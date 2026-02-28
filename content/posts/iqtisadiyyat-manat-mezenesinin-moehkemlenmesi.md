@@ -1,5 +1,5 @@
 ---
-title: "Manatın möhkəmlənməsi: iqtisadiyyata təsiri necədir?"
+title: "Manatın möhkəmlənməsivhv: iqtisadiyyata təsiri necədir?"
 date: 2026-02-27
 categories: ["İqtisadiyyat"]
 tags: ["manat", "iqtisadiyyat", "maliyyə"]
