@@ -1,0 +1,58 @@
+baseURL = "https://vaxtimyoxdu.com/"
+languageCode = "az"
+title = "Vaxtım Yoxdu"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  env = "production"
+  description = "Qısa və dəqiq xəbərlər — vaxtınız yoxdursa, biz varıq."
+  author = "Vaxtım Yoxdu"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = false
+  DateFormat = "2 January 2006"
+
+  [params.homeInfoParams]
+    Title = "Vaxtım Yoxdu"
+    Content = "Qısa və dəqiq xəbərlər. Vaxtınız yoxdursa, biz varıq."
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:info@vaxtimyoxdu.com"
+
+[params.assets]
+  favicon = "/favicon.ico"
+
+[menus]
+  [[menus.main]]
+    name = "Xəbərlər"
+    url = "/posts/"
+    weight = 1
+  [[menus.main]]
+    name = "Kateqoriyalar"
+    url = "/categories/"
+    weight = 2
+  [[menus.main]]
+    name = "Teqlər"
+    url = "/tags/"
+    weight = 3
+  [[menus.main]]
+    name = "Arxiv"
+    url = "/archives/"
+    weight = 4
+  [[menus.main]]
+    name = "Axtarış"
+    url = "/search/"
+    weight = 5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
