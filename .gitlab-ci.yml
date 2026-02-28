@@ -26,7 +26,7 @@ deploy:
   before_script:
     - npm install -g wrangler
   script:
-    - wrangler pages deploy public --project-name=vaxtimyoxdu
+    - wrangler pages deploy public --project-name=vaxtimyoxdu --branch=main
   environment:
     name: production
     url: https://vaxtimyoxdu.com
