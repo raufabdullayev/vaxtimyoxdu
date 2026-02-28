@@ -2,7 +2,8 @@ baseURL = "https://vaxtimyoxdu.com/"
 languageCode = "az"
 title = "Vaxtım Yoxdu"
 theme = "PaperMod"
-paginate = 10
+[pagination]
+  pagerSize = 10
 
 [params]
   env = "production"

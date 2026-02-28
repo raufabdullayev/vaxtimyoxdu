@@ -10,6 +10,9 @@ build:
   image:
     name: hugomods/hugo:exts
     entrypoint: [""]
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
   script:
     - hugo --minify
   artifacts:
