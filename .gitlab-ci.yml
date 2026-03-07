@@ -11,14 +11,8 @@ build:
   script:
     - npm ci
     - npm run build
-  artifacts:
-    paths:
-      - .next/
-      - out/
-      - public/
-      - package.json
-      - package-lock.json
-      - next.config.js
+  only:
+    - main
 
 deploy:
   stage: deploy
@@ -26,11 +20,11 @@ deploy:
   dependencies:
     - build
   before_script:
-    - npm install -g wrangler
-    - npm ci --omit=dev
+    - npm install -g vercel
   script:
-    - npx @cloudflare/next-on-pages
-    - wrangler pages deploy .vercel/output/static --project-name=vaxtimyoxdu --branch=main
+    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+    - vercel build --prod --token=$VERCEL_TOKEN
+    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
   environment:
     name: production
     url: https://vaxtimyoxdu.com
