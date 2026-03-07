@@ -5,10 +5,14 @@ deploy:
   stage: deploy
   image: node:20
   script:
-    - npm install -g vercel
-    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
-    - vercel build --prod --token=$VERCEL_TOKEN
-    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+    - npm install -g vercel@latest
+    - echo "Vercel version:" && vercel --version
+    - echo "Pulling project..."
+    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN 2>&1
+    - echo "Building..."
+    - vercel build --prod --token=$VERCEL_TOKEN 2>&1
+    - echo "Deploying..."
+    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN 2>&1
   environment:
     name: production
     url: https://vaxtimyoxdu.com
