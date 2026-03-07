@@ -69,7 +69,7 @@ export default function AdBanner({ slot, format = 'banner', className = '' }: Ad
         ref={adRef}
         className="adsbygoogle"
         style={config.style}
-        data-ad-client={`ca-pub-${adsenseId}`}
+        data-ad-client={adsenseId}
         data-ad-slot={slot}
         data-ad-format={config.format}
         data-full-width-responsive="true"
