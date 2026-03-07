@@ -4,8 +4,38 @@ import ToolCard from '@/components/tools/ToolCard'
 import { ToolCategory } from '@/types/tool'
 
 export const metadata: Metadata = {
-  title: 'Pulsuz Onlayn Alətlər - Vaxtım Yoxdu',
-  description: 'Pulsuz AI onlayn alətlər. PDF birləşdirici, şəkil sıxma, mətn yenidən yazma, JSON formatter, QR kod yaradıcı və daha çox.',
+  title: 'Pulsuz Onlayn Aletler - Vaxtim Yoxdu',
+  description: 'Pulsuz AI onlayn aletler. PDF birlesdirici, sekil sixma, metn yeniden yazma, JSON formatter, QR kod yaradici ve daha cox.',
+  keywords: 'pulsuz online aletler, ai tools, pdf merger, image compressor, json formatter, qr code generator, online tools',
+  openGraph: {
+    title: 'Pulsuz Onlayn Aletler - Vaxtim Yoxdu',
+    description: 'Pulsuz AI onlayn aletler. PDF birlesdirici, sekil sixma, metn yeniden yazma ve daha cox.',
+    url: 'https://vaxtimyoxdu.com/tools',
+    siteName: 'Vaxtim Yoxdu',
+    type: 'website',
+    locale: 'az_AZ',
+    images: [
+      {
+        url: 'https://vaxtimyoxdu.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vaxtim Yoxdu - Pulsuz Onlayn Aletler',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pulsuz Onlayn Aletler - Vaxtim Yoxdu',
+    description: 'Pulsuz AI onlayn aletler. PDF birlesdirici, sekil sixma, metn yeniden yazma ve daha cox.',
+    images: ['https://vaxtimyoxdu.com/og-image.png'],
+  },
+  alternates: {
+    canonical: 'https://vaxtimyoxdu.com/tools',
+    languages: {
+      'az': 'https://vaxtimyoxdu.com/tools',
+      'en': 'https://vaxtimyoxdu.com/tools',
+    },
+  },
 }
 
 export default function ToolsPage() {

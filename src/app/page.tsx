@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import { Zap, Newspaper, Wrench } from 'lucide-react'
 
+export const metadata = {
+  alternates: {
+    canonical: 'https://vaxtimyoxdu.com',
+  },
+}
+
 export default function HomePage() {
   return (
     <div className="container py-12 md:py-20">

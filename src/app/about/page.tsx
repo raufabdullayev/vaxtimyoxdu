@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About - ToolBox AI',
-  description: 'About ToolBox AI - Free AI-powered online tools platform.',
+  title: 'Haqqımızda - Vaxtım Yoxdu',
+  description: 'Vaxtım Yoxdu haqqında - Pulsuz AI onlayn alətlər platforması.',
+  alternates: {
+    canonical: 'https://vaxtimyoxdu.com/about',
+  },
 }
 
 export default function AboutPage() {

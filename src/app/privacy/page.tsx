@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - ToolBox AI',
-  description: 'Privacy Policy for ToolBox AI online tools platform.',
+  title: 'Məxfilik Siyasəti - Vaxtım Yoxdu',
+  description: 'Vaxtım Yoxdu onlayn alətlər platforması üçün məxfilik siyasəti.',
+  alternates: {
+    canonical: 'https://vaxtimyoxdu.com/privacy',
+  },
 }
 
 export default function PrivacyPage() {

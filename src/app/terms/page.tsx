@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - ToolBox AI',
-  description: 'Terms of Service for ToolBox AI online tools platform.',
+  title: 'İstifadə Şərtləri - Vaxtım Yoxdu',
+  description: 'Vaxtım Yoxdu onlayn alətlər platforması üçün istifadə şərtləri.',
+  alternates: {
+    canonical: 'https://vaxtimyoxdu.com/terms',
+  },
 }
 
 export default function TermsPage() {

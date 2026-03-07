@@ -1,39 +1,27 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
-import { generateToolMetadata } from '@/lib/utils/seo'
+import { generateToolMetadata, generateToolJsonLd } from '@/lib/utils/seo'
 import ToolTemplate from '@/components/tools/ToolTemplate'
-import QrCodeGenerator from '@/components/tools/generators/QrCodeGenerator'
-import JsonFormatter from '@/components/tools/dev/JsonFormatter'
-import WordCounter from '@/components/tools/WordCounter'
-import Base64Codec from '@/components/tools/dev/Base64Codec'
-import ColorPicker from '@/components/tools/generators/ColorPicker'
-import LoremIpsum from '@/components/tools/generators/LoremIpsum'
-import TextRewriter from '@/components/tools/ai/TextRewriter'
-import TextSummarizer from '@/components/tools/ai/TextSummarizer'
-import GrammarChecker from '@/components/tools/ai/GrammarChecker'
-import RegexTester from '@/components/tools/dev/RegexTester'
-import HashGenerator from '@/components/tools/dev/HashGenerator'
-import ImageCompress from '@/components/tools/image/ImageCompress'
-import ImageConvert from '@/components/tools/image/ImageConvert'
-import PdfMerge from '@/components/tools/pdf/PdfMerge'
+import AdBanner from '@/components/layout/AdBanner'
 
 const toolComponents: Record<string, React.ComponentType> = {
-  'qr-code-generator': QrCodeGenerator,
-  'json-formatter': JsonFormatter,
-  'word-counter': WordCounter,
-  'base64-encode-decode': Base64Codec,
-  'color-picker': ColorPicker,
-  'lorem-ipsum-generator': LoremIpsum,
-  'ai-text-rewriter': TextRewriter,
-  'ai-text-summarizer': TextSummarizer,
-  'ai-grammar-checker': GrammarChecker,
-  'regex-tester': RegexTester,
-  'hash-generator': HashGenerator,
-  'image-compress': ImageCompress,
-  'image-convert': ImageConvert,
-  'pdf-merge': PdfMerge,
+  'qr-code-generator': dynamic(() => import('@/components/tools/generators/QrCodeGenerator')),
+  'json-formatter': dynamic(() => import('@/components/tools/dev/JsonFormatter')),
+  'word-counter': dynamic(() => import('@/components/tools/WordCounter')),
+  'base64-encode-decode': dynamic(() => import('@/components/tools/dev/Base64Codec')),
+  'color-picker': dynamic(() => import('@/components/tools/generators/ColorPicker')),
+  'lorem-ipsum-generator': dynamic(() => import('@/components/tools/generators/LoremIpsum')),
+  'ai-text-rewriter': dynamic(() => import('@/components/tools/ai/TextRewriter')),
+  'ai-text-summarizer': dynamic(() => import('@/components/tools/ai/TextSummarizer')),
+  'ai-grammar-checker': dynamic(() => import('@/components/tools/ai/GrammarChecker')),
+  'regex-tester': dynamic(() => import('@/components/tools/dev/RegexTester')),
+  'hash-generator': dynamic(() => import('@/components/tools/dev/HashGenerator')),
+  'image-compress': dynamic(() => import('@/components/tools/image/ImageCompress')),
+  'image-convert': dynamic(() => import('@/components/tools/image/ImageConvert')),
+  'pdf-merge': dynamic(() => import('@/components/tools/pdf/PdfMerge')),
 }
 
 export async function generateStaticParams() {
@@ -59,9 +47,19 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
   const Component = toolComponents[tool.slug]
   if (!Component) notFound()
 
+  const jsonLd = generateToolJsonLd(tool)
+
   return (
-    <ToolTemplate tool={tool}>
-      <Component />
-    </ToolTemplate>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AdBanner slot="page-top" format="banner" className="mb-4" />
+      <ToolTemplate tool={tool}>
+        <Component />
+      </ToolTemplate>
+      <AdBanner slot="page-bottom" format="sidebar" className="mt-6 mx-auto" />
+    </>
   )
 }

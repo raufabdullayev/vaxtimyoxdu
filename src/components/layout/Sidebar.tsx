@@ -6,7 +6,7 @@ export default function Sidebar() {
   return (
     <aside className="hidden lg:block w-72 shrink-0">
       <div className="sticky top-20 space-y-6">
-        <AdBanner slot="sidebar-top" format="rectangle" className="min-h-[250px]" />
+        <AdBanner slot="sidebar-top" format="sidebar" />
         <div className="rounded-lg border bg-card p-4">
           <h3 className="font-semibold text-sm mb-3">Popular Tools</h3>
           <ul className="space-y-2">
@@ -23,7 +23,7 @@ export default function Sidebar() {
             ))}
           </ul>
         </div>
-        <AdBanner slot="sidebar-bottom" format="vertical" className="min-h-[600px]" />
+        <AdBanner slot="sidebar-bottom" format="sidebar" />
       </div>
     </aside>
   )

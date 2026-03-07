@@ -2,8 +2,37 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Blog - ToolBox AI',
-  description: 'Tips, tutorials, and guides about online tools, AI, and productivity.',
+  title: 'Blog - Vaxtim Yoxdu',
+  description: 'Tips, tutorials, and guides about online tools, AI, and productivity. Free tools for developers, designers, and content creators.',
+  openGraph: {
+    title: 'Blog - Vaxtim Yoxdu',
+    description: 'Tips, tutorials, and guides about online tools, AI, and productivity.',
+    url: 'https://vaxtimyoxdu.com/blog',
+    siteName: 'Vaxtim Yoxdu',
+    type: 'website',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://vaxtimyoxdu.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Vaxtim Yoxdu Blog',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog - Vaxtim Yoxdu',
+    description: 'Tips, tutorials, and guides about online tools, AI, and productivity.',
+    images: ['https://vaxtimyoxdu.com/og-image.png'],
+  },
+  alternates: {
+    canonical: 'https://vaxtimyoxdu.com/blog',
+    languages: {
+      'az': 'https://vaxtimyoxdu.com/blog',
+      'en': 'https://vaxtimyoxdu.com/blog',
+    },
+  },
 }
 
 const posts = [

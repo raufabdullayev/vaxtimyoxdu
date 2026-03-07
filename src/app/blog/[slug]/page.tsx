@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import { generateBlogPostMetadata, generateBlogArticleJsonLd } from '@/lib/utils/seo'
 
 const posts: Record<string, { title: string; date: string; content: string }> = {
   'best-free-online-tools-2026': {
@@ -160,18 +161,36 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const post = posts[params.slug]
   if (!post) return {}
-  return {
-    title: `${post.title} - ToolBox AI Blog`,
-    description: post.content.slice(0, 160).replace(/[#\n]/g, '').trim(),
-  }
+
+  const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
+
+  return generateBlogPostMetadata({
+    title: post.title,
+    description,
+    slug: params.slug,
+    date: post.date,
+  })
 }
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = posts[params.slug]
   if (!post) notFound()
 
+  const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
+
+  const jsonLd = generateBlogArticleJsonLd({
+    title: post.title,
+    description,
+    slug: params.slug,
+    date: post.date,
+  })
+
   return (
     <div className="container py-12 max-w-3xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <time className="text-sm text-muted-foreground">{post.date}</time>
       <h1 className="text-3xl font-bold mt-2 mb-8">{post.title}</h1>
       <div className="prose prose-sm max-w-none">

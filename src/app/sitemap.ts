@@ -25,6 +25,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const blogSlugs = [
+    'best-free-online-tools-2026',
+    'how-ai-text-rewriting-works',
+    'compress-images-without-losing-quality',
+    'regex-guide-for-beginners',
+    'why-grammar-matters-in-professional-writing',
+  ]
+
+  const blogPages = blogSlugs.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
+
   return [
     {
       url: baseUrl,
@@ -50,8 +65,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.6,
+      priority: 0.7,
     },
+    ...blogPages,
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),

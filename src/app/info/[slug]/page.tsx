@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { generateArticleMetadata, generateNewsArticleJsonLd } from '@/lib/utils/seo'
 
 const articles: Record<string, { title: string; date: string; category: string; content: string }> = {
   'texnologiya-suni-zekanin-yeni-dovru': {
@@ -90,18 +91,38 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const article = articles[params.slug]
   if (!article) return {}
-  return {
-    title: `${article.title} - Vaxtım Yoxdu`,
-    description: article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim(),
-  }
+
+  const description = article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim()
+
+  return generateArticleMetadata({
+    title: article.title,
+    description,
+    slug: params.slug,
+    date: article.date,
+    category: article.category,
+  })
 }
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = articles[params.slug]
   if (!article) notFound()
 
+  const description = article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim()
+
+  const jsonLd = generateNewsArticleJsonLd({
+    title: article.title,
+    description,
+    slug: params.slug,
+    date: article.date,
+    category: article.category,
+  })
+
   return (
     <div className="container py-12 max-w-3xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link href="/info" className="text-sm text-primary hover:underline mb-4 inline-block">&larr; Xəbərlərə qayıt</Link>
       <div className="flex items-center gap-3 mb-2">
         <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
