@@ -1,5 +1,12 @@
-public/
-resources/_gen/
-.hugo_build.lock
+/node_modules
+/.next/
+/out/
+/build
 .DS_Store
-node_modules/
+*.pem
+npm-debug.log*
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.claude/

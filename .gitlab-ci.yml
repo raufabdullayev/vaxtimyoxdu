@@ -3,21 +3,22 @@ stages:
   - deploy
 
 variables:
-  HUGO_ENV: production
+  NODE_ENV: production
 
 build:
   stage: build
-  image:
-    name: hugomods/hugo:exts
-    entrypoint: [""]
-  before_script:
-    - git submodule sync --recursive
-    - git submodule update --init --recursive
+  image: node:20
   script:
-    - hugo --minify
+    - npm ci
+    - npm run build
   artifacts:
     paths:
+      - .next/
+      - out/
       - public/
+      - package.json
+      - package-lock.json
+      - next.config.js
 
 deploy:
   stage: deploy
@@ -26,8 +27,10 @@ deploy:
     - build
   before_script:
     - npm install -g wrangler
+    - npm ci --omit=dev
   script:
-    - wrangler pages deploy public --project-name=vaxtimyoxdu --branch=main
+    - npx @cloudflare/next-on-pages
+    - wrangler pages deploy .vercel/output/static --project-name=vaxtimyoxdu --branch=main
   environment:
     name: production
     url: https://vaxtimyoxdu.com

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToolBox AI - Layihə Təqdimatı</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: #0a0a0a; color: #fafafa; overflow: hidden; }
+
+    .slide {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      padding: 60px 80px;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .slide.active { display: flex; }
+
+    h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 16px; line-height: 1.1; }
+    h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 24px; line-height: 1.2; }
+    h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 12px; color: #94a3b8; }
+    p { font-size: 1.3rem; color: #94a3b8; line-height: 1.6; max-width: 800px; }
+    .accent { color: #3b82f6; }
+    .green { color: #22c55e; }
+    .yellow { color: #eab308; }
+    .red { color: #ef4444; }
+
+    .grid { display: grid; gap: 20px; margin-top: 32px; }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+    .card {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+    .card p { font-size: 0.95rem; color: #71717a; }
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card.done { border-color: #22c55e40; background: #22c55e08; }
+    .card.pending { border-color: #ef444440; background: #ef444408; }
+    .card.partial { border-color: #eab30840; background: #eab30808; }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .badge-green { background: #22c55e20; color: #22c55e; }
+    .badge-blue { background: #3b82f620; color: #3b82f6; }
+    .badge-yellow { background: #eab30820; color: #eab308; }
+    .badge-red { background: #ef444420; color: #ef4444; }
+
+    .progress-bar {
+      width: 100%;
+      height: 12px;
+      background: #27272a;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+    .progress-bar .fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.5s;
+    }
+    .fill-green { background: linear-gradient(90deg, #22c55e, #16a34a); }
+    .fill-blue { background: linear-gradient(90deg, #3b82f6, #2563eb); }
+    .fill-yellow { background: linear-gradient(90deg, #eab308, #ca8a04); }
+
+    .stats { display: flex; gap: 40px; margin-top: 32px; }
+    .stat-item .number { font-size: 3rem; font-weight: 800; }
+    .stat-item .label { font-size: 0.9rem; color: #71717a; margin-top: 4px; }
+
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .tech-tag {
+      padding: 8px 16px;
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 100;
+    }
+    .nav button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #27272a;
+      background: #18181b;
+      color: #fafafa;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav button:hover { background: #3b82f6; border-color: #3b82f6; }
+    .nav .counter { font-size: 0.85rem; color: #71717a; }
+
+    .file-tree {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.85rem;
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 12px;
+      padding: 24px;
+      line-height: 1.8;
+      color: #a1a1aa;
+      margin-top: 20px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .file-tree .folder { color: #3b82f6; font-weight: 600; }
+    .file-tree .file { color: #94a3b8; }
+    .file-tree .highlight { color: #22c55e; font-weight: 600; }
+
+    .list { margin-top: 16px; }
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #27272a20;
+      font-size: 1.05rem;
+    }
+    .list-item .check { color: #22c55e; font-size: 1.2rem; flex-shrink: 0; }
+    .list-item .cross { color: #ef4444; font-size: 1.2rem; flex-shrink: 0; }
+
+    .test-block {
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+    .test-block h5 { font-size: 0.85rem; color: #71717a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .test-block pre {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: #e4e4e7;
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+    .test-block pre .string { color: #22c55e; }
+    .test-block pre .key { color: #3b82f6; }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDE 1: Title -->
+  <div class="slide active" id="slide-1">
+    <h3>Layihə Təqdimatı</h3>
+    <h1>ToolBox <span class="accent">AI</span></h1>
+    <p>AI-gücləndirilmiş pulsuz onlayn alətlər platforması. PDF, şəkil, mətn alətləri, developer utilities -- hamısı bir yerdə.</p>
+    <div class="stats">
+      <div class="stat-item">
+        <div class="number accent">8</div>
+        <div class="label">İşləyən Alət</div>
+      </div>
+      <div class="stat-item">
+        <div class="number green">53%</div>
+        <div class="label">Ümumi Tamamlanma</div>
+      </div>
+      <div class="stat-item">
+        <div class="number">36</div>
+        <div class="label">Ümumi Task</div>
+      </div>
+      <div class="stat-item">
+        <div class="number green">19</div>
+        <div class="label">Tamamlanmış Task</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: Tech Stack -->
+  <div class="slide" id="slide-2">
+    <h3>Texniki Infrastruktur</h3>
+    <h2>Tech Stack</h2>
+    <div class="grid grid-2">
+      <div>
+        <h4 style="color:#71717a;margin-bottom:16px;">Frontend</h4>
+        <div class="tech-stack">
+          <span class="tech-tag">Next.js 14</span>
+          <span class="tech-tag">React 18</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">App Router</span>
+        </div>
+        <h4 style="color:#71717a;margin:24px 0 16px;">Backend</h4>
+        <div class="tech-stack">
+          <span class="tech-tag">Next.js API Routes</span>
+          <span class="tech-tag">OpenAI GPT-4o-mini</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#71717a;margin-bottom:16px;">SEO & Marketing</h4>
+        <div class="tech-stack">
+          <span class="tech-tag">Sitemap.xml</span>
+          <span class="tech-tag">Robots.txt</span>
+          <span class="tech-tag">Open Graph</span>
+          <span class="tech-tag">Meta Tags</span>
+        </div>
+        <h4 style="color:#71717a;margin:24px 0 16px;">Monetizasiya</h4>
+        <div class="tech-stack">
+          <span class="tech-tag">Google AdSense (hazırlıq)</span>
+          <span class="tech-tag">Ad Placeholders</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: Project Structure -->
+  <div class="slide" id="slide-3">
+    <h3>Arxitektura</h3>
+    <h2>Layihə Strukturu</h2>
+    <div class="grid grid-2">
+      <div class="file-tree">
+        <span class="folder">src/</span><br>
+        &nbsp;&nbsp;<span class="folder">app/</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight">layout.tsx</span> &mdash; Root layout<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight">page.tsx</span> &mdash; Ana səhifə<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="folder">tools/[slug]/</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight">page.tsx</span> &mdash; Dinamik alət səhifəsi<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="folder">api/ai/</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">rewrite/route.ts</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">summarize/route.ts</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="folder">blog/</span>, <span class="folder">about/</span>, <span class="folder">privacy/</span>, <span class="folder">terms/</span><br>
+        &nbsp;&nbsp;<span class="folder">components/</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="folder">layout/</span> &mdash; Header, Footer, Sidebar, AdBanner<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="folder">tools/</span> &mdash; 8 alət komponenti<br>
+        &nbsp;&nbsp;<span class="folder">lib/</span> &mdash; AI client, registry, SEO, ads<br>
+        &nbsp;&nbsp;<span class="folder">config/</span> &mdash; tools.ts<br>
+        &nbsp;&nbsp;<span class="folder">types/</span> &mdash; tool.ts
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px;">
+          <h4>Dinamik Routing</h4>
+          <p>Hər alət <code>/tools/[slug]</code> ilə avtomatik route olunur. Yeni alət əlavə etmək = 1 komponent + config-ə 1 entry.</p>
+        </div>
+        <div class="card" style="margin-bottom:16px;">
+          <h4>Tool Registry</h4>
+          <p>Bütün alətlərin metadata-sı mərkəzi config-də saxlanılır: slug, ad, təsvir, kateqoriya, SEO keywords.</p>
+        </div>
+        <div class="card">
+          <h4>SSG + API Routes</h4>
+          <p>Client-side alətlər statik generate olunur (sürətli). AI alətlər server-side API routes istifadə edir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: Tools Overview -->
+  <div class="slide" id="slide-4">
+    <h3>Hazır Alətlər</h3>
+    <h2>8 İşləyən Alət</h2>
+    <div class="grid grid-4">
+      <div class="card done">
+        <div class="icon">📱</div>
+        <h4>QR Code Generator</h4>
+        <p>URL, mətn, email üçün QR kod yaradıcı. Rəng və ölçü seçimi.</p>
+        <span class="badge badge-green">Client-side</span>
+      </div>
+      <div class="card done">
+        <div class="icon">{ }</div>
+        <h4>JSON Formatter</h4>
+        <p>JSON format, validate, beautify, minify. Syntax xətası göstərir.</p>
+        <span class="badge badge-green">Client-side</span>
+      </div>
+      <div class="card done">
+        <div class="icon">🔢</div>
+        <h4>Word Counter</h4>
+        <p>Söz, hərf, cümlə, paraqraf sayıcı. Oxuma vaxtı hesablayır.</p>
+        <span class="badge badge-green">Client-side</span>
+      </div>
+      <div class="card done">
+        <div class="icon">🔐</div>
+        <h4>Base64 Codec</h4>
+        <p>Base64 encode/decode. UTF-8 dəstəkli. Swap funksiyası.</p>
+        <span class="badge badge-green">Client-side</span>
+      </div>
+      <div class="card done">
+        <div class="icon">🎨</div>
+        <h4>Color Picker</h4>
+        <p>HEX, RGB, HSL çevirmə. Rəng paleti generasiyası.</p>
+        <span class="badge badge-green">Client-side</span>
+      </div>
+      <div class="card done">
+        <div class="icon">📄</div>
+        <h4>Lorem Ipsum</h4>
+        <p>Placeholder mətn generatoru. Paraqraf, cümlə, söz seçimi.</p>
+        <span class="badge badge-green">Client-side</span>
+      </div>
+      <div class="card done">
+        <div class="icon">✍️</div>
+        <h4>AI Text Rewriter</h4>
+        <p>AI ilə mətn yenidən yazma. 5 fərqli ton seçimi.</p>
+        <span class="badge badge-blue">AI-Powered</span>
+      </div>
+      <div class="card done">
+        <div class="icon">📝</div>
+        <h4>AI Summarizer</h4>
+        <p>AI ilə mətn xülasəsi. Qısa, orta, detallı seçimlər.</p>
+        <span class="badge badge-blue">AI-Powered</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: Tool Demo - QR Code -->
+  <div class="slide" id="slide-5">
+    <h3>Canlı Demo Ssenarilər</h3>
+    <h2>1. QR Code Generator</h2>
+    <div class="grid grid-2">
+      <div>
+        <div class="test-block">
+          <h5>Test Nümunəsi</h5>
+          <pre>
+<span class="key">URL:</span> <span class="string">https://toolbox-ai.vercel.app</span>
+<span class="key">Ölçü:</span> <span class="string">512x512</span>
+<span class="key">Ön plan rəngi:</span> <span class="string">#1e40af (göy)</span>
+<span class="key">Arxa plan:</span> <span class="string">#ffffff (ağ)</span>
+
+<span class="key">Addımlar:</span>
+1. localhost:3099/tools/qr-code-generator aç
+2. URL-i daxil et
+3. Ölçünü 512x512 seç
+4. Ön plan rəngini #1e40af et
+5. "Generate QR Code" bas
+6. "Download PNG" ilə yüklə</pre>
+        </div>
+        <div class="test-block" style="margin-top:12px;">
+          <h5>Gözlənilən Nəticə</h5>
+          <pre>Göy rəngdə 512x512 QR kod görsənəcək.
+PNG olaraq yüklənə biləcək.
+Telefon ilə scan edəndə URL açılacaq.</pre>
+        </div>
+      </div>
+      <div>
+        <div class="card done" style="text-align:center;padding:40px;">
+          <div style="font-size:4rem;margin-bottom:16px;">📱</div>
+          <h4>Xüsusiyyətlər</h4>
+          <div class="list">
+            <div class="list-item"><span class="check">✓</span> URL, mətn, email, telefon dəstəkləyir</div>
+            <div class="list-item"><span class="check">✓</span> 4 fərqli ölçü (128-1024px)</div>
+            <div class="list-item"><span class="check">✓</span> Rəng özəlləşdirmə (ön plan + arxa plan)</div>
+            <div class="list-item"><span class="check">✓</span> PNG olaraq yükləmə</div>
+            <div class="list-item"><span class="check">✓</span> Tam client-side (data serverə getmir)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: Tool Demo - JSON Formatter -->
+  <div class="slide" id="slide-6">
+    <h3>Canlı Demo Ssenarilər</h3>
+    <h2>2. JSON Formatter & Validator</h2>
+    <div class="grid grid-2">
+      <div>
+        <div class="test-block">
+          <h5>Test Nümunəsi - Format</h5>
+          <pre>
+<span class="key">Input:</span>
+<span class="string">{"name":"ToolBox AI","version":"1.0","tools":["QR","JSON","Word"],"config":{"theme":"dark"}}</span>
+
+<span class="key">Addımlar:</span>
+1. localhost:3099/tools/json-formatter aç
+2. Yuxarıdakı JSON-u yapışdır
+3. "Format / Beautify" bas
+4. Nəticə panelində formatlanmış JSON görünəcək</pre>
+        </div>
+        <div class="test-block" style="margin-top:12px;">
+          <h5>Test Nümunəsi - Xətalı JSON</h5>
+          <pre>
+<span class="key">Input:</span>
+<span class="string">{"name": "test", invalid}</span>
+
+<span class="key">Nəticə:</span>
+<span style="color:#ef4444;">Error: Expected property name or '}'
+at position 20</span></pre>
+        </div>
+        <div class="test-block" style="margin-top:12px;">
+          <h5>Test Nümunəsi - Minify</h5>
+          <pre>
+<span class="key">Formatlanmış JSON-u "Minify" ilə sıxışdır</span>
+<span class="key">Nəticə:</span> Tək sətirdə kompakt JSON</pre>
+        </div>
+      </div>
+      <div>
+        <div class="card done" style="padding:30px;">
+          <h4>Xüsusiyyətlər</h4>
+          <div class="list">
+            <div class="list-item"><span class="check">✓</span> JSON beautify (2 / 4 space indent)</div>
+            <div class="list-item"><span class="check">✓</span> JSON minify</div>
+            <div class="list-item"><span class="check">✓</span> Xəta göstərmə (validation)</div>
+            <div class="list-item"><span class="check">✓</span> Copy düyməsi</div>
+            <div class="list-item"><span class="check">✓</span> Nümunə JSON yükləmə</div>
+            <div class="list-item"><span class="check">✓</span> Monospace font, kod görünüşü</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: Tool Demo - Word Counter -->
+  <div class="slide" id="slide-7">
+    <h3>Canlı Demo Ssenarilər</h3>
+    <h2>3. Word Counter</h2>
+    <div class="grid grid-2">
+      <div>
+        <div class="test-block">
+          <h5>Test Nümunəsi</h5>
+          <pre>
+<span class="key">Input:</span>
+<span class="string">ToolBox AI is a free online tools platform.
+It provides AI-powered text processing,
+PDF conversion, and developer utilities.
+
+No signup required. Fast and private.</span>
+
+<span class="key">Gözlənilən Nəticə:</span>
+Sözlər: <span class="string">24</span>
+Hərflər: <span class="string">155</span>
+Cümlələr: <span class="string">4</span>
+Paraqraflar: <span class="string">2</span>
+Oxuma vaxtı: <span class="string">7 sec</span></pre>
+        </div>
+      </div>
+      <div>
+        <div class="card done" style="padding:30px;">
+          <h4>Xüsusiyyətlər</h4>
+          <div class="list">
+            <div class="list-item"><span class="check">✓</span> Real-time söz sayma</div>
+            <div class="list-item"><span class="check">✓</span> Hərf sayı (boşluqlu / boşluqsuz)</div>
+            <div class="list-item"><span class="check">✓</span> Cümlə və paraqraf sayı</div>
+            <div class="list-item"><span class="check">✓</span> Oxuma vaxtı hesabı (200 söz/dəq)</div>
+            <div class="list-item"><span class="check">✓</span> Danışma vaxtı hesabı (130 söz/dəq)</div>
+            <div class="list-item"><span class="check">✓</span> Təmizlə düyməsi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: Tool Demo - Base64, Color Picker, Lorem Ipsum -->
+  <div class="slide" id="slide-8">
+    <h3>Canlı Demo Ssenarilər</h3>
+    <h2>4-6. Base64, Color Picker, Lorem Ipsum</h2>
+    <div class="grid grid-3">
+      <div>
+        <div class="test-block" style="height:100%;">
+          <h5>🔐 Base64 Encode/Decode</h5>
+          <pre>
+<span class="key">Encode test:</span>
+Input: <span class="string">Hello ToolBox AI!</span>
+Output: <span class="string">SGVsbG8gVG9vbEJ
+veCBBSSE=</span>
+
+<span class="key">Decode test:</span>
+Input: <span class="string">SGVsbG8gV29ybGQ=</span>
+Output: <span class="string">Hello World</span>
+
+<span class="key">Swap:</span> Nəticəni input-a
+keçirir və əksini edir</pre>
+        </div>
+      </div>
+      <div>
+        <div class="test-block" style="height:100%;">
+          <h5>🎨 Color Picker</h5>
+          <pre>
+<span class="key">Test:</span>
+Rəngi <span class="string">#3b82f6</span> seç
+
+<span class="key">Nəticələr:</span>
+HEX: <span class="string">#3B82F6</span>
+RGB: <span class="string">rgb(59, 130, 246)</span>
+HSL: <span class="string">hsl(217, 91%, 60%)</span>
+
+<span class="key">Palet:</span> 5 uyğun rəng
+avtomatik yaradılır.
+Hər rəngi kliklə kopyala.</pre>
+        </div>
+      </div>
+      <div>
+        <div class="test-block" style="height:100%;">
+          <h5>📄 Lorem Ipsum</h5>
+          <pre>
+<span class="key">Test:</span>
+Tip: <span class="string">Paragraphs</span>
+Say: <span class="string">3</span>
+"Lorem ipsum..." ilə başla: ✓
+
+<span class="key">Nəticə:</span>
+3 paraqraf placeholder mətn.
+
+<span class="key">Digər testlər:</span>
+- 5 cümlə generate et
+- 20 söz generate et
+- "Lorem" başlanğıcı söndür</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: AI Tools Demo -->
+  <div class="slide" id="slide-9">
+    <h3>Canlı Demo Ssenarilər</h3>
+    <h2>7-8. AI Text Rewriter & Summarizer</h2>
+    <div class="grid grid-2">
+      <div>
+        <div class="test-block">
+          <h5>✍️ AI Text Rewriter</h5>
+          <pre>
+<span class="key">Input:</span>
+<span class="string">"The meeting went okay. We talked
+about stuff and made some plans
+for the future."</span>
+
+<span class="key">Ton:</span> <span class="string">Professional</span>
+
+<span class="key">Gözlənilən Nəticə:</span>
+<span class="string">"The meeting was productive. We
+discussed key initiatives and
+established a strategic roadmap
+for upcoming quarters."</span>
+
+<span class="key">Digər tonlar:</span> Casual, Academic,
+Simple, Creative
+
+<span style="color:#eab308;">⚠ Qeyd: OpenAI API key kvotası
+lazımdır. Hazırda kvota bitib.</span></pre>
+        </div>
+      </div>
+      <div>
+        <div class="test-block">
+          <h5>📝 AI Text Summarizer</h5>
+          <pre>
+<span class="key">Input:</span> Uzun məqalə və ya esse
+(max 10,000 simvol)
+
+<span class="key">Uzunluq seçimləri:</span>
+- <span class="string">Short:</span> 1-2 cümlə
+- <span class="string">Medium:</span> 3-5 cümlə
+- <span class="string">Detailed:</span> Bullet points ilə
+
+<span class="key">API Endpoint:</span>
+POST /api/ai/summarize
+{
+  <span class="key">"text"</span>: <span class="string">"metn..."</span>,
+  <span class="key">"length"</span>: <span class="string">"medium"</span>
+}
+
+<span style="color:#eab308;">⚠ Qeyd: OpenAI API key kvotası
+lazımdır. Hazırda kvota bitib.</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: Sprint Status -->
+  <div class="slide" id="slide-10">
+    <h3>Sprint Vəziyyəti</h3>
+    <h2>Tamamlanma Hesabatı</h2>
+    <div class="grid grid-2" style="margin-top:24px;">
+      <div>
+        <div class="card" style="margin-bottom:16px;">
+          <h4>Sprint 1 - Quraşdırma + İlk Alətlər</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="color:#71717a;">11/12 task</span>
+            <span class="badge badge-green">92%</span>
+          </div>
+          <div class="progress-bar"><div class="fill fill-green" style="width:92%"></div></div>
+        </div>
+        <div class="card" style="margin-bottom:16px;">
+          <h4>Sprint 2 - AI Alətlər + PDF/Şəkil</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="color:#71717a;">3/8 task</span>
+            <span class="badge badge-yellow">37%</span>
+          </div>
+          <div class="progress-bar"><div class="fill fill-yellow" style="width:37%"></div></div>
+        </div>
+        <div class="card" style="margin-bottom:16px;">
+          <h4>Sprint 3 - Çox Alət + AdSense</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="color:#71717a;">5/8 task</span>
+            <span class="badge badge-yellow">62%</span>
+          </div>
+          <div class="progress-bar"><div class="fill fill-blue" style="width:62%"></div></div>
+        </div>
+        <div class="card">
+          <h4>Sprint 4 - Polish + Buraxılış</h4>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="color:#71717a;">0/8 task</span>
+            <span class="badge badge-red">0%</span>
+          </div>
+          <div class="progress-bar"><div class="fill fill-green" style="width:0%"></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="text-align:center;padding:40px;">
+          <div style="font-size:4rem;font-weight:800;color:#3b82f6;margin-bottom:8px;">53%</div>
+          <div style="color:#71717a;font-size:1.1rem;">Ümumi Tamamlanma</div>
+          <div style="margin-top:24px;text-align:left;">
+            <div class="list-item"><span class="check">✓</span> 8 işləyən alət</div>
+            <div class="list-item"><span class="check">✓</span> SEO infrastrukturu</div>
+            <div class="list-item"><span class="check">✓</span> Blog + Hüquqi səhifələr</div>
+            <div class="list-item"><span class="check">✓</span> AI API inteqrasiyası</div>
+            <div class="list-item"><span class="cross">✗</span> Rate limiting</div>
+            <div class="list-item"><span class="cross">✗</span> PDF / Image alətləri</div>
+            <div class="list-item"><span class="cross">✗</span> Deploy + Analitika</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: Next Steps -->
+  <div class="slide" id="slide-11">
+    <h3>Növbəti Addımlar</h3>
+    <h2>Qalan İşlər & Prioritetlər</h2>
+    <div class="grid grid-2">
+      <div>
+        <h4 style="color:#ef4444;margin-bottom:16px;">🔴 Kritik (Deploy-dan əvvəl)</h4>
+        <div class="card pending" style="margin-bottom:12px;">
+          <h4>Rate Limiting</h4>
+          <p>AI endpoint-ləri qorunmasızdır. IP-bazalı limit mütləqdir.</p>
+        </div>
+        <div class="card pending" style="margin-bottom:12px;">
+          <h4>OpenAI API Key</h4>
+          <p>Hazırkı key-in kvotası bitib. Yeni key / ödəniş lazımdır.</p>
+        </div>
+        <h4 style="color:#eab308;margin:24px 0 16px;">🟡 Yüksək Prioritet</h4>
+        <div class="card partial" style="margin-bottom:12px;">
+          <h4>Vercel Deploy</h4>
+          <p>Sayt canlı olmalıdır ki trafik və gəlir gəlsin.</p>
+        </div>
+        <div class="card partial">
+          <h4>Google Analytics 4</h4>
+          <p>Trafik ölçmə olmadan SEO strategiyası mümkün deyil.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#3b82f6;margin-bottom:16px;">🔵 Yeni Alətlər</h4>
+        <div class="card" style="margin-bottom:12px;">
+          <h4>PDF to Word</h4>
+          <p>pdf-lib ilə client-side çevirmə. Yüksək axtarış trafiki.</p>
+        </div>
+        <div class="card" style="margin-bottom:12px;">
+          <h4>Image Resize/Compress</h4>
+          <p>Sharp + Canvas API. Çox istifadə olunan alət.</p>
+        </div>
+        <h4 style="color:#22c55e;margin:24px 0 16px;">🟢 Uzunmüddətli</h4>
+        <div class="card" style="margin-bottom:12px;">
+          <h4>Supabase</h4>
+          <p>İstifadəçi sistemi, analitika cədvəlləri, rate limit storage.</p>
+        </div>
+        <div class="card">
+          <h4>Mobil Tətbiq</h4>
+          <p>React Native + Expo. Faza 3-də planlaşdırılıb.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: Thank You -->
+  <div class="slide" id="slide-12">
+    <h3>Təşəkkürlər</h3>
+    <h1>ToolBox <span class="accent">AI</span></h1>
+    <p style="font-size:1.5rem;margin-top:16px;">Suallar?</p>
+    <div class="stats" style="margin-top:48px;">
+      <div class="stat-item">
+        <div class="number green">8</div>
+        <div class="label">Hazır Alət</div>
+      </div>
+      <div class="stat-item">
+        <div class="number accent">2</div>
+        <div class="label">AI Endpoint</div>
+      </div>
+      <div class="stat-item">
+        <div class="number yellow">53%</div>
+        <div class="label">Tamamlanma</div>
+      </div>
+      <div class="stat-item">
+        <div class="number">4</div>
+        <div class="label">Sprint</div>
+      </div>
+    </div>
+    <p style="margin-top:48px;font-size:1rem;">
+      Demo: <span class="accent">localhost:3099</span> &nbsp;|&nbsp;
+      Təqdimat: <span class="accent">localhost:3099/presentation.html</span>
+    </p>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <span class="counter" id="counter">1 / 12</span>
+    <button onclick="prev()" aria-label="Previous">&#8592;</button>
+    <button onclick="next()" aria-label="Next">&#8594;</button>
+  </div>
+
+  <script>
+    let current = 1;
+    const total = 12;
+
+    function show(n) {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      document.getElementById('slide-' + n).classList.add('active');
+      document.getElementById('counter').textContent = n + ' / ' + total;
+    }
+
+    function next() { if (current < total) { current++; show(current); } }
+    function prev() { if (current > 1) { current--; show(current); } }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); next(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+    });
+  </script>
+</body>
+</html>
