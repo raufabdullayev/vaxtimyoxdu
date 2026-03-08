@@ -5,6 +5,37 @@ const SITE_URL = 'https://vaxtimyoxdu.com'
 const SITE_NAME = 'Vaxtim Yoxdu'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
 
+export function generateBaseMetadata(): Metadata {
+  return {
+    title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
+    description: 'Vaxtiniz yoxdursa, biz variq. Gunluk xeber xulasaleri, pulsuz AI aletleri, PDF birlesdirici, sekil sixma, QR kod yaradici ve daha cox.',
+    keywords: 'vaxtim yoxdu, xeberler, online tools, ai tools, pdf merger, image compressor, qr code generator, azerbaycan',
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+    verification: {
+      google: 'g9mV18mJU1P_Pjk_zOoomjHwDU2PdQsoLN5Vli4NOz8',
+    },
+    openGraph: {
+      title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
+      description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
+      url: SITE_URL,
+      siteName: SITE_NAME,
+      type: 'website',
+      locale: 'az_AZ',
+      images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
+      description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
+      images: [DEFAULT_OG_IMAGE],
+    },
+    alternates: {
+      canonical: SITE_URL,
+      languages: { 'az': SITE_URL, 'en': SITE_URL },
+    },
+  }
+}
+
 export function generateToolMetadata(tool: Tool): Metadata {
   const url = `${SITE_URL}/tools/${tool.slug}`
   return {
@@ -249,56 +280,3 @@ export function generateBlogArticleJsonLd({
   }
 }
 
-export function generateBaseMetadata(): Metadata {
-  return {
-    title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
-    description:
-      'Vaxtiniz yoxdursa, biz variq. Gunluk xeber xulasaleri, pulsuz AI aletleri, PDF birlesdirici, sekil sixma, QR kod yaradici ve daha cox.',
-    keywords:
-      'vaxtim yoxdu, xeberler, online tools, ai tools, pdf merger, image compressor, qr code generator, azerbaycan',
-    openGraph: {
-      title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
-      description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
-      url: SITE_URL,
-      siteName: SITE_NAME,
-      type: 'website',
-      locale: 'az_AZ',
-      images: [
-        {
-          url: DEFAULT_OG_IMAGE,
-          width: 1200,
-          height: 630,
-          alt: SITE_NAME,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
-      description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
-      images: [DEFAULT_OG_IMAGE],
-    },
-    alternates: {
-      canonical: SITE_URL,
-      languages: {
-        'az': SITE_URL,
-        'en': SITE_URL,
-      },
-    },
-    metadataBase: new URL(SITE_URL),
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
-    verification: {
-      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || undefined,
-    },
-  }
-}
