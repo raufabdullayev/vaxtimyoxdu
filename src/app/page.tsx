@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Zap, Newspaper, Wrench } from 'lucide-react'
+import AdBanner from '@/components/layout/AdBanner'
 
 export const metadata = {
   alternates: {
@@ -67,6 +68,11 @@ export default function HomePage() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16" />
         </Link>
       </section>
+
+      {/* Ad */}
+      <div className="max-w-4xl mx-auto mt-12">
+        <AdBanner slot="homepage-mid" format="banner" />
+      </div>
 
       {/* Stats */}
       <section className="mt-16 text-center">

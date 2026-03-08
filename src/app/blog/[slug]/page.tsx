@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { generateBlogPostMetadata, generateBlogArticleJsonLd } from '@/lib/utils/seo'
+import AdBanner from '@/components/layout/AdBanner'
 
 const posts: Record<string, { title: string; date: string; content: string }> = {
   'best-free-online-tools-2026': {
@@ -193,6 +194,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       />
       <time className="text-sm text-muted-foreground">{post.date}</time>
       <h1 className="text-3xl font-bold mt-2 mb-8">{post.title}</h1>
+      <AdBanner slot="blog-post-top" format="banner" className="mb-8" />
       <div className="prose prose-sm max-w-none">
         {post.content.split('\n\n').map((paragraph, i) => {
           if (paragraph.startsWith('## ')) {
@@ -227,6 +229,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           )
         })}
       </div>
+      <AdBanner slot="blog-post-bottom" format="in-article" className="mt-8" />
     </div>
   )
 }

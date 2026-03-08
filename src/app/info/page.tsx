@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import AdBanner from '@/components/layout/AdBanner'
 
 export const metadata: Metadata = {
   title: 'Xeberler - Vaxtim Yoxdu',
@@ -81,21 +82,23 @@ export default function InfoPage() {
       <p className="text-muted-foreground mb-8">Qısa və dəqiq xəbərlər — vaxtınız yoxdursa, biz varıq.</p>
 
       <div className="space-y-6">
-        {articles.map((article) => (
-          <Link
-            key={article.slug}
-            href={`/info/${article.slug}`}
-            className="block rounded-xl border bg-card p-6 hover:border-primary transition-all hover:shadow-sm"
-          >
-            <div className="flex items-center gap-3 mb-2">
-              <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${categoryColors[article.category] || 'bg-muted text-muted-foreground'}`}>
-                {article.category}
-              </span>
-              <time className="text-xs text-muted-foreground">{article.date}</time>
-            </div>
-            <h2 className="text-lg font-semibold mb-1">{article.title}</h2>
-            <p className="text-sm text-muted-foreground">{article.summary}</p>
-          </Link>
+        {articles.map((article, index) => (
+          <div key={article.slug}>
+            <Link
+              href={`/info/${article.slug}`}
+              className="block rounded-xl border bg-card p-6 hover:border-primary transition-all hover:shadow-sm"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium ${categoryColors[article.category] || 'bg-muted text-muted-foreground'}`}>
+                  {article.category}
+                </span>
+                <time className="text-xs text-muted-foreground">{article.date}</time>
+              </div>
+              <h2 className="text-lg font-semibold mb-1">{article.title}</h2>
+              <p className="text-sm text-muted-foreground">{article.summary}</p>
+            </Link>
+            {index === 1 && <AdBanner slot="info-list-mid" format="in-article" className="my-4" />}
+          </div>
         ))}
       </div>
     </div>

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateArticleMetadata, generateNewsArticleJsonLd } from '@/lib/utils/seo'
+import AdBanner from '@/components/layout/AdBanner'
 
 const articles: Record<string, { title: string; date: string; category: string; content: string }> = {
   'texnologiya-suni-zekanin-yeni-dovru': {
@@ -154,6 +155,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           )
         })}
       </div>
+      <AdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
     </div>
   )
 }

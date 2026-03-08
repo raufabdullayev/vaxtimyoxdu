@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import AdBanner from '@/components/layout/AdBanner'
 
 export const metadata: Metadata = {
   title: 'Blog - Vaxtim Yoxdu',
@@ -73,16 +74,19 @@ export default function BlogPage() {
     <div className="container py-12 max-w-3xl">
       <h1 className="text-3xl font-bold mb-8">Blog</h1>
       <div className="space-y-8">
-        {posts.map((post) => (
-          <article key={post.slug} className="border-b pb-8 last:border-0">
-            <time className="text-sm text-muted-foreground">{post.date}</time>
-            <h2 className="text-xl font-semibold mt-1 mb-2">
-              <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
-                {post.title}
-              </Link>
-            </h2>
-            <p className="text-muted-foreground text-sm">{post.excerpt}</p>
-          </article>
+        {posts.map((post, index) => (
+          <div key={post.slug}>
+            <article className="border-b pb-8">
+              <time className="text-sm text-muted-foreground">{post.date}</time>
+              <h2 className="text-xl font-semibold mt-1 mb-2">
+                <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                  {post.title}
+                </Link>
+              </h2>
+              <p className="text-muted-foreground text-sm">{post.excerpt}</p>
+            </article>
+            {index === 1 && <AdBanner slot="blog-list-mid" format="in-article" className="my-6" />}
+          </div>
         ))}
       </div>
     </div>
