@@ -11,28 +11,33 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="container py-12 max-w-3xl">
-      <h1 className="text-3xl font-bold mb-6">About ToolBox AI</h1>
+      <h1 className="text-3xl font-bold mb-6">Haqqimizda</h1>
       <div className="prose prose-sm max-w-none space-y-4 text-muted-foreground">
-        <p>
-          ToolBox AI is a collection of free online tools designed to help you work faster and
-          smarter. From AI-powered text rewriting to PDF conversion, image editing, and developer
-          utilities - we have everything you need in one place.
+        <p className="text-lg font-medium text-foreground italic">
+          &quot;Vaxtiniz yoxdursa, biz variq&quot;
         </p>
-        <h2 className="text-xl font-semibold text-foreground mt-8">Our Mission</h2>
         <p>
-          We believe essential tools should be free and accessible to everyone. No signup required,
-          no hidden fees, no data collection. Just powerful tools that work.
+          Vaxtim Yoxdu - Azerbaycan dilinde qisa xeber xulaseleri ve pulsuz onlayn aletler
+          platformasidir. Meqsedimiz sizin vaxtiniza qenaet etmekdir: muhum xeberleri qisa ve
+          aydin sekilde catdirmaq, eyni zamanda gundelik islerinizi asanlasdiracaq pulsuz aletler
+          teklif etmek.
         </p>
-        <h2 className="text-xl font-semibold text-foreground mt-8">Privacy First</h2>
+        <h2 className="text-xl font-semibold text-foreground mt-8">Missiyamiz</h2>
         <p>
-          Many of our tools run entirely in your browser - your data never leaves your device. For
-          AI-powered tools, we process your text securely and never store it.
+          Biz inaniriq ki, keyfiyyetli melumat ve faydali aletler her kes ucun pulsuz ve asanliqla
+          erisile bilen olmalidir. Qeydiyyat teleb olunmur, gizli odenisler yoxdur. Sadece ise
+          yarayan guclu aletler ve vaxtiniza qenaet eden xeber xulaseleri.
         </p>
-        <h2 className="text-xl font-semibold text-foreground mt-8">Contact</h2>
+        <h2 className="text-xl font-semibold text-foreground mt-8">Mexfilik</h2>
         <p>
-          Have feedback or suggestions? We&apos;d love to hear from you. Reach out at{' '}
-          <a href="mailto:hello@toolbox-ai.com" className="text-primary hover:underline">
-            hello@toolbox-ai.com
+          Aletlerimizin coxu birbase brauzerinizdede isleyir - melumatlariniz cihazinizdan cixmir.
+          AI ile isleyen aletler ucun melumatlariniz tehlukesiz emala olunur ve hec vaxt saxlanmir.
+        </p>
+        <h2 className="text-xl font-semibold text-foreground mt-8">Elaqe</h2>
+        <p>
+          Fikir ve teklileriniz var? Bize yazmaqdan cekinmeyin:{' '}
+          <a href="mailto:hello@vaxtimyoxdu.com" className="text-primary hover:underline">
+            hello@vaxtimyoxdu.com
           </a>
         </p>
       </div>

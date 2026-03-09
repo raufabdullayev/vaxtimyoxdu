@@ -1,11 +1,35 @@
 stages:
+  - validate
   - deploy
+
+variables:
+  VERCEL_CLI_VERSION: "39.3.0"
+
+validate:
+  stage: validate
+  image: node:20
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  script:
+    - npm ci --prefer-offline
+    - echo "Running lint..."
+    - npm run lint
+    - echo "Running type check..."
+    - npx tsc --noEmit
+  only:
+    - main
+    - merge_requests
+  timeout: 10 minutes
 
 deploy:
   stage: deploy
   image: node:20
+  needs:
+    - validate
   script:
-    - npm install -g vercel@latest
+    - npm install -g vercel@${VERCEL_CLI_VERSION}
     - echo "Vercel version:" && vercel --version
     - echo "Pulling project..."
     - vercel pull --yes --environment=production --token=$VERCEL_TOKEN 2>&1
@@ -18,3 +42,4 @@ deploy:
     url: https://vaxtimyoxdu.com
   only:
     - main
+  timeout: 15 minutes

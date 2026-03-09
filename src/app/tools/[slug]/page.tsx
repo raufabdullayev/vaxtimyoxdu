@@ -5,7 +5,6 @@ import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
 import { generateToolMetadata, generateToolJsonLd } from '@/lib/utils/seo'
 import ToolTemplate from '@/components/tools/ToolTemplate'
-import AdBanner from '@/components/layout/AdBanner'
 
 const toolComponents: Record<string, React.ComponentType> = {
   'qr-code-generator': dynamic(() => import('@/components/tools/generators/QrCodeGenerator')),
@@ -55,11 +54,9 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <AdBanner slot="page-top" format="banner" className="mb-4" />
       <ToolTemplate tool={tool}>
         <Component />
       </ToolTemplate>
-      <AdBanner slot="page-bottom" format="sidebar" className="mt-6 mx-auto" />
     </>
   )
 }

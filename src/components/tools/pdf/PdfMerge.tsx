@@ -182,7 +182,7 @@ export default function PdfMerge() {
 
       {done && (
         <div className="p-4 rounded-lg bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-400 text-sm">
-          PDFs merged successfully! Click "Download Merged PDF" to save.
+          PDFs merged successfully! Click &ldquo;Download Merged PDF&rdquo; to save.
         </div>
       )}
     </div>

@@ -49,8 +49,8 @@ export default function PrivacyPage() {
         <h2 className="text-xl font-semibold text-foreground mt-8">Contact</h2>
         <p>
           For privacy-related inquiries, contact us at{' '}
-          <a href="mailto:privacy@toolbox-ai.com" className="text-primary hover:underline">
-            privacy@toolbox-ai.com
+          <a href="mailto:privacy@vaxtimyoxdu.com" className="text-primary hover:underline">
+            privacy@vaxtimyoxdu.com
           </a>
         </p>
       </div>

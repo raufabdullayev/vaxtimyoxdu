@@ -10,6 +10,8 @@ interface AIProvider {
   model: string
 }
 
+const PROVIDER_TIMEOUT_MS = 15000
+
 function getProviders(): AIProvider[] {
   const providers: AIProvider[] = []
 
@@ -51,29 +53,43 @@ async function callProvider(
   messages: ChatMessage[],
   maxTokens: number
 ): Promise<string> {
-  const res = await fetch(provider.baseUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${provider.apiKey}`,
-    },
-    body: JSON.stringify({
-      model: provider.model,
-      messages,
-      max_tokens: maxTokens,
-      temperature: 0.7,
-    }),
-  })
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), PROVIDER_TIMEOUT_MS)
 
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}))
-    throw new Error(
-      `${provider.name} error: ${err.error?.message || res.status}`
-    )
+  try {
+    const res = await fetch(provider.baseUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${provider.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: provider.model,
+        messages,
+        max_tokens: maxTokens,
+        temperature: 0.7,
+      }),
+      signal: controller.signal,
+    })
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}))
+      throw new Error(
+        `${provider.name} error: ${err.error?.message || res.status}`
+      )
+    }
+
+    const data = await res.json()
+    const content = data.choices?.[0]?.message?.content
+
+    if (!content) {
+      throw new Error(`${provider.name} returned empty response`)
+    }
+
+    return content
+  } finally {
+    clearTimeout(timeout)
   }
-
-  const data = await res.json()
-  return data.choices?.[0]?.message?.content || ''
 }
 
 export async function callAI(
@@ -89,7 +105,15 @@ export async function callAI(
   // Try each provider in order, fallback on failure
   for (let i = 0; i < providers.length; i++) {
     try {
-      return await callProvider(providers[i], messages, maxTokens)
+      const result = await callProvider(providers[i], messages, maxTokens)
+
+      if (i > 0) {
+        console.warn(
+          `AI fallback: ${providers[0].name} failed, succeeded with ${providers[i].name}`
+        )
+      }
+
+      return result
     } catch (error) {
       const isLast = i === providers.length - 1
       if (isLast) throw error

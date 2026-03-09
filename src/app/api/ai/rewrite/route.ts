@@ -5,16 +5,25 @@ import { checkRateLimit } from '@/lib/ai/rate-limiter'
 export async function POST(req: NextRequest) {
   try {
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
-    const { allowed, remaining } = checkRateLimit(ip)
+    const { allowed, remaining, retryAfter } = checkRateLimit(ip)
 
     if (!allowed) {
+      const headers: Record<string, string> = { 'X-RateLimit-Remaining': '0' }
+      if (retryAfter) headers['Retry-After'] = String(retryAfter)
       return NextResponse.json(
-        { error: 'Daily limit reached (20 requests/day). Try again tomorrow.' },
-        { status: 429, headers: { 'X-RateLimit-Remaining': '0' } }
+        { error: 'Rate limit exceeded. Please try again later.' },
+        { status: 429, headers }
       )
     }
 
-    const { text, tone } = await req.json()
+    let body
+    try {
+      body = await req.json()
+    } catch {
+      return NextResponse.json({ error: 'Invalid JSON in request body' }, { status: 400 })
+    }
+
+    const { text, tone } = body
 
     if (!text || typeof text !== 'string') {
       return NextResponse.json({ error: 'Text is required' }, { status: 400 })

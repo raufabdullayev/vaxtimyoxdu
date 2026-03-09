@@ -17,7 +17,7 @@ export default function TermsPage() {
 
         <h2 className="text-xl font-semibold text-foreground mt-8">Acceptance of Terms</h2>
         <p>
-          By using ToolBox AI, you agree to these Terms of Service. If you do not agree, please do
+          By using Vaxtim Yoxdu, you agree to these Terms of Service. If you do not agree, please do
           not use our services.
         </p>
 

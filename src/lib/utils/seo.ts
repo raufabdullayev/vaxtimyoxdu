@@ -31,7 +31,6 @@ export function generateBaseMetadata(): Metadata {
     },
     alternates: {
       canonical: SITE_URL,
-      languages: { 'az': SITE_URL, 'en': SITE_URL },
     },
   }
 }
@@ -66,10 +65,6 @@ export function generateToolMetadata(tool: Tool): Metadata {
     },
     alternates: {
       canonical: url,
-      languages: {
-        'az': url,
-        'en': url,
-      },
     },
   }
 }
@@ -88,7 +83,6 @@ export function generateToolJsonLd(tool: Tool) {
       price: '0',
       priceCurrency: 'USD',
     },
-    aggregateRating: undefined,
     creator: {
       '@type': 'Organization',
       name: SITE_NAME,
@@ -141,10 +135,6 @@ export function generateArticleMetadata({
     },
     alternates: {
       canonical: url,
-      languages: {
-        'az': url,
-        'en': url,
-      },
     },
   }
 }
@@ -171,6 +161,11 @@ export function generateNewsArticleJsonLd({
     datePublished: date,
     dateModified: date,
     articleSection: category,
+    author: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
     inLanguage: 'az',
     publisher: {
       '@type': 'Organization',
@@ -230,10 +225,6 @@ export function generateBlogPostMetadata({
     },
     alternates: {
       canonical: url,
-      languages: {
-        'az': url,
-        'en': url,
-      },
     },
   }
 }
