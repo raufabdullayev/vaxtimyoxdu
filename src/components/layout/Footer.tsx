@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Newsletter from './Newsletter'
 
 export default function Footer() {
   return (
@@ -37,6 +38,11 @@ export default function Footer() {
               <li><Link href="/privacy" className="hover:text-foreground">Məxfilik Siyasəti</Link></li>
               <li><Link href="/terms" className="hover:text-foreground">İstifadə Şərtləri</Link></li>
             </ul>
+          </div>
+        </div>
+        <div className="mt-8 pt-8 border-t">
+          <div className="mx-auto max-w-md">
+            <Newsletter />
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">

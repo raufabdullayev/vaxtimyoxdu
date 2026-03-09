@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { tools, categories } from '@/config/tools'
 import ToolCard from '@/components/tools/ToolCard'
 import { ToolCategory } from '@/types/tool'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Pulsuz Onlayn Aletler - Vaxtim Yoxdu',
@@ -50,6 +51,12 @@ export default function ToolsPage() {
 
   return (
     <div className="container py-8 md:py-12">
+      <Breadcrumb
+        items={[
+          { label: 'Ana s\u0259hif\u0259', href: '/' },
+          { label: 'Al\u0259tl\u0259r' },
+        ]}
+      />
       <section className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Pulsuz Onlayn Alətlər

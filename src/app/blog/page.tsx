@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import AdBanner from '@/components/layout/AdBanner'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Blog - Vaxtim Yoxdu',
@@ -72,6 +73,12 @@ const posts = [
 export default function BlogPage() {
   return (
     <div className="container py-12 max-w-3xl">
+      <Breadcrumb
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog' },
+        ]}
+      />
       <h1 className="text-3xl font-bold mb-8">Blog</h1>
       <div className="space-y-8">
         {posts.map((post, index) => (

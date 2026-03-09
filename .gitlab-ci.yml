@@ -1,6 +1,7 @@
 stages:
   - validate
   - deploy
+  - preview
 
 variables:
   VERCEL_CLI_VERSION: "39.3.0"
@@ -43,3 +44,38 @@ deploy:
   only:
     - main
   timeout: 15 minutes
+
+preview:
+  stage: preview
+  image: node:20-alpine
+  before_script:
+    - npm install --global vercel@39.3.0
+  script:
+    - vercel pull --yes --environment=preview --token=$VERCEL_TOKEN
+    - vercel build --token=$VERCEL_TOKEN
+    - PREVIEW_URL=$(vercel deploy --prebuilt --token=$VERCEL_TOKEN)
+    - echo "Preview URL: $PREVIEW_URL"
+  environment:
+    name: preview/$CI_MERGE_REQUEST_IID
+    url: $PREVIEW_URL
+    on_stop: stop_preview
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  timeout: 15m
+  cache:
+    key: vercel-preview-${CI_COMMIT_REF_SLUG}
+    paths:
+      - .vercel/
+
+stop_preview:
+  stage: preview
+  image: alpine:latest
+  script:
+    - echo "Preview environment stopped"
+  environment:
+    name: preview/$CI_MERGE_REQUEST_IID
+    action: stop
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: manual
+  allow_failure: true

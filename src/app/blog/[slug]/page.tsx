@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateBlogPostMetadata, generateBlogArticleJsonLd } from '@/lib/utils/seo'
 import AdBanner from '@/components/layout/AdBanner'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 import { blogPosts } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
 
@@ -42,6 +43,13 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Breadcrumb
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Blog', href: '/blog' },
+          { label: post.title },
+        ]}
       />
       <time className="text-sm text-muted-foreground">{post.date}</time>
       <h1 className="text-3xl font-bold mt-2 mb-8">{post.title}</h1>

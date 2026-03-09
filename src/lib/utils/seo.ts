@@ -3,9 +3,26 @@ import { Tool } from '@/types/tool'
 
 const SITE_URL = 'https://vaxtimyoxdu.com'
 const SITE_NAME = 'Vaxtim Yoxdu'
-const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
+// Static fallback OG image kept for reference; dynamic generation is used via getOgImageUrl
+// const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
+
+function getOgImageUrl(params: {
+  title: string
+  subtitle?: string
+  type?: string
+}): string {
+  const url = new URL(`${SITE_URL}/api/og`)
+  url.searchParams.set('title', params.title)
+  if (params.subtitle) url.searchParams.set('subtitle', params.subtitle)
+  if (params.type) url.searchParams.set('type', params.type)
+  return url.toString()
+}
 
 export function generateBaseMetadata(): Metadata {
+  const ogImage = getOgImageUrl({
+    title: 'Vaxtim Yoxdu',
+    subtitle: 'Qisa xeberler ve pulsuz onlayn aletler',
+  })
   return {
     title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
     description: 'Vaxtiniz yoxdursa, biz variq. Gunluk xeber xulasaleri, pulsuz AI aletleri, PDF birlesdirici, sekil sixma, QR kod yaradici ve daha cox.',
@@ -21,13 +38,13 @@ export function generateBaseMetadata(): Metadata {
       siteName: SITE_NAME,
       type: 'website',
       locale: 'az_AZ',
-      images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: SITE_NAME }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
       description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
     alternates: {
       canonical: SITE_URL,
@@ -37,6 +54,11 @@ export function generateBaseMetadata(): Metadata {
 
 export function generateToolMetadata(tool: Tool): Metadata {
   const url = `${SITE_URL}/tools/${tool.slug}`
+  const ogImage = getOgImageUrl({
+    title: tool.name,
+    subtitle: tool.shortDescription,
+    type: 'tool',
+  })
   return {
     title: `${tool.name} - Free Online Tool | ${SITE_NAME}`,
     description: tool.description,
@@ -50,7 +72,7 @@ export function generateToolMetadata(tool: Tool): Metadata {
       locale: 'en_US',
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: `${tool.name} - ${SITE_NAME}`,
@@ -61,7 +83,7 @@ export function generateToolMetadata(tool: Tool): Metadata {
       card: 'summary_large_image',
       title: `${tool.name} - ${SITE_NAME}`,
       description: tool.shortDescription,
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
     alternates: {
       canonical: url,
@@ -105,6 +127,11 @@ export function generateArticleMetadata({
   category: string
 }): Metadata {
   const url = `${SITE_URL}/info/${slug}`
+  const ogImage = getOgImageUrl({
+    title,
+    subtitle: description.slice(0, 80),
+    type: 'news',
+  })
   return {
     title: `${title} - ${SITE_NAME}`,
     description,
@@ -120,7 +147,7 @@ export function generateArticleMetadata({
       section: category,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
@@ -131,7 +158,7 @@ export function generateArticleMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
     alternates: {
       canonical: url,
@@ -180,7 +207,11 @@ export function generateNewsArticleJsonLd({
       '@type': 'WebPage',
       '@id': `${SITE_URL}/info/${slug}`,
     },
-    image: DEFAULT_OG_IMAGE,
+    image: getOgImageUrl({
+      title,
+      subtitle: description.slice(0, 80),
+      type: 'news',
+    }),
   }
 }
 
@@ -196,6 +227,11 @@ export function generateBlogPostMetadata({
   date: string
 }): Metadata {
   const url = `${SITE_URL}/blog/${slug}`
+  const ogImage = getOgImageUrl({
+    title,
+    subtitle: description.slice(0, 80),
+    type: 'blog',
+  })
   return {
     title: `${title} - ${SITE_NAME} Blog`,
     description,
@@ -210,7 +246,7 @@ export function generateBlogPostMetadata({
       publishedTime: date,
       images: [
         {
-          url: DEFAULT_OG_IMAGE,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
@@ -221,7 +257,7 @@ export function generateBlogPostMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [DEFAULT_OG_IMAGE],
+      images: [ogImage],
     },
     alternates: {
       canonical: url,
@@ -267,7 +303,11 @@ export function generateBlogArticleJsonLd({
       '@type': 'WebPage',
       '@id': `${SITE_URL}/blog/${slug}`,
     },
-    image: DEFAULT_OG_IMAGE,
+    image: getOgImageUrl({
+      title,
+      subtitle: description.slice(0, 80),
+      type: 'blog',
+    }),
   }
 }
 

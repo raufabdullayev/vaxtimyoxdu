@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import AdBanner from '@/components/layout/AdBanner'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'Xeberler - Vaxtim Yoxdu',
@@ -78,6 +79,12 @@ const categoryColors: Record<string, string> = {
 export default function InfoPage() {
   return (
     <div className="container py-8 md:py-12 max-w-3xl">
+      <Breadcrumb
+        items={[
+          { label: 'Ana s\u0259hif\u0259', href: '/' },
+          { label: 'X\u0259b\u0259rl\u0259r' },
+        ]}
+      />
       <h1 className="text-3xl md:text-4xl font-bold mb-2">Xəbərlər</h1>
       <p className="text-muted-foreground mb-8">Qısa və dəqiq xəbərlər — vaxtınız yoxdursa, biz varıq.</p>
 

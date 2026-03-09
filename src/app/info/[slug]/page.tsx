@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateArticleMetadata, generateNewsArticleJsonLd } from '@/lib/utils/seo'
 import AdBanner from '@/components/layout/AdBanner'
+import Breadcrumb from '@/components/layout/Breadcrumb'
+import RelatedArticles from '@/components/layout/RelatedArticles'
 import { newsArticles } from '@/data/news-articles'
 
 export function generateStaticParams() {
@@ -44,7 +46,13 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Link href="/info" className="text-sm text-primary hover:underline mb-4 inline-block">&larr; Xəbərlərə qayıt</Link>
+      <Breadcrumb
+        items={[
+          { label: 'Ana s\u0259hif\u0259', href: '/' },
+          { label: 'X\u0259b\u0259rl\u0259r', href: '/info' },
+          { label: article.title },
+        ]}
+      />
       <div className="flex items-center gap-3 mb-2">
         <span className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
           {article.category}
@@ -76,6 +84,17 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         })}
       </div>
       <AdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
+      <RelatedArticles
+        items={Object.entries(newsArticles)
+          .filter(([slug]) => slug !== params.slug)
+          .slice(0, 2)
+          .map(([slug, a]) => ({
+            slug,
+            title: a.title,
+            category: a.category,
+            date: a.date,
+          }))}
+      />
     </div>
   )
 }

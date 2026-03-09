@@ -5,6 +5,7 @@ import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
 import { generateToolMetadata, generateToolJsonLd } from '@/lib/utils/seo'
 import ToolTemplate from '@/components/tools/ToolTemplate'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 
 const toolComponents: Record<string, React.ComponentType> = {
   'qr-code-generator': dynamic(() => import('@/components/tools/generators/QrCodeGenerator')),
@@ -53,6 +54,13 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Breadcrumb
+        items={[
+          { label: 'Ana s\u0259hif\u0259', href: '/' },
+          { label: 'Al\u0259tl\u0259r', href: '/tools' },
+          { label: tool.name },
+        ]}
       />
       <ToolTemplate tool={tool}>
         <Component />
