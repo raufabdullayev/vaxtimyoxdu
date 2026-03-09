@@ -53,8 +53,8 @@ preview:
   script:
     - vercel pull --yes --environment=preview --token=$VERCEL_TOKEN
     - vercel build --token=$VERCEL_TOKEN
-    - PREVIEW_URL=$(vercel deploy --prebuilt --token=$VERCEL_TOKEN)
-    - echo "Preview URL: $PREVIEW_URL"
+    - vercel deploy --prebuilt --token=$VERCEL_TOKEN | tee /tmp/preview_url.txt
+    - echo "Preview URL:" && cat /tmp/preview_url.txt
   environment:
     name: preview/$CI_MERGE_REQUEST_IID
     url: $PREVIEW_URL
