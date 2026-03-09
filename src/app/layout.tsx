@@ -45,7 +45,18 @@ const jsonLdOrganization = {
   url: 'https://vaxtimyoxdu.com',
   logo: 'https://vaxtimyoxdu.com/logo.png',
   description: 'Qisa xeberler ve pulsuz onlayn aletler - Azerbaycan',
-  sameAs: [],
+  sameAs: [
+    'https://github.com/vaxtimyoxdu',
+    'https://x.com/vaxtimyoxdu',
+    'https://instagram.com/vaxtimyoxdu',
+    'https://linkedin.com/company/vaxtimyoxdu',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'hello@vaxtimyoxdu.com',
+    contactType: 'customer service',
+    availableLanguage: ['az', 'en'],
+  },
 }
 
 export default function RootLayout({

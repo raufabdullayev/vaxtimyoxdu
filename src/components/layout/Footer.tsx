@@ -1,5 +1,29 @@
 import Link from 'next/link'
+import { Github, Twitter, Instagram, Linkedin } from 'lucide-react'
 import Newsletter from './Newsletter'
+
+const socialLinks = [
+  {
+    href: 'https://github.com/vaxtimyoxdu',
+    label: 'GitHub',
+    icon: Github,
+  },
+  {
+    href: 'https://x.com/vaxtimyoxdu',
+    label: 'Twitter',
+    icon: Twitter,
+  },
+  {
+    href: 'https://instagram.com/vaxtimyoxdu',
+    label: 'Instagram',
+    icon: Instagram,
+  },
+  {
+    href: 'https://linkedin.com/company/vaxtimyoxdu',
+    label: 'LinkedIn',
+    icon: Linkedin,
+  },
+]
 
 export default function Footer() {
   return (
@@ -11,6 +35,23 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">
               Qısa xəbərlər və pulsuz onlayn alətlər. Qeydiyyat lazım deyil.
             </p>
+            <div className="mt-4">
+              <p className="text-sm font-semibold mb-2">Bizi izləyin</p>
+              <div className="flex items-center gap-3">
+                {socialLinks.map(({ href, label, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <Icon size={20} />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
           <div>
             <h4 className="font-semibold text-sm mb-3">Alətlər</h4>

@@ -5,7 +5,7 @@ import { checkRateLimit } from '@/lib/ai/rate-limiter'
 export async function POST(req: NextRequest) {
   try {
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
-    const { allowed, remaining, retryAfter } = checkRateLimit(ip)
+    const { allowed, remaining, retryAfter } = await checkRateLimit(ip)
 
     if (!allowed) {
       const headers: Record<string, string> = { 'X-RateLimit-Remaining': '0' }

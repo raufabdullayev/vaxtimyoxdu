@@ -16,32 +16,50 @@ export default function TextRewriter() {
   const [tone, setTone] = useState('professional')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [remainingCount, setRemainingCount] = useState<string | null>(null)
 
   const rewrite = async () => {
     if (!input.trim()) {
-      setError('Please enter text to rewrite')
+      setError('Yenidən yazmaq üçün mətn daxil edin')
       return
     }
     setLoading(true)
     setError('')
     setOutput('')
+    setRemainingCount(null)
     try {
       const res = await fetch('/api/ai/rewrite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: input, tone }),
       })
-      const data = await res.json()
+
+      const remaining = res.headers.get('X-RateLimit-Remaining')
+
       if (!res.ok) {
-        if (res.status === 429) throw new Error('Daily limit reached. Please try again tomorrow.')
-        throw new Error('Service temporarily unavailable. Please try again later.')
+        if (res.status === 429) {
+          const retryAfter = res.headers.get('Retry-After')
+          setError(retryAfter
+            ? `Gündəlik limit aşılıb. ${retryAfter} saniyə sonra yenidən cəhd edin.`
+            : 'Gündəlik limit aşılıb. Sabah yenidən cəhd edin.')
+          return
+        }
+        if (res.status >= 500) {
+          setError('Xidmət müvəqqəti əlçatmazdır. Bir neçə dəqiqə sonra yenidən cəhd edin.')
+          return
+        }
+        setError('Xəta baş verdi. Yenidən cəhd edin.')
+        return
       }
+
+      const data = await res.json()
       setOutput(data.result)
-    } catch (e) {
-      if (e instanceof TypeError && e.message === 'Failed to fetch') {
-        setError('Connection error. Please check your internet connection.')
+      if (remaining) setRemainingCount(remaining)
+    } catch (err) {
+      if (err instanceof TypeError) {
+        setError('İnternet bağlantınızı yoxlayın.')
       } else {
-        setError(e instanceof Error ? e.message : 'Something went wrong. Please try again.')
+        setError('Xəta baş verdi. Yenidən cəhd edin.')
       }
     } finally {
       setLoading(false)
@@ -92,7 +110,7 @@ export default function TextRewriter() {
         disabled={loading}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
       >
-        {loading ? 'Rewriting...' : 'Rewrite Text'}
+        {loading ? 'Mətn yenidən yazılır...' : 'Rewrite Text'}
       </button>
 
       {output && (
@@ -104,6 +122,11 @@ export default function TextRewriter() {
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap">
             {output}
           </div>
+          {remainingCount && (
+            <p className="text-xs text-muted-foreground mt-2">
+              Qalan istifad{'\u0259'}: {remainingCount}/20
+            </p>
+          )}
         </div>
       )}
     </div>

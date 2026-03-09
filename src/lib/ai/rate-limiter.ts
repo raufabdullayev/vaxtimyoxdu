@@ -1,36 +1,82 @@
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
+
 const DAILY_LIMIT = 20 // requests per IP per day
 const BURST_LIMIT = 5 // requests per IP per minute
 const BURST_WINDOW_MS = 60000 // 1 minute
 
-// In-memory store (resets on server restart, sufficient for MVP)
-const store = new Map<string, { count: number; resetAt: number }>()
-const burstStore = new Map<string, number[]>()
+// Use Upstash Redis in production, in-memory fallback for dev
+const redis =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+      })
+    : null
 
-export function checkRateLimit(
+// Upstash rate limiters
+const dailyLimiter = redis
+  ? new Ratelimit({
+      redis,
+      limiter: Ratelimit.slidingWindow(20, '1 d'),
+      prefix: 'rl:daily',
+    })
+  : null
+
+const burstLimiter = redis
+  ? new Ratelimit({
+      redis,
+      limiter: Ratelimit.slidingWindow(5, '1 m'),
+      prefix: 'rl:burst',
+    })
+  : null
+
+// In-memory fallback stores (for local dev or when Redis is not configured)
+const memoryDailyStore = new Map<string, { count: number; resetAt: number }>()
+const memoryBurstStore = new Map<string, number[]>()
+
+export async function checkRateLimit(
   ip: string
-): { allowed: boolean; remaining: number; retryAfter?: number } {
+): Promise<{ allowed: boolean; remaining: number; retryAfter?: number }> {
+  // Use Upstash if available
+  if (dailyLimiter && burstLimiter) {
+    // Check burst first
+    const burst = await burstLimiter.limit(ip)
+    if (!burst.success) {
+      const retryAfter = Math.ceil((burst.reset - Date.now()) / 1000)
+      return { allowed: false, remaining: 0, retryAfter: Math.max(retryAfter, 1) }
+    }
+    // Check daily
+    const daily = await dailyLimiter.limit(ip)
+    if (!daily.success) {
+      return { allowed: false, remaining: 0 }
+    }
+    return { allowed: true, remaining: daily.remaining }
+  }
+
+  // Fallback: in-memory (same logic as before, for local dev)
   const now = Date.now()
 
   // Clean expired entries periodically
-  if (store.size > 10000) {
-    store.forEach((val, key) => {
-      if (val.resetAt < now) store.delete(key)
+  if (memoryDailyStore.size > 10000) {
+    memoryDailyStore.forEach((val, key) => {
+      if (val.resetAt < now) memoryDailyStore.delete(key)
     })
   }
 
-  if (burstStore.size > 10000) {
-    burstStore.forEach((timestamps, key) => {
+  if (memoryBurstStore.size > 10000) {
+    memoryBurstStore.forEach((timestamps, key) => {
       const valid = timestamps.filter((t) => t > now - BURST_WINDOW_MS)
       if (valid.length === 0) {
-        burstStore.delete(key)
+        memoryBurstStore.delete(key)
       } else {
-        burstStore.set(key, valid)
+        memoryBurstStore.set(key, valid)
       }
     })
   }
 
   // Check burst limit first
-  const burstTimestamps = burstStore.get(ip) || []
+  const burstTimestamps = memoryBurstStore.get(ip) || []
   const recentTimestamps = burstTimestamps.filter((t) => t > now - BURST_WINDOW_MS)
 
   if (recentTimestamps.length >= BURST_LIMIT) {
@@ -40,14 +86,14 @@ export function checkRateLimit(
   }
 
   // Check daily limit
-  const entry = store.get(ip)
+  const entry = memoryDailyStore.get(ip)
 
   if (!entry || entry.resetAt < now) {
     // New window: midnight UTC
     const tomorrow = new Date()
     tomorrow.setUTCHours(24, 0, 0, 0)
-    store.set(ip, { count: 1, resetAt: tomorrow.getTime() })
-    burstStore.set(ip, [...recentTimestamps, now])
+    memoryDailyStore.set(ip, { count: 1, resetAt: tomorrow.getTime() })
+    memoryBurstStore.set(ip, [...recentTimestamps, now])
     return { allowed: true, remaining: DAILY_LIMIT - 1 }
   }
 
@@ -56,6 +102,6 @@ export function checkRateLimit(
   }
 
   entry.count++
-  burstStore.set(ip, [...recentTimestamps, now])
+  memoryBurstStore.set(ip, [...recentTimestamps, now])
   return { allowed: true, remaining: DAILY_LIMIT - entry.count }
 }

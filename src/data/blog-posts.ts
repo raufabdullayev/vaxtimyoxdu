@@ -448,6 +448,232 @@ The good news is that maintaining high writing standards has never been easier. 
 
 Your words represent you. Make sure they represent you well.`,
   },
+  'pdf-tools-guide-merge-split-compress': {
+    title: 'The Complete Guide to PDF Tools: Merge, Split, and Compress',
+    date: '2026-03-10',
+    relatedTools: ['pdf-merge', 'image-compress', 'base64-encode-decode'],
+    content: `PDF files are the backbone of modern document management. From contracts and invoices to research papers and portfolios, PDFs are the universal format for sharing documents that look the same on every device. But working with PDFs has traditionally required expensive software. In 2026, browser-based PDF tools have changed the game, giving you professional-grade document management for free with complete privacy. This guide covers everything you need to know about merging, splitting, and compressing PDFs effectively.
+
+## Why PDFs Still Dominate
+
+Despite cloud-based editors like Google Docs and Notion, PDFs remain the standard for finalized documents. A PDF preserves your formatting exactly as intended -- fonts, images, layout, and colors render identically on Windows, Mac, Android, or iPad. No other format offers this level of cross-platform consistency.
+
+PDFs are also the legal standard for contracts, filings, and official records. Most government agencies, law firms, banks, and regulatory bodies require PDF submissions. If you work in any professional capacity, you will deal with PDFs regularly, and knowing how to manage them efficiently saves significant time over the course of a career.
+
+## Merging PDFs: Combining Documents Into One
+
+Merging is the most common PDF operation. You need five invoices combined for your accountant, a cover letter merged with your resume for a job portal, or three report sections from different team members unified into one deliverable.
+
+**Common use cases for PDF merging:**
+
+- Combining invoices or financial statements for bookkeeping
+- Merging cover letters with resumes for job applications
+- Assembling multi-section reports from different contributors
+- Creating comprehensive portfolios from individual project files
+- Compiling signed contract pages into a single agreement
+- Bundling related documents for legal or compliance submissions
+
+The key to effective merging is page order control. A good tool lets you drag and drop files into the correct sequence and preview each document before combining. It should also handle documents of different page sizes gracefully. The PDF Merge tool on Vaxtim Yoxdu handles all of this directly in your browser with a simple drag-and-drop interface that makes the process intuitive.
+
+## Splitting PDFs: Extracting What You Need
+
+Splitting is the inverse of merging. You receive a 50-page report but only need pages 12 through 18 for your meeting. You have a scanned document where each page is a separate form that needs to go to a different department. You want to extract a single chapter from a manual for quick reference.
+
+Effective splitting tools let you specify exact page ranges, select individual pages, or split at regular intervals (every 5 pages, for example). The ability to preview pages before splitting ensures you extract exactly what you need without trial and error.
+
+## Compressing PDFs: Reducing File Size
+
+PDF files can grow surprisingly large, especially with high-resolution images or embedded fonts. A marketing brochure can easily exceed 20MB, while email servers cap attachments at 10-25MB.
+
+**Why PDF compression matters:**
+
+- **Email attachments**: Most providers reject files over 25MB
+- **Upload portals**: Government and corporate portals often cap at 5-10MB
+- **Storage**: Compressed PDFs reduce cloud storage costs for large archives
+- **Loading speed**: PDFs on websites load faster when compressed
+- **Mobile access**: Smaller files download faster on mobile connections
+
+PDF compression works by optimizing images, removing redundant data, and streamlining the file structure. A well-compressed PDF can be 60-80% smaller with no visible quality loss. Choose maximum compression for email and web use, lighter compression for high-resolution print.
+
+## The Privacy Advantage of Browser-Based Tools
+
+Traditional online PDF tools require uploading files to a remote server. Your sensitive contracts, financial records, and personal files sit on someone else's infrastructure. Browser-based PDF tools like those on Vaxtim Yoxdu use JavaScript APIs to process files entirely within your browser. Your documents never leave your device -- no upload, no server-side processing, no data retention.
+
+**This matters especially for:**
+
+- Legal documents containing confidential terms
+- Financial statements and tax documents
+- Medical records protected by privacy regulations
+- Business plans and proprietary information
+- Personal identification documents
+
+## Best Practices for PDF Management
+
+1. **Name files descriptively before merging** -- Use conventions like "Invoice-2026-03-ClientName.pdf" rather than "scan001.pdf" for easier navigation
+2. **Compress before sharing, not before archiving** -- Keep original high-quality PDFs in your archive and create compressed copies for sharing
+3. **Check page orientation after merging** -- Documents from different sources may have mixed portrait and landscape orientations
+4. **Use PDF metadata** -- Set document title, author, and subject for easier search and a more professional appearance
+5. **Verify the final result** -- After any operation, scroll through every page to catch issues before sharing
+
+## Choosing the Right Tool
+
+When evaluating PDF tools, prioritize these factors:
+
+- **Client-side processing** for complete file privacy
+- **No file size limits** or hidden upgrade prompts
+- **No account required** for immediate access
+- **Preview functionality** to verify results before downloading
+- **Cross-browser compatibility** for any browser choice
+
+All of these features are available in the free PDF tools at Vaxtim Yoxdu. Your documents stay private, the tools work instantly, and there are no hidden limits or account requirements. Managing your documents should be simple, fast, and secure.`,
+  },
+  'qr-codes-everything-you-need-to-know': {
+    title: 'QR Codes: Everything You Need to Know in 2026',
+    date: '2026-03-09',
+    relatedTools: ['qr-code-generator', 'color-picker', 'image-convert'],
+    content: `QR codes have evolved from a niche industrial tracking technology into one of the most widely recognized digital tools on the planet. In 2026, they are everywhere -- restaurant menus, product packaging, business cards, event tickets, museum exhibits, and transit systems. Understanding how QR codes work, what types exist, and how to create effective ones is a practical skill for anyone who wants to bridge the gap between physical and digital experiences. Here is everything you need to know.
+
+## A Brief History of QR Codes
+
+QR codes -- short for Quick Response codes -- were invented in 1994 by Denso Wave, a subsidiary of Toyota. The original purpose was tracking vehicle parts during manufacturing. Traditional barcodes could only hold about 20 characters, which was insufficient for complex inventory systems. QR codes solved this by encoding data in two dimensions, allowing them to store thousands of characters in a small square.
+
+For over two decades, QR codes remained primarily an industrial technology. The global pandemic of 2020 was the turning point. Contactless menus, digital check-ins, and touchless payments drove adoption to unprecedented levels. By 2022, every modern smartphone could scan QR codes natively through the camera app. Today in 2026, QR codes are a permanent fixture of daily life.
+
+## How QR Codes Work
+
+A QR code is a machine-readable matrix of black and white squares on a grid. Each square represents a binary value, and the pattern encodes data according to a standardized format. When you scan a QR code, the software decodes this pattern back into the original data.
+
+**Key structural elements:**
+
+- **Finder patterns**: Three large corner squares that help the scanner identify and orient the code
+- **Alignment patterns**: Smaller squares that compensate for distortion on curved surfaces
+- **Timing patterns**: Alternating modules that help determine the grid size
+- **Error correction**: Redundant data that allows reading even when up to 30% of the code is damaged
+
+This error correction is why QR codes can incorporate logos in their center without becoming unscannable.
+
+## Types of QR Code Content
+
+QR codes can encode many types of data:
+
+1. **URL**: Opens a webpage in the browser. Perfect for marketing materials and product packaging.
+2. **Plain text**: Any text up to approximately 4,000 characters, readable without internet access.
+3. **Email**: Pre-fills an email with recipient, subject, and body. One scan starts a pre-addressed email.
+4. **Phone number**: Prompts the user to call the encoded number.
+5. **Wi-Fi credentials**: Encodes network name, password, and encryption type. Scanning auto-connects the device. Popular in hotels, cafes, and offices.
+6. **vCard**: Full contact information that adds directly to the user's address book -- the modern replacement for exchanging business cards.
+7. **Calendar event**: Encodes event details that add directly to the user's calendar.
+8. **Geolocation**: Opens a map application with pinned coordinates. Useful for venues and store locations.
+
+## Best Practices for Creating QR Codes
+
+Creating a reliable QR code requires more than generating a square. Follow these best practices:
+
+**Size and placement**: A QR code should be at least 2cm x 2cm for close-range scanning and proportionally larger for greater distances. For a poster viewed from 3 meters away, target at least 15cm x 15cm. Always test at the intended scanning distance.
+
+**Contrast and colors**: QR codes require strong contrast between foreground and background. Black-on-white works best. If using brand colors, keep the foreground dark and background light. Never use inverted color schemes. The Color Picker on Vaxtim Yoxdu can help you choose combinations that maintain sufficient contrast while aligning with your brand.
+
+**Error correction level**: Four levels are available -- Low (7%), Medium (15%), Quartile (25%), and High (30%). Use Low for clean digital displays, Medium for standard print, and High for surfaces that might get scratched or dirty.
+
+**Quiet zone**: Every QR code needs a blank border at least 4 modules wide. Never crop this space or place design elements too close to the edges.
+
+**Testing**: Test with at least three different devices before deploying. Check at the expected scanning distance, in various lighting conditions, and at different angles.
+
+## Business Applications in 2026
+
+QR codes have moved far beyond simple URL linking:
+
+- **Augmented reality**: QR codes launch AR experiences overlaying digital content on physical products and exhibits
+- **Contactless payments**: QR-based payment systems process billions of transactions daily worldwide
+- **Authentication**: Two-factor authentication apps use QR codes for secure setup
+- **Supply chain tracking**: Every step from manufacturing to delivery is tracked, giving consumers full provenance transparency
+- **Interactive print media**: Magazines and direct mail bridge readers from print to video, extended articles, and interactive experiences
+- **Smart packaging**: Food companies provide nutritional information, allergen data, and recipes via QR codes on packaging
+
+## Creating Your QR Codes
+
+The QR Code Generator at Vaxtim Yoxdu lets you create QR codes for URLs, text, email, phone numbers, and more. Customize size and colors to match your brand, download in PNG or SVG format, and generate codes entirely in your browser with no data sent to external servers. For print applications, always use SVG -- it scales to any size without losing sharpness.
+
+QR codes are no longer a trend -- they are infrastructure. Understanding how to create and deploy them effectively is a skill that serves anyone connecting physical experiences with digital content. Start creating your codes today and put them to work.`,
+  },
+  'developer-productivity-tools-you-should-use': {
+    title: '10 Developer Productivity Tools You Should Be Using',
+    date: '2026-03-08',
+    relatedTools: ['json-formatter', 'regex-tester', 'hash-generator', 'base64-encode-decode'],
+    content: `Developer productivity is not about writing code faster -- it is about removing friction from your workflow so you can spend more time solving real problems and less time on repetitive tasks. The best developers are the ones who have optimized their environment, chosen the right tools, and eliminated bottlenecks. Here are ten productivity tools that will improve your daily development workflow in 2026.
+
+## 1. JSON Formatter and Validator
+
+If you work with APIs or configuration files, you deal with JSON constantly. Raw API responses are often minified into a single unreadable line, and a single misplaced comma can break everything. A JSON formatter prettifies minified JSON with proper indentation and syntax highlighting, making nested structures easy to navigate.
+
+More importantly, a good formatter validates your data and pinpoints errors. Instead of scanning a 200-line config file for a missing bracket, the tool highlights the exact line where the syntax breaks. The JSON Formatter on Vaxtim Yoxdu handles prettify, minify, validation, and error detection directly in the browser.
+
+## 2. Regex Tester
+
+Regular expressions are powerful but error-prone. Writing regex without a tester is like writing code without running it. A real-time regex tester shows you exactly what your pattern matches as you type, highlights capture groups, and lets you test against multiple input strings for edge case validation.
+
+**Pro tip:** Build a personal library of tested regex patterns for common tasks -- email validation, URL parsing, date extraction, phone number formatting. Having these ready saves time every week.
+
+## 3. Base64 Encoder and Decoder
+
+Base64 encoding appears everywhere: JWT tokens, data URIs, API authentication headers, certificate files, and CI/CD configuration values. A good Base64 tool handles both text and file encoding, supports UTF-8 properly, and lets you encode or decode with a single click. When debugging a Base64-encoded error message inside a JWT payload, you should not need to write a script just to read the contents.
+
+## 4. Hash Generator
+
+Hash functions are fundamental to security and data integrity. Whether you are verifying file integrity, generating checksums for deployment artifacts, or implementing content-addressable storage, you need quick access to multiple hash algorithms. A tool supporting MD5, SHA-1, SHA-256, and SHA-512 covers virtually every use case, and generating hashes in your browser removes friction from verification workflows.
+
+## 5. Color Picker and Converter
+
+Front-end developers need color conversion tools multiple times per day. Design handoffs come in HEX, CSS custom properties use HSL, and canvas operations use RGB. A comprehensive color picker that converts between formats and generates harmonious palettes eliminates constant back-and-forth. WCAG contrast ratio checking is particularly valuable as accessibility compliance becomes standard for professional web projects.
+
+## 6. Code Snippet Manager
+
+Every developer accumulates useful code snippets -- utility functions, boilerplate templates, regex patterns, SQL queries, and shell commands. Without a system for organizing these, they get lost in Slack messages or buried in project files. A dedicated snippet manager lets you tag, search, and organize fragments by language or project. Building this library is an investment that compounds over your entire career.
+
+## 7. API Testing Client
+
+Whether you use Postman, Insomnia, or a browser-based alternative, a dedicated API testing tool is essential. A good client lets you save requests, organize them into collections, set up environment variables for dev/staging/production, and chain requests together. Key features to prioritize include request history, authentication helpers, and the ability to share collections with your team.
+
+## 8. Diff and Merge Tool
+
+Comparing text, code, or data outputs is routine in development. While git diff handles version-controlled files, you frequently need to compare arbitrary blocks of text -- an expected API response versus the actual, or two versions of a config file. A visual diff tool that highlights additions, deletions, and modifications side by side makes these comparisons instant and accurate.
+
+## 9. Terminal Multiplexer
+
+If you spend significant time in the terminal, a multiplexer like tmux or Zellij transforms your workflow. Running multiple sessions in a single window, splitting panes for simultaneous monitoring, and maintaining persistent sessions that survive SSH disconnections become indispensable. The learning curve is modest and the productivity gain is permanent.
+
+## 10. Browser Developer Tools (Beyond the Basics)
+
+Most developers barely scratch the surface of browser DevTools. Advanced features worth mastering include:
+
+- **Performance profiling**: Identify rendering bottlenecks and expensive JavaScript operations
+- **Network throttling**: Test application behavior on slow connections
+- **Memory profiling**: Find memory leaks with heap snapshots
+- **Lighthouse audits**: Run performance, accessibility, and SEO audits in your browser
+
+## Online Tools vs. Desktop Applications
+
+A significant shift in developer tooling is the move toward browser-based tools. The advantages are compelling:
+
+- **Zero installation**: Open a URL and start working. No downloads or dependency conflicts.
+- **Cross-platform**: Same tool works on Windows, macOS, Linux, and ChromeOS.
+- **Corporate environments**: Browser tools work on locked-down machines where you cannot install software.
+- **Privacy**: Client-side tools process data locally -- your code and API keys never leave your device.
+
+This is exactly the philosophy behind the developer tools on Vaxtim Yoxdu. The JSON Formatter, Regex Tester, Base64 Encoder, and Hash Generator all run entirely in your browser. No accounts, no installation, no data transmission.
+
+## Building Your Personal Toolkit
+
+The most productive developers invest time in curating their toolkit. Here is a practical approach:
+
+1. **Audit your workflow** -- Track where you lose minutes to friction and manual processes
+2. **Eliminate one bottleneck at a time** -- Pick the biggest time waster and find a tool that addresses it
+3. **Bookmark and organize** -- Create a browser folder for your most-used online tools
+4. **Automate repetitive tasks** -- If you do something manually more than three times, automate it
+5. **Share with your team** -- Collective productivity gains multiply across the organization
+
+The goal is not to have the most tools -- it is to have the right tools, always within reach. Start with the tools that address your biggest daily friction points, and build from there. Every minute you invest in optimizing your workflow pays compound interest for the rest of your career.`,
+  },
 }
 
 export const blogSlugs = Object.keys(blogPosts)
