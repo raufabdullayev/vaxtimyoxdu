@@ -1,11 +1,10 @@
+# CI pipeline: validate and test only.
+# Deployment is handled by Vercel Git Integration (auto-deploy on push to main).
+# This eliminates the Vercel CLI api-upload-free rate limit issue.
+
 stages:
   - validate
   - test
-  - deploy
-  - preview
-
-variables:
-  VERCEL_CLI_VERSION: "39.3.0"
 
 validate:
   stage: validate
@@ -40,79 +39,3 @@ test:
     - if: '$CI_COMMIT_BRANCH == "main"'
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
   timeout: 10 minutes
-
-deploy:
-  stage: deploy
-  image: node:20
-  needs:
-    - validate
-    - test
-  retry:
-    max: 2
-    when:
-      - script_failure
-  script:
-    - npm install -g vercel@${VERCEL_CLI_VERSION}
-    - echo "Vercel version:" && vercel --version
-    - echo "Pulling project..."
-    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN 2>&1
-    - echo "Building..."
-    - vercel build --prod --token=$VERCEL_TOKEN 2>&1
-    - echo "Deploying..."
-    - |
-      for attempt in 1 2 3; do
-        echo "Deploy attempt $attempt..."
-        if vercel deploy --prebuilt --prod --archive=tgz --token=$VERCEL_TOKEN 2>&1; then
-          echo "Deploy succeeded on attempt $attempt"
-          break
-        else
-          if [ $attempt -lt 3 ]; then
-            echo "Deploy failed, waiting 60s before retry..."
-            sleep 60
-          else
-            echo "Deploy failed after 3 attempts"
-            exit 1
-          fi
-        fi
-      done
-  environment:
-    name: production
-    url: https://vaxtimyoxdu.com
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-  timeout: 20 minutes
-
-preview:
-  stage: preview
-  image: node:20-alpine
-  before_script:
-    - npm install --global vercel@39.3.0
-  script:
-    - vercel pull --yes --environment=preview --token=$VERCEL_TOKEN
-    - vercel build --token=$VERCEL_TOKEN
-    - vercel deploy --prebuilt --token=$VERCEL_TOKEN | tee /tmp/preview_url.txt
-    - echo "Preview URL:" && cat /tmp/preview_url.txt
-  environment:
-    name: preview/$CI_MERGE_REQUEST_IID
-    url: $PREVIEW_URL
-    on_stop: stop_preview
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-  timeout: 15m
-  cache:
-    key: vercel-preview-${CI_COMMIT_REF_SLUG}
-    paths:
-      - .vercel/
-
-stop_preview:
-  stage: preview
-  image: alpine:latest
-  script:
-    - echo "Preview environment stopped"
-  environment:
-    name: preview/$CI_MERGE_REQUEST_IID
-    action: stop
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-      when: manual
-  allow_failure: true
