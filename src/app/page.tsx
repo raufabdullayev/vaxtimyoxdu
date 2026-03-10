@@ -78,7 +78,7 @@ export default function HomePage() {
       <section className="mt-16 text-center">
         <div className="grid grid-cols-3 max-w-lg mx-auto gap-8">
           <div>
-            <p className="text-3xl font-bold text-primary">14+</p>
+            <p className="text-3xl font-bold text-primary">30</p>
             <p className="text-sm text-muted-foreground">Pulsuz Alət</p>
           </div>
           <div>
