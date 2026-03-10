@@ -13,12 +13,16 @@ const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'),
 const InstallPrompt = dynamic(() => import('@/components/layout/InstallPrompt'), {
   ssr: false,
 })
+const PageViewTracker = dynamic(() => import('@/components/analytics/PageViewTracker'), {
+  ssr: false,
+})
 
 export default function ClientShell() {
   return (
     <>
       <CookieConsent />
       <InstallPrompt />
+      <PageViewTracker />
     </>
   )
 }
