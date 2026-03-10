@@ -422,5 +422,23 @@
   "language": {
     "label": "Vybrat yazyk",
     "current": "Tekushchiy yazyk"
+  },
+  "info": {
+    "metaTitle": "Novosti - Vaxtim Yoxdu",
+    "metaDescription": "Kratkie obzory vazhnykh novostey dnya. Ekonomika, tekhnologii, obrazovanie, sport - vse za odno mgnovenie.",
+    "title": "Novosti",
+    "subtitle": "Korotkie i tochnye novosti - kogda net vremeni, my zdes.",
+    "breadcrumbHome": "Glavnaya",
+    "breadcrumbNews": "Novosti",
+    "noArticles": "Novostey na etom yazyke poka net."
+  },
+  "blog": {
+    "metaTitle": "Blog - Vaxtim Yoxdu",
+    "metaDescription": "Sovety, uroki i rukovodstva ob onlayn instrumentakh, II i proizvoditelnosti.",
+    "title": "Blog",
+    "breadcrumbHome": "Glavnaya",
+    "breadcrumbBlog": "Blog",
+    "noArticles": "Zapisey v bloge na etom yazyke poka net.",
+    "readMore": "Chitat dalshe"
   }
 }

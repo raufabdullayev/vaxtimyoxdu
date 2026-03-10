@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
-import Link from 'next/link'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { generateArticleMetadata, generateNewsArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
@@ -11,7 +11,7 @@ export function generateStaticParams() {
   return Object.keys(newsArticles).map((slug) => ({ slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export function generateMetadata({ params }: { params: { slug: string; locale: string } }): Metadata {
   const article = newsArticles[params.slug]
   if (!article) return {}
 
@@ -24,11 +24,14 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     date: article.date,
     category: article.category,
   })
-  const alternates = generateHreflangAlternates(`/info/${params.slug}`)
+  const alternates = generateHreflangAlternates(`/info/${params.slug}`, params.locale)
   return { ...metadata, alternates }
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
+export default async function ArticlePage({ params }: { params: { slug: string; locale: string } }) {
+  setRequestLocale(params.locale)
+  const nav = await getTranslations('common.nav')
+
   const article = newsArticles[params.slug]
   if (!article) notFound()
 
@@ -40,6 +43,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     slug: params.slug,
     date: article.date,
     category: article.category,
+    locale: params.locale,
   })
 
   return (
@@ -50,8 +54,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       />
       <Breadcrumb
         items={[
-          { label: 'Ana s\u0259hif\u0259', href: '/' },
-          { label: 'X\u0259b\u0259rl\u0259r', href: '/info' },
+          { label: nav('home'), href: '/' },
+          { label: nav('news'), href: '/info' },
           { label: article.title },
         ]}
       />

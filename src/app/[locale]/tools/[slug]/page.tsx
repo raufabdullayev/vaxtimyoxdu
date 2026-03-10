@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
 import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
@@ -97,24 +98,72 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: { slug: string; locale: string }
 }): Promise<Metadata> {
   const tool = getToolBySlug(params.slug)
   if (!tool) return {}
-  const metadata = generateToolMetadata(tool)
-  const alternates = generateHreflangAlternates(`/tools/${tool.slug}`)
+
+  const t = await getTranslations({ locale: params.locale, namespace: 'tools' })
+
+  // Attempt to read localized name and description; fall back to tool defaults
+  let localizedName: string | undefined
+  let localizedDescription: string | undefined
+  try {
+    const nameKey = `toolNames.${tool.slug}.name` as Parameters<typeof t>[0]
+    const descKey = `toolNames.${tool.slug}.description` as Parameters<typeof t>[0]
+    const translatedName = t(nameKey)
+    const translatedDesc = t(descKey)
+    // next-intl returns the key path when a translation is missing; detect that
+    if (translatedName && translatedName !== nameKey) localizedName = translatedName
+    if (translatedDesc && translatedDesc !== descKey) localizedDescription = translatedDesc
+  } catch {
+    // Translation not found for this tool slug -- fall back to English defaults
+  }
+
+  const localeOpts = {
+    locale: params.locale,
+    localizedName,
+    localizedDescription,
+  }
+
+  const metadata = generateToolMetadata(tool, localeOpts)
+  const alternates = generateHreflangAlternates(`/tools/${tool.slug}`, params.locale)
   return { ...metadata, alternates }
 }
 
-export default function ToolPage({ params }: { params: { slug: string } }) {
+export default async function ToolPage({ params }: { params: { slug: string; locale: string } }) {
+  setRequestLocale(params.locale)
+  const t = await getTranslations('tools')
+
   const tool = getToolBySlug(params.slug)
   if (!tool) notFound()
 
   const Component = toolComponents[tool.slug]
   if (!Component) notFound()
 
-  const jsonLd = generateToolJsonLd(tool)
-  const faqJsonLd = generateToolFaqJsonLd(tool)
+  // Resolve localized tool name for JSON-LD and breadcrumb
+  let localizedName: string | undefined
+  let localizedDescription: string | undefined
+  try {
+    const nameKey = `toolNames.${tool.slug}.name` as Parameters<typeof t>[0]
+    const descKey = `toolNames.${tool.slug}.description` as Parameters<typeof t>[0]
+    const translatedName = t(nameKey)
+    const translatedDesc = t(descKey)
+    if (translatedName && translatedName !== nameKey) localizedName = translatedName
+    if (translatedDesc && translatedDesc !== descKey) localizedDescription = translatedDesc
+  } catch {
+    // Fall back to English defaults
+  }
+
+  const localeOpts = {
+    locale: params.locale,
+    localizedName,
+    localizedDescription,
+  }
+
+  const jsonLd = generateToolJsonLd(tool, localeOpts)
+  const faqJsonLd = generateToolFaqJsonLd(tool, localeOpts)
+  const displayName = localizedName || tool.name
 
   return (
     <>
@@ -128,9 +177,9 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       />
       <Breadcrumb
         items={[
-          { label: 'Ana s\u0259hif\u0259', href: '/' },
-          { label: 'Al\u0259tl\u0259r', href: '/tools' },
-          { label: tool.name },
+          { label: t('breadcrumbHome'), href: '/' },
+          { label: t('breadcrumbTools'), href: '/tools' },
+          { label: displayName },
         ]}
       />
       <ToolTemplate tool={tool}>

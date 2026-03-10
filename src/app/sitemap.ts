@@ -28,6 +28,7 @@ function buildAlternates(path: string): {
   for (const locale of locales) {
     languages[locale] = localizedUrl(path, locale)
   }
+  languages['x-default'] = localizedUrl(path, defaultLocale)
   return { languages }
 }
 
@@ -52,8 +53,8 @@ function localeEntries(
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date('2026-03-10')
-  const monthAgo = new Date('2026-03-01')
+  const now = new Date()
+  const monthAgo = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate())
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

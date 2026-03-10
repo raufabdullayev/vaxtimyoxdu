@@ -422,5 +422,23 @@
   "language": {
     "label": "Select language",
     "current": "Current language"
+  },
+  "info": {
+    "metaTitle": "News - Vaxtim Yoxdu",
+    "metaDescription": "Quick summaries of important daily news. Economy, technology, education, sports - everything at a glance.",
+    "title": "News",
+    "subtitle": "Short and accurate news - when you have no time, we are here.",
+    "breadcrumbHome": "Home",
+    "breadcrumbNews": "News",
+    "noArticles": "No news articles available in this language yet."
+  },
+  "blog": {
+    "metaTitle": "Blog - Vaxtim Yoxdu",
+    "metaDescription": "Tips, tutorials, and guides about online tools, AI, and productivity. Free tools for developers, designers, and content creators.",
+    "title": "Blog",
+    "breadcrumbHome": "Home",
+    "breadcrumbBlog": "Blog",
+    "noArticles": "No blog posts available in this language yet.",
+    "readMore": "Read more"
   }
 }

@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { Zap, Newspaper, Wrench } from 'lucide-react'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
@@ -10,7 +10,7 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const alternates = generateHreflangAlternates('/')
+  const alternates = generateHreflangAlternates('/', params.locale)
 
   return {
     alternates,

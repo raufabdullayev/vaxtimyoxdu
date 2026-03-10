@@ -1,6 +1,15 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import DOMPurify from 'dompurify'
+
+function sanitizeUrl(url: string): string {
+  const trimmed = url.trim().toLowerCase().replace(/\s/g, '')
+  if (trimmed.startsWith('javascript:') || trimmed.startsWith('data:') || trimmed.startsWith('vbscript:')) {
+    return '#'
+  }
+  return url
+}
 
 function escapeHtml(text: string): string {
   return text
@@ -50,10 +59,16 @@ function parseMarkdown(md: string): string {
   html = html.replace(/\*(.+?)\*/g, '<em>$1</em>')
 
   // Links
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary underline hover:opacity-80" target="_blank" rel="noopener noreferrer">$1</a>')
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_match, text, url) => {
+    const safeUrl = sanitizeUrl(url)
+    return `<a href="${safeUrl}" class="text-primary underline hover:opacity-80" target="_blank" rel="noopener noreferrer">${text}</a>`
+  })
 
   // Images
-  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="max-w-full rounded-lg my-2" />')
+  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_match, alt, url) => {
+    const safeUrl = sanitizeUrl(url)
+    return `<img src="${safeUrl}" alt="${alt}" class="max-w-full rounded-lg my-2" />`
+  })
 
   // Unordered lists: group consecutive lines starting with - or *
   html = html.replace(/^(?:[*-] .+\n?)+/gm, (block) => {
@@ -134,7 +149,18 @@ export default function MarkdownPreview() {
   const [input, setInput] = useState('')
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit')
 
-  const preview = useMemo(() => parseMarkdown(input), [input])
+  const preview = useMemo(() => {
+    const rawHtml = parseMarkdown(input)
+    if (!rawHtml) return ''
+    return DOMPurify.sanitize(rawHtml, {
+      ALLOWED_TAGS: ['h1','h2','h3','h4','h5','h6','p','br','hr','ul','ol','li','a','img','strong','em','del','code','pre','blockquote','table','thead','tbody','tr','th','td','span','div'],
+      ALLOWED_ATTR: ['href','src','alt','title','class','id','target','rel'],
+      ALLOW_DATA_ATTR: false,
+      ADD_ATTR: ['target'],
+      FORBID_ATTR: ['onerror','onload','onclick','onmouseover','onfocus','onblur'],
+      FORBID_TAGS: ['script','style','iframe','object','embed','form','input','textarea','select','button'],
+    })
+  }, [input])
 
   const loadSample = () => setInput(sampleMarkdown)
 

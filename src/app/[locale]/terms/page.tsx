@@ -8,7 +8,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: 'terms' })
-  const alternates = generateHreflangAlternates('/terms')
+  const alternates = generateHreflangAlternates('/terms', params.locale)
 
   return {
     title: t('metaTitle'),

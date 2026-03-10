@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { generateBlogPostMetadata, generateBlogArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
@@ -25,11 +26,14 @@ export function generateMetadata({ params }: { params: { slug: string; locale: s
     slug: params.slug,
     date: post.date,
   })
-  const alternates = generateHreflangAlternates(`/blog/${params.slug}`)
+  const alternates = generateHreflangAlternates(`/blog/${params.slug}`, params.locale)
   return { ...metadata, alternates }
 }
 
-export default function BlogPost({ params }: { params: { slug: string; locale: string } }) {
+export default async function BlogPost({ params }: { params: { slug: string; locale: string } }) {
+  setRequestLocale(params.locale)
+  const nav = await getTranslations('common.nav')
+
   const locale = (params.locale ?? 'az') as Locale
   const post = getBlogPostBySlug(params.slug, locale)
   if (!post) notFound()
@@ -41,6 +45,7 @@ export default function BlogPost({ params }: { params: { slug: string; locale: s
     description,
     slug: params.slug,
     date: post.date,
+    locale,
   })
 
   return (
@@ -51,8 +56,8 @@ export default function BlogPost({ params }: { params: { slug: string; locale: s
       />
       <Breadcrumb
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Blog', href: '/blog' },
+          { label: nav('home'), href: '/' },
+          { label: nav('blog'), href: '/blog' },
           { label: post.title },
         ]}
       />

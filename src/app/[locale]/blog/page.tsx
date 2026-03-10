@@ -1,100 +1,106 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
-import { generateHreflangAlternates } from '@/lib/utils/seo'
+import { generateHreflangAlternates, getOgLocale } from '@/lib/utils/seo'
+import { getBlogPostsByLocale } from '@/data/blog-posts'
+import type { Locale } from '@/i18n/config'
 
-export async function generateMetadata(): Promise<Metadata> {
-  const alternates = generateHreflangAlternates('/blog')
+type Props = {
+  params: { locale: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'blog' })
+  const alternates = generateHreflangAlternates('/blog', params.locale)
+  const ogLocale = getOgLocale(params.locale)
 
   return {
-    title: 'Blog - Vaxtim Yoxdu',
-    description: 'Tips, tutorials, and guides about online tools, AI, and productivity. Free tools for developers, designers, and content creators.',
+    title: t('metaTitle'),
+    description: t('metaDescription'),
     openGraph: {
-      title: 'Blog - Vaxtim Yoxdu',
-      description: 'Tips, tutorials, and guides about online tools, AI, and productivity.',
-      url: 'https://vaxtimyoxdu.com/blog',
+      title: t('metaTitle'),
+      description: t('metaDescription'),
+      url: alternates.canonical,
       siteName: 'Vaxtim Yoxdu',
       type: 'website',
-      locale: 'en_US',
+      locale: ogLocale,
       images: [
         {
           url: 'https://vaxtimyoxdu.com/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'Vaxtim Yoxdu Blog',
+          alt: t('title'),
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Blog - Vaxtim Yoxdu',
-      description: 'Tips, tutorials, and guides about online tools, AI, and productivity.',
+      title: t('metaTitle'),
+      description: t('metaDescription'),
       images: ['https://vaxtimyoxdu.com/og-image.png'],
     },
     alternates,
   }
 }
 
-const posts = [
-  {
-    slug: 'best-free-online-tools-2026',
-    title: 'Best Free Online Tools in 2026',
-    excerpt: 'Discover the most useful free online tools for productivity, development, and content creation.',
-    date: '2026-03-07',
-  },
-  {
-    slug: 'how-ai-text-rewriting-works',
-    title: 'How AI Text Rewriting Works',
-    excerpt: 'Learn how artificial intelligence can help you rewrite and improve your text content.',
-    date: '2026-03-05',
-  },
-  {
-    slug: 'compress-images-without-losing-quality',
-    title: 'How to Compress Images Without Losing Quality',
-    excerpt: 'Learn the best techniques for reducing image file sizes while keeping visual quality intact.',
-    date: '2026-03-04',
-  },
-  {
-    slug: 'regex-guide-for-beginners',
-    title: 'Regular Expressions: A Beginner\'s Guide',
-    excerpt: 'Master the basics of regex with practical examples you can test right in your browser.',
-    date: '2026-03-03',
-  },
-  {
-    slug: 'why-grammar-matters-in-professional-writing',
-    title: 'Why Grammar Matters in Professional Writing',
-    excerpt: 'How proper grammar and spelling can impact your career, business, and online presence.',
-    date: '2026-03-02',
-  },
-]
+/**
+ * Extract a short excerpt from the blog post content.
+ * Uses the first sentence or the first 200 characters, whichever is shorter.
+ */
+function extractExcerpt(content: string): string {
+  // Strip markdown headings and leading whitespace
+  const plain = content.replace(/^#+\s.*/gm, '').trim()
+  // Take the first sentence (up to first period followed by space or end)
+  const firstSentence = plain.match(/^[^.!?]+[.!?]/)
+  if (firstSentence && firstSentence[0].length <= 200) {
+    return firstSentence[0].trim()
+  }
+  // Fallback: first 160 chars with ellipsis
+  return plain.slice(0, 160).trim() + '...'
+}
 
-export default function BlogPage() {
+export default async function BlogPage({ params }: Props) {
+  setRequestLocale(params.locale)
+  const t = await getTranslations('blog')
+
+  // Get blog posts for the current locale; falls back to 'en' when no translation exists
+  const postsMap = getBlogPostsByLocale(params.locale as Locale)
+  const posts = Object.entries(postsMap)
+    .map(([slug, post]) => ({ slug, ...post }))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
   return (
     <div className="container py-12 max-w-3xl">
       <Breadcrumb
         items={[
-          { label: 'Home', href: '/' },
-          { label: 'Blog' },
+          { label: t('breadcrumbHome'), href: '/' },
+          { label: t('breadcrumbBlog') },
         ]}
       />
-      <h1 className="text-3xl font-bold mb-8">Blog</h1>
-      <div className="space-y-8">
-        {posts.map((post, index) => (
-          <div key={post.slug}>
-            <article className="border-b pb-8">
-              <time className="text-sm text-muted-foreground">{post.date}</time>
-              <h2 className="text-xl font-semibold mt-1 mb-2">
-                <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
-                  {post.title}
-                </Link>
-              </h2>
-              <p className="text-muted-foreground text-sm">{post.excerpt}</p>
-            </article>
-            {index === 1 && <LazyAdBanner slot="blog-list-mid" format="in-article" className="my-6" />}
-          </div>
-        ))}
-      </div>
+      <h1 className="text-3xl font-bold mb-8">{t('title')}</h1>
+
+      {posts.length === 0 ? (
+        <p className="text-muted-foreground">{t('noArticles')}</p>
+      ) : (
+        <div className="space-y-8">
+          {posts.map((post, index) => (
+            <div key={post.slug}>
+              <article className="border-b pb-8">
+                <time className="text-sm text-muted-foreground">{post.date}</time>
+                <h2 className="text-xl font-semibold mt-1 mb-2">
+                  <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="text-muted-foreground text-sm">{extractExcerpt(post.content)}</p>
+              </article>
+              {index === 1 && <LazyAdBanner slot="blog-list-mid" format="in-article" className="my-6" />}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

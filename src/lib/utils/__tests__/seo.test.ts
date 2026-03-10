@@ -130,9 +130,9 @@ describe('generateToolMetadata()', () => {
     expect(meta.keywords).toBe(tool.keywords.join(', '))
   })
 
-  it('should set openGraph url to the tool page', () => {
+  it('should set openGraph url to the tool page with locale prefix', () => {
     const og = meta.openGraph as Record<string, unknown>
-    expect(og.url).toBe(`${SITE_URL}/tools/${tool.slug}`)
+    expect(og.url).toBe(`${SITE_URL}/en/tools/${tool.slug}`)
   })
 
   it('should set openGraph locale to en_US for tools', () => {
@@ -147,9 +147,9 @@ describe('generateToolMetadata()', () => {
     expect(images[0].url).toContain('type=tool')
   })
 
-  it('should set canonical URL to the tool page', () => {
+  it('should set canonical URL to the tool page with locale prefix', () => {
     const alternates = meta.alternates as Record<string, unknown>
-    expect(alternates.canonical).toBe(`${SITE_URL}/tools/${tool.slug}`)
+    expect(alternates.canonical).toBe(`${SITE_URL}/en/tools/${tool.slug}`)
   })
 
   it('should set twitter card to summary_large_image', () => {
@@ -162,7 +162,48 @@ describe('generateToolMetadata()', () => {
     const aiMeta = generateToolMetadata(aiTool)
     expect(aiMeta.title).toContain('AI Writer')
     const og = aiMeta.openGraph as Record<string, unknown>
-    expect(og.url).toBe(`${SITE_URL}/tools/ai-writer`)
+    expect(og.url).toBe(`${SITE_URL}/en/tools/ai-writer`)
+  })
+
+  it('should omit locale prefix for default locale (az)', () => {
+    const azMeta = generateToolMetadata(tool, { locale: 'az' })
+    const og = azMeta.openGraph as Record<string, unknown>
+    expect(og.url).toBe(`${SITE_URL}/tools/${tool.slug}`)
+    const alternates = azMeta.alternates as Record<string, unknown>
+    expect(alternates.canonical).toBe(`${SITE_URL}/tools/${tool.slug}`)
+  })
+
+  it('should use localized name and description when provided', () => {
+    const localizedMeta = generateToolMetadata(tool, {
+      locale: 'tr',
+      localizedName: 'Test Araci',
+      localizedDescription: 'Kapsamli bir test araci aciklamasi.',
+    })
+    expect(localizedMeta.title).toContain('Test Araci')
+    expect(localizedMeta.description).toBe('Kapsamli bir test araci aciklamasi.')
+    const og = localizedMeta.openGraph as Record<string, unknown>
+    expect(og.title).toContain('Test Araci')
+    expect(og.description).toBe('Kapsamli bir test araci aciklamasi.')
+    expect(og.locale).toBe('tr_TR')
+    expect(og.url).toBe(`${SITE_URL}/tr/tools/${tool.slug}`)
+  })
+
+  it('should set OG locale to az_AZ for az locale', () => {
+    const azMeta = generateToolMetadata(tool, { locale: 'az' })
+    const og = azMeta.openGraph as Record<string, unknown>
+    expect(og.locale).toBe('az_AZ')
+  })
+
+  it('should set OG locale to ru_RU for ru locale', () => {
+    const ruMeta = generateToolMetadata(tool, { locale: 'ru' })
+    const og = ruMeta.openGraph as Record<string, unknown>
+    expect(og.locale).toBe('ru_RU')
+  })
+
+  it('should fall back to tool defaults when no localized options are given', () => {
+    const defaultMeta = generateToolMetadata(tool)
+    expect(defaultMeta.title).toContain(tool.name)
+    expect(defaultMeta.description).toBe(tool.description)
   })
 })
 
@@ -189,8 +230,13 @@ describe('generateToolJsonLd()', () => {
     expect(jsonLd.description).toBe(tool.description)
   })
 
-  it('should set the correct URL', () => {
-    expect(jsonLd.url).toBe(`${SITE_URL}/tools/${tool.slug}`)
+  it('should set the correct URL with locale prefix', () => {
+    expect(jsonLd.url).toBe(`${SITE_URL}/en/tools/${tool.slug}`)
+  })
+
+  it('should omit locale prefix for default locale (az)', () => {
+    const azJsonLd = generateToolJsonLd(tool, { locale: 'az' })
+    expect(azJsonLd.url).toBe(`${SITE_URL}/tools/${tool.slug}`)
   })
 
   it('should set applicationCategory to UtilitiesApplication', () => {
@@ -211,6 +257,24 @@ describe('generateToolJsonLd()', () => {
     expect(jsonLd.creator['@type']).toBe('Organization')
     expect(jsonLd.creator.name).toBe(SITE_NAME)
     expect(jsonLd.creator.url).toBe(SITE_URL)
+  })
+
+  it('should set inLanguage to the provided locale', () => {
+    expect(jsonLd.inLanguage).toBe('en')
+    const trJsonLd = generateToolJsonLd(tool, { locale: 'tr' })
+    expect(trJsonLd.inLanguage).toBe('tr')
+  })
+
+  it('should use localized name and description when provided', () => {
+    const localizedJsonLd = generateToolJsonLd(tool, {
+      locale: 'az',
+      localizedName: 'Test Aleti',
+      localizedDescription: 'Azerbaycan dilinde aciklama.',
+    })
+    expect(localizedJsonLd.name).toBe('Test Aleti')
+    expect(localizedJsonLd.description).toBe('Azerbaycan dilinde aciklama.')
+    expect(localizedJsonLd.inLanguage).toBe('az')
+    expect(localizedJsonLd.url).toBe(`${SITE_URL}/tools/${tool.slug}`)
   })
 })
 
@@ -295,6 +359,19 @@ describe('generateToolFaqJsonLd()', () => {
     const tool = makeTool({ category: 'image', isClientSide: true })
     const faqLd = generateToolFaqJsonLd(tool)
     expect(faqLd.mainEntity[2].name.toLowerCase()).toContain('image format')
+  })
+
+  it('should use localized name in FAQs when provided', () => {
+    const tool = makeTool({ name: 'SuperTool' })
+    const faqLd = generateToolFaqJsonLd(tool, { locale: 'tr', localizedName: 'Harika Arac' })
+    expect(faqLd.mainEntity[0].name).toContain('Harika Arac')
+    expect(faqLd.mainEntity[0].acceptedAnswer.text).toContain('Harika Arac')
+  })
+
+  it('should fall back to tool.name when no localized name is given', () => {
+    const tool = makeTool({ name: 'FallbackTool' })
+    const faqLd = generateToolFaqJsonLd(tool, { locale: 'ru' })
+    expect(faqLd.mainEntity[0].name).toContain('FallbackTool')
   })
 })
 
@@ -394,8 +471,17 @@ describe('generateNewsArticleJsonLd()', () => {
     expect(jsonLd.articleSection).toBe(params.category)
   })
 
-  it('should set inLanguage to az', () => {
+  it('should set inLanguage to az by default', () => {
     expect(jsonLd.inLanguage).toBe('az')
+  })
+
+  it('should use the provided locale for inLanguage', () => {
+    const trJsonLd = generateNewsArticleJsonLd({ ...params, locale: 'tr' })
+    expect(trJsonLd.inLanguage).toBe('tr')
+    const ruJsonLd = generateNewsArticleJsonLd({ ...params, locale: 'ru' })
+    expect(ruJsonLd.inLanguage).toBe('ru')
+    const enJsonLd = generateNewsArticleJsonLd({ ...params, locale: 'en' })
+    expect(enJsonLd.inLanguage).toBe('en')
   })
 
   it('should include publisher with logo', () => {
@@ -495,8 +581,17 @@ describe('generateBlogArticleJsonLd()', () => {
     expect(jsonLd.dateModified).toBe(params.date)
   })
 
-  it('should set inLanguage to en', () => {
+  it('should set inLanguage to en by default', () => {
     expect(jsonLd.inLanguage).toBe('en')
+  })
+
+  it('should use the provided locale for inLanguage', () => {
+    const azJsonLd = generateBlogArticleJsonLd({ ...params, locale: 'az' })
+    expect(azJsonLd.inLanguage).toBe('az')
+    const trJsonLd = generateBlogArticleJsonLd({ ...params, locale: 'tr' })
+    expect(trJsonLd.inLanguage).toBe('tr')
+    const ruJsonLd = generateBlogArticleJsonLd({ ...params, locale: 'ru' })
+    expect(ruJsonLd.inLanguage).toBe('ru')
   })
 
   it('should include publisher with logo', () => {

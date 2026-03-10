@@ -1,8 +1,17 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import DOMPurify from 'dompurify'
 
 type ViewMode = 'preview' | 'html'
+
+function sanitizeUrl(url: string): string {
+  const trimmed = url.trim().toLowerCase().replace(/\s/g, '')
+  if (trimmed.startsWith('javascript:') || trimmed.startsWith('data:') || trimmed.startsWith('vbscript:')) {
+    return '#'
+  }
+  return url
+}
 
 function escapeHtml(text: string): string {
   return text
@@ -171,13 +180,13 @@ function processInline(text: string): string {
   // Images (must be before links)
   result = result.replace(
     /!\[([^\]]*)\]\(([^)]+)\)/g,
-    '<img src="$2" alt="$1" />'
+    (_match, alt, url) => `<img src="${sanitizeUrl(url)}" alt="${alt}" />`
   )
 
   // Links
   result = result.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
-    '<a href="$2">$1</a>'
+    (_match, text, url) => `<a href="${sanitizeUrl(url)}">${text}</a>`
   )
 
   // Bold + Italic
@@ -203,7 +212,18 @@ export default function MarkdownToHtml() {
   const [viewMode, setViewMode] = useState<ViewMode>('preview')
   const [copied, setCopied] = useState(false)
 
-  const htmlOutput = useMemo(() => markdownToHtml(input), [input])
+  const htmlOutput = useMemo(() => {
+    const rawHtml = markdownToHtml(input)
+    if (!rawHtml) return ''
+    return DOMPurify.sanitize(rawHtml, {
+      ALLOWED_TAGS: ['h1','h2','h3','h4','h5','h6','p','br','hr','ul','ol','li','a','img','strong','em','del','code','pre','blockquote','table','thead','tbody','tr','th','td','span','div'],
+      ALLOWED_ATTR: ['href','src','alt','title','class','id','target','rel'],
+      ALLOW_DATA_ATTR: false,
+      ADD_ATTR: ['target'],
+      FORBID_ATTR: ['onerror','onload','onclick','onmouseover','onfocus','onblur'],
+      FORBID_TAGS: ['script','style','iframe','object','embed','form','input','textarea','select','button'],
+    })
+  }, [input])
 
   const copy = async () => {
     if (!htmlOutput) return

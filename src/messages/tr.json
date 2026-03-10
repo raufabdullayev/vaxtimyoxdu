@@ -422,5 +422,23 @@
   "language": {
     "label": "Dil secin",
     "current": "Mevcut dil"
+  },
+  "info": {
+    "metaTitle": "Haberler - Vaxtim Yoxdu",
+    "metaDescription": "Onemli gunluk haberlerin kisa ozeti. Ekonomi, teknoloji, egitim, spor - her sey bir bakista.",
+    "title": "Haberler",
+    "subtitle": "Kisa ve dogru haberler - zamaniniz yoksa, biz buradayiz.",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbNews": "Haberler",
+    "noArticles": "Bu dilde henuz haber bulunmamaktadir."
+  },
+  "blog": {
+    "metaTitle": "Blog - Vaxtim Yoxdu",
+    "metaDescription": "Online araclar, yapay zeka ve verimlilik hakkinda ipuclari, ogreticiler ve rehberler.",
+    "title": "Blog",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbBlog": "Blog",
+    "noArticles": "Bu dilde henuz blog yazisi bulunmamaktadir.",
+    "readMore": "Devamini oku"
   }
 }

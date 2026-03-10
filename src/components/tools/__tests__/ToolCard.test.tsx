@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react'
 import ToolCard from '../ToolCard'
 import { Tool } from '@/types/tool'
 
-vi.mock('next/link', () => ({
-  default: ({ href, children, ...props }: { href: string; children: React.ReactNode }) => (
+vi.mock('@/i18n/navigation', () => ({
+  Link: ({ href, children, ...props }: { href: string; children: React.ReactNode }) => (
     <a href={href} {...props}>{children}</a>
   ),
 }))

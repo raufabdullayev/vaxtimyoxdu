@@ -31,12 +31,7 @@ const jsonLdWebsite = {
   name: 'Vaxtim Yoxdu',
   url: 'https://vaxtimyoxdu.com',
   description: 'Vaxtınız yoxdursa, biz varıq. Qısa xəbər xülasələri və pulsuz AI onlayn alətlər.',
-  inLanguage: ['az', 'en'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://vaxtimyoxdu.com/tools/{search_term_string}',
-    'query-input': 'required name=search_term_string',
-  },
+  inLanguage: ['az', 'en', 'tr', 'ru'],
 }
 
 const jsonLdOrganization = {
@@ -56,7 +51,7 @@ const jsonLdOrganization = {
     '@type': 'ContactPoint',
     email: 'hello@vaxtimyoxdu.com',
     contactType: 'customer service',
-    availableLanguage: ['az', 'en'],
+    availableLanguage: ['az', 'en', 'tr', 'ru'],
   },
 }
 

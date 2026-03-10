@@ -22,10 +22,11 @@ export function getLocalizedUrl(path: string, locale: Locale): string {
  * Returns an object suitable for Next.js metadata `alternates.languages`
  * plus `x-default` pointing to the az (default locale) variant.
  */
-export function generateHreflangAlternates(path: string): {
+export function generateHreflangAlternates(path: string, currentLocale?: string): {
   canonical: string
   languages: Record<string, string>
 } {
+  const resolvedLocale = (currentLocale || defaultLocale) as Locale
   const languages: Record<string, string> = {}
   for (const locale of locales) {
     languages[locale] = getLocalizedUrl(path, locale)
@@ -34,7 +35,7 @@ export function generateHreflangAlternates(path: string): {
   languages['x-default'] = getLocalizedUrl(path, defaultLocale)
 
   return {
-    canonical: getLocalizedUrl(path, defaultLocale),
+    canonical: getLocalizedUrl(path, resolvedLocale),
     languages,
   }
 }
@@ -100,37 +101,44 @@ export function generateBaseMetadata(): Metadata {
   }
 }
 
-export function generateToolMetadata(tool: Tool): Metadata {
-  const url = `${SITE_URL}/tools/${tool.slug}`
+export function generateToolMetadata(
+  tool: Tool,
+  options?: { locale?: string; localizedName?: string; localizedDescription?: string }
+): Metadata {
+  const locale = options?.locale || 'en'
+  const name = options?.localizedName || tool.name
+  const description = options?.localizedDescription || tool.description
+  const ogLocale = getOgLocale(locale)
+  const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
   const ogImage = getOgImageUrl({
-    title: tool.name,
-    subtitle: tool.shortDescription,
+    title: name,
+    subtitle: description.slice(0, 80),
     type: 'tool',
   })
   return {
-    title: `${tool.name} - Free Online Tool | ${SITE_NAME}`,
-    description: tool.description,
+    title: `${name} - Free Online Tool | ${SITE_NAME}`,
+    description,
     keywords: tool.keywords.join(', '),
     openGraph: {
-      title: `${tool.name} - ${SITE_NAME}`,
-      description: tool.shortDescription,
+      title: `${name} - ${SITE_NAME}`,
+      description,
       url,
       siteName: SITE_NAME,
       type: 'website',
-      locale: 'en_US',
+      locale: ogLocale,
       images: [
         {
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: `${tool.name} - ${SITE_NAME}`,
+          alt: `${name} - ${SITE_NAME}`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${tool.name} - ${SITE_NAME}`,
-      description: tool.shortDescription,
+      title: `${name} - ${SITE_NAME}`,
+      description,
       images: [ogImage],
     },
     alternates: {
@@ -139,15 +147,23 @@ export function generateToolMetadata(tool: Tool): Metadata {
   }
 }
 
-export function generateToolJsonLd(tool: Tool) {
+export function generateToolJsonLd(
+  tool: Tool,
+  options?: { locale?: string; localizedName?: string; localizedDescription?: string }
+) {
+  const locale = options?.locale || 'en'
+  const name = options?.localizedName || tool.name
+  const description = options?.localizedDescription || tool.description
+  const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: tool.name,
-    description: tool.description,
-    url: `${SITE_URL}/tools/${tool.slug}`,
+    name,
+    description,
+    url,
     applicationCategory: 'UtilitiesApplication',
     operatingSystem: 'All',
+    inLanguage: locale,
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -220,12 +236,14 @@ export function generateNewsArticleJsonLd({
   slug,
   date,
   category,
+  locale = 'az',
 }: {
   title: string
   description: string
   slug: string
   date: string
   category: string
+  locale?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -241,7 +259,7 @@ export function generateNewsArticleJsonLd({
       name: SITE_NAME,
       url: SITE_URL,
     },
-    inLanguage: 'az',
+    inLanguage: locale,
     publisher: {
       '@type': 'Organization',
       name: SITE_NAME,
@@ -313,8 +331,11 @@ export function generateBlogPostMetadata({
   }
 }
 
-export function generateToolFaqJsonLd(tool: Tool) {
-  const faqs = generateToolFaqs(tool)
+export function generateToolFaqJsonLd(
+  tool: Tool,
+  options?: { locale?: string; localizedName?: string; localizedDescription?: string }
+) {
+  const faqs = generateToolFaqs(tool, options)
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -329,58 +350,64 @@ export function generateToolFaqJsonLd(tool: Tool) {
   }
 }
 
-function generateToolFaqs(tool: Tool): { question: string; answer: string }[] {
+function generateToolFaqs(
+  tool: Tool,
+  options?: { locale?: string; localizedName?: string; localizedDescription?: string }
+): { question: string; answer: string }[] {
+  const name = options?.localizedName || tool.name
+  const description = options?.localizedDescription || tool.description
+  const shortDesc = options?.localizedDescription || tool.shortDescription
   const faqs: { question: string; answer: string }[] = []
 
   // FAQ 1: What is this tool and what does it do?
   faqs.push({
-    question: `What is ${tool.name} and what does it do?`,
-    answer: `${tool.name} is a free online tool that lets you ${tool.shortDescription.toLowerCase()}. ${tool.description}`,
+    question: `What is ${name} and what does it do?`,
+    answer: `${name} is a free online tool that lets you ${shortDesc.toLowerCase()}. ${description}`,
   })
 
   // FAQ 2: Privacy/processing question based on tool type
   if (tool.isClientSide) {
     faqs.push({
-      question: `Is ${tool.name} safe to use? Are my files uploaded to a server?`,
-      answer: `Yes, ${tool.name} is completely safe to use. This tool processes everything directly in your browser using client-side technology. Your data never leaves your device -- nothing is uploaded to any server. This ensures complete privacy and security for all your files and data.`,
+      question: `Is ${name} safe to use? Are my files uploaded to a server?`,
+      answer: `Yes, ${name} is completely safe to use. This tool processes everything directly in your browser using client-side technology. Your data never leaves your device -- nothing is uploaded to any server. This ensures complete privacy and security for all your files and data.`,
     })
   } else if (tool.isAI) {
     faqs.push({
-      question: `How does the AI in ${tool.name} work?`,
-      answer: `${tool.name} uses advanced AI language models to ${tool.shortDescription.toLowerCase()}. The AI analyzes your input text, understands context and meaning, and generates high-quality results. The tool is free to use with no account required.`,
+      question: `How does the AI in ${name} work?`,
+      answer: `${name} uses advanced AI language models to ${shortDesc.toLowerCase()}. The AI analyzes your input text, understands context and meaning, and generates high-quality results. The tool is free to use with no account required.`,
     })
   } else {
     faqs.push({
-      question: `Is ${tool.name} free to use?`,
-      answer: `Yes, ${tool.name} is completely free to use with no hidden fees, no account required, and no usage limits. Simply open the tool and start working immediately.`,
+      question: `Is ${name} free to use?`,
+      answer: `Yes, ${name} is completely free to use with no hidden fees, no account required, and no usage limits. Simply open the tool and start working immediately.`,
     })
   }
 
   // FAQ 3: Practical usage question based on category and keywords
   const categoryQuestions: Record<string, { question: string; answer: string }> = {
     ai: {
-      question: `Do I need to create an account to use ${tool.name}?`,
-      answer: `No, you do not need to create an account or sign up to use ${tool.name}. The tool is available immediately -- just open the page and start using it. There are no word limits, no daily caps, and no hidden restrictions.`,
+      question: `Do I need to create an account to use ${name}?`,
+      answer: `No, you do not need to create an account or sign up to use ${name}. The tool is available immediately -- just open the page and start using it. There are no word limits, no daily caps, and no hidden restrictions.`,
     },
     pdf: {
-      question: `What file formats does ${tool.name} support?`,
-      answer: `${tool.name} supports standard PDF files. You can work with PDFs of any size directly in your browser. The tool handles multi-page documents and preserves the quality of your original files throughout the process.`,
+      question: `What file formats does ${name} support?`,
+      answer: `${name} supports standard PDF files. You can work with PDFs of any size directly in your browser. The tool handles multi-page documents and preserves the quality of your original files throughout the process.`,
     },
     image: {
-      question: `What image formats does ${tool.name} support?`,
-      answer: `${tool.name} supports all major image formats including JPEG, PNG, and WebP. You can process images of any size directly in your browser without installing any software. The tool maintains optimal quality while performing the requested operation.`,
+      question: `What image formats does ${name} support?`,
+      answer: `${name} supports all major image formats including JPEG, PNG, and WebP. You can process images of any size directly in your browser without installing any software. The tool maintains optimal quality while performing the requested operation.`,
     },
     dev: {
-      question: `Can I use ${tool.name} on any device or browser?`,
-      answer: `Yes, ${tool.name} works on any modern web browser including Chrome, Firefox, Safari, and Edge on desktop, tablet, and mobile devices. No installation or plugins are required -- it runs entirely in your browser.`,
+      question: `Can I use ${name} on any device or browser?`,
+      answer: `Yes, ${name} works on any modern web browser including Chrome, Firefox, Safari, and Edge on desktop, tablet, and mobile devices. No installation or plugins are required -- it runs entirely in your browser.`,
     },
     generators: {
-      question: `Can I customize the output of ${tool.name}?`,
-      answer: `Yes, ${tool.name} offers various customization options to tailor the output to your specific needs. You can adjust settings and parameters to get exactly the result you want. All processing happens in your browser for instant results.`,
+      question: `Can I customize the output of ${name}?`,
+      answer: `Yes, ${name} offers various customization options to tailor the output to your specific needs. You can adjust settings and parameters to get exactly the result you want. All processing happens in your browser for instant results.`,
     },
     text: {
-      question: `Can I use ${tool.name} for large documents?`,
-      answer: `Yes, ${tool.name} handles text of any length. Whether you are working with a short paragraph or a lengthy document, the tool processes your text instantly in your browser with no size limitations.`,
+      question: `Can I use ${name} for large documents?`,
+      answer: `Yes, ${name} handles text of any length. Whether you are working with a short paragraph or a lengthy document, the tool processes your text instantly in your browser with no size limitations.`,
     },
   }
 
@@ -397,11 +424,13 @@ export function generateBlogArticleJsonLd({
   description,
   slug,
   date,
+  locale = 'en',
 }: {
   title: string
   description: string
   slug: string
   date: string
+  locale?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -411,7 +440,7 @@ export function generateBlogArticleJsonLd({
     url: `${SITE_URL}/blog/${slug}`,
     datePublished: date,
     dateModified: date,
-    inLanguage: 'en',
+    inLanguage: locale,
     author: {
       '@type': 'Organization',
       name: SITE_NAME,

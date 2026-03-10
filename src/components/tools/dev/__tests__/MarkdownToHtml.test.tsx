@@ -190,7 +190,7 @@ describe('MarkdownToHtml', () => {
     fireEvent.click(screen.getByText('HTML Source'))
 
     const output = screen.getByLabelText('HTML output') as HTMLTextAreaElement
-    expect(output.value).toContain('<hr />')
+    expect(output.value).toContain('<hr>')
   })
 
   it('converts blockquotes', () => {
@@ -309,6 +309,6 @@ describe('MarkdownToHtml', () => {
     fireEvent.click(screen.getByText('HTML Source'))
 
     const output = screen.getByLabelText('HTML output') as HTMLTextAreaElement
-    expect(output.value).toContain('<img src="image.png" alt="Alt text" />')
+    expect(output.value).toContain('<img src="image.png" alt="Alt text">')
   })
 })

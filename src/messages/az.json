@@ -422,5 +422,23 @@
   "language": {
     "label": "Dil seçin",
     "current": "Hazırkı dil"
+  },
+  "info": {
+    "metaTitle": "Xəbərlər - Vaxtim Yoxdu",
+    "metaDescription": "Günlük vacib xəbərlərin qısa xülasəsi. İqtisadiyyat, texnologiya, təhsil, idman - hər şeyi bir baxışda.",
+    "title": "Xəbərlər",
+    "subtitle": "Qısa və dəqiq xəbərlər — vaxtınız yoxdursa, biz varıq.",
+    "breadcrumbHome": "Ana səhifə",
+    "breadcrumbNews": "Xəbərlər",
+    "noArticles": "Hazırda bu dildə xəbər yoxdur."
+  },
+  "blog": {
+    "metaTitle": "Blog - Vaxtim Yoxdu",
+    "metaDescription": "Onlayn alətlər, AI və məhsuldarlıq haqqında məsləhətlər, dərsliklər və bələdçilər.",
+    "title": "Blog",
+    "breadcrumbHome": "Ana səhifə",
+    "breadcrumbBlog": "Blog",
+    "noArticles": "Hazırda bu dildə blog yazısı yoxdur.",
+    "readMore": "Daha çox oxu"
   }
 }
