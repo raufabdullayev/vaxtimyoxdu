@@ -1,0 +1,83 @@
+{
+  "common": {
+    "siteName": "Vaxtim Yoxdu",
+    "siteDescription": "Zamaniniz yoksa, biz variz. Kisa haber ozetleri ve ucretsiz AI online araclar.",
+    "nav": {
+      "home": "Ana Sayfa",
+      "news": "Haberler",
+      "tools": "Araclar",
+      "blog": "Blog",
+      "about": "Hakkimizda",
+      "privacy": "Gizlilik Politikasi",
+      "terms": "Kullanim Sartlari"
+    },
+    "skipToContent": "Iceriye atla"
+  },
+  "home": {
+    "heroTitle": "Vaxtim",
+    "heroTitleHighlight": "Yoxdu",
+    "heroDescription": "Zamaniniz yoksa, biz variz. Kisa haberler ve ucretsiz online araclar.",
+    "newsTitle": "Haberler",
+    "newsDescription": "Onemli haberlerin gunluk ozeti. Ekonomi, teknoloji, egitim, spor - her seyi bir bakista.",
+    "newsLink": "Haberleri oku",
+    "toolsTitle": "Araclar",
+    "toolsDescription": "Ucretsiz AI online araclar. Metin yeniden yazma, gramer kontrolu, PDF birlestirme, goruntu sikistirma ve daha fazlasi.",
+    "toolsLink": "Araclara goz at",
+    "statTools": "Ucretsiz Arac",
+    "statRegistration": "Kayit",
+    "statAvailability": "Erisilebilirlik"
+  },
+  "tools": {
+    "pageTitle": "Ucretsiz Online Araclar",
+    "pageTitleHighlight": "AI Destekli",
+    "pageDescription": "PDF birlestirici, goruntu araclari, metin yeniden yazma, JSON formatlayici ve daha fazlasi. Kayit gerekmiyor. Hizli, ucretsiz ve guvenli.",
+    "searchPlaceholder": "Arac ara...",
+    "allTools": "Tum Araclar",
+    "clientSide": "Tarayici Tabanli",
+    "aiPowered": "AI Destekli",
+    "filterAll": "Tumunu Goster",
+    "breadcrumbHome": "Ana Sayfa",
+    "breadcrumbTools": "Araclar"
+  },
+  "footer": {
+    "description": "Kisa haberler ve ucretsiz online araclar. Kayit gerekmiyor.",
+    "followUs": "Bizi takip edin",
+    "toolsSection": "Araclar",
+    "sectionsTitle": "Bolumler",
+    "legalTitle": "Yasal",
+    "copyright": "Tum haklari saklidir.",
+    "newsletter": {
+      "title": "Yeniliklerden haberdar olun",
+      "placeholder": "E-posta adresinizi girin",
+      "subscribe": "Abone ol",
+      "sending": "Gonderiliyor...",
+      "success": "Basariyla abone oldunuz!",
+      "errorEmpty": "E-posta adresi girin.",
+      "errorInvalid": "Gecerli bir e-posta adresi girin.",
+      "errorDuplicate": "Bu e-posta zaten abone.",
+      "errorGeneral": "Bir hata olustu. Tekrar deneyin.",
+      "emailLabel": "E-posta adresi"
+    }
+  },
+  "errors": {
+    "notFound": "Sayfa bulunamadi",
+    "notFoundDescription": "Aradiginiz sayfa mevcut degil veya tasindi.",
+    "notFoundHome": "Ana Sayfa",
+    "notFoundTools": "Araclar",
+    "notFoundNews": "Haberler",
+    "generalError": "Hata",
+    "generalErrorTitle": "Bir hata olustu",
+    "generalErrorDescription": "Beklenmeyen bir hata olustu. Lutfen tekrar deneyin.",
+    "retry": "Tekrar dene",
+    "loading": "Yukleniyor..."
+  },
+  "cookie": {
+    "message": "Bu site deneyiminizi iyilestirmek icin cerezler kullanmaktadir.",
+    "accept": "Kabul et",
+    "reject": "Reddet"
+  },
+  "language": {
+    "label": "Dil secin",
+    "current": "Mevcut dil"
+  }
+}

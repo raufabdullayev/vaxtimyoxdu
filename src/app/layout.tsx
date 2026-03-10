@@ -1,22 +1,10 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import dynamic from 'next/dynamic'
 import { Inter } from 'next/font/google'
+import { getLocale } from 'next-intl/server'
 import './globals.css'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
 import ServiceWorkerRegistrar from '@/components/layout/ServiceWorkerRegistrar'
 import { generateBaseMetadata } from '@/lib/utils/seo'
-
-// Lazy load below-the-fold / post-interactive components.
-// These are only needed after the page is interactive, so deferring them
-// reduces the initial JS bundle and improves TTI and LCP.
-const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'), {
-  ssr: false,
-})
-const InstallPrompt = dynamic(() => import('@/components/layout/InstallPrompt'), {
-  ssr: false,
-})
 
 const inter = Inter({
   subsets: ['latin'],
@@ -72,13 +60,15 @@ const jsonLdOrganization = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const locale = await getLocale()
+
   return (
-    <html lang="az">
+    <html lang={locale}>
       <head>
         {/* PWA meta tags */}
         <link rel="manifest" href="/manifest.json" />
@@ -110,14 +100,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <a href="#main-content" className="skip-to-content">Kontenta kec</a>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main id="main-content" className="flex-1">{children}</main>
-          <Footer />
-        </div>
-        <CookieConsent />
-        <InstallPrompt />
+        {children}
         <ServiceWorkerRegistrar />
         {ADSENSE_ID && (
           <Script

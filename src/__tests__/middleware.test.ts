@@ -1,6 +1,26 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
-import { NextRequest } from 'next/server'
-import { middleware, config } from '@/middleware'
+import { NextRequest, NextResponse } from 'next/server'
+
+// Mock next-intl/middleware so it does not pull in incompatible Next.js server
+// internals inside the vitest environment. For non-API routes the middleware
+// delegates to the next-intl intl middleware, so we return a plain NextResponse
+// to simulate its behaviour.
+vi.mock('next-intl/middleware', () => ({
+  default: () =>
+    () => NextResponse.next(),
+}))
+
+// Mock the routing config that next-intl/middleware would consume.
+vi.mock('@/i18n/routing', () => ({
+  routing: {
+    locales: ['az', 'en', 'tr', 'ru'],
+    defaultLocale: 'az',
+    localePrefix: 'as-needed',
+  },
+}))
+
+// Import AFTER mocks are set up.
+const { middleware, config } = await import('@/middleware')
 
 /**
  * Helper to create a NextRequest for testing the middleware.
@@ -28,19 +48,18 @@ function createRequest(
 // matcher config
 // ---------------------------------------------------------------------------
 describe('middleware config', () => {
-  it('should export a matcher for /api/:path*', () => {
-    expect(config.matcher).toBe('/api/:path*')
+  it('should export a matcher that includes all paths except static files', () => {
+    expect(config.matcher).toEqual(['/((?!_next|_vercel|.*\\..*).*)'])
   })
 })
 
 // ---------------------------------------------------------------------------
-// Non-API routes (should pass through)
+// Non-API routes (delegated to next-intl middleware)
 // ---------------------------------------------------------------------------
 describe('middleware - non-API routes', () => {
   it('should pass through for the root path', () => {
     const req = createRequest('/')
     const res = middleware(req)
-    // NextResponse.next() does not set a custom status or body
     expect(res.status).toBe(200)
   })
 

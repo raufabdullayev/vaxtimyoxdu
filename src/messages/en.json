@@ -1,0 +1,83 @@
+{
+  "common": {
+    "siteName": "Vaxtim Yoxdu",
+    "siteDescription": "No time to waste. Quick news summaries and free AI online tools.",
+    "nav": {
+      "home": "Home",
+      "news": "News",
+      "tools": "Tools",
+      "blog": "Blog",
+      "about": "About",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    },
+    "skipToContent": "Skip to content"
+  },
+  "home": {
+    "heroTitle": "Vaxtim",
+    "heroTitleHighlight": "Yoxdu",
+    "heroDescription": "No time to waste. Quick news summaries and free online tools.",
+    "newsTitle": "News",
+    "newsDescription": "Daily summaries of important news. Economy, technology, education, sports — everything at a glance.",
+    "newsLink": "Read news",
+    "toolsTitle": "Tools",
+    "toolsDescription": "Free AI online tools. Text rewriting, grammar checking, PDF merging, image compression and more.",
+    "toolsLink": "Browse tools",
+    "statTools": "Free Tools",
+    "statRegistration": "Registration",
+    "statAvailability": "Availability"
+  },
+  "tools": {
+    "pageTitle": "Free Online Tools",
+    "pageTitleHighlight": "AI Powered",
+    "pageDescription": "PDF merger, image tools, text rewriting, JSON formatter and more. No registration needed. Fast, free and secure.",
+    "searchPlaceholder": "Search tools...",
+    "allTools": "All Tools",
+    "clientSide": "Browser Based",
+    "aiPowered": "AI Powered",
+    "filterAll": "All",
+    "breadcrumbHome": "Home",
+    "breadcrumbTools": "Tools"
+  },
+  "footer": {
+    "description": "Quick news summaries and free online tools. No registration needed.",
+    "followUs": "Follow us",
+    "toolsSection": "Tools",
+    "sectionsTitle": "Sections",
+    "legalTitle": "Legal",
+    "copyright": "All rights reserved.",
+    "newsletter": {
+      "title": "Stay up to date",
+      "placeholder": "Enter your email address",
+      "subscribe": "Subscribe",
+      "sending": "Sending...",
+      "success": "Successfully subscribed!",
+      "errorEmpty": "Please enter an email address.",
+      "errorInvalid": "Please enter a valid email address.",
+      "errorDuplicate": "This email is already subscribed.",
+      "errorGeneral": "An error occurred. Please try again.",
+      "emailLabel": "Email address"
+    }
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "notFoundDescription": "The page you are looking for does not exist or has been moved.",
+    "notFoundHome": "Home",
+    "notFoundTools": "Tools",
+    "notFoundNews": "News",
+    "generalError": "Error",
+    "generalErrorTitle": "An error occurred",
+    "generalErrorDescription": "An unexpected error occurred. Please try again.",
+    "retry": "Try again",
+    "loading": "Loading..."
+  },
+  "cookie": {
+    "message": "This site uses cookies to improve your experience.",
+    "accept": "Accept",
+    "reject": "Reject"
+  },
+  "language": {
+    "label": "Select language",
+    "current": "Current language"
+  }
+}

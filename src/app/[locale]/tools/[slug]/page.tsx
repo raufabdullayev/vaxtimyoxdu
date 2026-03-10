@@ -40,6 +40,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'sql-formatter': dynamic(() => import('@/components/tools/dev/SqlFormatter')),
   'json-to-csv': dynamic(() => import('@/components/tools/dev/JsonToCsv')),
   'ip-address-info': dynamic(() => import('@/components/tools/dev/IpAddressInfo')),
+  'json-to-yaml': dynamic(() => import('@/components/tools/dev/JsonToYaml')),
+  'xml-formatter': dynamic(() => import('@/components/tools/dev/XmlFormatter')),
+  'markdown-to-html': dynamic(() => import('@/components/tools/dev/MarkdownToHtml')),
   // Generators
   'qr-code-generator': dynamic(() => import('@/components/tools/generators/QrCodeGenerator')),
   'color-picker': dynamic(() => import('@/components/tools/generators/ColorPicker')),
@@ -51,6 +54,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'emoji-picker': dynamic(() => import('@/components/tools/generators/EmojiPicker')),
   'gradient-generator': dynamic(() => import('@/components/tools/generators/GradientGenerator')),
   'placeholder-image': dynamic(() => import('@/components/tools/generators/PlaceholderImage')),
+  'favicon-generator': dynamic(() => import('@/components/tools/generators/FaviconGenerator')),
+  'svg-to-png': dynamic(() => import('@/components/tools/generators/SvgToPng')),
   // Text Tools
   'word-counter': dynamic(() => import('@/components/tools/WordCounter')),
   'case-converter': dynamic(() => import('@/components/tools/text/CaseConverter')),
@@ -60,6 +65,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'text-to-binary': dynamic(() => import('@/components/tools/text/TextToBinary')),
   'rot13-encoder': dynamic(() => import('@/components/tools/text/Rot13Encoder')),
   'pomodoro-timer': dynamic(() => import('@/components/tools/text/PomodoroTimer')),
+  'text-to-speech': dynamic(() => import('@/components/tools/text/TextToSpeech')),
+  'character-counter': dynamic(() => import('@/components/tools/text/CharacterCounter')),
+  'find-and-replace': dynamic(() => import('@/components/tools/text/FindAndReplace')),
 }
 
 export async function generateStaticParams() {

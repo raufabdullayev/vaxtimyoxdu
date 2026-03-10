@@ -1,0 +1,83 @@
+{
+  "common": {
+    "siteName": "Vaxtim Yoxdu",
+    "siteDescription": "Vaxtiniz yoxdursa, biz variq. Qisa xeber xulaseleri ve pulsuz AI onlayn aletler.",
+    "nav": {
+      "home": "Ana Sehife",
+      "news": "Xeberler",
+      "tools": "Aletler",
+      "blog": "Blog",
+      "about": "Haqqimizda",
+      "privacy": "Mexfilik Siyaseti",
+      "terms": "Istifade Sertleri"
+    },
+    "skipToContent": "Kontenta kec"
+  },
+  "home": {
+    "heroTitle": "Vaxtim",
+    "heroTitleHighlight": "Yoxdu",
+    "heroDescription": "Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz onlayn aletler.",
+    "newsTitle": "Xeberler",
+    "newsDescription": "Gunluk vacib xeberlerin qisa xulasesi. Iqtisadiyyat, texnologiya, tehsil, idman - her seyi bir baxisda.",
+    "newsLink": "Xeberleri oxu",
+    "toolsTitle": "Aletler",
+    "toolsDescription": "Pulsuz AI onlayn aletler. Metn yeniden yazma, qrammatika yoxlama, PDF birlesdirme, sekil sixma ve daha cox.",
+    "toolsLink": "Aletlere bax",
+    "statTools": "Pulsuz Alet",
+    "statRegistration": "Qeydiyyat",
+    "statAvailability": "Elcatanlik"
+  },
+  "tools": {
+    "pageTitle": "Pulsuz Onlayn Aletler",
+    "pageTitleHighlight": "AI ile",
+    "pageDescription": "PDF birlesdirici, sekil aletleri, metn yeniden yazma, JSON formatter ve daha cox. Qeydiyyat lazim deyil. Suretli, pulsuz ve tehlukesiz.",
+    "searchPlaceholder": "Alet axtar...",
+    "allTools": "Butun Aletler",
+    "clientSide": "Brauzer Esasli",
+    "aiPowered": "AI ile isleyen",
+    "filterAll": "Hamisi",
+    "breadcrumbHome": "Ana sehife",
+    "breadcrumbTools": "Aletler"
+  },
+  "footer": {
+    "description": "Qisa xeberler ve pulsuz onlayn aletler. Qeydiyyat lazim deyil.",
+    "followUs": "Bizi izleyin",
+    "toolsSection": "Aletler",
+    "sectionsTitle": "Bolmeler",
+    "legalTitle": "Huquqi",
+    "copyright": "Butun huquqlar qorunur.",
+    "newsletter": {
+      "title": "Yeniliklerden xeberdar olun",
+      "placeholder": "Email unvaninizi daxil edin",
+      "subscribe": "Abune ol",
+      "sending": "Gonderilir...",
+      "success": "Ugurla abune oldunuz!",
+      "errorEmpty": "Email unvani daxil edin.",
+      "errorInvalid": "Duzgun email unvani daxil edin.",
+      "errorDuplicate": "Bu email artiq abune olub.",
+      "errorGeneral": "Xeta bas verdi. Yeniden cehd edin.",
+      "emailLabel": "Email unvani"
+    }
+  },
+  "errors": {
+    "notFound": "Sehife tapilmadi",
+    "notFoundDescription": "Axtardiginiz sehife movcud deyil ve ya kocurulub.",
+    "notFoundHome": "Ana Sehife",
+    "notFoundTools": "Aletler",
+    "notFoundNews": "Xeberler",
+    "generalError": "Xeta",
+    "generalErrorTitle": "Bir xeta bas verdi",
+    "generalErrorDescription": "Gozlenilmeyen xeta bas verdi. Zehmet olmasa yeniden cehd edin.",
+    "retry": "Yeniden cehd et",
+    "loading": "Yuklenilir..."
+  },
+  "cookie": {
+    "message": "Bu sayt tecrubemizi yaxsilasdirmaq ucun cookie-lerden istifade edir.",
+    "accept": "Qebul et",
+    "reject": "Red et"
+  },
+  "language": {
+    "label": "Dil secin",
+    "current": "Hazirki dil"
+  }
+}

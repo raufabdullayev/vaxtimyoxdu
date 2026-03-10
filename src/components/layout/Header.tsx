@@ -1,10 +1,13 @@
 'use client'
 
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { Menu, X, Zap, Moon, Sun } from 'lucide-react'
+import LanguageSelector from './LanguageSelector'
 
 export default function Header() {
+  const t = useTranslations('common')
   const [mobileOpen, setMobileOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
 
@@ -32,13 +35,14 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-          <Link href="/info" className="text-sm font-medium hover:text-primary transition-colors">Xeberler</Link>
-          <Link href="/tools" className="text-sm font-medium hover:text-primary transition-colors">Aletler</Link>
-          <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">Blog</Link>
-          <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">Haqqimizda</Link>
+          <Link href="/info" className="text-sm font-medium hover:text-primary transition-colors">{t('nav.news')}</Link>
+          <Link href="/tools" className="text-sm font-medium hover:text-primary transition-colors">{t('nav.tools')}</Link>
+          <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">{t('nav.blog')}</Link>
+          <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">{t('nav.about')}</Link>
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSelector />
           <button
             onClick={toggleTheme}
             className="p-2 rounded-lg hover:bg-accent transition-colors"
@@ -64,10 +68,10 @@ export default function Header() {
         aria-hidden={!mobileOpen}
       >
         <nav className="container flex flex-col gap-2 py-4" aria-label="Mobile navigation">
-          <Link href="/info" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Xeberler</Link>
-          <Link href="/tools" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Aletler</Link>
-          <Link href="/blog" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Blog</Link>
-          <Link href="/about" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Haqqimizda</Link>
+          <Link href="/info" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>{t('nav.news')}</Link>
+          <Link href="/tools" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>{t('nav.tools')}</Link>
+          <Link href="/blog" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>{t('nav.blog')}</Link>
+          <Link href="/about" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>{t('nav.about')}</Link>
         </nav>
       </div>
     </header>

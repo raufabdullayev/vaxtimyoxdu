@@ -1,0 +1,83 @@
+{
+  "common": {
+    "siteName": "Vaxtim Yoxdu",
+    "siteDescription": "Net vremeni? My zdes. Kratkie novosti i besplatnye AI onlayn instrumenty.",
+    "nav": {
+      "home": "Glavnaya",
+      "news": "Novosti",
+      "tools": "Instrumenty",
+      "blog": "Blog",
+      "about": "O nas",
+      "privacy": "Politika konfidencialnosti",
+      "terms": "Usloviya ispolzovaniya"
+    },
+    "skipToContent": "Pereyti k soderzhaniyu"
+  },
+  "home": {
+    "heroTitle": "Vaxtim",
+    "heroTitleHighlight": "Yoxdu",
+    "heroDescription": "Net vremeni? My zdes. Kratkie novosti i besplatnye onlayn instrumenty.",
+    "newsTitle": "Novosti",
+    "newsDescription": "Ezhednevnye kratkie obzory vazhnykh novostey. Ekonomika, tekhnologii, obrazovanie, sport - vsyo v odnom meste.",
+    "newsLink": "Chitat novosti",
+    "toolsTitle": "Instrumenty",
+    "toolsDescription": "Besplatnye AI onlayn instrumenty. Perepisyvanie teksta, proverka grammatiki, obyedinenie PDF, szhatie izobrazheniy i mnogoe drugoe.",
+    "toolsLink": "Smotret instrumenty",
+    "statTools": "Besplatnykh instrumentov",
+    "statRegistration": "Registraciya",
+    "statAvailability": "Dostupnost"
+  },
+  "tools": {
+    "pageTitle": "Besplatnye Onlayn Instrumenty",
+    "pageTitleHighlight": "S pomoshchyu AI",
+    "pageDescription": "Obyedinenie PDF, instrumenty dlya izobrazheniy, perepisyvanie teksta, JSON formatirovanie i mnogoe drugoe. Registraciya ne nuzhna. Bystro, besplatno i bezopasno.",
+    "searchPlaceholder": "Iskat instrumenty...",
+    "allTools": "Vse instrumenty",
+    "clientSide": "V brauzere",
+    "aiPowered": "S pomoshchyu AI",
+    "filterAll": "Vse",
+    "breadcrumbHome": "Glavnaya",
+    "breadcrumbTools": "Instrumenty"
+  },
+  "footer": {
+    "description": "Kratkie novosti i besplatnye onlayn instrumenty. Registraciya ne nuzhna.",
+    "followUs": "Podpisyvayites",
+    "toolsSection": "Instrumenty",
+    "sectionsTitle": "Razdely",
+    "legalTitle": "Pravovaya informaciya",
+    "copyright": "Vse prava zashchishcheny.",
+    "newsletter": {
+      "title": "Budyte v kurse novostey",
+      "placeholder": "Vvedite vash email",
+      "subscribe": "Podpisatsya",
+      "sending": "Otpravka...",
+      "success": "Vy uspeshno podpisalis!",
+      "errorEmpty": "Vvedite adres elektronnoy pochty.",
+      "errorInvalid": "Vvedite korrektniy adres elektronnoy pochty.",
+      "errorDuplicate": "Etot email uzhe podpisan.",
+      "errorGeneral": "Proizoshla oshibka. Poprobujte snova.",
+      "emailLabel": "Adres elektronnoy pochty"
+    }
+  },
+  "errors": {
+    "notFound": "Stranica ne naydena",
+    "notFoundDescription": "Stranica, kotoruyu vy ishchete, ne sushchestvuet ili byla peremeshchena.",
+    "notFoundHome": "Glavnaya",
+    "notFoundTools": "Instrumenty",
+    "notFoundNews": "Novosti",
+    "generalError": "Oshibka",
+    "generalErrorTitle": "Proizoshla oshibka",
+    "generalErrorDescription": "Proizoshla neprevidennaya oshibka. Pozhaluysta, poprobujte snova.",
+    "retry": "Poprobovat snova",
+    "loading": "Zagruzka..."
+  },
+  "cookie": {
+    "message": "Etot sayt ispolzuet cookie dlya uluchsheniya vashego opyta.",
+    "accept": "Prinyat",
+    "reject": "Otklonit"
+  },
+  "language": {
+    "label": "Vybrat yazyk",
+    "current": "Tekushchiy yazyk"
+  }
+}
