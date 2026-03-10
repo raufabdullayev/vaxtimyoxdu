@@ -47,6 +47,10 @@ deploy:
   needs:
     - validate
     - test
+  retry:
+    max: 2
+    when:
+      - script_failure
   script:
     - npm install -g vercel@${VERCEL_CLI_VERSION}
     - echo "Vercel version:" && vercel --version
@@ -55,13 +59,28 @@ deploy:
     - echo "Building..."
     - vercel build --prod --token=$VERCEL_TOKEN 2>&1
     - echo "Deploying..."
-    - vercel deploy --prebuilt --prod --archive=tgz --token=$VERCEL_TOKEN 2>&1
+    - |
+      for attempt in 1 2 3; do
+        echo "Deploy attempt $attempt..."
+        if vercel deploy --prebuilt --prod --archive=tgz --token=$VERCEL_TOKEN 2>&1; then
+          echo "Deploy succeeded on attempt $attempt"
+          break
+        else
+          if [ $attempt -lt 3 ]; then
+            echo "Deploy failed, waiting 60s before retry..."
+            sleep 60
+          else
+            echo "Deploy failed after 3 attempts"
+            exit 1
+          fi
+        fi
+      done
   environment:
     name: production
     url: https://vaxtimyoxdu.com
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
-  timeout: 15 minutes
+  timeout: 20 minutes
 
 preview:
   stage: preview
