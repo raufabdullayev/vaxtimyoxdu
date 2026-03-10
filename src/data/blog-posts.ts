@@ -674,6 +674,743 @@ The most productive developers invest time in curating their toolkit. Here is a 
 
 The goal is not to have the most tools -- it is to have the right tools, always within reach. Start with the tools that address your biggest daily friction points, and build from there. Every minute you invest in optimizing your workflow pays compound interest for the rest of your career.`,
   },
+  'cybersecurity-tools-guide': {
+    title: 'Essential Cybersecurity Tools and Practices for 2026',
+    date: '2026-03-06',
+    relatedTools: ['password-generator', 'hash-generator', 'base64-encode-decode', 'jwt-decoder'],
+    content: `Cybersecurity has never been more critical than it is in 2026. With data breaches making headlines weekly, ransomware attacks targeting organizations of every size, and AI-powered threats evolving faster than defenses, understanding the tools and practices that keep you safe online is essential knowledge for everyone -- not just IT professionals. This comprehensive guide covers the cybersecurity tools you should be using, the practices you should be following, and the threats you should be aware of.
+
+## The Threat Landscape in 2026
+
+The cybersecurity threat landscape has shifted dramatically. Attackers now use AI to craft convincing phishing emails that are virtually indistinguishable from legitimate communications. Deepfake audio and video are used in social engineering attacks, tricking employees into transferring funds or sharing credentials. Ransomware-as-a-Service (RaaS) has lowered the barrier to entry for cybercriminals, meaning even unsophisticated attackers can deploy devastating malware.
+
+**Key statistics that underscore the urgency:**
+
+- The average cost of a data breach reached $5.2 million in 2025, up 12% from the previous year
+- 83% of organizations experienced more than one data breach in the past 24 months
+- Phishing remains the most common initial attack vector, responsible for 36% of breaches
+- The average time to identify a breach is still 194 days -- over six months of undetected intrusion
+- Small businesses account for 43% of all cyberattack targets, yet only 14% are prepared to defend themselves
+
+## Password Security: Your First Line of Defense
+
+Weak passwords remain the single most exploited vulnerability in cybersecurity. Despite decades of awareness campaigns, "123456" and "password" still appear in breach databases with alarming frequency. Here is how to get password security right:
+
+**Use a password manager.** A password manager generates, stores, and auto-fills unique, complex passwords for every account. You only need to remember one master password. Leading options include Bitwarden (open-source), 1Password, and KeePass (offline). In 2026, browser-integrated password managers have also improved significantly.
+
+**Generate strong passwords.** Every password should be at least 16 characters long, containing uppercase and lowercase letters, numbers, and special characters. The Password Generator on Vaxtim Yoxdu creates cryptographically random passwords that meet these criteria, running entirely in your browser so no passwords are ever transmitted or stored.
+
+**Enable two-factor authentication (2FA) everywhere.** Even if an attacker obtains your password, 2FA blocks access without the second factor. Use authenticator apps (Google Authenticator, Authy) or hardware security keys (YubiKey) rather than SMS-based 2FA, which is vulnerable to SIM-swapping attacks.
+
+**Never reuse passwords.** If one service gets breached and you used the same password elsewhere, every account with that password is now compromised. This is called credential stuffing, and it is automated -- attackers test stolen credentials against hundreds of services within hours of a breach.
+
+## Hashing and Data Integrity
+
+Understanding cryptographic hashing is valuable for both security practitioners and anyone who works with sensitive data. A hash function takes input of any size and produces a fixed-length output (the hash or digest) that is unique to that input. Even a tiny change in the input produces a completely different hash.
+
+**Common use cases for hashing:**
+
+- **File integrity verification**: Download a file and compare its hash against the publisher's listed hash. If they match, the file has not been tampered with during transit.
+- **Password storage**: Responsible services never store your actual password. They store a hash of your password. When you log in, they hash your input and compare it to the stored hash.
+- **Digital signatures**: Hashing is a fundamental component of digital signature schemes that verify the authenticity and integrity of documents.
+- **Blockchain**: Every block in a blockchain contains the hash of the previous block, creating an immutable chain of verified transactions.
+
+The Hash Generator on Vaxtim Yoxdu supports SHA-1, SHA-256, SHA-384, and SHA-512 algorithms. Use SHA-256 or SHA-512 for security-sensitive applications. SHA-1 is considered deprecated for security purposes but is still used for non-security checksums.
+
+## Encryption Fundamentals
+
+Encryption transforms readable data (plaintext) into unreadable data (ciphertext) using an algorithm and a key. Only someone with the correct key can decrypt the data back to its original form.
+
+**Symmetric encryption** uses the same key for both encryption and decryption. AES-256 is the gold standard, used by governments and financial institutions worldwide. It is fast and efficient for encrypting large amounts of data.
+
+**Asymmetric encryption** uses a pair of keys -- a public key for encryption and a private key for decryption. RSA and ECC (Elliptic Curve Cryptography) are the most common algorithms. This is the foundation of HTTPS, secure email (PGP/GPG), and digital signatures.
+
+**Base64 encoding** is often confused with encryption, but it is not encryption at all. Base64 simply converts binary data into ASCII text for safe transmission. It provides zero security -- anyone can decode Base64 instantly. The Base64 Encoder/Decoder on Vaxtim Yoxdu handles encoding and decoding, which is useful for working with JWT tokens, data URIs, and API payloads.
+
+## JWT Token Security
+
+JSON Web Tokens (JWTs) are the standard for authentication in modern web applications. Understanding how they work is crucial for both developers and security-conscious users.
+
+A JWT consists of three parts: a header (algorithm and token type), a payload (claims and data), and a signature (verification). The header and payload are Base64-encoded (not encrypted), meaning anyone can read their contents. The signature ensures the token has not been tampered with.
+
+**Common JWT security mistakes:**
+
+- Using the "none" algorithm, which disables signature verification entirely
+- Storing sensitive data in the payload without additional encryption
+- Setting excessively long expiration times
+- Not validating the issuer and audience claims
+- Storing JWTs in localStorage (vulnerable to XSS attacks) instead of HTTP-only cookies
+
+The JWT Decoder on Vaxtim Yoxdu lets you inspect any JWT token, view its header, payload, and expiration status -- all processed locally in your browser without sending the token to any server.
+
+## Network Security Tools
+
+**VPN (Virtual Private Network):** A VPN encrypts your internet traffic and routes it through a secure server, protecting your data from interception on public Wi-Fi networks and preventing your ISP from monitoring your browsing activity. Choose a VPN provider with a verified no-logs policy, strong encryption (WireGuard or OpenVPN), and servers in multiple countries.
+
+**DNS Security:** Switch from your ISP's default DNS to a privacy-focused alternative like Cloudflare (1.1.1.1) or Quad9 (9.9.9.9). These services block known malicious domains and do not log your queries. DNS-over-HTTPS (DoH) adds encryption to your DNS queries, preventing interception.
+
+**Firewall:** Ensure your operating system's built-in firewall is enabled. For more advanced protection, consider application-level firewalls that control which programs can access the internet.
+
+## Browser Security
+
+Your browser is your primary interface with the internet, making it a critical security component:
+
+- **Keep your browser updated.** Browser updates patch security vulnerabilities. Enable automatic updates and never delay them.
+- **Use HTTPS everywhere.** Most modern browsers now warn you before loading HTTP sites. Never enter credentials or sensitive information on non-HTTPS pages.
+- **Install minimal extensions.** Each extension is a potential attack vector. Only install extensions from trusted sources, and regularly audit your installed extensions.
+- **Enable enhanced tracking protection.** Modern browsers offer built-in tracking protection that blocks third-party cookies, fingerprinting scripts, and cryptominers.
+- **Use separate browser profiles.** Maintain separate profiles for work and personal browsing to compartmentalize your online identity.
+
+## Phishing Defense
+
+Phishing attacks have become increasingly sophisticated with AI-generated content. Here is how to identify and avoid them:
+
+1. **Check the sender's email address carefully.** Attackers use domains that look similar to legitimate ones (e.g., "paypa1.com" instead of "paypal.com").
+2. **Hover before clicking.** Always hover over links to see the actual destination URL before clicking.
+3. **Be suspicious of urgency.** Phishing emails often create artificial urgency -- "Your account will be closed in 24 hours" -- to prevent careful thinking.
+4. **Verify through official channels.** If an email asks you to take action on an account, go directly to the website by typing the URL rather than clicking links in the email.
+5. **Report phishing attempts.** Most email providers have a "Report Phishing" button. Using it helps improve filters for everyone.
+
+## Building a Security Mindset
+
+Cybersecurity is not a product you buy -- it is a practice you maintain. The most secure individuals and organizations are those that build security into their daily habits:
+
+- Use strong, unique passwords for every account with a password manager
+- Enable two-factor authentication on all important accounts
+- Keep all software and operating systems updated
+- Back up critical data using the 3-2-1 rule (3 copies, 2 different media types, 1 offsite)
+- Verify file integrity using hash comparison when downloading important software
+- Be skeptical of unexpected emails, messages, and phone calls
+
+The free security tools on Vaxtim Yoxdu -- Password Generator, Hash Generator, Base64 Encoder, and JWT Decoder -- all process data entirely in your browser. No passwords generated, no hashes computed, and no tokens decoded are ever transmitted to any server. Security starts with the tools you choose to trust.`,
+  },
+  'api-testing-guide': {
+    title: 'The Complete Guide to API Testing: Tools, Techniques, and Best Practices',
+    date: '2026-03-01',
+    relatedTools: ['json-formatter', 'base64-encode-decode', 'jwt-decoder', 'url-encode-decode'],
+    content: `API testing is one of the most important skills in modern software development. As applications increasingly rely on microservices architectures, third-party integrations, and mobile backends, the quality and reliability of APIs directly determines the quality of the products built on top of them. This guide covers everything you need to know about testing APIs effectively -- from fundamental concepts to advanced techniques.
+
+## Why API Testing Matters
+
+APIs are the contracts between software systems. When an API breaks, every client that depends on it breaks too -- mobile apps crash, web frontends show errors, integrations fail silently, and data gets corrupted. API testing catches these problems before they reach production.
+
+**The business case for API testing is compelling:**
+
+- API bugs caught in development cost 10x less to fix than bugs caught in production
+- Automated API tests run in seconds compared to manual UI testing that takes minutes or hours
+- API tests are more stable than UI tests because APIs change less frequently than user interfaces
+- A comprehensive API test suite serves as living documentation of how your API actually behaves
+
+## Types of API Tests
+
+Different types of tests serve different purposes. A mature API testing strategy includes all of them:
+
+**Functional testing** verifies that each API endpoint returns the correct response for a given input. Does GET /users return a list of users? Does POST /orders create a new order with the correct fields? Does DELETE /items/123 actually remove the item? These are the foundation of your test suite.
+
+**Validation testing** checks that responses conform to the expected schema -- correct data types, required fields present, proper formatting. A response might return successfully (200 OK) but contain malformed data that breaks downstream consumers. Schema validation catches these issues.
+
+**Integration testing** verifies that multiple API endpoints work together correctly. Creating an order might involve calling the inventory service, payment service, and notification service. Integration tests ensure these workflows complete successfully end to end.
+
+**Performance testing** measures response times, throughput, and resource utilization under various load conditions. How does the API perform with 100 concurrent users? 1,000? 10,000? Performance tests identify bottlenecks before they affect real users.
+
+**Security testing** probes for vulnerabilities -- authentication bypass, SQL injection, cross-site scripting (XSS), broken access control, and data exposure. Security testing should be automated and run as part of your CI/CD pipeline.
+
+## Essential Tools for API Testing
+
+### HTTP Clients
+
+Every developer needs a reliable HTTP client for sending requests and inspecting responses:
+
+**Postman** remains the most popular API testing tool. Its collection feature organizes requests into logical groups, environment variables handle dev/staging/production URLs, and the built-in test runner executes assertions against responses. The free tier covers most individual and small team needs.
+
+**Insomnia** is a lightweight alternative with a cleaner interface. It supports GraphQL natively, handles authentication flows elegantly, and has excellent environment management.
+
+**curl** is the command-line standard. Every developer should be comfortable with basic curl commands for quick API checks. Its ubiquity means it works on any machine without installation.
+
+**Browser-based tools** like the ones on Vaxtim Yoxdu are invaluable for quick data manipulation during API work. The JSON Formatter validates and prettifies API responses, the Base64 Encoder handles authentication token encoding, and the URL Encoder ensures query parameters are properly formatted.
+
+### Automated Testing Frameworks
+
+For building comprehensive test suites:
+
+- **Jest + Supertest** (JavaScript/TypeScript): The most popular combination for Node.js API testing. Supertest provides a fluent API for making HTTP requests, and Jest provides assertions and test organization.
+- **pytest + requests** (Python): Python's requests library makes HTTP calls intuitive, and pytest provides powerful test fixtures and parameterization.
+- **REST Assured** (Java): A domain-specific language for testing RESTful APIs in Java, with built-in JSON and XML parsing.
+- **k6** (Performance testing): A modern load testing tool that uses JavaScript for writing test scripts. It produces detailed metrics and integrates with CI/CD pipelines.
+
+## Writing Effective API Tests
+
+### Request Construction
+
+A well-constructed API test covers these elements:
+
+1. **HTTP method**: GET, POST, PUT, PATCH, DELETE -- use the correct method for the operation
+2. **URL and path parameters**: Ensure dynamic segments (like /users/{id}) are correctly substituted
+3. **Query parameters**: URL-encode all query parameter values to handle special characters. The URL Encoder on Vaxtim Yoxdu handles this instantly.
+4. **Headers**: Content-Type, Authorization, Accept, and custom headers must be set correctly
+5. **Request body**: For POST and PUT requests, the body must be valid JSON (or whatever format the API expects). The JSON Formatter validates your request body before sending.
+6. **Authentication**: Bearer tokens, API keys, OAuth tokens, or Basic auth credentials must be included correctly. The Base64 Encoder handles Basic auth header encoding.
+
+### Response Validation
+
+Never just check the status code -- validate the complete response:
+
+- **Status code**: 200, 201, 204, 400, 401, 403, 404, 500 -- each has specific meaning
+- **Response body**: Verify the structure, data types, and values of every field
+- **Headers**: Check Content-Type, caching headers, rate-limit headers, and CORS headers
+- **Response time**: Set maximum acceptable response times and fail tests that exceed them
+- **Error responses**: Verify that error responses include meaningful error messages and codes
+
+### Test Data Management
+
+Managing test data is one of the hardest parts of API testing:
+
+- **Use factories or builders** to create test data programmatically rather than relying on hardcoded values
+- **Clean up after tests** to prevent test pollution. Each test should leave the system in the same state it found it.
+- **Use separate test environments** that mirror production but contain only test data
+- **Never test against production APIs** -- the risk of data corruption or unintended side effects is too high
+- **Seed databases** with known data before test runs for consistent, reproducible results
+
+## Authentication Testing
+
+API authentication is a common source of vulnerabilities. Test these scenarios thoroughly:
+
+- **Valid credentials**: Verify that correct credentials return an authentication token
+- **Invalid credentials**: Verify that wrong passwords return 401 Unauthorized, not 500 Internal Server Error
+- **Expired tokens**: Verify that expired JWT tokens are rejected. Use the JWT Decoder to inspect token expiration claims.
+- **Missing authentication**: Verify that protected endpoints return 401 when no token is provided
+- **Insufficient permissions**: Verify that authenticated users without the required role receive 403 Forbidden
+- **Token refresh**: Verify that the refresh token flow works correctly and that old tokens are invalidated
+
+## Common API Testing Mistakes
+
+1. **Only testing happy paths**: Your test suite must include error cases, edge cases, and boundary conditions. What happens when a required field is missing? When a string field receives a number? When the input exceeds maximum length?
+
+2. **Ignoring response times**: A functionally correct API that takes 30 seconds to respond is effectively broken. Set performance baselines and track regressions.
+
+3. **Not testing concurrency**: APIs that work perfectly for one user at a time might fail under concurrent load due to race conditions, deadlocks, or resource exhaustion.
+
+4. **Hardcoding test data**: Tests that depend on specific database records are brittle. If someone modifies the test database, all tests break.
+
+5. **Skipping security tests**: SQL injection, XSS, and authentication bypass vulnerabilities are preventable with automated security testing. Make it part of your pipeline.
+
+## CI/CD Integration
+
+API tests should run automatically on every code change:
+
+- **Pre-commit**: Run fast unit tests that mock external dependencies
+- **Pull request**: Run integration tests against a staging environment
+- **Pre-deployment**: Run the full test suite including performance tests
+- **Post-deployment**: Run smoke tests against production to verify the deployment succeeded
+
+## API Documentation as Tests
+
+One powerful technique is generating API tests from your documentation (or vice versa). Tools like Dredd test your API against an OpenAPI/Swagger specification, ensuring your documentation always matches your actual API behavior. This eliminates the common problem of documentation that drifts out of sync with the implementation.
+
+The free developer tools at Vaxtim Yoxdu support your API testing workflow at every step. Format and validate JSON responses, encode and decode Base64 authentication headers, inspect JWT tokens, and URL-encode query parameters -- all in your browser, all private, all free. Bookmark the tools you use most and make them part of your daily development routine.`,
+  },
+  'color-theory-for-designers': {
+    title: 'Color Theory for Web Designers: A Practical Guide to Creating Beautiful Palettes',
+    date: '2026-02-28',
+    relatedTools: ['color-picker', 'css-minifier', 'image-compress', 'meta-tag-generator'],
+    content: `Color is the most powerful tool in a designer's arsenal. It shapes emotion, guides attention, builds brand identity, and determines whether users trust your product or bounce within seconds. Yet many designers -- even experienced ones -- choose colors by instinct rather than understanding the principles that make certain combinations work and others fail. This guide covers the color theory fundamentals that every web designer needs, practical techniques for building palettes, and tools that streamline the process.
+
+## Why Color Matters in Web Design
+
+Color is not decorative -- it is functional. Research consistently shows that color influences user behavior in measurable ways:
+
+- **90% of snap judgments** about products are based on color alone
+- **Color increases brand recognition** by up to 80%
+- **Appropriate color choices** can increase conversion rates by 24%
+- **85% of consumers** cite color as the primary reason they buy a particular product
+- **Color accessibility** failures exclude approximately 300 million color-blind users worldwide
+
+In web design specifically, color serves three critical functions: it creates visual hierarchy (drawing attention to CTAs, warnings, and important information), it establishes emotional tone (professional blue, energetic orange, calming green), and it reinforces brand identity (users should recognize your brand from color alone).
+
+## The Color Wheel: Foundation of Everything
+
+Understanding the color wheel is the starting point for all color decisions. The traditional color wheel arranges 12 colors based on their relationships:
+
+**Primary colors** -- red, blue, yellow -- cannot be created by mixing other colors. They are the foundation from which all other colors are derived.
+
+**Secondary colors** -- green, orange, purple -- are created by mixing two primary colors. Red + blue = purple. Red + yellow = orange. Blue + yellow = green.
+
+**Tertiary colors** are created by mixing a primary and an adjacent secondary color, producing names like red-orange, yellow-green, and blue-violet.
+
+## Color Properties: Hue, Saturation, and Lightness
+
+Every color has three properties that you can manipulate to create variations:
+
+**Hue** is what most people mean when they say "color" -- red, blue, green, orange. It is the position on the color wheel, measured in degrees from 0 to 360.
+
+**Saturation** (also called chroma) is the intensity or purity of a color. 100% saturation is the purest, most vivid version of the hue. 0% saturation is a shade of gray. Desaturated colors feel more sophisticated and professional; highly saturated colors feel energetic and attention-grabbing.
+
+**Lightness** (or value) is how light or dark a color is. Adding white creates tints (lighter versions). Adding black creates shades (darker versions). This is the most important property for creating visual hierarchy and ensuring readability.
+
+The HSL (Hue, Saturation, Lightness) color model maps directly to these three properties, making it the most intuitive model for designers. The Color Picker on Vaxtim Yoxdu supports HSL along with HEX and RGB, letting you manipulate each property independently.
+
+## Color Harmony: Combinations That Work
+
+Color harmonies are mathematically derived combinations based on positions on the color wheel. Each harmony creates a different visual effect:
+
+**Complementary colors** sit directly opposite each other on the wheel (e.g., blue and orange, red and green). They create maximum contrast and visual energy. Use them for CTAs against backgrounds or to make important elements pop. Warning: using complementary colors at full saturation in equal amounts creates visual vibration that is uncomfortable to look at. Always let one color dominate and use the other as an accent.
+
+**Analogous colors** sit adjacent on the wheel (e.g., blue, blue-green, green). They create harmonious, cohesive designs that feel natural and comfortable. Analogous schemes are excellent for backgrounds and content areas where you want visual unity without monotony.
+
+**Triadic colors** are evenly spaced around the wheel (e.g., red, yellow, blue). They create vibrant, balanced designs. Triadic schemes work well when you need multiple distinct colors for data visualization, categories, or navigation.
+
+**Split-complementary** takes a base color and uses the two colors adjacent to its complement. This provides the contrast of a complementary scheme with less tension, making it easier to use effectively.
+
+**Tetradic (double-complementary)** uses two complementary pairs. This is the most complex harmony and requires careful balance to avoid visual chaos. Let one color dominate, use one as a secondary, and reserve the other two for accents.
+
+## Building a Web Color Palette
+
+A practical web color palette typically contains 5 to 8 colors organized by function:
+
+1. **Primary brand color**: Your most recognizable color. Used for the logo, primary buttons, and key interactive elements. Choose this first -- everything else derives from it.
+
+2. **Secondary brand color**: Complements the primary. Used for secondary buttons, highlights, and supporting elements. Often an analogous or complementary hue.
+
+3. **Neutral palette**: A range of grays (typically 5 to 7 shades from near-white to near-black) for text, backgrounds, borders, and dividers. Neutrals do the heavy lifting in any design.
+
+4. **Success/positive color**: Green tones for confirmations, completed states, and positive feedback.
+
+5. **Warning color**: Yellow or amber for cautions, pending states, and non-critical alerts.
+
+6. **Error/danger color**: Red tones for errors, destructive actions, and urgent alerts.
+
+7. **Info color**: Blue tones for informational messages and neutral highlights.
+
+## Color and Accessibility
+
+Accessibility is not optional -- it is a legal requirement in many jurisdictions and a moral imperative everywhere. The Web Content Accessibility Guidelines (WCAG) specify minimum contrast ratios:
+
+- **Normal text**: 4.5:1 contrast ratio against its background (WCAG AA)
+- **Large text** (18px+ bold or 24px+ regular): 3:1 contrast ratio (WCAG AA)
+- **Enhanced compliance** (WCAG AAA): 7:1 for normal text, 4.5:1 for large text
+- **UI components and graphical objects**: 3:1 contrast ratio against adjacent colors
+
+**Practical tips for accessible color:**
+
+- Never rely on color alone to convey information. Always pair color with text, icons, or patterns.
+- Test your palette with color blindness simulators. Approximately 8% of men and 0.5% of women have some form of color vision deficiency.
+- Use sufficient contrast for all text, including placeholder text, disabled states, and captions.
+- Ensure interactive elements (links, buttons, form fields) are distinguishable from non-interactive elements without relying solely on color.
+
+The Color Picker on Vaxtim Yoxdu includes color conversion between HEX, RGB, and HSL formats, making it easy to verify and adjust colors for accessibility compliance.
+
+## Color in CSS: Best Practices
+
+**Use CSS custom properties (variables) for your color palette.** Define your colors once in :root and reference them throughout your stylesheets. This makes theme changes trivial and ensures consistency.
+
+\`\`\`css
+:root {
+  --color-primary: #2563eb;
+  --color-primary-light: #60a5fa;
+  --color-primary-dark: #1d4ed8;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-900: #0f172a;
+}
+\`\`\`
+
+**Use HSL for color manipulation.** When you need lighter or darker variants, HSL makes it intuitive -- just adjust the lightness value. This is cleaner than maintaining separate HEX codes for every shade.
+
+**Minimize your palette.** Resist the temptation to add colors. Every additional color increases visual complexity and maintenance burden. Most professional designs use fewer than 8 colors total (including neutrals).
+
+**Use opacity for subtle variations.** Instead of defining new colors for hover states or disabled elements, adjust opacity. This maintains color consistency while creating visual feedback.
+
+## Color Psychology for Web Design
+
+Different colors trigger different psychological responses. While these associations vary across cultures, some patterns are broadly consistent in Western digital contexts:
+
+- **Blue**: Trust, reliability, professionalism. Dominant in finance, healthcare, technology, and social media. Facebook, Twitter/X, LinkedIn, PayPal, and most banks use blue as their primary color.
+- **Green**: Growth, health, nature, success. Common in environmental brands, health products, and financial apps (money associations).
+- **Red**: Energy, urgency, passion. Used for CTAs, sale banners, and notifications. Also signals errors and warnings.
+- **Orange**: Enthusiasm, creativity, affordability. Popular with brands targeting younger demographics.
+- **Purple**: Luxury, creativity, wisdom. Common in beauty, premium products, and creative industries.
+- **Black**: Sophistication, luxury, authority. Used by premium brands and minimalist designs.
+- **White**: Cleanliness, simplicity, space. The foundation of modern web design.
+
+## Tools for Color Work
+
+The most efficient color workflow combines several tools:
+
+1. **Color Picker & Palette Generator** (Vaxtim Yoxdu): Pick colors, convert between formats, and generate harmonious palettes directly in your browser.
+2. **CSS Minifier** (Vaxtim Yoxdu): After defining your color variables and styles, minify your CSS for production.
+3. **Image Compressor** (Vaxtim Yoxdu): Optimize images whose colors you have carefully calibrated, ensuring compression does not introduce color artifacts.
+4. **Contrast checkers**: Verify WCAG compliance for every text-background combination in your palette.
+
+Color theory is not about memorizing rules -- it is about understanding principles that inform better decisions. Start with a strong primary color, build harmonious combinations using the color wheel, ensure accessibility compliance, and organize your palette with CSS custom properties. The tools are free and the principles are timeless. Master them both and your designs will communicate more effectively with every user who sees them.`,
+  },
+  'markdown-writing-guide': {
+    title: 'Markdown Writing Guide: Format Beautiful Documents Without Complex Software',
+    date: '2026-02-25',
+    relatedTools: ['markdown-preview', 'word-counter', 'slug-generator', 'text-diff'],
+    content: `Markdown is a lightweight markup language that lets you format text using simple, readable syntax. Created by John Gruber in 2004, it has become the de facto standard for writing on the web. GitHub README files, documentation platforms, static site generators, note-taking apps, forums, and even email clients support Markdown. Once you learn its simple syntax, you can create beautifully formatted documents anywhere without reaching for heavy word processors. This guide covers everything from basic formatting to advanced techniques.
+
+## Why Markdown?
+
+Before diving into syntax, it is worth understanding why Markdown has achieved such widespread adoption:
+
+**Readability.** Unlike HTML, where tags obscure the content, Markdown is designed to be readable even in its raw, unformatted state. A Markdown document reads naturally as plain text, making it easy to write, review, and edit without rendering.
+
+**Portability.** Markdown files are plain text (.md or .markdown extension). They open in any text editor on any operating system. No proprietary software lock-in, no compatibility issues, no format corruption. A Markdown file you write today will be perfectly readable in 50 years.
+
+**Versatility.** Markdown converts to HTML, PDF, Word documents, slides, ebooks, and more. Write once, publish anywhere. Static site generators like Hugo, Jekyll, and Next.js use Markdown as their primary content format.
+
+**Speed.** Formatting in Markdown is faster than using a mouse to click toolbar buttons. Your hands never leave the keyboard. For writers who produce large volumes of content, this speed advantage compounds into hours saved per week.
+
+**Version control friendly.** Because Markdown is plain text, it works perfectly with Git. You can track changes, compare versions, merge contributions, and maintain a complete history of your documents -- something that is impossible with binary formats like .docx.
+
+## Basic Formatting
+
+### Headings
+
+Headings are created with hash symbols. The number of hashes indicates the heading level:
+
+\`# Heading 1\` creates the largest heading
+\`## Heading 2\` creates a second-level heading
+\`### Heading 3\` creates a third-level heading
+
+You can go up to six levels deep with \`######\`, though most documents rarely need more than three or four levels.
+
+### Text Emphasis
+
+- \`*italic*\` or \`_italic_\` renders as italic text
+- \`**bold**\` or \`__bold__\` renders as bold text
+- \`***bold italic***\` combines both
+- \`~~strikethrough~~\` renders as strikethrough text
+
+### Paragraphs and Line Breaks
+
+Paragraphs are separated by a blank line. Simply pressing Enter once does not create a new paragraph in most Markdown renderers -- you need a blank line between blocks of text. For a hard line break within a paragraph, end the line with two or more spaces before pressing Enter.
+
+## Lists
+
+### Unordered Lists
+
+Use \`-\`, \`*\`, or \`+\` followed by a space:
+
+\`\`\`
+- First item
+- Second item
+  - Nested item
+  - Another nested item
+- Third item
+\`\`\`
+
+### Ordered Lists
+
+Use numbers followed by a period:
+
+\`\`\`
+1. First step
+2. Second step
+3. Third step
+\`\`\`
+
+The actual numbers do not matter -- Markdown will number them sequentially regardless. You could write 1, 1, 1 and the output would still show 1, 2, 3. However, using correct numbers makes the raw Markdown more readable.
+
+### Task Lists
+
+GitHub-Flavored Markdown (GFM) supports checkboxes:
+
+\`\`\`
+- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another task
+\`\`\`
+
+## Links and Images
+
+### Links
+
+\`[Link text](https://example.com)\` creates a clickable hyperlink.
+\`[Link text](https://example.com "Title")\` adds a hover title.
+
+### Reference-Style Links
+
+For documents with many links, reference-style keeps the text clean:
+
+\`\`\`
+Check out [Vaxtim Yoxdu][1] for free online tools.
+
+[1]: https://vaxtimyoxdu.com "Free Online Tools"
+\`\`\`
+
+### Images
+
+\`![Alt text](image-url.jpg)\` embeds an image. The alt text is important for accessibility -- screen readers use it to describe the image to visually impaired users.
+
+## Code
+
+### Inline Code
+
+Wrap code in single backticks: \`console.log("hello")\` renders as inline code.
+
+### Code Blocks
+
+Use triple backticks with an optional language identifier for syntax highlighting:
+
+\`\`\`\`
+\`\`\`javascript
+function greet(name) {
+  return \`Hello, \${name}!\`;
+}
+\`\`\`
+\`\`\`\`
+
+Most Markdown renderers support syntax highlighting for dozens of languages including JavaScript, Python, TypeScript, Go, Rust, SQL, CSS, HTML, Bash, and many more.
+
+## Tables
+
+Markdown tables use pipes and hyphens:
+
+\`\`\`
+| Feature | Free Plan | Pro Plan |
+|---------|-----------|----------|
+| Storage | 5 GB | 100 GB |
+| Users | 1 | Unlimited |
+| Support | Email | Priority |
+\`\`\`
+
+Align columns using colons in the separator row: \`:---\` for left, \`:---:\` for center, \`---:\` for right alignment.
+
+## Blockquotes
+
+Use \`>\` to create blockquotes:
+
+\`\`\`
+> The best time to plant a tree was twenty years ago.
+> The second best time is now.
+\`\`\`
+
+Blockquotes can contain other Markdown elements including headings, lists, and code blocks.
+
+## Horizontal Rules
+
+Three or more hyphens, asterisks, or underscores on a line create a horizontal rule:
+
+\`\`\`
+---
+***
+___
+\`\`\`
+
+## Advanced Markdown
+
+### Footnotes
+
+Some Markdown processors support footnotes:
+
+\`\`\`
+Here is a statement that needs a citation[^1].
+
+[^1]: This is the footnote content.
+\`\`\`
+
+### Definition Lists
+
+\`\`\`
+Term
+: Definition of the term
+\`\`\`
+
+### Abbreviations
+
+\`\`\`
+The HTML specification is maintained by the W3C.
+
+*[HTML]: HyperText Markup Language
+*[W3C]: World Wide Web Consortium
+\`\`\`
+
+### Math Equations
+
+Many Markdown processors support LaTeX math:
+
+\`\`\`
+Inline: $E = mc^2$
+Block: $$\\sum_{i=1}^{n} x_i$$
+\`\`\`
+
+## Markdown for Different Platforms
+
+### GitHub-Flavored Markdown (GFM)
+
+GitHub extends standard Markdown with task lists, tables, strikethrough, autolinked URLs, emoji shortcodes (:rocket: renders as a rocket emoji), and syntax-highlighted code fences. GFM is the most commonly supported Markdown variant.
+
+### Documentation Platforms
+
+Tools like Docusaurus, MkDocs, and GitBook use Markdown as their primary format but add features like admonitions (warning/info/tip boxes), tabbed content, and embedded components.
+
+### Static Site Generators
+
+Next.js, Hugo, Jekyll, Gatsby, and Astro all support Markdown for content. They typically extend Markdown with frontmatter (YAML metadata at the top of the file) for titles, dates, tags, and custom properties.
+
+## Writing Workflow Tips
+
+1. **Use a Markdown preview tool.** The Markdown Preview on Vaxtim Yoxdu shows your formatted output in real time as you type, making it easy to verify your formatting without switching between editor and browser.
+
+2. **Count your words.** For blog posts, articles, and documentation with length requirements, the Word Counter on Vaxtim Yoxdu tracks words, characters, sentences, and paragraphs as you write.
+
+3. **Generate URL-friendly slugs.** When titling Markdown files for a blog or documentation site, the Slug Generator creates clean, SEO-friendly URLs from your titles.
+
+4. **Compare versions.** When reviewing changes to Markdown documents, the Text Diff tool highlights exactly what changed between two versions, line by line.
+
+5. **Write in a distraction-free editor.** Use a minimal text editor or a dedicated Markdown editor. Avoid the temptation to fuss with formatting -- Markdown's simplicity is its strength.
+
+6. **Establish conventions early.** For team projects, decide on formatting conventions upfront: heading levels for different content types, code block languages, list styles, and image alt text standards.
+
+## Common Mistakes to Avoid
+
+- **Missing blank lines before lists and headings**: Most Markdown processors require a blank line before starting a list or heading.
+- **Inconsistent list markers**: Pick one style (-, *, or +) and use it consistently throughout your document.
+- **Forgetting alt text for images**: Every image should have descriptive alt text for accessibility.
+- **Over-nesting**: Deeply nested lists and blockquotes become hard to read. If your nesting exceeds three levels, consider restructuring your content.
+- **Not escaping special characters**: If you need a literal asterisk, hash, or bracket, escape it with a backslash.
+
+Markdown is one of those rare technologies that is genuinely simple to learn and immediately useful. In 15 minutes, you can master the basics. In an hour, you can handle advanced formatting. And from that point on, you have a portable, version-controllable, future-proof writing format that works everywhere. Start practicing with the Markdown Preview tool on Vaxtim Yoxdu and experience the elegance of writing without the friction of formatting toolbars.`,
+  },
+  'time-management-productivity-tools': {
+    title: 'Time Management and Productivity Tools: Work Smarter in 2026',
+    date: '2026-02-20',
+    relatedTools: ['word-counter', 'ai-text-summarizer', 'ai-text-rewriter', 'cron-parser'],
+    content: `Time is the one resource you cannot create more of. In 2026, the average knowledge worker spends 28% of their workday on email, 20% searching for information, and 12% in unnecessary meetings. That leaves barely 40% for actual productive work -- the work that moves projects forward, solves problems, and creates value. The good news is that the right tools and techniques can reclaim significant portions of that lost time. This guide covers proven time management strategies, the best productivity tools available today, and practical techniques for getting more meaningful work done in less time.
+
+## The Productivity Problem
+
+Before jumping into solutions, it is worth understanding why productivity is so hard in the modern workplace:
+
+**Context switching is expensive.** Research from the University of California shows that it takes an average of 23 minutes to fully refocus after an interruption. If you are interrupted just 6 times per day, you lose over two hours to context switching alone -- and most people are interrupted far more than that.
+
+**Digital distractions are engineered to capture attention.** Social media platforms, news sites, and messaging apps are designed by teams of psychologists and engineers to be as addictive as possible. Your willpower alone is no match for billion-dollar attention engineering.
+
+**Meeting culture has spiraled out of control.** The average professional spends 31 hours per month in unproductive meetings. Surveys consistently show that 67% of professionals consider excessive meetings to be the number one barrier to getting work done.
+
+**Information overload is real.** The average knowledge worker receives 121 emails per day, manages accounts across 8+ communication tools, and processes more information in a single day than a person in the 15th century encountered in their entire lifetime.
+
+## Core Time Management Frameworks
+
+### The Eisenhower Matrix
+
+Divide tasks into four quadrants based on urgency and importance:
+
+**Quadrant 1 -- Urgent and Important:** Crises, deadlines, emergencies. Do these immediately.
+**Quadrant 2 -- Important but Not Urgent:** Strategic planning, skill development, relationship building. Schedule these proactively -- this is where the highest-value work happens.
+**Quadrant 3 -- Urgent but Not Important:** Many emails, some meetings, others' priorities. Delegate or minimize these.
+**Quadrant 4 -- Neither Urgent nor Important:** Social media scrolling, excessive news consumption, busywork. Eliminate these.
+
+The key insight is that most people spend too much time in Quadrants 1 and 3, neglecting Quadrant 2. The most effective professionals intentionally protect Quadrant 2 time.
+
+### Time Blocking
+
+Assign specific time blocks to specific types of work. Instead of a generic to-do list, your calendar becomes your plan:
+
+- 8:00-10:00: Deep work (no meetings, no email, no Slack)
+- 10:00-10:30: Email and messages
+- 10:30-12:00: Collaborative work (meetings, pair programming)
+- 12:00-13:00: Lunch and break
+- 13:00-14:30: Deep work
+- 14:30-15:00: Email and messages
+- 15:00-16:30: Administrative tasks and planning
+- 16:30-17:00: End-of-day review and next-day planning
+
+The critical discipline is protecting your deep work blocks. Decline meetings that fall during these times. Close email and messaging apps. Put your phone in another room. Two hours of uninterrupted deep work produces more value than six hours of fragmented, interrupted work.
+
+### The Pomodoro Technique
+
+Work in focused 25-minute intervals (pomodoros) followed by 5-minute breaks. After four pomodoros, take a longer 15-30 minute break. This technique works because:
+
+- It makes starting easier -- committing to 25 minutes feels manageable even when a task feels overwhelming
+- It creates natural stopping points for reflection and course correction
+- The timer creates mild urgency that helps maintain focus
+- Regular breaks prevent mental fatigue and maintain sustained performance
+
+### Getting Things Done (GTD)
+
+David Allen's methodology focuses on getting tasks out of your head and into a trusted system:
+
+1. **Capture**: Write down every task, idea, and commitment
+2. **Clarify**: Determine the next physical action for each item
+3. **Organize**: Put actions into appropriate lists (projects, waiting for, someday/maybe)
+4. **Reflect**: Review your lists weekly
+5. **Engage**: Choose what to work on based on context, time available, energy, and priority
+
+## Productivity Tools by Category
+
+### Task Management
+
+**Todoist** excels at personal task management with natural language input, recurring tasks, and priority levels. Its simplicity is its strength.
+
+**Linear** has become the standard for software development teams. Its keyboard-first design and opinionated workflow reduce friction in issue tracking and project management.
+
+**Notion** combines task management with documentation, wikis, and databases. It is flexible enough to model almost any workflow but requires discipline to avoid over-engineering your system.
+
+### Focus and Concentration
+
+**Freedom** blocks distracting websites and apps across all your devices simultaneously. Schedule blocking sessions in advance so you do not have to rely on willpower in the moment.
+
+**Brain.fm** uses AI-generated music designed to enhance focus, relaxation, or sleep. Unlike regular music, which can be distracting, these audio tracks are engineered to fade into the background while maintaining your attention on work.
+
+**Forest** gamifies focus by growing a virtual tree during work sessions. If you leave the app, the tree dies. Simple but surprisingly effective for many people.
+
+### Text and Content Tools
+
+When your work involves writing -- emails, reports, blog posts, documentation -- text tools save significant time:
+
+- **AI Text Summarizer** (Vaxtim Yoxdu): Condense long reports, articles, or research papers into key points in seconds. Instead of spending 30 minutes reading a 5,000-word report, get the essential information in 2 minutes.
+- **AI Text Rewriter** (Vaxtim Yoxdu): Generate multiple versions of the same content for different audiences or platforms. Write once, adapt for email, social media, and presentations without starting from scratch.
+- **Word Counter** (Vaxtim Yoxdu): Track word counts and reading time for content with length requirements. Knowing your writing pace helps you estimate task duration more accurately.
+
+### Automation
+
+**Zapier** and **Make (formerly Integromat)** connect apps and automate repetitive workflows. Examples: automatically save email attachments to cloud storage, post social media updates from a spreadsheet, create tasks from Slack messages, or send weekly digest emails.
+
+**Cron jobs** automate recurring server-side tasks -- database backups, report generation, cache clearing, and data synchronization. The Cron Expression Parser on Vaxtim Yoxdu helps you build and understand cron schedules without memorizing the syntax.
+
+### Communication
+
+**Loom** records quick video messages that replace meetings. Instead of scheduling a 30-minute meeting to explain something, record a 3-minute Loom and share it. Recipients watch on their own time at 1.5x or 2x speed.
+
+**Slack huddles** or **Discord voice channels** provide lightweight audio conversations that are less formal than video calls but more nuanced than text chat.
+
+## Daily Productivity Habits
+
+Tools alone do not make you productive. These habits create the foundation:
+
+**Start each day with your most important task.** Your energy and focus peak in the morning (for most people). Use this prime time for your hardest, most important work. Email and administrative tasks can wait.
+
+**Process email in batches.** Check email 2-3 times per day at scheduled times rather than continuously. Each time you check, process your inbox to zero -- reply, delegate, schedule, archive, or delete every message.
+
+**Say no more often.** Every yes is a no to something else. Protect your time by declining meetings without clear agendas, requests that do not align with your priorities, and commitments that exceed your capacity.
+
+**Plan tomorrow before leaving today.** Spending 10 minutes at the end of each day identifying tomorrow's priorities means you start the next day with clarity and momentum instead of spending the first hour figuring out what to do.
+
+**Track your time for one week.** You cannot optimize what you do not measure. Track how you actually spend your time (not how you think you spend it) for one week. The results will surprise you and reveal opportunities for improvement.
+
+## Measuring Productivity
+
+Productivity is not about being busy -- it is about producing outcomes. Track metrics that matter:
+
+- **Tasks completed** vs. tasks planned (completion rate)
+- **Deep work hours** per day (aim for 3-4 hours minimum)
+- **Time to completion** for recurring tasks (should decrease over time)
+- **Meeting hours** per week (should be minimized)
+- **Context switches** per day (should be reduced)
+
+## Building a Sustainable System
+
+The best productivity system is the one you actually use. Start simple:
+
+1. Choose one task management tool and commit to it for 30 days
+2. Implement time blocking for your most important work
+3. Identify your top 3 time wasters and find tools to address them
+4. Review and adjust your system weekly
+5. Add complexity only when you have mastered the basics
+
+Remember: productivity tools are means, not ends. The goal is not to have the most sophisticated system -- it is to do meaningful work consistently, maintain sustainable energy, and make progress on what matters most to you. Start with the tools that remove your biggest friction points, build habits around them, and iterate from there.`,
+  },
 }
 
 export const blogSlugs = Object.keys(blogPosts)

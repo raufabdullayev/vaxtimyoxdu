@@ -5,6 +5,8 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import CookieConsent from '@/components/layout/CookieConsent'
+import InstallPrompt from '@/components/layout/InstallPrompt'
+import ServiceWorkerRegistrar from '@/components/layout/ServiceWorkerRegistrar'
 import { generateBaseMetadata } from '@/lib/utils/seo'
 
 const inter = Inter({
@@ -16,9 +18,10 @@ const inter = Inter({
 export const metadata: Metadata = generateBaseMetadata()
 
 export const viewport = {
-  themeColor: '#3b82f6',
+  themeColor: '#7c3aed',
   width: 'device-width',
   initialScale: 1,
+  viewportFit: 'cover' as const,
 }
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || ''
@@ -67,6 +70,17 @@ export default function RootLayout({
   return (
     <html lang="az">
       <head>
+        {/* PWA meta tags */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="application-name" content="Vaxtim Yoxdu" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Vaxtim Yoxdu" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#7c3aed" />
+        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+        {/* DNS prefetch and preconnect */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
@@ -94,6 +108,8 @@ export default function RootLayout({
           <Footer />
         </div>
         <CookieConsent />
+        <InstallPrompt />
+        <ServiceWorkerRegistrar />
         {GA_ID && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />

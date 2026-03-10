@@ -3,9 +3,10 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
-import { generateToolMetadata, generateToolJsonLd } from '@/lib/utils/seo'
+import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd } from '@/lib/utils/seo'
 import ToolTemplate from '@/components/tools/ToolTemplate'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import RelatedTools from '@/components/tools/RelatedTools'
 
 const toolComponents: Record<string, React.ComponentType> = {
   // AI Tools
@@ -70,12 +71,17 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
   if (!Component) notFound()
 
   const jsonLd = generateToolJsonLd(tool)
+  const faqJsonLd = generateToolFaqJsonLd(tool)
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Breadcrumb
         items={[
@@ -87,6 +93,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       <ToolTemplate tool={tool}>
         <Component />
       </ToolTemplate>
+      <RelatedTools currentTool={tool} />
     </>
   )
 }

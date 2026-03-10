@@ -265,6 +265,85 @@ export function generateBlogPostMetadata({
   }
 }
 
+export function generateToolFaqJsonLd(tool: Tool) {
+  const faqs = generateToolFaqs(tool)
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+}
+
+function generateToolFaqs(tool: Tool): { question: string; answer: string }[] {
+  const faqs: { question: string; answer: string }[] = []
+
+  // FAQ 1: What is this tool and what does it do?
+  faqs.push({
+    question: `What is ${tool.name} and what does it do?`,
+    answer: `${tool.name} is a free online tool that lets you ${tool.shortDescription.toLowerCase()}. ${tool.description}`,
+  })
+
+  // FAQ 2: Privacy/processing question based on tool type
+  if (tool.isClientSide) {
+    faqs.push({
+      question: `Is ${tool.name} safe to use? Are my files uploaded to a server?`,
+      answer: `Yes, ${tool.name} is completely safe to use. This tool processes everything directly in your browser using client-side technology. Your data never leaves your device -- nothing is uploaded to any server. This ensures complete privacy and security for all your files and data.`,
+    })
+  } else if (tool.isAI) {
+    faqs.push({
+      question: `How does the AI in ${tool.name} work?`,
+      answer: `${tool.name} uses advanced AI language models to ${tool.shortDescription.toLowerCase()}. The AI analyzes your input text, understands context and meaning, and generates high-quality results. The tool is free to use with no account required.`,
+    })
+  } else {
+    faqs.push({
+      question: `Is ${tool.name} free to use?`,
+      answer: `Yes, ${tool.name} is completely free to use with no hidden fees, no account required, and no usage limits. Simply open the tool and start working immediately.`,
+    })
+  }
+
+  // FAQ 3: Practical usage question based on category and keywords
+  const categoryQuestions: Record<string, { question: string; answer: string }> = {
+    ai: {
+      question: `Do I need to create an account to use ${tool.name}?`,
+      answer: `No, you do not need to create an account or sign up to use ${tool.name}. The tool is available immediately -- just open the page and start using it. There are no word limits, no daily caps, and no hidden restrictions.`,
+    },
+    pdf: {
+      question: `What file formats does ${tool.name} support?`,
+      answer: `${tool.name} supports standard PDF files. You can work with PDFs of any size directly in your browser. The tool handles multi-page documents and preserves the quality of your original files throughout the process.`,
+    },
+    image: {
+      question: `What image formats does ${tool.name} support?`,
+      answer: `${tool.name} supports all major image formats including JPEG, PNG, and WebP. You can process images of any size directly in your browser without installing any software. The tool maintains optimal quality while performing the requested operation.`,
+    },
+    dev: {
+      question: `Can I use ${tool.name} on any device or browser?`,
+      answer: `Yes, ${tool.name} works on any modern web browser including Chrome, Firefox, Safari, and Edge on desktop, tablet, and mobile devices. No installation or plugins are required -- it runs entirely in your browser.`,
+    },
+    generators: {
+      question: `Can I customize the output of ${tool.name}?`,
+      answer: `Yes, ${tool.name} offers various customization options to tailor the output to your specific needs. You can adjust settings and parameters to get exactly the result you want. All processing happens in your browser for instant results.`,
+    },
+    text: {
+      question: `Can I use ${tool.name} for large documents?`,
+      answer: `Yes, ${tool.name} handles text of any length. Whether you are working with a short paragraph or a lengthy document, the tool processes your text instantly in your browser with no size limitations.`,
+    },
+  }
+
+  const categoryFaq = categoryQuestions[tool.category]
+  if (categoryFaq) {
+    faqs.push(categoryFaq)
+  }
+
+  return faqs
+}
+
 export function generateBlogArticleJsonLd({
   title,
   description,

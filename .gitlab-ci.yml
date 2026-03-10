@@ -1,5 +1,6 @@
 stages:
   - validate
+  - test
   - deploy
   - preview
 
@@ -24,11 +25,28 @@ validate:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
   timeout: 10 minutes
 
+test:
+  stage: test
+  image: node:20
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  script:
+    - npm ci --prefer-offline
+    - echo "Running tests..."
+    - npm run test:run
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  timeout: 10 minutes
+
 deploy:
   stage: deploy
   image: node:20
   needs:
     - validate
+    - test
   script:
     - npm install -g vercel@${VERCEL_CLI_VERSION}
     - echo "Vercel version:" && vercel --version
