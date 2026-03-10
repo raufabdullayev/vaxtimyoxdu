@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { generateBlogPostMetadata, generateBlogArticleJsonLd } from '@/lib/utils/seo'
+import { generateBlogPostMetadata, generateBlogArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import { blogPosts } from '@/data/blog-posts'
@@ -17,12 +17,14 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
   const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
 
-  return generateBlogPostMetadata({
+  const metadata = generateBlogPostMetadata({
     title: post.title,
     description,
     slug: params.slug,
     date: post.date,
   })
+  const alternates = generateHreflangAlternates(`/blog/${params.slug}`)
+  return { ...metadata, alternates }
 }
 
 export default function BlogPost({ params }: { params: { slug: string } }) {

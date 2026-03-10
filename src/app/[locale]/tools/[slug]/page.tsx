@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
-import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd } from '@/lib/utils/seo'
+import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import ToolTemplate from '@/components/tools/ToolTemplate'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import RelatedTools from '@/components/tools/RelatedTools'
@@ -43,6 +43,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'json-to-yaml': dynamic(() => import('@/components/tools/dev/JsonToYaml')),
   'xml-formatter': dynamic(() => import('@/components/tools/dev/XmlFormatter')),
   'markdown-to-html': dynamic(() => import('@/components/tools/dev/MarkdownToHtml')),
+  'yaml-to-json': dynamic(() => import('@/components/tools/dev/YamlToJson')),
+  'http-status-codes': dynamic(() => import('@/components/tools/dev/HttpStatusCodes')),
   // Generators
   'qr-code-generator': dynamic(() => import('@/components/tools/generators/QrCodeGenerator')),
   'color-picker': dynamic(() => import('@/components/tools/generators/ColorPicker')),
@@ -56,6 +58,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'placeholder-image': dynamic(() => import('@/components/tools/generators/PlaceholderImage')),
   'favicon-generator': dynamic(() => import('@/components/tools/generators/FaviconGenerator')),
   'svg-to-png': dynamic(() => import('@/components/tools/generators/SvgToPng')),
+  'unit-converter': dynamic(() => import('@/components/tools/generators/UnitConverter')),
+  'invoice-generator': dynamic(() => import('@/components/tools/generators/InvoiceGenerator')),
   // Text Tools
   'word-counter': dynamic(() => import('@/components/tools/WordCounter')),
   'case-converter': dynamic(() => import('@/components/tools/text/CaseConverter')),
@@ -68,6 +72,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'text-to-speech': dynamic(() => import('@/components/tools/text/TextToSpeech')),
   'character-counter': dynamic(() => import('@/components/tools/text/CharacterCounter')),
   'find-and-replace': dynamic(() => import('@/components/tools/text/FindAndReplace')),
+  'morse-code': dynamic(() => import('@/components/tools/text/MorseCode')),
+  'random-text-generator': dynamic(() => import('@/components/tools/text/RandomTextGenerator')),
+  'text-repeater': dynamic(() => import('@/components/tools/text/TextRepeater')),
 }
 
 export async function generateStaticParams() {
@@ -83,7 +90,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const tool = getToolBySlug(params.slug)
   if (!tool) return {}
-  return generateToolMetadata(tool)
+  const metadata = generateToolMetadata(tool)
+  const alternates = generateHreflangAlternates(`/tools/${tool.slug}`)
+  return { ...metadata, alternates }
 }
 
 export default function ToolPage({ params }: { params: { slug: string } }) {

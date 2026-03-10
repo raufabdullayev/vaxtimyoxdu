@@ -2,40 +2,39 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import { generateHreflangAlternates } from '@/lib/utils/seo'
 
-export const metadata: Metadata = {
-  title: 'Xeberler - Vaxtim Yoxdu',
-  description: 'Gunluk vacib xeberlerin qisa xulasesi. Iqtisadiyyat, texnologiya, tehsil, idman - her sheyi bir baxishda.',
-  keywords: 'xeberler, azerbaycan, iqtisadiyyat, texnologiya, tehsil, idman, gunluk xeberler',
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  const alternates = generateHreflangAlternates('/info')
+
+  return {
     title: 'Xeberler - Vaxtim Yoxdu',
-    description: 'Gunluk vacib xeberlerin qisa xulasesi. Iqtisadiyyat, texnologiya, tehsil, idman.',
-    url: 'https://vaxtimyoxdu.com/info',
-    siteName: 'Vaxtim Yoxdu',
-    type: 'website',
-    locale: 'az_AZ',
-    images: [
-      {
-        url: 'https://vaxtimyoxdu.com/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Vaxtim Yoxdu Xeberler',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Xeberler - Vaxtim Yoxdu',
-    description: 'Gunluk vacib xeberlerin qisa xulasesi. Iqtisadiyyat, texnologiya, tehsil, idman.',
-    images: ['https://vaxtimyoxdu.com/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://vaxtimyoxdu.com/info',
-    languages: {
-      'az': 'https://vaxtimyoxdu.com/info',
-      'en': 'https://vaxtimyoxdu.com/info',
+    description: 'Gunluk vacib xeberlerin qisa xulasesi. Iqtisadiyyat, texnologiya, tehsil, idman - her sheyi bir baxishda.',
+    keywords: 'xeberler, azerbaycan, iqtisadiyyat, texnologiya, tehsil, idman, gunluk xeberler',
+    openGraph: {
+      title: 'Xeberler - Vaxtim Yoxdu',
+      description: 'Gunluk vacib xeberlerin qisa xulasesi. Iqtisadiyyat, texnologiya, tehsil, idman.',
+      url: 'https://vaxtimyoxdu.com/info',
+      siteName: 'Vaxtim Yoxdu',
+      type: 'website',
+      locale: 'az_AZ',
+      images: [
+        {
+          url: 'https://vaxtimyoxdu.com/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Vaxtim Yoxdu Xeberler',
+        },
+      ],
     },
-  },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Xeberler - Vaxtim Yoxdu',
+      description: 'Gunluk vacib xeberlerin qisa xulasesi. Iqtisadiyyat, texnologiya, tehsil, idman.',
+      images: ['https://vaxtimyoxdu.com/og-image.png'],
+    },
+    alternates,
+  }
 }
 
 const articles = [

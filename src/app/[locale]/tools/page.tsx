@@ -1,45 +1,63 @@
 import { Metadata } from 'next'
-import { tools, categories } from '@/config/tools'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { tools } from '@/config/tools'
 import ToolCard from '@/components/tools/ToolCard'
 import { ToolCategory } from '@/types/tool'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import { generateHreflangAlternates, getOgLocale } from '@/lib/utils/seo'
 
-export const metadata: Metadata = {
-  title: 'Pulsuz Onlayn Aletler - Vaxtim Yoxdu',
-  description: 'Pulsuz AI onlayn aletler. PDF birlesdirici, sekil sixma, metn yeniden yazma, JSON formatter, QR kod yaradici ve daha cox.',
-  keywords: 'pulsuz online aletler, ai tools, pdf merger, image compressor, json formatter, qr code generator, online tools',
-  openGraph: {
-    title: 'Pulsuz Onlayn Aletler - Vaxtim Yoxdu',
-    description: 'Pulsuz AI onlayn aletler. PDF birlesdirici, sekil sixma, metn yeniden yazma ve daha cox.',
-    url: 'https://vaxtimyoxdu.com/tools',
-    siteName: 'Vaxtim Yoxdu',
-    type: 'website',
-    locale: 'az_AZ',
-    images: [
-      {
-        url: 'https://vaxtimyoxdu.com/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Vaxtim Yoxdu - Pulsuz Onlayn Aletler',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Pulsuz Onlayn Aletler - Vaxtim Yoxdu',
-    description: 'Pulsuz AI onlayn aletler. PDF birlesdirici, sekil sixma, metn yeniden yazma ve daha cox.',
-    images: ['https://vaxtimyoxdu.com/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://vaxtimyoxdu.com/tools',
-    languages: {
-      'az': 'https://vaxtimyoxdu.com/tools',
-      'en': 'https://vaxtimyoxdu.com/tools',
-    },
-  },
+type Props = {
+  params: { locale: string }
 }
 
-export default function ToolsPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'tools' })
+  const alternates = generateHreflangAlternates('/tools')
+  const ogLocale = getOgLocale(params.locale)
+
+  return {
+    title: `${t('pageTitle')} ${t('pageTitleHighlight')} - Vaxtim Yoxdu`,
+    description: t('pageDescription'),
+    openGraph: {
+      title: `${t('pageTitle')} ${t('pageTitleHighlight')} - Vaxtim Yoxdu`,
+      description: t('pageDescription'),
+      url: alternates.canonical,
+      siteName: 'Vaxtim Yoxdu',
+      type: 'website',
+      locale: ogLocale,
+      images: [
+        {
+          url: 'https://vaxtimyoxdu.com/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Vaxtim Yoxdu - ' + t('pageTitle'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${t('pageTitle')} ${t('pageTitleHighlight')} - Vaxtim Yoxdu`,
+      description: t('pageDescription'),
+      images: ['https://vaxtimyoxdu.com/og-image.png'],
+    },
+    alternates,
+  }
+}
+
+/** Map category keys to translation keys */
+const categoryTranslationKeys: Record<ToolCategory, { name: string; desc: string }> = {
+  ai: { name: 'categories.ai', desc: 'categories.aiDesc' },
+  pdf: { name: 'categories.pdf', desc: 'categories.pdfDesc' },
+  image: { name: 'categories.image', desc: 'categories.imageDesc' },
+  dev: { name: 'categories.dev', desc: 'categories.devDesc' },
+  generators: { name: 'categories.generators', desc: 'categories.generatorsDesc' },
+  text: { name: 'categories.text', desc: 'categories.textDesc' },
+}
+
+export default async function ToolsPage({ params }: Props) {
+  setRequestLocale(params.locale)
+  const t = await getTranslations('tools')
+
   const groupedTools = tools.reduce(
     (acc, tool) => {
       if (!acc[tool.category]) acc[tool.category] = []
@@ -53,36 +71,38 @@ export default function ToolsPage() {
     <div className="container py-8 md:py-12">
       <Breadcrumb
         items={[
-          { label: 'Ana s\u0259hif\u0259', href: '/' },
-          { label: 'Al\u0259tl\u0259r' },
+          { label: t('breadcrumbHome'), href: '/' },
+          { label: t('breadcrumbTools') },
         ]}
       />
       <section className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Pulsuz Onlayn Alətlər
-          <span className="text-primary"> AI ilə</span>
+          {t('pageTitle')}
+          <span className="text-primary"> {t('pageTitleHighlight')}</span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          PDF birləşdirici, şəkil alətləri, mətn yenidən yazma, JSON formatter və daha çox.
-          Qeydiyyat lazım deyil. Sürətli, pulsuz və təhlükəsiz.
+          {t('pageDescription')}
         </p>
       </section>
 
-      {Object.entries(groupedTools).map(([category, categoryTools]) => (
-        <section key={category} className="mb-10">
-          <h2 className="text-2xl font-bold mb-2">
-            {categories[category as ToolCategory]?.name || category}
-          </h2>
-          <p className="text-muted-foreground mb-4">
-            {categories[category as ToolCategory]?.description}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {categoryTools.map((tool) => (
-              <ToolCard key={tool.slug} tool={tool} />
-            ))}
-          </div>
-        </section>
-      ))}
+      {Object.entries(groupedTools).map(([category, categoryTools]) => {
+        const keys = categoryTranslationKeys[category as ToolCategory]
+        return (
+          <section key={category} className="mb-10">
+            <h2 className="text-2xl font-bold mb-2">
+              {keys ? t(keys.name) : category}
+            </h2>
+            <p className="text-muted-foreground mb-4">
+              {keys ? t(keys.desc) : ''}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {categoryTools.map((tool) => (
+                <ToolCard key={tool.slug} tool={tool} />
+              ))}
+            </div>
+          </section>
+        )
+      })}
     </div>
   )
 }

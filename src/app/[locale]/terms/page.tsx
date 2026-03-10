@@ -1,49 +1,46 @@
 import { Metadata } from 'next'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { generateHreflangAlternates } from '@/lib/utils/seo'
 
-export const metadata: Metadata = {
-  title: 'İstifadə Şərtləri - Vaxtım Yoxdu',
-  description: 'Vaxtım Yoxdu onlayn alətlər platforması üçün istifadə şərtləri.',
-  alternates: {
-    canonical: 'https://vaxtimyoxdu.com/terms',
-  },
+type Props = {
+  params: { locale: string }
 }
 
-export default function TermsPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'terms' })
+  const alternates = generateHreflangAlternates('/terms')
+
+  return {
+    title: t('metaTitle'),
+    description: t('metaDescription'),
+    alternates,
+  }
+}
+
+export default async function TermsPage({ params }: Props) {
+  setRequestLocale(params.locale)
+  const t = await getTranslations('terms')
+
   return (
     <div className="container py-12 max-w-3xl">
-      <h1 className="text-3xl font-bold mb-6">Terms of Service</h1>
+      <h1 className="text-3xl font-bold mb-6">{t('title')}</h1>
       <div className="prose prose-sm max-w-none space-y-4 text-muted-foreground">
-        <p className="text-sm">Last updated: March 2026</p>
+        <p className="text-sm">{t('lastUpdated')}</p>
 
-        <h2 className="text-xl font-semibold text-foreground mt-8">Acceptance of Terms</h2>
-        <p>
-          By using Vaxtim Yoxdu, you agree to these Terms of Service. If you do not agree, please do
-          not use our services.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mt-8">{t('acceptTitle')}</h2>
+        <p>{t('acceptDescription')}</p>
 
-        <h2 className="text-xl font-semibold text-foreground mt-8">Use of Services</h2>
-        <p>
-          Our tools are provided free of charge for personal and commercial use. You may not use our
-          services for any illegal or unauthorized purpose.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mt-8">{t('useTitle')}</h2>
+        <p>{t('useDescription')}</p>
 
-        <h2 className="text-xl font-semibold text-foreground mt-8">Limitations</h2>
-        <p>
-          AI-powered tools have usage limits to ensure fair access for all users. We reserve the
-          right to restrict access to users who abuse our services.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mt-8">{t('limitationsTitle')}</h2>
+        <p>{t('limitationsDescription')}</p>
 
-        <h2 className="text-xl font-semibold text-foreground mt-8">Disclaimer</h2>
-        <p>
-          Our tools are provided &quot;as is&quot; without warranties of any kind. We are not
-          responsible for any data loss or damages resulting from the use of our services.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mt-8">{t('disclaimerTitle')}</h2>
+        <p>{t('disclaimerDescription')}</p>
 
-        <h2 className="text-xl font-semibold text-foreground mt-8">Changes</h2>
-        <p>
-          We reserve the right to modify these terms at any time. Continued use of our services
-          constitutes acceptance of updated terms.
-        </p>
+        <h2 className="text-xl font-semibold text-foreground mt-8">{t('changesTitle')}</h2>
+        <p>{t('changesDescription')}</p>
       </div>
     </div>
   )

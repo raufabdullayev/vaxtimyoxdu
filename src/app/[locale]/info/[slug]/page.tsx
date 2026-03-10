@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { generateArticleMetadata, generateNewsArticleJsonLd } from '@/lib/utils/seo'
+import { generateArticleMetadata, generateNewsArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import RelatedArticles from '@/components/layout/RelatedArticles'
@@ -17,13 +17,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
   const description = article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim()
 
-  return generateArticleMetadata({
+  const metadata = generateArticleMetadata({
     title: article.title,
     description,
     slug: params.slug,
     date: article.date,
     category: article.category,
   })
+  const alternates = generateHreflangAlternates(`/info/${params.slug}`)
+  return { ...metadata, alternates }
 }
 
 export default function ArticlePage({ params }: { params: { slug: string } }) {

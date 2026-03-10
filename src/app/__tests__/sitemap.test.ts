@@ -5,6 +5,8 @@ import { newsArticles } from '@/data/news-articles'
 import { blogPosts } from '@/data/blog-posts'
 
 const BASE_URL = 'https://vaxtimyoxdu.com'
+const LOCALES = ['az', 'en', 'tr', 'ru']
+const LOCALE_COUNT = LOCALES.length
 const entries = sitemap()
 
 // ---------------------------------------------------------------------------
@@ -16,9 +18,10 @@ describe('sitemap() general structure', () => {
     expect(entries.length).toBeGreaterThan(0)
   })
 
-  it('should include entries for all tools, news articles, blog posts, and static pages', () => {
-    const expectedStaticPages = 6 // root, /info, /tools, /blog, /about, /privacy, /terms => 7
-    const expectedCount = 7 + tools.length + Object.keys(newsArticles).length + Object.keys(blogPosts).length
+  it('should include locale variants for all tools, news, blog, and static pages', () => {
+    const staticPages = 7 // /, /info, /tools, /blog, /about, /privacy, /terms
+    const uniquePages = staticPages + tools.length + Object.keys(newsArticles).length + Object.keys(blogPosts).length
+    const expectedCount = uniquePages * LOCALE_COUNT
     expect(entries.length).toBe(expectedCount)
   })
 
@@ -55,16 +58,35 @@ describe('sitemap() general structure', () => {
       expect(entry.priority).toBeLessThanOrEqual(1)
     }
   })
+
+  it('should have alternates with hreflang on every entry', () => {
+    for (const entry of entries) {
+      const alt = entry as { alternates?: { languages?: Record<string, string> } }
+      expect(alt.alternates).toBeDefined()
+      expect(alt.alternates!.languages).toBeDefined()
+      for (const locale of LOCALES) {
+        expect(alt.alternates!.languages![locale]).toBeDefined()
+      }
+    }
+  })
 })
 
 // ---------------------------------------------------------------------------
-// Static pages
+// Static pages (default locale = az, no prefix)
 // ---------------------------------------------------------------------------
 describe('sitemap() static pages', () => {
-  it('should include the root page with priority 1', () => {
-    const root = entries.find((e) => e.url === BASE_URL)
+  it('should include the root page for default locale with priority 1', () => {
+    const root = entries.find((e) => e.url === BASE_URL + '/')
     expect(root).toBeDefined()
     expect(root!.priority).toBe(1)
+  })
+
+  it('should include root page for all locales', () => {
+    // az: vaxtimyoxdu.com/, en: vaxtimyoxdu.com/en/, etc.
+    const azRoot = entries.find((e) => e.url === `${BASE_URL}/`)
+    const enRoot = entries.find((e) => e.url === `${BASE_URL}/en/`)
+    expect(azRoot).toBeDefined()
+    expect(enRoot).toBeDefined()
   })
 
   it('should include the /info page', () => {
@@ -108,10 +130,17 @@ describe('sitemap() static pages', () => {
 // Tool pages
 // ---------------------------------------------------------------------------
 describe('sitemap() tool pages', () => {
-  it('should include an entry for every tool', () => {
+  it('should include an entry for every tool in default locale', () => {
     for (const tool of tools) {
       const entry = entries.find((e) => e.url === `${BASE_URL}/tools/${tool.slug}`)
       expect(entry, `Missing sitemap entry for tool "${tool.slug}"`).toBeDefined()
+    }
+  })
+
+  it('should include locale variants for every tool', () => {
+    for (const tool of tools) {
+      const toolEntries = entries.filter((e) => e.url.endsWith(`/tools/${tool.slug}`))
+      expect(toolEntries.length).toBe(LOCALE_COUNT)
     }
   })
 
@@ -136,7 +165,7 @@ describe('sitemap() tool pages', () => {
 describe('sitemap() news article pages', () => {
   const newsSlugs = Object.keys(newsArticles)
 
-  it('should include an entry for every news article', () => {
+  it('should include an entry for every news article in default locale', () => {
     for (const slug of newsSlugs) {
       const entry = entries.find((e) => e.url === `${BASE_URL}/info/${slug}`)
       expect(entry, `Missing sitemap entry for news article "${slug}"`).toBeDefined()
@@ -172,7 +201,7 @@ describe('sitemap() news article pages', () => {
 describe('sitemap() blog post pages', () => {
   const blogSlugsList = Object.keys(blogPosts)
 
-  it('should include an entry for every blog post', () => {
+  it('should include an entry for every blog post in default locale', () => {
     for (const slug of blogSlugsList) {
       const entry = entries.find((e) => e.url === `${BASE_URL}/blog/${slug}`)
       expect(entry, `Missing sitemap entry for blog post "${slug}"`).toBeDefined()

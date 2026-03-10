@@ -1,8 +1,56 @@
 import { Metadata } from 'next'
 import { Tool } from '@/types/tool'
+import { locales, defaultLocale, Locale } from '@/i18n/config'
 
 const SITE_URL = 'https://vaxtimyoxdu.com'
 const SITE_NAME = 'Vaxtim Yoxdu'
+
+/**
+ * Build a locale-prefixed absolute URL.
+ * The default locale (az) has no prefix; others get /{locale}/path.
+ */
+export function getLocalizedUrl(path: string, locale: Locale): string {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  if (locale === defaultLocale) {
+    return `${SITE_URL}${cleanPath}`
+  }
+  return `${SITE_URL}/${locale}${cleanPath}`
+}
+
+/**
+ * Generate hreflang alternate links for a given path.
+ * Returns an object suitable for Next.js metadata `alternates.languages`
+ * plus `x-default` pointing to the az (default locale) variant.
+ */
+export function generateHreflangAlternates(path: string): {
+  canonical: string
+  languages: Record<string, string>
+} {
+  const languages: Record<string, string> = {}
+  for (const locale of locales) {
+    languages[locale] = getLocalizedUrl(path, locale)
+  }
+  // x-default should point to the default locale version
+  languages['x-default'] = getLocalizedUrl(path, defaultLocale)
+
+  return {
+    canonical: getLocalizedUrl(path, defaultLocale),
+    languages,
+  }
+}
+
+/**
+ * Map a locale code to an OpenGraph locale string (e.g. "az" -> "az_AZ").
+ */
+export function getOgLocale(locale: string): string {
+  const map: Record<string, string> = {
+    az: 'az_AZ',
+    en: 'en_US',
+    tr: 'tr_TR',
+    ru: 'ru_RU',
+  }
+  return map[locale] || 'az_AZ'
+}
 // Static fallback OG image kept for reference; dynamic generation is used via getOgImageUrl
 // const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
 
