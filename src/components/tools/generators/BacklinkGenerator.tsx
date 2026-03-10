@@ -165,7 +165,7 @@ export default function BacklinkGenerator() {
             onChange={(e) => update('nofollow', e.target.checked)}
             className="accent-primary"
           />
-          rel="nofollow"
+          rel=&quot;nofollow&quot;
         </label>
         <label className="flex items-center gap-2 text-sm">
           <input
@@ -183,7 +183,7 @@ export default function BacklinkGenerator() {
             onChange={(e) => update('noopener', e.target.checked)}
             className="accent-primary"
           />
-          rel="noopener"
+          rel=&quot;noopener&quot;
         </label>
       </div>
 

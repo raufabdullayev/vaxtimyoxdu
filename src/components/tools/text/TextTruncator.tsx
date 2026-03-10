@@ -215,7 +215,7 @@ export default function TextTruncator() {
             onChange={(e) => setPreserveWords(e.target.checked)}
             className="accent-primary"
           />
-          Preserve whole words (don't cut in the middle of a word)
+          Preserve whole words (don&apos;t cut in the middle of a word)
         </label>
       )}
 

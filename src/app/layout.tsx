@@ -30,7 +30,7 @@ const jsonLdWebsite = {
   '@type': 'WebSite',
   name: 'Vaxtim Yoxdu',
   url: 'https://vaxtimyoxdu.com',
-  description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeber xulaseleri ve pulsuz AI onlayn aletler.',
+  description: 'Vaxtınız yoxdursa, biz varıq. Qısa xəbər xülasələri və pulsuz AI onlayn alətlər.',
   inLanguage: ['az', 'en'],
   potentialAction: {
     '@type': 'SearchAction',
@@ -45,7 +45,7 @@ const jsonLdOrganization = {
   name: 'Vaxtim Yoxdu',
   url: 'https://vaxtimyoxdu.com',
   logo: 'https://vaxtimyoxdu.com/logo.png',
-  description: 'Qisa xeberler ve pulsuz onlayn aletler - Azerbaycan',
+  description: 'Qısa xəbərlər və pulsuz onlayn alətlər - Azərbaycan',
   sameAs: [
     'https://github.com/vaxtimyoxdu',
     'https://x.com/vaxtimyoxdu',
