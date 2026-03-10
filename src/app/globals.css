@@ -61,7 +61,7 @@
   border-radius: calc(var(--radius) - 2px);
 }
 
-/* Skip to content */
+/* Skip to content -- accessible & keyboard-only visible */
 .skip-to-content {
   position: absolute;
   left: -9999px;
@@ -83,8 +83,15 @@
   color: hsl(var(--primary-foreground));
   border-radius: var(--radius);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 9999;
+}
+
+/* Performance: prevent ad containers from causing CLS */
+.ad-container {
+  contain: layout style;
 }
 
 html {

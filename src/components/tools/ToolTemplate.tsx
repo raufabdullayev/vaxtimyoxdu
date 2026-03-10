@@ -1,5 +1,5 @@
 import { Tool } from '@/types/tool'
-import AdBanner from '@/components/layout/AdBanner'
+import LazyAdBanner from '@/components/layout/LazyAdBanner'
 
 interface ToolTemplateProps {
   tool: Tool
@@ -17,11 +17,11 @@ export default function ToolTemplate({ tool, children }: ToolTemplateProps) {
         <p className="text-muted-foreground">{tool.shortDescription}</p>
       </div>
 
-      <AdBanner slot="tool-top" format="banner" className="mb-6" />
+      <LazyAdBanner slot="tool-top" format="banner" className="mb-6" />
 
       <div className="rounded-xl border bg-card p-4 md:p-6">{children}</div>
 
-      <AdBanner slot="tool-bottom" format="in-article" className="mt-6" />
+      <LazyAdBanner slot="tool-bottom" format="in-article" className="mt-6" />
 
       <div className="mt-8 prose prose-sm max-w-none">
         <h2 className="text-xl font-semibold mb-3">About {tool.name}</h2>

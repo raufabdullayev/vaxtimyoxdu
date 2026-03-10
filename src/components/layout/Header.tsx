@@ -57,16 +57,19 @@ export default function Header() {
         </div>
       </div>
 
-      {mobileOpen && (
-        <div className="md:hidden border-t">
-          <nav className="container flex flex-col gap-2 py-4" aria-label="Mobile navigation">
-            <Link href="/info" className="text-sm font-medium hover:text-primary py-2" onClick={() => setMobileOpen(false)}>Xeberler</Link>
-            <Link href="/tools" className="text-sm font-medium hover:text-primary py-2" onClick={() => setMobileOpen(false)}>Aletler</Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-primary py-2" onClick={() => setMobileOpen(false)}>Blog</Link>
-            <Link href="/about" className="text-sm font-medium hover:text-primary py-2" onClick={() => setMobileOpen(false)}>Haqqimizda</Link>
-          </nav>
-        </div>
-      )}
+      <div
+        className={`md:hidden border-t overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+          mobileOpen ? 'max-h-60' : 'max-h-0'
+        }`}
+        aria-hidden={!mobileOpen}
+      >
+        <nav className="container flex flex-col gap-2 py-4" aria-label="Mobile navigation">
+          <Link href="/info" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Xeberler</Link>
+          <Link href="/tools" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Aletler</Link>
+          <Link href="/blog" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Blog</Link>
+          <Link href="/about" className="text-sm font-medium hover:text-primary py-2 transition-colors" onClick={() => setMobileOpen(false)} tabIndex={mobileOpen ? 0 : -1}>Haqqimizda</Link>
+        </nav>
+      </div>
     </header>
   )
 }

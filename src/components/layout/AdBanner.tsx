@@ -26,6 +26,14 @@ const AD_FORMAT_CONFIG: Record<AdFormat, { style: React.CSSProperties; format: s
   },
 }
 
+// Reserve space for each ad format to prevent CLS when ads load.
+// These min-heights match the expected ad sizes so the layout does not shift.
+const AD_MIN_HEIGHT: Record<AdFormat, string> = {
+  banner: 'min-h-[90px]',
+  sidebar: 'min-h-[250px]',
+  'in-article': 'min-h-[120px]',
+}
+
 export default function AdBanner({ slot, format = 'banner', className = '' }: AdBannerProps) {
   const adRef = useRef<HTMLModElement>(null)
   const isAdPushed = useRef(false)
@@ -45,16 +53,17 @@ export default function AdBanner({ slot, format = 'banner', className = '' }: Ad
     }
   }, [adsenseId, isProduction])
 
+  const minHeight = AD_MIN_HEIGHT[format]
+
   // In development or without AdSense ID, show a placeholder
   if (!adsenseId || !isProduction) {
-    const placeholderHeight =
-      format === 'banner' ? 'min-h-[90px]' : format === 'sidebar' ? 'min-h-[250px]' : 'min-h-[120px]'
-
     return (
       <div
-        className={`bg-muted/30 border border-dashed border-border rounded-lg flex items-center justify-center text-xs text-muted-foreground ${placeholderHeight} ${className}`}
+        className={`bg-muted/30 border border-dashed border-border rounded-lg flex items-center justify-center text-xs text-muted-foreground ${minHeight} ${className}`}
         data-ad-slot={slot}
         data-ad-format={format}
+        role="presentation"
+        aria-hidden="true"
       >
         <span className="py-4">Ad Placeholder ({format})</span>
       </div>
@@ -64,7 +73,11 @@ export default function AdBanner({ slot, format = 'banner', className = '' }: Ad
   const config = AD_FORMAT_CONFIG[format]
 
   return (
-    <div className={`ad-container overflow-hidden ${className}`}>
+    <div
+      className={`ad-container overflow-hidden ${minHeight} ${className}`}
+      role="presentation"
+      aria-hidden="true"
+    >
       <ins
         ref={adRef}
         className="adsbygoogle"

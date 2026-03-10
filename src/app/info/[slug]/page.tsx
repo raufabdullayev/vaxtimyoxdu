@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateArticleMetadata, generateNewsArticleJsonLd } from '@/lib/utils/seo'
-import AdBanner from '@/components/layout/AdBanner'
+import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import RelatedArticles from '@/components/layout/RelatedArticles'
 import { newsArticles } from '@/data/news-articles'
@@ -83,7 +83,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           )
         })}
       </div>
-      <AdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
+      <LazyAdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
       <RelatedArticles
         items={Object.entries(newsArticles)
           .filter(([slug]) => slug !== params.slug)

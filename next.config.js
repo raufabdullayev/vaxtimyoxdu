@@ -7,6 +7,9 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  // SWC minifier is enabled by default in Next.js 14, but we set it
+  // explicitly to ensure it is never accidentally turned off.
+  swcMinify: true,
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
@@ -19,6 +22,17 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // Cache Next.js static chunks aggressively.
+        // These filenames contain content hashes, so they are safe to cache forever.
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
         // Cache static assets (JS, CSS, fonts) for 1 year
         source: '/:path*.(js|css|woff|woff2|ttf|otf|eot)',
         headers: [
@@ -29,12 +43,38 @@ const nextConfig = {
         ],
       },
       {
-        // Cache images for 30 days
+        // Cache images for 30 days with stale-while-revalidate fallback
         source: '/:path*.(jpg|jpeg|png|gif|svg|ico|webp|avif)',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=2592000, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
+        // Service worker must never be cached by the browser.
+        // MDN and Chromium both require max-age=0 so the browser always
+        // re-validates and picks up updated SW scripts promptly.
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+          {
+            key: 'Service-Worker-Allowed',
+            value: '/',
+          },
+        ],
+      },
+      {
+        // Manifest should be cached moderately (1 day) with revalidation
+        source: '/manifest.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=43200',
           },
         ],
       },
@@ -65,16 +105,6 @@ const nextConfig = {
           {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
-          },
-        ],
-      },
-      {
-        // Cache Next.js static chunks aggressively
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
           },
         ],
       },

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faza 3 Hesabati - Vaxtim Yoxdu | 2026-03-10</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #dbeafe;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --success-bg: #dcfce7;
+            --info: #0891b2;
+            --info-bg: #cffafe;
+            --warning: #f59e0b;
+            --warning-bg: #fef3c7;
+            --danger: #dc2626;
+            --danger-bg: #fee2e2;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--gray-800); line-height: 1.6; background: var(--gray-50); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .cover { background: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #22d3ee 100%); color: white; padding: 60px 0; text-align: center; }
+        .cover h1 { font-size: 2.5rem; margin-bottom: 8px; }
+        .cover .subtitle { font-size: 1.25rem; opacity: 0.9; }
+        .cover .meta { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+        .summary-bar { background: white; border-bottom: 1px solid var(--gray-200); padding: 24px 0; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; text-align: center; }
+        .summary-item { padding: 16px; border-radius: 12px; background: var(--gray-50); }
+        .summary-item .number { font-size: 2rem; font-weight: 700; }
+        .summary-item .label { font-size: 0.8rem; color: var(--gray-500); margin-top: 4px; }
+        .section { padding: 40px 0; }
+        .section + .section { border-top: 1px solid var(--gray-200); }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+        .section-title .icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+        .card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+        .card-title { font-size: 1.1rem; font-weight: 600; }
+        .card-desc { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 16px; }
+        .badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .badge-success { background: var(--success-bg); color: var(--success); }
+        .badge-info { background: var(--info-bg); color: var(--info); }
+        .badge-warning { background: var(--warning-bg); color: var(--warning); }
+        .badge-danger { background: var(--danger-bg); color: var(--danger); }
+        .file-list { list-style: none; padding: 0; }
+        .file-list li { padding: 8px 12px; font-size: 0.85rem; font-family: 'SF Mono', 'Fira Code', monospace; background: var(--gray-50); margin-bottom: 4px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; }
+        .file-list .new { border-left: 3px solid var(--success); }
+        .file-list .modified { border-left: 3px solid var(--primary); }
+        .file-list .tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-family: 'Segoe UI', sans-serif; }
+        .tag-new { background: var(--success-bg); color: var(--success); }
+        .tag-mod { background: var(--info-bg); color: var(--info); }
+        .stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--gray-100); font-size: 0.9rem; }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: var(--gray-600); }
+        .stat-value { font-weight: 600; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th { background: var(--gray-100); text-align: left; padding: 10px 14px; font-weight: 600; white-space: nowrap; }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--gray-100); }
+        tr:hover td { background: var(--gray-50); }
+        .table-wrap { overflow-x: auto; }
+        .commit-list { list-style: none; padding: 0; }
+        .commit-list li { padding: 12px 0; border-bottom: 1px solid var(--gray-100); display: flex; gap: 12px; align-items: flex-start; }
+        .commit-list li:last-child { border-bottom: none; }
+        .commit-hash { font-family: 'SF Mono', monospace; font-size: 0.8rem; color: var(--info); background: var(--info-bg); padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+        .commit-msg { font-size: 0.9rem; }
+        .architecture { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin: 16px 0; }
+        .arch-box { padding: 16px; border-radius: 10px; text-align: center; font-size: 0.85rem; font-weight: 600; }
+        .arch-arrow { color: var(--gray-300); font-size: 1.5rem; }
+        .social-icons { display: flex; gap: 16px; margin-top: 12px; }
+        .social-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: white; }
+        .footer { background: var(--gray-900); color: white; padding: 40px 0; text-align: center; font-size: 0.85rem; }
+        .footer .faded { opacity: 0.6; }
+        @media (max-width: 640px) { .cover h1 { font-size: 1.75rem; } .summary-grid { grid-template-columns: repeat(2, 1fr); } .architecture { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="cover">
+        <div class="container">
+            <h1>Faza 3 Hesabati</h1>
+            <p class="subtitle">Kritik Inteqrasiyalar, Yeni Kontent ve AI UX</p>
+            <div class="meta">
+                <span>Layihe: vaxtimyoxdu.com</span>
+                <span>Tarix: 2026-03-10</span>
+                <span>Status: Tamamlandi ve Deploy Edildi</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="summary-bar">
+        <div class="container">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="number" style="color: var(--info)">6</div>
+                    <div class="label">Is Axini (Stream)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--success)">17</div>
+                    <div class="label">Deyisdirilmis Fayl</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--primary)">+868</div>
+                    <div class="label">Elave Edilmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--danger)">-85</div>
+                    <div class="label">Silinmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--warning)">8</div>
+                    <div class="label">Blog Yazisi</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--success)">7</div>
+                    <div class="label">Xeber Meqalesi</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#cffafe;color:#0891b2;">1</span> Stream 1: Upstash Redis Rate Limiter</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">In-Memory Map &rarr; Upstash Redis</span><span class="badge badge-success">Tamamlandi</span></div>
+                <div class="card-desc">Serverless muhitde in-memory Map her cold start-da sifirlannir. Upstash Redis ile rate limit melumetlari butun instance-lar arasinda paylasiiir.</div>
+                <div class="architecture">
+                    <div class="arch-box" style="background:#fee2e2;color:#dc2626;">Evvel: In-Memory Map<br><small>Cold start = reset</small></div>
+                    <span class="arch-arrow">&rarr;</span>
+                    <div class="arch-box" style="background:#dcfce7;color:#16a34a;">Sonra: Upstash Redis<br><small>Global, persistent</small></div>
+                </div>
+                <div class="stat-row"><span class="stat-label">Alqoritm</span><span class="stat-value">Sliding Window</span></div>
+                <div class="stat-row"><span class="stat-label">Gunluk limit</span><span class="stat-value">20 request/IP</span></div>
+                <div class="stat-row"><span class="stat-label">Burst limit</span><span class="stat-value">5 request/deqiqe</span></div>
+                <div class="stat-row"><span class="stat-label">Fallback</span><span class="stat-value">In-memory (lokal dev ucun)</span></div>
+                <div class="stat-row"><span class="stat-label">Paketler</span><span class="stat-value">@upstash/redis + @upstash/ratelimit</span></div>
+                <ul class="file-list" style="margin-top:16px;">
+                    <li class="modified">src/lib/ai/rate-limiter.ts <span class="tag tag-mod">Yeniden yazildi</span></li>
+                    <li class="modified">src/app/api/ai/rewrite/route.ts <span class="tag tag-mod">async await</span></li>
+                    <li class="modified">src/app/api/ai/grammar/route.ts <span class="tag tag-mod">async await</span></li>
+                    <li class="modified">src/app/api/ai/summarize/route.ts <span class="tag tag-mod">async await</span></li>
+                    <li class="modified">package.json <span class="tag tag-mod">+2 paket</span></li>
+                    <li class="modified">.env.example <span class="tag tag-mod">+Upstash vars</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#dbeafe;color:#2563eb;">2</span> Stream 2: Newsletter API Backend</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">/api/newsletter Endpoint</span><span class="badge badge-success">Yeni Route</span></div>
+                <div class="card-desc">Newsletter formu artiq yalniz localStorage-da deyil, server-side API-ya da yazir. Email validasiyasi, dublikat yoxlama, loading state.</div>
+                <div class="stat-row"><span class="stat-label">Endpoint</span><span class="stat-value">POST /api/newsletter</span></div>
+                <div class="stat-row"><span class="stat-label">Validasiya</span><span class="stat-value">Server-side regex + client-side</span></div>
+                <div class="stat-row"><span class="stat-label">Dublikat</span><span class="stat-value">409 Conflict (eyni email)</span></div>
+                <div class="stat-row"><span class="stat-label">Loading UX</span><span class="stat-value">Spinner + "Gonderilir..." text</span></div>
+                <div class="stat-row"><span class="stat-label">Accessibility</span><span class="stat-value">aria-busy, disabled state</span></div>
+                <ul class="file-list" style="margin-top:16px;">
+                    <li class="new">src/app/api/newsletter/route.ts <span class="tag tag-new">Yeni (45 setir)</span></li>
+                    <li class="modified">src/components/layout/Newsletter.tsx <span class="tag tag-mod">API inteqrasiya</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fef3c7;color:#d97706;">3</span> Stream 3: Sosial Media Inteqrasiyasi</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Footer + Organization JSON-LD</span><span class="badge badge-success">Tamamlandi</span></div>
+                <div class="card-desc">Footer-a sosial media ikon linkleri elave edildi. Organization JSON-LD sameAs ve contactPoint ile zenginlesdirildi.</div>
+                <div class="social-icons">
+                    <div class="social-icon" style="background:#333;">GH</div>
+                    <div class="social-icon" style="background:#1da1f2;">X</div>
+                    <div class="social-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">IG</div>
+                    <div class="social-icon" style="background:#0077b5;">LI</div>
+                </div>
+                <div style="margin-top:16px;">
+                    <div class="stat-row"><span class="stat-label">sameAs (JSON-LD)</span><span class="stat-value">4 sosial profil</span></div>
+                    <div class="stat-row"><span class="stat-label">contactPoint</span><span class="stat-value">hello@vaxtimyoxdu.com</span></div>
+                    <div class="stat-row"><span class="stat-label">availableLanguage</span><span class="stat-value">az, en</span></div>
+                </div>
+                <ul class="file-list" style="margin-top:16px;">
+                    <li class="modified">src/components/layout/Footer.tsx <span class="tag tag-mod">+Social icons</span></li>
+                    <li class="modified">src/app/layout.tsx <span class="tag tag-mod">+sameAs +contactPoint</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#dcfce7;color:#16a34a;">4</span> Stream 4: Yeni Blog Yazilari (EN)</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">3 Yeni Blog Yazisi</span><span class="badge badge-success">5 &rarr; 8</span></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Baslig</th><th>Tarix</th><th>Soz</th></tr></thead>
+                        <tbody>
+                            <tr><td>The Complete Guide to PDF Tools</td><td>2026-03-10</td><td>~858</td></tr>
+                            <tr><td>QR Codes: Everything You Need to Know in 2026</td><td>2026-03-09</td><td>~895</td></tr>
+                            <tr><td>10 Developer Productivity Tools You Should Be Using</td><td>2026-03-08</td><td>~1,012</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="file-list" style="margin-top:16px;"><li class="modified">src/data/blog-posts.ts <span class="tag tag-mod">+226 setir</span></li></ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fef3c7;color:#d97706;">5</span> Stream 5: Yeni Xeber Meqaleleri (AZ) + Dinamik Sitemap</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">3 Yeni Xeber Meqalesi</span><span class="badge badge-success">4 &rarr; 7</span></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Baslig</th><th>Kateqoriya</th><th>Tarix</th><th>Soz</th></tr></thead>
+                        <tbody>
+                            <tr><td>Reqemsal saglamliq texnologiyalari</td><td><span class="badge badge-danger">Saglamliq</span></td><td>2026-03-10</td><td>~897</td></tr>
+                            <tr><td>Azerbaycanin kosmik proqrami</td><td><span class="badge badge-info">Elm</span></td><td>2026-03-09</td><td>~937</td></tr>
+                            <tr><td>Baki Texnologiya Festivali 2026</td><td><span class="badge badge-warning">Medeniyyet</span></td><td>2026-03-08</td><td>~1,046</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Dinamik Sitemap</span><span class="badge badge-info">Yenilenib</span></div>
+                <div class="card-desc">Sitemap artiq hardcoded deyil &mdash; blog-posts.ts ve news-articles.ts-den avtomatik import edir. Yeni kontent elave etdikde sitemap ozunu yenileyir.</div>
+                <ul class="file-list"><li class="modified">src/app/sitemap.ts <span class="tag tag-mod">Dinamik import</span></li><li class="modified">src/data/news-articles.ts <span class="tag tag-mod">+261 setir</span></li></ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fee2e2;color:#dc2626;">6</span> Stream 6: AI Aletler Error UX</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Azerbaycan Dilinde Xeta Mesajlari</span><span class="badge badge-success">3 komponent</span></div>
+                <div class="card-desc">AI aletlerinin xeta mesajlari ingilisceden Azerbaycan diline kecirildi. Rate limit gostericisi elave edildi.</div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Xeta Novu</th><th>Mesaj (AZ)</th></tr></thead>
+                        <tbody>
+                            <tr><td>429 Rate Limit</td><td>Gundelik limit asildi. Sabah yeniden cehd edin.</td></tr>
+                            <tr><td>500 Server</td><td>Xidmet muveqqeti elcatmazdir.</td></tr>
+                            <tr><td>Network</td><td>Internet baglantinizi yoxlayin.</td></tr>
+                            <tr><td>Ugurlu cavab</td><td>Qalan istifade: X/20</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-top:16px;">
+                    <div class="stat-row"><span class="stat-label">TextRewriter loading</span><span class="stat-value">"Metn yeniden yazilir..."</span></div>
+                    <div class="stat-row"><span class="stat-label">TextSummarizer loading</span><span class="stat-value">"Metn xulase edilir..."</span></div>
+                    <div class="stat-row"><span class="stat-label">GrammarChecker loading</span><span class="stat-value">"Qrammatika yoxlanilir..."</span></div>
+                </div>
+                <ul class="file-list" style="margin-top:16px;">
+                    <li class="modified">src/components/tools/ai/TextRewriter.tsx <span class="tag tag-mod">Error UX + AZ</span></li>
+                    <li class="modified">src/components/tools/ai/TextSummarizer.tsx <span class="tag tag-mod">Error UX + AZ</span></li>
+                    <li class="modified">src/components/tools/ai/GrammarChecker.tsx <span class="tag tag-mod">Error UX + AZ</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:var(--info-bg);color:var(--info);">&#9989;</span> Kritik: Groq API Key</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">AI Aletler Artiq Isleyir!</span><span class="badge badge-success">Aktiv</span></div>
+                <div class="card-desc">Groq API key artiq Vercel production muhitinde movcuddur. AI Text Rewriter, AI Grammar Checker ve AI Text Summarizer canli isleyir.</div>
+                <div class="stat-row"><span class="stat-label">Provider</span><span class="stat-value">Groq (pulsuz tier)</span></div>
+                <div class="stat-row"><span class="stat-label">Model</span><span class="stat-value">llama-3.3-70b-versatile</span></div>
+                <div class="stat-row"><span class="stat-label">Vercel Env</span><span class="stat-value">GROQ_API_KEY (encrypted, production)</span></div>
+                <div class="stat-row"><span class="stat-label">Fallback</span><span class="stat-value">Gemini &rarr; OpenAI (konfiqurasiya olunub)</span></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Vaxtim Yoxdu - Faza 3 Hesabati</strong></p>
+            <p class="faded" style="margin-top:8px;">Hazirlayan: Texniki Komanda (6 agent) | Tarix: 2026-03-10 | Pipeline #2374164586 - SUCCESS</p>
+            <p class="faded" style="margin-top:4px;">vaxtimyoxdu.com | GitLab: rauf-idea/vaxtimyoxdu</p>
+        </div>
+    </footer>
+</body>
+</html>

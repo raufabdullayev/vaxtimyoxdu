@@ -1,16 +1,26 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import CookieConsent from '@/components/layout/CookieConsent'
-import InstallPrompt from '@/components/layout/InstallPrompt'
 import ServiceWorkerRegistrar from '@/components/layout/ServiceWorkerRegistrar'
 import { generateBaseMetadata } from '@/lib/utils/seo'
 
+// Lazy load below-the-fold / post-interactive components.
+// These are only needed after the page is interactive, so deferring them
+// reduces the initial JS bundle and improves TTI and LCP.
+const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'), {
+  ssr: false,
+})
+const InstallPrompt = dynamic(() => import('@/components/layout/InstallPrompt'), {
+  ssr: false,
+})
+
 const inter = Inter({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
   preload: true,
 })
@@ -80,10 +90,16 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#7c3aed" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 
-        {/* DNS prefetch and preconnect */}
+        {/* DNS prefetch and preconnect for external domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
@@ -92,13 +108,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrganization) }}
         />
-        {ADSENSE_ID && (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
-            crossOrigin="anonymous"
-          />
-        )}
       </head>
       <body className={inter.className}>
         <a href="#main-content" className="skip-to-content">Kontenta kec</a>
@@ -110,6 +119,13 @@ export default function RootLayout({
         <CookieConsent />
         <InstallPrompt />
         <ServiceWorkerRegistrar />
+        {ADSENSE_ID && (
+          <Script
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+            strategy="lazyOnload"
+            crossOrigin="anonymous"
+          />
+        )}
         {GA_ID && (
           <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />

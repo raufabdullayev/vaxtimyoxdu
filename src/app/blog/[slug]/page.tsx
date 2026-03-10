@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateBlogPostMetadata, generateBlogArticleJsonLd } from '@/lib/utils/seo'
-import AdBanner from '@/components/layout/AdBanner'
+import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import { blogPosts } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
@@ -53,7 +53,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       />
       <time className="text-sm text-muted-foreground">{post.date}</time>
       <h1 className="text-3xl font-bold mt-2 mb-8">{post.title}</h1>
-      <AdBanner slot="blog-post-top" format="banner" className="mb-8" />
+      <LazyAdBanner slot="blog-post-top" format="banner" className="mb-8" />
       <div className="prose prose-sm max-w-none">
         {post.content.split('\n\n').map((paragraph, i) => {
           if (paragraph.startsWith('## ')) {
@@ -108,7 +108,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </div>
         </div>
       )}
-      <AdBanner slot="blog-post-bottom" format="in-article" className="mt-8" />
+      <LazyAdBanner slot="blog-post-bottom" format="in-article" className="mt-8" />
     </div>
   )
 }

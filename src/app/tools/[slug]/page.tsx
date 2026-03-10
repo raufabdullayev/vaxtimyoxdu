@@ -15,9 +15,13 @@ const toolComponents: Record<string, React.ComponentType> = {
   'ai-grammar-checker': dynamic(() => import('@/components/tools/ai/GrammarChecker')),
   // PDF Tools
   'pdf-merge': dynamic(() => import('@/components/tools/pdf/PdfMerge')),
+  'pdf-split': dynamic(() => import('@/components/tools/pdf/PdfSplit')),
+  'pdf-compress': dynamic(() => import('@/components/tools/pdf/PdfCompress')),
   // Image Tools
   'image-compress': dynamic(() => import('@/components/tools/image/ImageCompress')),
   'image-convert': dynamic(() => import('@/components/tools/image/ImageConvert')),
+  'image-resize': dynamic(() => import('@/components/tools/image/ImageResize')),
+  'image-crop': dynamic(() => import('@/components/tools/image/ImageCrop')),
   // Developer Tools
   'json-formatter': dynamic(() => import('@/components/tools/dev/JsonFormatter')),
   'base64-encode-decode': dynamic(() => import('@/components/tools/dev/Base64Codec')),
@@ -31,6 +35,11 @@ const toolComponents: Record<string, React.ComponentType> = {
   'number-base-converter': dynamic(() => import('@/components/tools/dev/NumberBaseConverter')),
   'csv-to-json': dynamic(() => import('@/components/tools/dev/CsvToJson')),
   'cron-parser': dynamic(() => import('@/components/tools/dev/CronParser')),
+  'html-minifier': dynamic(() => import('@/components/tools/dev/HtmlMinifier')),
+  'js-minifier': dynamic(() => import('@/components/tools/dev/JsMinifier')),
+  'sql-formatter': dynamic(() => import('@/components/tools/dev/SqlFormatter')),
+  'json-to-csv': dynamic(() => import('@/components/tools/dev/JsonToCsv')),
+  'ip-address-info': dynamic(() => import('@/components/tools/dev/IpAddressInfo')),
   // Generators
   'qr-code-generator': dynamic(() => import('@/components/tools/generators/QrCodeGenerator')),
   'color-picker': dynamic(() => import('@/components/tools/generators/ColorPicker')),
@@ -39,12 +48,18 @@ const toolComponents: Record<string, React.ComponentType> = {
   'uuid-generator': dynamic(() => import('@/components/tools/generators/UuidGenerator')),
   'meta-tag-generator': dynamic(() => import('@/components/tools/generators/MetaTagGenerator')),
   'aspect-ratio-calculator': dynamic(() => import('@/components/tools/generators/AspectRatioCalc')),
+  'emoji-picker': dynamic(() => import('@/components/tools/generators/EmojiPicker')),
+  'gradient-generator': dynamic(() => import('@/components/tools/generators/GradientGenerator')),
+  'placeholder-image': dynamic(() => import('@/components/tools/generators/PlaceholderImage')),
   // Text Tools
   'word-counter': dynamic(() => import('@/components/tools/WordCounter')),
   'case-converter': dynamic(() => import('@/components/tools/text/CaseConverter')),
   'slug-generator': dynamic(() => import('@/components/tools/text/SlugGenerator')),
   'text-diff': dynamic(() => import('@/components/tools/text/TextDiff')),
   'html-entity-codec': dynamic(() => import('@/components/tools/text/HtmlEntityCodec')),
+  'text-to-binary': dynamic(() => import('@/components/tools/text/TextToBinary')),
+  'rot13-encoder': dynamic(() => import('@/components/tools/text/Rot13Encoder')),
+  'pomodoro-timer': dynamic(() => import('@/components/tools/text/PomodoroTimer')),
 }
 
 export async function generateStaticParams() {

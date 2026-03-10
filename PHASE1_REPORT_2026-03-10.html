@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faza 1 Hesabati - Vaxtim Yoxdu | 2026-03-10</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #dbeafe;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --success-bg: #dcfce7;
+            --warning: #f59e0b;
+            --warning-bg: #fef3c7;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-500: #6b7280;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--gray-800); line-height: 1.6; background: var(--gray-50); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        .cover {
+            background: linear-gradient(135deg, #059669 0%, #16a34a 50%, #22c55e 100%);
+            color: white; padding: 60px 0; text-align: center;
+        }
+        .cover h1 { font-size: 38px; font-weight: 800; margin-bottom: 6px; }
+        .cover .subtitle { font-size: 20px; font-weight: 300; opacity: 0.9; margin-bottom: 30px; }
+        .cover-meta {
+            display: inline-flex; gap: 24px; background: rgba(255,255,255,0.15);
+            padding: 14px 28px; border-radius: 12px; font-size: 14px; flex-wrap: wrap; justify-content: center;
+        }
+        .cover-badge { display: inline-block; background: rgba(255,255,255,0.25); padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-top: 20px; }
+
+        .section {
+            background: white; border: 1px solid var(--gray-200);
+            border-radius: 12px; padding: 28px; margin-bottom: 20px;
+        }
+        .section-header {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--gray-100);
+        }
+        .section-number {
+            background: var(--success); color: white; width: 34px; height: 34px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 15px; flex-shrink: 0;
+        }
+        .section h2 { font-size: 20px; color: var(--gray-900); }
+        .section h3 { font-size: 16px; color: var(--gray-800); margin: 20px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--gray-100); }
+
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+        thead th {
+            background: var(--gray-800); color: white; padding: 9px 12px;
+            text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        thead th:first-child { border-radius: 8px 0 0 0; }
+        thead th:last-child { border-radius: 0 8px 0 0; }
+        tbody td { padding: 9px 12px; border-bottom: 1px solid var(--gray-100); vertical-align: top; }
+        tbody tr:hover { background: var(--gray-50); }
+
+        .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+        .badge-done { background: var(--success-bg); color: var(--success); }
+        .badge-new { background: var(--primary-light); color: var(--primary); }
+        .badge-fix { background: var(--warning-bg); color: #b45309; }
+
+        .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0; }
+        .stat-box { padding: 18px; border-radius: 10px; text-align: center; color: white; }
+        .stat-box.blue { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+        .stat-box.green { background: linear-gradient(135deg, #16a34a, #15803d); }
+        .stat-box.teal { background: linear-gradient(135deg, #0891b2, #0e7490); }
+        .stat-box.purple { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+        .stat-value { font-size: 30px; font-weight: 800; }
+        .stat-label { font-size: 11px; opacity: 0.85; margin-top: 2px; }
+
+        .code-block {
+            background: var(--gray-800); color: #e5e7eb; padding: 16px; border-radius: 10px;
+            font-family: 'SF Mono', 'Consolas', monospace; font-size: 13px; line-height: 1.6;
+            overflow-x: auto; margin: 12px 0; white-space: pre;
+        }
+        code { background: var(--gray-100); padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', 'Consolas', monospace; font-size: 13px; }
+
+        .file-list { list-style: none; padding: 0; }
+        .file-list li { padding: 6px 0; padding-left: 24px; position: relative; font-size: 13px; border-bottom: 1px solid var(--gray-100); font-family: 'SF Mono', 'Consolas', monospace; }
+        .file-list li:last-child { border-bottom: none; }
+        .file-list li::before { position: absolute; left: 0; font-size: 14px; }
+        .file-list li.new::before { content: "\2795"; }
+        .file-list li.mod::before { content: "\270F\FE0F"; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .alert { padding: 14px 18px; border-radius: 10px; margin: 14px 0; font-size: 14px; border-left: 4px solid; }
+        .alert-success { background: var(--success-light); border-color: var(--success); color: #166534; }
+
+        .report-footer { text-align: center; padding: 28px 0; color: var(--gray-500); font-size: 13px; }
+        .report-footer .divider { width: 60px; height: 3px; background: var(--success); margin: 0 auto 14px; border-radius: 2px; }
+
+        .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+        .before-after > div { padding: 12px; border-radius: 8px; font-size: 13px; }
+        .before { background: #fef2f2; border: 1px solid #fecaca; }
+        .before strong { color: #dc2626; }
+        .after { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .after strong { color: #16a34a; }
+
+        @media print {
+            body { background: white; }
+            .section { break-inside: avoid; box-shadow: none; }
+        }
+        @media (max-width: 768px) {
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .two-col, .before-after { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cover">
+    <div class="container">
+        <p style="font-size:44px; margin-bottom:12px;">&#9989;</p>
+        <h1>FAZA 1 - TAMAMLANDI</h1>
+        <p class="subtitle">Kritik Duzelisler Hesabati</p>
+        <div class="cover-meta">
+            <span>&#128197; 10 Mart 2026</span>
+            <span>&#128101; 8 Muhendis, 8 Paralel Stream</span>
+            <span>&#128230; Commit: c0d7225</span>
+            <span>&#128640; Deploy: GitLab CI &rarr; Vercel</span>
+        </div>
+        <div class="cover-badge">Vaxtim Yoxdu | vaxtimyoxdu.com</div>
+    </div>
+</div>
+
+<div class="container" style="padding-top: 32px;">
+
+    <!-- SUMMARY -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">&#9889;</div>
+            <h2>Xulase</h2>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-box green">
+                <div class="stat-value">34</div>
+                <div class="stat-label">Deyisdirilmis Fayl</div>
+            </div>
+            <div class="stat-box blue">
+                <div class="stat-value">11</div>
+                <div class="stat-label">Yeni Fayl</div>
+            </div>
+            <div class="stat-box teal">
+                <div class="stat-value">+812</div>
+                <div class="stat-label">Elave Olunan Setir</div>
+            </div>
+            <div class="stat-box purple">
+                <div class="stat-value">-477</div>
+                <div class="stat-label">Silinen Setir</div>
+            </div>
+        </div>
+
+        <div class="alert alert-success">
+            <strong>&#9989; Build ugurlu</strong> &mdash; 40 statik sehife, 0 TypeScript xetasi, 0 Lint xetasi.
+            Deploy GitLab CI pipeline vasitesile Vercel-e gonderildi.
+        </div>
+    </div>
+
+    <!-- STREAM 1 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">1</div>
+            <h2>Stream 1: Tehlukesizlik (Security Engineer)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Is</th><th>Fayl</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>Next.js CVE patch</strong><br>14.2.21 &rarr; 14.2.35 (10 CVE duzeldildi, daxil authorization bypass)</td>
+                    <td><code>package.json</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Content-Security-Policy header</strong><br>XSS qorumasi: script-src, style-src, img-src, font-src, connect-src, frame-src teyin edildi</td>
+                    <td><code>next.config.js</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Strict-Transport-Security (HSTS)</strong><br>max-age=63072000, includeSubDomains, preload</td>
+                    <td><code>next.config.js</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>X-XSS-Protection silindi</strong><br>Deprecated header silindi, CSP ile evez olundu</td>
+                    <td><code>next.config.js</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>CORS + CSRF middleware</strong><br>API route-lara origin/referer validasiyasi, production-da yalniz icazeli domenlerden gelen request-ler qebul olunur</td>
+                    <td><code>src/middleware.ts</code></td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><strong>eslint-config-next yenilendi</strong><br>14.2.21 &rarr; 14.2.35 (glob command injection fix)</td>
+                    <td><code>package.json</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>@types/qrcode devDependencies-e kocuruldu</strong></td>
+                    <td><code>package.json</code></td>
+                    <td><span class="badge badge-fix">Duzeldi</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>CORS Middleware Arxitekturasi</h3>
+        <div class="code-block">Request &rarr; /api/* yoxla
+  |
+  +-- GET? &rarr; kecir (CORS header elave et)
+  |
+  +-- POST? &rarr; Origin/Referer yoxla
+        |
+        +-- vaxtimyoxdu.com / vaxtimyoxdur.com? &rarr; kecir
+        |
+        +-- basqa? &rarr; 403 Forbidden (production-da)</div>
+    </div>
+
+    <!-- STREAM 2 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">2</div>
+            <h2>Stream 2: Brend Duzeldisi (React Engineer)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Sehife</th><th>Deyisiklik</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><code>about/page.tsx</code></td>
+                    <td>
+                        "About ToolBox AI" &rarr; "Haqqimizda"<br>
+                        "ToolBox AI" &rarr; "Vaxtim Yoxdu" (butun metn)<br>
+                        hello@toolbox-ai.com &rarr; hello@vaxtimyoxdu.com<br>
+                        Missiya yeniden yazildi: "Vaxtiniz yoxdursa, biz variq"
+                    </td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><code>privacy/page.tsx</code></td>
+                    <td>privacy@toolbox-ai.com &rarr; privacy@vaxtimyoxdu.com</td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><code>terms/page.tsx</code></td>
+                    <td>"By using ToolBox AI" &rarr; "By using Vaxtim Yoxdu"</td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="before-after">
+            <div class="before"><strong>Evvel:</strong><br>"About ToolBox AI"<br>hello@toolbox-ai.com</div>
+            <div class="after"><strong>Sonra:</strong><br>"Haqqimizda - Vaxtim Yoxdu"<br>hello@vaxtimyoxdu.com</div>
+        </div>
+    </div>
+
+    <!-- STREAM 3 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">3</div>
+            <h2>Stream 3: SEO Duzeldisleri (SEO Specialist)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Is</th><th>Fayl</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>hreflang silindi</strong><br>az ve en eyni URL-e isare edirdi (semantik olaraq sehv). 4 funksiyada languages objesi silindi</td>
+                    <td><code>src/lib/utils/seo.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Sitemap lastModified duzeldildi</strong><br>new Date() evezine her sehife ucun faktiki kontent tarixi istifade olunur</td>
+                    <td><code>src/app/sitemap.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>aggregateRating: undefined silindi</strong><br>SoftwareApplication schema-dan menasiz sahfe silindi</td>
+                    <td><code>src/lib/utils/seo.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>NewsArticle-e author elave edildi</strong><br>E-E-A-T siqnali ucun Organization tipli author</td>
+                    <td><code>src/lib/utils/seo.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="before-after">
+            <div class="before"><strong>Evvel:</strong><br>lastModified: new Date() (her build-de eyni tarix)<br>languages: { 'az': url, 'en': url } (menasiz)</div>
+            <div class="after"><strong>Sonra:</strong><br>lastModified: new Date('2026-02-28') (real tarix)<br>alternates: { canonical: url } (temiz)</div>
+        </div>
+    </div>
+
+    <!-- STREAM 4 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">4</div>
+            <h2>Stream 4: UI/UX ve Accessibility (UI Engineer)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Is</th><th>Fayl</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>Focus-visible indikatorlar</strong><br>Butun interaktiv elementlerde 2px primary outline</td>
+                    <td><code>src/app/globals.css</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Skip-to-content link</strong><br>Klaviatura istifadecileri ucun "Kontenta kec" linki</td>
+                    <td><code>globals.css + layout.tsx</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Dark mode toggle</strong><br>Moon/Sun icon, localStorage persistence, prefers-color-scheme fallback</td>
+                    <td><code>Header.tsx</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>@tailwindcss/typography plugin</strong><br>prose class-lari artiq isleyir</td>
+                    <td><code>tailwind.config.ts + package.json</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>prefers-reduced-motion</strong><br>Animasiya/transition-lari devre xaricinde saxlayan media query</td>
+                    <td><code>globals.css</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>ARIA atributlari</strong><br>aria-label, aria-expanded, aria-hidden nav ve butonlarda</td>
+                    <td><code>Header.tsx</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Inter font Tailwind-e qeydiyyat</strong><br>fontFamily: { sans: ['Inter', ...] }</td>
+                    <td><code>tailwind.config.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- STREAM 5 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">5</div>
+            <h2>Stream 5: Backend / API (Node.js/TS Engineer)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Is</th><th>Fayl</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>AI provider timeout (15 saniye)</strong><br>AbortController ile her provider call-a 15s limit. Provider asildiqda novbeti provider-a kecir</td>
+                    <td><code>src/lib/ai/openai-client.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Fallback logging</strong><br>Provider ugursuz olduqda console.warn ile log. Ugurlu fallback da loglanir</td>
+                    <td><code>src/lib/ai/openai-client.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Bosh cavab yoxlamasi</strong><br>Provider bosh string qaytardiqda throw edir (evvel sessizce bosh qaytarirdi)</td>
+                    <td><code>src/lib/ai/openai-client.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Burst rate limiting (5 req/deq)</strong><br>Gunluk limit + deqiqelik burst qorumasi. 5 request/deqiqe asildiqda kecici blok</td>
+                    <td><code>src/lib/ai/rate-limiter.ts</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>JSON parse error handling</strong><br>Kecerisiz JSON body-de 400 qaytarir (evvel 500 idi)</td>
+                    <td><code>3 API route fayili</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Retry-After header</strong><br>Burst limit asildiqda Retry-After header gonderilir (saniye)</td>
+                    <td><code>3 API route fayili</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Yenilenmi AI Arxitekturasi</h3>
+        <div class="code-block"><span style="color:#4ade80;">callAI(messages, maxTokens)</span>
+  |
+  +-- providers = getProviders()  // [Groq, Gemini, OpenAI]
+  |
+  +-- for each provider:
+        |
+        +-- <span style="color:#fbbf24;">AbortController</span> (15s timeout)
+        |
+        +-- fetch(provider.baseUrl, { signal })
+        |     |
+        |     +-- ok? &rarr; return content
+        |     +-- empty? &rarr; throw "empty response"
+        |     +-- error? &rarr; <span style="color:#f87171;">console.warn</span>, try next
+        |
+        +-- finally: clearTimeout()</div>
+    </div>
+
+    <!-- STREAM 6 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">6</div>
+            <h2>Stream 6: DevOps / CI-CD (DevOps Engineer)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Is</th><th>Fayl</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><strong>Validate stage elave edildi</strong><br>npm run lint + npx tsc --noEmit deploy-dan evvel isleyir. merge_requests-de de isleyir</td>
+                    <td><code>.gitlab-ci.yml</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Vercel CLI pin olundu</strong><br>vercel@latest &rarr; vercel@39.3.0 (tekrarlana bilen build-ler)</td>
+                    <td><code>.gitlab-ci.yml</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>CI caching elave edildi</strong><br>node_modules/ branch slug ile cache olunur</td>
+                    <td><code>.gitlab-ci.yml</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Pipeline timeout-lar</strong><br>validate: 10 deq, deploy: 15 deq</td>
+                    <td><code>.gitlab-ci.yml</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Node versiya pin</strong><br>.nvmrc ile Node 20 pin olundu</td>
+                    <td><code>.nvmrc</code></td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><strong>.env.example yenilendi</strong><br>NEXT_PUBLIC_GA_ID elave edildi, placeholder-lar duzeldi</td>
+                    <td><code>.env.example</code></td>
+                    <td><span class="badge badge-done">&#10003; Tamam</span></td>
+                </tr>
+                <tr>
+                    <td><strong>ESLint config yaradildi</strong><br>next/core-web-vitals extends eden .eslintrc.json</td>
+                    <td><code>.eslintrc.json</code></td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Yeni CI/CD Pipeline</h3>
+        <div class="code-block"><span style="color:#4ade80;">push to main/MR</span>
+      |
+      v
+<span style="color:#fbbf24;">[validate]</span> (node:20, 10 deq timeout)
+  - npm ci
+  - npm run lint       &larr; <span style="color:#4ade80;">YENI</span>
+  - npx tsc --noEmit   &larr; <span style="color:#4ade80;">YENI</span>
+      |
+      v  (yalniz main branch)
+<span style="color:#60a5fa;">[deploy]</span> (node:20, 15 deq timeout)
+  - vercel@39.3.0      &larr; <span style="color:#4ade80;">PIN OLUNUB</span>
+  - vercel pull
+  - vercel build --prod
+  - vercel deploy --prebuilt --prod</div>
+    </div>
+
+    <!-- STREAM 7 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">7</div>
+            <h2>Stream 7: Yeni Sehifeler ve Komponentler (React Engineer)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Fayl</th><th>Tesvir</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><code>src/app/not-found.tsx</code></td>
+                    <td><strong>Custom 404 sehife</strong> - "Sehife tapilmadi" mesaji, Ana Sehife / Aletler / Xeberler linkler</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/error.tsx</code></td>
+                    <td><strong>Error boundary</strong> - Client component, "Yeniden cehd et" buttonu ile reset funksiyasi</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/loading.tsx</code></td>
+                    <td><strong>Root loading UI</strong> - Spin animasiyasi + "Yuklenilir..." metni</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/tools/[slug]/loading.tsx</code></td>
+                    <td><strong>Tool loading skeletonu</strong> - Pulse animasiyali placeholder bloklar</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/icon.tsx</code></td>
+                    <td><strong>Dinamik favicon</strong> - 32x32 mavi fonda ag "V" herfi (ImageResponse API)</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/apple-icon.tsx</code></td>
+                    <td><strong>Apple touch icon</strong> - 180x180 gradient fonda ag "V" herfi</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/tools/[slug]/page.tsx</code></td>
+                    <td><strong>Ikiqat reklam duzeldildi</strong> - Sehife seviyyesindeki 2 AdBanner silindi (6 reklam &rarr; 2 reklam)</td>
+                    <td><span class="badge badge-fix">Duzeldi</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- STREAM 8 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">8</div>
+            <h2>Stream 8: Kontent Ekstraksiyasi ve Carpaz Linkler (React Engineer)</h2>
+        </div>
+        <table>
+            <thead><tr><th>Fayl</th><th>Tesvir</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><code>src/data/blog-posts.ts</code></td>
+                    <td><strong>Blog data fayili</strong> - 5 blog yazisi, relatedTools massivi, "ToolBox AI" &rarr; "Vaxtim Yoxdu"</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/data/news-articles.ts</code></td>
+                    <td><strong>Xeber data fayili</strong> - 4 Azerbaycan dilinde xeber meqalesi</td>
+                    <td><span class="badge badge-new">Yeni fayl</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/blog/[slug]/page.tsx</code></td>
+                    <td><strong>Blog sehifesi yenilendi</strong> - Lokal data silindi, import edilir. "Related Tools" section elave olundu</td>
+                    <td><span class="badge badge-fix">Duzeldi</span></td>
+                </tr>
+                <tr>
+                    <td><code>src/app/info/[slug]/page.tsx</code></td>
+                    <td><strong>Xeber sehifesi yenilendi</strong> - Lokal data silindi, data fayilindan import edilir</td>
+                    <td><span class="badge badge-fix">Duzeldi</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Related Tools Numunesi (Blog yazisi altinda)</h3>
+        <div class="code-block">&lt;div class="mt-12 pt-8 border-t"&gt;
+  &lt;h2&gt;Related Tools&lt;/h2&gt;
+  &lt;div class="grid gap-3 sm:grid-cols-2"&gt;
+    +---------------------------+   +---------------------------+
+    | &#9997;&#65039; AI Text Rewriter      |   | &#128248; Image Compressor     |
+    | Rewrite text with AI    |   | Compress images easily   |
+    +---------------------------+   +---------------------------+
+    | &#128196; PDF Merge              |   | &#128178; QR Code Generator     |
+    | Merge PDF files         |   | Create QR codes          |
+    +---------------------------+   +---------------------------+
+  &lt;/div&gt;
+&lt;/div&gt;</div>
+    </div>
+
+    <!-- ALL FILES -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">&#128203;</div>
+            <h2>Tam Fayl Siyahisi</h2>
+        </div>
+        <div class="two-col">
+            <div>
+                <h3>Yeni Fayllar (11)</h3>
+                <ul class="file-list">
+                    <li class="new">.eslintrc.json</li>
+                    <li class="new">.nvmrc</li>
+                    <li class="new">src/middleware.ts</li>
+                    <li class="new">src/app/not-found.tsx</li>
+                    <li class="new">src/app/error.tsx</li>
+                    <li class="new">src/app/loading.tsx</li>
+                    <li class="new">src/app/icon.tsx</li>
+                    <li class="new">src/app/apple-icon.tsx</li>
+                    <li class="new">src/app/tools/[slug]/loading.tsx</li>
+                    <li class="new">src/data/blog-posts.ts</li>
+                    <li class="new">src/data/news-articles.ts</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Deyisdirilmis Fayllar (23)</h3>
+                <ul class="file-list">
+                    <li class="mod">.env.example</li>
+                    <li class="mod">.gitlab-ci.yml</li>
+                    <li class="mod">next.config.js</li>
+                    <li class="mod">package.json</li>
+                    <li class="mod">package-lock.json</li>
+                    <li class="mod">tailwind.config.ts</li>
+                    <li class="mod">src/app/globals.css</li>
+                    <li class="mod">src/app/layout.tsx</li>
+                    <li class="mod">src/app/about/page.tsx</li>
+                    <li class="mod">src/app/privacy/page.tsx</li>
+                    <li class="mod">src/app/terms/page.tsx</li>
+                    <li class="mod">src/app/sitemap.ts</li>
+                    <li class="mod">src/app/blog/[slug]/page.tsx</li>
+                    <li class="mod">src/app/info/[slug]/page.tsx</li>
+                    <li class="mod">src/app/tools/[slug]/page.tsx</li>
+                    <li class="mod">src/app/api/ai/grammar/route.ts</li>
+                    <li class="mod">src/app/api/ai/rewrite/route.ts</li>
+                    <li class="mod">src/app/api/ai/summarize/route.ts</li>
+                    <li class="mod">src/components/layout/Header.tsx</li>
+                    <li class="mod">src/components/tools/pdf/PdfMerge.tsx</li>
+                    <li class="mod">src/lib/ai/openai-client.ts</li>
+                    <li class="mod">src/lib/ai/rate-limiter.ts</li>
+                    <li class="mod">src/lib/utils/seo.ts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- VERIFICATION -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">&#9989;</div>
+            <h2>Yoxlama Neticeleri</h2>
+        </div>
+        <table>
+            <thead><tr><th>Yoxlama</th><th>Netice</th><th>Detallar</th></tr></thead>
+            <tbody>
+                <tr><td>TypeScript (tsc --noEmit)</td><td><span class="badge badge-done">&#10003; 0 xeta</span></td><td>Butun tipler duzgun</td></tr>
+                <tr><td>ESLint (next lint)</td><td><span class="badge badge-done">&#10003; 0 xeta</span></td><td>3 warning (img tag - gozlenilen)</td></tr>
+                <tr><td>Next.js Build</td><td><span class="badge badge-done">&#10003; Ugurlu</span></td><td>40 statik sehife, Middleware 26.5 KB</td></tr>
+                <tr><td>npm audit</td><td><span class="badge badge-fix">4 high</span></td><td>eslint-config-next (breaking change teleb edir)</td></tr>
+                <tr><td>Git push</td><td><span class="badge badge-done">&#10003; main &rarr; main</span></td><td>Commit: c0d7225</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="report-footer">
+        <div class="divider"></div>
+        <p><strong>Faza 1 - Kritik Duzeldisler Hesabati</strong></p>
+        <p>8 Paralel Stream | 8 Muhendis | 34 Fayl | +812/-477 Setir</p>
+        <p>Tarix: 10 Mart 2026 | Commit: c0d7225</p>
+        <p style="margin-top:8px; color: var(--gray-500);">Novbeti: Faza 2 - Redis rate limiter, dinamik OG sekiller, kontent genislendirme</p>
+    </div>
+
+</div>
+</body>
+</html>

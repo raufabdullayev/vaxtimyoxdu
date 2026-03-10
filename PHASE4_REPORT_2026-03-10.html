@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faza 4 Hesabati - Vaxtim Yoxdu | 2026-03-10</title>
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-light: #ede9fe;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --success-bg: #dcfce7;
+            --info: #0891b2;
+            --info-bg: #cffafe;
+            --warning: #f59e0b;
+            --warning-bg: #fef3c7;
+            --danger: #dc2626;
+            --danger-bg: #fee2e2;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--gray-800); line-height: 1.6; background: var(--gray-50); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .cover { background: linear-gradient(135deg, #7c3aed 0%, #8b5cf6 40%, #a78bfa 100%); color: white; padding: 60px 0; text-align: center; }
+        .cover h1 { font-size: 2.5rem; margin-bottom: 8px; }
+        .cover .subtitle { font-size: 1.25rem; opacity: 0.9; }
+        .cover .meta { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+        .summary-bar { background: white; border-bottom: 1px solid var(--gray-200); padding: 24px 0; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; text-align: center; }
+        .summary-item { padding: 16px; border-radius: 12px; background: var(--gray-50); }
+        .summary-item .number { font-size: 2rem; font-weight: 700; }
+        .summary-item .label { font-size: 0.8rem; color: var(--gray-500); margin-top: 4px; }
+        .section { padding: 40px 0; }
+        .section + .section { border-top: 1px solid var(--gray-200); }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+        .section-title .icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+        .card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+        .card-title { font-size: 1.1rem; font-weight: 600; }
+        .card-desc { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 16px; }
+        .badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .badge-success { background: var(--success-bg); color: var(--success); }
+        .badge-info { background: var(--info-bg); color: var(--info); }
+        .badge-warning { background: var(--warning-bg); color: var(--warning); }
+        .badge-danger { background: var(--danger-bg); color: var(--danger); }
+        .badge-purple { background: #ede9fe; color: #7c3aed; }
+        .file-list { list-style: none; padding: 0; }
+        .file-list li { padding: 8px 12px; font-size: 0.85rem; font-family: 'SF Mono', 'Fira Code', monospace; background: var(--gray-50); margin-bottom: 4px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; }
+        .file-list .new { border-left: 3px solid var(--success); }
+        .file-list .modified { border-left: 3px solid var(--primary); }
+        .file-list .tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-family: 'Segoe UI', sans-serif; }
+        .tag-new { background: var(--success-bg); color: var(--success); }
+        .tag-mod { background: #ede9fe; color: #7c3aed; }
+        .stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--gray-100); font-size: 0.9rem; }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: var(--gray-600); }
+        .stat-value { font-weight: 600; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th { background: var(--gray-100); text-align: left; padding: 10px 14px; font-weight: 600; white-space: nowrap; }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--gray-100); }
+        tr:hover td { background: var(--gray-50); }
+        .table-wrap { overflow-x: auto; }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 16px; }
+        .tool-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px; display: flex; gap: 12px; align-items: flex-start; }
+        .tool-card .tool-icon { font-size: 1.5rem; min-width: 36px; text-align: center; }
+        .tool-card .tool-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+        .tool-card .tool-short { font-size: 0.8rem; color: var(--gray-500); }
+        .progress-bar { background: var(--gray-200); border-radius: 20px; height: 24px; overflow: hidden; margin: 16px 0; position: relative; }
+        .progress-fill { height: 100%; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: white; transition: width 0.5s; }
+        .category-bar { display: flex; gap: 0; border-radius: 12px; overflow: hidden; height: 40px; margin: 16px 0; }
+        .category-segment { display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 600; color: white; }
+        .footer { background: var(--gray-900); color: white; padding: 40px 0; text-align: center; font-size: 0.85rem; }
+        .footer .faded { opacity: 0.6; }
+        .milestone { background: linear-gradient(135deg, #7c3aed, #a78bfa); color: white; border-radius: 16px; padding: 32px; text-align: center; margin: 24px 0; }
+        .milestone h3 { font-size: 1.8rem; margin-bottom: 8px; }
+        .milestone p { opacity: 0.9; font-size: 1rem; }
+        .milestone .big-number { font-size: 4rem; font-weight: 800; margin: 16px 0; }
+        @media (max-width: 640px) { .cover h1 { font-size: 1.75rem; } .summary-grid { grid-template-columns: repeat(2, 1fr); } .tool-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="cover">
+        <div class="container">
+            <h1>Faza 4 Hesabati</h1>
+            <p class="subtitle">16 Yeni Alet &mdash; 30 Pulsuz Alet Hedefe Catdi!</p>
+            <div class="meta">
+                <span>Layihe: vaxtimyoxdu.com</span>
+                <span>Tarix: 2026-03-10</span>
+                <span>Status: Tamamlandi ve Deploy Edildi</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="summary-bar">
+        <div class="container">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="number" style="color: #7c3aed">16</div>
+                    <div class="label">Yeni Alet</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--success)">30</div>
+                    <div class="label">Umumi Alet</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--info)">19</div>
+                    <div class="label">Deyisdirilmis Fayl</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--success)">+3,661</div>
+                    <div class="label">Elave Edilmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--danger)">-13</div>
+                    <div class="label">Silinmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--warning)">63</div>
+                    <div class="label">Statik Sehife</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- Milestone -->
+        <section class="section" style="border-top: none;">
+            <div class="milestone">
+                <h3>Hedef Tamam!</h3>
+                <div class="big-number">30</div>
+                <p>Pulsuz onlayn alet &mdash; butun kateqoriyalarda tam paket. AI, PDF, Image, Developer, Generators, Text.</p>
+            </div>
+        </section>
+
+        <!-- Category Overview -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#ede9fe;color:#7c3aed;">&#128202;</span> Kateqoriya Icmali</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">30 Alet &mdash; 6 Kateqoriya</span><span class="badge badge-purple">Tam Paket</span></div>
+                <div class="category-bar">
+                    <div class="category-segment" style="background:#7c3aed;width:10%;" title="AI Tools: 3">AI: 3</div>
+                    <div class="category-segment" style="background:#dc2626;width:3.3%;" title="PDF: 1">1</div>
+                    <div class="category-segment" style="background:#f59e0b;width:6.7%;" title="Image: 2">2</div>
+                    <div class="category-segment" style="background:#0891b2;width:40%;" title="Dev: 12">Dev: 12</div>
+                    <div class="category-segment" style="background:#16a34a;width:23.3%;" title="Generators: 7">Gen: 7</div>
+                    <div class="category-segment" style="background:#2563eb;width:16.7%;" title="Text: 5">Text: 5</div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Kateqoriya</th><th>Evvelki</th><th>Yeni</th><th>Cemi</th><th>Faiz</th></tr></thead>
+                        <tbody>
+                            <tr><td>&#129302; AI Tools</td><td>3</td><td>0</td><td>3</td><td>10%</td></tr>
+                            <tr><td>&#128209; PDF Tools</td><td>1</td><td>0</td><td>1</td><td>3%</td></tr>
+                            <tr><td>&#128444;&#65039; Image Tools</td><td>2</td><td>0</td><td>2</td><td>7%</td></tr>
+                            <tr><td style="font-weight:600;color:#0891b2;">&#128187; Developer Tools</td><td>4</td><td style="font-weight:700;color:var(--success);">+8</td><td style="font-weight:700;">12</td><td>40%</td></tr>
+                            <tr><td style="font-weight:600;color:#16a34a;">&#9881;&#65039; Generators</td><td>3</td><td style="font-weight:700;color:var(--success);">+4</td><td style="font-weight:700;">7</td><td>23%</td></tr>
+                            <tr><td style="font-weight:600;color:#2563eb;">&#128221; Text Tools</td><td>1</td><td style="font-weight:700;color:var(--success);">+4</td><td style="font-weight:700;">5</td><td>17%</td></tr>
+                            <tr style="background:var(--gray-50);font-weight:700;"><td>CEMI</td><td>14</td><td style="color:var(--success);">+16</td><td>30</td><td>100%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stream 1: Developer Tools -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#cffafe;color:#0891b2;">1</span> Stream 1: Developer Tools (+8 yeni)</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">4 &rarr; 12 Developer Aleti</span><span class="badge badge-info">En boyuk kateqoriya</span></div>
+                <div class="card-desc">Proqramcilarin gundelik is axininda istifade edecekleri 8 yeni alet. Butunu client-side isleyir &mdash; data serverе getmir.</div>
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">&#127760;</div>
+                        <div><div class="tool-name">URL Encode/Decode</div><div class="tool-short">Xususi simvollari faiz kodlamasina cevirir ve ya dekod edir</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#127915;</div>
+                        <div><div class="tool-name">JWT Decoder</div><div class="tool-short">JSON Web Token-leri parca-parca gosterir (header, payload, exp)</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#128203;</div>
+                        <div><div class="tool-name">Markdown Preview</div><div class="tool-short">Markdown yazmaq ve canli onizleme gormek</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#9200;</div>
+                        <div><div class="tool-name">Timestamp Converter</div><div class="tool-short">Unix timestamp &harr; insan oxuya bilecek tarix</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#127912;</div>
+                        <div><div class="tool-name">CSS Minifier & Beautifier</div><div class="tool-short">CSS kiciltme ve ya gozel formatda gosterme</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#128290;</div>
+                        <div><div class="tool-name">Number Base Converter</div><div class="tool-short">Binary, Octal, Decimal, Hex arasinda cevirme</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#128202;</div>
+                        <div><div class="tool-name">CSV to JSON Converter</div><div class="tool-short">CSV melumatlarini JSON formatina cevirir</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#9201;&#65039;</div>
+                        <div><div class="tool-name">Cron Expression Parser</div><div class="tool-short">Cron ifadelerini insan diline cevirir + novbeti icra vaxtlari</div></div>
+                    </div>
+                </div>
+                <ul class="file-list" style="margin-top:20px;">
+                    <li class="new">src/components/tools/dev/UrlCodec.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/dev/JwtDecoder.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/dev/MarkdownPreview.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/dev/TimestampConverter.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/dev/CssMinifier.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/dev/NumberBaseConverter.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/dev/CsvToJson.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/dev/CronParser.tsx <span class="tag tag-new">Yeni</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Stream 2: Generators -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#dcfce7;color:#16a34a;">2</span> Stream 2: Generators (+4 yeni)</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">3 &rarr; 7 Generator Aleti</span><span class="badge badge-success">+4 yeni</span></div>
+                <div class="card-desc">Parol, UUID, meta tag ve aspect ratio kimi seyler yaratmaq ucun praktik aletler.</div>
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">&#128274;</div>
+                        <div><div class="tool-name">Password Generator</div><div class="tool-short">Guclu, random parollar yaradir. Uzunluq ve simvol novleri secile biler</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#127380;</div>
+                        <div><div class="tool-name">UUID Generator</div><div class="tool-short">UUID v4 identifikatorlari yaradir. Toplu generasiya desteklenir</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#127991;&#65039;</div>
+                        <div><div class="tool-name">Meta Tag Generator</div><div class="tool-short">SEO ucun HTML meta taglari + Open Graph + Twitter Card</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#128208;</div>
+                        <div><div class="tool-name">Aspect Ratio Calculator</div><div class="tool-short">16:9, 4:3 ve s. nisbetleri hesablayir. Presetler var</div></div>
+                    </div>
+                </div>
+                <ul class="file-list" style="margin-top:20px;">
+                    <li class="new">src/components/tools/generators/PasswordGenerator.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/generators/UuidGenerator.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/generators/MetaTagGenerator.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/generators/AspectRatioCalc.tsx <span class="tag tag-new">Yeni</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Stream 3: Text Tools -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#dbeafe;color:#2563eb;">3</span> Stream 3: Text Tools (+4 yeni)</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">1 &rarr; 5 Metn Aleti</span><span class="badge badge-info">+4 yeni</span></div>
+                <div class="card-desc">Metn emalinin butun ehtiyaclarini qarsilayan aletler &mdash; case cevirme, slug yaratma, diff yoxlama, HTML entity.</div>
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">Aa</div>
+                        <div><div class="tool-name">Case Converter</div><div class="tool-short">UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#128279;</div>
+                        <div><div class="tool-name">Slug Generator</div><div class="tool-short">Temiz URL slug-lar yaradir. Aksent ve xususi simvollari silir</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&#128202;</div>
+                        <div><div class="tool-name">Text Diff Checker</div><div class="tool-short">Iki metni muqayise edir, ferqleri isiqlandirir</div></div>
+                    </div>
+                    <div class="tool-card">
+                        <div class="tool-icon">&lt;/&gt;</div>
+                        <div><div class="tool-name">HTML Entity Encoder/Decoder</div><div class="tool-short">Xususi simvollari HTML entity-lere cevirir ve eKSine</div></div>
+                    </div>
+                </div>
+                <ul class="file-list" style="margin-top:20px;">
+                    <li class="new">src/components/tools/text/CaseConverter.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/text/SlugGenerator.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/text/TextDiff.tsx <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/components/tools/text/HtmlEntityCodec.tsx <span class="tag tag-new">Yeni</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Config Updates -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fef3c7;color:#d97706;">4</span> Konfiqurasiya Yenilikliyi</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Tool Registry & Dynamic Imports</span><span class="badge badge-warning">3 fayl</span></div>
+                <div class="card-desc">16 yeni alet ucun konfiqurasiya, dinamik import ve ana sehife statistikasi yenilendi.</div>
+                <div class="stat-row"><span class="stat-label">tools.ts</span><span class="stat-value">+16 alet konfiqurasiyasi (slug, name, desc, category, icon, keywords)</span></div>
+                <div class="stat-row"><span class="stat-label">[slug]/page.tsx</span><span class="stat-value">+16 dynamic(() =&gt; import(...)) elave edildi</span></div>
+                <div class="stat-row"><span class="stat-label">page.tsx (homepage)</span><span class="stat-value">"14+" &rarr; "30" statistika yenilemesi</span></div>
+                <div class="stat-row"><span class="stat-label">categories</span><span class="stat-value">dev, generators, text tesvir yenilendi</span></div>
+                <ul class="file-list" style="margin-top:16px;">
+                    <li class="modified">src/config/tools.ts <span class="tag tag-mod">+16 alet</span></li>
+                    <li class="modified">src/app/tools/[slug]/page.tsx <span class="tag tag-mod">+16 import</span></li>
+                    <li class="modified">src/app/page.tsx <span class="tag tag-mod">30 stat</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Architecture -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#ede9fe;color:#7c3aed;">&#9881;</span> Texniki Arxitektura</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Alet Qeydiyyat Paterni</span><span class="badge badge-purple">Pattern</span></div>
+                <div class="card-desc">Her yeni alet 3 addimda qeydiyyatdan kecir:</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;">
+                    <div style="flex:1;min-width:200px;background:#f0fdf4;border:2px solid #86efac;border-radius:12px;padding:16px;text-align:center;">
+                        <div style="font-size:1.5rem;margin-bottom:8px;">1&#65039;&#8419;</div>
+                        <div style="font-weight:600;font-size:0.9rem;">Komponent Fayil</div>
+                        <div style="font-size:0.8rem;color:var(--gray-500);margin-top:4px;">src/components/tools/[cat]/[Name].tsx</div>
+                    </div>
+                    <div style="flex:1;min-width:200px;background:#dbeafe;border:2px solid #93c5fd;border-radius:12px;padding:16px;text-align:center;">
+                        <div style="font-size:1.5rem;margin-bottom:8px;">2&#65039;&#8419;</div>
+                        <div style="font-weight:600;font-size:0.9rem;">Config (tools.ts)</div>
+                        <div style="font-size:0.8rem;color:var(--gray-500);margin-top:4px;">slug, name, description, category, icon, keywords</div>
+                    </div>
+                    <div style="flex:1;min-width:200px;background:#ede9fe;border:2px solid #c4b5fd;border-radius:12px;padding:16px;text-align:center;">
+                        <div style="font-size:1.5rem;margin-bottom:8px;">3&#65039;&#8419;</div>
+                        <div style="font-weight:600;font-size:0.9rem;">Dynamic Import</div>
+                        <div style="font-size:0.8rem;color:var(--gray-500);margin-top:4px;">[slug]/page.tsx &rarr; dynamic(() =&gt; import(...))</div>
+                    </div>
+                </div>
+                <div class="stat-row"><span class="stat-label">Rendering</span><span class="stat-value">Static Site Generation (SSG) + dynamic import</span></div>
+                <div class="stat-row"><span class="stat-label">Client-side</span><span class="stat-value">Butun 27 non-AI alet (data serverе getmir)</span></div>
+                <div class="stat-row"><span class="stat-label">Code Splitting</span><span class="stat-value">next/dynamic ile lazy loading</span></div>
+                <div class="stat-row"><span class="stat-label">SEO</span><span class="stat-value">Her alet ucun: meta tags, JSON-LD, OG image, canonical URL</span></div>
+                <div class="stat-row"><span class="stat-label">Breadcrumb</span><span class="stat-value">Ana sehife &rarr; Aletler &rarr; [Alet adi]</span></div>
+            </div>
+        </section>
+
+        <!-- Full Tool List -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#dcfce7;color:#16a34a;">&#128221;</span> Butun 30 Alet Siyahisi</h2>
+            <div class="card">
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>#</th><th>Ikon</th><th>Alet Adi</th><th>Kateqoriya</th><th>Tip</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <!-- AI -->
+                            <tr><td>1</td><td>&#9997;&#65039;</td><td>AI Text Rewriter</td><td><span class="badge badge-purple">AI</span></td><td>Server</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>2</td><td>&#128221;</td><td>AI Text Summarizer</td><td><span class="badge badge-purple">AI</span></td><td>Server</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>3</td><td>&#9989;</td><td>AI Grammar Checker</td><td><span class="badge badge-purple">AI</span></td><td>Server</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <!-- PDF -->
+                            <tr><td>4</td><td>&#128209;</td><td>PDF Merge</td><td><span class="badge badge-danger">PDF</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <!-- Image -->
+                            <tr><td>5</td><td>&#128444;&#65039;</td><td>Image Compressor</td><td><span class="badge badge-warning">Image</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>6</td><td>&#128260;</td><td>Image Converter</td><td><span class="badge badge-warning">Image</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <!-- Dev (evvelki) -->
+                            <tr><td>7</td><td>{ }</td><td>JSON Formatter & Validator</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>8</td><td>&#128272;</td><td>Base64 Encode/Decode</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>9</td><td>&#128269;</td><td>Regex Tester</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>10</td><td>#&#65039;&#8419;</td><td>Hash Generator</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <!-- Dev (yeni) -->
+                            <tr style="background:#f0fdf4;"><td>11</td><td>&#127760;</td><td>URL Encode/Decode</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>12</td><td>&#127915;</td><td>JWT Decoder</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>13</td><td>&#128203;</td><td>Markdown Preview</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>14</td><td>&#9200;</td><td>Timestamp Converter</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>15</td><td>&#127912;</td><td>CSS Minifier & Beautifier</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>16</td><td>&#128290;</td><td>Number Base Converter</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>17</td><td>&#128202;</td><td>CSV to JSON Converter</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>18</td><td>&#9201;&#65039;</td><td>Cron Expression Parser</td><td><span class="badge badge-info">Dev</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <!-- Generators (evvelki) -->
+                            <tr><td>19</td><td>&#128241;</td><td>QR Code Generator</td><td><span class="badge badge-success">Gen</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>20</td><td>&#127912;</td><td>Color Picker & Palette</td><td><span class="badge badge-success">Gen</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <tr><td>21</td><td>&#128196;</td><td>Lorem Ipsum Generator</td><td><span class="badge badge-success">Gen</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <!-- Generators (yeni) -->
+                            <tr style="background:#f0fdf4;"><td>22</td><td>&#128274;</td><td>Password Generator</td><td><span class="badge badge-success">Gen</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>23</td><td>&#127380;</td><td>UUID Generator</td><td><span class="badge badge-success">Gen</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>24</td><td>&#127991;&#65039;</td><td>Meta Tag Generator</td><td><span class="badge badge-success">Gen</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>25</td><td>&#128208;</td><td>Aspect Ratio Calculator</td><td><span class="badge badge-success">Gen</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <!-- Text (evvelki) -->
+                            <tr><td>26</td><td>&#128290;</td><td>Word Counter</td><td><span class="badge" style="background:#dbeafe;color:#2563eb;">Text</span></td><td>Client</td><td><span class="badge badge-info">Faza 1</span></td></tr>
+                            <!-- Text (yeni) -->
+                            <tr style="background:#f0fdf4;"><td>27</td><td>Aa</td><td>Case Converter</td><td><span class="badge" style="background:#dbeafe;color:#2563eb;">Text</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>28</td><td>&#128279;</td><td>Slug Generator</td><td><span class="badge" style="background:#dbeafe;color:#2563eb;">Text</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>29</td><td>&#128202;</td><td>Text Diff Checker</td><td><span class="badge" style="background:#dbeafe;color:#2563eb;">Text</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                            <tr style="background:#f0fdf4;"><td>30</td><td>&lt;/&gt;</td><td>HTML Entity Encoder/Decoder</td><td><span class="badge" style="background:#dbeafe;color:#2563eb;">Text</span></td><td>Client</td><td><span class="badge badge-success">Faza 4 &#10004;</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Build & Deploy -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fef3c7;color:#d97706;">&#128640;</span> Build & Deploy</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">GitLab CI/CD Pipeline</span><span class="badge badge-success">SUCCESS</span></div>
+                <div class="stat-row"><span class="stat-label">Commit</span><span class="stat-value" style="font-family:monospace;">bdf0fe5</span></div>
+                <div class="stat-row"><span class="stat-label">Pipeline</span><span class="stat-value">#2374564321</span></div>
+                <div class="stat-row"><span class="stat-label">Branch</span><span class="stat-value">main</span></div>
+                <div class="stat-row"><span class="stat-label">Fayllar</span><span class="stat-value">19 deyisdirilmis</span></div>
+                <div class="stat-row"><span class="stat-label">Elave / Silinmis</span><span class="stat-value" style="color:var(--success);">+3,661</span> / <span style="color:var(--danger);">-13</span></div>
+                <div class="stat-row"><span class="stat-label">Statik sehifeler</span><span class="stat-value">63 sehife generate edildi</span></div>
+                <div class="stat-row"><span class="stat-label">Node.js</span><span class="stat-value">20.x (Vercel)</span></div>
+                <div class="stat-row"><span class="stat-label">Hosting</span><span class="stat-value">Vercel (auto-deploy)</span></div>
+            </div>
+
+            <div class="card">
+                <div class="card-header"><span class="card-title">Paralel Is Axini</span><span class="badge badge-purple">3 Agent</span></div>
+                <div class="card-desc">16 alet 3 paralel agent ile yaradildi:</div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+                    <div style="flex:1;min-width:180px;background:#cffafe;border-radius:10px;padding:16px;text-align:center;">
+                        <div style="font-weight:700;color:#0891b2;">Agent 1</div>
+                        <div style="font-size:0.85rem;margin-top:4px;">8 Developer Tool</div>
+                    </div>
+                    <div style="flex:1;min-width:180px;background:#dcfce7;border-radius:10px;padding:16px;text-align:center;">
+                        <div style="font-weight:700;color:#16a34a;">Agent 2</div>
+                        <div style="font-size:0.85rem;margin-top:4px;">4 Generator Tool</div>
+                    </div>
+                    <div style="flex:1;min-width:180px;background:#dbeafe;border-radius:10px;padding:16px;text-align:center;">
+                        <div style="font-weight:700;color:#2563eb;">Agent 3</div>
+                        <div style="font-size:0.85rem;margin-top:4px;">4 Text Tool</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before / After -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fee2e2;color:#dc2626;">&#128200;</span> Evvel / Sonra Muqayisesi</h2>
+            <div class="card">
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Metrika</th><th>Faza 3 Sonu</th><th>Faza 4 Sonu</th><th>Deyisiklik</th></tr></thead>
+                        <tbody>
+                            <tr><td>Umumi aletler</td><td>14</td><td style="font-weight:700;color:var(--success);">30</td><td style="color:var(--success);">+114%</td></tr>
+                            <tr><td>Developer Tools</td><td>4</td><td style="font-weight:700;">12</td><td style="color:var(--success);">+200%</td></tr>
+                            <tr><td>Generators</td><td>3</td><td style="font-weight:700;">7</td><td style="color:var(--success);">+133%</td></tr>
+                            <tr><td>Text Tools</td><td>1</td><td style="font-weight:700;">5</td><td style="color:var(--success);">+400%</td></tr>
+                            <tr><td>Statik sehifeler</td><td>~47</td><td style="font-weight:700;">63</td><td style="color:var(--success);">+34%</td></tr>
+                            <tr><td>Client-side aletler</td><td>11</td><td style="font-weight:700;">27</td><td style="color:var(--success);">+145%</td></tr>
+                            <tr><td>Homepage stat gostericisi</td><td>"14+"</td><td style="font-weight:700;">"30"</td><td>&#10004;</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:var(--gray-100);color:var(--gray-700);">&#128197;</span> Butun Fazalarin Xulasesi</h2>
+            <div class="card">
+                <div style="position:relative;padding-left:32px;">
+                    <div style="position:absolute;left:12px;top:0;bottom:0;width:2px;background:var(--gray-200);"></div>
+
+                    <div style="position:relative;padding:16px 0;">
+                        <div style="position:absolute;left:-26px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--gray-300);"></div>
+                        <div style="font-weight:700;">Faza 1 &mdash; Esas Qurulis</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">14 alet, 4 xeber, 5 blog, SEO, Analytics, AdSense</div>
+                    </div>
+
+                    <div style="position:relative;padding:16px 0;">
+                        <div style="position:absolute;left:-26px;top:20px;width:12px;height:12px;border-radius:50%;background:var(--gray-300);"></div>
+                        <div style="font-weight:700;">Faza 2 &mdash; Kontent & UX</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">OG images, breadcrumbs, cookie consent, newsletter, bundle analyzer</div>
+                    </div>
+
+                    <div style="position:relative;padding:16px 0;">
+                        <div style="position:absolute;left:-26px;top:20px;width:12px;height:12px;border-radius:50%;background:#0891b2;"></div>
+                        <div style="font-weight:700;">Faza 3 &mdash; Inteqrasiyalar</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">Upstash Redis, Newsletter API, sosial media, 3 blog, 3 xeber, AI UX</div>
+                    </div>
+
+                    <div style="position:relative;padding:16px 0;">
+                        <div style="position:absolute;left:-26px;top:20px;width:12px;height:12px;border-radius:50%;background:#7c3aed;border:3px solid #ede9fe;"></div>
+                        <div style="font-weight:700;color:#7c3aed;">Faza 4 &mdash; 30 Alet Hedefe &#10004;</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">+16 yeni alet (8 dev, 4 gen, 4 text), 30 umumi, 63 statik sehife</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Vaxtim Yoxdu - Faza 4 Hesabati</strong></p>
+            <p class="faded" style="margin-top:8px;">Hazirlayan: Texniki Komanda (3 paralel agent) | Tarix: 2026-03-10 | Pipeline #2374564321 - SUCCESS</p>
+            <p class="faded" style="margin-top:4px;">vaxtimyoxdu.com | GitLab: rauf-idea/vaxtimyoxdu | Commit: bdf0fe5</p>
+        </div>
+    </footer>
+</body>
+</html>

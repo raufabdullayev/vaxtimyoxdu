@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaxtim Yoxdu - Texniki Audit Hesabati | 2026-03-10</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #dbeafe;
+            --danger: #dc2626;
+            --danger-light: #fef2f2;
+            --danger-bg: #fee2e2;
+            --warning: #f59e0b;
+            --warning-light: #fffbeb;
+            --warning-bg: #fef3c7;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --success-bg: #dcfce7;
+            --info: #0891b2;
+            --info-light: #ecfeff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--gray-50);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== COVER PAGE ===== */
+        .cover {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #0891b2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            page-break-after: always;
+        }
+
+        .cover h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .cover .subtitle {
+            font-size: 22px;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .cover-meta {
+            display: inline-flex;
+            gap: 32px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+
+        .cover-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-top: 24px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 40px 0;
+        }
+
+        .toc h2 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+
+        .toc ol li {
+            counter-increment: toc-counter;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 15px;
+        }
+
+        .toc ol li:last-child { border-bottom: none; }
+
+        .toc ol li::before {
+            content: counter(toc-counter) ".";
+            font-weight: 700;
+            color: var(--primary);
+            margin-right: 12px;
+            min-width: 28px;
+            display: inline-block;
+        }
+
+        .toc ol li a {
+            color: var(--gray-700);
+            text-decoration: none;
+        }
+
+        .toc ol li a:hover {
+            color: var(--primary);
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--gray-100);
+        }
+
+        .section-number {
+            background: var(--primary);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            color: var(--gray-900);
+        }
+
+        .section h3 {
+            font-size: 17px;
+            color: var(--gray-800);
+            margin: 24px 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .section h4 {
+            font-size: 15px;
+            color: var(--gray-700);
+            margin: 16px 0 8px 0;
+        }
+
+        /* ===== TABLES ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        thead th {
+            background: var(--gray-800);
+            color: white;
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        thead th:first-child { border-radius: 8px 0 0 0; }
+        thead th:last-child { border-radius: 0 8px 0 0; }
+
+        tbody td {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--gray-100);
+            vertical-align: top;
+        }
+
+        tbody tr:hover { background: var(--gray-50); }
+        tbody tr:last-child td { border-bottom: none; }
+
+        /* ===== SCORE CARDS ===== */
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .score-card {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .score-card .label {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .score-card .value {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .score-card .value.good { color: var(--success); }
+        .score-card .value.warn { color: var(--warning); }
+        .score-card .value.bad { color: var(--danger); }
+        .score-card .value.neutral { color: var(--primary); }
+
+        .score-card .detail {
+            font-size: 12px;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        /* ===== BADGES ===== */
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .badge-critical {
+            background: var(--danger-bg);
+            color: var(--danger);
+        }
+
+        .badge-high {
+            background: #ffedd5;
+            color: #c2410c;
+        }
+
+        .badge-medium {
+            background: var(--warning-bg);
+            color: #b45309;
+        }
+
+        .badge-low {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .badge-info {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .badge-success {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        /* ===== ALERT BOXES ===== */
+        .alert {
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin: 16px 0;
+            font-size: 14px;
+            border-left: 4px solid;
+        }
+
+        .alert-danger {
+            background: var(--danger-light);
+            border-color: var(--danger);
+            color: #991b1b;
+        }
+
+        .alert-warning {
+            background: var(--warning-light);
+            border-color: var(--warning);
+            color: #92400e;
+        }
+
+        .alert-success {
+            background: var(--success-light);
+            border-color: var(--success);
+            color: #166534;
+        }
+
+        .alert-info {
+            background: var(--info-light);
+            border-color: var(--info);
+            color: #155e75;
+        }
+
+        .alert strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* ===== LISTS ===== */
+        .check-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .check-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 14px;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .check-list li:last-child { border-bottom: none; }
+
+        .check-list li::before {
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+
+        .check-list li.ok::before { content: "\2705"; }
+        .check-list li.fail::before { content: "\274C"; }
+        .check-list li.warn::before { content: "\26A0\FE0F"; }
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: var(--gray-800);
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 13px;
+            line-height: 1.7;
+            overflow-x: auto;
+            margin: 16px 0;
+            white-space: pre;
+        }
+
+        .code-inline {
+            background: var(--gray-100);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 13px;
+            color: var(--danger);
+        }
+
+        /* ===== STATS ROW ===== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-box.green { background: linear-gradient(135deg, var(--success) 0%, #15803d 100%); }
+        .stat-box.orange { background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%); }
+        .stat-box.teal { background: linear-gradient(135deg, var(--info) 0%, #0e7490 100%); }
+
+        .stat-box .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .stat-box .stat-label {
+            font-size: 12px;
+            opacity: 0.85;
+            margin-top: 4px;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-container {
+            margin: 12px 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .progress-fill.good { background: var(--success); }
+        .progress-fill.warn { background: var(--warning); }
+        .progress-fill.bad { background: var(--danger); }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gray-200);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 24px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            background: white;
+        }
+
+        .timeline-item.active::before {
+            background: var(--primary);
+        }
+
+        .timeline-item.done::before {
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        .timeline-item h4 {
+            font-size: 15px;
+            margin: 0 0 4px 0;
+            border: none;
+            padding: 0;
+        }
+
+        .timeline-item p {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        /* ===== DIAGRAM ===== */
+        .diagram {
+            background: var(--gray-900);
+            color: #a5f3fc;
+            padding: 24px;
+            border-radius: 10px;
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 12px;
+            line-height: 1.6;
+            overflow-x: auto;
+            margin: 16px 0;
+            white-space: pre;
+        }
+
+        .diagram .highlight { color: #fbbf24; }
+        .diagram .green { color: #4ade80; }
+        .diagram .red { color: #f87171; }
+        .diagram .blue { color: #60a5fa; }
+
+        /* ===== TWO COLUMNS ===== */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* ===== FOOTER ===== */
+        .report-footer {
+            text-align: center;
+            padding: 32px 0;
+            color: var(--gray-500);
+            font-size: 13px;
+        }
+
+        .report-footer .divider {
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            margin: 0 auto 16px;
+            border-radius: 2px;
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body { background: white; }
+            .cover { break-after: page; }
+            .section { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
+            .no-print { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .score-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .two-col { grid-template-columns: 1fr; }
+            .cover-meta { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== COVER PAGE ===== -->
+<div class="cover">
+    <div class="container">
+        <p style="font-size:48px; margin-bottom:16px;">&#9889;</p>
+        <h1>VAXTIM YOXDU</h1>
+        <p class="subtitle">Tam Texniki Audit Hesabati</p>
+        <div class="cover-meta">
+            <span>&#128197; 10 Mart 2026</span>
+            <span>&#128101; 6 Muhendis Komandasi</span>
+            <span>&#128203; READ-ONLY Audit</span>
+        </div>
+        <div class="cover-badge">Hazirlayan: Product Owner | CEO ucun</div>
+    </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="container" style="padding-top: 40px;">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+        <h2>&#128209; Mundericat</h2>
+        <ol>
+            <li><a href="#summary">Layihe Haqqinda Qisa Melumat</a></li>
+            <li><a href="#team-scores">Komanda Qiymetlendirmesi</a></li>
+            <li><a href="#structure">Layihe Strukturu ve Route Xeritesi</a></li>
+            <li><a href="#tools">14 Alet - Tam Siyahi</a></li>
+            <li><a href="#strengths">Guclu Terefleri</a></li>
+            <li><a href="#critical">Kritik Problemler</a></li>
+            <li><a href="#security">Tehlukesizlik Auditi</a></li>
+            <li><a href="#seo">SEO Auditi</a></li>
+            <li><a href="#uiux">UI/UX ve Accessibility Auditi</a></li>
+            <li><a href="#infra">Infrastruktur ve CI/CD</a></li>
+            <li><a href="#architecture">Arxitektura Diaqrami</a></li>
+            <li><a href="#roadmap">Qalan Isler ve Yol Xeritesi</a></li>
+            <li><a href="#verdict">Yekun Qiymetlendirme</a></li>
+        </ol>
+    </div>
+
+    <!-- ===== 1. SUMMARY ===== -->
+    <div class="section" id="summary">
+        <div class="section-header">
+            <div class="section-number">1</div>
+            <h2>Layihe Haqqinda Qisa Melumat</h2>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-value">30</div>
+                <div class="stat-label">Umumi Sehife</div>
+            </div>
+            <div class="stat-box green">
+                <div class="stat-value">14</div>
+                <div class="stat-label">Onlayn Alet</div>
+            </div>
+            <div class="stat-box orange">
+                <div class="stat-value">4,140</div>
+                <div class="stat-label">Setir Kod</div>
+            </div>
+            <div class="stat-box teal">
+                <div class="stat-value">46</div>
+                <div class="stat-label">Menbe Fayli</div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%">Metrik</th>
+                    <th>Deyer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Layihe adi</strong></td><td>Vaxtim Yoxdu (vaxtimyoxdu.com + vaxtimyoxdur.com)</td></tr>
+                <tr><td><strong>Meqsed</strong></td><td>Insanlara vaxt qenaet etmek - qisa xeber xulaseleri + pulsuz onlayn aletler</td></tr>
+                <tr><td><strong>Texnologiya</strong></td><td>Next.js 14.2.21 (App Router), React 18, TypeScript, Tailwind CSS</td></tr>
+                <tr><td><strong>Hosting</strong></td><td>Vercel (CDN + Serverless Functions)</td></tr>
+                <tr><td><strong>DNS</strong></td><td>Cloudflare (DNS-only rejim, CNAME &rarr; cname.vercel-dns.com)</td></tr>
+                <tr><td><strong>Repo</strong></td><td>GitLab (rauf-idea/vaxtimyoxdu), 18 commit</td></tr>
+                <tr><td><strong>CI/CD</strong></td><td>GitLab Pipeline &rarr; Vercel auto-deploy (main branch)</td></tr>
+                <tr><td><strong>Inkishaf muddeti</strong></td><td>~1 hefte (01-08 Mart 2026)</td></tr>
+                <tr><td><strong>Build statusu</strong></td><td><span class="badge badge-success">&#10003; UGURLU</span></td></tr>
+                <tr><td><strong>Production deps</strong></td><td>Cemi 10 paket (cox yungul)</td></tr>
+                <tr><td><strong>Rendering</strong></td><td>100% Static Site Generation (SSG) - butun 30 sehife build zamani yaradilir</td></tr>
+            </tbody>
+        </table>
+
+        <div class="two-col" style="margin-top:20px;">
+            <div>
+                <h4>Domenler</h4>
+                <ul class="check-list">
+                    <li class="ok">vaxtimyoxdu.com (esas)</li>
+                    <li class="ok">vaxtimyoxdur.com (alias)</li>
+                    <li class="ok">www.vaxtimyoxdu.com</li>
+                    <li class="ok">www.vaxtimyoxdur.com</li>
+                    <li class="ok">SSL sertifikatlari (butun 4 domen)</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Inteqrasiyalar</h4>
+                <ul class="check-list">
+                    <li class="ok">Google Analytics 4 (G-BJHT1YYBCS)</li>
+                    <li class="warn">Google AdSense (tesdiq gozleyir)</li>
+                    <li class="warn">Groq AI API (key elave edilmeyib)</li>
+                    <li class="ok">Google Search Console (verify olunub)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 2. TEAM SCORES ===== -->
+    <div class="section" id="team-scores">
+        <div class="section-header">
+            <div class="section-number">2</div>
+            <h2>Komanda Qiymetlendirmesi</h2>
+        </div>
+
+        <p style="color: var(--gray-500); margin-bottom: 20px; font-size: 14px;">6 muhendis paralel olaraq oz sahelerini arasdirdi. Asagida her birinin qiymetlendirmesi:</p>
+
+        <div class="score-grid">
+            <div class="score-card">
+                <div class="label">Frontend / Arxitektura</div>
+                <div class="value good">7.5<span style="font-size:16px">/10</span></div>
+                <div class="detail">React/Next.js Engineer</div>
+            </div>
+            <div class="score-card">
+                <div class="label">Backend / API</div>
+                <div class="value warn">6.5<span style="font-size:16px">/10</span></div>
+                <div class="detail">Node.js/TS Engineer</div>
+            </div>
+            <div class="score-card">
+                <div class="label">SEO</div>
+                <div class="value warn">6.5<span style="font-size:16px">/10</span></div>
+                <div class="detail">SEO Specialist</div>
+            </div>
+            <div class="score-card">
+                <div class="label">UI/UX & Dizayn</div>
+                <div class="value warn">6.1<span style="font-size:16px">/10</span></div>
+                <div class="detail">UI/Styling Engineer</div>
+            </div>
+            <div class="score-card">
+                <div class="label">Infrastruktur</div>
+                <div class="value good">7.7<span style="font-size:16px">/10</span></div>
+                <div class="detail">DevOps Engineer</div>
+            </div>
+            <div class="score-card">
+                <div class="label">Tehlukesizlik</div>
+                <div class="value bad">C+</div>
+                <div class="detail">Security Engineer</div>
+            </div>
+        </div>
+
+        <h3>Detalli Ballar</h3>
+        <div class="progress-container">
+            <div class="progress-label"><span>Frontend / Arxitektura</span><span>7.5/10</span></div>
+            <div class="progress-bar"><div class="progress-fill good" style="width:75%"></div></div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label"><span>Infrastruktur / DevOps</span><span>7.7/10</span></div>
+            <div class="progress-bar"><div class="progress-fill good" style="width:77%"></div></div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label"><span>Backend / API Layer</span><span>6.5/10</span></div>
+            <div class="progress-bar"><div class="progress-fill warn" style="width:65%"></div></div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label"><span>SEO</span><span>6.5/10</span></div>
+            <div class="progress-bar"><div class="progress-fill warn" style="width:65%"></div></div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label"><span>UI/UX & Accessibility</span><span>6.1/10</span></div>
+            <div class="progress-bar"><div class="progress-fill warn" style="width:61%"></div></div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label"><span>Tehlukesizlik</span><span>5.5/10 (C+)</span></div>
+            <div class="progress-bar"><div class="progress-fill bad" style="width:55%"></div></div>
+        </div>
+    </div>
+
+    <!-- ===== 3. STRUCTURE ===== -->
+    <div class="section" id="structure">
+        <div class="section-header">
+            <div class="section-number">3</div>
+            <h2>Layihe Strukturu ve Route Xeritesi</h2>
+        </div>
+
+        <h3>Repo Strukturu (3 layihe)</h3>
+        <div class="code-block">random/
+  vaxtimYoxdu/     &rarr; Esas layihe (Next.js 14, Vercel-de deploy)
+  toolbox-ai/      &rarr; Standalone klon (kohne versiya, eyni kodbazasi)
+  info-site/       &rarr; Hugo arxiv (1 commit, praktiki olaraq bosh)</div>
+
+        <h3>Esas Layihe - Fayl Strukturu</h3>
+        <div class="code-block">src/
+  app/
+    layout.tsx                 (Root layout - Server Component)
+    page.tsx                   (Ana sehife)
+    globals.css                (Qlobal stilleri)
+    robots.ts                  (Axtaris motorlari ucun)
+    sitemap.ts                 (Sayt xeritesi)
+    about/page.tsx             (Haqqimizda)
+    privacy/page.tsx           (Mexfilik siyaseti)
+    terms/page.tsx             (Istifade sertleri)
+    blog/page.tsx              (Blog siyahisi)
+    blog/[slug]/page.tsx       (Blog meqalesi - 5 yazi)
+    info/page.tsx              (Xeber siyahisi)
+    info/[slug]/page.tsx       (Xeber meqalesi - 4 yazi)
+    tools/page.tsx             (Aletler siyahisi)
+    tools/layout.tsx           (Aletler layout - sidebar)
+    tools/[slug]/page.tsx      (Alet sehifesi - 14 alet)
+    api/ai/grammar/route.ts    (AI Grammar API)
+    api/ai/rewrite/route.ts    (AI Rewrite API)
+    api/ai/summarize/route.ts  (AI Summarize API)
+  components/
+    layout/   (Header, Footer, Sidebar, AdBanner)
+    tools/    (14 alet komponenti - ai/, dev/, generators/, image/, pdf/)
+  config/
+    tools.ts  (Alet konfiqurasiyasi)
+  lib/
+    utils.ts, ads/adsense.ts, ai/openai-client.ts,
+    ai/rate-limiter.ts, tools/registry.ts, utils/seo.ts
+  types/
+    tool.ts   (TypeScript tip terifleri)</div>
+
+        <h3>Route Xeritesi</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Route</th>
+                    <th>Tipi</th>
+                    <th>Dil</th>
+                    <th>Sayi</th>
+                    <th>SSG</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>/</code></td><td>Ana sehife</td><td>AZ</td><td>1</td><td><span class="badge badge-success">Beli</span></td></tr>
+                <tr><td><code>/info/[slug]</code></td><td>Xeberler</td><td>AZ</td><td>4</td><td><span class="badge badge-success">Beli</span></td></tr>
+                <tr><td><code>/tools/[slug]</code></td><td>Aletler</td><td>EN</td><td>14</td><td><span class="badge badge-success">Beli</span></td></tr>
+                <tr><td><code>/blog/[slug]</code></td><td>Blog</td><td>EN</td><td>5</td><td><span class="badge badge-success">Beli</span></td></tr>
+                <tr><td><code>/about, /privacy, /terms</code></td><td>Statik</td><td>EN</td><td>3</td><td><span class="badge badge-success">Beli</span></td></tr>
+                <tr><td><code>/blog, /info, /tools</code></td><td>Siyahi sehifeleri</td><td>Mixed</td><td>3</td><td><span class="badge badge-success">Beli</span></td></tr>
+                <tr><td><code>/api/ai/*</code></td><td>API Endpoints</td><td>-</td><td>3</td><td><span class="badge badge-info">Serverless</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== 4. TOOLS ===== -->
+    <div class="section" id="tools">
+        <div class="section-header">
+            <div class="section-number">4</div>
+            <h2>14 Alet - Tam Siyahi</h2>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Alet</th>
+                    <th>Kateqoriya</th>
+                    <th>Isleme yeri</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>AI Text Rewriter</td><td><span class="badge badge-info">AI</span></td><td>Server (API)</td><td><span class="badge badge-high">API key lazim</span></td></tr>
+                <tr><td>2</td><td>AI Text Summarizer</td><td><span class="badge badge-info">AI</span></td><td>Server (API)</td><td><span class="badge badge-high">API key lazim</span></td></tr>
+                <tr><td>3</td><td>AI Grammar Checker</td><td><span class="badge badge-info">AI</span></td><td>Server (API)</td><td><span class="badge badge-high">API key lazim</span></td></tr>
+                <tr><td>4</td><td>PDF Merge</td><td><span class="badge badge-medium">PDF</span></td><td>Brauzer (pdf-lib)</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>5</td><td>Image Compressor</td><td><span class="badge badge-medium">Image</span></td><td>Brauzer (Canvas)</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>6</td><td>Image Converter</td><td><span class="badge badge-medium">Image</span></td><td>Brauzer</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>7</td><td>JSON Formatter</td><td><span class="badge badge-info">Dev</span></td><td>Brauzer</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>8</td><td>Base64 Encode/Decode</td><td><span class="badge badge-info">Dev</span></td><td>Brauzer</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>9</td><td>Regex Tester</td><td><span class="badge badge-info">Dev</span></td><td>Brauzer</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>10</td><td>Hash Generator</td><td><span class="badge badge-info">Dev</span></td><td>Brauzer (crypto)</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>11</td><td>QR Code Generator</td><td><span class="badge badge-medium">Generator</span></td><td>Brauzer (qrcode)</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>12</td><td>Color Picker</td><td><span class="badge badge-medium">Generator</span></td><td>Brauzer</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>13</td><td>Lorem Ipsum Generator</td><td><span class="badge badge-medium">Generator</span></td><td>Brauzer</td><td><span class="badge badge-success">Islek</span></td></tr>
+                <tr><td>14</td><td>Word Counter</td><td><span class="badge badge-medium">Text</span></td><td>Brauzer</td><td><span class="badge badge-success">Islek</span></td></tr>
+            </tbody>
+        </table>
+
+        <div class="alert alert-warning">
+            <strong>&#9888;&#65039; Qeyd:</strong>
+            3 AI alet (Rewriter, Summarizer, Grammar Checker) hazirda islemir - Groq API key Vercel-e elave edilmeyib.
+            11/14 alet tamamen brauzerde isleyir ve server-e hec bir melumat gondermez (mexfilik ustunluyu).
+        </div>
+
+        <h3>AI Provider Fallback Zenciri</h3>
+        <div class="code-block"><span style="color:#4ade80;">[1] Groq</span> (Llama 3.3 70B) ---- PULSUZ (esas)
+      | ugursuz?
+      v
+<span style="color:#fbbf24;">[2] Gemini</span> 2.0 Flash ------- PULSUZ (ehtiyat)
+      | ugursuz?
+      v
+<span style="color:#f87171;">[3] OpenAI</span> GPT-4o-mini ----- ODENISLI (son cere)</div>
+    </div>
+
+    <!-- ===== 5. STRENGTHS ===== -->
+    <div class="section" id="strengths">
+        <div class="section-header">
+            <div class="section-number">5</div>
+            <h2>Guclu Terefleri</h2>
+        </div>
+
+        <ul class="check-list">
+            <li class="ok"><strong>Minimum asillilik</strong> - Cemi 10 production dependency. Coh yungul ve suretli layihe.</li>
+            <li class="ok"><strong>100% statik generasiya (SSG)</strong> - Butun 30 sehife build zamani yaradilir. Vercel CDN-den suresli xidmet olunur.</li>
+            <li class="ok"><strong>Agilli AI arxitekturasi</strong> - Groq (pulsuz) &rarr; Gemini (pulsuz) &rarr; OpenAI (odenisli) fallback zenciri ile xercler minimuma endirilir.</li>
+            <li class="ok"><strong>Mexfilik ustunluyu</strong> - 11/14 alet tamamen brauzerde isleyir. Server-e hec bir istifadeci melumati gonderilmir.</li>
+            <li class="ok"><strong>Guclu SEO bazasi</strong> - JSON-LD structured data, sitemap, robots.txt, canonical URL, OG teqleri - hamisi var.</li>
+            <li class="ok"><strong>Kod ayirma (Code Splitting)</strong> - Her alet next/dynamic ile ayrica yuklenir. Istifadeciler yalniz istifade etdikleri aletin JS-ini yukleyir.</li>
+            <li class="ok"><strong>Tehlukesizlik basliklari</strong> - X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy konfiqurasiya edilib.</li>
+            <li class="ok"><strong>Duzgun Server/Client komponent serhedi</strong> - Yalniz interaktiv komponentler 'use client' istifade edir. Layout/Footer Server Component olaraq qalir.</li>
+            <li class="ok"><strong>Temiz cachleme strategiyasi</strong> - Statik fayllar 1 il immutable cache, seqiller 30 gun stale-while-revalidate.</li>
+            <li class="ok"><strong>Konsistent dizayn sistemi</strong> - HSL deyisenler uzerinde qurulan token-li renk sistemi (shadcn/ui patterni).</li>
+        </ul>
+    </div>
+
+    <!-- ===== 6. CRITICAL PROBLEMS ===== -->
+    <div class="section" id="critical">
+        <div class="section-header">
+            <div class="section-number">6</div>
+            <h2>Kritik Problemler</h2>
+        </div>
+
+        <div class="alert alert-danger">
+            <strong>&#128680; DERHAL DIQQET TELEB EDEN MESELELER</strong>
+            Asagidaki problemler produksiyaya cixmazdan evvel mutleq hell edilmelidir.
+        </div>
+
+        <h3>6.1 Tehlukesizlik Problemleri</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Problem</th>
+                    <th>Ciddilik</th>
+                    <th>Hell vaxti</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>S-1</td>
+                    <td><strong>Next.js 14.2.21-de 10 CVE var</strong> (icaze bypass daxil). 14.2.35-e yenilemek lazim.</td>
+                    <td><span class="badge badge-critical">KRITIK</span></td>
+                    <td>15 deq</td>
+                </tr>
+                <tr>
+                    <td>S-2</td>
+                    <td><strong>Groq API key deyisdirilmelidir</strong> - key artiq bu audit zamani expose olub.</td>
+                    <td><span class="badge badge-critical">KRITIK</span></td>
+                    <td>10 deq</td>
+                </tr>
+                <tr>
+                    <td>S-3</td>
+                    <td><strong>CORS konfiqurasiyasi yoxdur</strong> - istenilen sayt API endpoint-lerinizi istifade ede biler.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                    <td>30 deq</td>
+                </tr>
+                <tr>
+                    <td>S-4</td>
+                    <td><strong>Content-Security-Policy (CSP) yoxdur</strong> - XSS hucumuna aciq.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                    <td>45 deq</td>
+                </tr>
+                <tr>
+                    <td>S-5</td>
+                    <td><strong>CSRF qorumasi yoxdur</strong> POST API endpoint-lerinde.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                    <td>1 saat</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>6.2 Arxitektura Problemleri</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Problem</th>
+                    <th>Ciddilik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A-1</td>
+                    <td><strong>Rate limiter serverless-de islemir.</strong> In-memory Map her cold start-da sifirlanir. Vercel-de her funksiya ferqli konteyner-de ishleye biler - rate limit kecirilir. AI API key-ler qorumasizdir.</td>
+                    <td><span class="badge badge-critical">KRITIK</span></td>
+                </tr>
+                <tr>
+                    <td>A-2</td>
+                    <td><strong>Kontent hardcode edilib.</strong> Blog yazilar ve xeber meqaleleri birbase TSX fayllarin icindedir. Yeni kontent elave etmek ucun kod deyishikliyi ve yeniden deploy lazimdir.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>A-3</td>
+                    <td><strong>Brend uygunsuzlugu.</strong> About, Privacy, Terms sehifelerinde "ToolBox AI" ve "toolbox-ai.com" yazilir. Layihenin adi "Vaxtim Yoxdu" olmalidir.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>A-4</td>
+                    <td><strong>AI endpoint-lerde timeout yoxdur.</strong> Provider asildiqda funksiya hemislik gozleyir (Vercel-in oz timeout-u olene qeder).</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>A-5</td>
+                    <td><strong>toolbox-ai dublikat kodbazadir.</strong> Eyni 14 alet, eyni API routes. Iki ayri repo saxlamaq texniki borc yaradir.</td>
+                    <td><span class="badge badge-medium">ORTA</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>6.3 SEO Problemleri</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Problem</th>
+                    <th>Ciddilik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SEO-1</td>
+                    <td><strong>hreflang pozuqdur.</strong> 'az' ve 'en' eyni URL-e isare edir. Bu semantik olaraq menasizdir ve Google-u cesdire biler.</td>
+                    <td><span class="badge badge-critical">KRITIK</span></td>
+                </tr>
+                <tr>
+                    <td>SEO-2</td>
+                    <td><strong>&lt;html lang="az"&gt; hardcode edilib</strong> amma blog ve tools sehifeleri ingilis dilindedir. Ekran oxuculari ve axtaris motorlari ucun zedekan.</td>
+                    <td><span class="badge badge-critical">KRITIK</span></td>
+                </tr>
+                <tr>
+                    <td>SEO-3</td>
+                    <td><strong>Butun 30 sehife ucun cemi 1 OG sekli var.</strong> Sosial media paylasiminda her sehife eyni goruntunu gosterir. CTR-i dramatik azaldir.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>SEO-4</td>
+                    <td><strong>Kontent coh nazikdir.</strong> Xeberler ~100 soz, bloglar ~200 soz. Google Helpful Content telimatina gore bunlar "thin content" hesab olunur.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>SEO-5</td>
+                    <td><strong>Favicon / app icon yoxdur.</strong> Brauzer tabinda hec ne gorunmur. web manifest de yoxdur.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>SEO-6</td>
+                    <td><strong>Blog ve alet sehifeleri arasinda carpaz link yoxdur.</strong> Boyuk SEO fuqseti itirilir.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>SEO-7</td>
+                    <td><strong>Sitemap lastModified her build-de new Date() istifade edir.</strong> Google ucun faktiki kontent tarixini gostermek lazimdir.</td>
+                    <td><span class="badge badge-medium">ORTA</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>6.4 UI/UX Problemleri</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Problem</th>
+                    <th>Ciddilik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UI-1</td>
+                    <td><strong>Focus indikatorlari yoxdur.</strong> Klaviatura istifadecileri interaktiv elementlerin harada olduqunu gore bilmir.</td>
+                    <td><span class="badge badge-critical">KRITIK</span></td>
+                </tr>
+                <tr>
+                    <td>UI-2</td>
+                    <td><strong>Dark mode konfiqurasiya edilib amma toggle yoxdur.</strong> CSS deyisenleri, Tailwind config - hamisi hazirdir, amma istifadeci aktivleshdire bilmir. Olu koddur.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>UI-3</td>
+                    <td><strong>Alet sehifelerinde ikiqat reklam.</strong> Sehife seviyyesinde 2 + Template seviyyesinde 2 + Sidebar-da 2 = <strong>6 reklam</strong> her alet sehifesinde. AdSense siyasetini poza biler.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>UI-4</td>
+                    <td><strong>Fayl yukleme zonalari klaviatura ile elcatmaz.</strong> PDF Merge, Image Compress, Image Convert aletlerinde div onClick istifade edilir - keyboard users ucun islemir.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>UI-5</td>
+                    <td><strong>@tailwindcss/typography plugin yoxdur.</strong> Blog/xeber sehifelerinde istifade olunan 'prose' class-lari hec bir effekt vermir.</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                </tr>
+                <tr>
+                    <td>UI-6</td>
+                    <td><strong>Custom 404, error, loading sehifeleri yoxdur.</strong> Next.js default sehifelerine etibar edilir.</td>
+                    <td><span class="badge badge-medium">ORTA</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== 7. SECURITY ===== -->
+    <div class="section" id="security">
+        <div class="section-header">
+            <div class="section-number">7</div>
+            <h2>Tehlukesizlik Auditi (Detallar)</h2>
+        </div>
+
+        <h3>Movcud Qorumalar (Yaxsi isler)</h3>
+        <ul class="check-list">
+            <li class="ok">.gitignore duzgun konfigurasiya edilib - .env.local, .vercel, *.pem hamisi ignore olunur</li>
+            <li class="ok">Server-terefli input validasiyasi - butun 3 API route input tipini, movcudlugunu ve uzunlugunu yoxlayir</li>
+            <li class="ok">Generik xeta mesajlari - API route-lar "Service temporarily unavailable" qaytarir, daxili detallari aciqlmir</li>
+            <li class="ok">poweredByHeader: false - server finqerprintini gizledir</li>
+            <li class="ok">X-Frame-Options: DENY - clickjacking-in qarsisini alir</li>
+            <li class="ok">Permissions-Policy - camera, microphone, geolocation mehdudlasdirilir</li>
+            <li class="ok">Ucuncu teref skriptler tehlukesiz yuklenir - GA4 afterInteractive strategiyasi ile</li>
+            <li class="ok">dangerouslySetInnerHTML istifadeci inputu ile istifade olunmur - yalniz statik JSON-LD ucun</li>
+            <li class="ok">AI cavablari metn olaraq render edilir (React auto-escape) - XSS riski yoxdur</li>
+            <li class="ok">Hec bir eval() ve ya Function() - dinamik kod icraati yoxdur</li>
+        </ul>
+
+        <h3>Catismazliqlar ve Riskler</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Problem</th>
+                    <th>Risk</th>
+                    <th>Tesiri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Next.js 14.2.21 - 10 CVE</td>
+                    <td><span class="badge badge-critical">KRITIK</span></td>
+                    <td>Authorization bypass, cache poisoning, SSRF, DoS</td>
+                </tr>
+                <tr>
+                    <td>Content-Security-Policy (CSP) yoxdur</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                    <td>XSS hucumlarina aciq (xususen AdSense/GA ile)</td>
+                </tr>
+                <tr>
+                    <td>CORS konfigurasiyasi yoxdur</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                    <td>Xarici saytlar API-nizi pulsuz AI proxy kimi istifade ede biler</td>
+                </tr>
+                <tr>
+                    <td>CSRF qorumasi yoxdur</td>
+                    <td><span class="badge badge-high">YUKSEK</span></td>
+                    <td>Cross-site request forgery</td>
+                </tr>
+                <tr>
+                    <td>Strict-Transport-Security (HSTS) yoxdur</td>
+                    <td><span class="badge badge-medium">ORTA</span></td>
+                    <td>HTTPS zorlamasinin zeiflenmesi</td>
+                </tr>
+                <tr>
+                    <td>AI prompt injection mumkundur</td>
+                    <td><span class="badge badge-medium">ORTA</span></td>
+                    <td>Istifadeci system prompt-u override ede biler</td>
+                </tr>
+                <tr>
+                    <td>eslint-config-next-de HIGH vulnerability</td>
+                    <td><span class="badge badge-medium">ORTA</span></td>
+                    <td>glob paketinde command injection (build zamani)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Dependency Vulnerability Xulasesi</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Paket</th>
+                    <th>Ciddilik</th>
+                    <th>Birbase/Dolayi</th>
+                    <th>Fix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>next</code></td><td><span class="badge badge-critical">KRITIK</span></td><td>Birbase</td><td>14.2.35-e yenilemek</td></tr>
+                <tr><td><code>glob</code> (eslint vasitesile)</td><td><span class="badge badge-high">YUKSEK</span></td><td>Dolayi</td><td>eslint-config-next yenilemek</td></tr>
+                <tr><td><code>@next/eslint-plugin-next</code></td><td><span class="badge badge-high">YUKSEK</span></td><td>Dolayi</td><td>eslint-config-next yenilemek</td></tr>
+                <tr><td><code>eslint-config-next</code></td><td><span class="badge badge-high">YUKSEK</span></td><td>Birbase</td><td>16.1.6-ya yenilemek</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== 8. SEO ===== -->
+    <div class="section" id="seo">
+        <div class="section-header">
+            <div class="section-number">8</div>
+            <h2>SEO Auditi (Detallar)</h2>
+        </div>
+
+        <h3>Implementasiya Statusu</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>SEO Elementi</th>
+                    <th>Status</th>
+                    <th>Qeyd</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Sitemap</td><td><span class="badge badge-success">Var</span></td><td>Dinamik generasiya, amma lastModified sehvdir</td></tr>
+                <tr><td>robots.txt</td><td><span class="badge badge-success">Var</span></td><td>Duzgun - /api/ disallow edilir</td></tr>
+                <tr><td>Meta title/description</td><td><span class="badge badge-success">Var</span></td><td>Her sehifede unikal, merkezlesdirilmis seo.ts vasitesile</td></tr>
+                <tr><td>JSON-LD Structured Data</td><td><span class="badge badge-success">Var</span></td><td>WebSite, Organization, NewsArticle, Article, SoftwareApplication</td></tr>
+                <tr><td>Canonical URLs</td><td><span class="badge badge-success">Var</span></td><td>Her sehifede duzgun teyin olunub</td></tr>
+                <tr><td>OpenGraph Tags</td><td><span class="badge badge-success">Var</span></td><td>Amma butun sehifeler eyni sekili paylasir</td></tr>
+                <tr><td>Twitter Cards</td><td><span class="badge badge-success">Var</span></td><td>summary_large_image</td></tr>
+                <tr><td>Google Search Console</td><td><span class="badge badge-success">Verify</span></td><td>Tesdiqlenib, sitemap submit edilib</td></tr>
+                <tr><td>hreflang</td><td><span class="badge badge-critical">Pozuq</span></td><td>az ve en eyni URL-e isare edir</td></tr>
+                <tr><td>html lang attribute</td><td><span class="badge badge-critical">Sehv</span></td><td>Hardcode "az" amma ingilis sehifeler var</td></tr>
+                <tr><td>Dinamik OG sekilleri</td><td><span class="badge badge-high">Yoxdur</span></td><td>Bosh /public/og/ qovluqu - planlasmisdi amma edilmeyib</td></tr>
+                <tr><td>Favicon</td><td><span class="badge badge-high">Yoxdur</span></td><td>Hec bir icon faylilari tapilmadi</td></tr>
+                <tr><td>BreadcrumbList schema</td><td><span class="badge badge-medium">Yoxdur</span></td><td>SERP-de sitelinks ucun vacibdir</td></tr>
+                <tr><td>FAQ schema</td><td><span class="badge badge-medium">Yoxdur</span></td><td>Alet sehifelerinde elave oluna biler</td></tr>
+                <tr><td>Web manifest</td><td><span class="badge badge-medium">Yoxdur</span></td><td>PWA qabiliyyeti yoxdur</td></tr>
+                <tr><td>Sekiller meqalelerde</td><td><span class="badge badge-high">Yoxdur</span></td><td>Hec bir blog/xeber yazisinda sekil yoxdur</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Kontent Analizi</h3>
+        <div class="two-col">
+            <div>
+                <h4>Xeberler (AZ) - 4 meqale</h4>
+                <table>
+                    <thead><tr><th>Meqale</th><th>Soz</th></tr></thead>
+                    <tbody>
+                        <tr><td>Suni zekanin yeni dovru</td><td>~110</td></tr>
+                        <tr><td>Manatin mohkemlenmesi</td><td>~95</td></tr>
+                        <tr><td>Premyer Liqa movsumu</td><td>~100</td></tr>
+                        <tr><td>Yeni tehsil islahatlari</td><td>~100</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h4>Blog (EN) - 5 yazi</h4>
+                <table>
+                    <thead><tr><th>Yazi</th><th>Soz</th></tr></thead>
+                    <tbody>
+                        <tr><td>Best Free Online Tools 2026</td><td>~200</td></tr>
+                        <tr><td>How AI Text Rewriting Works</td><td>~180</td></tr>
+                        <tr><td>Compress Images Without Losing Quality</td><td>~230</td></tr>
+                        <tr><td>Regex Guide for Beginners</td><td>~250</td></tr>
+                        <tr><td>Why Grammar Matters</td><td>~230</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="alert alert-warning">
+            <strong>&#9888;&#65039; Kontent coh nazikdir!</strong>
+            Google Helpful Content telimatina gore, reqabet qabiliyyetli acarsozler ucun minimum 800-1500 soz lazimdir. Hazirki 100-250 sozluk meqaleler "thin content" hesab olunur ve ranking almaq cetindir.
+        </div>
+    </div>
+
+    <!-- ===== 9. UI/UX ===== -->
+    <div class="section" id="uiux">
+        <div class="section-header">
+            <div class="section-number">9</div>
+            <h2>UI/UX ve Accessibility Auditi (Detallar)</h2>
+        </div>
+
+        <h3>Dizayn Sistemi Qiymetlendirmesi</h3>
+        <div class="score-grid">
+            <div class="score-card">
+                <div class="label">Dizayn Sistemi</div>
+                <div class="value good">7<span style="font-size:16px">/10</span></div>
+            </div>
+            <div class="score-card">
+                <div class="label">Responsive Dizayn</div>
+                <div class="value good">7<span style="font-size:16px">/10</span></div>
+            </div>
+            <div class="score-card">
+                <div class="label">UI Konsistensiyasi</div>
+                <div class="value good">8<span style="font-size:16px">/10</span></div>
+            </div>
+            <div class="score-card">
+                <div class="label">Accessibility (a11y)</div>
+                <div class="value bad">4<span style="font-size:16px">/10</span></div>
+            </div>
+            <div class="score-card">
+                <div class="label">Animasiya/Motion</div>
+                <div class="value warn">5<span style="font-size:16px">/10</span></div>
+            </div>
+            <div class="score-card">
+                <div class="label">Reklam Inteqrasiyasi</div>
+                <div class="value warn">5<span style="font-size:16px">/10</span></div>
+            </div>
+        </div>
+
+        <h3>Reklam Yerleshmesi Problemi</h3>
+        <div class="alert alert-danger">
+            <strong>&#128680; Alet sehifelerinde 6 reklam!</strong>
+            Her alet sehifesinde: 2 reklam ustde (sehife + template), 2 reklam altda (sehife + template), 2 reklam sidebar-da.
+            Bu AdSense siyasetini poza biler ve istifadeci tecrubsini ciddi zeifletir.
+        </div>
+
+        <h3>Accessibility Catismazliqlari</h3>
+        <ul class="check-list">
+            <li class="fail">Skip-to-content linki yoxdur - klaviatura istifadecileri her sehifede header-den kecmelidir</li>
+            <li class="fail">Focus indikatorlari yoxdur - elemenlerin cogunluqunda focus gorsenliyi yoxdur</li>
+            <li class="fail">Fayl yukleme zonalari klaviatura ile elcatmaz (tabIndex, role, onKeyDown yoxdur)</li>
+            <li class="fail">Mobil menyuda focus trap yoxdur, Escape duymesi islemir, aria-expanded yoxdur</li>
+            <li class="fail">Kopyalama duymelerinde ekran oxucusu ucun geri bildiris yoxdur (aria-live)</li>
+            <li class="warn">prefers-reduced-motion media query nezere alinmir</li>
+            <li class="ok">Semantik HTML elementleri istifade olunur (header, main, footer, nav, article, aside)</li>
+            <li class="ok">Butun textarea-larda label elementleri var</li>
+            <li class="ok">Mobil menyu toggle-da aria-label="Menyu" var</li>
+        </ul>
+    </div>
+
+    <!-- ===== 10. INFRA ===== -->
+    <div class="section" id="infra">
+        <div class="section-header">
+            <div class="section-number">10</div>
+            <h2>Infrastruktur ve CI/CD</h2>
+        </div>
+
+        <h3>CI/CD Pipeline</h3>
+        <div class="code-block">[main branch push] &rarr; GitLab CI Runner (node:20)
+    1. npm install -g vercel@latest
+    2. vercel pull --yes --environment=production
+    3. vercel build --prod
+    4. vercel deploy --prebuilt --prod</div>
+
+        <table>
+            <thead><tr><th>Aspekt</th><th>Status</th><th>Qeyd</th></tr></thead>
+            <tbody>
+                <tr><td>Deploy trigger</td><td><span class="badge badge-success">Yaxsi</span></td><td>Yalniz main branch-den</td></tr>
+                <tr><td>Build metodu</td><td><span class="badge badge-success">Yaxsi</span></td><td>--prebuilt flag (GitLab-da build, Vercel-e deploy)</td></tr>
+                <tr><td>Sirr idareetmesi</td><td><span class="badge badge-success">Yaxsi</span></td><td>VERCEL_TOKEN GitLab CI variable-da</td></tr>
+                <tr><td>Test merhele</td><td><span class="badge badge-critical">Yoxdur</span></td><td>Hec bir test isledilmir</td></tr>
+                <tr><td>Lint merhele</td><td><span class="badge badge-high">Yoxdur</span></td><td>next lint CI-da isledilmir</td></tr>
+                <tr><td>Preview deploy</td><td><span class="badge badge-medium">Yoxdur</span></td><td>MR ucun preview muhit yoxdur</td></tr>
+                <tr><td>CI cache</td><td><span class="badge badge-medium">Yoxdur</span></td><td>Her run-da sifirdan install</td></tr>
+                <tr><td>Vercel CLI pin</td><td><span class="badge badge-medium">Pin olunmayib</span></td><td>vercel@latest - her defe ferqli versiya ola biler</td></tr>
+                <tr><td>Node versiya pin</td><td><span class="badge badge-medium">Yoxdur</span></td><td>.nvmrc ve ya .node-version faylilari yoxdur</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Bundle Olcusu Analizi</h3>
+        <table>
+            <thead><tr><th>Chunk</th><th>Olcu</th><th>Qiymtelendirme</th></tr></thead>
+            <tbody>
+                <tr><td>323.*.js (pdf-lib/qrcode)</td><td>414 KB</td><td><span class="badge badge-high">Boyuk</span> - dinamik import lazimdir</td></tr>
+                <tr><td>Framework bundle (React)</td><td>137 KB</td><td><span class="badge badge-success">Normal</span></td></tr>
+                <tr><td>Vendor chunk</td><td>170 KB</td><td><span class="badge badge-success">Normal</span></td></tr>
+                <tr><td>Main app bundle</td><td>109 KB</td><td><span class="badge badge-success">Normal</span></td></tr>
+                <tr><td>Polyfills</td><td>110 KB</td><td><span class="badge badge-success">Normal</span></td></tr>
+            </tbody>
+        </table>
+
+        <div class="alert alert-info">
+            <strong>&#128161; Qeyd:</strong> 414 KB-lik chunk buyuk ehtimalla pdf-lib kutuphanesidir. Bu yalniz PDF Merge aletinde istifade olunur, amma butun sehifelerde yuklene biler. Dinamik import ile izole edilmelidir.
+        </div>
+
+        <h3>Git Repository Sagligi</h3>
+        <table>
+            <thead><tr><th>Repo</th><th>Commits</th><th>Remote</th><th>Status</th></tr></thead>
+            <tbody>
+                <tr><td>vaxtimYoxdu</td><td>18</td><td>HTTPS (gitlab.com)</td><td><span class="badge badge-success">Aktiv</span></td></tr>
+                <tr><td>toolbox-ai</td><td>2</td><td>SSH (gitlab.com)</td><td><span class="badge badge-medium">Dublikat</span></td></tr>
+                <tr><td>info-site</td><td>1</td><td>SSH (gitlab.com)</td><td><span class="badge badge-low">Arxiv</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== 11. ARCHITECTURE ===== -->
+    <div class="section" id="architecture">
+        <div class="section-header">
+            <div class="section-number">11</div>
+            <h2>Arxitektura Diaqrami</h2>
+        </div>
+
+        <div class="diagram">                         <span class="blue">ISTIFADECI (Brauzer)</span>
+                              |
+           +------------------+------------------+
+           |                  |                  |
+    <span class="green">11 Client Tools</span>      <span class="highlight">3 AI Tools</span>       <span class="blue">Xeber/Blog</span>
+    (brauzerde isleyir)   (API call)       (Statik HTML)
+           |                  |                  |
+           |          POST /api/ai/*             |
+           |                  |                  |
+           +------------------+------------------+
+                              |
+                    <span class="highlight">VERCEL EDGE NETWORK (CDN)</span>
+                              |
+              +---------------+---------------+
+              |                               |
+     <span class="green">Statik HTML/JS/CSS</span>          <span class="highlight">Serverless Functions</span>
+     (30 SSG sehife)           (3 AI API endpoint)
+                                      |
+                         <span class="blue">AI Provider Zenciri:</span>
+                         <span class="green">[1] Groq (Llama 3.3 70B) -- PULSUZ</span>
+                                |
+                         <span class="highlight">[2] Gemini 2.0 Flash ----- PULSUZ</span>
+                                |
+                         <span class="red">[3] OpenAI GPT-4o-mini --- ODENISLI</span>
+
+    <span class="blue">CI/CD:</span>  GitLab (main push) &rarr; node:20 &rarr; vercel build &rarr; deploy
+
+    <span class="blue">DNS:</span>   vaxtimyoxdu.com  --+
+           vaxtimyoxdur.com --+-- Cloudflare DNS -- CNAME &rarr; cname.vercel-dns.com
+           www.*            --+   (DNS-only)</div>
+    </div>
+
+    <!-- ===== 12. ROADMAP ===== -->
+    <div class="section" id="roadmap">
+        <div class="section-header">
+            <div class="section-number">12</div>
+            <h2>Qalan Isler ve Yol Xeritesi</h2>
+        </div>
+
+        <h3>Faza 1 - Derhal (Bu hefte) &#128308;</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Is</th>
+                    <th>Vaxt</th>
+                    <th>Prioritet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Next.js-i 14.2.35-e yenilemek</td><td>15 deq</td><td><span class="badge badge-critical">P0</span></td></tr>
+                <tr><td>Groq API key-i deyisdirmek (rotate)</td><td>10 deq</td><td><span class="badge badge-critical">P0</span></td></tr>
+                <tr><td>CORS middleware elave etmek</td><td>30 deq</td><td><span class="badge badge-critical">P0</span></td></tr>
+                <tr><td>CSP + HSTS header elave etmek</td><td>45 deq</td><td><span class="badge badge-high">P1</span></td></tr>
+                <tr><td>Brend adini duzeltmek (ToolBox AI &rarr; Vaxtim Yoxdu)</td><td>1 saat</td><td><span class="badge badge-high">P1</span></td></tr>
+                <tr><td>hreflang-i silmek ve ya duzeltmek</td><td>30 deq</td><td><span class="badge badge-high">P1</span></td></tr>
+                <tr><td>Favicon / app icon elave etmek</td><td>30 deq</td><td><span class="badge badge-high">P1</span></td></tr>
+                <tr><td>Focus indikatorlarini elave etmek (globals.css)</td><td>30 deq</td><td><span class="badge badge-high">P1</span></td></tr>
+            </tbody>
+            <tfoot>
+                <tr style="background:var(--gray-50); font-weight:700;">
+                    <td>CEMI</td>
+                    <td colspan="2">~4-5 saat</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h3>Faza 2 - Qisa muddet (2-3 hefte) &#128992;</h3>
+        <table>
+            <thead><tr><th>Is</th><th>Vaxt</th></tr></thead>
+            <tbody>
+                <tr><td>Rate limiter-i Redis/Upstash-a kecirmek</td><td>2-3 saat</td></tr>
+                <tr><td>AI endpoint-lere timeout elave etmek (AbortController)</td><td>1 saat</td></tr>
+                <tr><td>Dinamik OG sekil generasiyasi (next/og)</td><td>3-4 saat</td></tr>
+                <tr><td>@tailwindcss/typography plugin elave etmek</td><td>30 deq</td></tr>
+                <tr><td>a11y duzelisleri (skip-link, aria, keyboard)</td><td>2-3 saat</td></tr>
+                <tr><td>Ikiqat reklam problemini hell etmek</td><td>1 saat</td></tr>
+                <tr><td>Dark mode toggle elave etmek</td><td>2 saat</td></tr>
+                <tr><td>CI/CD-ye lint + test merhele elave etmek</td><td>2 saat</td></tr>
+                <tr><td>Custom 404 + error sehifeler yaratmaq</td><td>1-2 saat</td></tr>
+                <tr><td>Kontenti ayri fayllara/CMS-e kecirmek</td><td>4-5 saat</td></tr>
+                <tr><td>Blog &harr; Tools carpaz linkler elave etmek</td><td>2 saat</td></tr>
+                <tr><td>BreadcrumbList structured data</td><td>1-2 saat</td></tr>
+                <tr><td>Sitemap lastModified-i duzeltmek</td><td>30 deq</td></tr>
+            </tbody>
+            <tfoot>
+                <tr style="background:var(--gray-50); font-weight:700;">
+                    <td>CEMI</td>
+                    <td>~22-28 saat</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h3>Faza 3 - Orta muddet (4-8 hefte) &#128993;</h3>
+        <table>
+            <thead><tr><th>Is</th><th>Vaxt</th></tr></thead>
+            <tbody>
+                <tr><td>Kontenti genisletmek (min. 800-1500 soz her meqale)</td><td>Davamli</td></tr>
+                <tr><td>30+ yeni alet elave etmek</td><td>Davamli</td></tr>
+                <tr><td>Supabase inteqrasiyasi (rate limiting, analytics)</td><td>4-6 saat</td></tr>
+                <tr><td>Email newsletter toplama</td><td>3-4 saat</td></tr>
+                <tr><td>Sosial media hesablari ve inteqrasiya</td><td>2-3 saat</td></tr>
+                <tr><td>FAQ schema alet sehifelerinde</td><td>2-3 saat</td></tr>
+                <tr><td>Sekiller elave etmek (blog/xeber yazilarina)</td><td>Davamli</td></tr>
+                <tr><td>Preview deploy (CI/CD - MR ucun)</td><td>2 saat</td></tr>
+                <tr><td>Bundle analysis setup</td><td>1 saat</td></tr>
+                <tr><td>Cookie consent banner</td><td>2 saat</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Faza 4 - Uzunmuddatli Vizyonu &#128309;</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>Mobil Tetbiq</h4>
+                <p>React Native + Expo ile mobil versiya</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Cohdilli Destek</h4>
+                <p>AZ, EN, TR, RU dil destyi</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Freemium Model</h4>
+                <p>Premium aletler + abuneli model</p>
+            </div>
+            <div class="timeline-item">
+                <h4>AdMob Inteqrasiyasi</h4>
+                <p>Mobil reklamlar</p>
+            </div>
+            <div class="timeline-item">
+                <h4>100+ Alet</h4>
+                <p>Genis alet ekosistemi</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 13. VERDICT ===== -->
+    <div class="section" id="verdict">
+        <div class="section-header">
+            <div class="section-number">13</div>
+            <h2>Yekun Qiymetlendirme</h2>
+        </div>
+
+        <div class="alert alert-info" style="font-size:16px;">
+            <strong>Layihenin Umumi Veziyyeti: MVP seviyyesinde, produksiyaya tam hazir deyil</strong>
+            <br><br>
+            Bu layihe <strong>1 heftelik intensiv is</strong> erzinde guclu fundamental arxitektura ile qurulub. Texnoloji secimler (Next.js SSG, Tailwind, minimal deps, client-side tools) <strong>mukemmeldir</strong>. AI fallback arxitekturasi <strong>yaradici ve xerc-effektivdir</strong>.
+        </div>
+
+        <div class="two-col">
+            <div>
+                <h3 style="color: var(--danger);">&#128680; En boyuk riskler</h3>
+                <ol style="font-size:14px; padding-left:20px;">
+                    <li style="margin-bottom:8px;">10 CVE olan Next.js versiyasi (derhal yenilenmelidir)</li>
+                    <li style="margin-bottom:8px;">Rate limiter serverless-de effektsizdir (API key-ler qorumasizdir)</li>
+                    <li style="margin-bottom:8px;">Brend identifikasiya problemi (ToolBox AI vs Vaxtim Yoxdu)</li>
+                    <li style="margin-bottom:8px;">CORS/CSP yoxdur - API ve XSS riski</li>
+                </ol>
+            </div>
+            <div>
+                <h3 style="color: var(--success);">&#128154; En boyuk fursetler</h3>
+                <ol style="font-size:14px; padding-left:20px;">
+                    <li style="margin-bottom:8px;">Kontent genislendirilse (800-1500 soz), SEO trafikini dramatik artirar</li>
+                    <li style="margin-bottom:8px;">Dinamik OG sekilleri sosial media paylasimini 3-5x artirar</li>
+                    <li style="margin-bottom:8px;">Dark mode toggle derhal elave oluna biler (infrastruktur artiq var)</li>
+                    <li style="margin-bottom:8px;">AI aletler Groq key elave edilende derhal isleyecek</li>
+                </ol>
+            </div>
+        </div>
+
+        <h3>Xulase Cedveli</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metrik</th>
+                    <th>Deyer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Umumi menbe fayllar</td><td>46</td></tr>
+                <tr><td>Setir kod</td><td>4,140</td></tr>
+                <tr><td>Sehife (cemi)</td><td>30 (butun SSG)</td></tr>
+                <tr><td>API endpoint</td><td>3</td></tr>
+                <tr><td>Client Component</td><td>15</td></tr>
+                <tr><td>Server Component</td><td>9</td></tr>
+                <tr><td>Production dependency</td><td>10</td></tr>
+                <tr><td>Ucuncu teref inteqrasiya</td><td>5 (GA4, AdSense, Groq, Gemini, OpenAI)</td></tr>
+                <tr><td>Test coverage</td><td style="color:var(--danger); font-weight:700;">0%</td></tr>
+                <tr><td>Build statusu</td><td style="color:var(--success); font-weight:700;">Ugurlu</td></tr>
+                <tr><td>Kritik problemler</td><td style="color:var(--danger); font-weight:700;">8</td></tr>
+                <tr><td>Yuksek prioritet problemler</td><td style="color:#c2410c; font-weight:700;">14</td></tr>
+                <tr><td>Orta prioritet problemler</td><td style="color:var(--warning); font-weight:700;">10</td></tr>
+                <tr><td><strong>Faza 1 ucun texmini vaxt</strong></td><td><strong>4-5 saat</strong></td></tr>
+                <tr><td><strong>Faza 2 ucun texmini vaxt</strong></td><td><strong>22-28 saat</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="report-footer">
+        <div class="divider"></div>
+        <p><strong>Vaxtim Yoxdu - Texniki Audit Hesabati</strong></p>
+        <p>Hazirlayan: Product Owner | 6 Muhendis Komandasi</p>
+        <p>Tarix: 10 Mart 2026 | Status: READ-ONLY Audit</p>
+        <p style="margin-top:8px; color: var(--gray-400);">Bu hesabat 6 paralel muhendis arasdirmasi neticesinde hazirlanmisdir.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faza 2 Hesabati - Vaxtim Yoxdu | 2026-03-10</title>
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-light: #ede9fe;
+            --success: #16a34a;
+            --success-light: #f0fdf4;
+            --success-bg: #dcfce7;
+            --info: #2563eb;
+            --info-bg: #dbeafe;
+            --warning: #f59e0b;
+            --warning-bg: #fef3c7;
+            --danger: #dc2626;
+            --danger-bg: #fee2e2;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--gray-800); line-height: 1.6; background: var(--gray-50); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        .cover {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+            color: white; padding: 60px 0; text-align: center;
+        }
+        .cover h1 { font-size: 2.5rem; margin-bottom: 8px; }
+        .cover .subtitle { font-size: 1.25rem; opacity: 0.9; }
+        .cover .meta { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+
+        .summary-bar {
+            background: white; border-bottom: 1px solid var(--gray-200); padding: 24px 0;
+        }
+        .summary-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; text-align: center;
+        }
+        .summary-item { padding: 16px; border-radius: 12px; background: var(--gray-50); }
+        .summary-item .number { font-size: 2rem; font-weight: 700; }
+        .summary-item .label { font-size: 0.8rem; color: var(--gray-500); margin-top: 4px; }
+
+        .section { padding: 40px 0; }
+        .section + .section { border-top: 1px solid var(--gray-200); }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+        .section-title .icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+
+        .card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+        .card-title { font-size: 1.1rem; font-weight: 600; }
+        .card-desc { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 16px; }
+
+        .badge {
+            display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 20px;
+            font-size: 0.75rem; font-weight: 600; gap: 4px;
+        }
+        .badge-success { background: var(--success-bg); color: var(--success); }
+        .badge-info { background: var(--info-bg); color: var(--info); }
+        .badge-warning { background: var(--warning-bg); color: var(--warning); }
+        .badge-danger { background: var(--danger-bg); color: var(--danger); }
+
+        .file-list { list-style: none; padding: 0; }
+        .file-list li {
+            padding: 8px 12px; font-size: 0.85rem; font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--gray-50); margin-bottom: 4px; border-radius: 6px; border-left: 3px solid var(--primary);
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px;
+        }
+        .file-list .new { border-left-color: var(--success); }
+        .file-list .modified { border-left-color: var(--info); }
+        .file-list .tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-family: 'Segoe UI', sans-serif; }
+        .tag-new { background: var(--success-bg); color: var(--success); }
+        .tag-mod { background: var(--info-bg); color: var(--info); }
+
+        .stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--gray-100); font-size: 0.9rem; }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: var(--gray-600); }
+        .stat-value { font-weight: 600; }
+
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th { background: var(--gray-100); text-align: left; padding: 10px 14px; font-weight: 600; white-space: nowrap; }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--gray-100); }
+        tr:hover td { background: var(--gray-50); }
+
+        .commit-list { list-style: none; padding: 0; }
+        .commit-list li { padding: 12px 0; border-bottom: 1px solid var(--gray-100); display: flex; gap: 12px; align-items: flex-start; }
+        .commit-list li:last-child { border-bottom: none; }
+        .commit-hash { font-family: 'SF Mono', monospace; font-size: 0.8rem; color: var(--primary); background: var(--primary-light); padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+        .commit-msg { font-size: 0.9rem; }
+
+        .pipeline-flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 16px 0; }
+        .pipeline-step { padding: 10px 20px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; position: relative; }
+        .pipeline-arrow { color: var(--gray-300); font-size: 1.2rem; }
+        .step-pass { background: var(--success-bg); color: var(--success); }
+        .step-fail { background: var(--danger-bg); color: var(--danger); }
+        .step-fix { background: var(--warning-bg); color: var(--warning); }
+
+        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .comparison-col { padding: 16px; border-radius: 8px; }
+        .comparison-before { background: #fef2f2; }
+        .comparison-after { background: #f0fdf4; }
+        .comparison-col h4 { font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; }
+
+        .progress-bar { height: 8px; background: var(--gray-200); border-radius: 4px; overflow: hidden; margin-top: 8px; }
+        .progress-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+
+        .color-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+        .color-card { padding: 20px 12px; border-radius: 10px; text-align: center; color: white; font-size: 0.8rem; font-weight: 600; }
+
+        .footer { background: var(--gray-900); color: white; padding: 40px 0; text-align: center; font-size: 0.85rem; }
+        .footer .faded { opacity: 0.6; }
+
+        @media print { .cover { padding: 30px 0; } body { font-size: 11pt; } }
+        @media (max-width: 640px) {
+            .cover h1 { font-size: 1.75rem; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .comparison { grid-template-columns: 1fr; }
+            .color-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER -->
+    <header class="cover">
+        <div class="container">
+            <h1>Faza 2 Hesabati</h1>
+            <p class="subtitle">Kontent, UX, SEO ve CI/CD Genislendirilmesi</p>
+            <div class="meta">
+                <span>Layihe: vaxtimyoxdu.com</span>
+                <span>Tarix: 2026-03-10</span>
+                <span>Status: Tamamlandi ve Deploy Edildi</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SUMMARY BAR -->
+    <div class="summary-bar">
+        <div class="container">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="number" style="color: var(--primary)">6</div>
+                    <div class="label">Is Axini (Stream)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--success)">20</div>
+                    <div class="label">Deyisdirilmis Fayl</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--info)">+1,353</div>
+                    <div class="label">Elave Edilmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--danger)">-111</div>
+                    <div class="label">Silinmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--warning)">5</div>
+                    <div class="label">Yeni Komponent</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--success)">3</div>
+                    <div class="label">Commit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- COMMITS -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: var(--primary-light); color: var(--primary);">&#128203;</span>
+                Git Commit Tarixcesi
+            </h2>
+            <div class="card">
+                <ul class="commit-list">
+                    <li>
+                        <span class="commit-hash">e49577c</span>
+                        <span class="commit-msg">Fix CI: replace shell substitution in preview script</span>
+                    </li>
+                    <li>
+                        <span class="commit-hash">ec08e3f</span>
+                        <span class="commit-msg">Fix CI pipeline: convert only/except to rules syntax</span>
+                    </li>
+                    <li>
+                        <span class="commit-hash">2075c81</span>
+                        <span class="commit-msg">Phase 2: Content expansion, OG images, breadcrumbs, cookie consent, newsletter</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PIPELINE FIX -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: var(--warning-bg); color: var(--warning);">&#9888;</span>
+                Pipeline Problemleri ve Helleri
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Problem 1: YAML Syntax Xetasi</span>
+                    <span class="badge badge-success">Duzeldildi</span>
+                </div>
+                <div class="card-desc">
+                    GitLab CI-da <code>only:</code> (kohne syntax) ve <code>rules:</code> (yeni syntax) eyni pipeline-da istifade olunurdu.
+                    GitLab bunu desteklemir ve pipeline-i dərhal reject edir.
+                </div>
+                <div class="comparison">
+                    <div class="comparison-col comparison-before">
+                        <h4 style="color: var(--danger);">Evvel (Xetali)</h4>
+                        <code style="font-size: 0.85rem;">validate: only: [main, merge_requests]<br>preview: rules: [{if: ...}]</code>
+                    </div>
+                    <div class="comparison-col comparison-after">
+                        <h4 style="color: var(--success);">Sonra (Duzeldilmis)</h4>
+                        <code style="font-size: 0.85rem;">validate: rules: [{if: '$CI_COMMIT_BRANCH == "main"'}]<br>preview: rules: [{if: ...}]</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Problem 2: Shell Substitution</span>
+                    <span class="badge badge-success">Duzeldildi</span>
+                </div>
+                <div class="card-desc">
+                    Preview job-da <code>PREVIEW_URL=$(vercel deploy ...)</code> GitLab CI parser terefinden reject olunurdu.
+                    <code>pipe tee</code> ile evez edildi.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Problem 3: Node.js Versiya Uygunsuzlugu</span>
+                    <span class="badge badge-success">Duzeldildi</span>
+                </div>
+                <div class="card-desc">
+                    Vercel project settings-de Node.js <strong>24.x</strong> qoyulmusdur, amma Vercel maksimum <strong>22.x</strong> destekleyir.
+                    Vercel API vasitesile <strong>20.x</strong>-e duzeldildi.
+                </div>
+                <div class="comparison">
+                    <div class="comparison-col comparison-before">
+                        <h4 style="color: var(--danger);">Vercel Settings (Evvel)</h4>
+                        <code>nodeVersion: "24.x"</code><br>
+                        <small style="color: var(--danger);">Error: Found invalid Node.js Version</small>
+                    </div>
+                    <div class="comparison-col comparison-after">
+                        <h4 style="color: var(--success);">Vercel Settings (Sonra)</h4>
+                        <code>nodeVersion: "20.x"</code><br>
+                        <small style="color: var(--success);">Build ugurlu</small>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 24px; margin-bottom: 12px; font-size: 1.1rem;">Pipeline Axini (son ugurlu)</h3>
+            <div class="pipeline-flow">
+                <div class="pipeline-step step-pass">validate</div>
+                <span class="pipeline-arrow">&rarr;</span>
+                <div class="pipeline-step step-pass">deploy</div>
+                <span class="pipeline-arrow">&rarr;</span>
+                <div class="pipeline-step step-pass" style="background: var(--success-bg); color: var(--success);">vaxtimyoxdu.com</div>
+            </div>
+        </section>
+
+        <!-- STREAM 1: BLOG CONTENT -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: #ecfdf5; color: #059669;">1</span>
+                Stream 1: Blog Kontent Genislendirilmesi
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">5 Blog Yazisi Genislendirildi (EN)</span>
+                    <span class="badge badge-success">Tamamlandi</span>
+                </div>
+                <div class="card-desc">
+                    Her bir blog yazisi 200-400 sozden 800-1500 soze genislendirildi. SEO-optimize olunmus, praktik meslehetler ve numuneler elave edildi.
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Blog Yazisi</th>
+                                <th>Evvelki</th>
+                                <th>Yeni</th>
+                                <th>Artim</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Best Free Online Tools in 2026</td>
+                                <td>~200 soz</td>
+                                <td><strong>1,075 soz</strong></td>
+                                <td style="color: var(--success);">+437%</td>
+                            </tr>
+                            <tr>
+                                <td>How AI Text Rewriting Works</td>
+                                <td>~200 soz</td>
+                                <td><strong>1,072 soz</strong></td>
+                                <td style="color: var(--success);">+436%</td>
+                            </tr>
+                            <tr>
+                                <td>Compress Images Without Losing Quality</td>
+                                <td>~250 soz</td>
+                                <td><strong>1,251 soz</strong></td>
+                                <td style="color: var(--success);">+400%</td>
+                            </tr>
+                            <tr>
+                                <td>Regular Expressions: A Beginner's Guide</td>
+                                <td>~250 soz</td>
+                                <td><strong>1,167 soz</strong></td>
+                                <td style="color: var(--success);">+367%</td>
+                            </tr>
+                            <tr>
+                                <td>Why Grammar Matters in Professional Writing</td>
+                                <td>~250 soz</td>
+                                <td><strong>1,412 soz</strong></td>
+                                <td style="color: var(--success);">+465%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul class="file-list" style="margin-top: 16px;">
+                    <li class="modified">src/data/blog-posts.ts <span class="tag tag-mod">448 setir deyisiklik</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- STREAM 2: NEWS CONTENT -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: #fef3c7; color: #d97706;">2</span>
+                Stream 2: Xeber Kontent Genislendirilmesi
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">4 Xeber Meqalesi Genislendirildi (AZ)</span>
+                    <span class="badge badge-success">Tamamlandi</span>
+                </div>
+                <div class="card-desc">
+                    Azerbaycan dilinde yazilmis her bir xeber meqalesi 150-300 sozden 800-1000 soze genislendirildi.
+                    Yeni bolmeler, etrafli analiz ve ekspert reyleri elave edildi.
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Xeber Meqalesi</th>
+                                <th>Kateqoriya</th>
+                                <th>Evvelki</th>
+                                <th>Yeni</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Suni zekanin yeni dovru: 2026-da neler deyisir?</td>
+                                <td><span class="badge badge-info">Texnologiya</span></td>
+                                <td>~150 soz</td>
+                                <td><strong>929 soz</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Manatin mohkemlenmesi: iqtisadiyyata tesiri necedir?</td>
+                                <td><span class="badge badge-warning">Iqtisadiyyat</span></td>
+                                <td>~170 soz</td>
+                                <td><strong>834 soz</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Premyer Liqa movsumu: hansi komanda favoritdir?</td>
+                                <td><span class="badge badge-success">Idman</span></td>
+                                <td>~180 soz</td>
+                                <td><strong>849 soz</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Yeni tehsil islahatlari: neler deyisecek?</td>
+                                <td><span class="badge badge-danger">Tehsil</span></td>
+                                <td>~190 soz</td>
+                                <td><strong>987 soz</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul class="file-list" style="margin-top: 16px;">
+                    <li class="modified">src/data/news-articles.ts <span class="tag tag-mod">257 setir deyisiklik</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- STREAM 3: COOKIE + NEWSLETTER -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: #dbeafe; color: #2563eb;">3</span>
+                Stream 3: Cookie Consent + Newsletter
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Cookie Consent Banneri</span>
+                    <span class="badge badge-success">Yeni Komponent</span>
+                </div>
+                <div class="card-desc">
+                    GDPR uygun cookie razilik banneri. Asagi kisimde sabit banner, accept/reject duymeleri, localStorage persist.
+                </div>
+                <div class="stat-row"><span class="stat-label">Dil</span><span class="stat-value">Azerbaycan dili</span></div>
+                <div class="stat-row"><span class="stat-label">Persist</span><span class="stat-value">localStorage (cookie-consent)</span></div>
+                <div class="stat-row"><span class="stat-label">Animasiya</span><span class="stat-value">slide-up (300ms delay, 500ms transition)</span></div>
+                <div class="stat-row"><span class="stat-label">GA Consent API</span><span class="stat-value">Accept zamani analytics_storage: granted</span></div>
+                <div class="stat-row"><span class="stat-label">Accessibility</span><span class="stat-value">role=dialog, aria-label, aria-describedby</span></div>
+                <div class="stat-row"><span class="stat-label">Z-index</span><span class="stat-value">z-50 (en ustte)</span></div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Newsletter Abune Formu</span>
+                    <span class="badge badge-success">Yeni Komponent</span>
+                </div>
+                <div class="card-desc">
+                    Email abune toplama formu. Footer-a inteqrasiya olunub. Email validasiyasi, dublikat yoxlama, ugurlu abune mesaji.
+                </div>
+                <div class="stat-row"><span class="stat-label">Validasiya</span><span class="stat-value">Regex email format yoxlama</span></div>
+                <div class="stat-row"><span class="stat-label">Dublikat</span><span class="stat-value">Eyni email tekrar qebul olunmur</span></div>
+                <div class="stat-row"><span class="stat-label">Saxlama</span><span class="stat-value">localStorage (newsletter-emails array)</span></div>
+                <div class="stat-row"><span class="stat-label">Accessibility</span><span class="stat-value">sr-only label, aria-invalid, aria-describedby</span></div>
+            </div>
+
+            <ul class="file-list">
+                <li class="new">src/components/layout/CookieConsent.tsx <span class="tag tag-new">Yeni (91 setir)</span></li>
+                <li class="new">src/components/layout/Newsletter.tsx <span class="tag tag-new">Yeni (99 setir)</span></li>
+                <li class="modified">src/app/layout.tsx <span class="tag tag-mod">Deyisdirildi (+2)</span></li>
+                <li class="modified">src/components/layout/Footer.tsx <span class="tag tag-mod">Deyisdirildi (+6)</span></li>
+            </ul>
+        </section>
+
+        <!-- STREAM 4: DYNAMIC OG IMAGES -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: #fce7f3; color: #db2777;">4</span>
+                Stream 4: Dinamik OG Sekil Generasiyasi
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">/api/og - Edge Runtime OG Image API</span>
+                    <span class="badge badge-success">Yeni Route</span>
+                </div>
+                <div class="card-desc">
+                    Next.js ImageResponse ile her sehife ucun dinamik 1200x630px OG sekil generasiyasi.
+                    Statik og-image.png evezine her sehifenin oz basligi ve alt basligina uygun unikal OG sekli yaradilir.
+                </div>
+
+                <h4 style="margin-bottom: 12px; font-size: 0.95rem;">Gradient Temalar:</h4>
+                <div class="color-grid">
+                    <div class="color-card" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+                        Default<br><small>Ana Sehife</small>
+                    </div>
+                    <div class="color-card" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+                        Tool<br><small>Aletler</small>
+                    </div>
+                    <div class="color-card" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        Blog<br><small>Blog Yazilari</small>
+                    </div>
+                    <div class="color-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        News<br><small>Xeberler</small>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <div class="stat-row"><span class="stat-label">Runtime</span><span class="stat-value">Edge (global CDN)</span></div>
+                    <div class="stat-row"><span class="stat-label">Olcu</span><span class="stat-value">1200 x 630 px</span></div>
+                    <div class="stat-row"><span class="stat-label">Parametrler</span><span class="stat-value">?title=...&subtitle=...&type=...</span></div>
+                    <div class="stat-row"><span class="stat-label">Brend</span><span class="stat-value">"V" logo + vaxtimyoxdu.com footer</span></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">SEO Utility Yenilemesi</span>
+                    <span class="badge badge-info">Deyisdirildi</span>
+                </div>
+                <div class="card-desc">
+                    Butun metadata funksiyalari (6 eded) statik OG sekilden dinamik URL-e kecirildi.
+                    JSON-LD image saheleride yenilendi.
+                </div>
+                <div class="stat-row"><span class="stat-label">generateBaseMetadata()</span><span class="stat-value">type: default</span></div>
+                <div class="stat-row"><span class="stat-label">generateToolMetadata()</span><span class="stat-value">type: tool</span></div>
+                <div class="stat-row"><span class="stat-label">generateArticleMetadata()</span><span class="stat-value">type: news</span></div>
+                <div class="stat-row"><span class="stat-label">generateBlogPostMetadata()</span><span class="stat-value">type: blog</span></div>
+                <div class="stat-row"><span class="stat-label">generateNewsArticleJsonLd()</span><span class="stat-value">Dinamik image URL</span></div>
+                <div class="stat-row"><span class="stat-label">generateBlogArticleJsonLd()</span><span class="stat-value">Dinamik image URL</span></div>
+            </div>
+
+            <ul class="file-list">
+                <li class="new">src/app/api/og/route.tsx <span class="tag tag-new">Yeni (110 setir)</span></li>
+                <li class="modified">src/lib/utils/seo.ts <span class="tag tag-mod">Deyisdirildi (+62)</span></li>
+            </ul>
+        </section>
+
+        <!-- STREAM 5: BREADCRUMBS + RELATED -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: #fff7ed; color: #ea580c;">5</span>
+                Stream 5: Breadcrumbs + Elaqeli Meqaleler
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Breadcrumb Komponenti (BreadcrumbList JSON-LD)</span>
+                    <span class="badge badge-success">Yeni Komponent</span>
+                </div>
+                <div class="card-desc">
+                    Schema.org BreadcrumbList strukturlasdirmmis data ile breadcrumb naviqasiyasi. Google axtaris neticeslerinde breadcrumb gosterir.
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sehife</th>
+                                <th>Breadcrumb</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>/tools</td>
+                                <td>Ana sehife / Aletler</td>
+                            </tr>
+                            <tr>
+                                <td>/tools/[slug]</td>
+                                <td>Ana sehife / Aletler / <em>[Alet adi]</em></td>
+                            </tr>
+                            <tr>
+                                <td>/blog</td>
+                                <td>Home / Blog</td>
+                            </tr>
+                            <tr>
+                                <td>/blog/[slug]</td>
+                                <td>Home / Blog / <em>[Post adi]</em></td>
+                            </tr>
+                            <tr>
+                                <td>/info</td>
+                                <td>Ana sehife / Xeberler</td>
+                            </tr>
+                            <tr>
+                                <td>/info/[slug]</td>
+                                <td>Ana sehife / Xeberler / <em>[Meqale adi]</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Elaqeli Meqaleler Komponenti</span>
+                    <span class="badge badge-success">Yeni Komponent</span>
+                </div>
+                <div class="card-desc">
+                    Xeber meqalelerinin altinda diger xeberleri gosteren kart sekli. Mövcut meqale xaric edilir, 2 elaqeli xeber gosterilir.
+                    Kateqoriya, baslig ve tarix ile 2 sutunlu grid layout.
+                </div>
+            </div>
+
+            <ul class="file-list">
+                <li class="new">src/components/layout/Breadcrumb.tsx <span class="tag tag-new">Yeni (48 setir)</span></li>
+                <li class="new">src/components/layout/RelatedArticles.tsx <span class="tag tag-new">Yeni (36 setir)</span></li>
+                <li class="modified">src/app/tools/[slug]/page.tsx <span class="tag tag-mod">+Breadcrumb</span></li>
+                <li class="modified">src/app/tools/page.tsx <span class="tag tag-mod">+Breadcrumb</span></li>
+                <li class="modified">src/app/blog/[slug]/page.tsx <span class="tag tag-mod">+Breadcrumb</span></li>
+                <li class="modified">src/app/blog/page.tsx <span class="tag tag-mod">+Breadcrumb</span></li>
+                <li class="modified">src/app/info/[slug]/page.tsx <span class="tag tag-mod">+Breadcrumb +RelatedArticles</span></li>
+                <li class="modified">src/app/info/page.tsx <span class="tag tag-mod">+Breadcrumb</span></li>
+            </ul>
+        </section>
+
+        <!-- STREAM 6: BUNDLE + CI/CD -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: #f0fdf4; color: #16a34a;">6</span>
+                Stream 6: Bundle Analyzer + CI/CD Preview
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">@next/bundle-analyzer</span>
+                    <span class="badge badge-success">Yeni Alat</span>
+                </div>
+                <div class="card-desc">
+                    Bundle olcusunu vizual olaraq analiz etmek ucun alat. <code>npm run analyze</code> ile interaktiv hesabat yaradir.
+                </div>
+                <div class="stat-row"><span class="stat-label">Komanda</span><span class="stat-value">npm run analyze</span></div>
+                <div class="stat-row"><span class="stat-label">Aktivlesme</span><span class="stat-value">ANALYZE=true env variable</span></div>
+                <div class="stat-row"><span class="stat-label">Netice</span><span class="stat-value">.next/analyze/ (HTML hesabat)</span></div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Preview Deploy (Merge Request)</span>
+                    <span class="badge badge-success">Yeni CI/CD Stage</span>
+                </div>
+                <div class="card-desc">
+                    Merge request acildiqda avtomatik preview URL yaradilir. Manual olaraq dayandirila biler.
+                </div>
+                <div class="stat-row"><span class="stat-label">Trigger</span><span class="stat-value">merge_request_event</span></div>
+                <div class="stat-row"><span class="stat-label">Muhit</span><span class="stat-value">preview/&lt;MR_IID&gt;</span></div>
+                <div class="stat-row"><span class="stat-label">Stop</span><span class="stat-value">Manual action (allow_failure)</span></div>
+                <div class="stat-row"><span class="stat-label">Cache</span><span class="stat-value">.vercel/ directory</span></div>
+            </div>
+
+            <ul class="file-list">
+                <li class="modified">package.json <span class="tag tag-mod">+analyze script, +@next/bundle-analyzer</span></li>
+                <li class="modified">next.config.js <span class="tag tag-mod">+withBundleAnalyzer wrapper</span></li>
+                <li class="modified">.gitlab-ci.yml <span class="tag tag-mod">+preview stage, +stop_preview, rules fix</span></li>
+                <li class="modified">package-lock.json <span class="tag tag-mod">+193 setir</span></li>
+            </ul>
+        </section>
+
+        <!-- FULL FILE LIST -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: var(--gray-100); color: var(--gray-700);">&#128193;</span>
+                Butun Deyisdirilmis Fayllar (20)
+            </h2>
+
+            <div class="card">
+                <h4 style="margin-bottom: 12px; color: var(--success);">Yeni Fayllar (5)</h4>
+                <ul class="file-list">
+                    <li class="new">src/app/api/og/route.tsx <span class="tag tag-new">110 setir</span></li>
+                    <li class="new">src/components/layout/Breadcrumb.tsx <span class="tag tag-new">48 setir</span></li>
+                    <li class="new">src/components/layout/CookieConsent.tsx <span class="tag tag-new">91 setir</span></li>
+                    <li class="new">src/components/layout/Newsletter.tsx <span class="tag tag-new">99 setir</span></li>
+                    <li class="new">src/components/layout/RelatedArticles.tsx <span class="tag tag-new">36 setir</span></li>
+                </ul>
+
+                <h4 style="margin: 20px 0 12px; color: var(--info);">Deyisdirilmis Fayllar (15)</h4>
+                <ul class="file-list">
+                    <li class="modified">.gitlab-ci.yml <span class="tag tag-mod">+46 setir</span></li>
+                    <li class="modified">next.config.js <span class="tag tag-mod">+6 setir</span></li>
+                    <li class="modified">package.json <span class="tag tag-mod">+2 setir</span></li>
+                    <li class="modified">package-lock.json <span class="tag tag-mod">+193 setir</span></li>
+                    <li class="modified">src/app/blog/[slug]/page.tsx <span class="tag tag-mod">+8 setir</span></li>
+                    <li class="modified">src/app/blog/page.tsx <span class="tag tag-mod">+7 setir</span></li>
+                    <li class="modified">src/app/info/[slug]/page.tsx <span class="tag tag-mod">+21 setir</span></li>
+                    <li class="modified">src/app/info/page.tsx <span class="tag tag-mod">+7 setir</span></li>
+                    <li class="modified">src/app/layout.tsx <span class="tag tag-mod">+2 setir</span></li>
+                    <li class="modified">src/app/tools/[slug]/page.tsx <span class="tag tag-mod">+8 setir</span></li>
+                    <li class="modified">src/app/tools/page.tsx <span class="tag tag-mod">+7 setir</span></li>
+                    <li class="modified">src/components/layout/Footer.tsx <span class="tag tag-mod">+6 setir</span></li>
+                    <li class="modified">src/data/blog-posts.ts <span class="tag tag-mod">+448 setir</span></li>
+                    <li class="modified">src/data/news-articles.ts <span class="tag tag-mod">+257 setir</span></li>
+                    <li class="modified">src/lib/utils/seo.ts <span class="tag tag-mod">+62 setir</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PHASE COMPARISON -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: var(--primary-light); color: var(--primary);">&#128202;</span>
+                Faza 1 vs Faza 2 Muqayisesi
+            </h2>
+
+            <div class="card">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metrik</th>
+                                <th>Faza 1</th>
+                                <th>Faza 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Is axini sayi</td>
+                                <td>8 stream</td>
+                                <td>6 stream</td>
+                            </tr>
+                            <tr>
+                                <td>Deyisdirilmis fayl</td>
+                                <td>25+</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>Yeni komponent</td>
+                                <td>6 (not-found, error, loading, icon...)</td>
+                                <td>5 (CookieConsent, Newsletter, Breadcrumb, RelatedArticles, OG route)</td>
+                            </tr>
+                            <tr>
+                                <td>Focus</td>
+                                <td>Tehlukesizlik, SEO, Bug fix, UX</td>
+                                <td>Kontent, UX, Strukturlasdirilmis Data, CI/CD</td>
+                            </tr>
+                            <tr>
+                                <td>Blog soz sayi</td>
+                                <td>~1,100 soz (cem)</td>
+                                <td><strong>~5,977 soz</strong> (cem)</td>
+                            </tr>
+                            <tr>
+                                <td>Xeber soz sayi</td>
+                                <td>~690 soz (cem)</td>
+                                <td><strong>~3,599 soz</strong> (cem)</td>
+                            </tr>
+                            <tr>
+                                <td>OG Images</td>
+                                <td>Statik (1 sekil)</td>
+                                <td><strong>Dinamik (sehife basina)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Structured Data</td>
+                                <td>WebSite, Organization, SoftwareApplication, NewsArticle, Article</td>
+                                <td><strong>+ BreadcrumbList (6 sehife)</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- REMAINING WORK -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="icon" style="background: var(--warning-bg); color: var(--warning);">&#128221;</span>
+                Novbeti Addimlar (Faza 3)
+            </h2>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Prioritet Isler</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tapshiriq</th>
+                                <th>Prioritet</th>
+                                <th>Tahmini Vaxt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Groq API key elave etmek (AI aletler islemir)</td>
+                                <td><span class="badge badge-danger">Kritik</span></td>
+                                <td>30 deq</td>
+                            </tr>
+                            <tr>
+                                <td>Rate limiter Redis/Upstash-a kocurmek</td>
+                                <td><span class="badge badge-warning">Yuksek</span></td>
+                                <td>2-3 saat</td>
+                            </tr>
+                            <tr>
+                                <td>Supabase inteqrasiyasi (analytics, rate limiting)</td>
+                                <td><span class="badge badge-warning">Yuksek</span></td>
+                                <td>4-6 saat</td>
+                            </tr>
+                            <tr>
+                                <td>Email newsletter backend (Supabase/API)</td>
+                                <td><span class="badge badge-info">Orta</span></td>
+                                <td>2-3 saat</td>
+                            </tr>
+                            <tr>
+                                <td>Sosial media hesablari + inteqrasiya</td>
+                                <td><span class="badge badge-info">Orta</span></td>
+                                <td>3-4 saat</td>
+                            </tr>
+                            <tr>
+                                <td>Heftlik blog + xeber meqaleleri</td>
+                                <td><span class="badge badge-info">Orta</span></td>
+                                <td>Davamedici</td>
+                            </tr>
+                            <tr>
+                                <td>Coxdilli destek (AZ, EN, TR, RU)</td>
+                                <td><span class="badge badge-info">Orta</span></td>
+                                <td>8-12 saat</td>
+                            </tr>
+                            <tr>
+                                <td>Mobil tetbiq (React Native + Expo)</td>
+                                <td><span class="badge" style="background: var(--gray-100); color: var(--gray-600);">Uzunmuddetli</span></td>
+                                <td>40+ saat</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Vaxtim Yoxdu - Faza 2 Hesabati</strong></p>
+            <p class="faded" style="margin-top: 8px;">
+                Hazirlayan: Texniki Komanda (6 agent - paralel icra) | Tarix: 2026-03-10 |
+                Pipeline #2374137975 - SUCCESS
+            </p>
+            <p class="faded" style="margin-top: 4px;">
+                vaxtimyoxdu.com | GitLab: rauf-idea/vaxtimyoxdu
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

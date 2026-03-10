@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faza 5 Hesabati - Vaxtim Yoxdu | 2026-03-10</title>
+    <style>
+        :root {
+            --primary: #059669;
+            --primary-light: #d1fae5;
+            --success: #16a34a;
+            --success-bg: #dcfce7;
+            --info: #0891b2;
+            --info-bg: #cffafe;
+            --warning: #f59e0b;
+            --warning-bg: #fef3c7;
+            --danger: #dc2626;
+            --danger-bg: #fee2e2;
+            --purple: #7c3aed;
+            --purple-bg: #ede9fe;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--gray-800); line-height: 1.6; background: var(--gray-50); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .cover { background: linear-gradient(135deg, #059669 0%, #10b981 40%, #34d399 100%); color: white; padding: 60px 0; text-align: center; }
+        .cover h1 { font-size: 2.5rem; margin-bottom: 8px; }
+        .cover .subtitle { font-size: 1.25rem; opacity: 0.9; }
+        .cover .meta { margin-top: 20px; font-size: 0.9rem; opacity: 0.8; display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+        .summary-bar { background: white; border-bottom: 1px solid var(--gray-200); padding: 24px 0; }
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; text-align: center; }
+        .summary-item { padding: 16px; border-radius: 12px; background: var(--gray-50); }
+        .summary-item .number { font-size: 2rem; font-weight: 700; }
+        .summary-item .label { font-size: 0.8rem; color: var(--gray-500); margin-top: 4px; }
+        .section { padding: 40px 0; }
+        .section + .section { border-top: 1px solid var(--gray-200); }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+        .section-title .icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+        .card { background: white; border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
+        .card-title { font-size: 1.1rem; font-weight: 600; }
+        .card-desc { color: var(--gray-600); font-size: 0.9rem; margin-bottom: 16px; }
+        .badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .badge-success { background: var(--success-bg); color: var(--success); }
+        .badge-info { background: var(--info-bg); color: var(--info); }
+        .badge-warning { background: var(--warning-bg); color: var(--warning); }
+        .badge-danger { background: var(--danger-bg); color: var(--danger); }
+        .badge-purple { background: var(--purple-bg); color: var(--purple); }
+        .badge-green { background: #d1fae5; color: #059669; }
+        .file-list { list-style: none; padding: 0; }
+        .file-list li { padding: 8px 12px; font-size: 0.85rem; font-family: 'SF Mono', 'Fira Code', monospace; background: var(--gray-50); margin-bottom: 4px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px; }
+        .file-list .new { border-left: 3px solid var(--success); }
+        .file-list .modified { border-left: 3px solid var(--primary); }
+        .file-list .tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; font-family: 'Segoe UI', sans-serif; }
+        .tag-new { background: var(--success-bg); color: var(--success); }
+        .tag-mod { background: #d1fae5; color: #059669; }
+        .stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--gray-100); font-size: 0.9rem; }
+        .stat-row:last-child { border-bottom: none; }
+        .stat-label { color: var(--gray-600); }
+        .stat-value { font-weight: 600; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th { background: var(--gray-100); text-align: left; padding: 10px 14px; font-weight: 600; white-space: nowrap; }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--gray-100); }
+        tr:hover td { background: var(--gray-50); }
+        .table-wrap { overflow-x: auto; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-top: 16px; }
+        .team-card { border-radius: 12px; padding: 24px; }
+        .team-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .team-card p { font-size: 0.85rem; opacity: 0.9; }
+        .team-card ul { list-style: none; padding: 0; margin-top: 12px; font-size: 0.85rem; }
+        .team-card ul li { padding: 4px 0; }
+        .team-card ul li::before { content: '✓ '; font-weight: 700; }
+        .test-bar { display: flex; align-items: center; gap: 12px; margin: 16px 0; }
+        .test-bar-fill { background: #16a34a; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.85rem; font-weight: 700; }
+        .footer { background: var(--gray-900); color: white; padding: 40px 0; text-align: center; font-size: 0.85rem; }
+        .footer .faded { opacity: 0.6; }
+        @media (max-width: 640px) { .cover h1 { font-size: 1.75rem; } .summary-grid { grid-template-columns: repeat(2, 1fr); } .team-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="cover">
+        <div class="container">
+            <h1>Faza 5 Hesabati</h1>
+            <p class="subtitle">PWA, Test Coverage, Kontent Genislenme ve SEO</p>
+            <div class="meta">
+                <span>Layihe: vaxtimyoxdu.com</span>
+                <span>Tarix: 2026-03-10</span>
+                <span>Status: Tamamlandi ve Deploy Edildi</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="summary-bar">
+        <div class="container">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="number" style="color: var(--primary)">3</div>
+                    <div class="label">Paralel Komanda</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--info)">23</div>
+                    <div class="label">Deyisdirilmis Fayl</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--success)">+5,822</div>
+                    <div class="label">Elave Edilmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--danger)">-341</div>
+                    <div class="label">Silinmis Setir</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--warning)">95</div>
+                    <div class="label">Test (hepsi PASS)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number" style="color: var(--purple)">25</div>
+                    <div class="label">Umumi Kontent</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- Paralel Komandalar -->
+        <section class="section" style="border-top:none;">
+            <h2 class="section-title"><span class="icon" style="background:#d1fae5;color:#059669;">&#9889;</span> Paralel Is Bolususu</h2>
+            <div class="card">
+                <div class="card-desc">Faza 5 isi 3 paralel komandaya bolundu. Her komanda izolyasiya olunmus git worktree-de isleyib, sonra main branch-a merge edilib.</div>
+                <div class="team-grid">
+                    <div class="team-card" style="background: linear-gradient(135deg, #dbeafe, #eff6ff); color: #1e40af;">
+                        <h3>&#128241; Komanda B &mdash; PWA</h3>
+                        <p>Progressive Web App desteyi</p>
+                        <ul>
+                            <li>manifest.json (ikon, reng, ad)</li>
+                            <li>Service Worker (cache strategiya)</li>
+                            <li>Offline sehife (AZ dilinde)</li>
+                            <li>Install Prompt komponenti</li>
+                            <li>Apple PWA meta taglari</li>
+                        </ul>
+                    </div>
+                    <div class="team-card" style="background: linear-gradient(135deg, #fef3c7, #fffbeb); color: #92400e;">
+                        <h3>&#129514; Komanda C &mdash; Testler</h3>
+                        <p>Vitest + React Testing Library</p>
+                        <ul>
+                            <li>95 test, 4 fayl, hepsi PASS</li>
+                            <li>Alet konfiqurasiya testleri (45)</li>
+                            <li>Registry funksiya testleri (24)</li>
+                            <li>Newsletter API testleri (13)</li>
+                            <li>Utility funksiya testleri (13)</li>
+                        </ul>
+                    </div>
+                    <div class="team-card" style="background: linear-gradient(135deg, #d1fae5, #ecfdf5); color: #065f46;">
+                        <h3>&#128221; Komanda D &mdash; Kontent + SEO</h3>
+                        <p>Yeni meqaleler ve SEO sxemleri</p>
+                        <ul>
+                            <li>+5 xeber meqalesi (AZ)</li>
+                            <li>+5 blog yazisi (EN)</li>
+                            <li>FAQ JSON-LD (her alet ucun 3 FAQ)</li>
+                            <li>RelatedTools komponenti</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Komanda B: PWA -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#dbeafe;color:#2563eb;">1</span> Komanda B: Progressive Web App (PWA)</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Mobil App-a Yakin Tecrube</span><span class="badge badge-success">Tamamlandi</span></div>
+                <div class="card-desc">Istifadeciler artiq veb sayti telefonlarina "qurasdira" biler, offline rejimdede istifade ede biler.</div>
+
+                <div style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0;">
+                    <div style="flex:1;min-width:200px;background:#eff6ff;border:2px solid #93c5fd;border-radius:12px;padding:16px;text-align:center;">
+                        <div style="font-size:2rem;">&#128230;</div>
+                        <div style="font-weight:600;font-size:0.9rem;margin-top:8px;">manifest.json</div>
+                        <div style="font-size:0.8rem;color:var(--gray-500);">App adi, ikonlar, reng teması</div>
+                    </div>
+                    <div style="flex:1;min-width:200px;background:#f0fdf4;border:2px solid #86efac;border-radius:12px;padding:16px;text-align:center;">
+                        <div style="font-size:2rem;">&#9881;&#65039;</div>
+                        <div style="font-weight:600;font-size:0.9rem;margin-top:8px;">Service Worker</div>
+                        <div style="font-size:0.8rem;color:var(--gray-500);">Cache-first statik, network-first API</div>
+                    </div>
+                    <div style="flex:1;min-width:200px;background:#fef3c7;border:2px solid #fcd34d;border-radius:12px;padding:16px;text-align:center;">
+                        <div style="font-size:2rem;">&#128246;</div>
+                        <div style="font-weight:600;font-size:0.9rem;margin-top:8px;">Offline Sehife</div>
+                        <div style="font-size:0.8rem;color:var(--gray-500);">AZ dilinde, istifadeciye melumat</div>
+                    </div>
+                    <div style="flex:1;min-width:200px;background:#ede9fe;border:2px solid #c4b5fd;border-radius:12px;padding:16px;text-align:center;">
+                        <div style="font-size:2rem;">&#128277;</div>
+                        <div style="font-weight:600;font-size:0.9rem;margin-top:8px;">Install Prompt</div>
+                        <div style="font-size:0.8rem;color:var(--gray-500);">Mobil cihazlarda qurasdirma</div>
+                    </div>
+                </div>
+
+                <div class="stat-row"><span class="stat-label">themeColor</span><span class="stat-value">#7c3aed</span></div>
+                <div class="stat-row"><span class="stat-label">display</span><span class="stat-value">standalone</span></div>
+                <div class="stat-row"><span class="stat-label">Ikonlar</span><span class="stat-value">192x192 + 512x512 PNG</span></div>
+                <div class="stat-row"><span class="stat-label">Cache strategiya</span><span class="stat-value">Statik: cache-first / API: network-first</span></div>
+                <div class="stat-row"><span class="stat-label">Apple desteyi</span><span class="stat-value">apple-mobile-web-app-capable, apple-touch-icon</span></div>
+
+                <ul class="file-list" style="margin-top:16px;">
+                    <li class="new">public/manifest.json <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">public/sw.js <span class="tag tag-new">Yeni (166 setir)</span></li>
+                    <li class="new">public/icons/icon-192.png <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">public/icons/icon-512.png <span class="tag tag-new">Yeni</span></li>
+                    <li class="new">src/app/offline/page.tsx <span class="tag tag-new">Yeni (36 setir)</span></li>
+                    <li class="new">src/components/layout/InstallPrompt.tsx <span class="tag tag-new">Yeni (159 setir)</span></li>
+                    <li class="new">src/components/layout/ServiceWorkerRegistrar.tsx <span class="tag tag-new">Yeni (37 setir)</span></li>
+                    <li class="new">scripts/generate-icons.js <span class="tag tag-new">Yeni (179 setir)</span></li>
+                    <li class="modified">src/app/layout.tsx <span class="tag tag-mod">PWA meta + import</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Komanda C: Testler -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fef3c7;color:#d97706;">2</span> Komanda C: Test Coverage</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">Vitest + React Testing Library</span><span class="badge badge-success">95 Test PASS</span></div>
+                <div class="card-desc">Sifirdan test infrastrukturu quruldu. 4 test faylinda 95 test yazildi — hamisi ugurla kecdi.</div>
+
+                <div class="test-bar">
+                    <div class="test-bar-fill" style="width:100%;">&#9989; 95 / 95 PASSED &mdash; 0 FAILED</div>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Test Fayil</th><th>Test Sayi</th><th>Status</th><th>Muddet</th></tr></thead>
+                        <tbody>
+                            <tr><td style="font-family:monospace;font-size:0.85rem;">src/config/__tests__/tools.test.ts</td><td><strong>45</strong></td><td><span class="badge badge-success">PASS</span></td><td>9ms</td></tr>
+                            <tr><td style="font-family:monospace;font-size:0.85rem;">src/lib/tools/__tests__/registry.test.ts</td><td><strong>24</strong></td><td><span class="badge badge-success">PASS</span></td><td>4ms</td></tr>
+                            <tr><td style="font-family:monospace;font-size:0.85rem;">src/app/api/__tests__/newsletter.test.ts</td><td><strong>13</strong></td><td><span class="badge badge-success">PASS</span></td><td>8ms</td></tr>
+                            <tr><td style="font-family:monospace;font-size:0.85rem;">src/lib/__tests__/utils.test.ts</td><td><strong>13</strong></td><td><span class="badge badge-success">PASS</span></td><td>6ms</td></tr>
+                            <tr style="font-weight:700;background:var(--gray-50);"><td>CEMI</td><td>95</td><td><span class="badge badge-success">ALL PASS</span></td><td>672ms</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top:16px;">
+                    <div class="stat-row"><span class="stat-label">Framework</span><span class="stat-value">Vitest 4.0.18</span></div>
+                    <div class="stat-row"><span class="stat-label">Environment</span><span class="stat-value">jsdom (browser emulation)</span></div>
+                    <div class="stat-row"><span class="stat-label">CI Integration</span><span class="stat-value">GitLab CI test stage elave edildi</span></div>
+                    <div class="stat-row"><span class="stat-label">Script</span><span class="stat-value">npm run test (package.json)</span></div>
+                </div>
+
+                <h4 style="margin-top:20px;font-size:0.95rem;">Test edilmis modullar:</h4>
+                <ul class="file-list" style="margin-top:8px;">
+                    <li class="new">src/config/__tests__/tools.test.ts <span class="tag tag-new">45 test &mdash; alet konfiqurasiyasi</span></li>
+                    <li class="new">src/lib/tools/__tests__/registry.test.ts <span class="tag tag-new">24 test &mdash; axtaris, filtr, slug</span></li>
+                    <li class="new">src/app/api/__tests__/newsletter.test.ts <span class="tag tag-new">13 test &mdash; email validasiya, API</span></li>
+                    <li class="new">src/lib/__tests__/utils.test.ts <span class="tag tag-new">13 test &mdash; cn(), utility</span></li>
+                    <li class="new">vitest.config.ts <span class="tag tag-new">Konfiqurasiya</span></li>
+                    <li class="new">vitest.setup.ts <span class="tag tag-new">Setup</span></li>
+                    <li class="modified">.gitlab-ci.yml <span class="tag tag-mod">+test stage</span></li>
+                    <li class="modified">package.json <span class="tag tag-mod">+vitest devDep</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Komanda D: Kontent -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#d1fae5;color:#059669;">3</span> Komanda D: Kontent Genislenmesi</h2>
+
+            <!-- Xeberler -->
+            <div class="card">
+                <div class="card-header"><span class="card-title">+5 Yeni Xeber Meqalesi (AZ)</span><span class="badge badge-success">7 &rarr; 12</span></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Baslig</th><th>Kateqoriya</th><th>Tarix</th></tr></thead>
+                        <tbody>
+                            <tr style="background:#f0fdf4;"><td>Kvant komputerler</td><td><span class="badge badge-info">Texnologiya</span></td><td>2026-03-07</td></tr>
+                            <tr style="background:#f0fdf4;"><td>Olimpiya hazirligi</td><td><span class="badge badge-warning">Idman</span></td><td>2026-03-06</td></tr>
+                            <tr style="background:#f0fdf4;"><td>Reqemsal bacariqlar</td><td><span class="badge badge-purple">Tehsil</span></td><td>2026-03-05</td></tr>
+                            <tr style="background:#f0fdf4;"><td>Azerbaycan turizm marshrutlari</td><td><span class="badge badge-green">Seyahet</span></td><td>2026-03-04</td></tr>
+                            <tr style="background:#f0fdf4;"><td>Startap ekosistemi</td><td><span class="badge badge-danger">Biznes</span></td><td>2026-03-03</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="stat-row" style="margin-top:12px;"><span class="stat-label">Her meqale</span><span class="stat-value">800+ soz, Azerbaycan dilinde</span></div>
+                <div class="stat-row"><span class="stat-label">Yeni kateqoriyalar</span><span class="stat-value">Seyahet, Biznes</span></div>
+                <ul class="file-list" style="margin-top:12px;"><li class="modified">src/data/news-articles.ts <span class="tag tag-mod">+442 setir</span></li></ul>
+            </div>
+
+            <!-- Bloglar -->
+            <div class="card">
+                <div class="card-header"><span class="card-title">+5 Yeni Blog Yazisi (EN)</span><span class="badge badge-success">8 &rarr; 13</span></div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Baslig</th><th>Tarix</th><th>Movzu</th></tr></thead>
+                        <tbody>
+                            <tr style="background:#f0fdf4;"><td>Cybersecurity Tools Guide</td><td>2026-03-06</td><td>Kibertehluekesizlik aletleri</td></tr>
+                            <tr style="background:#f0fdf4;"><td>API Testing Guide</td><td>2026-03-01</td><td>API test yanasmasi</td></tr>
+                            <tr style="background:#f0fdf4;"><td>Color Theory for Designers</td><td>2026-02-28</td><td>Dizaynerler ucun reng teoriyasi</td></tr>
+                            <tr style="background:#f0fdf4;"><td>Markdown Writing Guide</td><td>2026-02-25</td><td>Markdown yazma rehberi</td></tr>
+                            <tr style="background:#f0fdf4;"><td>Time Management & Productivity</td><td>2026-02-20</td><td>Vaxt idare etme aletleri</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="stat-row" style="margin-top:12px;"><span class="stat-label">Her yazi</span><span class="stat-value">800+ soz, ingilisce, relatedTools array</span></div>
+                <ul class="file-list" style="margin-top:12px;"><li class="modified">src/data/blog-posts.ts <span class="tag tag-mod">+737 setir</span></li></ul>
+            </div>
+        </section>
+
+        <!-- SEO -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#cffafe;color:#0891b2;">4</span> Komanda D: SEO Guclendirilmesi</h2>
+
+            <!-- FAQ Schema -->
+            <div class="card">
+                <div class="card-header"><span class="card-title">FAQ JSON-LD Structured Data</span><span class="badge badge-info">30 alet x 3 FAQ = 90 sual</span></div>
+                <div class="card-desc">Her alet sehifesinde 3 dinamik FAQ suali yaradilir. Bu, Google axtaris neticelerinde "Rich Results" (zengin neticeler) gosterilmesine imkan verir.</div>
+
+                <div style="background:#f0f9ff;border:2px solid #bae6fd;border-radius:12px;padding:20px;margin:16px 0;">
+                    <div style="font-size:0.85rem;color:var(--gray-600);margin-bottom:8px;">Google Rich Result onizleme:</div>
+                    <div style="background:white;border:1px solid var(--gray-200);border-radius:8px;padding:16px;">
+                        <div style="font-weight:700;color:#1a0dab;font-size:1rem;">JSON Formatter & Validator - Vaxtim Yoxdu</div>
+                        <div style="color:#006621;font-size:0.85rem;">vaxtimyoxdu.com &rsaquo; tools &rsaquo; json-formatter</div>
+                        <div style="margin-top:12px;border-top:1px solid var(--gray-200);padding-top:12px;">
+                            <div style="font-weight:600;font-size:0.9rem;">&#9660; How do I use JSON Formatter & Validator?</div>
+                            <div style="font-weight:600;font-size:0.9rem;margin-top:8px;">&#9660; Is JSON Formatter & Validator free to use?</div>
+                            <div style="font-weight:600;font-size:0.9rem;margin-top:8px;">&#9660; Is my data safe with this tool?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-row"><span class="stat-label">Generasiya usulu</span><span class="stat-value">Dinamik &mdash; alet adindan, kategoriyadan, flag-lardan</span></div>
+                <div class="stat-row"><span class="stat-label">Funksiya</span><span class="stat-value">generateToolFaqJsonLd() + generateToolFaqs()</span></div>
+                <div class="stat-row"><span class="stat-label">Schema</span><span class="stat-value">FAQPage (schema.org)</span></div>
+                <ul class="file-list" style="margin-top:12px;">
+                    <li class="modified">src/lib/utils/seo.ts <span class="tag tag-mod">+79 setir (FAQ funksiyalari)</span></li>
+                    <li class="modified">src/app/tools/[slug]/page.tsx <span class="tag tag-mod">+FAQ JSON-LD script</span></li>
+                </ul>
+            </div>
+
+            <!-- RelatedTools -->
+            <div class="card">
+                <div class="card-header"><span class="card-title">RelatedTools Komponenti</span><span class="badge badge-success">Internal Linking</span></div>
+                <div class="card-desc">Her alet sehifesinin altinda eyni kateqoriyadan 4 elaqeli alet gosterilir. Bu, hem UX-i hem de SEO-nu guclendirir (daxili linkleme).</div>
+
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0;">
+                    <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:8px;padding:12px;text-align:center;">
+                        <div style="font-size:1.3rem;">&#128272;</div>
+                        <div style="font-size:0.75rem;font-weight:600;margin-top:4px;">Base64</div>
+                    </div>
+                    <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:8px;padding:12px;text-align:center;">
+                        <div style="font-size:1.3rem;">&#128269;</div>
+                        <div style="font-size:0.75rem;font-weight:600;margin-top:4px;">Regex</div>
+                    </div>
+                    <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:8px;padding:12px;text-align:center;">
+                        <div style="font-size:1.3rem;">#&#65039;&#8419;</div>
+                        <div style="font-size:0.75rem;font-weight:600;margin-top:4px;">Hash Gen</div>
+                    </div>
+                    <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:8px;padding:12px;text-align:center;">
+                        <div style="font-size:1.3rem;">&#127915;</div>
+                        <div style="font-size:0.75rem;font-weight:600;margin-top:4px;">JWT</div>
+                    </div>
+                </div>
+
+                <div class="stat-row"><span class="stat-label">Gosterilen alet sayi</span><span class="stat-value">Maks 4 (eyni kateqoriya)</span></div>
+                <div class="stat-row"><span class="stat-label">Responsive</span><span class="stat-value">1 col mobil, 2 col tablet, 4 col desktop</span></div>
+                <ul class="file-list" style="margin-top:12px;">
+                    <li class="new">src/components/tools/RelatedTools.tsx <span class="tag tag-new">Yeni (51 setir)</span></li>
+                    <li class="modified">src/app/tools/[slug]/page.tsx <span class="tag tag-mod">+RelatedTools import</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Evvel/Sonra -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fee2e2;color:#dc2626;">&#128200;</span> Evvel / Sonra Muqayisesi</h2>
+            <div class="card">
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Metrika</th><th>Faza 4 Sonu</th><th>Faza 5 Sonu</th><th>Deyisiklik</th></tr></thead>
+                        <tbody>
+                            <tr><td>Xeber meqalesi</td><td>7</td><td style="font-weight:700;color:var(--success);">12</td><td style="color:var(--success);">+71%</td></tr>
+                            <tr><td>Blog yazisi</td><td>8</td><td style="font-weight:700;color:var(--success);">13</td><td style="color:var(--success);">+63%</td></tr>
+                            <tr><td>Test coverage</td><td style="color:var(--danger);">0</td><td style="font-weight:700;color:var(--success);">95 test</td><td style="color:var(--success);">&#8734;</td></tr>
+                            <tr><td>PWA desteyi</td><td style="color:var(--danger);">Yox</td><td style="font-weight:700;color:var(--success);">Var</td><td>&#10004;</td></tr>
+                            <tr><td>FAQ Schema</td><td style="color:var(--danger);">Yox</td><td style="font-weight:700;color:var(--success);">90 FAQ</td><td>&#10004;</td></tr>
+                            <tr><td>Internal linking</td><td style="color:var(--danger);">Yox</td><td style="font-weight:700;color:var(--success);">RelatedTools</td><td>&#10004;</td></tr>
+                            <tr><td>Offline destek</td><td style="color:var(--danger);">Yox</td><td style="font-weight:700;color:var(--success);">SW cache</td><td>&#10004;</td></tr>
+                            <tr><td>Xeber kateqoriyalari</td><td>7</td><td style="font-weight:700;">9</td><td style="color:var(--success);">+Seyahet, Biznes</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Build & Deploy -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:#fef3c7;color:#d97706;">&#128640;</span> Build & Deploy</h2>
+            <div class="card">
+                <div class="card-header"><span class="card-title">GitLab CI/CD Pipeline</span><span class="badge badge-success">SUCCESS</span></div>
+                <div class="stat-row"><span class="stat-label">Commit</span><span class="stat-value" style="font-family:monospace;">c259977</span></div>
+                <div class="stat-row"><span class="stat-label">Pipeline</span><span class="stat-value">#2375161327</span></div>
+                <div class="stat-row"><span class="stat-label">Branch</span><span class="stat-value">main</span></div>
+                <div class="stat-row"><span class="stat-label">Muddet</span><span class="stat-value">351 saniye</span></div>
+                <div class="stat-row"><span class="stat-label">Fayllar</span><span class="stat-value">23 deyisdirilmis</span></div>
+                <div class="stat-row"><span class="stat-label">Elave / Silinmis</span><span class="stat-value" style="color:var(--success);">+5,822</span> / <span style="color:var(--danger);">-341</span></div>
+                <div class="stat-row"><span class="stat-label">Test neticesi</span><span class="stat-value" style="color:var(--success);">95/95 PASS</span></div>
+                <div class="stat-row"><span class="stat-label">Hosting</span><span class="stat-value">Vercel (auto-deploy)</span></div>
+            </div>
+        </section>
+
+        <!-- Butun Fazalar Timeline -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:var(--gray-100);color:var(--gray-700);">&#128197;</span> Butun Fazalarin Xulasesi</h2>
+            <div class="card">
+                <div style="position:relative;padding-left:32px;">
+                    <div style="position:absolute;left:12px;top:0;bottom:0;width:2px;background:var(--gray-200);"></div>
+
+                    <div style="position:relative;padding:12px 0;">
+                        <div style="position:absolute;left:-26px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--gray-300);"></div>
+                        <div style="font-weight:700;">Faza 1 &mdash; Esas Qurulis</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">14 alet, 4 xeber, 5 blog, SEO, Analytics, AdSense</div>
+                    </div>
+
+                    <div style="position:relative;padding:12px 0;">
+                        <div style="position:absolute;left:-26px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--gray-300);"></div>
+                        <div style="font-weight:700;">Faza 2 &mdash; Kontent & UX</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">OG images, breadcrumbs, cookie consent, newsletter, bundle analyzer</div>
+                    </div>
+
+                    <div style="position:relative;padding:12px 0;">
+                        <div style="position:absolute;left:-26px;top:16px;width:12px;height:12px;border-radius:50%;background:#0891b2;"></div>
+                        <div style="font-weight:700;">Faza 3 &mdash; Inteqrasiyalar</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">Upstash Redis, Newsletter API, sosial media, 3 blog, 3 xeber, AI UX</div>
+                    </div>
+
+                    <div style="position:relative;padding:12px 0;">
+                        <div style="position:absolute;left:-26px;top:16px;width:12px;height:12px;border-radius:50%;background:#7c3aed;"></div>
+                        <div style="font-weight:700;">Faza 4 &mdash; 30 Alet Hedefe</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">+16 yeni alet (8 dev, 4 gen, 4 text), 30 umumi</div>
+                    </div>
+
+                    <div style="position:relative;padding:12px 0;">
+                        <div style="position:absolute;left:-26px;top:16px;width:14px;height:14px;border-radius:50%;background:#059669;border:3px solid #d1fae5;"></div>
+                        <div style="font-weight:700;color:#059669;">Faza 5 &mdash; PWA, Test, Kontent, SEO &#10004;</div>
+                        <div style="font-size:0.85rem;color:var(--gray-500);">PWA, 95 test, +5 xeber, +5 blog, FAQ schema, RelatedTools</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Novbeti Addimlar -->
+        <section class="section">
+            <h2 class="section-title"><span class="icon" style="background:var(--info-bg);color:var(--info);">&#128161;</span> Novbeti Addimlar</h2>
+            <div class="card">
+                <div class="card-desc">Asagidaki isler gelecek fazalar ucun planlasdirilib:</div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Is</th><th>Prioritet</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td>Multi-language (i18n) &mdash; AZ, EN, TR, RU</td><td><span class="badge badge-danger">Yuksek</span></td><td>Planlasdirilib</td></tr>
+                            <tr><td>Mobil app (React Native + Expo)</td><td><span class="badge badge-warning">Orta</span></td><td>Gelecek</td></tr>
+                            <tr><td>Supabase inteqrasiyasi (user DB, newsletter)</td><td><span class="badge badge-warning">Orta</span></td><td>Gelecek</td></tr>
+                            <tr><td>Freemium model</td><td><span class="badge badge-info">Asagi</span></td><td>Gelecek</td></tr>
+                            <tr><td>Upstash Redis credentials</td><td><span class="badge badge-danger">Yuksek</span></td><td>Manual (Vercel env)</td></tr>
+                            <tr><td>AdSense tesdiqi</td><td><span class="badge badge-warning">Orta</span></td><td>Google-dan gozlenilir</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Vaxtim Yoxdu - Faza 5 Hesabati</strong></p>
+            <p class="faded" style="margin-top:8px;">Hazirlayan: 3 Paralel Komanda (B, C, D) | Tarix: 2026-03-10 | Pipeline #2375161327 - SUCCESS</p>
+            <p class="faded" style="margin-top:4px;">vaxtimyoxdu.com | GitLab: rauf-idea/vaxtimyoxdu | Commit: c259977</p>
+        </div>
+    </footer>
+</body>
+</html>

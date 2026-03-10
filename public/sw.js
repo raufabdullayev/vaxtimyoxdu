@@ -3,14 +3,25 @@
 /**
  * Service Worker for Vaxtim Yoxdu PWA
  *
+ * Cache versioning: Bump CACHE_VERSION when deploying breaking changes.
+ * The activate handler automatically purges stale caches.
+ *
  * Strategies:
  * - Cache-first for static assets (JS, CSS, images, fonts)
+ *   with background refresh (stale-while-revalidate)
  * - Network-first for HTML pages and API calls
  * - Offline fallback page when network is unavailable
  */
 
-const CACHE_NAME = 'vaxtimyoxdu-v1'
+const CACHE_VERSION = 2
+const CACHE_NAME = `vaxtimyoxdu-v${CACHE_VERSION}`
 const OFFLINE_URL = '/offline'
+
+/**
+ * Maximum age (in ms) for cached navigation responses.
+ * After this threshold the SW will prefer the network.
+ */
+const MAX_NAV_CACHE_AGE_MS = 5 * 60 * 1000 // 5 minutes
 
 /**
  * Static assets to pre-cache during installation.
@@ -36,6 +47,7 @@ self.addEventListener('install', (event) => {
 })
 
 // ── Activate ─────────────────────────────────────────────────────────
+// Delete every cache whose name does not match the current version.
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches
@@ -51,7 +63,7 @@ self.addEventListener('activate', (event) => {
   )
 })
 
-// ── Fetch ────────────────────────────────────────────────────────────
+// ── Helpers ──────────────────────────────────────────────────────────
 
 /**
  * Determine whether a request should use cache-first strategy.
@@ -80,27 +92,31 @@ function isApiRequest(url) {
   return url.pathname.startsWith('/api/')
 }
 
-/**
- * Cache-first strategy: try the cache, fall back to network.
- * If the network response is successful, update the cache for next time.
- */
-async function cacheFirst(request) {
-  const cached = await caches.match(request)
-  if (cached) {
-    return cached
-  }
+// ── Strategies ───────────────────────────────────────────────────────
 
-  try {
-    const response = await fetch(request)
-    if (response.ok) {
-      const cache = await caches.open(CACHE_NAME)
-      cache.put(request, response.clone())
-    }
-    return response
-  } catch {
-    // For static assets with no cache and no network, return a basic error
-    return new Response('Offline', { status: 503, statusText: 'Service Unavailable' })
-  }
+/**
+ * Stale-while-revalidate for static assets.
+ *
+ * Returns a cached response immediately (if available) while fetching
+ * a fresh copy in the background. This gives instant loads for repeat
+ * visits while still keeping the cache up to date.
+ */
+async function staleWhileRevalidate(request) {
+  const cache = await caches.open(CACHE_NAME)
+  const cached = await cache.match(request)
+
+  // Kick off a background fetch regardless of cache state
+  const fetchPromise = fetch(request)
+    .then((response) => {
+      if (response.ok) {
+        cache.put(request, response.clone())
+      }
+      return response
+    })
+    .catch(() => cached || new Response('Offline', { status: 503, statusText: 'Service Unavailable' }))
+
+  // Return the cached version immediately, or wait for the network
+  return cached || fetchPromise
 }
 
 /**
@@ -108,21 +124,22 @@ async function cacheFirst(request) {
  * Successful network responses are cached for future offline access.
  */
 async function networkFirst(request) {
+  const cache = await caches.open(CACHE_NAME)
+
   try {
     const response = await fetch(request)
     if (response.ok) {
-      const cache = await caches.open(CACHE_NAME)
       cache.put(request, response.clone())
     }
     return response
   } catch {
-    const cached = await caches.match(request)
+    const cached = await cache.match(request)
     if (cached) {
       return cached
     }
     // For navigation requests, return the offline page
     if (isNavigationRequest(request)) {
-      const offlinePage = await caches.match(OFFLINE_URL)
+      const offlinePage = await cache.match(OFFLINE_URL)
       if (offlinePage) {
         return offlinePage
       }
@@ -130,6 +147,8 @@ async function networkFirst(request) {
     return new Response('Offline', { status: 503, statusText: 'Service Unavailable' })
   }
 }
+
+// ── Fetch ────────────────────────────────────────────────────────────
 
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
@@ -139,7 +158,7 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Skip non-GET requests
+  // Skip non-GET requests (POST, PUT, etc. should always go to the network)
   if (event.request.method !== 'GET') {
     return
   }
@@ -150,9 +169,9 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Static assets: cache-first (immutable content)
+  // Static assets: stale-while-revalidate (instant response + background update)
   if (isStaticAsset(url)) {
-    event.respondWith(cacheFirst(event.request))
+    event.respondWith(staleWhileRevalidate(event.request))
     return
   }
 

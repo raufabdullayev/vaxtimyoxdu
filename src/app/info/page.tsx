@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import AdBanner from '@/components/layout/AdBanner'
+import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 
 export const metadata: Metadata = {
@@ -104,7 +104,7 @@ export default function InfoPage() {
               <h2 className="text-lg font-semibold mb-1">{article.title}</h2>
               <p className="text-sm text-muted-foreground">{article.summary}</p>
             </Link>
-            {index === 1 && <AdBanner slot="info-list-mid" format="in-article" className="my-4" />}
+            {index === 1 && <LazyAdBanner slot="info-list-mid" format="in-article" className="my-4" />}
           </div>
         ))}
       </div>

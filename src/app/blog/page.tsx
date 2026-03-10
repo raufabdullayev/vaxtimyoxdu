@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import AdBanner from '@/components/layout/AdBanner'
+import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 
 export const metadata: Metadata = {
@@ -92,7 +92,7 @@ export default function BlogPage() {
               </h2>
               <p className="text-muted-foreground text-sm">{post.excerpt}</p>
             </article>
-            {index === 1 && <AdBanner slot="blog-list-mid" format="in-article" className="my-6" />}
+            {index === 1 && <LazyAdBanner slot="blog-list-mid" format="in-article" className="my-6" />}
           </div>
         ))}
       </div>

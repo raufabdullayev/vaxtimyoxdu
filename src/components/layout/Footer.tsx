@@ -1,6 +1,16 @@
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { Github, Twitter, Instagram, Linkedin } from 'lucide-react'
-import Newsletter from './Newsletter'
+
+// Newsletter is in the footer (below the fold on every page), so it should
+// never block the initial page load. Loading it lazily saves ~3-5 KB from
+// the critical bundle and avoids hydrating form state until needed.
+const Newsletter = dynamic(() => import('./Newsletter'), {
+  ssr: false,
+  loading: () => (
+    <div className="min-h-[72px]" aria-hidden="true" />
+  ),
+})
 
 const socialLinks = [
   {
