@@ -86,7 +86,7 @@ export default async function HomePage({ params }: Props) {
       <section className="mt-16 text-center">
         <div className="grid grid-cols-3 max-w-lg mx-auto gap-8">
           <div>
-            <p className="text-3xl font-bold text-primary">45</p>
+            <p className="text-3xl font-bold text-primary">70+</p>
             <p className="text-sm text-muted-foreground">{t('statTools')}</p>
           </div>
           <div>

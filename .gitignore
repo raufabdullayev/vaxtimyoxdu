@@ -10,3 +10,8 @@ npm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 .claude/
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/

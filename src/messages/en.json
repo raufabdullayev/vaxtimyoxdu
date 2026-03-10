@@ -51,6 +51,288 @@
       "generatorsDesc": "Generate passwords, UUIDs, QR codes, gradients, emojis, and colors",
       "text": "Text Tools",
       "textDesc": "Case converter, binary, ROT13, diff checker, timer, word count"
+    },
+    "toolNames": {
+      "ai-text-rewriter": {
+        "name": "AI Text Rewriter",
+        "description": "Rewrite and paraphrase your text using AI. Change tone, simplify language, or make text more professional."
+      },
+      "ai-text-summarizer": {
+        "name": "AI Text Summarizer",
+        "description": "Summarize long text, articles, and documents using AI. Get concise summaries with key points."
+      },
+      "ai-grammar-checker": {
+        "name": "AI Grammar Checker",
+        "description": "Check and fix grammar, spelling, and punctuation errors using AI. Get instant corrections for your text."
+      },
+      "pdf-merge": {
+        "name": "PDF Merge",
+        "description": "Merge multiple PDF files into one document online. Rearrange pages and combine PDFs in any order."
+      },
+      "pdf-split": {
+        "name": "PDF Page Splitter",
+        "description": "Extract specific pages from a PDF file online. Select page ranges to split and download."
+      },
+      "pdf-compress": {
+        "name": "PDF Compressor",
+        "description": "Reduce PDF file size online. Remove metadata and optimize structure to compress PDFs."
+      },
+      "image-compress": {
+        "name": "Image Compressor",
+        "description": "Compress and resize images online. Reduce file size while maintaining quality. Supports JPEG, PNG, and WebP."
+      },
+      "image-convert": {
+        "name": "Image Converter",
+        "description": "Convert images between JPEG, PNG, and WebP formats online. Your files stay in your browser."
+      },
+      "image-resize": {
+        "name": "Image Resizer",
+        "description": "Resize images to exact dimensions or by percentage online. Maintain aspect ratio, supports JPEG, PNG, and WebP."
+      },
+      "image-crop": {
+        "name": "Image Cropper",
+        "description": "Crop images with a drag-to-select area online. Select any region and download the cropped result."
+      },
+      "json-formatter": {
+        "name": "JSON Formatter & Validator",
+        "description": "Format, validate, and beautify your JSON data online. Minify or prettify JSON with syntax highlighting."
+      },
+      "base64-encode-decode": {
+        "name": "Base64 Encode/Decode",
+        "description": "Encode text to Base64 or decode Base64 strings online. Supports UTF-8 text and file encoding."
+      },
+      "regex-tester": {
+        "name": "Regex Tester",
+        "description": "Test and debug regular expressions online with real-time matching. Highlight matches and view groups."
+      },
+      "hash-generator": {
+        "name": "Hash Generator",
+        "description": "Generate SHA-1, SHA-256, SHA-384, SHA-512 hashes from text online. Free cryptographic hash generator."
+      },
+      "qr-code-generator": {
+        "name": "QR Code Generator",
+        "description": "Generate QR codes for URLs, text, email, phone numbers, and more. Download as PNG or SVG."
+      },
+      "color-picker": {
+        "name": "Color Picker & Palette Generator",
+        "description": "Pick colors, convert between HEX, RGB, HSL formats, and generate beautiful color palettes."
+      },
+      "lorem-ipsum-generator": {
+        "name": "Lorem Ipsum Generator",
+        "description": "Generate lorem ipsum placeholder text for your designs and mockups. Choose paragraphs, sentences, or words."
+      },
+      "word-counter": {
+        "name": "Word Counter",
+        "description": "Count words, characters, sentences, and paragraphs in your text. Estimate reading time."
+      },
+      "case-converter": {
+        "name": "Case Converter",
+        "description": "Convert text between UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case, and more."
+      },
+      "slug-generator": {
+        "name": "Slug Generator",
+        "description": "Generate clean URL slugs from any text. Remove special characters and create SEO-friendly URLs."
+      },
+      "text-diff": {
+        "name": "Text Diff Checker",
+        "description": "Compare two texts and find differences. Highlight additions, deletions, and changes line by line."
+      },
+      "html-entity-codec": {
+        "name": "HTML Entity Encoder/Decoder",
+        "description": "Encode special characters to HTML entities or decode HTML entities back to text."
+      },
+      "url-encode-decode": {
+        "name": "URL Encode/Decode",
+        "description": "Encode or decode URL strings online. Convert special characters to percent-encoding or decode them."
+      },
+      "jwt-decoder": {
+        "name": "JWT Decoder",
+        "description": "Decode and inspect JSON Web Tokens (JWT) online. View header, payload, and expiration status."
+      },
+      "markdown-preview": {
+        "name": "Markdown Preview",
+        "description": "Write and preview Markdown in real-time. Supports headings, lists, code blocks, and more."
+      },
+      "timestamp-converter": {
+        "name": "Timestamp Converter",
+        "description": "Convert Unix timestamps to human-readable dates and vice versa. Supports seconds and milliseconds."
+      },
+      "css-minifier": {
+        "name": "CSS Minifier & Beautifier",
+        "description": "Minify CSS to reduce file size or beautify minified CSS for readability. See size savings."
+      },
+      "number-base-converter": {
+        "name": "Number Base Converter",
+        "description": "Convert numbers between Binary, Octal, Decimal, and Hexadecimal. Real-time conversion with validation."
+      },
+      "csv-to-json": {
+        "name": "CSV to JSON Converter",
+        "description": "Convert CSV data to JSON format online. Supports custom delimiters, header rows, and quoted fields."
+      },
+      "cron-parser": {
+        "name": "Cron Expression Parser",
+        "description": "Parse and understand cron expressions. See human-readable descriptions and next execution times."
+      },
+      "html-minifier": {
+        "name": "HTML Minifier & Beautifier",
+        "description": "Minify HTML to reduce file size or beautify minified HTML for readability. Remove comments and whitespace."
+      },
+      "js-minifier": {
+        "name": "JavaScript Minifier & Beautifier",
+        "description": "Minify JavaScript to reduce file size or beautify minified JS for readability. Remove comments and whitespace."
+      },
+      "sql-formatter": {
+        "name": "SQL Formatter",
+        "description": "Format and beautify SQL queries online. Indent keywords, align clauses, and make your SQL readable."
+      },
+      "json-to-csv": {
+        "name": "JSON to CSV Converter",
+        "description": "Convert JSON arrays to CSV format online. Supports custom delimiters and download."
+      },
+      "ip-address-info": {
+        "name": "IP Address Info",
+        "description": "View your public IP address, user agent, screen resolution, and browser information."
+      },
+      "password-generator": {
+        "name": "Password Generator",
+        "description": "Generate strong, random passwords with customizable length and character types. Password strength indicator included."
+      },
+      "uuid-generator": {
+        "name": "UUID Generator",
+        "description": "Generate UUID v4 identifiers online. Bulk generation, uppercase/lowercase options, with or without hyphens."
+      },
+      "meta-tag-generator": {
+        "name": "Meta Tag Generator",
+        "description": "Generate HTML meta tags for SEO. Create Open Graph, Twitter Card, and standard meta tags with a live Google preview."
+      },
+      "aspect-ratio-calculator": {
+        "name": "Aspect Ratio Calculator",
+        "description": "Calculate and convert aspect ratios. Lock ratios, use common presets like 16:9 and 4:3, and find matching resolutions."
+      },
+      "emoji-picker": {
+        "name": "Emoji Picker & Search",
+        "description": "Browse, search, and copy emojis by category. Click any emoji to copy it to your clipboard instantly."
+      },
+      "gradient-generator": {
+        "name": "CSS Gradient Generator",
+        "description": "Create beautiful linear and radial CSS gradients with multiple color stops. Preview in real-time and copy the CSS code."
+      },
+      "placeholder-image": {
+        "name": "Placeholder Image Generator",
+        "description": "Generate placeholder images with custom dimensions, colors, and text. Download as PNG or JPEG."
+      },
+      "text-to-binary": {
+        "name": "Text to Binary Converter",
+        "description": "Convert text to binary, hexadecimal, or octal and vice versa. Multiple encoding formats supported."
+      },
+      "rot13-encoder": {
+        "name": "ROT13 Encoder/Decoder",
+        "description": "Encode and decode text using ROT13 Caesar cipher. Supports custom shift values from 1 to 25."
+      },
+      "pomodoro-timer": {
+        "name": "Pomodoro Timer",
+        "description": "Focus timer using the Pomodoro Technique. 25-minute work sessions with 5-minute breaks. Sound notifications and session tracking."
+      },
+      "json-to-yaml": {
+        "name": "JSON to YAML Converter",
+        "description": "Convert JSON to YAML and YAML to JSON online. Bidirectional conversion with proper formatting."
+      },
+      "xml-formatter": {
+        "name": "XML Formatter & Validator",
+        "description": "Format, minify, and validate XML online. Beautify XML with custom indentation and validate tag matching."
+      },
+      "markdown-to-html": {
+        "name": "Markdown to HTML Converter",
+        "description": "Convert Markdown to HTML with a live preview. Supports headings, bold, italic, links, code blocks, and more."
+      },
+      "favicon-generator": {
+        "name": "Favicon Generator",
+        "description": "Upload an image and generate favicons in multiple sizes (16x16 to 512x512). Download individually or as a ZIP."
+      },
+      "svg-to-png": {
+        "name": "SVG to PNG Converter",
+        "description": "Convert SVG to PNG with custom dimensions online. Paste SVG code or upload a file, set width and height."
+      },
+      "text-to-speech": {
+        "name": "Text to Speech",
+        "description": "Convert text to speech using the Web Speech API. Choose from available voices, adjust speed, pitch, and volume."
+      },
+      "character-counter": {
+        "name": "Character Counter",
+        "description": "Count characters, words, sentences, paragraphs, and lines. View reading time, speaking time, and character frequency."
+      },
+      "find-and-replace": {
+        "name": "Find and Replace",
+        "description": "Find and replace text with regex support, case sensitivity, and whole word matching. Highlights all matches in real-time."
+      },
+      "yaml-to-json": {
+        "name": "YAML to JSON Converter",
+        "description": "Parse and convert YAML to JSON online with validation and error highlighting. Supports nested objects and arrays."
+      },
+      "http-status-codes": {
+        "name": "HTTP Status Code Reference",
+        "description": "Searchable reference of all HTTP status codes with descriptions and categories (1xx-5xx). Filter by category or search by code."
+      },
+      "unit-converter": {
+        "name": "Unit Converter",
+        "description": "Convert between units of length, weight, temperature, speed, digital storage, time, and area. Metric and imperial supported."
+      },
+      "invoice-generator": {
+        "name": "Invoice Generator",
+        "description": "Create professional invoices with company details, line items, tax calculation, and totals. Download as PDF."
+      },
+      "morse-code": {
+        "name": "Morse Code Translator",
+        "description": "Convert text to Morse code and Morse code to text. Includes audio playback, reference chart, and bidirectional translation."
+      },
+      "random-text-generator": {
+        "name": "Random Text Generator",
+        "description": "Generate random words, sentences, paragraphs, names, email addresses, and phone numbers for testing and mockups."
+      },
+      "text-repeater": {
+        "name": "Text Repeater",
+        "description": "Repeat text N times with custom separator, prefix, suffix, and numbering options."
+      },
+      "video-to-gif": {
+        "name": "Video to GIF",
+        "description": "Extract animated clips from video files. Configure start time, duration, FPS, and resolution."
+      },
+      "color-palette-generator": {
+        "name": "Color Palette Generator",
+        "description": "Generate harmonious color palettes from a base color. Supports complementary, analogous, triadic, and tetradic harmonies."
+      },
+      "backlink-generator": {
+        "name": "Backlink Generator",
+        "description": "Generate link code in HTML, Markdown, BBCode, Textile, Wiki, and reStructuredText formats."
+      },
+      "json-path-finder": {
+        "name": "JSON Path Finder",
+        "description": "Navigate JSON with an interactive tree view. Click nodes to find their path. Query values by path expression."
+      },
+      "chmod-calculator": {
+        "name": "Chmod Calculator",
+        "description": "Interactive Unix file permissions calculator. Convert between octal (755) and symbolic (rwxr-xr-x) notation."
+      },
+      "markdown-table-generator": {
+        "name": "Markdown Table Generator",
+        "description": "Create Markdown tables with a visual editor. Add rows, columns, set alignment, and copy output."
+      },
+      "regex-library": {
+        "name": "Regex Pattern Library",
+        "description": "Curated library of common regex patterns for emails, URLs, dates, numbers, and more. Test patterns inline."
+      },
+      "image-to-base64": {
+        "name": "Image to Base64",
+        "description": "Convert images to Base64 strings. Output as Data URI, raw Base64, CSS background, or HTML img tag."
+      },
+      "base64-to-image": {
+        "name": "Base64 to Image",
+        "description": "Decode Base64 strings back to images. Auto-detects JPEG, PNG, GIF, WebP, and SVG formats."
+      },
+      "text-truncator": {
+        "name": "Text Truncator",
+        "description": "Truncate text by characters, words, or sentences with customizable ellipsis position and whole-word preservation."
+      }
     }
   },
   "about": {

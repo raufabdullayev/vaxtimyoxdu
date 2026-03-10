@@ -1414,3 +1414,39 @@ Remember: productivity tools are means, not ends. The goal is not to have the mo
 }
 
 export const blogSlugs = Object.keys(blogPosts)
+
+// ---------------------------------------------------------------------------
+// Locale-aware blog posts
+// ---------------------------------------------------------------------------
+import { blogPostsAz } from './blog-posts-az'
+import type { Locale } from '@/i18n/config'
+
+/**
+ * All blog posts organised by locale.
+ * - 'en' is the original set that has been available since launch.
+ * - 'az' translations were added to provide native Azerbaijani content.
+ * - Additional locales (tr, ru) can be added here in the future.
+ *
+ * Locales that do not yet have their own translations fall back to 'en'.
+ */
+export const blogPostsByLocale: Record<string, Record<string, BlogPost>> = {
+  en: blogPosts,
+  az: blogPostsAz,
+}
+
+/**
+ * Return blog posts for a given locale.
+ * Falls back to 'en' when translations are not yet available.
+ */
+export function getBlogPostsByLocale(locale: Locale): Record<string, BlogPost> {
+  return blogPostsByLocale[locale] ?? blogPosts
+}
+
+/**
+ * Return a single blog post by slug for a given locale.
+ * Falls back to 'en' when the locale does not have a translation.
+ */
+export function getBlogPostBySlug(slug: string, locale: Locale): BlogPost | undefined {
+  const posts = getBlogPostsByLocale(locale)
+  return posts[slug]
+}

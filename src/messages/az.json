@@ -51,6 +51,288 @@
       "generatorsDesc": "Sifreler, UUID, QR kodlar, gradientler, emojiler, rengler yaratmaq",
       "text": "Metn Aletleri",
       "textDesc": "Registr cevirmesi, binary, ROT13, ferq yoxlayici, taymer, soz sayaci"
+    },
+    "toolNames": {
+      "ai-text-rewriter": {
+        "name": "AI Metn Yenidenyazma",
+        "description": "AI ile metninizi yeniden yazin ve parafraz edin. Tonalligi deyisin, sadelesdirin ve ya daha pesekar edin."
+      },
+      "ai-text-summarizer": {
+        "name": "AI Metn Xulaseleyici",
+        "description": "Uzun metn, meqale ve senedleri AI ile xulase edin. Esas meqamlari ehate eden qisa xulaseler alin."
+      },
+      "ai-grammar-checker": {
+        "name": "AI Qrammatika Yoxlayici",
+        "description": "AI ile qrammatika, orfoqrafiya ve durgu isaresi xetalarini yoxlayin ve duzeltdirin. Ani duzelisler alin."
+      },
+      "pdf-merge": {
+        "name": "PDF Birlesdirici",
+        "description": "Bir nece PDF faylini onlayn birlesdirin. Sehifeleri yeniden siralayin, istediyniz ardiciciliqla birlesdirin."
+      },
+      "pdf-split": {
+        "name": "PDF Sehife Bolucu",
+        "description": "PDF fayldan mueyyen sehifeleri cixarin. Sehife araligini secin, bolun ve yuyleyin."
+      },
+      "pdf-compress": {
+        "name": "PDF Sixici",
+        "description": "PDF fayl olcusunu onlayn azaldin. Metadatalari silin ve strukturu optimallasdirin."
+      },
+      "image-compress": {
+        "name": "Sekil Sixici",
+        "description": "Sekilleri onlayn sixin ve olcusunu deyisin. Keyfiyyeti qoruyaraq fayl olcusunu azaldin. JPEG, PNG ve WebP destekleyir."
+      },
+      "image-convert": {
+        "name": "Sekil Ceviricisi",
+        "description": "Sekilleri JPEG, PNG ve WebP formatlari arasinda onlayn cevirin. Fayllariniz brauzerinizdede qalir."
+      },
+      "image-resize": {
+        "name": "Sekil Olcu Deyisdirici",
+        "description": "Sekillerin olcusunu deqiq olculere ve ya faizle deyisin. Nisbet qorunmasi, JPEG, PNG ve WebP destekleyir."
+      },
+      "image-crop": {
+        "name": "Sekil Kesici",
+        "description": "Sekilleri surukleme ile secim sahesi vasitesile onlayn kesin. Istediyniz boleni secin ve kesilmis neticeyi endirin."
+      },
+      "json-formatter": {
+        "name": "JSON Formatlayici ve Dogrulayici",
+        "description": "JSON melumatlarinizi onlayn formatlashdirin, dogrulayin ve gozel gosteris verin. Sintaksis vurgulamasi ile kiciltme ve ya gozel gosteris."
+      },
+      "base64-encode-decode": {
+        "name": "Base64 Kodlama/Dekoddlama",
+        "description": "Metni Base64-e kodlayin ve ya Base64 setirlerini onlayn dekod edin. UTF-8 metn ve fayl kodlamasi destekleyir."
+      },
+      "regex-tester": {
+        "name": "Regex Test Aleti",
+        "description": "Requlyer ifadeleri real vaxtda uygunluq ile onlayn test edin ve debug edin. Uygunluqlari vurgulayin, qruplari gorun."
+      },
+      "hash-generator": {
+        "name": "Hash Generatoru",
+        "description": "Metn uzerinden SHA-1, SHA-256, SHA-384, SHA-512 hashleri onlayn yaratmaq. Pulsuz kriptoqrafik hash aleti."
+      },
+      "qr-code-generator": {
+        "name": "QR Kod Generatoru",
+        "description": "URL, metn, email, telefon nomresi ve daha cox ucun QR kodlar yaratmaq. PNG ve ya SVG olaraq endirin."
+      },
+      "color-picker": {
+        "name": "Reng Secici ve Palet Generatoru",
+        "description": "Rengler secin, HEX, RGB, HSL formatlari arasinda cevirin ve gozel reng paletleri yaratmaq."
+      },
+      "lorem-ipsum-generator": {
+        "name": "Lorem Ipsum Generatoru",
+        "description": "Dizayn ve maketler ucun lorem ipsum yer tutucu metn yaratmaq. Paraqraf, cumle ve ya soz secin."
+      },
+      "word-counter": {
+        "name": "Soz Sayaci",
+        "description": "Metninizde sozleri, simvollari, cumleleri ve paraqraflari sayin. Oxuma vaxtini temin edin."
+      },
+      "case-converter": {
+        "name": "Registr Ceviricisi",
+        "description": "Metni BOYUK HERF, kicik herf, Bashliq Herfi, camelCase, snake_case, kebab-case ve daha cox arasinda cevirin."
+      },
+      "slug-generator": {
+        "name": "Slug Generatoru",
+        "description": "Istenielen metn uzerinden temiz URL slug-lari yaratmaq. Xususi simvollari silin, SEO-dost URL-ler yaratmaq."
+      },
+      "text-diff": {
+        "name": "Metn Ferq Yoxlayici",
+        "description": "Iki metni muqayise edin ve ferqleri tapin. Elaveleri, silmeleri ve deyisiklikleri setir-setir vurgulayin."
+      },
+      "html-entity-codec": {
+        "name": "HTML Entity Kodlayici/Dekoderi",
+        "description": "Xususi simvollari HTML entitylerine kodlayin ve ya HTML entitylerini yeniden metne cevirin."
+      },
+      "url-encode-decode": {
+        "name": "URL Kodlama/Dekodlama",
+        "description": "URL setirlerini onlayn kodlayin ve ya dekod edin. Xususi simvollari faiz-kodlamasina cevirin."
+      },
+      "jwt-decoder": {
+        "name": "JWT Dekoderi",
+        "description": "JSON Web Token-leri (JWT) onlayn dekod edin ve yoxlayin. Bashliq, yukleyici ve bitmesi statusunu gorun."
+      },
+      "markdown-preview": {
+        "name": "Markdown Onizleme",
+        "description": "Markdown-i real vaxtda yazin ve onizleyin. Bashliqlar, siyahilar, kod bloklari ve daha coxunu destekleyir."
+      },
+      "timestamp-converter": {
+        "name": "Zaman Damgasi Ceviricisi",
+        "description": "Unix zaman damgalarini oxunaqli tarixlere ve eksine cevirin. Saniye ve millisaniye destekleyir."
+      },
+      "css-minifier": {
+        "name": "CSS Kicildici ve Gozel Gosterici",
+        "description": "CSS-i kicildin ve ya kicildilmis CSS-i oxunaqli edin. Fayl olcusu qenaetini gorun."
+      },
+      "number-base-converter": {
+        "name": "Reqem Esasi Ceviricisi",
+        "description": "Reqemleri Ikili, Sekkizli, Onlu ve Onaltilig arasinda cevirin. Real vaxt cevirmesi ile giris dogrulama."
+      },
+      "csv-to-json": {
+        "name": "CSV-den JSON-a Cevirici",
+        "description": "CSV melumatlarini onlayn JSON formatina cevirin. Xususi ayiricilar, bashliq setirleri ve dirmaqli saheler destekleyir."
+      },
+      "cron-parser": {
+        "name": "Cron Ifade Tehlilcisi",
+        "description": "Cron ifadelerini tehlil edin ve anlayin. Oxunaqli tesviri ve novbeti icra vaxtlarini gorun."
+      },
+      "html-minifier": {
+        "name": "HTML Kicildici ve Gozel Gosterici",
+        "description": "HTML-i kicildin ve ya kicildilmis HTML-i oxunaqli edin. Serhleri ve bosluqlari silin."
+      },
+      "js-minifier": {
+        "name": "JavaScript Kicildici ve Gozel Gosterici",
+        "description": "JavaScript-i kicildin ve ya kicildilmis JS-i oxunaqli edin. Serhleri ve bosluqlari silin."
+      },
+      "sql-formatter": {
+        "name": "SQL Formatlayici",
+        "description": "SQL sorgularini onlayn formatlashdirin ve gozel gosterin. Achr sozleri girintileyin, ifadeleri duzun."
+      },
+      "json-to-csv": {
+        "name": "JSON-dan CSV-ye Cevirici",
+        "description": "JSON massivlerini onlayn CSV formatina cevirin. Xususi ayiricilar destekleyir."
+      },
+      "ip-address-info": {
+        "name": "IP Unvan Melumati",
+        "description": "Ictimai IP unvaninizi, brauzer melumati, ekran olcusu ve istifadeci agentinizi gorun."
+      },
+      "password-generator": {
+        "name": "Sifre Generatoru",
+        "description": "Guclu, tesadufi sifreler yaratmaq. Uzunlug ve simvol novlerini teyin edin. Sifre gucu gostericisi daxildir."
+      },
+      "uuid-generator": {
+        "name": "UUID Generatoru",
+        "description": "UUID v4 identifikatorlari onlayn yaratmaq. Toplu yaratma, boyuk/kicik herf secimi, tiresiz variant."
+      },
+      "meta-tag-generator": {
+        "name": "Meta Teq Generatoru",
+        "description": "SEO ucun HTML meta teqleri yaratmaq. Open Graph, Twitter Card ve standart meta teqleri ile canli Google onizleme."
+      },
+      "aspect-ratio-calculator": {
+        "name": "Nisbet Hesablayici",
+        "description": "En-boy nisbetlerini hesablayin ve cevirin. 16:9, 4:3 kimi populyar nisbetle ve uygun olculeri tapin."
+      },
+      "emoji-picker": {
+        "name": "Emoji Secicisi ve Axtarisi",
+        "description": "Kateqoriya uzre emojilere baxin, axtarin ve kopyalayin. Bir klikleme ile panoya kopyalayin."
+      },
+      "gradient-generator": {
+        "name": "CSS Gradient Generatoru",
+        "description": "Bir nece reng dayanacagi ile gozel xetti ve radial CSS gradientleri yaratmaq. Real vaxt onizleme ve CSS kodu."
+      },
+      "placeholder-image": {
+        "name": "Yer Tutucu Sekil Generatoru",
+        "description": "Xususi olculu, renglu ve metn ile yer tutucu sekiller yaratmaq. PNG ve ya JPEG olaraq endirin."
+      },
+      "text-to-binary": {
+        "name": "Metn-Binary Cevirici",
+        "description": "Metni ikilik, onaltilig ve ya sekkizlik sistemlere cevirin ve eksine. Bir nece kodlama formati destekleyir."
+      },
+      "rot13-encoder": {
+        "name": "ROT13 Kodlayici/Dekoderi",
+        "description": "ROT13 Sezar sifri ile metni kodlayin ve dekod edin. 1-den 25-e qeder xususi surme deyerleri destekleyir."
+      },
+      "pomodoro-timer": {
+        "name": "Pomodoro Taymeri",
+        "description": "Pomodoro Texnikasi ile fokus taymeri. 25 deqiqelik is sessiylari, 5 deqiqelik fasileler. Ses bildirisleri ve sessiya izleme."
+      },
+      "json-to-yaml": {
+        "name": "JSON-dan YAML-a Cevirici",
+        "description": "JSON-u YAML-a ve YAML-i JSON-a onlayn cevirin. Duzgun formatlama ile iki istiqametli cevrilme."
+      },
+      "xml-formatter": {
+        "name": "XML Formatlayici ve Dogrulayici",
+        "description": "XML-i onlayn formatlashdirin, kicildin ve dogrulayin. Xususi girinti ile gozel gosteris, teq uygunlugunu yoxlayin."
+      },
+      "markdown-to-html": {
+        "name": "Markdown-dan HTML-e Cevirici",
+        "description": "Markdown-i canli onizleme ile HTML-e cevirin. Bashliqlar, qalin, kursiv, linkler, kod bloklari ve daha coxunu destekleyir."
+      },
+      "favicon-generator": {
+        "name": "Favicon Generatoru",
+        "description": "Sekil yukleyin ve bir nece olcude (16x16-dan 512x512-ye) faviconlar yaratmaq. Tekil ve ya ZIP olaraq endirin."
+      },
+      "svg-to-png": {
+        "name": "SVG-den PNG-ye Cevirici",
+        "description": "SVG-ni xususi olculerle onlayn PNG-ye cevirin. SVG kodu yapisdirin ve ya fayl yukleyin, olculeri teyin edin."
+      },
+      "text-to-speech": {
+        "name": "Metnden Nitqe",
+        "description": "Web Speech API ile metni nitqe cevirin. Movcud seslerden secin, suret, tonalliq ve ses heccmini tenzimlein."
+      },
+      "character-counter": {
+        "name": "Simvol Sayaci",
+        "description": "Simvol, soz, cumle, paraqraf ve setir sayin. Oxuma ve danisma vaxti, simvol tezliyi ve daha coxunu gorun."
+      },
+      "find-and-replace": {
+        "name": "Tap ve Evez Et",
+        "description": "Regex destekli, registre heassas ve tam soz uygunlugu ile metn tapin ve evez edin. Butun uygunluqlari real vaxtda vurgulayin."
+      },
+      "yaml-to-json": {
+        "name": "YAML-dan JSON-a Cevirici",
+        "description": "YAML-i onlayn JSON-a cevirin ve dogrulayin. Ic-ice obyektler, massivler, serhler ve daha coxunu destekleyir."
+      },
+      "http-status-codes": {
+        "name": "HTTP Status Kod Sorgu Kitabi",
+        "description": "Butun HTTP status kodlarinin axtaris mumkun olan sorgu kitabi. Kateqoriyaya (1xx-5xx) gore filtreleme, kod ve ada gore axtaris."
+      },
+      "unit-converter": {
+        "name": "Vahid Ceviricisi",
+        "description": "Uzunlug, ceki, temperatur, suret, raqemsal yadadas, vaxt ve sahje vahidleri arasinda cevirin. Metrik ve imperial vahidleri destekleyir."
+      },
+      "invoice-generator": {
+        "name": "Faktura Generatoru",
+        "description": "Sirket melumatlari, mehsul setirleri, vergi hesablamasi ile pesekar fakturalar yaratmaq. PDF olaraq endirin."
+      },
+      "morse-code": {
+        "name": "Morze Kodu Tercumecisi",
+        "description": "Metni Morze koduna ve Morze kodunu metne cevirin. Audio playback, istinad cedveli ve iki istiqametli tercume."
+      },
+      "random-text-generator": {
+        "name": "Tesadufi Metn Generatoru",
+        "description": "Test ve maket meqsedleri ucun tesadufi sozler, cumleler, paraqraflar, adlar, emailleri ve telefonlar yaratmaq."
+      },
+      "text-repeater": {
+        "name": "Metn Tekrarlayici",
+        "description": "Metni N defe xususi ayirici, onsozu, sonsozu ve nomreleme secimi ile tekrarlayin."
+      },
+      "video-to-gif": {
+        "name": "Videodan GIF",
+        "description": "Video fayllarindan animasiyali klip cixarin. Baslama vaxti, muddet, FPS ve olcunu teyin edin."
+      },
+      "color-palette-generator": {
+        "name": "Reng Paleti Generatoru",
+        "description": "Esas rengden harmonik reng paletleri yaradir. Tamamlayici, analoq, triadik, tetradik harmoniyalar destekleyir."
+      },
+      "backlink-generator": {
+        "name": "Geri Kecidin Generatoru",
+        "description": "HTML, Markdown, BBCode, Textile, Wiki ve reStructuredText formatlarinda kecidle yaratmaq. Rel atributlarini ve hedefe konfiqurasiya edin."
+      },
+      "json-path-finder": {
+        "name": "JSON Yol Tapici",
+        "description": "Interaktiv agac gorunusu ile JSON strukturunda gez. Duymeler uzerine klikleyin, yollari tapin."
+      },
+      "chmod-calculator": {
+        "name": "Chmod Hesablayici",
+        "description": "Unix fayl icazeleri ucun interaktiv hesablayici. Sekizlik (755) ve simvolik (rwxr-xr-x) arasinda cevirin."
+      },
+      "markdown-table-generator": {
+        "name": "Markdown Cedvel Generatoru",
+        "description": "Vizual redaktor ile Markdown cedvelleri yaradir. Setir, sutun elave edin, hizalama teyin edin."
+      },
+      "regex-library": {
+        "name": "Regex Nemuner Kitabxanasi",
+        "description": "Email, URL, tarix, reqem ve s. ucun kuratorluq edilmis regex nemuneleri. Nemuneleri test edin."
+      },
+      "image-to-base64": {
+        "name": "Sekilden Base64-e",
+        "description": "Sekilleri Base64 kodlu metn seklinde cevirin. Data URI, CSS fon ve ya HTML img tegi formatinda cixis."
+      },
+      "base64-to-image": {
+        "name": "Base64-den Sekile",
+        "description": "Base64 metn setirlerini yeniden sekillere cevirin. JPEG, PNG, GIF, WebP, SVG avtomatik taninir."
+      },
+      "text-truncator": {
+        "name": "Metn Kisaldici",
+        "description": "Metni herf, soz ve ya cumle sayi ile kisaldin. Elips movqeyini ve butov soz qorunmasini secin."
+      }
     }
   },
   "about": {

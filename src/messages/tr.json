@@ -51,6 +51,288 @@
       "generatorsDesc": "Sifreler, UUID, QR kodlar, gradyanlar, emojiler ve renkler olusturun",
       "text": "Metin Araclari",
       "textDesc": "Buyuk/kucuk harf cevirici, binary, ROT13, fark kontrolu, zamanlayici, kelime sayaci"
+    },
+    "toolNames": {
+      "ai-text-rewriter": {
+        "name": "AI Metin Yeniden Yazici",
+        "description": "AI ile metninizi yeniden yazin ve baska sozcuklerle ifade edin. Tonu degistirin, sadlestirin veya daha profesyonel hale getirin."
+      },
+      "ai-text-summarizer": {
+        "name": "AI Metin Ozetleyici",
+        "description": "Uzun metinleri, makaleleri ve belgeleri AI ile ozetleyin. Onemli noktalari iceren kisa ozetler alin."
+      },
+      "ai-grammar-checker": {
+        "name": "AI Gramer Denetleyicisi",
+        "description": "AI ile gramer, yazim ve noktalama hatalarini kontrol edin ve duzelttin. Aninda duzeltmeler alin."
+      },
+      "pdf-merge": {
+        "name": "PDF Birlestirici",
+        "description": "Birden fazla PDF dosyasini cevrimici tek bir belgede birlestirin. Sayfalari yeniden siralayin ve istediginiz sirada birlestirin."
+      },
+      "pdf-split": {
+        "name": "PDF Sayfa Bolucu",
+        "description": "PDF dosyasindan belirli sayfalari cevrimici cikarin. Sayfa araliklarini secin, bolun ve indirin."
+      },
+      "pdf-compress": {
+        "name": "PDF Sikistirici",
+        "description": "PDF dosya boyutunu cevrimici azaltin. Meta verileri kaldirin ve yapiy optimize ederek sikistirin."
+      },
+      "image-compress": {
+        "name": "Goruntu Sikistirici",
+        "description": "Goruntuleri cevrimici sikistirin ve yeniden boyutlandirin. Kaliteyi koruyarak dosya boyutunu azaltin. JPEG, PNG ve WebP destekler."
+      },
+      "image-convert": {
+        "name": "Goruntu Donusturucu",
+        "description": "Goruntuleri JPEG, PNG ve WebP formatlari arasinda cevrimici donusturun. Dosyalariniz tarayicinizda kalir."
+      },
+      "image-resize": {
+        "name": "Goruntu Boyutlandirici",
+        "description": "Goruntuleri tam boyutlara veya yuzdeyle cevrimici yeniden boyutlandirin. En-boy oranini koruyun. JPEG, PNG ve WebP destekler."
+      },
+      "image-crop": {
+        "name": "Goruntu Kirpici",
+        "description": "Goruntuleri surukle-sec alaniyla cevrimici kirpin. Herhangi bir bolgeyi secin ve kirpilmis sonucu indirin."
+      },
+      "json-formatter": {
+        "name": "JSON Bimlendirici ve Dogrulayici",
+        "description": "JSON verilerinizi cevrimici bimlendirin, dogrulayin ve guzelce gosterin. Soz dizimi vurgulama ile kucultme veya guzel gosterim."
+      },
+      "base64-encode-decode": {
+        "name": "Base64 Kodlama/Cozme",
+        "description": "Metni Base64 olarak kodlayin veya Base64 dizelerini cevrimici cozun. UTF-8 metin ve dosya kodlamasini destekler."
+      },
+      "regex-tester": {
+        "name": "Regex Test Araci",
+        "description": "Duzgun ifadeleri gercek zamanli eslestirme ile cevrimici test edin ve hata ayiklayin. Eslesmeleri vurgulayin ve gruplari gorun."
+      },
+      "hash-generator": {
+        "name": "Hash Ureteci",
+        "description": "Metinden SHA-1, SHA-256, SHA-384, SHA-512 hashleri cevrimici uretin. Ucretsiz kriptografik hash araci."
+      },
+      "qr-code-generator": {
+        "name": "QR Kod Ureteci",
+        "description": "URL, metin, e-posta, telefon numarasi ve daha fazlasi icin QR kodlar uretin. PNG veya SVG olarak indirin."
+      },
+      "color-picker": {
+        "name": "Renk Secici ve Palet Ureteci",
+        "description": "Renkler secin, HEX, RGB, HSL formatlari arasinda donusturun ve guzel renk paletleri olusturun."
+      },
+      "lorem-ipsum-generator": {
+        "name": "Lorem Ipsum Ureteci",
+        "description": "Tasarimlariniz ve maketleriniz icin lorem ipsum yer tutucu metin olusturun. Paragraf, cumle veya kelime secin."
+      },
+      "word-counter": {
+        "name": "Kelime Sayaci",
+        "description": "Metninizde kelimeleri, karakterleri, cumleleri ve paragraflari sayin. Okuma suresini tahmin edin."
+      },
+      "case-converter": {
+        "name": "Harf Buyuklugu Ceviricisi",
+        "description": "Metni BUYUK HARF, kucuk harf, Baslik Harfi, camelCase, snake_case, kebab-case ve daha fazlasi arasinda donusturun."
+      },
+      "slug-generator": {
+        "name": "Slug Ureteci",
+        "description": "Herhangi bir metinden temiz URL slug-lari uretin. Ozel karakterleri kaldirin ve SEO dostu URL-ler olusturun."
+      },
+      "text-diff": {
+        "name": "Metin Fark Kontrolu",
+        "description": "Iki metni karsilastirin ve farklari bulun. Eklemeleri, silmeleri ve degisiklikleri satir satir vurgulayin."
+      },
+      "html-entity-codec": {
+        "name": "HTML Entity Kodlayici/Cozucu",
+        "description": "Ozel karakterleri HTML entity-lerine kodlayin veya HTML entity-lerini tekrar metne donusturun."
+      },
+      "url-encode-decode": {
+        "name": "URL Kodlama/Cozme",
+        "description": "URL dizelerini cevrimici kodlayin veya cozun. Ozel karakterleri yuzde-kodlamasina donusturun veya cozun."
+      },
+      "jwt-decoder": {
+        "name": "JWT Cozucu",
+        "description": "JSON Web Token-leri (JWT) cevrimici cozun ve inceleyin. Baslik, yuk ve sona erme durumunu gorun."
+      },
+      "markdown-preview": {
+        "name": "Markdown Onizleme",
+        "description": "Markdown-i gercek zamanli yazin ve onizleyin. Basliklar, listeler, kod bloklari ve daha fazlasini destekler."
+      },
+      "timestamp-converter": {
+        "name": "Zaman Damgasi Ceviricisi",
+        "description": "Unix zaman damgalarini okunabilir tarihlere ve tam tersine donusturun. Saniye ve milisaniye destekler."
+      },
+      "css-minifier": {
+        "name": "CSS Kucultucusu ve Guzellestiricisi",
+        "description": "CSS-i dosya boyutunu azaltmak icin kuculutun veya kucultulmus CSS-i okunabilir hale getirin. Boyut tasarrufunu gorun."
+      },
+      "number-base-converter": {
+        "name": "Sayi Tabani Ceviricisi",
+        "description": "Sayilari Ikilik, Sekizlik, Onluk ve On Altilik arasinda donusturun. Gercek zamanli donusum ve dogrulama."
+      },
+      "csv-to-json": {
+        "name": "CSV-den JSON-a Cevirici",
+        "description": "CSV verilerini cevrimici JSON formatina donusturun. Ozel ayiricilar, baslik satirlari ve tirnak icindeki alanlari destekler."
+      },
+      "cron-parser": {
+        "name": "Cron Ifade Cozumleyicisi",
+        "description": "Cron ifadelerini cozumleyin ve anlayin. Okunabilir aciklama ve sonraki calisma zamanlarini gorun."
+      },
+      "html-minifier": {
+        "name": "HTML Kucultucusu ve Guzellestiricisi",
+        "description": "HTML-i dosya boyutunu azaltmak icin kuculutun veya kucultulmus HTML-i okunabilir hale getirin. Yorumlari ve bosluklari kaldirin."
+      },
+      "js-minifier": {
+        "name": "JavaScript Kucultucusu ve Guzellestiricisi",
+        "description": "JavaScript-i dosya boyutunu azaltmak icin kuculutun veya kucultulmus JS-i okunabilir hale getirin. Yorumlari ve bosluklari kaldirin."
+      },
+      "sql-formatter": {
+        "name": "SQL Bimlendirici",
+        "description": "SQL sorgularini cevrimici bimlendir ve guzellecidir. Anahtar kelimeleri girintileyin ve cumleleri hizalayin."
+      },
+      "json-to-csv": {
+        "name": "JSON-dan CSV-ye Cevirici",
+        "description": "JSON dizilerini cevrimici CSV formatina donusturun. Ozel ayiricilar ve indirme destekler."
+      },
+      "ip-address-info": {
+        "name": "IP Adres Bilgisi",
+        "description": "Genel IP adresinizi, kullanici ajaninizi, ekran cozunurlugunu ve tarayici bilgilerinizi gorun."
+      },
+      "password-generator": {
+        "name": "Sifre Ureteci",
+        "description": "Ozellestirilebilir uzunluk ve karakter turleriyle guclu, rastgele sifreler uretin. Sifre gucu gostergesi dahildir."
+      },
+      "uuid-generator": {
+        "name": "UUID Ureteci",
+        "description": "UUID v4 tanimlayicilari cevrimici uretin. Toplu uretim, buyuk/kucuk harf secenekleri, tireli veya tiresiz."
+      },
+      "meta-tag-generator": {
+        "name": "Meta Etiket Ureteci",
+        "description": "SEO icin HTML meta etiketleri uretin. Open Graph, Twitter Card ve standart meta etiketleri ile canli Google onizlemesi."
+      },
+      "aspect-ratio-calculator": {
+        "name": "En-Boy Orani Hesaplayicisi",
+        "description": "En-boy oranlarini hesaplayin ve donusturun. 16:9, 4:3 gibi yaygin on ayarlari kullanin ve uygun cozunurlukleri bulun."
+      },
+      "emoji-picker": {
+        "name": "Emoji Secici ve Arama",
+        "description": "Emojilere kategoriye gore goz atin, arayin ve kopyalayin. Bir tikla panoya kopyalayin."
+      },
+      "gradient-generator": {
+        "name": "CSS Gradyan Ureteci",
+        "description": "Birden fazla renk duragiyla guzel dogrusal ve radyal CSS gradyanlari olusturun. Gercek zamanli onizleme ve CSS kodunu kopyalayin."
+      },
+      "placeholder-image": {
+        "name": "Yer Tutucu Goruntu Ureteci",
+        "description": "Ozel boyut, renk ve metin ile yer tutucu goruntuler olusturun. PNG veya JPEG olarak indirin."
+      },
+      "text-to-binary": {
+        "name": "Metin-Binary Cevirici",
+        "description": "Metni ikilik, on altilik veya sekizlik sisteme ve tam tersine donusturun. Birden fazla kodlama formati destekler."
+      },
+      "rot13-encoder": {
+        "name": "ROT13 Kodlayici/Cozucu",
+        "description": "ROT13 Sezar sifresi ile metni kodlayin ve cozun. 1 ile 25 arasinda ozel kaydirma degerleri destekler."
+      },
+      "pomodoro-timer": {
+        "name": "Pomodoro Zamanlayicisi",
+        "description": "Pomodoro Teknigi ile odaklanma zamanlayicisi. 25 dakika calisma, 5 dakika mola. Ses bildirimleri ve oturum takibi."
+      },
+      "json-to-yaml": {
+        "name": "JSON-dan YAML-a Cevirici",
+        "description": "JSON-u YAML-a ve YAML-i JSON-a cevrimici donusturun. Duzgun bimlendirme ile cift yonlu donusum."
+      },
+      "xml-formatter": {
+        "name": "XML Bimlendirici ve Dogrulayici",
+        "description": "XML-i cevrimici bimlendir, kuculutun ve dorulayin. Ozel girintileme ile guzelestirin ve etiket eslemesini dogrulayin."
+      },
+      "markdown-to-html": {
+        "name": "Markdown-dan HTML-e Cevirici",
+        "description": "Markdown-i canli onizleme ile HTML-e donusturun. Basliklar, kalin, italik, baglantilar, kod bloklari ve daha fazlasini destekler."
+      },
+      "favicon-generator": {
+        "name": "Favicon Ureteci",
+        "description": "Goruntu yukleyin ve birden fazla boyutta (16x16-dan 512x512-ye) faviconlar uretin. Tek tek veya ZIP olarak indirin."
+      },
+      "svg-to-png": {
+        "name": "SVG-den PNG-ye Cevirici",
+        "description": "SVG-yi ozel boyutlarla cevrimici PNG-ye donusturun. SVG kodu yapistirin veya dosya yukleyin, genislik ve yukseklik ayarlayin."
+      },
+      "text-to-speech": {
+        "name": "Metinden Sese",
+        "description": "Web Speech API ile metni sese donusturun. Mevcut seslerden secin, hiz, ton ve ses seviyesini ayarlayin."
+      },
+      "character-counter": {
+        "name": "Karakter Sayaci",
+        "description": "Karakter, kelime, cumle, paragraf ve satir sayin. Okuma suresi, konusma suresi ve karakter sikligi gorun."
+      },
+      "find-and-replace": {
+        "name": "Bul ve Degistir",
+        "description": "Regex destegi, buyuk/kucuk harf duyarliligi ve tam kelime eslemesi ile metin bulun ve degistirin. Tum eslemeleri gercek zamanli vurgulayin."
+      },
+      "yaml-to-json": {
+        "name": "YAML-dan JSON-a Cevirici",
+        "description": "YAML-i cevrimici JSON-a donusturun ve dogrulayin. Ic ice nesneler, diziler, yorumlar ve daha fazlasini destekler."
+      },
+      "http-status-codes": {
+        "name": "HTTP Durum Kodu Referansi",
+        "description": "Tum HTTP durum kodlarinin aranabilir referansi. Kategoriye (1xx-5xx) gore filtreleme, kod ve ada gore arama."
+      },
+      "unit-converter": {
+        "name": "Birim Ceviricisi",
+        "description": "Uzunluk, agirlik, sicaklik, hiz, dijital depolama, zaman ve alan birimleri arasinda donusturun. Metrik ve imperial destekler."
+      },
+      "invoice-generator": {
+        "name": "Fatura Ureteci",
+        "description": "Sirket bilgileri, kalem detaylari, vergi hesaplamasi ile profesyonel faturalar olusturun. PDF olarak indirin."
+      },
+      "morse-code": {
+        "name": "Mors Kodu Cevirici",
+        "description": "Metni Mors koduna ve Mors kodunu metne donusturun. Sesli oynatma, referans tablosu ve cift yonlu ceviri."
+      },
+      "random-text-generator": {
+        "name": "Rastgele Metin Ureteci",
+        "description": "Test ve maket amaclari icin rastgele kelimeler, cumleler, paragraflar, isimler, e-postalar ve telefonlar uretin."
+      },
+      "text-repeater": {
+        "name": "Metin Tekrarlayici",
+        "description": "Metni N kez ozel ayirici, onek, sonek ve numaralandirma secenekleriyle tekrarlayin."
+      },
+      "video-to-gif": {
+        "name": "Videodan GIF",
+        "description": "Video dosyalarindan animasyonlu klipler cikarin. Baslangic zamani, sure, FPS ve cozunurlugu ayarlayin."
+      },
+      "color-palette-generator": {
+        "name": "Renk Paleti Olusturucu",
+        "description": "Temel bir renkten uyumlu renk paletleri olusturun. Tamamlayici, analog, uclu ve dortlu uyumlar desteklenir."
+      },
+      "backlink-generator": {
+        "name": "Geri Baglanti Olusturucu",
+        "description": "HTML, Markdown, BBCode, Textile, Wiki ve reStructuredText formatlarinda baglanti kodu olusturun."
+      },
+      "json-path-finder": {
+        "name": "JSON Yol Bulucu",
+        "description": "Interaktif agac gorunumuyle JSON yapisinda gezinin. Dugumlere tiklayin, yollari bulun."
+      },
+      "chmod-calculator": {
+        "name": "Chmod Hesaplayici",
+        "description": "Interaktif Unix dosya izinleri hesaplayicisi. Sekizli (755) ve sembolik (rwxr-xr-x) arasinda donusturun."
+      },
+      "markdown-table-generator": {
+        "name": "Markdown Tablo Olusturucu",
+        "description": "Gorsel duzenleyici ile Markdown tablolari olusturun. Satir, sutun ekleyin ve hizalamayi ayarlayin."
+      },
+      "regex-library": {
+        "name": "Regex Kalip Kutuphanesi",
+        "description": "E-posta, URL, tarih, sayi ve daha fazlasi icin derlenmis regex kaliplari kutuphanesi. Kaliplari test edin."
+      },
+      "image-to-base64": {
+        "name": "Goruntuden Base64'e",
+        "description": "Goruntuleri Base64 kodlu metne donusturun. Data URI, CSS arka plan veya HTML img etiketi ciktisi."
+      },
+      "base64-to-image": {
+        "name": "Base64'ten Goruntuye",
+        "description": "Base64 metinlerini tekrar goruntulere donusturun. JPEG, PNG, GIF, WebP, SVG otomatik algilanir."
+      },
+      "text-truncator": {
+        "name": "Metin Kisaltici",
+        "description": "Metni karakter, kelime veya cumle sayisina gore kisaltin. Uc nokta konumunu ve tam kelime korumasini secin."
+      }
     }
   },
   "about": {

@@ -51,6 +51,288 @@
       "generatorsDesc": "Generaciya paroley, UUID, QR-kodov, gradientov, emodzi i cvetov",
       "text": "Tekstovye instrumenty",
       "textDesc": "Konverter registra, binarnyy, ROT13, proverka raznic, taymer, schyotchik slov"
+    },
+    "toolNames": {
+      "ai-text-rewriter": {
+        "name": "AI Perepisyvatel teksta",
+        "description": "Perepishite i perefraziruyte tekst s pomoshchyu AI. Izmenite ton, uprostite yazyk ili sdelayte tekst bolee professionalnym."
+      },
+      "ai-text-summarizer": {
+        "name": "AI Summarizator teksta",
+        "description": "Rezumirujte dlinnye teksty, stati i dokumenty s pomoshchyu AI. Poluchite kratkie rezyume s klyuchevymi momentami."
+      },
+      "ai-grammar-checker": {
+        "name": "AI Proverka grammatiki",
+        "description": "Proverte i ispravte grammaticheskie, orfograficheskie i punktuacionnye oshibki s pomoshchyu AI. Poluchite mgnovennye ispravleniya."
+      },
+      "pdf-merge": {
+        "name": "Obyedinenie PDF",
+        "description": "Obyedinte neskolko PDF-faylov v odin dokument onlayn. Pereraspredelite stranicy i obyedinyayte v lyubom poryadke."
+      },
+      "pdf-split": {
+        "name": "Razdelitel stranic PDF",
+        "description": "Izvlekite opredelyonnye stranicy iz PDF-fayla onlayn. Vyberite diapazon stranic, razdelite i skahayte."
+      },
+      "pdf-compress": {
+        "name": "Szhatie PDF",
+        "description": "Umenshite razmer PDF-fayla onlayn. Udalite metadannye i optimiziruyte strukturu dlya szhatiya."
+      },
+      "image-compress": {
+        "name": "Szhatie izobrazheniy",
+        "description": "Szhimayte i izmenyayte razmer izobrazheniy onlayn. Umenshite razmer fayla sokhranaya kachestvo. Podderzhka JPEG, PNG i WebP."
+      },
+      "image-convert": {
+        "name": "Konverter izobrazheniy",
+        "description": "Konvertiruyte izobrazheniya mezhdu formatami JPEG, PNG i WebP onlayn. Fayly ostayutsya v vashem brauzere."
+      },
+      "image-resize": {
+        "name": "Izmenenie razmera izobrazheniy",
+        "description": "Izmenite razmer izobrazheniy do tochnykh razmerov ili v procentakh onlayn. Sokhranenie proportsiy. Podderzhka JPEG, PNG i WebP."
+      },
+      "image-crop": {
+        "name": "Obrezka izobrazheniy",
+        "description": "Obrezayte izobrazheniya s pomoshchyu vydeleniya oblasti onlayn. Vyberite lyubuyu oblast i skahayte obrezannyy rezultat."
+      },
+      "json-formatter": {
+        "name": "JSON Formatirovaniye i Validaciya",
+        "description": "Formatirujte, validirujte i ukraste vashi JSON dannye onlayn. Minifikaciya ili formatirovaniye s podsvetkoy sintaksisa."
+      },
+      "base64-encode-decode": {
+        "name": "Base64 Kodirovanie/Dekodirovanie",
+        "description": "Kodirujte tekst v Base64 ili dekodirujte stroki Base64 onlayn. Podderzhka UTF-8 teksta i faylov."
+      },
+      "regex-tester": {
+        "name": "Tester regulyarnykh vyrazheniy",
+        "description": "Testirujte i otslezhivayte regulyarnye vyrazheniya onlayn v realnom vremeni. Podsvechivajte sovpadeniya i prosmatrivayte gruppy."
+      },
+      "hash-generator": {
+        "name": "Generator kheshey",
+        "description": "Generirujte kheshi SHA-1, SHA-256, SHA-384, SHA-512 iz teksta onlayn. Besplatnyy kriptograficheskiy khesh-instrument."
+      },
+      "qr-code-generator": {
+        "name": "Generator QR-kodov",
+        "description": "Generirujte QR-kody dlya URL, teksta, email, nomerov telefonov i prochego. Skahayte v formate PNG ili SVG."
+      },
+      "color-picker": {
+        "name": "Vybor cveta i Generator palitry",
+        "description": "Vybirayte cveta, konvertiruyte mezhdu formatami HEX, RGB, HSL i sozdavayte krasivye cvetnye palitry."
+      },
+      "lorem-ipsum-generator": {
+        "name": "Generator Lorem Ipsum",
+        "description": "Generirujte tekst-zapolnitel lorem ipsum dlya dizayna i maketov. Vybirayte abzacy, predlozheniya ili slova."
+      },
+      "word-counter": {
+        "name": "Schyotchik slov",
+        "description": "Podschayte slova, simvoly, predlozheniya i abzacy v vashem tekste. Ocenka vremeni chteniya."
+      },
+      "case-converter": {
+        "name": "Konverter registra",
+        "description": "Konvertiruyte tekst mezhdu VERKHNIM, nizhnim, Nachalnye Bukvy, camelCase, snake_case, kebab-case i drugimi registrami."
+      },
+      "slug-generator": {
+        "name": "Generator slug-ov",
+        "description": "Generirujte chistye URL slug-i iz lyubogo teksta. Udalyayte spetsialnye simvoly i sozdavayte SEO-druzhestvennyye URL."
+      },
+      "text-diff": {
+        "name": "Proverka raznic teksta",
+        "description": "Sravnite dva teksta i naydite otlichiya. Podsvechivajte dobavleniya, udaleniya i izmeneniya postrochno."
+      },
+      "html-entity-codec": {
+        "name": "HTML Entity Kodirovshchik/Dekoder",
+        "description": "Kodirujte spetsialnye simvoly v HTML entity ili dekodirujte HTML entity obratno v tekst."
+      },
+      "url-encode-decode": {
+        "name": "URL Kodirovanie/Dekodirovanie",
+        "description": "Kodirujte ili dekodirujte URL stroki onlayn. Konvertiruyte spetsialnye simvoly v procentnoe kodirovanie ili obratno."
+      },
+      "jwt-decoder": {
+        "name": "JWT Dekoder",
+        "description": "Dekodirujte i issleduyte JSON Web Token (JWT) onlayn. Prosmatrivayte zagolovok, poleznuyu nagruzku i status isteicheniya sroka."
+      },
+      "markdown-preview": {
+        "name": "Predprosmotr Markdown",
+        "description": "Pishite i prosmatrivayte Markdown v realnom vremeni. Podderzhka zagolovkov, spiskov, blokov koda i prochego."
+      },
+      "timestamp-converter": {
+        "name": "Konverter vremennych metok",
+        "description": "Konvertiruyte vremennyye metki Unix v chitaemye daty i naoborot. Podderzhka sekund i millisekund."
+      },
+      "css-minifier": {
+        "name": "CSS Minifikator i Formatirovalshchik",
+        "description": "Minifitsiruyte CSS dlya umenesheniya razmera fayla ili otformatirujte minificirovannyy CSS dlya chitaemosti. Prosmatrivayte ekonomiyu razmera."
+      },
+      "number-base-converter": {
+        "name": "Konverter sistem schisleniya",
+        "description": "Konvertiruyte chisla mezhdu Dvoichnoy, Vosmerichhnoy, Desyatichnoy i Shestnadcaterichhnoy sistemami. Konvertaciya v realnom vremeni s validaciey."
+      },
+      "csv-to-json": {
+        "name": "Konverter CSV v JSON",
+        "description": "Konvertiruyte dannye CSV v format JSON onlayn. Podderzhka polzovatelskikh razdeliteley, strok zagolovkov i poley v kavychkakh."
+      },
+      "cron-parser": {
+        "name": "Analizator Cron vyrazheniy",
+        "description": "Analizirujte i ponimayte cron vyrazheniya. Prosmatrivayte chitaemoye opisaniye i vremya sleduyushchego zapuska."
+      },
+      "html-minifier": {
+        "name": "HTML Minifikator i Formatirovalshchik",
+        "description": "Minifitsiruyte HTML dlya umenesheniya razmera fayla ili otformatirujte minificirovannyy HTML dlya chitaemosti. Udalite kommentarii i probely."
+      },
+      "js-minifier": {
+        "name": "JavaScript Minifikator i Formatirovalshchik",
+        "description": "Minifitsiruyte JavaScript dlya umenesheniya razmera fayla ili otformatirujte minificirovannyy JS dlya chitaemosti. Udalite kommentarii i probely."
+      },
+      "sql-formatter": {
+        "name": "SQL Formatirovshchik",
+        "description": "Formatirujte i ukraste SQL zaprosy onlayn. Vyravnivayte klyuchevye slova i strukturirujte vyrazheniya."
+      },
+      "json-to-csv": {
+        "name": "Konverter JSON v CSV",
+        "description": "Konvertiruyte massivy JSON v format CSV onlayn. Podderzhka polzovatelskikh razdeliteley i skachivaniya."
+      },
+      "ip-address-info": {
+        "name": "Informaciya ob IP adrese",
+        "description": "Prosmotrite vash publichnyy IP adres, user agent, razreshenie ekrana i informaciyu o brauzere."
+      },
+      "password-generator": {
+        "name": "Generator paroley",
+        "description": "Generirujte nadyozhnye sluchajnye paroli s nastroivaemoy dlinoy i tipami simvolov. Indikator nadezhnosti parolya vklyuchyon."
+      },
+      "uuid-generator": {
+        "name": "Generator UUID",
+        "description": "Generirujte identifikatory UUID v4 onlayn. Massovaya generaciya, vybor registra, s defisom ili bez."
+      },
+      "meta-tag-generator": {
+        "name": "Generator meta-tegov",
+        "description": "Generirujte HTML meta-tegi dlya SEO. Sozdavayte Open Graph, Twitter Card i standrartnye meta-tegi s predprosmatrom Google."
+      },
+      "aspect-ratio-calculator": {
+        "name": "Kalkulyator sootnosheniya storon",
+        "description": "Vychislyayte i konvertiruyte sootnosheniya storon. Ispolzuyte populyarnye presety 16:9, 4:3 i nahodite sootvetstvuyushchie razresheniya."
+      },
+      "emoji-picker": {
+        "name": "Vybor emodzi i Poisk",
+        "description": "Prosmatrivayte, ishchite i kopiruyte emodzi po kategoriyam. Odnim klikom kopiruyte v bufer obmena."
+      },
+      "gradient-generator": {
+        "name": "Generator CSS gradientov",
+        "description": "Sozdavayte krasivye lineynye i radialnye CSS gradienty s neskolkimi cvetovymi ostanovkami. Predprosmotr v realnom vremeni i kopirovanie CSS koda."
+      },
+      "placeholder-image": {
+        "name": "Generator izobrazheniy-zapolniteley",
+        "description": "Generirujte izobrazheniya-zapolniteli s polzovatelskimi razmerami, cvetami i tekstom. Skahayte v formate PNG ili JPEG."
+      },
+      "text-to-binary": {
+        "name": "Konverter teksta v dvoichniy kod",
+        "description": "Konvertiruyte tekst v dvoichniy, shestnadcaterichnyy ili vosmerichnyy format i obratno. Podderzhka neskolkikh formatov kodirovaniya."
+      },
+      "rot13-encoder": {
+        "name": "ROT13 Kodirovshchik/Dekoder",
+        "description": "Kodirujte i dekodirujte tekst s pomoshchyu shifra Cezarya ROT13. Podderzhka polzovatelskikh znacheniy sdviga ot 1 do 25."
+      },
+      "pomodoro-timer": {
+        "name": "Taymer Pomodoro",
+        "description": "Taymer fokusirovki po tekhnike Pomodoro. 25-minutnye rabochiye sessii s 5-minutnymi pererivami. Zvukovye uvedomleniya i otslezhivanie sessiy."
+      },
+      "json-to-yaml": {
+        "name": "Konverter JSON v YAML",
+        "description": "Konvertiruyte JSON v YAML i YAML v JSON onlayn. Dvunapravlennaya konvertaciya s pravilnym formatirovaniem."
+      },
+      "xml-formatter": {
+        "name": "XML Formatirovshchik i Validator",
+        "description": "Formatirujte, minifitsiruyte i validirujte XML onlayn. Formatiruyte s polzovatelskim otstupom i proveryayte sootvetstvie tegov."
+      },
+      "markdown-to-html": {
+        "name": "Konverter Markdown v HTML",
+        "description": "Konvertiruyte Markdown v HTML s predprosmatrom v realnom vremeni. Podderzhka zagolovkov, zhirnogo, kursiva, ssylok i blokov koda."
+      },
+      "favicon-generator": {
+        "name": "Generator favicon",
+        "description": "Zagruzite izobrazhenie i sgenerirujte favicon v raznykh razmerakh (ot 16x16 do 512x512). Skahayte po otdelnosti ili kak ZIP."
+      },
+      "svg-to-png": {
+        "name": "Konverter SVG v PNG",
+        "description": "Konvertiruyte SVG v PNG s polzovatelskimi razmerami onlayn. Vstavte SVG kod ili zagruzite fayl, zadayte shirinu i vysotu."
+      },
+      "text-to-speech": {
+        "name": "Tekst v rech",
+        "description": "Konvertiruyte tekst v rech cherez Web Speech API. Vybirayte iz dostupnykh golosov, nastraivayte skorost, ton i gromkost."
+      },
+      "character-counter": {
+        "name": "Schyotchik simvolov",
+        "description": "Podschayte simvoly, slova, predlozheniya, abzacy i stroki. Prosmatrivayte vremya chteniya, govoreniya i chastotu simvolov."
+      },
+      "find-and-replace": {
+        "name": "Nayti i Zamenit",
+        "description": "Nahodite i zamenyayte tekst s podderzhkoy regex, uchyotom registra i poiska chlykh slov. Podsvechivanie vsekh sovpadeniy v realnom vremeni."
+      },
+      "yaml-to-json": {
+        "name": "Konverter YAML v JSON",
+        "description": "Konvertiruyte YAML v JSON onlayn s validaciey i podsvechivaniem oshibok. Podderzhka vlozhennykh obyektov, massivov i kommentariev."
+      },
+      "http-status-codes": {
+        "name": "Spravochnik HTTP kodov sostoyaniya",
+        "description": "Poiskovyy spravochnik vsekh HTTP kodov sostoyaniya s opisaniyami i kategoriyami (1xx-5xx). Filtraciya po kategorii ili poisk po kodu."
+      },
+      "unit-converter": {
+        "name": "Konverter edinits",
+        "description": "Konvertiruyte edinitsy dliny, vesa, temperatury, skorosti, tsiforvogo khraneniya, vremeni i ploshchadi. Podderzhka metricheskoy i imperskoy sistem."
+      },
+      "invoice-generator": {
+        "name": "Generator schetov",
+        "description": "Sozdavayte professionalnye scheta s rekvizitami kompanii, pozitsiyami, raschetom naloga i itogovymi summami. Skahayte kak PDF."
+      },
+      "morse-code": {
+        "name": "Perevodchik koda Morze",
+        "description": "Konvertiruyte tekst v kod Morze i kod Morze v tekst. Audio vosproizvedenie, spravochnaya tablitsa i dvunapravlennyy perevod."
+      },
+      "random-text-generator": {
+        "name": "Generator sluchaynogo teksta",
+        "description": "Generirujte sluchajnye slova, predlozheniya, abzacy, imena, email adresa i telefony dlya testirovaniya i maketov."
+      },
+      "text-repeater": {
+        "name": "Povtoritel teksta",
+        "description": "Povtoryajte tekst N raz s polzovatelskim razdelitelem, prefiksom, suffiksom i optsiyami numeratsii."
+      },
+      "video-to-gif": {
+        "name": "Video v GIF",
+        "description": "Izvlekayte animirovannye klipy iz video faylov. Nastrayvajte vremya nachala, dlitelnost, FPS i razreshenie."
+      },
+      "color-palette-generator": {
+        "name": "Generator tsvetovoy palitry",
+        "description": "Sozdavayte garmonichnye tsvetovye palitry iz bazovogo tsveta. Dopolnitelnye, analogovye, triadnye i tetradnye garmonii."
+      },
+      "backlink-generator": {
+        "name": "Generator obratnyh ssylok",
+        "description": "Sozdavayte kod ssylok v formatah HTML, Markdown, BBCode, Textile, Wiki i reStructuredText."
+      },
+      "json-path-finder": {
+        "name": "Poiskovik JSON putey",
+        "description": "Naviragjte po strukture JSON s interaktivnym drevom. Nazhimayte na uzly, nahodite puti."
+      },
+      "chmod-calculator": {
+        "name": "Chmod Kalkulyator",
+        "description": "Interaktivnyy kalkulyator prav dostupa Unix. Konvertatsiya mezhdu vosmerichnymi (755) i simvolnymi (rwxr-xr-x) oboznacheniyami."
+      },
+      "markdown-table-generator": {
+        "name": "Generator Markdown tablits",
+        "description": "Sozdavayte Markdown tablitsy s vizualnym redaktorom. Dobavlyayte stroki, stolbtsy, nastraivayte vyravnivanie."
+      },
+      "regex-library": {
+        "name": "Biblioteka shablonov Regex",
+        "description": "Kuratorskaya biblioteka regex shablonov dlya email, URL, dat, chisel i drugogo. Testiruyte shablony."
+      },
+      "image-to-base64": {
+        "name": "Izobrazhenie v Base64",
+        "description": "Konvertiruyte izobrazheniya v stroki Base64. Vyvod v vide Data URI, CSS fona ili HTML img tega."
+      },
+      "base64-to-image": {
+        "name": "Base64 v Izobrazhenie",
+        "description": "Dekodiruyte stroki Base64 obratno v izobrazheniya. Avtoopredelenie JPEG, PNG, GIF, WebP, SVG."
+      },
+      "text-truncator": {
+        "name": "Usekatel teksta",
+        "description": "Usekayte tekst po simvolam, slovam ili predlozheniyam. Vyberite pozitsiyu mnogotochiya i sohranenie tselyh slov."
+      }
     }
   },
   "about": {

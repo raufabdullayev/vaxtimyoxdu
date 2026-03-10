@@ -75,6 +75,17 @@ const toolComponents: Record<string, React.ComponentType> = {
   'morse-code': dynamic(() => import('@/components/tools/text/MorseCode')),
   'random-text-generator': dynamic(() => import('@/components/tools/text/RandomTextGenerator')),
   'text-repeater': dynamic(() => import('@/components/tools/text/TextRepeater')),
+  // Phase 9 - New Tools
+  'video-to-gif': dynamic(() => import('@/components/tools/generators/VideoToGif')),
+  'color-palette-generator': dynamic(() => import('@/components/tools/generators/ColorPaletteGenerator')),
+  'backlink-generator': dynamic(() => import('@/components/tools/generators/BacklinkGenerator')),
+  'json-path-finder': dynamic(() => import('@/components/tools/dev/JsonPathFinder')),
+  'chmod-calculator': dynamic(() => import('@/components/tools/dev/ChmodCalculator')),
+  'markdown-table-generator': dynamic(() => import('@/components/tools/dev/MarkdownTableGenerator')),
+  'regex-library': dynamic(() => import('@/components/tools/dev/RegexLibrary')),
+  'image-to-base64': dynamic(() => import('@/components/tools/image/ImageToBase64')),
+  'base64-to-image': dynamic(() => import('@/components/tools/image/Base64ToImage')),
+  'text-truncator': dynamic(() => import('@/components/tools/text/TextTruncator')),
 }
 
 export async function generateStaticParams() {

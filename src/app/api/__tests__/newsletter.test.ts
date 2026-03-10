@@ -29,6 +29,7 @@ describe('POST /api/newsletter', () => {
     // Suppress console.log and console.error during tests
     vi.spyOn(console, 'log').mockImplementation(() => {})
     vi.spyOn(console, 'error').mockImplementation(() => {})
+    vi.spyOn(console, 'warn').mockImplementation(() => {})
   })
 
   describe('valid email submissions', () => {

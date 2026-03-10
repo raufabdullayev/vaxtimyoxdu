@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { newsArticles, newsSlugs } from '@/data/news-articles'
+import { newsArticles, newsSlugs, getArticlesByLocale, getSlugsByLocale } from '@/data/news-articles'
 import type { NewsArticle } from '@/data/news-articles'
 
 const slugs = Object.keys(newsArticles)
@@ -14,8 +14,22 @@ describe('newsArticles collection', () => {
     expect(slugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 12 articles', () => {
-    expect(slugs.length).toBe(12)
+  it('should contain exactly 24 articles (12 AZ + 12 EN)', () => {
+    expect(slugs.length).toBe(24)
+  })
+
+  it('should have 12 AZ articles', () => {
+    const azArticles = Object.values(newsArticles).filter(
+      (a) => (a.locale || 'az') === 'az'
+    )
+    expect(azArticles.length).toBe(12)
+  })
+
+  it('should have 12 EN articles', () => {
+    const enArticles = Object.values(newsArticles).filter(
+      (a) => a.locale === 'en'
+    )
+    expect(enArticles.length).toBe(12)
   })
 })
 
@@ -33,6 +47,60 @@ describe('newsSlugs export', () => {
 
   it('should have the same length as the number of articles', () => {
     expect(newsSlugs.length).toBe(slugs.length)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// getArticlesByLocale helper
+// ---------------------------------------------------------------------------
+describe('getArticlesByLocale', () => {
+  it('should return all articles when no locale is provided', () => {
+    const all = getArticlesByLocale()
+    expect(Object.keys(all).length).toBe(24)
+  })
+
+  it('should return only AZ articles for locale "az"', () => {
+    const az = getArticlesByLocale('az')
+    expect(Object.keys(az).length).toBe(12)
+    for (const article of Object.values(az)) {
+      expect(article.locale || 'az').toBe('az')
+    }
+  })
+
+  it('should return only EN articles for locale "en"', () => {
+    const en = getArticlesByLocale('en')
+    expect(Object.keys(en).length).toBe(12)
+    for (const article of Object.values(en)) {
+      expect(article.locale).toBe('en')
+    }
+  })
+
+  it('should return empty object for unsupported locale', () => {
+    const fr = getArticlesByLocale('fr')
+    expect(Object.keys(fr).length).toBe(0)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// getSlugsByLocale helper
+// ---------------------------------------------------------------------------
+describe('getSlugsByLocale', () => {
+  it('should return all slugs when no locale is provided', () => {
+    const all = getSlugsByLocale()
+    expect(all.length).toBe(24)
+  })
+
+  it('should return 12 slugs for AZ locale', () => {
+    const azSlugs = getSlugsByLocale('az')
+    expect(azSlugs.length).toBe(12)
+  })
+
+  it('should return 12 slugs for EN locale', () => {
+    const enSlugs = getSlugsByLocale('en')
+    expect(enSlugs.length).toBe(12)
+    for (const slug of enSlugs) {
+      expect(slug.startsWith('en-')).toBe(true)
+    }
   })
 })
 
@@ -61,6 +129,13 @@ describe('news article slugs', () => {
   it('should not contain spaces', () => {
     for (const slug of slugs) {
       expect(slug).not.toMatch(/\s/)
+    }
+  })
+
+  it('EN slugs should all start with "en-"', () => {
+    const enSlugs = getSlugsByLocale('en')
+    for (const slug of enSlugs) {
+      expect(slug.startsWith('en-')).toBe(true)
     }
   })
 })
@@ -126,6 +201,16 @@ describe('news article dates', () => {
       expect(year).toBeLessThanOrEqual(2030)
     }
   })
+
+  it('EN articles should share dates with their AZ counterparts', () => {
+    const azDates = new Set(
+      Object.values(getArticlesByLocale('az')).map((a) => a.date)
+    )
+    const enDates = Object.values(getArticlesByLocale('en')).map((a) => a.date)
+    for (const date of enDates) {
+      expect(azDates.has(date)).toBe(true)
+    }
+  })
 })
 
 // ---------------------------------------------------------------------------
@@ -152,30 +237,55 @@ describe('news article content', () => {
 // Category validation
 // ---------------------------------------------------------------------------
 describe('news article categories', () => {
-  const validCategories = [
-    'Texnologiya',
-    'Iqtisadiyyat',
-    'Idman',
-    'T\u0259hsil',
-    'Sa\u011flaml\u0131q',
-    'Elm',
-    'M\u0259d\u0259niyy\u0259t',
-    'S\u0259yah\u0259t',
-    'Biznes',
-    '\u0130qtisadiyyat',
-    '\u0130dman',
-  ]
-
   it('should all have a non-empty category string', () => {
     for (const article of articles) {
       expect(article.category.trim().length).toBeGreaterThan(0)
     }
   })
 
-  it('should have categories that are recognizable Azerbaijani topic names', () => {
+  it('should have categories that are recognizable topic names with at least 3 chars', () => {
     for (const article of articles) {
-      // Categories should be title-cased Azerbaijani words with at least 3 chars
       expect(article.category.length).toBeGreaterThanOrEqual(3)
+    }
+  })
+
+  it('EN articles should have English category names', () => {
+    const enCategories = Object.values(getArticlesByLocale('en')).map(
+      (a) => a.category
+    )
+    const validEnCategories = [
+      'Technology',
+      'Economy',
+      'Sports',
+      'Education',
+      'Health',
+      'Science',
+      'Culture',
+      'Travel',
+      'Business',
+    ]
+    for (const cat of enCategories) {
+      expect(validEnCategories).toContain(cat)
+    }
+  })
+})
+
+// ---------------------------------------------------------------------------
+// Locale validation
+// ---------------------------------------------------------------------------
+describe('news article locale field', () => {
+  it('every article should have a locale field', () => {
+    for (const [slug, article] of entries) {
+      expect(
+        article.locale,
+        `Article "${slug}" is missing locale field`
+      ).toBeDefined()
+    }
+  })
+
+  it('locale values should be either "az" or "en"', () => {
+    for (const article of articles) {
+      expect(['az', 'en']).toContain(article.locale)
     }
   })
 })
@@ -184,8 +294,8 @@ describe('news article categories', () => {
 // Interface conformance
 // ---------------------------------------------------------------------------
 describe('NewsArticle interface conformance', () => {
-  it('should have exactly 4 expected keys per article', () => {
-    const expectedKeys = ['title', 'date', 'category', 'content']
+  it('should have expected keys per article', () => {
+    const expectedKeys = ['title', 'date', 'category', 'content', 'locale']
     for (const article of articles) {
       for (const key of expectedKeys) {
         expect(article).toHaveProperty(key)

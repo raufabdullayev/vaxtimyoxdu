@@ -3,6 +3,7 @@ export interface NewsArticle {
   date: string
   category: string
   content: string
+  locale?: string
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
@@ -10,6 +11,7 @@ export const newsArticles: Record<string, NewsArticle> = {
     title: 'Süni zəkanın yeni dövrü: 2026-da nələr dəyişir?',
     date: '2026-02-28',
     category: 'Texnologiya',
+    locale: 'az',
     content: `Süni zəka texnologiyaları 2026-cı ildə yeni mərhələyə qədəm qoyub. Böyük dil modelləri artıq sadəcə mətn yaratmaqla kifayətlənmir — kod yazır, təhlil aparır, qərarlar qəbul edir. Bu il süni zəka sahəsində baş verən dəyişikliklər o qədər sürətlidir ki, cəmi altı ay əvvəlki proqnozlar belə artıq köhnəlmiş hesab olunur. Bəs 2026-cı il süni zəka dünyasında nələri dəyişdi və bu dəyişikliklər bizim gündəlik həyatımıza necə təsir edir?
 
 ## Əsas tendensiyalar
@@ -76,6 +78,7 @@ Süni zəkanın gələcəyi həm böyük imkanlar, həm də ciddi çağırışla
     title: 'Manatın möhkəmlənməsi: iqtisadiyyata təsiri necədir?',
     date: '2026-02-27',
     category: 'İqtisadiyyat',
+    locale: 'az',
     content: `Son aylarda Azərbaycan manatının xarici valyutalara qarşı mövqeyi möhkəmlənib. Bu tendensiya həm müsbət, həm də mənfi nəticələr doğurur. İqtisadçılar bu vəziyyəti müxtəlif rakurslardan təhlil edir və gələcək üçün fərqli ssenarilər irəli sürür. Manatın möhkəmlənməsinin əsas səbəbləri, nəticələri və iqtisadiyyatın müxtəlif sektorlarına təsiri barədə ətraflı təhlil təqdim edirik.
 
 ## Möhkəmlənmənin əsas səbəbləri
@@ -158,6 +161,7 @@ Manatın möhkəmlənməsi fonunda Mərkəzi Bankın rəqəmsal manat layihəsi 
     title: 'Premyer Liqa mövsümü: hansı komanda favoritdir?',
     date: '2026-02-26',
     category: 'İdman',
+    locale: 'az',
     content: `Azərbaycan Premyer Liqasında mövsümün ikinci yarısı başlayıb. Turnir cədvəlində maraqlı rəqabət davam edir və azarkeşlər hər həftə yeni sürprizlərlə üzləşir. Bu mövsüm Azərbaycan futbolunda son illərin ən maraqlı çempionluq yarışına şahidlik edirik. Gəlin mövsümün əsas hadisələrini, statistikalarını və gözləntiləri ətraflı nəzərdən keçirək.
 
 ## Cədvəlin başında
@@ -232,6 +236,7 @@ Premyer Liqanın güclü rəqabəti Azərbaycan klublarının Avropa kubokların
     title: 'Yeni təhsil islahatları: nələr dəyişəcək?',
     date: '2026-02-25',
     category: 'Təhsil',
+    locale: 'az',
     content: `Təhsil Nazirliyi 2026-cı il üçün yeni islahat paketini açıqlayıb. Dəyişikliklər həm orta, həm də ali təhsil səviyyəsini əhatə edir. Bu islahatlar son 10 ilin ən geniş miqyaslı təhsil dəyişiklikləri hesab olunur və ölkənin təhsil sistemini müasir standartlara uyğunlaşdırmağı hədəfləyir. Nazirliyə görə, islahatların əsas məqsədi Azərbaycanın insan kapitalını gücləndirib ölkəni bilik iqtisadiyyatına keçid üçün hazırlamaqdır.
 
 ## Əsas dəyişikliklər
@@ -321,6 +326,7 @@ Təhsil islahatlarının mühüm hissəsi beynəlxalq əməkdaşlığın genişl
     title: 'Rəqəmsal sağlamlıq texnologiyaları: gələcək burada',
     date: '2026-03-10',
     category: 'Sağlamlıq',
+    locale: 'az',
     content: `Rəqəmsal sağlamlıq texnologiyaları dünya üzrə tibb sahəsini köklü şəkildə dəyişir və Azərbaycan da bu qlobal tendensiyadan kənarda qalmır. 2026-cı ildə telemedisinadan tutmuş süni zəka əsaslı diaqnostikaya qədər bir çox yenilik artıq Azərbaycan vətəndaşlarının həyatına daxil olub. Bu məqalədə rəqəmsal sağlamlıq texnologiyalarının Azərbaycanda və dünyada vəziyyətini, perspektivlərini və cəmiyyətə təsirini ətraflı nəzərdən keçiririk.
 
 ## Telemedisinанın yüksəlişi
@@ -402,6 +408,7 @@ Rəqəmsal sağlamlıq texnologiyaları artıq gələcək deyil — bu gündür.
     title: 'Azərbaycanın kosmik proqramı: yeni addımlar',
     date: '2026-03-09',
     category: 'Elm',
+    locale: 'az',
     content: `Azərbaycan kosmik sahədə son illərdə əhəmiyyətli addımlar atıb və 2026-cı ildə ölkənin kosmik proqramı yeni mərhələyə qədəm qoyur. Azersky peykinindən tutmuş yeni kosmik texnologiya layihələrinə qədər bir sıra təşəbbüslər Azərbaycanı regionun kosmik liderləri sırasına daxil etməyə yönəlib. Bu məqalədə Azərbaycanın kosmik proqramının tarixi, bugünkü vəziyyəti və gələcək planları haqqında ətraflı məlumat təqdim edirik.
 
 ## Azersky peyki və onun nailiyyətləri
@@ -480,6 +487,7 @@ Kosmik texnologiyalar artıq lüks deyil, zərurətdir. İqlim dəyişikliyi, ə
     title: 'Bakı Texnologiya Festivalı 2026: innovasiya və yaradıcılıq',
     date: '2026-03-08',
     category: 'Mədəniyyət',
+    locale: 'az',
     content: `Bakı Texnologiya Festivalı 2026 mart ayının ilk həftəsində Heydər Əliyev Mərkəzində və onun ətrafında keçirilib. Üç gün davam edən festival texnologiya, innovasiya və yaradıcılığın qovuşduğu unikal platforma olub. 15 mindən çox iştirakçını bir araya gətirən bu tədbir Azərbaycanın texnoloji ekosisteminin gücünü və potensialını nümayiş etdirib. Bu məqalədə festivalın əsas hadisələrini, diqqəti cəlb edən layihələri və gələcəyə təsirini ətraflı nəzərdən keçiririk.
 
 ## Festivalın strukturu
@@ -582,6 +590,7 @@ Bakı Texnologiya Festivalı Azərbaycanın innovasiya mədəniyyətinin formala
     title: 'Kvant kompüterlər: gələcəyin texnologiyası Azərbaycana gəlir',
     date: '2026-03-07',
     category: 'Texnologiya',
+    locale: 'az',
     content: `Kvant hesablama texnologiyası 2026-cı ildə əvvəllər yalnız nəzəri müstəvidə müzakirə edilən imkanları praktiki reallığa çevirir. Dünyanın aparıcı texnologiya şirkətləri kvant kompüterlərinin kommersiya tətbiqlərini genişləndirdikcə, Azərbaycan da bu sahəyə maraq göstərməyə və ilk addımlarını atmağa başlayıb. Bu məqalədə kvant hesablamanın əsaslarını, dünyada və Azərbaycanda vəziyyəti, tətbiq sahələrini və gələcək perspektivlərini ətraflı nəzərdən keçiririk.
 
 ## Kvant hesablama nədir?
@@ -656,6 +665,7 @@ Kvant hesablama texnologiyası bəşəriyyətin hesablama gücünü tamamilə ye
     title: 'Bakı 2028 Olimpiya hazırlığı: idmançılarımız dünya arenasında',
     date: '2026-03-06',
     category: 'İdman',
+    locale: 'az',
     content: `Azərbaycan idmançıları 2028-ci il Los-Anceles Olimpiya Oyunlarına hazırlığı tam sürətlə davam etdirir. 2026-cı il bu hazırlıq prosesində kritik əhəmiyyət daşıyır — dünya və Avropa çempionatları, Gran-Pri yarışları və seçmə turnirləri vasitəsilə olimpiya vəsiqəsi qazanmaq uğrunda mübarizə şiddətlənir. Bu məqalədə Azərbaycan idmançılarının dünya arenasındakı nailiyyətlərini, hazırlıq prosesini və Los-Anceles-2028 gözləntilərini ətraflı nəzərdən keçiririk.
 
 ## Azərbaycan idmanının tarixi nailiyyətləri
@@ -729,6 +739,7 @@ Azərbaycanın olimpiya hazırlığında beynəlxalq əməkdaşlıq mühüm rol 
     title: 'Rəqəmsal bacarıqlar: Azərbaycan gənclərinin gələcəyi',
     date: '2026-03-05',
     category: 'Təhsil',
+    locale: 'az',
     content: `Rəqəmsal bacarıqlar 2026-cı ildə müasir əmək bazarının ən vacib tələblərindən birinə çevrilib. Azərbaycanın gənc nəsli üçün texnologiya savadlılığı artıq lüks deyil, həyati zərurətdir. Bu məqalədə Azərbaycanda rəqəmsal təhsilin vəziyyəti, mövcud proqramlar, çağırışlar və gələcək perspektivlər haqqında ətraflı təhlil təqdim edirik.
 
 ## Rəqəmsal bacarıqlar nəyə lazımdır?
@@ -821,6 +832,7 @@ Bu hədəflərə nail olmaq üçün təhsil, özəl sektor və dövlət arasınd
     title: 'Azərbaycanın kəşf edilməmiş turizm marşrutları: 2026 bələdçisi',
     date: '2026-03-04',
     category: 'Səyahət',
+    locale: 'az',
     content: `Azərbaycan turizm sahəsində son illərdə əhəmiyyətli inkişaf göstərsə də, ölkənin bir çox gözəl guşəsi hələ də turistlər tərəfindən kəşf edilməyib. 2026-cı ildə alternativ turizm marşrutları getdikcə populyarlaşır və səyahətsevərlər Bakının tanınmış məkanlarından kənara çıxaraq ölkənin əsl gözəlliklərini kəşf etməyə başlayıb. Bu bələdçidə Azərbaycanın ən maraqlı, lakin az bilinən turizm marşrutlarını, praktiki məsləhətləri və hər bir marşrutun unikal xüsusiyyətlərini təqdim edirik.
 
 ## Niyə alternativ marşrutlar?
@@ -932,6 +944,7 @@ Azərbaycan səyahət üçün əsl gizli xəzinədir. İstər qədim tarix, ist�
     title: 'Azərbaycan startap ekosistemi: 2026-cı ildə böyük sıçrayış',
     date: '2026-03-03',
     category: 'Biznes',
+    locale: 'az',
     content: `Azərbaycanın startap ekosistemi 2026-cı ildə əvvəlki illərlə müqayisədə əhəmiyyətli inkişaf göstərib. Yeni investisiya fondları, dövlət dəstək proqramları, texnoparklar və beynəlxalq əməkdaşlıq imkanları ölkədəki sahibkarlıq mühitini köklü şəkildə dəyişib. Bu məqalədə Azərbaycanın startap ekosisteminin hazırkı vəziyyəti, uğur hekayələri, mövcud çağırışlar və gələcək perspektivləri haqqında ətraflı təhlil təqdim edirik.
 
 ## Startap ekosisteminin hazırkı mənzərəsi
@@ -1020,6 +1033,1058 @@ Ekspertlər Azərbaycanın startap ekosisteminin 2030-cu ilə qədər regionun �
 
 Azərbaycanın startap ekosistemi artıq kritik kütləyə çatıb. İnvestisiya mühiti yaxşılaşır, dövlət dəstəyi güclənir, gənc nəslin texnologiyaya marağı artır. Əsas odur ki, bu müsbət tendensiya davam etdirilsin və ekosistem özünü dəstəkləyən dairəvi iqtisadiyyata çevrilsin — uğurlu startaplar yeni startaplara investisiya qoysun, təcrübəli sahibkarlar gənc startapçılara mentor olsun. Bu zəncir reaksiyası başladıqda, Azərbaycan startap ekosistemi qarşısıalınmaz böyümə dinamikası əldə edəcək.`,
   },
+
+  // ---------------------------------------------------------------------------
+  // English (EN) articles
+  // ---------------------------------------------------------------------------
+
+  'en-the-new-era-of-artificial-intelligence': {
+    title: 'The New Era of Artificial Intelligence: What Is Changing in 2026?',
+    date: '2026-02-28',
+    category: 'Technology',
+    locale: 'en',
+    content: `Artificial intelligence technologies have entered a new phase in 2026. Large language models no longer just generate text — they write code, conduct analysis, and make decisions. The pace of change in AI this year has been so rapid that forecasts made only six months ago are already considered outdated. So what exactly has 2026 changed in the world of AI, and how are those changes affecting our everyday lives?
+
+## Key trends
+
+- **Multimodal models** — systems that process images, video, and audio simultaneously have become widespread
+- **Agent-based AI** — artificial intelligence now carries out tasks autonomously
+- **On-device models** — small, fast models run directly on personal devices
+- **AI coding assistants** — the majority of developers now write code alongside AI
+- **Real-time translation** — language barriers have been virtually eliminated
+
+Each of these trends is significant on its own, but together they have sparked a genuine revolution in the technology world. Multimodal models no longer work with text alone — they recognize images, analyze video, understand voice commands, and process all of this data simultaneously. A physician, for instance, can upload an X-ray and request AI-driven analysis, while an engineer can discuss technical drawings with an AI collaborator.
+
+## Agent-based AI — a new era
+
+One of the biggest breakthroughs of 2026 is the widespread adoption of agent-based AI systems. In previous years, AI merely answered questions — now it can carry out complex tasks independently. That means you can tell an AI to "prepare a marketing plan for this project," and it will conduct market research, analyze competitors, draft a budget, and present you with the finished result.
+
+Agents are already being used across many sectors:
+
+- **Customer service** — AI agents receive customer complaints, identify the problem, and propose a solution. In complex cases, they escalate to the appropriate specialist.
+- **Financial analysis** — banks and insurance companies use AI agents for risk assessment. These agents can analyze thousands of documents within seconds.
+- **Software development** — AI agents no longer just write code; they also write tests, find bugs, and optimize performance.
+- **Healthcare** — AI systems assisting physicians in diagnostics have achieved major breakthroughs in early disease detection.
+
+## On-device models and privacy
+
+Although cloud-based AI services are powerful, privacy concerns have always been present. In 2026, on-device models have emerged as a popular solution. These models run directly on the user's device — smartphone, laptop, or tablet. Data never leaves the device, ensuring complete privacy.
+
+Companies like Apple, Google, and Samsung have integrated powerful on-device AI models into their hardware. These models can organize photos, summarize emails, manage calendars, and serve as personal assistants — even without an internet connection.
+
+## The situation in Azerbaijan
+
+Local companies have begun applying AI in customer service, financial analysis, and education. Government agencies are also increasing their use of AI in the digitalization process. Notably, an AI-powered document processing system is being piloted at ASAN service centers.
+
+Several important developments in Azerbaijan deserve attention:
+
+- **Azerbaijani-language AI models** — local startups are working on language models that better understand Azerbaijani. These models hold significant potential, especially in customer service and translation.
+- **AI in the public sector** — the Ministry of Digital Development and Transport has launched several AI projects. AI-driven automation of e-government services is ongoing.
+- **Startup ecosystem** — the number of AI-focused startups in Baku has grown by 40 percent compared to 2025. These startups primarily offer solutions in agriculture, oil and gas, and finance.
+- **Educational programs** — Baku Higher Oil School, ADA University, and BHOS have launched new master's programs in artificial intelligence. Student enrollment in these programs doubles each year.
+
+## Ethical questions and regulation
+
+The rapid development of AI has also raised ethical questions. The European Union's AI Act came into full force in 2026 and has become a global benchmark for AI regulation. Azerbaijan has also begun preparing its own legislative framework in this area.
+
+Key ethical concerns include job displacement, AI-generated disinformation (deepfakes), data privacy, and algorithmic bias. Experts believe that addressing these issues requires not only technological solutions but also a robust legal framework.
+
+## Looking ahead
+
+Experts forecast that by 2027, one in three companies in Azerbaijan will be using AI solutions. Globally, the AI market is expected to reach 500 billion dollars by 2027.
+
+## AI and the labor market
+
+One of the most debated topics of 2026 is the impact of AI on the labor market. On one hand, certain professions are changing or disappearing due to automation. On the other, entirely new professions and jobs are being created. According to the World Economic Forum, the number of new jobs created by AI in 2026 has surpassed the number of jobs lost to automation.
+
+This trend is visible in Azerbaijan as well. Demand for AI engineers, data analysts, AI ethics specialists, and prompt engineers is growing rapidly. According to the Ministry of Labor and Social Protection, technology sector jobs have increased by 30 percent compared to 2025.
+
+## AI in daily life
+
+The impact of AI extends far beyond the business world. In everyday life, AI's fingerprints are everywhere. Smartphone assistants have become smarter, smart home devices optimize energy consumption, and cars in semi-autonomous driving mode move more safely. In medicine, AI helps physicians make diagnoses, accelerates drug development, and creates personalized treatment plans.
+
+The future of artificial intelligence promises both tremendous opportunities and serious challenges. Individuals, companies, and governments that use this technology wisely will gain a competitive edge. The key is to ensure that alongside technological progress, its ethical and responsible use is also safeguarded. The future belongs to those who embrace AI not as a source of fear but as a tool for progress — and learn to use it effectively.`,
+  },
+  'en-manat-strengthening-impact-on-economy': {
+    title: 'The Manat Is Strengthening: What Does It Mean for the Economy?',
+    date: '2026-02-27',
+    category: 'Economy',
+    locale: 'en',
+    content: `In recent months, the Azerbaijani manat has strengthened its position against foreign currencies. This trend has both positive and negative consequences. Economists analyze the situation from various perspectives and put forward different scenarios for the future. Here is a detailed analysis of the main reasons behind the manat's strengthening, its outcomes, and its impact on different sectors of the economy.
+
+## Key reasons for the strengthening
+
+Several fundamental factors underpin the manat's stronger position:
+
+- **Rising oil prices** — the stabilization of global oil prices between 85 and 90 dollars per barrel has bolstered Azerbaijan's foreign currency reserves. Revenue flowing into the State Oil Fund has increased by 15 percent compared to 2025.
+- **Growing non-oil exports** — foreign currency earnings from agriculture, tourism, and the IT sector have risen significantly over the past two years. Agricultural exports alone recorded a 22 percent increase.
+- **Foreign direct investment** — the volume of foreign investment entering the country has grown. Major projects in green energy, technology parks, and logistics infrastructure are underway.
+- **Central Bank policy** — the Central Bank has skillfully managed interest rates and currency interventions, maintaining the manat's stability.
+
+## Positive effects
+
+- **Cheaper imports** — the cost of goods brought from abroad is falling
+- **Lower inflation** — food prices are stabilizing
+- **Higher consumer confidence** — citizens are spending more
+- **Reduced foreign debt burden** — dollar-denominated obligations are shrinking in manat terms
+- **Greater purchasing power** — the real income of citizens is rising
+
+The reduction in import costs has a particularly significant impact on consumers. Declines have been observed in the prices of electronics, automobiles, medical equipment, and food products. According to the State Statistics Committee, the consumer price index in January-February 2026 fell by 2.3 percent compared to the same period in 2025.
+
+## Negative effects
+
+- **Exports become harder** — domestic products grow more expensive on foreign markets
+- **Tourism revenue may decline** — the country becomes relatively more expensive for tourists
+- **Local producers face pressure** — competition from imported goods intensifies
+- **Remittances decrease** — the manat value of money sent from the diaspora drops
+
+The situation is especially difficult for exporters. The competitiveness of Azerbaijani tomatoes, hazelnuts, and other agricultural products on Russian and European markets has declined. The Exporters' Union has issued a statement urging the government to take additional measures to stimulate exports.
+
+## Impact by sector
+
+**Agriculture:** The cheaper cost of imported fertilizer and machinery has lowered production costs, but exporting finished products has become harder. Farmers face a mixed situation — expenses are down, but revenue may fall as well.
+
+**Construction:** The drop in the price of imported building materials — cement, steel, glass — has reduced the cost of construction projects. This is helping to stabilize real estate prices.
+
+**Tourism:** A strong manat makes the country relatively expensive for foreign tourists. On the other hand, travel abroad has become cheaper for Azerbaijani citizens. The Tourism Bureau is planning additional marketing campaigns to attract foreign visitors.
+
+**Technology sector:** For IT companies, the strong manat is largely positive. Acquiring foreign technology and licenses has become cheaper, though the competitiveness of services offered to foreign clients has decreased.
+
+## The Central Bank's position
+
+In its statement, the Central Bank noted that monetary policy is ready for adjustments and that market stability remains the priority. Bank leadership emphasized the following points at a recent press conference:
+
+- Foreign currency reserves are strong enough to respond to any market shifts
+- Interest rate policy will be adjusted in line with economic indicators
+- The inflation target is maintained at 4 percent
+- Macroprudential measures for financial stability will continue
+
+## Expert forecasts
+
+Economists hold differing views on the manat's short- and medium-term outlook. Some experts believe that if oil prices remain high, the manat will maintain its strong position through the end of 2026. Others think that global economic uncertainties could limit the manat's appreciation.
+
+The International Monetary Fund's latest report projects that Azerbaijan's economy will grow by 3.5 percent in 2026. This forecast is 0.3 percentage points higher than the previous estimate, signaling growing confidence in the economy.
+
+## Practical advice for citizens
+
+The manat's strengthening also affects citizens' financial decisions. Financial advisors recommend the following:
+
+- Diversify your savings — do not put all your eggs in one basket
+- Major imported purchases (electronics, cars) may be more cost-effective now
+- This is a favorable time for those considering foreign-currency loans
+- Review long-term investment plans
+
+## Comparison with neighboring countries
+
+To evaluate the manat's strengthening in a regional context, it helps to compare it with the currencies of neighboring countries. Georgia's lari and Turkey's lira have both lost value against foreign currencies during the same period. This suggests that Azerbaijan's oil-revenue-backed economic model is more resilient than those of its regional competitors.
+
+However, this comparison does not tell the full story. Since Turkey and Georgia have export-oriented economies, a weak currency provides certain advantages for their exporters. Azerbaijan, with a strong manat, is compelled to boost product quality and added value to maintain export competitiveness.
+
+## Digital manat prospects
+
+Against the backdrop of the manat's strengthening, the Central Bank's digital manat project is also drawing attention. The digital manat, whose pilot phase is expected to begin in 2026, will make payment systems faster and cheaper. This will be especially beneficial for international payments and small business transactions. Full implementation of the digital manat will fundamentally modernize the country's financial infrastructure.
+
+## Conclusion
+
+Overall, the manat's strengthening is a positive signal for Azerbaijan's economy, but sustaining this trend requires continued economic diversification and structural reforms. The main challenge facing the government is to maximize the benefits of a strong manat while minimizing its negative effects. Stimulating exports, supporting local production, and accelerating economic diversification must remain top priorities.`,
+  },
+  'en-premier-league-season-whos-the-favorite': {
+    title: 'Premier League Season: Who Is the Favorite?',
+    date: '2026-02-26',
+    category: 'Sports',
+    locale: 'en',
+    content: `The second half of the Azerbaijan Premier League season is underway. An exciting competition continues in the standings and fans are treated to new surprises every week. This season, we are witnessing one of the most thrilling title races in Azerbaijani football in recent years. Let us take a detailed look at the season's key events, statistics, and expectations.
+
+## At the top of the table
+
+The gap between the leaders is minimal. Only 4 points separate the top three teams. This indicates that the title fight will continue until the very end of the season. Every match day brings significant changes to the standings, and fans experience suspense right up to the final whistle.
+
+The teams at the top of the table have been delivering consistent results since the start of the season. The league leaders, in particular, have suffered only one defeat in their last 10 matches, strengthening their title credentials. Yet the second- and third-placed sides are also applying strong pressure from behind.
+
+## Notable statistics
+
+- **Highest-scoring team** — 38 goals across the season
+- **Tightest defense** — only 12 goals conceded
+- **Top scorer** — leading the charts with 14 goals
+- **Most penalties won** — 8 penalties
+- **Best home record** — 9 wins and 1 draw at home
+- **Best away record** — 6 wins on the road
+- **Most yellow cards** — 47 bookings
+
+This season's statistics reveal several interesting trends that set it apart from previous campaigns. First, the number of goals has risen by 18 percent compared to last season, indicating a more attack-minded style of play. Second, the home-win percentage has dropped — a sign that the league's competitive standard has risen.
+
+## Impact of the transfer window
+
+The winter transfer window produced several noteworthy moves. A number of teams have strengthened their squads, directly affecting the title race.
+
+- The league leaders signed an experienced striker from Georgia, who has already netted three goals in two appearances.
+- The second-placed team brought in a young midfielder from Turkey. This player's technique and speed have made him a fan favorite.
+- Clubs in the bottom half have also made significant moves. One team, in particular, signed three new players to boost their survival hopes.
+
+In terms of transfer strategy, clubs have shown a smarter and more strategic approach this season. Rather than big-money signings, the preference has been for promising young talents and experienced domestic players.
+
+## The season's surprises
+
+Several young footballers have made a name for themselves this season. The number of players emerging from local academies is on the rise, which is encouraging for the future of Azerbaijani football.
+
+- A 19-year-old midfielder has been a regular starter from the beginning of the season, and with 5 goals and 7 assists, is a strong contender for the league's Young Player of the Year award.
+- A 20-year-old goalkeeper delivered outstanding performances in several crucial matches, preventing his team from dropping points. The national team head coach has confirmed that he is closely monitoring the player.
+- A newly promoted team defied expectations by finishing the first half of the season in the upper half of the table. This validates the club's youth-oriented strategy.
+
+## Refereeing decisions and VAR
+
+Discussions about the implementation of the VAR (Video Assistant Referee) system continue this season. The system has overturned 23 decisions since the start of the campaign. Some clubs believe VAR has improved the fairness of decisions, while others argue it disrupts the flow of the game.
+
+AFFA (Association of Football Federations of Azerbaijan) issued a statement confirming it is working to refine the VAR system. New technological upgrades are expected to be introduced from next season.
+
+## Impact on the national team
+
+The intense competition in the Premier League also benefits the national team. The head coach recently emphasized that the quality of the domestic league has improved and that this creates more selection options for the national squad. Eighteen Premier League players are expected to feature on the squad list for the upcoming UEFA Nations League fixtures.
+
+## Looking toward the end of the season
+
+Experts believe the title race will continue right until the final matchday. Every point will be of immense importance in the remaining 10 rounds. The relegation battle at the bottom is equally dramatic — just 5 points separate the last 4 teams.
+
+Football pundits expect that nerves will intensify as the season nears its conclusion, which could affect match quality. Nevertheless, the prevailing expectation is that this campaign will be remembered as one of the most memorable in the history of Azerbaijani football. Fans are flocking to stadiums, and average attendance has increased by 25 percent compared to last season — a clear indicator of football's growing popularity in the country.
+
+## Stadium infrastructure and fan culture
+
+This season has also seen important steps toward improving stadium infrastructure. Renovation work has been carried out in several cities — new seating, upgraded lighting systems, and modernized facilities. These investments have significantly improved the matchday experience for fans.
+
+Positive changes are also evident in fan culture. The organization of ultras groups, choreographic displays, and the atmosphere generated inside stadiums are enhancing the appeal of Azerbaijani football. The league's social media following has doubled compared to 2025, signaling growing interest from the younger generation.
+
+## Coaching and tactical innovations
+
+From a coaching perspective, interesting trends have emerged this season. Several teams have begun collaborating with foreign coaches, introducing tactical innovations. High pressing, possession-based play, and rapid counter-attacks are among the defining tactical features of the season.
+
+Domestic coaches have also progressed in their professional development. A record number of participants enrolled in coaching courses organized jointly by AFFA and UEFA this year. This points to a further rise in coaching quality within Azerbaijani football in the years to come.
+
+## European competition prospects
+
+The Premier League's heightened competitive standard should also have a positive impact on Azerbaijani clubs' performances in European competition. Clubs representing Azerbaijan in the UEFA Champions League and Conference League next season will be better prepared. The AFFA president recently announced that a support program has been developed to help Azerbaijani clubs achieve greater success on the European stage.`,
+  },
+  'en-new-education-reforms-whats-changing': {
+    title: 'New Education Reforms: What Will Change?',
+    date: '2026-02-25',
+    category: 'Education',
+    locale: 'en',
+    content: `The Ministry of Education has unveiled its new reform package for 2026. The changes encompass both secondary and higher education. These reforms are considered the most sweeping education overhaul of the past decade and aim to bring the country's education system in line with modern standards. According to the Ministry, the core objective is to strengthen Azerbaijan's human capital and prepare the country for the transition to a knowledge-based economy.
+
+## Key changes
+
+- **Digital education platform** — all schools will be connected to a unified online system
+- **STEM focus** — new curricula for mathematics and technology subjects
+- **Teacher training** — professional development programs for educators are expanding
+- **Foreign language instruction** — a second foreign language will become mandatory in schools
+- **Vocational education** — new vocational-technical schools will open
+- **Textbook reform** — all textbooks will be redesigned
+
+## Digital education platform
+
+The new digital education platform is one of the central pillars of the reforms. It will unite all schools, teachers, students, and parents across the country within a single digital ecosystem. Key features of the platform include:
+
+- **Online learning materials** — video lessons, interactive assignments, and supplementary resources will be available for every subject. Students will be able to access lessons anytime, anywhere.
+- **Assessment system** — teachers will be able to track student performance in real time. Parents will also be able to view their children's academic results through the platform.
+- **AI-driven personalized learning** — the platform will analyze each student's strengths and weaknesses and generate an individualized learning plan. This will allow every student to progress at their own pace.
+- **Accessibility** — the platform will be accessible from computers, tablets, and smartphones. An offline mode has also been planned for regions with limited internet infrastructure.
+
+The first phase of the platform will be piloted in Baku and Sumgayit schools starting September 2026. Nationwide rollout is planned by the end of 2027.
+
+## Strengthening STEM education
+
+New curricula have been developed for STEM (Science, Technology, Engineering, Mathematics) subjects. These curricula align with international standards and emphasize practical application. The main innovations include:
+
+- Math lessons will place greater emphasis on solving real-world problems
+- The share of laboratory work in physics and chemistry classes will increase
+- Computer science will begin in the 3rd grade (previously starting in the 5th)
+- Programming fundamentals will be taught from the 5th grade onward
+- Robotics clubs will be established in all schools
+
+The Ministry has trained over 200 new teachers in this field, who will be deployed to schools starting the 2026-2027 academic year. Additionally, partnerships with technology companies will ensure that schools receive modern equipment.
+
+## Teacher training and professional development
+
+One of the most vital components of the reforms is teachers' professional growth. The Ministry has announced the following programs:
+
+- **Mandatory professional development** — every teacher must complete a minimum of 72 hours of professional development courses per year. These will be offered in both online and in-person formats.
+- **International exchange program** — 500 teachers per year will be sent to countries with leading education systems, including Finland, South Korea, and Singapore.
+- **Digital skills** — all teachers will complete a certification program in digital technologies.
+- **Salary increase** — a 20 percent raise in teacher salaries has been planned. The increase will apply to teachers who successfully complete professional development programs.
+- **Mentorship system** — experienced teachers will mentor younger colleagues, accelerating their professional development.
+
+## Foreign language instruction
+
+Making a second foreign language mandatory is one of the most debated provisions of the reforms. Currently, schools teach only one foreign language, typically English. Under the new reform, students will begin learning a second foreign language from the 6th grade. Proposed languages include Russian, German, French, Arabic, Turkish, and Chinese.
+
+This step will broaden students' worldview and better prepare them for a globalized world. However, critics note that a shortage of language teachers could complicate the reform's implementation.
+
+## Changes in higher education
+
+International accreditation processes at universities will be accelerated. In addition, student exchange programs will be expanded. Other key changes in higher education include:
+
+- **Full alignment with the Bologna system** — all universities will transition to a credit system. This will make it easier for students to transfer to foreign universities.
+- **Research funding** — university research budgets will be doubled. Priority areas will include artificial intelligence, green energy, and biotechnology.
+- **Industry-university partnerships** — dual education programs will be established with companies. Students will gain both theoretical knowledge and practical experience.
+- **Online education** — universities will offer a portion of their programs in an online format. This will enable students in regional areas to access programs at Baku-based universities.
+
+## Education financing
+
+Additional state budget funds have been allocated to finance the reforms. Education spending will reach 4.5 percent of GDP, which is 0.8 percentage points higher than the previous level. Negotiations are also underway with the World Bank and the European Investment Bank, with 300 million dollars in concessional loans expected to be secured.
+
+## Expectations and criticisms
+
+The Minister of Education has stated that full implementation of the reforms will be completed by 2028. Experts believe these changes could bring Azerbaijan's education system on par with regional leaders.
+
+However, some experts express concern about the pace of reforms. They argue that infrastructure and staff preparation may not keep up with the speed of the changes. In particular, the weak internet infrastructure in rural areas could hinder the effective deployment of the digital education platform.
+
+Despite this, the vast majority of parents and the public view the reforms positively. According to independent surveys, 78 percent of parents support the reforms and believe their children will receive a higher quality education.
+
+## Rebuilding vocational education
+
+A critical component of the reform package is the restructuring of vocational education. The Ministry plans to open 15 new vocational-technical schools between 2026 and 2028. These schools will train skilled workers in specializations aligned with labor market demand. Priority fields include information technology, green energy, hospitality and tourism, medical technologies, and agricultural technologies.
+
+Strengthening vocational education is especially significant for young people in regional areas. For those who do not enter university or lack the means to pursue higher education, vocational-technical schools will provide a real pathway to quality employment. Inspired by the German dual education model, students will spend half the week in school and the other half gaining hands-on experience at enterprises.
+
+## Inclusive education
+
+The reforms also place special emphasis on inclusive education. Plans call for improving physical infrastructure at schools for children with disabilities, training specialized educators, and developing individualized teaching plans. The goal is for all public schools to be fully accessible to students with disabilities by 2028.
+
+## International cooperation
+
+A significant component of the education reforms is the expansion of international cooperation. Agreements have been signed with education leaders such as Finland, Estonia, Singapore, and South Korea. Within this cooperation framework, knowledge sharing will take place in curriculum development, teacher exchange, technological solutions, and assessment methodology. This experience will enrich Azerbaijan's education system with global best practices.`,
+  },
+  'en-digital-health-technologies-the-future-is-here': {
+    title: 'Digital Health Technologies: The Future Is Here',
+    date: '2026-03-10',
+    category: 'Health',
+    locale: 'en',
+    content: `Digital health technologies are fundamentally transforming the medical field worldwide, and Azerbaijan is not staying on the sidelines of this global trend. In 2026, innovations ranging from telemedicine to AI-powered diagnostics have already become part of Azerbaijani citizens' daily lives. In this article, we take a detailed look at the state and prospects of digital health technologies in Azerbaijan and around the world, and examine their impact on society.
+
+## The rise of telemedicine
+
+The telemedicine trend, which accelerated during the pandemic, has reached an entirely new level in 2026. Several major clinics and hospitals in Azerbaijan now offer fully functional telemedicine platforms. Patients can consult with specialist physicians via video conference, receive prescriptions, and discuss treatment plans — all without leaving home.
+
+- **More than 15 clinics in Baku** provide full telemedicine services
+- **Regional accessibility** has improved — patients in rural areas can now connect with Baku-based specialists
+- **Wait times** have dropped by 60 percent thanks to online appointment systems
+- **Chronic disease monitoring** is conducted remotely — patients with diabetes, hypertension, and asthma are under continuous oversight
+
+The Ministry of Health launched a pilot version of the national telemedicine platform at the beginning of 2026. This platform will connect all public hospitals in a unified network and allow access to a patient's medical records from any facility.
+
+## Wearable technologies and health monitoring
+
+Smartwatches and fitness bands are no longer just step counters — they track vital health indicators in real time. In 2026, the capabilities of these devices have expanded significantly.
+
+- **Heart rate monitoring** — detects arrhythmia and other cardiac issues early
+- **Blood oxygen levels** — continuous SpO2 measurements
+- **Sleep quality analysis** — tracks sleep phases and offers sleep hygiene recommendations
+- **Stress levels** — measures stress based on skin conductivity and heart rate variability
+- **Blood pressure** — next-generation devices enable cuffless blood pressure monitoring
+- **Blood glucose monitoring** — non-invasive glucose measurement technology is in the testing phase
+
+The use of wearable health devices in Azerbaijan has increased by 45 percent compared to 2025. These devices are particularly popular among the 25-45 age group. Local startups are also active in this space — a Baku-based technology company has developed a health monitoring device specifically designed for the elderly, featuring fall detection and emergency call functions.
+
+## AI-powered diagnostics
+
+The application of artificial intelligence in medicine is yielding revolutionary results in 2026. AI-driven diagnostic systems have achieved major breakthroughs in the following areas:
+
+**Radiological analysis:** AI analyzes X-rays, MRIs, and CT scans to detect anomalies. Several major hospitals in Baku already use AI-assisted radiological systems. These systems analyze images within seconds and highlight suspicious areas for physicians. Research shows that AI-assisted diagnostics has improved accuracy by 15-20 percent.
+
+**Dermatological diagnostics:** Apps that analyze skin photographs taken with a smartphone camera are now in widespread use. These apps can identify skin cancer, eczema, and other skin conditions with high accuracy. In Azerbaijan, this technology is especially significant in regions with a shortage of dermatologists.
+
+**Pathological analysis:** In microscopic analysis of tissue samples, AI assists pathologists. AI systems identify cancer cells with high precision and help determine the stage of the disease.
+
+**Ophthalmological screening:** AI analysis of retinal images enables early detection of conditions such as diabetic retinopathy and glaucoma. This technology is especially valuable in regions where regular eye examinations are not readily available.
+
+## Health apps and digital solutions
+
+Mobile health applications have become even more sophisticated in 2026 and have become an integral part of people's daily health management.
+
+- **Medication reminder apps** — alert patients with chronic conditions to take their medicine on time
+- **Diet and nutrition apps** — create personalized nutrition plans powered by AI
+- **Mental health platforms** — offer online psychological support and meditation programs
+- **Pregnancy tracking** — weekly development tracking and advice for expectant mothers
+- **Child health** — vaccination calendars and developmental tracking for parents
+
+Several health apps developed by local teams in Azerbaijan have attracted attention. The "Healthy Life" app offers free medical advice in Azerbaijani, information about disease symptoms, and a map of nearby medical facilities. The app already has more than 200,000 users.
+
+## Electronic health records
+
+Azerbaijan's electronic health records system has seen significant progress in 2026. The new system stores a patient's complete medical history — lab results, prescriptions, surgical records, and allergies — on a unified digital platform. This delivers several important advantages:
+
+- Physicians can instantly access a patient's full medical history
+- Duplicate examinations and tests are avoided, saving costs
+- Drug interactions are automatically checked
+- In emergencies, doctors can immediately obtain critical patient information
+
+## Challenges of digital health
+
+Despite all its benefits, digital health technology faces a number of challenges:
+
+**Data privacy:** Medical data is among the most sensitive personal information. Cybersecurity and data protection remain priorities in this field. The Azerbaijani government is preparing dedicated legislation to protect medical data.
+
+**The digital divide:** The older generation and rural populations face difficulties using digital technologies. To address this, apps with simplified interfaces and digital literacy programs are being implemented.
+
+**Infrastructure:** Limited internet availability in some regions complicates the deployment of digital health services. The government is working on expanding broadband infrastructure.
+
+## Looking ahead
+
+Experts forecast that by 2028, the digital health market in Azerbaijan will reach 500 million manats. Fields such as genomics, personalized medicine, nanotechnology, and 3D bioprinting are set to transform medicine even further in the near future.
+
+Within the framework of the Azerbaijani government's "Healthy Azerbaijan 2030" program, the broad adoption of digital health technologies has been identified as a priority. This program aims to provide citizens with higher-quality, more accessible, and more affordable healthcare.
+
+Digital health technologies are no longer the future — they are the present. Societies that use these technologies wisely will gain the ability to live healthier, longer, and higher-quality lives. Azerbaijan's steps in this field are encouraging and could turn the country's healthcare system into one of the most modern in the region.`,
+  },
+  'en-azerbaijans-space-program-new-steps': {
+    title: "Azerbaijan's Space Program: New Steps Forward",
+    date: '2026-03-09',
+    category: 'Science',
+    locale: 'en',
+    content: `Azerbaijan has taken significant strides in the space sector in recent years, and in 2026, the country's space program is entering a new phase. From the Azersky satellite to new space technology projects, a range of initiatives are aimed at positioning Azerbaijan among the region's space leaders. In this article, we provide a detailed overview of the history, current state, and future plans of Azerbaijan's space program.
+
+## The Azersky satellite and its achievements
+
+Launched into orbit in 2014, the Azersky satellite (formerly known as SPOT-7) was Azerbaijan's first serious step in the space arena. This high-resolution observation satellite gave Azerbaijan the ability to obtain independent satellite imagery. In 2026, Azersky continues to operate, and the data it collects is used across many fields:
+
+- **Agriculture** — monitoring crop fields, forecasting yields, and managing water resources
+- **Ecology** — tracking forest cover, detecting pollution sources, and protecting biodiversity
+- **Urban planning** — land-use planning, construction oversight, and infrastructure development monitoring
+- **Emergency response** — monitoring natural disasters and assessing earthquake damage
+- **Defense and security** — border surveillance and strategic intelligence
+
+The satellite can capture images at 1.5-meter resolution, enabling detailed observation of objects on the earth's surface. In recent years, the application of AI algorithms to image processing has significantly increased the quality and usefulness of the data obtained from the satellite.
+
+## New satellite projects
+
+Azerbaijan has announced several new projects in 2026 to expand its space infrastructure:
+
+**Azersky-2 observation satellite:** A next-generation observation satellite capable of capturing higher-resolution images. With 50-centimeter resolution, this satellite will deliver imagery three times more detailed than its predecessor. It will also feature night imaging and radar technology, enabling observation even beneath cloud cover.
+
+**Telecommunications satellite:** Azerbaijan plans to launch its own telecommunications satellite. This will improve access to internet and television services, particularly in rural areas. Negotiations with international partners are underway.
+
+**Small satellite cluster:** One of the most interesting initiatives is the creation of a cluster of small satellites (nanosatellites). These 10-to-50-kilogram satellites will work together to rapidly survey large areas. This project is being developed by local engineers and holds great significance as a practical application of STEM education.
+
+## Azerbaijan Space Agency
+
+Discussions about establishing an Azerbaijan Space Agency are underway in 2026. Currently, space-related activities are distributed among several entities — Azercosmos, the National Aerospace Agency, and relevant ministries. A unified space agency would be essential for coordinating these activities, using resources more efficiently, and strengthening international cooperation.
+
+The proposed agency's main functions would include:
+
+- Strategic planning and management of the space program
+- Operation and development of satellite systems
+- Cooperation with international space organizations
+- Commercialization of space technologies
+- Training of space-sector professionals
+
+## International cooperation
+
+Azerbaijan cooperates with several countries and international organizations in the space sector:
+
+- **Turkey** — close cooperation exists with Turkey's space program. Joint projects are underway in satellite technologies, space engineering, and training. Turkey's experience with the GOKTURK satellites is a valuable reference for Azerbaijan.
+- **France** — cooperation continues with Airbus Defence and Space, the manufacturer of the Azersky satellite. French technologies are also planned for new satellite projects.
+- **European Space Agency (ESA)** — Azerbaijan has signed a cooperation agreement with ESA. Under this agreement, Azerbaijani specialists can participate in ESA programs.
+- **United Nations** — as a member of the UN Committee on the Peaceful Uses of Outer Space (COPUOS), Azerbaijan participates in shaping international space law.
+
+## STEM education and the space sector
+
+Azerbaijan's space program is directly linked to the development of STEM education. Achieving success in the space sector requires highly qualified engineers, physicists, mathematicians, and programmers. Several important steps have been taken in this direction:
+
+**University-level space programs:** ADA University, Baku State University, and Azerbaijan Technical University have launched new programs in space engineering and aerospace technologies. Students in these programs acquire knowledge in satellite design, orbital mechanics, remote sensing, and space data processing.
+
+**At the school level:** The Ministry of Education supports the establishment of astronomy clubs in schools. In 2026, more than 50 schools have active astronomy clubs. In these clubs, students engage in telescope observations, satellite tracking, and building simple rocket models.
+
+**Space summer camps:** Annual space camps held during the summer generate significant interest among young people. Participants gain hands-on knowledge about rocket engines, satellite communications, and space navigation. Over 500 applications were received for the 2026 camp — twice as many as the previous year.
+
+**International olympiads:** Azerbaijani youth achieve strong results in international astronomy and astrophysics olympiads. At the 2025 International Astronomy Olympiad, the Azerbaijani team won a silver medal.
+
+## Economic benefits of space technologies
+
+Investment in space technologies serves not only scientific interest but also economic purpose. Research shows that every dollar invested in the space sector generates 4 to 7 dollars in returns. In the Azerbaijani context, the economic benefits of space technologies are evident in the following areas:
+
+- **Agricultural optimization** — precision farming based on satellite data increases yields by 15-20 percent
+- **Natural disaster management** — early warnings for floods, earthquakes, and wildfires prevent millions of manats in losses
+- **Oil and gas industry** — satellite observation is used for pipeline monitoring and the discovery of new deposits
+- **Tourism and cartography** — high-precision mapping supports tourism infrastructure planning
+
+## Challenges and prospects
+
+Azerbaijan's space program also faces certain challenges. First and foremost, the space sector demands substantial investment. Developing, launching, and operating satellites costs millions of dollars. Second, the shortage of qualified personnel remains — the number of experienced space engineering professionals is limited.
+
+Nevertheless, the future of Azerbaijan's space program is promising. The country's strategic geographic location, growing economic capacity, and the younger generation's enthusiasm for technology create fertile ground for success in the space sector. The goal is for Azerbaijan to have one of the region's strongest space programs by 2030.
+
+Space technologies are no longer a luxury — they are a necessity. Space technology plays an irreplaceable role in addressing global challenges such as climate change, food security, and natural resource management. The steps Azerbaijan is taking in this field strengthen the country's technological sovereignty and create new opportunities for future generations.`,
+  },
+  'en-baku-technology-festival-2026': {
+    title: 'Baku Technology Festival 2026: Innovation Meets Creativity',
+    date: '2026-03-08',
+    category: 'Culture',
+    locale: 'en',
+    content: `Baku Technology Festival 2026 was held during the first week of March at and around the Heydar Aliyev Center. Spanning three days, the festival served as a unique platform where technology, innovation, and creativity converged. Drawing more than 15,000 participants, the event showcased the strength and potential of Azerbaijan's technology ecosystem. In this article, we take a detailed look at the festival's main events, standout projects, and its impact on the future.
+
+## Festival structure
+
+Baku Technology Festival 2026 comprised several main sections:
+
+- **Startup Showcase** — an exhibition where local and international startups presented their projects
+- **AI Laboratory** — live demonstrations of artificial intelligence technologies
+- **Gaming World** — video games, esports, and entertainment technologies
+- **Workshops** — hands-on seminars and creative competitions
+- **Main Stage** — talks by renowned technology leaders and innovators
+- **Youth Zone** — a dedicated program for the 12-18 age group
+
+## Startup Showcase: companies of the future
+
+One of the festival's most engaging sections was the Startup Showcase. Here, over 80 local and international startups displayed their products and services. Winners were selected in three categories:
+
+**Best Technology Startup:** The winner was an AI-powered agricultural monitoring platform. Using drones and satellite imagery analyzed by artificial intelligence, the platform helps farmers detect plant diseases early, plan irrigation, and forecast yields. The team won a 200,000-dollar investment prize.
+
+**Best Social Impact Startup:** The winner was a navigation app designed for people with disabilities. The app shows the most accessible routes, wheelchair-friendly buildings, and public transport options for users with disabilities. Covering Baku, Ganja, and Sumgayit, the app already has 10,000 users.
+
+**Best Youth Startup:** The winner was a team of 17-year-old students. Their app is an AI assistant that school students can use to ask questions during study breaks. The app works in Azerbaijani and provides explanations in mathematics, physics, and chemistry.
+
+This year, the startup competition received over 250 applications — a 60 percent increase compared to last year. The jury chair noted that Azerbaijan's startup ecosystem is maturing rapidly and producing projects capable of competing at the international level.
+
+## AI Laboratory: the possibilities of artificial intelligence
+
+The AI Laboratory was the festival's most visited section. Here, various real-world applications of AI were demonstrated live:
+
+- **Real-time translation** — a system translating from Azerbaijani into more than 30 languages was demonstrated. Participants could speak in Azerbaijani and watch both the written and audio translation appear on screen.
+- **AI art generator** — visitors could input descriptions and create unique artworks using artificial intelligence. The best pieces were exhibited in the festival's art gallery.
+- **Voice cloning** — a technology that clones a user's voice from a 10-second sample and uses it to read any text generated significant interest.
+- **Automatic video editing** — a system that professionally edits raw video material using AI was demonstrated.
+- **Medical diagnostic AI** — an AI system analyzing X-rays and skin images generated strong interest among physicians.
+
+The laboratory also hosted a panel discussion on the ethical dimensions of AI. Experts debated topics including deepfake technology, data privacy, and AI's impact on the job market.
+
+## Gaming World and Esports
+
+The festival's Gaming World section was the most popular among young attendees. The following events took place:
+
+**Esports tournament:** The Baku Esports Cup featured competitions in three titles — Counter-Strike 2, Dota 2, and EA FC 26. A total of 64 teams participated, with a combined prize pool of 50,000 manats. The finals were watched live by more than 100,000 viewers.
+
+**Virtual reality zone:** Equipped with cutting-edge VR headsets, this zone allowed visitors to journey through virtual worlds, play VR games, and create virtual art. A locally developed virtual tour of Baku attracted particular interest — users could explore the Old City, Fountain Square, and the Heydar Aliyev Center in virtual reality.
+
+**Game Jam:** A 48-hour game development competition took place. Twenty teams competed, and the winning team took first place with a platformer game inspired by Azerbaijani folklore. In the game, players adventure through virtual Azerbaijani landscapes as the character Koroghlu.
+
+## Workshops and seminars
+
+Over 40 seminars and workshops were held during the festival. The most popular topics included:
+
+- **Building a business with AI** — participants learned how to develop business plans using AI tools
+- **Web3 and blockchain fundamentals** — a hands-on seminar about decentralized technologies
+- **Drone programming** — participants learned to program drones to navigate through obstacle courses
+- **3D printing technologies** — creating custom designs with 3D printers
+- **Cybersecurity** — practical advice on online safety and personal data protection
+- **Digital marketing** — a workshop on social media, SEO, and content marketing
+
+Seminars were held in both Azerbaijani and English. The participation of international speakers further elevated the festival's quality.
+
+## Main Stage: inspiring talks
+
+The festival's Main Stage featured talks by prominent figures from the technology world:
+
+- The founder of Azerbaijan's leading technology company spoke about the development of the country's startup ecosystem
+- A digital government expert invited from Estonia shared e-governance best practices
+- A Turkish AI researcher shared thought-provoking forecasts about the future of AI
+- A Georgian game developer discussed the prospects of the gaming industry in the region
+
+The most applauded talk was by a young Azerbaijani developer. The 22-year-old Baku resident announced that his open-source software has reached 1 million users worldwide and encouraged young people to be bold in the technology field.
+
+## Youth Zone
+
+The Youth Zone, designed specifically for the 12-18 age group, was the festival's most energetic section. Here, young participants:
+
+- Built and programmed simple robots
+- Created their first websites
+- Developed electronics projects using Arduino
+- Learned the Scratch programming language
+- Explored 3D modeling
+
+The primary aim of this section was to spark young people's interest in technology and inspire careers in STEM. A post-festival survey found that 85 percent of participants want to pursue a career in technology.
+
+## Festival outcomes and impact
+
+Baku Technology Festival 2026 will be remembered for several important results:
+
+- Over 15,000 participants — a 40 percent increase over the previous year
+- More than 80 startup presentations
+- Over 3 million manats in investment deals
+- More than 40 seminars and workshops
+- 25 international speakers
+- Over 5 million social media views
+
+Festival organizers announced that Baku Technology Festival will be held annually going forward, with an even larger scale planned for 2027. Growing sponsorship interest from international technology companies will further elevate the event's quality.
+
+Baku Technology Festival plays a vital role in shaping Azerbaijan's innovation culture. Events like these bring the technology community together, create conditions for the birth of new ideas, and represent an investment in the country's technological future. The festival's success demonstrates that Azerbaijan has both the interest in technology and the talented youth — what is needed is to provide them with the right platform.`,
+  },
+  'en-quantum-computers-the-future-arrives-in-azerbaijan': {
+    title: 'Quantum Computers: The Technology of the Future Arrives in Azerbaijan',
+    date: '2026-03-07',
+    category: 'Technology',
+    locale: 'en',
+    content: `Quantum computing technology in 2026 is turning possibilities that were once discussed only in theory into practical reality. As the world's leading technology companies expand commercial applications of quantum computers, Azerbaijan has also begun to show interest in the field and take its first steps. In this article, we take a detailed look at the fundamentals of quantum computing, the current situation globally and in Azerbaijan, areas of application, and future prospects.
+
+## What is quantum computing?
+
+Classical computers process data in the form of bits — 0s and 1s. Each bit can be either 0 or 1 at any given moment. Quantum computers, on the other hand, use qubits (quantum bits). The key difference is that, thanks to the principle of superposition, qubits can exist in both the 0 and 1 states simultaneously. This property enables quantum computers to perform certain types of calculations millions of times faster than classical computers.
+
+Another fundamental principle of quantum computing is entanglement. When two qubits are placed in an entangled state, the state of one immediately affects the other — regardless of the distance between them. This phenomenon has no analogue in classical physics and gives quantum computers a unique computational advantage.
+
+## The global state of quantum technologies
+
+Several landmark developments took place in the quantum technology field in 2026:
+
+- **IBM** has developed a 4,000-qubit quantum processor — four times the previous record. This processor is being applied particularly in drug discovery and materials science.
+- **Google** has demonstrated quantum advantage in new domains — cryptography and optimization problems. Their successor to the Willow chip solved in minutes what would take classical supercomputers years.
+- **Microsoft** has achieved a major breakthrough in topological qubits. These qubits are more stable and produce fewer errors than conventional qubits.
+- **China** has expanded its quantum communication network by adding five new cities to the Beijing-Shanghai quantum network. China leads the world in quantum cryptography.
+- **The European Union** has allocated 2 billion euros to quantum technologies. This investment is being used to establish quantum research centers across 15 countries.
+
+## Application areas of quantum computers
+
+Quantum computing is not merely an academic pursuit — its practical applications are already gaining traction:
+
+**Drug discovery and medicine:** Quantum computers are significantly better at simulating molecular behavior than classical computers. This can reduce the drug development timeline from years to months. In 2026, several pharmaceutical companies have used quantum simulation to discover new molecules for cancer treatment.
+
+**Financial sector:** Banks and investment funds use quantum algorithms for portfolio optimization, risk assessment, and market forecasting. Companies like Goldman Sachs and JPMorgan have expanded their quantum computing departments.
+
+**Logistics and transportation:** Quantum computers calculate optimal routes while accounting for millions of variables. Large logistics companies are using quantum optimization to reduce fuel costs by 15-20 percent.
+
+**Cryptography:** The potential of quantum computers to break existing encryption systems is driving the cybersecurity world toward quantum-resistant cryptography. The U.S. National Institute of Standards and Technology (NIST) has approved quantum-resistant encryption standards.
+
+**AI and machine learning:** Quantum algorithms can accelerate the training of machine learning models. Research in quantum machine learning shows that quantum approaches deliver results up to 100 times faster than classical methods for certain types of data analysis.
+
+## Quantum technologies in Azerbaijan
+
+Azerbaijan is still at an early stage in quantum technologies, but several important steps were taken in 2026:
+
+- **ANAS (Azerbaijan National Academy of Sciences)** has established a quantum computing research group. This group is working on applying quantum algorithms to the oil and gas industry.
+- **ADA University** has opened a master's program in quantum computing. Students acquire in-depth knowledge in quantum programming, quantum algorithms, and quantum machine learning.
+- **Azerbaijan Technical University** has gained access to IBM's and Microsoft's quantum computing platforms. Students gain hands-on experience on cloud-based quantum computers.
+- **A government program** has allocated 50 million manats for the development of quantum technologies. These funds are directed toward building research infrastructure and training personnel.
+
+Applications in the oil and gas industry are particularly interesting for Azerbaijan. Quantum simulations could enable more accurate modeling of oil reservoirs, optimization of extraction processes, and acceleration of exploration work. SOCAR has begun preliminary discussions with international partners in this field.
+
+## Quantum programming
+
+Quantum programming differs fundamentally from classical programming. Programmers use quantum gates to perform operations on qubits. The most popular quantum programming languages and platforms include:
+
+- **Qiskit** — an open-source Python library developed by IBM. It is the world's most widely used quantum programming platform.
+- **Cirq** — Google's quantum programming platform. It is specifically optimized for running on Google's quantum processors.
+- **Q#** — Microsoft's quantum programming language. It integrates with the .NET ecosystem.
+- **PennyLane** — a platform specifically designed for quantum machine learning.
+
+These platforms are used as the primary teaching tools for training Azerbaijan's quantum programmers. Foundational knowledge covers classical programming, linear algebra, and the basics of quantum mechanics.
+
+## Challenges and solutions
+
+Several serious challenges stand in the way of quantum technology development:
+
+**Qubit stability:** Qubits are extremely sensitive to environmental interference. Temperature changes, electromagnetic fields, and vibration can disrupt qubit states. To address this, quantum computers are kept at temperatures near absolute zero — minus 273 degrees Celsius.
+
+**Error correction:** Errors in quantum computations are inevitable. The development of quantum error correction algorithms is one of the most important research directions in the field. In 2026, significant progress was made in this area — error rates were reduced tenfold.
+
+**Talent shortage:** The number of quantum specialists worldwide falls significantly short of demand. This problem is even more acute in Azerbaijan. University quantum programs and international cooperation for personnel training are the proposed solutions.
+
+## Looking ahead
+
+Experts forecast that by 2030, quantum computers will find commercial applications in many sectors. For Azerbaijan, not falling behind in this technology is essential. The country's oil and gas sector, financial system, and cybersecurity infrastructure are the key areas that could benefit from quantum technologies.
+
+Quantum computing technology will elevate humanity's computational power to an entirely new level. Countries that invest in this technology early will gain an advantage in the digital economy of the future. Azerbaijan's initial steps in this field are encouraging and lay a solid foundation for the country's technological future.`,
+  },
+  'en-baku-2028-olympic-preparations': {
+    title: "Baku 2028 Olympic Preparations: Azerbaijan's Athletes on the World Stage",
+    date: '2026-03-06',
+    category: 'Sports',
+    locale: 'en',
+    content: `Azerbaijani athletes are continuing their preparations for the 2028 Los Angeles Olympic Games at full speed. The year 2026 is critically important in this process — the battle to secure Olympic qualification through world and European championships, Grand Prix events, and selection tournaments is intensifying. In this article, we take a detailed look at the achievements of Azerbaijani athletes on the world stage, the training process, and expectations for Los Angeles 2028.
+
+## Azerbaijan's historic sporting achievements
+
+Since gaining independence, Azerbaijan has achieved significant success in the Olympic movement. From 1996 through 2024, Azerbaijani athletes won a total of 18 gold, 20 silver, and 35 bronze medals at the Summer Olympic Games. Wrestling, boxing, judo, and shooting are our traditionally strong sports.
+
+The inaugural European Games held in Baku in 2015 fundamentally improved Azerbaijan's sports infrastructure. The National Gymnastics Arena, Boxing Arena, Aquatics Center, and other modern sports facilities have enabled our athletes to train at a world-class level.
+
+## 2026 competition results
+
+In the first quarter of this year, Azerbaijani athletes have delivered strong results at several major international competitions:
+
+**Wrestling:** Azerbaijani wrestlers won 3 gold, 2 silver, and 4 bronze medals at the European Championships. In freestyle wrestling, our athlete in the 74 kg weight class defeated an American opponent in the final to claim the gold medal. In Greco-Roman wrestling, we claimed podium finishes in 2 weight categories.
+
+**Judo:** At the Grand Slam tournament, the Azerbaijani team finished third in the team standings. Our athletes won gold medals in the 73 kg and 81 kg weight classes. Our women's judo athletes are also making significant progress — a young athlete in the 57 kg category won a silver medal, demonstrating tremendous potential for the future.
+
+**Boxing:** Azerbaijani boxers won 4 medals at the World Boxing Tour. Our athlete in the 71 kg class defeated a strong Cuban boxer in the semifinal to advance to the final. The boxing federation is paying special attention to developing young boxers — 6 medals were won at international youth tournaments this year.
+
+**Shooting:** At a Shooting World Cup stage, Azerbaijani shooters claimed 2 gold and 1 silver medal. Our record-holder in rifle shooting broke the world record, raising medal expectations for the Los Angeles Olympics.
+
+**Karate and taekwondo:** Azerbaijani athletes are delivering strong results in karate, which has been reinstated in the 2028 Olympic program. Two medals were won at the European Championships. In taekwondo, a young athlete has entered the world's top ten rankings.
+
+## Training infrastructure
+
+Olympic preparation also requires significant infrastructure investment. Several major projects were implemented in 2026:
+
+- **A new Olympic Training Center** has been built near Baku. The center features modern training halls equipped for 15 sports, a recovery center, a medical examination unit, and residential quarters. The facility fully meets international standards.
+- **A high-altitude training base** has opened in the Quba district. Located at 2,000 meters above sea level, this base is designed for endurance athletes. The lower atmospheric pressure at this altitude enhances the body's oxygen-carrying capacity.
+- **An AI-powered performance analysis system** has been deployed. This system monitors athletes' training via cameras and sensors, conducts motion analysis, and creates individualized development plans.
+- **A psychological preparation program** has been expanded. Each athlete has been assigned an individual psychologist to work on competition stress, motivation, and mental resilience.
+
+## Financial support
+
+The state budget allocation for Olympic preparation has been increased by 35 percent compared to 2025. The distribution of these funds is as follows:
+
+- **Athlete salaries and bonuses** — 30 percent of the budget. Significant rewards are provided for medal-winning athletes.
+- **International competition participation** — 25 percent. Athletes' participation in world championships, Grand Prix events, and selection tournaments is fully funded.
+- **Infrastructure and equipment** — 20 percent. Procurement of modern training equipment, athletic apparel, and technology systems.
+- **Personnel training and foreign coaches** — 15 percent. World-class foreign coaches have been brought in for several sports.
+- **Medical services and recovery** — 10 percent. Protecting athlete health and rehabilitation from injuries.
+
+## The next generation and Olympic reserves
+
+Developing young athletes is of particular importance in the Los Angeles 2028 preparations. The Ministry of Sports expanded the "Olympic Reserves" program in 2026:
+
+- A nationwide screening program was conducted to identify talented athletes aged 14-18. Two hundred were selected from more than 3,000 young athletes.
+- A special scholarship program has been established for selected young athletes. The program supports both their athletic and educational pursuits.
+- The number of sports schools in the regions has been increased. Ten new specialized sports schools have opened outside Baku.
+- Participation in international youth tournaments has intensified. In 2026, Azerbaijani young athletes competed in 45 international events.
+
+## Medal expectations
+
+Sports experts put forward the following projections for Azerbaijan at the Los Angeles 2028 Olympic Games:
+
+- **Wrestling** — at least 3-4 medals (including 1-2 golds). This is our traditionally strongest discipline.
+- **Judo** — 2-3 medals. Our judo team holds a strong position in the world rankings.
+- **Boxing** — 2-3 medals. Our boxing program has shown significant development in recent years.
+- **Shooting** — 1-2 medals. Having a world record holder boosts our gold medal chances.
+- **Karate** — 1 medal. This sport has been reinstated in the Olympic program.
+- **Other sports** — 1-2 medals. Surprise medals are expected in taekwondo, weightlifting, and swimming.
+
+## International cooperation
+
+International cooperation plays a vital role in Azerbaijan's Olympic preparation. Joint training camps are held with Japan's judo federation. Boxing coaches invited from Cuba are refining the technique of Azerbaijani boxers. Cooperation with experienced coaches from the Russian wrestling school continues. Knowledge exchange in sports science and technology is conducted with the U.S. Olympic Committee.
+
+## Conclusion
+
+The 2028 Los Angeles Olympic Games will be an important test for Azerbaijani sports. The results of the 2026 preparation process are encouraging — our athletes are delivering strong results internationally, infrastructure is improving, and the next generation is rising. All conditions are being created to showcase the strength of Azerbaijani sports on the world stage once again. The main goal is to surpass our historic achievement and inscribe our country's name in Olympic history in even bolder letters.`,
+  },
+  'en-digital-skills-the-future-of-azerbaijani-youth': {
+    title: "Digital Skills: The Future of Azerbaijan's Youth",
+    date: '2026-03-05',
+    category: 'Education',
+    locale: 'en',
+    content: `Digital skills have become one of the most essential requirements of the modern labor market in 2026. For Azerbaijan's younger generation, technological literacy is no longer a luxury — it is a vital necessity. In this article, we present a detailed analysis of the state of digital education in Azerbaijan, existing programs, challenges, and future prospects.
+
+## Why are digital skills needed?
+
+According to the World Economic Forum's 2026 report, by 2030, 85 percent of all professions will require digital skills. This applies not only to programmers — accountants, teachers, doctors, lawyers, marketers, and other professionals will all need to be proficient with technology. According to the European Commission, workers with digital skills earn an average of 25 percent more.
+
+In the Azerbaijani context, this is an even more pressing issue. The country's economic diversification strategy has identified the development of the digital economy as a priority. The success of this strategy depends directly on a workforce equipped with digital skills.
+
+## The current state of digital education in Azerbaijan
+
+According to independent research, Azerbaijan's population has the following levels of digital literacy:
+
+- **Basic digital skills** (internet use, email, office software) — 65 percent of the population
+- **Intermediate level** (data analysis, social media management, online collaboration tools) — 35 percent
+- **Advanced level** (programming, web design, cybersecurity, data science) — 8 percent
+- **Expert level** (artificial intelligence, cloud computing, blockchain, IoT) — 2 percent
+
+These figures are below the European average, but significant growth has been recorded over the past three years. Digital skill levels are rising particularly fast among the 18-30 age group.
+
+## Government programs and initiatives
+
+The Azerbaijani government is implementing several important programs to develop digital skills:
+
+**"Digital Skills" National Program (2025-2030):** This program aims to improve the digital skills of 500,000 citizens over five years. The program offers training courses at three levels — basic, intermediate, and advanced. In 2026, over 80,000 people have already registered.
+
+**"Young Programmers" initiative:** Free programming courses are organized for young people aged 14-25. Courses cover Python, JavaScript, Java, and mobile development. Over 15,000 young people participated in these courses in 2026. Sixty percent of those who successfully completed the courses found employment.
+
+**"Teacher.tech" program:** A specialized program has been developed to improve teachers' digital skills. In 2026, 8,000 teachers completed the program. It covers interactive teaching methods, digital instructional tools, and online assessment systems.
+
+**Technology parks and innovation centers:** Technology centers operate in Baku, Ganja, Sumgayit, and Lankaran. These centers offer young people free computer and internet access, mentorship services, and startup support.
+
+## Digital education at universities
+
+Higher education institutions have fundamentally updated their curricula in the digital skills domain:
+
+- **ADA University** — offers specialized programs in artificial intelligence, cybersecurity, and data science. The university's technology park provides incubation services for startups.
+- **Baku State University** — five new specializations have been introduced in the computer science faculty: data science, cybersecurity, cloud computing, game development, and IoT engineering.
+- **BHOS (Baku Higher Oil School)** — a specialization program in digital oil and gas technologies. Students learn about SCADA systems, digital twin technology, and automation.
+- **Azerbaijan Technical University** — a new master's program in robotics and mechatronics. Students gain practical experience with industrial robots in laboratory settings.
+
+## The role of the private sector
+
+Private companies are playing an increasingly active role in developing digital skills:
+
+- **Technology companies** conduct corporate training programs. Several large IT companies have launched free "academy" programs where they train young people according to their own staffing needs.
+- **Banks and financial institutions** run fintech skills training programs. Specialized courses are organized in digital banking, blockchain, and financial analytics.
+- **Telecommunications companies** conduct digital literacy campaigns. Alongside the expansion of internet access in rural areas, digital skills training sessions are also being held.
+
+## Online education platforms
+
+Following the COVID-19 pandemic, online education platforms have become widely adopted in Azerbaijan. The landscape in 2026 is as follows:
+
+- Five local online education platforms operate in Azerbaijani. These platforms offer courses in programming, design, marketing, and business management.
+- More than 150,000 active users from Azerbaijan are registered on international platforms (Coursera, Udemy, edX). The most popular courses include Python programming, web development, data science, and artificial intelligence.
+- There are over 200 YouTube channels that provide technology instruction in Azerbaijani. These channels are especially popular among young people.
+
+## The digital divide
+
+The most serious challenge in the development of digital skills is the digital divide — that is, the gap in digital competency between urban and rural populations, younger and older generations, and affluent and disadvantaged families. Statistics show:
+
+- The digital skill level of Baku residents is twice that of regional residents
+- The 18-30 age group's digital proficiency is three times higher than that of those over 50
+- Men's digital skill levels are still higher than women's, though this gap continues to narrow
+
+To address this problem, the government is expanding digital infrastructure in the regions, developing simplified training programs for the elderly, and organizing dedicated technology courses for women.
+
+## The labor market and digital skills
+
+Demand for digital skills is growing rapidly in Azerbaijan's labor market:
+
+- Demand for IT specialists has increased by 40 percent compared to 2025
+- Demand for digital marketing specialists has risen by 55 percent
+- Demand for data analysts has grown by 70 percent
+- Demand for cybersecurity specialists has surged by 80 percent (the highest growth)
+
+Seventy-three percent of employers report that candidates' digital skills play a decisive role in hiring decisions. This trend will only strengthen in the future.
+
+## Looking ahead
+
+The following targets have been set for digital skills in Azerbaijan by 2030:
+
+- 80 percent of the population to possess basic digital skills
+- 100,000 new IT specialists to be trained
+- The digital economy's share of GDP to reach 10 percent
+- All government services to transition to digital formats
+
+Achieving these goals requires close collaboration among education, the private sector, and the state. Digital skills are no longer a future skill — they are today's requirement. Azerbaijan's younger generation has the potential to meet this demand — what they need is the right opportunities.`,
+  },
+  'en-azerbaijans-undiscovered-tourism-routes': {
+    title: "Azerbaijan's Undiscovered Tourism Routes: A 2026 Guide",
+    date: '2026-03-04',
+    category: 'Travel',
+    locale: 'en',
+    content: `Although Azerbaijan has made significant progress in tourism in recent years, many of the country's beautiful corners remain undiscovered by travelers. In 2026, alternative tourism routes are gaining popularity as adventurous visitors venture beyond Baku's well-known landmarks to explore the country's true beauty. In this guide, we present Azerbaijan's most fascinating yet lesser-known tourism routes, practical tips, and the unique features of each itinerary.
+
+## Why choose alternative routes?
+
+Most tourists visiting Azerbaijan head to Baku's Old City, Fountain Square, the Heydar Aliyev Center, and the Gobustan Reserve. These sites are undoubtedly worth seeing, but Azerbaijan's real charm lies deeper within the country. The hospitality of rural villages, the unique architecture of mountain settlements, rare natural landscapes, and areas rich in ancient history offer an incomparable experience for those who want to truly discover Azerbaijan.
+
+## Route 1: Khinalig and the Quba Mountains
+
+**Duration:** 3-4 days
+**Difficulty:** Moderate
+**Best time:** May-October
+
+Khinalig is considered one of the world's oldest continuously inhabited settlements. Perched at 2,350 meters above sea level, this village has a 5,000-year history. Its residents have preserved their unique language — the Khinalig language — to this day. UNESCO has listed it among critically endangered languages.
+
+The Khinalig route begins from the town of Quba. Along the way, you can visit Afurja Waterfall, the Tenghi forests, and the Red Village. The Red Village (Qirmizi Gasaba) is one of the few places where Mountain Jews live and is known for its distinctive culture.
+
+**Practical tips:**
+- A 4x4 vehicle is recommended
+- Staying with local families is possible in Khinalig — book in advance
+- Mobile coverage is limited in the village — download an offline map
+- Do not miss the local cuisine — especially chiz-biz and mountain honey
+
+## Route 2: Lahij and Shamakhi
+
+**Duration:** 2-3 days
+**Difficulty:** Easy
+**Best time:** Year-round (exercise caution in winter)
+
+Lahij is a unique town renowned for its ancient craft traditions. Copperware made by local artisans is famous throughout the world. The cobblestone streets, historic houses, and the sound of hammering from every doorway transport visitors back in time.
+
+Shamakhi is an ancient city situated along the historic Silk Road. Here you can visit the Juma Mosque, the Yeddi Gumbaz mausoleum, and the Shamakhi Observatory. The observatory offers excellent conditions for nighttime sky observation — its distance from city lights means the stars are astonishingly clear.
+
+**Practical tips:**
+- Haggle when buying copperware in Lahij — it is a local tradition
+- Shamakhi wines are internationally recognized — join a wine tour
+- Market day (Monday) is the best time to visit Lahij
+
+## Route 3: Sheki and Balakan
+
+**Duration:** 3-5 days
+**Difficulty:** Easy to Moderate
+**Best time:** April-November
+
+Sheki is famous for its Khan Palace, which is inscribed on the UNESCO World Heritage List. But the city's appeal extends far beyond the palace. Its historic bazaar, caravanserais, piti restaurants, and silk-weaving workshops require a full day to explore.
+
+Balakan is one of Azerbaijan's least visited yet most beautiful regions. Here you will find the Katekh Waterfall, Mazikh Cave, and walnut forests. The region offers ideal conditions for adrenaline sports — rafting, paragliding, and mountain biking.
+
+**Practical tips:**
+- Stay at least two nights in Sheki — the city is worth it
+- Do not leave without tasting Sheki baklava — it is completely different from the Baku version
+- Homestay tours are popular in Balakan — spend time with local families
+
+## Route 4: Lerik and the Talysh Mountains
+
+**Duration:** 3-4 days
+**Difficulty:** Moderate to Challenging
+**Best time:** June-September
+
+The Lerik district is known as the land of long-lived people. In mountain villages, it is common to encounter residents over 100 years old. The region's clean air, natural food, and active lifestyle are considered the main reasons for this longevity.
+
+The Talysh Mountains are a natural paradise with subtropical forests, rare flora, and unique fauna. Hirkan National Park is inscribed on the UNESCO World Natural Heritage List. The park contains over 1,000 plant species, including rare trees found nowhere else on Earth.
+
+**Practical tips:**
+- Mountain roads can be challenging — travel with an experienced driver
+- Visit different villages to sample local teas — each village has its own tea recipe
+- Hiring a local guide in Lerik is recommended
+
+## Route 5: Nakhchivan
+
+**Duration:** 4-5 days
+**Difficulty:** Easy
+**Best time:** April-October
+
+Nakhchivan is one of Azerbaijan's oldest regions, boasting a 7,500-year history. Here you can visit the ancient Gamigaya petroglyphs, the Momine Khatun mausoleum, Alinja Fortress, and salt caves. Nakhchivan's cuisine is also unique — dasta kebab, Nakhchivan gutab, and doshama plov differ markedly from those of other Azerbaijani regions.
+
+Alinja Fortress sits at 2,000 meters elevation and is considered one of the most important medieval defensive structures in Azerbaijani history. From its summit, a panoramic view of the Nakhchivan Plain unfolds. The Gamigaya petroglyphs are ancient rock drawings at 3,000 meters above sea level.
+
+## Ecotourism opportunities
+
+Azerbaijan significantly expanded its ecotourism infrastructure in 2026:
+
+- New hiking trails have been opened across 11 national parks — more than 500 km of walking paths in total
+- Ecotourism lodges have been built in 8 regions — energy-efficient accommodations made from local materials
+- Birdwatching tourism is growing — Azerbaijan is home to more than 400 bird species
+- Mountain biking routes have been created — a 200 km route network
+
+## Practical information
+
+Things you should know when traveling to Azerbaijan:
+
+- **Visa:** Electronic visas (ASAN Visa) are available for citizens of many countries — ready within 3 business days
+- **Currency:** The Azerbaijani manat (AZN). Card payments are accepted in Baku and major cities, but cash is needed in rural areas
+- **Transport:** Intercity buses are available, but car rental is recommended for route flexibility
+- **Language:** Azerbaijani is the official language. English is widely understood in Baku, but Russian is more useful in the regions
+- **Hospitality:** Azerbaijanis are renowned for their hospitality — be prepared for tea-table invitations in rural areas
+
+## Tourism innovations
+
+Several innovations in Azerbaijan's tourism sector have caught attention in 2026:
+
+- A **digital tourist guide** app has been developed — an interactive platform covering all of Azerbaijan's tourism sites, routes, and services
+- A **local guide network** has been established — more than 500 certified local guides offer services in 8 languages
+- **Glamping** (luxury tent camping) sites have opened — in Shahdag, Gabala, and Lerik, you can experience comfort in the heart of nature
+- **Gastronomic tours** are gaining popularity — the chance to learn about and taste regional cuisine on site
+
+Azerbaijan is a true hidden treasure for travelers. Whether you seek ancient history, breathtaking nature, rare culture, or unforgettable culinary experiences — this country offers it all. You only need to venture a little beyond Baku to discover an entirely different Azerbaijan.`,
+  },
+  'en-azerbaijan-startup-ecosystem-2026-breakthrough': {
+    title: "Azerbaijan's Startup Ecosystem: A Major Leap in 2026",
+    date: '2026-03-03',
+    category: 'Business',
+    locale: 'en',
+    content: `Azerbaijan's startup ecosystem has shown significant development in 2026 compared to previous years. New investment funds, government support programs, technology parks, and international cooperation opportunities have fundamentally transformed the country's entrepreneurial environment. In this article, we present a detailed analysis of the current state of Azerbaijan's startup ecosystem, success stories, existing challenges, and future prospects.
+
+## The current landscape of the startup ecosystem
+
+According to statistics from the beginning of 2026, the number of active startups in Azerbaijan has exceeded 1,200 — a 65 percent increase compared to 2024. The sector breakdown is as follows:
+
+- **Fintech (financial technologies)** — 22 percent. Digital payment systems, lending platforms, and investment apps.
+- **EdTech (education technologies)** — 18 percent. Online education platforms, interactive teaching tools, and language-learning apps.
+- **AgriTech (agricultural technologies)** — 15 percent. Drone-based monitoring, smart irrigation, and yield forecasting systems.
+- **HealthTech (health technologies)** — 12 percent. Telemedicine, health tracking, and medical diagnostics apps.
+- **E-commerce and logistics** — 10 percent. Online sales platforms and delivery services.
+- **GreenTech (green technologies)** — 8 percent. Renewable energy, waste management, and carbon tracking.
+- **Other sectors** — 15 percent. Tourism technology, gaming, cybersecurity, and more.
+
+## The investment climate
+
+Startup investment volume in Azerbaijan has reached a record level in 2026:
+
+**Government investment funds:**
+- **Azerbaijan Investment Holding (AIH)** has allocated 50 million manats to startups. These funds are primarily directed toward seed- and Series A-stage startups.
+- **The Innovation Agency** has awarded grants of up to 100,000 manats to over 200 startups through its grant program.
+- **The Startup Certificate** program offers certified startups access to tax incentives, office space, and mentorship services.
+
+**Private investment funds:**
+- Eight local venture capital funds operate in Azerbaijan. Their total capital stands at 150 million manats.
+- The angel investor network has expanded — over 120 individual investors fund startups.
+- International funds are showing interest in Azerbaijani startups — 30 million dollars were attracted from foreign funds in 2026.
+
+## Success stories
+
+Several Azerbaijani startups achieved notable success in 2026:
+
+**PayBaku — digital payment platform:** This fintech startup has captured 15 percent of Azerbaijan's mobile payment market. With 500,000 active users, the platform has also entered the Georgian and Uzbek markets. The company raised 12 million dollars in its Series B investment round.
+
+**AgriSense — smart agriculture:** This startup analyzes drone and satellite data using AI to provide farmers with recommendations for increasing yields. It is used on more than 200 farms. The startup has signed a cooperation agreement with the FAO (UN Food and Agriculture Organization).
+
+**MedConnect — telemedicine platform:** This platform connects patients with doctors via video conference and conducts more than 50,000 consultations per month. Over 300 specialist physicians are registered on the platform. Post-COVID demand growth drove the platform's rapid expansion.
+
+**EcoTrack — carbon tracking:** This green technology startup offers companies a platform to track and reduce their carbon emissions. It is targeting entry into the European market. With the strengthening of ESG (Environmental, Social, Governance) standards, demand in this field is growing rapidly.
+
+## Technology parks and accelerators
+
+Technology parks and accelerators play a crucial role in the development of Azerbaijan's startup ecosystem:
+
+**Baku Technopark:** The country's largest technology park hosts more than 150 startups. Park residents are offered office space, laboratory equipment, mentorship services, legal support, and access to investors. In 2026, the park's territory was expanded and a new innovation center was opened.
+
+**INNOLAND Incubation Center:** This center focuses specifically on early-stage startups. During a 6-month incubation program, startups receive training in business model development, product development, market research, and investor presentations. Seventy percent of startups that complete the program continue to operate.
+
+**Northern Accelerator:** Based in Ganja, this accelerator supports startups in the regions. Through a 3-month program, startups receive 30,000 manats in investment, mentorship, and access to Baku's investor network.
+
+## Legal environment and regulation
+
+Significant steps have been taken to improve the legal environment for Azerbaijan's startup ecosystem:
+
+- **Startup legislation** has been refined — companies that receive startup status benefit from 3 years of tax incentives
+- **A venture capital law** has been adopted — providing a clear legal framework for the creation and operation of investment funds
+- **Intellectual property protection** has been strengthened — the patent application process has been simplified and accelerated
+- **Foreign investment procedures** have been streamlined — bureaucratic barriers for foreign investors funding Azerbaijani startups have been reduced
+
+## International cooperation
+
+Azerbaijan's startup ecosystem is expanding its international ties:
+
+- **Turkey** — cooperation agreements have been signed with Istanbul technology parks and accelerators. Turkish investors are showing growing interest in Azerbaijani startups.
+- **Estonia** — knowledge exchange is underway with Estonia, a leader in e-governance, regarding digital infrastructure. Azerbaijani startups are benefiting from Estonia's e-residency program.
+- **Israel** — Israel's "startup nation" experience is being studied as a model for Azerbaijan. Technology transfer and joint research projects are being carried out between the two countries.
+- **UAE** — cooperation with Dubai and Abu Dhabi technology parks is expanding. Azerbaijani startups benefit from a special support program for accessing the UAE market.
+
+## Challenges
+
+Despite positive developments, Azerbaijan's startup ecosystem faces several challenges:
+
+- **Talent shortage:** Demand for skilled programmers and engineers exceeds supply. This constrains startup growth rates.
+- **Market size:** Azerbaijan's domestic market is small (10 million people). Startups need to target international markets from an early stage.
+- **Exit strategy:** Opportunities for selling startups (exits) in the Azerbaijani market are still limited. IPOs and M&A transactions occur rarely.
+- **Risk culture:** Society's attitude toward entrepreneurial failure is not yet sufficiently tolerant. Building a startup culture takes time.
+
+## Looking ahead
+
+Experts forecast that Azerbaijan's startup ecosystem could become one of the strongest in the region by 2030. The key conditions for achieving this are:
+
+- Raising the quality of technology education
+- Continuing to attract international investment
+- Facilitating entry into markets beyond the domestic one
+- Popularizing successful startups as role models
+
+Azerbaijan's startup ecosystem has already reached critical mass. The investment climate is improving, government support is strengthening, and the younger generation's interest in technology is growing. The key is to sustain this positive trend and transform the ecosystem into a self-sustaining circular economy — where successful startups invest in new startups and experienced entrepreneurs mentor young founders. Once this chain reaction begins, Azerbaijan's startup ecosystem will achieve unstoppable growth momentum.`,
+  },
 }
 
 export const newsSlugs = Object.keys(newsArticles)
+
+/**
+ * Get articles filtered by locale.
+ * If no locale is provided, returns all articles.
+ */
+export function getArticlesByLocale(locale?: string): Record<string, NewsArticle> {
+  if (!locale) return newsArticles
+  return Object.fromEntries(
+    Object.entries(newsArticles).filter(([, article]) => (article.locale || 'az') === locale)
+  )
+}
+
+/**
+ * Get slugs filtered by locale.
+ */
+export function getSlugsByLocale(locale?: string): string[] {
+  if (!locale) return newsSlugs
+  return Object.entries(newsArticles)
+    .filter(([, article]) => (article.locale || 'az') === locale)
+    .map(([slug]) => slug)
+}

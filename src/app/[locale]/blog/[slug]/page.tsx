@@ -4,15 +4,17 @@ import Link from 'next/link'
 import { generateBlogPostMetadata, generateBlogArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
-import { blogPosts } from '@/data/blog-posts'
+import { blogPosts, getBlogPostBySlug } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
+import type { Locale } from '@/i18n/config'
 
 export function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({ slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = blogPosts[params.slug]
+export function generateMetadata({ params }: { params: { slug: string; locale: string } }): Metadata {
+  const locale = (params.locale ?? 'az') as Locale
+  const post = getBlogPostBySlug(params.slug, locale)
   if (!post) return {}
 
   const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
@@ -27,8 +29,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return { ...metadata, alternates }
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug]
+export default function BlogPost({ params }: { params: { slug: string; locale: string } }) {
+  const locale = (params.locale ?? 'az') as Locale
+  const post = getBlogPostBySlug(params.slug, locale)
   if (!post) notFound()
 
   const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
