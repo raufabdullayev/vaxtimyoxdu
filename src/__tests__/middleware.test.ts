@@ -19,8 +19,9 @@ vi.mock('@/i18n/routing', () => ({
   },
 }))
 
-// Import AFTER mocks are set up.
-const { middleware, config } = await import('@/middleware')
+// Import the middleware module. The dynamic import runs after mocks are
+// registered because vitest hoists vi.mock calls above all other code.
+import { middleware, config } from '@/middleware'
 
 /**
  * Helper to create a NextRequest for testing the middleware.
