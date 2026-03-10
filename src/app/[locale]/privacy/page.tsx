@@ -3,12 +3,13 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { generateHreflangAlternates } from '@/lib/utils/seo'
 
 type Props = {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'privacy' })
-  const alternates = generateHreflangAlternates('/privacy', params.locale)
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'privacy' })
+  const alternates = generateHreflangAlternates('/privacy', locale)
 
   return {
     title: t('metaTitle'),
@@ -18,7 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PrivacyPage({ params }: Props) {
-  setRequestLocale(params.locale)
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('privacy')
 
   return (

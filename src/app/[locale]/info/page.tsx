@@ -7,13 +7,14 @@ import { generateHreflangAlternates, getOgLocale } from '@/lib/utils/seo'
 import { getArticlesByLocale } from '@/data/news-articles'
 
 type Props = {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'info' })
-  const alternates = generateHreflangAlternates('/info', params.locale)
-  const ogLocale = getOgLocale(params.locale)
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'info' })
+  const alternates = generateHreflangAlternates('/info', locale)
+  const ogLocale = getOgLocale(locale)
 
   return {
     title: t('metaTitle'),
@@ -84,11 +85,12 @@ function extractSummary(content: string): string {
 }
 
 export default async function InfoPage({ params }: Props) {
-  setRequestLocale(params.locale)
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('info')
 
   // Get articles for current locale; falls back to 'az' if locale has no articles
-  const articlesMap = getArticlesByLocale(params.locale)
+  const articlesMap = getArticlesByLocale(locale)
   const articles = Object.entries(articlesMap)
     .map(([slug, article]) => ({ slug, ...article }))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

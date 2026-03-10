@@ -6,11 +6,12 @@ import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import { generateHreflangAlternates } from '@/lib/utils/seo'
 
 type Props = {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const alternates = generateHreflangAlternates('/', params.locale)
+  const { locale } = await params
+  const alternates = generateHreflangAlternates('/', locale)
 
   return {
     alternates,
@@ -18,7 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function HomePage({ params }: Props) {
-  setRequestLocale(params.locale)
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('home')
 
   return (

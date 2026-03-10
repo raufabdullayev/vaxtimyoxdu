@@ -10,9 +10,6 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
-  // SWC minifier is enabled by default in Next.js 14, but we set it
-  // explicitly to ensure it is never accidentally turned off.
-  swcMinify: true,
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },

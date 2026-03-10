@@ -3,12 +3,13 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { generateHreflangAlternates } from '@/lib/utils/seo'
 
 type Props = {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'terms' })
-  const alternates = generateHreflangAlternates('/terms', params.locale)
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'terms' })
+  const alternates = generateHreflangAlternates('/terms', locale)
 
   return {
     title: t('metaTitle'),
@@ -18,7 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function TermsPage({ params }: Props) {
-  setRequestLocale(params.locale)
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('terms')
 
   return (

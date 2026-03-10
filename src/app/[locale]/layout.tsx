@@ -1,24 +1,14 @@
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import dynamic from 'next/dynamic'
 import { routing } from '@/i18n/routing'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-
-// Lazy load below-the-fold / post-interactive components.
-// These are only needed after the page is interactive, so deferring them
-// reduces the initial JS bundle and improves TTI and LCP.
-const CookieConsent = dynamic(() => import('@/components/layout/CookieConsent'), {
-  ssr: false,
-})
-const InstallPrompt = dynamic(() => import('@/components/layout/InstallPrompt'), {
-  ssr: false,
-})
+import ClientShell from '@/components/layout/ClientShell'
 
 type Props = {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export function generateStaticParams() {
@@ -26,7 +16,7 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = params
+  const { locale } = await params
 
   if (!hasLocale(routing.locales, locale)) {
     notFound()
@@ -49,8 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
       </div>
-      <CookieConsent />
-      <InstallPrompt />
+      <ClientShell />
     </NextIntlClientProvider>
   )
 }

@@ -8,13 +8,14 @@ import { getBlogPostsByLocale } from '@/data/blog-posts'
 import type { Locale } from '@/i18n/config'
 
 type Props = {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'blog' })
-  const alternates = generateHreflangAlternates('/blog', params.locale)
-  const ogLocale = getOgLocale(params.locale)
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'blog' })
+  const alternates = generateHreflangAlternates('/blog', locale)
+  const ogLocale = getOgLocale(locale)
 
   return {
     title: t('metaTitle'),
@@ -62,11 +63,12 @@ function extractExcerpt(content: string): string {
 }
 
 export default async function BlogPage({ params }: Props) {
-  setRequestLocale(params.locale)
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('blog')
 
   // Get blog posts for the current locale; falls back to 'en' when no translation exists
-  const postsMap = getBlogPostsByLocale(params.locale as Locale)
+  const postsMap = getBlogPostsByLocale(locale as Locale)
   const posts = Object.entries(postsMap)
     .map(([slug, post]) => ({ slug, ...post }))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

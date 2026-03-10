@@ -13,9 +13,10 @@ export function generateStaticParams() {
   return Object.keys(blogPosts).map((slug) => ({ slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string; locale: string } }): Metadata {
-  const locale = (params.locale ?? 'az') as Locale
-  const post = getBlogPostBySlug(params.slug, locale)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
+  const { slug, locale: rawLocale } = await params
+  const locale = (rawLocale ?? 'az') as Locale
+  const post = getBlogPostBySlug(slug, locale)
   if (!post) return {}
 
   const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
@@ -23,19 +24,20 @@ export function generateMetadata({ params }: { params: { slug: string; locale: s
   const metadata = generateBlogPostMetadata({
     title: post.title,
     description,
-    slug: params.slug,
+    slug,
     date: post.date,
   })
-  const alternates = generateHreflangAlternates(`/blog/${params.slug}`, params.locale)
+  const alternates = generateHreflangAlternates(`/blog/${slug}`, rawLocale)
   return { ...metadata, alternates }
 }
 
-export default async function BlogPost({ params }: { params: { slug: string; locale: string } }) {
-  setRequestLocale(params.locale)
+export default async function BlogPost({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale: rawLocale } = await params
+  setRequestLocale(rawLocale)
   const nav = await getTranslations('common.nav')
 
-  const locale = (params.locale ?? 'az') as Locale
-  const post = getBlogPostBySlug(params.slug, locale)
+  const locale = (rawLocale ?? 'az') as Locale
+  const post = getBlogPostBySlug(slug, locale)
   if (!post) notFound()
 
   const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
@@ -43,7 +45,7 @@ export default async function BlogPost({ params }: { params: { slug: string; loc
   const jsonLd = generateBlogArticleJsonLd({
     title: post.title,
     description,
-    slug: params.slug,
+    slug,
     date: post.date,
     locale,
   })

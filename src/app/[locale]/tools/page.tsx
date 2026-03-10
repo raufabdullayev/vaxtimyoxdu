@@ -7,13 +7,14 @@ import Breadcrumb from '@/components/layout/Breadcrumb'
 import { generateHreflangAlternates, getOgLocale } from '@/lib/utils/seo'
 
 type Props = {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'tools' })
-  const alternates = generateHreflangAlternates('/tools', params.locale)
-  const ogLocale = getOgLocale(params.locale)
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'tools' })
+  const alternates = generateHreflangAlternates('/tools', locale)
+  const ogLocale = getOgLocale(locale)
 
   return {
     title: `${t('pageTitle')} ${t('pageTitleHighlight')} - Vaxtim Yoxdu`,
@@ -55,7 +56,8 @@ const categoryTranslationKeys: Record<ToolCategory, { name: string; desc: string
 }
 
 export default async function ToolsPage({ params }: Props) {
-  setRequestLocale(params.locale)
+  const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('tools')
 
   const groupedTools = tools.reduce(

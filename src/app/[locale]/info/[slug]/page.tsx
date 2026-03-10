@@ -11,8 +11,9 @@ export function generateStaticParams() {
   return Object.keys(newsArticles).map((slug) => ({ slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string; locale: string } }): Metadata {
-  const article = newsArticles[params.slug]
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
+  const { slug, locale } = await params
+  const article = newsArticles[slug]
   if (!article) return {}
 
   const description = article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim()
@@ -20,19 +21,20 @@ export function generateMetadata({ params }: { params: { slug: string; locale: s
   const metadata = generateArticleMetadata({
     title: article.title,
     description,
-    slug: params.slug,
+    slug,
     date: article.date,
     category: article.category,
   })
-  const alternates = generateHreflangAlternates(`/info/${params.slug}`, params.locale)
+  const alternates = generateHreflangAlternates(`/info/${slug}`, locale)
   return { ...metadata, alternates }
 }
 
-export default async function ArticlePage({ params }: { params: { slug: string; locale: string } }) {
-  setRequestLocale(params.locale)
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params
+  setRequestLocale(locale)
   const nav = await getTranslations('common.nav')
 
-  const article = newsArticles[params.slug]
+  const article = newsArticles[slug]
   if (!article) notFound()
 
   const description = article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim()
@@ -40,10 +42,10 @@ export default async function ArticlePage({ params }: { params: { slug: string; 
   const jsonLd = generateNewsArticleJsonLd({
     title: article.title,
     description,
-    slug: params.slug,
+    slug,
     date: article.date,
     category: article.category,
-    locale: params.locale,
+    locale,
   })
 
   return (
@@ -92,7 +94,7 @@ export default async function ArticlePage({ params }: { params: { slug: string; 
       <LazyAdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
       <RelatedArticles
         items={Object.entries(newsArticles)
-          .filter(([slug]) => slug !== params.slug)
+          .filter(([s]) => s !== slug)
           .slice(0, 2)
           .map(([slug, a]) => ({
             slug,

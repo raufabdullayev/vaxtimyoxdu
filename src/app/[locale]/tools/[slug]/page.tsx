@@ -98,12 +98,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string; locale: string }
+  params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
-  const tool = getToolBySlug(params.slug)
+  const { slug, locale } = await params
+  const tool = getToolBySlug(slug)
   if (!tool) return {}
 
-  const t = await getTranslations({ locale: params.locale, namespace: 'tools' })
+  const t = await getTranslations({ locale, namespace: 'tools' })
 
   // Attempt to read localized name and description; fall back to tool defaults
   let localizedName: string | undefined
@@ -121,21 +122,22 @@ export async function generateMetadata({
   }
 
   const localeOpts = {
-    locale: params.locale,
+    locale,
     localizedName,
     localizedDescription,
   }
 
   const metadata = generateToolMetadata(tool, localeOpts)
-  const alternates = generateHreflangAlternates(`/tools/${tool.slug}`, params.locale)
+  const alternates = generateHreflangAlternates(`/tools/${tool.slug}`, locale)
   return { ...metadata, alternates }
 }
 
-export default async function ToolPage({ params }: { params: { slug: string; locale: string } }) {
-  setRequestLocale(params.locale)
+export default async function ToolPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations('tools')
 
-  const tool = getToolBySlug(params.slug)
+  const tool = getToolBySlug(slug)
   if (!tool) notFound()
 
   const Component = toolComponents[tool.slug]
@@ -156,7 +158,7 @@ export default async function ToolPage({ params }: { params: { slug: string; loc
   }
 
   const localeOpts = {
-    locale: params.locale,
+    locale,
     localizedName,
     localizedDescription,
   }
