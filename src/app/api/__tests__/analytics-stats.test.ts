@@ -32,7 +32,7 @@ function createChainMock(resolvedValue: Record<string, unknown> = { count: 0, da
   return chain
 }
 
-const mockFrom = vi.fn(() => createChainMock())
+const mockFrom = vi.fn((_table: string) => createChainMock())
 
 vi.mock('@/lib/supabase/client', () => ({
   isSupabaseConfigured: true,
