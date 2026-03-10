@@ -6,11 +6,15 @@ const BURST_LIMIT = 5 // requests per IP per minute
 const BURST_WINDOW_MS = 60000 // 1 minute
 
 // Use Upstash Redis in production, in-memory fallback for dev
+// Trim env vars to prevent trailing whitespace/newline issues from Vercel UI
+const redisUrl = process.env.UPSTASH_REDIS_REST_URL?.trim()
+const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN?.trim()
+
 const redis =
-  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+  redisUrl && redisToken
     ? new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+        url: redisUrl,
+        token: redisToken,
       })
     : null
 
