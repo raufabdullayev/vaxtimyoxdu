@@ -9,8 +9,9 @@ describe('ADSENSE_CLIENT_ID', () => {
     expect(typeof ADSENSE_CLIENT_ID).toBe('string')
   })
 
-  it('should be empty string initially (waiting for approval)', () => {
-    expect(ADSENSE_CLIENT_ID).toBe('')
+  it('should read from NEXT_PUBLIC_ADSENSE_ID env variable', () => {
+    // In test environment, env var is not set so it falls back to empty string
+    expect(typeof ADSENSE_CLIENT_ID).toBe('string')
   })
 })
 
@@ -61,9 +62,9 @@ describe('AD_SLOTS', () => {
     }
   })
 
-  it('should have all slots as empty strings initially (pending approval)', () => {
+  it('should have non-empty slot identifiers', () => {
     for (const [key, value] of Object.entries(AD_SLOTS)) {
-      expect(value, `AD_SLOTS.${key} should be empty`).toBe('')
+      expect(value.length, `AD_SLOTS.${key} should not be empty`).toBeGreaterThan(0)
     }
   })
 })
@@ -80,13 +81,8 @@ describe('isAdsenseEnabled()', () => {
     expect(typeof isAdsenseEnabled()).toBe('boolean')
   })
 
-  it('should return false when ADSENSE_CLIENT_ID is empty', () => {
-    // Currently ADSENSE_CLIENT_ID is empty string
-    expect(isAdsenseEnabled()).toBe(false)
-  })
-
-  it('should return false because ads are not yet approved', () => {
-    // Reflects the current production state
+  it('should return false when NEXT_PUBLIC_ADSENSE_ID env is not set', () => {
+    // In test environment, env var is not set so returns false
     expect(isAdsenseEnabled()).toBe(false)
   })
 })

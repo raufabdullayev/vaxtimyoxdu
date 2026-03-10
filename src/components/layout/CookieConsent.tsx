@@ -31,6 +31,9 @@ export default function CookieConsent() {
       if (typeof w.gtag === 'function') {
         w.gtag('consent', 'update', {
           analytics_storage: 'granted',
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
         })
       }
     }
