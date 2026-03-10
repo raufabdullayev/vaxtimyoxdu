@@ -55,7 +55,7 @@ deploy:
     - echo "Building..."
     - vercel build --prod --token=$VERCEL_TOKEN 2>&1
     - echo "Deploying..."
-    - vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN 2>&1
+    - vercel deploy --prebuilt --prod --archive=tgz --token=$VERCEL_TOKEN 2>&1
   environment:
     name: production
     url: https://vaxtimyoxdu.com

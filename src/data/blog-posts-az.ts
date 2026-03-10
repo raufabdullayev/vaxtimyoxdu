@@ -2,1150 +2,1150 @@ import { BlogPost } from './blog-posts'
 
 export const blogPostsAz: Record<string, BlogPost> = {
   'best-free-online-tools-2026': {
-    title: '2026-da Istifade Etmeniz Gereken En Yaxsi Pulsuz Onlayn Aletler',
+    title: '2026-da İstifadə Etməniz Gərəkən Ən Yaxşı Pulsuz Onlayn Alətlər',
     date: '2026-03-07',
     relatedTools: ['ai-text-rewriter', 'image-compress', 'pdf-merge', 'qr-code-generator', 'color-picker', 'json-formatter'],
-    content: `Internet pulsuz onlayn aletlerle doludur, amma etibarli ve haqiqeten pulsuz olanlari tapmaq cox vaxt alir. "Pulsuz" adlandirilan bir cox alet gizli odenis divarlari qoyur, qeydiyyat teleb edir ve ya fayllarinizi namelum serverlere yukleyir. 2026-ci ilde veziyyet koklunden deyisib. Brauzer esasli aletler indi her seyi birbase cihazinizda emal edir, melumatlarinizi qoruyaraq pesekar seviyyeli neticeler verir. Bu il istifade etmeniz gereken en yaxsi pulsuz onlayn aletler ve onlarin gundlik is axininiz ucun niye vacib oldugu haqqinda danisaq.
+    content: `İnternet pulsuz onlayn alətlərlə doludur, amma etibarlı və həqiqətən pulsuz olanları tapmaq çox vaxt alır. "Pulsuz" adlandırılan bir çox alət gizli ödəniş divarları qoyur, qeydiyyat tələb edir və ya fayllarınızı naməlum serverlərə yükləyir. 2026-cı ildə vəziyyət kökündən dəyişib. Brauzer əsaslı alətlər indi hər şeyi birbaşa cihazınızda emal edir, məlumatlarınızı qoruyaraq peşəkar səviyyəli nəticələr verir. Bu il istifadə etməniz gərəkən ən yaxşı pulsuz onlayn alətlər və onların gündəlik iş axınınız üçün niyə vacib olduğu haqqında danışaq.
 
-## AI Metn Aletleri
+## AI Mətn Alətləri
 
-AI ile islenen metn aletleri son iki ilde ciddi sekilde inkisaf edib. Bir vaxtlar yenilik kimi gorunen bu aletler indi yazicilarin, marketoloqlarin, telebelerin ve mutexessislerin gundlik isinin ayrilmaz hissesidir. Muasir AI metn yeniden yazicilari butov meqaleleri orijinal menani qoruyaraq yeniden ifade ede bilir, tonu bir klikle qeyri-resmiden akademike deyise bilir ve kontentinizi muxtelif platformalarda tezelemeye komek edir.
+AI ilə işlənən mətn alətləri son iki ildə ciddi şəkildə inkişaf edib. Bir vaxtlar yenilik kimi görünən bu alətlər indi yazıçıların, marketoloqların, tələbələrin və mütəxəssislərin gündəlik işinin ayrılmaz hissəsidir. Müasir AI mətn yenidən yazıcıları bütöv məqalələri orijinal mənası qoruyaraq yenidən ifadə edə bilir, tonu bir kliklə qeyri-rəsmidən akademikə dəyişə bilir və kontentinizi müxtəlif platformalarda təzələməyə kömək edir.
 
-AI xulaseediciler de eyni derecede deyerlidir. Uzun arasdirma hesabatini oxumaq ve ya 3000 sozluk hesabati komandaniz ucun qisa brefinqe cevirmek isteyirsinizse, bu aletler bir nece saniye erzinde esas meqamlari cixarir. Qrammatika yoxlayicilari da sade orfoqrafiya yoxlamasinin otesine kecib. Onlar indi yerlesdirilmemis teyinleri, passiv sesin heddinden artiq istifadesini, uygunsuz zaman deyisiklikleri ve ton uygunsuzluqlarini tutmaga qadirdir. Pesekar sekilde yazan her kes ucun bu aletler artiq istege bagli deyil -- zeruridir.
+AI xülasəedicilər də eyni dərəcədə dəyərlidir. Uzun araşdırma hesabatını oxumaq və ya 3000 sözlük hesabatı komandanız üçün qısa brifinqə çevirmək istəyirsinizsə, bu alətlər bir neçə saniyə ərzində əsas məqamları çıxarır. Qrammatika yoxlayıcıları da sadə orfoqrafiya yoxlamasının ötəsinə keçib. Onlar indi yerləşdirilməmiş təyinləri, passiv səsin həddindən artıq istifadəsini, uyğunsuz zaman dəyişikliklərini və ton uyğunsuzluqlarını tutmağa qadirdir. Peşəkar şəkildə yazan hər kəs üçün bu alətlər artıq istəyə bağlı deyil -- zəruridir.
 
-**Niye vacibdir:** Kontent yaratma sureti reqabet ustunluyune cevrilib. AI metn aletlerinden istifade eden komandalar cilalanmis qaralama versiyalari qat-qat az vaxtda hazirlaya bilir ve enerjini yorucu redakte evezine strategiya ve yaradici dusunceye yoneldir.
+**Niyə vacibdir:** Kontent yaratma sürəti rəqabət üstünlüyünə çevrilib. AI mətn alətlərindən istifadə edən komandalar cilalanmış qaralama versiyaları qat-qat az vaxtda hazırlaya bilir və enerjini yorucu redaktə əvəzinə strategiya və yaradıcı düşüncəyə yönəldir.
 
-## Sekil Aletleri
+## Şəkil Alətləri
 
-Sekiller elaqeli veb-saytlarin en agir aktivleri olaraq qalir ve 2026-ci ilde sehife sureti hem istifadeci tecrubesi, hem de axtaris motoru siralamalari ucun her zamankinden daha vacibdir. Onlayn sekil siqisdiricilar fayl olcusunu gorunen keyfiyyet itirmeden 50-80% azaltmaga imkan verir. En yaxsi aletler toplu emal destekleyir, belelikle bir qovluqdaki butun sekilleri bir anda optimallasdira bilirsiniz.
+Şəkillər əlaqəli veb-saytların ən ağır aktivləri olaraq qalır və 2026-cı ildə səhifə sürəti həm istifadəçi təcrübəsi, həm də axtarış motoru sıralamaları üçün hər zamankından daha vacibdir. Onlayn şəkil sıxışdırıcılar fayl ölçüsünü görünən keyfiyyət itirmədən 50-80% azaltmağa imkan verir. Ən yaxşı alətlər toplu emal dəstəkləyir, beləliklə bir qovluqdakı bütün şəkilləri bir anda optimallaşdıra bilərsiniz.
 
-Sekil format cevricileri de eyni derecede vacibdir. WebP ustun sixilmasi sayesinde veb sekiller ucun standart haline gelib, amma e-poct bultenleri ve cap is axinlari kimi mueyyen kontekstlerde hemin JPEG ve PNG-ye ehtiyac var. Yaxsi bir cevirici formatlar arasinda ani kecid etmeye imkan verir -- birbase brauzerinizde, masa ustu proqram temin etmeden.
+Şəkil format çevriciləri də eyni dərəcədə vacibdir. WebP üstün sıxılması sayəsində veb şəkillər üçün standart halına gəlib, amma e-poçt bülletenləri və çap iş axınları kimi müəyyən kontekstlərdə həmin JPEG və PNG-yə ehtiyac var. Yaxşı bir çevirici formatlar arasında anı keçid etməyə imkan verir -- birbaşa brauzerinizdə, masa üstü proqram təmin etmədən.
 
-**Sekil aletlerinde axtarmali oldugunuz xususiyyetler:**
-- Fayllarinizi gizli saxlayan musteriterefi emali
-- WebP, JPEG, PNG ve SVG formatlari ucun destek
-- Bir nece fayl ucun toplu emal
-- Sixilmadan evvel ve sonra onizleme
-- Daqiq nezaret ucun xususi keyfiyyet suruculeri
+**Şəkil alətlərində axtarmalı olduğunuz xüsusiyyətlər:**
+- Fayllarınızı gizli saxlayan müştəritərəfi emalı
+- WebP, JPEG, PNG və SVG formatları üçün dəstək
+- Bir neçə fayl üçün toplu emal
+- Sıxılmadan əvvəl və sonra önizləmə
+- Dəqiq nəzarət üçün xüsusi keyfiyyət sürücüləri
 
-## PDF Aletleri
+## PDF Alətləri
 
-PDF ile islemek eskiden Adobe Acrobat kimi bahali proqram teleb edirdi. Artiq bele deyil. Brauzer esasli PDF birlesdiriciler fakturalari, hesabatlari, muqavileleri ve prezentasiyalari bir nece saniyede vahid fayla birlesdirmeye imkan verir. Muasir PDF aletlerinin esas ustunluyu odur ki, fayllar tamamiley brauzerinizde emal olunur. Hassas maliyye senedleriniz, huquqi muqavileleriniz ve sexsi fayllariniz cihazinizi terk etmir -- server yukleme yoxdur, melumat saxlama siyasetleri barede narahat olmaga ehtiyac yoxdur.
+PDF ilə işləmək əskidən Adobe Acrobat kimi bahalı proqram tələb edirdi. Artıq belə deyil. Brauzer əsaslı PDF birləşdiriciləri fakturaları, hesabatları, müqavilələri və prezentasiyaları bir neçə saniyədə vahid fayla birləşdirməyə imkan verir. Müasir PDF alətlərinin əsas üstünlüyü odur ki, fayllar tamamilə brauzerinizdə emal olunur. Həssas maliyyə sənədləriniz, hüquqi müqavilələriniz və şəxsi fayllarınız cihazınızı tərk etmir -- server yükləmə yoxdur, məlumat saxlama siyasətləri barədə narahat olmağa ehtiyac yoxdur.
 
-## Tereccicar Aletleri
+## Tərtibatçı Alətləri
 
-Tereccicarlar gundlik isleri boyunca kicik yardimci proqramlardan asilidir. API cavablarini gozellesdirib tesdiqleyen JSON formatlayicilar, naxislari yaradib sazlayan regex test ediciler, autentifikasiya tokenleri ucun Base64 kodlayicilar ve fayl butovluyunu yoxlayan hes generatorlari -- bunlar muasir proqram hazirlamanin temel daslaridir.
+Tərtibatçılar gündəlik işləri boyunca kiçik yardımçı proqramlardan asılıdır. API cavablarını gözəlləşdirib təsdiqləyən JSON formatlayıcılar, naxışları yaradıb sazlayan regex test ediciləri, autentifikasiya tokenləri üçün Base64 kodlayıcılar və fayl bütövlüyünü yoxlayan heş generatorları -- bunlar müasir proqram hazırlamanın təməl daşlarıdır.
 
-En yaxsi tereccicar aletleri tamamiley brauzerde isleyir ve sifir qurashdirma teleb edir. Bu xususen mehdudlasdirilmis korporativ kompyuterde isleyende, is yoldasinizin noutbukunda cut proqramlashdirma edende ve ya sadece sisteminizi tek istifadelik CLI yardimcilari ile doldurmaq istemeyende deyerlidir.
+Ən yaxşı tərtibatçı alətləri tamamilə brauzerdə işləyir və sıfır quraşdırma tələb edir. Bu xüsusilə məhdudlaşdırılmış korporativ kompüterdə işləyəndə, iş yoldaşınızın noutbukunda cüt proqramlaşdırma edəndə və ya sadəcə sisteminizi tək istifadəlik CLI yardımçıları ilə doldurmaq istəməyəndə dəyərlidir.
 
-**2026-ci il ucun vacib tereccicar aletleri:**
-- **JSON Formatlayici**: Sintaksis vurgulamasi ile JSON-u gozellesdirir, minimallasdirin ve tesdiqleyin
-- **Regex Test Edici**: Real vaxt uygunluqu ile muenzzem ifadeler qurun ve sinayin
-- **Base64 Kodlayici/Dekoder**: Setrleri ve faylari Base64-e ve Base64-den cevirin
-- **Hes Generatoru**: MD5, SHA-1, SHA-256 ve diger hesleri ani olaraq yaradir
-- **Reng Secici**: HEX, RGB ve HSL arasinda cevirin, palitra yaradir
+**2026-cı il üçün vacib tərtibatçı alətləri:**
+- **JSON Formatlayıcı**: Sintaksis vurğulaması ilə JSON-u gözəlləşdirin, minimallaşdırın və təsdiqləyin
+- **Regex Test Edici**: Real vaxt uyğunluğu ilə müntəzəm ifadələr qurun və sınayın
+- **Base64 Kodlayıcı/Dekoder**: Sətrləri və faylları Base64-ə və Base64-dən çevirin
+- **Heş Generatoru**: MD5, SHA-1, SHA-256 və digər heşləri anı olaraq yaradır
+- **Rəng Seçici**: HEX, RGB və HSL arasında çevirin, palitra yaradır
 
-## QR Kod Generatorlari
+## QR Kod Generatorları
 
-QR kodlar pandemiya dovrundeki partlayisdan cox ireli gedib. 2026-ci ilde onlar vizit kartlarinda, mehsul qablashdirmalarinda, restoran menyularinda, tedbirlerden biletlerde, dasinmaz emlak elanlarinda ve her novden marketinq materiallarinda yerlesdirilir. Etibarli QR kod generatoru URL-leri, duz metni, e-poct unvanlarini, telefon nomrelerini, Wi-Fi etimadnamelerini ve vCard elaqa melumatlarini kodlasdirmaga imkan verir.
+QR kodlar pandemiya dövründəki partlayışdan çox irəli gedib. 2026-cı ildə onlar vizit kartlarında, məhsul qablaşdırmalarında, restoran menyularında, tədbirlərdən biletlərdə, daşınmaz əmlak elanlarında və hər növdən marketinq materiallarında yerləşdirilir. Etibarlı QR kod generatoru URL-ləri, düz mətni, e-poçt ünvanlarını, telefon nömrələrini, Wi-Fi etimadnamələrini və vCard əlaqə məlumatlarını kodlaşdırmağa imkan verir.
 
-Brendinize uygun olmasini temin etmek ucun ferdi reng ve olculer teklif eden generatorlar axdarin. Kodlari SVG formatinda yuklemek imkani xususen deyerlidir, cunki SVG-ler keyfiyyetini itirmeden istenilen olcuye olculenir -- afisa ve bannerlere cap kimi tetbiqler ucun vacibdir.
+Brendinizə uyğun olmasını təmin etmək üçün fərdi rəng və ölçülər təklif edən generatorlar axtarın. Kodları SVG formatında yükləmək imkanı xüsusilə dəyərlidir, çünki SVG-lər keyfiyyətini itirmədən istənilən ölçüyə ölçülənir -- afişa və bannerlərə çap kimi tətbiqlər üçün vacibdir.
 
-## Reng Seciciler
+## Rəng Seçiciləri
 
-Dizaynerler ve frontend tereccicarlar gun erzinde defe-defe reng cevirme aletlerine ehtiyac duyur. Yaxsi bir reng secici sadece HEX, RGB ve HSL arasinda cevirmekle kifayetlenmez. O, tamamlayici, analoq, triadik ve bolunmus-tamamlayici palitralar yaradir ki, siz saniyeler erzinde uyumlu reng sxemleri qura bilesiniz. Bezi aletler WCAG erisisebilirlik uygunlugu ucun kontrast nisbeti yoxlayicilari da daxildir.
+Dizaynerlər və frontend tərtibatçılar gün ərzində dəfə-dəfə rəng çevirmə alətlərinə ehtiyac duyur. Yaxşı bir rəng seçici sadəcə HEX, RGB və HSL arasında çevirməklə kifayətlənməz. O, tamamlayıcı, analoq, triadik və bölünmüş-tamamlayıcı palitralar yaradır ki, siz saniyələr ərzində uyumlu rəng sxemləri qura biləsiniz. Bəzi alətlər WCAG əlçatanlıq uyğunluğu üçün kontrast nisbəti yoxlayıcıları da daxildir.
 
-## Dogru Aleti Nece Secmeli
+## Doğru Aləti Necə Seçməli
 
-Bu qeder coxlu secimle, pulsuz onlayn aletleri secerken en cok maraq dogan meyarlar bunlardir:
+Bu qədər çoxlu seçimlə, pulsuz onlayn alətləri seçərkən ən çox maraq doğuran meyarlar bunlardır:
 
-1. **Gizlilik**: Alet fayllarinizi brauzerinizde yerli olaraq emal edir, yoxsa onlari servere yukleyir?
-2. **Suret**: Ani isleyir, yoxsa novbede gozlemeyi teleb edir?
-3. **Hesab teleb olunmur**: En yaxsi aletler qeydiyyat mecbur etmeden derhal isleyir
-4. **Gizli mehdudiyyetler yoxdur**: Gunde bir nece fayl ile mehdudlasdirilan "pulsuz" aletlerden ehtiyatli olun
-5. **Mobil dostu**: Aleti lazim olduqda telefonunuzda ve ya tabletinizde istifade ede bilmelisiniz
+1. **Gizlilik**: Alət fayllarınızı brauzerinizdə yerli olaraq emal edir, yoxsa onları serverə yükləyir?
+2. **Sürət**: Anı işləyir, yoxsa növbədə gözləməyi tələb edir?
+3. **Hesab tələb olunmur**: Ən yaxşı alətlər qeydiyyat məcbur etmədən dərhal işləyir
+4. **Gizli məhdudiyyətlər yoxdur**: Gündə bir neçə fayl ilə məhdudlaşdırılan "pulsuz" alətlərdən ehtiyatlı olun
+5. **Mobil dostu**: Aləti lazım olduqda telefonunuzda və ya tabletinizdə istifadə edə bilməlisiniz
 
-Bu aletlerin hamisi ve daha coxu Vaxtim Yoxdu-da pulsuz movcuddur. Qeydiyyat yoxdur, gizli odenisler yoxdur, fayllar uzaq serverlere yuklenmir. Sadece aleti acin, isinizi gorun ve gununuze davam edin. Cunki vaxt azdir ve aletleriniz hec vaxt maneye cevrimelidir.`,
+Bu alətlərin hamısı və daha çoxu Vaxtım Yoxdu-da pulsuz mövcuddur. Qeydiyyat yoxdur, gizli ödənişlər yoxdur, fayllar uzaq serverlərə yüklənmir. Sadəcə aləti açın, işinizi görün və gününüzə davam edin. Çünki vaxt azdır və alətləriniz heç vaxt maneəyə çevrilməlidir.`,
   },
   'how-ai-text-rewriting-works': {
-    title: 'AI Metn Yeniden Yazma Nece Isleyir',
+    title: 'AI Mətn Yenidən Yazma Necə İşləyir',
     date: '2026-03-05',
     relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer'],
-    content: `AI metn yeniden yazma boyuk dil modellerinden istifade ederek metninizi anlayir ve orijinal menani qoruyaraq yeniden ifade edir. Bu, muasir suni zekanin en praktik tetbiqlerinden biridir ve yazicilar, marketoloqlar, telebeler ve pesekarlar terefinden her gun istifade olunur. Texniki terefinden nece isleyir, bezi aletleri digerlerinden ustun eden nedir ve en yaxsi neticeleri nece elde ede bilirsiniz.
+    content: `AI mətn yenidən yazma böyük dil modellərindən istifadə edərək mətninizi anlayır və orijinal mənası qoruyaraq yenidən ifadə edir. Bu, müasir süni zekanın ən praktik tətbiqlərindən biridir və yazıçılar, marketoloqlar, tələbələr və peşəkarlar tərəfindən hər gün istifadə olunur. Texniki tərəfdən necə işləyir, bəzi alətləri digərlərindən üstün edən nədir və ən yaxşı nəticələri necə əldə edə bilərsiniz.
 
-## Kontekstin Anlastirilmasi
+## Kontekstin Anlaşdırılması
 
-Muasir AI modelleri sozleri sinonimlerle deyismekden cox daha artiq is gorur. Siz bir cumleni yeniden yazma aletine verdikde, model evvelce butun girisi eslesdirerek menanin, niyyetin, tonun ve strukturun derin anlayisini qurur. Bu proses kontekstual yerlesdirme adlanir -- AI metninizi ayri-ayri sozleri deyil, onlar arasindaki elaqeleri tutan riyazi temsile cevirir.
+Müasir AI modelləri sözləri sinonimlərlə dəyişməkdən çox daha artıq iş görür. Siz bir cümləni yenidən yazma alətinə verdikdə, model əvvəlcə bütün girişi əsləşdirərək mənanın, niyyətin, tonun və strukturun dərin anlayışını qurur. Bu prosses kontekstual yerləşdirmə adlanır -- AI mətninizi ayrı-ayrı sözləri deyil, onlar arasındakı əlaqələri tutan riyazi təmsilə çevirir.
 
-Meselen, bu cumleye baxin: "Cayin sahili dik idi ve ciceklarle ortulu idi." Sade sinonim deyisdiricisi "sahil" sozunu baska menada basa duse biler. Kontekstual AI modeli ise etrafdaki sozlerden anladigi ucun duzgun yeniden yazir. Kohne parafraz aletleri ile muasir AI yeniden yazicilari arasindaki esas ferq budur -- haqiqi anlama ile mexaniki evezleme.
+Məsələn, bu cümləyə baxın: "Çayın sahili dik idi və çiçəklərlə örtülü idi." Sadə sinonim dəyişdiricisi "sahil" sözünü başqa mənada başa düşə bilər. Kontekstual AI modeli isə ətrafındakı sözlərdən anladığı üçün düzgün yenidən yazır. Köhnə parafraz alətləri ilə müasir AI yenidən yazıcıları arasındakı əsas fərq budur -- həqiqi anlama ilə mexaniki əvəzləmə.
 
-Model hemcinin metninizin tonunu izleyir. Orijinal yaziniz resmi ise, yeniden yazma da resmi olacaq. Eger qeyri-resmidirse, netice uygun olacaq. Bu kontekstual melumatlilig AI yeniden yazmanin robot kimi deyil, tebii gorsendirir.
+Model həmçinin mətninizin tonunu izləyir. Orijinal yazınız rəsmi isə, yenidən yazma da rəsmi olacaq. Əgər qeyri-rəsmidirsə, nəticə uyğun olacaq. Bu kontekstual məlumatlandırılıq AI yenidən yazmanın robot kimi deyil, təbii görsəndirir.
 
-## Boyuk Dil Modelleri Metni Nece Yaradir
+## Böyük Dil Modelləri Mətni Necə Yaradır
 
-Her AI metn yeniden yazicisinin esasinda genis metn datalari uzerinde oyredilmis boyuk dil modeli (LLM) dayanir. Bu modeller sozlerin, ifadelerin ve cumlelerin bir-biri ile nece elaqeli oldugunun statistik naxislarini oyrenir. Yeniden yazma yaradarken model oz teyim datasindan kocurmur. Evezine, girisinizdeki eyni menani catan, amma ferqli ifadeler istifade eden en ehtemali soz ardicilligini proqnozlasdirir.
+Hər AI mətn yenidən yazıcısının əsasında geniş mətn dataları üzərində öyrədilmiş böyük dil modeli (LLM) dayanır. Bu modellər sözlərin, ifadələrin və cümlələrin bir-biri ilə necə əlaqəli olduğunun statistik naxışlarını öyrənir. Yenidən yazma yaradarkən model öz təyim datasından köçürmür. Əvəzinə, girişinizdəki eyni mənası çatan, amma fərqli ifadələr istifadə edən ən ehtimallı söz ardıcıllığını proqnozlaşdırır.
 
-Proses token-token isleyir. Model her defesinde bir soz yaradir, her secim evvel gelenlerin hamisi terefinden tesir olunur. **Temperature** kimi parametrler neticenin ne qeder yaradici ve ya muhafizekar olacagini idaree edir. Asagi temperature tehlukesiz, proqnozlasdirila bilen yeniden yazmalar verir. Yuksek temperature daha cox muxteli ve yaradici ifade getirin, bu fikir yigimi ucun faydali ola biler, amma deqiqlik ucun riskli ola biler.
+Prosses token-token işləyir. Model hər dəfəsində bir söz yaradır, hər seçim əvvəl gələnlərin hamısı tərəfindən təsir olunur. **Temperature** kimi parametrlər nəticənin nə qədər yaradıcı və ya mühafizəkar olacağını idarə edir. Aşağı temperature təhlükəsiz, proqnozlaşdırıla bilən yenidən yazmalar verir. Yüksək temperature daha çox müxtəlif və yaradıcı ifadə gətirir, bu fikir yığımı üçün faydalı ola bilər, amma dəqiqlik üçün riskli ola bilər.
 
-**AI neticelerini formalashdiran esas parametrler:**
-- **Temperature**: Tesadufluyu idaree edir. Asagi deyerler daha proqnozlasdirila bilen metn yaradir.
-- **Ton ayari**: Resmi, qeyri-resmi, akademik, inandirici ve ya sohbet uslubu.
-- **Uzunluq idaresi**: Genislendirmek, sixismaq ve ya orijinal uzunlugu ile uygunlasdirmaq.
-- **Yaradici seviyye**: Modelin orijinal ifadeden ne qeder uzaqlasa bilecei.
+**AI nəticələrini formalaşdıran əsas parametrlər:**
+- **Temperature**: Təsadüfilüyü idarə edir. Aşağı dəyərlər daha proqnozlaşdırıla bilən mətn yaradır.
+- **Ton ayarı**: Rəsmi, qeyri-rəsmi, akademik, inandırıcı və ya söhbət üslubu.
+- **Uzunluq idarəsi**: Genişləndirmək, sıxışdırmaq və ya orijinal uzunluğu ilə uyğunlaşdırmaq.
+- **Yaradıcı səviyyə**: Modelin orijinal ifadədən nə qədər uzaqlaşa biləcəyi.
 
-## Alternativlerin Yaradilmasi
+## Alternativlərin Yaradılması
 
-AI metninizi anladiqdan sonra eyni mesaji catan alternativ ifadeler yaradir. Tonu ve uzunlugu mueyyen ederek neticeni idaree ede bilirsiniz. En yaxsi yeniden yazma aletleri sece bilecekiniz bir nece variasiya verir ve ehtiyaclariniza en uygun olani sec bilirsiniz.
+AI mətninizi anladıqdan sonra eyni mesajı çatan alternativ ifadələr yaradır. Tonu və uzunluğu müəyyən edərək nəticəni idarə edə bilərsiniz. Ən yaxşı yenidən yazma alətləri seçə biləcəyiniz bir neçə variasiya verir və ehtiyaclarınıza ən uyğun olanı seçə bilərsiniz.
 
-Haqiqi guc burada yatir. Tek bir paraqraf onlarla ferqli yolla yeniden yazila biler, her biri etibarlidi ve her biri ferqli auditoriya ve ya platforma uygun. Eyni mehsul tesviri sosial media ucun qisa versiya, veb-saytiniz ucun etrafli versiya ve B2B teklifi ucun pesekar versiya teleb ede biler. AI yeniden yazma tek bir menbeden her ucunu haz bilir.
+Həqiqi güc burada yatır. Tək bir paraqraf onlarla fərqli yolla yenidən yazıla bilər, hər biri etibarlıdır və hər biri fərqli auditoriya və ya platforma uyğun. Eyni məhsul təşviqi sosial media üçün qısa versiya, veb-saytınız üçün ətraflı versiya və B2B təklifi üçün peşəkar versiya tələb edə bilər. AI yenidən yazma tək bir mənbədən hər üçünü hazırlaya bilir.
 
-## Istifade Sahreleri
+## İstifadə Sahələri
 
-- **Kontent Yaratma**: Kontent teqviminizde tekrarlanmani azaltmaq ucun blog yazlarini yeniden ifade edin. Hefte-hefte oxsar movzularda yazanda AI yeniden yazma tekrarlanan movzular ucun teze rakurslar tapmagqa komek edir.
-- **Akademik Yazma**: Deqiqliyi qoruyaraq menbeleri parafraz edin. Bu, edebiyyat icmallari ve tedqiqat islerinde deyerlidir.
-- **Marketinq**: Ferqli auditoriyalar ucun tonu uygunlashdirin. Eyni esas mesaj rehberler, texniki istifadeciler ve ya adi istehlakilar ucun yeniden yazila biler.
-- **SEO**: Axtaris motorlarindan tekrar kontent cezalarindan qacinaraq ferqli sehifeler ucun mehsul tesviri variasiyalari yaradir.
-- **E-poct Kampaniyalari**: Movzu setirleri ve mesaj metninin muxtelif versiyalarini yaradaraq A/B testi aparir.
-- **Sosial Media**: Uzun formali kontenti her platformanin uslubu ve simvol limitlerine uygunlasdirilmis qisa, tesirli yazilara cevirin.
+- **Kontent Yaratma**: Kontent təqviminizdə təkrarlanmanı azaltmaq üçün bloq yazılarını yenidən ifadə edin. Həftə-həftə oxşar mövzularda yazanda AI yenidən yazma təkrarlanan mövzular üçün təzə rakurslar tapmağa kömək edir.
+- **Akademik Yazma**: Dəqiqliyi qoruyaraq mənbələri parafraz edin. Bu, ədəbiyyat icmalları və tədqiqat işlərində dəyərlidir.
+- **Marketinq**: Fərqli auditoriyalar üçün tonu uyğunlaşdırın. Eyni əsas mesaj rəhbərlər, texniki istifadəçilər və ya adi istehlakçılar üçün yenidən yazıla bilər.
+- **SEO**: Axtarış motorlarından təkrar kontent cəzalarından qaçınaraq fərqli səhifələr üçün məhsul təşviqi variasiyaları yaradır.
+- **E-poçt Kampaniyaları**: Mövzu sətirləri və mesaj mətninin müxtəlif versiyalarını yaradaraq A/B testi aparır.
+- **Sosial Media**: Uzun formalı kontenti hər platformanın üslubu və simvol limitlərinə uyğunlaşdırılmış qısa, təsirli yazılara çevirin.
 
-## Qarsisinirn Alinmasi Gereken Umumiy Sehvler
+## Qarşısının Alınması Gərəkən Ümumi Səhvlər
 
-Bir coxlari AI yeniden yazmasini tek kliklik hell kimi goreb neticeni yoxlanmadan nesrh edir. Bu bir nece umumiy problemle neticelenir:
+Bir çoxları AI yenidən yazmasını tək kliklik həll kimi görüb nəticəni yoxlanmadan nəşr edir. Bu bir neçə ümumi problemlə nəticələnir:
 
-1. **Mena surusmesi**: Yeniden yazma orijinal menani inceden deyisir. Neticeni her zaman menbee metninizle muqayise edin.
-2. **Heddinden artiq resmilesdirme**: AI modelleri bezzen heddinden artiq resmi dile dusur. Brend tonunuz qeyri-resmidirse, neticenin uygun oldugunu yoxlayin.
-3. **Faktiki sehvler**: Orijinal metniniz xususi reqemler, tarixler ve ya iddialr ehtiva edirse, yeniden yazmanin onlari deqiq qoruduqunu tesdiq edin.
-4. **Nuans itkisi**: Sarkazm, ironiya ve medeniy istinadlar yeniden yazma zamani duzeldirilere ve ya itirile biler.
-5. **Tekrarlanan struktur**: Bezi aletler hamisi eyni cumle naxisina uygun yeniden yazmalar yaradir.
+1. **Məna sürüşməsi**: Yenidən yazma orijinal mənası incədən dəyişir. Nəticəni hər zaman mənbə mətninizlə müqayisə edin.
+2. **Həddindən artıq rəsmiləşdirmə**: AI modelləri bəzən həddindən artıq rəsmi dilə düşür. Brend tonunuz qeyri-rəsmidirsə, nəticənin uyğun olduğunu yoxlayın.
+3. **Faktiki səhvlər**: Orijinal mətniniz xüsusi rəqəmlər, tarixlər və ya iddialar ehtiva edirsə, yenidən yazmanın onları dəqiq qoruduğunu təsdiq edin.
+4. **Nüans itkisi**: Sarkazm, ironiya və mədəni istinadlar yenidən yazma zamanı düzəldirilə və ya itirilə bilər.
+5. **Təkrarlanan struktur**: Bəzi alətlər hamısı eyni cümlə naxışına uyğun yenidən yazmalar yaradır.
 
-## En Yaxsi Tecrubeler
+## Ən Yaxşı Təcrübələr
 
-1. Neshr etmeden ve ya gondermeden evvel AI terefinden yaradilmis metni her zaman deqiqlik ucun yoxlayin
-2. Yeniden yazmanindan son mehsul deyil, baslangic noqtesi kimi istifade edin -- insan muhakimensi keyfiyyet filtridir
-3. Ilk cehddeni daha yaxsi netice almaq ucun istediyniz tonu ve auditoriyani mueyyen edin
-4. Orijinal menani qoruyun -- tehlif olunacaq derecede cevirmeyin
-5. Muhum yeniden yazmalari ikinci yoxlama olaraq qrammatika yoxlayicisinan kecirin
-6. En yaxsisini secmezden evvel bir nece yeniden yazma secimlini muqayise edin
-7. Sexsi sesinizi ve bilginizi elave etmek ucun AI neticenizini redakte edin
+1. Nəşr etmədən və ya göndərmədən əvvəl AI tərəfindən yaradılmış mətni hər zaman dəqiqlik üçün yoxlayın
+2. Yenidən yazmanı son məhsul deyil, başlanğıc nöqtəsi kimi istifadə edin -- insan mühakiməsi keyfiyyət filtridir
+3. İlk cəhddə daha yaxşı nəticə almaq üçün istədiyiniz tonu və auditoriyanı müəyyən edin
+4. Orijinal mənası qoruyun -- tanınılmaz dərəcədə çevirməyin
+5. Mühüm yenidən yazmaları ikinci yoxlama olaraq qrammatika yoxlayıcısından keçirin
+6. Ən yaxşısını seçməzdən əvvəl bir neçə yenidən yazma seçimini müqayisə edin
+7. Şəxsi səsinizi və bilginizi əlavə etmək üçün AI nəticənizi redaktə edin
 
-## AI Metn Aletlerinin Gelecei
+## AI Mətn Alətlərinin Gələcəyi
 
-AI metn yeniden yazmasi suretlu inkisaf edir. Artiq muxeyyen brend ses telimatlariga uygun metn yaza bilen, mueyyen oxu seviyyeleri ucun kontenti yeniden yaza bilen ve hetin erisisebilirlik tebelbleri ucun metni uygunlasdira bilen aletler goruruk. Bu aletler tekmilleshdikce "AI komekli" ve "AI terefinden yaradilmis" kontent arasindaki serhed bulaniqlasmaga davam edecek.
+AI mətn yenidən yazması sürətli inkişaf edir. Artıq müəyyən brend səs təlimatlarına uyğun mətn yaza bilən, müəyyən oxu səviyyələri üçün kontenti yenidən yaza bilən və hətta əlçatanlıq tələbləri üçün mətni uyğunlaşdıra bilən alətlər görürük. Bu alətlər təkmilləşdikcə "AI köməkli" və "AI tərəfindən yaradılmış" kontent arasındakı sərhəd bulanıqlaşmağa davam edəcək.
 
-Vaxtim Yoxdu-daki AI Metn Yeniden Yazici kimi aletler sizd bu imkanlara pulsuz, birbase brauzerinizde erisim verir. Hesab lazim deyil, soz limiti yoxdur, xarici serverlerde melumat saxlanilmir. Ferqli ton ayarlari sinayin, neticeleri muqayise edin ve auditoriyanuiz ucun en yaxsi isleyen versiyanin tapin.`,
+Vaxtım Yoxdu-dakı AI Mətn Yenidən Yazıcı kimi alətlər sizə bu imkanlara pulsuz, birbaşa brauzerinizdə erişim verir. Hesab lazım deyil, söz limiti yoxdur, xarici serverlərdə məlumat saxlanılmır. Fərqli ton ayarları sınayın, nəticələri müqayisə edin və auditoriyanız üçün ən yaxşı işləyən versiyanı tapın.`,
   },
   'compress-images-without-losing-quality': {
-    title: 'Keyfiyyeti Itirmeden Sekilleri Nece Siqisdirmali',
+    title: 'Keyfiyyəti İtirmədən Şəkilləri Necə Sıxışdırmalı',
     date: '2026-03-04',
     relatedTools: ['image-compress', 'image-convert'],
-    content: `Boyuk sekil fayllar veb-saytlari yavaslatirir, yaddasi tukedirs ve paylasmageni cetinlesdirir. Sehife suretinin birbase axtaris siralamalarina, istifadeci tecrubesine ve konversiya derecelerine tesir etdiyi dovrde sekillerin effektiv siqisdirilmasini bilmek reqemsal kontentle islayan her kes ucun temel bacariqdir. Vizual keyfiyyetden guzest vermeden fayl olcusunu azaltmaq ucun ehtiyaj olan her seyi bu beledcide tapacaqsiniz.
+    content: `Böyük şəkil faylları veb-saytları yavaşladır, yaddaşı tükədir və paylaşmağı çətinləşdirir. Səhifə sürətinin birbaşa axtarış sıralamalarına, istifadəçi təcrübəsinə və konversiya dərəcələrinə təsir etdiyi dövrdə şəkillərin effektiv sıxışdırılmasını bilmək rəqəmsal kontentlə işləyən hər kəs üçün təməl bacarıqdır. Vizual keyfiyyətdən güzəşt vermədən fayl ölçüsünü azaltmaq üçün ehtiyac olan hər şeyi bu bələdçidə tapacaqsınız.
 
-## Sekil Siqisdirilmasi Niye Vacibdir
+## Şəkil Sıxışdırılması Niyə Vacibdir
 
-Sekiller adeten veb-sehifenin umumi olcusunun 40-60%-ni teskil edir. Optimallasdirmamis sekiller veb-saytlarin yavad yuklenmesinin en umumi sebebidir ve yavad veb-saytlar ziyaretcileri itirir:
+Şəkillər adətən veb-səhifənin ümumi ölçüsünün 40-60%-ni təşkil edir. Optimallaşdırılmamış şəkillər veb-saytların yavaş yüklənməsinin ən ümumi səbəbidir və yavaş veb-saytlar ziyarətçiləri itirir:
 
-- **Veb-sayt Sureti**: Sekillerin siqisdirilmasi sehife yukleme muddelerini 50-80% azalda biler. Yukleme mudetinde bir saniye gecikmek konversiyalari 7% azalda biler.
-- **SEO Tesiri**: Google 2018-ci ilden sehife suretini siralamandr faktor kimi istifade edir ve Core Web Vitals -- yavad yuklendn sekilleri ciddi cezalandirir -- 2021-ci ilde siralamad siqnalina cevrildi. 2026-ci ilde bu metriklarin ehemiyyeti daha da artib.
-- **Yaddas Qenaeti**: Siqisdirilmis sekiller daha az bulud yaddasi ve otdurme genislyi istifade edir, bu da birbase hosting xerclerini azaldir.
-- **Mobil Tecrube**: Veb trefiqinin 60%-den cogu mobil cihazlardan gelir, bir coqu daha yavad baglantilarla. Siqisdirmis sekiller saytinizin 3G ve ya zaif Wi-Fi-de bele suretli yuklenmsini temin edir.
-- **E-poct Catdirilma**: Boyuk sekil elaqeleri spam filtrleri terefinden isarelenr ve e-poct serverleri terefinden redd edilir.
+- **Veb-sayt Sürəti**: Şəkillərin sıxışdırılması səhifə yükləmə müddətlərini 50-80% azalda bilər. Yükləmə müddətində bir saniyə gecikmək konversiyaları 7% azalda bilər.
+- **SEO Təsiri**: Google 2018-ci ildən səhifə sürətini sıralamada faktor kimi istifadə edir və Core Web Vitals -- yavaş yüklənən şəkilləri ciddi cəzalandırır -- 2021-ci ildə sıralama siqnalına çevrildi. 2026-cı ildə bu metriklərin əhəmiyyəti daha da artıb.
+- **Yaddaş Qənaəti**: Sıxışdırılmış şəkillər daha az bulud yaddaşı və ötürmə genişliyi istifadə edir, bu da birbaşa hostinq xərclərini azaldır.
+- **Mobil Təcrübə**: Veb trafiqinin 60%-dən çoxu mobil cihazlardan gəlir, bir çoxu daha yavaş bağlantılarla. Sıxışdırılmış şəkillər saytınızın 3G və ya zəif Wi-Fi-də belə sürətli yüklənməsini təmin edir.
+- **E-poçt Çatdırılma**: Böyük şəkil əlavələri spam filtrləri tərəfindən işarələnir və e-poçt serverləri tərəfindən rədd edilir.
 
-## Sekil Formatlarini Anlamaq
+## Şəkil Formatlarını Anlamaq
 
-Siqisdirma texnikalarini oyrenmeozden evvel esas sekil formatlari ve her birini ne zaman istifade edilece anlamaq faydalidir:
+Sıxışdırma texnikalarını öyrənməzdən əvvəl əsas şəkil formatları və hər birini nə zaman istifadə edəcəyini anlamaq faydalıdır:
 
-- **JPEG**: Fotolarrn ve cox reng ve gradiyenti olan murkkeb sekiller ucun en yaxsisidir. Itkili siqisdirilmani destekleyir. Seffafliliqni desteklemir.
-- **PNG**: Metn, keski kenarlar, logolar, ikonlar ve seffafiq teleb eden her sey ucun en yaxsisidir. Itkisiz siqisdirilma destekleyir. Fotolar ucun JPEG-den daha boyuk fayl olculerini verir.
-- **WebP**: Google terefinden islenib hazirlanmib, WebP eyni keyfiyyetde JPEG ve PNG-den 25-35% kicik fayl olculeri ile hem itkili, hem de itkisiz sixilma teklif edir. Butun muasir brauzerlr terefinden desteklenir.
-- **AVIF**: WebP-den daha yaxsi siqisdirma teklif eden en yeni format. Brauzer destyi inkisaf edir, amma henuz universal deyil.
-- **SVG**: Logolar, ikonlar ve sade illhstrasiyalar ucun vektor formati. SVG-ler keyfiyyetr itkisi olmadan istenilen olcuye olculenir.
+- **JPEG**: Fotoların və çox rəng və gradiyenti olan mürəkkəb şəkillər üçün ən yaxşısıdır. İtkili sıxışdırmanı dəstəkləyir. Şəffaflığı dəstəkləmir.
+- **PNG**: Mətn, kəskin kənarlar, logolar, ikonlar və şəffaflıq tələb edən hər şey üçün ən yaxşısıdır. İtkisiz sıxışdırma dəstəkləyir. Fotolar üçün JPEG-dən daha böyük fayl ölçülərini verir.
+- **WebP**: Google tərəfindən işlənib hazırlanıb, WebP eyni keyfiyyətdə JPEG və PNG-dən 25-35% kiçik fayl ölçüləri ilə həm itkili, həm də itkisiz sıxılma təklif edir. Bütün müasir brauzerlər tərəfindən dəstəklənir.
+- **AVIF**: WebP-dən daha yaxşı sıxışdırma təklif edən ən yeni format. Brauzer dəstəyi inkişaf edir, amma hələ universal deyil.
+- **SVG**: Logolar, ikonlar və sadə illüstrasiyalar üçün vektor formatı. SVG-lər keyfiyyət itkisi olmadan istənilən ölçüyə ölçülənir.
 
-## Itkili ve Itkisiz Siqisdirma
+## İtkili və İtkisiz Sıxışdırma
 
-Sekil siqisdirilmasindaki en vacib ferqlesme budur:
+Şəkil sıxışdırılmasındakı ən vacib fərqləşdirmə budur:
 
-**Itkili siqisdirma** (JPEG ve WebP itkili rejim terefinden istifade olunur) deramatik kicik fayl olculeri elde etmek ucun bezi sekil melumatlarini daimi olaraq silir. Esas fikir odur ki, insan gozu silinen melumatlardin aksariyyetini goraa bilmir. 70-80% keyfiyyetde orijinal ile siqisdmirilmis versiya arasindaki vizual ferqi pikselleri boyudererk muqayise etmeden goremek demek olar ki mumkun deyil.
+**İtkili sıxışdırma** (JPEG və WebP itkili rejim tərəfindən istifadə olunur) dramatik kiçik fayl ölçüləri əldə etmək üçün bəzi şəkil məlumatlarını daimi olaraq silir. Əsas fikir odur ki, insan gözü silənən məlumatların əksəriyyətini görə bilmir. 70-80% keyfiyyətdə orijinal ilə sıxışdırılmış versiya arasındakı vizual fərqi pikselləri böyüdərək müqayisə etmədən görəmək demək olar ki mümkün deyil.
 
-**Itkisiz siqisdirma** (PNG ve WebP itkisiz rejim terefinden istifade olunur) eyni menlumatini daha effektiv kodlashdirma yollari taparaq fayl olculerini azaldir. Hec bir melumat itilmir, siqisdirmasi acilmis sekil orijinaldan piksel-piksel eynidir. Kompromis budur ki, itkisiz siqisdirma daha kicik azalalar elde edir -- adeten itkili ucun 50-80% ile muqayisede 10-30%.
+**İtkisiz sıxışdırma** (PNG və WebP itkisiz rejim tərəfindən istifadə olunur) eyni məlumatı daha effektiv kodlaşdırma yolları taparaq fayl ölçülərini azaldır. Heç bir məlumat itirilmir, sıxışdırması açılmış şəkil orijinaldan piksel-piksel eynidir. Kompromis budur ki, itkisiz sıxışdırma daha kiçik azalmalar əldə edir -- adətən itkili üçün 50-80% ilə müqayisədə 10-30%.
 
-**Hankisini ne zaman istifade etmeli:**
-- Fotolar, bannerler, hero sekilleri ve arxa fon sekilleri ucun itkili siqisdirma istifade edin
-- Ekran gortuntulueri, diaqramlar, logolar ve deqiqliyin vacib oldugu sekillr ucun itkisiz siqisdirma istifade edin
+**Hansını nə zaman istifadə etməli:**
+- Fotolar, bannerlər, hero şəkilləri və arxa fon şəkilləri üçün itkili sıxışdırma istifadə edin
+- Ekran görüntüləri, diaqramlar, logolar və dəqiqliyin vacib olduğu şəkillər üçün itkisiz sıxışdırma istifadə edin
 
-## Veb Sekilleri ucun En Yaxsi Tecrubeler
+## Veb Şəkilləri üçün Ən Yaxşı Təcrübələr
 
-1. **Fotolar ve murkkeb sekiller ucun JPEG istifade edin** -- fotoqrafik kontent ucun keyfiyyet ve fayl olcusu arasinda en yaxsi tarazliq temin edir
-2. **Metn, logolar ve ya seffafiliqi olan sekiller ucun PNG istifade edin** -- itkisiz format keski kenarlari ve metnin oxunabiliyini qoruyur
-3. **En yaxsi siqisdirma-keyfiyyet nisbeti ucun WebP istifade edin** -- auditoriyaniz muasir brauzerlerden istifade edirse (2026-da eksariyyet bele edir), WebP optimal secimdir
-4. **Siqisdirmadan evvel sekilleri haqiqi gostermee olcusune uygunlashdirin** -- 800px-de gosterilecek bir seklin 4000px eninida verilenin menasi yoxdur
-5. **Veb istifadesi ucun 70-80% keyfiyyete yonelin** -- fayl olcusu deramatik azalir, amma vizual keyfiyyet ela qalir
-6. **Responsive sekiller istifade edin** -- HTML-de srcset atributu istifade ederek ferqli ekran genislikleri ucun ferqli olculer verin
-7. **Lazy loading tetbiq edin** -- sekilleri yalniz gorunen saheyee surushdurulduqda yukleyin
-8. **Metamelumat silin** -- kameralardan olan EXIF melumetlari her sekile 10-50KB elave ede biler
+1. **Fotolar və mürəkkəb şəkillər üçün JPEG istifadə edin** -- fotoqrafik kontent üçün keyfiyyət və fayl ölçüsü arasında ən yaxşı tarazlıq təmin edir
+2. **Mətn, logolar və ya şəffaflığı olan şəkillər üçün PNG istifadə edin** -- itkisiz format kəskin kənarları və mətnin oxunabiliyini qoruyur
+3. **Ən yaxşı sıxışdırma-keyfiyyət nisbəti üçün WebP istifadə edin** -- auditoriyanız müasir brauzerlərdən istifadə edirsə (2026-da əksəriyyət belə edir), WebP optimal seçimdir
+4. **Sıxışdırmadan əvvəl şəkilləri həqiqi göstərmə ölçüsünə uyğunlaşdırın** -- 800px-də göstəriləcək bir şəklin 4000px enində verilənin mənası yoxdur
+5. **Veb istifadəsi üçün 70-80% keyfiyyətə yönəlin** -- fayl ölçüsü dramatik azalır, amma vizual keyfiyyət əla qalır
+6. **Responsive şəkillər istifadə edin** -- HTML-də srcset atributu istifadə edərək fərqli ekran genişlikləri üçün fərqli ölçülər verin
+7. **Lazy loading tətbiq edin** -- şəkilləri yalnız görünən sahəyə sürüşdürüldükdə yükləyin
+8. **Metamelumat silin** -- kameralardan olan EXIF məlumatları hər şəkilə 10-50KB əlavə edə bilər
 
-## Muisteriterefi Siqisdirma
+## Müştəritərəfi Sıxışdırma
 
-Son illerin en muhum irerliyishlerinden biri musteriterefi sekil siqisdirmasidir. Canvas API ve daha yeni WebCodecs API kimi muasir brauzer API-leri tam sekil siqisdirmanin birbase brauzerinizde etmeye imkan verir. Bu o demekdir ki, sekilleriniz cihazinizi hec vaxt terk etmir -- server yukleme yoxdur, melumat saxlama narahatlqlari yoxdur, gizlilik riskleri yoxdur.
+Son illərin ən mühüm irəliləyişlərindən biri müştəritərəfi şəkil sıxışdırmasıdır. Canvas API və daha yeni WebCodecs API kimi müasir brauzer API-ləri tam şəkil sıxışdırmanı birbaşa brauzerinizdə etməyə imkan verir. Bu o deməkdir ki, şəkilləriniz cihazınızı heç vaxt tərk etmir -- server yükləmə yoxdur, məlumat saxlama narahatlıqları yoxdur, gizlilik riskləri yoxdur.
 
-Vaxtim Yoxdu-nun Sekil Siqisdiricisi bu musteriterefi yanasmanindan istifade edir ve her seyi birbase brauzerinizda emal edir.
+Vaxtım Yoxdu-nun Şəkil Sıxışdırıcısı bu müştəritərəfi yanaşmasından istifadə edir və hər şeyi birbaşa brauzerinizdə emal edir.
 
-**Musteriterefi siqisdirmanin ustunlukleri:**
-- Tam gizlilik -- fayllar cihazinizi terk etmir
-- Daha suretli emal -- yukleme/endirme gozleme muddetleri yoxdur
-- Oflayn isleyir -- sehife yuklendikden sonra internet baglantisi lazim deyil
-- Fayl olcusu limiti yoxdur -- server esasli aletler adeten yuiklemleri 5-10MB ile mehdudlasdirir
+**Müştəritərəfi sıxışdırmanın üstünlükləri:**
+- Tam gizlilik -- fayllar cihazınızı tərk etmir
+- Daha sürətli emal -- yükləmə/endirmə gözləmə müddətləri yoxdur
+- Oflayn işləyir -- səhifə yükləndikdən sonra internet bağlantısı lazım deyil
+- Fayl ölçüsü limiti yoxdur -- server əsaslı alətlər adətən yükləmələri 5-10MB ilə məhdudlaşdırır
 
-## Istifade Halina Gore Toevsiye Olunan Ayarlar
+## İstifadə Halına Görə Tövsiyə Olunan Ayarlar
 
-- **Veb-sayt hero bannerleri**: 1920px eninda, JPEG ve ya WebP 70% keyfiyyetde. Hedefe fayl olcusu: 200KB-den az.
-- **Bloq yazisi sekilleri**: 1024px eninda, WebP 75% keyfiyyetde. Hedefe fayl olcusu: 100KB-den az.
-- **Miniatuer ve kartlar**: 640px eninda, WebP 80% keyfiyyetde. Hedef fayl olcusu: 50KB-dan az.
-- **Sosial media yazilari**: Her platformanin tovsiye olunan olculerine riaye edin. JPEG 80% keyfiyyetde.
-- **E-poct sekilleri**: 600px eninda, JPEG 75% keyfiyyetde. Hedefe fayl olcusu: 80KB-den az.
+- **Veb-sayt hero bannerləri**: 1920px enində, JPEG və ya WebP 70% keyfiyyətdə. Hədəf fayl ölçüsü: 200KB-dən az.
+- **Bloq yazısı şəkilləri**: 1024px enində, WebP 75% keyfiyyətdə. Hədəf fayl ölçüsü: 100KB-dən az.
+- **Miniatür və kartlar**: 640px enində, WebP 80% keyfiyyətdə. Hədəf fayl ölçüsü: 50KB-dan az.
+- **Sosial media yazıları**: Hər platformanın tövsiyə olunan ölçülərinə riayət edin. JPEG 80% keyfiyyətdə.
+- **E-poçt şəkilləri**: 600px enində, JPEG 75% keyfiyyətdə. Hədəf fayl ölçüsü: 80KB-dən az.
 
-Vaxtim Yoxdu-daki pulsuz Sekil Siqisdiricisini sinayaraq sekillerinizi tam gizlilik ve sifir xerclye birbase brauzerinizde siqishdirin.`,
+Vaxtım Yoxdu-dakı pulsuz Şəkil Sıxışdırıcısını sınayaraq şəkillərinizi tam gizlilik və sıfır xərclə birbaşa brauzerinizdə sıxışdırın.`,
   },
   'regex-guide-for-beginners': {
-    title: 'Muenzzem Ifadeler: Yeni Baslayanlar ucun Beledci',
+    title: 'Müntəzəm İfadələr: Yeni Başlayanlar üçün Bələdçi',
     date: '2026-03-03',
     relatedTools: ['regex-tester', 'json-formatter', 'hash-generator'],
-    content: `Muenzzem ifadeler (regex) metn axtarisi, uygunlasdirma ve manipulyasiyasi ucun guclu naxislardir. Ilk baxisda qorxuducu goruene biler -- \`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\` kimi bir setir yad dile benze biler. Amma esaslar teeccublendirici qeder sadedir ve quruluq elementlerini anladiqdan sonra regex naxislai etiamdr ve yaradici ola bilirsiniz. Bu beledci sizi sifirdan praktik bacarilqa cadir.
+    content: `Müntəzəm ifadələr (regex) mətn axtarışı, uyğunlaşdırma və manipulyasiyası üçün güclü naxışlardır. İlk baxışda qorxuducu görünə bilər -- \`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\` kimi bir sətir yad dilə bənzəyə bilər. Amma əsaslar təəccübləndirici qədər sadədir və quruluş elementlərini anladıqdan sonra regex naxışları etibarlı və yaradıcı ola bilərsiniz. Bu bələdçi sizi sıfırdan praktik bacarığa çatdırır.
 
-## Regex Nedir?
+## Regex Nədir?
 
-Muenzzem ifade axtaris naxisini mueyyen eden simvollar ardicilligicdr. Onu xususi olaraq metn tapma ve manipulyasiya etmek ucun hazirlanmis mini proqramlashdirma dili kimi dusunun. Regex demek olar ki her proqramlashdirma dilinde (JavaScript, Python, Java, Go, PHP, Ruby, C#), metn redaktorlarinda (VS Code, Sublime Text, Vim), komanda setri aletlerinde (grep, sed, awk), verilemer bazalarinda (MySQL, PostgreSQL) ve hetin cedvel tetbiqlerinde istifade olunur.
+Müntəzəm ifadə axtarış naxışını müəyyən edən simvollar ardıcıllığıdır. Onu xüsusi olaraq mətn tapmaq və manipulyasiya etmək üçün hazırlanmış mini proqramlaşdırma dili kimi düşünün. Regex demək olar ki hər proqramlaşdırma dilində (JavaScript, Python, Java, Go, PHP, Ruby, C#), mətn redaktorlarında (VS Code, Sublime Text, Vim), komanda sətiri alətlərində (grep, sed, awk), verilənlər bazalarında (MySQL, PostgreSQL) və hətta cədvəl tətbiqlərində istifadə olunur.
 
-"hello" kimi literal setr axtardiqda siz deqiq uygunluqlar tapirsiniz. Regex ise naxislar axtarmaga imkan verir -- "h ile baslayan ve o ile biten istenilen soz," ve ya "telefon nomresine bencer istenilen reqem ardicililqi," ve ya "bu seneddeki istenilen e-poct unvani." Muenzzem ifadelerin esas gucu budur: onlar xususi setrleri deyil, metn kateqoriyalarini tesvir edir.
+"hello" kimi literal sətir axtardıqda siz dəqiq uyğunluqlar tapırsınız. Regex isə naxışlar axtarmağa imkan verir -- "h ilə başlayan və o ilə bitən istənilən söz," və ya "telefon nömrəsinə bənzər istənilən rəqəm ardıcıllığı," və ya "bu sənəddəki istənilən e-poçt ünvanı." Müntəzəm ifadələrin əsas gücü budur: onlar xüsusi sətirləri deyil, mətn kateqoriyalarını təsvir edir.
 
-## Niye Regex Oyrenmelisiniz?
+## Niyə Regex Öyrənməlisiniz?
 
-1. **Melumat tesdiqlemesi**: Istifadeci girisinin gozlenilen formatlara uygun olub olmadigini yoxlayin (e-poct, telefon nomreleri, tarixler)
-2. **Axtar ve deyisdir**: Minlerle faylda naxislari saniyeler erzinde tapin ve deyisdir
-3. **Melumat cixarisi**: Strukturlasdirmamis metn icinden xususi informasiya (URL-ler, qiymetler, tarixler) cixarin
-4. **Jurnal tehlili**: Server jurnallarinii xususi sehv naxislari ve ya IP unvanlari ucun filtrlein
-5. **Metn emali**: Idxal/ixrac emeliyyatlari zamani melumatlari temizleyin ve cevirin
-6. **Kod refaktorinqi**: Butov kodba boyunca deyisenlerin adini deyisdir, funksiya imzalarini yenieleyin
+1. **Məlumat təsdiqləməsi**: İstifadəçi girişinin gözlənilən formatlara uyğun olub olmadığını yoxlayın (e-poçt, telefon nömrələri, tarixlər)
+2. **Axtar və dəyişdir**: Minlərlə faylda naxışları saniyələr ərzində tapın və dəyişdirin
+3. **Məlumat çıxarışı**: Strukturlaşdırılmamış mətn içindən xüsusi informasiya (URL-lər, qiymətlər, tarixlər) çıxarın
+4. **Jurnal təhlili**: Server jurnallarını xüsusi səhv naxışları və ya IP ünvanları üçün filtrləyin
+5. **Mətn emalı**: İdxal/ixrac əməliyyatları zamanı məlumatları təmizləyin və çevirin
+6. **Kod refaktorinqi**: Bütöv kod bazası boyunca dəyişənlərin adını dəyişdirin, funksiya imzalarını yeniləyin
 
-## Esas Naxislar
+## Əsas Naxışlar
 
-Bunlar regex-in temel quruluq elementleridir. Her biri xususi simvol novune uygun gelir:
+Bunlar regex-in təməl quruluş elementləridir. Hər biri xüsusi simvol növünə uyğun gəlir:
 
-- \`\\d\` istenilen reqqeme uygun gelir (0-9)
-- \`\\D\` reqem olmayan istenilen simvola uygun gelir
-- \`\\w\` istenilen soz simvoluna uygun gelir (herfler, reqemler, alt xett)
-- \`\\W\` soz olmayan istenilen simvola uygun gelir
-- \`\\s\` istenilen bosluqa uygun gelir (boslulq, tab, yeni setr)
-- \`\\S\` boslug olmayan istenilen simvola uygun gelir
-- \`.\` yeni setir xaric istenilen simvola uygun gelir
-- \`^\` setrin basina uygun gelir
-- \`$\` setrin sonuna uygun gelir
+- \`\\d\` istənilən rəqəmə uyğun gəlir (0-9)
+- \`\\D\` rəqəm olmayan istənilən simvola uyğun gəlir
+- \`\\w\` istənilən söz simvoluna uyğun gəlir (hərflər, rəqəmlər, alt xətt)
+- \`\\W\` söz olmayan istənilən simvola uyğun gəlir
+- \`\\s\` istənilən boşluğa uyğun gəlir (boşluq, tab, yeni sətir)
+- \`\\S\` boşluq olmayan istənilən simvola uyğun gəlir
+- \`.\` yeni sətir xaric istənilən simvola uyğun gəlir
+- \`^\` sətrin başına uyğun gəlir
+- \`$\` sətrin sonuna uyğun gəlir
 
-**Misal:** \`\\d\\d\\d\` naxisi ardicisl uc reqeme uygun gelir -- "123", "456", "789", amma "12a" ve ya "ab3"e deyil.
+**Misal:** \`\\d\\d\\d\` naxışı ardıcıl üç rəqəmə uyğun gəlir -- "123", "456", "789", amma "12a" və ya "ab3"ə deyil.
 
-## Simvol Sinilflari
+## Simvol Sinifləri
 
-Simvol sinifleri uygun gelen xususi simvol desteleri mueyyen etmeye imkan verir:
+Simvol sinifləri uyğun gələn xüsusi simvol dəstələri müəyyən etməyə imkan verir:
 
-- \`[abc]\` a, b ve ya c olan istenilen tek simvola uygun gelir
-- \`[a-z]\` istenilen kicik herfe uygun gelir
-- \`[A-Z]\` istenilen boyuk herfe uygun gelir
-- \`[0-9]\` istenilen reqeme uygun gelir (\`\\d\` ile eyni)
-- \`[a-zA-Z0-9]\` istenilen herf ve ya reqeme uygun gelir
-- \`[^abc]\` a, b ve ya c OLMAYAN istenilen simvola uygun gelir
+- \`[abc]\` a, b və ya c olan istənilən tək simvola uyğun gəlir
+- \`[a-z]\` istənilən kiçik hərfə uyğun gəlir
+- \`[A-Z]\` istənilən böyük hərfə uyğun gəlir
+- \`[0-9]\` istənilən rəqəmə uyğun gəlir (\`\\d\` ilə eyni)
+- \`[a-zA-Z0-9]\` istənilən hərf və ya rəqəmə uyğun gəlir
+- \`[^abc]\` a, b və ya c OLMAYAN istənilən simvola uyğun gəlir
 
 ## Kvantifikatorlar
 
-Kvantifikatorlar naxisin nece defe tekrarlanacagini mueyyen edir:
+Kvantifikatorlar naxışın neçə dəfə təkrarlanacağını müəyyən edir:
 
-- \`*\` 0 ve ya daha cox defe uygun gelir
-- \`+\` 1 ve ya daha cox defe uygun gelir
-- \`?\` 0 ve ya 1 defe uygun gelir (bir seyi istege bagli edir)
-- \`{3}\` deqiq 3 defe uygun gelir
-- \`{2,5}\` 2-den 5-e qeder defe uygun gelir
-- \`{3,}\` 3 ve ya daha cox defe uygun gelir
+- \`*\` 0 və ya daha çox dəfə uyğun gəlir
+- \`+\` 1 və ya daha çox dəfə uyğun gəlir
+- \`?\` 0 və ya 1 dəfə uyğun gəlir (bir şeyi istəyə bağlı edir)
+- \`{3}\` dəqiq 3 dəfə uyğun gəlir
+- \`{2,5}\` 2-dən 5-ə qədər dəfə uyğun gəlir
+- \`{3,}\` 3 və ya daha çox dəfə uyğun gəlir
 
-**Misal:** \`\\d{3}-\\d{4}\` naxisi uc reqemli nomre, tire ve dord reqemli nomreye uygun gelir -- meselen "555-1234".
+**Misal:** \`\\d{3}-\\d{4}\` naxışı üç rəqəmli nömrə, tirə və dörd rəqəmli nömrəyə uyğun gəlir -- məsələn "555-1234".
 
-## Qruplar ve Alternasiya
+## Qruplar və Alternasiya
 
-Moterizeler qruplar yaradir, boru simvolu ise alternasiya (menteqi VE YA) yaradir:
+Mötərizələr qruplar yaradır, boru simvolu isə alternasiya (məntiqi VƏ YA) yaradır:
 
-- \`(abc)\` "abc" qrupunu tutur -- uygunlugun xususi hisselerini cixarmaq ucun faydalidir
-- \`(a|b|c)\` a, b ve ya c-ye uygun gelir (alternasiya)
-- \`(?:abc)\` tutulmayan qrupdur -- "abc"-ye uygun gelir, amma sonraki istifade ucun tutmur
+- \`(abc)\` "abc" qrupunu tutur -- uyğunluğun xüsusi hissələrini çıxarmaq üçün faydalıdır
+- \`(a|b|c)\` a, b və ya c-yə uyğun gəlir (alternasiya)
+- \`(?:abc)\` tutulmayan qrupdur -- "abc"-yə uyğun gəlir, amma sonrakı istifadə üçün tutmur
 
 ## Praktik Misallar
 
-Bu gun istifade ede bilceyniz real-dunya regex naxislari:
+Bu gün istifadə edə biləcəyiniz real-dünya regex naxışları:
 
-1. **E-poct tesdiqlemesi**: \`[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\`
-2. **Telefon nomresi**: \`\\d{3}[-.]?\\d{3}[-.]?\\d{4}\`
+1. **E-poçt təsdiqləməsi**: \`[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\`
+2. **Telefon nömrəsi**: \`\\d{3}[-.]?\\d{3}[-.]?\\d{4}\`
 3. **URL**: \`https?://[\\w.-]+(?:\\.[\\w.-]+)+[\\w.,@?^=%&:/~+#-]*\`
-4. **IP unvani**: \`\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\`
+4. **IP ünvanı**: \`\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\`
 5. **Tarix (YYYY-MM-DD)**: \`\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])\`
 6. **HTML teqi**: \`<([a-z]+)[^>]*>.*?</\\1>\`
-7. **HEX reng kodu**: \`#(?:[0-9a-fA-F]{3}){1,2}\`
-8. **Guclu sifreh** (min 8 simvol, boyuk, kicik herf, reqem): \`^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$\`
+7. **HEX rəng kodu**: \`#(?:[0-9a-fA-F]{3}){1,2}\`
+8. **Güclü şifrə** (min 8 simvol, böyük, kiçik hərf, rəqəm): \`^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$\`
 
-## Bayraklar
+## Bayraqlar
 
-Bayraklar regex motorunun naxisinizi nece serh etdiyini deyisir:
+Bayraqlar regex motorunun naxışınızı necə şərh etdiyini dəyişir:
 
-- \`g\` (qlobal): Yalniz birincini deyil, butun uygunluqlari tapir
-- \`i\` (herfler ferqli deyil): Uygunlashdirarkn herflerin olcusunu neze almr
-- \`m\` (coxsetirli): \`^\` ve \`$\` setr serhedi evezine setr serhedlerine uygun gelir
-- \`s\` (dotAll): \`.\` yeni setr simvollarinin da uygun gelir
+- \`g\` (qlobal): Yalnız birincini deyil, bütün uyğunluqları tapır
+- \`i\` (hərflər fərqli deyil): Uyğunlaşdırarkən hərflərin ölçüsünü nəzərə almır
+- \`m\` (çoxsətirli): \`^\` və \`$\` sətir sərhədi əvəzinə sətir sərhədlərinə uyğun gəlir
+- \`s\` (dotAll): \`.\` yeni sətir simvollarına da uyğun gəlir
 
-## Umumiy Tuzaqlar
+## Ümumi Tuzaqlar
 
-Regex yazarken bu tez-tez ediln sehvlere diqqet edin:
+Regex yazarkən bu tez-tez edilən səhvlərə diqqət edin:
 
-1. **Xususi simvollari qacistirmagi unutmaq**: \`.\`, \`*\`, \`+\` kimi simvollar xususi menaya malikdir. Onlari literal olaraq uygunlashdirmaq ucun ters xett ile qacisdirin: \`\\.\` haqiqi noqtye uygun gelir.
-2. **Agoz uygunlashdirma cox sey tutmaq**: En qisa mumkun uygunluq lazim olandirsa tenbel kvantifikatorlardan (\`*?\`, \`+?\`) istifade edin.
-3. **Heddinden artiq murkkeb naxislar**: Regex-iniz 50-60 simvoldan uzundursa, onu bir nece sade naxise bolmeyi ve ya kod mentiqi istifade etmeyi dusunun.
-4. **Naxislari baglamamaq**: \`^\` ve \`$\` olmadan naxisiniz niyyetda olmayan alt setrlere uygun gele biler.
-5. **Felaketli geri qaytarma**: \`(a+)+\` kimi ic-ice kvantifikatorlar regex motorunun mueyyen girishleride donmasina sebeb ola biler.
+1. **Xüsusi simvolları qaçışdırmağı unutmaq**: \`.\`, \`*\`, \`+\` kimi simvollar xüsusi mənaya malikdir. Onları literal olaraq uyğunlaşdırmaq üçün tərs xətt ilə qaçışdırın: \`\\.\` həqiqi nöqtəyə uyğun gəlir.
+2. **Acgöz uyğunlaşdırma çox şey tutmaq**: Ən qısa mümkün uyğunluq lazım olandırsa tənbəl kvantifikatorlardan (\`*?\`, \`+?\`) istifadə edin.
+3. **Həddindən artıq mürəkkəb naxışlar**: Regex-iniz 50-60 simvoldan uzundursa, onu bir neçə sadə naxışa bölməyi və ya kod məntiqi istifadə etməyi düşünün.
+4. **Naxışları bağlamamaq**: \`^\` və \`$\` olmadan naxışınız niyyət olunmayan alt sətrlərə uyğun gələ bilər.
+5. **Fəlakətli geri qaytarma**: \`(a+)+\` kimi iç-içə kvantifikatorlar regex motorunun müəyyən girişlərdə donmasına səbəb ola bilər.
 
-## Oyrenmek ucun Meslehetler
+## Öyrənmək üçün Məsləhətlər
 
-1. Sade naxislardan baslain ve tedricen murrkkebliyi artirin
-2. Vaxtim Yoxdu-daki onlayn regex test edicisinden istifade ederek ani vizual reyla ks kecirin
-3. Regex naxislerini soldan saga, her defen bir token oxuyub, her hisseesini adi dile cevirin
-4. Real-dunya metn cixarma tapssiriqlarinla mssq edin
-5. Tez-tez istifade etdiyiniz naxislarin sexsi siyahisini saxlayin
+1. Sadə naxışlardan başlayın və tədricən mürəkkəbliyi artırın
+2. Vaxtım Yoxdu-dakı onlayn regex test edicisindən istifadə edərək anı vizual rəylə məşq keçirin
+3. Regex naxışlərini soldan sağa, hər dəfə bir token oxuyub, hər hissəsini adi dilə çevirin
+4. Real-dünya mətn çıxarma tapşırıqlarıyla məşq edin
+5. Tez-tez istifadə etdiyiniz naxışların şəxsi siyahısını saxlayın
 
-Muenzzem ifadeler proqramlashdirma ve melumat isleri uchun en umumi faydali bacariqlardan biridir. Onlari oyrenmek ucun etdiyiniz investisiya karyeranizin her heftes ozunu odeycek. Vaxtim Yoxdu-daki pulsuz Regex Test Edicisi ile eksperiment etmeye baslayin.`,
+Müntəzəm ifadələr proqramlaşdırma və məlumat işləri üçün ən ümumi faydalı bacarıqlardan biridir. Onları öyrənmək üçün etdiyiniz investisiya karyeranızın hər həftəsi özünü ödəyəcək. Vaxtım Yoxdu-dakı pulsuz Regex Test Edicisi ilə eksperiment etməyə başlayın.`,
   },
   'why-grammar-matters-in-professional-writing': {
-    title: 'Pesekar Yazida Qrammatikanin Niye Vacib Olmasi',
+    title: 'Peşəkar Yazıda Qrammatikanın Niyə Vacib Olması',
     date: '2026-03-02',
     relatedTools: ['ai-grammar-checker', 'ai-text-rewriter', 'word-counter'],
-    content: `Yaxsi qrammatika sadece qaydalara riayetden ibaret deyil -- aydin unsiyyetdir, etibardir ve dogru tesir yaratmaqdir. Pesekar elaqelerin aksariyyetinin metn vasitesile (e-poctl, Slack mesajlar, hesabatlar, teklifler, sosial media) bas verdiri bir dunyada yaziniz cox vaxt insanlarin sizin bacariginiizi qiymetlendirmek ucun istifade etdiyi ilk ve yegane vasitedir. Qrammatikanin niye her zamankinden daha vacib olduqu ve stil beledcicleri illerce oyrenmeden sizinini nece yaxsilasidirileceyi haqqinda danisaq.
+    content: `Yaxşı qrammatika sadəcə qaydalara riayətdən ibarət deyil -- aydın ünsiyyətdir, etibardır və doğru təsir yaratmaqdır. Peşəkar əlaqələrin əksəriyyətinin mətn vasitəsilə (e-poçt, Slack mesajlar, hesabatlar, təkliflər, sosial media) baş verdiyi bir dünyada yazınız çox vaxt insanların sizin bacarığınızı qiymətləndirmək üçün istifadə etdiyi ilk və yeganə vasitədir. Qrammatikanın niyə hər zamankından daha vacib olduğu və stil bələdçilərini illərlə öyrənmədən sizinkinini necə yaxşılaşdırılacağı haqqında danışaq.
 
-## Ilk Tesir Muhudmdir
+## İlk Təsir Mühümdür
 
-Tedqiqatlar gosterir ki, istehlakilarin 59%-i veb-sayytlarinda aciq qrammatik ve ya orfoqrafik sehvler olan sirketlerle is gormekden qacinacaq. Pesekar kontekstlerde risk daha da yuksekdir. Oert mektubunda tek bir sehv muracieetinizi redd qovluguna sala biler. Musteri teklifinde qrammatik sehv aylrliq elaqe quruculugunu poza biler.
+Tədqiqatlar göstərir ki, istehlakçıların 59%-i veb-saytlarında açıq qrammatik və ya orfoqrafik səhvlər olan şirkətlərlə iş görməkdən qaçınacaq. Peşəkar kontekstlərdə risk daha da yüksəkdir. Örtmə məktubunda tək bir səhv müraciətinizi rədd qovluğuna sala bilər. Müştəri təklifində qrammatik səhv aylıq əlaqə qurculuğunu poza bilər.
 
-Bu pedantik olmaqla bagli deyil. Yazmia keyfiyyetinin gonderiyi suursuz siqnallar haqqindadir. Qrammtikaniz temiz olandirsa, oxucular fikirlerinize diqqeet edir. Olmayanda ise sehvlere diqqet edir.
+Bu pedantik olmaqla bağlı deyil. Yazma keyfiyyətinin göndərdiyi şüursuz siqnallar haqqındadır. Qrammatikanız təmiz olandırsa, oxucular fikirlərinizə diqqət edir. Olmayanda isə səhvlərə diqqət edir.
 
-**Tedqiqatlar gosterir:**
-- Veb oxucullarinin 74%-i veb-saytlardaki qrammtika ve orfoqrafiya keyfiyyetine diqqet yetirir
-- Qrammatik sehvleri olan CV-ler ise goturenler terefinden 77% redd edilir
-- Sehvleri olan biznes e-poctl 29% az musbat cavab alir
-- Qrammatik sehvleri olan achils sehifeleri olcule bilen asagi konversiya derecedari gorur
+**Tədqiqatlar göstərir:**
+- Veb oxucularının 74%-i veb-saytlardakı qrammatika və orfoqrafiya keyfiyyətinə diqqət yetirir
+- Qrammatik səhvləri olan CV-lər işə götürənlər tərəfindən 77% rədd edilir
+- Səhvləri olan biznes e-poçtları 29% az müsbət cavab alır
+- Qrammatik səhvləri olan açılış səhifələri ölçülə bilən aşağı konversiya dərəcələri görür
 
-## Umumi Qrammatik Sehvler
+## Ümumi Qrammatik Səhvlər
 
-Tecrubaliy yaziiclar bele bu sehvleri edir. Onlari tapmagi oyrenmek onlari yazinizdan aradan qaldirmaq ucun ilk addimdir:
+Təcrübəli yazıçılar belə bu səhvləri edir. Onları tapmağı öyrənmək onları yazınızdan aradan qaldırmaq üçün ilk addımdır:
 
-- **Your ve You're** (Ingilis dilinde): "Your" yelklikdir; "you're" "you are" qisaltmasidir
-- **Their/There/They're**: "Their" yelklikdir, "there" yer gosterir, "they're" "they are" dir
-- **Its ve It's**: "Its" yelklikdir; "it's" "it is" demekdir
-- **Effect ve Affect**: "Effect" adeten ism, "affect" adeten feldir
-- **Daha az ve Az**: Saylma bilen seyler ucun "az" (fewer), sayila bilmeyen ucun "daha az" (less)
+- **Your və You're** (İngilis dilində): "Your" yiyəlikdir; "you're" "you are" qısaltmasıdır
+- **Their/There/They're**: "Their" yiyəlikdir, "there" yer göstərir, "they're" "they are" dir
+- **Its və It's**: "Its" yiyəlikdir; "it's" "it is" deməkdir
+- **Effect və Affect**: "Effect" adətən isim, "affect" adətən feldir
+- **Daha az və Az**: Sayıla bilən şeylər üçün "az" (fewer), sayıla bilməyən üçün "daha az" (less)
 
-## Biznes Unsiyyetine Tesiri
+## Biznes Ünsiyyətinə Təsiri
 
-Qrammatik sehvler her biznes kanalinda olcule bilen neticeler verir:
+Qrammatik səhvlər hər biznes kanalında ölçülə bilən nəticələr verir:
 
-1. **E-poct**: Biznes e-pocltlarinda qrammatik sehvler cavab nisbetleini azaldir ve layiheleri ray cixara bilen anlasiqmazliqlar yarada biler.
-2. **CV ve Oert Mektublari**: Ise goturenler muenezzem olaraq orfoqrafiya ve ya qrammtika sehvleri olan CV-leri redd edir.
-3. **Veb-saytlar ve Aiclis Sehifeleri**: Qrammatik sehvler etibari ve konversiya derecelerini azaldir. Ziyaretciler suursuz olaraq yaaz keyfiyyetini mehsul keyfiyyeti ile elaqeleindirir.
-4. **Sosial Media**: Sehvleri olan yazilkr daha az elaqe alir. Saniyeler erzinde tesir yaratmali oldugunuz platformalarda sehv paylasma ile surushdurme arasindaki ferq ola biler.
-5. **Musteri Teklifleri ve Hesabatlar**: Bu yuksek riskli senedler sirketinizin pesekarlibini temsil edir.
-6. **Daxili Unsiyyet**: Daxili mesajlarda ve senedlesdirmede sehlernkar qrammatika karkis yaradir, vaxt itirir ve pesekar nomrenizi asdindir.
+1. **E-poçt**: Biznes e-poçtlarında qrammatik səhvlər cavab nisbətlərini azaldır və layihələri raydan çıxara bilən anlaşılmazlıqlar yarada bilər.
+2. **CV və Örtmə Məktubları**: İşə götürənlər müntəzəm olaraq orfoqrafiya və ya qrammatika səhvləri olan CV-ləri rədd edir.
+3. **Veb-saytlar və Açılış Səhifələri**: Qrammatik səhvlər etibarı və konversiya dərəcələrini azaldır. Ziyarətçilər şüursuz olaraq yazı keyfiyyətini məhsul keyfiyyəti ilə əlaqələndirir.
+4. **Sosial Media**: Səhvləri olan yazılar daha az əlaqə alır. Saniyələr ərzində təsir yaratmalı olduğunuz platformalarda səhv paylaşma ilə sürüşdürmə arasındakı fərq ola bilər.
+5. **Müştəri Təklifləri və Hesabatlar**: Bu yüksək riskli sənədlər şirkətinizin peşəkarlığını təmsil edir.
+6. **Daxili Ünsiyyət**: Daxili mesajlarda və sənədləşdirmədə səhlənkar qrammatika qarışıqlıq yaradır, vaxt itirir və peşəkar nüfuzunuzu aşındırır.
 
-## Qrammatikadan Kenare: Uslub ve Aydinliq
+## Qrammatikadan Kənara: Üslub və Aydınlıq
 
-Dogru qrammatika baslangic noqtesidir, amma haqiqeten effektiv pesekar yazi daha ireli gedir:
+Doğru qrammatika başlanğıc nöqtəsidir, amma həqiqətən effektiv peşəkar yazı daha irəli gedir:
 
-**Cumleleri qisa saxlayin.** Uzun, dolanan cumleler daha cetindir ve sehv ehtimali daha yuksekdir. Cumle 25-30 sozden oteye kecirse, onu ikiye bolmeyi dusunun.
+**Cümlələri qısa saxlayın.** Uzun, dolanan cümlələr daha çətindir və səhv ehtimalı daha yüksəkdir. Cümlə 25-30 sözdən ötəyə keçirsə, onu ikiyə bölməyi düşünün.
 
-**Aktiv ses istifade edin.** "Komanda layiheni tamamladi" "Layihe komanda terefinden tamamlandi" dan daha aydin ve birbase edir.
+**Aktiv səs istifadə edin.** "Komanda layihəni tamamladı" "Layihə komanda tərəfindən tamamlandı" dan daha aydın və birbaşa edir.
 
-**Doldurcu sozleri aradan qaldirin.** "cox", "haqiqeten", "eslinde", "esasen" kimi sozler nadir hallarda mena elave edir. Onlari kesin ve yaziniz daha siki ve etibatli olacaq.
+**Doldurucu sözləri aradan qaldırın.** "çox", "həqiqətən", "əslində", "əsasən" kimi sözlər nadir hallarda məna əlavə edir. Onları kəsin və yazınız daha sıx və etibarlı olacaq.
 
-**Konkret olun.** "Ehemiyyetli artim gorduek" qeyri-mueyyndir. "Gelir rubden rube 23% artib" konkret ve inandiricidir.
+**Konkret olun.** "Əhəmiyyətli artım gördük" qeyri-müəyyəndir. "Gəlir rübdən rübə 23% artıb" konkret və inandırıcıdır.
 
-## AI Qrammatika Yoxlayicilari Nece Komek Edir
+## AI Qrammatika Yoxlayıcıları Necə Kömək Edir
 
-Muasir AI qrammatika yoxlayicilari sade orfoqrafiya yoxlamasindan cox ireli gedir. Onlar konteksti anlayir, bu da qayda esasli yoxlayicilarin tamamiley qaciirtdiqi sehvleri tutmaga imkan verir:
+Müasir AI qrammatika yoxlayıcıları sadə orfoqrafiya yoxlamasından çox irəli gedir. Onlar konteksti anlayır, bu da qaydaya əsaslı yoxlayıcıların tamamilə qaçırdığı səhvləri tutmağa imkan verir:
 
-- **Kontekstual orfoqrafiya**: Orfoqrafiya yoxlayicisi sehv yazilmis soz gormir, amma AI qrammatika yoxlayicisi kontekset esasinda sehvi taniyir.
-- **Ton tehlili**: AI tonunuz gozlenilmedien deyisdiyinde (meselen, resmi hesabat birddn-bire qeyri-resmi olduqda) xeberdarllq ede biler.
-- **Uslub ardiciilligi**: Uzun sened boyunca ardiciil uslub saxlamaq insanlar ucun cetindir, amma AI ucun asandir.
-- **Durguisaret**: Vergul yerlesdirmesi, noqteli vergul istifadesi ve tire formatlashdirmasi sehv edileyasi sahelrdir.
-- **Cumle strukturu**: AI uzun cumleler, fraqmentler ve asili modifikatorlari mueyyen ede bilir.
+- **Kontekstual orfoqrafiya**: Orfoqrafiya yoxlayıcısı səhv yazılmış söz görmür, amma AI qrammatika yoxlayıcısı kontekst əsasında səhvi tanıyır.
+- **Ton təhlili**: AI tonunuz gözlənilmədən dəyişdiyində (məsələn, rəsmi hesabat birdən-birə qeyri-rəsmi olduqda) xəbərdarlıq edə bilər.
+- **Üslub ardıcıllığı**: Uzun sənəd boyunca ardıcıl üslub saxlamaq insanlar üçün çətindir, amma AI üçün asandır.
+- **Durğu işarəsi**: Vergül yerləşdirilməsi, nöqtəli vergül istifadəsi və tirə formatlashdrılması səhv ediləsi sahələrdir.
+- **Cümlə strukturu**: AI uzun cümlələr, fraqmentlər və asılı modifikatorları müəyyən edə bilir.
 
-Vaxtim Yoxdu-daki Qrammatika Yoxlayicisi kimi aletler bu ince sehvleri real vaxtda tutaraq yoxlama prosesinizle yanasi islyen tehlukesizlik sebekesi verir.
+Vaxtım Yoxdu-dakı Qrammatika Yoxlayıcısı kimi alətlər bu incə səhvləri real vaxtda tutaraq yoxlama prosesinizlə yanası işləyən təhlükəsizlik şəbəkəsi verir.
 
-## Daha Yaxsi Yazma Verdislerini Qurmaq
+## Daha Yaxşı Yazma Vərdişlərini Qurmaq
 
-Qrammatikanizi yaxsilasdirmaq ders kitabindan qaydalar ezberlemek deyil. Bu, vaxt kecdikce avtomatik hala gelen vrdisler qurmaqdir:
+Qrammatikanızı yaxşılaşdırmaq dərs kitabından qaydalar əzbərləmək deyil. Bu, vaxt keçdikcə avtomatik hala gələn vərdişlər qurmaqdır:
 
-1. **Gondermeden evvel her zaman yoxlayin** -- hetin suretli 30 saniyyelik baxis en aciq sehvleri tutur
-2. **AI qrammatika yoxlayicisiindan tehlukesizlik sebeksi kimi istifade edin** -- eyni metne saatlarca baxdiqda gozlerinizin qacirdigi sehvleri tutur
-3. **Metninizi ucadan oxuyun** -- qulaginiz yonaluq, uzun cumleler ve itkin sozleri tutur
-4. **Muhum senedleri is yoldasin yoxlamasina verin** -- teze gozler en etibarli sehv asakarlayicisidir
-5. **Umumi sehvleriniizden oyreninh** -- insanlarin aksariyyeti eyni bir nece sehvi tekrar-tekrar edir
-6. **Genish oxuyun ve aktiv oxuyun** -- pesekar neisrlerin cumlelerini ve paraqraflarini nece strukturlasdirdiqlarqa diqqet edin
-7. **Muenezzem yazin** -- her bacariq kimi, yazma da mesqle yaxsirlasir
+1. **Göndərmədən əvvəl hər zaman yoxlayın** -- hətta sürətli 30 saniyəlik baxış ən açıq səhvləri tutur
+2. **AI qrammatika yoxlayıcısından təhlükəsizlik şəbəkəsi kimi istifadə edin** -- eyni mətnə saatlarca baxdıqda gözlərinizin qaçırdığı səhvləri tutur
+3. **Mətninizi ucadan oxuyun** -- qulağınız yöndəmsiz, uzun cümlələri və itkin sözləri tutur
+4. **Mühüm sənədləri iş yoldaşının yoxlamasına verin** -- təzə gözlər ən etibarlı səhv aşkarlayıcısıdır
+5. **Ümumi səhvlərinizdən öyrənin** -- insanların əksəriyyəti eyni bir neçə səhvi təkrar-təkrar edir
+6. **Geniş oxuyun və aktiv oxuyun** -- peşəkar nəşrlərin cümlələrini və paraqraflarını necə strukturlaşdırdıqlarına diqqət edin
+7. **Müntəzəm yazın** -- hər bacarıq kimi, yazma da məşqlə yaxşılaşır
 
-Vaxtim Yoxdu AI qrammatika yoxlayicisi, oxunabilirlik aletleri ve soz sayacini qeydiyyat olmadan, soz limiti olmadan ve xarici serverlerde melumat saxlanilmadan pulsuz teklif edir. Sozleriniz sizi temsil edir. Onlarin sizi yaxsica temsil etdiyini temin edin.`,
+Vaxtım Yoxdu AI qrammatika yoxlayıcısı, oxunabilirlik alətləri və söz sayacını qeydiyyat olmadan, söz limiti olmadan və xarici serverlərdə məlumat saxlanılmadan pulsuz təklif edir. Sözləriniz sizi təmsil edir. Onların sizi yaxşıca təmsil etdiyini təmin edin.`,
   },
   'pdf-tools-guide-merge-split-compress': {
-    title: 'PDF Aletlerine Tam Beledci: Birlesdirme, Bolme ve Siqisdirma',
+    title: 'PDF Alətlərinə Tam Bələdçi: Birləşdirmə, Bölmə və Sıxışdırma',
     date: '2026-03-10',
     relatedTools: ['pdf-merge', 'image-compress', 'base64-encode-decode'],
-    content: `PDF fayllar muasir sened idarechilyinin esasini teskil edir. Muqavillerden ve fakturalardan tedqiqat meqalelerine ve portfoliolara qeder PDF-ler her cihazda eyni gorunen senedlerin paylasimasi ucun universal formatdir. Amma PDF-lerle islemek endis bahalii proqram teleb edirdi. 2026-ci ilde brauzer esasli PDF aletleri oyun qaydalarini deyisib -- tam gizlilikle pulsuz pesekar seviyyeli sened idareciiliyi teklif edir. Bu beledci PDF-lerin birlsdirilmesi, bolunmesi ve siqisdirilmasi haqqinda bilmeniz gereken her seyi ehate edir.
+    content: `PDF fayllar müasir sənəd idarəçiliyinin əsasını təşkil edir. Müqavilələrdən və fakturalardan tədqiqat məqalələrinə və portfoliolara qədər PDF-lər hər cihazda eyni görünən sənədlərin paylaşılması üçün universal formatdır. Amma PDF-lərlə işləmək əndişəli bahalı proqram tələb edirdi. 2026-cı ildə brauzer əsaslı PDF alətləri oyun qaydalarını dəyişib -- tam gizliliklə pulsuz peşəkar səviyyəli sənəd idarəçiliyi təklif edir. Bu bələdçi PDF-lərin birləşdirilməsi, bölünməsi və sıxışdırılması haqqında bilməniz gərəkən hər şeyi əhatə edir.
 
-## PDF-ler Niye Dominantliq Edir
+## PDF-lər Niyə Dominantlıq Edir
 
-Google Docs ve Notion kimi bulud esasli redaktorlara baxmayaraq, PDF-ler tamamlanmis senedler ucun standart olaraq qalir. PDF formatlasdimanizi tam niyyetlendiiniz kimi qoruyur -- sriftler, sekiller, makan ve renglerr Windows, Mac, Android ve ya iPad-da eyni gorsendir. Hec bir basqa format platformalar arasi bu seviyeli ardiciiliq teklif etmir.
+Google Docs və Notion kimi bulud əsaslı redaktorlara baxmayaraq, PDF-lər tamamlanmış sənədlər üçün standart olaraq qalır. PDF formatlşdırmanızı tam niyyətləndiyiniz kimi qoruyur -- şriftlər, şəkillər, məkan və rənglər Windows, Mac, Android və ya iPad-da eyni görsənir. Heç bir başqa format platformalar arası bu səviyyəli ardıcıllıq təklif etmir.
 
-PDF-ler hemcinin muqavileler, huquqi senedler ve resmi qeydler ucun huquqi standartdir. Ekkseriyyet dovlet qurumllari, huquq firmalari, banklar ve tenzimleme qurumllari PDF formatiinda teqdmiat teleb edir.
+PDF-lər həmçinin müqavilələr, hüquqi sənədlər və rəsmi qeydlər üçün hüquqi standartdır. Əksəriyyət dövlət qurumları, hüquq firmaları, banklar və tənzimləmə qurumları PDF formatında təqdimaat tələb edir.
 
-## PDF-lerin Birlersdirilmesi: Senedleri Bir Fayla Birlesdirmek
+## PDF-lərin Birləşdirilməsi: Sənədləri Bir Fayla Birləşdirmək
 
-Birlsedirme en umumi PDF emeliyyatidir. Muhsibiniz ucun bes fakturani birlesdirmek, is portalii ucun ort mektubunu CV ile birlesdirmek ve ya ferqli komanda uzvlerinden uc hesabat bolmsini vahid sened halina gatirmek lazimdir.
+Birləşdirmə ən ümumi PDF əməliyyatıdır. Mühasibiniz üçün beş fakturanı birləşdirmək, iş portalı üçün örtmə məktubunu CV ilə birləşdirmək və ya fərqli komanda üzvlərindən üç hesabat bölməsini vahid sənəd halına gətirmək lazımdır.
 
-**PDF birlsedirmesinin umumi istifade hallari:**
+**PDF birləşdirməsinin ümumi istifadə halları:**
 
-- Muhasibat ucun fatura ve ya maliyye hesabatlarinin birledirilmesi
-- Is muracietleri ucun ort mektublarinin CV ile birledirilmesi
-- Ferqli muelliflerden coxbolmeli hesabatlarin yigilmasi
-- Ferdi layihe faylllarindanelhateli portfoliolarin yaradilmasi
-- Imzalanmis muqavile sehifelerinin vahid razilashmaya birledirilmesi
+- Mühasibat üçün faktura və ya maliyyə hesabatlarının birləşdirilməsi
+- İş müraciətləri üçün örtmə məktublarının CV ilə birləşdirilməsi
+- Fərqli müəlliflərdən çoxbölməli hesabatların yığılması
+- Fərdi layihə fayllarından əlaqəli portfolioların yaradılması
+- İmzalanmış müqavilə səhifələrinin vahid razılaşmaya birləşdirilməsi
 
-Effektiv birlsedirmenin acari sehife sirasina nezaretdir. Yaxsi bir alet fayllari duzgun ardiciilliqa surukleyib buraxmaga ve birlesdirmezden evvel her senede onizleme etmeye imkan verir.
+Effektiv birləşdirmənin açarı səhifə sırasına nəzarətdir. Yaxşı bir alət faylları düzgün ardıcıllığa sürükləyib buraxmağa və birləşdirməzdən əvvəl hər sənədə önizləmə etməyə imkan verir.
 
-## PDF-lerin Bolunmesi: Lazim Olan Hissenin Cixarilmasi
+## PDF-lərin Bölünməsi: Lazım Olan Hissənin Çıxarılması
 
-Bolme birlsedirmenin eksidir. 50 sehifelik hesabat alirsiniz, amma yalniz 12-den 18-e qeder olan sehifeler lazimdir. Skenr edilmis senedniz var, her sehifede ferqli sebeye gonderilmli olan ayri forma var.
+Bölmə birləşdirmənin əksidir. 50 səhifəlik hesabat alırsınız, amma yalnız 12-dən 18-ə qədər olan səhifələr lazımdır. Skaner edilmiş sənədiniz var, hər səhifədə fərqli səbəbə göndərilməli olan ayrı forma var.
 
-Effektiv bolme aletleri deqiq sehife araliqlari mueyyen etmeye, ayri-ayri sehifeleri secmeye ve ya muenezzem intervallarda (meselen, her 5 sehifede) bolmeye imkan verir.
+Effektiv bölmə alətləri dəqiq səhifə aralıqları müəyyən etməyə, ayrı-ayrı səhifələri seçməyə və ya müntəzəm intervallarda (məsələn, hər 5 səhifədə) bölməyə imkan verir.
 
-## PDF-lerin Siqisdirilmasi: Fayl Olcusunun Azaldilmasi
+## PDF-lərin Sıxışdırılması: Fayl Ölçüsünün Azaldılması
 
-PDF fayllar xususen yuksek keyfiyetli sekiller ve ya daxil edilmis sriftlerle gozlenilmez derecede boyuk ola biler. Marketinq brosurlau asanliqla 20MB-i kece biler, halbuki e-poct serverleri elavelerqi 10-25MB ile mehdudlasdirir.
+PDF fayllar xüsusilə yüksək keyfiyyətli şəkillər və ya daxil edilmiş şriftlərlə gözlənilməz dərəcədə böyük ola bilər. Marketinq broşurları asanlıqla 20MB-i keçə bilər, halbuki e-poçt serverləri əlavələri 10-25MB ilə məhdudlaşdırır.
 
-**PDF siqisdiirmasi niye vacibdir:**
+**PDF sıxışdırması niyə vacibdir:**
 
-- **E-poct elaveleri**: Aksariyyet provayder 25MB-den boyuk fayllari redd edir
-- **Yukleme portallari**: Dovlet ve korporativ portallar tez-tez 5-10MB ile mehdudlasdirir
-- **Yaddas**: Siqisdirilmis PDF-ler boyuk arxivler ucun bulud yaddas xerclerini azaldir
-- **Yukleme sureti**: Veb-saytlardaki PDF-ler siqisdirilldiqda daha suretli yuklenir
-- **Mobil erishim**: Daha kicik fayllar mobil baglantilarda daha suretli yuklenir
+- **E-poçt əlavələri**: Əksəriyyət provayder 25MB-dən böyük faylları rədd edir
+- **Yükləmə portalları**: Dövlət və korporativ portallar tez-tez 5-10MB ilə məhdudlaşdırır
+- **Yaddaş**: Sıxışdırılmış PDF-lər böyük arxivlər üçün bulud yaddaş xərclərini azaldır
+- **Yükləmə sürəti**: Veb-saytlardakı PDF-lər sıxışdırıldıqda daha sürətli yüklənir
+- **Mobil erişim**: Daha kiçik fayllar mobil bağlantılarda daha sürətli yüklənir
 
-## Brauzer Esasli Aletlerin Gizlilik Ustunluyu
+## Brauzer Əsaslı Alətlərin Gizlilik Üstünlüyü
 
-Enenevi onlayn PDF aletleri fayllari uzaq servere yuklemeyi teleb edir. Hassas muqavileleriniz, maliyye qeydleriniz ve sexsi fayllariniz basqasinin infrastrukturunda oturur. Vaxtim Yoxdu-dakiler kimi brauzer esasli PDF aletleri JavaScript API-lerinden istifade ederek fayllari tamamiley brauzerinizde emal edir. Senedleriniz cihazinizi terk etmir -- yukleme yoxdur, server terefi emal yoxdur, melumat saxlama yoxdur.
+Ənənəvi onlayn PDF alətləri faylları uzaq serverə yükləməyi tələb edir. Həssas müqavilələriniz, maliyyə qeydləriniz və şəxsi fayllarınız başqasının infrastrukturunda oturur. Vaxtım Yoxdu-dakılar kimi brauzer əsaslı PDF alətləri JavaScript API-lərindən istifadə edərək faylları tamamilə brauzerinizdə emal edir. Sənədləriniz cihazınızı tərk etmir -- yükləmə yoxdur, server tərəfi emal yoxdur, məlumat saxlama yoxdur.
 
-**Bu xususen bunlar ucun vacibdir:**
+**Bu xüsusilə bunlar üçün vacibdir:**
 
-- Gizli sertler ehtiva eden huquqi senedler
-- Maliyye hesabatlari ve vergi senedleri
-- Gizlilik qaydalarla qorunan tibbi qeydler
-- Biznes planlari ve mulkiyyet meluatlari
-- Sexsi kimlik senedleri
+- Gizli şərtlər ehtiva edən hüquqi sənədlər
+- Maliyyə hesabatları və vergi sənədləri
+- Gizlilik qaydalarla qorunan tibbi qeydlər
+- Biznes planları və mülkiyyət məlumatları
+- Şəxsi kimlik sənədləri
 
-## PDF Idarechilyii ucun En Yaxsi Tecrubeler
+## PDF İdarəçiliyi üçün Ən Yaxşı Təcrübələr
 
-1. **Birlsdirmeden evvel faylllara tesviri adlar verin** -- "scan001.pdf" evezine "Faktura-2026-03-MusteriAdi.pdf" kimi konvensiyalar istifade edin
-2. **Paylasmazdan evvel siqishdirin, arxivlmezden evvel yox** -- Arxivinizdee orijinal yuksek keyfiyyetli PDF-leri saxlayin ve paylasma ucun siqisdirilmis kopyalar yaradiin
-3. **Birlsedirmeden sonra sehife istiqametini yoxlayin** -- Ferqli menbelerden olan senedlerin portret ve landssaft istiqametleri qarisiq ola biler
-4. **PDF metamelumatlarindaan istifade edin** -- Daha asan axtaris ucun sened basligi, muellif ve movzu mueyyen edin
-5. **Son neticeni tesdiq edin** -- Istenilen emeliyyatdan sonra paylasmazdan evvel her sehifeye baxin
+1. **Birləşdirmədən əvvəl fayllara təsviri adlar verin** -- "scan001.pdf" əvəzinə "Faktura-2026-03-MüştəriAdı.pdf" kimi konvensiyalar istifadə edin
+2. **Paylaşmazdan əvvəl sıxışdırın, arxivləməzdən əvvəl yox** -- Arxivinizdə orijinal yüksək keyfiyyətli PDF-ləri saxlayın və paylaşma üçün sıxışdırılmış kopyalar yaradın
+3. **Birləşdirmədən sonra səhifə istiqamətini yoxlayın** -- Fərqli mənbələrdən olan sənədlərin portret və landşaft istiqamətləri qarışıq ola bilər
+4. **PDF metamelumatlarından istifadə edin** -- Daha asan axtarış üçün sənəd başlığı, müəllif və mövzu müəyyən edin
+5. **Son nəticəni təsdiq edin** -- İstənilən əməliyyatdan sonra paylaşmazdan əvvəl hər səhifəyə baxın
 
-Butun bu xususiyyetler Vaxtim Yoxdu-daki pulsuz PDF aletlerinde movcuddur. Senedleriniz gizli qalir, aletler ani isleyir ve gizli mehdudiyyetler ve ya hesab telebleri yoxdur.`,
+Bütün bu xüsusiyyətlər Vaxtım Yoxdu-dakı pulsuz PDF alətlərində mövcuddur. Sənədləriniz gizli qalır, alətlər anı işləyir və gizli məhdudiyyətlər və ya hesab tələbləri yoxdur.`,
   },
   'qr-codes-everything-you-need-to-know': {
-    title: 'QR Kodlar: 2026-da Bilmeniz Gereken Her Sey',
+    title: 'QR Kodlar: 2026-da Bilməniz Gərəkən Hər Şey',
     date: '2026-03-09',
     relatedTools: ['qr-code-generator', 'color-picker', 'image-convert'],
-    content: `QR kodlar nis senaye izleme texnologiyasindan planetdeki en genis tanilnan reqemsal aletlerden birine cevrilib. 2026-ci ilde onlar her yerdedir -- restoran menyulari, mehsul qablasdirmalari, vizit kartlari, tedbirlerin biletleri, muzey ekspozisiyalari ve nesqliyyat sistemleri. QR kodlarin nece isldiyini, hansii novlerin movcud oldugunu ve effektiv QR kodlarin nece yaradilacagini basa dusmek fiziki ve reqemsal tecrubeleri bir-birine baglmaq isteyen her kes ucun praktik bacariqdir.
+    content: `QR kodlar niş sənaye izləmə texnologiyasından planetdəki ən geniş tanınan rəqəmsal alətlərdən birinə çevrilib. 2026-cı ildə onlar hər yerdədir -- restoran menyuları, məhsul qablaşdırmaları, vizit kartları, tədbirlərin biletləri, muzey ekspozisiyaları və nəqliyyat sistemləri. QR kodların necə işlədiyini, hansı növlərin mövcud olduğunu və effektiv QR kodların necə yaradılacağını başa düşmək fiziki və rəqəmsal təcrübələri bir-birinə bağlamaq istəyən hər kəs üçün praktik bacarıqdır.
 
-## QR Kodlarin Qisa Tarixi
+## QR Kodların Qısa Tarixi
 
-QR kodlar -- Quick Response (Suretli Cavab) kodlarinin qisalmasi -- 1994-cu ilde Toyota-nin toreme sirketi olan Denso Wave terefinden ixtirae edilib. Ilkin meqsed istehsal zamani avtoombil hisselerinin izlenmesi idi. Enenevi barkodlar yalniz teqriben 20 simvol tuta bilirdi, bu da murkkeb inventar sistemleri ucun kifayet etmirdi. QR kodlar melumatlari iki olcude kodlashdirmaqla bu problemi hell etdi ve kicik bir kvadratda minlerle simvol saxlamaga imkan verdi.
+QR kodlar -- Quick Response (Sürətli Cavab) kodlarının qısalması -- 1994-cü ildə Toyota-nın törəmə şirkəti olan Denso Wave tərəfindən ixtira edilib. İlkin məqsəd istehsal zamanı avtomobil hissələrinin izlənməsi idi. Ənənəvi barkodlar yalnız təqribən 20 simvol tuta bilirdi, bu da mürəkkəb inventar sistemləri üçün kifayət etmirdi. QR kodlar məlumatları iki ölçüdə kodlaşdırmaqla bu problemi həll etdi və kiçik bir kvadratda minlərlə simvol saxlamağa imkan verdi.
 
-Iyirmi ilddn artiq QR kodlar esasen senaye texnologiyasi olaraq qaldi. 2020-ci ilin qlobal pandemiysai donuhs noqtesi oldu. Kontaktsiz menyular, reqemsal qeydiyyatlar ve toxunmasiz odenisler qebul seviyyesini misli gorulmnmis derecede artirdi. 2022-ci ile qeder her muasir smartfon kamera tetbiqi vasitesile QR kodlari skan ede bilirdi. Bu gun 2026-ci ilde QR kodlar gundlik heyatin daimi elementidir.
+İyirmi ildən artıq QR kodlar əsasən sənaye texnologiyası olaraq qaldı. 2020-ci ilin qlobal pandemiyası dönüş nöqtəsi oldu. Kontaktsız menyular, rəqəmsal qeydiyyatlar və toxunmasız ödənişlər qəbul səviyyəsini misli görülməmiş dərəcədə artırdı. 2022-ci ilə qədər hər müasir smartfon kamera tətbiqi vasitəsilə QR kodları skan edə bilirdi. Bu gün 2026-cı ildə QR kodlar gündəlik həyatın daimi elementidir.
 
-## QR Kodlar Nece Isleyir
+## QR Kodlar Necə İşləyir
 
-QR kod cetvelde qara ve ag kvadratlarin massinla oxuna bilen matrissidir. Her kvadrat ikili deyeri temsil edir ve naxis standartlasdirilmis formata gore melumat kodlasdirir. QR kodu skan etdikde proqram bu naxisi yeniden orijinal meluata cevriir.
+QR kod cədvəldə qara və ağ kvadratların maşınla oxuna bilən matrissidir. Hər kvadrat ikili dəyəri təmsil edir və naxış standartlaşdırılmış formata görə məlumat kodlaşdırır. QR kodu skan etdikdə proqram bu naxışı yenidən orijinal məluata çevirir.
 
-**Esas struktur elementleri:**
+**Əsas struktur elementləri:**
 
-- **Tapici naxislar**: Skanerein kodu mueyyen etmesine ve istiqametlendirmesine komek eden uc boyuk kunc kvaadratlar
-- **Uygunlasdirma naxislari**: Eyri sethlerdin tahriful kompensasiya eden daha kicik kvadratlar
-- **Zamanlamanaxislari**: Cetveel olcusunu mueyyen etmeye komek eden novbelesmis modullar
-- **Sehve duzeltme**: Kodun 30%-e qeder zedelnsine baxmayaraq oxumaga imkan veren artiq melumatlar
+- **Tapıcı naxışlar**: Skanerin kodu müəyyən etməsinə və istiqamətləndirməsinə kömək edən üç böyük künc kvadratları
+- **Uyğunlaşdırma naxışları**: Əyri səthlərdin təhrifini kompensasiya edən daha kiçik kvadratlar
+- **Zamanlama naxışları**: Cədvəl ölçüsünü müəyyən etməyə kömək edən növbələşən modullar
+- **Səhvə düzəltmə**: Kodun 30%-ə qədər zədələnməsinə baxmayaraq oxumağa imkan verən artıq məlumatlar
 
-Bu sehve duzeltme QR kodlarin merkezlerine logo daxil etseeler bele skan oluna bilen sebbidir.
+Bu səhvə düzəltmə QR kodların mərkəzlərinə logo daxil etsələr belə skan oluna bilən səbəbidir.
 
-## QR Kod Kontentinin Novleri
+## QR Kod Kontentinin Növləri
 
-QR kodlar bir cox melumat novrini kodlasdiira bilir:
+QR kodlar bir çox məlumat növünü kodlaşdıra bilir:
 
-1. **URL**: Brauzerde veb-sehife acir. Marketinq materiallari ve mehsul qablasdirmalari ucun muekemmeldir.
-2. **Duz metn**: Internet erishimi olmadan oxuna bilen teqriben 4000 simvola qeder metn.
-3. **E-poct**: Alnci, movzu ve mesajla onceden doldurulmus e-poct. Bir skan onceden unvanlannmis e-poctu basllidir.
-4. **Telefon nomresi**: Istifadeiciden kodlanmis nomreye zeng etmeyi telklif edir.
-5. **Wi-Fi etimadnameleri**: Sebekee adi, sifresi ve sifreleme novunu kodlasdirir. Skan etmek cihazi avtomatik baglatir. Otellder, kafelr ve ofsislrde populyardir.
-6. **vCard**: Istifadecinin unvan kitabina birbase elave olunan tam elaqe melumati -- vizit kartlarinin muasir evezedicisii.
-7. **Teqvim tedbiri**: Istifadecinin teqvimine birbase elave olunan tedbiir detallarini kodlasdirir.
-8. **Geolokaasiya**: Sabitlenmis koordinatlarla xerite tetbbiqini acir.
+1. **URL**: Brauzerdə veb-səhifə açır. Marketinq materialları və məhsul qablaşdırmaları üçün mükəmməldir.
+2. **Düz mətn**: İnternet erişimi olmadan oxuna bilən təqribən 4000 simvola qədər mətn.
+3. **E-poçt**: Alıcı, mövzu və mesajla öncədən doldurulmuş e-poçt. Bir skan öncədən ünvanlanmış e-poçtu başladır.
+4. **Telefon nömrəsi**: İstifadəçidən kodlanmış nömrəyə zəng etməyi təklif edir.
+5. **Wi-Fi etimadnamələri**: Şəbəkə adı, şifrəsi və şifrələmə növünü kodlaşdırır. Skan etmək cihazı avtomatik bağlayır. Otellərdə, kafələrdə və ofislərdə populyardır.
+6. **vCard**: İstifadəçinin ünvan kitabına birbaşa əlavə olunan tam əlaqə məlumatı -- vizit kartlarının müasir əvəzedicisidir.
+7. **Təqvim tədbiri**: İstifadəçinin təqviminə birbaşa əlavə olunan tədbir detallarını kodlaşdırır.
+8. **Geolokasiya**: Sabitlənmiş koordinatlarla xəritə tətbiqini açır.
 
-## QR Kodlarin Yaradilmasi ucun En Yaxsi Tecrubeler
+## QR Kodların Yaradılması üçün Ən Yaxşı Təcrübələr
 
-Etibarli QR kod yaratmaq sadece kvadrat generasiya etmekden artiq teleb edir:
+Etibarlı QR kod yaratmaq sadəcə kvadrat generasiya etməkdən artıq tələb edir:
 
-**Olcu ve yerlesdirme**: QR kod yaxin mesafeden skan ucun en azi 2sm x 2sm, daha uzaq mesafeler ucun mutensib olaraq daha boyuk olmalidir. 3 metrden baxilan afisa ucun en azi 15sm x 15sm olmalidire. Her zaman neezer tutulan skan mesafesinde yoxlayin.
+**Ölçü və yerləşdirmə**: QR kod yaxın məsafədən skan üçün ən azı 2sm x 2sm, daha uzaq məsafələr üçün mütənasib olaraq daha böyük olmalıdır. 3 metrdən baxılan afişa üçün ən azı 15sm x 15sm olmalıdır. Hər zaman nəzərdə tutulan skan məsafəsində yoxlayın.
 
-**Kontrast ve rengller**: QR kodlar on plan ve arxa plan arasinda guclu kontrast teleb edir. Qara-ag en yaxsi isleyir. Brend rengleri istifade edirsinizse, on plani qaranliiq, arxa plani isiqli saxlayin.
+**Kontrast və rənglər**: QR kodlar ön plan və arxa plan arasında güclü kontrast tələb edir. Qara-ağ ən yaxşı işləyir. Brend rəngləri istifadə edirsinizsə, ön planı qaranlıq, arxa planı işıqlı saxlayın.
 
-**Sehve duzeltme seviyesi**: Dord seviye movcuddur -- Asagi (7%), Orta (15%), Dordde bir (25%) ve Yuksek (30%). Temiz reqemsal ekranlar ucun Asagi, standart cap ucun Orta ve cizila ve ya kirlenee bilen sethler ucun Yuksek istifade edin.
+**Səhvə düzəltmə səviyyəsi**: Dörd səviyyə mövcuddur -- Aşağı (7%), Orta (15%), Dörddə bir (25%) və Yüksək (30%). Təmiz rəqəmsal ekranlar üçün Aşağı, standart çap üçün Orta və cızıla və ya kirləna bilən səthlər üçün Yüksək istifadə edin.
 
-**Sakit zona**: Her QR kodun en azi 4 modul eninde bos serhede ehtiyaci var. Bu saheni hec vaxt kesmeyin.
+**Sakit zona**: Hər QR kodun ən azı 4 modul enində boş sərhədə ehtiyacı var. Bu sahəni heç vaxt kəsməyin.
 
-**Test**: Yerleshdirmezden evvel en azi uc ferqli cihazla yoxlayin.
+**Test**: Yerləşdirməzdən əvvəl ən azı üç fərqli cihazla yoxlayın.
 
-## 2026-da Biznes Tetbiqleri
+## 2026-da Biznes Tətbiqləri
 
-QR kodlar sade URL baglantisinin cox otesine kecib:
+QR kodlar sadə URL bağlantısının çox ötəsinə keçib:
 
-- **Artrilmis realliq**: QR kodlar fiziki mehsullar uzerinde reqemsal kontent overt eden AR tecrubeleri basladir
-- **Kontaktsiz odeniisler**: QR esasli odenis sistemleri dunyada her gun milyardlarla emeliyyat emal edir
-- **Autentifikasiya**: Iki faktorlu autentifikasiya tetbiqleri tehlukesiz qurashdirma ucun QR kodlardan istifade edir
-- **Tedaruk zenciri izleme**: Istehsaldan catdirilmaya qeder her addim izlenir
-- **Interaktiv cap mediiasi**: Jurnal ve birbasa poctu oxuculari capdan videoya kecidi temin edir
-- **Agilli qablasdirma**: Qida sirketleri qablasdirmadaki QR kodlar vasitesile qida deyeri, alergen melumati verir
+- **Artırılmış reallıq**: QR kodlar fiziki məhsullar üzərində rəqəmsal kontent örtən AR təcrübələri başladır
+- **Kontaktsız ödənişlər**: QR əsaslı ödəniş sistemləri dünyada hər gün milyardlarla əməliyyat emal edir
+- **Autentifikasiya**: İki faktorlu autentifikasiya tətbiqləri təhlükəsiz quraşdırma üçün QR kodlardan istifadə edir
+- **Tədarük zənciri izləmə**: İstehsaldan çatdırılmaya qədər hər addım izlənir
+- **İnteraktiv çap mediası**: Jurnal və birbaşa poçtu oxuculara çapdan videoya keçidi təmin edir
+- **Ağıllı qablaşdırma**: Qida şirkətləri qablaşdırmadakı QR kodlar vasitəsilə qida dəyəri, allergen məlumatı verir
 
-## QR Kodlarinizin Yaradilmasi
+## QR Kodlarınızın Yaradılması
 
-Vaxtim Yoxdu-daki QR Kod Generatoru URL-ler, metn, e-poct, telefon nomreleri ve daha coxu ucun QR kodlar yaratmaga imkan verir. Brendinize uygun olcu ve rengleri ferdileshdirin, PNG ve ya SVG formatinda yukleyin ve xarici serverlere hec bir melumat gondermeden butun kodlari brauzerinizde yaraadin. Cap tetbiqleri ucun her zaman SVG istifade edin -- keskinliyini itirmeden istenilen olcuye olculenir.
+Vaxtım Yoxdu-dakı QR Kod Generatoru URL-lər, mətn, e-poçt, telefon nömrələri və daha çoxu üçün QR kodlar yaratmağa imkan verir. Brendinizə uyğun ölçü və rəngləri fərdiləşdirin, PNG və ya SVG formatında yükləyin və xarici serverlərə heç bir məlumat göndərmədən bütün kodları brauzerinizdə yaradın. Çap tətbiqləri üçün hər zaman SVG istifadə edin -- kəskinliyini itirmədən istənilən ölçüyə ölçülənir.
 
-QR kodlar artiq trend deyil -- infrastrukturdur. Onlari effektiv yaratmaqi ve yerlesdirmeyi bilmek fiziki tecrubeleri reqemsal kontentlee baglayan her kes ucun faydali bacariqdir.`,
+QR kodlar artıq trend deyil -- infrastrukturdur. Onları effektiv yaratmağı və yerləşdirməyi bilmək fiziki təcrübələri rəqəmsal kontentlə bağlayan hər kəs üçün faydalı bacarıqdır.`,
   },
   'developer-productivity-tools-you-should-use': {
-    title: 'Istifade Etmeniz Gereken 10 Terecciicar Mehsuldariliq Aleti',
+    title: 'İstifadə Etməniz Gərəkən 10 Tərtibatçı Məhsuldarlıq Aləti',
     date: '2026-03-08',
     relatedTools: ['json-formatter', 'regex-tester', 'hash-generator', 'base64-encode-decode'],
-    content: `Terecciicar mehsuldarliqi daha suretli kod yazmaq deyil -- is axininizdan surtunme aradan qaldiraraq real problemleri hell etmeye daha cox vaxt, tekrarlanan tapshiriqlara daha az vaxt serfh etmekdir. En yaxsi terecciicarlar muhitlerini optimallasdirmis, duzgun aletleri secmis ve darbogazlari aradan qaldirmis olanlardir. 2026-ci ilde gundlik inkisaf is axininizi yaxsilasdircaq on mehsuldariliq aletin haqqinda danisaq.
+    content: `Tərtibatçı məhsuldarlığı daha sürətli kod yazmaq deyil -- iş axınından sürtünmə aradan qaldıraraq real problemləri həll etməyə daha çox vaxt, təkrarlanan tapşırıqlara daha az vaxt sərf etməkdir. Ən yaxşı tərtibatçılar mühitlərini optimallaşdırmış, düzgün alətləri seçmiş və darboğazları aradan qaldırmış olanlardır. 2026-cı ildə gündəlik inkişaf iş axınınızı yaxşılaşdıracaq on məhsuldarlıq aləti haqqında danışaq.
 
-## 1. JSON Formatlayici ve Tesdiqleyici
+## 1. JSON Formatlayıcı və Təsdiqləyici
 
-API-ler ve ya konfiqurasiya fayllari ile isleyirsinizse, JSON ile daima qarsilaisrsiniz. Xam API cavablari adeten oxunulmaz tek setire minimallasdirillir ve tek bir yerlesdirilmemis vergul her seyi poza biler. JSON formatlayicisi minimallasdiirlmis JSON-u duzgun girintileme ve sintaksis vurgulamasi ile gozellesdirir.
+API-lər və ya konfiqurasiya faylları ilə işləyirsinizsə, JSON ilə daima qarşılaşırsınız. Xam API cavabları adətən oxunulmaz tək sətirə minimallaşdırılır və tək bir yerləşdirilməmiş vergül hər şeyi poza bilər. JSON formatlayıcısı minimallaşdırılmış JSON-u düzgün girintləmə və sintaksis vurğulaması ilə gözəlləşdirir.
 
-Daha muhumu, yaxsi formatlayici melumatlarinizi tesdiq edir ve sehvleri deqiq gostirir. 200 setirlik konfiqurasiya faylinda itkin moterizeni axtarmaq evezine alet sintaksisin pozuldugu deqiq setri vurgulayir.
+Daha mühümü, yaxşı formatlayıcı məlumatlarınızı təsdiq edir və səhvləri dəqiq göstərir. 200 sətirlik konfiqurasiya faylında itkin mötərizəni axtarmaq əvəzinə alət sintaksisin pozulduğu dəqiq sətri vurğulayır.
 
 ## 2. Regex Test Edici
 
-Muenezzem ifadeler guclu, amma sehve meyllidir. Test edici olmadan regex yazmaq kodu isletmeden yazmaga benzer. Real vaxt regex test edicisi yazarken naxisinizin deqiq neye uygun geldiyini gosterir, tutma qruplarini vurgulayir ve kenar halllari ucun bir nece giris metn uzerinde yoxlamaga imkan verir.
+Müntəzəm ifadələr güclü, amma səhvə meyllidir. Test edici olmadan regex yazmaq kodu işlətmədən yazmağa bənzəyir. Real vaxt regex test edicisi yazarkən naxışınızın dəqiq nəyə uyğun gəldiyini göstərir, tutma qruplarını vurğulayır və kənar hallar üçün bir neçə giriş mətni üzərində yoxlamağa imkan verir.
 
-## 3. Base64 Kodlayici ve Dekoder
+## 3. Base64 Kodlayıcı və Dekoder
 
-Base64 kodlama her yerde gorsendirir: JWT tokenler, data URI-leri, API autentifikasiya baslilqlari, sertifikat fayllar ve CI/CD konfiqurasiya deyerleri. Yaxsi Base64 aleti hem metn, hem de fayl kodlamasini idaree edir, UTF-8-i duzgun destekleyir ve tek bir klikle kodlashdirmaga ve ya dekodlashdirmaga imkan verir.
+Base64 kodlama hər yerdə görsənir: JWT tokenlər, data URI-ləri, API autentifikasiya başlıqları, sertifikat fayllar və CI/CD konfiqurasiya dəyərləri. Yaxşı Base64 aləti həm mətn, həm də fayl kodlamasını idarə edir, UTF-8-i düzgün dəstəkləyir və tək bir kliklə kodlaşdırmağa və ya dekodlaşdırmağa imkan verir.
 
-## 4. Hes Generatoru
+## 4. Heş Generatoru
 
-Hes funksiyalari tehlukesizlik ve melumat butovluyu ucun esasdir. Fayl butovluyunu tesdiqlemek, yerleshdirme artefaktlari ucun yoxlama cemlerini yaratmaq ve ya kontent unvanli yaddas tetbiq etmek -- bunlarin hamisi ucun bir nece hes alqoritmine suretli erishime ehtiyaciniz var. MD5, SHA-1, SHA-256 ve SHA-512-ni destekleyen bir alet demek olar ki her istifade halini ehate edir.
+Heş funksiyaları təhlükəsizlik və məlumat bütövlüyü üçün əsasdır. Fayl bütövlüyünü təsdiqləmək, yerləşdirmə artefaktları üçün yoxlama cəmlərini yaratmaq və ya kontent ünvanlı yaddaş tətbiq etmək -- bunların hamısı üçün bir neçə heş alqoritminə sürətli erişimə ehtiyacınız var. MD5, SHA-1, SHA-256 və SHA-512-ni dəstəkləyən bir alət demək olar ki hər istifadə halını əhatə edir.
 
-## 5. Reng Secici ve Cevirici
+## 5. Rəng Seçici və Çevirici
 
-Frontend terecciicarlar gun erzinde defe-defe reng cevirme aletlerine ehtiyac duyur. Dizayn teslimleri HEX-de gelir, CSS xususi xususiyyetleri HSL istifade edir ve canvas emeliyyatlari RGB istifade edir. Formatlar arasi cevirme ve ahengdar palitralar yaratma imkani olan ehtiva olunan reng secici daimi geri-ireli gediselimi aradan qaldirir. WCAG kontrast nisbeti yoxlamasi pesekar veb layiheleri ucun xususen deyerlidir.
+Frontend tərtibatçılar gün ərzində dəfə-dəfə rəng çevirmə alətlərinə ehtiyac duyur. Dizayn təslimləri HEX-də gəlir, CSS xüsusi xüsusiyyətləri HSL istifadə edir və canvas əməliyyatları RGB istifadə edir. Formatlar arası çevirmə və ahəngdar palitralar yaratma imkanı olan ehtiva olunan rəng seçici daimi geri-irəli gedişi aradan qaldırır. WCAG kontrast nisbəti yoxlaması peşəkar veb layihələri üçün xüsusilə dəyərlidir.
 
-## 6. Kod Parcasi Idarecisi
+## 6. Kod Parçası İdarəçisi
 
-Her terecciicar faydali kod parcalari yigir -- yardimci funksiyalar, sablon naxislari, regex naxisleri, SQL sorgulari ve shell emrleri. Onlari teskil eden sistem olmadan Slack mesajlarinda itirilir ve ya layihe fayllarinda gomulur. Xususi parca idarecisi dil ve ya layiheye gore etiketlemeye, axtarmaga ve teskil etmeye imkan verir.
+Hər tərtibatçı faydalı kod parçaları yığır -- yardımçı funksiyalar, şablon naxışları, regex naxışları, SQL sorğuları və shell əmrləri. Onları təşkil edən sistem olmadan Slack mesajlarında itirilir və ya layihə fayllarında gömülür. Xüsusi parça idarəçisi dilə və ya layihəyə görə etiketləməyə, axtarmağa və təşkil etməyə imkan verir.
 
-## 7. API Test Musteri
+## 7. API Test Müştəri
 
-Postman, Insomnia ve ya brauzer esasli alternativ istifade edirsinizse, xususi API test aleti vacibdir. Yaxsi musterit soygulari saxlamaga, onlari kolleksiyalara teskil etmeye, dev/staging/production ucun muhit deyisenleri qurmaga ve sorgulaari bir-birine zencirlmeye imkan verir.
+Postman, Insomnia və ya brauzer əsaslı alternativ istifadə edirsinizsə, xüsusi API test aləti vacibdir. Yaxşı müştəri sorğuları saxlamağa, onları kolleksiyalara təşkil etməyə, dev/staging/production üçün mühit dəyişənləri qurmağa və sorğuları bir-birinə zəncirləməyə imkan verir.
 
-## 8. Ferq ve Birlesdirme Aleti
+## 8. Fərq və Birləşdirmə Aləti
 
-Metn, kod ve ya melumat neticelerini muqayise etmek inkisafda adi isdir. Git diff versiya nezareti altindaki fayllar ise isleyir, amma tez-tez ixtiyari metn bloklarini muqayise etmek lazimdir. Elaveleri, silinmeleri ve deyisiklikleri yan-yana vurgulayan vizual ferq aleti bu muqayiseleri ani ve deqiq edir.
+Mətn, kod və ya məlumat nəticələrini müqayisə etmək inkişafda adi işdir. Git diff versiya nəzarəti altındakı fayllar ilə işləyir, amma tez-tez ixtiyari mətn bloklarını müqayisə etmək lazımdır. Əlavələri, silinmələri və dəyişiklikləri yan-yana vurğulayan vizual fərq aləti bu müqayisələri anı və dəqiq edir.
 
 ## 9. Terminal Multipleksoru
 
-Terminalda xeyli vaxt kecrirsinizse, tmux ve ya Zellij kimi multipleksor is axininizi cevrir. Bir pencerede bir nece seans isletmek, eyni vaxtda izleme ucun panelleri bolmek ve SSH kesilmelerinden sag cixan davaml seanslar saxlamaq vezsiecilmez olur.
+Terminalda xeyli vaxt keçirirsinizsə, tmux və ya Zellij kimi multipleksor iş axınınızı çevirir. Bir pəncərədə bir neçə seans işlətmək, eyni vaxtda izləmə üçün panelləri bölmək və SSH kəsilmələrindən sağ çıxan davamlı seanslar saxlamaq əvəzsiz olur.
 
-## 10. Brauzer Teerecciicar Aletleri (Esaslardan Kenare)
+## 10. Brauzer Tərtibatçı Alətləri (Əsaslardan Kənara)
 
-Terecciiclarin aksariyyeti brauzer DevTools-un sethini cizmekle kifayetlenir. Mesterlesmehye dyer olan tekmill xususiyyetler:
+Tərtibatçıların əksəriyyəti brauzer DevTools-un səthini çizməklə kifayətlənir. Məstərləşməyə dəyər olan təkmil xüsusiyyətlər:
 
-- **Performans profillemesi**: Renderinq darbogazlarini ve bahalii JavaScript emeliyyatlarini mueyyen edin
-- **Sebeke throttlingi**: Yavash bagalantilarda tetbiq davranisini yoxlayin
-- **Yaddas profilllemesi**: Heap snapshsotlari ile yaddas sizmalarini tapin
-- **Lighthouse auditlrri**: Brauzeriinizde performans, erisisebilirlik ve SEO auditlri apardin
+- **Performans profilləşdirilməsi**: Renderinq darboğazlarını və bahalı JavaScript əməliyyatlarını müəyyən edin
+- **Şəbəkə throttlinqi**: Yavaş bağlantılarda tətbiq davranışını yoxlayın
+- **Yaddaş profilləşdirilməsi**: Heap snapshot-ları ilə yaddaş sızmalarını tapın
+- **Lighthouse auditləri**: Brauzerinizdə performans, əlçatanlıq və SEO auditləri aparın
 
-## Onlayn Aletler ve Masaustu Tetbiiqleri
+## Onlayn Alətlər və Masaüstü Tətbiqlər
 
-Teerecciicar alletlerinde ehemiyyetli deyisiiklik brauzer esasli aletlere dogru hereketdir:
+Tərtibatçı alətlərində əhəmiyyətli dəyişiklik brauzer əsaslı alətlərə doğru hərəkətdir:
 
-- **Sifir qurashdirma**: URL acin ve islmeye baslayin. Yukleme ve ya asililiiq munaqiseeleri yoxdur.
-- **Coxplatformalli**: Eyni alet Windows, macOS, Linux ve ChromeOS-da isleyir.
-- **Korporativ muhitler**: Brauzer aletleri proqram qurasdira bilmediyiniz mehdudlasdirilmis masinlarda isleyir.
-- **Gizlilik**: Muisteriterefi aletler melumatlari yerli olaraq emal edir -- kodunuz ve API acarllariniz cihazinizi terk etmir.
+- **Sıfır quraşdırma**: URL açın və işləməyə başlayın. Yükləmə və ya asılılıq münaqişələri yoxdur.
+- **Çoxplatformalı**: Eyni alət Windows, macOS, Linux və ChromeOS-da işləyir.
+- **Korporativ mühitlər**: Brauzer alətləri proqram quraşdıra bilmədiyiniz məhdudlaşdırılmış maşınlarda işləyir.
+- **Gizlilik**: Müştəritərəfi alətlər məlumatları yerli olaraq emal edir -- kodunuz və API açarlarınız cihazınızı tərk etmir.
 
-Bu, Vaxtim Yoxdu-daki terecciicar aletlerinin esasinda dayanan felsefedir. JSON Formatlayicii, Regex Test Edici, Base64 Kodlayicii ve Hes Generatoru tamamiley brauzerinizde isleyir. Hesab yoxdur, qurashdirma yoxdur, melumat oturmesi yoxdur.
+Bu, Vaxtım Yoxdu-dakı tərtibatçı alətlərinin əsasında dayanan fəlsəfədir. JSON Formatlayıcı, Regex Test Edici, Base64 Kodlayıcı və Heş Generatoru tamamilə brauzerinizdə işləyir. Hesab yoxdur, quraşdırma yoxdur, məlumat ötürməsi yoxdur.
 
-## Sexsi Aletler Desteinizi Qurmaq
+## Şəxsi Alətlər Dəstinizi Qurmaq
 
-En mehsuldar terecciicarlar aletler destini kurasiya etmeye vaxt serfh edirlr:
+Ən məhsuldar tərtibatçılar alətlər dəstini kurasiya etməyə vaxt sərf edirlər:
 
-1. **Is axininizi yoxlayin** -- Surtunme ve manual proseslere harada vaxt itirdiyinizi izleyin
-2. **Bir anda bir darbogazdi aradan qaldirin** -- En boyuk vaxt itkisini tapin ve onu hell eden alet tapin
-3. **Elechim isareeleyin ve teskil edin** -- En cox istifade etdiyiniz onlayn aletler ucun brauzer qovluq yaraadin
-4. **Tekrarlanan tapshiriqlari avtomatlasdirin** -- Bir seyi ucden cox defe manual olarak edirsinizse, onu avtomatlasdirin
-5. **Komandanizla payliasin** -- Kolektiv mehsuldariliq qazanclari teskiilat boyunca artnir
+1. **İş axınınızı yoxlayın** -- Sürtünmə və manual proseslərə harada vaxt itirdiyinizi izləyin
+2. **Bir anda bir darboğazı aradan qaldırın** -- Ən böyük vaxt itkisini tapın və onu həll edən alət tapın
+3. **Əlfəcin işarələyin və təşkil edin** -- Ən çox istifadə etdiyiniz onlayn alətlər üçün brauzer qovluğu yaradın
+4. **Təkrarlanan tapşırıqları avtomatlaşdırın** -- Bir şeyi üçdən çox dəfə manual olaraq edirsinizsə, onu avtomatlaşdırın
+5. **Komandanızla paylaşın** -- Kollektiv məhsuldarlıq qazancları təşkilat boyunca artır
 
-Meqsed en cox alete sahib olmaq deyil -- duzgun aletlere sahib olmaq ve onlarin her zaman elinizin altinda olmasidir.`,
+Məqsəd ən çox alətə sahib olmaq deyil -- düzgün alətlərə sahib olmaq və onların hər zaman əlinizin altında olmasıdır.`,
   },
   'cybersecurity-tools-guide': {
-    title: '2026-ci il ucun Vacib Kibertrehlukesizlik Aletleri ve Tecrubleleri',
+    title: '2026-cı il üçün Vacib Kibertəhlükəsizlik Alətləri və Təcrübələri',
     date: '2026-03-06',
     relatedTools: ['password-generator', 'hash-generator', 'base64-encode-decode', 'jwt-decoder'],
-    content: `Kibertrehlukesizlik 2026-ci ilde her zamankinden daha vacibdir. Melumat sizmalari her hefte xeberllere duser, ransomware hucumlari her olcude teshkilatlari hedefe alir ve AI destekli tehdidler mudafie sistemlerinden daha suretli inkisaf edir. Sizi onlayn tehlukesiz saxlayan aletleri ve tecrubleleri anlamaq her kes ucun -- yalniz IT mutexessislleri ucun deyil -- zeruri bilgikdir.
+    content: `Kibertəhlükəsizlik 2026-cı ildə hər zamankından daha vacibdir. Məlumat sızmaları hər həftə xəbərlərə düşür, ransomware hücumları hər ölçüdə təşkilatları hədəfə alır və AI dəstəkli təhdidlər müdafiə sistemlərindən daha sürətli inkişaf edir. Sizi onlayn təhlükəsiz saxlayan alətləri və təcrübələri anlamaq hər kəs üçün -- yalnız İT mütəxəssisləri üçün deyil -- zəruri bilgidir.
 
-## 2026-ci Ilde Tehdiid Menzresi
+## 2026-cı İldə Təhdid Mənzərəsi
 
-Kibertrehlukesizlik tehdiid menzresi deramatik sekilde deyishib. Hucumcullar indi leqitim unsiyyetlerden demek olar ki ferqlenmeyen inandirici fisinq e-pochtlari hazirlamaq ucun AI-den istifade edir. Deepfake audio ve video sosial muhendislik hucumlarinda istifade olunur. Xidmet kimi Ransomware (RaaS) kibercinalyetkarlar ucun giris barierini asaghi salib.
+Kibertəhlükəsizlik təhdid mənzərəsi dramatik şəkildə dəyişib. Hücumçular indi leqitim ünsiyyətlərdən demək olar ki fərqlənməyən inandırıcı fişinq e-poçtları hazırlamaq üçün AI-dən istifadə edir. Deepfake audio və video sosial mühəndislik hücumlarında istifadə olunur. Xidmət kimi Ransomware (RaaS) kibercinayətkarlar üçün giriş baryerini aşağı salıb.
 
-**Teecililliyin altini cizen esas statistikalar:**
+**Təcililliyin altını çəkən əsas statistikalar:**
 
-- Melumat sizmasinin orta deyeri 2025-ci ilde 5.2 milyon dollara catib, evvelki ilden 12% artib
-- Teshkilatlarin 83%-i son 24 ayda birden cox melumat sizmasi yasayib
-- Fisinq en umumi ilkin hucum vektoru olaraq qalir, sizmalarin 36%-ne cavabdehdir
-- Sizmaanin mueyyen edilmesi ucun orta vaxt helee de 194 gundur
-- Kicik biznesler butun kiberhucum hedeflerinin 43%-ni teskil edir, amma yalniz 14%-i mudafieye hazirdir
+- Məlumat sızmasının orta dəyəri 2025-ci ildə 5.2 milyon dollara çatıb, əvvəlki ildən 12% artıb
+- Təşkilatların 83%-i son 24 ayda birdən çox məlumat sızması yaşayıb
+- Fişinq ən ümumi ilkin hücum vektoru olaraq qalır, sızmaların 36%-nə cavabdehdir
+- Sızmanın müəyyən edilməsi üçün orta vaxt hələ də 194 gündür
+- Kiçik bizneslər bütün kiberhücum hədəflərinin 43%-ni təşkil edir, amma yalnız 14%-i müdafiəyə hazırdır
 
-## Sifre Tehlukesizliyi: Ilk Mudafie Xettiniz
+## Şifrə Təhlükəsizliyi: İlk Müdafiə Xəttiniz
 
-Zayif sifreler kibertrehlukesizlikde en cox istismar olunan zaifliq olaraq qalir. Onilliklerin melumatlandirma kampaniyalarina baxmayaraq, "123456" ve "password" helee de sizma verilener bazalarinda narahat edici tezlikle gorsenir.
+Zəif şifrələr kibertəhlükəsizlikdə ən çox istismar olunan zəiflik olaraq qalır. Onilliklərin məlumatlandırma kampaniyalarına baxmayaraq, "123456" və "password" hələ də sızma verilənlər bazalarında narahat edici tezliklə görünür.
 
-**Sifre idarechiisinden istifade edin.** Sifre idarechiisi her hesab ucun unikal, murkkeb sifreler yaradir, saxlayir ve avto-doldurur. Yalniz bir esas sifreeni yadda saxlamaq lazimdir. Esas secimlerden Bitwarden (aciq menbeli), 1Password ve KeePass (oflayn) var.
+**Şifrə idarəçisindən istifadə edin.** Şifrə idarəçisi hər hesab üçün unikal, mürəkkəb şifrələr yaradır, saxlayır və avto-doldurur. Yalnız bir əsas şifrəni yadda saxlamaq lazımdır. Əsas seçimlərdən Bitwarden (açıq mənbəli), 1Password və KeePass (oflayn) var.
 
-**Guclu sifreler yaraadin.** Her sifre en azi 16 simvoldan ibaret olmali, boyuk ve kicik herfler, reqemler ve xususi simvollar ehtiva etmelidir. Vaxtim Yoxdu-daki Sifre Generatoru bu meyarlara cavab veren kriqptoqrafik olaraq tesadufi sifreler yaradir -- tamamiley brauzerinizde isleyir ve hec bir sifre oturulemez ve ya saxlanilmaz.
+**Güclü şifrələr yaradın.** Hər şifrə ən azı 16 simvoldan ibarət olmalı, böyük və kiçik hərflər, rəqəmlər və xüsusi simvollar ehtiva etməlidir. Vaxtım Yoxdu-dakı Şifrə Generatoru bu meyarlara cavab verən kriptoqrafik olaraq təsadüfi şifrələr yaradır -- tamamilə brauzerinizdə işləyir və heç bir şifrə ötürülməz və ya saxlanılmaz.
 
-**Her yerde iki faktorlu autentifikasiyanin (2FA) aktiv edin.** Hucumcu sifrenizi elde etse bele, 2FA ikinci faktor olmadan errishimi baglayir. SMS esasli 2FA evezine (SIM-swapping hucumlarina meyli var) autentifikator tetbiqleri ve ya aparat tehlukesizlik acarlari istifade edin.
+**Hər yerdə iki faktorlu autentifikasiyanı (2FA) aktiv edin.** Hücumçu şifrənizi əldə etsə belə, 2FA ikinci faktor olmadan erişimi bağlayır. SMS əsaslı 2FA əvəzinə (SIM-swapping hücumlarına meyli var) autentifikator tətbiqləri və ya aparat təhlükəsizlik açarları istifadə edin.
 
-**Hec vaxt sifrelerri tekrar istifade etmeyin.** Bir xidmet sizarsa ve siz eyni sifreni basqa yerde istifade etmissinizse, o sifreli her hesab indi tehlike altindadir.
+**Heç vaxt şifrələri təkrar istifadə etməyin.** Bir xidmət sızarsa və siz eyni şifrəni başqa yerdə istifadə etmisinizsə, o şifrəli hər hesab indi təhlükə altındadır.
 
-## Heslemee ve Melumat Butovluyu
+## Heşləmə və Məlumat Bütövlüyü
 
-Kriqptoqrafik heslemeni anlamaq hem tehlukesizlik mutexessisleri, hem de hassas melumatlarla islyen her kes ucun deyerlidir. Hes funksiyasi istenilen olcude girish goturur ve o girise xususi olan sabit uzunluqda netice (hes ve ya icmal) yaradir. Girisdeki en kicik deyisiiklik tamamiley ferqli hes yaradir.
+Kriptoqrafik heşləməni anlamaq həm təhlükəsizlik mütəxəssisləri, həm də həssas məlumatlarla işləyən hər kəs üçün dəyərlidir. Heş funksiyası istənilən ölçüdə giriş götürür və o girişə xüsusi olan sabit uzunluqda nəticə (heş və ya icmal) yaradır. Girişdəki ən kiçik dəyişiklik tamamilə fərqli heş yaradır.
 
-**Heslemennin umumi istifade hallari:**
+**Heşləmənin ümumi istifadə halları:**
 
-- **Fayl butovluyu tesdiqlemesi**: Faylin tranziit zamani deyisdirmyediyini yoxlayin
-- **Sifre saxlama**: Mesuliyyetli xidmetler hec vaxt haqiqi sifrenizi saxlamir, onun hesini saxlayir
-- **Reqemsal imzalar**: Senedlerin haqiqiliiyini ve butovluyunu tesdiq eden sxemlerin temel komponentdidr
-- **Blokcheyn**: Tesdiq edilmis emeliyyatlarin deyisdirmez zencirini yaradir
+- **Fayl bütövlüyü təsdiqləməsi**: Faylın tranzit zamanı dəyişdirmədiyini yoxlayın
+- **Şifrə saxlama**: Məsuliyyətli xidmətlər heç vaxt həqiqi şifrənizi saxlamır, onun heşini saxlayır
+- **Rəqəmsal imzalar**: Sənədlərin həqiqiliyini və bütövlüyünü təsdiq edən sxemlərin təməl komponentidir
+- **Blokçeyn**: Təsdiq edilmiş əməliyyatların dəyişdirməz zəncirini yaradır
 
-Vaxtim Yoxdu-daki Hes Generatoru SHA-1, SHA-256, SHA-384 ve SHA-512 alqoritmlrini destekleyir.
+Vaxtım Yoxdu-dakı Heş Generatoru SHA-1, SHA-256, SHA-384 və SHA-512 alqoritmlərini dəstəkləyir.
 
-## Sifreleme Esaslari
+## Şifrələmə Əsasları
 
-Sifreleme oxuna bilen melumatlari (duz metn) oxunmaz melumatlara (sifre metn) alqoritm ve acar istifade ederek cevirir. Yalniz duzgun acara sahib olan adiam melumatlari orjinal formasina dekodlashdira biler.
+Şifrələmə oxuna bilən məlumatları (düz mətn) oxunmaz məlumatlara (şifrə mətni) alqoritm və açar istifadə edərək çevirir. Yalnız düzgün açara sahib olan adam məlumatları orijinal formasına dekodlaşdıra bilər.
 
-**Simmetrik sifreleme** hem sifreleme, hem de desifrleme ucun eyni acari istifade edir. AES-256 dovletler ve maliyye institutlari terefinden dunyada istifade olunan qizil standartdir.
+**Simmetrik şifrələmə** həm şifrələmə, həm də deşifrləmə üçün eyni açarı istifadə edir. AES-256 dövlətlər və maliyyə institutları tərəfindən dünyada istifadə olunan qızıl standartdır.
 
-**Asimmetrik sifreleme** acar cutunden -- sifreleme ucun aciq acar ve desifrlme ucun gizli acar -- istifade edir. RSA ve ECC en umumi alqoritmlrddir. HTTPS, tehlukesiz e-poct ve reqemsal imzalarin temelidir.
+**Asimmetrik şifrələmə** açar cütündən -- şifrələmə üçün açıq açar və deşifrləmə üçün gizli açar -- istifadə edir. RSA və ECC ən ümumi alqoritmlərdir. HTTPS, təhlükəsiz e-poçt və rəqəmsal imzaların təməlidir.
 
-**Base64 kodlama** cox vaxt sifreleme ile qarisdirilir, amma esl heq bir sifreleme deyil. Base64 sadece ikili melumatlari tehlukesiz otdurme ucun ASCII metne cevirir. Sifir tehlukesizlik temin edir.
+**Base64 kodlama** çox vaxt şifrələmə ilə qarışdırılır, amma əslində heç bir şifrələmə deyil. Base64 sadəcə ikili məlumatları təhlükəsiz ötürmə üçün ASCII mətnə çevirir. Sıfır təhlükəsizlik təmin edir.
 
-## JWT Token Tehlukesizliiyi
+## JWT Token Təhlükəsizliyi
 
-JSON Web Tokenllri (JWT) muasir veb tetbiqlrinde autentifikasiya ucun standartdir.
+JSON Web Tokenlər (JWT) müasir veb tətbiqlərində autentifikasiya üçün standartdır.
 
-JWT uc hisseden ibaret: bashliq (alqoritm ve token novu), yukh (iddial ve melumatlar) ve imza (tesdiq). Bashliq ve yukh Base64 ile kodlanib (sifrelenmeyib), yeni her kes onlarin mzmununu oxuya bilir. Imza tokenin deyisidirilmediyini temin edir.
+JWT üç hissədən ibarət: başlıq (alqoritm və token növü), yük (iddialar və məlumatlar) və imza (təsdiq). Başlıq və yük Base64 ilə kodlanıb (şifrələnməyib), yəni hər kəs onların məzmununu oxuya bilir. İmza tokenin dəyişdirilmədiyini təmin edir.
 
-**Umumi JWT tehlukesizlik sehvleri:**
+**Ümumi JWT təhlükəsizlik səhvləri:**
 
-- Imza tesdiqini tamamiley sonduren "none" alqoritmindin istifade
-- Elave sifreleme olmadan yukhe hassas melumatlarin saxlanmasi
-- Heddinden artiq uzun bitmee muddetlrinin mueyyen edilmesi
-- Emitent ve auditoriya iddiallarinin tesdiq edilmemesi
-- JWT-lerin localStorage-da saxlanmasi (XSS hucumlarma meyli var)
+- İmza təsdiqini tamamilə söndürən "none" alqoritmindən istifadə
+- Əlavə şifrələmə olmadan yükə həssas məlumatların saxlanması
+- Həddindən artıq uzun bitmə müddətlərinin müəyyən edilməsi
+- Emitent və auditoriya iddialarının təsdiq edilməməsi
+- JWT-lərin localStorage-da saxlanması (XSS hücumlarına meyli var)
 
-## Brauzer Tehlukesizliiyi
+## Brauzer Təhlükəsizliyi
 
-Brauzeriniz internetle esas interfeysinizdir ve onu vacib tehlukesizlik komponentin edir:
+Brauzeriniz internetlə əsas interfeysinizdir və onu vacib təhlükəsizlik komponenti edir:
 
-- **Brauzerinizi yenilenrmish saxlayin.** Yenilemeler tehlukesizlik zaifliqlarini yamaqllayir.
-- **Her yerde HTTPS istifade edin.** Hec vaxt HTTPS olmayan sehifelrde etimadnameler ve ya hassas melumatlar daxil etmeyin.
-- **Minimal genislenmeler qurasdirin.** Her genislenme potensial hucum vektorudur.
-- **Inkisaf etmish izleme mudafiesiini aktiv edin.** Muasir brauzerler ucuncu teref kukileri, barmaqg izi skriptleri ve krioptomaynerllri baglayan daxili izleme mudafiesii teklif edir.
+- **Brauzerinizi yenilənmiş saxlayın.** Yeniləmələr təhlükəsizlik zəifliklərini yamaqlar.
+- **Hər yerdə HTTPS istifadə edin.** Heç vaxt HTTPS olmayan səhifələrdə etimadnamələr və ya həssas məlumatlar daxil etməyin.
+- **Minimal genişlənmələr quraşdırın.** Hər genişlənmə potensial hücum vektorudur.
+- **İnkişaf etmiş izləmə müdafiəsini aktiv edin.** Müasir brauzerlər üçüncü tərəf kukiləri, barmaq izi skriptləri və kriptomaynerləri bağlayan daxili izləmə müdafiəsi təklif edir.
 
-## Fishinq Mudafiesi
+## Fişinq Müdafiəsi
 
-AI terefinden yaradlmis kontentla fisinq hucumlari getdikce daha tkmilleslir:
+AI tərəfindən yaradılmış kontentlə fişinq hücumları getdikcə daha təkmilləşir:
 
-1. **Gonderenin e-poct unvanini diqqetle yoxlayin.** Hucumcullar leqitim unvanlara benzer domenlrden istifade edir.
-2. **Kliiklemezden evvel ustuine gelin.** Linke kliklemezden evvel haqiqi hedefe URL-i gormek ucun her zaman linkin ustune gelin.
-3. **Teeciililik barede subheli olun.** Fisinq e-pochtlari tez-tez dusunulmish dusunmeni onlemek ucun sueni teeciiililik yaradir.
-4. **Resmi kanallar vasitesile tesdiq edin.** E-poct hesabinizda hereket etmeyi xahis edirse, e-pocttdaki linklere kliklemek evezine birbase veb-sayta daxil olun.
+1. **Göndərənin e-poçt ünvanını diqqətlə yoxlayın.** Hücumçular leqitim ünvanlara bənzər domenlərdan istifadə edir.
+2. **Klikləməzdən əvvəl üstünə gəlin.** Linkə klikləməzdən əvvəl həqiqi hədəf URL-i görmək üçün hər zaman linkin üstünə gəlin.
+3. **Təcililik barədə şübhəli olun.** Fişinq e-poçtları tez-tez düşünülmüş düşünməni önləmək üçün süni təcililik yaradır.
+4. **Rəsmi kanallar vasitəsilə təsdiq edin.** E-poçt hesabınızda hərəkət etməyi xahiş edirsə, e-poçtdakı linklərə klikləmək əvəzinə birbaşa veb-sayta daxil olun.
 
-## Tehlukesizlik Dushunce Terzini Qurmaq
+## Təhlükəsizlik Düşüncə Tərzini Qurmaq
 
-Kibertrehlukesizlik aldiqginiz mehsul deyil -- saxladiqniz teercrubdir:
+Kibertəhlükəsizlik aldığınız məhsul deyil -- saxladığınız təcrübədir:
 
-- Her hesab ucun sifre idarechiisi ile guclu, unikal sifreler istifade edin
-- Butun muhum hesablarda iki faktorlu autentifikasiya aktiv edin
-- Butun proqram ve emeliyyat sistemlerini yenilenrmish saxlayin
-- 3-2-1 qaydasindan istifade ederek muhim melumatlari ehtiyat nuexesini yaraadin
-- Vacib proqram yukleyende hes muqayiesi ile fayl butovluqunu tesdiq edin
-- Gozlenilmez e-pochtlar, mesajlar ve telefon zengleri baresinde subheli olun
+- Hər hesab üçün şifrə idarəçisi ilə güclü, unikal şifrələr istifadə edin
+- Bütün mühüm hesablarda iki faktorlu autentifikasiya aktiv edin
+- Bütün proqram və əməliyyat sistemlərini yenilənmiş saxlayın
+- 3-2-1 qaydasından istifadə edərək mühüm məlumatları ehtiyat nüsxəsini yaradın
+- Vacib proqram yüklədikdə heş müqayisəsi ilə fayl bütövlüyünü təsdiq edin
+- Gözlənilməz e-poçtlar, mesajlar və telefon zəngləri barəsində şübhəli olun
 
-Vaxtim Yoxdu-daki pulsuz tehlukesizlik aletleri -- Sifre Generatoru, Hes Generatoru, Base64 Kodlayici ve JWT Dekoderi -- melumatlari tamamiley brauzerinizde emal edir. Hec bir yaradilan sifre, hesablanan hes ve ya dekod olunan token hec bir servere oturuilmir.`,
+Vaxtım Yoxdu-dakı pulsuz təhlükəsizlik alətləri -- Şifrə Generatoru, Heş Generatoru, Base64 Kodlayıcı və JWT Dekoderi -- məlumatları tamamilə brauzerinizdə emal edir. Heç bir yaradılan şifrə, hesablanan heş və ya dekod olunan token heç bir serverə ötürülmür.`,
   },
   'api-testing-guide': {
-    title: 'API Testine Tam Beledci: Aletler, Texnikalar ve En Yaxsi Tecrubeler',
+    title: 'API Testinə Tam Bələdçi: Alətlər, Texnikalar və Ən Yaxşı Təcrübələr',
     date: '2026-03-01',
     relatedTools: ['json-formatter', 'base64-encode-decode', 'jwt-decoder', 'url-encode-decode'],
-    content: `API testi muasir proqram tesminatinin inkisafinda en muhum bacariqlardan biridir. Tetbiqlerin getdikce daha cox mikroxidmetler arxitekturasina, ucuncu teref inteqrasiyalrina ve mobil arxaplanlaranaarx asililiiga kecdiyi bir dovrde API-lerin keyfiyyeti ve etibarliliiqi onlarin uzerine qurulan mehsullarin keyfiyyetini birbase mueyyen edir.
+    content: `API testi müasir proqram təminatının inkişafında ən mühüm bacarıqlardan biridir. Tətbiqlərin getdikcə daha çox mikroxidmətlər arxitekturasına, üçüncü tərəf inteqrasiyalarına və mobil arxaplanlarına asılılığa keçdiyi bir dövrdə API-lərin keyfiyyəti və etibarlılığı onların üzərinə qurulan məhsulların keyfiyyətini birbaşa müəyyən edir.
 
-## API Testi Niye Vacibdir
+## API Testi Niyə Vacibdir
 
-API-ler proqram sistemleri arasinda muqavilelerdir. API pozulanda ona asili olan her musteri de pozulur -- mobil tetbiqler cavab, veb frontendler sehv gosterir, inteqrasiyalar sessizce uugsuzlesir ve melumatlar korlanir. API testi bu problemleri istehsalata catmazdan evvel tutur.
+API-lər proqram sistemləri arasında müqavilələrdir. API pozulanda ona asılı olan hər müştəri də pozulur -- mobil tətbiqlər çökür, veb frontendlər səhv göstərir, inteqrasiyalar sessizlicə uğursuzlaşır və məlumatlar korlanır. API testi bu problemləri istehsalata çatmazdan əvvəl tutur.
 
-**API testi ucun biznes araqumenti inandiricidir:**
+**API testi üçün biznes arqumenti inandırıcıdır:**
 
-- Inkisaf zamaninda tutulan API xetalari istehsalda tutulan xetalrdan 10 defe az temir xerci teleb edir
-- Avtomatlasdiirlmis API testleri deqiqeler ve ya saatlar alan manual UI testine nisbeten saniyeler erzinde isleyir
-- API testleri UI testlerinden daha sabitdir, cunki API-ler istifadeci interfeyslerinden daha az deyisir
-- Ehateeli API test desti API-nin haqiqete nece davrandiginin canli senedllesdirmesi kimi xidmet edir
+- İnkişaf zamanında tutulan API xətaları istehsalda tutulan xətalardan 10 dəfə az təmir xərci tələb edir
+- Avtomatlaşdırılmış API testləri dəqiqələr və ya saatlar alan manual UI testinə nisbətən saniyələr ərzində işləyir
+- API testləri UI testlərindən daha sabitdir, çünki API-lər istifadəçi interfeylərindən daha az dəyişir
+- Əhatəli API test dəsti API-nin həqiqətdə necə davrandığının canlı sənədləşdirilməsi kimi xidmət edir
 
-## API Test Novleri
+## API Test Növləri
 
-**Funksional test** her API son noqtesinin verilmis giris ucun duzgun cavab qaytardiginii tesdiq edir. GET /users istifadeiciler siyahisini qaytarirmi? POST /orders duzgun sahellerle yeni sifaris yaradirmi? DELETE /items/123 haqiqeten elementi silirmi?
+**Funksional test** hər API son nöqtəsinin verilmiş giriş üçün düzgün cavab qaytardığını təsdiq edir. GET /users istifadəçilər siyahısını qaytarırmı? POST /orders düzgün sahələrlə yeni sifariş yaradırmı? DELETE /items/123 həqiqətən elementi silirsmi?
 
-**Tesdiq testi** cavablarin gozlenilen sxemee uygun geldiyini yoxlayir -- duzgun melumat novleri, teleb olunan saheler movcud, duzgun formatlashdirma.
+**Təsdiq testi** cavabların gözlənilən sxemə uyğun gəldiyini yoxlayır -- düzgün məlumat növləri, tələb olunan sahələr mövcud, düzgün formatlışdırma.
 
-**Inteqrasiya testi** bir nece API son noqtesinin birge duzgun isldiyini tesdiq edir. Sifaris yaratmaq inventar, odenis ve bildiiris xidmetinin cagrilmasini ehtiva ede biler.
+**İnteqrasiya testi** bir neçə API son nöqtəsinin birgə düzgün işlədiyini təsdiq edir. Sifariş yaratmaq inventar, ödəniş və bildiriş xidmətinin çağrılmasını ehtiva edə bilər.
 
-**Performans testi** muxtelif yuk sertlerinde cavab muddetlerini, oturme qabiliiyetini ve resurs istifadesini olcur.
+**Performans testi** müxtəlif yük şərtlərində cavab müddətlərini, ötürmə qabiliyyətini və resurs istifadəsini ölçür.
 
-**Tehlukesizlik testi** zaiifliqlaeri arasdirir -- autentifikasiya kecidi, SQL inyeksiyasi, XSS, pozulmus erishim nezareti ve melumat ifshasi.
+**Təhlükəsizlik testi** zəiflikləri araşdırır -- autentifikasiya keçidi, SQL inyeksiyası, XSS, pozulmuş erişim nəzarəti və məlumat ifşası.
 
-## API Testi ucun Esas Aletler
+## API Testi üçün Əsas Alətlər
 
-### HTTP Musterileri
+### HTTP Müştəriləri
 
-**Postman** en populyar API test aletidir. Kolleksiya xususiyyeti sorgulaari mentiqii qruplara teskil edir.
+**Postman** ən populyar API test alətidir. Kolleksiya xüsusiyyəti sorğuları məntiqi qruplara təşkil edir.
 
-**Insomnia** daha temiz interfeysi olan yungul alternativdir. GraphQL-i nativ destekleyir.
+**Insomnia** daha təmiz interfeysi olan yüngül alternativdir. GraphQL-i nativ dəstəkləyir.
 
-**curl** komanda setri standartdiir. Her terecciicar esas curl emrleri ile rahat olmalidlr.
+**curl** komanda sətiri standartıdır. Hər tərtibatçı əsas curl əmrləri ilə rahat olmalıdır.
 
-**Brauzer esasli aletler** -- Vaxtim Yoxdu-dakiler kimi -- API isi zamani suretli melumat manipulyasiyasi ucun qiymetlidir. JSON Formatlayici API cavablarini tesdiq edir ve gozellesdirir, Base64 Kodlayici autentifikasiya token kodlamasini idaree edir, URL Kodlayici sorgu parametrlerinin duzgun formatlasdirilmasini temin edir.
+**Brauzer əsaslı alətlər** -- Vaxtım Yoxdu-dakılər kimi -- API işi zamanı sürətli məlumat manipulyasiyası üçün qiymətlidir. JSON Formatlayıcı API cavablarını təsdiq edir və gözəlləşdirir, Base64 Kodlayıcı autentifikasiya token kodlamasını idarə edir, URL Kodlayıcı sorğu parametrlərinin düzgün formatlşdırılmasını təmin edir.
 
-## Effektiv API Testlerinin Yazilmasi
+## Effektiv API Testlərinin Yazılması
 
-### Sorgu Qurulumu
+### Sorğu Qurulumu
 
-1. **HTTP metodu**: GET, POST, PUT, PATCH, DELETE -- emeliyyat ucun duzgun metodu istifade edin
-2. **URL ve yol parametrlerri**: Dinamik seqmentlerin duzgun evez edildiyini temin edin
-3. **Sorgu parametrlerri**: Xususi simvollarin idaree edilmesi ucun butun sorgu parametrlerinin URL kodlasdirilmasini edin
-4. **Bashliqlar**: Content-Type, Authorization, Accept duzgun mueyyen edilmelidir
-5. **Sorgu metni**: POST ve PUT sorgulaari ucun metn etiberli JSON olmalidir
-6. **Autentifikasiya**: Bearer tokenllr, API acarlari duzgun daxil edilmelidir
+1. **HTTP metodu**: GET, POST, PUT, PATCH, DELETE -- əməliyyat üçün düzgün metodu istifadə edin
+2. **URL və yol parametrləri**: Dinamik seqmentlərin düzgün əvəz edildiyini təmin edin
+3. **Sorğu parametrləri**: Xüsusi simvolların idarə edilməsi üçün bütün sorğu parametrlərinin URL kodlaşdırılmasını edin
+4. **Başlıqlar**: Content-Type, Authorization, Accept düzgün müəyyən edilməlidir
+5. **Sorğu mətni**: POST və PUT sorğuları üçün mətn etibarlı JSON olmalıdır
+6. **Autentifikasiya**: Bearer tokenlər, API açarları düzgün daxil edilməlidir
 
-### Cavab Tesdiqlemesi
+### Cavab Təsdiqləməsi
 
-Yalniz status kodunu yoxlamayin -- tam cavabi tesdiq edin:
+Yalnız status kodunu yoxlamayın -- tam cavabı təsdiq edin:
 
-- **Status kodu**: 200, 201, 204, 400, 401, 403, 404, 500 -- her birinin xususi menasi var
-- **Cavab metni**: Her sahenin strukturunu, melumat novlerini ve deyerllerini tesdiq edin
-- **Bashliqlar**: Content-Type, kes bashliqllari, suret mehdudiyyeti bashliqllari yoxlayin
-- **Cavab mudeti**: Maksimum qebuul edilebilen cavab muddetleri mueyyen edin
-- **Sehv cavablari**: Sehv cavablarinin menali sehv mesajlari ehtiva etdiyini tesdiq edin
+- **Status kodu**: 200, 201, 204, 400, 401, 403, 404, 500 -- hər birinin xüsusi mənası var
+- **Cavab mətni**: Hər sahənin strukturunu, məlumat növlərini və dəyərlərini təsdiq edin
+- **Başlıqlar**: Content-Type, keş başlıqları, sürət məhdudiyyəti başlıqları yoxlayın
+- **Cavab müddəti**: Maksimum qəbul edilə bilən cavab müddətləri müəyyən edin
+- **Səhv cavabları**: Səhv cavablarının mənalı səhv mesajları ehtiva etdiyini təsdiq edin
 
 ## Autentifikasiya Testi
 
-1. **Etiberli etimadnameler**: Duzgun etimadnamelerin autentifikasiya tokeni qaytardigini tesdiq edin
-2. **Etibarsiz etimadnameler**: Sehv sifrelerinin 500 deyil, 401 qaytardigini tesdiq edin
-3. **Mudeti bitmish tokenler**: Mudeti bitmis JWT tokenlerinin redd edildiyini tesdiq edin
-4. **Etksik autentifikasiya**: Qorunan son noqtelerin token verilmydikde 401 qaytardigini tesdiq edin
-5. **Kifayetsiz icazeler**: Lazimi rolu olmayan istifadeicilerin 403 aldiqlarini tesdiq edin
+1. **Etibarlı etimadnamələr**: Düzgün etimadnamələrin autentifikasiya tokeni qaytardığını təsdiq edin
+2. **Etibarsız etimadnamələr**: Səhv şifrələrin 500 deyil, 401 qaytardığını təsdiq edin
+3. **Müddəti bitmiş tokenlər**: Müddəti bitmiş JWT tokenlərinin rədd edildiyini təsdiq edin
+4. **Əksik autentifikasiya**: Qorunan son nöqtələrin token verilmədikdə 401 qaytardığını təsdiq edin
+5. **Kifayətsiz icazələr**: Lazımi rolu olmayan istifadəçilərin 403 aldıqlarını təsdiq edin
 
-## Umumi API Test Sehvleri
+## Ümumi API Test Səhvləri
 
-1. **Yalniz ugurlu yollarin test edilmesi**: Test destiniz sehv hallari, kenar hallari ve serhed sertlerini ehtiva etmelidir.
-2. **Cavab muddetlerinin neze alinmemasi**: Funksional olaraq duzgun ama cavab vermeye 30 saniye ceken API effektiv olaraq pozulmushdur.
-3. **Paralleliyin test edilmemesi**: Eyni anda bir istifadeci ucun mukemmel isleyen API-ler paralel yuk altinda ugursuz ola biler.
-4. **Test melumatlarinin kodda sabitlenmesi**: Xususi verilener bazasi qeydlerine asili olan testler kovrqdlr.
-5. **Tehlukesizlik testlerinin atlanmasi**: SQL inyeksiyasi ve XSS zaifliiqlri avtomatlasdiirlmis tehlukesizlik testi ile onlene biler.
+1. **Yalnız uğurlu yolların test edilməsi**: Test dəstiniz səhv halları, kənar halları və sərhəd şərtlərini ehtiva etməlidir.
+2. **Cavab müddətlərinin nəzərə alınmaması**: Funksional olaraq düzgün amma cavab verməyə 30 saniyə çəkən API effektiv olaraq pozulmuşdur.
+3. **Parallelliyin test edilməməsi**: Eyni anda bir istifadəçi üçün mükəmməl işləyən API-lər paralel yük altında uğursuz ola bilər.
+4. **Test məlumatlarının kodda sabitlənməsi**: Xüsusi verilənlər bazası qeydlərinə asılı olan testlər kövrəkdir.
+5. **Təhlükəsizlik testlərinin atlanması**: SQL inyeksiyası və XSS zəiflikləri avtomatlaşdırılmış təhlükəsizlik testi ilə önlənə bilər.
 
-## CI/CD Inteqrasiyasi
+## CI/CD İnteqrasiyası
 
-API testleri her kod deyisikliyinde avtomatik islemeliidir:
+API testləri hər kod dəyişikliyində avtomatik işləməlidir:
 
-- **Pre-commit**: Xarici asililiiqlarri mak eden suretli vahid testleri isledin
-- **Pull request**: Staging muhitine qarsi inteqrasiya testleri isledin
-- **Yerleshdirmeden evvel**: Performans testleri daxil tam test destini isledin
-- **Yerleshdirmeden sonra**: Yerlesdirmenin ugurlu oldugunu tesdiq etmek ucun istehsala qarsi tustue testleri isledin
+- **Pre-commit**: Xarici asılılıqları mak edən sürətli vahid testlərini işlədin
+- **Pull request**: Staging mühitinə qarşı inteqrasiya testlərini işlədin
+- **Yerləşdirmədən əvvəl**: Performans testləri daxil tam test dəstini işlədin
+- **Yerləşdirmədən sonra**: Yerləşdirmənin uğurlu olduğunu təsdiq etmək üçün istehsala qarşı tüstü testlərini işlədin
 
-Vaxtim Yoxdu-daki pulsuz terecciicar aletleri API test is axininizin her addiminda sizee destek olur. JSON cavablarini formatlayin ve tesdiq edin, Base64 autentifikasiya bashliqlarini kodlayin ve dekodlayin, JWT tokenlerinii yoxlayin ve sorgu parametrlerini URL-kodlayin -- hamisi brauzerinizde, hamisi gizli, hamisi pulsuz.`,
+Vaxtım Yoxdu-dakı pulsuz tərtibatçı alətləri API test iş axınının hər addımında sizə dəstək olur. JSON cavablarını formatlayin və təsdiq edin, Base64 autentifikasiya başlıqlarını kodlayın və dekodlayın, JWT tokenlərini yoxlayın və sorğu parametrlərini URL-kodlayın -- hamısı brauzerinizdə, hamısı gizli, hamısı pulsuz.`,
   },
   'color-theory-for-designers': {
-    title: 'Veb Dizaynerler ucun Reng Teoriyasi: Gozel Palitralar Yaratmaq ucun Praktik Beledci',
+    title: 'Veb Dizaynerlər üçün Rəng Teoriyası: Gözəl Palitralar Yaratmaq üçün Praktik Bələdçi',
     date: '2026-02-28',
     relatedTools: ['color-picker', 'css-minifier', 'image-compress', 'meta-tag-generator'],
-    content: `Reng dizaynerin arsenalindaki en guclu aletdir. O, emosiyalari formalasdiirir, diqqeti istiqametlendirir, brend kimliyi qurur ve istifadeicilerin mehsulunuza guvenib-guvenmeyeceyini ve ya saniyeler erzinde sehifeeni terk edib-etmeyeceyini mueyyen edir. Amma bir cox dizayner -- hetin tecrubelilri bele -- rengleri prinsipleri anlamaq evezine instinkte secir. Bu beledci her veb dizaynerin bilmeli oldugu reng teoriyasi esaslarini, palitra qurmaq ucun praktik texnikalari ve prosesi suretlendiren aletleri ehate edir.
+    content: `Rəng dizaynerin arsenalındakı ən güclü alətdir. O, emosiyaları formalaşdırır, diqqəti istiqamətləndirir, brend kimliyi qurur və istifadəçilərin məhsulunuza güvənib-güvənməyəcəyini və ya saniyələr ərzində səhifəni tərk edib-etməyəcəyini müəyyən edir. Amma bir çox dizayner -- hətta təcrübəliləri belə -- rəngləri prinsipləri anlamaq əvəzinə instinktlə seçir. Bu bələdçi hər veb dizaynerin bilməli olduğu rəng teoriyası əsaslarını, palitra qurmaq üçün praktik texnikaları və prosesi sürətləndirən alətləri əhatə edir.
 
-## Reng Veb Dizaynda Niye Vacibdir
+## Rəng Veb Dizaynda Niyə Vacibdir
 
-Reng dekorativ deyil -- funksionaldlr. Tedqiqatlar ardiciil olaraq gosterir ki, reng istifadeci davranisina olcule bilen sekillerde tesir edir:
+Rəng dekorativ deyil -- funksionaldır. Tədqiqatlar ardıcıl olaraq göstərir ki, rəng istifadəçi davranışına ölçülə bilən şəkillərdə təsir edir:
 
-- Mehsullar haqqinda **ani muhakimelerin 90%-i** yalniz renge esaslanir
-- **Reng brend tanilmasini** 80%-e qeder artirir
-- **Uygun reng secimleri** konversiya derecelerini 24% artira biler
-- **Istehlakcilarin 85%-i** muyeyyen mehsulu almalarinin esas sebebi kimi rengi gosterir
-- **Reng erisisebilirliyi** ugursuzluqlari dunyada teqriben 300 milyon reng kor istifadecini xaric edir
+- Məhsullar haqqında **anı mühakimələrin 90%-i** yalnız rəngə əsaslanır
+- **Rəng brend tanınmasını** 80%-ə qədər artırır
+- **Uyğun rəng seçimləri** konversiya dərəcələrini 24% artıra bilər
+- **İstehlakçıların 85%-i** müəyyən məhsulu almalarının əsas səbəbi kimi rəngi göstərir
+- **Rəng əlçatanlığı** uğursuzluqları dünyada təqribən 300 milyon rəng kor istifadəçini xaric edir
 
-Veb dizaynda reng uc muhum funksiiya yerine yetirir: vizual iyerarxiya yaradir (CTA-lara, xeberdariqlara ve muhum meluatlara diqqet cekir), emosional ton mueyyen edir (pesekar mavi, enerjili narinchi, sakitlesdirici yasil) ve brend kimliyini guclendiirir.
+Veb dizaynda rəng üç mühüm funksiya yerinə yetirir: vizual iyerarxiya yaradır (CTA-lara, xəbərdarlıqlara və mühüm məluatlara diqqət çəkir), emosional ton müəyyən edir (peşəkar mavi, enerjili narıncı, sakitləşdirici yaşıl) və brend kimliyini gücləndirir.
 
-## Reng Cxari: Her Seyin Temeli
+## Rəng Çarxı: Hər Şeyin Təməli
 
-Reng cxarini anlamaq butun reng qerarlarinin baslangic noqtesidir. Enenevi reng cxari elaqelerine esaslanaaraq 12 rengi duzur:
+Rəng çarxını anlamaq bütün rəng qərarlarının başlanğıc nöqtəsidir. Ənənəvi rəng çarxı əlaqələrinə əsaslanaraq 12 rəngi düzür:
 
-**Esas rengller** -- qirmizi, mavi, sari -- basqa rengleri qarisdirmaqla yaradila bilmez. Butun diger renglerin cixardigi temeldir.
+**Əsas rənglər** -- qırmızı, mavi, sarı -- başqa rəngləri qarışdırmaqla yaradıla bilməz. Bütün digər rənglərin çıxardığı təməldir.
 
-**Ikincil rengller** -- yasil, narinchi, benovse -- iki esas rengi qarisdirmaqla yaradilir. Qirmizi + mavi = benovse. Qirmizi + sari = narinchi. Mavi + sari = yasil.
+**İkincil rənglər** -- yaşıl, narıncı, bənövşə -- iki əsas rəngi qarışdırmaqla yaradılır. Qırmızı + mavi = bənövşə. Qırmızı + sarı = narıncı. Mavi + sarı = yaşıl.
 
-**Ucuncul rengller** esas ve qonsu ikincil rengi qarisdirmaqla yaradilir.
+**Üçüncül rənglər** əsas və qonşu ikincil rəngi qarışdırmaqla yaradılır.
 
-## Reng Xususiyyetleri: Ton, Doyma ve Isiqiliq
+## Rəng Xüsusiyyətləri: Ton, Doyma və İşıqlıq
 
-Her rengin manipulyasiya ede bilceyiniz uc xususiyyeti var:
+Hər rəngin manipulyasiya edə biləcəyiniz üç xüsusiyyəti var:
 
-**Ton** aksariyyet insanlarin "reng" deyende nezerde tutduqlaridir -- qirmizi, mavi, yasil, narinchi. Reng cxarinda movqeedir, 0-dan 360 dereceeye qeder olculur.
+**Ton** əksəriyyət insanların "rəng" deyəndə nəzərdə tutduqlarıdır -- qırmızı, mavi, yaşıl, narıncı. Rəng çarxında mövqesidir, 0-dan 360 dərəcəyə qədər ölçülür.
 
-**Doyma** rengin intensivliyi ve ya saafliqidir. 100% doyma tonun en temiz, en canli versiyasidir. 0% doyma boz calardir. Doymasizlasdirilmish rengller daha safistike ve pesekar hiss edir; yuksek doymali rengller enerjili ve diqqet celb edici hiss edir.
+**Doyma** rəngin intensivliyi və ya saflığıdır. 100% doyma tonun ən təmiz, ən canlı versiyasıdır. 0% doyma boz çalardır. Doymasızlaşdırılmış rənglər daha sofistike və peşəkar hiss edir; yüksək doymalı rənglər enerjili və diqqət çəlb edici hiss edir.
 
-**Isiqiliq** rengin ne qeder isiqli ve ya qaranliiq olduqudur. Ag elave etmek tintler (daha isiqli versiyalar) yaradir. Qara elave etmek celalar (daha qaranliiq versiyalar) yaradir. Vizual iyerarxiya yaratmaq ve oxunabilirliyi temin etmek ucun en muhum xususiyyetdir.
+**İşıqlıq** rəngin nə qədər işıqlı və ya qaranlıq olduğudur. Ağ əlavə etmək tintlər (daha işıqlı versiyalar) yaradır. Qara əlavə etmək çalalar (daha qaranlıq versiyalar) yaradır. Vizual iyerarxiya yaratmaq və oxunabilirliyi təmin etmək üçün ən mühüm xüsusiyyətdir.
 
-HSL reng modeli bu uc xususiyyete birbase uygun gedir ve dizaynerler ucun en intuitiv model edir. Vaxtim Yoxdu-daki Reng Secici HEX ve RGB ile birge HSL-i destekleyir.
+HSL rəng modeli bu üç xüsusiyyətə birbaşa uyğun gəlir və dizaynerlər üçün ən intuitiv model edir. Vaxtım Yoxdu-dakı Rəng Seçici HEX və RGB ilə birgə HSL-i dəstəkləyir.
 
-## Reng Ahhengi: Islyen Kombinasiyalar
+## Rəng Ahəngi: İşləyən Kombinasiyalar
 
-Reng ahengileri reng cxarindaki movqelere esaslanan riyazi olaraq cixarilmis kombinasiyalardlr:
+Rəng ahəngləri rəng çarxındakı mövqelərə əsaslanan riyazi olaraq çıxarılmış kombinasiyalardır:
 
-**Tamamlayici rengller** cxarda bir-birinin tam qarsiisinda oturur (meselen, mavi ve narinchi). Maksimum kontrast ve vizual enerji yaradir. CTA-lar ve ya muhum elementlerin one cixmasi ucun istifade edin.
+**Tamamlayıcı rənglər** çarxda bir-birinin tam qarşısında oturur (məsələn, mavi və narıncı). Maksimum kontrast və vizual enerji yaradır. CTA-lar və ya mühüm elementlərin önə çıxması üçün istifadə edin.
 
-**Analoq rengller** cxarda qonsu oturur (meselen, mavi, mavi-yasil, yasil). Ahengdar, uyumlu dizaynlar yaradir. Arxa plan ve kontent saheleri ucun mukemmeldir.
+**Analoq rənglər** çarxda qonşu oturur (məsələn, mavi, mavi-yaşıl, yaşıl). Ahəngdar, uyumlu dizaynlar yaradır. Arxa plan və kontent sahələri üçün mükəmməldir.
 
-**Triadik rengller** cxarda belbr olaraq yerlesmis (meselen, qirmizi, sari, mavi). Canli, tarazli dizaynlar yaradir.
+**Triadik rənglər** çarxda bərabər olaraq yerləşmiş (məsələn, qırmızı, sarı, mavi). Canlı, tarazlı dizaynlar yaradır.
 
-**Bolunmus-tamamlayici** esas rengi ve tamamlayicisinin yanindaki iki rengi istifade edir. Daha az gerginlikle tamamlayici sxemin kontrastini temin edir.
+**Bölünmüş-tamamlayıcı** əsas rəngi və tamamlayıcısının yanındakı iki rəngi istifadə edir. Daha az gərginliklə tamamlayıcı sxemin kontrastını təmin edir.
 
-## Veb Reng Palitrasi Qurmaq
+## Veb Rəng Palitrası Qurmaq
 
-Praktik veb reng palitrasi adeten funksiyaya gore teskil olunmus 5-den 8 reng ehtiva edir:
+Praktik veb rəng palitrası adətən funksiyaya görə təşkil olunmuş 5-dən 8 rəng ehtiva edir:
 
-1. **Esas brend rengi**: En taninilan renginiz. Logo, esas dugmeler ve muxtel interaktiv elementler ucun istifade olunur.
-2. **Ikincil brend rengi**: Esas rengi tamamlayir. Ikincil dugmeler, vurgulamalar ucun istifade olunur.
-3. **Neytral palitra**: Metn, arxa planlar, serhedler ve boluculer ucun boz celalar (adeten 5-den 7 celaya qeder).
-4. **Ugur/musbetrengi**: Tesdiqler, tamamlanmis vveziyyetler ucun yasil tonlar.
-5. **Xeberdarlik rengi**: Ehtiyatliliqlar ucun sari ve ya kehreeba.
-6. **Sehv/tehluekerengi**: Sehvler ve teccili xeberdariqlar ucun qirmizi tonlar.
-7. **Melumat rengi**: Informasiya mesajlri ucun mavi tonlar.
+1. **Əsas brend rəngi**: Ən tanınan rənginiz. Logo, əsas düymələr və müxtəlif interaktiv elementlər üçün istifadə olunur.
+2. **İkincil brend rəngi**: Əsas rəngi tamamlayır. İkincil düymələr, vurğulamalar üçün istifadə olunur.
+3. **Neytral palitra**: Mətn, arxa planlar, sərhədlər və bölücülər üçün boz çalalar (adətən 5-dən 7 çalaya qədər).
+4. **Uğur/müsbət rəngi**: Təsdiqlər, tamamlanmış vəziyyətlər üçün yaşıl tonlar.
+5. **Xəbərdarlıq rəngi**: Ehtiyatlılıqlar üçün sarı və ya kəhrəba.
+6. **Səhv/təhlükə rəngi**: Səhvlər və təcili xəbərdarlıqlar üçün qırmızı tonlar.
+7. **Məlumat rəngi**: İnformasiya mesajları üçün mavi tonlar.
 
-## Reng ve Erisisebilirlik
+## Rəng və Əlçatanlıq
 
-Erisisebilirlik istege bagli deyil. WCAG minimum kontrast nisbetleri mueyyen edir:
+Əlçatanlıq istəyə bağlı deyil. WCAG minimum kontrast nisbətləri müəyyən edir:
 
-- **Normal metn**: Arxa planina qarsi 4.5:1 kontrast nisbeti (WCAG AA)
-- **Boyuk metn** (18px+ qalin ve ya 24px+ adi): 3:1 kontrast nisbeti (WCAG AA)
-- **Inkisaf etmish uygunluq** (WCAG AAA): Normal metn ucun 7:1, boyuk metn ucun 4.5:1
+- **Normal mətn**: Arxa planına qarşı 4.5:1 kontrast nisbəti (WCAG AA)
+- **Böyük mətn** (18px+ qalın və ya 24px+ adi): 3:1 kontrast nisbəti (WCAG AA)
+- **İnkişaf etmiş uyğunluq** (WCAG AAA): Normal mətn üçün 7:1, böyük mətn üçün 4.5:1
 
-**Erisisebilir reng ucun praktik meslehetller:**
+**Əlçatan rəng üçün praktik məsləhətlər:**
 
-- Melumat otdumek ucun hec vaxt yalniz renge guvnmeyin. Her zaman rengi metn, ikonlar ve ya naxislarla cutleshdirin.
-- Palitranizi reng korluyu simulyatorlari ile yoxlayin.
-- Butun metn ucun, o cumleden placeholder metn, sondrulmus veziyyetler ucun kifayet qeder kontrast temin edin.
+- Məlumat ötürmək üçün heç vaxt yalnız rəngə güvənməyin. Hər zaman rəngi mətn, ikonlar və ya naxışlarla cütləşdirin.
+- Palitranızı rəng korluğu simulyatorları ilə yoxlayın.
+- Bütün mətn üçün, o cümlədən placeholder mətn, söndürülmüş vəziyyətlər üçün kifayət qədər kontrast təmin edin.
 
-## CSS-de Reng: En Yaxsi Tecrubeler
+## CSS-də Rəng: Ən Yaxşı Təcrübələr
 
-**Reng palitraniz ucun CSS xususi xususiyyetlerinden (deyisenler) istifade edin.** Renglerinizi :root-da bir defe mueyyen edin ve stilyazilriniz boyunca istinad edin. Bu tema deyisikliklerin trivial edir ve ardiciilliq temin edir.
+**Rəng palitranız üçün CSS xüsusi xüsusiyyətlərindən (dəyişənlər) istifadə edin.** Rənglərinizi :root-da bir dəfə müəyyən edin və stilyazılarınız boyunca istinad edin. Bu tema dəyişikliklərini trivial edir və ardıcıllıq təmin edir.
 
-**Reng manipulyasiyasi ucun HSL istifade edin.** Daha isiqli ve ya daha qaranliiq variantlar lazim olanda HSL intuitiv edir -- sadece isiqiliq deyerini uygunlashdirin.
+**Rəng manipulyasiyası üçün HSL istifadə edin.** Daha işıqlı və ya daha qaranlıq variantlar lazım olanda HSL intuitiv edir -- sadəcə işıqlıq dəyərini uyğunlaşdırın.
 
-**Palitranizi minimmumlashdirin.** Reng elave etme cezbesine qarrsi dyanin. Her elave reng vizual murkkebliyi ve texniki baxim yukunu artiirir.
+**Palitranızı minimallaşdırın.** Rəng əlavə etmə cəzbəsinə qarşı dayanın. Hər əlavə rəng vizual mürəkkəbliyi və texniki baxım yükünü artırır.
 
-## Veb Dizayn ucun Reng Psixologiyasi
+## Veb Dizayn üçün Rəng Psixologiyası
 
-Ferqli rengller ferqli psixoloji reaksiyalar yaradir:
+Fərqli rənglər fərqli psixoloji reaksiyalar yaradır:
 
-- **Mavi**: Etibarliliq, pesekarliq. Maliyye, texnologiya ve sosial mediada dominantdir.
-- **Yasil**: Artim, saglamliq, tebiet, ugur. Ekoloji brendler ve saglamliq mehsullarinda umindir.
-- **Qirmizi**: Enerji, teeciiililik, ehhtiras. CTA-lar, endirim bannerleri ucun istifade olunur.
-- **Narinchi**: Heves, yaradici, elcatanliiq. Genc demoqrafiyani hedeeleyen brendlerde populyardir.
-- **Benovse**: Luksus, yaradici, hikmeet. Gozellik ve premium mehsullarda umindir.
-- **Qara**: Safistike, luksus, haakimiyyet. Premium brendler terefinden istifade olunur.
-- **Ag**: Temizlik, sadelik, boslluq. Muasir veb dizaynin temelidir.
+- **Mavi**: Etibarlılıq, peşəkarlıq. Maliyyə, texnologiya və sosial mediada dominantdır.
+- **Yaşıl**: Artım, sağlamlıq, təbiət, uğur. Ekoloji brendlər və sağlamlıq məhsullarında ümumdir.
+- **Qırmızı**: Enerji, təcililik, ehtiyas. CTA-lar, endirim bannerləri üçün istifadə olunur.
+- **Narıncı**: Həvəs, yaradıcılıq, əlçatanlıq. Gənc demoqrafiyanı hədəfləyən brendlərdə populyardır.
+- **Bənövşə**: Lüks, yaradıcılıq, hikmət. Gözəllik və premium məhsullarda ümumdir.
+- **Qara**: Sofistike, lüks, hakimiyyət. Premium brendlər tərəfindən istifadə olunur.
+- **Ağ**: Təmizlik, sadəlik, boşluq. Müasir veb dizaynın təməlidir.
 
-Reng teoriyasi qaydalar ezbeerlemek deyil -- daha yaxsi qerarlari melumatlandiran prinsipleri anlamaqdir. Guclu esas rengden baslayin, reng cxarindan istifade ederek ahengdar kombinasiyalar qurun, erisisebilirlik uygunlugunu temin edin ve CSS xususi xususiyyetleri ile palitranizi teskil edin. Vaxtim Yoxdu-daki Reng Secici, CSS Minifikator ve Sekil Siqisdiricisi ile bu prinsipleri tetbiq edin.`,
+Rəng teoriyası qaydalar əzbərləmək deyil -- daha yaxşı qərarları məlumatlandıran prinsipləri anlamaqdır. Güclü əsas rəngdən başlayın, rəng çarxından istifadə edərək ahəngdar kombinasiyalar qurun, əlçatanlıq uyğunluğunu təmin edin və CSS xüsusi xüsusiyyətləri ilə palitranızı təşkil edin. Vaxtım Yoxdu-dakı Rəng Seçici, CSS Minifikator və Şəkil Sıxışdırıcısı ilə bu prinsipləri tətbiq edin.`,
   },
   'markdown-writing-guide': {
-    title: 'Markdown Yazma Beledcisi: Murkkeb Proqram Olmadan Gozel Senedler Formatlashdirin',
+    title: 'Markdown Yazma Bələdçisi: Mürəkkəb Proqram Olmadan Gözəl Sənədlər Formatlışdırın',
     date: '2026-02-25',
     relatedTools: ['markdown-preview', 'word-counter', 'slug-generator', 'text-diff'],
-    content: `Markdown sade, oxuna bilen sintaksis istifade ederek metni formatlasdirmaga imkan veren yungul isaareleme dilidir. 2004-cu ilde John Gruber terefinden yaradildib ve vebde yazinin de-fakto standartina cevrlib. GitHub README fayllar, senedlsdirme platformalari, statik sayt generatorlari, qeyd tetbiiqlri, forumlar ve hetin e-poct musterileri Markdown-i destekleyir. Sade sintaksisini oyrendikden sonra agir soz emalcilarina el atmadan her yerde gozel formatlanmis senedler yarada bilirsiniz.
+    content: `Markdown sadə, oxuna bilən sintaksis istifadə edərək mətni formatlşdırmağa imkan verən yüngül işarələmə dilidir. 2004-cü ildə John Gruber tərəfindən yaradılıb və vebdə yazının de-fakto standartına çevrilib. GitHub README fayllar, sənədləşdirmə platformaları, statik sayt generatorları, qeyd tətbiqləri, forumlar və hətta e-poçt müştəriləri Markdown-ı dəstəkləyir. Sadə sintaksisini öyrəndikdən sonra ağır söz emalçılarına əl atmadan hər yerdə gözəl formatlanmış sənədlər yarada bilərsiniz.
 
-## Niye Markdown?
+## Niyə Markdown?
 
-**Oxunabilirlik.** HTML-den ferqli olaraq teqlerin kontenti gizletdiyi yerde Markdown xam, formatlanmamis veziyyetinde bele oxuna bilen sekilde hazirlanib.
+**Oxunabilirlik.** HTML-dən fərqli olaraq teqlərin kontenti gizlətdiyi yerdə Markdown xam, formatlanmamış vəziyyətində belə oxuna bilən şəkildə hazırlanıb.
 
-**Dasinabilirlik.** Markdown fayllari duz metn (.md ve ya .markdown uzantisi). Istenilen emeliyyat sisteminde istenilen metn redaktorunda acilir. Mulkiyyet proqram bagliliqi yoxdur, uygunluq problemleri yoxdur.
+**Daşınabilirlik.** Markdown faylları düz mətn (.md və ya .markdown uzantısı). İstənilən əməliyyat sistemində istənilən mətn redaktorunda açılır. Mülkiyyət proqram bağlılığı yoxdur, uyğunluq problemləri yoxdur.
 
-**Coxterfliliik.** Markdown HTML, PDF, Word senedlerine, slaydlara, e-kitablara ve daha coxuna cevrilir. Bir defe yazin, her yerde neshr edin.
+**Çoxtərəflilik.** Markdown HTML, PDF, Word sənədlərinə, slaydlara, e-kitablara və daha çoxuna çevrilir. Bir dəfə yazın, hər yerdə nəşr edin.
 
-**Suret.** Markdown-da formatlashdirma aleetler panelinde mus ile dugmelere kliklemekden daha suretidir. Elleriniz hec vaxt klaviaturani terk etmir.
+**Sürət.** Markdown-da formatlışdırma alətlər panelində maus ilə düymələrə klikləməkdən daha sürətlidir. Əlləriniz heç vaxt klaviaturanı tərk etmir.
 
-**Versiya nezareti ile uygunluq.** Markdown duz metn oldugu ucun Git ile mukemmel isleyir. Deyisiklikleri izleye, versiyalari muqayise ede, toehfeleri birlesdire ve senedlerinizin tam tarixcesini saxlaya bilrsiniz.
+**Versiya nəzarəti ilə uyğunluq.** Markdown düz mətn olduğu üçün Git ilə mükəmməl işləyir. Dəyişiklikləri izləyə, versiyaları müqayisə edə, töhfələri birləşdirə və sənədlərinizin tam tarixçəsini saxlaya bilərsiniz.
 
-## Esas Formatlashdirma
+## Əsas Formatlışdırma
 
-### Bashliqlar
+### Başlıqlar
 
-Bashliqlar hes simvolllari ile yaradilir. Heslerin sayi bashliq seviyyesini gosterir:
+Başlıqlar heş simvolları ilə yaradılır. Heşlərin sayı başlıq səviyyəsini göstərir:
 
-\`# Bashliq 1\` en boyuk bashligi yaradir
-\`## Bashliq 2\` ikinci seviyye bashliq yaradir
-\`### Bashliq 3\` ucuncu seviyye bashliq yaradir
+\`# Başlıq 1\` ən böyük başlığı yaradır
+\`## Başlıq 2\` ikinci səviyyə başlıq yaradır
+\`### Başlıq 3\` üçüncü səviyyə başlıq yaradır
 
-Altiya qeder derin gede bilrsiniz, amma aksariyyet senedler nadir hallarda uc ve ya dordden artiq seviyyeye ehtiyac duyur.
+Altıya qədər dərin gedə bilərsiniz, amma əksəriyyət sənədlər nadir hallarda üç və ya dörddən artıq səviyyəyə ehtiyac duyur.
 
-### Metn Vurgusu
+### Mətn Vurğusu
 
-- \`*kursiv*\` ve ya \`_kursiv_\` kursiv metn verir
-- \`**qalin**\` ve ya \`__qalin__\` qalin metn verir
-- \`***qalin kursiv***\` her ikisini birlesdirir
-- \`~~uzeri xetli~~\` uzeri xetli metn verir
+- \`*kursiv*\` və ya \`_kursiv_\` kursiv mətn verir
+- \`**qalın**\` və ya \`__qalın__\` qalın mətn verir
+- \`***qalın kursiv***\` hər ikisini birləşdirir
+- \`~~üzəri xətli~~\` üzəri xətli mətn verir
 
-### Paraqraflar ve Setr Kecidleri
+### Paraqraflar və Sətir Keçidləri
 
-Paraqraflar bos setrle ayriliir. Basqa Markdown rendererlerin aksariyyetinde yalniz bir defe Enter basma yeni paraqraf yaratmir -- metn bloklari arasinda bos setr lazimdir.
+Paraqraflar boş sətirlə ayrılır. Başqa Markdown rendererlərinin əksəriyyətində yalnız bir dəfə Enter basma yeni paraqraf yaratmır -- mətn blokları arasında boş sətir lazımdır.
 
-## Siyahilar
+## Siyahılar
 
-### Sirasiz Siyahilar
+### Sırasız Siyahılar
 
-\`-\`, \`*\` ve ya \`+\` istifade edib ardindan boslqu gelib:
+\`-\`, \`*\` və ya \`+\` istifadə edib ardından boşluq gəlir:
 
 \`\`\`
 - Birinci element
-- Ikinci element
-  - Ic-ice element
-- Ucuncu element
+- İkinci element
+  - İç-içə element
+- Üçüncü element
 \`\`\`
 
-### Sirali Siyahilar
+### Sıralı Siyahılar
 
-Reqemlrden sonra noqte gelib:
-
-\`\`\`
-1. Birinci addim
-2. Ikinci addim
-3. Ucuncu addim
-\`\`\`
-
-### Tapshiriq Siyahilar
-
-GitHub-Flavored Markdown (GFM) cek qutularini destekleyir:
+Rəqəmlərdən sonra nöqtə gəlir:
 
 \`\`\`
-- [x] Tamamlanmis tapsiriq
-- [ ] Tamamlanmamis tapsiriq
+1. Birinci addım
+2. İkinci addım
+3. Üçüncü addım
 \`\`\`
 
-## Linkler ve Sekiller
+### Tapşırıq Siyahıları
 
-### Linkler
+GitHub-Flavored Markdown (GFM) çek qutularını dəstəkləyir:
 
-\`[Link metni](https://example.com)\` kliklene bilen hiperlink yaradir.
+\`\`\`
+- [x] Tamamlanmış tapşırıq
+- [ ] Tamamlanmamış tapşırıq
+\`\`\`
 
-### Sekiller
+## Linklər və Şəkillər
 
-\`![Alt metn](sekil-url.jpg)\` sekil yerleshdirir. Alt metn erisisebilirlik ucun vacibdir.
+### Linklər
+
+\`[Link mətni](https://example.com)\` klikləna bilən hiperlink yaradır.
+
+### Şəkillər
+
+\`![Alt mətn](şəkil-url.jpg)\` şəkil yerləşdirir. Alt mətn əlçatanlıq üçün vacibdir.
 
 ## Kod
 
-### Setiirci Kod
+### Sətirçi Kod
 
-Kodu tek geriye isaaretlerle sairin: \`console.log("salam")\` setirci kod kimi verir.
+Kodu tək geriyə işarətlərlə sarın: \`console.log("salam")\` sətirçi kod kimi verir.
 
-### Kod Bloklari
+### Kod Blokları
 
-Sintaksis vurgulamasi ucun istege bagli dil identifikatoru ile uc geriye isaaret istifade edin.
+Sintaksis vurğulaması üçün istəyə bağlı dil identifikatoru ilə üç geriyə işarət istifadə edin.
 
-## Cedveller
+## Cədvəllər
 
-Markdown cedveller borulr ve tirelrr istifade edir:
+Markdown cədvəllər borular və tirələr istifadə edir:
 
 \`\`\`
-| Xususiyyet | Pulsuz Plan | Pro Plan |
+| Xüsusiyyət | Pulsuz Plan | Pro Plan |
 |------------|-------------|----------|
-| Yaddas | 5 GB | 100 GB |
-| Istifadeciler | 1 | Limitsiz |
+| Yaddaş | 5 GB | 100 GB |
+| İstifadəçilər | 1 | Limitsiz |
 \`\`\`
 
-## Sitat Bloklari
+## Sitat Blokları
 
-Sitat bloklari yaratmaq ucun \`>\` istifade edin:
+Sitat blokları yaratmaq üçün \`>\` istifadə edin:
 
 \`\`\`
-> Agac ekmek ucun en yaxsi vaxt iyirmi il evvel idi.
-> Ikinci en yaxsi vaxt indi.
+> Ağac əkmək üçün ən yaxşı vaxt iyirmi il əvvəl idi.
+> İkinci ən yaxşı vaxt indidir.
 \`\`\`
 
-## Tekmill Markdown
+## Təkmil Markdown
 
-### Dipnotlar, Terif Siyahilari, Riyazi Tenlikler
+### Dipnotlar, Tərif Siyahıları, Riyazi Tənliklər
 
-Bezi Markdown emalcilari dipnotlari, terif siyahlarini ve LaTeX riyaziyyatini destekleyir.
+Bəzi Markdown emalçıları dipnotları, tərif siyahılarını və LaTeX riyaziyyatını dəstəkləyir.
 
-## Ferqli Platformalar ucun Markdown
+## Fərqli Platformalar üçün Markdown
 
 ### GitHub-Flavored Markdown (GFM)
 
-GitHub standart Markdown-i tapshiriq siyahilar, cedveller, uzeri xetli metn, avtomatik linklenmiish URL-ler ve sintaksle vurgulnmis kod bloklari ile genislendirir.
+GitHub standart Markdown-ı tapşırıq siyahıları, cədvəllər, üzəri xətli mətn, avtomatik linklənmiş URL-lər və sintaksislə vurğulanmış kod blokları ilə genişləndirir.
 
-### Senedlesdirme Platformalari
+### Sənədləşdirmə Platformaları
 
-Docusaurus, MkDocs ve GitBook kimi aletler esas kontent formati kimi Markdown istifade edir.
+Docusaurus, MkDocs və GitBook kimi alətlər əsas kontent formatı kimi Markdown istifadə edir.
 
-### Statik Sayt Generatorlari
+### Statik Sayt Generatorları
 
-Next.js, Hugo, Jekyll ve Astro hamisi kontent ucun Markdown-i destekleyir.
+Next.js, Hugo, Jekyll və Astro hamısı kontent üçün Markdown-ı dəstəkləyir.
 
-## Yazma Is Axini Meslehetleri
+## Yazma İş Axını Məsləhətləri
 
-1. **Markdown onizleme aletindoen istifade edin.** Vaxtim Yoxdu-daki Markdown Onizleme yazdiginiz kimi real vaxtda formatlanmis neticenizi gosterir.
-2. **Sozlerinizi sayin.** Uzunluq telebleri olan kontent ucun Vaxtim Yoxdu-daki Soz Sayaci sozleri, simvollari, cumleleri ve paraqraflari izleyir.
-3. **URL-dostu sluglar yaraadin.** Blog ucun bashliqlardan temiz, SEO-dostu URL-ler yaradan Slug Generatoru istifade edin.
-4. **Versiyalari muqayise edin.** Markdown senedlerindeki deyisiklikleri yoxlayanda Metn Ferqi aleti deqiq neyin deyisdiyini setr-setr vurgulayir.
-5. **Diqqeti dagidici olmayan redaktorda yazin.** Minimal metn redaktoru ve ya xususi Markdown redaktoru istifade edin.
-6. **Konvensiyalari erken mueyyen edin.** Komanda layiheleri ucun formatlashdirma konvensiyalarini qabaqcadan qerarlashdirin.
+1. **Markdown önizləmə alətindən istifadə edin.** Vaxtım Yoxdu-dakı Markdown Önizləmə yazdığınız kimi real vaxtda formatlanmış nəticənizi göstərir.
+2. **Sözlərinizi sayın.** Uzunluq tələbləri olan kontent üçün Vaxtım Yoxdu-dakı Söz Sayacı sözləri, simvolları, cümlələri və paraqrafları izləyir.
+3. **URL-dostu sluglar yaradın.** Bloq üçün başlıqlardan təmiz, SEO-dostu URL-lər yaradan Slug Generatoru istifadə edin.
+4. **Versiyaları müqayisə edin.** Markdown sənədlərindəki dəyişiklikləri yoxlayanda Mətn Fərqi aləti dəqiq nəyin dəyişdiyini sətir-sətir vurğulayır.
+5. **Diqqəti dağıdıcı olmayan redaktorda yazın.** Minimal mətn redaktoru və ya xüsusi Markdown redaktoru istifadə edin.
+6. **Konvensiyaları erkən müəyyən edin.** Komanda layihələri üçün formatlışdırma konvensiyalarını qabaqcadan qərarlaşdırın.
 
-Markdown oyrenmesi haqiqeten sade ve derhal faydali olan nadir texnologiyalardan biridir. 15 deqiqede esaslari mesnimsye bilrsiniz. Bir saatda tekmill formatlashdirma ede bilrsiniz. Ve bundan sonra her yerde islyen dasinabile, versiya-nezaretli, gelecke-davaml yazma formatiniz var. Vaxtim Yoxdu-daki Markdown Onizleme aleti ile mesq edin.`,
+Markdown öyrənməsi həqiqətən sadə və dərhal faydalı olan nadir texnologiyalardan biridir. 15 dəqiqədə əsasları mənimsəyə bilərsiniz. Bir saatda təkmil formatlışdırma edə bilərsiniz. Və bundan sonra hər yerdə işləyən daşına bilən, versiya-nəzarətli, gələcəyə-davamlı yazma formatınız var. Vaxtım Yoxdu-dakı Markdown Önizləmə aləti ilə məşq edin.`,
   },
   'time-management-productivity-tools': {
-    title: 'Vaxt Idareciiliyi ve Mehsuldariliq Aletleri: 2026-da Daha Agilli Ishleyin',
+    title: 'Vaxt İdarəçiliyi və Məhsuldarlıq Alətləri: 2026-da Daha Ağıllı İşləyin',
     date: '2026-02-20',
     relatedTools: ['word-counter', 'ai-text-summarizer', 'ai-text-rewriter', 'cron-parser'],
-    content: `Vaxt daha cox yarada bilmeyeceyniz yegane qaynaqdir. 2026-ci ilde orta bilik iscisi is gununun 28%-ni e-pocta, 20%-ni melumat axtarisina ve 12%-ni lazmsiz gorusulere serfh edir. Bu, haqiqi mehsuldar is ucun cemi 40% buraxir -- layiheleri ireli aparan, problemleri hell eden ve dyer yaradan is. Yaxsi xeber odur ki, duzgun aletler ve texnikalar itirilen vaxtinn ehemiyyetli hissesini geri qazanmaga komek ede biler.
+    content: `Vaxt daha çox yarada bilməyəcəyiniz yeganə qaynağdır. 2026-cı ildə orta bilik işçisi iş gününün 28%-ni e-poçta, 20%-ni məlumat axtarışına və 12%-ni lazımsız görüşlərə sərf edir. Bu, həqiqi məhsuldar iş üçün cəmi 40% buraxır -- layihələri irəli aparan, problemləri həll edən və dəyər yaradan iş. Yaxşı xəbər odur ki, düzgün alətlər və texnikalar itirilən vaxtın əhəmiyyətli hissəsini geri qazanmağa kömək edə bilər.
 
-## Mehsuldariliq Problemi
+## Məhsuldarlıq Problemi
 
-Hellre kecmezdn evvel muasir is yerinde mehsuldariligin niye bu qeder cetin oldugunu anlamaga dyer:
+Həllərə keçməzdən əvvəl müasir iş yerində məhsuldarlığın niyə bu qədər çətin olduğunu anlamağa dəyər:
 
-**Kontekst deyisdirme bahalidir.** Kaliforniya Universitetinin tedqiqatii gosterir ki, kesilmeden sonra tamamiley yeniden diqqeti cemlemek ucun orta hesabla 23 deqiqe lazimdir. Gunde cmi 6 defe kesilseniz, yalniz kontekst deyisdirmeye iki saatdan cox vaxt itrirsiniz.
+**Kontekst dəyişdirmə bahalıdır.** Kaliforniya Universitetinin tədqiqatı göstərir ki, kəsilmədən sonra tamamilə yenidən diqqəti cəmləmək üçün orta hesabla 23 dəqiqə lazımdır. Gündə cəmi 6 dəfə kəsilsəniz, yalnız kontekst dəyişdirməyə iki saatdan çox vaxt itirirsiniz.
 
-**Reqemsal diqqet yayindicilari diqqeeti tutmaq ucun muhendislesdirilir.** Sosial media platformalari, xeber saytlari ve mesajlasma tetbiqleri mumkun qeder asililiga sebeb olmaq ucun dizayn edilib.
+**Rəqəmsal diqqət yayındırıcıları diqqəti tutmaq üçün mühəndisləşdirilib.** Sosial media platformaları, xəbər saytları və mesajlaşma tətbiqləri mümkün qədər asılılığa səbəb olmaq üçün dizayn edilib.
 
-**Gorus medeniyyeti nezaretsiz boyuyub.** Orta mutexessis ayda 31 saati mehsuldar olmayan goruslerde kecirir. Sorgulaaar ardiciil olaraq gosterir ki, mutexessislerin 67%-i heddinden artiq gorusleri ishi gormek ucun bir nomreli maniee hesab edir.
+**Görüş mədəniyyəti nəzarətsiz böyüyüb.** Orta mütəxəssis ayda 31 saatı məhsuldar olmayan görüşlərdə keçirir. Sorğular ardıcıl olaraq göstərir ki, mütəxəssislərin 67%-i həddindən artıq görüşləri işi görmək üçün bir nömrəli maneə hesab edir.
 
-**Melumat asiri yuklenmesi realdlr.** Orta bilik iscisi gunde 121 e-poct alir, 8+ unsiyyet aletinde hesab idare edir.
+**Məlumat aşırı yüklənməsi realdır.** Orta bilik işçisi gündə 121 e-poçt alır, 8+ ünsiyyət alətində hesab idarə edir.
 
-## Esas Vaxt Idareciiliyi Cercciveleri
+## Əsas Vaxt İdarəçiliyi Çərçivələri
 
-### Eyzenhauer Matrissi
+### Eyzenhauer Matrisi
 
-Tapsiriqlari teecililiik ve ehemiyyete gore dord kadrana bolun:
+Tapşırıqları təcililik və əhəmiyyətə görə dörd kadrana bölün:
 
-**Kadran 1 -- Teecili ve Muhum:** Bohranlar, son tarixler. Derhal bunlari edin.
-**Kadran 2 -- Muhum amma Teecili Deyil:** Strateji planlasdirma, bacariq inkisafi. Bunlari planlasdirin -- en yuksek deyerli is burada bas verir.
-**Kadran 3 -- Teecili amma Muhum Deyil:** Bir cox e-poct, bezi gorusler. Hevale edin ve ya minimmumlashdirin.
-**Kadran 4 -- Ne Teecili, Ne Muhum:** Sosial media gezintisi, lazmsiz xeber izleme. Bunlari aradan qaldirin.
+**Kadran 1 -- Təcili və Mühüm:** Böhranlar, son tarixlər. Dərhal bunları edin.
+**Kadran 2 -- Mühüm amma Təcili Deyil:** Strategiya planlaşdırması, bacarıq inkişafı. Bunları planlaşdırın -- ən yüksək dəyərli iş burada baş verir.
+**Kadran 3 -- Təcili amma Mühüm Deyil:** Bir çox e-poçt, bəzi görüşlər. Həvalə edin və ya minimallaşdırın.
+**Kadran 4 -- Nə Təcili, Nə Mühüm:** Sosial media gəzintisi, lazımsız xəbər izləmə. Bunları aradan qaldırın.
 
 ### Vaxt Bloklama
 
-Isinn xususi novlerine xususi vaxt bloklari teyin edin:
+İşin xüsusi növlərinə xüsusi vaxt blokları təyin edin:
 
-- 8:00-10:00: Derin is (gorus yoxdur, e-poct yoxdur, Slack yoxdur)
-- 10:00-10:30: E-poct ve mesajlar
-- 10:30-12:00: Emekdashliq isi (gorusler)
-- 12:00-13:00: Nahaar ve fasillee
-- 13:00-14:30: Derin is
-- 14:30-15:00: E-poct ve mesajlar
-- 15:00-16:30: Inzibati tapshiriqlar ve planlasdirma
-- 16:30-17:00: Gun sonu icmali ve sabahki planlasdirma
+- 8:00-10:00: Dərin iş (görüş yoxdur, e-poçt yoxdur, Slack yoxdur)
+- 10:00-10:30: E-poçt və mesajlar
+- 10:30-12:00: Əməkdaşlıq işi (görüşlər)
+- 12:00-13:00: Nahar və fasilə
+- 13:00-14:30: Dərin iş
+- 14:30-15:00: E-poçt və mesajlar
+- 15:00-16:30: İnzibati tapşırıqlar və planlaşdırma
+- 16:30-17:00: Gün sonu icmalı və sabahkı planlaşdırma
 
-Muhim intizam derin is bloklarinizin qorunmasidir. Bu vaxtlarda gorusleri redd edin. E-poct ve mesajlasma tetbiqlerini baglayin. Iki saat kesintisiz derin is alti saat parcalanmis, kesilmis isdn daha cox dyer yaradir.
+Mühüm intizam dərin iş bloklarınızın qorunmasıdır. Bu vaxtlarda görüşləri rədd edin. E-poçt və mesajlaşma tətbiqlərini bağlayın. İki saat kəsintisiz dərin iş altı saat parçalanmış, kəsilmiş işdən daha çox dəyər yaradır.
 
-### Pomodoro Texnikasi
+### Pomodoro Texnikası
 
-Diqqetli 25 deqiquelik intervallarla (pomodorolar) isleyin ve ardindan 5 deqiquelik fasileler verin. Dord pomodorodan sonra daha uzun 15-30 deqiquelik fasile verin. Bu texnika niye isleyir:
+Diqqətli 25 dəqiqəlik intervallarla (pomodorolar) işləyin və ardından 5 dəqiqəlik fasilələr verin. Dörd pomodorodan sonra daha uzun 15-30 dəqiqəlik fasilə verin. Bu texnika niyə işləyir:
 
-- Baslamaqi asanlasdiirir -- 25 deqiqeye ohdeilik vermek tapsiriq asiri gorsende bele idare oluna bilen hiss edir
-- Dusunce ve kursu duzeltme ucun tebii dayanma noqteleri yaradir
-- Taymer diqqeti qorumaga komek eden yuenguil teeciiililik yaradir
-- Muenezzem fasileler zehni yorgunluqu onleyir
+- Başlamağı asanlaşdırır -- 25 dəqiqəyə öhdəlik vermək tapşırıq aşırı görsəndə belə idarə oluna bilən hiss edir
+- Düşüncə və kurs düzəltmə üçün təbii dayanma nöqtələri yaradır
+- Taymer diqqəti qorumağa kömək edən yüngül təcililik yaradır
+- Müntəzəm fasilələr zehni yorğunluğu önləyir
 
 ### GTD (Getting Things Done)
 
-David Allen-in metodologiyasi tapsiriqlari beyninizden etibarli sisteme kocurmeye yonelir:
+David Allen-in metodologiyası tapşırıqları beyninizədən etibarlı sistemə köçürməyə yönəlir:
 
-1. **Tutun**: Her tapsiriq, fikir ve ohdeilik yazin
-2. **Aydinlashdirin**: Her element ucun novbeti fiziki hereketi mueyyen edin
-3. **Teskil edin**: Hereketleri muvafiq siyahilaara yerlesdirin
-4. **Dusunun**: Siyahilariniizi heftelik nezeerden kecirin
-5. **Isleyin**: Kontekst, movcud vaxt, enerji ve prioritetee esaslanaaraq ne uzerinde islmeye qerar verin
+1. **Tutun**: Hər tapşırıq, fikir və öhdəlik yazın
+2. **Aydınlaşdırın**: Hər element üçün növbəti fiziki hərəkəti müəyyən edin
+3. **Təşkil edin**: Hərəkətləri müvafiq siyahılara yerləşdirin
+4. **Düşünün**: Siyahılarınızı həftəlik nəzərdən keçirin
+5. **İşləyin**: Kontekst, mövcud vaxt, enerji və prioritetə əsaslanaraq nə üzərində işləməyə qərar verin
 
-## Kateqoriyaya Gore Mehsuldariliq Aletleri
+## Kateqoriyaya Görə Məhsuldarlıq Alətləri
 
-### Tapsiriq Idareciiliyi
+### Tapşırıq İdarəçiliyi
 
-**Todoist** tebii dil girishi, tekrarlanan tapshiriqlar ve prioritet seviyyeleri ile sexsi tapshiriq idareciliyinde ustunluk edir.
+**Todoist** təbii dil girişi, təkrarlanan tapşırıqlar və prioritet səviyyələri ilə şəxsi tapşırıq idarəçiliyində üstünlük edir.
 
-**Linear** proqram teminatii inkisaf komandlari ucun standart haline gelib.
+**Linear** proqram təminatı inkişaf komandaları üçün standart halına gəlib.
 
-**Notion** tapshiriq idareeciliyini senedlesdirme, vikiler ve verilenler bazalari ile birleshdirir.
+**Notion** tapşırıq idarəçiliyini sənədləşdirmə, vikilər və verilənlər bazaları ilə birləşdirir.
 
-### Metn ve Kontent Aletleri
+### Mətn və Kontent Alətləri
 
-Isiniz yazmaqi ehtiva edirse -- e-poct, hesabatlar, blog yazilari -- metn aletleri ehemiyyetli vaxt qazandirir:
+İşiniz yazmağı ehtiva edirsə -- e-poçt, hesabatlar, bloq yazıları -- mətn alətləri əhəmiyyətli vaxt qazandırır:
 
-- **AI Metn Xulaseedicisi** (Vaxtim Yoxdu): Uzun hesabatlari, meqaleleri saniyeler erzinde esas noqteleree siqisdirin. 5000 sozluk hesabati oxumaga 30 deqiqe serfh etmek evezine vacib meluaati 2 deqiqe erzinde alin.
-- **AI Metn Yeniden Yazici** (Vaxtim Yoxdu): Ferqli auditoriya ve ya platformalar ucun eyni kontentin bir nece versiyasini yaraadin. Bir defe yazin, sifirdan baslamadan e-poct, sosial media ucun uygunlashdirin.
-- **Soz Sayaci** (Vaxtim Yoxdu): Uzunluq telebleri olan kontent ucun soz saylarini ve oxuma vaxtini izleyin.
+- **AI Mətn Xülasəedicisi** (Vaxtım Yoxdu): Uzun hesabatları, məqalələri saniyələr ərzində əsas nöqtələrə sıxışdırın. 5000 sözlük hesabatı oxumağa 30 dəqiqə sərf etmək əvəzinə vacib məlumatı 2 dəqiqə ərzində alın.
+- **AI Mətn Yenidən Yazıcı** (Vaxtım Yoxdu): Fərqli auditoriya və ya platformalar üçün eyni kontentin bir neçə versiyasını yaradın. Bir dəfə yazın, sıfırdan başlamadan e-poçt, sosial media üçün uyğunlaşdırın.
+- **Söz Sayacı** (Vaxtım Yoxdu): Uzunluq tələbləri olan kontent üçün söz saylarını və oxuma vaxtını izləyin.
 
-### Avtomatlasdirma
+### Avtomatlaşdırma
 
-**Zapier** ve **Make** tetbiiqleri baglayir ve tekrarlanan is axinlarini avtomatlasdiirir.
+**Zapier** və **Make** tətbiqləri bağlayır və təkrarlanan iş axınlarını avtomatlaşdırır.
 
-**Cron tapshiriqlari** tekrarlanan server terfi tapshiriqlarini avtomatlasdiirir -- verilener bazasi ehtiyat nuexeleri, hesabat yaratma, kes temizlme. Vaxtim Yoxdu-daki Cron Ifade Parcalayicisi sintaksisi eezberlmden cron cedvelleri qurmaga ve anlamaga komek edir.
+**Cron tapşırıqları** təkrarlanan server tərəfi tapşırıqlarını avtomatlaşdırır -- verilənlər bazası ehtiyat nüsxələri, hesabat yaratma, keş təmizləmə. Vaxtım Yoxdu-dakı Cron İfadə Parçalayıcısı sintaksisi əzbərləmədən cron cədvəlləri qurmağa və anlamağa kömək edir.
 
-## Gundlik Mehsuldariliq Verdisleri
+## Gündəlik Məhsuldarlıq Vərdişləri
 
-Tek basina aletler sizi mehsuldar etmir. Bu verdisler temeli yaradir:
+Tək başına alətlər sizi məhsuldar etmir. Bu vərdişlər təməli yaradır:
 
-**Her gune en muhum tapshiriqnizla baslayin.** Enerji ve diqqetiniz seher zirveye catir. Bu pik vaxti en cetin, en muhum isiniz ucun istifade edin.
+**Hər günə ən mühüm tapşırığınızla başlayın.** Enerji və diqqətiniz səhər zirvəyə çatır. Bu pik vaxtı ən çətin, ən mühüm işiniz üçün istifadə edin.
 
-**E-poctu toplu emal edin.** E-poctu davaml yoxlamaq evezine planlasdirilmis vaxtlarda gunde 2-3 defe yoxlayin.
+**E-poçtu toplu emal edin.** E-poçtu davamlı yoxlamaq əvəzinə planlaşdırılmış vaxtlarda gündə 2-3 dəfə yoxlayın.
 
-**Daha tez-tez yox deyin.** Her beli basqa bir seye yoxdur. Aydin gundemi olmayan gorusleri, prioritetlerinizle uygunlashmayan xahisleri redd ederek vaxtinizi qoruyun.
+**Daha tez-tez yox deyin.** Hər bəli başqa bir şeyə yoxdur. Aydın gündəmi olmayan görüşləri, prioritetlərinizlə uyğunlaşmayan xahişləri rədd edərək vaxtınızı qoruyun.
 
-**Bu gun getmezden evvel sabahi planlasdirin.** Her gunun sonunda sabahki prioritetleri mueyyen etmeye 10 deqiqe serfh etmek novbeti gune aydinliq ve templle baslamaginiz demekdir.
+**Bu gün getməzdən əvvəl sabahı planlaşdırın.** Hər günün sonunda sabahkı prioritetləri müəyyən etməyə 10 dəqiqə sərf etmək növbəti günə aydınlıq və templə başlamağınız deməkdir.
 
-**Bir hefte vaxtinizi izleyin.** Olcmediyiniz seyi optimallasdira bilmezsiniz. Bir hefte vaxtinizi haqiqete nece keirdiyinizi izleyin. Neticeler sizi teccublendirecek.
+**Bir həftə vaxtınızı izləyin.** Ölçmədiyiniz şeyi optimallaşdıra bilməzsiniz. Bir həftə vaxtınızı həqiqətdə necə keçirdiyinizi izləyin. Nəticələr sizi təəccübləndirəcək.
 
-## Davaml Sistem Qurmaq
+## Davamlı Sistem Qurmaq
 
-En yaxsi mehsuldariliq sistemi haqiqeten istifade etdiyiniz sistemdir. Sade baslayin:
+Ən yaxşı məhsuldarlıq sistemi həqiqətən istifadə etdiyiniz sistemdir. Sadə başlayın:
 
-1. Bir tapshiriq idareciiliyi aleti secin ve 30 gun istifade edin
-2. En muhum isiniz ucun vaxt bloklamani tetbiq edin
-3. En boyuk 3 vaxt itkiciniezi mueyyen edin ve onlari hell eden aletler tapin
-4. Sisteminizi heftelik nezeerden kecirin ve uygunlashdirin
-5. Yalniz esaslari mesnimsedikden sonra murkkeblik elave edin
+1. Bir tapşırıq idarəçiliyi aləti seçin və 30 gün istifadə edin
+2. Ən mühüm işiniz üçün vaxt blamağı tətbiq edin
+3. Ən böyük 3 vaxt itkiçinizi müəyyən edin və onları həll edən alətlər tapın
+4. Sisteminizi həftəlik nəzərdən keçirin və uyğunlaşdırın
+5. Yalnız əsasları mənimsədikdən sonra mürəkkəblik əlavə edin
 
-Yadda saxlayin: mehsuldariliq aletleri vasitelerdir, meqsed deyil. Meqsed menali isi ardiciil gormek, davaml enerji saxlamaq ve sizin ucun en coo ehemiyyetli olan seylerden ireliye gedismekdir.`,
+Yadda saxlayın: məhsuldarlıq alətləri vasitələrdir, məqsəd deyil. Məqsəd mənalı işi ardıcıl görmək, davamlı enerji saxlamaq və sizin üçün ən çox əhəmiyyətli olan şeylərdən irəliyə getməkdir.`,
   },
 }
