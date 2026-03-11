@@ -32,17 +32,30 @@ function createRequest(
     method?: string
     origin?: string | null
     referer?: string | null
+    host?: string
   } = {}
 ): NextRequest {
-  const { method = 'GET', origin = null, referer = null } = options
+  const { method = 'GET', origin = null, referer = null, host } = options
   const headers = new Headers()
   if (origin) headers.set('origin', origin)
   if (referer) headers.set('referer', referer)
 
-  return new NextRequest(`http://localhost:3000${path}`, {
+  // Use a custom host when provided (for domain redirect tests);
+  // otherwise default to localhost:3000 for all existing tests.
+  const baseUrl = host ? `https://${host}` : 'http://localhost:3000'
+
+  const req = new NextRequest(`${baseUrl}${path}`, {
     method,
     headers,
   })
+
+  // NextRequest reads the host from the URL, but the middleware checks the
+  // 'host' header. Override it explicitly when a custom host is provided.
+  if (host) {
+    req.headers.set('host', host)
+  }
+
+  return req
 }
 
 // ---------------------------------------------------------------------------
@@ -51,6 +64,72 @@ function createRequest(
 describe('middleware config', () => {
   it('should export a matcher that includes all paths except static files', () => {
     expect(config.matcher).toEqual(['/((?!_next|_vercel|.*\\..*).*)'])
+  })
+})
+
+// ---------------------------------------------------------------------------
+// Domain redirect: vaxtimyoxdur.com -> vaxtimyoxdu.com (301)
+// ---------------------------------------------------------------------------
+describe('middleware - domain redirect (vaxtimyoxdur.com -> vaxtimyoxdu.com)', () => {
+  it('should 301 redirect root path from vaxtimyoxdur.com', () => {
+    const req = createRequest('/', { host: 'vaxtimyoxdur.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/')
+  })
+
+  it('should 301 redirect /tools path from vaxtimyoxdur.com', () => {
+    const req = createRequest('/tools', { host: 'vaxtimyoxdur.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/tools')
+  })
+
+  it('should 301 redirect /en/ path from vaxtimyoxdur.com', () => {
+    const req = createRequest('/en/', { host: 'vaxtimyoxdur.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/en/')
+  })
+
+  it('should 301 redirect from www.vaxtimyoxdur.com', () => {
+    const req = createRequest('/', { host: 'www.vaxtimyoxdur.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/')
+  })
+
+  it('should preserve query strings during redirect', () => {
+    const req = createRequest('/tools?q=json', { host: 'vaxtimyoxdur.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/tools?q=json')
+  })
+
+  it('should preserve deep nested paths during redirect', () => {
+    const req = createRequest('/en/tools/json-formatter', { host: 'vaxtimyoxdur.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/en/tools/json-formatter')
+  })
+
+  it('should redirect API routes from vaxtimyoxdur.com before CORS/CSRF logic', () => {
+    const req = createRequest('/api/newsletter', { host: 'vaxtimyoxdur.com', method: 'POST' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/api/newsletter')
+  })
+
+  it('should NOT redirect requests from vaxtimyoxdu.com', () => {
+    const req = createRequest('/', { host: 'vaxtimyoxdu.com' })
+    const res = middleware(req)
+    expect(res.status).not.toBe(301)
+  })
+
+  it('should NOT redirect requests from localhost', () => {
+    const req = createRequest('/')
+    const res = middleware(req)
+    expect(res.status).not.toBe(301)
   })
 })
 

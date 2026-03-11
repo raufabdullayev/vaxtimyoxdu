@@ -10,11 +10,24 @@ const ALLOWED_ORIGINS = [
   'https://www.vaxtimyoxdur.com',
 ]
 
+/** Hostnames that must be 301-redirected to the canonical domain. */
+const REDIRECT_HOSTS = ['vaxtimyoxdur.com', 'www.vaxtimyoxdur.com']
+const CANONICAL_ORIGIN = 'https://vaxtimyoxdu.com'
+
 // Create the next-intl middleware instance once.
 const intlMiddleware = createIntlMiddleware(routing)
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  // ─── Domain redirect: vaxtimyoxdur.com -> vaxtimyoxdu.com (301) ───
+  // This must run FIRST, before any other logic, to ensure all requests
+  // to the non-canonical domain are permanently redirected.
+  const host = request.headers.get('host')?.split(':')[0] // strip port if present
+  if (host && REDIRECT_HOSTS.includes(host)) {
+    const url = new URL(`${CANONICAL_ORIGIN}${pathname}${request.nextUrl.search}`)
+    return NextResponse.redirect(url, 301)
+  }
 
   // ─── API routes: keep existing CORS / CSRF logic, skip i18n ───
   if (pathname.startsWith('/api/')) {

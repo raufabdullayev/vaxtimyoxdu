@@ -19,6 +19,25 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
+  async redirects() {
+    return [
+      // 301 redirect: vaxtimyoxdur.com -> vaxtimyoxdu.com (all paths).
+      // This catches paths with file extensions (e.g. /sitemap.xml, /robots.txt)
+      // that the middleware matcher excludes. Pages and API routes are handled
+      // by the middleware redirect above for better performance.
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: '(www\\.)?vaxtimyoxdur\\.com',
+          },
+        ],
+        destination: 'https://vaxtimyoxdu.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {
