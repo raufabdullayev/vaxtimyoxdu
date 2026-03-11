@@ -32,6 +32,14 @@ const jsonLdWebsite = {
   url: 'https://vaxtimyoxdu.com',
   description: 'Vaxtınız yoxdursa, biz varıq. Qısa xəbər xülasələri və pulsuz AI onlayn alətlər.',
   inLanguage: ['az', 'en', 'tr', 'ru'],
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://vaxtimyoxdu.com/tools?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
 }
 
 const jsonLdOrganization = {

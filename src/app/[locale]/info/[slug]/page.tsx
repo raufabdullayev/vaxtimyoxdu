@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
 import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
 import RelatedArticles from '@/components/layout/RelatedArticles'
+import NewsRelatedTools from '@/components/layout/NewsRelatedTools'
 import { newsArticles } from '@/data/news-articles'
 
 export function generateStaticParams() {
@@ -35,6 +36,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug, locale } = await params
   setRequestLocale(locale)
   const nav = await getTranslations('common.nav')
+  const crossT = await getTranslations('crossLinks')
 
   const article = newsArticles[slug]
   if (!article) notFound()
@@ -99,6 +101,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         description={description}
       />
       <NewsletterInlineCTA variant="news" />
+      <NewsRelatedTools category={article.category} title={crossT('tryTheseTool')} />
       <LazyAdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
       <RelatedArticles
         items={Object.entries(newsArticles)

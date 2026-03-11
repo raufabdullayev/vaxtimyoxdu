@@ -8,6 +8,7 @@ import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, genera
 import ToolTemplate from '@/components/tools/ToolTemplate'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import RelatedTools from '@/components/tools/RelatedTools'
+import RelatedBlogPosts from '@/components/tools/RelatedBlogPosts'
 import ToolUseTrackerWrapper from '@/components/analytics/ToolUseTrackerWrapper'
 import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
 
@@ -140,6 +141,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const { slug, locale } = await params
   setRequestLocale(locale)
   const t = await getTranslations('tools')
+  const crossT = await getTranslations('crossLinks')
 
   const tool = getToolBySlug(slug)
   if (!tool) notFound()
@@ -203,6 +205,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         description={localizedDescription || tool.shortDescription}
       />
       <RelatedTools currentTool={tool} />
+      <RelatedBlogPosts toolSlug={tool.slug} title={crossT('relatedBlogPosts')} />
     </>
   )
 }

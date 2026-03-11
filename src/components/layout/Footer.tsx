@@ -4,6 +4,9 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import dynamic from 'next/dynamic'
 import { Github, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { popularToolSlugs } from '@/lib/utils/cross-links'
+import { categories } from '@/config/tools'
+import type { ToolCategory } from '@/types/tool'
 
 // Newsletter is in the footer (below the fold on every page), so it should
 // never block the initial page load. Loading it lazily saves ~3-5 KB from
@@ -38,14 +41,36 @@ const socialLinks = [
   },
 ]
 
+/** Top 8 popular tools shown in the footer for internal linking. */
+const footerPopularToolSlugs = popularToolSlugs.slice(0, 8)
+
+/** English fallback names (used only when translation is unavailable). */
+const toolEnglishNames: Record<string, string> = {
+  'ai-text-rewriter': 'AI Text Rewriter',
+  'json-formatter': 'JSON Formatter',
+  'image-compress': 'Image Compressor',
+  'pdf-merge': 'PDF Merge',
+  'qr-code-generator': 'QR Code Generator',
+  'password-generator': 'Password Generator',
+  'color-picker': 'Color Picker',
+  'word-counter': 'Word Counter',
+  'base64-encode-decode': 'Base64 Encode/Decode',
+  'uuid-generator': 'UUID Generator',
+}
+
+/** Category keys in display order. */
+const categoryOrder: ToolCategory[] = ['ai', 'pdf', 'image', 'dev', 'generators', 'text']
+
 export default function Footer() {
   const t = useTranslations('footer')
   const nav = useTranslations('common.nav')
+  const toolsT = useTranslations('tools')
 
   return (
     <footer className="border-t bg-muted/50">
       <div className="container py-8 md:py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="font-bold text-lg mb-3">Vaxtim Yoxdu</h3>
             <p className="text-sm text-muted-foreground">
@@ -69,17 +94,60 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div>
-            <h4 className="font-semibold text-sm mb-3">{t('toolsSection')}</h4>
+
+          {/* Popular tools column */}
+          <div className="col-span-1">
+            <h4 className="font-semibold text-sm mb-3">{t('popularToolsSection')}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/tools/ai-text-rewriter" className="hover:text-foreground">AI Text Rewriter</Link></li>
-              <li><Link href="/tools/ai-grammar-checker" className="hover:text-foreground">Grammar Checker</Link></li>
-              <li><Link href="/tools/image-compress" className="hover:text-foreground">Image Compressor</Link></li>
-              <li><Link href="/tools/pdf-merge" className="hover:text-foreground">PDF Merge</Link></li>
-              <li><Link href="/tools/json-formatter" className="hover:text-foreground">JSON Formatter</Link></li>
-              <li><Link href="/tools/qr-code-generator" className="hover:text-foreground">QR Code Generator</Link></li>
+              {footerPopularToolSlugs.map((slug) => {
+                let displayName = toolEnglishNames[slug] || slug
+                try {
+                  const nameKey = `toolNames.${slug}.name` as Parameters<typeof toolsT>[0]
+                  const translated = toolsT(nameKey)
+                  if (translated && translated !== nameKey) {
+                    displayName = translated
+                  }
+                } catch {
+                  // fallback to English
+                }
+                return (
+                  <li key={slug}>
+                    <Link href={`/tools/${slug}`} className="hover:text-foreground transition-colors">
+                      {displayName}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
+
+          {/* Categories column */}
+          <div className="col-span-1">
+            <h4 className="font-semibold text-sm mb-3">{t('categoriesSection')}</h4>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {categoryOrder.map((catKey) => {
+                let displayName = categories[catKey]?.name || catKey
+                try {
+                  const nameKey = `categories.${catKey}` as Parameters<typeof toolsT>[0]
+                  const translated = toolsT(nameKey)
+                  if (translated && translated !== nameKey) {
+                    displayName = translated
+                  }
+                } catch {
+                  // fallback to English
+                }
+                return (
+                  <li key={catKey}>
+                    <Link href="/tools" className="hover:text-foreground transition-colors">
+                      {displayName}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+
+          {/* Sections column */}
           <div>
             <h4 className="font-semibold text-sm mb-3">{t('sectionsTitle')}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
@@ -89,6 +157,8 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-foreground">{nav('about')}</Link></li>
             </ul>
           </div>
+
+          {/* Legal column */}
           <div>
             <h4 className="font-semibold text-sm mb-3">{t('legalTitle')}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
