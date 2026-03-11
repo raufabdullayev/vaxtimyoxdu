@@ -147,6 +147,22 @@ export function generateToolMetadata(
   }
 }
 
+/**
+ * Map tool category to a schema.org applicationCategory value.
+ * https://schema.org/SoftwareApplication lists suggested values.
+ */
+function getApplicationCategory(category: string): string {
+  const categoryMap: Record<string, string> = {
+    ai: 'UtilitiesApplication',
+    pdf: 'UtilitiesApplication',
+    image: 'MultimediaApplication',
+    dev: 'DeveloperApplication',
+    generators: 'UtilitiesApplication',
+    text: 'UtilitiesApplication',
+  }
+  return categoryMap[category] || 'UtilitiesApplication'
+}
+
 export function generateToolJsonLd(
   tool: Tool,
   options?: { locale?: string; localizedName?: string; localizedDescription?: string }
@@ -161,8 +177,8 @@ export function generateToolJsonLd(
     name,
     description,
     url,
-    applicationCategory: 'UtilitiesApplication',
-    operatingSystem: 'All',
+    applicationCategory: getApplicationCategory(tool.category),
+    operatingSystem: 'Web Browser',
     inLanguage: locale,
     offers: {
       '@type': 'Offer',
@@ -174,6 +190,86 @@ export function generateToolJsonLd(
       name: SITE_NAME,
       url: SITE_URL,
     },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo.png`,
+      },
+    },
+  }
+}
+
+/**
+ * Generate HowTo JSON-LD schema for a tool page.
+ * Provides a generic 3-step "how to use" guide for every tool.
+ */
+export function generateToolHowToJsonLd(
+  tool: Tool,
+  options?: { locale?: string; localizedName?: string; localizedDescription?: string }
+) {
+  const locale = options?.locale || 'en'
+  const name = options?.localizedName || tool.name
+  const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
+
+  // Determine input method based on tool type
+  let step1Text: string
+  let step2Text: string
+  let step3Text: string
+
+  if (tool.category === 'pdf') {
+    step1Text = `Open the ${name} tool and upload your PDF file(s) by clicking the upload area or dragging and dropping.`
+    step2Text = `Configure the settings as needed (page ranges, quality, output options) and click the process button.`
+    step3Text = `Download the resulting PDF file to your device. All processing happens in your browser -- your files are never uploaded to a server.`
+  } else if (tool.category === 'image') {
+    step1Text = `Open the ${name} tool and upload your image by clicking the upload area or dragging and dropping. Supports JPEG, PNG, and WebP formats.`
+    step2Text = `Adjust the settings (dimensions, quality, format) to match your needs and apply the changes.`
+    step3Text = `Preview the result and download the processed image. All processing is done client-side in your browser.`
+  } else if (tool.isAI) {
+    step1Text = `Open the ${name} tool and enter or paste your text into the input area.`
+    step2Text = `Select the desired options (tone, length, style) and click the process button to let the AI analyze your text.`
+    step3Text = `Review the AI-generated result and copy it to your clipboard or make further adjustments as needed.`
+  } else {
+    step1Text = `Open the ${name} tool and enter or paste your input data into the provided field.`
+    step2Text = `Configure any available options or settings, then click the process or convert button.`
+    step3Text = `Copy the result to your clipboard or download the output. The tool processes everything instantly in your browser.`
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `How to Use ${name}`,
+    description: `Step-by-step guide on how to use the free online ${name} tool.`,
+    totalTime: 'PT1M',
+    tool: {
+      '@type': 'HowToTool',
+      name: 'Web Browser',
+    },
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Open the tool and provide input',
+        text: step1Text,
+        url: url,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Configure settings and process',
+        text: step2Text,
+        url: url,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Get your result',
+        text: step3Text,
+        url: url,
+      },
+    ],
   }
 }
 

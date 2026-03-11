@@ -4,6 +4,7 @@ import {
   generateToolMetadata,
   generateToolJsonLd,
   generateToolFaqJsonLd,
+  generateToolHowToJsonLd,
   generateArticleMetadata,
   generateNewsArticleJsonLd,
   generateBlogPostMetadata,
@@ -239,12 +240,13 @@ describe('generateToolJsonLd()', () => {
     expect(azJsonLd.url).toBe(`${SITE_URL}/tools/${tool.slug}`)
   })
 
-  it('should set applicationCategory to UtilitiesApplication', () => {
-    expect(jsonLd.applicationCategory).toBe('UtilitiesApplication')
+  it('should set applicationCategory based on tool category', () => {
+    // Default test tool has category 'dev' which maps to DeveloperApplication
+    expect(jsonLd.applicationCategory).toBe('DeveloperApplication')
   })
 
-  it('should set operatingSystem to All', () => {
-    expect(jsonLd.operatingSystem).toBe('All')
+  it('should set operatingSystem to Web Browser', () => {
+    expect(jsonLd.operatingSystem).toBe('Web Browser')
   })
 
   it('should include a free offer', () => {
@@ -275,6 +277,145 @@ describe('generateToolJsonLd()', () => {
     expect(localizedJsonLd.description).toBe('Azerbaycan dilinde aciklama.')
     expect(localizedJsonLd.inLanguage).toBe('az')
     expect(localizedJsonLd.url).toBe(`${SITE_URL}/tools/${tool.slug}`)
+  })
+  it('should map applicationCategory for image tools to MultimediaApplication', () => {
+    const imageTool = makeTool({ category: 'image' })
+    const imageJsonLd = generateToolJsonLd(imageTool)
+    expect(imageJsonLd.applicationCategory).toBe('MultimediaApplication')
+  })
+
+  it('should map applicationCategory for ai tools to UtilitiesApplication', () => {
+    const aiTool = makeTool({ category: 'ai', isAI: true, isClientSide: false })
+    const aiJsonLd = generateToolJsonLd(aiTool)
+    expect(aiJsonLd.applicationCategory).toBe('UtilitiesApplication')
+  })
+
+  it('should map applicationCategory for pdf tools to UtilitiesApplication', () => {
+    const pdfTool = makeTool({ category: 'pdf' })
+    const pdfJsonLd = generateToolJsonLd(pdfTool)
+    expect(pdfJsonLd.applicationCategory).toBe('UtilitiesApplication')
+  })
+
+  it('should map applicationCategory for generators to UtilitiesApplication', () => {
+    const genTool = makeTool({ category: 'generators' })
+    const genJsonLd = generateToolJsonLd(genTool)
+    expect(genJsonLd.applicationCategory).toBe('UtilitiesApplication')
+  })
+
+  it('should map applicationCategory for text tools to UtilitiesApplication', () => {
+    const textTool = makeTool({ category: 'text' })
+    const textJsonLd = generateToolJsonLd(textTool)
+    expect(textJsonLd.applicationCategory).toBe('UtilitiesApplication')
+  })
+
+  it('should include publisher with Organization type and logo', () => {
+    expect(jsonLd.publisher['@type']).toBe('Organization')
+    expect(jsonLd.publisher.name).toBe(SITE_NAME)
+    expect(jsonLd.publisher.url).toBe(SITE_URL)
+    expect(jsonLd.publisher.logo['@type']).toBe('ImageObject')
+    expect(jsonLd.publisher.logo.url).toBe(`${SITE_URL}/logo.png`)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// generateToolHowToJsonLd
+// ---------------------------------------------------------------------------
+describe('generateToolHowToJsonLd()', () => {
+  const tool = makeTool()
+  const howTo = generateToolHowToJsonLd(tool)
+
+  it('should have @context set to schema.org', () => {
+    expect(howTo['@context']).toBe('https://schema.org')
+  })
+
+  it('should have @type set to HowTo', () => {
+    expect(howTo['@type']).toBe('HowTo')
+  })
+
+  it('should include the tool name in the HowTo name', () => {
+    expect(howTo.name).toContain(tool.name)
+  })
+
+  it('should include a description', () => {
+    expect(typeof howTo.description).toBe('string')
+    expect(howTo.description.length).toBeGreaterThan(0)
+  })
+
+  it('should set totalTime to PT1M', () => {
+    expect(howTo.totalTime).toBe('PT1M')
+  })
+
+  it('should include a HowToTool referencing Web Browser', () => {
+    expect(howTo.tool['@type']).toBe('HowToTool')
+    expect(howTo.tool.name).toBe('Web Browser')
+  })
+
+  it('should include exactly 3 steps', () => {
+    expect(howTo.step).toHaveLength(3)
+  })
+
+  it('should have HowToStep type for every step', () => {
+    for (const step of howTo.step) {
+      expect(step['@type']).toBe('HowToStep')
+    }
+  })
+
+  it('should have correct position values (1, 2, 3)', () => {
+    expect(howTo.step[0].position).toBe(1)
+    expect(howTo.step[1].position).toBe(2)
+    expect(howTo.step[2].position).toBe(3)
+  })
+
+  it('should have name and text for every step', () => {
+    for (const step of howTo.step) {
+      expect(typeof step.name).toBe('string')
+      expect(step.name.length).toBeGreaterThan(0)
+      expect(typeof step.text).toBe('string')
+      expect(step.text.length).toBeGreaterThan(0)
+    }
+  })
+
+  it('should set step URLs to the tool page URL', () => {
+    for (const step of howTo.step) {
+      expect(step.url).toBe(`${SITE_URL}/en/tools/${tool.slug}`)
+    }
+  })
+
+  it('should omit locale prefix for default locale (az)', () => {
+    const azHowTo = generateToolHowToJsonLd(tool, { locale: 'az' })
+    expect(azHowTo.step[0].url).toBe(`${SITE_URL}/tools/${tool.slug}`)
+  })
+
+  it('should use localized name when provided', () => {
+    const localized = generateToolHowToJsonLd(tool, {
+      locale: 'tr',
+      localizedName: 'Test Araci',
+    })
+    expect(localized.name).toContain('Test Araci')
+  })
+
+  it('should generate PDF-specific steps for pdf category', () => {
+    const pdfTool = makeTool({ category: 'pdf', name: 'PDF Merge' })
+    const pdfHowTo = generateToolHowToJsonLd(pdfTool)
+    expect(pdfHowTo.step[0].text).toContain('PDF')
+  })
+
+  it('should generate image-specific steps for image category', () => {
+    const imgTool = makeTool({ category: 'image', name: 'Image Resize' })
+    const imgHowTo = generateToolHowToJsonLd(imgTool)
+    expect(imgHowTo.step[0].text).toContain('image')
+  })
+
+  it('should generate AI-specific steps for AI tools', () => {
+    const aiTool = makeTool({ category: 'ai', isAI: true, isClientSide: false, name: 'AI Summarizer' })
+    const aiHowTo = generateToolHowToJsonLd(aiTool)
+    expect(aiHowTo.step[1].text).toContain('AI')
+  })
+
+  it('should generate generic steps for other tool categories', () => {
+    const textTool = makeTool({ category: 'text', name: 'Word Counter' })
+    const textHowTo = generateToolHowToJsonLd(textTool)
+    expect(textHowTo.step[0].text).toContain('input')
   })
 })
 

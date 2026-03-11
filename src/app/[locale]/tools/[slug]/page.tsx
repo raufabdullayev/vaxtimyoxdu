@@ -4,11 +4,12 @@ import dynamic from 'next/dynamic'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
-import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
+import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateToolHowToJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import ToolTemplate from '@/components/tools/ToolTemplate'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import RelatedTools from '@/components/tools/RelatedTools'
 import ToolUseTrackerWrapper from '@/components/analytics/ToolUseTrackerWrapper'
+import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
 
 const toolComponents: Record<string, React.ComponentType> = {
   // AI Tools
@@ -168,6 +169,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   const jsonLd = generateToolJsonLd(tool, localeOpts)
   const faqJsonLd = generateToolFaqJsonLd(tool, localeOpts)
+  const howToJsonLd = generateToolHowToJsonLd(tool, localeOpts)
   const displayName = localizedName || tool.name
 
   return (
@@ -180,6 +182,10 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <Breadcrumb
         items={[
           { label: t('breadcrumbHome'), href: '/' },
@@ -191,6 +197,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         <Component />
       </ToolTemplate>
       <ToolUseTrackerWrapper slug={tool.slug} />
+      <ShareButtonsWrapper
+        path={`/tools/${tool.slug}`}
+        title={displayName}
+        description={localizedDescription || tool.shortDescription}
+      />
       <RelatedTools currentTool={tool} />
     </>
   )
