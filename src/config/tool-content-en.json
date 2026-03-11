@@ -1,0 +1,971 @@
+{
+  "sectionTitles": {
+    "howToUse": "How to Use",
+    "whyUse": "Why Use This Tool",
+    "tips": "Tips & Best Practices",
+    "faq": "Frequently Asked Questions"
+  },
+  "json-formatter": {
+    "howToUse": [
+      "Paste your raw JSON data into the input field on the left side of the editor. You can paste JSON from any source, including API responses, configuration files, or database exports.",
+      "Click the Format button to beautify your JSON with proper indentation and line breaks. The formatter automatically detects the structure and applies consistent spacing for easy reading.",
+      "Use the Minify button if you need to compress your JSON by removing all whitespace. This is useful when preparing data for API requests or reducing payload size in production.",
+      "Review the output panel which highlights any syntax errors with descriptive messages. If your JSON contains errors, the validator pinpoints the exact line and character where the issue occurs.",
+      "Copy the formatted result to your clipboard with one click or download it as a .json file for local use."
+    ],
+    "whyUse": [
+      "Debugging API responses becomes significantly faster when JSON data is properly formatted with indentation and syntax highlighting. Nested objects that appear as a single unreadable line transform into a clear hierarchical structure.",
+      "The built-in validator catches common JSON mistakes like trailing commas, missing quotes around keys, single quotes instead of double quotes, and unescaped special characters before they cause runtime errors in your application.",
+      "Everything runs entirely in your browser using JavaScript. Your sensitive configuration data, API keys, and private information never leave your device, making this tool safe for enterprise and production data.",
+      "Unlike desktop applications that require installation, this tool works instantly on any device with a web browser. Whether you are on a desktop workstation, a tablet during a meeting, or a phone while troubleshooting, your JSON formatter is always available.",
+      "Professional developers use JSON formatting tools daily when working with REST APIs, GraphQL responses, NoSQL databases, configuration management, and data interchange between microservices."
+    ],
+    "tips": [
+      "When working with large JSON files (over 1MB), consider formatting only the section you need to inspect rather than the entire document for better performance.",
+      "Use the minified output when storing JSON in databases or sending it over the network to reduce bandwidth usage and storage costs.",
+      "If your JSON fails validation, check for common issues: trailing commas after the last item in arrays or objects, single quotes instead of double quotes, and unquoted property names.",
+      "For nested JSON with many levels, use the collapse/expand feature to focus on specific sections without getting lost in the overall structure."
+    ],
+    "faqs": [
+      {
+        "question": "What is a JSON Formatter and why do I need one?",
+        "answer": "A JSON Formatter is a tool that takes raw, minified, or poorly structured JSON data and transforms it into a well-organized, human-readable format with proper indentation. Developers need JSON formatters daily when working with API responses, debugging data structures, reviewing configuration files, and preparing documentation. Without formatting, complex nested JSON objects appear as a single long line that is nearly impossible to read and debug."
+      },
+      {
+        "question": "Is my JSON data safe when using this online formatter?",
+        "answer": "Yes, your data is completely safe. This JSON formatter runs entirely in your browser using client-side JavaScript. Your JSON data is never sent to any server, never stored in any database, and never logged anywhere. The processing happens locally on your device, which means even sensitive data like API keys, credentials, and private configuration can be formatted without any privacy concerns."
+      },
+      {
+        "question": "What is the difference between JSON formatting and JSON minification?",
+        "answer": "JSON formatting (also called beautifying or pretty-printing) adds whitespace, indentation, and line breaks to make JSON human-readable. JSON minification does the opposite: it removes all unnecessary whitespace, comments, and formatting to produce the smallest possible file size. Formatted JSON is ideal for development and debugging, while minified JSON is preferred for production use where file size and bandwidth matter."
+      },
+      {
+        "question": "Can this tool validate JSON with nested objects and arrays?",
+        "answer": "Yes, the validator handles JSON of any complexity, including deeply nested objects, multidimensional arrays, mixed data types, Unicode characters, and escaped special characters. It checks for proper bracket matching, correct comma placement, valid string formatting, and compliance with the JSON specification (RFC 8259). Error messages pinpoint the exact location of any syntax issues."
+      },
+      {
+        "question": "What common JSON errors does the validator detect?",
+        "answer": "The validator detects all common JSON syntax errors including: trailing commas after the last element in arrays or objects, single quotes instead of double quotes around strings and keys, unquoted property names, missing colons between keys and values, unclosed brackets or braces, invalid escape sequences, and duplicate keys in the same object level."
+      },
+      {
+        "question": "Can I use this JSON formatter for large files?",
+        "answer": "Yes, the formatter handles large JSON files efficiently because it processes everything in your browser. For optimal performance with very large files (several megabytes), we recommend using a modern browser like Chrome or Firefox and ensuring your device has sufficient memory. The tool can format files up to several MB without issues, though extremely large datasets may benefit from being processed in smaller chunks."
+      },
+      {
+        "question": "Does this tool support JSON5 or JSONC (JSON with comments)?",
+        "answer": "This tool follows the standard JSON specification (RFC 8259), which does not allow comments or trailing commas. If you paste JSON5 or JSONC content, the validator will flag comments and non-standard syntax as errors. To format JSON5 or JSONC, you would need to remove comments first and then format the resulting standard JSON."
+      }
+    ]
+  },
+  "image-compress": {
+    "howToUse": [
+      "Click the upload area or drag and drop your image file into the tool. Supported formats include JPEG, PNG, and WebP images of any resolution.",
+      "Adjust the quality slider to set your desired compression level. Lower values produce smaller files but may introduce visible quality loss, while higher values preserve quality at the cost of larger file sizes.",
+      "Preview the compressed result side by side with the original to visually compare quality. The tool displays both file sizes so you can see exactly how much space you are saving.",
+      "Download the compressed image when you are satisfied with the quality-to-size ratio. The output file is ready for use on websites, emails, or social media."
+    ],
+    "whyUse": [
+      "Website page load speed is a critical ranking factor for search engines. Compressing images before uploading them to your website can reduce page load times by 40-70%, directly improving your SEO rankings and user experience.",
+      "Social media platforms, email services, and content management systems often impose file size limits. Compressing images ensures your visuals meet upload requirements without sacrificing clarity or visual appeal.",
+      "All image processing happens directly in your browser. Your photos, screenshots, and sensitive images are never uploaded to any server, guaranteeing complete privacy. This makes the tool safe for medical images, personal photos, and confidential documents.",
+      "Reduced image sizes mean lower bandwidth costs for website operators and faster downloads for visitors on slower connections. A single page with properly compressed images can save megabytes of data transfer per visitor.",
+      "Unlike many online compressors that add watermarks, limit file sizes, or require paid subscriptions, this tool is completely free with no restrictions on the number of images you can process."
+    ],
+    "tips": [
+      "For photographs, JPEG compression at 75-85% quality usually provides an excellent balance between file size and visual quality that most viewers cannot distinguish from the original.",
+      "PNG images with large areas of solid color compress very well. Consider converting complex photographs from PNG to JPEG for significantly better compression ratios.",
+      "WebP format often produces files 25-35% smaller than JPEG at equivalent visual quality. If your target platforms support WebP, prefer this format for maximum compression.",
+      "Always keep an original copy of important images before compressing. Compression is a lossy process for JPEG and WebP, meaning quality cannot be restored once reduced."
+    ],
+    "faqs": [
+      {
+        "question": "How much can I reduce image file size without losing quality?",
+        "answer": "For JPEG images, you can typically reduce file size by 60-80% with minimal visible quality loss by using a quality setting between 70-85%. The exact savings depend on the image content: photographs with many details retain quality well at lower settings, while images with text or sharp edges may need higher quality settings. PNG images can often be reduced by 30-50% through lossless optimization without any quality loss."
+      },
+      {
+        "question": "Are my images uploaded to a server when I compress them?",
+        "answer": "No, all image compression happens entirely in your browser using client-side JavaScript and the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for personal photos, sensitive documents, and confidential business images."
+      },
+      {
+        "question": "What is the best image format for web use?",
+        "answer": "WebP is currently the best format for web images, offering 25-35% smaller files than JPEG at equivalent quality, with support from all major browsers. JPEG remains excellent for photographs when broad compatibility is needed. PNG is ideal for images requiring transparency or those with text, logos, and sharp edges where lossless compression is important."
+      },
+      {
+        "question": "Does image compression affect SEO and page speed?",
+        "answer": "Absolutely. Google considers page speed a ranking factor, and images are typically the largest contributors to page size. Properly compressed images can improve your Core Web Vitals scores, reduce Largest Contentful Paint (LCP) times, and lead to better search engine rankings. Google recommends keeping total page weight under 1.6MB, with images accounting for a significant portion."
+      },
+      {
+        "question": "Can I compress multiple images at once?",
+        "answer": "The current version processes one image at a time for maximum quality control. For each image, you can adjust the quality slider and preview the result before downloading. This approach ensures you get the optimal compression level for each individual image based on its content and your quality requirements."
+      },
+      {
+        "question": "What is the maximum image size I can compress?",
+        "answer": "Since processing happens in your browser, the maximum size depends on your device's available memory. Modern devices with 4GB or more RAM can typically handle images up to 50 megapixels (approximately 8000x6000 pixels) without issues. For very large images, processing may take a few seconds longer but will complete successfully on most modern devices."
+      }
+    ]
+  },
+  "pdf-merge": {
+    "howToUse": [
+      "Click the upload area or drag and drop multiple PDF files into the tool. You can select two or more PDF documents that you want to combine into a single file.",
+      "Rearrange the order of your PDF files by dragging them into your preferred sequence. The final merged document will follow this exact order from first to last.",
+      "Review the file list to confirm all documents are included and in the correct order. You can remove individual files or add more PDFs before merging.",
+      "Click the Merge button to combine all selected PDFs into one document. The process runs entirely in your browser and typically completes within seconds.",
+      "Download your merged PDF file once processing is complete. The combined document preserves all pages, formatting, links, and bookmarks from the original files."
+    ],
+    "whyUse": [
+      "Combining related documents into a single PDF simplifies file management and sharing. Instead of sending multiple attachments, you can share one comprehensive document that keeps everything organized and easy to navigate.",
+      "All PDF processing happens client-side in your browser using JavaScript. Your sensitive documents, contracts, financial statements, and personal files never leave your device, ensuring complete confidentiality.",
+      "Unlike many online PDF services that impose daily limits, file size caps, or watermarks on free accounts, this tool has no restrictions. Merge as many PDFs as you need, as often as you need, without any limitations.",
+      "The tool preserves the original quality of each PDF during the merge process. Fonts, images, vector graphics, hyperlinks, and form fields remain intact in the final combined document.",
+      "Whether you are preparing a business proposal from multiple sections, combining scanned receipts for expense reports, or assembling a portfolio, merging PDFs saves time and creates professional results."
+    ],
+    "tips": [
+      "Ensure all PDF files are finalized before merging. While the tool preserves content perfectly, making changes to the merged file requires splitting and re-merging.",
+      "For large merges with many files, process them in batches of 10-15 documents for optimal browser performance. You can then merge the resulting files in a second pass.",
+      "Check that your PDFs have consistent page sizes if uniformity is important. The tool preserves each page's original dimensions, so mixing letter and A4 sizes will result in pages of different sizes in the final document.",
+      "Name your source files descriptively before merging so the file list is easy to reorder correctly."
+    ],
+    "faqs": [
+      {
+        "question": "How do I merge PDF files online for free?",
+        "answer": "Simply drag and drop your PDF files into the upload area, arrange them in your desired order by dragging the file cards, and click the Merge button. The tool combines all your PDFs into a single document that you can download instantly. No registration, no file size limits, and no watermarks. The entire process runs in your browser, keeping your files private and secure."
+      },
+      {
+        "question": "Are my PDF files uploaded to a server?",
+        "answer": "No. This PDF merger processes everything directly in your web browser using client-side JavaScript libraries. Your files never leave your computer, are never uploaded to any server, and are never stored in any cloud storage. This makes it safe for confidential documents including contracts, financial records, legal papers, and personal information."
+      },
+      {
+        "question": "Is there a limit on how many PDFs I can merge?",
+        "answer": "There is no hard limit on the number of files. You can merge 2, 10, or even 50+ PDF files in a single operation. The only practical limitation is your device's available memory. For very large merges with many files totaling hundreds of megabytes, we recommend processing in smaller batches for optimal performance."
+      },
+      {
+        "question": "Does the merge preserve bookmarks, links, and form fields?",
+        "answer": "Yes, the PDF merger preserves the internal structure of each document including bookmarks, hyperlinks, form fields, annotations, and embedded fonts. The final merged document maintains all the interactive elements from the original files, ensuring nothing is lost during the combination process."
+      },
+      {
+        "question": "Can I change the page order in the merged PDF?",
+        "answer": "Yes, you can reorder the PDF files before merging by dragging them in the file list. Each file's pages will appear in the merged document in the order shown. If you need to reorder individual pages within a single PDF, use our PDF Split tool first to extract specific pages, then merge them in your desired sequence."
+      },
+      {
+        "question": "What is the maximum file size for merging PDFs?",
+        "answer": "Since processing happens in your browser, the maximum depends on your device's RAM. Modern computers with 8GB+ RAM can typically handle combined file sizes of 100MB or more. For mobile devices, smaller combined sizes (under 50MB) are recommended. Very large PDF files with high-resolution images will require more memory than text-heavy documents of the same page count."
+      }
+    ]
+  },
+  "qr-code-generator": {
+    "howToUse": [
+      "Enter the content you want to encode in the QR code. This can be a URL, plain text, email address, phone number, Wi-Fi credentials, or any other text-based information up to several thousand characters.",
+      "Customize the appearance by adjusting the size, selecting colors for the foreground and background, and choosing the error correction level. Higher error correction makes the QR code more resilient to damage but slightly larger.",
+      "Preview the generated QR code in real time as you type and adjust settings. The preview updates instantly so you can see exactly how the final code will look.",
+      "Test the QR code by scanning it with your phone's camera or a QR scanner app to verify it contains the correct information before sharing or printing.",
+      "Download the QR code as a PNG image for digital use or as SVG for print materials. SVG format is recommended for print because it scales to any size without losing quality."
+    ],
+    "whyUse": [
+      "QR codes bridge the physical and digital worlds, allowing customers to instantly access your website, product information, payment links, or contact details by simply scanning a code with their smartphone camera.",
+      "Modern smartphones have built-in QR code scanners in their default camera apps, making QR codes universally accessible without requiring any special app installation. This technology reaches billions of potential users worldwide.",
+      "Business cards, restaurant menus, product packaging, event tickets, promotional materials, and real estate listings all benefit from QR codes that link to detailed information, interactive content, or direct action like calling a phone number.",
+      "The tool runs entirely in your browser, meaning your URLs, contact information, and Wi-Fi passwords are never sent to or stored on any server. Your data remains completely private throughout the generation process.",
+      "Generate QR codes for free without watermarks, usage limits, or quality restrictions. Every generated code is production-ready for both digital and print applications."
+    ],
+    "tips": [
+      "Use Medium or High error correction level when the QR code will be printed on materials that might get damaged, folded, or partially obscured. Low error correction is fine for digital-only use.",
+      "For print materials, download the SVG format which scales perfectly to any size. PNG works well for digital use like websites, emails, and social media posts.",
+      "Always test your QR code on multiple devices before mass-printing. Scan it with at least two different phones to ensure compatibility and correct content.",
+      "When linking to a URL, use a short URL or redirect service so you can update the destination later without reprinting the QR code.",
+      "Maintain sufficient contrast between the foreground and background colors. Dark codes on light backgrounds scan most reliably across all devices."
+    ],
+    "faqs": [
+      {
+        "question": "What types of content can I put in a QR code?",
+        "answer": "QR codes can encode various types of content including website URLs, plain text, email addresses (with subject and body), phone numbers, SMS messages, Wi-Fi network credentials, geographic coordinates, calendar events, and vCard contact information. The maximum capacity depends on the data type: approximately 7,000 numeric characters, 4,300 alphanumeric characters, or 3,000 bytes of binary data."
+      },
+      {
+        "question": "Is this QR code generator really free with no watermarks?",
+        "answer": "Yes, this tool is completely free with no watermarks, no usage limits, and no account required. Every QR code you generate is production-ready and can be used commercially without any restrictions. The tool runs entirely in your browser, so there are no server costs that would necessitate limiting usage."
+      },
+      {
+        "question": "What is QR code error correction and which level should I choose?",
+        "answer": "Error correction allows a QR code to remain scannable even when partially damaged or obscured. There are four levels: Low (7% recovery), Medium (15% recovery), Quartile (25% recovery), and High (30% recovery). Use Medium for most purposes. Choose High when printing on materials that may get scratched, folded, or stained. Low is sufficient for clean digital displays where damage is unlikely."
+      },
+      {
+        "question": "What is the difference between PNG and SVG QR code formats?",
+        "answer": "PNG is a raster (pixel-based) format ideal for digital use on websites, emails, social media, and presentations. SVG is a vector format that scales to any size without losing quality, making it perfect for print materials like business cards, posters, banners, and product packaging. For professional print work, always use SVG."
+      },
+      {
+        "question": "How small can I print a QR code and still have it work?",
+        "answer": "The minimum recommended print size for a QR code is approximately 2cm x 2cm (about 0.8 x 0.8 inches) for close-range scanning with a smartphone. For scanning from greater distances (like posters or signage), the QR code should be larger. A general rule is that the QR code width should be at least one-tenth of the expected scanning distance."
+      },
+      {
+        "question": "Do QR codes expire?",
+        "answer": "Static QR codes like the ones generated by this tool never expire. The data is encoded directly into the code pattern and remains readable indefinitely, as long as the physical code is not damaged beyond its error correction capability. However, if the QR code links to a URL, the content at that URL may change or become unavailable independently of the QR code itself."
+      },
+      {
+        "question": "Can I customize the colors of my QR code?",
+        "answer": "Yes, you can customize both the foreground (the dark modules) and background colors. However, it is important to maintain sufficient contrast between them for reliable scanning. Dark foreground on a light background works best. Avoid very light colors for the foreground or very dark colors for the background, as this can prevent scanners from recognizing the code."
+      }
+    ]
+  },
+  "password-generator": {
+    "howToUse": [
+      "Set the desired password length using the slider or input field. Security experts recommend a minimum of 12 characters for important accounts, with 16 or more characters for critical services like banking and email.",
+      "Select the character types to include in your password: uppercase letters (A-Z), lowercase letters (a-z), numbers (0-9), and special symbols (!@#$%^&*). Including all four types maximizes password strength.",
+      "Click the Generate button to create a random password. The generator uses cryptographically secure random number generation (crypto.getRandomValues) to ensure true randomness.",
+      "Review the password strength indicator which rates your password from weak to very strong based on length, character diversity, and entropy. Aim for at least a Strong rating for all important accounts.",
+      "Copy the generated password to your clipboard with one click and paste it directly into your registration form or password manager."
+    ],
+    "whyUse": [
+      "Data breaches expose billions of passwords annually. Using unique, randomly generated passwords for each account ensures that a breach on one service does not compromise your other accounts. Reusing passwords is the single biggest security risk for individual users.",
+      "Humans are inherently bad at creating random passwords. We tend to use predictable patterns, dictionary words, personal information like birthdays, and simple substitutions (a becomes @, o becomes 0) that password-cracking algorithms easily defeat. A proper random generator eliminates these patterns entirely.",
+      "The password is generated entirely in your browser using the Web Crypto API. The generated password is never transmitted to any server, never logged, and never stored anywhere. You are the only person who ever sees the password.",
+      "A truly random 16-character password using all character types has approximately 100 bits of entropy, making it virtually impossible to crack through brute force even with modern computing power. Such a password would take billions of years to guess.",
+      "The strength indicator provides immediate visual feedback on your password's security level, helping you understand the relationship between length, character variety, and overall password strength."
+    ],
+    "tips": [
+      "Always use a unique password for each account. If you cannot remember them all, use a reputable password manager like Bitwarden, 1Password, or KeePass to store your credentials securely.",
+      "For maximum security, enable two-factor authentication (2FA) on important accounts in addition to using strong passwords. Even the strongest password benefits from an additional layer of protection.",
+      "When a website limits special characters, generate a longer password using only letters and numbers. A 20-character alphanumeric password is stronger than a 10-character password with all character types.",
+      "Avoid modifying generated passwords to make them more memorable. Any pattern you introduce reduces the randomness and therefore the security of the password.",
+      "Generate separate passwords for each tier of account importance: banking, email, social media, and casual accounts should all have different, unique passwords."
+    ],
+    "faqs": [
+      {
+        "question": "How long should my password be for good security?",
+        "answer": "Security experts recommend a minimum of 12 characters for standard accounts and 16+ characters for critical accounts like email, banking, and cloud storage. Every additional character exponentially increases the number of possible combinations: a 12-character password has 3 sextillion possible combinations, while a 16-character password has 43 sextillion (using all character types). Longer is always better."
+      },
+      {
+        "question": "Is this password generator secure? Can anyone see my password?",
+        "answer": "Yes, this generator is highly secure. Passwords are generated entirely in your browser using the Web Crypto API (crypto.getRandomValues), which provides cryptographically secure pseudo-random numbers. Your generated password is never transmitted over the internet, never stored in any database, and never logged. The generation process happens locally on your device."
+      },
+      {
+        "question": "What makes a strong password?",
+        "answer": "A strong password has three key properties: sufficient length (at least 12 characters), high character diversity (uppercase, lowercase, numbers, and symbols), and true randomness (no dictionary words, patterns, or personal information). The combination of these factors creates high entropy, making the password resistant to both brute force attacks and dictionary attacks."
+      },
+      {
+        "question": "Should I use special characters in my password?",
+        "answer": "Including special characters increases password strength by expanding the character set from 62 (letters + numbers) to 90+ possible characters per position. However, length matters more than complexity. A 20-character password with only lowercase letters (26^20 combinations) is actually stronger than a 10-character password with all character types (90^10 combinations). Use special characters when possible, but prioritize length."
+      },
+      {
+        "question": "How often should I change my passwords?",
+        "answer": "The latest guidance from NIST (National Institute of Standards and Technology) actually recommends against mandatory periodic password changes. Instead, change your password only when there is evidence of a compromise, such as a data breach notification, suspicious account activity, or if you shared the password. Using unique, strong passwords with two-factor authentication is more effective than frequent rotation."
+      },
+      {
+        "question": "Why should I not use the same password on multiple sites?",
+        "answer": "Credential stuffing is one of the most common attack methods: hackers take username/password combinations from one breached service and automatically try them on thousands of other websites. If you use the same password for your email and a shopping site, and the shopping site gets breached, attackers can access your email and potentially reset passwords for your banking and other critical accounts."
+      },
+      {
+        "question": "Is a passphrase better than a random password?",
+        "answer": "Passphrases (like 'correct-horse-battery-staple') are easier to remember but need to be longer than random passwords to achieve equivalent security. A truly random 16-character password has more entropy than a typical 4-word passphrase. Both approaches are valid: use a random password with a password manager, or use a long passphrase (6+ random words) for passwords you must memorize, like your password manager's master password."
+      }
+    ]
+  },
+  "color-picker": {
+    "howToUse": [
+      "Click on the color spectrum area to select a base color, or enter a specific color value in HEX, RGB, or HSL format in the input field. The picker updates all color formats simultaneously as you make selections.",
+      "Fine-tune your selected color using the hue slider and the saturation-brightness panel. These controls give you precise adjustment over every aspect of the color.",
+      "Copy the color value in your preferred format by clicking the copy button next to HEX, RGB, or HSL representations. Each format is displayed and updated in real time.",
+      "Explore generated color palettes based on your selection, including complementary, analogous, triadic, and split-complementary harmonies for design inspiration."
+    ],
+    "whyUse": [
+      "Designers and developers need precise color values in multiple formats. This tool instantly converts between HEX (used in CSS and design tools), RGB (used in digital screens and programming), and HSL (intuitive for adjusting hue, saturation, and lightness), saving time during the design and development workflow.",
+      "Color harmony palettes help create visually appealing designs without deep color theory knowledge. The automatically generated complementary, analogous, and triadic palettes provide professional color combinations that work well together.",
+      "Web developers frequently need specific color codes for CSS stylesheets, HTML attributes, and JavaScript canvas operations. Having instant access to copy-ready color values in all formats eliminates manual conversion and reduces errors.",
+      "The tool runs entirely in your browser with no account required. Pick colors, generate palettes, and copy values instantly without signing up for any service.",
+      "Accessibility-conscious designers can use the tool to test color contrast ratios and ensure their color choices meet WCAG guidelines for readability."
+    ],
+    "tips": [
+      "When designing for the web, use HSL format in your CSS for easier color manipulation. Adjusting lightness and saturation in HSL is more intuitive than modifying individual RGB channels.",
+      "For brand consistency, save your selected HEX values and use them as CSS custom properties (variables) throughout your project.",
+      "Test your color choices on both light and dark backgrounds to ensure sufficient contrast for readability, especially for text colors.",
+      "When building a color system, start with a primary color and use the generated harmony palettes as starting points for accent and secondary colors."
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between HEX, RGB, and HSL color formats?",
+        "answer": "HEX uses a six-digit hexadecimal code (#FF5733) commonly used in CSS and web design. RGB defines colors using Red, Green, and Blue channel values from 0-255 (rgb(255, 87, 51)), matching how screens display colors. HSL uses Hue (0-360 degrees), Saturation (0-100%), and Lightness (0-100%), which is the most intuitive format for humans since you can easily adjust brightness and vividness independently."
+      },
+      {
+        "question": "How do I find the perfect color for my website?",
+        "answer": "Start by choosing a primary brand color that reflects your identity, then use the color picker's harmony palette generator to find complementary and accent colors. Consider your target audience and industry conventions. Test your colors for accessibility (sufficient contrast for text readability) and view them on multiple screens, as colors can appear differently on various monitors and devices."
+      },
+      {
+        "question": "What is a color palette and why do I need one?",
+        "answer": "A color palette is a curated set of colors that work harmoniously together in a design. Having a defined palette ensures visual consistency across your website, app, or marketing materials. Most effective palettes include a primary color, a secondary color, an accent color, and neutral tones for backgrounds and text. Using a palette prevents the visual chaos that comes from picking colors randomly."
+      },
+      {
+        "question": "Can I use this tool to check color accessibility?",
+        "answer": "While this tool primarily focuses on color selection and palette generation, the HEX and RGB values it provides can be used with dedicated accessibility checkers to verify WCAG contrast ratios. For text readability, the Web Content Accessibility Guidelines recommend a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text."
+      },
+      {
+        "question": "What are complementary, analogous, and triadic color harmonies?",
+        "answer": "Complementary colors sit opposite each other on the color wheel (like blue and orange), creating strong contrast. Analogous colors are adjacent on the wheel (like blue, blue-green, and green), creating harmonious, low-contrast designs. Triadic colors are evenly spaced 120 degrees apart (like red, yellow, and blue), offering vibrant variety while maintaining balance. Each harmony type serves different design purposes."
+      },
+      {
+        "question": "How do I convert a color from HEX to RGB?",
+        "answer": "Simply enter your HEX color code in the input field, and the tool instantly displays the equivalent RGB and HSL values. The conversion is automatic and bidirectional: you can also enter RGB values to get the HEX code. Manually, HEX conversion works by converting each pair of hexadecimal digits to a decimal number (e.g., #FF5733 becomes R:255, G:87, B:51)."
+      }
+    ]
+  },
+  "base64-encode-decode": {
+    "howToUse": [
+      "Paste or type the text you want to encode into the input field. The tool accepts any text including Unicode characters, special symbols, and multi-line content.",
+      "Click the Encode button to convert your text to Base64 format. The encoded output appears instantly in the result area, ready to be copied.",
+      "To decode Base64 back to readable text, paste the Base64-encoded string into the input field and click the Decode button. The original text is restored immediately.",
+      "Copy the result to your clipboard with one click for use in your code, configuration files, API requests, or data transfer operations."
+    ],
+    "whyUse": [
+      "Base64 encoding is essential for embedding binary data in text-based formats. Developers commonly use it to include images directly in HTML/CSS (data URIs), send binary data in JSON APIs, encode email attachments (MIME), and store binary content in XML or database text fields.",
+      "When transmitting data through systems that only support ASCII text, Base64 provides a reliable way to encode any binary data without corruption. This is critical for API integrations, webhook payloads, and cross-system data transfer.",
+      "All encoding and decoding happens in your browser. Sensitive data like API tokens, authentication headers, and configuration values are never sent to any server during the encoding process.",
+      "Developers working with REST APIs frequently need to encode or decode Base64 strings when dealing with authentication headers (Basic Auth), JWT token payloads, file upload/download endpoints, and binary data in JSON responses.",
+      "The tool handles UTF-8 encoding correctly, supporting international characters, emoji, and special symbols without data loss or encoding errors."
+    ],
+    "tips": [
+      "Remember that Base64 encoding is not encryption. It is a reversible encoding scheme that anyone can decode. Never use Base64 as a security measure for sensitive data.",
+      "Base64-encoded data is approximately 33% larger than the original. Consider this overhead when embedding large files as data URIs or transmitting encoded data over networks.",
+      "When working with Basic Authentication headers, the format is 'username:password' encoded in Base64, prefixed with 'Basic ' (note the space) in the Authorization header.",
+      "For debugging JWT tokens, decode the header and payload portions (separated by dots) individually to inspect their contents."
+    ],
+    "faqs": [
+      {
+        "question": "What is Base64 encoding and when do I need it?",
+        "answer": "Base64 is a binary-to-text encoding scheme that converts binary data into a string of ASCII characters using a 64-character alphabet (A-Z, a-z, 0-9, +, and /). You need it when transmitting binary data through text-only channels (like JSON APIs or XML), embedding images in HTML/CSS, working with email attachments (MIME encoding), handling authentication tokens, and storing binary data in text-based databases or configuration files."
+      },
+      {
+        "question": "Is Base64 encoding the same as encryption?",
+        "answer": "No, Base64 encoding is absolutely not encryption. It is a reversible, standardized encoding method that anyone can decode without any key or password. Its purpose is data transformation for compatibility, not security. Never use Base64 to protect sensitive information. For actual data protection, use proper encryption methods like AES-256, RSA, or established encryption libraries."
+      },
+      {
+        "question": "Why is Base64-encoded data larger than the original?",
+        "answer": "Base64 converts every 3 bytes of original data into 4 ASCII characters, resulting in approximately 33% size increase. This overhead occurs because Base64 uses only 64 characters (6 bits per character) to represent 8-bit binary data. Additionally, padding characters (=) may be added to make the output length a multiple of 4. This size increase is the trade-off for safe transmission through text-only systems."
+      },
+      {
+        "question": "Can I encode files to Base64 with this tool?",
+        "answer": "This tool is optimized for text-to-Base64 encoding. For encoding files (images, PDFs, documents) to Base64, you can use our Image to Base64 tool for image files. Text content from any file can be pasted directly into this tool for encoding. The tool correctly handles UTF-8 encoded text including international characters and special symbols."
+      },
+      {
+        "question": "How do I decode a Base64 string I received from an API?",
+        "answer": "Paste the Base64 string into the input field and click Decode. The tool automatically handles standard Base64 encoding as well as URL-safe Base64 variants (where + is replaced with - and / with _). If the decoded output appears garbled, the original data may be binary (like an image) rather than text, or it may use a different character encoding than UTF-8."
+      },
+      {
+        "question": "Is my data safe when using this online Base64 encoder?",
+        "answer": "Yes, completely safe. All encoding and decoding operations happen entirely in your browser using JavaScript. No data is ever transmitted to our servers, logged, or stored. This makes the tool safe for encoding sensitive information like API keys, authentication tokens, and configuration data, though remember that Base64 itself is not a security measure."
+      }
+    ]
+  },
+  "word-counter": {
+    "howToUse": [
+      "Paste or type your text into the large text area. The counter begins analyzing your content immediately as you type, providing real-time statistics without needing to click any button.",
+      "View the comprehensive statistics displayed above the text area: total words, characters (with and without spaces), sentences, paragraphs, and estimated reading time.",
+      "Use the reading time estimate to gauge how long your content will take to read. This is calculated based on the average adult reading speed of approximately 200-250 words per minute.",
+      "For academic or professional writing, check the word count against your target requirements. The real-time counter lets you monitor your progress as you write or edit."
+    ],
+    "whyUse": [
+      "Writers, students, and professionals frequently work with word count requirements. Academic papers, essays, blog posts, social media updates, and job applications all have specific length guidelines. A real-time counter eliminates the need to manually track your progress.",
+      "Understanding reading time helps content creators optimize their articles for audience engagement. Blog posts between 1,500-2,500 words typically perform best for SEO, while social media posts need to be concise. Knowing exactly how long your content takes to read helps you target the right length.",
+      "SEO professionals use word counters to analyze competitor content length and ensure their articles meet minimum content depth requirements. Search engines generally favor comprehensive content, and tracking word count is a fundamental part of content strategy.",
+      "The tool processes everything in your browser with no data transmission. Your drafts, academic papers, business documents, and personal writing remain completely private.",
+      "Unlike text editors that only show basic word counts, this tool provides comprehensive statistics including character counts (with and without spaces), sentence counts, paragraph counts, and estimated reading and speaking times."
+    ],
+    "tips": [
+      "For blog posts targeting SEO, aim for at least 1,500 words for competitive topics. Long-form content (2,000-3,000 words) tends to rank higher in search results for information-rich queries.",
+      "Social media character limits: Twitter/X allows 280 characters, Instagram captions allow 2,200 characters, LinkedIn posts allow 3,000 characters. Check your character count before posting.",
+      "When writing academic papers, the word count typically excludes the title page, abstract, references, and appendices unless your instructor specifies otherwise. Paste only the relevant sections.",
+      "Use the speaking time estimate when preparing presentations. A 10-minute talk typically requires about 1,300-1,500 words depending on your speaking pace."
+    ],
+    "faqs": [
+      {
+        "question": "How is reading time calculated?",
+        "answer": "Reading time is calculated based on the average adult silent reading speed of approximately 200-250 words per minute. The tool uses 200 WPM as a standard baseline, which accounts for varying text complexity. Actual reading time varies by individual, content difficulty, and familiarity with the subject matter. Technical content typically takes longer to read than casual prose."
+      },
+      {
+        "question": "Do spaces count as characters?",
+        "answer": "The tool displays both metrics: characters with spaces (total character count including all whitespace) and characters without spaces (only letters, numbers, punctuation, and symbols). Most character limits (like Twitter) count spaces, while some systems only count non-space characters. Having both counts helps you meet any requirement."
+      },
+      {
+        "question": "How many words should a blog post be for SEO?",
+        "answer": "There is no single perfect length, but research consistently shows that longer content tends to rank better. For competitive keywords, aim for 1,500-2,500 words. For highly competitive topics, 3,000+ words may be necessary. However, quality matters more than quantity. A well-written 1,500-word article that thoroughly covers a topic will outperform a 3,000-word article with filler content."
+      },
+      {
+        "question": "Is my text saved or stored anywhere?",
+        "answer": "No. All text analysis happens entirely in your browser using JavaScript. Your text is never sent to any server, never stored in any database, and never logged. When you close the browser tab, all data is gone. This makes the tool completely safe for sensitive documents, unpublished manuscripts, business communications, and personal writing."
+      },
+      {
+        "question": "How does this tool count words?",
+        "answer": "Words are counted by splitting text at whitespace boundaries (spaces, tabs, and line breaks). Hyphenated words like 'well-known' count as one word. Numbers and abbreviations count as individual words. Empty lines between paragraphs do not count as words. This methodology matches the word counting standards used by most word processors and publishing platforms."
+      },
+      {
+        "question": "Can I use this for academic paper word counts?",
+        "answer": "Yes, this tool provides accurate word counts suitable for academic requirements. Paste only the sections that should be included in your word count (typically the body text, excluding title page, abstract, references, and appendices unless specified otherwise). The count matches the methodology used by academic word processors like Microsoft Word and Google Docs."
+      }
+    ]
+  },
+  "lorem-ipsum-generator": {
+    "howToUse": [
+      "Select the type of output you want: paragraphs, sentences, or individual words. Each option generates different amounts of placeholder text suitable for various design needs.",
+      "Set the quantity using the input field. For example, specify 3 paragraphs for a blog post mockup, 5 sentences for a card component, or 50 words for a short text block.",
+      "Click the Generate button to create your lorem ipsum text. The output is randomized from the classic lorem ipsum corpus to produce natural-looking placeholder content.",
+      "Copy the generated text to your clipboard with one click and paste it directly into your design tool, HTML template, or content management system."
+    ],
+    "whyUse": [
+      "Designers and developers use placeholder text to fill layouts and mockups before final content is ready. Lorem ipsum provides realistic text distribution and length patterns that help evaluate how a design will look with actual content, without distracting reviewers with readable meaning.",
+      "Using lorem ipsum instead of copy-pasting random content ensures consistent, neutral placeholder text across your projects. This prevents stakeholders from focusing on temporary content instead of evaluating the visual design, layout, and typography choices.",
+      "Web developers testing responsive layouts need text of various lengths. The generator lets you quickly create exactly the amount of text needed: a few words for buttons and labels, sentences for descriptions, or multiple paragraphs for article templates.",
+      "The generator runs entirely in your browser with no server communication. Generate as much placeholder text as you need, as often as you need, without any limitations or tracking.",
+      "Lorem ipsum has been the industry standard for placeholder text since the 1960s. Using it signals professionalism and indicates that the text is intentionally placeholder, preventing confusion during design review."
+    ],
+    "tips": [
+      "When creating mockups, use varying amounts of placeholder text to test how your design handles different content lengths. Test with both minimal and maximum content to identify layout issues.",
+      "For multilingual projects, remember that different languages have different average word lengths. German text, for example, is typically 30% longer than English, so add extra text when testing layouts for languages with longer words.",
+      "Use paragraph mode for content areas like blog posts and articles, sentence mode for card descriptions and summaries, and word mode for labels, headings, and button text.",
+      "Always replace placeholder text with actual content before launching. Include a final review step in your deployment checklist to catch any remaining lorem ipsum text."
+    ],
+    "faqs": [
+      {
+        "question": "What is Lorem Ipsum and where does it come from?",
+        "answer": "Lorem ipsum is placeholder text derived from a work by the Roman philosopher Cicero written in 45 BC ('De Finibus Bonorum et Malorum'). The text was scrambled and adapted for use as typographic filler in the 1960s by the Letraset company, and later by digital typesetting software like Aldus PageMaker. It has remained the industry standard for over 500 years because its Latin-like appearance mimics natural text distribution without being readable."
+      },
+      {
+        "question": "Why use Lorem Ipsum instead of real text for design mockups?",
+        "answer": "Lorem ipsum prevents stakeholders and reviewers from reading and responding to the content instead of evaluating the visual design. When real, readable text is used in mockups, people naturally focus on the words rather than the layout, typography, spacing, and overall visual hierarchy. Lorem ipsum looks like real text from a distance but does not distract readers with meaning."
+      },
+      {
+        "question": "How much placeholder text do I need for a blog post design?",
+        "answer": "A typical blog post layout requires 3-5 paragraphs (300-500 words) for the main content area. Include 1-2 sentences for the meta description preview, 5-10 words for the title, and additional paragraphs if your layout includes sidebar excerpts or related post summaries. Test with varying lengths to ensure your design handles both short and long articles gracefully."
+      },
+      {
+        "question": "Can I customize the generated Lorem Ipsum text?",
+        "answer": "This generator produces text from the classic lorem ipsum corpus, allowing you to control the output type (paragraphs, sentences, or words) and quantity. The text is randomized from traditional lorem ipsum content to provide natural variation while maintaining the industry-standard placeholder appearance that designers and developers expect."
+      },
+      {
+        "question": "Is Lorem Ipsum text copyrighted?",
+        "answer": "No. Lorem ipsum text is derived from a work written in 45 BC, which is firmly in the public domain. The scrambled version used as placeholder text has been in common use since the 1960s and has no copyright restrictions. You can freely use generated lorem ipsum text in any project, whether personal, commercial, or educational."
+      },
+      {
+        "question": "Does using placeholder text affect SEO?",
+        "answer": "Placeholder text on a live website can negatively impact SEO. Search engines may interpret lorem ipsum as thin or irrelevant content, which could harm your rankings. Always replace placeholder text with actual, valuable content before publishing any page. Google's algorithms are sophisticated enough to detect and potentially penalize pages containing lorem ipsum or other placeholder text."
+      }
+    ]
+  },
+  "uuid-generator": {
+    "howToUse": [
+      "Click the Generate button to instantly create a new UUID v4 identifier. The generated UUID follows the standard format: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx, where each x is a random hexadecimal digit.",
+      "Choose your preferred format options: uppercase or lowercase letters, with or without hyphens. These options let you match the UUID format required by your specific system or database.",
+      "Use the bulk generation feature to create multiple UUIDs at once. Specify the quantity and generate a list of unique identifiers for batch operations, database seeding, or test data creation.",
+      "Copy individual UUIDs or the entire list to your clipboard with a single click for immediate use in your code, database queries, or configuration files."
+    ],
+    "whyUse": [
+      "UUIDs (Universally Unique Identifiers) are essential for distributed systems where multiple components need to generate unique identifiers independently without coordination. Unlike sequential IDs, UUIDs can be created on any machine at any time without risk of collision.",
+      "Database architects use UUIDs as primary keys to prevent enumeration attacks (where sequential IDs reveal the total number of records), enable easy data merging from multiple sources, and support distributed database architectures where records are created across different servers.",
+      "UUID v4 identifiers are generated using cryptographically secure random numbers in your browser, ensuring both uniqueness and security. The probability of generating two identical UUID v4s is astronomically small: approximately 1 in 2^122.",
+      "Software developers need test UUIDs for unit tests, mock data, API testing, and database seeding. The bulk generation feature creates properly formatted identifiers without writing custom code.",
+      "All generation happens in your browser using the Web Crypto API. No identifiers are sent to or stored on any server, making the tool suitable for generating IDs for security-sensitive applications."
+    ],
+    "tips": [
+      "When using UUIDs as database primary keys, consider the impact on index performance. In some databases (like MySQL with InnoDB), random UUIDs can cause index fragmentation. Consider UUID v7 (time-ordered) for better index locality if your database supports it.",
+      "For URL-friendly identifiers, use the no-hyphens format. This produces a 32-character hexadecimal string that works well in URLs, file names, and other contexts where hyphens might cause issues.",
+      "Always validate UUID format when accepting them as input in your applications. A valid UUID v4 has the digit 4 in the third group and 8, 9, a, or b as the first digit of the fourth group.",
+      "When bulk generating UUIDs for test data, copy the entire list and use text manipulation to insert them into SQL INSERT statements or JSON arrays."
+    ],
+    "faqs": [
+      {
+        "question": "What is a UUID and why is it used?",
+        "answer": "A UUID (Universally Unique Identifier) is a 128-bit identifier formatted as 32 hexadecimal digits in five groups separated by hyphens (e.g., 550e8400-e29b-41d4-a716-446655440000). UUIDs are used as unique identifiers in software systems because they can be generated independently on any machine without coordination while maintaining an extremely low probability of duplication. They are commonly used as database primary keys, session tokens, file names, API request identifiers, and distributed system correlation IDs."
+      },
+      {
+        "question": "What is the difference between UUID v4 and other UUID versions?",
+        "answer": "UUID v4 uses random numbers for all fields (except the version and variant bits), making it the most common version for general use. UUID v1 includes a timestamp and MAC address (potentially revealing device info). UUID v3 and v5 are generated from a namespace and name using MD5 or SHA-1 hashing. UUID v7 (newer) uses a Unix timestamp prefix for time-ordered generation, which improves database index performance while maintaining uniqueness."
+      },
+      {
+        "question": "Can two UUIDs ever be the same?",
+        "answer": "Theoretically possible but practically impossible. UUID v4 has 122 random bits, yielding approximately 5.3 x 10^36 possible values. To have a 50% chance of one collision, you would need to generate about 2.7 x 10^18 (2.7 quintillion) UUIDs. Even generating one billion UUIDs per second for 85 years would not reach that threshold. For all practical purposes, UUID v4 collisions will never occur."
+      },
+      {
+        "question": "Should I use UUIDs or sequential IDs for my database?",
+        "answer": "Both have advantages. Sequential IDs are smaller (4-8 bytes vs 16 bytes), better for index performance, and simpler to debug. UUIDs are better for distributed systems, prevent ID enumeration, enable data merging, and can be generated anywhere without database access. Use UUIDs when you need distributed generation, data privacy, or multi-source data merging. Use sequential IDs for simple applications where performance and simplicity are priorities."
+      },
+      {
+        "question": "Is this UUID generator cryptographically secure?",
+        "answer": "Yes. The generator uses the Web Crypto API (crypto.getRandomValues) which provides cryptographically secure pseudo-random numbers. This means the generated UUIDs are suitable not only for general identification but also for security-sensitive applications where predictability would be a vulnerability. The randomness source is your operating system's cryptographic random number generator."
+      },
+      {
+        "question": "How do I use the generated UUIDs in my code?",
+        "answer": "Copy the UUID from the tool and use it as a string literal in your code. In most programming languages, UUIDs are stored as strings or specialized UUID types. For example, in PostgreSQL use the uuid data type, in Python use the uuid module, in Java use java.util.UUID, and in JavaScript you can use the string directly. When accepting UUIDs as input, always validate the format using a regex pattern."
+      }
+    ]
+  },
+  "json-to-csv": {
+    "howToUse": [
+      "Paste your JSON array data into the input field. The data should be an array of objects where each object represents a row, like [{\"name\":\"John\",\"age\":30},{\"name\":\"Jane\",\"age\":25}].",
+      "Configure the delimiter if needed. The default is a comma, but you can switch to semicolons, tabs, or pipes depending on your target application. European locales often use semicolons since commas are used as decimal separators.",
+      "Click the Convert button to transform your JSON into CSV format. The tool automatically extracts column headers from the object keys and aligns all values into rows.",
+      "Preview the CSV output to verify the conversion is correct, then copy it to your clipboard or download it as a .csv file for use in spreadsheets, databases, or data analysis tools."
+    ],
+    "whyUse": [
+      "Data analysts frequently need to convert API responses and JSON datasets into CSV format for analysis in tools like Excel, Google Sheets, R, Python pandas, and SQL databases. This converter bridges the gap between modern API formats and traditional data analysis tools.",
+      "Non-technical stakeholders often request data in spreadsheet format. Converting JSON to CSV lets you quickly share database exports, analytics data, and API results with colleagues who prefer working with Excel or Google Sheets.",
+      "The converter handles complex JSON structures by flattening nested objects and arrays into a flat CSV format. This automatic flattening saves hours of manual data restructuring.",
+      "All conversion happens in your browser. Sensitive data from your APIs, databases, and applications is never sent to any server during the conversion process.",
+      "Unlike many JSON-to-CSV converters that have file size limits or require paid subscriptions, this tool is completely free with no restrictions on data volume."
+    ],
+    "tips": [
+      "Ensure your JSON is a properly formatted array of objects. Single objects or nested structures may need to be restructured before conversion.",
+      "If your data contains commas within values (like addresses), the converter automatically wraps those fields in quotes to preserve the CSV structure.",
+      "For European regions, switch the delimiter to semicolons since Excel in many European locales expects semicolons as field separators.",
+      "Large datasets convert faster in modern browsers. If you experience slowness with very large files, try processing in smaller batches."
+    ],
+    "faqs": [
+      {
+        "question": "What JSON format does this converter expect?",
+        "answer": "The converter expects a JSON array of objects, where each object becomes a row in the CSV output. For example: [{\"name\":\"Alice\",\"email\":\"alice@example.com\"},{\"name\":\"Bob\",\"email\":\"bob@example.com\"}]. The keys from the objects become the CSV column headers. All objects in the array should ideally have the same keys, though the tool handles missing keys gracefully by leaving those cells empty."
+      },
+      {
+        "question": "Can I convert nested JSON objects to CSV?",
+        "answer": "The converter handles flat JSON objects most effectively, where each key has a simple value (string, number, boolean, null). For nested objects, the tool flattens them using dot notation for the column headers. Deeply nested structures may require pre-processing to achieve the desired CSV layout. For best results, flatten your JSON to a single level before conversion."
+      },
+      {
+        "question": "What delimiter options are available?",
+        "answer": "The tool supports comma (default, standard CSV), semicolon (common in European locales where commas are decimal separators), tab (TSV format, used by many database tools), and pipe (used in some specialized data processing pipelines). Choose the delimiter that matches your target application's import requirements."
+      },
+      {
+        "question": "How does the tool handle special characters in values?",
+        "answer": "Values containing the delimiter character, double quotes, or line breaks are automatically enclosed in double quotes according to the CSV specification (RFC 4180). Double quotes within values are escaped by doubling them. This ensures the CSV output is properly parseable by any standard CSV reader."
+      },
+      {
+        "question": "Is there a limit on the amount of JSON data I can convert?",
+        "answer": "Since the conversion runs in your browser, the limit depends on your device's available memory. Modern devices can typically handle JSON files up to several megabytes containing thousands of rows without issues. For very large datasets (hundreds of thousands of rows), the conversion may take a few seconds but will complete successfully on most modern devices."
+      },
+      {
+        "question": "Can I open the CSV output directly in Excel?",
+        "answer": "Yes. Download the CSV file and open it in Excel, Google Sheets, LibreOffice Calc, or any spreadsheet application. If Excel does not properly parse the columns, try using the Text Import Wizard (available under Data > From Text in Excel) to specify the correct delimiter. European versions of Excel may default to semicolon delimiters, so adjust the converter's delimiter accordingly."
+      }
+    ]
+  },
+  "markdown-to-html": {
+    "howToUse": [
+      "Type or paste your Markdown content into the editor on the left side. The tool supports all standard Markdown syntax including headings, bold, italic, links, images, code blocks, lists, blockquotes, and tables.",
+      "View the rendered HTML preview in real time on the right side of the editor. The preview updates instantly as you type, showing you exactly how your Markdown will appear when converted to HTML.",
+      "Switch to the HTML source view to see the generated HTML code. This is the clean HTML output that you can copy and use in your website, email template, or content management system.",
+      "Copy the HTML output to your clipboard with one click, ready to paste into your web project, blog platform, or documentation system."
+    ],
+    "whyUse": [
+      "Markdown is the preferred writing format for developers, technical writers, and content creators because of its simplicity. But web browsers display HTML, not Markdown. This converter bridges the gap, letting you write in easy-to-read Markdown and get production-ready HTML output.",
+      "Content management systems, email builders, and many web platforms accept HTML but not Markdown. This tool lets you write your content in Markdown's clean syntax and convert it to HTML for any platform that requires it.",
+      "The live preview eliminates guesswork. You can see exactly how your headings, lists, code blocks, tables, and other formatting will look before copying the HTML output, saving time on formatting iterations.",
+      "Technical documentation, README files, blog posts, and knowledge base articles are commonly written in Markdown. This converter helps you repurpose that content for HTML-based platforms without rewriting.",
+      "All processing happens in your browser with no server communication. Your documentation, articles, and content remain private throughout the conversion process."
+    ],
+    "tips": [
+      "Use fenced code blocks (triple backticks) with a language identifier for syntax-highlighted code snippets. For example, ```javascript for JavaScript code.",
+      "For tables, use the pipe (|) and hyphen (-) syntax. Align columns using colons in the separator row: :--- for left, :---: for center, ---: for right alignment.",
+      "When writing for web publication, test your Markdown with both common and edge-case formatting to ensure the HTML output matches your expectations on the target platform.",
+      "Use reference-style links [text][id] for documents with many links. This keeps the Markdown readable and makes it easier to update URLs in one place."
+    ],
+    "faqs": [
+      {
+        "question": "What Markdown syntax does this converter support?",
+        "answer": "The converter supports standard CommonMark Markdown syntax including: headings (# through ######), bold (**text**), italic (*text*), links [text](url), images ![alt](url), ordered and unordered lists, blockquotes (>), inline code (`code`), fenced code blocks (```), horizontal rules (---), tables, and task lists (- [x]). The output is clean, semantic HTML ready for web use."
+      },
+      {
+        "question": "Is the generated HTML clean and ready for production use?",
+        "answer": "Yes, the converter generates clean, semantic HTML without unnecessary attributes, inline styles, or wrapper elements. The output uses standard HTML tags (h1-h6, p, ul, ol, blockquote, pre, code, table, etc.) that work with any CSS framework or custom stylesheet. The HTML is well-structured and follows web standards for accessibility and SEO."
+      },
+      {
+        "question": "Can I use this for converting README.md files to HTML?",
+        "answer": "Absolutely. This tool handles the same Markdown syntax used in GitHub, GitLab, and Bitbucket README files, including headings, code blocks with language identifiers, tables, task lists, and embedded images. Simply paste your README content and get HTML output suitable for documentation websites, help pages, or knowledge base articles."
+      },
+      {
+        "question": "Does the converter handle code blocks with syntax highlighting?",
+        "answer": "The converter preserves language identifiers in fenced code blocks (e.g., ```javascript) in the HTML output as class attributes on the code element (class=\"language-javascript\"). To get visual syntax highlighting, you need to include a syntax highlighting library like Prism.js or highlight.js in your HTML page, which uses these class names to apply color coding."
+      },
+      {
+        "question": "How does this compare to server-side Markdown rendering?",
+        "answer": "This tool provides identical results to popular server-side Markdown libraries since it uses established parsing algorithms. The advantage of client-side conversion is that your content never leaves your browser, and you get instant preview. For production websites, you may want to compile Markdown to HTML at build time or on the server for best performance."
+      },
+      {
+        "question": "Can I embed HTML within my Markdown?",
+        "answer": "Standard Markdown allows inline HTML. You can include HTML tags directly in your Markdown content, and they will pass through to the HTML output unchanged. This is useful for adding elements that Markdown does not natively support, like div containers, custom classes, video embeds, or interactive elements. However, Markdown formatting inside HTML blocks may not be processed."
+      }
+    ]
+  },
+  "html-minifier": {
+    "howToUse": [
+      "Paste your HTML code into the input editor. The tool accepts any valid HTML including full page documents, individual components, templates, and HTML email code.",
+      "Click the Minify button to compress your HTML by removing all unnecessary whitespace, comments, and optional tags. The minifier displays the reduced file size and savings percentage.",
+      "Use the Beautify button to reverse the process: take minified HTML and add proper indentation and line breaks for readable formatting.",
+      "Copy the minified or beautified output and use it in your production deployment, email templates, or wherever you need optimized HTML."
+    ],
+    "whyUse": [
+      "Minified HTML files are smaller, which means faster page loads, lower bandwidth costs, and better performance scores. Reducing HTML file size by 20-30% through minification can noticeably improve loading times, especially for content-heavy pages.",
+      "Google PageSpeed Insights, GTmetrix, and Lighthouse specifically recommend minifying HTML as a performance optimization. Meeting these recommendations improves your site's technical SEO score and can positively impact search rankings.",
+      "When working with minified HTML from production builds, the beautifier restores readable formatting for debugging. This is invaluable when inspecting rendered HTML, diagnosing layout issues, or reverse-engineering third-party templates.",
+      "All processing runs in your browser. Your HTML templates, email code, and web application code remain private and are never sent to any server.",
+      "The tool removes not just whitespace but also HTML comments, optional closing tags, unnecessary quotes around attributes, and redundant attributes, achieving maximum size reduction."
+    ],
+    "tips": [
+      "Always test minified HTML in a browser before deploying to production. While minification rarely causes issues, certain CSS selectors or JavaScript queries that depend on specific whitespace may behave differently.",
+      "For HTML emails, be cautious with minification. Some email clients handle minified HTML poorly. Test across multiple email clients (Gmail, Outlook, Apple Mail) after minification.",
+      "Combine HTML minification with CSS and JavaScript minification for maximum page speed improvement. Together, these optimizations can reduce total page size by 30-50%.",
+      "Keep the original unminified HTML in your source code repository. Use minification only in your build/deployment pipeline so the source code remains readable for development."
+    ],
+    "faqs": [
+      {
+        "question": "What does HTML minification do?",
+        "answer": "HTML minification removes all unnecessary characters from HTML code without changing its functionality. This includes: removing whitespace between tags, deleting HTML comments, removing optional closing tags, stripping unnecessary quotes from attributes, removing default attribute values, and collapsing boolean attributes. The result is a smaller file that browsers render identically to the original."
+      },
+      {
+        "question": "Does minifying HTML affect how the page looks?",
+        "answer": "No, minified HTML renders identically in web browsers. Browsers ignore extra whitespace when parsing HTML, so removing it has no visual impact. However, there are rare edge cases: if your CSS uses the 'white-space: pre' property on elements, or if you rely on specific whitespace in inline elements for spacing, minification might affect the layout. Always test after minifying."
+      },
+      {
+        "question": "How much can HTML minification reduce file size?",
+        "answer": "Typical savings range from 10-30% depending on the original code's formatting. HTML with many comments, generous indentation, and extensive whitespace will see larger reductions. Already compact HTML may see only 5-10% savings. When combined with Gzip or Brotli server compression, the total reduction from the original uncompressed size can be 70-90%."
+      },
+      {
+        "question": "Should I minify HTML for production websites?",
+        "answer": "Yes, minifying HTML is a recommended best practice for production websites. It reduces bandwidth usage, improves page load times, and contributes to better performance scores on tools like Google PageSpeed Insights. Most modern build tools (webpack, Vite, Next.js) include HTML minification as part of their production build process."
+      },
+      {
+        "question": "Is my HTML code safe when using this online minifier?",
+        "answer": "Yes, completely safe. All minification processing happens in your browser using JavaScript. Your HTML code is never uploaded to any server, never stored, and never logged. This makes the tool safe for proprietary templates, email code containing sensitive information, and any other confidential HTML content."
+      },
+      {
+        "question": "What is the difference between minifying and compressing HTML?",
+        "answer": "Minification removes unnecessary characters from the source code itself, creating a permanently smaller file. Compression (Gzip, Brotli) is a server-side process that compresses the file during transfer and decompresses it in the browser. These techniques are complementary: minify first to remove redundant characters, then compress for additional savings during network transfer. Together they can reduce HTML delivery size by 80-95%."
+      }
+    ]
+  },
+  "css-minifier": {
+    "howToUse": [
+      "Paste your CSS code into the input editor. The tool handles all CSS syntax including media queries, animations, custom properties (CSS variables), selectors, and vendor prefixes.",
+      "Click the Minify button to compress your CSS by removing whitespace, comments, and unnecessary characters. The tool shows the original and compressed file sizes along with the savings percentage.",
+      "Use the Beautify button to format minified CSS into readable code with proper indentation. This is useful when debugging production stylesheets or reviewing third-party CSS.",
+      "Copy the result to use in your stylesheets. Use minified CSS for production and beautified CSS for development and debugging."
+    ],
+    "whyUse": [
+      "CSS files are render-blocking resources, meaning browsers cannot display the page until CSS is fully downloaded and parsed. Smaller CSS files load faster, directly reducing the time to first paint and improving the user experience.",
+      "Performance tools like Google Lighthouse, PageSpeed Insights, and WebPageTest specifically flag unminified CSS as a performance issue. Minifying CSS is one of the simplest ways to improve your performance scores and technical SEO.",
+      "Modern web applications often accumulate large CSS files through frameworks, design systems, and iterative development. Minification can reduce CSS file sizes by 20-40%, which is significant for bandwidth savings across thousands of page views.",
+      "All CSS processing happens locally in your browser. Your stylesheets, including any proprietary design system code or brand-specific styling, remain completely private.",
+      "The beautifier helps you understand and debug minified CSS from production sites, CDN-hosted frameworks, or compiled CSS-in-JS output."
+    ],
+    "tips": [
+      "For production websites, combine CSS minification with tree-shaking (removing unused CSS rules) for maximum file size reduction. Tools like PurgeCSS can identify and remove unused styles.",
+      "Use source maps in development to debug minified CSS. Source maps link minified CSS back to original source files, making it easy to find and edit the right rule.",
+      "Consider critical CSS extraction: inline the CSS needed for above-the-fold content and defer loading the rest. This combined with minification dramatically improves perceived loading speed.",
+      "When using CSS custom properties (variables), minification preserves variable names since they are part of the runtime API. The savings come from whitespace and comment removal."
+    ],
+    "faqs": [
+      {
+        "question": "What does CSS minification remove?",
+        "answer": "CSS minification removes all unnecessary whitespace (spaces, tabs, newlines), comments (/* ... */), redundant semicolons after the last property in a rule, unnecessary quotes in url() values, leading zeros in decimal values (0.5 becomes .5), and redundant units on zero values (0px becomes 0). All of these removals are safe and do not change how browsers interpret the CSS."
+      },
+      {
+        "question": "Does CSS minification change how my styles look?",
+        "answer": "No. CSS minification only removes characters that browsers ignore during parsing. The visual output of your styles remains completely identical. The browser computes the same CSS Object Model (CSSOM) from both minified and unminified versions. Media queries, animations, transitions, custom properties, and all other CSS features work exactly the same after minification."
+      },
+      {
+        "question": "How much can CSS minification reduce file size?",
+        "answer": "Typical CSS minification achieves 15-30% file size reduction, depending on the original code's formatting and comment density. Heavily commented CSS with generous whitespace can see up to 40% reduction. When combined with server-side Gzip or Brotli compression, total network transfer savings typically reach 80-90% of the original file size."
+      },
+      {
+        "question": "Should I minify CSS that is already processed by a build tool?",
+        "answer": "Most modern build tools (webpack, Vite, Parcel, Next.js) include CSS minification in their production build process. If your build pipeline already minifies CSS, running it through this tool again will have minimal additional effect. This tool is most useful for standalone CSS files, quick one-off minification, or beautifying already-minified CSS for debugging."
+      },
+      {
+        "question": "Is my CSS code safe when using this online tool?",
+        "answer": "Yes, completely safe. All processing happens in your browser using JavaScript. Your CSS code is never sent to any server, never stored, and never logged. This makes the tool safe for proprietary stylesheets, design system code, and any CSS containing confidential brand or application-specific information."
+      },
+      {
+        "question": "Can I minify CSS that uses modern features like custom properties?",
+        "answer": "Yes. The minifier correctly handles all modern CSS features including custom properties (--variable-name), calc() expressions, CSS Grid, Flexbox, CSS animations, container queries, and all at-rules (@media, @keyframes, @layer, @container). Variable names are preserved since they are referenced at runtime, while surrounding whitespace and comments are safely removed."
+      }
+    ]
+  },
+  "text-to-speech": {
+    "howToUse": [
+      "Type or paste the text you want to hear into the text area. The tool accepts text of any length including articles, documents, study notes, and any written content.",
+      "Select a voice from the dropdown menu. Available voices depend on your device and operating system. Most systems offer multiple voices in various languages with different accents and genders.",
+      "Adjust the speech parameters: speed (rate) controls how fast the text is read, pitch adjusts the voice tone from low to high, and volume controls the audio level.",
+      "Click the Play button to start the text-to-speech conversion. You can pause, resume, or stop the reading at any time using the playback controls."
+    ],
+    "whyUse": [
+      "Text-to-speech is an essential accessibility tool that makes written content available to people with visual impairments, reading difficulties, dyslexia, or cognitive disabilities. It enables equal access to information regardless of reading ability.",
+      "Auditory learning is more effective for many people. Students, researchers, and professionals can listen to articles, study materials, documentation, and reports while commuting, exercising, or doing other tasks, making productive use of otherwise idle time.",
+      "Content creators and writers can use text-to-speech to proofread their work by hearing it read aloud. Listening to your writing often reveals awkward phrasing, repetitive words, and grammatical issues that are easy to miss when reading silently.",
+      "The tool uses the Web Speech API built into your browser, which means no data is sent to any server. Your text is processed entirely on your device, keeping your documents and content private.",
+      "Multiple language support allows you to hear correct pronunciation of foreign language text, making this a valuable tool for language learners practicing listening comprehension."
+    ],
+    "tips": [
+      "For natural-sounding speech, keep the rate between 0.8 and 1.2. Very fast or slow rates can sound unnatural and reduce comprehension.",
+      "Try different voices to find the one you find most pleasant and easy to understand. Voice quality varies significantly between operating systems and browsers.",
+      "For proofreading, set the rate slightly slower than normal (0.8-0.9x) to give yourself time to catch errors as the text is read aloud.",
+      "Punctuation affects how the speech sounds. Proper use of commas and periods in your text results in more natural pauses and intonation."
+    ],
+    "faqs": [
+      {
+        "question": "What voices are available for text-to-speech?",
+        "answer": "Available voices depend on your device and browser. Windows typically offers Microsoft voices in multiple languages. macOS offers high-quality Apple voices. Chrome on Android provides Google voices. Most systems include at least English voices with both male and female options. Some systems offer premium voices with more natural intonation. The voice dropdown shows all voices available on your current device."
+      },
+      {
+        "question": "Does text-to-speech work with non-English text?",
+        "answer": "Yes, the Web Speech API supports multiple languages. When you select a voice for a specific language (e.g., a German voice), the speech engine uses that language's pronunciation rules. For best results, match the voice language to the text language. Most modern devices include voices for major world languages including English, Spanish, French, German, Chinese, Japanese, and many more."
+      },
+      {
+        "question": "Is my text sent to a server for processing?",
+        "answer": "No. The text-to-speech conversion uses the Web Speech API built into your browser, which processes text locally on your device using the operating system's speech synthesis engine. Your text never leaves your device and is never sent to any server. This makes the tool completely private and secure for reading sensitive documents."
+      },
+      {
+        "question": "Can I save the generated speech as an audio file?",
+        "answer": "The Web Speech API used by this tool provides real-time speech synthesis but does not natively support saving the output as an audio file. The speech is generated and played directly by your browser's speech engine. For creating audio files from text, you would need a dedicated text-to-speech service that provides audio file downloads."
+      },
+      {
+        "question": "Why do some voices sound better than others?",
+        "answer": "Voice quality depends on the speech synthesis technology. Neural (AI-based) voices sound significantly more natural than traditional concatenative or formant-based voices. Premium voices available on macOS, iOS, and newer Windows versions use neural networks for more natural intonation, rhythm, and pronunciation. System voices also improve over time through operating system updates."
+      },
+      {
+        "question": "Can I use this tool as a reading aid for accessibility?",
+        "answer": "Yes, this is an excellent reading aid. It helps people with visual impairments, dyslexia, ADHD, and other conditions that affect reading. Adjustable speed, pitch, and volume allow customization to individual needs. The ability to pause and resume makes it practical for studying and working with longer documents. Combined with screen magnification, it provides a comprehensive accessibility solution."
+      }
+    ]
+  },
+  "pdf-compress": {
+    "howToUse": [
+      "Click the upload area or drag and drop a PDF file you want to compress. The tool accepts PDF files of any size for processing.",
+      "The compression process begins automatically after upload. The tool removes unnecessary metadata, duplicate resources, and optimizes the internal structure of the PDF.",
+      "Review the compression results showing the original and compressed file sizes along with the percentage reduction achieved.",
+      "Download the compressed PDF file. The optimized document is ready for sharing via email, uploading to websites, or storing to save disk space."
+    ],
+    "whyUse": [
+      "Large PDF files are difficult to share via email (most providers limit attachments to 10-25MB), slow to download from websites, and consume unnecessary storage space. Compression reduces file size while preserving content quality, making PDFs practical for everyday use.",
+      "Websites and platforms often impose file size limits for PDF uploads. Compressing your PDFs ensures they meet upload requirements for government portals, job applications, insurance claims, and online forms without needing to split documents.",
+      "All compression happens in your browser. Financial documents, medical records, legal contracts, and other sensitive PDFs are processed locally on your device and never uploaded to any server.",
+      "Storage optimization is important for organizations handling thousands of PDF documents. Even modest compression (20-30% reduction) across a large document library can save gigabytes of storage space.",
+      "Compressed PDFs load faster in web browsers and PDF readers, improving the experience for anyone viewing the document."
+    ],
+    "tips": [
+      "PDFs with many high-resolution images benefit most from compression. Documents that are primarily text will see smaller reductions since text data is already very compact.",
+      "Always verify the compressed PDF by opening it and checking that all pages, images, and formatting appear correct before deleting the original.",
+      "For maximum compression, consider reducing image quality separately using an image compressor before embedding images in your PDF.",
+      "If the compressed file is still too large, consider splitting the PDF into smaller sections using our PDF Split tool."
+    ],
+    "faqs": [
+      {
+        "question": "How much can PDF compression reduce file size?",
+        "answer": "Compression results vary based on content. PDFs with embedded high-resolution images can often be reduced by 40-70%. Text-heavy documents with minimal images typically see 10-25% reduction. PDFs that have already been optimized may see minimal additional compression. The tool shows you the exact savings after compression so you can decide if the result meets your needs."
+      },
+      {
+        "question": "Does PDF compression reduce quality?",
+        "answer": "This tool focuses on lossless optimization techniques: removing unnecessary metadata, eliminating duplicate embedded resources, and optimizing the internal structure. These methods reduce file size without affecting visible content quality. Text, vectors, and page layout remain identical. For image-heavy PDFs, some image resampling may occur, but the visual impact is minimal."
+      },
+      {
+        "question": "Is it safe to compress sensitive PDF documents online?",
+        "answer": "Yes. All compression processing happens entirely in your browser using client-side JavaScript. Your PDF file is never uploaded to any server, never stored in any cloud, and never transmitted over the internet. This makes the tool safe for confidential documents including financial statements, legal contracts, medical records, and personal identification documents."
+      },
+      {
+        "question": "Can I compress password-protected PDF files?",
+        "answer": "Encrypted or password-protected PDF files may not compress effectively since the encryption prevents the tool from accessing and optimizing the internal structure. For best results, remove the password protection before compression and re-apply it afterward if needed."
+      },
+      {
+        "question": "What is the maximum PDF file size I can compress?",
+        "answer": "Since processing happens in your browser, the maximum depends on your device's available memory. Modern computers with 8GB+ RAM can typically handle PDFs up to 100MB. Mobile devices may be limited to smaller files. For very large PDFs, processing may take longer but will complete on most modern devices."
+      },
+      {
+        "question": "Does compression affect PDF accessibility features?",
+        "answer": "The compression preserves the document's visible content and structure. Accessibility features like tagged elements, reading order, and alternative text for images are maintained. However, if you are working with accessibility-critical documents, always verify the compressed output with an accessibility checker to confirm all features are preserved."
+      }
+    ]
+  },
+  "image-convert": {
+    "howToUse": [
+      "Upload your image by clicking the upload area or dragging and dropping the file. The converter accepts JPEG, PNG, and WebP formats as input.",
+      "Select the target format you want to convert to: JPEG for photographs and universal compatibility, PNG for images needing transparency, or WebP for modern web use with optimal compression.",
+      "Preview the converted image to verify the quality meets your requirements. The tool shows both the original and converted file sizes for comparison.",
+      "Download the converted image file, ready for use on your website, in your application, or for sharing."
+    ],
+    "whyUse": [
+      "Different platforms and use cases require specific image formats. Social media platforms, email clients, print services, and web applications often accept only certain formats. This converter lets you quickly switch between formats to meet any requirement.",
+      "WebP format offers 25-35% better compression than JPEG at equivalent quality, but not all platforms support it yet. This tool lets you convert between WebP and universally supported formats like JPEG and PNG when needed.",
+      "PNG supports transparency (alpha channel) while JPEG does not. Converting to PNG is essential when you need transparent backgrounds for logos, icons, and overlay graphics. Converting from PNG to JPEG is useful when transparency is not needed and smaller file size is desired.",
+      "All conversion happens in your browser using the Canvas API. Your images are never uploaded to any server, ensuring complete privacy for personal photos, product images, and confidential graphics.",
+      "The tool preserves image quality during conversion and gives you control over output quality settings, allowing you to balance file size against visual fidelity."
+    ],
+    "tips": [
+      "Convert photographs from PNG to JPEG to reduce file size by 70-90% with minimal quality loss. PNG is inefficient for photographic images.",
+      "Use WebP format for web images whenever your target audience uses modern browsers. It provides the best quality-to-size ratio of all three formats.",
+      "When converting to JPEG, remember that transparency is not supported. Transparent areas will be filled with a solid color (usually white).",
+      "For logos, icons, and graphics with sharp edges or text, prefer PNG over JPEG. JPEG compression introduces artifacts around sharp edges that are visible at any quality setting."
+    ],
+    "faqs": [
+      {
+        "question": "Which image format should I use for my website?",
+        "answer": "For photographs and complex images, use WebP (with JPEG fallback) for the best compression. For images requiring transparency (logos, icons), use WebP or PNG. For universal compatibility with older systems, use JPEG for photos and PNG for graphics. Modern best practice is to serve WebP with picture element fallbacks for maximum compatibility and performance."
+      },
+      {
+        "question": "Does image conversion affect quality?",
+        "answer": "Converting between lossy formats (JPEG, WebP) involves recompression which can introduce additional quality loss with each conversion. Converting to PNG from any format is lossless and preserves all pixel data. For best quality, always convert from the highest-quality source available and avoid multiple rounds of lossy conversion."
+      },
+      {
+        "question": "What is WebP and should I use it?",
+        "answer": "WebP is a modern image format developed by Google that provides both lossy and lossless compression. It typically produces files 25-35% smaller than JPEG at equivalent quality and supports transparency like PNG. All modern browsers (Chrome, Firefox, Safari, Edge) support WebP. It is now the recommended format for web images when universal compatibility with very old browsers is not required."
+      },
+      {
+        "question": "Can I convert animated GIFs with this tool?",
+        "answer": "This tool is optimized for static image conversion between JPEG, PNG, and WebP formats. Animated GIF conversion requires special handling to preserve frame timing and animation data. For animated content, consider our Video to GIF tool or specialized animation converters."
+      },
+      {
+        "question": "Why is my PNG file so much larger than the JPEG version?",
+        "answer": "PNG uses lossless compression, meaning every pixel is preserved exactly. JPEG uses lossy compression that discards visual information the human eye is unlikely to notice. For photographic images, this difference can be 5-10x in file size. PNG excels at compressing images with large areas of solid color, text, and sharp edges, but is inefficient for photographs."
+      },
+      {
+        "question": "Are my images uploaded to a server during conversion?",
+        "answer": "No. All image conversion processing happens entirely in your browser using the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for private photos, confidential product images, and any other sensitive visual content."
+      }
+    ]
+  },
+  "regex-tester": {
+    "howToUse": [
+      "Enter your regular expression pattern in the pattern input field. The tool supports the full JavaScript regex syntax including character classes, quantifiers, anchors, groups, lookaheads, and lookbehinds.",
+      "Set the regex flags: g (global - find all matches), i (case insensitive), m (multiline - ^ and $ match line boundaries), s (dotAll - dot matches newlines), and u (Unicode support).",
+      "Paste or type the test string you want to match against in the text area below. The tool highlights all matches in real time as you type both the pattern and the test string.",
+      "Review the match results showing each match, its position in the string, and any captured groups. This detailed output helps you verify and debug complex patterns."
+    ],
+    "whyUse": [
+      "Building and debugging regular expressions is one of the most common challenges developers face. This tool provides instant visual feedback showing exactly what your pattern matches, where it matches, and what groups it captures, dramatically reducing the trial-and-error debugging cycle.",
+      "The real-time highlighting makes it easy to see unintended matches or missed text. When your pattern captures too much or too little, the visual feedback immediately shows the problem, making regex development significantly faster.",
+      "Whether you are validating email addresses, parsing log files, extracting data from text, performing search-and-replace operations, or building input validation rules, this tool lets you test and perfect your patterns before implementing them in your code.",
+      "All regex testing runs locally in your browser. Test strings containing sensitive data like log files, user data, or configuration content remain completely private.",
+      "The tool helps developers learn regex by showing the immediate effect of each pattern change. The visual match highlighting makes abstract regex concepts tangible and understandable."
+    ],
+    "tips": [
+      "Start with a simple pattern and gradually add complexity. Test each addition to verify it matches correctly before adding the next element.",
+      "Use non-capturing groups (?:...) when you need to group parts of a pattern but do not need the matched text in the results. This improves performance and keeps your captures clean.",
+      "Be cautious with greedy quantifiers (*, +) which match as much text as possible. Use lazy quantifiers (*?, +?) when you want to match as little text as possible.",
+      "For complex patterns, add comments using the verbose mode pattern or break the regex into named groups (?<name>...) for self-documenting code.",
+      "Always test your regex with edge cases: empty strings, special characters, very long text, and boundary conditions to ensure robust behavior."
+    ],
+    "faqs": [
+      {
+        "question": "What is a regular expression (regex)?",
+        "answer": "A regular expression (regex) is a sequence of characters that defines a search pattern used for matching, finding, and manipulating text. Regex is used in virtually every programming language and many text editors for tasks like input validation (email, phone numbers), search and replace operations, data extraction from text, log file parsing, and text formatting. Learning regex is an essential skill for developers, data analysts, and system administrators."
+      },
+      {
+        "question": "Which regex flags should I use?",
+        "answer": "The most common flag is 'g' (global) which finds all matches instead of stopping at the first one. Use 'i' (case insensitive) when you want to match regardless of letter case. Use 'm' (multiline) when you want ^ and $ to match the start and end of each line rather than the entire string. The 's' (dotAll) flag makes the dot character match newlines. Use 'u' (Unicode) for proper handling of Unicode characters and emoji."
+      },
+      {
+        "question": "How do I match an email address with regex?",
+        "answer": "A practical email regex pattern is: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$. This matches most standard email formats. However, the official email specification (RFC 5322) allows many unusual formats that are extremely difficult to capture with regex. For production use, it is better to use a simple pattern for basic validation and then verify the email by sending a confirmation message."
+      },
+      {
+        "question": "What is the difference between greedy and lazy quantifiers?",
+        "answer": "Greedy quantifiers (*, +, ?) match as much text as possible while still allowing the overall pattern to succeed. Lazy quantifiers (*?, +?, ??) match as little text as possible. For example, with the text '<b>hello</b><b>world</b>', the greedy pattern '<b>.*</b>' matches everything from the first <b> to the last </b>, while the lazy pattern '<b>.*?</b>' matches each <b>...</b> pair individually."
+      },
+      {
+        "question": "Can I test regex for other programming languages here?",
+        "answer": "This tool uses JavaScript's regex engine, which shares most syntax with other languages including Python, Java, C#, PHP, and Ruby. Core features like character classes ([a-z]), quantifiers (*, +, ?), anchors (^, $), and groups work identically across languages. Some advanced features like lookbehinds, possessive quantifiers, and recursive patterns may differ between language implementations."
+      },
+      {
+        "question": "Is my test data private when using this tool?",
+        "answer": "Yes, completely private. All regex matching happens in your browser using JavaScript's built-in RegExp engine. Your test strings and patterns are never sent to any server, never stored, and never logged. This makes the tool safe for testing patterns against log files, user data, configuration files, and any other sensitive text."
+      },
+      {
+        "question": "How do I use capturing groups in regex?",
+        "answer": "Capturing groups are created by wrapping part of your pattern in parentheses. For example, (\\d{3})-(\\d{4}) matches a phone format and captures the two number groups separately. Named groups use (?<name>...) syntax for clarity. Access captured groups by their index (group 1, 2, etc.) or by name in your code. Non-capturing groups (?:...) group without capturing when you need grouping but not the matched text."
+      }
+    ]
+  },
+  "hash-generator": {
+    "howToUse": [
+      "Type or paste the text you want to hash into the input field. The tool accepts any text input including passwords, files content, API keys, or any string you need to generate a hash for.",
+      "The tool instantly generates hash values in multiple algorithms: SHA-1, SHA-256, SHA-384, and SHA-512. All hashes are computed simultaneously for easy comparison.",
+      "Copy any hash value to your clipboard by clicking the copy button next to the desired algorithm's output.",
+      "Use the generated hashes for data integrity verification, password storage, digital signatures, or any application requiring cryptographic hash functions."
+    ],
+    "whyUse": [
+      "Hash functions are fundamental to software security. Developers use them for password storage (never store plaintext passwords), data integrity verification (checking if a file has been modified), digital signatures, API authentication tokens, and content-addressable storage systems.",
+      "Verifying file integrity is a common use case. By comparing the hash of a downloaded file against the publisher's provided hash, you can confirm the file has not been corrupted or tampered with during transfer.",
+      "The tool generates hashes using the Web Crypto API, which provides native browser implementations of cryptographic algorithms. This ensures correct, standards-compliant hash computation.",
+      "All hash computation happens in your browser. Text you are hashing, which may include sensitive data like passwords or API keys, is never transmitted over the network.",
+      "Having multiple hash algorithms available simultaneously lets you compare output lengths and choose the appropriate algorithm for your specific use case: SHA-256 for most purposes, SHA-512 for maximum security."
+    ],
+    "tips": [
+      "SHA-256 is the current recommended standard for most hashing needs. SHA-1 is considered cryptographically weak and should be avoided for security-sensitive applications.",
+      "When hashing passwords for storage, always use a dedicated password hashing algorithm (bcrypt, scrypt, Argon2) with salt, not a general-purpose hash function like SHA-256.",
+      "Hash functions are one-way: you cannot reverse a hash to get the original text. If you need reversible transformation, use encryption instead.",
+      "Two different inputs can theoretically produce the same hash (a collision), but this is extremely unlikely with SHA-256 and SHA-512. SHA-1 has known practical collision attacks."
+    ],
+    "faqs": [
+      {
+        "question": "What is a hash function and what is it used for?",
+        "answer": "A hash function takes any input data and produces a fixed-size output (the hash or digest) that uniquely represents that input. Hash functions are used for password storage (storing hashes instead of plaintext passwords), data integrity verification (detecting file modifications), digital signatures, authentication tokens, blockchain technology, and content-addressable storage. A good hash function is deterministic (same input always produces same output), fast to compute, and practically impossible to reverse."
+      },
+      {
+        "question": "Which hash algorithm should I use?",
+        "answer": "For most purposes, SHA-256 provides an excellent balance of security and performance. It produces a 256-bit (64-character hex) hash that is secure against all known attacks. Use SHA-512 when you need extra security margin or when working with systems that require it. Avoid SHA-1 for security-sensitive applications as practical collision attacks exist. For password hashing specifically, use dedicated algorithms like bcrypt, scrypt, or Argon2 instead of SHA functions."
+      },
+      {
+        "question": "Can I reverse a hash to get the original text?",
+        "answer": "No. Cryptographic hash functions are designed to be one-way functions. It is computationally infeasible to determine the original input from a hash output. This property is what makes hashing useful for password storage and data integrity verification. While rainbow tables and brute force attacks can find inputs that produce a given hash for short/common strings, this does not constitute reversing the function."
+      },
+      {
+        "question": "What is the difference between hashing and encryption?",
+        "answer": "Hashing is a one-way process: data goes in, a fixed-size hash comes out, and you cannot get the original data back. Encryption is a two-way process: data is encrypted with a key, and can be decrypted back to the original using the correct key. Use hashing when you need to verify data without needing the original (like passwords). Use encryption when you need to protect data that must be recovered later (like stored documents)."
+      },
+      {
+        "question": "Is my text safe when generating hashes online?",
+        "answer": "Yes. All hash computation in this tool happens entirely in your browser using the Web Crypto API. The text you input is never sent to any server, never transmitted over the network, and never stored anywhere. This makes the tool safe for generating hashes of sensitive data including passwords, API keys, and confidential content."
+      },
+      {
+        "question": "Why does changing one character completely change the hash?",
+        "answer": "This property is called the avalanche effect, and it is a crucial feature of good hash functions. Even a single bit change in the input produces a drastically different hash output. This ensures that similar inputs do not produce similar hashes, making it impossible to deduce information about the input by analyzing the hash. It also means you cannot predict how a change to the input will affect the hash output."
+      }
+    ]
+  },
+  "url-encode-decode": {
+    "howToUse": [
+      "Paste or type the URL or text you want to encode into the input field. This can be a complete URL with query parameters, a single parameter value, or any text containing special characters.",
+      "Click the Encode button to convert special characters to percent-encoding (e.g., spaces become %20, ampersands become %26). This makes the text safe for use in URLs.",
+      "To decode, paste a percent-encoded URL or string and click the Decode button. The tool converts all percent-encoded sequences back to their original characters.",
+      "Copy the result to your clipboard for use in your application code, API requests, browser address bar, or configuration files."
+    ],
+    "whyUse": [
+      "URLs have a restricted character set. Characters like spaces, ampersands (&), question marks (?), hash signs (#), and non-ASCII characters must be percent-encoded to be safely included in URLs. Incorrect encoding causes broken links, failed API requests, and data corruption.",
+      "When building dynamic URLs with query parameters, proper encoding prevents parameter injection and ensures data is transmitted correctly. This is essential for API integrations, form submissions, redirect URLs, and any system that passes data through URL parameters.",
+      "Debugging URL encoding issues is a common developer task. When an API returns unexpected results or a link does not work, decoding the URL often reveals the problem: double-encoded characters, missing encoding, or incorrectly encoded special characters.",
+      "All encoding and decoding happens in your browser. URLs containing sensitive parameters like authentication tokens, API keys, and user data are never sent to any external server.",
+      "The tool handles all standard URL encoding cases including UTF-8 multibyte characters, reserved characters, and commonly mishandled edge cases like plus signs and tildes."
+    ],
+    "tips": [
+      "Remember the difference between encodeURI() and encodeURIComponent() in JavaScript: encodeURI() preserves URL-safe characters like :, /, ?, &, while encodeURIComponent() encodes everything except letters, digits, and - _ . ~",
+      "Spaces in URLs can be encoded as either %20 or + (in form data). Be aware of which format your target system expects.",
+      "Avoid double-encoding: if a URL is already properly encoded, encoding it again will turn %20 into %2520, breaking the URL. If you are unsure, decode first and then encode.",
+      "When debugging API issues, decode the full URL to see the actual parameter values being sent. This often reveals encoding problems that are not visible in the encoded form."
+    ],
+    "faqs": [
+      {
+        "question": "What is URL encoding and why is it needed?",
+        "answer": "URL encoding (also called percent-encoding) converts characters that are not allowed or have special meaning in URLs into a safe format using percent signs followed by hexadecimal values. For example, a space becomes %20 and an ampersand becomes %26. This is necessary because URLs have a restricted character set (RFC 3986), and characters outside this set must be encoded to be transmitted correctly. Without proper encoding, URLs can break, data can be corrupted, and security vulnerabilities can arise."
+      },
+      {
+        "question": "What characters need to be URL encoded?",
+        "answer": "Characters that must be encoded include: spaces ( ), exclamation marks (!), hash (#), dollar signs ($), ampersands (&), single quotes ('), parentheses (()), asterisks (*), plus signs (+), commas (,), semicolons (;), equals signs (=), at signs (@), square brackets ([]), and any non-ASCII characters (like accented letters, Chinese characters, emoji). Letters (A-Z, a-z), digits (0-9), and a few special characters (- _ . ~) are safe and do not need encoding."
+      },
+      {
+        "question": "What is the difference between encodeURI and encodeURIComponent?",
+        "answer": "In JavaScript, encodeURI() encodes a complete URL while preserving characters that have special meaning in URL structure (:, /, ?, #, &, =). encodeURIComponent() encodes a URL component (like a parameter value) and encodes all special characters including those that have URL structural meaning. Use encodeURI() for complete URLs and encodeURIComponent() for individual parameter values."
+      },
+      {
+        "question": "How do I fix double-encoded URLs?",
+        "answer": "Double encoding occurs when an already-encoded URL is encoded again, turning sequences like %20 into %2520. To fix this, decode the URL once: if the result still contains percent-encoded sequences, decode again until no more encoded sequences remain. Then encode once from the clean text. To prevent double encoding, always check if text is already encoded before encoding it."
+      },
+      {
+        "question": "Is my URL data safe when using this tool?",
+        "answer": "Yes, completely safe. All encoding and decoding operations happen entirely in your browser using JavaScript's built-in encodeURIComponent() and decodeURIComponent() functions. No data is transmitted to any server. This makes the tool safe for URLs containing authentication tokens, API keys, user identifiers, and any other sensitive parameters."
+      },
+      {
+        "question": "Should spaces be encoded as %20 or + in URLs?",
+        "answer": "Both are valid but used in different contexts. In URL paths and most contexts, spaces should be encoded as %20 (this is the standard percent-encoding). In HTML form data submitted via GET method (application/x-www-form-urlencoded), spaces are encoded as +. Most modern APIs and web frameworks handle both correctly, but if you encounter issues, try switching between the two formats."
+      }
+    ]
+  }
+}

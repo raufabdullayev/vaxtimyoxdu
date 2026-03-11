@@ -1,0 +1,952 @@
+{
+  "sectionTitles": {
+    "howToUse": "Kak polzovatsya",
+    "whyUse": "Pochemu stoit ispolzovat etot instrument",
+    "tips": "Sovety i rekomendatsii",
+    "faq": "Chasto zadavaemye voprosy"
+  },
+  "json-formatter": {
+    "howToUse": [
+      "Vstavte vashi syryie JSON-dannye v pole vvoda v levoy chasti redaktora. Vy mozhete vstavit JSON iz lyubogo istochnika, vklyuchaya otvety API, konfiguratsionyie fayly ili eksport baz dannykh.",
+      "Nazhmite knopku Formatirovat, chtoby oformit vash JSON s pravilnymi otstupami i perenosami strok. Formatirovshchik avtomaticheski opredelyaet strukturu i primenyaet edinoobraznyie otstupy dlya udobnogo chteniya.",
+      "Ispolzuyte knopku Minifitsirovat, yesli vam nuzhno szhat JSON, udaliv vse probely. Eto polezno pri podgotovke dannykh dlya API-zaprosov ili umensheniya razmera poleznoy nagruzki v produktsii.",
+      "Prosmotrte panel vyvoda, kotoraya vydelyaet lyubyie sintaksicheskiye oshibki s opisatelnymi soobshcheniyami. Yesli v vashem JSON yest oshibki, validtor ukazyvaet tochnuyu stroku i simvol, gde voznikla problema.",
+      "Skopiruyte otformatirovannyy rezultat v bufer obmena odnim klikom ili skahayte yego kak fayl .json dlya lokalnogo ispolzovaniya."
+    ],
+    "whyUse": [
+      "Otladka otvetov API stanovitsya znachitelno bystree, kogda JSON-dannyie pravilno otformatirovalny s otstupami i podsvetkoy sintaksisa. Vlozhennyie obekty, kotoryie vyglyadyat kak odna nechitayemaya stroka, preobrazuyutsya v yasnnuyu iyerarkhicheskuyu strukturu.",
+      "Vstroennnyy validator lovit rasprostranennyie oshibki JSON, takiye kak zavershayushchiye zapyatyie, otsutsvuyushchiye kavychki vokrug klyuchey, odinarnyie kavychki vmesto dvoynykh i neekranirovannyie spetsialnyie simvoly, prezhde chem oni vyzovut oshibki vremen vypolneniya v vashem prilozhenii.",
+      "Vsyo rabotaet polnostyu v vashem brauzere na JavaScript. Vashi konfidentsialnyie konfiguratsionyie dannyie, klyuchi API i chastnaya informatsiya nikogda ne pokidayut vashe ustroystvo, chto delayet instrument bezopasnym dlya korporativnykh i produktsionnykh dannykh.",
+      "V otlichiye ot nastolnykh prilozheniy, trebuyushchikh ustanovki, etot instrument rabotaet mgnovenno na lyubom ustroystve s veb-brauzerom. Gde by vy ni byli — za rabochey stantsiyey, s planshetom na soveshchanii ili s telefonom pri ustranenii nepoladok — vash JSON-formatirovshchik vsegda pod rukoy.",
+      "Professionalnyie razrabotchiki ispolzuyut instrumenty formatirovaniya JSON yezheno pri rabote s REST API, otvetami GraphQL, bazami dannykh NoSQL, upravleniyem konfiguratsiey i obmennom dannymi mezhdu mikroservisami."
+    ],
+    "tips": [
+      "Pri rabote s bolshimi faylami JSON (bolee 1 MB) dlya luchshey proizvoditelnosti formatuyte tolko tot razdel, kotoryy vam nuzhno proverit, a ne ves dokument.",
+      "Ispolzuyte minifitsirovannyy vyvod pri khranenii JSON v bazakh dannykh ili otpravke po seti dlya snizheniya ispolzovaniya polosy propuskaniya i zatrat na khraneniye.",
+      "Yesli JSON ne prokhodit validatsiyu, proverite rasprostranennyie problemy: zavershayushchiye zapyatyie posle poslednego elementa v massivakh ili obektakh, odinarnyie kavychki vmesto dvoynykh i nekotirovanyie imena svoystv.",
+      "Dlya vlozhennogo JSON s mnozhestvom urovney ispolzuyte funktsiyu svertyvaniya/razvertyvaniya, chtoby sosredotochitsya na konkretnykh razdelakh, ne teryayas v obshchey strukture."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye formatirovshchik JSON i zachem on nuzhen?",
+        "answer": "Formatirovshchik JSON — eto instrument, kotoryy prinimaet syryie, minifitsirovannyie ili plokho strukturirovannyie JSON-dannyie i preobrazuyet ikh v khorosho organizovannyy, chitayemyy format s pravilnymi otstupami. Razrabotchiki nuzhayutsya v formatirovshchikakh JSON yezhndnevno pri rabote s otvetami API, otladke struktur dannykh, proverke konfiguratsionyikh faylov i podgotovke dokumentatsii."
+      },
+      {
+        "question": "Bezopasny li moi JSON-dannyie pri ispolzovanii etogo onlayn-formatirovshchika?",
+        "answer": "Da, vashi dannyie polnostyu v bezopasnosti. Etot formatirovshchik JSON rabotaet polnostyu v vashem brauzere s ispolzovaniyem klientskogo JavaScript. Vashi JSON-dannyie nikogda ne otpravlyayutsya ni na kakoy server, ne khranyatsya ni v kakoy baze dannykh i nigde ne registriruyutsya. Obrabotka proiskhodit lokalno na vashem ustroystve."
+      },
+      {
+        "question": "V chom raznitsa mezhdu formatirovaniyem i minifikatsiyey JSON?",
+        "answer": "Formatirovaniye JSON dobavlyaet probely, otstupy i perenosy strok, chtoby sdelat JSON chitayemym dlya cheloveka. Minifikatsiya JSON delayet obratnoye: udalyaet vse nenuzhnyie probely dlya polucheniya minimalno vozmozhnogo razmera faylna. Formatirovannyy JSON idealen dlya razrabotki i otladki, a minifitsirovannyy predpochtitelen dlya produktsionnogo ispolzovaniya."
+      },
+      {
+        "question": "Mozhet li etot instrument validirovat JSON s vlozhennymi obektami i massivami?",
+        "answer": "Da, validator obrabatyvayet JSON lyuboy slozhnosti, vklyuchaya gluboko vlozhennyie obekty, mnogomernyie massivy, smeshannyie tipy dannykh, simvoly Unicode i ekranirovannyie spetsialnyie simvoly. On proveryaet pravilnoye sopostavleniye skobok, pravilnuyu rasstnovku zapyatykh i sootvetstviye spetsifikatsii JSON (RFC 8259)."
+      },
+      {
+        "question": "Kakiye rasprostranennyie oshibki JSON obnaruzhivayet validator?",
+        "answer": "Validator obnaruzhivayet vse rasprostranennyie sintaksicheskiye oshibki JSON: zavershayushchiye zapyatyie posle poslednego elementa, odinarnyie kavychki vmesto dvoynykh, nekotirovannyie imena svoystv, otsutstvuyushchiye dvoyetochiya mezhdu klyuchami i znacheniyami, nezakrytyie skobki, nedopustimyie escape-posledovatelnosti i dublirovanyie klyuchi na odnom urovne obekta."
+      },
+      {
+        "question": "Mozhno li ispolzovat etot formatirovshchik dlya bolshikh faylov?",
+        "answer": "Da, formatirovshchik effektivno obrabatyvayet bolshiye fayly JSON, tak kak vsyo proiskhodit v vashem brauzere. Dlya ochen bolshikh faylov (neskolko megabayt) my rekomenduem ispolzovat sovremennyy brauzer, tazkoy kak Chrome ili Firefox, i ubeditsya, chto vashe ustroystvo obladayet dostatochnym obemom pamyati."
+      },
+      {
+        "question": "Podderzhivayet li etot instrument JSON5 ili JSONC?",
+        "answer": "Etot instrument sleduyet standartnoy spetsifikatsii JSON (RFC 8259), kotoraya ne dopuskayet kommentarii ili zavershayushchiye zapyatyie. Yesli vy vstavite soderzhimoye JSON5 ili JSONC, validator otmetit kommentarii i nestandartnyy sintaksis kak oshibki. Dlya formatirovaniya snachala udalite kommentarii."
+      }
+    ]
+  },
+  "image-compress": {
+    "howToUse": [
+      "Nazhmite na oblast zagruzki ili peretashchite fayly izobrazheniya v instrument. Podderzhivayutsya formaty JPEG, PNG i WebP lyubogo razresheniya.",
+      "Nastroyte polzunok kachestva dlya ustanovki zhelayemogo urovnya szhatiya. Nizlyie znacheniya dayut menshiye fayly, no mogut vvesti zamemuyu poteryu kachestva, vysokiye znacheniya sokhranyayut kachestvo za schet bolshego razmera fayla.",
+      "Prosmotrte szhatyy rezultat ryadom s originalom dlya vizualnogo sravneniya kachestva. Instrument pokazyvayet oba razmera faylov, chtoby vy mogli tochno videt, skolko mesta vy ekonomite.",
+      "Skahayte szhatoye izobrazheniye, kogda vy dovolny sootnosheniyem kachestva i razmera. Vykhondoy fayl gotov k ispolzovaniyu na veb-saytakh, v elektronnoy pochte ili sotsialnykh setyakh."
+    ],
+    "whyUse": [
+      "Skorost zagruzki stranitsy yavlyaetsya kriticheski vazhnym faktorom ranzhirovaniya dlya poiskovykh sistem. Szhatiye izobrazheniy pered zagruzkoy na sayt mozhet sokratit vremya zagruzki stranits na 40-70%, napryamuyu uluchshaya vashi pozitsii v SEO i polzovatelskiy opyt.",
+      "Platformy sotsialnykh setey, servisy elektronnoy pochty i sistemy upravleniya kontetnom chasto ustanavlivayut ogranicheniya na razmer faylov. Szhatiye izobrazheniy pozvolyayet sootvetstvovat trebovaniyam zagruzki bez ushcherba dlya vizualnogo kachestva.",
+      "Vsya obrabotka izobrazheniy proiskhodit neposredstvenno v vashem brauzere. Vashi fotografii, skrinshoty i konfidentsialnyie izobrazheniya nikogda ne zagruzhayutsya ni na kakoy server, chto garantiruyet polnuyu konfidentsialnost.",
+      "Umenshennyie razmery izobrazheniy oznachayut menshshiye zatraty na polosu propuskaniya dlya operatorov saytov i boleye bystryie zagruzki dlya posetiteley s medlennymi soedineniyami.",
+      "V otlichiye ot mnohikh onlayn-komressorov, kotoryie dobavlyayut vodyanyie znaki ili trebuyut platnuyu podpisku, etot instrument polnostyu besplatnyy bez ogranichheniy."
+    ],
+    "tips": [
+      "Dlya fotografiy szhatiye JPEG s kachestvom 75-85% obychno obespecchivayet otlichnyy balans mezhdu razmerom fayla i vizualnym kachestvom, kotoryy bolshinstvo zriteley ne mozhet otlichit ot originala.",
+      "Izobrazheniya PNG s bolshimi oblastyami sploshnogo tsveta skimayutsya ochen khorosho. Rassmotrite preobrazovaniye slozhnykh fotografiy iz PNG v JPEG dlya znachitelno luchshikh koeffitsientov szhatiya.",
+      "Format WebP chasto sozdayet fayly na 25-35% menshhe, chem JPEG pri ekvivalentnom vizualnom kachestve. Yesli vashi tselevyie platformy podderzhivayut WebP, predpochitayte etot format dlya maksimalnogo szhatiya.",
+      "Vsegda sokhranyayte originalnuyu kopiyu vazhnykh izobrazheniy pered szhatiyem. Szhatiye yavlyaetsya protsessom s poteryami dlya JPEG i WebP, chto oznachayet, chto kachestvo ne mozhet byt vosstanovelno posle snizheniya."
+    ],
+    "faqs": [
+      {
+        "question": "Naskolko mozhno umenshit razmer fayla izobrazheniya bez poteri kachestva?",
+        "answer": "Dlya izobrazheniy JPEG obychno mozhno umenshit razmer fayla na 60-80% s minimalnoy zametnoy poterey kachestva pri ispolzovanii nastroyki kachestva 70-85%. Izobrazheniya PNG chasto mozhno umenshit na 30-50% s pomoshchyu optimizatsii bez poter, voobshche bez kakoy-libo poteri kachestva."
+      },
+      {
+        "question": "Zagruzhayutsya li moi izobrazheniya na server pri szhatii?",
+        "answer": "Net, vsya obrabotka izobrazheniy proiskhodit polnostyu v vashem brauzere s ispolzovaniyem klientskogo JavaScript i HTML5 Canvas API. Vashi izobrazheniya nikogda ne pokidayut vashe ustroystvo, nikogda ne zagruzhayutsya ni na kakoy server i nigde ne khranyatsya."
+      },
+      {
+        "question": "Kakoy format izobrazheniy luchshiy dlya veb-ispolzovaniya?",
+        "answer": "WebP v nastoyashcheye vremya yavlyaetsya luchshim formatom dlya veb-izobrazheniy, predlagaya fayly na 25-35% menshhe, chem JPEG pri ekvivalentnom kachestve. JPEG ostaetsya otlichnym dlya fotografiy, kogda neobkhodima shirokaya sovmestimost. PNG idealen dlya izobrazheniy, trebuyushchikh prozrachnosti."
+      },
+      {
+        "question": "Vliyayet li szhatiye izobrazheniy na SEO i skorost stranitsy?",
+        "answer": "Bezuslovno. Google rassmatrivayet skorost stranitsy kak faktor ranzhirovaniya, a izobrazheniya obychno yavlyayutsya naibolshimi elementami, vliyayushchimi na razmer stranitsy. Pravilno szhatyie izobrazheniya mogut uluchshit vashi pokazateli Core Web Vitals, sokratit vremya Largest Contentful Paint i privesti k luchshemu ranzhirovaniyu v poiskovikh sistemakh."
+      },
+      {
+        "question": "Mozhno li szhat neskolko izobrazheniy odnovremenno?",
+        "answer": "Tekushchaya versiya obrabatyvayet odno izobrazheniye za raz dlya maksimalnogo kontrolya kachestva. Dlya kazhdogo izobrazheniya vy mozhete nastroit polzunok kachestva i prosmoret rezultat pered skachivaniyem."
+      },
+      {
+        "question": "V chom raznitsa mezhdu JPEG, PNG i WebP?",
+        "answer": "JPEG — eto format s poteryami, luchshiy dlya fotografiy, obespechivayet malenkiy razmer faylov. PNG — format bez poter s podderzhkoy prozrachnosti, idealnyy dlya logotipov i izobrazheniy s tekstom. WebP obedinayayet preimushchestva oboikh, podderzhivaya szhatiye kak s poteryami, tak i bez poter, i obychno sozdayot samyie malenkiye fayly."
+      }
+    ]
+  },
+  "pdf-merge": {
+    "howToUse": [
+      "Peretashchite fayly PDF, kotoryie vy khotite obedinit, v oblast zagruzki ili nazhmite knopku obzora, chtoby vybrat ikh iz provodnika. Mozhno zagruzit neskolko faylov odnovremenno.",
+      "Raspolozhite zagruzhennyie fayly v nuzhnom poryadke peretaskivaniyem. Fayly budut obedineny v tom poryadke, v kotorom oni otobrazhayutsya v spiske.",
+      "Yesli nado dobavit bolshe faylov, ispolzuyte oblast zagruzki snova, chtoby dobavit dopolnitelnyie PDF-fayly. Ogranicheniya na kolichestvo faylov net.",
+      "Nazhmite knopku Obedinit, chtoby sovmestit vse PDF-fayly v odin dokument. Obrabotka proiskhodit polnostyu v vashem brauzere, i fayly ne otpravlyayutsya na server.",
+      "Skahayte obedinennyy PDF. Vse stranitsy, zakladki i formatirovaniye originalnykh faylov sokhraneny."
+    ],
+    "whyUse": [
+      "Obedineniye neskolkikh otchyotov, schyotov-faktur ili dokumentov v odin fayl uproshchayet upravleniye dokumentami, umenshayet besporyadok v faylakh i oblegchayet sovmestnoye ispolzovaniye.",
+      "Vsya obrabotka PDF proiskhodit neposredstvenno v vashem brauzere. Konfidentsialnyie delovyie dokumenty, kontrakty i personalnyie fayly nikogda ne zagruzhayutsya na server, chto obespecchvayet polnuyu konfidentsialnost.",
+      "Kogda vam nuzhno obedinit neskolko razdelov v odin dokument dlya professionalnykh prezentatsiy, proyektnykh predlozheniy i akademicheskikh rabot, etot instrument ekonomit vremya.",
+      "Predostavlyayet besplatnuyu i neogranichennnuyu vozmozhnost ispolzovaniya. Vy mozhete rabotat s bolshimi PDF-faylami i bolshim kolichestvom dokumentov.",
+      "Veb-instrument, rabotayushchiy na lyuboy platforme, vklyuchaya mobilnyie ustroystva, ne trebuyet ustanovki."
+    ],
+    "tips": [
+      "Pered obedineniyem ubedites, chto PDF-fayly raspolozheny v pravilnom poryadke. Funktsiya peretaskivaniya pozvolyayet legko izmenyat poryadok.",
+      "Pri obedinehnii ochen bolshikh faylov PDF ubedites, chto brauzer obladayet dostatochnym obemom pamyati. Sovremennyie brauzery mogut bez problem obrabatyvat fayly s sotnyami stranits.",
+      "Yesli vy khotite udalit nenzhnyie stranitsy pered obedineniyem, snachala ispolzuyte nash instrument razdeleniya PDF, chtoby vybrat tolko nuzhnyie stranitsy.",
+      "Obshchiy razmer obedinyonnogo dokumenta budet blizok k summarnomou razmeru originalnykh faylov. Yesli vy khotite umenshit razmer, ispolzuyte nash instrument szhatiya PDF."
+    ],
+    "faqs": [
+      {
+        "question": "Zachem nuzhno obedinyat fayly PDF?",
+        "answer": "Obedineniye PDF ispolzuyetsya dlya sobyraniya neskolkikh dokumentov v odin fayl. Eto osobenno rasprostranenno dlya sozdaniya mnogostrannichnykh otchyotov, obedineniya dokumentov iz raznykh istochnikov, podgotovki zayavitelnykh dosye i arkhivirovaniya. Otpravit odin PDF-fayl gorazdo praktichneye, chem otpravlyat neskolko otdelnykh faylov."
+      },
+      {
+        "question": "Bezopasny li moi fayly pri obednehnii?",
+        "answer": "Da, polnostyu bezopasny. Vsya obrabotka PDF proiskhodit lokalno v vashem brauzere. Vashi fayly nikogda ne zagruzhayutsya ni na kakoy server i nigde ne khranyatsya. Eto delayet instrument polnostyu bezopasnym dlya konfidentsaialynkh delovykh dokumentov, kontraktov i lichnykh faylov."
+      },
+      {
+        "question": "Skolko faylov PDF mozhno obedinit?",
+        "answer": "Ogranicheniya na kolichestvo faylov net. Vy mozhete obedinit stolko PDF-faylov, skolko vam nuzhno. Odnako pri rabote s bolshim kolichestvom ili bolshimi faylami rekomenduetsya sledit za ispolzovaniyem pamyati brauzera."
+      },
+      {
+        "question": "Mozhno li izmenyat poryadok obedineniya?",
+        "answer": "Da, posle zagruzki vy mozhete peretaskivat fayly v nuzhnom poryadke. Fayly obedinyayutsya v tom poryadke, v kotorom oni otobrazhayyutsya v spiske, poetomu vazhno proverit poryadok pered obedineniyem."
+      },
+      {
+        "question": "Menyaetsya li kachestvo obedinyonnogo PDF?",
+        "answer": "Net, protsess obedineniya ne izmenyayet soderzhaniye originalnykh faylov. Tekst, izobrazheniya, zakladki i vso ostalnoye soderzhaniye polnostyu sokhranyayetsya. Itogoyvy fayl soderzhit vse stranitsy originalnykh faylov bez izmeneniy."
+      },
+      {
+        "question": "Mozhno li obedinit zashchishchennyie parolem PDF?",
+        "answer": "Zashchishchennyie parolem PDF-fayly trebuyut snytiya parolya pered obedineniyem. Instrument ne mozhet napryamuyu obrabatytvat zashifrovanniye fayly. Snachala udalite parol, zatem obedinitye fayly i pri neobkhodimosti dobavte novyy parol k rezultiruyushchemu faylu."
+      }
+    ]
+  },
+  "qr-code-generator": {
+    "howToUse": [
+      "Vvedite tekst, URL ili dannyie, kotoryie vy khotite preobrazovat v QR-kod, v pole vvoda. Podderzhivayutsya URL, prostoye tekst, adresa elektronoy pochty i nastroyki WiFi.",
+      "Vyberite zhelayemyy razmer QR-koda i uroven ispravleniya oshibok. Boleye vysokiy uroven ispravleniya obespecchivayet chteniye koda dazhe pri chastichnom povrezhdenii.",
+      "Nastroyte tsvet QR-koda i tsvet fona v sootvetstvii s vashim brendom. Sokhranite vysokiy kontrast, inache skanery mogut ne prochitat kod.",
+      "Prosmotrte sozdannyy QR-kod i skahayte yego v formate PNG ili SVG. SVG idealen dlya pechati, PNG — dlya tsifrovogo ispolzovaniya."
+    ],
+    "whyUse": [
+      "QR-kody sozdayut mgnovennuyu svyaz mezhdu fizicheskim mirom i tsifrovym kontentom. Oni shiroko ispolzuyutsya v menyu restoranov, vizitnykh kartochkakh, upakovke produktov i bilettakh na meropriyatiya.",
+      "V marketingovykh kampaniyakh QR-kody napravlyayut polzovateley na veb-sayty, profili sotsialnykh setey ili spetsialnyie predlozheniya. Oni uproshchayut perekhod ot pechatnykh materialov k tsifrovomu vzaimodeystviyu.",
+      "Predpriyatiya shiroko ispolzuyut QR-kody v upravlenii zapasami, otslezhivanii aktivov i logisticheskikh operatsiyakh. Kazhdyy prodkt ili aktiv mozhet byt identificirovan s pomoshchyu unikalnogo QR-koda.",
+      "Etot instrument polnostyu besplatnyy i neogranichennyy. Vy mozhete sozzdavat stolko QR-kodov, skolko neobkhodimo, bez vodyanykh znakov ili ogranicheniy.",
+      "Vsyo sozdaniye QR-kodov proiskhodit lokalno v vashem brauzere, vashi dannyie ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Ubedites, chto URL pravilny i polnyy, prezhde chem kodirovat yego v QR-kod. Ne zabudte dobavit prefiks https://.",
+      "Ispolzuyte vysokiy uroven ispravleniya oshibok (H), osobenno yesli QR-kod budet ispolzovatsya v pechatnykh materialakh. Eto pozvolit kodu ostavatsya chitayemym dazhe pri chastichnom povrezhdenii.",
+      "Pered pechatyu protersiruyte skanirovalniye QR-koda na raznykh ustroystvakh. Ubedites, chto yego mozhno legko skanirovat s kamery lyubogo smartfona.",
+      "Ispolzovaniye korotkikh URL ili servisov sokrashcheniya URL delayet QR-kod boleye prostym i legko skaniruyemym."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye QR-kod i kak on rabotayet?",
+        "answer": "QR (Quick Response) kod — eto dvukhmeryy shtrikkhod, kodiruyushchiy dannyie. Yego mogut chitat smartfony i spetsialnyie skanery. On khranit dannyie v chyornobyelykh kvadratnykh uzorakh i blagodarya funktsii ispravleniya oshibok mozhet sokhranit zakodirovannnuyu informatsiyu dazhe pri chastichnom povrezhdenii."
+      },
+      {
+        "question": "Istekayut li sozdannyie QR-kody?",
+        "answer": "Net, staticheskiye QR-kody ne istekayut. Zakodirovannnaya informatsiya khrannitsya v samom QR-kode, a ne na kakom-libo servere. QR-kody s URL, tekstom ili kontaktnoy informatsiey ostayutsya deystvitelnymi navsegda, no vy dolzhny ubeditsya, chto zakodirovannyy URL aktivean."
+      },
+      {
+        "question": "Skolko dannykh mozhno zakodirovat v QR-kode?",
+        "answer": "Standartnyy QR-kod mozhet khranit okolo 3000 alfatsifrrovykh simvolov ili 7000 tsifrovykh simvolov. Odnako bolshe dannykh uslozhnyayet QR-kod i zatrudnyaet yego skanirovalniye. Luchshiye rezultaty dostigayutsya s URL i korotkimi tekstami."
+      },
+      {
+        "question": "Mozhno li nastroit tsveta QR-koda?",
+        "answer": "Da, vy mozhete svobodno izmenyat tsveta perednego plana i fona. Odnako neobkhodimo obespechit dostatochnyy kontrast — tyomnyie moduli na svetlom fone vazhny dlya skaniruyemosti. Kombinatsii tsvetov s nizkim kontrastom mogut vyzyvat problemy pri skanirovannii."
+      },
+      {
+        "question": "Bezopasny li QR-kody?",
+        "answer": "Sami QR-kody bezopasny, no vazhno obratit vnimaniye na URL, na kotoryie oni napravlyayut. QR-kody, sozdannyie s pomoshchyu etogo instrumenta, polnostyu pod vashim kontrolem. Bezopasnost skaniruemykh QR-kodov zavisit ot tselevogo URL."
+      },
+      {
+        "question": "V kakom formate luchshe skahat QR-kod?",
+        "answer": "Predpochitayte format SVG dlya pechatnykh rabot, tak kak on vektornyy i mozhet masshtabirvoatsya do lyubogo razmera bez poteri kachestva. Ispolzuyte format PNG dlya veb-saytov, sotsialnykh setey i tsifrovykh materialov. Oba formata shiroko podderzhivayutsya."
+      },
+      {
+        "question": "Mozhno li zakodirovat dannyie WiFi v QR-kode?",
+        "answer": "Da, vy mozhete sozdat QR-kod, soderzhashchiy nazvalniye seti WiFi (SSID), parol i tip shifrovaniya (WPA/WPA2). Polzovateli mogut otskanirovat etot QR-kod i avtomaticheski podklyuchitsya k seti WiFi, ne vvodya parol vruchnuyu."
+      }
+    ]
+  },
+  "password-generator": {
+    "howToUse": [
+      "Opredelite dlinu parolya. Dlya bezopasnykh paroley rekomenduetsya ne meneye 12 simvolov, dlya uchyotnykh zapisey s vysokimi trebovaniyami bezopasnosti — 16 ili boleye.",
+      "Vyberite tipy simvolov, kotoryie budut vklyucheny v parol: propisnyie bukvy, strochnyie bukvy, tsifry i spetsialnyie simvoly. Chem bolshe tipov simvolov vy vklyuchite, tem silneye budet parol.",
+      "Nazhmite knopku Sgenerirovat i mgnovenno poluchite sluchaynyy nadyozhnyy parol. Parol sozdayotsya s pomoschyu kriptograficheski bezopasnogo generatora sluchaynykh chisel.",
+      "Skopiruyte sgenerirovannyy parol v bufer obmena odnim klikom. Yesli on vam ne nravitsya, nazhmite snova dlya generatsii novogo."
+    ],
+    "whyUse": [
+      "Slabyie i predsikazuyemyie paroli yavlyayutsya odnoy iz naibolee rasprostranennykh prichin utechek dannykh. Sluchayno sgenerirovannyie silnyie paroli obespecchivayut znachitelnuyu zashchitu ot atak polnym pereborom.",
+      "Lyudi obychno sozdayut prostyie paroli, kotoryie mogut zapomnit, chto delayet ikh predskazuyemymi. Generator paroley sozdayot polnostyu sluchaynyie kombinatsii.",
+      "Ispolzovaniye unikalnogo parolya dlya kazhdoy uchyotnoy zapisi zashchishchayet drugiye vashi akkaunt v sluchaye vzloma odnogo iz nikh.",
+      "Vsya generatsiya paroley proiskhodit lokalno v vashem brauzere. Sozdannyie paroli ne otpravlyayutsya ni na kakoy server i ne sokhranyyautsya.",
+      "Sozdayot paroli, sootvetstvuyushchiye standartam bezopasnosti NIST. Trebovaniya k minimalnoy dline, slozhnosti i sluchaynosti vypolnyayutsya."
+    ],
+    "tips": [
+      "Vsegda ispolzuyte paroli dlinnoy ne meneye 12 simvolov. Kazhdyy dopolnitelnyy simvol eksponentialyno uvelichivayet vremya vzloma parolya.",
+      "Vklyuchayte vse tipy simvolov (propisnyie/strochnyie bukvy, tsifry, spetsialnyie simvoly). Eto znachitelno uvelichivayet chislo vozmozhnykh kombinatsiy.",
+      "Ispolzuyte raznyy parol dlya kazhdoy uchyotnoy zapisi. Menedzher paroley pomozhet bezopasno khranit vse vashi unikalnyie paroli.",
+      "Regulyarno menyayte paroli, osobenno dlya vazhnykh uchyotnykh zapisey. Yesli vy uslyshite o kakom-libo narushenii dannykh, nemedlenno smenite sootvetstvuyushchiye paroli.",
+      "Sochetayte silnyie paroli s dvukhfaktornoy autentifikatsiyey (2FA). Eto dobavit dopolnitelnyy uroven zashchity."
+    ],
+    "faqs": [
+      {
+        "question": "Kakoy dliny dolzhen byt nadyozhnyy parol?",
+        "answer": "Eksperty po bezopasnosti rekomendduyut minimum 12 simvolov, no 16 ili boleye idealny dlya kriticheskikh uchyotnykh zapisey. Kazhdyy dopolnitelnyy simvol eksponentsialno uvelichivayet vremya, neobkhodimoye dlya ataki polnym pereborom. 8-simvolnyy parol mozhet byt vzloman za chasy, togda kak 16-simvolnyy mozhet potrebovat trilliony let s sovremennymi tekhnologiyami."
+      },
+      {
+        "question": "Yavlyayutsya li sgenerirovannyie paroli deystvitelno sluchaynymi?",
+        "answer": "Da, instrument ispolzuyet kriptograficheski bezopasnyy generator sluchaynykh chisel brauzera (Crypto.getRandomValues API). Eto garantiruyet, chto kazhdyy sgenerirovannyy parol yavlyaetsya deystvitelno sluchaynym i nepredskazuyemym. V otlichiye ot predvizimoykh shablonov v parolyakh, sozdannykh chelovekom, etot metod garantiruyet istinnuyu sluchaynost."
+      },
+      {
+        "question": "Bezopasen li generator paroley? Sokhranyyautsya li moi paroli?",
+        "answer": "Polnostyu bezopasen. Generatsiya paroley proiskhodit polnostyu v vashem brauzere. Ni odin parol ne otpravlyaetsya ni na kakoy server, ne sokhranyyaetsya i ne khranitsya. Pri obnovlenii ili zakrytii stranitsy sgenerirovannyie paroli polnostyu udalyayutsya iz pamyati."
+      },
+      {
+        "question": "Pochemu nuzhno ispolzovat raznyy parol dlya kazhdoy uchyotnoy zapisi?",
+        "answer": "Ispolzovaniye odnogo i togo zhe parolya dlya neskolkikh uchyotnykh zapisey — eto bolshoy risk bezopasnosti. Kogda baza dannykh servisa vzlomana, zloyumyshlenniki poprobuyut tot zhe parol na drugikh vashikh akkountakh (ataka credential stuffing). Unikalnyie paroli predotvraschayut etot tsepnoy effekt."
+      },
+      {
+        "question": "Naskolko spetsialnyie simvoly usilyvayut parol?",
+        "answer": "Spetsialnyie simvoly (!@#$%^&*) znachitelno rasshiryayut pool vozmozhnykh simvolov. Tolko so strochnymi bukvami yest 26 vozmozhnykh simvolov, a dobavleniye vsekh tipov simvolov uvelichivayet eto do boleye chem 90. Eto v milliony raz uvelichivayet vremya vzloma parolya toy zhe dliny."
+      },
+      {
+        "question": "Kak chasto nuzhno menyat parol?",
+        "answer": "Sovremennyie rekomendatsii po bezopasnosti ne trebuyut rutinnoy smeny parolya, poka vy ispolzuyete nadyozhnyy unikalnyy parol. Odnako smeniite parol nemedlenno, yesli vy podozrevayete utechku dannykh, vidite podozritelnuyu aktivnost v akaunte ili vam prishlos podelitsya parolem s kem-to."
+      },
+      {
+        "question": "Stoit li ispolzovat menedzher paroley?",
+        "answer": "Da, menedzher paroley nastoyatelno rekomenduetsya. Zapomnit desyatki unikalnykh slozhnykh paroley nepraktichno dlya lyudey. Menedzher paroley bezopasno khranit vse vashi paroli v zashifrovannom khranilishche i avtomaticheski zapolnyayet ikh po mere neobkhodimosti."
+      }
+    ]
+  },
+  "color-picker": {
+    "howToUse": [
+      "Ispolzuyte instrument vybora tsveta, chtoby vybrat nuzhnnyy tsvet iz shirokhoy palitry. Peremeshchayte kursor myshi po tsvetovoy poverkhnosti, nastranivaya ottenok, nasyschennost i yarkost.",
+      "Vvedite tsvetovyie kody HEX, RGB, HSL ili HSV napryamuyu v pole vvoda, chtoby bystro vybrat konkretnyy tsvet.",
+      "Prosmotrte predvaritelnyy vid vybrannogo tsveta i proverite, kak on budet vyglyadet na raznykh fonakh.",
+      "Skopiruyte tsvetovoy kod v nuzhnom formate (HEX, RGB, HSL) odnim klikom i ispolzuyte v svoikh proyektakh."
+    ],
+    "whyUse": [
+      "Veb-dizaynery i razrabotchiki postoyanno nuzhdayutsya v tochnykh tsvetovykh kodakh dlya CSS, HTML i faylov dizayna. Etot instrument obespecchivayet mgnovennuyu konversiyu mezhdu razlichnymi formatami.",
+      "Soglasovannost tsvetov brenda vazhna. Vy mozhete nayti tochnyy kod kazhdogo tsveta, ispolzuyemogo v dizayn-proyekte.",
+      "Otsenka koeffitsientov kontrastnosti tsvetov vazhna dlya proverok dostupnosti. Obespechenniye dostatochnogo kontrasta delayet veb-kontent dostupnym dlya vsekh.",
+      "Polnostyu besplatnyy, ne trebuyet ustanovki i rabotayet na lyubom ustroystve."
+    ],
+    "tips": [
+      "Dlya veb-dostupnosti obespechte koeffitsient kontrastnosti ne meneye 4.5:1 mezhdu tekstom i fonom (standart WCAG AA).",
+      "Pri sozdanii tsvetovykh palitr ispolzuyte dopolnitelnyie tsveta (tsveta na protivopolozhnoy storone tsvetovogo kruga) dlya vizualnoy garmonii.",
+      "Znayte sokrashchennuyu notatsiyu HEX-kodov: #RGB dayot tot zhe rezultat, chto i #RRGGBB (naprimer, #F00 = #FF0000).",
+      "Dokumentiruyte tsveta, ispolzuyemyie v vashey dizayn-sisteme. Zapisyvayte znacheniya HEX, RGB i HSL v rukovodstve po brendu."
+    ],
+    "faqs": [
+      {
+        "question": "V chom raznitsa mezhdu tsvetovymi formatami HEX, RGB i HSL?",
+        "answer": "HEX predstavlyayet tsvet 6-znachnym shestnadtsaterichnym chislom (#RRGGBB), eto naiboleye rasprostranennyy format v veb-razrabotke. RGB ukazyvayet znacheniya krasnogo, zelyonogo i sinegno kanalov v diapazone 0-255. HSL opredelyayet tsvet cherez ottenok (0-360), nasyschennost (0-100%) i svetlotu (0-100%), chto pozvolyayet boleye intuitivno vosprinimaty tsveta."
+      },
+      {
+        "question": "Kak uznat tsvetovoy kod elementa na veb-sayte?",
+        "answer": "Otkroyte instrumenty razrabotchika brauzera (F12), chtoby prosmatrivat elementy i videt tsvetovyie kody v svoystakh CSS. Vy takzhe mozhete ispolzovat rasshireniya brauzera ili funktsiyu vybora tsveta v etom instrumente, chtoby poluchit tsvetovoy kod iz lyubogo izobrazheniya."
+      },
+      {
+        "question": "Pochemu koeffitsient kontrastnosti tsvetov vazhen dlya dostupnosti?",
+        "answer": "WCAG (Rukovodstva po dostupnosti veb-kontenta) ustanavlivayet minimalnyie koeffitsienty kontrastnosti: 4.5:1 dlya obychnogo teksta, 3:1 dlya krupnogo teksta. Nedostatochnyy kontrast delayet kontnet nechetaemym dlya polzovateley s narusheniyami zreniya i polzovateley mobilnykh ustroystv pri yarkom solnechnom svete."
+      },
+      {
+        "question": "Kak ispolzovat znacheniye alfa (prozrachnost) v CSS?",
+        "answer": "V CSS funktsii rgba() i hsla() prinimayut znacheniye alfa ot 0 do 1: rgba(255, 0, 0, 0.5) sozdayot 50% prozrachnyy krasnyy. V formate HEX mozhno ispolzovat 8-znachnuyu notatsiyu: #FF000080. Sovremennyy CSS takzhe podderzhivayet prozrachnost v rgb(): rgb(255 0 0 / 50%)."
+      },
+      {
+        "question": "Kak proektirovat dlya polzovateley s daltonizmom?",
+        "answer": "Izbegayte peredachi informatsii tolko cherez tsvet — dopolnyayte ikonkami, uzorami i tekstovymi metkami. Ispolzuyte simulyatory daltonizma dlya testirovaniya dizayna. Dlya naibolee rasprostranennogo tipa daltonizma (krasno-zyolonogo) izbegayte ispolzovaniya etikh dvukh tsvetov v kachestve razlichitelnykh."
+      },
+      {
+        "question": "Kak sozdavat garmonichnyyye tsvetovyie palitry?",
+        "answer": "Ispolzuyte printsipy teorii tsveta: dopolnitelnyie tsveta (naprotiv), analogichnyie (ryadom), triada (interval 120 gradusov) i razdyolennyie dopolnitelnyie. Vyberite osnovnoy tsvet i sozdayte garmonichnyie ottsenki po etim printsipam. Obychno odnoho osnovnogo, odnogo aktsentnogo tsveta i neyralnykh tonov dostatochno."
+      }
+    ]
+  },
+  "base64-encode-decode": {
+    "howToUse": [
+      "Vstavte tekst ili dannyie, kotoryie vy khotite zakodirovat ili dekoduirovat, v pole vvoda.",
+      "Vyberite tip operatsii: Zakodirovat (Encode) preobrazuyet prostoye tekst v format Base64, Dekodirovat (Decode) preobrazuyet zakodirovannyie Base64 dannyie obratno v originralnyy tekst.",
+      "Nazhmite knopku Preobrazovat i mgnovenno uvidte rezultat. Rezultat avtomaticheski otobrazhaetsya v oblasti vyvoda.",
+      "Skopiruyte rezultat v bufer obmena odnim klikom i ispolzuyte tam, gde eto neobkhodimo."
+    ],
+    "whyUse": [
+      "Kodirovaniye Base64 neobkhodimo dlya bezopasnoy peredachi binnarnykh dannykh (izobrazheniy, faylov) v tekstovykh sredakh. Ono shiroko ispolzuyetsya v vlozheniyakh elektronnoy pochty, URI dannykh i API-zaprosakh.",
+      "V veb-razrabotke kodirovaniye Base64 ispolzuyetsya dlya vstraivaniya izobrazheniy neposredstvenno v HTML ili CSS. Eto mozhet uluchshit vremya zagruzki stranits dlya nebolshikh izobrazheniy za schet umenisheniya dopolnitelnykh HTTP-zaprosov.",
+      "Tokeny JWT, zagolovki HTTP-autentifikatsii i razlichnyie otvety API soderzhhat dannyie, zakodirovannyie v Base64. Bystroye kodirovalniye i dekodirovanniye etikh dannykh uskoaryayet protsess razrabotki.",
+      "Vsyo kodirovalniye i dekodirovanniye proiskhodit lokalno v vashem brauzere. Vashi konfidentsialnyie dannyie ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Base64 — eto ne shifrovalniye. Dannyie Base64 mogut byt legko dekodirovany, poetomu dlya bezopasnoy peredachi konfidentialnoy informatsii ispolzuyte sootvetstvuyushchiye metody shifrovaniya vmesto Base64.",
+      "Kodirovaniye Base64 uvelichivayet razmer dannykh priblizitelno na 33%. Uchityvayte eto pri kodirovanii bolshikh faylov.",
+      "V URI dannykh pri ispolzovanii Base64 ukazhite pravilnyy MIME-tip: data:image/png;base64, ili data:application/pdf;base64, i tak daleye.",
+      "Kogda trebuetsya URL-bezopasnyy Base64, simvoly + i / iz standartnogo Base64 zamenyayutsya na - i _ sootvetstvenno."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye kodirovaniye Base64?",
+        "answer": "Base64 — eto skhema kodirovaniya, preobrazuyushchaya binarnyie dannyie v nabor iz 64 pechatnyikh ASCII-simvolov. Ispolzuyutsya simvoly A-Z, a-z, 0-9, + i /. Eto obespecchivayet bezopasnuyu peredachu binnarnykh dannykh po tekstovym protokolam."
+      },
+      {
+        "question": "Yavlyaetsya li Base64 shifrovamniyem?",
+        "answer": "Net, Base64 — eto ne shifrovamniye. Lyubyie dannyie v Base64 mogut byt legko dekodirovanny, tak kak ne ispolzuyetsya sekreetnyy klyuch. Tsel Base64 — ne skryvat dannyie, a obespechit peredachu binnarnykh dannykh po tekstovym kanalam bez iskazheniy."
+      },
+      {
+        "question": "Pochemu kodirovaniye Base64 uvelichivayet razmer fayla?",
+        "answer": "Base64 preobrazuyet kazhdyie 3 bajta binnarnykh dannykh v 4 ASCII-simvola, chto privodit k uvelicheniyu razmera priblizitelno na 33%. Eto svyazano s tem, chto 8-bitnyyie binarnyie dannyie razdelyyayutsya na 6-bitnyyie gruppy, i kazhdaya grupa predstavlyaetsya odnim simvolom Base64."
+      },
+      {
+        "question": "Kak Base64 ispolzuyetsya v veb-razrabotke?",
+        "answer": "V veb-razrabotke Base64 sluzhat raznym tselyam: vstraivalniye nebolshikh izobrazheniy v HTML/CSS (URI dannykh), kodirovaniye vlozheniy elektronnoy pochty v formate MIME, peredacha dannykh v tokenakh JWT, kodirovaniye imeni polzovatelya i parolya v zagolovkakh bazovoy HTTP-autentifikatsii i obmen binarnymi dannymi mezhdu API."
+      },
+      {
+        "question": "Chto takoye URL-bezopasnyy Base64?",
+        "answer": "Simvoly + i / iz standartnogo Base64 imeyut spetsialnoye znacheniye v URL. URL-bezopasnyy Base64 (Base64url) zamenyayet eti simvoly na - i _ sootvettstvenno, chto pozvolyayet bezopasno ispolzovat zakodirovannyie dannyie v parametrakh URL. Tokeny JWT ispolzuyut URL-bezopasnyy Base64."
+      },
+      {
+        "question": "Bezopasny li moi dannyie pri kodirovalnii Base64?",
+        "answer": "So storony instrumenta — da, vsyo kodirovalniye i dekodirovanniye proiskhodit lokalno v vashem brauzere, vashi dannyie ne otpravlyayutsya ni na kakoy server. Odnako sam Base64 ne obespecchivayet bezopasnost, tak kak mozhet byt legko dekodirovan kem ugodno. Dlya konfidentialnykh dannykh ispolzuyte nastoyashchiye algoritmy shifrovaniya, takiyke kak AES ili RSA."
+      }
+    ]
+  },
+  "word-counter": {
+    "howToUse": [
+      "Vstavte tekst v pole vvoda ili nachniete vvodit napryamuyu. Instrument obnovlyayet statistiku v realnom vremeni po mere vvoda teksta.",
+      "Prosmotrte podrobnuyu statistiku: kolichestvo slov, simvolov (s probelami i bez), predlozheniy i abzatsev.",
+      "Rasschyotnoye vremya chteniya i vremya proizneseniya polezny dlya planirovaniya kontenta.",
+      "Ochistite tekst ili sbrosye statistiku odnim klikom."
+    ],
+    "whyUse": [
+      "Avtoram kontenta neobkhodimo soblyudat opredelennyie trebovaniya k kolichestvu slov dlya blogov, statey i postov v sotsialnykh setyakh. Etot instrument obespechivayet podschet v realnom vremeni.",
+      "V akademicheskikh rabotakh vazhny limity slov dlya zaadaniy i dissertatsiy. Schetchik slov pomogayet soblyudat ukazannyie limity.",
+      "Dlya SEO vazhny meta-opisaniya (155 simvolov), zagolovki (60 simvolov) i dlina kontenta. Etot instrument mgnovenno pokazyvayet vash podschet simvolov.",
+      "Platformy sotsialnykh setey imeyut limity simvolov: Twitter/X 280, Instagram bio 150, LinkedIn post 3000. Proverite dlinu kontenta pered publikatsiyey."
+    ],
+    "tips": [
+      "Dlya SEO blogi obychno luchshhe vsego rabotayut pri dline 1500-2500 slov. Sledite za dlinoy vo vremya napisaniya s pomoshchyu etogo instrumenta.",
+      "Otsenka vremeni chteniya osnovana na skorosti chteniya 200-250 slov v minutu. Dlya tekhnicheskogo kontenta chitateli obychno chitayut medlenneye.",
+      "Proveryayte podschet simvolov s probelami i bez. Nekotoryie platformy vklyuchayut probely v podschet simvolov, drugiye — net.",
+      "Kolichestvo abzatsev — vazhnyy pokazatel formatirovaniya teksta i chitabelnosti. Korotkiye abzatsy luchshe chitayutsya v veb-kontente."
+    ],
+    "faqs": [
+      {
+        "question": "Kak rabotayet schetchik slov?",
+        "answer": "Schetchik slov razdelyayet tekst po probelam, tabulyatsiyam i simvolam kontysa stroki i podchityvayet poluchennyie slova. Predlozheniya opredelyayutsya po znakam prepinaniya, a abzatsy — po pustym strokam. Podschet obnovlyayetsya v realnom vremeni po mere vvoda ili izmeneniya teksta."
+      },
+      {
+        "question": "Naskolko tochna otsenka vremeni chteniya?",
+        "answer": "Otsenka vremeni chteniya osnovana na sredney skorosti chteniya vzroslogo cheloveka (priblizitelno 200-250 slov v minutu). Fakticheskoye vremya chteniya mozhet varyirovatsya v zavisimosti ot slozhnosti kontenta, urovnya vladeniya yazykom chitatelem i formatirovaniya teksta. Tekhnicheskiy i akademicheskiy kontnet obychno chitayetsya medlenneye."
+      },
+      {
+        "question": "Kakoye idealnoye kolichestvo slov dlya bloga?",
+        "answer": "Soglasno issledovaniyam SEO, dlinnolformnyy kontent (1500-2500 slov) obychno luchshe ranzhiruyetsya v poiskovykh sistemakh. Odnako kachestvo vsegda vazhneye kolichestva. Tema dolzhna byt polnostyu raskryta i predostavlyat tsennnost chitattelyam. Korotkiye blogi (500-1000 slov) mogut byt dostatochny dlya opredelyonnykh tem."
+      },
+      {
+        "question": "Pochemu vazhen podschet simvolov?",
+        "answer": "Podschet simvolov kriticheski vazhen na mnohikh platformakh: meta-opisaniya Google ~155 simvolov, zagolovki Google ~60 simvolov, Twitter/X 280 simvolov, SMS-soobshcheniya 160 simvolov. Previsheniye etikh limitov privodit k obrezhannyu kontenta i neppolnoy peredache soobshcheniya."
+      },
+      {
+        "question": "Otlichayetsya li podschet slov v raznykh yazykakh?",
+        "answer": "Da, podschet slov zavisit ot yazyka. V yazykakh s probelami, takikh kak russkiy i angliyskiy, slova schitayutsya mezhdu probelami. Odnako v yazykakh bez probelov, takikh kak kitayskiy ili yaponskiy, opredeleniye granits slov trebuyet drugikh podkhodov. Etot instrument osushchestvlyayet podschet na osnove probelov."
+      },
+      {
+        "question": "Besplatnyy li etot instrument i yest li ogranicheniya?",
+        "answer": "Da, on polnostyu besplatnyy i bez ogranicheniy. Vy mozhete analiziirovat stolko teksta, skolko khotite. Vsya obrabotka proiskhodit lokalno v vashem brauzere, vash tekst ne otpravlyayetsya ni na kakoy server i ne khranitsya."
+      }
+    ]
+  },
+  "lorem-ipsum-generator": {
+    "howToUse": [
+      "Vyberite tip kontenta Lorem Ipsum, kotoryy vy khotite sgenerirovat: abzatsy, predlozheniya ili slova.",
+      "Ukazhite kolichestvo — skolko abzatsev, predlozheniy ili slov neobkhodimo sgenerirovat.",
+      "Nazhmite knopku Sgenerirovat i mgnovenno poluchite tekst-zapolnitel. Tekst sozdayot soderzhaniye s yestestvennym vidom, sleduyushcheye structure latinskogo yazyka.",
+      "Skopiruyte sgenerirovannyy tekst odnim klikom i ispolzuyte v svoikh dizayn-proyektakh, na veb-stranitsakh ili v shablonakh dokumentov."
+    ],
+    "whyUse": [
+      "Dizayneram nuzhen realistichno vyglyadyashchiy tekst-zapolnitel dlya otsenki tipografiki, mazketa stranitsy i vizualnoy iyerarkhii. Lorem Ipsum simuliruyet potok teksta, ne otvlekaya vnimalniye.",
+      "V veb-razrabotke neobkhodim tekst-zapolnitel dlya testirovaniya togo, kak budut vyglyadet razdely stranitsy s tekstom. Eto pozvolyayet proverit maket stranitsy do togo, kak budet gotov realnyy kontent.",
+      "V prezentatsiyakh dlya klientov ispolzuyetsya dlya demonstratsii obshchego vida dizayna, kogda finalnyy kontent yeshchyo ne gotov. Lorem Ipsum pomogayet sosredotsotochitsya na dizayne, a ne na konntente.",
+      "Polnostyu besplatnyy, neogranichennyy i ne trebuyushchiy ustanovki instrument. Vy mozhete generirovat stolko teksta-zapolnitelya, skolko neobkhodimo."
+    ],
+    "tips": [
+      "Dlya dizayna veb-stranitsy obychno dostatochno 3-5 abzatsev. Ispolzovaniye kolichestva, blizkogo k realnoy dline kontenta, obespecchivayet boleye realistichnny predvaritelnyy prosmotr.",
+      "Ispolzuyte rezhim predlozheniy dlya odnolstrochhhykh zapolniteley, a rezhim slov — dlya korotkikh metok.",
+      "Lorem Ipsum ne dolzhen byt pokazan konechnnomu polzovatelyuyu. Pered publikatsiyey ubedites, chto ves tekst-zapolnitel zamenen na realnyy kontent.",
+      "Testiruyte s raznoy dlinoy teksta, chtoby proverit, kak vash dizayn veydyot sebya s korotkim i dlinnym kontentom."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye Lorem Ipsum?",
+        "answer": "Lorem Ipsum — eto iskusstvennyy latinskiy tekst, ispolzuyemyy v kachestve standartnogo teksta-zapolnitelya v poligrafii i nabornom dele. On ispolzuyetsya s 1500-kh godov i proizveden iz raboty Tsitserona 'de Finibus Bonorum et Malorum'. Khotya on vyglyadit bessmyslenno, on ispolzuyet latinskiye slovesnyie patterny dlya simulyatsii yestestvennogo potoka teksta."
+      },
+      {
+        "question": "Pochemu Lorem Ipsum ispolzuyetsya vmesto sluchaynnogo teksta?",
+        "answer": "Lorem Ipsum imeyet dliny slov i struktury predlozheniy, pokhzhie na yestestvennyy yazyk. Polnostyu sluchaynyy tekst vyglyadit povtoryayushchimsya i iskusstvennym i otvlekayet vnimaniye. Lorem Ipsum zhe obespecchivayet chitayemyy tekst-zapolnitel, pozvolyaya auditorii sosredotochitsya na dizayne, a ne na soderzzhanii."
+      },
+      {
+        "question": "Lorem Ipsum — eto nastoyashchaya latyn?",
+        "answer": "Chastichno. Lorem Ipsum proizveden iz raboty Tsitserona, napisannoy v 45 godu do n.e. — 'de Finibus Bonorum et Malorum' (O predelakh dobra i zla). Odnako so vremenem slova byli izmeneny, dobavleny i udaleny, poetomu eto ne yavlyaetsya nastoyashchim osmyslennym latinskim tekstom."
+      },
+      {
+        "question": "Umestno li ispolzovat Lorem Ipsum v veb-dizayne?",
+        "answer": "Da, na etape dizayna i razrabotki eto polnostyu umestno. Odnako na opublikovannykh saytakh Lorem Ipsum kategoricheski ne dolzhen prisutstvovat. Poiskovyie sistemy mogut rastsenit tekst-zapolnitel kak nizkokachestvennyy kontent, i eto sozdayot neprofessionalnoye vpechatleniye."
+      },
+      {
+        "question": "Kakiye alternativy Lorem Ipsum sushchestvuyut?",
+        "answer": "Sredi populyarnykh alternativ — Hipster Ipsum, Bacon Ipsum, Cupcake Ipsum i drugiye tematicheskiye teksty-zapolniteli. Dlya boleye seryoznykh proyektov ispolzovaniye primernykh tekstov, blizkikh po dline k realnomu kontentu, mozhet byt boleye effektivnym dlya proverki dizayna."
+      },
+      {
+        "question": "Yest li avtorskoye pravo na sgenerirovannyy tekst Lorem Ipsum?",
+        "answer": "Net, Lorem Ipsum yavlyaetsya obshchestvennym dostoyaniyem i ne imeyet nikakikh ogranicheniy avtorskogo prava. Vy mozhete svobodno ispolzovat yego v lyubom proyekte v kommercheskikh ili lichnykh tselyakh. On shiroko ispolzuyetsya uzhe na protyazhenii vekov."
+      }
+    ]
+  },
+  "uuid-generator": {
+    "howToUse": [
+      "Vyberite tip UUID. UUID v4 (sluchaynyy) yavlyaetsya naibolee rasprostranennym i generiruyet polnostyu sluchaynyie znacheniya.",
+      "Ukazhite kolichestvo UUID, kotoroye vy khotite sgenerirovat. Mozhno sozdavat neskolko UUID odnovremenno.",
+      "Nazhmite knopku Sgenerirovat i mgnovenno poluchite unikalnyie identifikatory.",
+      "Skopiruyte UUID v bufer obmena odnim klikom ili skahayte kak spisok."
+    ],
+    "whyUse": [
+      "UUID — standartnyy sposob sozdaniya unikalnykh identifikatorov v raspredelyonnykh sistemakh bez tsentralnoy koordinatsii. Idealno poddkhodiat dlya zapisey baz dannykh, resursov API i imenovaniya faylov.",
+      "V otlichiye ot avtoinkramentnykh chislovykh ID, UUID nepredskazuyemy, chto delayet ikh boleye podkhodyashchimi s tochki zreniya bezopasnosti. Zloyumyshlenniki ne mogut ugadat sushchestvuyushchiye resursy.",
+      "UUID yavlyayutsya 128-bitnymi i imeyut prakticheski nulevuyu veroyatnost kolllizii. Dazhe pri generatsii milliardov UUID veroyatnost povtoreniya astronomicheski mala.",
+      "Vsya generatsiya UUID proiskhodit lokalno v vashem brauzere. Sozdannyie znacheniya ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Dlya bolshinstva stsenariyev ispolzovaniya UUID v4 (sluchaynyy) — luchshiy vybor. Prostoy, bystryy i obespecchivayet dostatochnuyu unikalnost.",
+      "Pri ispolzovanii UUID v kachestve indeksa v bazakh dannykh uchityvayte vliyaniye na proizvoditelnost. Nekotoryie bazy dannykh mogut indeksirovat UUID medlenneye po sravneniyu s chislovymi ID.",
+      "Rekomenduetsya sokhranyyat tire v formate UUID (550e8400-e29b-41d4-a716-446655440000) dlya chitabelnosti, khotya format bez tire takzhe doopustim.",
+      "UUID v1, soderzhashchiy vremennoyu metku, mozhet vyzyvat opaseniya konfidentsialnosti, tak kak soderzhit informatsiyu o vremeni sozdaniya i MAC-adrese."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye UUID?",
+        "answer": "UUID (Universally Unique Identifier) — eto 128-bitnyy identifikator so standartnym formatom iz 32 shestnadtsaterichnnykh tsifr i 4 tire: 550e8400-e29b-41d4-a716-446655440000. On prednaznachen dlya sozdaniya unikalnykh identifikatorov v raspredelyonnykh sistemakh bez tsentralnogo organa."
+      },
+      {
+        "question": "V chom raznitsa mezhdu tipami UUID?",
+        "answer": "UUID v1 ispolzuyet vremennnuyu metku i MAC-adres. UUID v3 i v5 sozdayut deterministicheskiye UUID na osnove imeni i prostranstva imyon (v3 ispolzuyet MD5, v5 — SHA-1). UUID v4 polnostyu sluchaynyy i yavlyaetsya naibolee rasprostranennym. Kazhdyy tip optimizirovan dlya raznykh stsenariyev ispolzovanniya."
+      },
+      {
+        "question": "Mogut li dva odinakovykh UUID byt sozdany?",
+        "answer": "Teoreticheski eto vozmozhno, no na praktike veroyatnost nchtozhno mala. Dlya UUID v4 sushchestvuyet 2^122 vozmozhnykh znacheniy. Dazhe yesli generiovat 1 milliard UUID v sekundu, dlya povtoreniya potrebuetsya priblizitelno 85 let, i eto tolko s veroyatnostyu 50%."
+      },
+      {
+        "question": "Sleduyet li ispolzovat UUID kak pervichnyy klyuch v baze dannykh?",
+        "answer": "Mozhno, i v raspredelyonnykh sistemakh eto osobenno polezno. Odnako UUID zanimayut bolshe mesta v khranilishche (16 bayt vmesto 4-8 bayt) i iz-za ikh sluchaynosti mogut neegativno vliyat na proizvoditelnost indeksov. Ispolzovaniye tipa uuid v PostgreSQL ili BINARY(16) v MySQL pozvolyayet ekonomit mesto."
+      },
+      {
+        "question": "Bezopasny li UUID?",
+        "answer": "UUID v4 ispolzuyet kriptograficheski bezopasnyy generator sluchaynnykh chisel i nepredskazuyem. Odnako UUID v1 soderzhit vremennnuyu metku i MAC-adres, chto mozhet vyzyvat opaseniya konfidentsialnosti. Dlya kriticheskikh prilozheniy bezopasnosti sledueyt predpochest UUID v4."
+      },
+      {
+        "question": "V chom raznitsa mezhdu GUID i UUID?",
+        "answer": "GUID (Globally Unique Identifier) i UUID — po suti odno i to zhe. Termin GUID shiroko ispolzuyetsya v ekosisteme Microsoft, togda kak UUID — ofitsiaalnyy termin, opredelyonnyy v standarte RFC 4122. Oba yavlyayutsya 128-bitnymi unikalnymi identifikatorami s odinakovym formatom i strukturoy."
+      }
+    ]
+  },
+  "json-to-csv": {
+    "howToUse": [
+      "Vstavte vashi JSON-dannyie v pole vvoda. Dannyie dolzhny byt v formate massiva obektov. Kazhdyy obekt predstavlyayet stroku, a klyuchi obektov — zagolovki stolbtsov.",
+      "Vyberite simvol-razdelitel: zapyataya (,) dlya standartnogo CSV, tochka s zapyatoy (;) dlya yevropeyskogo formata Excel ili simvol tabulyatsii dlya formata TSV.",
+      "Nazhmite knopku Preobrazovat, chtoby prevratit JSON v format CSV. Instrument avtomaticheski izvlekayet zagolovki stolbtsov iz klyuchey obektov i vyravnivayet vse znacheniya v stroki.",
+      "Prosmotrte vyvod CSV, zatem skopiruyte v bufer obmena ili skahayte kak fayl .csv dlya ispolzovaniya v Excel, Google Sheets ili instrumentakh analiza dannykh."
+    ],
+    "whyUse": [
+      "Analitiki dannykh chasto dolzhny preobrazovyvat otvety API i nabory dannykh JSON v format CSV dlya analiza v takikh instrumentakh, kak Excel, Google Sheets, R, Python pandas i bazy dannykh SQL.",
+      "Netekhnicheskiye zainteresovannyie storony chasto zaprszhivayut dannyie v formatte tablits. Preobrazovaniye JSON v CSV pozvolyayet legko delist eksport baz dannykh i rezultaty API.",
+      "Preobrazovatel obrabatyvayet slozhnyie vlozhennyie struktury JSON, avtomaticheski preobrazovyvaya ikh v ploskiy format CSV i ekonomya chasy ruchnoy restrukturizatsii dannykh.",
+      "Vsyo preobrazovaniye proiskhodit v vashem brauzere. Konfidentsialnyie dannyie iz vashikh API i baz dannykh nikogda ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Ubedites, chto vash JSON yavlyaetsya pravilno otformatirovannym massivom obektov. Odinochnyie obekty ili vlozhennyie struktury mogut trebovat restrukturizatsii pered preobrazovaniyem.",
+      "Yesli vashi dannyie soderzhhat zapyatyie v znacheniyakh (naprimer, adresa), preobrazovatel avtomaticheski oborachiivayet eti polya v kavychki dlya sokhraneniiya struktury CSV.",
+      "Dlya yevropeyskikh regionov perekyuchite razdelitel na tochku s zapyatoy, tak kak Excel vo mnogikh yevropeyskikh lokalyakh ozhidayet tochku s zapyatoy v kachestve razdelitelya poley.",
+      "Pered preobrazovaniyem proveryte svoy JSON s pomoshchyu nashego instrumenta formatirovaniya JSON. Nekorrektnyy JSON privedyot k oshibkam preobrazovaniya."
+    ],
+    "faqs": [
+      {
+        "question": "Zachem preobrazovyvat JSON v CSV?",
+        "answer": "CSV universalno podderzhivayetsya programami dlya raboty s tablitsami (Excel, Google Sheets), bazami dannykh i instrumentami analiza dannykh. API i sovremennyie prilozheniya chasto vozvrashchayut dannyie v formate JSON, no dlya analiiza dannykh, otchyotnosti i obmena s netekhnichesskimi zainteresovannnymi storonami CSV yavlyaetsya boleye udobnym i dostupnym formatom."
+      },
+      {
+        "question": "Mozhno li preobrazovyvat vlozhenniyie struktury JSON v CSV?",
+        "answer": "Da, preobrazovatel splashchivayet vlozhennyie obekty v CSV. Vlozhennyie puti klyuchey otobrazhayyutsya tochechnoy notatsiyey (naprimer, address.city, address.country) v zagolovkakh stolbtsov. Dlya ochen glubokikh ili slozhnykh vlozhennykh struktur predvaritlelnaya restrukturizatsiya JSON mozhet dat luchshiye rezultaty."
+      },
+      {
+        "question": "Kak otkryt CSV-fayl v Excel?",
+        "answer": "CSV-fayl mozhno otkryt dvoynnym shchelchkom neposredstvenno v Excel. Yesli vy rabotayete s russkim Excel, vam mozhet potrebovatsya ispolzovat tochku s zapyatoy (;) v kachestve razdelitelya poley. Ili ispolzuyte v Excel vkladku Dannyie i funktssiyu importa iz teksta/CSV dlya ruchnoy nastroyki kodirovki i razdelitelya."
+      },
+      {
+        "question": "Mozhno li preobrazovyvat bolshiye JSON-fayly?",
+        "answer": "Da, preobrazovatel rabotayet v vashem brauzere, i sovremennyie brauzery mogut effektivno obrabatytvat bolshiye nabory dannykh. Odnako dlya ochen bolshikh faylov (10 MB+) pamyati brauzera mozhet byt nedostatochno. V etom sluchaye rekomenduetsya razdelit dannyie na bolshye melkiye chasti."
+      },
+      {
+        "question": "Russkiye simvoly v CSV iskazhayyutsya, chto delat?",
+        "answer": "Eto obychno problema kodirovki simvolov. Pri otkrytii skaachannogo CSV-fayla v Excel vyberite kodirovku UTF-8. Google Sheets obychno avtomaticheski opredelyayet UTF-8. Yesli problema sokhranyyayetsya, otkroyte fayl v Bloknote i sokhranite yego zanovo v UTF-8."
+      },
+      {
+        "question": "Bezopasny li moi dannyie pri preobrazovalnii?",
+        "answer": "Da, vsyo preobrazovaniye proiskhodit lokalno v vashem brauzere. Vashi JSON-dannyie ne otpravlyayutsya ni na kakoy server, ne sokhranyyayutsya i ne registriruyutsya. Eto polnostyu bezopasno dlya konfidentialnykh biznes-dannykh, lichnoy informatsii i sekretnykh otvetov API."
+      }
+    ]
+  },
+  "markdown-to-html": {
+    "howToUse": [
+      "Vstavte vash tekst Markdown v pole vvoda slevaa ili nachniete vvodit napryamuyu. Podderzhivayetsya ves standartnyy sintaksis Markdown: zagolovki, spiski, sslyki, izobrazheniya i bloki koda.",
+      "Preobrazovalniye proiskhodit avtomaticheski — po mere vvoda vyvod HTML obnovlyayetsya sprava. Blagodarya predvaritielnomu prosmotru v realnom vremeni vy mgnovenno vidite rezultat.",
+      "Prosmotriyete vyvod HTML, chtoby ubeditsya, chto formatirovaniye sootvetsvuyet ozhidaniyam. Osoboye vnimaniye udelite zagolovkam, spiskam, tablitsam i blokam koda.",
+      "Skopiruyte sozdannyy HTML i vstavte yego na svoyu veb-stranittsu, v blog ili v shaablon elektronnoy pochty."
+    ],
+    "whyUse": [
+      "Markdown — eto legkokiy yazyk formatirovaniya, kotoryy legko pisat i chitat, no dlya otoobrazheniya na veb-stranitsakh yego neobkhodimo preobrazovat v HTML. Etot instrument obespecchivayet mgnovennhoye preobrazovalniye.",
+      "Blohgery i sozdateli kontenta chasto pishut v Markdown i publikuyut v HTML. Dlya uskoreniya etogo rabochego protsessa neobkhodim nadyozhnyy preobrazovatel.",
+      "Fayly README na GitHub, tekhnicheskaya dokumentatsiya i wiki-stranitsy ispolzuyut Markdown. Dlya otobrazheniya etogo kontenta na veb-stranitsakh neobkhodimo preobrazovalniye v HTML.",
+      "Vsyo preobrazovalniye proiskhodit v vashem brauzere, vash kontent ne otpravlyayetsya ni na kakoy server."
+    ],
+    "tips": [
+      "V zagolovkakh Markdown ostavlyayte probel mezhdu znakom # i tekstom zagolovka: '# Zagolovok' pravilno, '#Zagolovok' — nepravilno.",
+      "Dlya tablits ispolzuyte simvol (|) i tirie (-). Dlya vyravnivaniya soderzhmogo yacheek ispolzuyte dvoetochiya (:).",
+      "Dlya blokov koda ispolzuyte tri obratnyie kavychki (```) i ukazhite nazvalniye yazyka dlya podsvetki sintaksisa.",
+      "Dlya izobrazheniy ispolzuyte sintaksis ![alt tekst](url) i vsegda dobavlyayte osmyslennyy alternativnyy tekst."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye Markdown?",
+        "answer": "Markdown — eto lyogkiy yazyk razmetki, sozdannyy Dzhonom Gruberom v 2004 godu. On pozvolyayet sozdavat strukturirovannyie dokumenty, ispolzuya sintaksis formatirovaniya prostogo teksta. Vy mozhete opredelyat zagolovki, spiski, ssylki, izobrazheniya, zhirnyy/kursivnyy tekst i bloki koda prostymi oboznacheniyami."
+      },
+      {
+        "question": "Pochemu Markdown proshche HTML?",
+        "answer": "V Markdown dlya zagolovka pishetsya '# Zagolovok', togda kak v HTML nuzhno pisat '<h1>Zagolovok</h1>'. Zhirnyy tekst: '**tekst**' vmesto '<strong>tekst</strong>'. Markdown trebuyet menshe simvolov, ostaetsya chitabelnym i ne preryvayet potok napisaniya. Odnako Markdown ne podderzhivayet vse funktsii HTML."
+      },
+      {
+        "question": "Podderzhivayetsya li GitHub Flavored Markdown (GFM)?",
+        "answer": "Da, nash instrument podderzhivayet funktsii GitHub Flavored Markdown dopolnitelno k standartnomu Markdown: tablitsy, spiski zadach (chekboksy), zachyorknutyy tekst, avtomaticheskoye opredeleniye ssylok i obuahrennyie bloki koda s podsvetkoy sintaksisa."
+      },
+      {
+        "question": "Yest li v sozdannom HTML inline-stili?",
+        "answer": "Instrument sozdayot chistyy, semanticheskiy HTML. Vmesto inline-stiley ispolzuyyutsya standartnyie HTML-tegi (h1-h6, p, ul, ol, a, img, code, pre, table i dr.). Dlya vizualnogo formatirovaniya vy mozhete primenit svoi CSS-fayly ili stili freymvorka."
+      },
+      {
+        "question": "Podderzhivayutsya li LaTeX ili matematicheskiye formuly?",
+        "answer": "Standartnyy Markdown ne podderzhivayet LaTeX ili matematicheskiye formuly. Dlya takogo kontenta trebuyutsya dopolnitelnyie biblioteki, takiye kak MathJax ili KaTeX. Nash instrument podderzhivayet standartnyy Markdown i sintaksis GFM."
+      },
+      {
+        "question": "Kak sozdat tablitsu v Markdown?",
+        "answer": "Opredelite stolbtsy simvolami (|) i razdelitel zagolovka tirami (-). Primer: '| Zagolovok 1 | Zagolovok 2 |' i pod nim '|---|---|'. Dlya vyravnivaniya ispolzuyte dvoyetochiya: ':---' po levomu krayu, ':---:' po tsentru, '---:' po pravomu krayu."
+      }
+    ]
+  },
+  "html-minifier": {
+    "howToUse": [
+      "Vstavte vash HTML-kod v pole vvoda. Vy mozhete obrabatytvat polnyie HTML-dokumenty ili fragmenty HTML.",
+      "Nastroyte parametry minifikatsii: udaleniye probelov, udaleniye kommentariyev, udaleniye pustykh atributov i udaleniye neobyzatelnykh tegov.",
+      "Nazhmite knopku Minifitsirovat i mgnovenno poluchite optimizirovannyy HTML. Originalnyy i minifitsirovanyy razmery sravnivayutsya.",
+      "Skopiruyte minifitsirovannyy HTML i ispolzuyte na svoiom produktsionnom veb-sayte."
+    ],
+    "whyUse": [
+      "Minifikatsiya HTML mozhet umenshit razmer fayla na 20-50%, znachitelno uluchshaya vremya zagruzhki stranits i snizhaya zatraty na polosu propuskaniya.",
+      "Google rassmatrivayet skorost stranitsy kak faktor ranzhirovaniya. Minifitsirovannyy HTML zagruzhaetsya bystree, uluchshayet pokazateli Core Web Vitals i povyshayet vash reyting v SEO.",
+      "Dlya mobilnykh polzovateley polosa propuskaniya mozhet byt ogranichena. Minifitsirovannyy HTML trebuyet menshey peredachi dannykh, uluchsaya mobilnyy opyt.",
+      "Vsya obrabotka proiskhodit v vashem brauzere, vash HTML-kod ne otpravlyaetsya ni na kakoy server."
+    ],
+    "tips": [
+      "Vsegda avtomatiziruyte minifikatsiyu kak chast protsessa sborki ili razvertyvaniya. Ruchnaya minifikatsiya podverzhena oshibkam i yavlyayetsya povtoryayushcheysya zadachey.",
+      "Ubedites v validnosti vashego HTML pered minifikatsiyey. Nekorrektnyy HTML mozhet privesti k neozhidannym rezultatam pri minifikatsii.",
+      "Sravnivayte razmery faylov do i posle, chtoby izmerit ekonomiyu. Eta informatsiya tsenna dlya otchyotov ob optimizatsii proizvoditelnosti.",
+      "Dlya HTML, soderzhashchego inline JavaScript i CSS, ispolzuyte instrumenty, kotoryie takzhe minifitsiruyut JavaScript i CSS."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye minifikatsiya HTML?",
+        "answer": "Minifikatsiya HTML — eto protsess udaleniya iz HTML-faylov nenuzhhnykh simvolov bez izmeneniya funktsionalnosti. Probely, perenosy strok, kommentarii, nenuzhnyie kavychki i neobyzazatelnyie zakryvayushchiye tegi udalyayutsya dlya umennsheniya razmera fayla. Rezultat interpretiruetsya brauzerom identichno, no imeyet menshiy razmer."
+      },
+      {
+        "question": "Naskolko minifikatsiya HTML uluchshayet skorost stranitsy?",
+        "answer": "Dlya tipichnogo HTML-dokumenta minifikatsiya mozhet obespechit umennsheniye razmera fayla na 20-50%. Fakticheskoye uluchsheniye skorosti zavisit ot kontenta, konfiguratsii servera i ispolzuyemykh drugikh optimizatsiy (szhatiye, keshirovalniye). V sochetanii s gzip vyiigrysh stanovitsya boleye znachimym."
+      },
+      {
+        "question": "Vliyayet li minifikatsiya na rabotu HTML?",
+        "answer": "Net, pri pravilnom vypolnenii minifikatsiya ne izmenyayet funktsionalnost HTML. Brauzery interpretiruyut minifitsirovannyy HTML identichno originalu. Odnako sleduyet byt ostorozhnym s HTML, soderzhashchim inline JavaScript, tak kak nekotoryie operatsii minifikatsii mogut narushit JavaScript."
+      },
+      {
+        "question": "Bezopasno li udalyat HTML-kommentarii?",
+        "answer": "Udaleniye kommentariyev iz produktsionnogo HTML obychno bezopasno i rekomenduetsya. Odnako uslovnyie kommentarii (dlya Internet Explorer) ili spetsialnyie kommentarii, ispolzuyemyie nekotorymi JavaScript-freymvorkami, mogut byt funktsionalnymi. Takiye kommentarii mogut potrebovat sokhraneniya."
+      },
+      {
+        "question": "Nuzhno li minifitsirovat CSS i JavaScript?",
+        "answer": "Da, bezuslovno. Vmeste s minifikatsiyey HTML sleduyet primenyat minifikatsiyu CSS i JavaScript. Minifikatsiya CSS mozhet umenshit razmer fayla na 10-30%, minifikatsiya JavaScript — na 20-60%. Sovmestnaya minifikatsiya vsekh resursov obespecchivayet znachitelnoye umennsheniye obshchego razmera stranitsy."
+      },
+      {
+        "question": "Mozhno li vernut minifitsirovannyy HTML v chitayemyy vid?",
+        "answer": "Da, instrumenty formatirovaniya HTML mogut vernut minifitsirovannomu HTML otstupy i chitabelnost. Odnako udalennyie kommentarii i nekotoraya informatsiya o probelakh ne mogut byt vosstanovleny. Poetomu vsegda sokhranyyayte iskhhodnyie HTML-fayly i ispolzuyte minifitsirovannuyu versiyu tolko dlya produktsii."
+      }
+    ]
+  },
+  "css-minifier": {
+    "howToUse": [
+      "Vstavte vash CSS-kod v pole vvoda. Vy mozhete obrabatytvat vneshsniye fayly stiley, vstroyennyie stili ili fragmenty CSS.",
+      "Nazhmite knopku Minifitsirovat. Instrument udalit nenuzhnyie probely, kommentarii i neobyzatelnnyy sintaksis.",
+      "Sravniyte originalnyy i minifitsirovannyy razmery faylov. Prosmotrte protsent ekonomii.",
+      "Skopiruyte minifitsirovannyy CSS i ispolzuyte na svoiom produktsionnom veb-sayte."
+    ],
+    "whyUse": [
+      "Fayly CSS obychno yavlyayutsya blokiruyushchim resursom v tsepochke zagruzki stranitsy. Menshiye fayly CSS zagruzhayutsya bystree i pozvolyayut stranitse otobrazitsya ranshe.",
+      "Minifikatsiya CSS mozhet umenshit razmer fayla na 10-30%, chto obespecchivayet znachitlenuyu ekonomiyu polosy propuskaniya, osobenno dlya bolshikh faylov stiley.",
+      "Google PageSpeed Insights i Lighthouse rekomendduyut minifitsirovannyie resursy. Minifikatsiya CSS uluchshayet vashi pokazateli proizvoditelnosti.",
+      "Vsya obrabotka proiskhodit lokalno v vashem brauzere, vash CSS-kod obrabatyvaetsya bezopasno."
+    ],
+    "tips": [
+      "Integriruyte minifikatsiyu v protsess sborki. Ispolzuyte PostCSS, cssnano ili analogichnyie instrumenty v vashem CI/CD-konveyere.",
+      "Sozdavayte karty istochnikov (source maps) vmeste s minifitsirovannymi CSS. Eto oblegchayet otladku v produktsionnoy srede.",
+      "Udalite neispolzuyemyie pravila CSS pered minifikatsiyey. Instrumenty PurgeCSS ili UnCSS obnaruzhivayut neispolzuyemyie stili.",
+      "Ispolzuyte peremennyyie CSS i sovremennyie funktsii CSS dlya napisaniya iznachalno boleye effektivnykh faylov stiley."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye minifikatsiya CSS?",
+        "answer": "Minifikatsiya CSS — eto protsess udaleniya iz faylov CSS nenuzhnnykh simvolov dlya umensheniya razmera fayla. Probely, perenosy strok, kommentarii, nenuzhnyie tochki s zapyatoy i neobyzatelnyy sintaksis udalyyayutsya. Rezultat interpretiruetsya brauzerom identichno, no imeyet menshiy razmer fayla."
+      },
+      {
+        "question": "Narushit li minifikatsiya CSS moi stili?",
+        "answer": "Net, pri pravilnom vypolnenii minifikatsiya ne izmenyayet vizualnyy rezultat CSS. Brauzery primenyayut minifitsirovannyy CSS identichno originalu. Odnako v redkikh sluchayakh CSS-khaki ili obkhodnyie resheniya dlya konkretnykh brauzerov mogut byt zatronuty."
+      },
+      {
+        "question": "V chom raznitsa mezhdu minifikatsiyey i szhatiyem (gzip) CSS?",
+        "answer": "Minifikatsiya CSS fizicheski udalyayet nenuzhnyie simvoly iz fayla. Gzip szhimayet fayl pri peredache i raspakovyvayet v brauzere. Nailuchshiy rezultat dostigayetsya pri ispolzovanii oboikh metodov vmeste: snachala primenyayetsya minifikatsiya, zatem server otpravlyayet szhatuyu gzip-versiyu."
+      },
+      {
+        "question": "Pochemu karty istochnikov vazhny?",
+        "answer": "Karta istochnikov (source map) svyazyvayet minifitsirovannyy CSS s originalnym iskhodnym faylom. Pri otladke v produktsionnoy srede instrumenty razrabotchika brauzera pokazyvayut originalnyy, chitabelnyy kod vmesto minifitsirovannogo. Eto znachitelno oblegchayet obnaruzheniiye produktsionnykh problem."
+      },
+      {
+        "question": "Kak obnaruzhit neispolzuyemyy CSS?",
+        "answer": "Vkladka Coverage v Chrome DevTools pokazyvayet ispolzuyemyie i neispolzuyemyie pravila CSS na stranitse. Dlya avtomaticheskogo obnarruzheniya ispolzuyte PurgeCSS, UnCSS ili funktsiyu purge v Tailwind CSS. Udaleniye neispolzuyemogo CSS mozhet dat bolvshheye umensheniye razmera, chem minifikatsiya."
+      },
+      {
+        "question": "Vazhna li minifikatsiya CSS dlya SEO?",
+        "answer": "Da, CSS yavlyaetsya blokiruyushchim resursom dlya renderinga v tsepochke zagruzki stranitsy. Menshiye fayly CSS zagruzhayutsya i obrabatyvayutsya bystree, uluchshaya takiye metriki Core Web Vitals, kak First Contentful Paint (FCP) i Largest Contentful Paint (LCP). Google rassmatrivayet eti metriki kak faktory ranzhirovaniya."
+      }
+    ]
+  },
+  "text-to-speech": {
+    "howToUse": [
+      "Vvedite ili vstavte tekst, kotoryy vy khotite ozvuchit, v pole vvoda.",
+      "Vyberite yazyk i golosovyie nastroyki. Mozhno vybirat mezhdu raznymi yazykami i tonami golosa.",
+      "Nastroyte skorost rechi i gromkost v sootvetstvii s vashimi potrebnostyami. Medlennaya skorost podkhodit dlya izucheniya yazyka, normalnaya — dlya povsednevnogo proslushivaniya.",
+      "Nazhmite knopku Vosproizvesti, chtoby proslushat tekst. Vy mozhete skahat zvukovoy fayl ili perezapisat s drugimi nastroykammi."
+    ],
+    "whyUse": [
+      "Preobrazovalniye veb-kontenta v zvukovoy format znachitelno povyshayet dostupnost dlya polzovateley s narusheniyami zreniya.",
+      "Izuchayushchiye yazyk polzuyutsya preobrazovalniyem teksta v rech dlya proslushivaniya pravilnogo proiznosheniya. Raznyie nastroyki skorosti mogut byt adaptirovany k urovnyu obucheniya.",
+      "Sozdateli kontenta mogut preobrazovat blogi, statyi i uchebnyie materialy v zvukovoy format, okhvatyvaya boleye shirokuyu auditoriyu.",
+      "Polzovateli, vypolnyayushchiye neskolko zadach odnovremenno, mogut slushat tekstovyy kontent vo vremya vozhdeniya, zanyatiy sportom ili vypolneniya domashnikh del."
+    ],
+    "tips": [
+      "Dlya dlinnykh tekstov ozvuchivayte abzatsy po otdelnosti. Eto obespecchivayet luchsheye kachestvo zvuka i uluchshayet opyt proslushivaniya.",
+      "Nastroyte skorost rechi v zavisimosti ot vashey auditorii. Dlya uchebnogo kontenta — medlenneye, dlya obshchego informirovaniya — normalnaya skorost.",
+      "Probuyteye raznyie golosa, chtoby nayti naibolee podkhodyashchiy dlya vashego tipa kontenta. Professionalnnyy ton dlya formalnogo kontenta, druzheskiy — dlya povsednevnogo.",
+      "Obratite vnimalniye na znaki prepinaniya. Pravilnaya punktuatsiya sozdayet boleye yestestvennyie pauzy i udareniya."
+    ],
+    "faqs": [
+      {
+        "question": "Kak rabotayet preobrazovalniye teksta v rech (TTS)?",
+        "answer": "Tekhnologiya TTS preobrazuyet pismennyy tekst v rech, pokhozhhuyu na chelovecheskuyu. Sovremennyie sistemy TTS ispolzuyut neyronnyie seti i glubokoye obucheniye dlya imitatsii yestestvennykh rechevykh patternov, udareniy i intonatsiy. Brauzernyy TTS ispolzuyet vstroennnyy rechevoy dvizhok vashego ustroystva."
+      },
+      {
+        "question": "Kakiye yazyki podderzhivayutsya?",
+        "answer": "Podderzhivayemyie yazyki zavisyat ot vstroyennogo rechevogo dvizhka vashego ustroystva i brauzera. Bolshinstvo sovremennykh brauzerov podderzhivayut angliyskiy, russkiy, nemetskiy, frantsuzskiy, ispanskiy i mnozhhestvo drugikh yazykov. Spisok dostupnykh golosov otobrazhaetsya v menyu nastroyek."
+      },
+      {
+        "question": "Naskolko khorosheye kachestvo zvuka?",
+        "answer": "Kachestvo zvuka zavisit ot dvizhka TTS vashego ustroystva. Sovremennyie operatsionnyie sistemy (iOS, Android, Windows 11, macOS) predlagayut vysokhokachestvennyie neyronnyie golosa. Na bolee starykh sistemakh zvuk mozhet byt boleye robotizirovannym. Dlya luchshikh rezultatov ubedites, chto na vashhem ustroystve ustanovleny noveyshiye golosovyie pakety TTS."
+      },
+      {
+        "question": "Mozhno li skahat sozdannyy zvuk?",
+        "answer": "Vozmozhnost skachivaniya zvukovogo vyvoda zavisit ot podderzhki brauzera. Nekotoryie brauzery pozvolyayut sokhranit zvukovoy fayl, drugiye predlagayut tolko vosproizvedeniye v realnom vremeni. Dlya dlinnykh tekstov vy mozhete ispolzovat vneshnnyeye programmnoye obespecheniye dlya zapisi zvuka dlya zapisi vyvoda TTS."
+      },
+      {
+        "question": "Besplatno li preobrazovalniye teksta v rech?",
+        "answer": "Da, nash instrument polnostyu besplaten. Poskolku on ispolzuyet vstroennnyy dvizhok TTS vashego ustroystva, dopolnitelnyie zatraty otsutstvuyut. Net ogranichheniy na dlinu teksta ili kolichestvo ispolzovanniy. Vsya obrabotka proiskhodit lokalno na vashem ustroystve."
+      },
+      {
+        "question": "Pochemu TTS vazhen dlya dostupnosti?",
+        "answer": "TTS yavlyaetsya osnovnym instrumentom dostupa k veb-kontentu dlya polzovateley s narusheniyami zreniya. On takzhe polezen dlya polzovateley s disleksiyey, trudnostyami obucheniya i nizkimi navykami chteniya. Rukovodstva WCAG po dostupnosti rekommenduyut zvukovyie alternativy kak alternativnyie formaty kontenta."
+      }
+    ]
+  },
+  "pdf-compress": {
+    "howToUse": [
+      "Peretashchite vash PDF-fayl v oblast zagruzki ili vyberite yego cherez provodnik faylov.",
+      "Vyberite uroven szhatiya: nizkoye szhatiye sokhranyyayet vysokoye kachestvo, vysokoye szhatiye obespecchivvayet maksimalnoye umennsheniye razmera.",
+      "Nazhmite knopku Szhat i dozhdites zaversheniya protsessa. Originalnyy i szhatyy razmery faylov sravnivayutsya.",
+      "Skahayte szhatyy PDF. Soderzhaniye dokumenta, vozmozhnost poiska teksta i ssylki sokhraneny."
+    ],
+    "whyUse": [
+      "Servisy elektronnoy pochty obychno ustanavlivayut ogranicheniye razmera vlozheniy v 10-25 MB. Szhatiye PDF pozvolyayet otpravlyat bolshiye dokumenty po elektronnoy pochte.",
+      "Bolshiye fayly PDF sozdayut medlenno zagruzhayemyy kontent na veb-saytakh. Szhatyie PDF zagruzhayutsya bystree i uluchshayut polzovatelskiy opyt.",
+      "Oblachnoye khranilishche i servernoye prostranstvo mogut byt ogranicheny. Szhatiye PDF snizhayet zatraty na khraneniye i uproshchayet upravleniye faylami.",
+      "Vsya obrabotka proiskhodit lokalno v vashem brauzere. Konfidentsialnyie dokumenty, kontrakty i sekretnyie fayly ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Otskanirovannyie PDF obychno soderzhhat bolshiye fayly izobrazheniy i poluchayut naibolshhuyu vygodu ot szhatiya.",
+      "Nastroyte uroven szhatiya v zavisimosti ot tipa dokumenta: vysokoye szhatiye dlya dokumentov s preobladaniyem teksta, sredneye — dlya dokumentov s preobladaniyem izobrazheniy.",
+      "Posle szhatiya proverite dokument. Ubedites, chto teksty chitabelny, izobrazheniya dostatochnogo kachestva i ssylki rabotayut.",
+      "Dlya arkhivnykh PDF sokhranite originalnuyu versiyu vysokogo kachestva i ispolzuyte szhatuyu versiyu dlya obmena."
+    ],
+    "faqs": [
+      {
+        "question": "Kak szhatiye PDF vliyayet na kachestvo?",
+        "answer": "Vliyaniye zavisit ot urovnya szhatiya i tipa kontenta. PDF s preobladaniyem teksta obespecchivayut znachitelnoye umennsheniye razmera s minimalnoy poterey kachestva. V PDF s preobladaniyem izobrazheniy vysokoye szhatiye mozhet snizit razresheniye izobrazheniy. Nizkoye i sredneye szhatiye obychno ne sozdayet zameetnoy raznitsy."
+      },
+      {
+        "question": "Bezopasny li moi PDF-fayly pri szhatii?",
+        "answer": "Da, polnostyu bezopasny. Vsya obrabotka PDF proiskhodit lokalno v vashem brauzere. Vashi fayly nikogda ne zagruzhayutsya ni na kakoy server i nigde ne sokhranyyayutsya. Eto polnostyu bezopasno dlya konfidentialnykh delovykh dokumentov, meditsinskikh zapisey i yuridicheskikh faylov."
+      },
+      {
+        "question": "Kakoye umensheniye razmera mozhno ozhidat?",
+        "answer": "Dlya tipichnogo PDF mozhno ozhidat umensheniye razmera na 30-70%. Fakticheskiy rezultat zavisit ot kontenta: otskanirovannyie dokumenty i PDF s preobladaniyem izobrazheniy dayut naibolee vysokoye sootnosheniye, togda kak uzhe optimizirovannyie ili tekstovyie PDF mogut pokazat mensheye umennsheniye."
+      },
+      {
+        "question": "Vliyayet li szhatiye na tekst v PDF?",
+        "answer": "Net, tekstovoye soderzhimoye i vozmozhnost poiska teksta ne zatrgivayutsya szhatiyem. Tekst khrannitsya v vektornom formate i ne podvergayetsya izmeneniyam razmera. Szhatiye v osnovnom optimiziruyet izobrazheniya i vstroyennyie shrifty."
+      },
+      {
+        "question": "Mozhno li szhat PDF, zashchishchennyye parolem?",
+        "answer": "Dlya zashchishchennykh parolem PDF mozhet potrebovatsya vvod parolya pered szhatiyem. Nekotoryie tipy shifrovaniya prepyatstvuyut obrabotke fayla. V etom sluchae snachala udalite parol, szhmite fayl i zatem pri neobkhodimosti dobavte novyy parol."
+      },
+      {
+        "question": "Mozhno li szhat neskolko PDF odnovremenno?",
+        "answer": "Tekushchaya versiya obrabatyvayet odin PDF-fayl za raz. Eto pozvolyayet vybrat optimalnyyie nastroyki szhatiya dlya kazhdogo fayla i proverit rezultat. Dlya neskolkikh faylov vy mozhete povtorit protsess posledovatelno."
+      }
+    ]
+  },
+  "image-convert": {
+    "howToUse": [
+      "Peretashchite fayl izobrazheniya v oblast zagruzki ili vyberite yego cherez provodnik faylov. Podderzhivayutsya JPEG, PNG, WebP i drugiye rasprostranennyie formaty.",
+      "Vyberite tselevoy format: WebP dlya umensheniya razmera faylov, PNG dlya izobrazheniy, trebuyushchikh prozrachnosti, JPEG dlya fotografiy.",
+      "Nastroyte kachestvo v sootvetstvii s vashimi potrebnostyami. Boleye vysokoye kachestvo oznachayet bolshiy razmer fayla, boleye nizkoye — menshiy razmer.",
+      "Nazhmite knopku Preobrazovat i skahayte izobrazheniye v novom formate."
+    ],
+    "whyUse": [
+      "Preobrazovalniye v format WebP umenshayet razmery izobrazheniy na veb-saytakh na 25-35%, uluchshaya skorost zagruzki stranits i proizvoditelnost SEO.",
+      "Raznyie platformy trebuyut raznyie formaty izobrazheniy. Etot instrument obespecchivayet mgnovennnoye preobrazovalniye mezhdu vsemi rasprostrannennymi formatami.",
+      "Izobrazheniya, trebuyushchiye prozrachnosti, mozhno preobrazovat v PNG, a fotografii — v JPEG, chtoby vybrat naibolee poddkhodyashchiy format.",
+      "Vsyo preobrazovalniye izobrazheniy proiskhodit lokalno v vashem brauzere. Vashi izobrazheniya ne otpravlyayutsya ni na kakoy server, i vasha konfidentsialnost sokhranyyayetsya."
+    ],
+    "tips": [
+      "Preobrazuyte izobrazheniya v format WebP dlya veb-saytov, chtoby poluchit znachitelnuyu ekonomiyu razmera. Vse sovremennyie brauzery podderzhivayut WebP.",
+      "Ispolzuyte format PNG dlya izobrazheniy, trebuyushchikh prozrachnosti, naprimer logotipov i ikonok. JPEG ne podderzhivayet prozrachnost.",
+      "Dlya fotografiy JPEG obychno predlagayet luchsheye sootnosheniye razmera i kachestva. Nastroyka kachestva 80-85% idealna v bolshinstvve sluchayev.",
+      "Preobrazovalniye izobrazheniya v bolshiy format (naprimer, iz JPEG v PNG) mozhet uvelichit razmer fayla. Vybirajte format v sootvetstvii s vashim kontentom."
+    ],
+    "faqs": [
+      {
+        "question": "Kakoy format izobrazheniy luchshiy?",
+        "answer": "Luchshiy format zavisit ot tseli ispolzovaniya: WebP — naibolee effektivnyy format dlya veb-saytov, JPEG predlagayet luchsheye sootnosheniye razmera i kachestva dlya fotografiy, PNG idealen dlya izobrazheniy, trebuyushchikh prozrachnosti, i grafiki s ostrymi krayami, SVG luchshhe vsego dlya vektornoy grafiki i logotipov."
+      },
+      {
+        "question": "Vliyayet li preobrazovalniye formata na kachestvo?",
+        "answer": "Preobrazovalniye v formaty s poteryami (JPEG, WebP s poteryami) mozhet privesti k nekotoroyy potere kachestva. Preobrazovalniye mezhdu formatami bez poter (iz PNG v WebP bez poter) predotvrashchayet poteryu kachestva. Uchityvayte, chto pri kazhdom preobrazovalnii mozhet byt nekotoraya poterya kachestva, i izbegayte mnohokratnogo preobrazovaniya."
+      },
+      {
+        "question": "Pochemu stoit ispolzovat format WebP?",
+        "answer": "WebP podderzhivayet kak szhatiye s poteryami, tak i bez poter, predlagayet fayly na 25-35% menshhe, chem JPEG, podderzhivayet prozrachnost (kak PNG) i animatsiyu (kak GIF). Vse sovremennyie brauzery (Chrome, Firefox, Safari, Edge) podderzhivayut WebP, chto delayet yego naibolee universalnym formatom dlya veb-izobrazheniy."
+      },
+      {
+        "question": "Bezopasny li moi dannyie pri preobrazovalnii izobrazheniy?",
+        "answer": "Da, vsya obrabotka izobrazheniy proiskhodit lokalno v vashem brauzere. Vashi izobrazheniya ne zagruzhayutsya ni na kakoy server, ne sokhranyyayutsya i ne peredayutsya tretim storonam. Polnostyu bezopasno dlya lichnykh fotografiy, delovykh izobrazheniy i konfidentialnogo kontenta."
+      },
+      {
+        "question": "Mozhno li preobrazovat animirovannyie GIF?",
+        "answer": "Preobrazovalniye v staticheskiye formaty (JPEG, PNG) sokhranit tolko pervyy kadr GIF. Yesli vy khotite sokhranit animatsiyu, vyberite formaty s poddershkoy animatsii, naprimer WebP ili APNG. Odnako ne vse instrumenty preobrazovaniya podderzhivayut animirovannoye preobrazovalniye."
+      },
+      {
+        "question": "Mozhno li preobrazovat format HEIC/HEIF?",
+        "answer": "HEIC/HEIF — format fotografiy po umolchaniyu na ustroystvakh Apple. V zavisimosti ot podderzhki brauzera vy mozhete preobrazovat eti formaty v JPEG, PNG ili WebP. Ne vse brauzery napryamuyu podderzhivayut HEIC, poetomu rezultat mozhet zaviset ot vashego brauzera."
+      }
+    ]
+  },
+  "regex-tester": {
+    "howToUse": [
+      "Vvedite svoy regex-shablon v verkhneye pole vvoda. Sovpadeniya vydelyayutsya v realnom vremeni po mere vvoda shablona.",
+      "Vstavte ili vvedite testovyy tekst v nizhneye pole vvoda. Sovpadayushchiye chasti avtomaticheski podsvechivayutsya.",
+      "Nastroyte flagi: g (globalnyy — vse sovpadeniya), i (bez uchota registra), m (mnogostrichnyy) i drugiye.",
+      "Prosmotriyete rezultaty sovpadeniy, gruppy i informasiyu o zakhvate. Pozitsiya i soderzhaniye kazhdogo sovpadeniya otobrazhayyutsya."
+    ],
+    "whyUse": [
+      "Regex-shablony mogut byt slozhnymi, i malyie oshibki mogut privesti k neozhidannym rezultatam. Testirovalniye v realnom vremeni pozvolyayet mgnovenno proveryat svoi shablony.",
+      "V raznykh yazykakh programmirovaniya sintaksis regex mozhet nemnogo otlichatsya. Etot instrument ispolzuyet dvizhok regex JavaScript i idealen dlya veb-razrabotki.",
+      "Vy mozhete bystro testirovat rasprostranennyie shablony: validatsiya email, formatirovaniye telefonnykh nomerov, razbor URL i poisk teksta.",
+      "Vsya obrabotka proiskhodit v vashem brauzere, vashi testovoiye teksty i shablony ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Razbivayte slozhnyie shablony na malyie chasti i testiruyte ikh poetapno. Eto znachitelno oblegchayet otladku.",
+      "Dlya literalnogo sovpadenhiya spetsialnykh simvolov (. * + ? ^ $ { } [ ] ( ) | \\) ispolzuyte obratnuyu kosyuyu chertu (\\) dlya ekranirovaniya.",
+      "Znayte raznitsu mezhdu zhadnymi (greedy) i lenivymi (lazy) kvantifilkatorami: .* sovpadayet s maksimumom, .*? — s minimumom.",
+      "Ispolzuyte gruppy zakhvata () dlya vydeleniya sovpadayushchikh podvyrazheniy. Imenovannyie gruppy (?<imya>...) delayut kod boleye chitabelnym."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye regex (regulyarnoye vyrazheniye)?",
+        "answer": "Regex (Regular Expression) — eto moshchnaya sistema sintaksisa, ispolzuyemaya dlya poiska shablonov, sovpadeniy i zameny v tekste. On shiroko ispolzuyetsya v programmirovannii, obrabotke teksta, validatsii dannykh i operatsiyakh poiska-zameny. Prakticheskii vse yazyki programmirovaniya i tekstovyie redaktory podderzhivayut regex."
+      },
+      {
+        "question": "Trudno li izuchit regex?",
+        "answer": "Bazovyie shablony regex (literalnoye sovpadeniye, klassy simvolov, kvantifikatory) dostatochno prosty i mozhno bystro osvoit. Prodvinutyie vozmozhnosti (lookahead, lookbehind, obratnaya ssylka) boleye slozhny, no bolshinstvo povsednevnykh zadach reshayetsya bazovymi shablonami. Praktika s realnymi primerami uskoaryayet obucheniye."
+      },
+      {
+        "question": "Kakoy pravilnyy regex dlya email-adresa?",
+        "answer": "Prostoy regex dlya email: ^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$ Odnako polnostyu sootvetstvuyushchiy RFC 5322 regex dlya email ochen slozhen. Dlya bolshinstva prilozheniy bazovoy proverki formata dostatochno, a dopolnitelnaya validatsiya dolzhna vypolnyatsya na storone servera."
+      },
+      {
+        "question": "Yest li raznitsa mezhdu regex v JavaScript i Python?",
+        "answer": "Bazovyy sintaksis odniakov, no yest nekotoryie razlichiya. Python podderzhivayet lookbehind peremennoy dliny, togda kak JavaScript — net (do ES2018). Python modul re predlagayet dopolnitelnyie flagi (naprimer, re.VERBOSE). Python ispolzuyet r'' (raw strings), togda kak JavaScript ispolzuyet /shablon/flagi literalnyy sintaksis."
+      },
+      {
+        "question": "Mozhet li regex vyzyvat problemy s proizvoditelnostyu?",
+        "answer": "Da, plokho razrabotannyie regex-shablony mogut rabotat ochen medlenno iz-za katastroficheskogo otkta (catastrophic backtracking). Vlozhennyie kvantifikatory ((.+)+) i konfiktuyushchiye alternativy — naibolee rasprostranennyie prichiny. Atomarnyie gruppy, prityzhannyie kvantifikatory i uproshcheniye shablona predotvrashchayut eti problemy."
+      },
+      {
+        "question": "Kakiye rasprostranennyie flagi regex sushchestvuyut?",
+        "answer": "g (global): nakhodit vse sovpadeniya, a ne tolko pervoye. i (case-insensitive): ignoriruyet registr bukv. m (multiline): ^ i $ sovpadayut s nachalom/kontsom kazhdoy stroki. s (dotAll): simvol . sovpadayet s perenosami strok. u (unicode): polnaya podderzhka Unicode."
+      },
+      {
+        "question": "Chto takoye lookahead i lookbehind v regex?",
+        "answer": "Lookahead (?=...) i lookbehind (?<=...) proveryayut, yest li opredelyonnyy shablon vperedi ili pozadi, no ne vklyuchayut yego v rezultat sovpadeniya. Negativnyie versii (?!...) i (?<!...) vyrazhayut otsutstviye ukazannogo shablona. Naprimer, \\d+(?= RUB) sovpadayet tolko s chislami pered 'RUB'."
+      }
+    ]
+  },
+  "hash-generator": {
+    "howToUse": [
+      "Vvedite ili vstavte tekst ili dannyie, kotoryie vy khotite kheshirovat, v pole vvoda.",
+      "Vyberite algoritm kheshirovaniya: MD5, SHA-1, SHA-256, SHA-384 ili SHA-512. SHA-256 rekomenduetsya dlya bolshinstva stsenariyev ispolzovaniya.",
+      "Mgnovenno prosmotriye znacheniye khesha. Khesh — eto stroka simvolov fiksirovannnoy dliny, unikalnaya dlya vkhodnykh dannykh.",
+      "Skopiruyte znacheniye khesha odnim klikom i ispolzuyte tam, gde eto neobkhodimo."
+    ],
+    "whyUse": [
+      "Khesh-funktsii ispolzuuytsya dlya proverki tselostnosti dannykh. Vy mozhete proverit, byl li fayl ili dannyie izmeneny, sravniv znacheniya kheshey.",
+      "Paroli dolzhny khranitsya v bazakh dannykh ne v vide prostogo teksta, a v vide khesha. V sluchae utechki dannykh kheshi ne raskryvayut napryamuyu originalnyie paroli.",
+      "Pri distributsii programmnogo obespecheniya kheshi shiroko ispolzuyutsya dlya proverki tselostnosti faylov. Sravniyte khesh skaachannogo fayla s khaeshem, predostavlennym izdatelem.",
+      "Vsyo generirovaniye kheshey proiskhodit lokalno v vashem brauzere. Vashi dannyie ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Dlya prilozheniy, trebuyushchikh bezopasnosti, predpochitayte SHA-256 ili boleye moshchnyie algoritmy. MD5 i SHA-1 ne rekomenduyyutsya dlya bezopasnosti iz-za uyazvimosti k atakam kolliziy.",
+      "Dlya kheshirovaniya paroley ispolzuyte spetsializirovannyie algoritmy kheshirovaniya paroley, takiye kak bcrypt, scrypt ili Argon2, vmesto pryamogo ispolzovaniya SHA-256.",
+      "Odin i tot zhe vkhod vsegda sozdayot odin i tot zhe khesh. Dazhe maleysheye izmeneniye vkhoda sozdayot polnostyu drugoy khesh (lavinnyy effekt).",
+      "Khesh-funktsii odnostoronni — matematicheski nevozmozhn vosstanovit originalnyie dannyie iz khesha."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye khesh-funktsiya?",
+        "answer": "Khesh-funktsiya — eto matematicheskaya funktsiya, preobrazuyushchaya dannyie lyubnogo razmera v vykhod fiksirovannogo razmera (znacheniye khesha). Ona odnostoronnya (originalnyie dannyie nelzya vosstanovit iz khesha), determinisitchnaya (odin i tot zhe vkhod vsegda dayot odin i tot zhe vykhod) i obladayet lavinnym effektom (nebolshoye izmeneniye vkhoda sozdayot polnostyu drugoy vykhod)."
+      },
+      {
+        "question": "Pochemu MD5 schitayetsya nebeizopasnym?",
+        "answer": "Dokazano, chto MD5 uyazvim k atakam kolliziy, chto oznachayet vozmozhnost sozdaniya raznykh vkhodov s odinakovym kheshem MD5. Eto yavlyayetsya seryoznnoy uyazvimostyu dlya tsifrovykh podpisey i proverki sertifikatov. Dlya nebezopasnostnykh tseley (kontrolnyie summy faylov) on vsyo yeshchyo mozhet ispolzovatsya, no dlya bezopasnosti rekomenduetsya SHA-256+."
+      },
+      {
+        "question": "V chom raznitsa mezhdu SHA-256 i SHA-512?",
+        "answer": "SHA-256 sozdayot 256-bitnyy (64 shestnadtsaterichhnykh simvola) khesh, togda kak SHA-512 sozdayot 512-bitnyy (128 shestnadtsaterichhnykh simvolov) khesh. SHA-512 obespecchivayet boleye dlinnoye znacheniye khesha i teoreticheski boleye nadyozhen. Odnako dlya bolshinstva prilozheniy SHA-256 obespecchivayet dostatochnuyu bezopasnost. SHA-512 mozhet rabotat effektivneye na 64-bitnykh sistemakh."
+      },
+      {
+        "question": "V chom raznitsa mezhdu kheshirovalniyem i shifrovalniyem?",
+        "answer": "Kheshirovalniye — odnostoronnniy protsess: originalnyie dannyie nelzya vosstanovit. Shifrovannniye dvustoronneyee: s pravilnym klyuchom zashifrovanniye dannyie mozhno rasshirovat. Kheshirovalniye ispolzuetsya dlya proverki tselostnosti dannykh i khraneniya paroley, a shifrovaniye — dlya obespecheniya konfidentsialnosti dannykh. Oni sluzhat raznym tselyam i ne vzaimozamenyaemy."
+      },
+      {
+        "question": "Chto takoye kolliziya kheshey?",
+        "answer": "Kolliziya kheshey — eto situatsiya, kogda dva raznykh vkhoda sozdayut odinakovoye znacheniye khesha. Idealnaya khesh-funktsiya minimiziruyet veroyatnost kollizii. Dlya MD5 i SHA-1 prodemonstrirovany prakticheskiye ataki kollizniy, poetomu dlya prilozheniy, trebuyushchikh bezopasnosti, predpochitayete SHA-256 ili boleye moshchnyie algoritmy."
+      },
+      {
+        "question": "Kakoy algoritm ispolzovat dlya kheshirovaniya paroley?",
+        "answer": "Dlya paroley ispolzuyte spetsializirovannyie algoritmy kheshirovaniya paroley: bcrypt, scrypt ili Argon2. Eti algoritmy namerennno rabotayut medlenno (chtoby zatrudnit ataki polnym pereborom), ispolzuyut sol (salt) dlya zashchity ot raduzhnyikh tablits i imeyut nastranivayemyy uroven slozhnosti. Prostoye SHA-256 nedostatochno dlya kheshirovaniya paroley."
+      }
+    ]
+  },
+  "url-encode-decode": {
+    "howToUse": [
+      "Vstavte URL ili tekst, kotoryye vy khotite zakodirovat ili dekodirovat, v pole vvoda.",
+      "Vyberite tip operatsii: Zakodirovat (Encode) preobrazuyet spetsialnyie simvoly v protsetnuyu kodirovku, Dekodirovat (Decode) preobrazuyet protsettno kodirovannyie znacheniya obratno v originalnyie simvoly.",
+      "Nazhmite knopku Preobrazovat i mgnovenno uvidte rezultat.",
+      "Skopiruyte rezultat v bufer obmena i ispolzuyte v svoikh prilozheniyakh."
+    ],
+    "whyUse": [
+      "URL podderzhivayut tolko ogranichennyy nabor simvolov ASCII. Simvoly kirilltsy, probely i spetsialnyie simvoly dolzhny byt zakodirowany dlya bezopasnoy peredachi v URL.",
+      "V API-zaprosakh parametry zaprosa trebuyut URL-kodirovaniya. Nezakodirovannyie spetsialnyie simvoly mogut privesti k neudachnym zaprosam ili nepravilnoy interpretatsii.",
+      "V veb-razrabotke dannyie form, znacheniya cookie i URL-perennapravleniya chasto trebuyut URL-kodirovanniya.",
+      "Vsyo kodirovalniye i dekodirovanniye proiskhodit lokalno v vashem brauzere. Vashi URL ne otpravlyayutsya ni na kakoy server."
+    ],
+    "tips": [
+      "Kodiruyte tolko chasti znacheniy URL, a ne ves URL tselikom. Protokol (https://), domen i razdeliteli putey (/) ne dolzhny kodirvoatsya.",
+      "Izbegayte dvoynogo kodirovaniya — kodirovaniye uzhe zakodirovannnogo znacheniya privodit k povrezhdenmym URL.",
+      "V JavaScript znayte raznitsu mezhdu encodeURIComponent() i encodeURI(): pervyy kodiruyet znacheniya parametrov, vtoroy — polnyie URL.",
+      "URL-kodirovalniye ispolzuyet simvol protsenta (%) i dve shestnadtsaterichnyie tsifry: probel stanovitsya %20, russkaya bukva — multibaytnoy posledovatelnostyu."
+    ],
+    "faqs": [
+      {
+        "question": "Chto takoye URL-kodirovalniye?",
+        "answer": "URL-kodirovalniye (protsetnaya kodirovka) — eto zamena nebezopasnnykh ili spetsialnykh simvolov v URL na simvol protsenta (%) i dve shestnadtsaterichnyie tsifry. Naprimer, probel stanovitsya %20, simvol & — %26. Eto obespecchivayet pravilnuyu interpretassiyu URL vo vsekh sistemakh."
+      },
+      {
+        "question": "Kakiye simvoly nuzhno kodirovat?",
+        "answer": "Probely, kirillicheskiye simvoly, spetsialnyie simvoly (&, =, ?, #, +, %, @) i drugiye ne-ASCII simvoly dolzhny byt zakodirowany v URL. Bukvy (A-Z, a-z), tsifry (0-9) i nekotoryie spetsialnyie simvoly (-, _, ., ~) ne trebuyut kodirovanniya."
+      },
+      {
+        "question": "V chom raznitsa mezhdu encodeURI i encodeURIComponent?",
+        "answer": "encodeURI() kodiruyet polnyy URL i sokhranyyayet simvoly, neobkhodimoye dlya struktury URL (://?#&=). encodeURIComponent() kodiruyet otdelnoye znacheniye parametra i kodiruyet eti spetsialnyie simvoly takzhe. Ispolzuyte encodeURIComponent() dlya parametrov zaprosa, encodeURI() — dlya polnykh URL."
+      },
+      {
+        "question": "Probel kodiruyetsya kak %20 ili kak +?",
+        "answer": "Oba varianta dopustimy, no ispolzuyutsya v raznykh kontekstakh. V putyakh URL i parametrakh zaprosa %20 yavlyaetsya standartnym kodirovanniyem (RFC 3986). V dannykh form (application/x-www-form-urlencoded) probel kodiruyetsya kak +. Bolshinstvo veb-prilozheniy pravilno interpretiruyet oba formata."
+      },
+      {
+        "question": "Vliyayet li URL-kodirovalniye na SEO?",
+        "answer": "Pravilnoye URL-kodirovalniye ne vliyayet neegativno na SEO. Poiskovyie sistemy pravilno interpretiruyut zakodirovannyie URL. Odnako chitayemyie URL (ponyyatnyie cheloveku slug'i) predpochtiitelny s tochki zreniya polzovatelskogo opyta i CTR. V russkoyazychnykh URL ispolzovalniye transliteratsii vmesto spetsialnykh simvolov yavlyaetsya khoroshey praktikoy."
+      },
+      {
+        "question": "Chto takoye dvoynoye URL-kodirovalniye i pochemu eto problematichno?",
+        "answer": "Dvoynoye kodirovalniye — eto kodirovalniye uzhe zakodirovannnogo znacheniya. Naprimer, %20 prevrashchayetsya v %2520. Eto privodit k oshibkam dekodirovaniya na storone servera, oshibkam 404 i somannym ssylkam. Pered kodirovaniyem proverite, ne bylo li znacheniye uzhe zakodirowano."
+      }
+    ]
+  }
+}

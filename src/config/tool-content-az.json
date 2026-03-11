@@ -1,0 +1,970 @@
+{
+  "sectionTitles": {
+    "howToUse": "Necə istifadə etməli",
+    "whyUse": "Niyə bu aləti istifadə etməli",
+    "tips": "Məsləhətlər və Tövsiyələr",
+    "faq": "Tez-tez Verilən Suallar"
+  },
+  "json-formatter": {
+    "howToUse": [
+      "JSON məlumatlarınızı redaktorun sol tərəfindəki giriş sahəsinə yapışdırın. API cavabları, konfiqurasiya faylları və ya verilənlər bazası ixracları daxil olmaqla istənilən mənbədən JSON yapışdıra bilərsiniz.",
+      "JSON-unuzu düzgün girintilə formatlaşdırmaq üçün Format düyməsinə klikləyin. Formatlayıcı avtomatik olaraq strukturu aşkar edir və rahat oxumaq üçün ardıcıl aralıq tətbiq edir.",
+      "Bütün boşluqları silərək JSON-unuzu sıxmaq lazımdırsa, Kiçiltmə düyməsini istifadə edin. Bu, API sorğuları üçün məlumat hazırlayarkən və ya prodakşn mühitdə payload ölçüsünü azaltarkən faydalıdır.",
+      "Çıxış panelini nəzərdən keçirin - sintaksis xətaları təsviri mesajlarla vurğulanır. JSON-da xəta varsa, doğrulayıcı problemin baş verdiyi dəqiq sətir və simvolu göstərir.",
+      "Formatlanmış nəticəni bir kliklə pano-ya kopyalayın və ya yerli istifadə üçün .json faylı kimi endirin."
+    ],
+    "whyUse": [
+      "API cavablarının debug edilməsi JSON məlumatları düzgün girintilənmiş və sintaksis vurğulanmış olduqda xeyli sürətlənir. Tək oxunmaz sətir kimi görünən iç-içə obyektlər aydın iyerarxik strukturla əvəz olunur.",
+      "Daxili doğrulayıcı tətbiqinizdə runtime xətalarına səbəb olmadan əvvəl yayılmış JSON səhvlərini tapır: son vergüllər, açar sözlər ətrafında çatışmayan dırnaqlar, tək dırnaqlar əvəzinə ikiqat dırnaqlar və qaçırılmamış xüsusi simvollar.",
+      "Hər şey tamamilə brauzerinizdə JavaScript ilə işləyir. Həssas konfiqurasiya məlumatlarınız, API açarlarınız və şəxsi məlumatlarınız cihazınızdan heç vaxt çıxmır, bu da aləti müəssisə və prodakşn məlumatları üçün təhlükəsiz edir.",
+      "Quraşdırma tələb edən masaüstü tətbiqlərdən fərqli olaraq, bu alət veb brauzeri olan istənilən cihazda dərhal işləyir. İstər masaüstü iş stansiyasında, istər iclasda planşetdə, istərsə də problemin həlli zamanı telefonda olun - JSON formatlayıcınız həmişə əlinizdədir.",
+      "Peşəkar proqramçılar REST API-ləri, GraphQL cavabları, NoSQL verilənlər bazası, konfiqurasiya idarəetməsi və mikroservislər arasında məlumat mübadiləsi ilə işləyərkən hər gün JSON formatlama alətlərindən istifadə edirlər."
+    ],
+    "tips": [
+      "Böyük JSON faylları (1MB-dan çox) ilə işləyərkən daha yaxşı performans üçün bütün sənəd əvəzinə yalnız yoxlamaq istədiyiniz bölməni formatlaşdırın.",
+      "JSON-u verilənlər bazasında saxlayarkən və ya şəbəkə üzərindən göndərərkən bant genişliyi istifadəsini və saxlama xərclərini azaltmaq üçün kiçildilmiş çıxışı istifadə edin.",
+      "JSON doğrulamadan keçmirsə, yayılmış problemləri yoxlayın: massivlərdə və ya obyektlərdə son elementdən sonra artıq vergüllər, ikiqat dırnaqlar əvəzinə tək dırnaqlar və dırnaqsız açar adları.",
+      "Çox səviyyəli iç-içə JSON üçün ümumi strukturda itməmək üçün müəyyən bölmələrə diqqət yetirmək məqsədilə yığma/açma xüsusiyyətini istifadə edin."
+    ],
+    "faqs": [
+      {
+        "question": "JSON Formatlayıcı nədir və niyə lazımdır?",
+        "answer": "JSON Formatlayıcı xam, kiçildilmiş və ya zəif strukturlaşdırılmış JSON məlumatlarını düzgün girintilə yaxşı təşkil olunmuş, oxunaqlı formata çevirən alətdir. Proqramçılar API cavabları ilə işləyərkən, məlumat strukturlarını debug edərkən, konfiqurasiya fayllarını nəzərdən keçirərkən və sənədləşdirmə hazırlayarkən hər gün JSON formatlayıcılara ehtiyac duyurlar."
+      },
+      {
+        "question": "Bu onlayn formatlayıcıdan istifadə edərkən JSON məlumatlarım təhlükəsizdir?",
+        "answer": "Bəli, məlumatlarınız tamamilə təhlükəsizdir. Bu JSON formatlayıcı tamamilə brauzerinizdə client-side JavaScript ilə işləyir. JSON məlumatlarınız heç vaxt heç bir serverə göndərilmir, heç bir verilənlər bazasında saxlanmır və heç bir yerdə qeyd olunmur. Emal cihazınızda yerli olaraq baş verir."
+      },
+      {
+        "question": "JSON formatlaşdırma ilə JSON kiçiltmə arasında fərq nədir?",
+        "answer": "JSON formatlaşdırma boşluqlar, girintilər və sətir fasilələri əlavə edərək JSON-u insanlar üçün oxunaqlı edir. JSON kiçiltmə əksinədir: mümkün olan ən kiçik fayl ölçüsünü istehsal etmək üçün bütün lazımsız boşluqları silir. Formatlaşdırılmış JSON inkişaf və debug üçün idealdır, kiçildilmiş JSON isə fayl ölçüsü və bant genişliyinin əhəmiyyətli olduğu prodakşn istifadəsi üçün üstünlük verilir."
+      },
+      {
+        "question": "Bu alət iç-içə obyektlər və massivlərlə JSON-u doğrulaya bilir?",
+        "answer": "Bəli, doğrulayıcı dərin iç-içə obyektlər, çox ölçülü massivlər, qarışıq məlumat növləri, Unicode simvolları və qaçırılmış xüsusi simvollar daxil olmaqla istənilən mürəkkəblikdə JSON-u emal edir. Düzgün mötərizə uyğunluğunu, düzgün vergül yerləşdirməsini və JSON spesifikasiyasına (RFC 8259) uyğunluğu yoxlayır."
+      },
+      {
+        "question": "Doğrulayıcı hansı ümumi JSON xətalarını aşkar edir?",
+        "answer": "Doğrulayıcı bütün ümumi JSON sintaksis xətalarını aşkar edir: massivlərdə və ya obyektlərdə son elementdən sonra artıq vergüllər, sətirlər və açar sözlər ətrafında tək dırnaqlar, dırnaqsız açar adları, açar və dəyərlər arasında çatışmayan iki nöqtə, bağlanmamış mötərizələr, yanlış qaçırma ardıcıllıqları və eyni obyekt səviyyəsində təkrarlanan açarlar."
+      },
+      {
+        "question": "Bu JSON formatlayıcını böyük fayllar üçün istifadə edə bilərəm?",
+        "answer": "Bəli, formatlayıcı hər şeyi brauzerinizdə emal etdiyi üçün böyük JSON fayllarını effektiv şəkildə emal edir. Çox böyük fayllar (bir neçə meqabayt) üçün Chrome və ya Firefox kimi müasir brauzerdən istifadə etməyi və cihazınızın kifayət qədər yaddaşının olmasını təmin etməyi tövsiyə edirik."
+      },
+      {
+        "question": "Bu alət JSON5 və ya JSONC (şərhli JSON) dəstəkləyir?",
+        "answer": "Bu alət standart JSON spesifikasiyasına (RFC 8259) uyğundur və şərhləri və ya artıq vergülləri icazə vermir. JSON5 və ya JSONC kontenti yapışdırsanız, doğrulayıcı şərhləri və qeyri-standart sintaksisi xəta kimi qeyd edəcək. Formatlaşdırmaq üçün əvvəlcə şərhləri silməlisiniz."
+      }
+    ]
+  },
+  "image-compress": {
+    "howToUse": [
+      "Yükləmə sahəsinə klikləyin və ya şəkil faylınızı alətə sürükləyib atın. Dəstəklənən formatlar arasında istənilən ölçülü JPEG, PNG və WebP şəkillər var.",
+      "İstədiyiniz sıxma səviyyəsini təyin etmək üçün keyfiyyət sürüşdürücüsünü tənzimləyin. Aşağı dəyərlər daha kiçik fayllar istehsal edir lakin keyfiyyət itkisi ola bilər, yüksək dəyərlər isə keyfiyyəti daha böyük fayl ölçüsü hesabına qoruyur.",
+      "Keyfiyyəti vizual müqayisə etmək üçün sıxılmış nəticəni orijinalla yan-yana önizləyin. Alət hər iki fayl ölçüsünü göstərir ki, nə qədər yer qənaət etdiyinizi dəqiq görəsiniz.",
+      "Keyfiyyət-ölçü nisbətindən razı olduğunuzda sıxılmış şəkli endirin. Çıxış faylı veb saytlarda, e-poçtlarda və ya sosial mediada istifadəyə hazırdır."
+    ],
+    "whyUse": [
+      "Veb sayt yüklənmə sürəti axtarış motorları üçün mühüm sıralama amilidir. Şəkilləri veb saytınıza yükləməzdən əvvəl sıxmaq səhifə yüklənmə vaxtlarını 40-70% azalda bilər, SEO sıralamalarınızı və istifadəçi təcrübəsini birbaşa yaxşılaşdırır.",
+      "Sosial media platformaları, e-poçt xidmətləri və kontenti idarəetmə sistemləri tez-tez fayl ölçüsü limitləri tətbiq edir. Şəkilləri sıxmaq vizual aydınlığı qurban vermədən yükləmə tələblərini qarşılamağınızı təmin edir.",
+      "Bütün şəkil emalı birbaşa brauzerinizdə baş verir. Fotolarınız, ekran görüntüləriniz və həssas şəkilləriniz heç vaxt heç bir serverə yüklənmir, tam məxfiliyi təmin edir.",
+      "Azaldılmış şəkil ölçüləri veb sayt operatorları üçün daha aşağı bant genişliyi xərcləri və yavaş bağlantılarda ziyarətçilər üçün daha sürətli yüklənmələr deməkdir.",
+      "Filigran əlavə edən, fayl ölçülərini məhdudlaşdıran və ya pullu abunəlik tələb edən bir çox onlayn sıxıcılardan fərqli olaraq, bu alət heç bir məhdudiyyət olmadan tamamilə pulsuzdur."
+    ],
+    "tips": [
+      "Fotoqrafiyalar üçün 75-85% keyfiyyətdə JPEG sıxması adətən əksər izləyicilərin orijinaldan ayıra bilməyəcəyi fayl ölçüsü və vizual keyfiyyət arasında əla balans təmin edir.",
+      "Böyük düz rəngli sahələri olan PNG şəkilləri çox yaxşı sıxılır. Mürəkkəb fotoqrafiyaları xeyli daha yaxşı sıxma nisbəti üçün PNG-dən JPEG-ə çevirməyi düşünün.",
+      "WebP formatı tez-tez ekvivalent vizual keyfiyyətdə JPEG-dən 25-35% daha kiçik fayllar istehsal edir. Hədəf platformalarınız WebP dəstəkləyirsə, maksimum sıxma üçün bu formatı üstün tutun.",
+      "Sıxmadan əvvəl mühüm şəkillərin orijinal surətini həmişə saxlayın. JPEG və WebP üçün sıxma itkili prosesdir, yəni azaldılmış keyfiyyət bərpa oluna bilməz."
+    ],
+    "faqs": [
+      {
+        "question": "Keyfiyyət itirmədən şəkil fayl ölçüsünü nə qədər azalda bilərəm?",
+        "answer": "JPEG şəkillər üçün 70-85% keyfiyyət ayarında minimal görünən keyfiyyət itkisi ilə fayl ölçüsünü adətən 60-80% azalda bilərsiniz. PNG şəkilləri isə heç bir keyfiyyət itkisi olmadan itkisiz optimallaşdırma ilə 30-50% azaldıla bilər."
+      },
+      {
+        "question": "Sıxdığım zaman şəkillərim serverə yüklənir?",
+        "answer": "Xeyr, bütün şəkil sıxması tamamilə brauzerinizdə client-side JavaScript və HTML5 Canvas API istifadə edərək baş verir. Şəkilləriniz heç vaxt cihazınızdan çıxmır, heç bir serverə yüklənmir və heç bir yerdə saxlanmır."
+      },
+      {
+        "question": "Veb istifadə üçün ən yaxşı şəkil formatı hansıdır?",
+        "answer": "WebP hazırda veb şəkilləri üçün ən yaxşı formatdır, ekvivalent keyfiyyətdə JPEG-dən 25-35% daha kiçik fayllar təklif edir. JPEG geniş uyğunluq lazım olduqda fotoqrafiyalar üçün əla olaraq qalır. PNG şəffaflıq tələb edən və ya mətn, loqo və kəskin kənarları olan şəkillər üçün idealdır."
+      },
+      {
+        "question": "Şəkil sıxması SEO və səhifə sürətinə təsir edir?",
+        "answer": "Tamamilə. Google səhifə sürətini sıralama amili hesab edir və şəkillər adətən səhifə ölçüsünə ən böyük töhfə verənlərdir. Düzgün sıxılmış şəkillər Core Web Vitals göstəricilərinizi yaxşılaşdıra, Largest Contentful Paint vaxtlarını azalda və daha yaxşı axtarış motoru sıralamalarına gətirib çıxara bilər."
+      },
+      {
+        "question": "Bir neçə şəkli eyni anda sıxa bilərəm?",
+        "answer": "Hazırkı versiya maksimum keyfiyyət nəzarəti üçün bir anda bir şəkil emal edir. Hər bir şəkil üçün keyfiyyət sürüşdürücüsünü tənzimləyə və endirməzdən əvvəl nəticəni önizləyə bilərsiniz."
+      },
+      {
+        "question": "Sıxa biləcəyim maksimum şəkil ölçüsü nə qədərdir?",
+        "answer": "Emal brauzerinizdə baş verdiyi üçün maksimum ölçü cihazınızın mövcud yaddaşından asılıdır. 4GB və ya daha çox RAM olan müasir cihazlar adətən 50 meqapikselə qədər (təxminən 8000x6000 piksel) şəkilləri problemsiz emal edə bilər."
+      }
+    ]
+  },
+  "pdf-merge": {
+    "howToUse": [
+      "Yükləmə sahəsinə klikləyin və ya bir neçə PDF faylını alətə sürükləyib atın. Tək fayla birləşdirmək istədiyiniz iki və ya daha çox PDF sənədi seçə bilərsiniz.",
+      "PDF fayllarınızın sırasını istədiyiniz ardıcıllığa sürükləyərək yenidən düzün. Son birləşdirilmiş sənəd tam bu sıranı izləyəcək.",
+      "Bütün sənədlərin daxil olduğunu və düzgün sırada olduğunu təsdiqləmək üçün fayl siyahısını nəzərdən keçirin. Birləşdirmədən əvvəl ayrı-ayrı faylları silə və ya daha çox PDF əlavə edə bilərsiniz.",
+      "Seçilmiş bütün PDF-ləri bir sənəddə birləşdirmək üçün Birləşdir düyməsinə klikləyin. Proses tamamilə brauzerinizdə işləyir və adətən saniyələr ərzində tamamlanır.",
+      "Emal tamamlandıqdan sonra birləşdirilmiş PDF faylınızı endirin. Birləşdirilmiş sənəd orijinal faylların bütün səhifələrini, formatlaşdırmasını və keçidlərini qoruyur."
+    ],
+    "whyUse": [
+      "Əlaqəli sənədləri tək PDF-də birləşdirmək fayl idarəetməsini və paylaşmanı sadələşdirir. Bir neçə qoşma göndərmək əvəzinə, hər şeyi mütəşəkkil saxlayan bir hərtərəfli sənədi paylaşa bilərsiniz.",
+      "Bütün PDF emalı brauzerinizdə client-side baş verir. Həssas sənədləriniz, müqavilələriniz, maliyyə hesabatlarınız heç vaxt cihazınızdan çıxmır.",
+      "Pulsuz hesablarda gündəlik limitlər, fayl ölçüsü məhdudiyyətləri və ya filigranlar tətbiq edən bir çox onlayn PDF xidmətlərindən fərqli olaraq, bu alətin heç bir məhdudiyyəti yoxdur.",
+      "Alət birləşdirmə prosesi zamanı hər PDF-in orijinal keyfiyyətini qoruyur. Şriftlər, şəkillər, vektor qrafikalar, hiperlinklər və forma sahələri son birləşdirilmiş sənəddə bütöv qalır.",
+      "İstər bir neçə bölmədən biznes təklifi hazırlayırsınız, istər xərc hesabatları üçün skan edilmiş qəbzləri birləşdirirsiniz, istərsə də portfolyo yığırsınız - PDF birləşdirmə vaxt qənaət edir."
+    ],
+    "tips": [
+      "Birləşdirmədən əvvəl bütün PDF faylların son versiya olduğundan əmin olun. Birləşdirilmiş faylda dəyişiklik etmək bölmə və yenidən birləşdirmə tələb edir.",
+      "Çoxlu fayllı böyük birləşdirmələr üçün optimal brauzer performansı üçün onları 10-15 sənəd partiyalarında emal edin.",
+      "Vahidlik vacibirsə, PDF-lərinizin ardıcıl səhifə ölçülərinə malik olduğunu yoxlayın. Alət hər səhifənin orijinal ölçülərini qoruyur.",
+      "Fayl siyahısını düzgün sıralamaq üçün mənbə fayllarınızı birləşdirmədən əvvəl təsviri adlandırın."
+    ],
+    "faqs": [
+      {
+        "question": "Pulsuz olaraq PDF fayllarını onlayn necə birləşdirə bilərəm?",
+        "answer": "Sadəcə PDF fayllarınızı yükləmə sahəsinə sürükləyib atın, fayl kartlarını sürükləyərək istədiyiniz sırada düzün və Birləşdir düyməsinə klikləyin. Alət bütün PDF-lərinizi dərhal endirə biləcəyiniz tək sənəddə birləşdirir. Qeydiyyat yoxdur, fayl ölçüsü limiti yoxdur, filigran yoxdur."
+      },
+      {
+        "question": "PDF fayllarım serverə yüklənir?",
+        "answer": "Xeyr. Bu PDF birləşdirici hər şeyi birbaşa veb brauzerinizdə client-side JavaScript kitabxanalarından istifadə edərək emal edir. Fayllarınız heç vaxt kompüterinizdən çıxmır."
+      },
+      {
+        "question": "Birləşdirə biləcəyim PDF sayında limit var?",
+        "answer": "Fayl sayında sərt limit yoxdur. 2, 10 və ya hətta 50+ PDF faylını tək əməliyyatda birləşdirə bilərsiniz. Yeganə praktiki məhdudiyyət cihazınızın mövcud yaddaşıdır."
+      },
+      {
+        "question": "Birləşdirmə əlfəcin, keçid və forma sahələrini qoruyur?",
+        "answer": "Bəli, PDF birləşdirici hər sənədin daxili strukturunu - əlfəcinlər, hiperlinklər, forma sahələri, annotasiyalar və daxil edilmiş şriftlər daxil olmaqla qoruyur. Son birləşdirilmiş sənəd orijinal fayllardan bütün interaktiv elementləri saxlayır."
+      },
+      {
+        "question": "Birləşdirilmiş PDF-də səhifə sırasını dəyişə bilərəm?",
+        "answer": "Bəli, birləşdirmədən əvvəl fayl siyahısında sürükləyərək PDF fayllarını yenidən sıralaya bilərsiniz. Tək PDF daxilində ayrı-ayrı səhifələri yenidən sıralamaq lazımdırsa, əvvəlcə PDF Bölücü alətimizi istifadə edərək müəyyən səhifələri çıxarın, sonra istədiyiniz ardıcıllıqda birləşdirin."
+      },
+      {
+        "question": "PDF birləşdirmə üçün maksimum fayl ölçüsü nə qədərdir?",
+        "answer": "Emal brauzerinizdə baş verdiyi üçün maksimum cihazınızın RAM-ından asılıdır. 8GB+ RAM olan müasir kompüterlər adətən 100MB və ya daha çox birləşdirilmiş fayl ölçüsünü emal edə bilər."
+      }
+    ]
+  },
+  "qr-code-generator": {
+    "howToUse": [
+      "QR kodda kodlamaq istədiyiniz məzmunu daxil edin. Bu URL, düz mətn, e-poçt ünvanı, telefon nömrəsi, Wi-Fi etimadnamələri və ya hər hansı digər mətn əsaslı məlumat ola bilər.",
+      "Ölçüsünü tənzimləyərək, ön plan və fon üçün rənglər seçərək və xəta düzəltmə səviyyəsini seçərək görünüşü fərdiləşdirin.",
+      "Yazarkən və parametrləri tənzimləyərkən real vaxtda yaradılmış QR kodun önizləməsinə baxın.",
+      "Paylaşmadan və ya çap etməzdən əvvəl düzgün məlumatları ehtiva etdiyini yoxlamaq üçün QR kodu telefon kameranızla skan edin.",
+      "Rəqəmsal istifadə üçün QR kodu PNG şəkli kimi, çap materialları üçün isə SVG kimi endirin."
+    ],
+    "whyUse": [
+      "QR kodlar fiziki və rəqəmsal dünyaları birləşdirir, müştərilərə smartfon kamerası ilə sadəcə kodu skan edərək veb saytınıza, məhsul məlumatlarına və ya əlaqə detallarına ani giriş imkanı verir.",
+      "Müasir smartfonlarda standart kamera tətbiqlərində daxili QR kod skanerləri var, bu da QR kodları heç bir xüsusi tətbiq quraşdırmadan universal əlçatan edir.",
+      "Vizit kartları, restoran menyuları, məhsul qablaşdırması, biletlər və tanıtım materialları hamısı ətraflı məlumata keçid edən QR kodlardan faydalanır.",
+      "Alət tamamilə brauzerinizdə işləyir - URL-ləriniz, əlaqə məlumatlarınız və Wi-Fi şifrələriniz heç vaxt heç bir serverə göndərilmir.",
+      "Filigran, istifadə limiti və ya keyfiyyət məhdudiyyəti olmadan pulsuz QR kodlar yaradın."
+    ],
+    "tips": [
+      "QR kod çap olunacaq materiallarda zədələnə bilən hallarda Orta və ya Yüksək xəta düzəltmə səviyyəsini istifadə edin.",
+      "Çap materialları üçün hər hansı ölçüyə mükəmməl şəkildə miqyaslanan SVG formatını endirin.",
+      "QR kodunuzu kütləvi çapdan əvvəl həmişə bir neçə cihazda test edin.",
+      "URL-ə bağlandıqda qısa URL istifadə edin ki, QR kodu yenidən çap etmədən hədəfi sonradan yeniləyə biləsiniz.",
+      "Ön plan və fon rəngləri arasında kifayət qədər kontrast saxlayın. Açıq fondakı tünd kodlar bütün cihazlarda ən etibarlı şəkildə skan olunur."
+    ],
+    "faqs": [
+      {
+        "question": "QR koda hansı növ məzmun yerləşdirə bilərəm?",
+        "answer": "QR kodlar veb sayt URL-ləri, düz mətn, e-poçt ünvanları, telefon nömrələri, SMS mesajları, Wi-Fi şəbəkə etimadnamələri, coğrafi koordinatlar, təqvim tədbirləri və vCard əlaqə məlumatları daxil olmaqla müxtəlif məzmun növlərini kodlaya bilər."
+      },
+      {
+        "question": "Bu QR kod generatoru həqiqətən pulsuz və filigransızdır?",
+        "answer": "Bəli, bu alət filigran, istifadə limiti və hesab tələbi olmadan tamamilə pulsuzdur. Yaratdığınız hər QR kod prodakşn üçün hazırdır və heç bir məhdudiyyət olmadan kommersiya məqsədilə istifadə oluna bilər."
+      },
+      {
+        "question": "QR kod xəta düzəltməsi nədir və hansı səviyyəni seçməliyəm?",
+        "answer": "Xəta düzəltmə QR kodun qismən zədələndikdə belə skan oluna bilməsini təmin edir. Dörd səviyyə var: Aşağı (7%), Orta (15%), Dörddəbir (25%) və Yüksək (30%). Əksər hallar üçün Orta istifadə edin. Cızıla, qatlana bilən materiallarda çap edərkən Yüksək seçin."
+      },
+      {
+        "question": "PNG və SVG QR kod formatları arasında fərq nədir?",
+        "answer": "PNG rəqəmsal istifadə üçün ideal piksel əsaslı formatdır. SVG keyfiyyət itirmədən hər hansı ölçüyə miqyaslanan vektor formatıdır və vizit kartları, posterlər, bannerlər üçün mükəmməldir."
+      },
+      {
+        "question": "QR kodu nə qədər kiçik çap edib hələ də işləyə bilər?",
+        "answer": "QR kod üçün tövsiyə olunan minimum çap ölçüsü yaxın məsafədən skan üçün təxminən 2sm x 2sm-dir. Daha uzaq məsafələrdən skan üçün QR kod daha böyük olmalıdır."
+      },
+      {
+        "question": "QR kodların müddəti bitir?",
+        "answer": "Bu alət tərəfindən yaradılan statik QR kodların müddəti heç vaxt bitmir. Məlumat birbaşa kod naxışına kodlanır və fiziki kod zədələnmədikcə sonsuz oxunaqlı qalır. Lakin QR kod URL-ə bağlanırsa, həmin URL-dəki məzmun müstəqil olaraq dəyişə bilər."
+      },
+      {
+        "question": "QR kodumun rənglərini fərdiləşdirə bilərəm?",
+        "answer": "Bəli, həm ön plan, həm də fon rənglərini fərdiləşdirə bilərsiniz. Lakin etibarlı skan üçün aralarında kifayət qədər kontrast saxlamaq vacibdir. Açıq fondakı tünd ön plan ən yaxşı işləyir."
+      }
+    ]
+  },
+  "password-generator": {
+    "howToUse": [
+      "Sürüşdürücü və ya giriş sahəsini istifadə edərək istəyiniz şifrə uzunluğunu təyin edin. Təhlükəsizlik mütəxəssisləri mühüm hesablar üçün minimum 12 simvol, bank və e-poçt kimi kritik xidmətlər üçün 16 və ya daha çox simvol tövsiyə edirlər.",
+      "Şifrəyə daxil ediləcək simvol növlərini seçin: böyük hərflər (A-Z), kiçik hərflər (a-z), rəqəmlər (0-9) və xüsusi simvollar (!@#$%^&*). Dörd növün hamısını daxil etmək şifrə gücünü maksimuma çatdırır.",
+      "Təsadüfi şifrə yaratmaq üçün Yarat düyməsinə klikləyin. Generator həqiqi təsadüfiliyi təmin etmək üçün kriptoqrafik cəhətdən təhlükəsiz təsadüfi nömrə yaratmasından (crypto.getRandomValues) istifadə edir.",
+      "Şifrənizi uzunluq, simvol müxtəlifliyi və entropiya əsasında zəifdən çox güclüyə qədər qiymətləndirən şifrə gücü göstəricisini nəzərdən keçirin.",
+      "Yaradılmış şifrəni bir kliklə panonuza kopyalayın və birbaşa qeydiyyat formanıza və ya şifrə menecerinizdə yapışdırın."
+    ],
+    "whyUse": [
+      "Məlumat sızmaları hər il milyardlarla şifrəni ifşa edir. Hər hesab üçün unikal, təsadüfi yaradılmış şifrələr istifadə etmək bir xidmətdəki sızmanın digər hesablarınızı təhlükəyə atmamasını təmin edir.",
+      "İnsanlar təsadüfi şifrə yaratmaqda xarakterik olaraq zəifdir. Biz proqnozlaşdırıla bilən naxışlar, lüğət sözləri, doğum günləri kimi şəxsi məlumatlar istifadə etməyə meylliyik. Düzgün təsadüfi generator bu naxışları tamamilə aradan qaldırır.",
+      "Şifrə tamamilə Web Crypto API istifadə edərək brauzerinizdə yaradılır. Yaradılmış şifrə heç vaxt heç bir serverə ötürülmür, qeyd olunmur və saxlanmır.",
+      "Bütün simvol növlərini istifadə edən həqiqətən təsadüfi 16 simvolluq şifrənin təxminən 100 bit entropiyası var ki, bu da müasir hesablama gücü ilə belə brute force ilə sındırmağı praktiki olaraq qeyri-mümkün edir.",
+      "Güc göstəricisi şifrənizin təhlükəsizlik səviyyəsi haqqında ani vizual rəy təmin edir."
+    ],
+    "tips": [
+      "Həmişə hər hesab üçün unikal şifrə istifadə edin. Hamısını yadda saxlaya bilmirsinizsə, etimadnamələrinizi təhlükəsiz saxlamaq üçün etibarlı şifrə meneceri istifadə edin.",
+      "Maksimum təhlükəsizlik üçün güclü şifrələrə əlavə olaraq mühüm hesablarda iki faktorlu autentifikasiyanı (2FA) aktivləşdirin.",
+      "Veb sayt xüsusi simvolları məhdudlaşdıranda yalnız hərfləri və rəqəmləri istifadə edərək daha uzun şifrə yaradın. 20 simvollu əlifbə-rəqəmli şifrə 10 simvollu bütün növləri əhatə edən şifrədən güclüdür.",
+      "Yaradılmış şifrələri yadda saxlamaq üçün dəyişdirməkdən çəkinin. Tətbiq etdiyiniz hər hansı naxış şifrənin təhlükəsizliyini azaldır."
+    ],
+    "faqs": [
+      {
+        "question": "Yaxşı təhlükəsizlik üçün şifrəm nə qədər uzun olmalıdır?",
+        "answer": "Təhlükəsizlik mütəxəssisləri standart hesablar üçün minimum 12 simvol, e-poçt, bank və bulud saxlama kimi kritik hesablar üçün 16+ simvol tövsiyə edirlər. Hər əlavə simvol mümkün birləşmələrin sayını eksponensial artırır."
+      },
+      {
+        "question": "Bu şifrə generatoru təhlükəsizdir? Şifrəmi kimsə görə bilər?",
+        "answer": "Bəli, bu generator yüksək dərəcədə təhlükəsizdir. Şifrələr tamamilə brauzerinizdə Web Crypto API istifadə edərək yaradılır. Yaradılmış şifrəniz heç vaxt internet üzərindən ötürülmür, heç bir verilənlər bazasında saxlanmır və qeyd olunmur."
+      },
+      {
+        "question": "Güclü şifrəni nə edir?",
+        "answer": "Güclü şifrənin üç əsas xüsusiyyəti var: kifayət qədər uzunluq (ən azı 12 simvol), yüksək simvol müxtəlifliyi (böyük, kiçik hərflər, rəqəmlər və simvollar) və həqiqi təsadüfilik (lüğət sözləri, naxışlar və ya şəxsi məlumatlar yoxdur)."
+      },
+      {
+        "question": "Şifrəmdə xüsusi simvollar istifadə etməliyəm?",
+        "answer": "Xüsusi simvollar daxil etmək hər mövqe üçün simvol dəstini 62-dən 90+-a genişləndirərək şifrə gücünü artırır. Lakin uzunluq mürəkkəblikdən daha çox əhəmiyyət kəsb edir. Yalnız kiçik hərflərdən ibarət 20 simvolluq şifrə bütün simvol növlərini əhatə edən 10 simvolluq şifrədən güclüdür."
+      },
+      {
+        "question": "Şifrələrimi nə qədər tez-tez dəyişdirməliyəm?",
+        "answer": "NIST-in son təlimatları əslində məcburi periodik şifrə dəyişikliyinə qarşı tövsiyə edir. Bunun əvəzinə, şifrənizi yalnız sızma sübutu olduqda dəyişdirin. Unikal, güclü şifrələr + iki faktorlu autentifikasiya tez-tez rotasiyadan daha effektivdir."
+      },
+      {
+        "question": "Eyni şifrəni bir neçə saytda niyə istifadə etməməliyəm?",
+        "answer": "Credential stuffing ən yayılmış hücum üsullarından biridir: hackerlər bir sızılmış xidmətdən istifadəçi adı/şifrə birləşmələrini götürüb minlərlə digər veb saytda avtomatik sınayırlar. Eyni şifrəni istifadə etsəniz, bir saytda sızma bütün hesablarınızı təhlükəyə ata bilər."
+      },
+      {
+        "question": "Parafraz şifrə təsadüfi şifrədən yaxşıdır?",
+        "answer": "Parafraz şifrələr yadda saxlamaq daha asandır, lakin ekvivalent təhlükəsizliyə nail olmaq üçün təsadüfi şifrələrdən daha uzun olmalıdır. Həqiqətən təsadüfi 16 simvolluq şifrə tipik 4 sözlü parafrazdan daha çox entropiyaya malikdir. Hər iki yanaşma etibarlıdır."
+      }
+    ]
+  },
+  "color-picker": {
+    "howToUse": [
+      "Əsas rəngi seçmək üçün rəng spektri sahəsinə klikləyin və ya giriş sahəsinə HEX, RGB, HSL formatında müəyyən rəng dəyəri daxil edin.",
+      "Ton sürüşdürücüsü və doyma-parlaqlıq panelini istifadə edərək seçdiyiniz rəngi dəqiq tənzimləyin.",
+      "HEX, RGB və ya HSL təsvirləri yanında kopyalama düyməsinə klikləyərək istədiyiniz formatda rəng dəyərini kopyalayın.",
+      "Seçiminizə əsaslanan yaradılmış rəng paletlərini kəşf edin - tamamlayıcı, analoq, triada və digər harmoniyalar dizayn ilhamı üçün."
+    ],
+    "whyUse": [
+      "Dizaynerlər və proqramçılar bir neçə formatda dəqiq rəng dəyərlərinə ehtiyac duyurlar. Bu alət HEX, RGB və HSL arasında ani çevirmə edərək dizayn və inkişaf iş axınını sürətləndirir.",
+      "Rəng harmoniyası paletləri dərin rəng nəzəriyyəsi biliyi olmadan vizual cəhətdən cəlbedici dizaynlar yaratmağa kömək edir.",
+      "Veb proqramçılar CSS stylesheetləri, HTML atributları və JavaScript canvas əməliyyatları üçün tez-tez müəyyən rəng kodlarına ehtiyac duyurlar.",
+      "Alət heç bir hesab tələb etmədən tamamilə brauzerinizdə işləyir.",
+      "Accessibility-dən xəbərdar dizaynerlər rəng kontrast nisbətlərini test edə və rəng seçimlərinin WCAG qaydalarına uyğunluğunu təmin edə bilərlər."
+    ],
+    "tips": [
+      "Veb üçün dizayn edərkən CSS-də daha asan rəng manipulyasiyası üçün HSL formatından istifadə edin.",
+      "Brend ardıcıllığı üçün seçdiyiniz HEX dəyərlərini CSS custom properties (dəyişənlər) kimi bütün layihənizdə istifadə edin.",
+      "Rəng seçimlərinizi oxunaqlılıq üçün kifayət qədər kontrastı təmin etmək məqsədilə həm açıq, həm də tünd fondalar test edin.",
+      "Rəng sistemi qurarkən əsas rəngdən başlayın və vurğu rənglər üçün yaradılmış harmoniya paletlərini başlanğıc nöqtəsi kimi istifadə edin."
+    ],
+    "faqs": [
+      {
+        "question": "HEX, RGB və HSL rəng formatları arasında fərq nədir?",
+        "answer": "HEX CSS və veb dizaynda istifadə olunan altı rəqəmli onaltılıq koddur (#FF5733). RGB Qırmızı, Yaşıl və Mavi kanal dəyərlərini 0-255 aralığında təyin edir. HSL isə Ton (0-360 dərəcə), Doyma (0-100%) və Parlaqlıq (0-100%) istifadə edir - insanlar üçün ən intuitiv formatdır."
+      },
+      {
+        "question": "Veb saytım üçün mükəmməl rəngi necə tapım?",
+        "answer": "Kimliğinizi əks etdirən əsas brend rəngini seçərək başlayın, sonra tamamlayıcı və vurğu rəngləri tapmaq üçün rəng seçicisinin harmoniya paleti generatorundan istifadə edin. Accessibility üçün yoxlayın və bir neçə ekranda test edin."
+      },
+      {
+        "question": "Rəng paleti nədir və niyə lazımdır?",
+        "answer": "Rəng paleti dizaynda harmonik şəkildə birlikdə işləyən seçilmiş rənglər dəstidir. Təyin olunmuş palet veb saytınızda, tətbiqinizdə vizual ardıcıllığı təmin edir. Əksər effektiv paletlərə əsas rəng, ikinci rəng, vurğu rəngi və neytral tonlar daxildir."
+      },
+      {
+        "question": "Bu aləti rəng accessibility yoxlaması üçün istifadə edə bilərəm?",
+        "answer": "Bu alət əsasən rəng seçimi və palet yaratmağa fokuslanır, lakin təqdim etdiyi HEX və RGB dəyərləri WCAG kontrast nisbətlərini yoxlamaq üçün xüsusi accessibility yoxlayıcıları ilə istifadə oluna bilər. Normal mətn üçün minimum 4.5:1, böyük mətn üçün 3:1 kontrast nisbəti tövsiyə olunur."
+      },
+      {
+        "question": "Tamamlayıcı, analoq və triada rəng harmoniyaları nədir?",
+        "answer": "Tamamlayıcı rənglər rəng çarxında bir-birinin əksində yerləşir (mavi və narıncı kimi), güclü kontrast yaradır. Analoq rənglər çarxda yan-yanadır, harmonik dizaynlar yaradır. Triada rənglər 120 dərəcə aralıqla yerləşir, canlı müxtəliflik təklif edir."
+      },
+      {
+        "question": "HEX-dən RGB-yə rəng necə çevirə bilərəm?",
+        "answer": "Sadəcə giriş sahəsinə HEX rəng kodunuzu daxil edin və alət dərhal ekvivalent RGB və HSL dəyərlərini göstərəcək. Çevirmə avtomatik və iki istiqamətlidir."
+      }
+    ]
+  },
+  "base64-encode-decode": {
+    "howToUse": [
+      "Kodlamaq istədiyiniz mətni giriş sahəsinə yapışdırın və ya yazın. Alət Unicode simvolları, xüsusi simvollar və çox sətirli məzmun daxil olmaqla istənilən mətni qəbul edir.",
+      "Mətninizi Base64 formatına çevirmək üçün Kodla düyməsinə klikləyin. Kodlanmış çıxış dərhal nəticə sahəsində görünür.",
+      "Base64-ü yenidən oxunaqlı mətnə çevirmək üçün Base64 kodlanmış sətri giriş sahəsinə yapışdırın və Dekod et düyməsinə klikləyin.",
+      "Nəticəni bir kliklə panonuza kopyalayın - kodunuzda, konfiqurasiya fayllarında, API sorğularında istifadə üçün."
+    ],
+    "whyUse": [
+      "Base64 kodlama binary məlumatları mətn əsaslı formatlara daxil etmək üçün vacibdir. Proqramçılar onu şəkilləri HTML/CSS-ə daxil etmək (data URI), JSON API-lərdə binary məlumat göndərmək, e-poçt qoşmalarını kodlamaq (MIME) üçün istifadə edirlər.",
+      "Yalnız ASCII mətni dəstəkləyən sistemlər vasitəsilə məlumat ötürərkən Base64 korrupsiya olmadan istənilən binary məlumatı kodlamaq üçün etibarlı yol təmin edir.",
+      "Bütün kodlama və dekodlama brauzerinizdə baş verir. API tokenləri, autentifikasiya başlıqları kimi həssas məlumatlar kodlama prosesi zamanı heç vaxt heç bir serverə göndərilmir.",
+      "REST API-lərlə işləyən proqramçılar autentifikasiya başlıqları, JWT token payload-ları ilə məşğul olarkən tez-tez Base64 sətirlərini kodlamaq və ya dekod etmək lazımdır.",
+      "Alət UTF-8 kodlamanı düzgün emal edir, beynəlxalq simvollar, emoji və xüsusi simvollar dəstəklənir."
+    ],
+    "tips": [
+      "Yadda saxlayın ki, Base64 kodlama şifrələmə deyil. Bu, hər kəsin dekod edə biləcəyi geri çevrilə bilən kodlama sxemidir. Həssas məlumatlar üçün heç vaxt təhlükəsizlik tədbiri kimi istifadə etməyin.",
+      "Base64 kodlanmış məlumat orijinaldan təxminən 33% böyükdür. Böyük faylları data URI kimi daxil edərkən bu artımı nəzərə alın.",
+      "Basic Authentication başlıqları ilə işləyərkən format 'username:password' Base64-ə kodlanmış, Authorization başlığında 'Basic ' (boşluğa diqqət) prefiksi ilə olur.",
+      "JWT tokenləri debug edərkən başlıq və payload hissələrini (nöqtələrlə ayrılmış) ayrı-ayrılıqda dekod edərək məzmunlarını yoxlayın."
+    ],
+    "faqs": [
+      {
+        "question": "Base64 kodlama nədir və nə vaxt lazımdır?",
+        "answer": "Base64, 64 simvollu əlifba istifadə edərək binary məlumatları ASCII simvol sətrinə çevirən kodlama sxemidir. JSON API-ləri və ya XML vasitəsilə binary məlumat ötürərkən, HTML/CSS-də şəkilləri daxil edərkən, e-poçt qoşmaları ilə işləyərkən lazımdır."
+      },
+      {
+        "question": "Base64 kodlama şifrələmə ilə eynidirmi?",
+        "answer": "Xeyr. Base64 kodlama qətiyyən şifrələmə deyil. Bu, hər kəsin heç bir açar və ya şifrə olmadan dekod edə biləcəyi standartlaşdırılmış kodlama metodudur. Məqsədi uyğunluq üçün məlumat transformasiyasıdır, təhlükəsizlik deyil. Həssas məlumatların qorunması üçün AES-256, RSA kimi düzgün şifrələmə metodlarından istifadə edin."
+      },
+      {
+        "question": "Niyə Base64 kodlanmış məlumat orijinaldan böyükdür?",
+        "answer": "Base64 hər 3 bayt orijinal məlumatı 4 ASCII simvola çevirir, nəticədə təxminən 33% ölçü artımı yaranır. Bu artım Base64-ün 8-bit binary məlumatları təmsil etmək üçün yalnız 64 simvoldan (simvol başına 6 bit) istifadə etməsi ilə bağlıdır."
+      },
+      {
+        "question": "Bu alətlə faylları Base64-ə kodlaya bilərəm?",
+        "answer": "Bu alət mətn-Base64 kodlama üçün optimallaşdırılıb. Şəkil fayllarını kodlamaq üçün Şəkildən Base64-ə alətimizi istifadə edə bilərsiniz. İstənilən fayldakı mətn məzmunu birbaşa bu alətə yapışdırıla bilər."
+      },
+      {
+        "question": "API-dən aldığım Base64 sətirini necə dekod edə bilərəm?",
+        "answer": "Base64 sətirini giriş sahəsinə yapışdırın və Dekod et klikləyin. Alət standart Base64 kodlamanı həm də URL-təhlükəsiz Base64 variantlarını avtomatik emal edir."
+      },
+      {
+        "question": "Bu onlayn Base64 kodlayıcısını istifadə edərkən məlumatlarım təhlükəsizdir?",
+        "answer": "Bəli, tamamilə təhlükəsizdir. Bütün kodlama və dekodlama əməliyyatları tamamilə brauzerinizdə JavaScript ilə baş verir. Heç bir məlumat serverlərimizə ötürülmür, qeyd olunmur və ya saxlanmır."
+      }
+    ]
+  },
+  "word-counter": {
+    "howToUse": [
+      "Mətninizi böyük mətn sahəsinə yapışdırın və ya yazın. Sayğac heç bir düymə klikləmədən yazdıqca dərhal məzmununuzu təhlil etməyə başlayır.",
+      "Mətn sahəsinin üstündə göstərilən hərtərəfli statistikaya baxın: ümumi sözlər, simvollar, cümlələr, paraqraflar və təxmini oxuma vaxtı.",
+      "Məzmununuzun oxunmasının nə qədər vaxt aparacağını qiymətləndirmək üçün oxuma vaxtı təxminindən istifadə edin.",
+      "Akademik və ya peşəkar yazı üçün söz sayını hədəf tələblərinizlə yoxlayın."
+    ],
+    "whyUse": [
+      "Yazıçılar, tələbələr və peşəkarlar tez-tez söz sayı tələbləri ilə işləyirlər. Akademik işlər, esse, bloq yazıları, sosial media paylaşımları - hamısında müəyyən uzunluq qaydaları var.",
+      "Oxuma vaxtını bilmək kontenti auditoriya cəlb etmə üçün optimallaşdırmağa kömək edir. SEO üçün 1500-2500 söz arası blog yazıları adətən ən yaxşı nəticə verir.",
+      "SEO mütəxəssisləri rəqib kontentin uzunluğunu təhlil etmək və məqalələrinin minimum kontent dərinliyi tələblərini ödəməsini təmin etmək üçün söz sayğaclarından istifadə edirlər.",
+      "Alət heç bir məlumat ötürməsi olmadan hər şeyi brauzerinizdə emal edir. Qaralamalarınız, akademik işləriniz tamamilə məxfi qalır.",
+      "Yalnız əsas söz sayı göstərən mətn redaktorlarından fərqli olaraq, bu alət simvol sayları, cümlə sayları, paraqraf sayları, oxuma və danışma vaxtları daxil olmaqla hərtərəfli statistika təqdim edir."
+    ],
+    "tips": [
+      "SEO-nu hədəfləyən blog yazıları üçün rəqabətli mövzularda ən azı 1500 sözü hədəfləyin. Uzun formatlı kontenti (2000-3000 söz) axtarış nəticələrində daha yüksək sıralama meyli var.",
+      "Sosial media simvol limitləri: Twitter/X 280 simvol, Instagram yazıları 2200 simvol, LinkedIn paylaşımları 3000 simvol icazə verir.",
+      "Akademik işlər yazarkən söz sayına adətən başlıq səhifəsi, abstrakt, istinadlar və əlavələr daxil edilmir.",
+      "Təqdimatlar hazırlayarkən danışma vaxtı təxminindən istifadə edin. 10 dəqiqəlik çıxış adətən danışma sürətinizdən asılı olaraq təxminən 1300-1500 söz tələb edir."
+    ],
+    "faqs": [
+      {
+        "question": "Oxuma vaxtı necə hesablanır?",
+        "answer": "Oxuma vaxtı yetkin şəxsin orta səssiz oxuma sürəti olan təxminən dəqiqədə 200-250 söz əsasında hesablanır. Alət standart baza kimi 200 s/dəq istifadə edir. Faktiki oxuma vaxtı fərdə, məzmun mürəkkəbliyinə görə dəyişir."
+      },
+      {
+        "question": "Boşluqlar simvol kimi sayılır?",
+        "answer": "Alət hər iki metrikanı göstərir: boşluqlarla simvollar (bütün boşluqlar daxil olmaqla ümumi simvol sayı) və boşluqsuz simvollar (yalnız hərflər, rəqəmlər, durğu işarələri). Əksər simvol limitləri (Twitter kimi) boşluqları sayır."
+      },
+      {
+        "question": "SEO üçün blog yazısı neçə söz olmalıdır?",
+        "answer": "Tək mükəmməl uzunluq yoxdur, lakin araşdırmalar ardıcıl olaraq daha uzun kontentin daha yaxşı sıralandığını göstərir. Rəqabətli açar sözlər üçün 1500-2500 söz, yüksək rəqabətli mövzular üçün 3000+ söz hədəfləyin. Lakin keyfiyyət kəmiyyətdən daha vacibdir."
+      },
+      {
+        "question": "Mətnim saxlanılır və ya haradasa saxlanılır?",
+        "answer": "Xeyr. Bütün mətn təhlili tamamilə brauzerinizdə JavaScript ilə baş verir. Mətniniz heç vaxt heç bir serverə göndərilmir, verilənlər bazasında saxlanmır. Brauzer tabını bağladıqda bütün məlumatlar silinir."
+      },
+      {
+        "question": "Bu alət sözləri necə sayır?",
+        "answer": "Sözlər mətn boşluq həddlərində (boşluqlar, tablar, sətir fasilələri) bölünərək sayılır. 'well-known' kimi defisli sözlər bir söz kimi sayılır. Rəqəmlər və abbreviaturalar ayrı sözlər kimi sayılır. Bu metodologiya əksər söz prosessorları tərəfindən istifadə olunan standartlara uyğundur."
+      },
+      {
+        "question": "Bunu akademik iş söz sayları üçün istifadə edə bilərəm?",
+        "answer": "Bəli, bu alət akademik tələblər üçün uyğun dəqiq söz sayları təmin edir. Yalnız söz sayınıza daxil edilməli olan bölmələri yapışdırın. Say Microsoft Word və Google Docs tərəfindən istifadə olunan metodologiya ilə uyğundur."
+      }
+    ]
+  },
+  "lorem-ipsum-generator": {
+    "howToUse": [
+      "İstədiyiniz çıxış növünü seçin: paraqraflar, cümlələr və ya ayrı sözlər. Hər seçim müxtəlif dizayn ehtiyaclarına uyğun müxtəlif miqdarda yer tutucu mətn yaradır.",
+      "Giriş sahəsini istifadə edərək miqdarı təyin edin. Məsələn, blog yazısı maketi üçün 3 paraqraf, kart komponenti üçün 5 cümlə və ya qısa mətn bloku üçün 50 söz.",
+      "Lorem ipsum mətninizi yaratmaq üçün Yarat düyməsinə klikləyin. Çıxış təbii görünən yer tutucu məzmun istehsal etmək üçün klassik lorem ipsum korpusundan təsadüfi seçilir.",
+      "Yaradılmış mətni bir kliklə panonuza kopyalayın və birbaşa dizayn alətinizə, HTML şablonunuza yapışdırın."
+    ],
+    "whyUse": [
+      "Dizaynerlər və proqramçılar son məzmun hazır olmadan əvvəl maketləri doldurmaq üçün yer tutucu mətndən istifadə edirlər. Lorem ipsum dizaynın əsl məzmunla necə görünəcəyini qiymətləndirməyə kömək edən realist mətn paylanması təmin edir.",
+      "Lorem ipsum istifadə etmək layihələrinizdə ardıcıl, neytral yer tutucu mətn təmin edir. Bu, maraqlı tərəflərin vizual dizayn əvəzinə müvəqqəti məzmuna fokuslanmasının qarşısını alır.",
+      "Cavab verən maketləri test edən proqramçılara müxtəlif uzunluqlarda mətn lazımdır. Generator ehtiyac duyulan dəqiq miqdarı tez yaratmağa imkan verir.",
+      "Generator heç bir server əlaqəsi olmadan tamamilə brauzerinizdə işləyir.",
+      "Lorem ipsum 1960-cı illərdən bəri yer tutucu mətn üçün sənaye standartıdır."
+    ],
+    "tips": [
+      "Maketlər yaradarkən dizaynınızın müxtəlif məzmun uzunluqlarını necə emal etdiyini test etmək üçün müxtəlif miqdarda yer tutucu mətn istifadə edin.",
+      "Çox dilli layihələr üçün müxtəlif dillərin orta söz uzunluqlarının fərqli olduğunu unutmayın. Alman mətni adətən ingilis dilindən 30% daha uzundur.",
+      "Məzmun sahələri üçün paraqraf rejimini, kart təsvirləri üçün cümlə rejimini, etiketlər və başlıqlar üçün söz rejimini istifadə edin.",
+      "İşə salmadan əvvəl həmişə yer tutucu mətni əsl məzmunla əvəz edin."
+    ],
+    "faqs": [
+      {
+        "question": "Lorem Ipsum nədir və haradan gəlir?",
+        "answer": "Lorem ipsum Romalı filosof Sisero tərəfindən e.ə. 45-ci ildə yazılmış əsərdən ('De Finibus Bonorum et Malorum') alınmış yer tutucu mətndir. Mətn 1960-cı illərdə Letraset şirkəti tərəfindən tipoqrafik doldurucu kimi istifadə üçün qarışdırılmış və uyğunlaşdırılmışdır."
+      },
+      {
+        "question": "Dizayn maketləri üçün niyə əsl mətn əvəzinə Lorem Ipsum istifadə etməli?",
+        "answer": "Lorem ipsum maraqlı tərəflərin və nəzərdən keçirənlərin vizual dizaynı qiymətləndirmək əvəzinə məzmunu oxumağının və cavab verməsinin qarşısını alır. Real, oxunaqlı mətn istifadə edildikdə insanlar təbii olaraq layout, tipoqrafiya əvəzinə sözlərə fokuslanır."
+      },
+      {
+        "question": "Blog yazısı dizaynı üçün nə qədər yer tutucu mətn lazımdır?",
+        "answer": "Tipik blog yazısı maketi əsas məzmun sahəsi üçün 3-5 paraqraf (300-500 söz) tələb edir. Meta təsvir üçün 1-2 cümlə, başlıq üçün 5-10 söz daxil edin. Dizaynınızın həm qısa, həm də uzun məqalələri düzgün emal etdiyindən əmin olmaq üçün müxtəlif uzunluqlarla test edin."
+      },
+      {
+        "question": "Yaradılmış Lorem Ipsum mətnini fərdiləşdirə bilərəm?",
+        "answer": "Bu generator klassik lorem ipsum korpusundan mətn istehsal edir, çıxış növünü (paraqraf, cümlə, söz) və miqdarı idarə etməyə imkan verir."
+      },
+      {
+        "question": "Lorem Ipsum mətninin müəllif hüququ var?",
+        "answer": "Xeyr. Lorem ipsum mətni e.ə. 45-ci ildə yazılmış əsərdən alınıb ki, bu da tamamilə ictimai mülkiyyətdədir. 1960-cı illərdən bəri yer tutucu mətn kimi istifadə olunan qarışdırılmış versiyanın heç bir müəllif hüququ məhdudiyyəti yoxdur."
+      },
+      {
+        "question": "Yer tutucu mətn istifadə etmək SEO-ya təsir edir?",
+        "answer": "Canlı veb saytda yer tutucu mətn SEO-ya mənfi təsir göstərə bilər. Axtarış motorları lorem ipsum-u nazik və ya əlaqəsiz məzmun kimi şərh edə bilər. Hər hansı səhifəni dərc etməzdən əvvəl həmişə yer tutucu mətni əsl dəyərli məzmunla əvəz edin."
+      }
+    ]
+  },
+  "uuid-generator": {
+    "howToUse": [
+      "Yeni UUID v4 identifikatoru yaratmaq üçün Yarat düyməsinə klikləyin. Yaradılmış UUID standart formatı izləyir: xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx.",
+      "Üstünlük verdiyiniz format seçimlərini seçin: böyük və ya kiçik hərflər, tirəli və ya tirəsiz.",
+      "Bir neçə UUID-i birdəfəyə yaratmaq üçün toplu yaratma xüsusiyyətindən istifadə edin.",
+      "Ayrı-ayrı UUID-ləri və ya bütün siyahını bir kliklə panonuza kopyalayın."
+    ],
+    "whyUse": [
+      "UUID-lər bir neçə komponentin koordinasiya olmadan müstəqil olaraq unikal identifikatorlar yaratmalı olduğu paylanmış sistemlər üçün vacibdir.",
+      "Verilənlər bazası arxitektorları UUID-ləri əsas açar kimi istifadə edərək enumeration hücumlarının qarşısını alır və paylanmış verilənlər bazası arxitekturalarını dəstəkləyir.",
+      "UUID v4 identifikatorları brauzerinizdə kriptoqrafik cəhətdən təhlükəsiz təsadüfi nömrələrdən istifadə edərək yaradılır. İki eyni UUID v4 yaratma ehtimalı astronomik dərəcədə kiçikdir.",
+      "Proqramçılara unit testlər, mock data, API test və verilənlər bazası doldurma üçün test UUID-ləri lazımdır.",
+      "Bütün yaratma brauzerinizdə Web Crypto API istifadə edərək baş verir."
+    ],
+    "tips": [
+      "UUID-ləri verilənlər bazası əsas açarı kimi istifadə edərkən indeks performansına təsiri nəzərə alın. Bəzi verilənlər bazalarında təsadüfi UUID-lər indeks fraqmentasiyasına səbəb ola bilər.",
+      "URL-dost identifikatorlar üçün tirəsiz formatı istifadə edin.",
+      "Tətbiqlərinizə giriş kimi qəbul edərkən həmişə UUID formatını doğrulayın.",
+      "Test data üçün toplu UUID yaradarkən SQL INSERT ifadələrinə daxil etmək üçün bütün siyahını kopyalayın."
+    ],
+    "faqs": [
+      {
+        "question": "UUID nədir və niyə istifadə olunur?",
+        "answer": "UUID (Universal Unikal İdentifikator) beş qrupda tirə ilə ayrılmış 32 onaltılıq rəqəm kimi formatlanan 128-bit identifikatordır. UUID-lər proqram sistemlərində unikal identifikator kimi istifadə olunur çünki koordinasiya olmadan istənilən maşında yaradıla bilər."
+      },
+      {
+        "question": "UUID v4 ilə digər UUID versiyaları arasında fərq nədir?",
+        "answer": "UUID v4 bütün sahələr üçün (versiya və variant bitləri istisna olmaqla) təsadüfi nömrələr istifadə edir. UUID v1 vaxt damğası və MAC ünvanı ehtiva edir. UUID v3 və v5 namespace və addan hash istifadə edərək yaradılır. UUID v7 vaxt sıralı yaratma üçün Unix zaman damğası prefiksi istifadə edir."
+      },
+      {
+        "question": "İki UUID heç eyni ola bilər?",
+        "answer": "Nəzəri olaraq mümkündür, lakin praktiki olaraq qeyri-mümkündür. UUID v4-ün 122 təsadüfi bit var, təxminən 5.3 x 10^36 mümkün dəyər verir. Bir toqquşma üçün 50% ehtimala nail olmaq üçün təxminən 2.7 kvintilyon UUID yaratmaq lazımdır."
+      },
+      {
+        "question": "Verilənlər bazam üçün UUID-lər yoxsa ardıcıl ID-lər istifadə etməliyəm?",
+        "answer": "Hər ikisinin üstünlükləri var. Ardıcıl ID-lər daha kiçik, indeks performansı üçün daha yaxşı və debug etmək daha sadədir. UUID-lər paylanmış sistemlər, ID enumeration-ın qarşısının alınması və çox mənbəli məlumat birləşdirməsi üçün daha yaxşıdır."
+      },
+      {
+        "question": "Bu UUID generatoru kriptoqrafik cəhətdən təhlükəsizdir?",
+        "answer": "Bəli. Generator kriptoqrafik cəhətdən təhlükəsiz psevdo-təsadüfi nömrələr təmin edən Web Crypto API-dən (crypto.getRandomValues) istifadə edir. Yaradılmış UUID-lər təhlükəsizlik baxımından həssas tətbiqlər üçün də uyğundur."
+      },
+      {
+        "question": "Yaradılmış UUID-ləri kodumda necə istifadə edə bilərəm?",
+        "answer": "UUID-i alətdən kopyalayın və kodunuzda mətn literal kimi istifadə edin. Əksər proqramlaşdırma dillərində UUID-lər mətn və ya xüsusi UUID tipləri kimi saxlanır. PostgreSQL-də uuid məlumat tipini, Python-da uuid modulunu, Java-da java.util.UUID istifadə edin."
+      }
+    ]
+  },
+  "json-to-csv": {
+    "howToUse": [
+      "JSON massiv məlumatlarınızı giriş sahəsinə yapışdırın. Məlumat hər obyektin bir sətri təmsil etdiyi obyektlər massivi olmalıdır.",
+      "Lazım olduqda ayırıcını konfiqurasiya edin. Standart vergüldür, lakin nöqtəli vergül, tab və ya boru simvoluna da keçə bilərsiniz.",
+      "JSON-u CSV formatına çevirmək üçün Çevir düyməsinə klikləyin. Alət sütun başlıqlarını avtomatik çıxarır.",
+      "CSV çıxışını nəzərdən keçirin, sonra kopyalayın və ya .csv faylı kimi endirin."
+    ],
+    "whyUse": [
+      "Data analitiklər API cavablarını və JSON məlumat dəstlərini Excel, Google Sheets, R, Python pandas kimi alətlərdə təhlil üçün tez-tez CSV formatına çevirməyə ehtiyac duyurlar.",
+      "Texniki olmayan maraqlı tərəflər tez-tez cədvəl formatında məlumat tələb edirlər. JSON-u CSV-yə çevirmək verilənlər bazası ixraclarını paylaşmağa imkan verir.",
+      "Çevirici mürəkkəb JSON strukturlarını düz CSV formatına avtomatik yastılaşdıraraq emal edir.",
+      "Bütün çevirmə brauzerinizdə baş verir. API-lərinizdən olan həssas məlumatlar heç vaxt serverə göndərilmir.",
+      "Fayl ölçüsü limitləri və ya pullu abunəlik tələb edən bir çox çeviricilərdən fərqli olaraq, bu alət tamamilə pulsuzdur."
+    ],
+    "tips": [
+      "JSON-unuzun düzgün formatlı obyektlər massivi olduğundan əmin olun.",
+      "Dəyərləriniz daxilində vergüllər varsa (məsələn, ünvanlar), çevirici CSV strukturunu qorumaq üçün həmin sahələri avtomatik dırnaqlarla əhatə edir.",
+      "Avropa regionları üçün ayırıcını nöqtəli vergülə dəyişdirin.",
+      "Böyük məlumat dəstləri müasir brauzerlərdə daha sürətli çevrilir."
+    ],
+    "faqs": [
+      {
+        "question": "Bu çevirici hansı JSON formatı gözləyir?",
+        "answer": "Çevirici hər obyektin CSV çıxışında bir sətirə çevrildiyi JSON obyektlər massivi gözləyir. Obyektlərdən açarlar CSV sütun başlıqlarına çevrilir."
+      },
+      {
+        "question": "İç-içə JSON obyektlərini CSV-yə çevirə bilərəm?",
+        "answer": "Çevirici hər açarın sadə dəyər (sətr, rəqəm, boolean, null) olan düz JSON obyektlərini ən effektiv emal edir. İç-içə obyektlər üçün alət sütun başlıqlarında nöqtə notasiyası ilə yastılaşdırır."
+      },
+      {
+        "question": "Hansı ayırıcı seçimləri mövcuddur?",
+        "answer": "Alət vergül (standart CSV), nöqtəli vergül (Avropa lokal-larında vergüllər onluq ayırıcı kimi istifadə olunduğu üçün), tab (TSV formatı) və boru simvolu dəstəkləyir."
+      },
+      {
+        "question": "Alət dəyərlərdəki xüsusi simvolları necə emal edir?",
+        "answer": "Ayırıcı simvol, ikiqat dırnaq və ya sətir fasilələri olan dəyərlər CSV spesifikasiyasına (RFC 4180) uyğun olaraq avtomatik ikiqat dırnaqlarla əhatə olunur."
+      },
+      {
+        "question": "Çevirə biləcəyim JSON məlumatının miqdarında limit var?",
+        "answer": "Çevirmə brauzerinizdə işlədiyindən limit cihazınızın mövcud yaddaşından asılıdır. Müasir cihazlar adətən minlərlə sətir ehtiva edən bir neçə meqabaytlıq JSON fayllarını problemsiz emal edə bilər."
+      },
+      {
+        "question": "CSV çıxışını birbaşa Excel-də aça bilərəm?",
+        "answer": "Bəli. CSV faylını endirin və Excel, Google Sheets, LibreOffice Calc-da açın. Excel sütunları düzgün təhlil etmirsə, Mətn İdxalı Sihirbazından istifadə edərək düzgün ayırıcını təyin edin."
+      }
+    ]
+  },
+  "markdown-to-html": {
+    "howToUse": [
+      "Markdown məzmununuzu sol tərəfdəki redaktora yazın və ya yapışdırın. Alət başlıqlar, qalın, kursiv, keçidlər, şəkillər, kod blokları, siyahılar, sitat blokları və cədvəllər daxil olmaqla bütün standart Markdown sintaksisini dəstəkləyir.",
+      "Redaktorun sağ tərəfində real vaxtda render edilmiş HTML önizləməsinə baxın.",
+      "Yaradılmış HTML kodunu görmək üçün HTML mənbə görünüşünə keçin.",
+      "HTML çıxışını bir kliklə panonuza kopyalayın."
+    ],
+    "whyUse": [
+      "Markdown proqramçılar, texniki yazıçılar və məzmun yaradıcıları üçün sadəliyi ilə üstünlük verilən yazı formatıdır. Lakin veb brauzerlər HTML göstərir, Markdown deyil. Bu çevirici körpü rolunu oynayır.",
+      "CMS-lər, e-poçt qurucuları və bir çox veb platforma HTML qəbul edir, Markdown deyil. Bu alət Markdown-ın təmiz sintaksisində yazmağa və istənilən platforma üçün HTML çıxışı əldə etməyə imkan verir.",
+      "Canlı önizləmə təxminləri aradan qaldırır. HTML çıxışını kopyalamadan əvvəl formatlaşdırmanızın necə görünəcəyini dəqiq görə bilərsiniz.",
+      "Texniki sənədləşdirmə, README faylları, blog yazıları Markdown-da yazılır. Bu çevirici həmin kontenti HTML əsaslı platformalar üçün yenidən istifadəyə imkan verir.",
+      "Bütün emal server əlaqəsi olmadan brauzerinizdə baş verir."
+    ],
+    "tips": [
+      "Sintaksis vurğulanmış kod parçaları üçün dil identifikatoru ilə fenced kod blokları istifadə edin.",
+      "Cədvəllər üçün boru (|) və defis (-) sintaksisini istifadə edin.",
+      "Veb nəşri üçün yazarkən Markdown-unuzu həm adi, həm də kənar hal formatlaşdırma ilə test edin.",
+      "Çoxlu keçidi olan sənədlər üçün istinad üslublu keçidlərdən [mətn][id] istifadə edin."
+    ],
+    "faqs": [
+      {
+        "question": "Bu çevirici hansı Markdown sintaksisini dəstəkləyir?",
+        "answer": "Çevirici standart CommonMark Markdown sintaksisini dəstəkləyir: başlıqlar (# - ######), qalın (**mətn**), kursiv (*mətn*), keçidlər, şəkillər, sıralı və sırasız siyahılar, sitat blokları, daxili kod, fenced kod blokları, üfüqi xətlər, cədvəllər və tapşırıq siyahıları."
+      },
+      {
+        "question": "Yaradılmış HTML təmiz və prodakşn üçün hazırdır?",
+        "answer": "Bəli, çevirici lazımsız atributlar, daxili üslublar və ya sarğı elementləri olmadan təmiz, semantik HTML yaradır. Çıxış istənilən CSS framework və ya xüsusi stylesheet ilə işləyir."
+      },
+      {
+        "question": "Bunu README.md fayllarını HTML-ə çevirmək üçün istifadə edə bilərəm?",
+        "answer": "Tamamilə. Bu alət GitHub, GitLab və Bitbucket README fayllarında istifadə olunan eyni Markdown sintaksisini emal edir. README məzmununuzu yapışdırın və sənədləşdirmə veb saytları üçün uyğun HTML çıxışı əldə edin."
+      },
+      {
+        "question": "Çevirici sintaksis vurğulanması ilə kod bloklarını emal edir?",
+        "answer": "Çevirici fenced kod bloklarında dil identifikatorlarını HTML çıxışında code elementində class atributları kimi qoruyur. Vizual sintaksis vurğulanması üçün Prism.js və ya highlight.js kimi kitabxana əlavə etmək lazımdır."
+      },
+      {
+        "question": "Bu server tərəfli Markdown render ilə necə müqayisə olunur?",
+        "answer": "Bu alət populyar server tərəfli Markdown kitabxanaları ilə eyni nəticə verir. Client-side çevirmənin üstünlüyü kontentinizin brauzerinizdən heç vaxt çıxmaması və ani önizləmə əldə etməyinizdir."
+      },
+      {
+        "question": "Markdown daxilində HTML daxil edə bilərəm?",
+        "answer": "Standart Markdown daxili HTML-ə icazə verir. HTML teqlərini birbaşa Markdown məzmununuza daxil edə bilərsiniz və onlar dəyişdirilmədən HTML çıxışına keçəcək."
+      }
+    ]
+  },
+  "html-minifier": {
+    "howToUse": [
+      "HTML kodunuzu giriş redaktoruna yapışdırın. Alət tam səhifə sənədləri, ayrı komponentlər, şablonlar və HTML e-poçt kodu daxil olmaqla istənilən etibarlı HTML-i qəbul edir.",
+      "Bütün lazımsız boşluqları, şərhləri və ixtiyari teqləri silərək HTML-nizi sıxmaq üçün Kiçilt düyməsinə klikləyin.",
+      "Gözəlləşdir düyməsini istifadə edərək prosesi geri çevirin: kiçildilmiş HTML-ə düzgün girintilər və sətir fasilələri əlavə edin.",
+      "Kiçildilmiş və ya gözəlləşdirilmiş çıxışı kopyalayın və prodakşn deployment-inizdə istifadə edin."
+    ],
+    "whyUse": [
+      "Kiçildilmiş HTML faylları daha kiçikdir, daha sürətli səhifə yüklənmələri, aşağı bant genişliyi xərcləri və daha yaxşı performans göstəriciləri deməkdir.",
+      "Google PageSpeed Insights, GTmetrix və Lighthouse HTML kiçiltməni performans optimallaşdırması kimi xüsusi olaraq tövsiyə edir.",
+      "Prodakşn build-lərindən kiçildilmiş HTML ilə işləyərkən gözəlləşdirici debug üçün oxunaqlı formatlaşdırmanı bərpa edir.",
+      "Bütün emal brauzerinizdə işləyir. HTML şablonlarınız, e-poçt kodunuz tamamilə məxfi qalır.",
+      "Alət yalnız boşluqları deyil, həm də HTML şərhlərini, ixtiyari bağlama teqlərini, atributlar ətrafında lazımsız dırnaqları silir."
+    ],
+    "tips": [
+      "Prodakşna deployment etməzdən əvvəl kiçildilmiş HTML-i həmişə brauzerdə test edin.",
+      "HTML e-poçtları üçün kiçiltmə ilə ehtiyatlı olun. Bəzi e-poçt klientləri kiçildilmiş HTML-i zəif emal edir.",
+      "Maksimum səhifə sürəti yaxşılaşması üçün HTML kiçiltməni CSS və JavaScript kiçiltmə ilə birləşdirin.",
+      "Orijinal kiçildilməmiş HTML-i mənbə kod repozitoriyasında saxlayın."
+    ],
+    "faqs": [
+      {
+        "question": "HTML kiçiltmə nə edir?",
+        "answer": "HTML kiçiltmə funksionallığını dəyişdirmədən HTML kodundan bütün lazımsız simvolları silir: teqlər arasında boşluqlar, HTML şərhləri, ixtiyari bağlama teqləri, atributlardan lazımsız dırnaqlar. Nəticə brauzerlərin orijinalla eyni render etdiyi daha kiçik fayldır."
+      },
+      {
+        "question": "HTML kiçiltmə səhifənin görünüşünə təsir edir?",
+        "answer": "Xeyr, kiçildilmiş HTML veb brauzerlərdə eyni render olunur. Brauzerlər HTML təhlil edərkən artıq boşluqları nəzərə almır. Lakin nadir kənar hallar var: CSS-iniz 'white-space: pre' istifadə edirsə, kiçiltmə layout-a təsir edə bilər."
+      },
+      {
+        "question": "HTML kiçiltmə fayl ölçüsünü nə qədər azalda bilər?",
+        "answer": "Tipik qənaət orijinal kodun formatlaşdırmasından asılı olaraq 10-30% arasında dəyişir. Gzip və ya Brotli server sıxması ilə birləşdirildikdə ümumi azalma 70-90% ola bilər."
+      },
+      {
+        "question": "Prodakşn veb saytları üçün HTML kiçiltməliyəm?",
+        "answer": "Bəli, HTML kiçiltmə prodakşn veb saytları üçün tövsiyə olunan ən yaxşı təcrübədir. Bant genişliyi istifadəsini azaldır, səhifə yüklənmə vaxtlarını yaxşılaşdırır və performans göstəricilərini artırır."
+      },
+      {
+        "question": "Bu onlayn kiçildici istifadə edərkən HTML kodum təhlükəsizdir?",
+        "answer": "Bəli, tamamilə təhlükəsizdir. Bütün kiçiltmə emalı brauzerinizdə JavaScript ilə baş verir. HTML kodunuz heç vaxt heç bir serverə yüklənmir, saxlanmır və qeyd olunmur."
+      },
+      {
+        "question": "HTML kiçiltmə ilə sıxma arasında fərq nədir?",
+        "answer": "Kiçiltmə mənbə kodunun özündən lazımsız simvolları silir. Sıxma (Gzip, Brotli) faylı transfer zamanı sıxan server tərəfli prosesdir. Bu texnikalar tamamlayıcıdır: əvvəlcə kiçildin, sonra əlavə qənaət üçün sıxın."
+      }
+    ]
+  },
+  "css-minifier": {
+    "howToUse": [
+      "CSS kodunuzu giriş redaktoruna yapışdırın. Alət media sorğuları, animasiyalar, CSS dəyişənləri, selektorlar daxil olmaqla bütün CSS sintaksisini emal edir.",
+      "Boşluqları, şərhləri və lazımsız simvolları silərək CSS-nizi sıxmaq üçün Kiçilt düyməsinə klikləyin.",
+      "Kiçildilmiş CSS-i oxunaqlı koda formatlaşdırmaq üçün Gözəlləşdir düyməsini istifadə edin.",
+      "Nəticəni stylesheet-lərinizdə istifadə etmək üçün kopyalayın."
+    ],
+    "whyUse": [
+      "CSS faylları render-bloklayan resurslar-dır, brauzerlər CSS tam yüklənənə və təhlil olunana qədər səhifəni göstərə bilməz. Daha kiçik CSS faylları daha sürətli yüklənir.",
+      "Google Lighthouse, PageSpeed Insights kiçildilməmiş CSS-i xüsusi olaraq performans problemi kimi qeyd edir.",
+      "Müasir veb tətbiqlər framework-lər, dizayn sistemləri vasitəsilə tez-tez böyük CSS faylları yığır. Kiçiltmə CSS fayl ölçülərini 20-40% azalda bilər.",
+      "Bütün CSS emalı brauzerinizdə yerli olaraq baş verir. Xüsusi dizayn sistemi kodunuz tamamilə məxfi qalır.",
+      "Gözəlləşdirici prodakşn saytlarından, CDN-dən host edilən framework-lərdən kiçildilmiş CSS-i anlamağa və debug etməyə kömək edir."
+    ],
+    "tips": [
+      "Maksimum fayl ölçüsü azaltması üçün CSS kiçiltməni tree-shaking (istifadə olunmayan CSS qaydalarının silinməsi) ilə birləşdirin.",
+      "Kiçildilmiş CSS-i debug etmək üçün inkişafda source map-lar istifadə edin.",
+      "Kritik CSS çıxarmasını nəzərdən keçirin: above-the-fold məzmun üçün lazım olan CSS-i daxil edin, qalanını yükləməni təxirə salın.",
+      "CSS custom properties (dəyişənlər) istifadə edərkən kiçiltmə dəyişən adlarını qoruyur çünki onlar runtime API-nin hissəsidir."
+    ],
+    "faqs": [
+      {
+        "question": "CSS kiçiltmə nələri silir?",
+        "answer": "CSS kiçiltmə bütün lazımsız boşluqları, şərhləri (/* ... */), qaydada son xüsusiyyətdən sonra artıq nöqtəli vergülləri, url() dəyərlərində lazımsız dırnaqları, onluq dəyərlərdə baştakı sıfırları (0.5 .5 olur) və sıfır dəyərlərdə artıq vahidləri (0px 0 olur) silir."
+      },
+      {
+        "question": "CSS kiçiltmə üslublarımın görünüşünü dəyişir?",
+        "answer": "Xeyr. CSS kiçiltmə yalnız brauzerlərin təhlil zamanı nəzərə almadığı simvolları silir. Üslublarınızın vizual çıxışı tamamilə eyni qalır."
+      },
+      {
+        "question": "CSS kiçiltmə fayl ölçüsünü nə qədər azalda bilər?",
+        "answer": "Tipik CSS kiçiltmə orijinal kodun formatlaşdırmasından asılı olaraq 15-30% fayl ölçüsü azaltması əldə edir. Server tərəfli Gzip və ya Brotli sıxma ilə birləşdirildikdə ümumi şəbəkə transfer qənaəti 80-90%-ə çatır."
+      },
+      {
+        "question": "Build aləti tərəfindən artıq emal olunmuş CSS-i kiçiltməliyəm?",
+        "answer": "Əksər müasir build alətləri (webpack, Vite, Parcel, Next.js) prodakşn build proseslərinə CSS kiçiltməni daxil edir. Build pipeline-nız artıq kiçildibsə, bu alətdən yenidən keçirmək minimal əlavə effekt verəcək."
+      },
+      {
+        "question": "Bu onlayn alət istifadə edərkən CSS kodum təhlükəsizdir?",
+        "answer": "Bəli, tamamilə təhlükəsizdir. Bütün emal brauzerinizdə JavaScript ilə baş verir. CSS kodunuz heç vaxt heç bir serverə göndərilmir."
+      },
+      {
+        "question": "Custom properties kimi müasir CSS xüsusiyyətlərini istifadə edən CSS-i kiçildə bilərəm?",
+        "answer": "Bəli. Kiçildici custom properties, calc() ifadələri, CSS Grid, Flexbox, CSS animasiyaları, container sorğuları daxil olmaqla bütün müasir CSS xüsusiyyətlərini düzgün emal edir. Dəyişən adları runtime-da istinad edildikləri üçün qorunur."
+      }
+    ]
+  },
+  "text-to-speech": {
+    "howToUse": [
+      "Eşitmək istədiyiniz mətni mətn sahəsinə yazın və ya yapışdırın. Alət məqalələr, sənədlər, tədris qeydləri daxil olmaqla istənilən uzunluqda mətni qəbul edir.",
+      "Açılan menyudan səs seçin. Mövcud səslər cihazınızdan və əməliyyat sisteminizdən asılıdır.",
+      "Nitq parametrlərini tənzimləyin: sürət mətni nə qədər sürətli oxunacağını, ton səsin tonallığını, həcm isə audio səviyyəsini idarə edir.",
+      "Mətnin nitqə çevrilməsini başlamaq üçün Oynat düyməsinə klikləyin. Playback idarəetmələri ilə fasilə verə, davam edə və ya dayandıra bilərsiniz."
+    ],
+    "whyUse": [
+      "Mətndən nitqə görmə pozğunluqları, oxuma çətinlikləri, disleksiya və ya koqnitiv əlilliyi olan insanlar üçün yazılı məzmunu əlçatan edən vacib accessibility alətidir.",
+      "Eşitmə yolu ilə öyrənmə bir çox insan üçün daha effektivdir. Tələbələr, tədqiqatçılar məqalələri, tədris materiallarını səfər edərkən, idman edərkən dinləyə bilərlər.",
+      "Məzmun yaradıcıları və yazıçılar yazılarını səslə oxudaraq korrektə etmək üçün istifadə edə bilərlər. Yazınızı dinləmək tez-tez səssiz oxuyanda qaçırdığınız yöndəmsiz ifadələri, təkrarlanan sözləri üzə çıxarır.",
+      "Alət brauzerinizə daxil edilmiş Web Speech API istifadə edir, heç bir məlumat heç bir serverə göndərilmir.",
+      "Çox dil dəstəyi xarici dil mətninin düzgün tələffüzünü eşitməyə imkan verir - dil öyrənənlər üçün dəyərli alətdir."
+    ],
+    "tips": [
+      "Təbii səslənən nitq üçün sürəti 0.8-1.2 arasında saxlayın.",
+      "Ən xoş və anlaşılan səsi tapmaq üçün müxtəlif səsləri sınayın.",
+      "Korrektə üçün sürəti normaldan bir az aşağı (0.8-0.9x) təyin edin.",
+      "Durğu işarələri nitqin səslənməsinə təsir edir. Vergüllər və nöqtələrin düzgün istifadəsi daha təbii fasilələr və intonasiya yaradır."
+    ],
+    "faqs": [
+      {
+        "question": "Mətndən nitqə üçün hansı səslər mövcuddur?",
+        "answer": "Mövcud səslər cihazınızdan və brauzerinizdən asılıdır. Windows Microsoft səsləri, macOS yüksək keyfiyyətli Apple səsləri təklif edir. Əksər sistemlər ən azı kişi və qadın seçimləri olan İngilis səslərini ehtiva edir."
+      },
+      {
+        "question": "Mətndən nitqə qeyri-ingilis dilli mətnlə işləyir?",
+        "answer": "Bəli, Web Speech API bir neçə dili dəstəkləyir. Müəyyən dil üçün səs seçdikdə nitq mühərriki həmin dilin tələffüz qaydalarını istifadə edir."
+      },
+      {
+        "question": "Mətnim emal üçün serverə göndərilir?",
+        "answer": "Xeyr. Mətndən nitqə çevirməsi brauzerinizə daxil edilmiş Web Speech API istifadə edir və cihazınızda yerli olaraq emal edir. Mətniniz heç vaxt cihazınızdan çıxmır."
+      },
+      {
+        "question": "Yaradılmış nitqi audio fayl kimi saxlaya bilərəm?",
+        "answer": "Bu alət tərəfindən istifadə olunan Web Speech API real vaxt nitq sintezi təmin edir, lakin çıxışı audio fayl kimi saxlamağı dəstəkləmir. Audio fayllar yaratmaq üçün audio fayl yükləmələri təmin edən xüsusi text-to-speech xidmətinə ehtiyac olacaq."
+      },
+      {
+        "question": "Niyə bəzi səslər digərlərindən daha yaxşı səslənir?",
+        "answer": "Səs keyfiyyəti nitq sintez texnologiyasından asılıdır. Neural (AI əsaslı) səslər ənənəvi birləşdirici və ya formant əsaslı səslərdən xeyli daha təbii səslənir."
+      },
+      {
+        "question": "Bu aləti accessibility üçün oxuma köməyi kimi istifadə edə bilərəm?",
+        "answer": "Bəli, bu əla oxuma köməyidir. Görmə pozğunluqları, disleksiya, ADHD olan insanlara kömək edir. Tənzimlənə bilən sürət, ton və həcm fərdi ehtiyaclara uyğunlaşdırmağa imkan verir."
+      }
+    ]
+  },
+  "pdf-compress": {
+    "howToUse": [
+      "Sıxmaq istədiyiniz PDF faylını yükləmə sahəsinə klikləyərək və ya sürükləyib ataraq yükləyin.",
+      "Sıxma prosesi yükləmədən sonra avtomatik başlayır. Alət lazımsız metadata-nı, təkrarlanan resursları silir və PDF-in daxili strukturunu optimallaşdırır.",
+      "Orijinal və sıxılmış fayl ölçülərini və əldə edilmiş faiz azalmasını göstərən sıxma nəticələrini nəzərdən keçirin.",
+      "Sıxılmış PDF faylını endirin. Optimallaşdırılmış sənəd e-poçt ilə paylaşma, veb saytlara yükləmə üçün hazırdır."
+    ],
+    "whyUse": [
+      "Böyük PDF fayllarını e-poçt ilə paylaşmaq çətindir (əksər provayderlər qoşmaları 10-25MB ilə məhdudlaşdırır), veb saytlardan yükləmək yavaşdır. Sıxma məzmun keyfiyyətini qoruyaraq fayl ölçüsünü azaldır.",
+      "Veb saytlar və platformalar tez-tez PDF yükləmələri üçün fayl ölçüsü limitləri tətbiq edir. PDF-lərinizi sıxmaq hökumət portalları, iş müraciətləri üçün yükləmə tələblərini ödəməyi təmin edir.",
+      "Bütün sıxma brauzerinizdə baş verir. Maliyyə sənədləri, tibbi qeydlər, hüquqi müqavilələr yerli olaraq emal olunur və heç vaxt serverə yüklənmir.",
+      "Minlərlə PDF sənədi ilə məşğul olan təşkilatlar üçün saxlama optimallaşdırması vacibdir. Böyük sənəd kitabxanasında hətta mütəvazı sıxma belə qiqabaytlarla yer qənaət edə bilər.",
+      "Sıxılmış PDF-lər veb brauzerlərdə və PDF oxuyucularda daha sürətli yüklənir."
+    ],
+    "tips": [
+      "Çoxlu yüksək keyfiyyətli şəkilləri olan PDF-lər sıxmadan ən çox faydalanır. Əsasən mətn olan sənədlər daha kiçik azalmalar görəcək.",
+      "Sıxılmış PDF-i həmişə açaraq bütün səhifələrin, şəkillərin və formatlaşdırmanın düzgün göründüyünü yoxlayın.",
+      "Maksimum sıxma üçün şəkilləri PDF-ə daxil etməzdən əvvəl ayrıca şəkil sıxıcısı ilə azaltmağı düşünün.",
+      "Sıxılmış fayl hələ də çox böyükdürsə, PDF Bölücü alətimizi istifadə edərək daha kiçik bölmələrə bölməyi düşünün."
+    ],
+    "faqs": [
+      {
+        "question": "PDF sıxma fayl ölçüsünü nə qədər azalda bilər?",
+        "answer": "Sıxma nəticələri məzmundan asılı olaraq dəyişir. Daxil edilmiş yüksək keyfiyyətli şəkilləri olan PDF-lər tez-tez 40-70% azaldıla bilər. Minimal şəkilli mətn ağırlıqlı sənədlər adətən 10-25% azalma görür."
+      },
+      {
+        "question": "PDF sıxma keyfiyyəti azaldır?",
+        "answer": "Bu alət itkisiz optimallaşdırma texnikalarına fokuslanır: lazımsız metadata-nın silinməsi, təkrarlanan daxil edilmiş resursların aradan qaldırılması və daxili strukturun optimallaşdırılması. Mətn, vektorlar və səhifə layout-u eyni qalır."
+      },
+      {
+        "question": "Həssas PDF sənədlərini onlayn sıxmaq təhlükəsizdir?",
+        "answer": "Bəli. Bütün sıxma emalı tamamilə brauzerinizdə client-side JavaScript ilə baş verir. PDF faylınız heç vaxt heç bir serverə yüklənmir, heç bir buludda saxlanmır."
+      },
+      {
+        "question": "Şifrə ilə qorunan PDF fayllarını sıxa bilərəm?",
+        "answer": "Şifrələnmiş və ya şifrə ilə qorunan PDF faylları effektiv sıxılmaya bilər çünki şifrələmə alətə daxili struktura daxil olmağın və optimallaşdırmanın qarşısını alır."
+      },
+      {
+        "question": "Sıxa biləcəyim maksimum PDF fayl ölçüsü nə qədərdir?",
+        "answer": "Emal brauzerinizdə baş verdiyi üçün maksimum cihazınızın mövcud yaddaşından asılıdır. 8GB+ RAM olan müasir kompüterlər adətən 100MB-a qədər PDF-ləri emal edə bilər."
+      },
+      {
+        "question": "Sıxma PDF accessibility xüsusiyyətlərinə təsir edir?",
+        "answer": "Sıxma sənədin görünən məzmununu və strukturunu qoruyur. Accessibility xüsusiyyətləri - etiketlənmiş elementlər, oxuma sırası, şəkillər üçün alternativ mətn saxlanır."
+      }
+    ]
+  },
+  "image-convert": {
+    "howToUse": [
+      "Yükləmə sahəsinə klikləyərək və ya faylı sürükləyib ataraq şəklinizi yükləyin. Çevirici giriş kimi JPEG, PNG və WebP formatlarını qəbul edir.",
+      "Çevirmək istədiyiniz hədəf formatı seçin: fotoqrafiyalar üçün JPEG, şəffaflıq lazım olan şəkillər üçün PNG, müasir veb istifadə üçün WebP.",
+      "Keyfiyyətin tələblərinizə uyğun olduğunu yoxlamaq üçün çevrilmiş şəkli önizləyin.",
+      "Çevrilmiş şəkil faylını endirin."
+    ],
+    "whyUse": [
+      "Müxtəlif platformalar müəyyən şəkil formatları tələb edir. Bu çevirici istənilən tələbi ödəmək üçün formatlar arasında sürətlə keçməyə imkan verir.",
+      "WebP formatı ekvivalent keyfiyyətdə JPEG-dən 25-35% daha yaxşı sıxma təklif edir, lakin bütün platformalar dəstəkləmir. Bu alət WebP və universal dəstəklənən formatlar arasında çevirməyə imkan verir.",
+      "PNG şəffaflığı (alfa kanalı) dəstəkləyir, JPEG isə dəstəkləmir. Loqolar, ikonlar üçün PNG-yə çevirmə vacibdir.",
+      "Bütün çevirmə Canvas API istifadə edərək brauzerinizdə baş verir. Şəkilləriniz heç vaxt serverə yüklənmir.",
+      "Alət çevirmə zamanı şəkil keyfiyyətini qoruyur və çıxış keyfiyyəti parametrləri üzərində idarə imkanı verir."
+    ],
+    "tips": [
+      "Fotoqrafiyaları PNG-dən JPEG-ə çevirərək fayl ölçüsünü minimal keyfiyyət itkisi ilə 70-90% azaldın.",
+      "Hədəf auditoriyanız müasir brauzerlər istifadə edirsə hər zaman WebP formatını üstün tutun.",
+      "JPEG-ə çevirərkən şəffaflığın dəstəklənmədiyini yadda saxlayın. Şəffaf sahələr bərk rənglə doldurulacaq.",
+      "Loqolar, ikonlar və kəskin kənarlı qrafiklər üçün JPEG əvəzinə PNG-ni üstün tutun."
+    ],
+    "faqs": [
+      {
+        "question": "Veb saytım üçün hansı şəkil formatını istifadə etməliyəm?",
+        "answer": "Fotoqrafiyalar üçün WebP (JPEG geri dönüşü ilə) ən yaxşı sıxma üçün istifadə edin. Şəffaflıq tələb edən şəkillər üçün WebP və ya PNG istifadə edin. Köhnə sistemlərlə universal uyğunluq üçün fotoqrafiyalar üçün JPEG, qrafiklər üçün PNG istifadə edin."
+      },
+      {
+        "question": "Şəkil çevirmə keyfiyyətə təsir edir?",
+        "answer": "İtkili formatlar (JPEG, WebP) arasında çevirmə əlavə keyfiyyət itkisi əlavə edə biləcək yenidən sıxma ehtiva edir. PNG-yə çevirmə itkisizdir. Ən yaxşı keyfiyyət üçün həmişə ən yüksək keyfiyyətli mənbədən çevirin."
+      },
+      {
+        "question": "WebP nədir və istifadə etməliyəm?",
+        "answer": "WebP Google tərəfindən hazırlanmış həm itkili, həm də itkisiz sıxma təmin edən müasir şəkil formatıdır. Adətən ekvivalent keyfiyyətdə JPEG-dən 25-35% daha kiçik fayllar istehsal edir. Bütün müasir brauzerlər (Chrome, Firefox, Safari, Edge) WebP dəstəkləyir."
+      },
+      {
+        "question": "Bu alətlə animasiyalı GIF-ləri çevirə bilərəm?",
+        "answer": "Bu alət JPEG, PNG və WebP formatları arasında statik şəkil çevirmə üçün optimallaşdırılıb. Animasiyalı GIF çevirmə kadır vaxtlamasını və animasiya məlumatlarını qorumaq üçün xüsusi emal tələb edir."
+      },
+      {
+        "question": "PNG faylım niyə JPEG versiyasından bu qədər böyükdür?",
+        "answer": "PNG itkisiz sıxma istifadə edir, hər piksel dəqiq qorunur. JPEG insan gözünün fərq etməsi ehtimalı az olan vizual məlumatı atan itkili sıxma istifadə edir. Fotoqrafik şəkillər üçün bu fərq 5-10x fayl ölçüsündə ola bilər."
+      },
+      {
+        "question": "Çevirmə zamanı şəkillərim serverə yüklənir?",
+        "answer": "Xeyr. Bütün şəkil çevirmə emalı tamamilə brauzerinizdə HTML5 Canvas API istifadə edərək baş verir. Şəkilləriniz heç vaxt cihazınızdan çıxmır."
+      }
+    ]
+  },
+  "regex-tester": {
+    "howToUse": [
+      "Regex naxışınızı naxış giriş sahəsinə daxil edin. Alət simvol sinifləri, kvantifikatorlar, lövbərlər, qruplar daxil olmaqla tam JavaScript regex sintaksisini dəstəkləyir.",
+      "Regex bayraqlarını təyin edin: g (qlobal), i (registrə həssas deyil), m (çox sətirli), s (dotAll), u (Unicode dəstəyi).",
+      "Aşağıdakı mətn sahəsinə uyğunlaşdırmaq istədiyiniz test sətrini yapışdırın və ya yazın. Alət həm naxışı, həm də test sətrini yazdıqca real vaxtda bütün uyğunluqları vurğulayır.",
+      "Hər uyğunluğu, onun sətirdəki mövqeyini və tutulan qrupları göstərən uyğunluq nəticələrini nəzərdən keçirin."
+    ],
+    "whyUse": [
+      "Regex qurmaq və debug etmək proqramçıların üzləşdiyi ən çox yayılmış çətinliklərdən biridir. Bu alət naxışınızın nəyi, harada uyğunlaşdırdığını göstərən ani vizual rəy təmin edir.",
+      "Real vaxt vurğulama gözlənilməz uyğunluqları və ya qaçırılmış mətni görməyi asanlaşdırır.",
+      "E-poçt ünvanlarını doğrulamaq, log fayllarını təhlil etmək, məlumat çıxarmaq, axtarış-əvəzetmə əməliyyatları aparmaq üçün naxışlarınızı kodunuza tətbiq etməzdən əvvəl test edə bilərsiniz.",
+      "Bütün regex testi brauzerinizdə yerli olaraq işləyir. Həssas məlumatlar tamamilə məxfi qalır.",
+      "Alət hər naxış dəyişikliyinin ani effektini göstərərək regex öyrənməyə kömək edir."
+    ],
+    "tips": [
+      "Sadə naxışla başlayın və tədricən mürəkkəblik əlavə edin. Növbəti elementi əlavə etməzdən əvvəl hər əlavəni test edin.",
+      "Tutulan mətnə ehtiyac olmadıqda qeyri-tutucu qruplardan (?:...) istifadə edin.",
+      "Acgöz kvantifikatorlardan (*, +) ehtiyatlı olun. Mümkün qədər az mətni uyğunlaşdırmaq istədikdə tənbəl kvantifikatorlardan (*?, +?) istifadə edin.",
+      "Mürəkkəb naxışlar üçün adlandırılmış qruplar (?<ad>...) istifadə edin.",
+      "Regex-inizi kənar hallarla həmişə test edin: boş sətirlər, xüsusi simvollar, çox uzun mətn."
+    ],
+    "faqs": [
+      {
+        "question": "Requlyar ifadə (regex) nədir?",
+        "answer": "Regex mətndə uyğunluq tapmaq, axtarmaq və manipulyasiya etmək üçün istifadə olunan axtarış naxışını təyin edən simvol ardıcıllığıdır. Regex demək olar ki, hər proqramlaşdırma dilində giriş doğrulama, axtarış-əvəzetmə, məlumat çıxarma üçün istifadə olunur."
+      },
+      {
+        "question": "Hansı regex bayraqlarını istifadə etməliyəm?",
+        "answer": "Ən yayılmış bayraq birincidə dayanmaq əvəzinə bütün uyğunluqları tapan 'g' (qlobal). Hərf registrindən asılı olmayaraq uyğunlaşdırmaq üçün 'i'. ^ və $ hər sətirin başı və sonuna uyğunlaşsın deyə 'm' (çox sətirli) istifadə edin."
+      },
+      {
+        "question": "Regex ilə e-poçt ünvanını necə uyğunlaşdırım?",
+        "answer": "Praktik e-poçt regex naxışı: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$. Bu əksər standart e-poçt formatlarına uyğun gəlir. Lakin prodakşn istifadə üçün sadə naxış + təsdiq e-poçtu göndərmək daha yaxşıdır."
+      },
+      {
+        "question": "Acgöz və tənbəl kvantifikatorlar arasında fərq nədir?",
+        "answer": "Acgöz kvantifikatorlar (*, +, ?) mümkün qədər çox mətni uyğunlaşdırır. Tənbəl kvantifikatorlar (*?, +?, ??) mümkün qədər az mətni uyğunlaşdırır. Məsələn '<b>.*</b>' acgöz naxışı bütün mətni birinci <b>-dən son </b>-ə qədər uyğunlaşdırır, '<b>.*?</b>' tənbəl naxışı isə hər bir cütü ayrı-ayrılıqda uyğunlaşdırır."
+      },
+      {
+        "question": "Burada digər proqramlaşdırma dilləri üçün regex test edə bilərəm?",
+        "answer": "Bu alət JavaScript regex mühərrikindən istifadə edir, lakin əksər sintaksis Python, Java, C#, PHP, Ruby ilə ortaqdır. Simvol sinifləri, kvantifikatorlar, lövbərlər, qruplar dillər arasında eyni işləyir."
+      },
+      {
+        "question": "Bu aləti istifadə edərkən test məlumatlarım məxfidir?",
+        "answer": "Bəli, tamamilə məxfidir. Bütün regex uyğunlaşdırma brauzerinizdə JavaScript-in daxili RegExp mühərriki ilə baş verir. Test sətirləriniz və naxışlarınız heç vaxt heç bir serverə göndərilmir."
+      },
+      {
+        "question": "Regex-də tutucu qrupları necə istifadə edə bilərəm?",
+        "answer": "Tutucu qruplar naxışınızın bir hissəsini mötərizəyə alaraq yaradılır. Məsələn, (\\d{3})-(\\d{4}) telefon formatına uyğun gəlir və iki rəqəm qrupunu ayrıca tutur. Adlandırılmış qruplar (?<ad>...) sintaksisini aydınlıq üçün istifadə edir."
+      }
+    ]
+  },
+  "hash-generator": {
+    "howToUse": [
+      "Hash etmək istədiyiniz mətni giriş sahəsinə yazın və ya yapışdırın.",
+      "Alət dərhal bir neçə alqoritmdə hash dəyərlərini yaradır: SHA-1, SHA-256, SHA-384 və SHA-512.",
+      "İstədiyiniz alqoritmin çıxışının yanındakı kopyalama düyməsinə klikləyərək istənilən hash dəyərini panonuza kopyalayın.",
+      "Yaradılmış hashları məlumat bütövlüyü doğrulaması, şifrə saxlama, rəqəmsal imzalar üçün istifadə edin."
+    ],
+    "whyUse": [
+      "Hash funksiyaları proqram təhlükəsizliyinin əsasıdır. Proqramçılar onları şifrə saxlama, məlumat bütövlüyü doğrulaması, rəqəmsal imzalar, API autentifikasiya tokenləri üçün istifadə edirlər.",
+      "Fayl bütövlüyünü doğrulamaq geniş yayılmış istifadə halıdır. Yüklənmiş faylın hashını naşirin təqdim etdiyi hash ilə müqayisə edərək faylın dəyişdirilmədiyini təsdiqləyə bilərsiniz.",
+      "Alət yerli brauzer implementasiyaları təmin edən Web Crypto API istifadə edərək hashlar yaradır.",
+      "Bütün hash hesablaması brauzerinizdə baş verir. Hash etdiyiniz mətn heç vaxt şəbəkə üzərindən ötürülmür.",
+      "Eyni vaxtda bir neçə hash alqoritminin mövcud olması xüsusi istifadə halınız üçün uyğun alqoritmi seçməyə imkan verir."
+    ],
+    "tips": [
+      "SHA-256 əksər hash ehtiyacları üçün hazırda tövsiyə olunan standarttır. SHA-1 kriptoqrafik cəhətdən zəif hesab olunur.",
+      "Şifrələri saxlama üçün hash edərkən həmişə SHA-256 deyil, xüsusi şifrə hash alqoritmi (bcrypt, scrypt, Argon2) istifadə edin.",
+      "Hash funksiyaları birtərəflidir: hashı geri çevirərək orijinal mətni əldə edə bilməzsiniz.",
+      "İki fərqli giriş nəzəri olaraq eyni hashı istehsal edə bilər (toqquşma), lakin SHA-256 və SHA-512 ilə bu çox ehtimalsızdır."
+    ],
+    "faqs": [
+      {
+        "question": "Hash funksiyası nədir və nə üçün istifadə olunur?",
+        "answer": "Hash funksiyası istənilən giriş məlumatını götürüb həmin girişi unikal şəkildə təmsil edən sabit ölçülü çıxış (hash və ya daycest) istehsal edir. Şifrə saxlama, məlumat bütövlüyü doğrulaması, rəqəmsal imzalar, blockchain texnologiyası üçün istifadə olunur."
+      },
+      {
+        "question": "Hansı hash alqoritmini istifadə etməliyəm?",
+        "answer": "Əksər hallar üçün SHA-256 təhlükəsizlik və performans arasında əla balans təmin edir. Əlavə təhlükəsizlik marjası lazım olduqda SHA-512 istifadə edin. Təhlükəsizlik baxımından həssas tətbiqlər üçün SHA-1-dən çəkinin. Şifrə hash etmə üçün xüsusi olaraq bcrypt, scrypt, Argon2 istifadə edin."
+      },
+      {
+        "question": "Hashı geri çevirərək orijinal mətni əldə edə bilərəm?",
+        "answer": "Xeyr. Kriptoqrafik hash funksiyaları birtərəfli funksiyalar kimi dizayn edilib. Hash çıxışından orijinal girişi təyin etmək hesablama baxımından mümkün deyil."
+      },
+      {
+        "question": "Hash etmə ilə şifrələmə arasında fərq nədir?",
+        "answer": "Hash etmə birtərəfli prosesdir: məlumat daxil olur, sabit ölçülü hash çıxır, orijinal məlumatı geri almaq mümkün deyil. Şifrələmə ikitərəfli prosesdir: məlumat açarla şifrələnir və düzgün açarla yenidən deşifrə oluna bilər."
+      },
+      {
+        "question": "Onlayn hash yaradarkən mətnim təhlükəsizdir?",
+        "answer": "Bəli. Bu alətdə bütün hash hesablaması tamamilə brauzerinizdə Web Crypto API istifadə edərək baş verir. Daxil etdiyiniz mətn heç vaxt heç bir serverə göndərilmir."
+      },
+      {
+        "question": "Bir simvolu dəyişmək niyə hashı tamamilə dəyişdirir?",
+        "answer": "Bu xüsusiyyət uçqun effekti adlanır və yaxşı hash funksiyalarının mühüm xüsusiyyətidir. Girişdə hətta tək bit dəyişikliyi kəskin fərqli hash çıxışı istehsal edir. Bu, oxşar girişlərin oxşar hashlar istehsal etməməsini təmin edir."
+      }
+    ]
+  },
+  "url-encode-decode": {
+    "howToUse": [
+      "Kodlamaq istədiyiniz URL və ya mətni giriş sahəsinə yapışdırın və ya yazın. Bu tam URL, tək parametr dəyəri və ya xüsusi simvollar ehtiva edən istənilən mətn ola bilər.",
+      "Xüsusi simvolları faiz-kodlamasına çevirmək üçün Kodla düyməsinə klikləyin (məsələn, boşluqlar %20, ampersan-lar %26 olur).",
+      "Dekod etmək üçün faiz-kodlanmış URL və ya sətir yapışdırıb Dekod et düyməsinə klikləyin.",
+      "Nəticəni tətbiq kodunuzda, API sorğularında istifadə üçün panonuza kopyalayın."
+    ],
+    "whyUse": [
+      "URL-lərin məhdud simvol dəsti var. Boşluqlar, ampersan-lar (&), sual işarələri (?), hash işarələri (#) və qeyri-ASCII simvollar URL-lərə təhlükəsiz daxil edilmək üçün faiz-kodlanmalıdır.",
+      "Sorğu parametrləri ilə dinamik URL-lər qurarkən düzgün kodlama parametr inyeksiyasının qarşısını alır və məlumatın düzgün ötürülməsini təmin edir.",
+      "URL kodlama problemlərini debug etmək proqramçıların adi işlərindəndir. API gözlənilməz nəticə qaytardıqda URL-i dekod etmək tez-tez problemi üzə çıxarır.",
+      "Bütün kodlama və dekodlama brauzerinizdə baş verir. Autentifikasiya tokenləri, API açarları kimi həssas parametrlər ehtiva edən URL-lər heç vaxt xarici serverə göndərilmir.",
+      "Alət UTF-8 çoxbaytlı simvollar, qorunan simvollar daxil olmaqla bütün standart URL kodlama hallarını emal edir."
+    ],
+    "tips": [
+      "JavaScript-də encodeURI() və encodeURIComponent() arasındaki fərqi yadda saxlayın: encodeURI() URL-təhlükəsiz simvolları (:, /, ?, &) qoruyur, encodeURIComponent() isə hərflər, rəqəmlər, - _ . ~ istisna olmaqla hər şeyi kodlayır.",
+      "URL-lərdəki boşluqlar ya %20, ya da + kimi kodlana bilər. Hədəf sisteminizin hansı formatı gözlədiyini bilin.",
+      "İkili kodlamadan çəkinin: URL artıq düzgün kodlanıbsa, yenidən kodlamaq %20-ni %2520-yə çevirərək URL-i pozacaq.",
+      "API problemlərini debug edərkən göndərilən parametr dəyərlərini görmək üçün tam URL-i dekod edin."
+    ],
+    "faqs": [
+      {
+        "question": "URL kodlama nədir və niyə lazımdır?",
+        "answer": "URL kodlama URL-lərdə icazə verilməyən və ya xüsusi mənası olan simvolları faiz işarəsi və ardınca onaltılıq dəyərlər istifadə edərək təhlükəsiz formata çevirir. Düzgün kodlama olmadan URL-lər pozula bilər, məlumat korrupsiyaya uğraya bilər."
+      },
+      {
+        "question": "Hansı simvollar URL kodlanmalıdır?",
+        "answer": "Kodlanmalı simvollar bunlardır: boşluqlar, nida işarələri, hash (#), dollar işarələri, ampersan-lar (&), tək dırnaqlar, mötərizələr, ulduzlar, artı işarələri, vergüllər, nöqtəli vergüllər, bərabər işarələri, at işarələri (@), kvadrat mötərizələr və istənilən qeyri-ASCII simvollar."
+      },
+      {
+        "question": "encodeURI ilə encodeURIComponent arasında fərq nədir?",
+        "answer": "JavaScript-də encodeURI() URL strukturunda xüsusi mənası olan simvolları qoruyaraq tam URL-i kodlayır. encodeURIComponent() URL komponentini kodlayır və URL struktural mənası olan simvollar daxil bütün xüsusi simvolları kodlayır. Tam URL-lər üçün encodeURI(), ayrı-ayrı parametr dəyərləri üçün encodeURIComponent() istifadə edin."
+      },
+      {
+        "question": "İkili kodlanmış URL-ləri necə düzəldim?",
+        "answer": "İkili kodlama artıq kodlanmış URL yenidən kodlandıqda baş verir. Düzəltmək üçün URL-i bir dəfə dekod edin: nəticədə hələ də faiz-kodlanmış ardıcıllıqlar varsa, yenidən dekod edin. Sonra təmiz mətndən bir dəfə kodlayın."
+      },
+      {
+        "question": "Bu aləti istifadə edərkən URL məlumatlarım təhlükəsizdir?",
+        "answer": "Bəli, tamamilə təhlükəsizdir. Bütün kodlama və dekodlama əməliyyatları tamamilə brauzerinizdə JavaScript-in daxili funksiyaları ilə baş verir. Heç bir məlumat heç bir serverə ötürülmür."
+      },
+      {
+        "question": "URL-lərdə boşluqlar %20 yoxsa + kimi kodlanmalıdır?",
+        "answer": "Hər ikisi etibarlıdır, lakin müxtəlif kontekstlərdə istifadə olunur. URL yollarında boşluqlar %20 kimi kodlanmalıdır. HTML forma məlumatlarında (GET metodu ilə) boşluqlar + kimi kodlanır. Əksər müasir API-lər hər ikisini düzgün emal edir."
+      }
+    ]
+  }
+}

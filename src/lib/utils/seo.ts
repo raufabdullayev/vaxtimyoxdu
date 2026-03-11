@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Tool } from '@/types/tool'
 import { locales, defaultLocale, Locale } from '@/i18n/config'
+import { getToolFaqs, getToolRichContent } from '@/lib/utils/tool-content-loader'
 
 const SITE_URL = 'https://vaxtimyoxdu.com'
 const SITE_NAME = 'Vaxtim Yoxdu'
@@ -214,7 +215,30 @@ export function generateToolHowToJsonLd(
   const name = options?.localizedName || tool.name
   const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
 
-  // Determine input method based on tool type
+  // Try to use rich content steps from content files (top 20 tools)
+  const richContent = getToolRichContent(tool.slug, locale)
+  if (richContent && richContent.howToUse.length > 0) {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: `${richContent.sectionTitles.howToUse} - ${name}`,
+      description: richContent.howToUse[0],
+      totalTime: 'PT2M',
+      tool: {
+        '@type': 'HowToTool',
+        name: 'Web Browser',
+      },
+      step: richContent.howToUse.map((stepText, index) => ({
+        '@type': 'HowToStep',
+        position: index + 1,
+        name: `Step ${index + 1}`,
+        text: stepText,
+        url: url,
+      })),
+    }
+  }
+
+  // Fallback: generic steps based on tool type
   let step1Text: string
   let step2Text: string
   let step3Text: string
@@ -431,7 +455,12 @@ export function generateToolFaqJsonLd(
   tool: Tool,
   options?: { locale?: string; localizedName?: string; localizedDescription?: string }
 ) {
-  const faqs = generateToolFaqs(tool, options)
+  const locale = options?.locale || 'en'
+
+  // Try to use rich FAQs from content files first (top 20 tools)
+  const richFaqs = getToolFaqs(tool.slug, locale)
+  const faqs = richFaqs || generateToolFaqs(tool, options)
+
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

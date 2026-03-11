@@ -5,7 +5,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
 import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateToolHowToJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
+import { getToolRichContent } from '@/lib/utils/tool-content-loader'
 import ToolTemplate from '@/components/tools/ToolTemplate'
+import ToolContentSection from '@/components/tools/ToolContentSection'
+import ToolFaqSection from '@/components/tools/ToolFaqSection'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import RelatedTools from '@/components/tools/RelatedTools'
 import RelatedBlogPosts from '@/components/tools/RelatedBlogPosts'
@@ -174,6 +177,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const howToJsonLd = generateToolHowToJsonLd(tool, localeOpts)
   const displayName = localizedName || tool.name
 
+  // Load rich content for top 20 tools
+  const richContent = getToolRichContent(tool.slug, locale)
+
   return (
     <>
       <script
@@ -199,6 +205,22 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         <Component />
       </ToolTemplate>
       <ToolUseTrackerWrapper slug={tool.slug} />
+      {richContent && (
+        <ToolContentSection
+          howToUseTitle={richContent.sectionTitles.howToUse}
+          howToUseSteps={richContent.howToUse}
+          whyUseTitle={richContent.sectionTitles.whyUse}
+          whyUseReasons={richContent.whyUse}
+          tipsTitle={richContent.sectionTitles.tips}
+          tips={richContent.tips}
+        />
+      )}
+      {richContent && (
+        <ToolFaqSection
+          title={richContent.sectionTitles.faq}
+          faqs={richContent.faqs}
+        />
+      )}
       <ShareButtonsWrapper
         path={`/tools/${tool.slug}`}
         title={displayName}
