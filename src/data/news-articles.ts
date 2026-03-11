@@ -7,6 +7,245 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  'idman-chempionlar-liqasi-1-8-final-neticeleri-10-mart': {
+    title: 'Çempionlar Liqası 1/8 final: Bayern 6 qol vurdu, Yamal son dəqiqədə xilas etdi',
+    date: '2026-03-11',
+    category: 'İdman',
+    locale: 'az',
+    content: `UEFA Çempionlar Liqasının 1/8 final mərhələsinin ilk oyun günü dramatik nəticələrlə yadda qaldı. 10 mart, çərşənbə axşamı keçirilən dörd matçda cəmi 17 qol vuruldu, qapıçı səhvləri, gec penaltilər və tarixi rekordlar qeydə alındı.
+
+## Qalatasaray 1-0 Liverpool
+
+Türk nəhəngi Qalatasaray İstanbulda Liverpulu məğlub edərək 1/8 finalın ilk oyununda üstünlük qazandı.
+
+**Qol:** Mario Lemina (7') — Osimhenin ötürməsindən
+
+**Sarı vərəqələr:**
+- Qalatasaray: Davinson Sanchez (90')
+- Liverpool: Milos Kerkez (33'), Virgil van Dijk (55'), Ryan Gravenberch (88'), Dominik Szoboszlai (90+5')
+
+Arne Slotun baş məşqçi kimi 100-cü matçında Liverpool İstanbulda məğlubiyyətlə üzləşdi. Liverpulun 4 sarı vərəqəsi komanданın əsəbi oyununun göstəricisi oldu. Topun sahibliyi 54%-46% nisbətində Liverpulda olsa da, qonaqlar qol imkanlarını reallaşdıra bilmədi.
+
+## Atalanta 1-6 Bayern Münhen
+
+Gecənin ən inanılmaz nəticəsi Berqamodan gəldi. Bayern Münhen İtaliyada 6 qolla əsl futbol şousu göstərdi.
+
+**Qollar:**
+- Bayern: Josip Stanisic (12'), Michael Olise (22', 64'), Serge Gnabry (25'), Nicolas Jackson (52'), Jamal Musiala (67')
+- Atalanta: Mario Pasalic (90+3')
+
+**Sarı vərəqələr:**
+- Atalanta: Lazar Samardzic (55'), Nicola Zalewski (55'), Yunus Musah (83')
+- Bayern: Konrad Laimer (39'), Joshua Kimmich (39'), Michael Olise (77')
+
+Michael Olise 2 qol, 1 məhsuldar ötürmə ilə matçın ən yaxşı oyunçusu seçildi. Bayern ilk yarını 3-0 hesabı ilə bitirdi və ikinci yarıda da dominantlığını davam etdirdi. Pasalicin son dəqiqə qolu yalnız şərəf qolu oldu.
+
+## Atletiko Madrid 5-2 Tottenhem
+
+Madridlilərin 22 dəqiqə ərzində vurduğu 4 qol Çempionlar Liqası tarixinə düşdü. Atletiko ilk 15 dəqiqədə 3-0 hesaba çıxaraq plej-off matçlarında ən erkən 3 qol rekordu qırıd.
+
+**Qollar:**
+- Atletiko: Marcos Llorente (6'), Antoine Griezmann (14'), Julian Alvarez (15', 55'), Robin Le Normand (22')
+- Tottenhem: Pedro Porro (26'), Dominic Solanke (76')
+
+**Sarı vərəqələr:**
+- Tottenhem: Djed Spence (4'), Richarlison (60'), Archie Gray (62'), Kevin Danso (80'), Cristian Romero (85')
+
+Fəlakətin baş səbəbkarı qapıçı Antonin Kinsky oldu. 6-cı dəqiqədə qapıdan top çıxararkən sürüşdü və topu birbaşa Alvarezə verdi. 17-ci dəqiqədə ikinci kobud səhvindən sonra baş məşqçi onu dəyişdirdi. Julian Alvarez 2 qol, 1 assist ilə gecənin ulduzuna çevrildi.
+
+## Newcastle 1-1 Barselona
+
+Gecənin ən dramatik sonluğu Sent Ceyms Parkda yaşandı. Newcastle nəhəng qələbədən 90+6-da məhrum oldu.
+
+**Qollar:**
+- Newcastle: Harvey Barnes (86')
+- Barselona: Lamine Yamal (90+6', penalti)
+
+**Sarı vərəqələr:**
+- Newcastle: Sandro Tonali
+- Barselona: Joao Cancelo
+
+52.103 azarkeşin önündə Newcastle 86-cı dəqiqədə Barnesın qolu ilə öndə keçdi. Lakin matçın son anlarında Dani Olmo cərimə sahəsində Malick Thiaw tərəfindən yıxıldı və hakim penalti təyin etdi. 18 yaşlı Lamine Yamal son zərbə ilə Barselonaya qiymətli səfər bərabərliyi qazandırdı.
+
+## Statistika xülasəsi
+
+| Matç | Nəticə | Toplam qollar |
+|------|--------|---------------|
+| Qalatasaray - Liverpool | 1-0 | 1 |
+| Atalanta - Bayern | 1-6 | 7 |
+| Atletiko - Tottenhem | 5-2 | 7 |
+| Newcastle - Barselona | 1-1 | 2 |
+
+Cavab matçları 17-18 mart tarixlərində keçiriləcək.`,
+  },
+  'idman-chempionlar-liqasi-bu-axsam-11-mart': {
+    title: 'Bu axşam Çempionlar Liqası: Real Madrid - Man City, PSG - Chelsea və digər matçlar',
+    date: '2026-03-11',
+    category: 'İdman',
+    locale: 'az',
+    content: `UEFA Çempionlar Liqasının 1/8 final mərhələsinin ikinci oyun günü bu axşam keçirilir. 11 mart, çərşənbə günü dörd maraqlı matç futbolsevərləri gözləyir. Bütün matçlar Bakı vaxtı ilə aşağıdakı saatlarda başlayacaq.
+
+## Bu axşamkı matçlar
+
+### Bayer Leverkuzen - Arsenal (Bakı vaxtı: 22:45)
+- **Stadion:** BayArena, Leverkuzen
+- **Yayım:** CBC Sport
+
+Alman çempionu Leverkuzen evdə Arsenal ilə üz-üzə gəlir. Hər iki komanda bu mövsüm güclü forma nümayiş etdirib. Arsenal Premyer Liqada çempionluq yarışında öndədir, Leverkuzen isə Bundesliqa titulunu qorumağa çalışır.
+
+### Bodö/Qlimt - Sportinq (Bakı vaxtı: 22:45)
+- **Stadion:** Aspmyra Stadion, Bodö, Norveç
+- **Yayım:** CBC Sport
+
+Mövsümün sürpriz komandası Bodö/Qlimt öz "Arktik qalası"nda Portuqaliyanın Sportinq klubunu qəbul edir. Norveçlilər bu mövsüm İnter, Mançester Siti və Atletiko Madridi məğlub edərək tarix yazıb. Hücumçu Jens Petter Hauge turnirdə 6 qolla ən yaxşı bombardirlərdən biridir.
+
+### PSG - Chelsea (Bakı vaxtı: 00:00, 12 mart)
+- **Stadion:** Parc des Princes, Paris
+- **Yayım:** CBC Sport
+
+Paris gənclik heyəti ilə Çelsi qarşısında güclü olacağına ümid edir. Çelsi isə yeni transferləri ilə Avropa səhnəsində ciddi iddiaçıya çevrilib. Bu matç gecə saat 00:00-da (12 mart) başlayacaq.
+
+### Real Madrid - Mançester Siti (Bakı vaxtı: 00:00, 12 mart)
+- **Stadion:** Santyaqo Bernabeu, Madrid
+- **Yayım:** CBC Sport
+
+Gecənin əsas matçı! Son illərin ən böyük Çempionlar Liqası rəqabətlərindən biri olan Real Madrid - Mançester Siti qarşılaşması yenə futbolsevərləri ekran qarşısına toplayacaq. İki komanda son 3 mövsümdə ardıcıl plej-offda görüşür. Bernabeu stadionunda 80.000-dən çox azarkeş gözlənilir.
+
+## Matç cədvəli (Bakı vaxtı, UTC+4)
+
+| Matç | Saat | Stadion |
+|------|------|---------|
+| Leverkuzen - Arsenal | 22:45 | BayArena |
+| Bodö/Qlimt - Sportinq | 22:45 | Aspmyra |
+| PSG - Chelsea | 00:00 (12.03) | Parc des Princes |
+| Real Madrid - Man City | 00:00 (12.03) | Bernabeu |
+
+## Yayım məlumatı
+
+Bütün matçları Azərbaycanda **CBC Sport** kanalından canlı izləyə bilərsiniz. Həmçinin CBC Sport-un rəsmi saytı və mobil tətbiqi üzərindən onlayn yayım mövcuddur.
+
+## Diqqət ediləcək oyunçular
+
+- **Florian Wirtz** (Leverkuzen) — Bundesliqa mövsümünün ən yaxşı oyunçusu
+- **Bukayo Saka** (Arsenal) — Premyer Liqanın ən məhsuldar oyunçularından
+- **Jens Petter Hauge** (Bodö/Qlimt) — Turnirin sürpriz bomardiri, 6 qol
+- **Vinicius Jr** (Real Madrid) — Bernabeu gecələrinin ulduzу
+- **Erling Haaland** (Man City) — Qol maşını, bu mövsüm 40+ qol
+
+Ətraflı statistika və matç sonrası xülasələr üçün saytımızı izləyin!`,
+  },
+  'dunya-iran-muharibe-12-ci-gun': {
+    title: 'İran müharibəsi 12-ci günə qədəm qoydu: Tehran 10.000 mülki hədəfin vurulduğunu bildirir',
+    date: '2026-03-11',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ və İsrailin İrana qarşı hərbi əməliyyatı 12-ci günə daxil olub. Tehran 10.000-ə yaxın mülki obyektin bombardman edildiyini və 1.300-dən çox mülki şəxsin həlak olduğunu açıqlayıb. Münaqişə dünya enerji bazarlarını silkələyir, qlobal neft qiymətləri kəskin şəkildə yüksəlib.
+
+## Son vəziyyət
+
+ABŞ müdafiə naziri Pit Heqset çərşənbə axşamı günün "ən intensiv zərbə günü" olacağını elan etdi. Tehranın ən azı 8 rayonu hücuma məruz qalıb. İran Həmin gün "Xürrəmşəhr" tipli ağır ballistik raketlərlə 37-ci dalğa əks-zərbə endirdi. Hücumlar 3 saat davam edib və İsraildəki Tel-Əviv, Hayfa, Qüds, eləcə də İraqdakı Ərbil və Bəhreyndəki ABŞ hərbi bazaları hədəf alınıb.
+
+## İtkilər
+
+- **İran:** 1.300-dən çox mülki şəxs həlak olub (Tehran-ın açıqlaması)
+- **Livan:** İsrailin zərbələri nəticəsində ən azı 570 nəfər həlak
+- **ABŞ:** 7 hərbçi həlak, 140-a yaxın yaralı
+- **Region:** Küveyt, Qətər, Səudiyyə Ərəbistanı və BƏƏ İran raketlərini və dronlarını ələ keçirib
+
+## Enerji bazarına təsir
+
+İranın neft obyektlərinin bombardmanı qlobal neft qiymətlərini kəskin artırıb. G7 maliyyə nazirləri bazarı sabitləşdirmək üçün strateji enerji ehtiyatlarını bazara çıxarmağa hazır olduqlarını elan edib. Körfəz ölkələri müvəqqəti olaraq neft və qaz istehsalını dayandırıb ki, bu da yanacaq qiymətlərinin daha da artmasına səbəb olub.
+
+Azərbaycanın Azəri Light neftinin qiyməti 90,34 dollara düşüb ki, bu da bir gün əvvəlkindən 12,69 dollar (12,3%) azdır. Buna baxmayaraq, qlobal qeyri-müəyyənlik fonunda neft qiymətlərinin yüksək qalması gözlənilir.
+
+## Siyasi təzyiqlər
+
+Vaşinqtonda konqres üzvləri müharibənin məqsədləri barədə açıq dinləmələr tələb edir. Mülki hədəflərə zərbələr və artan ABŞ itkiləri administrasiyanın strategiyası barədə suallar yaradır. Tramp İranın gələcək liderinin seçilməsində rol oynamaq istədiyini bildirib.
+
+## Azərbaycana təsir
+
+Münaqişə Azərbaycana da birbaşa təsir göstərir. İranın Azərbaycana yönəlmiş dron və raket zərbələri qeydə alınıb. Ölkənin hava müdafiə sistemləri yüksək hazırlıq vəziyyətindədir. Cənub sərhədlərində təhlükəsizlik tədbirləri gücləndirilb.
+
+## Beynəlxalq reaksiya
+
+BMT Baş Katibi dərhal atəşkəs çağırışı edib. Avropa İttifaqı diplomatik həll yolu üçün vasitəçilik təklif edib. Çin və Rusiya münaqişənin genişlənməsinə qarşı ciddi xəbərdarlıq verib.`,
+  },
+  'texnologiya-apple-iphone-17e-satisa-cixdi': {
+    title: 'Apple iPhone 17e bu gün satışa çıxdı: 599 dollara A19 prosessor və 48MP kamera',
+    date: '2026-03-11',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Apple-ın ən yeni büdcə smartfonu iPhone 17e bu gün, 11 mart 2026-cı ildə rəsmi satışa çıxıb. 599 dollardan başlayan qiymətlə təqdim olunan cihaz əvvəlki nəsillə eyni qiymətə iki dəfə çox yaddaş — 256GB baza yaddaş təklif edir.
+
+## Əsas xüsusiyyətlər
+
+- **Prosessor:** Apple A19 çip — ən son və ən güclü mobil prosessor
+- **Kamera:** 48MP 2-in-1 kamera sistemi — yüksək keyfiyyətli foto və video
+- **Yaddaş:** 256GB (baza) və 512GB variantları
+- **Ekran:** OLED Super Retina XDR
+- **Davamlılıq:** Ceramic Shield 2 — əvvəlkindən 2 dəfə daha davamlı
+- **Batareya:** Uzun ömürlü batareya, bütün gün istifadə
+- **Xüsusiyyət:** Apple Intelligence — süni zəka funksiyaları daxili
+- **Əməliyyat sistemi:** iOS 26
+- **MagSafe:** Simsiz şarj və aksessuar dəstəyi
+
+## Qiymətlər
+
+| Model | Qiymət (ABŞ) |
+|-------|---------------|
+| iPhone 17e 256GB | $599 |
+| iPhone 17e 512GB | $799 |
+
+## iPhone 17 ailəsi
+
+iPhone 17e, iPhone 17 ailəsinin ən sərfəli üzvüdür. Ailəyə həmçinin standart iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max və yeni iPhone Air modeli daxildir. iPhone Air Apple-ın indiyədək istehsal etdiyi ən nazik telefondur.
+
+## Azərbaycanda mövcudluq
+
+Azərbaycanda iPhone 17e iSpace və digər rəsmi dilerlər vasitəsilə əldə edilə bilər. Yerli qiymətlər rəsmi ABŞ qiymətindən bir qədər yüksək olacaq. İlk partiya telefonların mart ayının sonuna qədər Bakıdakı mağazalara çatması gözlənilir.
+
+## Kimə uyğundur?
+
+iPhone 17e güclü prosessor və keyfiyyətli kamera istəyən, lakin Pro modellərin yüksək qiymətini ödəmək istəməyən istifadəçilər üçün ideal seçimdir. A19 prosessor sayəsində Apple Intelligence süni zəka funksiyalarından tam istifadə etmək mümkündür.
+
+Qısa desək: Vaxtınız yoxdursa və sürətli qərar istəyirsinizsə — iPhone 17e bu il ən yaxşı qiymət-keyfiyyət nisbətini təklif edən smartfondur.`,
+  },
+  'iqtisadiyyat-neft-qiymetleri-iran-munaqisesi': {
+    title: 'Neft qiymətləri dalğalanır: İran münaqişəsi qlobal bazarları silkələyir',
+    date: '2026-03-11',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `İran münaqişəsi qlobal enerji bazarlarında ciddi dalğalanmalara səbəb olub. G7 maliyyə nazirləri bazarları sabitləşdirmək üçün strateji enerji ehtiyatlarını bazara buraxmağa hazır olduqlarını elan edib. Azərbaycanın Azəri Light neftinin qiyməti isə bir gün ərzində 12,3% dəyişib.
+
+## Qlobal neft bazarı
+
+İranın neft infrastrukturuna zərbələr dünya neft təchizatını ciddi şəkildə pozub. Körfəz ölkələrinin müvəqqəti olaraq neft və qaz hasilatını dayandırması yanacaq qiymətlərinin daha da artmasına gətirib çıxarıb. Hörmüz boğazı ətrafında ABŞ hərbi dəniz qüvvələrinin İranın 16 mina döşəyən gəmisini məhv etməsi gəmiçilik riskini artırıb.
+
+## Azəri Light neftinin qiyməti
+
+Azərbaycanın əsas ixrac nefti olan Azəri Light-ın İtaliyanın Augusta limanında qiyməti 10 mart tarixində 90,34 dollara enilib. Bu, əvvəlki gündən 12,69 dollar (12,3%) azdır. Buna baxmayaraq, il ərzində neftin orta qiyməti hələ də yüksək səviyyədə qalır.
+
+## G7-nin cavabı
+
+G7 maliyyə nazirləri fövqəladə iclas keçirərək aşağıdakı qərarları açıqlayıb:
+
+- Strateji neft ehtiyatlarının bazara buraxılmasına hazırlıq
+- Enerji bazarlarının monitorinqinin gücləndirilməsi
+- Alternativ təchizat marşrutlarının aktivləşdirilməsi
+- İnflyasiya təzyiqinə qarşı koordinasiyalı tədbirlər
+
+## Almaniya ticarət statistikası
+
+Maraqlı təzad: Almaniyanın ticarət artıqlığı yanvar ayında 21,2 milyard avroya yüksəlib — gözləntilərdən (15,4 mlrd) xeyli çox. Lakin bu artım ixracın gücündən deyil, idxalın 5,9% azalmasından — yəni zəif daxili tələbdən qaynaqlanır.
+
+## ABŞ mənzil bazarı
+
+Müsbət xəbər: ABŞ-da mövcud mənzil satışları fevral ayında 4,09 milyona yüksəlib — gözləntilərdən (3,89 mln) çox. Bu, artan enerji xərcləri və əmək bazarı qeyri-müəyyənliyi fonunda Amerika istehlakçısı üçün nadir müsbət göstəricidir.
+
+## Azərbaycan iqtisadiyyatına təsir
+
+Neft qiymətlərindəki dalğalanma Azərbaycan büdcəsinə birbaşa təsir göstərir. Hökumət mənbələri bildirilib ki, qısamüddətli enişlərə baxmayaraq, ilin ümumi neft gəlirlərinin büdcə proqnozunu ödəyəcəyi gözlənilir. Dövlət Neft Fondu ehtiyat vəsaitləri ilə mümkün riskləri kompensasiya etməyə hazırdır.`,
+  },
   'texnologiya-suni-zekanin-yeni-dovru': {
     title: 'Süni zəkanın yeni dövrü: 2026-da nələr dəyişir?',
     date: '2026-02-28',

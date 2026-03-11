@@ -14,15 +14,15 @@ describe('newsArticles collection', () => {
     expect(slugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 24 articles (12 AZ + 12 EN)', () => {
-    expect(slugs.length).toBe(24)
+  it('should contain exactly 29 articles (17 AZ + 12 EN)', () => {
+    expect(slugs.length).toBe(29)
   })
 
-  it('should have 12 AZ articles', () => {
+  it('should have 17 AZ articles', () => {
     const azArticles = Object.values(newsArticles).filter(
       (a) => (a.locale || 'az') === 'az'
     )
-    expect(azArticles.length).toBe(12)
+    expect(azArticles.length).toBe(17)
   })
 
   it('should have 12 EN articles', () => {
@@ -56,12 +56,12 @@ describe('newsSlugs export', () => {
 describe('getArticlesByLocale', () => {
   it('should return all articles when no locale is provided', () => {
     const all = getArticlesByLocale()
-    expect(Object.keys(all).length).toBe(24)
+    expect(Object.keys(all).length).toBe(29)
   })
 
   it('should return only AZ articles for locale "az"', () => {
     const az = getArticlesByLocale('az')
-    expect(Object.keys(az).length).toBe(12)
+    expect(Object.keys(az).length).toBe(17)
     for (const article of Object.values(az)) {
       expect(article.locale || 'az').toBe('az')
     }
@@ -87,12 +87,12 @@ describe('getArticlesByLocale', () => {
 describe('getSlugsByLocale', () => {
   it('should return all slugs when no locale is provided', () => {
     const all = getSlugsByLocale()
-    expect(all.length).toBe(24)
+    expect(all.length).toBe(29)
   })
 
-  it('should return 12 slugs for AZ locale', () => {
+  it('should return 17 slugs for AZ locale', () => {
     const azSlugs = getSlugsByLocale('az')
-    expect(azSlugs.length).toBe(12)
+    expect(azSlugs.length).toBe(17)
   })
 
   it('should return 12 slugs for EN locale', () => {
