@@ -392,6 +392,8 @@
     "description": "Kisa haberler ve ucretsiz online araclar. Kayit gerekmiyor.",
     "followUs": "Bizi takip edin",
     "toolsSection": "Araclar",
+    "popularToolsSection": "Populer Araclar",
+    "categoriesSection": "Kategoriler",
     "sectionsTitle": "Bolumler",
     "legalTitle": "Yasal",
     "copyright": "Tum haklari saklidir.",
@@ -411,9 +413,14 @@
   "errors": {
     "notFound": "Sayfa bulunamadi",
     "notFoundDescription": "Aradiginiz sayfa mevcut degil veya tasindi.",
+    "notFoundSuggestion": "Belki aradiginizi burada bulabilirsiniz:",
     "notFoundHome": "Ana Sayfa",
     "notFoundTools": "Araclar",
     "notFoundNews": "Haberler",
+    "notFoundBlog": "Blog",
+    "notFoundPopularTools": "Populer Araclar",
+    "notFoundCategories": "Kategoriler",
+    "notFoundBrowseAll": "Tum araclara goz at",
     "generalError": "Hata",
     "generalErrorTitle": "Bir hata olustu",
     "generalErrorDescription": "Beklenmeyen bir hata olustu. Lutfen tekrar deneyin.",
@@ -477,6 +484,13 @@
     "errorDuplicate": "Bu e-posta zaten abone.",
     "errorGeneral": "Bir hata olustu. Tekrar deneyin."
   },
+  "share": {
+    "title": "Paylas",
+    "shareOn": "{platform} uzerinde paylas",
+    "copyLink": "Linki kopyala",
+    "copied": "Kopyalandi!",
+    "poweredBy": "VaxtimYoxdu.com ile uretildi"
+  },
   "newsletterHome": {
     "title": "Haftalik teknoloji bultenimize katilin",
     "description": "En onemli teknoloji guncellemeleri, yeni araclar ve faydali ipuclari dogrudan e-postaniza.",
@@ -484,5 +498,11 @@
     "bullet2": "Yeni ucretsiz araclardan ilk siz haberdar olun",
     "bullet3": "Zamaninizi tasarruf eden ipuclari ve oneriler",
     "subscriberCount": "zaten abone oldu"
+  },
+  "crossLinks": {
+    "relatedTools": "Faydali Araclar",
+    "relatedBlogPosts": "Ilgili Blog Yazilari",
+    "tryTheseTool": "Bu araclari deneyin",
+    "readMore": "Daha fazla oku"
   }
 }

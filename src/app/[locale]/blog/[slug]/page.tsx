@@ -6,6 +6,7 @@ import { generateBlogPostMetadata, generateBlogArticleJsonLd, generateHreflangAl
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
+import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
 import { blogPosts, getBlogPostBySlug } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
 import type { Locale } from '@/i18n/config'
@@ -121,6 +122,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       )}
+      <ShareButtonsWrapper
+        path={`/blog/${slug}`}
+        title={post.title}
+        description={description}
+      />
       <NewsletterInlineCTA variant="blog" />
       <LazyAdBanner slot="blog-post-bottom" format="in-article" className="mt-8" />
     </div>

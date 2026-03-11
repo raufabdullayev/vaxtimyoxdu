@@ -392,6 +392,8 @@
     "description": "Quick news summaries and free online tools. No registration needed.",
     "followUs": "Follow us",
     "toolsSection": "Tools",
+    "popularToolsSection": "Popular Tools",
+    "categoriesSection": "Categories",
     "sectionsTitle": "Sections",
     "legalTitle": "Legal",
     "copyright": "All rights reserved.",
@@ -411,9 +413,14 @@
   "errors": {
     "notFound": "Page not found",
     "notFoundDescription": "The page you are looking for does not exist or has been moved.",
+    "notFoundSuggestion": "Maybe you can find what you are looking for here:",
     "notFoundHome": "Home",
     "notFoundTools": "Tools",
     "notFoundNews": "News",
+    "notFoundBlog": "Blog",
+    "notFoundPopularTools": "Popular Tools",
+    "notFoundCategories": "Categories",
+    "notFoundBrowseAll": "Browse all tools",
     "generalError": "Error",
     "generalErrorTitle": "An error occurred",
     "generalErrorDescription": "An unexpected error occurred. Please try again.",
@@ -477,6 +484,13 @@
     "errorDuplicate": "This email is already subscribed.",
     "errorGeneral": "An error occurred. Please try again."
   },
+  "share": {
+    "title": "Share",
+    "shareOn": "Share on {platform}",
+    "copyLink": "Copy link",
+    "copied": "Copied!",
+    "poweredBy": "Powered by VaxtimYoxdu.com"
+  },
   "newsletterHome": {
     "title": "Join our weekly tech newsletter",
     "description": "The most important tech updates, new tools, and useful tips delivered straight to your inbox.",
@@ -484,5 +498,11 @@
     "bullet2": "Be the first to know about new free tools",
     "bullet3": "Time-saving tips and recommendations",
     "subscriberCount": "already subscribed"
+  },
+  "crossLinks": {
+    "relatedTools": "Useful Tools",
+    "relatedBlogPosts": "Related Blog Posts",
+    "tryTheseTool": "Try these tools",
+    "readMore": "Read more"
   }
 }

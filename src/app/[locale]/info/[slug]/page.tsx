@@ -5,6 +5,7 @@ import { generateArticleMetadata, generateNewsArticleJsonLd, generateHreflangAlt
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
+import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
 import RelatedArticles from '@/components/layout/RelatedArticles'
 import { newsArticles } from '@/data/news-articles'
 
@@ -92,6 +93,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           )
         })}
       </div>
+      <ShareButtonsWrapper
+        path={`/info/${slug}`}
+        title={article.title}
+        description={description}
+      />
       <NewsletterInlineCTA variant="news" />
       <LazyAdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
       <RelatedArticles

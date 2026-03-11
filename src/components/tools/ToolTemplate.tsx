@@ -1,5 +1,6 @@
 import { Tool } from '@/types/tool'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
+import PoweredByBrand from '@/components/common/PoweredByBrand'
 
 interface ToolTemplateProps {
   tool: Tool
@@ -19,7 +20,10 @@ export default function ToolTemplate({ tool, children }: ToolTemplateProps) {
 
       <LazyAdBanner slot="tool-top" format="banner" className="mb-6" />
 
-      <div className="rounded-xl border bg-card p-4 md:p-6">{children}</div>
+      <div className="rounded-xl border bg-card p-4 md:p-6">
+        {children}
+        <PoweredByBrand />
+      </div>
 
       <LazyAdBanner slot="tool-bottom" format="in-article" className="mt-6" />
 

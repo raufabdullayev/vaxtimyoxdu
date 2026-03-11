@@ -392,6 +392,8 @@
     "description": "Qısa xəbərlər və pulsuz onlayn alətlər. Qeydiyyat lazım deyil.",
     "followUs": "Bizi izləyin",
     "toolsSection": "Alətlər",
+    "popularToolsSection": "Populyar Alətlər",
+    "categoriesSection": "Kateqoriyalar",
     "sectionsTitle": "Bölmələr",
     "legalTitle": "Hüquqi",
     "copyright": "Bütün hüquqlar qorunur.",
@@ -411,9 +413,14 @@
   "errors": {
     "notFound": "Səhifə tapılmadı",
     "notFoundDescription": "Axtardığınız səhifə mövcud deyil və ya köçürülüb.",
+    "notFoundSuggestion": "Bəlkə axtardığınızı burada tapa bilərsiniz:",
     "notFoundHome": "Ana Səhifə",
     "notFoundTools": "Alətlər",
     "notFoundNews": "Xəbərlər",
+    "notFoundBlog": "Blog",
+    "notFoundPopularTools": "Populyar Alətlər",
+    "notFoundCategories": "Kateqoriyalar",
+    "notFoundBrowseAll": "Bütün alətlərə bax",
     "generalError": "Xəta",
     "generalErrorTitle": "Bir xəta baş verdi",
     "generalErrorDescription": "Gözlənilməyən xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.",
@@ -477,6 +484,13 @@
     "errorDuplicate": "Bu email artıq abunə olub.",
     "errorGeneral": "Xəta baş verdi. Yenidən cəhd edin."
   },
+  "share": {
+    "title": "Paylas",
+    "shareOn": "{platform}-da paylas",
+    "copyLink": "Linki kopyala",
+    "copied": "Kopyalandi!",
+    "poweredBy": "VaxtimYoxdu.com ile hazirlanib"
+  },
   "newsletterHome": {
     "title": "Həftəlik texno bülletenimizə qoşulun",
     "description": "Ən vacib texnologiya yenilikləri, yeni alətlər və faydalı məsləhətlər birbaşa e-poçtunuza.",
@@ -484,5 +498,11 @@
     "bullet2": "Yeni pulsuz alətlər haqqında ilk xəbər",
     "bullet3": "Vaxtınıza qənaət edən məsləhətlər və tövsiyələr",
     "subscriberCount": "artıq abunə olub"
+  },
+  "crossLinks": {
+    "relatedTools": "Faydalı Alətlər",
+    "relatedBlogPosts": "Əlaqəli Blog Yazıları",
+    "tryTheseTool": "Bu alətləri sınayın",
+    "readMore": "Daha çox oxu"
   }
 }

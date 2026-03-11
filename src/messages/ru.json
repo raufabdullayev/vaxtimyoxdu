@@ -392,6 +392,8 @@
     "description": "Kratkie novosti i besplatnye onlayn instrumenty. Registraciya ne nuzhna.",
     "followUs": "Podpisyvayites",
     "toolsSection": "Instrumenty",
+    "popularToolsSection": "Populyarnye Instrumenty",
+    "categoriesSection": "Kategorii",
     "sectionsTitle": "Razdely",
     "legalTitle": "Pravovaya informaciya",
     "copyright": "Vse prava zashchishcheny.",
@@ -411,9 +413,14 @@
   "errors": {
     "notFound": "Stranica ne naydena",
     "notFoundDescription": "Stranica, kotoruyu vy ishchete, ne sushchestvuet ili byla peremeshchena.",
+    "notFoundSuggestion": "Vozmozhno, vy naydyote to, chto ishchete, zdes:",
     "notFoundHome": "Glavnaya",
     "notFoundTools": "Instrumenty",
     "notFoundNews": "Novosti",
+    "notFoundBlog": "Blog",
+    "notFoundPopularTools": "Populyarnye Instrumenty",
+    "notFoundCategories": "Kategorii",
+    "notFoundBrowseAll": "Posmotret vse instrumenty",
     "generalError": "Oshibka",
     "generalErrorTitle": "Proizoshla oshibka",
     "generalErrorDescription": "Proizoshla neprevidennaya oshibka. Pozhaluysta, poprobujte snova.",
@@ -477,6 +484,13 @@
     "errorDuplicate": "Etot email uzhe podpisan.",
     "errorGeneral": "Proizoshla oshibka. Poprobujte snova."
   },
+  "share": {
+    "title": "Podelitsya",
+    "shareOn": "Podelitsya v {platform}",
+    "copyLink": "Kopirovat ssylku",
+    "copied": "Skopirovano!",
+    "poweredBy": "Sdelano s pomoshchyu VaxtimYoxdu.com"
+  },
   "newsletterHome": {
     "title": "Prisoyedinyaytes k nashey ezhenedelnoy rassylke",
     "description": "Samye vazhnye tekh-obnovleniya, novye instrumenty i poleznye sovety pryamo na vashu pochtu.",
@@ -484,5 +498,11 @@
     "bullet2": "Uznavayte pervymi o novykh besplatnykh instrumentakh",
     "bullet3": "Sovety i rekomendacii dlya ekonomii vremeni",
     "subscriberCount": "uzhe podpisalis"
+  },
+  "crossLinks": {
+    "relatedTools": "Poleznye Instrumenty",
+    "relatedBlogPosts": "Svyazannye Stati",
+    "tryTheseTool": "Poprobujte eti instrumenty",
+    "readMore": "Chitat dalshe"
   }
 }
