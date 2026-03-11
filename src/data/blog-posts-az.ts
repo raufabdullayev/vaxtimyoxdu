@@ -1148,4 +1148,405 @@ Tək başına alətlər sizi məhsuldar etmir. Bu vərdişlər təməli yaradır
 
 Yadda saxlayın: məhsuldarlıq alətləri vasitələrdir, məqsəd deyil. Məqsəd mənalı işi ardıcıl görmək, davamlı enerji saxlamaq və sizin üçün ən çox əhəmiyyətli olan şeylərdən irəliyə getməkdir.`,
   },
+  'easiest-way-to-merge-pdf-files': {
+    title: 'PDF Fayllarını Birləşdirməyin Ən Asan Yolu',
+    date: '2026-03-11',
+    relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
+    content: `PDF faylları ilə işləmək gündəlik həyatın ayrılmaz hissəsidir. İstər tələbə olun, istər ofis işçisi, istərsə də sərbəst işləyən peşəkar -- müxtəlif PDF sənədlərini bir faylda birləşdirmək ehtiyacı mütləq qarşınıza çıxır. Hesabatlar, fakturalar, müqavilələr, diplom əlavələri, portfolio materialları -- bunların hamısını tək bir sənəddə birləşdirmək həm vaxt qənaəti edir, həm də sənəd idarəçiliyini sadələşdirir. Bu təlimatda PDF birləşdirmənin ən asan və təhlükəsiz yolunu addım-addım izah edəcəyik.
+
+## Niyə PDF Birləşdirmə Lazımdır?
+
+Gündəlik işdə çoxlu PDF faylları ilə qarşılaşırıq. Bir layihə hesabatı üçün üz qabığı ayrı faylda, maliyyə göstəriciləri ayrı cədvəldə, nəticə və tövsiyələr isə ayrı sənəddə ola bilər. Bunları ayrı-ayrı göndərmək bir sıra problemlər yaradır:
+
+- **Fayllar itə bilər.** E-poçtla 5 ayrı PDF göndərdikdə alan şəxs birini və ya ikisini açmağı unuda bilər
+- **Sıra pozula bilər.** Ayrı fayllar düzgün ardıcıllıqda oxunmaya bilər
+- **Çap çətinliyi.** Hər faylı ayrıca çap etmək vaxt itkisidir
+- **Arxivləşmə problemi.** 50 ayrı fayl əvəzinə 1 birləşdirilmiş fayl saxlamaq daha rahatdır
+- **Peşəkar görünüş.** Tək bir sənəd göndərmək daha professional təsir bağışlayır
+
+## Ənənəvi Üsullar və Problemləri
+
+Əvvəllər PDF birləşdirmə üçün Adobe Acrobat Pro kimi ödənişli proqramlar lazım idi. Bu proqramların illik lisenziya qiyməti yüzlərlə dollar ola bilər. Bəzi insanlar pulsuz masa üstü proqramlar yükləyir, amma bunlar çox vaxt:
+
+- Kompüterə lazımsız proqramlar (bloatware) quraşdırır
+- Yavaş işləyir və köhnə əməliyyat sistemlərində xəta verir
+- Birləşdirilmiş fayla filigran (watermark) əlavə edir
+- Gündə yalnız 1-2 fayl birləşdirməyə icazə verir
+
+2026-cı ildə bu problemlərin heç biri mövcud olmamalıdır. Brauzer əsaslı alətlər bütün bu məhdudiyyətləri aradan qaldırıb.
+
+## Addım-Addım: Brauzer ilə PDF Birləşdirmə
+
+Vaxtım Yoxdu-nun PDF Birləşdirmə aləti ilə prosess son dərəcə sadədir:
+
+**Addım 1: Aləti açın.** Brauzerdə PDF Birləşdirmə alətinə daxil olun. Heç bir qeydiyyat və ya proqram yükləmə tələb olunmur.
+
+**Addım 2: Faylları seçin.** "Faylları seçin" düyməsinə basın və ya faylları birbaşa brauzer pəncərəsinə sürükləyib buraxın. Bir neçə faylı eyni anda seçə bilərsiniz.
+
+**Addım 3: Sıranı tənzimləyin.** Faylları sürükləyib-buraxaraq istədiyiniz ardıcıllığa düzün. Üz qabığı birinci, əlavələr sonda olsun.
+
+**Addım 4: Birləşdirin.** "Birləşdir" düyməsinə basın. Bir neçə saniyə ərzində birləşdirilmiş PDF hazır olacaq.
+
+**Addım 5: Yükləyin.** Birləşdirilmiş faylı kompüterinizə endirin. Yeni faylı açıb bütün səhifələrin düzgün sırada olduğunu yoxlayın.
+
+## Hansı Fayl Növlərini Birləşdirmək Olar?
+
+PDF birləşdirmə yalnız PDF-PDF birləşdirmə ilə məhdudlaşmır. Müasir alətlər fərqli mənbələrdən gələn PDF-ləri problemsiz birləşdirir:
+
+- **Skan olunmuş sənədlər.** Skanerdən gələn PDF fayllar
+- **Ofis proqramlarından eksport edilmiş PDF-lər.** Word, Excel, PowerPoint-dən yaradılmış PDF-lər
+- **Onlayn yaradılmış PDF-lər.** Veb saytlardan və ya onlayn redaktorlardan yüklənmiş PDF-lər
+- **Şəkillərdən çevrilmiş PDF-lər.** JPG, PNG kimi şəkillərdən yaradılmış PDF-lər
+- **Rəqəmsal imzalı PDF-lər.** Rəqəmsal imzası olan sənədlər (imza birləşdirmədən sonra da qorunur)
+
+## Gizlilik və Təhlükəsizlik
+
+PDF fayllarınız çox vaxt həssas məlumatlar ehtiva edir: maliyyə hesabatları, şəxsi sənədlər, hüquqi müqavilələr, tibbi qeydlər. Bu faylları onlayn alətə yükləyərkən ən vacib sual budur: fayllarım haraya gedir?
+
+**Server əsaslı alətlər** fayllarınızı uzaq serverə yükləyir. Bu, sənədlərinizin internet üzərindən ötürülməsi və başqasının hardverində saxlanması deməkdir. Şifrələmə və silmə siyasətləri olsa belə, bu risk yaradır.
+
+**Müştəri tərəfi (client-side) alətlər** isə fayllarınızı tamamilə brauzerinizdə emal edir. Heç bir fayl serverə yüklənmir, heç bir məlumat cihazınızı tərk etmir. Vaxtım Yoxdu-nun PDF alətləri bu yanaşmadan istifadə edir -- fayllarınız tamamilə sizin cihazınızda qalır.
+
+## Ən Yaxşı Təcrübələr
+
+1. **Birləşdirmədən əvvəl faylları yoxlayın.** Hər bir PDF-i ayrıca açıb düzgün olduğunu təsdiqləyin
+2. **Sıranı əvvəlcədən planlaşdırın.** Faylları nömrələmək (01-uz-qabigi.pdf, 02-mezmun.pdf) prosessi asanlaşdırır
+3. **Birləşdirmədən sonra yoxlayın.** Nəticə faylını açıb bütün səhifələrin olduğunu və düzgün sırada olduğunu yoxlayın
+4. **Fayl ölçüsünü nəzərə alın.** Çox sayda yüksək keyfiyyətli PDF birləşdirdikdə nəticə faylı böyük ola bilər. Lazım gəldikdə PDF sıxışdırma alətindən istifadə edin
+5. **Orijinalları saxlayın.** Birləşdirilmiş faylı yaratdıqdan sonra da orijinal faylları silməyin -- gələcəkdə ayrıca lazım ola bilər
+
+## Tez-Tez Verilən Suallar
+
+**Birləşdirilmiş PDF-in keyfiyyəti düşür?**
+Xeyr. PDF birləşdirmə faylların məzmununu dəyişdirmir. Hər səhifənin orijinal keyfiyyəti, şriftləri, şəkilləri və formatlaşdırması qorunur.
+
+**Neçə fayl birləşdirə bilərəm?**
+Brauzer əsaslı alətlərdə adətən fayl sayı limiti yoxdur. Amma çox sayda böyük fayl birləşdirdikdə kompüterinizin yaddaşından asılı olaraq prosess yavaşlaya bilər.
+
+**Birləşdirmə şifrəli PDF-lərlə işləyir?**
+Şifrə ilə qorunan PDF-ləri birləşdirmək üçün əvvəlcə şifrəni daxil edib faylın kilidini açmaq lazımdır. Açıq fayllar problemsiz birləşdirilə bilər.
+
+**Mobil telefondan birləşdirə bilərəm?**
+Bəli. Brauzer əsaslı alətlər mobil brauzerlərdə də işləyir. Fayl seçmə, sıralama və birləşdirmə əməliyyatlarını telefonunuzdan edə bilərsiniz.
+
+Vaxtım Yoxdu-nun pulsuz PDF Birləşdirmə alətini sınayın. Fayllarınız cihazınızda qalır, qeydiyyat tələb olunmur, gizli ödəniş yoxdur. Sənədlərinizi saniyələr ərzində birləşdirin və vaxtınıza qənaət edin.`,
+  },
+  'why-your-password-is-weak-strong-password-guide': {
+    title: 'Şifrəniz Niyə Zəifdir? Güclü Şifrə Yaratma Rehberi',
+    date: '2026-03-11',
+    relatedTools: ['password-generator', 'hash-generator', 'base64-encode-decode'],
+    content: `Hər gün yüzlərlə insanın onlayn hesabları sındırılır. Səbəb çox vaxt mürəkkəb texniki boşluqlar deyil -- sadəcə zəif şifrələrdir. "123456", "password", "qwerty", ad və doğum tarixinin birləşməsi -- bunlar dünyada ən çox istifadə edilən şifrələrdir və hakerlərin ilk yoxladığı kombinasiyalardır. Bu rehberdə şifrənizin niyə zəif ola biləcəyini, güclü şifrənin nə olduğunu və özünüzü onlayn təhlükələrdən necə qoruya biləcəyinizi ətraflı izah edəcəyik.
+
+## Şifrələr Necə Sındırılır?
+
+Güclü şifrə yaratmaq üçün əvvəlcə şifrələrin necə sındırıldığını başa düşmək lazımdır. Hakerlər bir neçə əsas üsuldan istifadə edir:
+
+**Brute force (qaba güc) hücumu.** Kompüter bütün mümkün kombinasiyaları ardıcıl sınayır. Qısa və sadə şifrələr saniyələr ərzində sındırılır. 6 simvollu yalnız kiçik hərflərdən ibarət şifrə müasir hardverlə 10 saniyədən az müddətdə sındırıla bilər.
+
+**Lüğət hücumu.** Haker proqramı məlum sözlər bazasından istifadə edir: lüğət sözləri, populyar şifrələr, ümumi ifadələr. "sunshine", "football", "iloveyou" kimi şifrələr bu bazalarda mövcuddur və saniyələr ərzində tapılır.
+
+**Sosial mühəndislik.** Haker sosial mediadakı məlumatlarınızdan istifadə edir: uşağınızın adı, doğum tarixiniz, sevimli komandasınız, ev heyvanınızın adı. İnsanlar çox vaxt bu cür şəxsi məlumatlardan şifrə yaradır və hakerlər bunu bilirlər.
+
+**Credential stuffing.** Bir saytdan sızan şifrə-email kombinasiyası digər saytlarda da sınanır. Əgər eyni şifrəni bir neçə yerdə istifadə edirsinizsə, bir saytdakı sızıntı bütün hesablarınızı risk altına qoyur.
+
+**Phishing.** Saxta e-poçtlar, saxta veb saytlar vasitəsilə şifrənizi özünüz hakeranə verirsiniz. Bu texniki hücum deyil, psixoloji manipulyasiyadır.
+
+## Zəif Şifrənin Əlamətləri
+
+Aşağıdakı xüsusiyyətlərdən hər hansı biri varsa, şifrəniz zəifdir:
+
+- **8 simvoldan qısadır.** Qısa şifrələr brute force ilə çox tez sındırılır
+- **Yalnız hərflərdən ibarətdir.** Rəqəm və xüsusi simvol olmadan kombinasiya sayı çox azdır
+- **Şəxsi məlumat ehtiva edir.** Ad, doğum ili, telefon nömrəsi kimi məlumatlar asanlıqla təxmin edilir
+- **Ümumi söz və ya ifadədir.** "password123", "admin", "welcome" kimi ifadələr hücum lüğətlərində mövcuddur
+- **Ardıcıl simvollardan ibarətdir.** "123456", "abcdef", "qwerty" kimi ardıcıllıqlar ən zəif şifrələrdir
+- **Başqa hesabda da istifadə olunur.** Eyni şifrəni bir neçə yerdə istifadə etmək ən böyük risklardan biridir
+- **Uzun müddətdir dəyişdirilməyib.** Köhnə şifrələr sızmış məlumat bazalarında ola bilər
+
+## Güclü Şifrənin Xüsusiyyətləri
+
+Güclü şifrə bu meyarlara cavab verməlidir:
+
+**Minimum 12 simvol uzunluğunda.** Hər əlavə simvol sındırılma müddətini eksponensial artırır. 8 simvollu şifrə saatlar ərzində sındırıla bilər, 12 simvollu isə illər çəkə bilər, 16 simvollu şifrəni sındırmaq praktiki olaraq qeyri-mümkündür.
+
+**Qarışıq simvol tipləri.** Böyük hərflər (A-Z), kiçik hərflər (a-z), rəqəmlər (0-9) və xüsusi simvollar (!@#$%^&*) birlikdə istifadə edilməlidir. Bu, mümkün kombinasiya sayını milyard qat artırır.
+
+**Təsadüfi olmalıdır.** İnsan beyni naxışlar yaratmağa meyllidir və hakerlər bu naxışları tanıyır. "P@ssw0rd" şifrəsi güclü görünsə də, bu sadə əvəzləmə naxışı (a->@, o->0) hücum proqramları tərəfindən çoxdan öyrənilib.
+
+**Unikal olmalıdır.** Hər hesab üçün fərqli şifrə. Bu, bir saytdakı sızıntının bütün hesablarınızı risk altına qoymasının qarşısını alır.
+
+## Güclü Şifrə Yaratma Üsulları
+
+**Üsul 1: Təsadüfi şifrə generatoru.** Ən etibarlı üsul şifrə generatorundan istifadə etməkdir. Generatorlar həqiqi təsadüfi simvol ardıcıllıqları yaradır ki, bunları heç bir naxış və ya lüğət hücumu ilə təxmin etmək mümkün deyil. Vaxtım Yoxdu-nun Şifrə Generatoru istədiyiniz uzunluq və simvol tiplərini seçməyə imkan verir.
+
+**Üsul 2: Parol ifadəsi (passphrase).** 4-6 təsadüfi sözü birləşdirin: "portağal traktor buludlu televiziya şüşə". Bu tip şifrələr həm uzun (güclü), həm də yadda saxlamaq asandır. Sözlər arasına rəqəm və xüsusi simvol əlavə etmək daha da gücləndirir: "portağal7traktor!buludlu3televiziya".
+
+**Üsul 3: Cümlə üsulu.** Yadda qalan bir cümlənin hər sözünün ilk hərfini götürün: "Mənim 3 pişiyim var və hər biri fərqli rəngdədir!" -> "M3pvvhbfrd!" Bu üsul yadda saxlanması asan, amma güclü şifrələr yaradır.
+
+## Şifrə İdarəçisi (Password Manager) İstifadə Edin
+
+Hər hesab üçün fərqli, güclü, təsadüfi şifrə yadda saxlamaq insan üçün qeyri-mümkündür. Bu problemi şifrə idarəçiləri həll edir:
+
+- **Bütün şifrələrinizi şifrələnmiş anbarda saxlayır.** Siz yalnız bir ana şifrəni (master password) yadda saxlayırsınız
+- **Hər hesab üçün unikal, güclü şifrə yaradır.** 20+ simvollu təsadüfi şifrələr heç bir problem yaratmır çünki onları yadda saxlamaq lazım deyil
+- **Avtomatik doldurma.** Saytlara daxil olanda şifrə idarəçisi sizin əvəzinizə şifrəni daxil edir
+- **Sızıntı xəbərdarlığı.** Bəzi şifrə idarəçiləri şifrələrinizin sızan məlumat bazalarında olub-olmadığını yoxlayır
+
+## İki Faktorlu Autentifikasiya (2FA)
+
+Güclü şifrə təkbaşına kifayət deyil. İki faktorlu autentifikasiya ikinci qoruma qatı əlavə edir. Hətta kimsə şifrənizi öyrənsə belə, ikinci faktor olmadan hesabınıza daxil ola bilməz.
+
+**2FA növləri:**
+- **SMS kodu.** Telefonunuza gələn birdəfəlik kod. Ən sadə, amma ən az təhlükəsiz seçimdir (SIM swap hücumları mövcuddur)
+- **Autentifikasiya tətbiqi.** Google Authenticator, Authy, Microsoft Authenticator kimi tətbiqlər 30 saniyədə dəyişən kodlar yaradır. SMS-dən daha təhlükəsizdir
+- **Hardware açar.** YubiKey kimi fiziki cihazlar ən güclü 2FA üsuludur. Fiziki cihaz olmadan hesaba giriş mümkün deyil
+- **Biometrik.** Barmaq izi, üz tanıma. Rahat, amma əsas 2FA üsulu kimi deyil, əlavə qat kimi istifadə olunmalıdır
+
+## Ən Çox Buraxılan Səhvlər
+
+1. **Hər yerdə eyni şifrə.** Bir saytdakı sızıntı bütün hesablarınızı təhlükəyə atır
+2. **Şifrəni brauzerdə yadda saxlamaq (şifrə idarəçisi olmadan).** Brauzer parolları adətən zəif şifrələnir
+3. **Şifrəni başqası ilə paylaşmaq.** Hətta güvəndiyiniz insanlarla belə şifrə paylaşmayın
+4. **Şifrəni kağıza yazmaq.** Masa üstündə və ya monitorda yapışdırılmış şifrələr fiziki təhlükəsizlik risqidir
+5. **"Şifrəni yadda saxla" linkini klikləyərkən ümumi kompüterdə.** Kafe, kitabxana, otel kompüterlərində heç vaxt şifrəni yadda saxlatmayın
+6. **Köhnə şifrəni dəyişdirməmək.** Mühüm hesabların şifrələrini ildə ən az bir dəfə yeniləyin
+7. **Təhlükəsizlik suallarına həqiqi cavab vermək.** "Ananızın qız familiyası?" sualının cavabını sosial mediadan tapmaq asandır. Saxta, amma yadda qalan cavablar istifadə edin
+
+## Şifrənizin Gücünü Yoxlayın
+
+Yeni şifrə yaratdıqdan sonra onun gücünü qiymətləndirin:
+
+- **Uzunluq:** Minimum 12 simvol, ideal olaraq 16+
+- **Mürəkkəblik:** Hər 4 simvol tipindən (böyük hərf, kiçik hərf, rəqəm, xüsusi simvol) ən az biri
+- **Unikallıq:** Heç bir başqa hesabda istifadə olunmamalı
+- **Təsadüfilik:** Heç bir tanınan söz, ad, tarix, naxış ehtiva etməməli
+- **Sızıntı yoxlaması:** haveibeenpwned.com saytında şifrənizin sızan məlumat bazalarında olub-olmadığını yoxlaya bilərsiniz
+
+Vaxtım Yoxdu-nun pulsuz Şifrə Generatoru ilə saniyələr ərzində güclü, təsadüfi şifrələr yaradın. Uzunluğu, simvol tiplərini özünüz seçin. Generasiya tamamilə brauzerinizdə baş verir -- şifrəniz heç bir serverə göndərilmir, tamamilə gizli və təhlükəsiz qalır.`,
+  },
+  'best-free-json-tools-for-developers-2026': {
+    title: '2026-da Tərtibatçılar üçün Ən Yaxşı 10 Pulsuz JSON Aləti',
+    date: '2026-03-11',
+    relatedTools: ['json-formatter', 'json-to-yaml', 'json-to-csv', 'json-path-finder', 'csv-to-json'],
+    content: `JSON (JavaScript Object Notation) müasir veb tərtibatının əsas sütunudur. REST API-lər, konfiqurasiya faylları, NoSQL məlumat bazaları və serversiz funksiyalar -- JSON hər yerdədir. İstər gecə saat 2-də API cavabını sazlayın, istərsə də müştəri hesabatı üçün məlumatları çevirin -- düzgün JSON alətlərinə sahib olmaq zərurətdir. 2026-cı ildə hər tərtibatçının bilməli olduğu ən yaxşı 10 pulsuz JSON alətini təqdim edirik.
+
+## JSON Alətləri Niyə Hər Zamankından Daha Vacibdir
+
+Orta tərtibatçı gün ərzində onlarla dəfə JSON ilə qarşılaşır. API cavabları, konfiqurasiya faylları, məlumat bazası eksportları, webhook yükləri -- JSON məlumat mübadiləsinin universal dilidir. Lakin xam JSON oxumaq çox çətindir. Tək bir yanlış vergül bütöv bir tətbiqi sındıra bilər. 50 iç-içə obyektli minimallaşdırılmış API cavabını format olmadan vizual olaraq təhlil etmək demək olar ki, qeyri-mümkündür.
+
+## 1. JSON Formatlayıcı və Təsdiqləyici
+
+JSON formatlayıcı kod redaktorundan sonra ən çox istifadə edilən tərtibatçı alətidir. Xam, minimallaşdırılmış JSON-u təmiz, düzgün girintili çıxışa çevirir. Yaxşı formatlayıcı həm gözəlləşdirir, həm də JSON-unuzu təsdiqləyir və xətaları dəqiq göstərir. Vaxtım Yoxdu-nun JSON Formatlayıcısı bütün bunları birbaşa brauzerinizdə edir.
+
+## 2. JSON-dan YAML-a Çevirici
+
+YAML bulud-doğma ekosistemində konfiqurasiya faylları üçün standart halına gəlib. Kubernetes, Docker Compose, GitHub Actions -- hamısı YAML istifadə edir. Etibarlı JSON-dan YAML-a çevirici çoxsəviyyəli sətirləri, xüsusi simvolları və iç-içə massivləri düzgün idarə edir. Vaxtım Yoxdu-nun JSON-dan YAML-a aləti düzgün formatlama ilə anı çevirməni təmin edir.
+
+## 3. JSON-dan CSV-yə Çevirici
+
+Hər kəs JSON danışmır. Məhsul menecerləri və analitiklər çox vaxt cədvəl formatında məlumata ehtiyac duyur. JSON-dan CSV-yə çevirmə tərtibatçı məlumatları ilə biznes dostu formatlar arasında körpü yaradır.
+
+## 4. JSON Yol Tapıcı
+
+Böyük JSON cavabları ilə işləyəndə xüsusi dəyəri tapmaq çətin ola bilər. JSON yol tapıcıları yol ifadələrindən istifadə edərək ehtiyacınız olan məlumatları çıxarmağa imkan verir.
+
+## 5. JSON Sxem Təsdiqləyicisi
+
+JSON Sxemi məlumatınızın izləməli olduğu strukturu, tipləri və məhdudiyyətləri müəyyən edir. Sxem təsdiqləməsi məlumat keyfiyyəti problemlərini sisteminizə yayılmadan əvvəl tutur.
+
+## 6. JSON Müqayisə Aləti
+
+Sazlama zamanı tez-tez iki JSON obyektini müqayisə etmək lazım olur. JSON müqayisə aləti əlavələri, silmələri və dəyişiklikləri vizual formatda vurğulayır.
+
+## 7. JSON Minimallaşdırıcı
+
+Formatlama JSON-u oxunaqlı edir, minimallaşdırma isə onu səmərəli edir. Boşluqların silinməsi yük ölçülərini 15-30% azalda bilər.
+
+## 8. CSV-dən JSON-a Çevirici
+
+Cədvəl məlumatlarını veb tətbiqlərə idxal edərkən CSV-ni JSON-a çevirmək lazımdır. Vaxtım Yoxdu-nun CSV-dən JSON-a çeviricisi bu çevrilmələri düzgün tiplənmiş JSON istehsal edərək təmiz həll edir.
+
+## 9. JSON Ağac Görüntüləyicisi
+
+Bəzən JSON sənədini xətti oxumaq əvəzinə interaktiv araşdırmaq lazımdır. Ağac görüntüləyicisi məlumatlarınızı yığıla bilən, naviqasiya edilə bilən ağac strukturu kimi təqdim edir.
+
+## 10. JSON-dan TypeScript İnterfeysı Generatoru
+
+TypeScript qəbulu 2026-cı ildə artmağa davam edir. JSON-dan TypeScript generatoru JSON məlumat strukturlarınızı analiz edib dəqiq TypeScript interfeysləri yaradır.
+
+## JSON ilə İşləmək üçün Ən Yaxşı Təcrübələr
+
+1. **Həmişə emal etmədən əvvəl təsdiqləyin.** Tək bir sintaksis xətası parserınızı sındıra bilər
+2. **Ardıcıl adlandırma konvensiyaları istifadə edin.** camelCase və ya snake_case arasında seçim edin və layihə boyu davam edin
+3. **İç-içə keçməni dayaz saxlayın.** Dərin iç-içə JSON oxumaq, sorğulamaq və saxlamaq çətindir
+4. **Null dəyərləri açıq şəkildə idarə edin.** Çatışmayan sahələrin null, undefined və ya tamamilə buraxılması barədə qərar verin
+5. **İstehsal üçün minimallaşdırın, inkişaf üçün formatlayın.** İstehsal mühitlərində heç vaxt formatlanmış JSON göndərməyin
+
+Vaxtım Yoxdu-da pulsuz JSON Formatlayıcı, JSON-dan YAML-a çevirici və JSON-dan CSV-yə çevirici alətlərini sınayın -- bütün emal brauzerinizdə yerli olaraq baş verir.`,
+  },
+  'how-to-compress-images-without-losing-quality': {
+    title: 'Keyfiyyət İtirmədən Şəkilləri Necə Sıxışdırmaq Olar: 2026 Tam Bələdçi',
+    date: '2026-03-11',
+    relatedTools: ['image-compress', 'image-convert', 'image-resize', 'image-crop'],
+    content: `Veb saytınızın yüklənməsinə çəkdiyi hər saniyə sizə ziyarətçilərə, çevrilmələrə və axtarış reytinqlərinə başa gəlir. Yavaş səhifələrin ən böyük günahkarı nədir? Şəkillər. Onlar veb səhifənin ümumi çəkisinin orta hesabla 50%-ni təşkil edir. Yaxşı xəbər odur ki, müasir sıxışdırma texnikaları şəkil fayl ölçülərini orijinallardan vizual olaraq fərqlənmədən 60-80% azalda bilər. Bu bələdçi sizə bunu necə edəcəyinizi, hansı formatları istifadə edəcəyinizi və hansı parametrləri seçəcəyinizi addım-addım izah edir.
+
+## Optimallaşdırılmamış Şəkillərin Həqiqi Dəyəri
+
+- **Tərk etmə nisbəti 32% artır** səhifə yüklənmə müddəti 1 saniyədən 3 saniyəyə qalxanda
+- **Mobil çevrilmələr 20% düşür** hər əlavə saniyə üçün
+- **Google Core Web Vitals** böyük LCP elementləri olan səhifələri cəzalandırır
+- **Hosting xərcləri** bant genişliyi ilə düz mütənasib artır
+- **SEO reytinqləri birbaşa əziyyət çəkir.** Səhifə sürəti 2018-ci ildən Google-un sıralama faktorudur
+
+## Sıxışdırmanı Anlamaq: İtkili və İtkisiz
+
+**İtkili sıxışdırma** (JPEG, WebP itkili rejim) insan gözünün asan qavramadığı məlumatları həmişəlik silir. 75% keyfiyyətdə sıxışdırılmış fotoşəkil orijinaldan demək olar ki, fərqlənmir, amma fayl 70% kiçik ola bilər.
+
+**İtkisiz sıxışdırma** (PNG, WebP itkisiz rejim) eyni məlumatları daha səmərəli kodlaşdırır. Dekompressiya edilmiş şəkil orijinalla piksel-piksel eynidir. Ancaq yalnız 10-30% ölçü azalması əldə edilir.
+
+## Format Seçimi
+
+- **JPEG**: Fotoşəkillər üçün ən yaxşı. İtkili sıxışdırma. Şəffaflıq yoxdur
+- **PNG**: Mətn, loqo, ekran görüntüsü üçün. İtkisiz sıxışdırma. Şəffaflıq dəstəkləyir
+- **WebP**: Müasir standart. İtkili və itkisiz rejim. JPEG-dən 25-35% kiçik fayl
+- **AVIF**: Ən yeni format. WebP-dən 20% daha yaxşı sıxışdırma
+- **SVG**: Vektor formatı. Loqo və ikon üçün ideal
+
+## Addım-Addım Sıxışdırma İş Axını
+
+**Addım 1: Əvvəlcə ölçüsünü dəyişin.** Heç vaxt göstərilmə ölçüsündən böyük şəkli sıxışdırmayın. Ölçü dəyişdirmə təkbaşına fayl ölçüsünü 50-75% azalda bilər.
+
+**Addım 2: Formatınızı seçin.** Fotoşəkillər üçün WebP (JPEG fallback ilə). Ekran görüntüləri üçün PNG. İkonlar üçün SVG.
+
+**Addım 3: Sıxışdırmanı tətbiq edin.** Tövsiyə olunan keyfiyyət parametrlərindən başlayın. Artefaktları görənə qədər keyfiyyəti azaldın, sonra 5-10 bal geri qayıdın.
+
+**Addım 4: Əvvəl və sonra müqayisə edin.** Yaxşı sıxışdırma aləti saxlamadan əvvəl keyfiyyəti yoxlamağınız üçün yan-yana baxış göstərir.
+
+## Müştəri Tərəfi vs Server Tərəfi Sıxışdırma
+
+Müştəri tərəfi sıxışdırma fayllarınızı tamamilə brauzerinizdə emal edir. Fayllarınız heç vaxt cihazınızı tərk etmir. Vaxtım Yoxdu-nun Şəkil Sıxışdırıcısı bu yanaşmadan istifadə edir.
+
+## Tövsiyə Olunan Parametrlər
+
+- **Veb sayt banner**: 1920px eni, JPEG 70-75% keyfiyyət. Hədəf: 180KB-dan az
+- **Blog şəkilləri**: 1024px eni, WebP 75-80%. Hədəf: 90KB-dan az
+- **Kiçik şəkillər**: 640px eni, WebP 78-82%. Hədəf: 40KB-dan az
+- **E-ticarət məhsul**: 1200px eni, JPEG 78-82%. Hədəf: 150KB-dan az
+
+Vaxtım Yoxdu-da pulsuz Şəkil Sıxışdırıcını sınayın -- şəkillərinizi birbaşa brauzerinizdə sıxışdırın. Fayllarınız heç vaxt cihazınızı tərk etmir, fayl ölçüsü limiti yoxdur.`,
+  },
+  'pdf-merge-vs-pdf-split-when-to-use-which': {
+    title: 'PDF Birləşdirmə vs PDF Bölmə: Hansını Nə Zaman İstifadə Etməli',
+    date: '2026-03-11',
+    relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
+    content: `PDF-lər universal sənəd formatıdır. Formatlama hər cihazda qorunur, hüquqi və iş məqsədləri üçün geniş qəbul edilir və təsadüfən dəyişdirmək çətindir. Amma PDF-lərlə işləmək -- çoxlu faylı birləşdirmək və ya böyük sənədi kiçik hissələrə bölmək -- ənənəvi olaraq Adobe Acrobat kimi bahalı proqram tələb edirdi. 2026-cı ildə brauzer əsaslı PDF alətləri bunu tamamilə dəyişdirib. Nə vaxt birləşdirməli, nə vaxt bölməli və hər ikisini necə effektiv etməli -- bu rehber bunu izah edir.
+
+## PDF Birləşdirməni Anlamaq
+
+PDF birləşdirmə iki və ya daha çox ayrı PDF faylını vahid sənəddə birləşdirir. Nəticə faylı bütün mənbə fayllardan bütün səhifələri müəyyən etdiyiniz sırada ehtiva edir.
+
+**Nə vaxt birləşdirməli:**
+
+- **Hesabatlar tərtib edəndə.** Üz qabığı, maliyyə məlumatları, layihə qrafiki və əlavələr bir sənəddə birləşir
+- **Müqavilə və hüquqi sənədlər.** Əsas razılaşma, əlavələr, imza səhifələri bir faylda təqdim edilir
+- **Portfolio hazırlayanda.** İş nümunələri tək bir peşəkar sənəddə toplanır
+- **Faktura və qəbzləri birləşdirəndə.** Aylıq sənədlər konsolidasiya edilir
+
+## PDF Bölməni Anlamaq
+
+PDF bölmə tək bir PDF-i ayrı fayllara ayırır. Səhifə aralığına, fərdi səhifələrə və ya əlfəcinlərə görə bölə bilərsiniz.
+
+**Nə vaxt bölməli:**
+
+- **Xüsusi bölmələr çıxaranda.** 200 səhifəlik hesabatdan yalnız 15 səhifəlik maliyyə xülasəsi lazımdır
+- **Həssas məlumatı ayıranda.** Açıq və məxfi bölmələri ayırmaq üçün
+- **Fayl ölçüsünü idarə edəndə.** Böyük PDF-i e-poçt limiti çərçivəsində göndərmək üçün
+- **Fərdi qeydləri arxivləşdirəndə.** Toplu skan olunmuş sənəddən fərdi qeydlər ayrılır
+
+## Qərar Çərçivəsi
+
+**BİRLƏŞDİR seç, əgər:**
+- Bir-birinə aid bir neçə fayl var
+- Tək bir çatdırıla bilən sənəd yaratmaq lazımdır
+- Fayl idarəçiliyini sadələşdirmək istəyirsiniz
+
+**BÖL seç, əgər:**
+- Böyük sənəddən səhifə alt çoxluğu lazımdır
+- Paylaşma üçün fayl ölçüsünü azaltmaq istəyirsiniz
+- Məxfi bölmələri paylaşıla bilən bölmələrdən ayırmaq lazımdır
+
+## Gizlilik və Təhlükəsizlik
+
+PDF alətləri ilə ən vacib məsələ fayllarınızın haraya getdiyidir. Vaxtım Yoxdu-nun PDF alətləri fayllarınızı tamamilə brauzerinizdə emal edir -- server yüklənməsi yoxdur, məlumat saxlama yoxdur, gizlilik riski yoxdur.
+
+## Ən Yaxşı Təcrübələr
+
+1. **Birləşdirmədən əvvəl sıranı planlaşdırın.** Faylları nömrəli prefiks ilə adlandırın
+2. **Bölmədən əvvəl səhifə nömrələrini bilin.** PDF baxıcısının kiçik şəkil panelindən istifadə edin
+3. **Nəticəni yoxlayın.** Birləşdirilmiş və ya bölünmüş faylları açıb düzgünlüyünü təsdiqləyin
+4. **Orijinalları saxlayın.** Mənbə fayllarını heç vaxt silməyin
+
+Vaxtım Yoxdu-da pulsuz PDF Birləşdirmə və PDF Bölmə alətlərini sınayın. Hər ikisi fayllarınızı tamamilə brauzerinizdə emal edir -- yükləmə yoxdur, server emalı yoxdur, gizlilik narahatlığı yoxdur.`,
+  },
+  'complete-guide-to-qr-code-generation': {
+    title: 'QR Kod Yaratma üzrə Tam Bələdçi: 2026-cı ildə Bilməli Olduğunuz Hər Şey',
+    date: '2026-03-11',
+    relatedTools: ['qr-code-generator', 'color-picker', 'meta-tag-generator'],
+    content: `QR kodlar gündəlik həyatın daimi hissəsinə çevrilib. Yapon avtomobil sənayesində sənaye izləmə aləti kimi başlayan QR kodlar fiziki və rəqəmsal dünyalar arasında universal körpüyə çevrilib. 2026-cı ildə QR kodlar vizit kartlarında, məhsul qablaşdırmalarında, restoran menyularında, tədbirlərdən biletlərdə, daşınmaz əmlak lövhələrində və hər miqyasda marketinq kampaniyalarında görünür.
+
+## QR Kod Nədir və Necə İşləyir?
+
+QR (Quick Response -- Sürətli Cavab) kodu qara və ağ kvadratlardan ibarət ikiölçülü barkodur. Ənənəvi birölçülü barkodlardan fərqli olaraq QR kodlar matris naxışından istifadə edir ki, bu da daha çox məlumat saxlamağa və istənilən bucaqdan skanlanmağa imkan verir.
+
+**QR kodun anatomiyası:**
+- **Tapıcı naxışları**: Üç küncündəki böyük kvadratlar skanerə kodu tapmağa kömək edir
+- **Hizalama naxışları**: Şəkil pozulmasını kompensasiya edən kiçik kvadratlar
+- **Vaxt naxışları**: Modul ölçüsünü müəyyən etməyə kömək edən alternativ qara-ağ modullar
+- **Məlumat və xəta düzəltmə**: Həqiqi məlumatı və ehtiyat məlumatını kodlayan qalan modullar
+
+## QR Kodların Kodlaya Biləcəyi Məlumat Növləri
+
+- **URL-lər**: Ən çox yayılmış istifadə. Skanlandıqda telefon avtomatik olaraq URL-i brauzerdə açır
+- **Düz mətn**: 4,296 alfanumerik simvola qədər istənilən mətn
+- **E-poçt ünvanları**: mailto: linki alıcını, mövzunu əvvəlcədən doldurur
+- **Telefon nömrələri**: tel: linki ilə bir toxunuşla zəng etmək
+- **Wi-Fi etimadnamələri**: Skanlandıqda cihaz avtomatik Wi-Fi-ya qoşulur
+- **vCard kontaktları**: Ad, telefon, e-poçt, ünvan -- bir skan ilə ünvan kitabçasına əlavə edilir
+- **Coğrafi koordinatlar**: Enlem və uzunluğu kodlayır, xəritə tətbiqini açır
+- **Təqvim hadisələri**: iCalendar formatında tədbir əlavə edir
+
+## QR Kod Xəta Düzəltmə
+
+QR kodların ən vacib xüsusiyyətlərindən biri daxili xəta düzəltmədir:
+
+- **L Səviyyəsi**: 7% məlumat itkisini bərpa edir. Ən kiçik QR kod ölçüsü
+- **M Səviyyəsi**: 15% bərpa. Çox tətbiqlər üçün standart seçim
+- **Q Səviyyəsi**: 25% bərpa. Cızıla bilən məhsullardakı kodlar üçün
+- **H Səviyyəsi**: 30% bərpa. QR kodun mərkəzinə loqo yerləşdirəndə tələb olunur
+
+## Skan Olunan QR Kodlar Dizayn Etmək
+
+- **Ölçü vacibdir.** Yaxın məsafədən skan üçün ən az 2 sm x 2 sm. Uzaq məsafə üçün skan məsafəsinin 1/10-u
+- **Kontrast vacibdir.** Qara-ağ ən yaxşı işləyir. Xüsusi rənglər istifadə etsəniz güclü kontrast təmin edin
+- **Fəaliyyətə çağırış daxil edin.** "Menyu üçün skanla", "Wi-Fi üçün skanla" kimi təlimat yazın
+- **Çapdan əvvəl test edin.** Həmişə bir neçə telefonla test edin
+- **Səssiz zonasını qoruyun.** QR kodun ətrafındakı ağ haşiyə funksionaldır
+
+## Statik vs Dinamik QR Kodlar
+
+**Statik QR kodlar** məlumatı birbaşa kodda kodlayır. Çap edildikdən sonra dəyişdirilə bilməz. Sadədir və üçüncü tərəf xidməti tələb etmir.
+
+**Dinamik QR kodlar** qısa yönləndirmə URL-i kodlayır. Hədəf istənilən vaxt yenilənə bilər. Skan statistikasını izləməyə imkan verir.
+
+## Ən Yaxşı Təcrübələr
+
+1. İstifadə vəziyyətinizə uyğun məlumat növünü seçin
+2. Kodlanmış məlumatı qısa saxlayın -- qısa məlumat daha kiçik, daha asan skanlanabilən kodlar verir
+3. Uyğun xəta düzəltmə səviyyəsi təyin edin
+4. Modullar və fon arasında güclü kontrast saxlayın
+5. Nəzərdə tutulan skan məsafəsi üçün kodu uyğun ölçüdə edin
+6. Çap tətbiqləri üçün SVG formatı istifadə edin
+
+Vaxtım Yoxdu-da pulsuz QR Kod Generatorunu sınayın. Bütün məlumat növlərini dəstəkləyir, rəng fərdiləşdirmə və SVG eksportu təklif edir, hər şeyi brauzerinizdə emal edir. Su nişanı olmadan limitsiz QR kodlar yaradın.`,
+  },
 }
