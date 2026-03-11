@@ -3,6 +3,8 @@ import { Link } from '@/i18n/navigation'
 import { Zap, Newspaper, Wrench } from 'lucide-react'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
+import NewsletterHomeSection from '@/components/layout/NewsletterHomeSection'
+import MarketTicker from '@/components/market/MarketTicker'
 import { generateHreflangAlternates } from '@/lib/utils/seo'
 
 type Props = {
@@ -36,6 +38,11 @@ export default async function HomePage({ params }: Props) {
         <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
           {t('heroDescription')}
         </p>
+      </section>
+
+      {/* Market Ticker */}
+      <section className="max-w-4xl mx-auto mb-10">
+        <MarketTicker />
       </section>
 
       {/* Two columns */}
@@ -101,6 +108,9 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Newsletter */}
+      <NewsletterHomeSection />
     </div>
   )
 }

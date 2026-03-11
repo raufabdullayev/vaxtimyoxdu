@@ -25,7 +25,9 @@
     "toolsLink": "Araclara goz at",
     "statTools": "Ucretsiz Arac",
     "statRegistration": "Kayit",
-    "statAvailability": "Erisilebilirlik"
+    "statAvailability": "Erisilebilirlik",
+    "marketTitle": "Piyasa Fiyatlari",
+    "marketViewAll": "Tumunu gor"
   },
   "tools": {
     "pageTitle": "Ucretsiz Online Araclar",
@@ -332,6 +334,10 @@
       "text-truncator": {
         "name": "Metin Kisaltici",
         "description": "Metni karakter, kelime veya cumle sayisina gore kisaltin. Uc nokta konumunu ve tam kelime korumasini secin."
+      },
+      "market-tracker": {
+        "name": "Piyasa Fiyat Takipcisi",
+        "description": "Bitcoin, Ethereum, Altin ve Petrol fiyatlarini canli izleyin. 24 saatlik degisiklikleri gorun, para birimleri arasinda donusturun (USD, AZN, EUR)."
       }
     }
   },
@@ -440,5 +446,43 @@
     "breadcrumbBlog": "Blog",
     "noArticles": "Bu dilde henuz blog yazisi bulunmamaktadir.",
     "readMore": "Devamini oku"
+  },
+  "newsletterPopup": {
+    "title": "Yeniliklerden geri kalmayin!",
+    "description": "Haftalik teknoloji haberleri ve yeni araclar dogrudan e-postaniza!",
+    "placeholder": "E-posta adresiniz",
+    "subscribe": "Ucretsiz abone ol",
+    "sending": "Gonderiliyor...",
+    "success": "Basariyla abone oldunuz!",
+    "successDescription": "Tesekkurler! En son yeniliklerden ilk siz haberdar olacaksiniz.",
+    "close": "Kapat",
+    "dontShowAgain": "Bir daha gosterme",
+    "noSpam": "Spam yok, soz veriyoruz!",
+    "errorEmpty": "E-posta adresi girin.",
+    "errorInvalid": "Gecerli bir e-posta adresi girin.",
+    "errorDuplicate": "Bu e-posta zaten abone.",
+    "errorGeneral": "Bir hata olustu. Tekrar deneyin."
+  },
+  "newsletterCta": {
+    "blogTitle": "Bu yaziyi begendiniz mi?",
+    "blogDescription": "Yeni blog yazilari ve faydali araclar hakkinda bilgilendirilmek icin abone olun.",
+    "newsTitle": "Haberleri kacirmayin!",
+    "newsDescription": "En onemli haberlerin haftalik ozetini e-postaniza alin.",
+    "placeholder": "E-posta adresiniz",
+    "subscribe": "Abone ol",
+    "sending": "Gonderiliyor...",
+    "success": "Basariyla abone oldunuz!",
+    "errorEmpty": "E-posta adresi girin.",
+    "errorInvalid": "Gecerli bir e-posta adresi girin.",
+    "errorDuplicate": "Bu e-posta zaten abone.",
+    "errorGeneral": "Bir hata olustu. Tekrar deneyin."
+  },
+  "newsletterHome": {
+    "title": "Haftalik teknoloji bultenimize katilin",
+    "description": "En onemli teknoloji guncellemeleri, yeni araclar ve faydali ipuclari dogrudan e-postaniza.",
+    "bullet1": "Her hafta en onemli teknoloji haberleri",
+    "bullet2": "Yeni ucretsiz araclardan ilk siz haberdar olun",
+    "bullet3": "Zamaninizi tasarruf eden ipuclari ve oneriler",
+    "subscriberCount": "zaten abone oldu"
   }
 }

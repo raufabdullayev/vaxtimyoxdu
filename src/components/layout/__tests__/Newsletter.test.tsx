@@ -3,6 +3,28 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Newsletter from '../Newsletter'
 
+// Mock next-intl
+vi.mock('next-intl', () => ({
+  useTranslations: (namespace: string) => {
+    const translations: Record<string, Record<string, string>> = {
+      'footer.newsletter': {
+        title: 'Yeniliklərdən xəbərdar olun',
+        placeholder: 'Email ünvanınızı daxil edin',
+        subscribe: 'Abunə ol',
+        sending: 'Göndərilir...',
+        success: 'Uğurla abunə oldunuz!',
+        errorEmpty: 'Email ünvanı daxil edin.',
+        errorInvalid: 'Düzgün email ünvanı daxil edin.',
+        errorDuplicate: 'Bu email artıq abunə olub.',
+        errorGeneral: 'Xəta baş verdi. Yenidən cəhd edin.',
+        emailLabel: 'Email ünvanı',
+      },
+    }
+    return (key: string) => translations[namespace]?.[key] ?? key
+  },
+  useLocale: () => 'az',
+}))
+
 // Mock lucide-react icons
 vi.mock('lucide-react', () => ({
   Mail: ({ className, ...props }: { className?: string; [key: string]: unknown }) => (
@@ -118,7 +140,7 @@ describe('Newsletter', () => {
       expect(fetchMock).toHaveBeenCalledWith('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: 'user@example.com' }),
+        body: JSON.stringify({ email: 'user@example.com', source: 'footer', locale: 'az' }),
       })
     })
   })

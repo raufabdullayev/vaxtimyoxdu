@@ -676,6 +676,18 @@ export const tools: Tool[] = [
     isClientSide: true,
     keywords: ['text repeater', 'repeat text', 'text multiplier', 'copy paste repeat', 'duplicate text'],
   },
+  // Market Tracker
+  {
+    slug: 'market-tracker',
+    name: 'Market Price Tracker',
+    description: 'Track live prices of Bitcoin, Ethereum, Gold, and Oil. See 24-hour price changes, convert between currencies (USD, AZN, EUR), and view market summaries. Free real-time market tracker.',
+    shortDescription: 'Live crypto, gold & oil price tracker',
+    category: 'generators',
+    icon: '\uD83D\uDCC8',
+    isAI: false,
+    isClientSide: false,
+    keywords: ['market tracker', 'bitcoin price', 'crypto prices', 'gold price', 'oil price', 'market prices', 'price tracker'],
+  },
   // Phase 9 - New Tools (70 total)
   // New Generators
   {

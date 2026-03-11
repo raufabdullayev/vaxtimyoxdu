@@ -25,7 +25,9 @@
     "toolsLink": "Alətlərə bax",
     "statTools": "Pulsuz Alət",
     "statRegistration": "Qeydiyyat",
-    "statAvailability": "Əlçatanlıq"
+    "statAvailability": "Əlçatanlıq",
+    "marketTitle": "Bazar Qiymətləri",
+    "marketViewAll": "Hamısına bax"
   },
   "tools": {
     "pageTitle": "Pulsuz Onlayn Alətlər",
@@ -332,6 +334,10 @@
       "text-truncator": {
         "name": "Mətn Qısaldıcı",
         "description": "Mətni hərf, söz və ya cümlə sayı ilə qısaldın. Elips mövqeyini və bütöv söz qorunmasını seçin."
+      },
+      "market-tracker": {
+        "name": "Bazar Qiymətləri İzləyicisi",
+        "description": "Bitcoin, Ethereum, Qızıl və Neft qiymətlərini canlı izləyin. 24 saatlıq dəyişiklikləri görün, valyutalar arasında çevirin (USD, AZN, EUR)."
       }
     }
   },
@@ -440,5 +446,43 @@
     "breadcrumbBlog": "Blog",
     "noArticles": "Hazırda bu dildə blog yazısı yoxdur.",
     "readMore": "Daha çox oxu"
+  },
+  "newsletterPopup": {
+    "title": "Yeniliklərdən geri qalmayın!",
+    "description": "Həftəlik texno xəbərlər və yeni alətlər birbaşa e-poçtunuza!",
+    "placeholder": "Email ünvanınız",
+    "subscribe": "Pulsuz abunə ol",
+    "sending": "Göndərilir...",
+    "success": "Uğurla abunə oldunuz!",
+    "successDescription": "Təşəkkür edirik! Ən yeni yeniliklərdən xəbərdar olacaqsınız.",
+    "close": "Bağla",
+    "dontShowAgain": "Bir daha göstərmə",
+    "noSpam": "Spam yoxdur, söz veririk!",
+    "errorEmpty": "Email ünvanı daxil edin.",
+    "errorInvalid": "Düzgün email ünvanı daxil edin.",
+    "errorDuplicate": "Bu email artıq abunə olub.",
+    "errorGeneral": "Xəta baş verdi. Yenidən cəhd edin."
+  },
+  "newsletterCta": {
+    "blogTitle": "Bu yazı xoşunuza gəldi?",
+    "blogDescription": "Yeni blog yazıları və faydalı alətlər haqqında məlumat almaq üçün abunə olun.",
+    "newsTitle": "Xəbərlərdən geri qalmayın!",
+    "newsDescription": "Ən vacib xəbərlərin qısa xülasəsini hər həftə e-poçtunuza alın.",
+    "placeholder": "Email ünvanınız",
+    "subscribe": "Abunə ol",
+    "sending": "Göndərilir...",
+    "success": "Uğurla abunə oldunuz!",
+    "errorEmpty": "Email ünvanı daxil edin.",
+    "errorInvalid": "Düzgün email ünvanı daxil edin.",
+    "errorDuplicate": "Bu email artıq abunə olub.",
+    "errorGeneral": "Xəta baş verdi. Yenidən cəhd edin."
+  },
+  "newsletterHome": {
+    "title": "Həftəlik texno bülletenimizə qoşulun",
+    "description": "Ən vacib texnologiya yenilikləri, yeni alətlər və faydalı məsləhətlər birbaşa e-poçtunuza.",
+    "bullet1": "Hər həftə ən vacib texnologiya xəbərləri",
+    "bullet2": "Yeni pulsuz alətlər haqqında ilk xəbər",
+    "bullet3": "Vaxtınıza qənaət edən məsləhətlər və tövsiyələr",
+    "subscriberCount": "artıq abunə olub"
   }
 }

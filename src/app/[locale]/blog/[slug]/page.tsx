@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { generateBlogPostMetadata, generateBlogArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
 import { blogPosts, getBlogPostBySlug } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
 import type { Locale } from '@/i18n/config'
@@ -120,6 +121,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         </div>
       )}
+      <NewsletterInlineCTA variant="blog" />
       <LazyAdBanner slot="blog-post-bottom" format="in-article" className="mt-8" />
     </div>
   )

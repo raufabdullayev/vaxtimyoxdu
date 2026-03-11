@@ -25,7 +25,9 @@
     "toolsLink": "Smotret instrumenty",
     "statTools": "Besplatnykh instrumentov",
     "statRegistration": "Registraciya",
-    "statAvailability": "Dostupnost"
+    "statAvailability": "Dostupnost",
+    "marketTitle": "Rynochnye tseny",
+    "marketViewAll": "Smotret vse"
   },
   "tools": {
     "pageTitle": "Besplatnye Onlayn Instrumenty",
@@ -332,6 +334,10 @@
       "text-truncator": {
         "name": "Usekatel teksta",
         "description": "Usekayte tekst po simvolam, slovam ili predlozheniyam. Vyberite pozitsiyu mnogotochiya i sohranenie tselyh slov."
+      },
+      "market-tracker": {
+        "name": "Otslezhivanie rynochnykh tsen",
+        "description": "Otslezhivayte tseny Bitcoin, Ethereum, Zolota i Nefti v realnom vremeni. Smotrite 24-chasovye izmeneniya, konvertiruyte mezhdu valyutami (USD, AZN, EUR)."
       }
     }
   },
@@ -440,5 +446,43 @@
     "breadcrumbBlog": "Blog",
     "noArticles": "Zapisey v bloge na etom yazyke poka net.",
     "readMore": "Chitat dalshe"
+  },
+  "newsletterPopup": {
+    "title": "Budyte v kurse novostey!",
+    "description": "Ezhenedelnye tekh-novosti i novye instrumenty pryamo na vashu pochtu!",
+    "placeholder": "Vash email adres",
+    "subscribe": "Podpisatsya besplatno",
+    "sending": "Otpravka...",
+    "success": "Vy uspeshno podpisalis!",
+    "successDescription": "Spasibo! Vy budete pervymi uznavat o poslednikh obnovleniyakh.",
+    "close": "Zakryt",
+    "dontShowAgain": "Bolshe ne pokazyvat",
+    "noSpam": "Nikakogo spama, obeshchayem!",
+    "errorEmpty": "Vvedite adres elektronnoy pochty.",
+    "errorInvalid": "Vvedite korrektniy adres elektronnoy pochty.",
+    "errorDuplicate": "Etot email uzhe podpisan.",
+    "errorGeneral": "Proizoshla oshibka. Poprobujte snova."
+  },
+  "newsletterCta": {
+    "blogTitle": "Ponravilas statya?",
+    "blogDescription": "Podpishites, chtoby uznavat o novykh statyakh i poleznykh instrumentakh.",
+    "newsTitle": "Ne propuskayte novosti!",
+    "newsDescription": "Poluchayte ezhenedelnyye obzory samykh vazhnykh novostey na vashu pochtu.",
+    "placeholder": "Vash email adres",
+    "subscribe": "Podpisatsya",
+    "sending": "Otpravka...",
+    "success": "Vy uspeshno podpisalis!",
+    "errorEmpty": "Vvedite adres elektronnoy pochty.",
+    "errorInvalid": "Vvedite korrektniy adres elektronnoy pochty.",
+    "errorDuplicate": "Etot email uzhe podpisan.",
+    "errorGeneral": "Proizoshla oshibka. Poprobujte snova."
+  },
+  "newsletterHome": {
+    "title": "Prisoyedinyaytes k nashey ezhenedelnoy rassylke",
+    "description": "Samye vazhnye tekh-obnovleniya, novye instrumenty i poleznye sovety pryamo na vashu pochtu.",
+    "bullet1": "Ezhenedelnyy obzor samykh vazhnykh tekh-novostey",
+    "bullet2": "Uznavayte pervymi o novykh besplatnykh instrumentakh",
+    "bullet3": "Sovety i rekomendacii dlya ekonomii vremeni",
+    "subscriberCount": "uzhe podpisalis"
   }
 }

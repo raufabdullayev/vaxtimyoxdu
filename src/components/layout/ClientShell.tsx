@@ -16,6 +16,9 @@ const InstallPrompt = dynamic(() => import('@/components/layout/InstallPrompt'),
 const PageViewTracker = dynamic(() => import('@/components/analytics/PageViewTracker'), {
   ssr: false,
 })
+const NewsletterPopup = dynamic(() => import('@/components/layout/NewsletterPopup'), {
+  ssr: false,
+})
 
 export default function ClientShell() {
   return (
@@ -23,6 +26,7 @@ export default function ClientShell() {
       <CookieConsent />
       <InstallPrompt />
       <PageViewTracker />
+      <NewsletterPopup />
     </>
   )
 }

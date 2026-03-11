@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { generateArticleMetadata, generateNewsArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
 import RelatedArticles from '@/components/layout/RelatedArticles'
 import { newsArticles } from '@/data/news-articles'
 
@@ -91,6 +92,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           )
         })}
       </div>
+      <NewsletterInlineCTA variant="news" />
       <LazyAdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
       <RelatedArticles
         items={Object.entries(newsArticles)

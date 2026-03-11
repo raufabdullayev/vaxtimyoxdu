@@ -25,7 +25,9 @@
     "toolsLink": "Browse tools",
     "statTools": "Free Tools",
     "statRegistration": "Registration",
-    "statAvailability": "Availability"
+    "statAvailability": "Availability",
+    "marketTitle": "Market Prices",
+    "marketViewAll": "View all"
   },
   "tools": {
     "pageTitle": "Free Online Tools",
@@ -332,6 +334,10 @@
       "text-truncator": {
         "name": "Text Truncator",
         "description": "Truncate text by characters, words, or sentences with customizable ellipsis position and whole-word preservation."
+      },
+      "market-tracker": {
+        "name": "Market Price Tracker",
+        "description": "Track live prices of Bitcoin, Ethereum, Gold, and Oil. View 24-hour changes, convert between currencies (USD, AZN, EUR), and see market summaries."
       }
     }
   },
@@ -440,5 +446,43 @@
     "breadcrumbBlog": "Blog",
     "noArticles": "No blog posts available in this language yet.",
     "readMore": "Read more"
+  },
+  "newsletterPopup": {
+    "title": "Stay ahead of the curve!",
+    "description": "Weekly tech news and new tools delivered straight to your inbox!",
+    "placeholder": "Your email address",
+    "subscribe": "Subscribe for free",
+    "sending": "Sending...",
+    "success": "Successfully subscribed!",
+    "successDescription": "Thank you! You will be the first to know about the latest updates.",
+    "close": "Close",
+    "dontShowAgain": "Don't show again",
+    "noSpam": "No spam, we promise!",
+    "errorEmpty": "Please enter an email address.",
+    "errorInvalid": "Please enter a valid email address.",
+    "errorDuplicate": "This email is already subscribed.",
+    "errorGeneral": "An error occurred. Please try again."
+  },
+  "newsletterCta": {
+    "blogTitle": "Enjoyed this article?",
+    "blogDescription": "Subscribe to get notified about new blog posts and useful tools.",
+    "newsTitle": "Never miss the news!",
+    "newsDescription": "Get weekly summaries of the most important news delivered to your inbox.",
+    "placeholder": "Your email address",
+    "subscribe": "Subscribe",
+    "sending": "Sending...",
+    "success": "Successfully subscribed!",
+    "errorEmpty": "Please enter an email address.",
+    "errorInvalid": "Please enter a valid email address.",
+    "errorDuplicate": "This email is already subscribed.",
+    "errorGeneral": "An error occurred. Please try again."
+  },
+  "newsletterHome": {
+    "title": "Join our weekly tech newsletter",
+    "description": "The most important tech updates, new tools, and useful tips delivered straight to your inbox.",
+    "bullet1": "Weekly roundup of the most important tech news",
+    "bullet2": "Be the first to know about new free tools",
+    "bullet3": "Time-saving tips and recommendations",
+    "subscriberCount": "already subscribed"
   }
 }

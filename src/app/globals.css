@@ -89,6 +89,15 @@
   z-index: 9999;
 }
 
+/* Hide scrollbar for horizontal ticker */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Performance: prevent ad containers from causing CLS */
 .ad-container {
   contain: layout style;
