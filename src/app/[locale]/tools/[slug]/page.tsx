@@ -8,7 +8,7 @@ import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, genera
 import ToolTemplate from '@/components/tools/ToolTemplate'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import RelatedTools from '@/components/tools/RelatedTools'
-import ToolUseTracker from '@/components/analytics/ToolUseTracker'
+import ToolUseTrackerWrapper from '@/components/analytics/ToolUseTrackerWrapper'
 
 const toolComponents: Record<string, React.ComponentType> = {
   // AI Tools
@@ -190,7 +190,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       <ToolTemplate tool={tool}>
         <Component />
       </ToolTemplate>
-      <ToolUseTracker slug={tool.slug} />
+      <ToolUseTrackerWrapper slug={tool.slug} />
       <RelatedTools currentTool={tool} />
     </>
   )
