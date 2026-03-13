@@ -79,7 +79,10 @@ export function generateBaseMetadata(): Metadata {
     keywords: 'vaxtim yoxdu, xeberler, online tools, ai tools, pdf merger, image compressor, qr code generator, azerbaycan',
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     verification: {
-      google: 'g9mV18mJU1P_Pjk_zOoomjHwDU2PdQsoLN5Vli4NOz8',
+      google: [
+        'g9mV18mJU1P_Pjk_zOoomjHwDU2PdQsoLN5Vli4NOz8',
+        'DsJOuCRkCBTHzY7mkm6NTQWcnj5qNEkwB56oZruVZw0',
+      ],
     },
     openGraph: {
       title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
