@@ -1,15 +1,19 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 import { generateUnsubscribeToken, verifyUnsubscribeToken } from '@/lib/newsletter/token'
+import { createHmac } from 'crypto'
 
 const TEST_SECRET = 'test-secret-key-for-hmac-signing-1234'
 
 describe('newsletter unsubscribe token', () => {
   beforeEach(() => {
     process.env.UNSUBSCRIBE_SECRET = TEST_SECRET
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-03-14T12:00:00Z'))
   })
 
   afterEach(() => {
     delete process.env.UNSUBSCRIBE_SECRET
+    vi.useRealTimers()
   })
 
   describe('generateUnsubscribeToken', () => {
@@ -22,10 +26,21 @@ describe('newsletter unsubscribe token', () => {
       expect(parts[1].length).toBeGreaterThan(0)
     })
 
-    it('generates deterministic tokens for the same email', () => {
+    it('embeds timestamp in the payload', () => {
+      const token = generateUnsubscribeToken('user@example.com')
+      const [payload] = token.split('.')
+      const decoded = Buffer.from(payload, 'base64url').toString('utf-8')
+      expect(decoded).toContain(':')
+      const lastColon = decoded.lastIndexOf(':')
+      const timestamp = Number(decoded.slice(lastColon + 1))
+      expect(timestamp).toBe(Date.now())
+    })
+
+    it('generates different tokens at different times', () => {
       const t1 = generateUnsubscribeToken('user@example.com')
+      vi.advanceTimersByTime(1000)
       const t2 = generateUnsubscribeToken('user@example.com')
-      expect(t1).toBe(t2)
+      expect(t1).not.toBe(t2)
     })
 
     it('generates different tokens for different emails', () => {
@@ -36,8 +51,8 @@ describe('newsletter unsubscribe token', () => {
 
     it('normalizes email to lowercase', () => {
       const t1 = generateUnsubscribeToken('User@Example.COM')
-      const t2 = generateUnsubscribeToken('user@example.com')
-      expect(t1).toBe(t2)
+      const email = verifyUnsubscribeToken(t1)
+      expect(email).toBe('user@example.com')
     })
 
     it('throws if UNSUBSCRIBE_SECRET is not set', () => {
@@ -55,10 +70,28 @@ describe('newsletter unsubscribe token', () => {
       expect(email).toBe('user@example.com')
     })
 
+    it('accepts a token within the 30-day window', () => {
+      const token = generateUnsubscribeToken('user@example.com')
+      vi.advanceTimersByTime(29 * 24 * 60 * 60 * 1000) // 29 days
+      expect(verifyUnsubscribeToken(token)).toBe('user@example.com')
+    })
+
+    it('rejects an expired token (>30 days)', () => {
+      const token = generateUnsubscribeToken('user@example.com')
+      vi.advanceTimersByTime(31 * 24 * 60 * 60 * 1000) // 31 days
+      expect(verifyUnsubscribeToken(token)).toBeNull()
+    })
+
+    it('rejects a token at exactly 30 days + 1ms', () => {
+      const token = generateUnsubscribeToken('user@example.com')
+      vi.advanceTimersByTime(30 * 24 * 60 * 60 * 1000 + 1) // 30 days + 1ms
+      expect(verifyUnsubscribeToken(token)).toBeNull()
+    })
+
     it('returns null for a token with tampered payload', () => {
       const token = generateUnsubscribeToken('user@example.com')
       const [, sig] = token.split('.')
-      const tamperedPayload = Buffer.from('attacker@evil.com').toString('base64url')
+      const tamperedPayload = Buffer.from(`attacker@evil.com:${Date.now()}`).toString('base64url')
       expect(verifyUnsubscribeToken(`${tamperedPayload}.${sig}`)).toBeNull()
     })
 
@@ -91,14 +124,18 @@ describe('newsletter unsubscribe token', () => {
     })
 
     it('returns null for a plain base64url email (old-style insecure token)', () => {
-      // An attacker crafting a base64url-encoded email should be rejected
       const fakeToken = Buffer.from('victim@example.com').toString('base64url')
       expect(verifyUnsubscribeToken(fakeToken)).toBeNull()
     })
 
+    it('returns null if decoded payload has no timestamp', () => {
+      const payload = Buffer.from('user@example.com').toString('base64url')
+      const sig = createHmac('sha256', TEST_SECRET).update(payload).digest('base64url')
+      expect(verifyUnsubscribeToken(`${payload}.${sig}`)).toBeNull()
+    })
+
     it('returns null if decoded payload is not an email', () => {
-      const payload = Buffer.from('not-an-email').toString('base64url')
-      const { createHmac } = require('crypto')
+      const payload = Buffer.from(`not-an-email:${Date.now()}`).toString('base64url')
       const sig = createHmac('sha256', TEST_SECRET).update(payload).digest('base64url')
       expect(verifyUnsubscribeToken(`${payload}.${sig}`)).toBeNull()
     })
@@ -107,6 +144,18 @@ describe('newsletter unsubscribe token', () => {
       const token = generateUnsubscribeToken('user@example.com')
       process.env.UNSUBSCRIBE_SECRET = 'different-secret'
       expect(verifyUnsubscribeToken(token)).toBeNull()
+    })
+
+    it('rejects a token with invalid timestamp', () => {
+      const payload = Buffer.from('user@example.com:notanumber').toString('base64url')
+      const sig = createHmac('sha256', TEST_SECRET).update(payload).digest('base64url')
+      expect(verifyUnsubscribeToken(`${payload}.${sig}`)).toBeNull()
+    })
+
+    it('rejects a token with negative timestamp', () => {
+      const payload = Buffer.from('user@example.com:-1').toString('base64url')
+      const sig = createHmac('sha256', TEST_SECRET).update(payload).digest('base64url')
+      expect(verifyUnsubscribeToken(`${payload}.${sig}`)).toBeNull()
     })
   })
 })
