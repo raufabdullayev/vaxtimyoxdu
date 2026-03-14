@@ -1,0 +1,37 @@
+import { Tool } from '@/types/tool'
+
+export const pdfTools: Tool[] = [
+  {
+    slug: 'pdf-merge',
+    name: 'PDF Merge',
+    description: 'Merge multiple PDF files into one document online. Rearrange pages, combine PDFs in any order. Free client-side PDF merger - your files never leave your browser.',
+    shortDescription: 'Combine multiple PDFs into one',
+    category: 'pdf',
+    icon: '\uD83D\uDCD1',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['pdf merge', 'combine pdf', 'join pdf', 'pdf combiner'],
+  },
+  {
+    slug: 'pdf-split',
+    name: 'PDF Page Splitter',
+    description: 'Extract specific pages from a PDF file online. Select page ranges to split and download. Free client-side PDF splitter - your files never leave your browser.',
+    shortDescription: 'Extract specific pages from a PDF',
+    category: 'pdf',
+    icon: '\u2702\uFE0F',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['pdf split', 'pdf extract pages', 'pdf page splitter', 'split pdf'],
+  },
+  {
+    slug: 'pdf-compress',
+    name: 'PDF Compressor',
+    description: 'Reduce PDF file size online. Remove metadata and optimize structure to compress PDFs. Free client-side PDF compressor - your files never leave your browser.',
+    shortDescription: 'Reduce PDF file size',
+    category: 'pdf',
+    icon: '\uD83D\uDCE6',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['pdf compress', 'reduce pdf size', 'pdf compressor', 'shrink pdf'],
+  },
+]
