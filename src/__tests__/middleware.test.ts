@@ -222,6 +222,47 @@ describe('middleware - disallowed origins', () => {
     const res = middleware(req)
     expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull()
   })
+
+  it('should reject origin that is a prefix match bypass (e.g. vaxtimyoxdu.com.evil.com)', () => {
+    const req = createRequest('/api/newsletter', { origin: 'https://vaxtimyoxdu.com.evil.com' })
+    const res = middleware(req)
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull()
+  })
+
+  it('should reject origin with allowed domain as subdomain of attacker', () => {
+    const req = createRequest('/api/newsletter', { origin: 'https://www.vaxtimyoxdu.com.attacker.net' })
+    const res = middleware(req)
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull()
+  })
+})
+
+// ---------------------------------------------------------------------------
+// CORS bypass prevention for CSRF (production)
+// ---------------------------------------------------------------------------
+describe('middleware - CORS bypass prevention (production)', () => {
+  const originalEnv = process.env.NODE_ENV
+
+  beforeEach(() => {
+    // @ts-expect-error NODE_ENV assignment for testing
+    process.env.NODE_ENV = 'production'
+  })
+
+  afterEach(() => {
+    // @ts-expect-error NODE_ENV assignment for testing
+    process.env.NODE_ENV = originalEnv
+  })
+
+  it('should reject POST with prefix-bypass origin (vaxtimyoxdu.com.evil.com)', () => {
+    const req = createRequest('/api/newsletter', { method: 'POST', origin: 'https://vaxtimyoxdu.com.evil.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(403)
+  })
+
+  it('should reject POST with prefix-bypass referer', () => {
+    const req = createRequest('/api/newsletter', { method: 'POST', referer: 'https://vaxtimyoxdu.com.evil.com/page' })
+    const res = middleware(req)
+    expect(res.status).toBe(403)
+  })
 })
 
 // ---------------------------------------------------------------------------

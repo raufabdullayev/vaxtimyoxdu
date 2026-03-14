@@ -29,11 +29,11 @@
     "faqs": [
       {
         "question": "What is a JSON Formatter and why do I need one?",
-        "answer": "A JSON Formatter is a tool that takes raw, minified, or poorly structured JSON data and transforms it into a well-organized, human-readable format with proper indentation. Developers need JSON formatters daily when working with API responses, debugging data structures, reviewing configuration files, and preparing documentation. Without formatting, complex nested JSON objects appear as a single long line that is nearly impossible to read and debug."
+        "answer": "A JSON Formatter transforms raw or minified JSON data into a well-organized, human-readable format with proper indentation. Developers need JSON formatters daily when working with API responses, debugging data structures, and reviewing configuration files. Without formatting, complex nested JSON objects appear as a single unreadable line."
       },
       {
         "question": "Is my JSON data safe when using this online formatter?",
-        "answer": "Yes, your data is completely safe. This JSON formatter runs entirely in your browser using client-side JavaScript. Your JSON data is never sent to any server, never stored in any database, and never logged anywhere. The processing happens locally on your device, which means even sensitive data like API keys, credentials, and private configuration can be formatted without any privacy concerns."
+        "answer": "Yes, completely safe. This JSON formatter runs entirely in your browser using client-side JavaScript. Your data is never sent to any server, stored, or logged. Processing happens locally on your device, so even sensitive data like API keys and credentials can be formatted without privacy concerns."
       },
       {
         "question": "What is the difference between JSON formatting and JSON minification?",
@@ -49,7 +49,7 @@
       },
       {
         "question": "Can I use this JSON formatter for large files?",
-        "answer": "Yes, the formatter handles large JSON files efficiently because it processes everything in your browser. For optimal performance with very large files (several megabytes), we recommend using a modern browser like Chrome or Firefox and ensuring your device has sufficient memory. The tool can format files up to several MB without issues, though extremely large datasets may benefit from being processed in smaller chunks."
+        "answer": "Yes, the formatter handles large JSON files efficiently since it processes everything in your browser. For files over several megabytes, use a modern browser like Chrome or Firefox with sufficient device memory. The tool formats files up to several MB without issues."
       },
       {
         "question": "Does this tool support JSON5 or JSONC (JSON with comments)?",
@@ -80,10 +80,10 @@
     "faqs": [
       {
         "question": "How much can I reduce image file size without losing quality?",
-        "answer": "For JPEG images, you can typically reduce file size by 60-80% with minimal visible quality loss by using a quality setting between 70-85%. The exact savings depend on the image content: photographs with many details retain quality well at lower settings, while images with text or sharp edges may need higher quality settings. PNG images can often be reduced by 30-50% through lossless optimization without any quality loss."
+        "answer": "For JPEG images, you can typically reduce file size by 60-80% with minimal visible quality loss using a quality setting of 70-85%. The exact savings depend on image content: photographs retain quality well at lower settings, while images with text or sharp edges may need higher quality. PNG images can be reduced 30-50% through lossless optimization."
       },
       {
-        "question": "Are my images uploaded to a server when I compress them?",
+        "question": "Is my image data safe when using this online compressor?",
         "answer": "No, all image compression happens entirely in your browser using client-side JavaScript and the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for personal photos, sensitive documents, and confidential business images."
       },
       {
@@ -128,10 +128,10 @@
     "faqs": [
       {
         "question": "How do I merge PDF files online for free?",
-        "answer": "Simply drag and drop your PDF files into the upload area, arrange them in your desired order by dragging the file cards, and click the Merge button. The tool combines all your PDFs into a single document that you can download instantly. No registration, no file size limits, and no watermarks. The entire process runs in your browser, keeping your files private and secure."
+        "answer": "Drag and drop your PDF files into the upload area, arrange them in your desired order, and click the Merge button. The tool combines all PDFs into a single downloadable document instantly. No registration, no file size limits, and no watermarks. The entire process runs in your browser for complete privacy."
       },
       {
-        "question": "Are my PDF files uploaded to a server?",
+        "question": "Is it safe to merge PDF files using this online tool?",
         "answer": "No. This PDF merger processes everything directly in your web browser using client-side JavaScript libraries. Your files never leave your computer, are never uploaded to any server, and are never stored in any cloud storage. This makes it safe for confidential documents including contracts, financial records, legal papers, and personal information."
       },
       {
@@ -185,7 +185,7 @@
       },
       {
         "question": "What is QR code error correction and which level should I choose?",
-        "answer": "Error correction allows a QR code to remain scannable even when partially damaged or obscured. There are four levels: Low (7% recovery), Medium (15% recovery), Quartile (25% recovery), and High (30% recovery). Use Medium for most purposes. Choose High when printing on materials that may get scratched, folded, or stained. Low is sufficient for clean digital displays where damage is unlikely."
+        "answer": "Error correction allows a QR code to remain scannable even when partially damaged. There are four levels: Low (7% recovery), Medium (15%), Quartile (25%), and High (30%). Use Medium for most purposes, High for printed materials that may get scratched or stained, and Low for clean digital displays."
       },
       {
         "question": "What is the difference between PNG and SVG QR code formats?",
@@ -197,7 +197,7 @@
       },
       {
         "question": "Do QR codes expire?",
-        "answer": "Static QR codes like the ones generated by this tool never expire. The data is encoded directly into the code pattern and remains readable indefinitely, as long as the physical code is not damaged beyond its error correction capability. However, if the QR code links to a URL, the content at that URL may change or become unavailable independently of the QR code itself."
+        "answer": "Static QR codes generated by this tool never expire. The data is encoded directly into the code pattern and remains readable indefinitely, as long as the physical code is not damaged beyond its error correction capability. However, if the QR code links to a URL, that URL's content may change independently."
       },
       {
         "question": "Can I customize the colors of my QR code?",
@@ -241,20 +241,20 @@
         "answer": "A strong password has three key properties: sufficient length (at least 12 characters), high character diversity (uppercase, lowercase, numbers, and symbols), and true randomness (no dictionary words, patterns, or personal information). The combination of these factors creates high entropy, making the password resistant to both brute force attacks and dictionary attacks."
       },
       {
-        "question": "Should I use special characters in my password?",
-        "answer": "Including special characters increases password strength by expanding the character set from 62 (letters + numbers) to 90+ possible characters per position. However, length matters more than complexity. A 20-character password with only lowercase letters (26^20 combinations) is actually stronger than a 10-character password with all character types (90^10 combinations). Use special characters when possible, but prioritize length."
+        "question": "Do special characters make passwords stronger?",
+        "answer": "Yes, special characters expand the character set from 62 to 90+ possibilities per position. However, length matters more than complexity. A 20-character lowercase-only password is stronger than a 10-character password with all character types. Use special characters when possible, but always prioritize length."
       },
       {
         "question": "How often should I change my passwords?",
         "answer": "The latest guidance from NIST (National Institute of Standards and Technology) actually recommends against mandatory periodic password changes. Instead, change your password only when there is evidence of a compromise, such as a data breach notification, suspicious account activity, or if you shared the password. Using unique, strong passwords with two-factor authentication is more effective than frequent rotation."
       },
       {
-        "question": "Why should I not use the same password on multiple sites?",
-        "answer": "Credential stuffing is one of the most common attack methods: hackers take username/password combinations from one breached service and automatically try them on thousands of other websites. If you use the same password for your email and a shopping site, and the shopping site gets breached, attackers can access your email and potentially reset passwords for your banking and other critical accounts."
+        "question": "Is it dangerous to reuse the same password on multiple sites?",
+        "answer": "Yes, very dangerous. Credential stuffing attacks take leaked passwords from one breached service and automatically try them on thousands of other websites. If your shopping site password is the same as your email, a single breach gives attackers access to your email and potentially your banking accounts."
       },
       {
         "question": "Is a passphrase better than a random password?",
-        "answer": "Passphrases (like 'correct-horse-battery-staple') are easier to remember but need to be longer than random passwords to achieve equivalent security. A truly random 16-character password has more entropy than a typical 4-word passphrase. Both approaches are valid: use a random password with a password manager, or use a long passphrase (6+ random words) for passwords you must memorize, like your password manager's master password."
+        "answer": "Passphrases are easier to remember but need to be longer for equivalent security. A random 16-character password has more entropy than a typical 4-word passphrase. Both approaches are valid: use random passwords with a password manager, or use long passphrases (6+ random words) for passwords you must memorize."
       }
     ]
   },
@@ -281,7 +281,7 @@
     "faqs": [
       {
         "question": "What is the difference between HEX, RGB, and HSL color formats?",
-        "answer": "HEX uses a six-digit hexadecimal code (#FF5733) commonly used in CSS and web design. RGB defines colors using Red, Green, and Blue channel values from 0-255 (rgb(255, 87, 51)), matching how screens display colors. HSL uses Hue (0-360 degrees), Saturation (0-100%), and Lightness (0-100%), which is the most intuitive format for humans since you can easily adjust brightness and vividness independently."
+        "answer": "HEX uses a six-digit hexadecimal code (#FF5733) common in CSS. RGB defines colors using Red, Green, Blue values from 0-255, matching how screens display colors. HSL uses Hue (0-360), Saturation (0-100%), and Lightness (0-100%), making it the most intuitive format for adjusting brightness and vividness."
       },
       {
         "question": "How do I find the perfect color for my website?",
@@ -289,7 +289,7 @@
       },
       {
         "question": "What is a color palette and why do I need one?",
-        "answer": "A color palette is a curated set of colors that work harmoniously together in a design. Having a defined palette ensures visual consistency across your website, app, or marketing materials. Most effective palettes include a primary color, a secondary color, an accent color, and neutral tones for backgrounds and text. Using a palette prevents the visual chaos that comes from picking colors randomly."
+        "answer": "A color palette is a curated set of colors that work harmoniously together in a design. It ensures visual consistency across your website, app, or marketing materials. Effective palettes include a primary color, secondary color, accent color, and neutral tones. Using a palette prevents visual chaos from picking colors randomly."
       },
       {
         "question": "Can I use this tool to check color accessibility?",
@@ -328,23 +328,23 @@
     "faqs": [
       {
         "question": "What is Base64 encoding and when do I need it?",
-        "answer": "Base64 is a binary-to-text encoding scheme that converts binary data into a string of ASCII characters using a 64-character alphabet (A-Z, a-z, 0-9, +, and /). You need it when transmitting binary data through text-only channels (like JSON APIs or XML), embedding images in HTML/CSS, working with email attachments (MIME encoding), handling authentication tokens, and storing binary data in text-based databases or configuration files."
+        "answer": "Base64 is a binary-to-text encoding scheme that converts data into ASCII characters using a 64-character alphabet. You need it when transmitting binary data through text-only channels (JSON APIs, XML), embedding images in HTML/CSS, working with email attachments (MIME), handling authentication tokens, and storing binary data in text-based systems."
       },
       {
         "question": "Is Base64 encoding the same as encryption?",
         "answer": "No, Base64 encoding is absolutely not encryption. It is a reversible, standardized encoding method that anyone can decode without any key or password. Its purpose is data transformation for compatibility, not security. Never use Base64 to protect sensitive information. For actual data protection, use proper encryption methods like AES-256, RSA, or established encryption libraries."
       },
       {
-        "question": "Why is Base64-encoded data larger than the original?",
-        "answer": "Base64 converts every 3 bytes of original data into 4 ASCII characters, resulting in approximately 33% size increase. This overhead occurs because Base64 uses only 64 characters (6 bits per character) to represent 8-bit binary data. Additionally, padding characters (=) may be added to make the output length a multiple of 4. This size increase is the trade-off for safe transmission through text-only systems."
+        "question": "Does Base64 encoding increase data size?",
+        "answer": "Yes, Base64 converts every 3 bytes into 4 ASCII characters, resulting in approximately 33% size increase. This occurs because Base64 uses 64 characters (6 bits each) to represent 8-bit binary data. Padding characters (=) may also be added. This size increase is the trade-off for safe transmission through text-only systems."
       },
       {
         "question": "Can I encode files to Base64 with this tool?",
         "answer": "This tool is optimized for text-to-Base64 encoding. For encoding files (images, PDFs, documents) to Base64, you can use our Image to Base64 tool for image files. Text content from any file can be pasted directly into this tool for encoding. The tool correctly handles UTF-8 encoded text including international characters and special symbols."
       },
       {
-        "question": "How do I decode a Base64 string I received from an API?",
-        "answer": "Paste the Base64 string into the input field and click Decode. The tool automatically handles standard Base64 encoding as well as URL-safe Base64 variants (where + is replaced with - and / with _). If the decoded output appears garbled, the original data may be binary (like an image) rather than text, or it may use a different character encoding than UTF-8."
+        "question": "How do I decode a Base64 string from an API?",
+        "answer": "Paste the Base64 string into the input field and click Decode. The tool handles both standard Base64 and URL-safe variants (where + is replaced with - and / with _). If the decoded output appears garbled, the original data may be binary rather than text, or it may use a different character encoding."
       },
       {
         "question": "Is my data safe when using this online Base64 encoder?",
@@ -422,10 +422,10 @@
     "faqs": [
       {
         "question": "What is Lorem Ipsum and where does it come from?",
-        "answer": "Lorem ipsum is placeholder text derived from a work by the Roman philosopher Cicero written in 45 BC ('De Finibus Bonorum et Malorum'). The text was scrambled and adapted for use as typographic filler in the 1960s by the Letraset company, and later by digital typesetting software like Aldus PageMaker. It has remained the industry standard for over 500 years because its Latin-like appearance mimics natural text distribution without being readable."
+        "answer": "Lorem ipsum is placeholder text derived from a work by the Roman philosopher Cicero (45 BC). It was adapted for typographic use in the 1960s by Letraset and later by digital tools like Aldus PageMaker. It remains the industry standard because its Latin-like appearance mimics natural text distribution without being readable."
       },
       {
-        "question": "Why use Lorem Ipsum instead of real text for design mockups?",
+        "question": "What is the advantage of Lorem Ipsum over real text in mockups?",
         "answer": "Lorem ipsum prevents stakeholders and reviewers from reading and responding to the content instead of evaluating the visual design. When real, readable text is used in mockups, people naturally focus on the words rather than the layout, typography, spacing, and overall visual hierarchy. Lorem ipsum looks like real text from a distance but does not distract readers with meaning."
       },
       {
@@ -469,19 +469,19 @@
     "faqs": [
       {
         "question": "What is a UUID and why is it used?",
-        "answer": "A UUID (Universally Unique Identifier) is a 128-bit identifier formatted as 32 hexadecimal digits in five groups separated by hyphens (e.g., 550e8400-e29b-41d4-a716-446655440000). UUIDs are used as unique identifiers in software systems because they can be generated independently on any machine without coordination while maintaining an extremely low probability of duplication. They are commonly used as database primary keys, session tokens, file names, API request identifiers, and distributed system correlation IDs."
+        "answer": "A UUID (Universally Unique Identifier) is a 128-bit identifier formatted as 32 hexadecimal digits in five groups separated by hyphens. UUIDs can be generated independently on any machine without coordination while maintaining extremely low duplication probability. They are commonly used as database primary keys, session tokens, API identifiers, and distributed system correlation IDs."
       },
       {
         "question": "What is the difference between UUID v4 and other UUID versions?",
-        "answer": "UUID v4 uses random numbers for all fields (except the version and variant bits), making it the most common version for general use. UUID v1 includes a timestamp and MAC address (potentially revealing device info). UUID v3 and v5 are generated from a namespace and name using MD5 or SHA-1 hashing. UUID v7 (newer) uses a Unix timestamp prefix for time-ordered generation, which improves database index performance while maintaining uniqueness."
+        "answer": "UUID v4 uses random numbers for all fields except version and variant bits, making it the most common version. UUID v1 includes a timestamp and MAC address. UUID v3 and v5 use namespace-based hashing. UUID v7 uses a Unix timestamp prefix for time-ordered generation, improving database index performance while maintaining uniqueness."
       },
       {
         "question": "Can two UUIDs ever be the same?",
-        "answer": "Theoretically possible but practically impossible. UUID v4 has 122 random bits, yielding approximately 5.3 x 10^36 possible values. To have a 50% chance of one collision, you would need to generate about 2.7 x 10^18 (2.7 quintillion) UUIDs. Even generating one billion UUIDs per second for 85 years would not reach that threshold. For all practical purposes, UUID v4 collisions will never occur."
+        "answer": "Theoretically possible but practically impossible. UUID v4 has 122 random bits, yielding approximately 5.3 x 10^36 possible values. To reach a 50% collision probability, you would need to generate about 2.7 quintillion UUIDs. Even generating one billion per second for 85 years would not reach that threshold."
       },
       {
-        "question": "Should I use UUIDs or sequential IDs for my database?",
-        "answer": "Both have advantages. Sequential IDs are smaller (4-8 bytes vs 16 bytes), better for index performance, and simpler to debug. UUIDs are better for distributed systems, prevent ID enumeration, enable data merging, and can be generated anywhere without database access. Use UUIDs when you need distributed generation, data privacy, or multi-source data merging. Use sequential IDs for simple applications where performance and simplicity are priorities."
+        "question": "What are the advantages of UUIDs over sequential IDs?",
+        "answer": "UUIDs excel in distributed systems, prevent ID enumeration attacks, enable data merging from multiple sources, and can be generated anywhere without database access. Sequential IDs are smaller (4-8 bytes vs 16 bytes) and better for index performance. Choose UUIDs for distributed generation and data privacy; sequential IDs for simpler applications."
       },
       {
         "question": "Is this UUID generator cryptographically secure?",
@@ -489,7 +489,7 @@
       },
       {
         "question": "How do I use the generated UUIDs in my code?",
-        "answer": "Copy the UUID from the tool and use it as a string literal in your code. In most programming languages, UUIDs are stored as strings or specialized UUID types. For example, in PostgreSQL use the uuid data type, in Python use the uuid module, in Java use java.util.UUID, and in JavaScript you can use the string directly. When accepting UUIDs as input, always validate the format using a regex pattern."
+        "answer": "Copy the UUID and use it as a string literal. In PostgreSQL use the uuid data type, in Python use the uuid module, in Java use java.util.UUID, and in JavaScript use the string directly. When accepting UUIDs as input, always validate the format using a regex pattern."
       }
     ]
   },
@@ -621,7 +621,7 @@
         "answer": "Typical savings range from 10-30% depending on the original code's formatting. HTML with many comments, generous indentation, and extensive whitespace will see larger reductions. Already compact HTML may see only 5-10% savings. When combined with Gzip or Brotli server compression, the total reduction from the original uncompressed size can be 70-90%."
       },
       {
-        "question": "Should I minify HTML for production websites?",
+        "question": "Is HTML minification recommended for production websites?",
         "answer": "Yes, minifying HTML is a recommended best practice for production websites. It reduces bandwidth usage, improves page load times, and contributes to better performance scores on tools like Google PageSpeed Insights. Most modern build tools (webpack, Vite, Next.js) include HTML minification as part of their production build process."
       },
       {
@@ -668,7 +668,7 @@
         "answer": "Typical CSS minification achieves 15-30% file size reduction, depending on the original code's formatting and comment density. Heavily commented CSS with generous whitespace can see up to 40% reduction. When combined with server-side Gzip or Brotli compression, total network transfer savings typically reach 80-90% of the original file size."
       },
       {
-        "question": "Should I minify CSS that is already processed by a build tool?",
+        "question": "Does CSS need minification if a build tool already processes it?",
         "answer": "Most modern build tools (webpack, Vite, Parcel, Next.js) include CSS minification in their production build process. If your build pipeline already minifies CSS, running it through this tool again will have minimal additional effect. This tool is most useful for standalone CSS files, quick one-off minification, or beautifying already-minified CSS for debugging."
       },
       {
@@ -719,7 +719,7 @@
         "answer": "The Web Speech API used by this tool provides real-time speech synthesis but does not natively support saving the output as an audio file. The speech is generated and played directly by your browser's speech engine. For creating audio files from text, you would need a dedicated text-to-speech service that provides audio file downloads."
       },
       {
-        "question": "Why do some voices sound better than others?",
+        "question": "What determines text-to-speech voice quality?",
         "answer": "Voice quality depends on the speech synthesis technology. Neural (AI-based) voices sound significantly more natural than traditional concatenative or formant-based voices. Premium voices available on macOS, iOS, and newer Windows versions use neural networks for more natural intonation, rhythm, and pronunciation. System voices also improve over time through operating system updates."
       },
       {
@@ -797,7 +797,7 @@
     ],
     "faqs": [
       {
-        "question": "Which image format should I use for my website?",
+        "question": "What is the best image format for website use?",
         "answer": "For photographs and complex images, use WebP (with JPEG fallback) for the best compression. For images requiring transparency (logos, icons), use WebP or PNG. For universal compatibility with older systems, use JPEG for photos and PNG for graphics. Modern best practice is to serve WebP with picture element fallbacks for maximum compatibility and performance."
       },
       {
@@ -813,11 +813,11 @@
         "answer": "This tool is optimized for static image conversion between JPEG, PNG, and WebP formats. Animated GIF conversion requires special handling to preserve frame timing and animation data. For animated content, consider our Video to GIF tool or specialized animation converters."
       },
       {
-        "question": "Why is my PNG file so much larger than the JPEG version?",
+        "question": "What causes PNG files to be larger than JPEG files?",
         "answer": "PNG uses lossless compression, meaning every pixel is preserved exactly. JPEG uses lossy compression that discards visual information the human eye is unlikely to notice. For photographic images, this difference can be 5-10x in file size. PNG excels at compressing images with large areas of solid color, text, and sharp edges, but is inefficient for photographs."
       },
       {
-        "question": "Are my images uploaded to a server during conversion?",
+        "question": "Is it safe to convert images using this online tool?",
         "answer": "No. All image conversion processing happens entirely in your browser using the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for private photos, confidential product images, and any other sensitive visual content."
       }
     ]
@@ -846,11 +846,11 @@
     "faqs": [
       {
         "question": "What is a regular expression (regex)?",
-        "answer": "A regular expression (regex) is a sequence of characters that defines a search pattern used for matching, finding, and manipulating text. Regex is used in virtually every programming language and many text editors for tasks like input validation (email, phone numbers), search and replace operations, data extraction from text, log file parsing, and text formatting. Learning regex is an essential skill for developers, data analysts, and system administrators."
+        "answer": "A regular expression (regex) is a character sequence that defines a search pattern for matching and manipulating text. Regex is used in virtually every programming language for input validation, search and replace, data extraction, log file parsing, and text formatting. It is an essential skill for developers and system administrators."
       },
       {
-        "question": "Which regex flags should I use?",
-        "answer": "The most common flag is 'g' (global) which finds all matches instead of stopping at the first one. Use 'i' (case insensitive) when you want to match regardless of letter case. Use 'm' (multiline) when you want ^ and $ to match the start and end of each line rather than the entire string. The 's' (dotAll) flag makes the dot character match newlines. Use 'u' (Unicode) for proper handling of Unicode characters and emoji."
+        "question": "What do the different regex flags mean?",
+        "answer": "The 'g' (global) flag finds all matches instead of stopping at the first. The 'i' flag enables case-insensitive matching. The 'm' (multiline) flag makes ^ and $ match line boundaries. The 's' (dotAll) flag makes dot match newlines. The 'u' (Unicode) flag enables proper handling of Unicode characters and emoji."
       },
       {
         "question": "How do I match an email address with regex?",
@@ -870,7 +870,7 @@
       },
       {
         "question": "How do I use capturing groups in regex?",
-        "answer": "Capturing groups are created by wrapping part of your pattern in parentheses. For example, (\\d{3})-(\\d{4}) matches a phone format and captures the two number groups separately. Named groups use (?<name>...) syntax for clarity. Access captured groups by their index (group 1, 2, etc.) or by name in your code. Non-capturing groups (?:...) group without capturing when you need grouping but not the matched text."
+        "answer": "Capturing groups are created by wrapping part of your pattern in parentheses. For example, (\\d{3})-(\\d{4}) captures two number groups separately. Named groups use (?<name>...) syntax for clarity. Access captures by index or name in your code. Non-capturing groups (?:...) group without capturing."
       }
     ]
   },
@@ -897,27 +897,27 @@
     "faqs": [
       {
         "question": "What is a hash function and what is it used for?",
-        "answer": "A hash function takes any input data and produces a fixed-size output (the hash or digest) that uniquely represents that input. Hash functions are used for password storage (storing hashes instead of plaintext passwords), data integrity verification (detecting file modifications), digital signatures, authentication tokens, blockchain technology, and content-addressable storage. A good hash function is deterministic (same input always produces same output), fast to compute, and practically impossible to reverse."
+        "answer": "A hash function takes any input data and produces a fixed-size output (the hash) that uniquely represents that input. Hash functions are used for password storage, data integrity verification, digital signatures, authentication tokens, and blockchain technology. A good hash function is deterministic, fast to compute, and practically impossible to reverse."
       },
       {
-        "question": "Which hash algorithm should I use?",
-        "answer": "For most purposes, SHA-256 provides an excellent balance of security and performance. It produces a 256-bit (64-character hex) hash that is secure against all known attacks. Use SHA-512 when you need extra security margin or when working with systems that require it. Avoid SHA-1 for security-sensitive applications as practical collision attacks exist. For password hashing specifically, use dedicated algorithms like bcrypt, scrypt, or Argon2 instead of SHA functions."
+        "question": "What hash algorithm is best for my use case?",
+        "answer": "SHA-256 is recommended for most purposes -- it produces a 256-bit hash secure against all known attacks. Use SHA-512 for extra security margin. Avoid SHA-1 for security-sensitive applications as practical collision attacks exist. For password hashing specifically, use bcrypt, scrypt, or Argon2 instead of SHA functions."
       },
       {
         "question": "Can I reverse a hash to get the original text?",
-        "answer": "No. Cryptographic hash functions are designed to be one-way functions. It is computationally infeasible to determine the original input from a hash output. This property is what makes hashing useful for password storage and data integrity verification. While rainbow tables and brute force attacks can find inputs that produce a given hash for short/common strings, this does not constitute reversing the function."
+        "answer": "No. Cryptographic hash functions are designed to be one-way. It is computationally infeasible to determine the original input from a hash output. This property makes hashing useful for password storage and data integrity verification. While rainbow tables can find inputs matching a hash for short strings, this does not constitute reversing the function."
       },
       {
         "question": "What is the difference between hashing and encryption?",
-        "answer": "Hashing is a one-way process: data goes in, a fixed-size hash comes out, and you cannot get the original data back. Encryption is a two-way process: data is encrypted with a key, and can be decrypted back to the original using the correct key. Use hashing when you need to verify data without needing the original (like passwords). Use encryption when you need to protect data that must be recovered later (like stored documents)."
+        "answer": "Hashing is one-way: data goes in, a fixed-size hash comes out, and the original cannot be recovered. Encryption is two-way: data is encrypted with a key and can be decrypted back. Use hashing to verify data without needing the original (like passwords). Use encryption to protect data that must be recovered later."
       },
       {
         "question": "Is my text safe when generating hashes online?",
         "answer": "Yes. All hash computation in this tool happens entirely in your browser using the Web Crypto API. The text you input is never sent to any server, never transmitted over the network, and never stored anywhere. This makes the tool safe for generating hashes of sensitive data including passwords, API keys, and confidential content."
       },
       {
-        "question": "Why does changing one character completely change the hash?",
-        "answer": "This property is called the avalanche effect, and it is a crucial feature of good hash functions. Even a single bit change in the input produces a drastically different hash output. This ensures that similar inputs do not produce similar hashes, making it impossible to deduce information about the input by analyzing the hash. It also means you cannot predict how a change to the input will affect the hash output."
+        "question": "What is the avalanche effect in hash functions?",
+        "answer": "The avalanche effect means even a single bit change in the input produces a drastically different hash output. This crucial property ensures similar inputs do not produce similar hashes, making it impossible to deduce information about the input by analyzing the hash or predict how changes will affect the output."
       }
     ]
   },
@@ -944,11 +944,11 @@
     "faqs": [
       {
         "question": "What is URL encoding and why is it needed?",
-        "answer": "URL encoding (also called percent-encoding) converts characters that are not allowed or have special meaning in URLs into a safe format using percent signs followed by hexadecimal values. For example, a space becomes %20 and an ampersand becomes %26. This is necessary because URLs have a restricted character set (RFC 3986), and characters outside this set must be encoded to be transmitted correctly. Without proper encoding, URLs can break, data can be corrupted, and security vulnerabilities can arise."
+        "answer": "URL encoding (percent-encoding) converts characters not allowed in URLs into a safe format using percent signs followed by hexadecimal values. For example, spaces become %20 and ampersands become %26. This is necessary because URLs have a restricted character set (RFC 3986), and unencoded special characters can break links or corrupt data."
       },
       {
         "question": "What characters need to be URL encoded?",
-        "answer": "Characters that must be encoded include: spaces ( ), exclamation marks (!), hash (#), dollar signs ($), ampersands (&), single quotes ('), parentheses (()), asterisks (*), plus signs (+), commas (,), semicolons (;), equals signs (=), at signs (@), square brackets ([]), and any non-ASCII characters (like accented letters, Chinese characters, emoji). Letters (A-Z, a-z), digits (0-9), and a few special characters (- _ . ~) are safe and do not need encoding."
+        "answer": "Characters requiring encoding include spaces, ampersands (&), hash (#), question marks (?), equals signs (=), at signs (@), square brackets, and any non-ASCII characters like accented letters or emoji. Letters (A-Z, a-z), digits (0-9), and a few special characters (- _ . ~) are safe and do not need encoding."
       },
       {
         "question": "What is the difference between encodeURI and encodeURIComponent?",
@@ -963,7 +963,7 @@
         "answer": "Yes, completely safe. All encoding and decoding operations happen entirely in your browser using JavaScript's built-in encodeURIComponent() and decodeURIComponent() functions. No data is transmitted to any server. This makes the tool safe for URLs containing authentication tokens, API keys, user identifiers, and any other sensitive parameters."
       },
       {
-        "question": "Should spaces be encoded as %20 or + in URLs?",
+        "question": "How are spaces encoded in URLs - as %20 or +?",
         "answer": "Both are valid but used in different contexts. In URL paths and most contexts, spaces should be encoded as %20 (this is the standard percent-encoding). In HTML form data submitted via GET method (application/x-www-form-urlencoded), spaces are encoded as +. Most modern APIs and web frameworks handle both correctly, but if you encounter issues, try switching between the two formats."
       }
     ]

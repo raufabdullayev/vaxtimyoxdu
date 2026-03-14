@@ -10,6 +10,19 @@ const ALLOWED_ORIGINS = [
   'https://www.vaxtimyoxdur.com',
 ]
 
+/**
+ * Check whether the given origin/referer is in the allow-list using exact
+ * origin comparison. Parsing with `new URL()` prevents prefix-based bypasses
+ * such as `https://vaxtimyoxdu.com.evil.com`.
+ */
+function isAllowedOrigin(value: string): boolean {
+  try {
+    return ALLOWED_ORIGINS.includes(new URL(value).origin)
+  } catch {
+    return false
+  }
+}
+
 /** Hostnames that must be 301-redirected to the canonical domain. */
 const REDIRECT_HOSTS = ['vaxtimyoxdur.com', 'www.vaxtimyoxdur.com']
 const CANONICAL_ORIGIN = 'https://vaxtimyoxdu.com'
@@ -36,10 +49,10 @@ export function middleware(request: NextRequest) {
 
     // For non-GET requests, validate origin (CSRF + CORS protection)
     if (request.method !== 'GET') {
-      const isAllowedOrigin = origin && ALLOWED_ORIGINS.some(o => origin.startsWith(o))
-      const isAllowedReferer = referer && ALLOWED_ORIGINS.some(o => referer.startsWith(o))
+      const originAllowed = origin && isAllowedOrigin(origin)
+      const refererAllowed = referer && isAllowedOrigin(referer)
 
-      if (process.env.NODE_ENV === 'production' && !isAllowedOrigin && !isAllowedReferer) {
+      if (process.env.NODE_ENV === 'production' && !originAllowed && !refererAllowed) {
         return NextResponse.json(
           { error: 'Forbidden: Invalid origin' },
           { status: 403 }
@@ -49,7 +62,7 @@ export function middleware(request: NextRequest) {
 
     const response = NextResponse.next()
 
-    if (origin && ALLOWED_ORIGINS.some(o => origin.startsWith(o))) {
+    if (origin && isAllowedOrigin(origin)) {
       response.headers.set('Access-Control-Allow-Origin', origin)
       response.headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
       response.headers.set('Access-Control-Allow-Headers', 'Content-Type')
