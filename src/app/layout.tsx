@@ -5,6 +5,7 @@ import { getLocale } from 'next-intl/server'
 import './globals.css'
 import ServiceWorkerRegistrar from '@/components/layout/ServiceWorkerRegistrar'
 import { generateBaseMetadata } from '@/lib/utils/seo'
+import { themeBlockingScript } from '@/lib/theme'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -73,6 +74,8 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        {/* Blocking script to prevent dark mode FOUC */}
+        <script dangerouslySetInnerHTML={{ __html: themeBlockingScript }} />
         {/* PWA meta tags */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="application-name" content="Vaxtim Yoxdu" />
