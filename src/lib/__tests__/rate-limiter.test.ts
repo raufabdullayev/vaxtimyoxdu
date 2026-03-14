@@ -95,6 +95,58 @@ describe('createRateLimiter – in-memory fallback', () => {
     expect(result.allowed).toBe(true)
     expect(result.retryAfter).toBeUndefined()
   })
+
+  it('resets count after window expires', async () => {
+    const createRateLimiter = await getCreateRateLimiter()
+    const checkLimit = createRateLimiter({ limit: 2, window: '1 s', prefix: 'test:reset' })
+
+    const realDateNow = Date.now
+    let fakeNow = realDateNow.call(Date)
+    vi.spyOn(Date, 'now').mockImplementation(() => fakeNow)
+
+    await checkLimit('10.0.0.10')
+    await checkLimit('10.0.0.10')
+    const blocked = await checkLimit('10.0.0.10')
+    expect(blocked.allowed).toBe(false)
+
+    // Advance past the 1-second window
+    fakeNow += 1100
+    const afterReset = await checkLimit('10.0.0.10')
+    expect(afterReset.allowed).toBe(true)
+    expect(afterReset.remaining).toBe(1)
+
+    vi.spyOn(Date, 'now').mockRestore()
+  })
+
+  it('supports different window units (seconds, minutes, hours, days)', async () => {
+    const createRateLimiter = await getCreateRateLimiter()
+
+    // 10 second window
+    const limiterS = createRateLimiter({ limit: 1, window: '10 s', prefix: 'test:unit-s' })
+    const r1 = await limiterS('ip')
+    expect(r1.allowed).toBe(true)
+    const r2 = await limiterS('ip')
+    expect(r2.allowed).toBe(false)
+
+    // 1 minute window
+    const limiterM = createRateLimiter({ limit: 1, window: '1 m', prefix: 'test:unit-m' })
+    const r3 = await limiterM('ip2')
+    expect(r3.allowed).toBe(true)
+
+    // 1 day window
+    const limiterD = createRateLimiter({ limit: 1, window: '1 d', prefix: 'test:unit-d' })
+    const r4 = await limiterD('ip3')
+    expect(r4.allowed).toBe(true)
+  })
+
+  it('retryAfter is at least 1 second when blocked', async () => {
+    const createRateLimiter = await getCreateRateLimiter()
+    const checkLimit = createRateLimiter({ limit: 1, window: '1 m', prefix: 'test:retry-min' })
+
+    await checkLimit('ip-retry')
+    const blocked = await checkLimit('ip-retry')
+    expect(blocked.retryAfter).toBeGreaterThanOrEqual(1)
+  })
 })
 
 describe('createRateLimiter – fail-closed in production', () => {
