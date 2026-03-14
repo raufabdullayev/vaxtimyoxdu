@@ -5,6 +5,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+const { withSentryConfig } = require('@sentry/nextjs')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -111,7 +113,13 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
+            // SECURITY NOTE: Removed 'unsafe-inline' and 'unsafe-eval' from all directives.
+            // - 'self': Allows scripts from same origin (Next.js runtime)
+            // - Trusted third-party domains: Google Tag Manager, Analytics, AdSense
+            // - External scripts at /theme.js and /analytics.js are whitelisted via SHA256 hashes
+            // - style-src retains 'unsafe-inline' because Next.js and Tailwind CSS inject styles dynamically
+            // - JSON-LD scripts (application/ld+json) are safe inline data, not executable code
+            value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com 'sha256-d7oRcdu6BA3PiKKOjEIBlL/uvY3MgLdkyYs1H0Iqpu4=' 'sha256-2If02813LSNViupHa21qAiFzjpWLoKi3GFjUV5B1Cek='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
           },
           {
             key: 'Strict-Transport-Security',
@@ -131,4 +139,26 @@ const nextConfig = {
   },
 }
 
-module.exports = withNextIntl(withBundleAnalyzer(nextConfig))
+// Wrap with Sentry for error tracking and performance monitoring
+const sentryConfig = {
+  // Sentry options
+  org: process.env.SENTRY_ORG || 'vaxtim-yoxdu',
+  project: process.env.SENTRY_PROJECT || 'vaxtim-yoxdu',
+
+  // Only enable Sentry if DSN is set
+  dryRun: !process.env.SENTRY_DSN,
+
+  // Silently fail if there's an error (don't crash build)
+  silent: true,
+
+  // Define which files to instrument for tracing
+  widenClientFileUpload: true,
+
+  // Release tracking
+  release: process.env.VERCEL_GIT_COMMIT_SHA || '0.0.0',
+}
+
+module.exports = withSentryConfig(
+  withNextIntl(withBundleAnalyzer(nextConfig)),
+  sentryConfig
+)
