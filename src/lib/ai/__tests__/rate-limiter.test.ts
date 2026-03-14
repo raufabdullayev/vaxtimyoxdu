@@ -8,16 +8,14 @@ vi.mock('@upstash/ratelimit', () => ({
   Ratelimit: vi.fn(),
 }))
 
-describe('checkRateLimit – in-memory fallback', () => {
-  // We must re-import the module in each test group so the module-level
-  // code that reads env vars and initialises stores is re-evaluated.
-  // We also need a fresh module per test to get a clean Map.
-
+describe('checkRateLimit – in-memory fallback (development)', () => {
   beforeEach(() => {
     vi.resetModules()
     // Ensure Upstash env vars are NOT set so the in-memory path is used
     delete process.env.UPSTASH_REDIS_REST_URL
     delete process.env.UPSTASH_REDIS_REST_TOKEN
+    // Ensure we're in development mode for in-memory fallback
+    process.env.NODE_ENV = 'test'
   })
 
   async function getCheckRateLimit() {
@@ -49,7 +47,6 @@ describe('checkRateLimit – in-memory fallback', () => {
 
   it('falls back to in-memory limiter when UPSTASH env vars are NOT set', async () => {
     const checkRateLimit = await getCheckRateLimit()
-    // If the in-memory path works (no Redis errors), the fallback is active
     const result = await checkRateLimit('10.0.0.1')
 
     expect(result.allowed).toBe(true)
@@ -72,7 +69,6 @@ describe('checkRateLimit – in-memory fallback', () => {
     const checkRateLimit = await getCheckRateLimit()
 
     // Exhaust 20 requests (burst limit is 5/min so we need to stagger)
-    // We will manipulate time to avoid burst blocking
     const realDateNow = Date.now
     let fakeNow = realDateNow.call(Date)
 
@@ -172,5 +168,23 @@ describe('checkRateLimit – in-memory fallback', () => {
 
     expect(result.allowed).toBe(true)
     expect(result.retryAfter).toBeUndefined()
+  })
+})
+
+describe('checkRateLimit – fail-closed in production', () => {
+  beforeEach(() => {
+    vi.resetModules()
+    // No Redis configured
+    delete process.env.UPSTASH_REDIS_REST_URL
+    delete process.env.UPSTASH_REDIS_REST_TOKEN
+  })
+
+  it('rejects all requests when Redis is unavailable in production', async () => {
+    process.env.NODE_ENV = 'production'
+    const mod = await import('@/lib/ai/rate-limiter')
+    const result = await mod.checkRateLimit('10.0.0.1')
+
+    expect(result.allowed).toBe(false)
+    expect(result.remaining).toBe(0)
   })
 })

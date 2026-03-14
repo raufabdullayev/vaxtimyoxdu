@@ -67,6 +67,8 @@ function getMemoryStore(prefix: string): Map<string, { count: number; resetAt: n
   return store
 }
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 export function createRateLimiter(config: RateLimiterConfig) {
   const windowMs = parseWindowMs(config.window)
 
@@ -82,7 +84,13 @@ export function createRateLimiter(config: RateLimiterConfig) {
       return { allowed: true, remaining: result.remaining }
     }
 
-    // In-memory fallback
+    // Fail closed in production: if Redis is unavailable, reject requests
+    // rather than falling back to in-memory (which resets on every cold start)
+    if (isProduction) {
+      return { allowed: false, remaining: 0 }
+    }
+
+    // In-memory fallback (development only)
     const store = getMemoryStore(config.prefix)
     const now = Date.now()
 

@@ -13,6 +13,7 @@ describe('createRateLimiter – in-memory fallback', () => {
     vi.resetModules()
     delete process.env.UPSTASH_REDIS_REST_URL
     delete process.env.UPSTASH_REDIS_REST_TOKEN
+    process.env.NODE_ENV = 'test'
   })
 
   async function getCreateRateLimiter() {
@@ -93,5 +94,33 @@ describe('createRateLimiter – in-memory fallback', () => {
 
     expect(result.allowed).toBe(true)
     expect(result.retryAfter).toBeUndefined()
+  })
+})
+
+describe('createRateLimiter – fail-closed in production', () => {
+  beforeEach(() => {
+    vi.resetModules()
+    delete process.env.UPSTASH_REDIS_REST_URL
+    delete process.env.UPSTASH_REDIS_REST_TOKEN
+  })
+
+  it('rejects all requests when Redis is unavailable in production', async () => {
+    process.env.NODE_ENV = 'production'
+    const mod = await import('@/lib/rate-limiter')
+    const checkLimit = mod.createRateLimiter({ limit: 10, window: '1 h', prefix: 'test:prod' })
+    const result = await checkLimit('10.0.0.1')
+
+    expect(result.allowed).toBe(false)
+    expect(result.remaining).toBe(0)
+  })
+
+  it('allows in-memory fallback in development even without Redis', async () => {
+    process.env.NODE_ENV = 'development'
+    const mod = await import('@/lib/rate-limiter')
+    const checkLimit = mod.createRateLimiter({ limit: 10, window: '1 h', prefix: 'test:dev' })
+    const result = await checkLimit('10.0.0.1')
+
+    expect(result.allowed).toBe(true)
+    expect(result.remaining).toBe(9)
   })
 })
