@@ -116,10 +116,11 @@ const nextConfig = {
             // SECURITY NOTE: Removed 'unsafe-inline' and 'unsafe-eval' from all directives.
             // - 'self': Allows scripts from same origin (Next.js runtime)
             // - Trusted third-party domains: Google Tag Manager, Analytics, AdSense
-            // - External scripts at /theme.js and /analytics.js are whitelisted via SHA256 hashes
+            // - Inline theme script whitelisted via SHA256 hash (prevents FOUC)
+            // - External /analytics.js whitelisted via SHA256 hash
             // - style-src retains 'unsafe-inline' because Next.js and Tailwind CSS inject styles dynamically
             // - JSON-LD scripts (application/ld+json) are safe inline data, not executable code
-            value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com 'sha256-d7oRcdu6BA3PiKKOjEIBlL/uvY3MgLdkyYs1H0Iqpu4=' 'sha256-2If02813LSNViupHa21qAiFzjpWLoKi3GFjUV5B1Cek='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
+            value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com 'sha256-XPEotMgRK9ibO2p3eF2KD3VH8YL32QAPZgu+4yezoDI=' 'sha256-2If02813LSNViupHa21qAiFzjpWLoKi3GFjUV5B1Cek='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
           },
           {
             key: 'Strict-Transport-Security',

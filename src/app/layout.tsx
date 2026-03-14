@@ -6,6 +6,10 @@ import './globals.css'
 import ServiceWorkerRegistrar from '@/components/layout/ServiceWorkerRegistrar'
 import { generateBaseMetadata } from '@/lib/utils/seo'
 import { themeBlockingScript } from '@/lib/theme'
+import { initSentryServer } from '../../sentry.server.config'
+
+// Initialize Sentry for server-side error tracking
+initSentryServer()
 
 const inter = Inter({
   subsets: ['latin'],
@@ -74,7 +78,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
-        {/* Blocking script to prevent dark mode FOUC */}
+        {/* Blocking inline script to prevent dark mode FOUC — zero network overhead */}
         <script dangerouslySetInnerHTML={{ __html: themeBlockingScript }} />
         {/* PWA meta tags */}
         <link rel="manifest" href="/manifest.json" />
@@ -117,12 +121,10 @@ export default async function RootLayout({
         )}
         {GA_ID && (
           <>
-            <Script id="consent-defaults" strategy="beforeInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});`}
-            </Script>
+            <Script src="/analytics.js" strategy="beforeInteractive" />
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+            <Script id="ga-config" strategy="afterInteractive">
+              {`gtag('config','${GA_ID}')`}
             </Script>
           </>
         )}
