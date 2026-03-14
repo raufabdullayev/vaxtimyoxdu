@@ -10,7 +10,7 @@ const checkRateLimit = createRateLimiter({
 })
 
 export async function GET(req: NextRequest) {
-  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+  const ip = req.headers.get('x-real-ip') || req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'anonymous'
   const { allowed } = await checkRateLimit(ip)
 
   if (!allowed) {

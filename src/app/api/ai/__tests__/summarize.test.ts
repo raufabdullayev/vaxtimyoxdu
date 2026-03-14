@@ -27,7 +27,7 @@ function createRequest(body: unknown, ip = '127.0.0.1'): NextRequest {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-forwarded-for': ip,
+      'x-real-ip': ip,
     },
     body: JSON.stringify(body),
   })
@@ -38,7 +38,7 @@ function createInvalidJsonRequest(ip = '127.0.0.1'): NextRequest {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-forwarded-for': ip,
+      'x-real-ip': ip,
     },
     body: 'not valid json{{{',
   })

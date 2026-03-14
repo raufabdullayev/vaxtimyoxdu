@@ -28,7 +28,7 @@ function createRequest(body: unknown, ip = '127.0.0.1'): NextRequest {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-forwarded-for': ip,
+      'x-real-ip': ip,
     },
     body: JSON.stringify(body),
   })
@@ -39,7 +39,7 @@ function createInvalidJsonRequest(ip = '127.0.0.1'): NextRequest {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-forwarded-for': ip,
+      'x-real-ip': ip,
     },
     body: 'not valid json{{{',
   })
@@ -125,7 +125,7 @@ describe('POST /api/ai/rewrite', () => {
   // ---- Rate limiting (429) ----
 
   describe('rate limiting', () => {
-    it('calls checkRateLimit with the client IP from x-forwarded-for', async () => {
+    it('calls checkRateLimit with the client IP from x-real-ip', async () => {
       mockCallAI.mockResolvedValue('Rewritten text')
 
       const req = createRequest({ text: 'Hello world' }, '203.0.113.5')

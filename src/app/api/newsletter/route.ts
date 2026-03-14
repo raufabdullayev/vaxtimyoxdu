@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     // ------------------------------------------------------------------
     // 0. Rate limiting (5 requests per hour per IP)
     // ------------------------------------------------------------------
-    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+    const ip = req.headers.get('x-real-ip') || req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'anonymous'
     const { allowed, retryAfter } = await checkRateLimit(ip)
 
     if (!allowed) {
@@ -114,11 +114,18 @@ export async function POST(req: NextRequest) {
     )
 
     // Fire-and-forget welcome email (non-blocking)
-    sendWelcomeEmail(trimmed, typeof locale === 'string' ? locale : 'en').catch(
-      (err) => console.error('[Newsletter] Welcome email error:', err)
-    )
+    sendWelcomeEmail(trimmed, typeof locale === 'string' ? locale : 'en')
+      .then((success) => {
+        if (!success) {
+          console.warn('[Newsletter] Welcome email delivery failed (will retry on next attempt)')
+        }
+      })
+      .catch((err) => {
+        console.error('[Newsletter] Unexpected error sending welcome email:', err instanceof Error ? err.message : String(err))
+      })
 
-    console.log(`[Newsletter] New subscriber: ${trimmed}`)
+    const maskedEmail = trimmed.charAt(0) + '*'.repeat(Math.max(1, trimmed.length - 3)) + trimmed.slice(-2)
+    console.info(`[Newsletter] New subscriber: ${maskedEmail} (source: ${source || 'unknown'})`)
 
     return NextResponse.json({ success: true, message: 'Successfully subscribed' })
   } catch (error) {

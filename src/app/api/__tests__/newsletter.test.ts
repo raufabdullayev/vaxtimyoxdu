@@ -19,7 +19,7 @@ function createRequest(body: unknown, ip = '127.0.0.1'): NextRequest {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-forwarded-for': ip,
+      'x-real-ip': ip,
     },
     body: JSON.stringify(body),
   })
@@ -221,7 +221,7 @@ describe('POST /api/newsletter', () => {
       expect(response.headers.get('Retry-After')).toBe('1800')
     })
 
-    it('calls rate limiter with client IP from x-forwarded-for', async () => {
+    it('calls rate limiter with client IP from x-real-ip', async () => {
       const req = createRequest({ email: 'ip-test@example.com' }, '203.0.113.5')
       await POST(req)
 

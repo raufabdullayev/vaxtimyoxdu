@@ -19,7 +19,7 @@ interface AIRouteConfig {
 export function withAIRoute(config: AIRouteConfig) {
   return async function POST(req: NextRequest) {
     try {
-      const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+      const ip = req.headers.get('x-real-ip') || req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'anonymous'
       const { allowed, remaining, retryAfter } = await checkRateLimit(ip)
 
       if (!allowed) {
@@ -77,7 +77,23 @@ export function withAIRoute(config: AIRouteConfig) {
         { headers: { 'X-RateLimit-Remaining': String(remaining) } }
       )
     } catch (error) {
+      const errorMsg = error instanceof Error ? error.message : 'Unknown error'
       console.error(`AI ${config.taskDescription} error:`, error)
+
+      // Return user-friendly error messages instead of generic 500
+      const isTimeoutError =
+        errorMsg.includes('timeout') || errorMsg.includes('unavailable')
+
+      if (isTimeoutError) {
+        return NextResponse.json(
+          {
+            error:
+              'AI service is responding slowly. Please try again in a moment.',
+          },
+          { status: 503 } // 503 Service Unavailable is more accurate than 500
+        )
+      }
+
       return NextResponse.json(
         { error: 'Service temporarily unavailable. Please try again later.' },
         { status: 500 }

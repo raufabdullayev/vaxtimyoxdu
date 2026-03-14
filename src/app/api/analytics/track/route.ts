@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { trackEvent } from '@/lib/supabase/analytics'
+import { createRateLimiter } from '@/lib/rate-limiter'
 
 /**
  * POST /api/analytics/track
@@ -14,7 +15,15 @@ import { trackEvent } from '@/lib/supabase/analytics'
  *
  * The endpoint always returns 204 No Content so the client is never
  * blocked waiting for the database write to complete.
+ *
+ * Rate limited to 100 requests/minute per IP to prevent abuse.
  */
+
+const checkRateLimit = createRateLimiter({
+  limit: 100,
+  window: '1 m',
+  prefix: 'rl:analytics-track',
+})
 
 /** Valid event types accepted by this endpoint. */
 const ALLOWED_EVENT_TYPES = new Set([
@@ -32,6 +41,19 @@ function isValidString(value: unknown, maxLen = MAX_FIELD_LENGTH): value is stri
 
 export async function POST(req: NextRequest) {
   try {
+    // Rate limit check (100 requests/minute per IP)
+    const ip = req.headers.get('x-real-ip') || req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'anonymous'
+    const { allowed, retryAfter } = await checkRateLimit(ip)
+
+    if (!allowed) {
+      const headers: Record<string, string> = {}
+      if (retryAfter) headers['Retry-After'] = String(retryAfter)
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429, headers }
+      )
+    }
+
     let body: Record<string, unknown>
     try {
       body = await req.json()
