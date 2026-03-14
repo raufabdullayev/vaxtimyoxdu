@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseServer, isSupabaseConfigured } from '@/lib/supabase/client'
 import { trackNewsletterSubscribe } from '@/lib/supabase/analytics'
 import { createRateLimiter } from '@/lib/rate-limiter'
+import { sendWelcomeEmail } from '@/lib/email/resend'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -110,6 +111,11 @@ export async function POST(req: NextRequest) {
       trimmed,
       typeof locale === 'string' ? locale : null,
       typeof source === 'string' ? source : null
+    )
+
+    // Fire-and-forget welcome email (non-blocking)
+    sendWelcomeEmail(trimmed, typeof locale === 'string' ? locale : 'en').catch(
+      (err) => console.error('[Newsletter] Welcome email error:', err)
     )
 
     console.log(`[Newsletter] New subscriber: ${trimmed}`)
