@@ -51,7 +51,8 @@ function getProviders(): AIProvider[] {
 async function callProvider(
   provider: AIProvider,
   messages: ChatMessage[],
-  maxTokens: number
+  maxTokens: number,
+  temperature: number
 ): Promise<string> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), PROVIDER_TIMEOUT_MS)
@@ -67,7 +68,7 @@ async function callProvider(
         model: provider.model,
         messages,
         max_tokens: maxTokens,
-        temperature: 0.7,
+        temperature,
       }),
       signal: controller.signal,
     })
@@ -94,7 +95,8 @@ async function callProvider(
 
 export async function callAI(
   messages: ChatMessage[],
-  maxTokens = 1024
+  maxTokens = 1024,
+  temperature = 0.7
 ): Promise<string> {
   const providers = getProviders()
 
@@ -105,7 +107,7 @@ export async function callAI(
   // Try each provider in order, fallback on failure
   for (let i = 0; i < providers.length; i++) {
     try {
-      const result = await callProvider(providers[i], messages, maxTokens)
+      const result = await callProvider(providers[i], messages, maxTokens, temperature)
 
       if (i > 0) {
         console.warn(
