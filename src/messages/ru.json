@@ -1,526 +1,508 @@
 {
   "common": {
     "siteName": "Vaxtim Yoxdu",
-    "siteDescription": "Net vremeni? My zdes. Kratkie novosti i besplatnye AI onlayn instrumenty.",
+    "siteDescription": "Нет времени? Мы здесь. Краткие новости и бесплатные AI онлайн инструменты.",
     "nav": {
-      "home": "Glavnaya",
-      "news": "Novosti",
-      "tools": "Instrumenty",
-      "blog": "Blog",
-      "about": "O nas",
-      "privacy": "Politika konfidencialnosti",
-      "terms": "Usloviya ispolzovaniya"
+      "home": "Главная",
+      "news": "Новости",
+      "tools": "Инструменты",
+      "blog": "Блог",
+      "about": "О нас",
+      "privacy": "Политика конфиденциальности",
+      "terms": "Условия использования"
     },
-    "skipToContent": "Pereyti k soderzhaniyu"
+    "skipToContent": "Перейти к содержанию"
   },
   "home": {
     "heroTitle": "Vaxtim",
     "heroTitleHighlight": "Yoxdu",
-    "heroDescription": "Net vremeni? My zdes. Kratkie novosti i besplatnye onlayn instrumenty.",
-    "newsTitle": "Novosti",
-    "newsDescription": "Ezhednevnye kratkie obzory vazhnykh novostey. Ekonomika, tekhnologii, obrazovanie, sport - vsyo v odnom meste.",
-    "newsLink": "Chitat novosti",
-    "toolsTitle": "Instrumenty",
-    "toolsDescription": "Besplatnye AI onlayn instrumenty. Perepisyvanie teksta, proverka grammatiki, obyedinenie PDF, szhatie izobrazheniy i mnogoe drugoe.",
-    "toolsLink": "Smotret instrumenty",
-    "statTools": "Besplatnykh instrumentov",
-    "statRegistration": "Registraciya",
-    "statAvailability": "Dostupnost",
-    "marketTitle": "Rynochnye tseny",
-    "marketViewAll": "Smotret vse"
+    "heroDescription": "Нет времени? Мы здесь. Краткие новости и бесплатные онлайн инструменты.",
+    "newsTitle": "Новости",
+    "newsDescription": "Ежедневные краткие обзоры важных новостей. Экономика, технологии, образование, спорт — всё в одном месте.",
+    "newsLink": "Читать новости",
+    "toolsTitle": "Инструменты",
+    "toolsDescription": "Бесплатные AI онлайн инструменты. Переписывание текста, проверка грамматики, объединение PDF, сжатие изображений и многое другое.",
+    "toolsLink": "Смотреть инструменты",
+    "statTools": "Бесплатных инструментов",
+    "statRegistration": "Регистрация",
+    "statAvailability": "Доступность",
+    "marketTitle": "Рыночные цены",
+    "marketViewAll": "Смотреть все"
   },
   "tools": {
-    "pageTitle": "Besplatnye Onlayn Instrumenty",
-    "pageTitleHighlight": "S pomoshchyu AI",
-    "pageDescription": "Obyedinenie PDF, instrumenty dlya izobrazheniy, perepisyvanie teksta, JSON formatirovanie i mnogoe drugoe. Registraciya ne nuzhna. Bystro, besplatno i bezopasno.",
-    "searchPlaceholder": "Iskat instrumenty...",
-    "allTools": "Vse instrumenty",
-    "clientSide": "V brauzere",
-    "aiPowered": "S pomoshchyu AI",
-    "filterAll": "Vse",
-    "breadcrumbHome": "Glavnaya",
-    "breadcrumbTools": "Instrumenty",
+    "pageTitle": "Бесплатные Онлайн Инструменты",
+    "pageTitleHighlight": "С помощью AI",
+    "pageDescription": "Объединение PDF, инструменты для изображений, переписывание текста, JSON форматирование и многое другое. Регистрация не нужна. Быстро, бесплатно и безопасно.",
+    "searchPlaceholder": "Искать инструменты...",
+    "allTools": "Все инструменты",
+    "clientSide": "В браузере",
+    "aiPowered": "С помощью AI",
+    "filterAll": "Все",
+    "breadcrumbHome": "Главная",
+    "breadcrumbTools": "Инструменты",
     "categories": {
-      "ai": "AI Instrumenty",
-      "aiDesc": "Instrumenty obrabotki teksta na baze iskusstvennogo intellekta",
-      "pdf": "PDF Instrumenty",
-      "pdfDesc": "Obyedinenie, razdelenie i szhatie PDF-faylov",
-      "image": "Instrumenty dlya izobrazheniy",
-      "imageDesc": "Szhatie, izmenenie razmera, obrezka i konvertaciya izobrazheniy",
-      "dev": "Instrumenty razrabotchika",
-      "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV i mnogoe drugoe dlya razrabotchikov",
-      "generators": "Generatory",
-      "generatorsDesc": "Generaciya paroley, UUID, QR-kodov, gradientov, emodzi i cvetov",
-      "text": "Tekstovye instrumenty",
-      "textDesc": "Konverter registra, binarnyy, ROT13, proverka raznic, taymer, schyotchik slov"
+      "ai": "AI Инструменты",
+      "aiDesc": "Инструменты обработки текста на базе искусственного интеллекта",
+      "pdf": "PDF Инструменты",
+      "pdfDesc": "Объединение, разделение и сжатие PDF-файлов",
+      "image": "Инструменты для изображений",
+      "imageDesc": "Сжатие, изменение размера, обрезка и конвертация изображений",
+      "dev": "Инструменты разработчика",
+      "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV и многое другое для разработчиков",
+      "generators": "Генераторы",
+      "generatorsDesc": "Генерация паролей, UUID, QR-кодов, градиентов, эмодзи и цветов",
+      "text": "Текстовые инструменты",
+      "textDesc": "Конвертер регистра, бинарный, ROT13, проверка разниц, таймер, счётчик слов"
     },
     "toolNames": {
       "ai-text-rewriter": {
-        "name": "AI Perepisyvatel teksta",
-        "description": "Perepishite i perefraziruyte tekst s pomoshchyu AI. Izmenite ton, uprostite yazyk ili sdelayte tekst bolee professionalnym."
+        "name": "AI Переписыватель текста",
+        "description": "Перепишите и перефразируйте текст с помощью AI. Измените тон, упростите язык или сделайте текст более профессиональным."
       },
       "ai-text-summarizer": {
-        "name": "AI Summarizator teksta",
-        "description": "Rezumirujte dlinnye teksty, stati i dokumenty s pomoshchyu AI. Poluchite kratkie rezyume s klyuchevymi momentami."
+        "name": "AI Суммаризатор текста",
+        "description": "Резюмируйте длинные тексты, статьи и документы с помощью AI. Получите краткие резюме с ключевыми моментами."
       },
       "ai-grammar-checker": {
-        "name": "AI Proverka grammatiki",
-        "description": "Proverte i ispravte grammaticheskie, orfograficheskie i punktuacionnye oshibki s pomoshchyu AI. Poluchite mgnovennye ispravleniya."
+        "name": "AI Проверка грамматики",
+        "description": "Проверьте и исправьте грамматические, орфографические и пунктуационные ошибки с помощью AI. Получите мгновенные исправления."
       },
       "pdf-merge": {
-        "name": "Obyedinenie PDF",
-        "description": "Obyedinte neskolko PDF-faylov v odin dokument onlayn. Pereraspredelite stranicy i obyedinyayte v lyubom poryadke."
+        "name": "Объединение PDF",
+        "description": "Объедините несколько PDF-файлов в один документ онлайн. Перераспределите страницы и объединяйте в любом порядке."
       },
       "pdf-split": {
-        "name": "Razdelitel stranic PDF",
-        "description": "Izvlekite opredelyonnye stranicy iz PDF-fayla onlayn. Vyberite diapazon stranic, razdelite i skahayte."
+        "name": "Разделитель страниц PDF",
+        "description": "Извлеките определённые страницы из PDF-файла онлайн. Выберите диапазон страниц, разделите и скачайте."
       },
       "pdf-compress": {
-        "name": "Szhatie PDF",
-        "description": "Umenshite razmer PDF-fayla onlayn. Udalite metadannye i optimiziruyte strukturu dlya szhatiya."
+        "name": "Сжатие PDF",
+        "description": "Уменьшите размер PDF-файла онлайн. Удалите метаданные и оптимизируйте структуру для сжатия."
       },
       "image-compress": {
-        "name": "Szhatie izobrazheniy",
-        "description": "Szhimayte i izmenyayte razmer izobrazheniy onlayn. Umenshite razmer fayla sokhranaya kachestvo. Podderzhka JPEG, PNG i WebP."
+        "name": "Сжатие изображений",
+        "description": "Сжимайте и изменяйте размер изображений онлайн. Уменьшите размер файла сохраняя качество. Поддержка JPEG, PNG и WebP."
       },
       "image-convert": {
-        "name": "Konverter izobrazheniy",
-        "description": "Konvertiruyte izobrazheniya mezhdu formatami JPEG, PNG i WebP onlayn. Fayly ostayutsya v vashem brauzere."
+        "name": "Конвертер изображений",
+        "description": "Конвертируйте изображения между форматами JPEG, PNG и WebP онлайн. Файлы остаются в вашем браузере."
       },
       "image-resize": {
-        "name": "Izmenenie razmera izobrazheniy",
-        "description": "Izmenite razmer izobrazheniy do tochnykh razmerov ili v procentakh onlayn. Sokhranenie proportsiy. Podderzhka JPEG, PNG i WebP."
+        "name": "Изменение размера изображений",
+        "description": "Измените размер изображений до точных размеров или в процентах онлайн. Сохранение пропорций. Поддержка JPEG, PNG и WebP."
       },
       "image-crop": {
-        "name": "Obrezka izobrazheniy",
-        "description": "Obrezayte izobrazheniya s pomoshchyu vydeleniya oblasti onlayn. Vyberite lyubuyu oblast i skahayte obrezannyy rezultat."
+        "name": "Обрезка изображений",
+        "description": "Обрезайте изображения с помощью выделения области онлайн. Выберите любую область и скачайте обрезанный результат."
       },
       "json-formatter": {
-        "name": "JSON Formatirovaniye i Validaciya",
-        "description": "Formatirujte, validirujte i ukraste vashi JSON dannye onlayn. Minifikaciya ili formatirovaniye s podsvetkoy sintaksisa."
+        "name": "JSON Форматирование и Валидация",
+        "description": "Форматируйте, валидируйте и украсьте ваши JSON данные онлайн. Минификация или форматирование с подсветкой синтаксиса."
       },
       "base64-encode-decode": {
-        "name": "Base64 Kodirovanie/Dekodirovanie",
-        "description": "Kodirujte tekst v Base64 ili dekodirujte stroki Base64 onlayn. Podderzhka UTF-8 teksta i faylov."
+        "name": "Base64 Кодирование/Декодирование",
+        "description": "Кодируйте текст в Base64 или декодируйте строки Base64 онлайн. Поддержка UTF-8 текста и файлов."
       },
       "regex-tester": {
-        "name": "Tester regulyarnykh vyrazheniy",
-        "description": "Testirujte i otslezhivayte regulyarnye vyrazheniya onlayn v realnom vremeni. Podsvechivajte sovpadeniya i prosmatrivayte gruppy."
+        "name": "Тестер регулярных выражений",
+        "description": "Тестируйте и отслеживайте регулярные выражения онлайн в реальном времени. Подсвечивайте совпадения и просматривайте группы."
       },
       "hash-generator": {
-        "name": "Generator kheshey",
-        "description": "Generirujte kheshi SHA-1, SHA-256, SHA-384, SHA-512 iz teksta onlayn. Besplatnyy kriptograficheskiy khesh-instrument."
+        "name": "Генератор хешей",
+        "description": "Генерируйте хеши SHA-1, SHA-256, SHA-384, SHA-512 из текста онлайн. Бесплатный криптографический хеш-инструмент."
       },
       "qr-code-generator": {
-        "name": "Generator QR-kodov",
-        "description": "Generirujte QR-kody dlya URL, teksta, email, nomerov telefonov i prochego. Skahayte v formate PNG ili SVG."
+        "name": "Генератор QR-кодов",
+        "description": "Генерируйте QR-коды для URL, текста, email, номеров телефонов и прочего. Скачайте в формате PNG или SVG."
       },
       "color-picker": {
-        "name": "Vybor cveta i Generator palitry",
-        "description": "Vybirayte cveta, konvertiruyte mezhdu formatami HEX, RGB, HSL i sozdavayte krasivye cvetnye palitry."
+        "name": "Выбор цвета и Генератор палитры",
+        "description": "Выбирайте цвета, конвертируйте между форматами HEX, RGB, HSL и создавайте красивые цветные палитры."
       },
       "lorem-ipsum-generator": {
-        "name": "Generator Lorem Ipsum",
-        "description": "Generirujte tekst-zapolnitel lorem ipsum dlya dizayna i maketov. Vybirayte abzacy, predlozheniya ili slova."
+        "name": "Генератор Lorem Ipsum",
+        "description": "Генерируйте текст-заполнитель lorem ipsum для дизайна и макетов. Выбирайте абзацы, предложения или слова."
       },
       "word-counter": {
-        "name": "Schyotchik slov",
-        "description": "Podschayte slova, simvoly, predlozheniya i abzacy v vashem tekste. Ocenka vremeni chteniya."
+        "name": "Счётчик слов",
+        "description": "Подсчитайте слова, символы, предложения и абзацы в вашем тексте. Оценка времени чтения."
       },
       "case-converter": {
-        "name": "Konverter registra",
-        "description": "Konvertiruyte tekst mezhdu VERKHNIM, nizhnim, Nachalnye Bukvy, camelCase, snake_case, kebab-case i drugimi registrami."
+        "name": "Конвертер регистра",
+        "description": "Конвертируйте текст между ВЕРХНИМ, нижним, Начальные Буквы, camelCase, snake_case, kebab-case и другими регистрами."
       },
       "slug-generator": {
-        "name": "Generator slug-ov",
-        "description": "Generirujte chistye URL slug-i iz lyubogo teksta. Udalyayte spetsialnye simvoly i sozdavayte SEO-druzhestvennyye URL."
+        "name": "Генератор slug-ов",
+        "description": "Генерируйте чистые URL slug-и из любого текста. Удаляйте специальные символы и создавайте SEO-дружественные URL."
       },
       "text-diff": {
-        "name": "Proverka raznic teksta",
-        "description": "Sravnite dva teksta i naydite otlichiya. Podsvechivajte dobavleniya, udaleniya i izmeneniya postrochno."
+        "name": "Проверка разниц текста",
+        "description": "Сравните два текста и найдите отличия. Подсвечивайте добавления, удаления и изменения построчно."
       },
       "html-entity-codec": {
-        "name": "HTML Entity Kodirovshchik/Dekoder",
-        "description": "Kodirujte spetsialnye simvoly v HTML entity ili dekodirujte HTML entity obratno v tekst."
+        "name": "HTML Entity Кодировщик/Декодер",
+        "description": "Кодируйте специальные символы в HTML entity или декодируйте HTML entity обратно в текст."
       },
       "url-encode-decode": {
-        "name": "URL Kodirovanie/Dekodirovanie",
-        "description": "Kodirujte ili dekodirujte URL stroki onlayn. Konvertiruyte spetsialnye simvoly v procentnoe kodirovanie ili obratno."
+        "name": "URL Кодирование/Декодирование",
+        "description": "Кодируйте или декодируйте URL строки онлайн. Конвертируйте специальные символы в процентное кодирование или обратно."
       },
       "jwt-decoder": {
-        "name": "JWT Dekoder",
-        "description": "Dekodirujte i issleduyte JSON Web Token (JWT) onlayn. Prosmatrivayte zagolovok, poleznuyu nagruzku i status isteicheniya sroka."
+        "name": "JWT Декодер",
+        "description": "Декодируйте и исследуйте JSON Web Token (JWT) онлайн. Просматривайте заголовок, полезную нагрузку и статус истечения срока."
       },
       "markdown-preview": {
-        "name": "Predprosmotr Markdown",
-        "description": "Pishite i prosmatrivayte Markdown v realnom vremeni. Podderzhka zagolovkov, spiskov, blokov koda i prochego."
+        "name": "Предпросмотр Markdown",
+        "description": "Пишите и просматривайте Markdown в реальном времени. Поддержка заголовков, списков, блоков кода и прочего."
       },
       "timestamp-converter": {
-        "name": "Konverter vremennych metok",
-        "description": "Konvertiruyte vremennyye metki Unix v chitaemye daty i naoborot. Podderzhka sekund i millisekund."
+        "name": "Конвертер временных меток",
+        "description": "Конвертируйте временные метки Unix в читаемые даты и наоборот. Поддержка секунд и миллисекунд."
       },
       "css-minifier": {
-        "name": "CSS Minifikator i Formatirovalshchik",
-        "description": "Minifitsiruyte CSS dlya umenesheniya razmera fayla ili otformatirujte minificirovannyy CSS dlya chitaemosti. Prosmatrivayte ekonomiyu razmera."
+        "name": "CSS Минификатор и Форматировщик",
+        "description": "Минифицируйте CSS для уменьшения размера файла или отформатируйте минифицированный CSS для читаемости. Просматривайте экономию размера."
       },
       "number-base-converter": {
-        "name": "Konverter sistem schisleniya",
-        "description": "Konvertiruyte chisla mezhdu Dvoichnoy, Vosmerichhnoy, Desyatichnoy i Shestnadcaterichhnoy sistemami. Konvertaciya v realnom vremeni s validaciey."
+        "name": "Конвертер систем счисления",
+        "description": "Конвертируйте числа между Двоичной, Восьмеричной, Десятичной и Шестнадцатеричной системами. Конвертация в реальном времени с валидацией."
       },
       "csv-to-json": {
-        "name": "Konverter CSV v JSON",
-        "description": "Konvertiruyte dannye CSV v format JSON onlayn. Podderzhka polzovatelskikh razdeliteley, strok zagolovkov i poley v kavychkakh."
+        "name": "Конвертер CSV в JSON",
+        "description": "Конвертируйте данные CSV в формат JSON онлайн. Поддержка пользовательских разделителей, строк заголовков и полей в кавычках."
       },
       "cron-parser": {
-        "name": "Analizator Cron vyrazheniy",
-        "description": "Analizirujte i ponimayte cron vyrazheniya. Prosmatrivayte chitaemoye opisaniye i vremya sleduyushchego zapuska."
+        "name": "Анализатор Cron выражений",
+        "description": "Анализируйте и понимайте cron выражения. Просматривайте читаемое описание и время следующего запуска."
       },
       "html-minifier": {
-        "name": "HTML Minifikator i Formatirovalshchik",
-        "description": "Minifitsiruyte HTML dlya umenesheniya razmera fayla ili otformatirujte minificirovannyy HTML dlya chitaemosti. Udalite kommentarii i probely."
+        "name": "HTML Минификатор и Форматировщик",
+        "description": "Минифицируйте HTML для уменьшения размера файла или отформатируйте минифицированный HTML для читаемости. Удалите комментарии и пробелы."
       },
       "js-minifier": {
-        "name": "JavaScript Minifikator i Formatirovalshchik",
-        "description": "Minifitsiruyte JavaScript dlya umenesheniya razmera fayla ili otformatirujte minificirovannyy JS dlya chitaemosti. Udalite kommentarii i probely."
+        "name": "JavaScript Минификатор и Форматировщик",
+        "description": "Минифицируйте JavaScript для уменьшения размера файла или отформатируйте минифицированный JS для читаемости. Удалите комментарии и пробелы."
       },
       "sql-formatter": {
-        "name": "SQL Formatirovshchik",
-        "description": "Formatirujte i ukraste SQL zaprosy onlayn. Vyravnivayte klyuchevye slova i strukturirujte vyrazheniya."
+        "name": "SQL Форматировщик",
+        "description": "Форматируйте и украсьте SQL запросы онлайн. Выравнивайте ключевые слова и структурируйте выражения."
       },
       "json-to-csv": {
-        "name": "Konverter JSON v CSV",
-        "description": "Konvertiruyte massivy JSON v format CSV onlayn. Podderzhka polzovatelskikh razdeliteley i skachivaniya."
+        "name": "Конвертер JSON в CSV",
+        "description": "Конвертируйте массивы JSON в формат CSV онлайн. Поддержка пользовательских разделителей и скачивания."
       },
       "ip-address-info": {
-        "name": "Informaciya ob IP adrese",
-        "description": "Prosmotrite vash publichnyy IP adres, user agent, razreshenie ekrana i informaciyu o brauzere."
+        "name": "Информация об IP адресе",
+        "description": "Просмотрите ваш публичный IP адрес, user agent, разрешение экрана и информацию о браузере."
       },
       "password-generator": {
-        "name": "Generator paroley",
-        "description": "Generirujte nadyozhnye sluchajnye paroli s nastroivaemoy dlinoy i tipami simvolov. Indikator nadezhnosti parolya vklyuchyon."
+        "name": "Генератор паролей",
+        "description": "Генерируйте надёжные случайные пароли с настраиваемой длиной и типами символов. Индикатор надёжности пароля включён."
       },
       "uuid-generator": {
-        "name": "Generator UUID",
-        "description": "Generirujte identifikatory UUID v4 onlayn. Massovaya generaciya, vybor registra, s defisom ili bez."
+        "name": "Генератор UUID",
+        "description": "Генерируйте идентификаторы UUID v4 онлайн. Массовая генерация, выбор регистра, с дефисом или без."
       },
       "meta-tag-generator": {
-        "name": "Generator meta-tegov",
-        "description": "Generirujte HTML meta-tegi dlya SEO. Sozdavayte Open Graph, Twitter Card i standrartnye meta-tegi s predprosmatrom Google."
+        "name": "Генератор мета-тегов",
+        "description": "Генерируйте HTML мета-теги для SEO. Создавайте Open Graph, Twitter Card и стандартные мета-теги с предпросмотром Google."
       },
       "aspect-ratio-calculator": {
-        "name": "Kalkulyator sootnosheniya storon",
-        "description": "Vychislyayte i konvertiruyte sootnosheniya storon. Ispolzuyte populyarnye presety 16:9, 4:3 i nahodite sootvetstvuyushchie razresheniya."
+        "name": "Калькулятор соотношения сторон",
+        "description": "Вычисляйте и конвертируйте соотношения сторон. Используйте популярные пресеты 16:9, 4:3 и находите соответствующие разрешения."
       },
       "emoji-picker": {
-        "name": "Vybor emodzi i Poisk",
-        "description": "Prosmatrivayte, ishchite i kopiruyte emodzi po kategoriyam. Odnim klikom kopiruyte v bufer obmena."
+        "name": "Выбор эмодзи и Поиск",
+        "description": "Просматривайте, ищите и копируйте эмодзи по категориям. Одним кликом копируйте в буфер обмена."
       },
       "gradient-generator": {
-        "name": "Generator CSS gradientov",
-        "description": "Sozdavayte krasivye lineynye i radialnye CSS gradienty s neskolkimi cvetovymi ostanovkami. Predprosmotr v realnom vremeni i kopirovanie CSS koda."
+        "name": "Генератор CSS градиентов",
+        "description": "Создавайте красивые линейные и радиальные CSS градиенты с несколькими цветовыми остановками. Предпросмотр в реальном времени и копирование CSS кода."
       },
       "placeholder-image": {
-        "name": "Generator izobrazheniy-zapolniteley",
-        "description": "Generirujte izobrazheniya-zapolniteli s polzovatelskimi razmerami, cvetami i tekstom. Skahayte v formate PNG ili JPEG."
+        "name": "Генератор изображений-заполнителей",
+        "description": "Генерируйте изображения-заполнители с пользовательскими размерами, цветами и текстом. Скачайте в формате PNG или JPEG."
       },
       "text-to-binary": {
-        "name": "Konverter teksta v dvoichniy kod",
-        "description": "Konvertiruyte tekst v dvoichniy, shestnadcaterichnyy ili vosmerichnyy format i obratno. Podderzhka neskolkikh formatov kodirovaniya."
+        "name": "Конвертер текста в двоичный код",
+        "description": "Конвертируйте текст в двоичный, шестнадцатеричный или восьмеричный формат и обратно. Поддержка нескольких форматов кодирования."
       },
       "rot13-encoder": {
-        "name": "ROT13 Kodirovshchik/Dekoder",
-        "description": "Kodirujte i dekodirujte tekst s pomoshchyu shifra Cezarya ROT13. Podderzhka polzovatelskikh znacheniy sdviga ot 1 do 25."
+        "name": "ROT13 Кодировщик/Декодер",
+        "description": "Кодируйте и декодируйте текст с помощью шифра Цезаря ROT13. Поддержка пользовательских значений сдвига от 1 до 25."
       },
       "pomodoro-timer": {
-        "name": "Taymer Pomodoro",
-        "description": "Taymer fokusirovki po tekhnike Pomodoro. 25-minutnye rabochiye sessii s 5-minutnymi pererivami. Zvukovye uvedomleniya i otslezhivanie sessiy."
+        "name": "Таймер Помодоро",
+        "description": "Таймер фокусировки по технике Помодоро. 25-минутные рабочие сессии с 5-минутными перерывами. Звуковые уведомления и отслеживание сессий."
       },
       "json-to-yaml": {
-        "name": "Konverter JSON v YAML",
-        "description": "Konvertiruyte JSON v YAML i YAML v JSON onlayn. Dvunapravlennaya konvertaciya s pravilnym formatirovaniem."
+        "name": "Конвертер JSON в YAML",
+        "description": "Конвертируйте JSON в YAML и YAML в JSON онлайн. Двунаправленная конвертация с правильным форматированием."
       },
       "xml-formatter": {
-        "name": "XML Formatirovshchik i Validator",
-        "description": "Formatirujte, minifitsiruyte i validirujte XML onlayn. Formatiruyte s polzovatelskim otstupom i proveryayte sootvetstvie tegov."
+        "name": "XML Форматировщик и Валидатор",
+        "description": "Форматируйте, минифицируйте и валидируйте XML онлайн. Форматируйте с пользовательским отступом и проверяйте соответствие тегов."
       },
       "markdown-to-html": {
-        "name": "Konverter Markdown v HTML",
-        "description": "Konvertiruyte Markdown v HTML s predprosmatrom v realnom vremeni. Podderzhka zagolovkov, zhirnogo, kursiva, ssylok i blokov koda."
+        "name": "Конвертер Markdown в HTML",
+        "description": "Конвертируйте Markdown в HTML с предпросмотром в реальном времени. Поддержка заголовков, жирного, курсива, ссылок и блоков кода."
       },
       "favicon-generator": {
-        "name": "Generator favicon",
-        "description": "Zagruzite izobrazhenie i sgenerirujte favicon v raznykh razmerakh (ot 16x16 do 512x512). Skahayte po otdelnosti ili kak ZIP."
+        "name": "Генератор favicon",
+        "description": "Загрузите изображение и сгенерируйте favicon в разных размерах (от 16x16 до 512x512). Скачайте по отдельности или как ZIP."
       },
       "svg-to-png": {
-        "name": "Konverter SVG v PNG",
-        "description": "Konvertiruyte SVG v PNG s polzovatelskimi razmerami onlayn. Vstavte SVG kod ili zagruzite fayl, zadayte shirinu i vysotu."
+        "name": "Конвертер SVG в PNG",
+        "description": "Конвертируйте SVG в PNG с пользовательскими размерами онлайн. Вставьте SVG код или загрузите файл, задайте ширину и высоту."
       },
       "text-to-speech": {
-        "name": "Tekst v rech",
-        "description": "Konvertiruyte tekst v rech cherez Web Speech API. Vybirayte iz dostupnykh golosov, nastraivayte skorost, ton i gromkost."
+        "name": "Текст в речь",
+        "description": "Конвертируйте текст в речь через Web Speech API. Выбирайте из доступных голосов, настраивайте скорость, тон и громкость."
       },
       "character-counter": {
-        "name": "Schyotchik simvolov",
-        "description": "Podschayte simvoly, slova, predlozheniya, abzacy i stroki. Prosmatrivayte vremya chteniya, govoreniya i chastotu simvolov."
+        "name": "Счётчик символов",
+        "description": "Подсчитайте символы, слова, предложения, абзацы и строки. Просматривайте время чтения, говорения и частоту символов."
       },
       "find-and-replace": {
-        "name": "Nayti i Zamenit",
-        "description": "Nahodite i zamenyayte tekst s podderzhkoy regex, uchyotom registra i poiska chlykh slov. Podsvechivanie vsekh sovpadeniy v realnom vremeni."
+        "name": "Найти и Заменить",
+        "description": "Находите и заменяйте текст с поддержкой regex, учётом регистра и поиска целых слов. Подсвечивание всех совпадений в реальном времени."
       },
       "yaml-to-json": {
-        "name": "Konverter YAML v JSON",
-        "description": "Konvertiruyte YAML v JSON onlayn s validaciey i podsvechivaniem oshibok. Podderzhka vlozhennykh obyektov, massivov i kommentariev."
+        "name": "Конвертер YAML в JSON",
+        "description": "Конвертируйте YAML в JSON онлайн с валидацией и подсвечиванием ошибок. Поддержка вложенных объектов, массивов и комментариев."
       },
       "http-status-codes": {
-        "name": "Spravochnik HTTP kodov sostoyaniya",
-        "description": "Poiskovyy spravochnik vsekh HTTP kodov sostoyaniya s opisaniyami i kategoriyami (1xx-5xx). Filtraciya po kategorii ili poisk po kodu."
+        "name": "Справочник HTTP кодов состояния",
+        "description": "Поисковый справочник всех HTTP кодов состояния с описаниями и категориями (1xx-5xx). Фильтрация по категории или поиск по коду."
       },
       "unit-converter": {
-        "name": "Konverter edinits",
-        "description": "Konvertiruyte edinitsy dliny, vesa, temperatury, skorosti, tsiforvogo khraneniya, vremeni i ploshchadi. Podderzhka metricheskoy i imperskoy sistem."
+        "name": "Конвертер единиц",
+        "description": "Конвертируйте единицы длины, веса, температуры, скорости, цифрового хранения, времени и площади. Поддержка метрической и имперской систем."
       },
       "invoice-generator": {
-        "name": "Generator schetov",
-        "description": "Sozdavayte professionalnye scheta s rekvizitami kompanii, pozitsiyami, raschetom naloga i itogovymi summami. Skahayte kak PDF."
+        "name": "Генератор счетов",
+        "description": "Создавайте профессиональные счета с реквизитами компании, позициями, расчётом налога и итоговыми суммами. Скачайте как PDF."
       },
       "morse-code": {
-        "name": "Perevodchik koda Morze",
-        "description": "Konvertiruyte tekst v kod Morze i kod Morze v tekst. Audio vosproizvedenie, spravochnaya tablitsa i dvunapravlennyy perevod."
+        "name": "Переводчик кода Морзе",
+        "description": "Конвертируйте текст в код Морзе и код Морзе в текст. Аудио воспроизведение, справочная таблица и двунаправленный перевод."
       },
       "random-text-generator": {
-        "name": "Generator sluchaynogo teksta",
-        "description": "Generirujte sluchajnye slova, predlozheniya, abzacy, imena, email adresa i telefony dlya testirovaniya i maketov."
+        "name": "Генератор случайного текста",
+        "description": "Генерируйте случайные слова, предложения, абзацы, имена, email адреса и телефоны для тестирования и макетов."
       },
       "text-repeater": {
-        "name": "Povtoritel teksta",
-        "description": "Povtoryajte tekst N raz s polzovatelskim razdelitelem, prefiksom, suffiksom i optsiyami numeratsii."
+        "name": "Повторитель текста",
+        "description": "Повторяйте текст N раз с пользовательским разделителем, префиксом, суффиксом и опциями нумерации."
       },
       "video-to-gif": {
-        "name": "Video v GIF",
-        "description": "Izvlekayte animirovannye klipy iz video faylov. Nastrayvajte vremya nachala, dlitelnost, FPS i razreshenie."
+        "name": "Видео в GIF",
+        "description": "Извлекайте анимированные клипы из видео файлов. Настраивайте время начала, длительность, FPS и разрешение."
       },
       "color-palette-generator": {
-        "name": "Generator tsvetovoy palitry",
-        "description": "Sozdavayte garmonichnye tsvetovye palitry iz bazovogo tsveta. Dopolnitelnye, analogovye, triadnye i tetradnye garmonii."
+        "name": "Генератор цветовой палитры",
+        "description": "Создавайте гармоничные цветовые палитры из базового цвета. Дополнительные, аналоговые, триадные и тетрадные гармонии."
       },
       "backlink-generator": {
-        "name": "Generator obratnyh ssylok",
-        "description": "Sozdavayte kod ssylok v formatah HTML, Markdown, BBCode, Textile, Wiki i reStructuredText."
+        "name": "Генератор обратных ссылок",
+        "description": "Создавайте код ссылок в форматах HTML, Markdown, BBCode, Textile, Wiki и reStructuredText."
       },
       "json-path-finder": {
-        "name": "Poiskovik JSON putey",
-        "description": "Naviragjte po strukture JSON s interaktivnym drevom. Nazhimayte na uzly, nahodite puti."
+        "name": "Поисковик JSON путей",
+        "description": "Навигируйте по структуре JSON с интерактивным деревом. Нажимайте на узлы, находите пути."
       },
       "chmod-calculator": {
-        "name": "Chmod Kalkulyator",
-        "description": "Interaktivnyy kalkulyator prav dostupa Unix. Konvertatsiya mezhdu vosmerichnymi (755) i simvolnymi (rwxr-xr-x) oboznacheniyami."
+        "name": "Chmod Калькулятор",
+        "description": "Интерактивный калькулятор прав доступа Unix. Конвертация между восьмеричными (755) и символьными (rwxr-xr-x) обозначениями."
       },
       "markdown-table-generator": {
-        "name": "Generator Markdown tablits",
-        "description": "Sozdavayte Markdown tablitsy s vizualnym redaktorom. Dobavlyayte stroki, stolbtsy, nastraivayte vyravnivanie."
+        "name": "Генератор Markdown таблиц",
+        "description": "Создавайте Markdown таблицы с визуальным редактором. Добавляйте строки, столбцы, настраивайте выравнивание."
       },
       "regex-library": {
-        "name": "Biblioteka shablonov Regex",
-        "description": "Kuratorskaya biblioteka regex shablonov dlya email, URL, dat, chisel i drugogo. Testiruyte shablony."
+        "name": "Библиотека шаблонов Regex",
+        "description": "Кураторская библиотека regex шаблонов для email, URL, дат, чисел и другого. Тестируйте шаблоны."
       },
       "image-to-base64": {
-        "name": "Izobrazhenie v Base64",
-        "description": "Konvertiruyte izobrazheniya v stroki Base64. Vyvod v vide Data URI, CSS fona ili HTML img tega."
+        "name": "Изображение в Base64",
+        "description": "Конвертируйте изображения в строки Base64. Вывод в виде Data URI, CSS фона или HTML img тега."
       },
       "base64-to-image": {
-        "name": "Base64 v Izobrazhenie",
-        "description": "Dekodiruyte stroki Base64 obratno v izobrazheniya. Avtoopredelenie JPEG, PNG, GIF, WebP, SVG."
+        "name": "Base64 в Изображение",
+        "description": "Декодируйте строки Base64 обратно в изображения. Автоопределение JPEG, PNG, GIF, WebP, SVG."
       },
       "text-truncator": {
-        "name": "Usekatel teksta",
-        "description": "Usekayte tekst po simvolam, slovam ili predlozheniyam. Vyberite pozitsiyu mnogotochiya i sohranenie tselyh slov."
+        "name": "Усекатель текста",
+        "description": "Усекайте текст по символам, словам или предложениям. Выберите позицию многоточия и сохранение целых слов."
       },
       "market-tracker": {
-        "name": "Otslezhivanie rynochnykh tsen",
-        "description": "Otslezhivayte tseny Bitcoin, Ethereum, Zolota i Nefti v realnom vremeni. Smotrite 24-chasovye izmeneniya, konvertiruyte mezhdu valyutami (USD, AZN, EUR)."
+        "name": "Отслеживание рыночных цен",
+        "description": "Отслеживайте цены Bitcoin, Ethereum, Золота и Нефти в реальном времени. Смотрите 24-часовые изменения, конвертируйте между валютами (USD, AZN, EUR)."
       }
     }
   },
   "about": {
-    "title": "O nas",
-    "metaTitle": "O nas - Vaxtim Yoxdu",
-    "metaDescription": "O platforme Vaxtim Yoxdu - Besplatnye AI onlayn instrumenty.",
-    "motto": "Net vremeni? My zdes dlya vas",
-    "description": "Vaxtim Yoxdu - eto platforma, predlagayushchaya kratkie obzory novostey na azerbaydzhanskom yazyke i besplatnye onlayn instrumenty. Nasha cel - ekonomit vashe vremya: dostavlyat vazhnye novosti v kratkom i ponyatnom vide, a takzhe predlagat besplatnye instrumenty dlya uprosheniya vashikh povsednevnykh zadach.",
-    "missionTitle": "Nasha missiya",
-    "missionDescription": "My verim, chto kachestvennaya informaciya i poleznye instrumenty dolzhny byt besplatnymi i legkodostupnymi dlya vsekh. Registraciya ne trebuetsya, skrytykh platezhey net. Tolko moshchnye instrumenty, kotorye rabotayut, i obzory novostey, kotorye ekonomyat vashe vremya.",
-    "privacyTitle": "Konfidencialnost",
-    "privacyDescription": "Bolshinstvo nashikh instrumentov rabotaet neposredstvenno v vashem brauzere - vashi dannye ne pokidayut vashe ustroystvo. Dlya instrumentov na baze AI vashi dannye obrabatyvayutsya bezopasno i nikogda ne khranyatsya.",
-    "contactTitle": "Kontakty",
-    "contactDescription": "Est idei ili predlozheniya? Ne stesnyaytes pisat nam:"
+    "title": "О нас",
+    "metaTitle": "О нас - Vaxtim Yoxdu",
+    "metaDescription": "О платформе Vaxtim Yoxdu - Бесплатные AI онлайн инструменты.",
+    "motto": "Нет времени? Мы здесь для вас",
+    "description": "Vaxtim Yoxdu - это платформа, предлагающая краткие обзоры новостей на азербайджанском языке и бесплатные онлайн инструменты. Наша цель — экономить ваше время: доставлять важные новости в кратком и понятном виде, а также предлагать бесплатные инструменты для упрощения ваших повседневных задач.",
+    "missionTitle": "Наша миссия",
+    "missionDescription": "Мы верим, что качественная информация и полезные инструменты должны быть бесплатными и легкодоступными для всех. Регистрация не требуется, скрытых платежей нет. Только мощные инструменты, которые работают, и обзоры новостей, которые экономят ваше время.",
+    "privacyTitle": "Конфиденциальность",
+    "privacyDescription": "Большинство наших инструментов работает непосредственно в вашем браузере — ваши данные не покидают ваше устройство. Для инструментов на базе AI ваши данные обрабатываются безопасно и никогда не хранятся.",
+    "contactTitle": "Контакты",
+    "contactDescription": "Есть идеи или предложения? Не стесняйтесь писать нам:"
   },
   "privacy": {
-    "title": "Politika konfidencialnosti",
-    "metaTitle": "Politika konfidencialnosti - Vaxtim Yoxdu",
-    "metaDescription": "Politika konfidencialnosti platformy onlayn instrumentov Vaxtim Yoxdu.",
-    "lastUpdated": "Posledneye obnovlenie: Mart 2026",
-    "collectTitle": "Sobiraemaya informaciya",
-    "collectDescription": "My sobirayem minimum informacii dlya predostavleniya nashikh uslug. Klientskie instrumenty obrabatyvayut dannye polnostyu v vashem brauzere - nichego ne otpravlyaetsya na nashi servery.",
-    "aiTitle": "Instrumenty na baze AI",
-    "aiDescription": "Dlya instrumentov na baze AI vash vkhodnyy tekst otpravlyaetsya na nashi zashchishchyonnye servery dlya obrabotki. My ne khranim, ne registriruem i ne ispolzuem vashi vkhodnye dannye dlya obucheniya. Dannye udalyayutsya srazu posle obrabotki.",
-    "analyticsTitle": "Analitika",
-    "analyticsDescription": "My ispolzuem Google Analytics dlya ponimaniya togo, kak posetiteli ispolzuyut nash sayt. Eto sobiraet anonimnye dannye ob ispolzovanii, takie kak prosmotry stranic, tip brauzera i obshchee mestopolozhenie.",
-    "advertisingTitle": "Reklama",
-    "advertisingDescription": "My otobrazhaem reklamu cherez Google AdSense i drugikh partnyorov. Eti servisy mogut ispolzovat fayly cookie dlya pokazam relevantnoy reklamy na osnove vashey aktivnosti v internete.",
-    "cookiesTitle": "Fayly cookie",
-    "cookiesDescription": "My ispolzuem neobkhodimye fayly cookie dlya raboty sayta i fayly cookie tretikh storon dlya analitiki i reklamy. Upravlyat nastroykamy faylov cookie mozhno v nastroykakh brauzera.",
-    "contactTitle": "Kontakty",
-    "contactDescription": "Po voprosam konfidencialnosti svyazhites s nami:"
+    "title": "Политика конфиденциальности",
+    "metaTitle": "Политика конфиденциальности - Vaxtim Yoxdu",
+    "metaDescription": "Политика конфиденциальности платформы онлайн инструментов Vaxtim Yoxdu.",
+    "lastUpdated": "Последнее обновление: Март 2026",
+    "collectTitle": "Собираемая информация",
+    "collectDescription": "Мы собираем минимум информации для предоставления наших услуг. Клиентские инструменты обрабатывают данные полностью в вашем браузере — ничего не отправляется на наши серверы.",
+    "aiTitle": "Инструменты на базе AI",
+    "aiDescription": "Для инструментов на базе AI ваш входной текст отправляется на наши защищённые серверы для обработки. Мы не храним, не регистрируем и не используем ваши входные данные для обучения. Данные удаляются сразу после обработки.",
+    "analyticsTitle": "Аналитика",
+    "analyticsDescription": "Мы используем Google Analytics для понимания того, как посетители используют наш сайт. Это собирает анонимные данные об использовании, такие как просмотры страниц, тип браузера и общее местоположение.",
+    "advertisingTitle": "Реклама",
+    "advertisingDescription": "Мы отображаем рекламу через Google AdSense и других партнёров. Эти сервисы могут использовать файлы cookie для показа релевантной рекламы на основе вашей активности в интернете.",
+    "cookiesTitle": "Файлы cookie",
+    "cookiesDescription": "Мы используем необходимые файлы cookie для работы сайта и файлы cookie третьих сторон для аналитики и рекламы. Управлять настройками файлов cookie можно в настройках браузера.",
+    "contactTitle": "Контакты",
+    "contactDescription": "По вопросам конфиденциальности свяжитесь с нами:"
   },
   "terms": {
-    "title": "Usloviya ispolzovaniya",
-    "metaTitle": "Usloviya ispolzovaniya - Vaxtim Yoxdu",
-    "metaDescription": "Usloviya ispolzovaniya platformy onlayn instrumentov Vaxtim Yoxdu.",
-    "lastUpdated": "Posledneye obnovlenie: Mart 2026",
-    "acceptTitle": "Prinyatie usloviy",
-    "acceptDescription": "Ispolzuya Vaxtim Yoxdu, vy soglashayetes s etimi Usloviyami ispolzovaniya. Esli vy ne soglasny, pozhaluysta, ne ispolzuyte nashi uslugi.",
-    "useTitle": "Ispolzovanie uslug",
-    "useDescription": "Nashi instrumenty predostavlyayutsya besplatno dlya lichnogo i kommercheskogo ispolzovaniya. Vy ne mozhete ispolzovat nashi uslugi v lyubykh nezakonnykh ili nesankcionirovannykh celyakh.",
-    "limitationsTitle": "Ogranicheniya",
-    "limitationsDescription": "Instrumenty na baze AI imeyut ogranicheniya ispolzovaniya dlya obespecheniya spravedlivogo dostupa dlya vsekh polzovateley. My ostavlyaem za soboy pravo ogranichit dostup polzovateley, zloupotreblyayushchikh nashimi uslugami.",
-    "disclaimerTitle": "Otkaz ot otvetstvennosti",
-    "disclaimerDescription": "Nashi instrumenty predostavlyayutsya \"kak est\" bez kakikh-libo garantiy. My ne nesyom otvetstvennosti za lyubuyu poteryu dannykh ili ushcherb, vyzvannye ispolzovaniem nashikh uslug.",
-    "changesTitle": "Izmeneniya",
-    "changesDescription": "My ostavlyaem za soboy pravo izmenyat eti usloviya v lyuboye vremya. Prodolzhenie ispolzovaniya nashikh uslug oznachaet prinyatie obnovlyonnykh usloviy."
+    "title": "Условия использования",
+    "metaTitle": "Условия использования - Vaxtim Yoxdu",
+    "metaDescription": "Условия использования платформы онлайн инструментов Vaxtim Yoxdu.",
+    "lastUpdated": "Последнее обновление: Март 2026",
+    "acceptTitle": "Принятие условий",
+    "acceptDescription": "Используя Vaxtim Yoxdu, вы соглашаетесь с этими Условиями использования. Если вы не согласны, пожалуйста, не используйте наши услуги.",
+    "useTitle": "Использование услуг",
+    "useDescription": "Наши инструменты предоставляются бесплатно для личного и коммерческого использования. Вы не можете использовать наши услуги в любых незаконных или несанкционированных целях.",
+    "limitationsTitle": "Ограничения",
+    "limitationsDescription": "Инструменты на базе AI имеют ограничения использования для обеспечения справедливого доступа для всех пользователей. Мы оставляем за собой право ограничить доступ пользователей, злоупотребляющих нашими услугами.",
+    "disclaimerTitle": "Отказ от ответственности",
+    "disclaimerDescription": "Наши инструменты предоставляются \"как есть\" без каких-либо гарантий. Мы не несём ответственности за любую потерю данных или ущерб, вызванные использованием наших услуг.",
+    "changesTitle": "Изменения",
+    "changesDescription": "Мы оставляем за собой право изменять эти условия в любое время. Продолжение использования наших услуг означает принятие обновлённых условий."
   },
   "footer": {
-    "description": "Kratkie novosti i besplatnye onlayn instrumenty. Registraciya ne nuzhna.",
-    "followUs": "Podpisyvayites",
-    "toolsSection": "Instrumenty",
-    "popularToolsSection": "Populyarnye Instrumenty",
-    "categoriesSection": "Kategorii",
-    "sectionsTitle": "Razdely",
-    "legalTitle": "Pravovaya informaciya",
-    "copyright": "Vse prava zashchishcheny.",
+    "description": "Краткие новости и бесплатные онлайн инструменты. Регистрация не нужна.",
+    "followUs": "Подписывайтесь",
+    "toolsSection": "Инструменты",
+    "popularToolsSection": "Популярные Инструменты",
+    "categoriesSection": "Категории",
+    "sectionsTitle": "Разделы",
+    "legalTitle": "Правовая информация",
+    "copyright": "Все права защищены.",
     "newsletter": {
-      "title": "Budyte v kurse novostey",
-      "placeholder": "Vvedite vash email",
-      "subscribe": "Podpisatsya",
-      "sending": "Otpravka...",
-      "success": "Vy uspeshno podpisalis!",
-      "errorEmpty": "Vvedite adres elektronnoy pochty.",
-      "errorInvalid": "Vvedite korrektniy adres elektronnoy pochty.",
-      "errorDuplicate": "Etot email uzhe podpisan.",
-      "errorGeneral": "Proizoshla oshibka. Poprobujte snova.",
-      "emailLabel": "Adres elektronnoy pochty"
+      "title": "Будьте в курсе новостей",
+      "placeholder": "Введите ваш email",
+      "subscribe": "Подписаться",
+      "sending": "Отправка...",
+      "success": "Вы успешно подписались!",
+      "errorEmpty": "Введите адрес электронной почты.",
+      "errorInvalid": "Введите корректный адрес электронной почты.",
+      "errorDuplicate": "Этот email уже подписан.",
+      "errorGeneral": "Произошла ошибка. Попробуйте снова.",
+      "emailLabel": "Адрес электронной почты"
     }
   },
   "errors": {
-    "notFound": "Stranica ne naydena",
-    "notFoundDescription": "Stranica, kotoruyu vy ishchete, ne sushchestvuet ili byla peremeshchena.",
-    "notFoundSuggestion": "Vozmozhno, vy naydyote to, chto ishchete, zdes:",
-    "notFoundHome": "Glavnaya",
-    "notFoundTools": "Instrumenty",
-    "notFoundNews": "Novosti",
-    "notFoundBlog": "Blog",
-    "notFoundPopularTools": "Populyarnye Instrumenty",
-    "notFoundCategories": "Kategorii",
-    "notFoundBrowseAll": "Posmotret vse instrumenty",
-    "generalError": "Oshibka",
-    "generalErrorTitle": "Proizoshla oshibka",
-    "generalErrorDescription": "Proizoshla neprevidennaya oshibka. Pozhaluysta, poprobujte snova.",
-    "retry": "Poprobovat snova",
-    "loading": "Zagruzka..."
+    "notFound": "Страница не найдена",
+    "notFoundDescription": "Страница, которую вы ищете, не существует или была перемещена.",
+    "notFoundSuggestion": "Возможно, вы найдёте то, что ищете, здесь:",
+    "notFoundHome": "Главная",
+    "notFoundTools": "Инструменты",
+    "notFoundNews": "Новости",
+    "notFoundBlog": "Блог",
+    "notFoundPopularTools": "Популярные Инструменты",
+    "notFoundCategories": "Категории",
+    "notFoundBrowseAll": "Посмотреть все инструменты",
+    "generalError": "Ошибка",
+    "generalErrorTitle": "Произошла ошибка",
+    "generalErrorDescription": "Произошла непредвиденная ошибка. Пожалуйста, попробуйте снова.",
+    "retry": "Попробовать снова",
+    "loading": "Загрузка..."
   },
   "cookie": {
     "message": "Этот сайт использует cookie для улучшения вашего опыта.",
     "accept": "Принять",
-    "reject": "Отклонить",
-    "privacyLink": "Политика конфиденциальности",
-    "ariaLabel": "Баннер согласия на cookie",
-    "ariaReject": "Отклонить cookie",
-    "ariaAccept": "Принять cookie"
-  },
-  "installPrompt": {
-    "ariaLabel": "Установить приложение",
-    "title": "Установите Vaxtim Yoxdu на ваш телефон!",
-    "description": "Добавьте на главный экран для быстрого доступа.",
-    "dismiss": "Позже",
-    "install": "Установить",
-    "close": "Закрыть"
-  },
-  "offline": {
-    "title": "Нет подключения к интернету",
-    "description": "Для отображения этой страницы требуется подключение к интернету. Пожалуйста, проверьте соединение и попробуйте снова.",
-    "retry": "Попробовать снова",
-    "hint": "Если проблема сохраняется, свяжитесь с вашим интернет-провайдером."
+    "reject": "Отклонить"
   },
   "language": {
-    "label": "Vybrat yazyk",
-    "current": "Tekushchiy yazyk"
+    "label": "Выбрать язык",
+    "current": "Текущий язык"
   },
   "info": {
-    "metaTitle": "Novosti - Vaxtim Yoxdu",
-    "metaDescription": "Kratkie obzory vazhnykh novostey dnya. Ekonomika, tekhnologii, obrazovanie, sport - vse za odno mgnovenie.",
-    "title": "Novosti",
-    "subtitle": "Korotkie i tochnye novosti - kogda net vremeni, my zdes.",
-    "breadcrumbHome": "Glavnaya",
-    "breadcrumbNews": "Novosti",
-    "noArticles": "Novostey na etom yazyke poka net."
+    "metaTitle": "Новости - Vaxtim Yoxdu",
+    "metaDescription": "Краткие обзоры важных новостей дня. Экономика, технологии, образование, спорт — все за одно мгновение.",
+    "title": "Новости",
+    "subtitle": "Короткие и точные новости — когда нет времени, мы здесь.",
+    "breadcrumbHome": "Главная",
+    "breadcrumbNews": "Новости",
+    "noArticles": "Новостей на этом языке пока нет."
   },
   "blog": {
-    "metaTitle": "Blog - Vaxtim Yoxdu",
-    "metaDescription": "Sovety, uroki i rukovodstva ob onlayn instrumentakh, II i proizvoditelnosti.",
-    "title": "Blog",
-    "breadcrumbHome": "Glavnaya",
-    "breadcrumbBlog": "Blog",
-    "noArticles": "Zapisey v bloge na etom yazyke poka net.",
-    "readMore": "Chitat dalshe"
+    "metaTitle": "Блог - Vaxtim Yoxdu",
+    "metaDescription": "Советы, уроки и руководства об онлайн инструментах, ИИ и производительности.",
+    "title": "Блог",
+    "breadcrumbHome": "Главная",
+    "breadcrumbBlog": "Блог",
+    "noArticles": "Записей в блоге на этом языке пока нет.",
+    "readMore": "Читать дальше"
   },
   "newsletterPopup": {
-    "title": "Budyte v kurse novostey!",
-    "description": "Ezhenedelnye tekh-novosti i novye instrumenty pryamo na vashu pochtu!",
-    "placeholder": "Vash email adres",
-    "subscribe": "Podpisatsya besplatno",
-    "sending": "Otpravka...",
-    "success": "Vy uspeshno podpisalis!",
-    "successDescription": "Spasibo! Vy budete pervymi uznavat o poslednikh obnovleniyakh.",
-    "close": "Zakryt",
-    "dontShowAgain": "Bolshe ne pokazyvat",
-    "noSpam": "Nikakogo spama, obeshchayem!",
-    "errorEmpty": "Vvedite adres elektronnoy pochty.",
-    "errorInvalid": "Vvedite korrektniy adres elektronnoy pochty.",
-    "errorDuplicate": "Etot email uzhe podpisan.",
-    "errorGeneral": "Proizoshla oshibka. Poprobujte snova."
+    "title": "Будьте в курсе новостей!",
+    "description": "Еженедельные тех-новости и новые инструменты прямо на вашу почту!",
+    "placeholder": "Ваш email адрес",
+    "subscribe": "Подписаться бесплатно",
+    "sending": "Отправка...",
+    "success": "Вы успешно подписались!",
+    "successDescription": "Спасибо! Вы будете первыми узнавать о последних обновлениях.",
+    "close": "Закрыть",
+    "dontShowAgain": "Больше не показывать",
+    "noSpam": "Никакого спама, обещаем!",
+    "errorEmpty": "Введите адрес электронной почты.",
+    "errorInvalid": "Введите корректный адрес электронной почты.",
+    "errorDuplicate": "Этот email уже подписан.",
+    "errorGeneral": "Произошла ошибка. Попробуйте снова."
   },
   "newsletterCta": {
-    "blogTitle": "Ponravilas statya?",
-    "blogDescription": "Podpishites, chtoby uznavat o novykh statyakh i poleznykh instrumentakh.",
-    "newsTitle": "Ne propuskayte novosti!",
-    "newsDescription": "Poluchayte ezhenedelnyye obzory samykh vazhnykh novostey na vashu pochtu.",
-    "placeholder": "Vash email adres",
-    "subscribe": "Podpisatsya",
-    "sending": "Otpravka...",
-    "success": "Vy uspeshno podpisalis!",
-    "errorEmpty": "Vvedite adres elektronnoy pochty.",
-    "errorInvalid": "Vvedite korrektniy adres elektronnoy pochty.",
-    "errorDuplicate": "Etot email uzhe podpisan.",
-    "errorGeneral": "Proizoshla oshibka. Poprobujte snova."
+    "blogTitle": "Понравилась статья?",
+    "blogDescription": "Подпишитесь, чтобы узнавать о новых статьях и полезных инструментах.",
+    "newsTitle": "Не пропускайте новости!",
+    "newsDescription": "Получайте еженедельные обзоры самых важных новостей на вашу почту.",
+    "placeholder": "Ваш email адрес",
+    "subscribe": "Подписаться",
+    "sending": "Отправка...",
+    "success": "Вы успешно подписались!",
+    "errorEmpty": "Введите адрес электронной почты.",
+    "errorInvalid": "Введите корректный адрес электронной почты.",
+    "errorDuplicate": "Этот email уже подписан.",
+    "errorGeneral": "Произошла ошибка. Попробуйте снова."
   },
   "share": {
-    "title": "Podelitsya",
-    "shareOn": "Podelitsya v {platform}",
-    "copyLink": "Kopirovat ssylku",
-    "copied": "Skopirovano!",
-    "poweredBy": "Sdelano s pomoshchyu VaxtimYoxdu.com"
+    "title": "Поделиться",
+    "shareOn": "Поделиться в {platform}",
+    "copyLink": "Копировать ссылку",
+    "copied": "Скопировано!",
+    "poweredBy": "Сделано с помощью VaxtimYoxdu.com"
   },
   "newsletterHome": {
-    "title": "Prisoyedinyaytes k nashey ezhenedelnoy rassylke",
-    "description": "Samye vazhnye tekh-obnovleniya, novye instrumenty i poleznye sovety pryamo na vashu pochtu.",
-    "bullet1": "Ezhenedelnyy obzor samykh vazhnykh tekh-novostey",
-    "bullet2": "Uznavayte pervymi o novykh besplatnykh instrumentakh",
-    "bullet3": "Sovety i rekomendacii dlya ekonomii vremeni",
-    "subscriberCount": "uzhe podpisalis"
+    "title": "Присоединяйтесь к нашей еженедельной рассылке",
+    "description": "Самые важные тех-обновления, новые инструменты и полезные советы прямо на вашу почту.",
+    "bullet1": "Еженедельный обзор самых важных тех-новостей",
+    "bullet2": "Узнавайте первыми о новых бесплатных инструментах",
+    "bullet3": "Советы и рекомендации для экономии времени",
+    "subscriberCount": "уже подписались"
   },
   "crossLinks": {
-    "relatedTools": "Poleznye Instrumenty",
-    "relatedBlogPosts": "Svyazannye Stati",
-    "tryTheseTool": "Poprobujte eti instrumenty",
-    "readMore": "Chitat dalshe"
+    "relatedTools": "Полезные Инструменты",
+    "relatedBlogPosts": "Связанные Статьи",
+    "tryTheseTool": "Попробуйте эти инструменты",
+    "readMore": "Читать дальше"
   }
 }

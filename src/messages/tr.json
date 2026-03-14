@@ -1,526 +1,508 @@
 {
   "common": {
     "siteName": "Vaxtim Yoxdu",
-    "siteDescription": "Zamaniniz yoksa, biz variz. Kisa haber ozetleri ve ucretsiz AI online araclar.",
+    "siteDescription": "Zamanınız yoksa, biz varız. Kısa haber özetleri ve ücretsiz AI online araçlar.",
     "nav": {
       "home": "Ana Sayfa",
       "news": "Haberler",
-      "tools": "Araclar",
+      "tools": "Araçlar",
       "blog": "Blog",
-      "about": "Hakkimizda",
-      "privacy": "Gizlilik Politikasi",
-      "terms": "Kullanim Sartlari"
+      "about": "Hakkımızda",
+      "privacy": "Gizlilik Politikası",
+      "terms": "Kullanım Şartları"
     },
-    "skipToContent": "Iceriye atla"
+    "skipToContent": "İçeriğe atla"
   },
   "home": {
     "heroTitle": "Vaxtim",
     "heroTitleHighlight": "Yoxdu",
-    "heroDescription": "Zamaniniz yoksa, biz variz. Kisa haberler ve ucretsiz online araclar.",
+    "heroDescription": "Zamanınız yoksa, biz varız. Kısa haberler ve ücretsiz online araçlar.",
     "newsTitle": "Haberler",
-    "newsDescription": "Onemli haberlerin gunluk ozeti. Ekonomi, teknoloji, egitim, spor - her seyi bir bakista.",
+    "newsDescription": "Önemli haberlerin günlük özeti. Ekonomi, teknoloji, eğitim, spor - her şeyi bir bakışta.",
     "newsLink": "Haberleri oku",
-    "toolsTitle": "Araclar",
-    "toolsDescription": "Ucretsiz AI online araclar. Metin yeniden yazma, gramer kontrolu, PDF birlestirme, goruntu sikistirma ve daha fazlasi.",
-    "toolsLink": "Araclara goz at",
-    "statTools": "Ucretsiz Arac",
-    "statRegistration": "Kayit",
-    "statAvailability": "Erisilebilirlik",
-    "marketTitle": "Piyasa Fiyatlari",
-    "marketViewAll": "Tumunu gor"
+    "toolsTitle": "Araçlar",
+    "toolsDescription": "Ücretsiz AI online araçlar. Metin yeniden yazma, gramer kontrolü, PDF birleştirme, görüntü sıkıştırma ve daha fazlası.",
+    "toolsLink": "Araçlara göz at",
+    "statTools": "Ücretsiz Araç",
+    "statRegistration": "Kayıt",
+    "statAvailability": "Erişilebilirlik",
+    "marketTitle": "Piyasa Fiyatları",
+    "marketViewAll": "Tümünü gör"
   },
   "tools": {
-    "pageTitle": "Ucretsiz Online Araclar",
+    "pageTitle": "Ücretsiz Online Araçlar",
     "pageTitleHighlight": "AI Destekli",
-    "pageDescription": "PDF birlestirici, goruntu araclari, metin yeniden yazma, JSON formatlayici ve daha fazlasi. Kayit gerekmiyor. Hizli, ucretsiz ve guvenli.",
-    "searchPlaceholder": "Arac ara...",
-    "allTools": "Tum Araclar",
-    "clientSide": "Tarayici Tabanli",
+    "pageDescription": "PDF birleştirici, görüntü araçları, metin yeniden yazma, JSON biçimlendirici ve daha fazlası. Kayıt gerekmiyor. Hızlı, ücretsiz ve güvenli.",
+    "searchPlaceholder": "Araç ara...",
+    "allTools": "Tüm Araçlar",
+    "clientSide": "Tarayıcı Tabanlı",
     "aiPowered": "AI Destekli",
-    "filterAll": "Tumunu Goster",
+    "filterAll": "Tümünü Göster",
     "breadcrumbHome": "Ana Sayfa",
-    "breadcrumbTools": "Araclar",
+    "breadcrumbTools": "Araçlar",
     "categories": {
-      "ai": "AI Araclari",
-      "aiDesc": "Yapay zeka destekli metin isleme araclari",
-      "pdf": "PDF Araclari",
-      "pdfDesc": "PDF dosyalarini birlestirin, bolusdurub, sikistirin",
-      "image": "Goruntu Araclari",
-      "imageDesc": "Goruntuleri sikistirin, yeniden boyutlandirin, kirpin ve donusturun",
-      "dev": "Gelistirici Araclari",
-      "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV ve daha fazlasi",
-      "generators": "Jeneratorler",
-      "generatorsDesc": "Sifreler, UUID, QR kodlar, gradyanlar, emojiler ve renkler olusturun",
-      "text": "Metin Araclari",
-      "textDesc": "Buyuk/kucuk harf cevirici, binary, ROT13, fark kontrolu, zamanlayici, kelime sayaci"
+      "ai": "AI Araçları",
+      "aiDesc": "Yapay zeka destekli metin işleme araçları",
+      "pdf": "PDF Araçları",
+      "pdfDesc": "PDF dosyalarını birleştirin, bölüştürüp, sıkıştırın",
+      "image": "Görüntü Araçları",
+      "imageDesc": "Görüntüleri sıkıştırın, yeniden boyutlandırın, kırpın ve dönüştürün",
+      "dev": "Geliştirici Araçları",
+      "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV ve daha fazlası",
+      "generators": "Jeneratörler",
+      "generatorsDesc": "Şifreler, UUID, QR kodlar, gradyanlar, emojiler ve renkler oluşturun",
+      "text": "Metin Araçları",
+      "textDesc": "Büyük/küçük harf çevirici, binary, ROT13, fark kontrolü, zamanlayıcı, kelime sayacı"
     },
     "toolNames": {
       "ai-text-rewriter": {
-        "name": "AI Metin Yeniden Yazici",
-        "description": "AI ile metninizi yeniden yazin ve baska sozcuklerle ifade edin. Tonu degistirin, sadlestirin veya daha profesyonel hale getirin."
+        "name": "AI Metin Yeniden Yazıcı",
+        "description": "AI ile metninizi yeniden yazın ve başka sözcüklerle ifade edin. Tonu değiştirin, sadeleştirin veya daha profesyonel hale getirin."
       },
       "ai-text-summarizer": {
-        "name": "AI Metin Ozetleyici",
-        "description": "Uzun metinleri, makaleleri ve belgeleri AI ile ozetleyin. Onemli noktalari iceren kisa ozetler alin."
+        "name": "AI Metin Özetleyici",
+        "description": "Uzun metinleri, makaleleri ve belgeleri AI ile özetleyin. Önemli noktaları içeren kısa özetler alın."
       },
       "ai-grammar-checker": {
         "name": "AI Gramer Denetleyicisi",
-        "description": "AI ile gramer, yazim ve noktalama hatalarini kontrol edin ve duzelttin. Aninda duzeltmeler alin."
+        "description": "AI ile gramer, yazım ve noktalama hatalarını kontrol edin ve düzeltin. Anında düzeltmeler alın."
       },
       "pdf-merge": {
-        "name": "PDF Birlestirici",
-        "description": "Birden fazla PDF dosyasini cevrimici tek bir belgede birlestirin. Sayfalari yeniden siralayin ve istediginiz sirada birlestirin."
+        "name": "PDF Birleştirici",
+        "description": "Birden fazla PDF dosyasını çevrimiçi tek bir belgede birleştirin. Sayfaları yeniden sıralayın ve istediğiniz sırada birleştirin."
       },
       "pdf-split": {
-        "name": "PDF Sayfa Bolucu",
-        "description": "PDF dosyasindan belirli sayfalari cevrimici cikarin. Sayfa araliklarini secin, bolun ve indirin."
+        "name": "PDF Sayfa Bölücü",
+        "description": "PDF dosyasından belirli sayfaları çevrimiçi çıkarın. Sayfa aralıklarını seçin, bölün ve indirin."
       },
       "pdf-compress": {
-        "name": "PDF Sikistirici",
-        "description": "PDF dosya boyutunu cevrimici azaltin. Meta verileri kaldirin ve yapiy optimize ederek sikistirin."
+        "name": "PDF Sıkıştırıcı",
+        "description": "PDF dosya boyutunu çevrimiçi azaltın. Meta verileri kaldırın ve yapıyı optimize ederek sıkıştırın."
       },
       "image-compress": {
-        "name": "Goruntu Sikistirici",
-        "description": "Goruntuleri cevrimici sikistirin ve yeniden boyutlandirin. Kaliteyi koruyarak dosya boyutunu azaltin. JPEG, PNG ve WebP destekler."
+        "name": "Görüntü Sıkıştırıcı",
+        "description": "Görüntüleri çevrimiçi sıkıştırın ve yeniden boyutlandırın. Kaliteyi koruyarak dosya boyutunu azaltın. JPEG, PNG ve WebP destekler."
       },
       "image-convert": {
-        "name": "Goruntu Donusturucu",
-        "description": "Goruntuleri JPEG, PNG ve WebP formatlari arasinda cevrimici donusturun. Dosyalariniz tarayicinizda kalir."
+        "name": "Görüntü Dönüştürücü",
+        "description": "Görüntüleri JPEG, PNG ve WebP formatları arasında çevrimiçi dönüştürün. Dosyalarınız tarayıcınızda kalır."
       },
       "image-resize": {
-        "name": "Goruntu Boyutlandirici",
-        "description": "Goruntuleri tam boyutlara veya yuzdeyle cevrimici yeniden boyutlandirin. En-boy oranini koruyun. JPEG, PNG ve WebP destekler."
+        "name": "Görüntü Boyutlandırıcı",
+        "description": "Görüntüleri tam boyutlara veya yüzdeyle çevrimiçi yeniden boyutlandırın. En-boy oranını koruyun. JPEG, PNG ve WebP destekler."
       },
       "image-crop": {
-        "name": "Goruntu Kirpici",
-        "description": "Goruntuleri surukle-sec alaniyla cevrimici kirpin. Herhangi bir bolgeyi secin ve kirpilmis sonucu indirin."
+        "name": "Görüntü Kırpıcı",
+        "description": "Görüntüleri sürükle-seç alanıyla çevrimiçi kırpın. Herhangi bir bölgeyi seçin ve kırpılmış sonucu indirin."
       },
       "json-formatter": {
-        "name": "JSON Bimlendirici ve Dogrulayici",
-        "description": "JSON verilerinizi cevrimici bimlendirin, dogrulayin ve guzelce gosterin. Soz dizimi vurgulama ile kucultme veya guzel gosterim."
+        "name": "JSON Biçimlendirici ve Doğrulayıcı",
+        "description": "JSON verilerinizi çevrimiçi biçimlendirin, doğrulayın ve güzelce gösterin. Söz dizimi vurgulama ile küçültme veya güzel gösterim."
       },
       "base64-encode-decode": {
-        "name": "Base64 Kodlama/Cozme",
-        "description": "Metni Base64 olarak kodlayin veya Base64 dizelerini cevrimici cozun. UTF-8 metin ve dosya kodlamasini destekler."
+        "name": "Base64 Kodlama/Çözme",
+        "description": "Metni Base64 olarak kodlayın veya Base64 dizelerini çevrimiçi çözün. UTF-8 metin ve dosya kodlamasını destekler."
       },
       "regex-tester": {
-        "name": "Regex Test Araci",
-        "description": "Duzgun ifadeleri gercek zamanli eslestirme ile cevrimici test edin ve hata ayiklayin. Eslesmeleri vurgulayin ve gruplari gorun."
+        "name": "Regex Test Aracı",
+        "description": "Düzenli ifadeleri gerçek zamanlı eşleştirme ile çevrimiçi test edin ve hata ayıklayın. Eşleşmeleri vurgulayın ve grupları görün."
       },
       "hash-generator": {
-        "name": "Hash Ureteci",
-        "description": "Metinden SHA-1, SHA-256, SHA-384, SHA-512 hashleri cevrimici uretin. Ucretsiz kriptografik hash araci."
+        "name": "Hash Üreteci",
+        "description": "Metinden SHA-1, SHA-256, SHA-384, SHA-512 hashleri çevrimiçi üretin. Ücretsiz kriptografik hash aracı."
       },
       "qr-code-generator": {
-        "name": "QR Kod Ureteci",
-        "description": "URL, metin, e-posta, telefon numarasi ve daha fazlasi icin QR kodlar uretin. PNG veya SVG olarak indirin."
+        "name": "QR Kod Üreteci",
+        "description": "URL, metin, e-posta, telefon numarası ve daha fazlası için QR kodlar üretin. PNG veya SVG olarak indirin."
       },
       "color-picker": {
-        "name": "Renk Secici ve Palet Ureteci",
-        "description": "Renkler secin, HEX, RGB, HSL formatlari arasinda donusturun ve guzel renk paletleri olusturun."
+        "name": "Renk Seçici ve Palet Üreteci",
+        "description": "Renkler seçin, HEX, RGB, HSL formatları arasında dönüştürün ve güzel renk paletleri oluşturun."
       },
       "lorem-ipsum-generator": {
-        "name": "Lorem Ipsum Ureteci",
-        "description": "Tasarimlariniz ve maketleriniz icin lorem ipsum yer tutucu metin olusturun. Paragraf, cumle veya kelime secin."
+        "name": "Lorem Ipsum Üreteci",
+        "description": "Tasarımlarınız ve maketleriniz için lorem ipsum yer tutucu metin oluşturun. Paragraf, cümle veya kelime seçin."
       },
       "word-counter": {
-        "name": "Kelime Sayaci",
-        "description": "Metninizde kelimeleri, karakterleri, cumleleri ve paragraflari sayin. Okuma suresini tahmin edin."
+        "name": "Kelime Sayacı",
+        "description": "Metninizde kelimeleri, karakterleri, cümleleri ve paragrafları sayın. Okuma süresini tahmin edin."
       },
       "case-converter": {
-        "name": "Harf Buyuklugu Ceviricisi",
-        "description": "Metni BUYUK HARF, kucuk harf, Baslik Harfi, camelCase, snake_case, kebab-case ve daha fazlasi arasinda donusturun."
+        "name": "Harf Büyüklüğü Çeviricisi",
+        "description": "Metni BÜYÜK HARF, küçük harf, Başlık Harfi, camelCase, snake_case, kebab-case ve daha fazlası arasında dönüştürün."
       },
       "slug-generator": {
-        "name": "Slug Ureteci",
-        "description": "Herhangi bir metinden temiz URL slug-lari uretin. Ozel karakterleri kaldirin ve SEO dostu URL-ler olusturun."
+        "name": "Slug Üreteci",
+        "description": "Herhangi bir metinden temiz URL slug-ları üretin. Özel karakterleri kaldırın ve SEO dostu URL-ler oluşturun."
       },
       "text-diff": {
-        "name": "Metin Fark Kontrolu",
-        "description": "Iki metni karsilastirin ve farklari bulun. Eklemeleri, silmeleri ve degisiklikleri satir satir vurgulayin."
+        "name": "Metin Fark Kontrolü",
+        "description": "İki metni karşılaştırın ve farkları bulun. Eklemeleri, silmeleri ve değişiklikleri satır satır vurgulayın."
       },
       "html-entity-codec": {
-        "name": "HTML Entity Kodlayici/Cozucu",
-        "description": "Ozel karakterleri HTML entity-lerine kodlayin veya HTML entity-lerini tekrar metne donusturun."
+        "name": "HTML Entity Kodlayıcı/Çözücü",
+        "description": "Özel karakterleri HTML entity-lerine kodlayın veya HTML entity-lerini tekrar metne dönüştürün."
       },
       "url-encode-decode": {
-        "name": "URL Kodlama/Cozme",
-        "description": "URL dizelerini cevrimici kodlayin veya cozun. Ozel karakterleri yuzde-kodlamasina donusturun veya cozun."
+        "name": "URL Kodlama/Çözme",
+        "description": "URL dizelerini çevrimiçi kodlayın veya çözün. Özel karakterleri yüzde-kodlamasına dönüştürün veya çözün."
       },
       "jwt-decoder": {
-        "name": "JWT Cozucu",
-        "description": "JSON Web Token-leri (JWT) cevrimici cozun ve inceleyin. Baslik, yuk ve sona erme durumunu gorun."
+        "name": "JWT Çözücü",
+        "description": "JSON Web Token-leri (JWT) çevrimiçi çözün ve inceleyin. Başlık, yük ve sona erme durumunu görün."
       },
       "markdown-preview": {
-        "name": "Markdown Onizleme",
-        "description": "Markdown-i gercek zamanli yazin ve onizleyin. Basliklar, listeler, kod bloklari ve daha fazlasini destekler."
+        "name": "Markdown Önizleme",
+        "description": "Markdown-ı gerçek zamanlı yazın ve önizleyin. Başlıklar, listeler, kod blokları ve daha fazlasını destekler."
       },
       "timestamp-converter": {
-        "name": "Zaman Damgasi Ceviricisi",
-        "description": "Unix zaman damgalarini okunabilir tarihlere ve tam tersine donusturun. Saniye ve milisaniye destekler."
+        "name": "Zaman Damgası Çeviricisi",
+        "description": "Unix zaman damgalarını okunabilir tarihlere ve tam tersine dönüştürün. Saniye ve milisaniye destekler."
       },
       "css-minifier": {
-        "name": "CSS Kucultucusu ve Guzellestiricisi",
-        "description": "CSS-i dosya boyutunu azaltmak icin kuculutun veya kucultulmus CSS-i okunabilir hale getirin. Boyut tasarrufunu gorun."
+        "name": "CSS Küçültücüsü ve Güzelleştiricisi",
+        "description": "CSS-i dosya boyutunu azaltmak için küçültün veya küçültülmüş CSS-i okunabilir hale getirin. Boyut tasarrufunu görün."
       },
       "number-base-converter": {
-        "name": "Sayi Tabani Ceviricisi",
-        "description": "Sayilari Ikilik, Sekizlik, Onluk ve On Altilik arasinda donusturun. Gercek zamanli donusum ve dogrulama."
+        "name": "Sayı Tabanı Çeviricisi",
+        "description": "Sayıları İkilik, Sekizlik, Onluk ve On Altılık arasında dönüştürün. Gerçek zamanlı dönüşüm ve doğrulama."
       },
       "csv-to-json": {
-        "name": "CSV-den JSON-a Cevirici",
-        "description": "CSV verilerini cevrimici JSON formatina donusturun. Ozel ayiricilar, baslik satirlari ve tirnak icindeki alanlari destekler."
+        "name": "CSV-den JSON-a Çevirici",
+        "description": "CSV verilerini çevrimiçi JSON formatına dönüştürün. Özel ayırıcılar, başlık satırları ve tırnak içindeki alanları destekler."
       },
       "cron-parser": {
-        "name": "Cron Ifade Cozumleyicisi",
-        "description": "Cron ifadelerini cozumleyin ve anlayin. Okunabilir aciklama ve sonraki calisma zamanlarini gorun."
+        "name": "Cron İfade Çözümleyicisi",
+        "description": "Cron ifadelerini çözümleyin ve anlayın. Okunabilir açıklama ve sonraki çalışma zamanlarını görün."
       },
       "html-minifier": {
-        "name": "HTML Kucultucusu ve Guzellestiricisi",
-        "description": "HTML-i dosya boyutunu azaltmak icin kuculutun veya kucultulmus HTML-i okunabilir hale getirin. Yorumlari ve bosluklari kaldirin."
+        "name": "HTML Küçültücüsü ve Güzelleştiricisi",
+        "description": "HTML-i dosya boyutunu azaltmak için küçültün veya küçültülmüş HTML-i okunabilir hale getirin. Yorumları ve boşlukları kaldırın."
       },
       "js-minifier": {
-        "name": "JavaScript Kucultucusu ve Guzellestiricisi",
-        "description": "JavaScript-i dosya boyutunu azaltmak icin kuculutun veya kucultulmus JS-i okunabilir hale getirin. Yorumlari ve bosluklari kaldirin."
+        "name": "JavaScript Küçültücüsü ve Güzelleştiricisi",
+        "description": "JavaScript-i dosya boyutunu azaltmak için küçültün veya küçültülmüş JS-i okunabilir hale getirin. Yorumları ve boşlukları kaldırın."
       },
       "sql-formatter": {
-        "name": "SQL Bimlendirici",
-        "description": "SQL sorgularini cevrimici bimlendir ve guzellecidir. Anahtar kelimeleri girintileyin ve cumleleri hizalayin."
+        "name": "SQL Biçimlendirici",
+        "description": "SQL sorgularını çevrimiçi biçimlendirin ve güzelleştirin. Anahtar kelimeleri girintileyin ve cümleleri hizalayın."
       },
       "json-to-csv": {
-        "name": "JSON-dan CSV-ye Cevirici",
-        "description": "JSON dizilerini cevrimici CSV formatina donusturun. Ozel ayiricilar ve indirme destekler."
+        "name": "JSON-dan CSV-ye Çevirici",
+        "description": "JSON dizilerini çevrimiçi CSV formatına dönüştürün. Özel ayırıcılar ve indirme destekler."
       },
       "ip-address-info": {
         "name": "IP Adres Bilgisi",
-        "description": "Genel IP adresinizi, kullanici ajaninizi, ekran cozunurlugunu ve tarayici bilgilerinizi gorun."
+        "description": "Genel IP adresinizi, kullanıcı ajanınızı, ekran çözünürlüğünü ve tarayıcı bilgilerinizi görün."
       },
       "password-generator": {
-        "name": "Sifre Ureteci",
-        "description": "Ozellestirilebilir uzunluk ve karakter turleriyle guclu, rastgele sifreler uretin. Sifre gucu gostergesi dahildir."
+        "name": "Şifre Üreteci",
+        "description": "Özelleştirilebilir uzunluk ve karakter türleriyle güçlü, rastgele şifreler üretin. Şifre gücü göstergesi dahildir."
       },
       "uuid-generator": {
-        "name": "UUID Ureteci",
-        "description": "UUID v4 tanimlayicilari cevrimici uretin. Toplu uretim, buyuk/kucuk harf secenekleri, tireli veya tiresiz."
+        "name": "UUID Üreteci",
+        "description": "UUID v4 tanımlayıcıları çevrimiçi üretin. Toplu üretim, büyük/küçük harf seçenekleri, tireli veya tiresiz."
       },
       "meta-tag-generator": {
-        "name": "Meta Etiket Ureteci",
-        "description": "SEO icin HTML meta etiketleri uretin. Open Graph, Twitter Card ve standart meta etiketleri ile canli Google onizlemesi."
+        "name": "Meta Etiket Üreteci",
+        "description": "SEO için HTML meta etiketleri üretin. Open Graph, Twitter Card ve standart meta etiketleri ile canlı Google önizlemesi."
       },
       "aspect-ratio-calculator": {
-        "name": "En-Boy Orani Hesaplayicisi",
-        "description": "En-boy oranlarini hesaplayin ve donusturun. 16:9, 4:3 gibi yaygin on ayarlari kullanin ve uygun cozunurlukleri bulun."
+        "name": "En-Boy Oranı Hesaplayıcısı",
+        "description": "En-boy oranlarını hesaplayın ve dönüştürün. 16:9, 4:3 gibi yaygın ön ayarları kullanın ve uygun çözünürlükleri bulun."
       },
       "emoji-picker": {
-        "name": "Emoji Secici ve Arama",
-        "description": "Emojilere kategoriye gore goz atin, arayin ve kopyalayin. Bir tikla panoya kopyalayin."
+        "name": "Emoji Seçici ve Arama",
+        "description": "Emojilere kategoriye göre göz atın, arayın ve kopyalayın. Bir tıkla panoya kopyalayın."
       },
       "gradient-generator": {
-        "name": "CSS Gradyan Ureteci",
-        "description": "Birden fazla renk duragiyla guzel dogrusal ve radyal CSS gradyanlari olusturun. Gercek zamanli onizleme ve CSS kodunu kopyalayin."
+        "name": "CSS Gradyan Üreteci",
+        "description": "Birden fazla renk durağıyla güzel doğrusal ve radyal CSS gradyanları oluşturun. Gerçek zamanlı önizleme ve CSS kodunu kopyalayın."
       },
       "placeholder-image": {
-        "name": "Yer Tutucu Goruntu Ureteci",
-        "description": "Ozel boyut, renk ve metin ile yer tutucu goruntuler olusturun. PNG veya JPEG olarak indirin."
+        "name": "Yer Tutucu Görüntü Üreteci",
+        "description": "Özel boyut, renk ve metin ile yer tutucu görüntüler oluşturun. PNG veya JPEG olarak indirin."
       },
       "text-to-binary": {
-        "name": "Metin-Binary Cevirici",
-        "description": "Metni ikilik, on altilik veya sekizlik sisteme ve tam tersine donusturun. Birden fazla kodlama formati destekler."
+        "name": "Metin-Binary Çevirici",
+        "description": "Metni ikilik, on altılık veya sekizlik sisteme ve tam tersine dönüştürün. Birden fazla kodlama formatı destekler."
       },
       "rot13-encoder": {
-        "name": "ROT13 Kodlayici/Cozucu",
-        "description": "ROT13 Sezar sifresi ile metni kodlayin ve cozun. 1 ile 25 arasinda ozel kaydirma degerleri destekler."
+        "name": "ROT13 Kodlayıcı/Çözücü",
+        "description": "ROT13 Sezar şifresi ile metni kodlayın ve çözün. 1 ile 25 arasında özel kaydırma değerleri destekler."
       },
       "pomodoro-timer": {
-        "name": "Pomodoro Zamanlayicisi",
-        "description": "Pomodoro Teknigi ile odaklanma zamanlayicisi. 25 dakika calisma, 5 dakika mola. Ses bildirimleri ve oturum takibi."
+        "name": "Pomodoro Zamanlayıcısı",
+        "description": "Pomodoro Tekniği ile odaklanma zamanlayıcısı. 25 dakika çalışma, 5 dakika mola. Ses bildirimleri ve oturum takibi."
       },
       "json-to-yaml": {
-        "name": "JSON-dan YAML-a Cevirici",
-        "description": "JSON-u YAML-a ve YAML-i JSON-a cevrimici donusturun. Duzgun bimlendirme ile cift yonlu donusum."
+        "name": "JSON-dan YAML-a Çevirici",
+        "description": "JSON-u YAML-a ve YAML-ı JSON-a çevrimiçi dönüştürün. Düzgün biçimlendirme ile çift yönlü dönüşüm."
       },
       "xml-formatter": {
-        "name": "XML Bimlendirici ve Dogrulayici",
-        "description": "XML-i cevrimici bimlendir, kuculutun ve dorulayin. Ozel girintileme ile guzelestirin ve etiket eslemesini dogrulayin."
+        "name": "XML Biçimlendirici ve Doğrulayıcı",
+        "description": "XML-i çevrimiçi biçimlendirin, küçültün ve doğrulayın. Özel girintileme ile güzelleştirin ve etiket eşlemesini doğrulayın."
       },
       "markdown-to-html": {
-        "name": "Markdown-dan HTML-e Cevirici",
-        "description": "Markdown-i canli onizleme ile HTML-e donusturun. Basliklar, kalin, italik, baglantilar, kod bloklari ve daha fazlasini destekler."
+        "name": "Markdown-dan HTML-e Çevirici",
+        "description": "Markdown-ı canlı önizleme ile HTML-e dönüştürün. Başlıklar, kalın, italik, bağlantılar, kod blokları ve daha fazlasını destekler."
       },
       "favicon-generator": {
-        "name": "Favicon Ureteci",
-        "description": "Goruntu yukleyin ve birden fazla boyutta (16x16-dan 512x512-ye) faviconlar uretin. Tek tek veya ZIP olarak indirin."
+        "name": "Favicon Üreteci",
+        "description": "Görüntü yükleyin ve birden fazla boyutta (16x16-dan 512x512-ye) faviconlar üretin. Tek tek veya ZIP olarak indirin."
       },
       "svg-to-png": {
-        "name": "SVG-den PNG-ye Cevirici",
-        "description": "SVG-yi ozel boyutlarla cevrimici PNG-ye donusturun. SVG kodu yapistirin veya dosya yukleyin, genislik ve yukseklik ayarlayin."
+        "name": "SVG-den PNG-ye Çevirici",
+        "description": "SVG-yi özel boyutlarla çevrimiçi PNG-ye dönüştürün. SVG kodu yapıştırın veya dosya yükleyin, genişlik ve yükseklik ayarlayın."
       },
       "text-to-speech": {
         "name": "Metinden Sese",
-        "description": "Web Speech API ile metni sese donusturun. Mevcut seslerden secin, hiz, ton ve ses seviyesini ayarlayin."
+        "description": "Web Speech API ile metni sese dönüştürün. Mevcut seslerden seçin, hız, ton ve ses seviyesini ayarlayın."
       },
       "character-counter": {
-        "name": "Karakter Sayaci",
-        "description": "Karakter, kelime, cumle, paragraf ve satir sayin. Okuma suresi, konusma suresi ve karakter sikligi gorun."
+        "name": "Karakter Sayacı",
+        "description": "Karakter, kelime, cümle, paragraf ve satır sayın. Okuma süresi, konuşma süresi ve karakter sıklığı görün."
       },
       "find-and-replace": {
-        "name": "Bul ve Degistir",
-        "description": "Regex destegi, buyuk/kucuk harf duyarliligi ve tam kelime eslemesi ile metin bulun ve degistirin. Tum eslemeleri gercek zamanli vurgulayin."
+        "name": "Bul ve Değiştir",
+        "description": "Regex desteği, büyük/küçük harf duyarlılığı ve tam kelime eşlemesi ile metin bulun ve değiştirin. Tüm eşlemeleri gerçek zamanlı vurgulayın."
       },
       "yaml-to-json": {
-        "name": "YAML-dan JSON-a Cevirici",
-        "description": "YAML-i cevrimici JSON-a donusturun ve dogrulayin. Ic ice nesneler, diziler, yorumlar ve daha fazlasini destekler."
+        "name": "YAML-dan JSON-a Çevirici",
+        "description": "YAML-ı çevrimiçi JSON-a dönüştürün ve doğrulayın. İç içe nesneler, diziler, yorumlar ve daha fazlasını destekler."
       },
       "http-status-codes": {
-        "name": "HTTP Durum Kodu Referansi",
-        "description": "Tum HTTP durum kodlarinin aranabilir referansi. Kategoriye (1xx-5xx) gore filtreleme, kod ve ada gore arama."
+        "name": "HTTP Durum Kodu Referansı",
+        "description": "Tüm HTTP durum kodlarının aranabilir referansı. Kategoriye (1xx-5xx) göre filtreleme, kod ve ada göre arama."
       },
       "unit-converter": {
-        "name": "Birim Ceviricisi",
-        "description": "Uzunluk, agirlik, sicaklik, hiz, dijital depolama, zaman ve alan birimleri arasinda donusturun. Metrik ve imperial destekler."
+        "name": "Birim Çeviricisi",
+        "description": "Uzunluk, ağırlık, sıcaklık, hız, dijital depolama, zaman ve alan birimleri arasında dönüştürün. Metrik ve imperial destekler."
       },
       "invoice-generator": {
-        "name": "Fatura Ureteci",
-        "description": "Sirket bilgileri, kalem detaylari, vergi hesaplamasi ile profesyonel faturalar olusturun. PDF olarak indirin."
+        "name": "Fatura Üreteci",
+        "description": "Şirket bilgileri, kalem detayları, vergi hesaplaması ile profesyonel faturalar oluşturun. PDF olarak indirin."
       },
       "morse-code": {
-        "name": "Mors Kodu Cevirici",
-        "description": "Metni Mors koduna ve Mors kodunu metne donusturun. Sesli oynatma, referans tablosu ve cift yonlu ceviri."
+        "name": "Mors Kodu Çevirici",
+        "description": "Metni Mors koduna ve Mors kodunu metne dönüştürün. Sesli oynatma, referans tablosu ve çift yönlü çeviri."
       },
       "random-text-generator": {
-        "name": "Rastgele Metin Ureteci",
-        "description": "Test ve maket amaclari icin rastgele kelimeler, cumleler, paragraflar, isimler, e-postalar ve telefonlar uretin."
+        "name": "Rastgele Metin Üreteci",
+        "description": "Test ve maket amaçları için rastgele kelimeler, cümleler, paragraflar, isimler, e-postalar ve telefonlar üretin."
       },
       "text-repeater": {
-        "name": "Metin Tekrarlayici",
-        "description": "Metni N kez ozel ayirici, onek, sonek ve numaralandirma secenekleriyle tekrarlayin."
+        "name": "Metin Tekrarlayıcı",
+        "description": "Metni N kez özel ayırıcı, önek, sonek ve numaralandırma seçenekleriyle tekrarlayın."
       },
       "video-to-gif": {
         "name": "Videodan GIF",
-        "description": "Video dosyalarindan animasyonlu klipler cikarin. Baslangic zamani, sure, FPS ve cozunurlugu ayarlayin."
+        "description": "Video dosyalarından animasyonlu klipler çıkarın. Başlangıç zamanı, süre, FPS ve çözünürlüğü ayarlayın."
       },
       "color-palette-generator": {
-        "name": "Renk Paleti Olusturucu",
-        "description": "Temel bir renkten uyumlu renk paletleri olusturun. Tamamlayici, analog, uclu ve dortlu uyumlar desteklenir."
+        "name": "Renk Paleti Oluşturucu",
+        "description": "Temel bir renkten uyumlu renk paletleri oluşturun. Tamamlayıcı, analog, üçlü ve dörtlü uyumlar desteklenir."
       },
       "backlink-generator": {
-        "name": "Geri Baglanti Olusturucu",
-        "description": "HTML, Markdown, BBCode, Textile, Wiki ve reStructuredText formatlarinda baglanti kodu olusturun."
+        "name": "Geri Bağlantı Oluşturucu",
+        "description": "HTML, Markdown, BBCode, Textile, Wiki ve reStructuredText formatlarında bağlantı kodu oluşturun."
       },
       "json-path-finder": {
         "name": "JSON Yol Bulucu",
-        "description": "Interaktif agac gorunumuyle JSON yapisinda gezinin. Dugumlere tiklayin, yollari bulun."
+        "description": "İnteraktif ağaç görünümüyle JSON yapısında gezinin. Düğümlere tıklayın, yolları bulun."
       },
       "chmod-calculator": {
-        "name": "Chmod Hesaplayici",
-        "description": "Interaktif Unix dosya izinleri hesaplayicisi. Sekizli (755) ve sembolik (rwxr-xr-x) arasinda donusturun."
+        "name": "Chmod Hesaplayıcı",
+        "description": "İnteraktif Unix dosya izinleri hesaplayıcısı. Sekizli (755) ve sembolik (rwxr-xr-x) arasında dönüştürün."
       },
       "markdown-table-generator": {
-        "name": "Markdown Tablo Olusturucu",
-        "description": "Gorsel duzenleyici ile Markdown tablolari olusturun. Satir, sutun ekleyin ve hizalamayi ayarlayin."
+        "name": "Markdown Tablo Oluşturucu",
+        "description": "Görsel düzenleyici ile Markdown tabloları oluşturun. Satır, sütun ekleyin ve hizalamayı ayarlayın."
       },
       "regex-library": {
-        "name": "Regex Kalip Kutuphanesi",
-        "description": "E-posta, URL, tarih, sayi ve daha fazlasi icin derlenmis regex kaliplari kutuphanesi. Kaliplari test edin."
+        "name": "Regex Kalıp Kütüphanesi",
+        "description": "E-posta, URL, tarih, sayı ve daha fazlası için derlenmiş regex kalıpları kütüphanesi. Kalıpları test edin."
       },
       "image-to-base64": {
-        "name": "Goruntuden Base64'e",
-        "description": "Goruntuleri Base64 kodlu metne donusturun. Data URI, CSS arka plan veya HTML img etiketi ciktisi."
+        "name": "Görüntüden Base64'e",
+        "description": "Görüntüleri Base64 kodlu metne dönüştürün. Data URI, CSS arka plan veya HTML img etiketi çıktısı."
       },
       "base64-to-image": {
-        "name": "Base64'ten Goruntuye",
-        "description": "Base64 metinlerini tekrar goruntulere donusturun. JPEG, PNG, GIF, WebP, SVG otomatik algilanir."
+        "name": "Base64'ten Görüntüye",
+        "description": "Base64 metinlerini tekrar görüntülere dönüştürün. JPEG, PNG, GIF, WebP, SVG otomatik algılanır."
       },
       "text-truncator": {
-        "name": "Metin Kisaltici",
-        "description": "Metni karakter, kelime veya cumle sayisina gore kisaltin. Uc nokta konumunu ve tam kelime korumasini secin."
+        "name": "Metin Kısaltıcı",
+        "description": "Metni karakter, kelime veya cümle sayısına göre kısaltın. Üç nokta konumunu ve tam kelime korumasını seçin."
       },
       "market-tracker": {
-        "name": "Piyasa Fiyat Takipcisi",
-        "description": "Bitcoin, Ethereum, Altin ve Petrol fiyatlarini canli izleyin. 24 saatlik degisiklikleri gorun, para birimleri arasinda donusturun (USD, AZN, EUR)."
+        "name": "Piyasa Fiyat Takipçisi",
+        "description": "Bitcoin, Ethereum, Altın ve Petrol fiyatlarını canlı izleyin. 24 saatlik değişiklikleri görün, para birimleri arasında dönüştürün (USD, AZN, EUR)."
       }
     }
   },
   "about": {
-    "title": "Hakkimizda",
-    "metaTitle": "Hakkimizda - Vaxtim Yoxdu",
-    "metaDescription": "Vaxtim Yoxdu hakkinda - Ucretsiz AI online araclar platformu.",
-    "motto": "Zamaniniz yoksa, biz variz",
-    "description": "Vaxtim Yoxdu, Azerbaycan dilinde kisa haber ozetleri ve ucretsiz online araclar sunan bir platformdur. Amacimiz zamaninizi tasarruf etmektir: onemli haberleri kisa ve net bir sekilde iletmek, ayni zamanda gunluk islerinizi kolaylastiracak ucretsiz araclar sunmak.",
+    "title": "Hakkımızda",
+    "metaTitle": "Hakkımızda - Vaxtim Yoxdu",
+    "metaDescription": "Vaxtim Yoxdu hakkında - Ücretsiz AI online araçlar platformu.",
+    "motto": "Zamanınız yoksa, biz varız",
+    "description": "Vaxtim Yoxdu, Azerbaycan dilinde kısa haber özetleri ve ücretsiz online araçlar sunan bir platformdur. Amacımız zamanınızı tasarruf etmektir: önemli haberleri kısa ve net bir şekilde iletmek, aynı zamanda günlük işlerinizi kolaylaştıracak ücretsiz araçlar sunmak.",
     "missionTitle": "Misyonumuz",
-    "missionDescription": "Kaliteli bilgi ve faydali araclarin herkes icin ucretsiz ve kolayca erisilebilir olmasi gerektigine inaniyoruz. Kayit gerekmez, gizli ucretler yoktur. Sadece calisan guclu araclar ve zamaninizi tasarruf eden haber ozetleri.",
+    "missionDescription": "Kaliteli bilgi ve faydalı araçların herkes için ücretsiz ve kolayca erişilebilir olması gerektiğine inanıyoruz. Kayıt gerekmez, gizli ücretler yoktur. Sadece çalışan güçlü araçlar ve zamanınızı tasarruf eden haber özetleri.",
     "privacyTitle": "Gizlilik",
-    "privacyDescription": "Araclarimizin cogu dogrudan tarayicinizda calisir - verileriniz cihazinizdan cikmaz. AI destekli araclar icin verileriniz guvenli bir sekilde islenir ve asla depolanmaz.",
-    "contactTitle": "Iletisim",
-    "contactDescription": "Fikir ve onerileriniz mi var? Bize yazmaktan cekinmeyin:"
+    "privacyDescription": "Araçlarımızın çoğu doğrudan tarayıcınızda çalışır - verileriniz cihazınızdan çıkmaz. AI destekli araçlar için verileriniz güvenli bir şekilde işlenir ve asla depolanmaz.",
+    "contactTitle": "İletişim",
+    "contactDescription": "Fikir ve önerileriniz mi var? Bize yazmaktan çekinmeyin:"
   },
   "privacy": {
-    "title": "Gizlilik Politikasi",
-    "metaTitle": "Gizlilik Politikasi - Vaxtim Yoxdu",
-    "metaDescription": "Vaxtim Yoxdu online araclar platformu icin gizlilik politikasi.",
-    "lastUpdated": "Son guncelleme: Mart 2026",
+    "title": "Gizlilik Politikası",
+    "metaTitle": "Gizlilik Politikası - Vaxtim Yoxdu",
+    "metaDescription": "Vaxtim Yoxdu online araçlar platformu için gizlilik politikası.",
+    "lastUpdated": "Son güncelleme: Mart 2026",
     "collectTitle": "Toplanan Bilgiler",
-    "collectDescription": "Hizmetlerimizi sunmak icin minimum duzeyde bilgi topluyoruz. Istemci tarafli araclar tum verileri tamamen tarayicinizda isler - sunucularimiza hicbir sey gonderilmez.",
-    "aiTitle": "AI Destekli Araclar",
-    "aiDescription": "AI destekli araclar icin girdaginiz metin islenmek uzere guvenli sunucularimiza gonderilir. Girdaginiz verileri saklamiyoruz, kayit etmiyoruz veya egitim amaciyla kullanmiyoruz. Veriler islemden hemen sonra silinir.",
+    "collectDescription": "Hizmetlerimizi sunmak için minimum düzeyde bilgi topluyoruz. İstemci taraflı araçlar tüm verileri tamamen tarayıcınızda işler - sunucularımıza hiçbir şey gönderilmez.",
+    "aiTitle": "AI Destekli Araçlar",
+    "aiDescription": "AI destekli araçlar için girdağınız metin işlenmek üzere güvenli sunucularımıza gönderilir. Girdağınız verileri saklamıyoruz, kayıt etmiyoruz veya eğitim amacıyla kullanmıyoruz. Veriler işlemden hemen sonra silinir.",
     "analyticsTitle": "Analitik",
-    "analyticsDescription": "Ziyaretcilerin sitemizi nasil kullandigini anlamak icin Google Analytics kullaniyoruz. Bu, sayfa goruntulumeleri, tarayici turu ve genel konum gibi anonim kullanim verilerini toplar.",
-    "advertisingTitle": "Reklamcilik",
-    "advertisingDescription": "Google AdSense ve diger ortaklar araciligiyla reklamlar gosteriyoruz. Bu hizmetler, tarama etkinliginize dayali ilgili reklamlar sunmak icin cerezler kullanabilir.",
-    "cookiesTitle": "Cerezler",
-    "cookiesDescription": "Site islevseligi icin temel cerezler ve analitik ve reklamcilik icin ucuncu taraf cerezleri kullaniyoruz. Cerez tercihlerini tarayici ayarlarinizdan yonetebilirsiniz.",
-    "contactTitle": "Iletisim",
-    "contactDescription": "Gizlilikle ilgili sorulariniz icin bizimle iletisime gecin:"
+    "analyticsDescription": "Ziyaretçilerin sitemizi nasıl kullandığını anlamak için Google Analytics kullanıyoruz. Bu, sayfa görüntülemeleri, tarayıcı türü ve genel konum gibi anonim kullanım verilerini toplar.",
+    "advertisingTitle": "Reklamcılık",
+    "advertisingDescription": "Google AdSense ve diğer ortaklar aracılığıyla reklamlar gösteriyoruz. Bu hizmetler, tarama etkinliğinize dayalı ilgili reklamlar sunmak için çerezler kullanabilir.",
+    "cookiesTitle": "Çerezler",
+    "cookiesDescription": "Site işlevselliği için temel çerezler ve analitik ve reklamcılık için üçüncü taraf çerezleri kullanıyoruz. Çerez tercihlerini tarayıcı ayarlarınızdan yönetebilirsiniz.",
+    "contactTitle": "İletişim",
+    "contactDescription": "Gizlilikle ilgili sorularınız için bizimle iletişime geçin:"
   },
   "terms": {
-    "title": "Kullanim Sartlari",
-    "metaTitle": "Kullanim Sartlari - Vaxtim Yoxdu",
-    "metaDescription": "Vaxtim Yoxdu online araclar platformu icin kullanim sartlari.",
-    "lastUpdated": "Son guncelleme: Mart 2026",
-    "acceptTitle": "Sartlarin Kabulu",
-    "acceptDescription": "Vaxtim Yoxdu'yu kullanarak bu Kullanim Sartlarini kabul etmis olursunuz. Kabul etmiyorsaniz, lutfen hizmetlerimizi kullanmayin.",
-    "useTitle": "Hizmetlerin Kullanimi",
-    "useDescription": "Araclarimiz kisisel ve ticari kullanim icin ucretsiz olarak sunulmaktadir. Hizmetlerimizi herhangi bir yasa disi veya yetkisiz amac icin kullanamazsiniz.",
-    "limitationsTitle": "Sinirlamalar",
-    "limitationsDescription": "AI destekli araclarin tum kullanicilar icin adil erisim saglamak icin kullanim sinirlari vardir. Hizmetlerimizi kotuye kullanan kullanicilarin erisimini kisitlama hakkimizi sakli tutariz.",
+    "title": "Kullanım Şartları",
+    "metaTitle": "Kullanım Şartları - Vaxtim Yoxdu",
+    "metaDescription": "Vaxtim Yoxdu online araçlar platformu için kullanım şartları.",
+    "lastUpdated": "Son güncelleme: Mart 2026",
+    "acceptTitle": "Şartların Kabulü",
+    "acceptDescription": "Vaxtim Yoxdu'yu kullanarak bu Kullanım Şartlarını kabul etmiş olursunuz. Kabul etmiyorsanız, lütfen hizmetlerimizi kullanmayın.",
+    "useTitle": "Hizmetlerin Kullanımı",
+    "useDescription": "Araçlarımız kişisel ve ticari kullanım için ücretsiz olarak sunulmaktadır. Hizmetlerimizi herhangi bir yasa dışı veya yetkisiz amaç için kullanamazsınız.",
+    "limitationsTitle": "Sınırlamalar",
+    "limitationsDescription": "AI destekli araçların tüm kullanıcılar için adil erişim sağlamak için kullanım sınırları vardır. Hizmetlerimizi kötüye kullanan kullanıcıların erişimini kısıtlama hakkımızı saklı tutarız.",
     "disclaimerTitle": "Sorumluluk Reddi",
-    "disclaimerDescription": "Araclarimiz herhangi bir garanti olmaksizin \"oldugu gibi\" sunulmaktadir. Hizmetlerimizin kullanimindan kaynaklanan herhangi bir veri kaybi veya hasardan sorumlu degiliz.",
-    "changesTitle": "Degisiklikler",
-    "changesDescription": "Bu sartlari herhangi bir zamanda degistirme hakkimizi sakli tutariz. Hizmetlerimizi kullanmaya devam etmeniz, guncellenmis sartlarin kabulunu olusturur."
+    "disclaimerDescription": "Araçlarımız herhangi bir garanti olmaksızın \"olduğu gibi\" sunulmaktadır. Hizmetlerimizin kullanımından kaynaklanan herhangi bir veri kaybı veya hasardan sorumlu değiliz.",
+    "changesTitle": "Değişiklikler",
+    "changesDescription": "Bu şartları herhangi bir zamanda değiştirme hakkımızı saklı tutarız. Hizmetlerimizi kullanmaya devam etmeniz, güncellenmiş şartların kabulünü oluşturur."
   },
   "footer": {
-    "description": "Kisa haberler ve ucretsiz online araclar. Kayit gerekmiyor.",
+    "description": "Kısa haberler ve ücretsiz online araçlar. Kayıt gerekmiyor.",
     "followUs": "Bizi takip edin",
-    "toolsSection": "Araclar",
-    "popularToolsSection": "Populer Araclar",
+    "toolsSection": "Araçlar",
+    "popularToolsSection": "Popüler Araçlar",
     "categoriesSection": "Kategoriler",
-    "sectionsTitle": "Bolumler",
+    "sectionsTitle": "Bölümler",
     "legalTitle": "Yasal",
-    "copyright": "Tum haklari saklidir.",
+    "copyright": "Tüm hakları saklıdır.",
     "newsletter": {
       "title": "Yeniliklerden haberdar olun",
       "placeholder": "E-posta adresinizi girin",
       "subscribe": "Abone ol",
-      "sending": "Gonderiliyor...",
-      "success": "Basariyla abone oldunuz!",
+      "sending": "Gönderiliyor...",
+      "success": "Başarıyla abone oldunuz!",
       "errorEmpty": "E-posta adresi girin.",
-      "errorInvalid": "Gecerli bir e-posta adresi girin.",
+      "errorInvalid": "Geçerli bir e-posta adresi girin.",
       "errorDuplicate": "Bu e-posta zaten abone.",
-      "errorGeneral": "Bir hata olustu. Tekrar deneyin.",
+      "errorGeneral": "Bir hata oluştu. Tekrar deneyin.",
       "emailLabel": "E-posta adresi"
     }
   },
   "errors": {
-    "notFound": "Sayfa bulunamadi",
-    "notFoundDescription": "Aradiginiz sayfa mevcut degil veya tasindi.",
-    "notFoundSuggestion": "Belki aradiginizi burada bulabilirsiniz:",
+    "notFound": "Sayfa bulunamadı",
+    "notFoundDescription": "Aradığınız sayfa mevcut değil veya taşındı.",
+    "notFoundSuggestion": "Belki aradığınızı burada bulabilirsiniz:",
     "notFoundHome": "Ana Sayfa",
-    "notFoundTools": "Araclar",
+    "notFoundTools": "Araçlar",
     "notFoundNews": "Haberler",
     "notFoundBlog": "Blog",
-    "notFoundPopularTools": "Populer Araclar",
+    "notFoundPopularTools": "Popüler Araçlar",
     "notFoundCategories": "Kategoriler",
-    "notFoundBrowseAll": "Tum araclara goz at",
+    "notFoundBrowseAll": "Tüm araçlara göz at",
     "generalError": "Hata",
-    "generalErrorTitle": "Bir hata olustu",
-    "generalErrorDescription": "Beklenmeyen bir hata olustu. Lutfen tekrar deneyin.",
+    "generalErrorTitle": "Bir hata oluştu",
+    "generalErrorDescription": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
     "retry": "Tekrar dene",
-    "loading": "Yukleniyor..."
+    "loading": "Yükleniyor..."
   },
   "cookie": {
     "message": "Bu site deneyiminizi iyileştirmek için çerezler kullanmaktadır.",
     "accept": "Kabul et",
-    "reject": "Reddet",
-    "privacyLink": "Gizlilik Politikası",
-    "ariaLabel": "Çerez onay bildirimi",
-    "ariaReject": "Çerezleri reddet",
-    "ariaAccept": "Çerezleri kabul et"
-  },
-  "installPrompt": {
-    "ariaLabel": "Uygulamayı yükle",
-    "title": "Vaxtim Yoxdu'yu telefonunuza yükleyin!",
-    "description": "Daha hızlı erişim için ana ekrana ekleyin.",
-    "dismiss": "Sonra",
-    "install": "Yükle",
-    "close": "Kapat"
-  },
-  "offline": {
-    "title": "İnternet bağlantınız yok",
-    "description": "Bu sayfayı görüntülemek için internet bağlantısı gereklidir. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.",
-    "retry": "Tekrar dene",
-    "hint": "Sorun devam ederse, internet sağlayıcınızla iletişime geçin."
+    "reject": "Reddet"
   },
   "language": {
-    "label": "Dil secin",
+    "label": "Dil seçin",
     "current": "Mevcut dil"
   },
   "info": {
     "metaTitle": "Haberler - Vaxtim Yoxdu",
-    "metaDescription": "Onemli gunluk haberlerin kisa ozeti. Ekonomi, teknoloji, egitim, spor - her sey bir bakista.",
+    "metaDescription": "Önemli günlük haberlerin kısa özeti. Ekonomi, teknoloji, eğitim, spor - her şey bir bakışta.",
     "title": "Haberler",
-    "subtitle": "Kisa ve dogru haberler - zamaniniz yoksa, biz buradayiz.",
+    "subtitle": "Kısa ve doğru haberler - zamanınız yoksa, biz buradayız.",
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbNews": "Haberler",
-    "noArticles": "Bu dilde henuz haber bulunmamaktadir."
+    "noArticles": "Bu dilde henüz haber bulunmamaktadır."
   },
   "blog": {
     "metaTitle": "Blog - Vaxtim Yoxdu",
-    "metaDescription": "Online araclar, yapay zeka ve verimlilik hakkinda ipuclari, ogreticiler ve rehberler.",
+    "metaDescription": "Online araçlar, yapay zeka ve verimlilik hakkında ipuçları, öğreticiler ve rehberler.",
     "title": "Blog",
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbBlog": "Blog",
-    "noArticles": "Bu dilde henuz blog yazisi bulunmamaktadir.",
-    "readMore": "Devamini oku"
+    "noArticles": "Bu dilde henüz blog yazısı bulunmamaktadır.",
+    "readMore": "Devamını oku"
   },
   "newsletterPopup": {
-    "title": "Yeniliklerden geri kalmayin!",
-    "description": "Haftalik teknoloji haberleri ve yeni araclar dogrudan e-postaniza!",
+    "title": "Yeniliklerden geri kalmayın!",
+    "description": "Haftalık teknoloji haberleri ve yeni araçlar doğrudan e-postanıza!",
     "placeholder": "E-posta adresiniz",
-    "subscribe": "Ucretsiz abone ol",
-    "sending": "Gonderiliyor...",
-    "success": "Basariyla abone oldunuz!",
-    "successDescription": "Tesekkurler! En son yeniliklerden ilk siz haberdar olacaksiniz.",
+    "subscribe": "Ücretsiz abone ol",
+    "sending": "Gönderiliyor...",
+    "success": "Başarıyla abone oldunuz!",
+    "successDescription": "Teşekkürler! En son yeniliklerden ilk siz haberdar olacaksınız.",
     "close": "Kapat",
-    "dontShowAgain": "Bir daha gosterme",
-    "noSpam": "Spam yok, soz veriyoruz!",
+    "dontShowAgain": "Bir daha gösterme",
+    "noSpam": "Spam yok, söz veriyoruz!",
     "errorEmpty": "E-posta adresi girin.",
-    "errorInvalid": "Gecerli bir e-posta adresi girin.",
+    "errorInvalid": "Geçerli bir e-posta adresi girin.",
     "errorDuplicate": "Bu e-posta zaten abone.",
-    "errorGeneral": "Bir hata olustu. Tekrar deneyin."
+    "errorGeneral": "Bir hata oluştu. Tekrar deneyin."
   },
   "newsletterCta": {
-    "blogTitle": "Bu yaziyi begendiniz mi?",
-    "blogDescription": "Yeni blog yazilari ve faydali araclar hakkinda bilgilendirilmek icin abone olun.",
-    "newsTitle": "Haberleri kacirmayin!",
-    "newsDescription": "En onemli haberlerin haftalik ozetini e-postaniza alin.",
+    "blogTitle": "Bu yazıyı beğendiniz mi?",
+    "blogDescription": "Yeni blog yazıları ve faydalı araçlar hakkında bilgilendirilmek için abone olun.",
+    "newsTitle": "Haberleri kaçırmayın!",
+    "newsDescription": "En önemli haberlerin haftalık özetini e-postanıza alın.",
     "placeholder": "E-posta adresiniz",
     "subscribe": "Abone ol",
-    "sending": "Gonderiliyor...",
-    "success": "Basariyla abone oldunuz!",
+    "sending": "Gönderiliyor...",
+    "success": "Başarıyla abone oldunuz!",
     "errorEmpty": "E-posta adresi girin.",
-    "errorInvalid": "Gecerli bir e-posta adresi girin.",
+    "errorInvalid": "Geçerli bir e-posta adresi girin.",
     "errorDuplicate": "Bu e-posta zaten abone.",
-    "errorGeneral": "Bir hata olustu. Tekrar deneyin."
+    "errorGeneral": "Bir hata oluştu. Tekrar deneyin."
   },
   "share": {
-    "title": "Paylas",
-    "shareOn": "{platform} uzerinde paylas",
+    "title": "Paylaş",
+    "shareOn": "{platform} üzerinde paylaş",
     "copyLink": "Linki kopyala",
-    "copied": "Kopyalandi!",
-    "poweredBy": "VaxtimYoxdu.com ile uretildi"
+    "copied": "Kopyalandı!",
+    "poweredBy": "VaxtimYoxdu.com ile üretildi"
   },
   "newsletterHome": {
-    "title": "Haftalik teknoloji bultenimize katilin",
-    "description": "En onemli teknoloji guncellemeleri, yeni araclar ve faydali ipuclari dogrudan e-postaniza.",
-    "bullet1": "Her hafta en onemli teknoloji haberleri",
-    "bullet2": "Yeni ucretsiz araclardan ilk siz haberdar olun",
-    "bullet3": "Zamaninizi tasarruf eden ipuclari ve oneriler",
+    "title": "Haftalık teknoloji bültenimize katılın",
+    "description": "En önemli teknoloji güncellemeleri, yeni araçlar ve faydalı ipuçları doğrudan e-postanıza.",
+    "bullet1": "Her hafta en önemli teknoloji haberleri",
+    "bullet2": "Yeni ücretsiz araçlardan ilk siz haberdar olun",
+    "bullet3": "Zamanınızı tasarruf eden ipuçları ve öneriler",
     "subscriberCount": "zaten abone oldu"
   },
   "crossLinks": {
-    "relatedTools": "Faydali Araclar",
-    "relatedBlogPosts": "Ilgili Blog Yazilari",
-    "tryTheseTool": "Bu araclari deneyin",
+    "relatedTools": "Faydalı Araçlar",
+    "relatedBlogPosts": "İlgili Blog Yazıları",
+    "tryTheseTool": "Bu araçları deneyin",
     "readMore": "Daha fazla oku"
   }
 }
