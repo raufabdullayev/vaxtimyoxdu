@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface Stats {
   characters: number
@@ -52,17 +53,18 @@ function analyze(text: string): Stats {
 }
 
 export default function WordCounter() {
+  const t = useTranslations('toolUI')
   const [text, setText] = useState('')
   const stats = useMemo(() => analyze(text), [text])
 
   const statItems = [
-    { label: 'Words', value: stats.words },
-    { label: 'Characters', value: stats.characters },
-    { label: 'Characters (no spaces)', value: stats.charactersNoSpaces },
-    { label: 'Sentences', value: stats.sentences },
-    { label: 'Paragraphs', value: stats.paragraphs },
-    { label: 'Reading Time', value: stats.readingTime },
-    { label: 'Speaking Time', value: stats.speakingTime },
+    { label: t('words'), value: stats.words },
+    { label: t('characters'), value: stats.characters },
+    { label: t('characters') + ' (no spaces)', value: stats.charactersNoSpaces },
+    { label: t('sentences'), value: stats.sentences },
+    { label: t('paragraphs'), value: stats.paragraphs },
+    { label: t('readingTime'), value: stats.readingTime },
+    { label: t('speakingTime'), value: stats.speakingTime },
   ]
 
   return (
@@ -100,7 +102,7 @@ export default function WordCounter() {
           onClick={() => setText('')}
           className="px-4 py-2 border rounded-lg text-sm hover:bg-accent transition-colors"
         >
-          Clear Text
+          {t('clear')}
         </button>
       )}
     </div>

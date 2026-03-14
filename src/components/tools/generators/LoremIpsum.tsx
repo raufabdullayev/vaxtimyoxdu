@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const WORDS = [
   'lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit',
@@ -47,6 +48,7 @@ function generate(type: string, count: number, startWithLorem: boolean): string 
 }
 
 export default function LoremIpsum() {
+  const t = useTranslations('toolUI')
   const [type, setType] = useState('paragraphs')
   const [count, setCount] = useState(3)
   const [startWithLorem, setStartWithLorem] = useState(true)
@@ -70,13 +72,13 @@ export default function LoremIpsum() {
             onChange={(e) => setType(e.target.value)}
             className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
           >
-            <option value="paragraphs">Paragraphs</option>
-            <option value="sentences">Sentences</option>
-            <option value="words">Words</option>
+            <option value="paragraphs">{t('paragraphs')}</option>
+            <option value="sentences">{t('sentences')}</option>
+            <option value="words">{t('words')}</option>
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Count</label>
+          <label className="block text-sm font-medium mb-1">{t('count')}</label>
           <input
             type="number"
             min={1}
@@ -101,14 +103,14 @@ export default function LoremIpsum() {
         onClick={handleGenerate}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
       >
-        Generate
+        {t('generate')}
       </button>
 
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Generated Text</label>
-            <button onClick={copy} className="text-xs text-primary hover:underline">Copy</button>
+            <label className="text-sm font-medium">{t('result')}</label>
+            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
           </div>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap max-h-[400px] overflow-y-auto">
             {output}

@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function PdfMerge() {
+  const t = useTranslations('toolUI')
   const [files, setFiles] = useState<File[]>([])
   const [merging, setMerging] = useState(false)
   const [error, setError] = useState('')
@@ -167,7 +169,7 @@ export default function PdfMerge() {
           disabled={files.length < 2 || merging}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
         >
-          {merging ? 'Merging...' : 'Merge PDFs'}
+          {merging ? t('processing') : t('mergeFiles')}
         </button>
 
         {done && (
@@ -175,7 +177,7 @@ export default function PdfMerge() {
             onClick={download}
             className="px-6 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            Download Merged PDF
+            {t('download')}
           </button>
         )}
       </div>

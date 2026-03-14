@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 
 function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
@@ -36,6 +37,7 @@ function generatePalette(hex: string): string[] {
 }
 
 export default function ColorPicker() {
+  const t = useTranslations('toolUI')
   const [color, setColor] = useState('#3b82f6')
   const [copied, setCopied] = useState('')
 
@@ -87,7 +89,7 @@ export default function ColorPicker() {
                 onClick={() => copy(f.value)}
                 className="text-xs text-primary hover:underline"
               >
-                {copied === f.value ? 'Copied!' : 'Copy'}
+                {copied === f.value ? t('copied') : t('copy')}
               </button>
             </div>
           ))}
@@ -96,7 +98,7 @@ export default function ColorPicker() {
 
       {palette.length > 0 && (
         <div>
-          <h3 className="text-sm font-medium mb-2">Color Palette</h3>
+          <h3 className="text-sm font-medium mb-2">{t('generatePalette')}</h3>
           <div className="flex gap-2">
             {palette.map((c, i) => (
               <button

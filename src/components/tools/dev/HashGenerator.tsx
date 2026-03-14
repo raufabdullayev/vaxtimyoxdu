@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 async function hashText(text: string, algorithm: string): Promise<string> {
   const encoder = new TextEncoder()
@@ -18,6 +19,7 @@ const algorithms = [
 ]
 
 export default function HashGenerator() {
+  const t = useTranslations('toolUI')
   const [input, setInput] = useState('')
   const [results, setResults] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
@@ -40,7 +42,7 @@ export default function HashGenerator() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-1">Input Text</label>
+        <label className="block text-sm font-medium mb-1">{t('input')}</label>
         <textarea
           className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[120px] focus:outline-none focus:ring-2 focus:ring-primary"
           placeholder="Enter text to hash..."
@@ -54,7 +56,7 @@ export default function HashGenerator() {
         disabled={!input || loading}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
       >
-        {loading ? 'Generating...' : 'Generate Hashes'}
+        {loading ? t('processing') : t('hashGenerate')}
       </button>
 
       {Object.keys(results).length > 0 && (
@@ -67,7 +69,7 @@ export default function HashGenerator() {
                   onClick={() => copy(results[algo.value])}
                   className="text-xs text-primary hover:underline"
                 >
-                  Copy
+                  {t('copy')}
                 </button>
               </div>
               <div className="rounded-lg border bg-muted/50 p-3 text-sm font-mono break-all">

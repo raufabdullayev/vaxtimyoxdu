@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface TextStats {
   characters: number
@@ -122,6 +123,7 @@ function getCharFrequency(text: string, top: number = 10): CharFreq[] {
 }
 
 export default function CharacterCounter() {
+  const t = useTranslations('toolUI')
   const [text, setText] = useState('')
   const [copied, setCopied] = useState(false)
 
@@ -163,19 +165,19 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.characters}</div>
-          <div className="text-xs text-muted-foreground mt-1">Characters</div>
+          <div className="text-xs text-muted-foreground mt-1">{t('characters')}</div>
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.charactersNoSpaces}</div>
-          <div className="text-xs text-muted-foreground mt-1">No Spaces</div>
+          <div className="text-xs text-muted-foreground mt-1">{t('characters')}</div>
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.words}</div>
-          <div className="text-xs text-muted-foreground mt-1">Words</div>
+          <div className="text-xs text-muted-foreground mt-1">{t('words')}</div>
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.sentences}</div>
-          <div className="text-xs text-muted-foreground mt-1">Sentences</div>
+          <div className="text-xs text-muted-foreground mt-1">{t('sentences')}</div>
         </div>
       </div>
 
@@ -183,7 +185,7 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.paragraphs}</div>
-          <div className="text-xs text-muted-foreground mt-1">Paragraphs</div>
+          <div className="text-xs text-muted-foreground mt-1">{t('paragraphs')}</div>
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.lines}</div>
@@ -191,11 +193,11 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.readingTime}</div>
-          <div className="text-xs text-muted-foreground mt-1">Reading Time</div>
+          <div className="text-xs text-muted-foreground mt-1">{t('readingTime')}</div>
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.speakingTime}</div>
-          <div className="text-xs text-muted-foreground mt-1">Speaking Time</div>
+          <div className="text-xs text-muted-foreground mt-1">{t('speakingTime')}</div>
         </div>
       </div>
 
@@ -233,14 +235,14 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
                 className="text-xs text-primary hover:underline"
                 aria-label="Copy stats report"
               >
-                {copied ? 'Copied!' : 'Copy Stats'}
+                {copied ? t('copied') : t('copy')}
               </button>
             )}
             <button
               onClick={loadSample}
               className="text-xs text-primary hover:underline"
             >
-              Load Sample
+              {t('loadSample')}
             </button>
           </div>
         </div>
@@ -294,7 +296,7 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
           className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           aria-label="Clear text"
         >
-          Clear
+          {t('clear')}
         </button>
       )}
     </div>

@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function Base64Codec() {
+  const t = useTranslations('toolUI')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [mode, setMode] = useState<'encode' | 'decode'>('encode')
@@ -10,7 +12,7 @@ export default function Base64Codec() {
 
   const process = () => {
     if (!input.trim()) {
-      setError('Please enter text')
+      setError(t('pleaseEnterText'))
       setOutput('')
       return
     }
@@ -22,7 +24,7 @@ export default function Base64Codec() {
         setOutput(decodeURIComponent(escape(atob(input.trim()))))
       }
     } catch {
-      setError(mode === 'encode' ? 'Failed to encode' : 'Invalid Base64 string')
+      setError(mode === 'encode' ? t('failedToEncode') : t('invalidBase64'))
       setOutput('')
     }
   }
@@ -47,7 +49,7 @@ export default function Base64Codec() {
             mode === 'encode' ? 'bg-primary text-primary-foreground' : 'border hover:bg-accent'
           }`}
         >
-          Encode
+          {t('encode')}
         </button>
         <button
           onClick={() => { setMode('decode'); setError('') }}
@@ -55,17 +57,17 @@ export default function Base64Codec() {
             mode === 'decode' ? 'bg-primary text-primary-foreground' : 'border hover:bg-accent'
           }`}
         >
-          Decode
+          {t('decode')}
         </button>
       </div>
 
       <div>
         <label className="block text-sm font-medium mb-1">
-          {mode === 'encode' ? 'Text to Encode' : 'Base64 to Decode'}
+          {mode === 'encode' ? t('textToEncode') : t('base64ToDecode')}
         </label>
         <textarea
           className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[150px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder={mode === 'encode' ? 'Enter text...' : 'Enter Base64 string...'}
+          placeholder={mode === 'encode' ? t('enterText') : t('enterBase64')}
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
@@ -80,14 +82,14 @@ export default function Base64Codec() {
           onClick={process}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
         >
-          {mode === 'encode' ? 'Encode' : 'Decode'}
+          {mode === 'encode' ? t('encode') : t('decode')}
         </button>
         {output && (
           <button
             onClick={swap}
             className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            Swap
+            {t('swap')}
           </button>
         )}
       </div>
@@ -95,8 +97,8 @@ export default function Base64Codec() {
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Result</label>
-            <button onClick={copy} className="text-xs text-primary hover:underline">Copy</button>
+            <label className="text-sm font-medium">{t('result')}</label>
+            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
           </div>
           <textarea
             className="w-full rounded-lg border bg-muted/50 px-3 py-2 text-sm font-mono min-h-[150px] focus:outline-none"

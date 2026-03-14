@@ -142,7 +142,7 @@ describe('UrlCodec', () => {
     fireEvent.click(screen.getByLabelText('Copy output to clipboard'))
 
     await waitFor(() => {
-      expect(screen.getByText('Copied!')).toBeInTheDocument()
+      expect(screen.getByText('copied')).toBeInTheDocument()
     })
   })
 

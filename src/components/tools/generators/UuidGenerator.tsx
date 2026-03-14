@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 
 function generateUuidV4(): string {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
@@ -24,6 +25,7 @@ function formatUuid(uuid: string, uppercase: boolean, hyphens: boolean): string 
 }
 
 export default function UuidGenerator() {
+  const t = useTranslations('toolUI')
   const [uuid, setUuid] = useState('')
   const [uppercase, setUppercase] = useState(false)
   const [hyphens, setHyphens] = useState(true)
@@ -79,7 +81,7 @@ export default function UuidGenerator() {
             className="text-xs text-primary hover:underline"
             aria-label="Copy UUID"
           >
-            {copiedMain ? 'Copied!' : 'Copy'}
+            {copiedMain ? t('copied') : t('copy')}
           </button>
         </div>
         <p className="text-lg font-mono break-all select-all" aria-label="Generated UUID">
@@ -94,7 +96,7 @@ export default function UuidGenerator() {
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           aria-label="Generate new UUID"
         >
-          Generate New
+          {t('generate')}
         </button>
         <label className="flex items-center gap-2 text-sm cursor-pointer">
           <input
@@ -103,7 +105,7 @@ export default function UuidGenerator() {
             onChange={(e) => setUppercase(e.target.checked)}
             className="rounded accent-primary"
           />
-          Uppercase
+          {t('uppercaseUuid')}
         </label>
         <label className="flex items-center gap-2 text-sm cursor-pointer">
           <input
@@ -112,7 +114,7 @@ export default function UuidGenerator() {
             onChange={(e) => setHyphens(e.target.checked)}
             className="rounded accent-primary"
           />
-          Hyphens
+          {t('includeHyphens')}
         </label>
       </div>
 
@@ -147,7 +149,7 @@ export default function UuidGenerator() {
               className="px-4 py-2 border rounded-lg text-sm font-medium hover:bg-accent transition-colors"
               aria-label="Copy all UUIDs"
             >
-              {copiedAll ? 'Copied All!' : 'Copy All'}
+              {copiedAll ? t('copied') : t('copy')}
             </button>
           )}
         </div>
@@ -165,7 +167,7 @@ export default function UuidGenerator() {
                     className="text-xs text-primary hover:underline shrink-0"
                     aria-label={`Copy UUID number ${i + 1}`}
                   >
-                    {copiedIndex === i ? 'Copied!' : 'Copy'}
+                    {copiedIndex === i ? t('copied') : t('copy')}
                   </button>
                 </div>
               )

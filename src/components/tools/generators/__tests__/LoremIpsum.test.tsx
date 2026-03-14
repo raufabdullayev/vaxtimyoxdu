@@ -18,7 +18,7 @@ describe('LoremIpsum', () => {
   it('renders type selector with default "Paragraphs"', () => {
     render(<LoremIpsum />)
 
-    const select = screen.getByDisplayValue('Paragraphs')
+    const select = screen.getByDisplayValue('paragraphs')
     expect(select).toBeInTheDocument()
   })
 
@@ -38,29 +38,29 @@ describe('LoremIpsum', () => {
   it('renders Generate button', () => {
     render(<LoremIpsum />)
 
-    expect(screen.getByText('Generate')).toBeInTheDocument()
+    expect(screen.getByText('generate')).toBeInTheDocument()
   })
 
   it('does not show output before generation', () => {
     render(<LoremIpsum />)
 
-    expect(screen.queryByText('Generated Text')).not.toBeInTheDocument()
+    expect(screen.queryByText('result')).not.toBeInTheDocument()
   })
 
   it('generates lorem ipsum text when Generate is clicked', async () => {
     const user = userEvent.setup()
     render(<LoremIpsum />)
 
-    await user.click(screen.getByText('Generate'))
+    await user.click(screen.getByText('generate'))
 
-    expect(screen.getByText('Generated Text')).toBeInTheDocument()
+    expect(screen.getByText('result')).toBeInTheDocument()
   })
 
   it('starts with "Lorem ipsum" when checkbox is checked', async () => {
     const user = userEvent.setup()
     const { container } = render(<LoremIpsum />)
 
-    await user.click(screen.getByText('Generate'))
+    await user.click(screen.getByText('generate'))
 
     const outputDiv = container.querySelector('.whitespace-pre-wrap')
     const outputText = outputDiv?.textContent || ''
@@ -75,7 +75,7 @@ describe('LoremIpsum', () => {
     const checkbox = screen.getByRole('checkbox')
     await user.click(checkbox)
 
-    await user.click(screen.getByText('Generate'))
+    await user.click(screen.getByText('generate'))
 
     const outputDiv = container.querySelector('.whitespace-pre-wrap')
     const outputText = outputDiv?.textContent || ''
@@ -87,41 +87,41 @@ describe('LoremIpsum', () => {
     const user = userEvent.setup()
     render(<LoremIpsum />)
 
-    const select = screen.getByDisplayValue('Paragraphs')
+    const select = screen.getByDisplayValue('paragraphs')
     await user.selectOptions(select, 'sentences')
 
-    expect(screen.getByDisplayValue('Sentences')).toBeInTheDocument()
+    expect(screen.getByDisplayValue('sentences')).toBeInTheDocument()
   })
 
   it('allows changing type to Words', async () => {
     const user = userEvent.setup()
     render(<LoremIpsum />)
 
-    const select = screen.getByDisplayValue('Paragraphs')
+    const select = screen.getByDisplayValue('paragraphs')
     await user.selectOptions(select, 'words')
 
-    expect(screen.getByDisplayValue('Words')).toBeInTheDocument()
+    expect(screen.getByDisplayValue('words')).toBeInTheDocument()
   })
 
   it('shows Copy button after generation', async () => {
     const user = userEvent.setup()
     render(<LoremIpsum />)
 
-    expect(screen.queryByText('Copy')).not.toBeInTheDocument()
+    expect(screen.queryByText('copy')).not.toBeInTheDocument()
 
-    await user.click(screen.getByText('Generate'))
+    await user.click(screen.getByText('generate'))
 
-    expect(screen.getByText('Copy')).toBeInTheDocument()
+    expect(screen.getByText('copy')).toBeInTheDocument()
   })
 
   it('copies output to clipboard', async () => {
     render(<LoremIpsum />)
 
-    fireEvent.click(screen.getByText('Generate'))
+    fireEvent.click(screen.getByText('generate'))
 
-    expect(screen.getByText('Copy')).toBeInTheDocument()
+    expect(screen.getByText('copy')).toBeInTheDocument()
 
-    fireEvent.click(screen.getByText('Copy'))
+    fireEvent.click(screen.getByText('copy'))
 
     expect(writeTextMock).toHaveBeenCalledTimes(1)
     expect(typeof writeTextMock.mock.calls[0][0]).toBe('string')
@@ -131,12 +131,12 @@ describe('LoremIpsum', () => {
   it('generates new text on each click', async () => {
     const { container } = render(<LoremIpsum />)
 
-    fireEvent.click(screen.getByText('Generate'))
+    fireEvent.click(screen.getByText('generate'))
 
     const outputDiv = container.querySelector('.whitespace-pre-wrap')
     const firstOutput = outputDiv?.textContent || ''
 
-    fireEvent.click(screen.getByText('Generate'))
+    fireEvent.click(screen.getByText('generate'))
 
     const secondOutput = outputDiv?.textContent || ''
     // Both should be non-empty
@@ -160,7 +160,7 @@ describe('LoremIpsum', () => {
     const { container } = render(<LoremIpsum />)
 
     // Set type to words
-    const select = screen.getByDisplayValue('Paragraphs')
+    const select = screen.getByDisplayValue('paragraphs')
     fireEvent.change(select, { target: { value: 'words' } })
 
     // Uncheck Lorem prefix
@@ -171,7 +171,7 @@ describe('LoremIpsum', () => {
     const countInput = screen.getByDisplayValue('3')
     fireEvent.change(countInput, { target: { value: '5' } })
 
-    fireEvent.click(screen.getByText('Generate'))
+    fireEvent.click(screen.getByText('generate'))
 
     const outputDiv = container.querySelector('.whitespace-pre-wrap')
     const outputText = outputDiv?.textContent || ''

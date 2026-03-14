@@ -10,8 +10,9 @@ import CharacterCounter from '../CharacterCounter'
  *     <div class="text-xs text-muted-foreground ...">{label}</div>
  *   </div>
  */
-function getStatValue(label: string): string {
-  const labelEl = screen.getByText(label)
+function getStatValue(label: string, index = 0): string {
+  const labelEls = screen.getAllByText(label)
+  const labelEl = labelEls[index]
   const container = labelEl.parentElement!
   const valueEl = container.querySelector('[class*="font-bold"]') as HTMLElement
   return valueEl?.textContent ?? ''
@@ -32,19 +33,19 @@ describe('CharacterCounter', () => {
   it('renders with all zero stats on initial load', () => {
     render(<CharacterCounter />)
 
-    expect(getStatValue('Characters')).toBe('0')
-    expect(getStatValue('No Spaces')).toBe('0')
-    expect(getStatValue('Words')).toBe('0')
-    expect(getStatValue('Sentences')).toBe('0')
+    expect(getStatValue('characters', 0)).toBe('0')
+    expect(getStatValue('characters', 1)).toBe('0')
+    expect(getStatValue('words')).toBe('0')
+    expect(getStatValue('sentences')).toBe('0')
   })
 
   it('renders secondary stats with zeros', () => {
     render(<CharacterCounter />)
 
-    expect(getStatValue('Paragraphs')).toBe('0')
+    expect(getStatValue('paragraphs')).toBe('0')
     expect(getStatValue('Lines')).toBe('0')
-    expect(getStatValue('Reading Time')).toBe('0s')
-    expect(getStatValue('Speaking Time')).toBe('0s')
+    expect(getStatValue('readingTime')).toBe('0s')
+    expect(getStatValue('speakingTime')).toBe('0s')
   })
 
   it('renders the textarea with correct placeholder', () => {
@@ -59,7 +60,7 @@ describe('CharacterCounter', () => {
     render(<CharacterCounter />)
 
     expect(screen.getByText('Your Text')).toBeInTheDocument()
-    expect(screen.getByText('Load Sample')).toBeInTheDocument()
+    expect(screen.getByText('loadSample')).toBeInTheDocument()
   })
 
   it('counts characters correctly', () => {
@@ -68,7 +69,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'Hello World' } })
 
-    expect(getStatValue('Characters')).toBe('11')
+    expect(getStatValue('characters', 0)).toBe('11')
   })
 
   it('counts characters without spaces correctly', () => {
@@ -77,7 +78,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'Hello World' } })
 
-    expect(getStatValue('No Spaces')).toBe('10')
+    expect(getStatValue('characters', 1)).toBe('10')
   })
 
   it('counts words correctly', () => {
@@ -86,7 +87,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'The quick brown fox jumps' } })
 
-    expect(getStatValue('Words')).toBe('5')
+    expect(getStatValue('words')).toBe('5')
   })
 
   it('counts sentences correctly', () => {
@@ -95,7 +96,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'Hello world. How are you? I am fine!' } })
 
-    expect(getStatValue('Sentences')).toBe('3')
+    expect(getStatValue('sentences')).toBe('3')
   })
 
   it('counts a single sentence without ending punctuation', () => {
@@ -104,7 +105,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'Hello world' } })
 
-    expect(getStatValue('Sentences')).toBe('1')
+    expect(getStatValue('sentences')).toBe('1')
   })
 
   it('counts paragraphs correctly', () => {
@@ -115,7 +116,7 @@ describe('CharacterCounter', () => {
       target: { value: 'First paragraph\n\nSecond paragraph\n\nThird paragraph' },
     })
 
-    expect(getStatValue('Paragraphs')).toBe('3')
+    expect(getStatValue('paragraphs')).toBe('3')
   })
 
   it('counts lines correctly', () => {
@@ -134,7 +135,7 @@ describe('CharacterCounter', () => {
     fireEvent.change(textarea, { target: { value: 'Short text here' } })
 
     // 3 words / 225 wpm = 0.0133 min = ~1 second
-    expect(getStatValue('Reading Time')).toBe('1s')
+    expect(getStatValue('readingTime')).toBe('1s')
   })
 
   it('calculates reading time for longer text', () => {
@@ -145,7 +146,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: words } })
 
-    expect(getStatValue('Reading Time')).toBe('1m')
+    expect(getStatValue('readingTime')).toBe('1m')
   })
 
   it('calculates speaking time for short text', () => {
@@ -155,7 +156,7 @@ describe('CharacterCounter', () => {
     fireEvent.change(textarea, { target: { value: 'A few words here' } })
 
     // 4 words / 130 wpm = 0.0308 min = ~2 seconds
-    expect(getStatValue('Speaking Time')).toBe('2s')
+    expect(getStatValue('speakingTime')).toBe('2s')
   })
 
   it('handles empty input with all zero stats', () => {
@@ -164,10 +165,10 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: '' } })
 
-    expect(getStatValue('Characters')).toBe('0')
-    expect(getStatValue('No Spaces')).toBe('0')
-    expect(getStatValue('Words')).toBe('0')
-    expect(getStatValue('Sentences')).toBe('0')
+    expect(getStatValue('characters', 0)).toBe('0')
+    expect(getStatValue('characters', 1)).toBe('0')
+    expect(getStatValue('words')).toBe('0')
+    expect(getStatValue('sentences')).toBe('0')
   })
 
   it('handles whitespace-only input', () => {
@@ -176,8 +177,8 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: '   \n  \t  ' } })
 
-    expect(getStatValue('Words')).toBe('0')
-    expect(getStatValue('Sentences')).toBe('0')
+    expect(getStatValue('words')).toBe('0')
+    expect(getStatValue('sentences')).toBe('0')
   })
 
   it('handles special characters in character count', () => {
@@ -186,8 +187,8 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: '@#$%^&*()' } })
 
-    expect(getStatValue('Characters')).toBe('9')
-    expect(getStatValue('No Spaces')).toBe('9')
+    expect(getStatValue('characters', 0)).toBe('9')
+    expect(getStatValue('characters', 1)).toBe('9')
   })
 
   it('handles multi-line text correctly', () => {
@@ -199,8 +200,8 @@ describe('CharacterCounter', () => {
     })
 
     expect(getStatValue('Lines')).toBe('5')
-    expect(getStatValue('Paragraphs')).toBe('3')
-    expect(getStatValue('Sentences')).toBe('3')
+    expect(getStatValue('paragraphs')).toBe('3')
+    expect(getStatValue('sentences')).toBe('3')
   })
 
   it('shows additional stats (avg word length, unique words, longest word) when text is entered', () => {
@@ -261,7 +262,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'Some text here' } })
 
-    fireEvent.click(screen.getByText('Copy Stats'))
+    fireEvent.click(screen.getByText('copy'))
 
     await waitFor(() => {
       expect(writeTextMock).toHaveBeenCalled()
@@ -291,13 +292,13 @@ describe('CharacterCounter', () => {
     fireEvent.click(screen.getByLabelText('Clear text'))
 
     expect(textarea).toHaveValue('')
-    expect(getStatValue('Characters')).toBe('0')
+    expect(getStatValue('characters', 0)).toBe('0')
   })
 
   it('loads sample text when Load Sample is clicked', () => {
     render(<CharacterCounter />)
 
-    fireEvent.click(screen.getByText('Load Sample'))
+    fireEvent.click(screen.getByText('loadSample'))
 
     const textarea = screen.getByLabelText('Text input for character counting') as HTMLTextAreaElement
     expect(textarea.value).toContain('quick brown fox')

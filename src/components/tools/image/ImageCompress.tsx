@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function ImageCompress() {
+  const t = useTranslations('toolUI')
   const [originalFile, setOriginalFile] = useState<File | null>(null)
   const [originalUrl, setOriginalUrl] = useState<string | null>(null)
   const [compressedUrl, setCompressedUrl] = useState<string | null>(null)
@@ -19,12 +21,12 @@ export default function ImageCompress() {
     if (!file) return
 
     if (!file.type.startsWith('image/')) {
-      setError('Please select an image file (JPEG, PNG, WebP)')
+      setError(t('pleaseSelectImage'))
       return
     }
 
     if (file.size > 20 * 1024 * 1024) {
-      setError('File too large. Maximum size is 20MB.')
+      setError(t('fileTooLarge'))
       return
     }
 
@@ -107,7 +109,7 @@ export default function ImageCompress() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-1">Upload Image</label>
+        <label className="block text-sm font-medium mb-1">{t('uploadImage')}</label>
         <div
           className="border-2 border-dashed rounded-lg p-8 text-center cursor-pointer hover:border-primary transition-colors"
           onClick={() => fileInputRef.current?.click()}
@@ -126,7 +128,7 @@ export default function ImageCompress() {
             </p>
           ) : (
             <div>
-              <p className="text-sm font-medium">Click to select an image</p>
+              <p className="text-sm font-medium">{t('clickToSelectImage')}</p>
               <p className="text-xs text-muted-foreground mt-1">JPEG, PNG, WebP (max 20MB)</p>
             </div>
           )}
@@ -135,7 +137,7 @@ export default function ImageCompress() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Quality: {quality}%</label>
+          <label className="block text-sm font-medium mb-1">{t('quality')}: {quality}%</label>
           <input
             type="range"
             min="10"
@@ -145,12 +147,12 @@ export default function ImageCompress() {
             className="w-full accent-primary"
           />
           <div className="flex justify-between text-xs text-muted-foreground">
-            <span>Smaller file</span>
-            <span>Better quality</span>
+            <span>{t('smallerFile')}</span>
+            <span>{t('betterQuality')}</span>
           </div>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Max Width (px)</label>
+          <label className="block text-sm font-medium mb-1">{t('maxWidth')}</label>
           <select
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             value={maxWidth}
@@ -174,22 +176,22 @@ export default function ImageCompress() {
         disabled={!originalFile || processing}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
       >
-        {processing ? 'Compressing...' : 'Compress Image'}
+        {processing ? t('compressing') : t('compress')}
       </button>
 
       {compressedUrl && (
         <div className="space-y-4">
           <div className="grid grid-cols-3 gap-4 p-4 rounded-lg bg-muted/50">
             <div className="text-center">
-              <p className="text-xs text-muted-foreground">Original</p>
+              <p className="text-xs text-muted-foreground">{t('original')}</p>
               <p className="font-medium text-sm">{formatSize(originalSize)}</p>
             </div>
             <div className="text-center">
-              <p className="text-xs text-muted-foreground">Compressed</p>
+              <p className="text-xs text-muted-foreground">{t('compressed')}</p>
               <p className="font-medium text-sm">{formatSize(compressedSize)}</p>
             </div>
             <div className="text-center">
-              <p className="text-xs text-muted-foreground">Saved</p>
+              <p className="text-xs text-muted-foreground">{t('saved')}</p>
               <p className="font-medium text-sm text-green-600">{savings}%</p>
             </div>
           </div>
@@ -206,7 +208,7 @@ export default function ImageCompress() {
             onClick={download}
             className="w-full sm:w-auto px-6 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            Download Compressed Image
+            {t('downloadCompressedImage')}
           </button>
         </div>
       )}

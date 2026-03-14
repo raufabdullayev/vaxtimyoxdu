@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useRef, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import QRCode from 'qrcode'
 
 export default function QrCodeGenerator() {
+  const t = useTranslations('toolUI')
   const [text, setText] = useState('')
   const [size, setSize] = useState(256)
   const [fgColor, setFgColor] = useState('#000000')
@@ -13,7 +15,7 @@ export default function QrCodeGenerator() {
 
   const generate = useCallback(async () => {
     if (!text.trim()) {
-      setError('Please enter text or URL')
+      setError(t('pleaseEnterTextOrUrl'))
       return
     }
     setError('')
@@ -28,7 +30,7 @@ export default function QrCodeGenerator() {
       })
       setQrDataUrl(url)
     } catch {
-      setError('Failed to generate QR code')
+      setError(t('failedToGenerateQr'))
     }
   }, [text, size, fgColor, bgColor])
 
@@ -43,10 +45,10 @@ export default function QrCodeGenerator() {
   return (
     <div className="space-y-6">
       <div>
-        <label className="block text-sm font-medium mb-1">Text or URL</label>
+        <label className="block text-sm font-medium mb-1">{t('textOrUrl')}</label>
         <textarea
           className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[80px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Enter URL, text, email, phone number..."
+          placeholder={t('enterUrlText')}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
@@ -54,7 +56,7 @@ export default function QrCodeGenerator() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Size (px)</label>
+          <label className="block text-sm font-medium mb-1">{t('size')} (px)</label>
           <select
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             value={size}
@@ -67,7 +69,7 @@ export default function QrCodeGenerator() {
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Foreground</label>
+          <label className="block text-sm font-medium mb-1">{t('foreground')}</label>
           <div className="flex items-center gap-2">
             <input
               type="color"
@@ -84,7 +86,7 @@ export default function QrCodeGenerator() {
           </div>
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Background</label>
+          <label className="block text-sm font-medium mb-1">{t('background')}</label>
           <div className="flex items-center gap-2">
             <input
               type="color"
@@ -108,7 +110,7 @@ export default function QrCodeGenerator() {
         onClick={generate}
         className="w-full sm:w-auto px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
       >
-        Generate QR Code
+        {t('generateQrCode')}
       </button>
 
       {qrDataUrl && (
@@ -118,7 +120,7 @@ export default function QrCodeGenerator() {
             onClick={download}
             className="px-4 py-2 border rounded-lg text-sm font-medium hover:bg-accent transition-colors"
           >
-            Download PNG
+            {t('downloadPng')}
           </button>
         </div>
       )}

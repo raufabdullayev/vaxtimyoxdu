@@ -61,7 +61,7 @@ describe('UuidGenerator', () => {
     const user = userEvent.setup()
     render(<UuidGenerator />)
 
-    await user.click(screen.getByLabelText('Uppercase'))
+    await user.click(screen.getByLabelText('uppercaseUuid'))
 
     const uuidDisplay = screen.getByLabelText('Generated UUID')
     const uuid = uuidDisplay.textContent!
@@ -118,7 +118,7 @@ describe('UuidGenerator', () => {
     fireEvent.click(screen.getByLabelText('Copy UUID'))
 
     await waitFor(() => {
-      expect(screen.getByText('Copied!')).toBeInTheDocument()
+      expect(screen.getByText('copied')).toBeInTheDocument()
     })
   })
 
@@ -144,7 +144,7 @@ describe('UuidGenerator', () => {
     await user.click(screen.getByText('Generate Bulk'))
 
     // Should show 5 UUIDs (default count)
-    const copyButtons = screen.getAllByText('Copy')
+    const copyButtons = screen.getAllByText('copy')
     // Main UUID copy + 5 bulk UUID copies = at least 5 individual Copy buttons
     expect(copyButtons.length).toBeGreaterThanOrEqual(5)
   })
@@ -190,7 +190,7 @@ describe('UuidGenerator', () => {
     fireEvent.click(screen.getByLabelText('Copy all UUIDs'))
 
     await waitFor(() => {
-      expect(screen.getByText('Copied All!')).toBeInTheDocument()
+      expect(screen.getByText('copied')).toBeInTheDocument()
     })
   })
 
@@ -198,7 +198,7 @@ describe('UuidGenerator', () => {
     const user = userEvent.setup()
     render(<UuidGenerator />)
 
-    await user.click(screen.getByLabelText('Uppercase'))
+    await user.click(screen.getByLabelText('uppercaseUuid'))
     await user.click(screen.getByText('Generate Bulk'))
 
     // All bulk UUIDs should be uppercase

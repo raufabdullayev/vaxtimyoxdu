@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function UrlCodec() {
+  const t = useTranslations('toolUI')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [error, setError] = useState('')
@@ -61,7 +63,7 @@ export default function UrlCodec() {
     <div className="space-y-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Input</label>
+          <label className="block text-sm font-medium mb-1">{t('input')}</label>
           <textarea
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[200px] focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Enter text to encode or decode..."
@@ -72,14 +74,14 @@ export default function UrlCodec() {
         </div>
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Output</label>
+            <label className="text-sm font-medium">{t('output')}</label>
             {output && (
               <button
                 onClick={copy}
                 className="text-xs text-primary hover:underline"
                 aria-label="Copy output to clipboard"
               >
-                {copied ? 'Copied!' : 'Copy'}
+                {copied ? t('copied') : t('copy')}
               </button>
             )}
           </div>
@@ -103,14 +105,14 @@ export default function UrlCodec() {
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           aria-label="URL encode"
         >
-          Encode
+          {t('encode')}
         </button>
         <button
           onClick={decode}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           aria-label="URL decode"
         >
-          Decode
+          {t('decode')}
         </button>
         {output && (
           <button
@@ -118,7 +120,7 @@ export default function UrlCodec() {
             className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
             aria-label="Swap output to input"
           >
-            Swap
+            {t('swap')}
           </button>
         )}
         <button
@@ -126,7 +128,7 @@ export default function UrlCodec() {
           className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           aria-label="Clear all fields"
         >
-          Clear
+          {t('clear')}
         </button>
       </div>
     </div>

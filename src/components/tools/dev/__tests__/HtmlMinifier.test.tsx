@@ -25,21 +25,21 @@ describe('HtmlMinifier', () => {
   it('renders Minify, Beautify, and Clear buttons', () => {
     render(<HtmlMinifier />)
 
-    expect(screen.getByText('Minify')).toBeInTheDocument()
-    expect(screen.getByText('Beautify')).toBeInTheDocument()
-    expect(screen.getByText('Clear')).toBeInTheDocument()
+    expect(screen.getByText('minify')).toBeInTheDocument()
+    expect(screen.getByText('beautify')).toBeInTheDocument()
+    expect(screen.getByText('clear')).toBeInTheDocument()
   })
 
   it('disables Minify button when input is empty', () => {
     render(<HtmlMinifier />)
 
-    expect(screen.getByText('Minify')).toBeDisabled()
+    expect(screen.getByText('minify')).toBeDisabled()
   })
 
   it('disables Beautify button when input is empty', () => {
     render(<HtmlMinifier />)
 
-    expect(screen.getByText('Beautify')).toBeDisabled()
+    expect(screen.getByText('beautify')).toBeDisabled()
   })
 
   it('enables buttons when input has content', () => {
@@ -48,8 +48,8 @@ describe('HtmlMinifier', () => {
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div>hello</div>' } })
 
-    expect(screen.getByText('Minify')).not.toBeDisabled()
-    expect(screen.getByText('Beautify')).not.toBeDisabled()
+    expect(screen.getByText('minify')).not.toBeDisabled()
+    expect(screen.getByText('beautify')).not.toBeDisabled()
   })
 
   it('minifies HTML by removing whitespace and comments', () => {
@@ -59,7 +59,7 @@ describe('HtmlMinifier', () => {
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: htmlInput } })
 
-    fireEvent.click(screen.getByText('Minify'))
+    fireEvent.click(screen.getByText('minify'))
 
     const output = screen.getByLabelText('HTML output')
     const outputValue = (output as HTMLTextAreaElement).value
@@ -75,7 +75,7 @@ describe('HtmlMinifier', () => {
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<!-- remove me --><div>content</div>' } })
 
-    fireEvent.click(screen.getByText('Minify'))
+    fireEvent.click(screen.getByText('minify'))
 
     const output = screen.getByLabelText('HTML output')
     expect((output as HTMLTextAreaElement).value).not.toContain('remove me')
@@ -88,7 +88,7 @@ describe('HtmlMinifier', () => {
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div><p>hello</p></div>' } })
 
-    fireEvent.click(screen.getByText('Beautify'))
+    fireEvent.click(screen.getByText('beautify'))
 
     const output = screen.getByLabelText('HTML output')
     const outputValue = (output as HTMLTextAreaElement).value
@@ -102,7 +102,7 @@ describe('HtmlMinifier', () => {
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div>   <p>   hello   </p>   </div>' } })
 
-    fireEvent.click(screen.getByText('Minify'))
+    fireEvent.click(screen.getByText('minify'))
 
     expect(screen.getByText(/Original:/)).toBeInTheDocument()
     expect(screen.getByText(/Result:/)).toBeInTheDocument()
@@ -115,7 +115,7 @@ describe('HtmlMinifier', () => {
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div><p>hello</p></div>' } })
 
-    fireEvent.click(screen.getByText('Beautify'))
+    fireEvent.click(screen.getByText('beautify'))
 
     expect(screen.getByText(/Original:/)).toBeInTheDocument()
     expect(screen.getByText(/Result:/)).toBeInTheDocument()
@@ -126,12 +126,12 @@ describe('HtmlMinifier', () => {
 
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div>test</div>' } })
-    fireEvent.click(screen.getByText('Minify'))
+    fireEvent.click(screen.getByText('minify'))
 
     // Verify output exists
     expect(screen.getByText(/Original:/)).toBeInTheDocument()
 
-    fireEvent.click(screen.getByText('Clear'))
+    fireEvent.click(screen.getByText('clear'))
 
     expect(input).toHaveValue('')
     expect(screen.getByLabelText('HTML output')).toHaveValue('')
@@ -145,7 +145,7 @@ describe('HtmlMinifier', () => {
 
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div>test</div>' } })
-    fireEvent.click(screen.getByText('Minify'))
+    fireEvent.click(screen.getByText('minify'))
 
     expect(screen.getByLabelText('Copy output to clipboard')).toBeInTheDocument()
   })
@@ -155,7 +155,7 @@ describe('HtmlMinifier', () => {
 
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div>test</div>' } })
-    fireEvent.click(screen.getByText('Minify'))
+    fireEvent.click(screen.getByText('minify'))
 
     fireEvent.click(screen.getByLabelText('Copy output to clipboard'))
 
@@ -169,12 +169,12 @@ describe('HtmlMinifier', () => {
 
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div>test</div>' } })
-    fireEvent.click(screen.getByText('Minify'))
+    fireEvent.click(screen.getByText('minify'))
 
     fireEvent.click(screen.getByLabelText('Copy output to clipboard'))
 
     await waitFor(() => {
-      expect(screen.getByText('Copied!')).toBeInTheDocument()
+      expect(screen.getByText('copied')).toBeInTheDocument()
     })
   })
 
@@ -184,7 +184,7 @@ describe('HtmlMinifier', () => {
     const input = screen.getByLabelText('HTML input')
     fireEvent.change(input, { target: { value: '<div><br /><img src="test.png" /><p>text</p></div>' } })
 
-    fireEvent.click(screen.getByText('Beautify'))
+    fireEvent.click(screen.getByText('beautify'))
 
     const output = screen.getByLabelText('HTML output')
     const outputValue = (output as HTMLTextAreaElement).value
@@ -199,6 +199,6 @@ describe('HtmlMinifier', () => {
     fireEvent.change(input, { target: { value: '   ' } })
 
     // Buttons should be disabled for whitespace-only
-    expect(screen.getByText('Minify')).toBeDisabled()
+    expect(screen.getByText('minify')).toBeDisabled()
   })
 })

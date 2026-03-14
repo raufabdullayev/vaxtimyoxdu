@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 import DOMPurify from 'dompurify'
 
 function sanitizeUrl(url: string): string {
@@ -146,6 +147,7 @@ function greet(name) {
 That's it!`
 
 export default function MarkdownPreview() {
+  const t = useTranslations('toolUI')
   const [input, setInput] = useState('')
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit')
 
@@ -172,7 +174,7 @@ export default function MarkdownPreview() {
           className="px-3 py-1 text-sm border rounded-lg hover:bg-accent transition-colors"
           aria-label="Load sample markdown"
         >
-          Load Sample
+          {t('loadSample')}
         </button>
         <div className="lg:hidden flex gap-2">
           <button
@@ -181,7 +183,7 @@ export default function MarkdownPreview() {
               mobileView === 'edit' ? 'bg-primary text-primary-foreground' : 'border hover:bg-accent'
             }`}
           >
-            Edit
+            {t('input')}
           </button>
           <button
             onClick={() => setMobileView('preview')}
@@ -189,14 +191,14 @@ export default function MarkdownPreview() {
               mobileView === 'preview' ? 'bg-primary text-primary-foreground' : 'border hover:bg-accent'
             }`}
           >
-            Preview
+            {t('preview')}
           </button>
         </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className={`${mobileView === 'preview' ? 'hidden lg:block' : ''}`}>
-          <label className="block text-sm font-medium mb-1">Markdown</label>
+          <label className="block text-sm font-medium mb-1">{t('markdownInput')}</label>
           <textarea
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[400px] focus:outline-none focus:ring-2 focus:ring-primary resize-y"
             placeholder="Type your markdown here..."
@@ -206,7 +208,7 @@ export default function MarkdownPreview() {
           />
         </div>
         <div className={`${mobileView === 'edit' ? 'hidden lg:block' : ''}`}>
-          <label className="block text-sm font-medium mb-1">Preview</label>
+          <label className="block text-sm font-medium mb-1">{t('preview')}</label>
           <div
             className="w-full rounded-lg border bg-background px-4 py-3 min-h-[400px] overflow-auto prose-sm"
             dangerouslySetInnerHTML={{ __html: preview || '<p class="text-muted-foreground text-sm">Preview will appear here...</p>' }}

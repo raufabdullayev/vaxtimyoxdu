@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 
 const CHARSETS = {
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -28,6 +29,7 @@ const STRENGTH_COLORS: Record<StrengthLevel, string> = {
 }
 
 export default function PasswordGenerator() {
+  const t = useTranslations('toolUI')
   const [length, setLength] = useState(16)
   const [useUppercase, setUseUppercase] = useState(true)
   const [useLowercase, setUseLowercase] = useState(true)
@@ -83,7 +85,7 @@ export default function PasswordGenerator() {
           className="text-lg font-mono break-all pr-16 min-h-[1.75rem]"
           aria-label="Generated password"
         >
-          {password || (noCharsetSelected ? 'Select at least one character set' : '')}
+          {password || (noCharsetSelected ? t('selectAtLeastOne') : '')}
         </p>
         <button
           onClick={copy}
@@ -91,7 +93,7 @@ export default function PasswordGenerator() {
           className="absolute top-3 right-3 px-3 py-1.5 text-xs font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
           aria-label="Copy password to clipboard"
         >
-          {copied ? 'Copied!' : 'Copy'}
+          {copied ? t('copied') : t('copy')}
         </button>
       </div>
 
@@ -99,7 +101,7 @@ export default function PasswordGenerator() {
       {password && (
         <div className="space-y-1">
           <div className="flex items-center justify-between text-sm">
-            <span className="text-muted-foreground">Strength</span>
+            <span className="text-muted-foreground">{t('strength')}</span>
             <span className="font-medium capitalize">{strength.level}</span>
           </div>
           <div className="h-2 w-full rounded-full bg-muted">
@@ -115,7 +117,7 @@ export default function PasswordGenerator() {
       <div>
         <div className="flex items-center justify-between mb-2">
           <label htmlFor="pw-length" className="text-sm font-medium">
-            Length
+            {t('length')}
           </label>
           <span className="text-sm font-mono bg-muted/50 px-2 py-0.5 rounded">{length}</span>
         </div>
@@ -138,10 +140,10 @@ export default function PasswordGenerator() {
       {/* Character sets */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {[
-          { label: 'Uppercase (A-Z)', checked: useUppercase, setter: setUseUppercase },
-          { label: 'Lowercase (a-z)', checked: useLowercase, setter: setUseLowercase },
-          { label: 'Digits (0-9)', checked: useDigits, setter: setUseDigits },
-          { label: 'Symbols (!@#$)', checked: useSymbols, setter: setUseSymbols },
+          { label: t('uppercase'), checked: useUppercase, setter: setUseUppercase },
+          { label: t('lowercase'), checked: useLowercase, setter: setUseLowercase },
+          { label: t('digits'), checked: useDigits, setter: setUseDigits },
+          { label: t('symbols'), checked: useSymbols, setter: setUseSymbols },
         ].map((opt) => (
           <label
             key={opt.label}
@@ -165,7 +167,7 @@ export default function PasswordGenerator() {
         className="w-full sm:w-auto px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
         aria-label="Regenerate password"
       >
-        Regenerate
+        {t('regenerate')}
       </button>
     </div>
   )

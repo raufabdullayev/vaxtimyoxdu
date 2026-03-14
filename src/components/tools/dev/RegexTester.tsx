@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function RegexTester() {
+  const t = useTranslations('toolUI')
   const [pattern, setPattern] = useState('')
   const [flags, setFlags] = useState('g')
   const [testString, setTestString] = useState('')
@@ -73,7 +75,7 @@ export default function RegexTester() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-1">Regular Expression</label>
+        <label className="block text-sm font-medium mb-1">{t('regex')}</label>
         <div className="flex items-center gap-2">
           <span className="text-muted-foreground text-lg">/</span>
           <input
@@ -88,7 +90,7 @@ export default function RegexTester() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-1">Flags</label>
+        <label className="block text-sm font-medium mb-1">{t('flags')}</label>
         <div className="flex flex-wrap gap-2">
           {flagOptions.map((f) => (
             <button
@@ -107,7 +109,7 @@ export default function RegexTester() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-1">Test String</label>
+        <label className="block text-sm font-medium mb-1">{t('testString')}</label>
         <textarea
           className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[120px] font-mono focus:outline-none focus:ring-2 focus:ring-primary"
           placeholder="Enter text to test against..."
@@ -122,7 +124,7 @@ export default function RegexTester() {
 
       {highlightedText && (
         <div>
-          <label className="text-sm font-medium mb-1 block">Highlighted Matches</label>
+          <label className="text-sm font-medium mb-1 block">{t('matches')}</label>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm font-mono whitespace-pre-wrap break-all">
             {highlightedText.map((part, i) =>
               part.highlighted ? (

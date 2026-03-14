@@ -205,7 +205,7 @@ describe('CssMinifier', () => {
     fireEvent.click(screen.getByLabelText('Copy output'))
 
     await waitFor(() => {
-      expect(screen.getByText('Copied!')).toBeInTheDocument()
+      expect(screen.getByText('copied')).toBeInTheDocument()
     })
   })
 

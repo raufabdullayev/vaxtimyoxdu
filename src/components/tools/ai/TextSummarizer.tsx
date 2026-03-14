@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 const lengths = [
   { value: 'short', label: 'Short (1-2 sentences)' },
@@ -9,6 +10,7 @@ const lengths = [
 ]
 
 export default function TextSummarizer() {
+  const t = useTranslations('toolUI')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [length, setLength] = useState('medium')
@@ -18,7 +20,7 @@ export default function TextSummarizer() {
 
   const summarize = async () => {
     if (!input.trim()) {
-      setError('Xülasə etmək üçün mətn daxil edin')
+      setError(t('pleaseEnterText'))
       return
     }
     setLoading(true)
@@ -38,15 +40,15 @@ export default function TextSummarizer() {
         if (res.status === 429) {
           const retryAfter = res.headers.get('Retry-After')
           setError(retryAfter
-            ? `Gündəlik limit aşılıb. ${retryAfter} saniyə sonra yenidən cəhd edin.`
-            : 'Gündəlik limit aşılıb. Sabah yenidən cəhd edin.')
+            ? t('rateLimitRetry', { seconds: retryAfter })
+            : t('rateLimitExceeded'))
           return
         }
         if (res.status >= 500) {
-          setError('Xidmət müvəqqəti əlçatmazdır. Bir neçə dəqiqə sonra yenidən cəhd edin.')
+          setError(t('serviceUnavailable'))
           return
         }
-        setError('Xəta baş verdi. Yenidən cəhd edin.')
+        setError(t('errorOccurred'))
         return
       }
 
@@ -55,9 +57,9 @@ export default function TextSummarizer() {
       if (remaining) setRemainingCount(remaining)
     } catch (err) {
       if (err instanceof TypeError) {
-        setError('İnternet bağlantınızı yoxlayın.')
+        setError(t('checkConnection'))
       } else {
-        setError('Xəta baş verdi. Yenidən cəhd edin.')
+        setError(t('errorOccurred'))
       }
     } finally {
       setLoading(false)
@@ -111,21 +113,21 @@ export default function TextSummarizer() {
         disabled={loading}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
       >
-        {loading ? 'Mətn xülasə edilir...' : 'Summarize'}
+        {loading ? t('summarizing') : t('summarize')}
       </button>
 
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Summary</label>
-            <button onClick={copy} className="text-xs text-primary hover:underline">Copy</button>
+            <label className="text-sm font-medium">{t('result')}</label>
+            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
           </div>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap">
             {output}
           </div>
           {remainingCount && (
             <p className="text-xs text-muted-foreground mt-2">
-              Qalan istifad{'\u0259'}: {remainingCount}/20
+              {t('remainingUses')}: {remainingCount}/20
             </p>
           )}
         </div>

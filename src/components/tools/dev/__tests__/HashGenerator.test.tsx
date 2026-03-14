@@ -50,13 +50,13 @@ describe('HashGenerator', () => {
   it('renders Generate Hashes button', () => {
     render(<HashGenerator />)
 
-    expect(screen.getByText('Generate Hashes')).toBeInTheDocument()
+    expect(screen.getByText('hashGenerate')).toBeInTheDocument()
   })
 
   it('disables button when input is empty', () => {
     render(<HashGenerator />)
 
-    const button = screen.getByText('Generate Hashes')
+    const button = screen.getByText('hashGenerate')
     expect(button).toBeDisabled()
   })
 
@@ -66,7 +66,7 @@ describe('HashGenerator', () => {
     const input = screen.getByPlaceholderText('Enter text to hash...')
     fireEvent.change(input, { target: { value: 'hello' } })
 
-    const button = screen.getByText('Generate Hashes')
+    const button = screen.getByText('hashGenerate')
     expect(button).not.toBeDisabled()
   })
 
@@ -76,7 +76,7 @@ describe('HashGenerator', () => {
     const input = screen.getByPlaceholderText('Enter text to hash...')
     fireEvent.change(input, { target: { value: 'test input' } })
 
-    fireEvent.click(screen.getByText('Generate Hashes'))
+    fireEvent.click(screen.getByText('hashGenerate'))
 
     await waitFor(() => {
       expect(screen.getByText('SHA-1')).toBeInTheDocument()
@@ -92,7 +92,7 @@ describe('HashGenerator', () => {
     const input = screen.getByPlaceholderText('Enter text to hash...')
     fireEvent.change(input, { target: { value: 'test' } })
 
-    fireEvent.click(screen.getByText('Generate Hashes'))
+    fireEvent.click(screen.getByText('hashGenerate'))
 
     await waitFor(() => {
       expect(mockDigest).toHaveBeenCalledTimes(4)
@@ -110,11 +110,11 @@ describe('HashGenerator', () => {
     const input = screen.getByPlaceholderText('Enter text to hash...')
     fireEvent.change(input, { target: { value: 'hello' } })
 
-    fireEvent.click(screen.getByText('Generate Hashes'))
+    fireEvent.click(screen.getByText('hashGenerate'))
 
     await waitFor(() => {
       // Each algorithm should produce a hex string display
-      const allCopyButtons = screen.getAllByText('Copy')
+      const allCopyButtons = screen.getAllByText('copy')
       expect(allCopyButtons).toHaveLength(4)
     })
   })
@@ -125,14 +125,14 @@ describe('HashGenerator', () => {
     const input = screen.getByPlaceholderText('Enter text to hash...')
     fireEvent.change(input, { target: { value: 'hello' } })
 
-    fireEvent.click(screen.getByText('Generate Hashes'))
+    fireEvent.click(screen.getByText('hashGenerate'))
 
     await waitFor(() => {
-      expect(screen.getAllByText('Copy')).toHaveLength(4)
+      expect(screen.getAllByText('copy')).toHaveLength(4)
     })
 
     // Click first Copy button
-    const copyButtons = screen.getAllByText('Copy')
+    const copyButtons = screen.getAllByText('copy')
     fireEvent.click(copyButtons[0])
 
     expect(writeTextMock).toHaveBeenCalledTimes(1)
@@ -156,8 +156,8 @@ describe('HashGenerator', () => {
     const input = screen.getByPlaceholderText('Enter text to hash...')
     fireEvent.change(input, { target: { value: 'hello' } })
 
-    fireEvent.click(screen.getByText('Generate Hashes'))
+    fireEvent.click(screen.getByText('hashGenerate'))
 
-    expect(screen.getByText('Generating...')).toBeInTheDocument()
+    expect(screen.getByText('processing')).toBeInTheDocument()
   })
 })

@@ -1,16 +1,18 @@
 'use client'
 
 import { useState } from 'react'
-
-const tones = [
-  { value: 'professional', label: 'Professional' },
-  { value: 'casual', label: 'Casual' },
-  { value: 'academic', label: 'Academic' },
-  { value: 'simple', label: 'Simple' },
-  { value: 'creative', label: 'Creative' },
-]
+import { useTranslations } from 'next-intl'
 
 export default function TextRewriter() {
+  const t = useTranslations('toolUI')
+
+  const tones = [
+    { value: 'professional', label: t('professional') },
+    { value: 'casual', label: t('casual') },
+    { value: 'academic', label: t('academic') },
+    { value: 'simple', label: t('simple') },
+    { value: 'creative', label: t('creative') },
+  ]
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [tone, setTone] = useState('professional')
@@ -20,7 +22,7 @@ export default function TextRewriter() {
 
   const rewrite = async () => {
     if (!input.trim()) {
-      setError('Yenidən yazmaq üçün mətn daxil edin')
+      setError(t('enterTextToRewrite'))
       return
     }
     setLoading(true)
@@ -40,15 +42,15 @@ export default function TextRewriter() {
         if (res.status === 429) {
           const retryAfter = res.headers.get('Retry-After')
           setError(retryAfter
-            ? `Gündəlik limit aşılıb. ${retryAfter} saniyə sonra yenidən cəhd edin.`
-            : 'Gündəlik limit aşılıb. Sabah yenidən cəhd edin.')
+            ? t('rateLimitRetry', { seconds: retryAfter })
+            : t('rateLimitExceeded'))
           return
         }
         if (res.status >= 500) {
-          setError('Xidmət müvəqqəti əlçatmazdır. Bir neçə dəqiqə sonra yenidən cəhd edin.')
+          setError(t('serviceUnavailable'))
           return
         }
-        setError('Xəta baş verdi. Yenidən cəhd edin.')
+        setError(t('errorOccurred'))
         return
       }
 
@@ -57,9 +59,9 @@ export default function TextRewriter() {
       if (remaining) setRemainingCount(remaining)
     } catch (err) {
       if (err instanceof TypeError) {
-        setError('İnternet bağlantınızı yoxlayın.')
+        setError(t('checkConnection'))
       } else {
-        setError('Xəta baş verdi. Yenidən cəhd edin.')
+        setError(t('errorOccurred'))
       }
     } finally {
       setLoading(false)
@@ -90,11 +92,11 @@ export default function TextRewriter() {
 
       <div>
         <label className="block text-sm font-medium mb-1">
-          Original Text <span className="text-muted-foreground">(max 5,000 chars)</span>
+          {t('originalText')} <span className="text-muted-foreground">({t('maxChars', { count: '5,000' })})</span>
         </label>
         <textarea
           className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[180px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Enter text to rewrite..."
+          placeholder={t('enterTextToRewrite')}
           value={input}
           onChange={(e) => setInput(e.target.value.slice(0, 5000))}
         />
@@ -110,21 +112,21 @@ export default function TextRewriter() {
         disabled={loading}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
       >
-        {loading ? 'Mətn yenidən yazılır...' : 'Rewrite Text'}
+        {loading ? t('rewriting') : t('rewriteText')}
       </button>
 
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Rewritten Text</label>
-            <button onClick={copy} className="text-xs text-primary hover:underline">Copy</button>
+            <label className="text-sm font-medium">{t('rewrittenText')}</label>
+            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
           </div>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap">
             {output}
           </div>
           {remainingCount && (
             <p className="text-xs text-muted-foreground mt-2">
-              Qalan istifad{'\u0259'}: {remainingCount}/20
+              {t('remainingUses')}: {remainingCount}/20
             </p>
           )}
         </div>

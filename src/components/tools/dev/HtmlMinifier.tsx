@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 function minifyHtml(html: string): string {
   return html
@@ -53,6 +54,7 @@ function beautifyHtml(html: string): string {
 }
 
 export default function HtmlMinifier() {
+  const t = useTranslations('toolUI')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [copied, setCopied] = useState(false)
@@ -93,7 +95,7 @@ export default function HtmlMinifier() {
     <div className="space-y-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Input HTML</label>
+          <label className="block text-sm font-medium mb-1">{t('htmlInput')}</label>
           <textarea
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[250px] focus:outline-none focus:ring-2 focus:ring-primary"
             placeholder="Paste your HTML code here..."
@@ -104,14 +106,14 @@ export default function HtmlMinifier() {
         </div>
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Output</label>
+            <label className="text-sm font-medium">{t('output')}</label>
             {output && (
               <button
                 onClick={copy}
                 className="text-xs text-primary hover:underline"
                 aria-label="Copy output to clipboard"
               >
-                {copied ? 'Copied!' : 'Copy'}
+                {copied ? t('copied') : t('copy')}
               </button>
             )}
           </div>
@@ -150,20 +152,20 @@ export default function HtmlMinifier() {
           disabled={!input.trim()}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
         >
-          Minify
+          {t('minify')}
         </button>
         <button
           onClick={handleBeautify}
           disabled={!input.trim()}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
         >
-          Beautify
+          {t('beautify')}
         </button>
         <button
           onClick={clear}
           className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
         >
-          Clear
+          {t('clear')}
         </button>
       </div>
     </div>

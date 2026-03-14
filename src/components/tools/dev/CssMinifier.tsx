@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 function minifyCss(css: string): string {
   let result = css
@@ -46,6 +47,7 @@ function getByteSize(str: string): number {
 }
 
 export default function CssMinifier() {
+  const t = useTranslations('toolUI')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [error, setError] = useState('')
@@ -137,20 +139,20 @@ export default function CssMinifier() {
           className="px-3 py-1 text-sm border rounded-lg hover:bg-accent transition-colors"
           aria-label="Load sample CSS"
         >
-          Load Sample
+          {t('loadSample')}
         </button>
         <button
           onClick={clear}
           className="px-3 py-1 text-sm border rounded-lg hover:bg-accent transition-colors"
           aria-label="Clear all"
         >
-          Clear
+          {t('clear')}
         </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Input CSS</label>
+          <label className="block text-sm font-medium mb-1">{t('cssInput')}</label>
           <textarea
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[300px] focus:outline-none focus:ring-2 focus:ring-primary resize-y"
             placeholder="Paste your CSS here..."
@@ -161,14 +163,14 @@ export default function CssMinifier() {
         </div>
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Output</label>
+            <label className="text-sm font-medium">{t('output')}</label>
             {output && (
               <button
                 onClick={copy}
                 className="text-xs text-primary hover:underline"
                 aria-label="Copy output"
               >
-                {copied ? 'Copied!' : 'Copy'}
+                {copied ? t('copied') : t('copy')}
               </button>
             )}
           </div>
@@ -206,14 +208,14 @@ export default function CssMinifier() {
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           aria-label="Minify CSS"
         >
-          Minify
+          {t('minify')}
         </button>
         <button
           onClick={handleBeautify}
           className="px-6 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           aria-label="Beautify CSS"
         >
-          Beautify
+          {t('beautify')}
         </button>
       </div>
     </div>

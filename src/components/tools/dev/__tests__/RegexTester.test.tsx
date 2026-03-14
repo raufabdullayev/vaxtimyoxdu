@@ -127,7 +127,7 @@ describe('RegexTester', () => {
     fireEvent.change(patternInput, { target: { value: 'world' } })
     fireEvent.change(testInput, { target: { value: 'hello world' } })
 
-    expect(screen.getByText('Highlighted Matches')).toBeInTheDocument()
+    expect(screen.getByText('matches')).toBeInTheDocument()
   })
 
   it('shows error for invalid regex pattern', () => {
