@@ -5,7 +5,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import NewsletterHomeSection from '@/components/layout/NewsletterHomeSection'
 import MarketTicker from '@/components/market/MarketTicker'
-import { generateHreflangAlternates } from '@/lib/utils/seo'
+import { generateHreflangAlternates, getOgLocale, getOgImageUrl, SITE_NAME, getLocalizedUrl } from '@/lib/utils/seo'
+import type { Locale } from '@/i18n/config'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -13,10 +14,38 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations('home')
   const alternates = generateHreflangAlternates('/', locale)
 
+  const title = `${t('heroTitle')} ${t('heroTitleHighlight')}`
+  const description = t('heroDescription')
+
+  const ogImage = getOgImageUrl({
+    title: SITE_NAME,
+    subtitle: description.slice(0, 80),
+  })
+  const url = getLocalizedUrl('/', locale as Locale)
+
   return {
+    title,
+    description,
     alternates,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url,
+      siteName: SITE_NAME,
+      locale: getOgLocale(locale),
+      images: [{ url: ogImage, width: 1200, height: 630, alt: SITE_NAME }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImage],
+    },
   }
 }
 
