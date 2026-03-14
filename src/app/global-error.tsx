@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import './globals.css'
 
 export default function GlobalError({
   error,
@@ -15,62 +16,20 @@ export default function GlobalError({
 
   return (
     <html lang="az">
-      <body style={{ margin: 0, fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            minHeight: '100vh',
-            padding: '2rem',
-            textAlign: 'center',
-            backgroundColor: '#fafafa',
-          }}
-        >
-          <p
-            style={{
-              fontSize: '5rem',
-              fontWeight: 'bold',
-              color: 'rgba(124, 58, 237, 0.2)',
-              marginBottom: '0.5rem',
-              lineHeight: 1,
-            }}
-          >
+      <body className="m-0 font-sans">
+        <div className="flex flex-col items-center justify-center min-h-screen p-8 text-center bg-gray-50">
+          <p className="text-7xl md:text-8xl font-bold text-primary/20 mb-2 leading-none select-none">
             Xeta
           </p>
-          <h1
-            style={{
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              marginBottom: '0.5rem',
-              color: '#111',
-            }}
-          >
+          <h1 className="text-2xl font-bold mb-2 text-gray-900">
             Bir xeta bas verdi
           </h1>
-          <p
-            style={{
-              color: '#666',
-              marginBottom: '2rem',
-              maxWidth: '28rem',
-              lineHeight: 1.6,
-            }}
-          >
+          <p className="text-gray-500 mb-8 max-w-md leading-relaxed">
             Gozlenilmeyen xeta bas verdi. Zehmet olmasa yeniden cehd edin.
           </p>
           <button
             onClick={() => reset()}
-            style={{
-              padding: '0.625rem 1.5rem',
-              backgroundColor: '#7c3aed',
-              color: '#fff',
-              border: 'none',
-              borderRadius: '0.5rem',
-              fontWeight: 500,
-              fontSize: '1rem',
-              cursor: 'pointer',
-            }}
+            className="px-6 py-2.5 bg-primary text-white border-none rounded-lg font-medium text-base cursor-pointer hover:bg-primary/90 transition-colors"
           >
             Yeniden cehd et
           </button>
