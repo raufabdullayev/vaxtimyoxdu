@@ -55,8 +55,8 @@ test:
       - node_modules/
   script:
     - npm ci --prefer-offline
-    - echo "Running tests..."
-    - npm run test:run
+    - echo "Running tests with coverage..."
+    - npm run test:coverage
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'

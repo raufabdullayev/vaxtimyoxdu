@@ -7,6 +7,7 @@ import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
 import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
+import MarkdownRenderer from '@/components/common/MarkdownRenderer'
 import { blogPosts, getBlogPostBySlug } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
 import type { Locale } from '@/i18n/config'
@@ -70,40 +71,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <time className="text-sm text-muted-foreground">{post.date}</time>
       <h1 className="text-3xl font-bold mt-2 mb-8">{post.title}</h1>
       <LazyAdBanner slot="blog-post-top" format="banner" className="mb-8" />
-      <div className="prose prose-sm max-w-none">
-        {post.content.split('\n\n').map((paragraph, i) => {
-          if (paragraph.startsWith('## ')) {
-            return (
-              <h2 key={i} className="text-xl font-semibold mt-8 mb-3 text-foreground">
-                {paragraph.replace('## ', '')}
-              </h2>
-            )
-          }
-          if (paragraph.startsWith('- ')) {
-            return (
-              <ul key={i} className="list-disc pl-6 space-y-1 text-muted-foreground">
-                {paragraph.split('\n').map((item, j) => (
-                  <li key={j}>{item.replace(/^- \*\*(.+?)\*\*: /, '$1: ').replace('- ', '')}</li>
-                ))}
-              </ul>
-            )
-          }
-          if (paragraph.match(/^\d\. /)) {
-            return (
-              <ol key={i} className="list-decimal pl-6 space-y-1 text-muted-foreground">
-                {paragraph.split('\n').map((item, j) => (
-                  <li key={j}>{item.replace(/^\d+\. /, '')}</li>
-                ))}
-              </ol>
-            )
-          }
-          return (
-            <p key={i} className="text-muted-foreground mb-4">
-              {paragraph}
-            </p>
-          )
-        })}
-      </div>
+      <MarkdownRenderer content={post.content} />
       {post.relatedTools && post.relatedTools.length > 0 && (
         <div className="mt-12 pt-8 border-t">
           <h2 className="text-xl font-semibold mb-4">Related Tools</h2>

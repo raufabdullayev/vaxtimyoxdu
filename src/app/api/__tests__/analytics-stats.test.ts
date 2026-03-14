@@ -43,13 +43,11 @@ import { GET } from '@/app/api/analytics/stats/route'
 
 // ── Helpers ────────────────────────────────────────────────────────────
 
-function createRequest(apiKey?: string, useHeader = true): NextRequest {
-  const url = useHeader
-    ? 'http://localhost:3000/api/analytics/stats'
-    : `http://localhost:3000/api/analytics/stats?api_key=${apiKey ?? ''}`
+function createRequest(apiKey?: string): NextRequest {
+  const url = 'http://localhost:3000/api/analytics/stats'
 
   const headers: HeadersInit = {}
-  if (useHeader && apiKey) {
+  if (apiKey) {
     headers['x-api-key'] = apiKey
   }
 
@@ -88,14 +86,6 @@ describe('GET /api/analytics/stats', () => {
       expect(data.error).toBe('Unauthorized')
     })
 
-    it('should return 401 when wrong API key is provided via query param', async () => {
-      const req = createRequest('wrong-key', false)
-      const response = await GET(req)
-      const data = await response.json()
-
-      expect(response.status).toBe(401)
-      expect(data.error).toBe('Unauthorized')
-    })
 
     it('should return 401 when ANALYTICS_API_KEY env var is not set', async () => {
       delete process.env.ANALYTICS_API_KEY
@@ -117,12 +107,6 @@ describe('GET /api/analytics/stats', () => {
       expect(response.status).toBe(200)
     })
 
-    it('should accept valid API key via query parameter and return 200', async () => {
-      const req = createRequest('test-secret-key', false)
-      const response = await GET(req)
-
-      expect(response.status).toBe(200)
-    })
 
     it('should return the expected response shape', async () => {
       const req = createRequest('test-secret-key')

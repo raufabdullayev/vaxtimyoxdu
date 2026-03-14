@@ -14,10 +14,18 @@ const ALLOWED_ORIGINS = [
  * Check whether the given origin/referer is in the allow-list using exact
  * origin comparison. Parsing with `new URL()` prevents prefix-based bypasses
  * such as `https://vaxtimyoxdu.com.evil.com`.
+ *
+ * Also rejects origins with embedded authentication info (e.g.,
+ * `https://attacker.com@vaxtimyoxdu.com`) to prevent URL parsing bypasses.
  */
 function isAllowedOrigin(value: string): boolean {
   try {
-    return ALLOWED_ORIGINS.includes(new URL(value).origin)
+    const url = new URL(value)
+    // Reject if origin contains authentication (username/password)
+    if (url.username || url.password) {
+      return false
+    }
+    return ALLOWED_ORIGINS.includes(url.origin)
   } catch {
     return false
   }

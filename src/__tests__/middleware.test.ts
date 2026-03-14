@@ -234,6 +234,24 @@ describe('middleware - disallowed origins', () => {
     const res = middleware(req)
     expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull()
   })
+
+  it('should reject origin with authentication bypass (attacker.com@vaxtimyoxdu.com)', () => {
+    const req = createRequest('/api/newsletter', { origin: 'https://attacker.com@vaxtimyoxdu.com' })
+    const res = middleware(req)
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull()
+  })
+
+  it('should reject origin with username:password authentication bypass', () => {
+    const req = createRequest('/api/newsletter', { origin: 'https://user:pass@vaxtimyoxdu.com' })
+    const res = middleware(req)
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull()
+  })
+
+  it('should reject referer with authentication bypass (attacker.com@vaxtimyoxdu.com)', () => {
+    const req = createRequest('/api/newsletter', { referer: 'https://attacker.com@vaxtimyoxdu.com/page' })
+    const res = middleware(req)
+    expect(res.headers.get('Access-Control-Allow-Origin')).toBeNull()
+  })
 })
 
 // ---------------------------------------------------------------------------
@@ -260,6 +278,18 @@ describe('middleware - CORS bypass prevention (production)', () => {
 
   it('should reject POST with prefix-bypass referer', () => {
     const req = createRequest('/api/newsletter', { method: 'POST', referer: 'https://vaxtimyoxdu.com.evil.com/page' })
+    const res = middleware(req)
+    expect(res.status).toBe(403)
+  })
+
+  it('should reject POST with authentication bypass origin (attacker.com@vaxtimyoxdu.com)', () => {
+    const req = createRequest('/api/newsletter', { method: 'POST', origin: 'https://attacker.com@vaxtimyoxdu.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(403)
+  })
+
+  it('should reject POST with authentication bypass referer (user:pass@vaxtimyoxdu.com)', () => {
+    const req = createRequest('/api/newsletter', { method: 'POST', referer: 'https://user:pass@vaxtimyoxdu.com/page' })
     const res = middleware(req)
     expect(res.status).toBe(403)
   })

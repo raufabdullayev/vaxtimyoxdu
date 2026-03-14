@@ -1,36 +1,51 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { timingSafeEqual } from 'crypto'
 import { getSupabaseServer, isSupabaseConfigured } from '@/lib/supabase/client'
+import { createRateLimiter } from '@/lib/rate-limiter'
 
 /**
  * GET /api/analytics/stats
  *
  * Returns aggregated analytics data. Protected by an API key passed
- * via the `x-api-key` header or `api_key` query parameter.
+ * via the `x-api-key` header only.
  *
  * The API key is read from the ANALYTICS_API_KEY environment variable.
- * If the env var is not set, the endpoint returns 503 Service Unavailable.
+ * If the env var is not set, the endpoint returns 401 Unauthorized.
+ *
+ * Rate limited to 10 requests/minute per API key to prevent resource exhaustion.
  *
  * Response shape:
  * {
- *   visitors: { last_24h, last_7d, last_30d },
  *   page_views: { last_24h, last_7d, last_30d },
+ *   tool_uses: { last_24h, last_7d, last_30d },
  *   popular_tools: [{ tool, count }],
  *   visitors_by_locale: [{ locale, count }],
  *   top_pages: [{ page_path, count }]
  * }
  */
 
+const checkRateLimit = createRateLimiter({
+  limit: 10,
+  window: '1 m',
+  prefix: 'rl:analytics-stats',
+})
+
 function isAuthorized(req: NextRequest): boolean {
   const apiKey = process.env.ANALYTICS_API_KEY
   if (!apiKey) return false
 
   const headerKey = req.headers.get('x-api-key')
-  if (headerKey === apiKey) return true
+  if (!headerKey) return false
 
-  const urlKey = req.nextUrl.searchParams.get('api_key')
-  if (urlKey === apiKey) return true
-
-  return false
+  try {
+    return timingSafeEqual(
+      Buffer.from(headerKey),
+      Buffer.from(apiKey)
+    )
+  } catch {
+    // timingSafeEqual throws if lengths don't match; return false for security
+    return false
+  }
 }
 
 /**
@@ -61,6 +76,18 @@ export async function GET(req: NextRequest) {
   // ── Auth check ──
   if (!isAuthorized(req)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  // ── Rate limit check (10 requests/minute per API key) ──
+  // Use the API key itself as the rate limit key (different keys get separate buckets)
+  const apiKey = req.headers.get('x-api-key') || 'unknown'
+  const { allowed } = await checkRateLimit(apiKey)
+
+  if (!allowed) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429 }
+    )
   }
 
   // ── Supabase availability check ──

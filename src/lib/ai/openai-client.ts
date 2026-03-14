@@ -10,10 +10,15 @@ interface AIProvider {
   model: string
 }
 
-/** Total timeout budget across all providers — must fit within Vercel's 10s limit. */
-const TOTAL_TIMEOUT_MS = 9000
-/** Minimum time (ms) to allocate to a provider — below this it's not worth trying. */
-const MIN_PROVIDER_TIMEOUT_MS = 500
+/** Total timeout budget across all providers — must fit within Vercel's 10s limit.
+ *  Using 8s here leaves 2s buffer for Vercel's own overhead and network latency. */
+const TOTAL_TIMEOUT_MS = 8000
+/** Maximum time (ms) per single provider — ensures fallback chain completes in time.
+ *  Reduced from 4000ms to 3000ms to guarantee completion with network overhead. */
+const MAX_PROVIDER_TIMEOUT_MS = 3000
+/** Minimum time (ms) to allocate to a provider — below this it's not worth trying.
+ *  Increased from 500ms to 800ms to skip providers if we can't give them a fair chance. */
+const MIN_PROVIDER_TIMEOUT_MS = 800
 
 function getProviders(): AIProvider[] {
   const providers: AIProvider[] = []
@@ -118,7 +123,7 @@ export async function callAI(
     // Not enough budget left — skip remaining providers
     if (remaining < MIN_PROVIDER_TIMEOUT_MS) {
       throw new Error(
-        `AI timeout budget exhausted after ${elapsed}ms (tried ${i} provider${i !== 1 ? 's' : ''})`
+        `AI providers unavailable: request timed out after ${elapsed}ms. Please try again.`
       )
     }
 
@@ -126,10 +131,10 @@ export async function callAI(
     const providersLeft = providers.length - i
     const providerTimeout = Math.max(
       MIN_PROVIDER_TIMEOUT_MS,
-      Math.floor(remaining / providersLeft) + (providersLeft === 1 ? 0 : Math.floor(remaining * 0.1))
+      Math.floor(remaining / providersLeft)
     )
-    // Cap at remaining budget
-    const timeoutMs = Math.min(providerTimeout, remaining)
+    // Cap at both MAX_PROVIDER_TIMEOUT_MS and remaining budget
+    const timeoutMs = Math.min(providerTimeout, MAX_PROVIDER_TIMEOUT_MS, remaining)
 
     try {
       const result = await callProvider(providers[i], messages, maxTokens, temperature, timeoutMs)
@@ -142,11 +147,24 @@ export async function callAI(
 
       return result
     } catch (error) {
+      const isTimeout = error instanceof DOMException && error.name === 'AbortError'
+      const providerName = providers[i].name
+
+      if (isTimeout) {
+        console.warn(`${providerName} timed out after ${timeoutMs}ms (${elapsed + timeoutMs}ms total)`)
+      } else {
+        console.warn(`${providerName} failed: ${error instanceof Error ? error.message : String(error)}`)
+      }
+
       const isLast = i === providers.length - 1
-      if (isLast) throw error
+      if (isLast) {
+        throw new Error(
+          'All AI providers are currently unavailable. Please try again in a moment.'
+        )
+      }
       // Continue to next provider
     }
   }
 
-  throw new Error('All AI providers failed')
+  throw new Error('All AI providers are currently unavailable. Please try again in a moment.')
 }

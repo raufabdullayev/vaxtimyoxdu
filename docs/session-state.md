@@ -1,10 +1,12 @@
-# Session State — Son Yenilənmə: 2026-03-14 (Session 2)
+# Session State — Son Yenilənmə: 2026-03-14 (Session 4)
 
 ## Hazırda Nə Edirik
 - Sprint 1 TAMAMLANDI (11/12, secrets rotate qalır)
 - Sprint 2 TAMAMLANDI (8/8, team mode, deployed)
 - Sprint 3 TAMAMLANDI (7/7, team mode, deployed)
-- Sprint review gözlənilir
+- Sprint 4 TAMAMLANDI (5/5, team mode, deployed)
+- Sprint Review TAMAMLANDI (7 reviewer, 50+ tapıntı)
+- UNSUBSCRIBE_SECRET Vercel-ə əlavə olundu + redeploy (Session 4)
 - GSC tam qurulub, hər iki domen verified, sitemap submit olunub
 - İndeksasiya prosesi gözlənilir (1-2 həftə)
 - AdSense təsdiqi gözlənilir (daha çox indekslənmiş səhifə lazımdır)
@@ -95,7 +97,14 @@
 - 1592 test pass (70 fayl), 10 commit push
 - Son commit: 016226b
 
+## Session 4 (2026-03-14)
+- [x] UNSUBSCRIBE_SECRET generate + Vercel production-a əlavə (DevOps agent)
+- [x] Vercel redeploy — 527 statik səhifə, UNSUBSCRIBE_SECRET aktiv
+- [ ] RESEND_API_KEY — CEO manual (resend.com dashboard)
+- [ ] Secrets rotate — CEO manual (aşağı prioritet)
+
 ## Gözləyən İşlər
+- [ ] RESEND_API_KEY Vercel-ə əlavə etmək (CEO manual)
 - [ ] /tools/word-counter-dən URL submit-ə davam (quota exceeded)
 - [ ] /news → /info 301 redirect əlavə etmək
 - [ ] İndeksasiya prosesini izləmək (həftəlik)
@@ -103,6 +112,9 @@
 - [ ] Backlink strategiyası (Dev.to, Medium, kataloqlar — pulsuz)
 - [ ] CEO-TODO.md-dəki digər bəndlər
 - [ ] AdSense təsdiqi (daha çox indekslənmiş səhifə lazımdır)
+- [ ] i18n message splitting (30-48KB → namespace-based loading)
+- [ ] UI primitives adoption (ToolTextarea etc.)
+- [ ] TR tercümə keyfiyyəti (27 key AZ ilə eyni)
 
 ## Son Commitlər
 - 455be80 — GSC verification meta tag vaxtimyoxdu.com
