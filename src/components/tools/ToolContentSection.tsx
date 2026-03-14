@@ -1,5 +1,3 @@
-'use client'
-
 interface ToolContentSectionProps {
   howToUseTitle: string
   howToUseSteps: string[]
