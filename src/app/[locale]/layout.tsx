@@ -27,8 +27,16 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const messages = await getMessages()
 
+  // Only pass namespaces needed by client components to reduce bundle size.
+  // Server-only namespaces (home, about, privacy, terms, info, blog, crossLinks)
+  // are used exclusively via getTranslations() in server components.
+  const serverOnlyNamespaces = ['home', 'about', 'privacy', 'terms', 'info', 'blog', 'crossLinks']
+  const clientMessages = Object.fromEntries(
+    Object.entries(messages).filter(([key]) => !serverOnlyNamespaces.includes(key))
+  )
+
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider messages={clientMessages}>
       <a href="#main-content" className="skip-to-content">
         {messages && typeof messages === 'object' && 'common' in messages
           ? (messages.common as Record<string, string>).skipToContent || 'Kontenta kec'
