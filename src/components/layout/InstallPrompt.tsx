@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import { Download, X } from 'lucide-react'
 
 /**
@@ -52,6 +53,7 @@ function isStandalone(): boolean {
 }
 
 export default function InstallPrompt() {
+  const t = useTranslations('installPrompt')
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [visible, setVisible] = useState(false)
 
@@ -111,7 +113,7 @@ export default function InstallPrompt() {
   return (
     <div
       role="dialog"
-      aria-label="Tetbiqi yukle"
+      aria-label={t('ariaLabel')}
       className={`fixed bottom-0 left-0 right-0 z-40 transition-transform duration-500 ease-out ${
         visible ? 'translate-y-0' : 'translate-y-full'
       }`}
@@ -124,16 +126,16 @@ export default function InstallPrompt() {
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-card-foreground">
-                Vaxtim Yoxdu-nu telefonunuza yukleyin!
+                {t('title')}
               </p>
               <p className="mt-0.5 text-xs text-muted-foreground">
-                Daha surətli giris ucun ana ekrana elave edin.
+                {t('description')}
               </p>
             </div>
             <button
               onClick={handleDismiss}
               className="shrink-0 rounded-md p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-              aria-label="Bagla"
+              aria-label={t('close')}
             >
               <X className="h-4 w-4" />
             </button>
@@ -143,13 +145,13 @@ export default function InstallPrompt() {
               onClick={handleDismiss}
               className="flex-1 rounded-md border px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              Sonra
+              {t('dismiss')}
             </button>
             <button
               onClick={handleInstall}
               className="flex-1 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              Yukle
+              {t('install')}
             </button>
           </div>
         </div>

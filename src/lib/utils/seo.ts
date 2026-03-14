@@ -306,14 +306,18 @@ export function generateArticleMetadata({
   slug,
   date,
   category,
+  locale,
 }: {
   title: string
   description: string
   slug: string
   date: string
   category: string
+  locale?: string
 }): Metadata {
-  const url = `${SITE_URL}/info/${slug}`
+  const resolvedLocale = (locale || defaultLocale) as Locale
+  const url = getLocalizedUrl(`/info/${slug}`, resolvedLocale)
+  const ogLocale = getOgLocale(resolvedLocale)
   const ogImage = getOgImageUrl({
     title,
     subtitle: description.slice(0, 80),
@@ -329,7 +333,7 @@ export function generateArticleMetadata({
       url,
       siteName: SITE_NAME,
       type: 'article',
-      locale: 'az_AZ',
+      locale: ogLocale,
       publishedTime: date,
       section: category,
       images: [
@@ -368,12 +372,13 @@ export function generateNewsArticleJsonLd({
   category: string
   locale?: string
 }) {
+  const url = getLocalizedUrl(`/info/${slug}`, locale as Locale)
   return {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
     headline: title,
     description,
-    url: `${SITE_URL}/info/${slug}`,
+    url,
     datePublished: date,
     dateModified: date,
     articleSection: category,
@@ -394,7 +399,7 @@ export function generateNewsArticleJsonLd({
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_URL}/info/${slug}`,
+      '@id': url,
     },
     image: getOgImageUrl({
       title,
@@ -409,13 +414,17 @@ export function generateBlogPostMetadata({
   description,
   slug,
   date,
+  locale,
 }: {
   title: string
   description: string
   slug: string
   date: string
+  locale?: string
 }): Metadata {
-  const url = `${SITE_URL}/blog/${slug}`
+  const resolvedLocale = (locale || defaultLocale) as Locale
+  const url = getLocalizedUrl(`/blog/${slug}`, resolvedLocale)
+  const ogLocale = getOgLocale(resolvedLocale)
   const ogImage = getOgImageUrl({
     title,
     subtitle: description.slice(0, 80),
@@ -431,7 +440,7 @@ export function generateBlogPostMetadata({
       url,
       siteName: SITE_NAME,
       type: 'article',
-      locale: 'en_US',
+      locale: ogLocale,
       publishedTime: date,
       images: [
         {
@@ -560,12 +569,13 @@ export function generateBlogArticleJsonLd({
   date: string
   locale?: string
 }) {
+  const url = getLocalizedUrl(`/blog/${slug}`, locale as Locale)
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
     description,
-    url: `${SITE_URL}/blog/${slug}`,
+    url,
     datePublished: date,
     dateModified: date,
     inLanguage: locale,
@@ -585,7 +595,7 @@ export function generateBlogArticleJsonLd({
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${SITE_URL}/blog/${slug}`,
+      '@id': url,
     },
     image: getOgImageUrl({
       title,

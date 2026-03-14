@@ -76,6 +76,7 @@ export default async function BlogPage({ params }: Props) {
   return (
     <div className="container py-12 max-w-3xl">
       <Breadcrumb
+        locale={locale}
         items={[
           { label: t('breadcrumbHome'), href: '/' },
           { label: t('breadcrumbBlog') },

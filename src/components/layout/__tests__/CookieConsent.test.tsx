@@ -2,6 +2,24 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
 import CookieConsent from '../CookieConsent'
 
+// Mock next-intl
+vi.mock('next-intl', () => ({
+  useTranslations: (namespace: string) => {
+    const translations: Record<string, Record<string, string>> = {
+      cookie: {
+        message: 'Bu sayt təcrübəmizi yaxşılaşdırmaq üçün cookie-lərdən istifadə edir.',
+        accept: 'Qəbul et',
+        reject: 'Rədd et',
+        privacyLink: 'Məxfilik Siyasəti',
+        ariaLabel: 'Cookie razılıq banneri',
+        ariaReject: 'Cookie-ləri rədd et',
+        ariaAccept: 'Cookie-ləri qəbul et',
+      },
+    }
+    return (key: string) => translations[namespace]?.[key] ?? key
+  },
+}))
+
 // Mock i18n navigation Link
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (
@@ -212,7 +230,7 @@ describe('CookieConsent', () => {
     })
 
     const dialog = screen.getByRole('dialog')
-    expect(dialog).toHaveAttribute('aria-label', 'Cookie raziliq banneri')
+    expect(dialog).toHaveAttribute('aria-label', 'Cookie razılıq banneri')
     expect(dialog).toHaveAttribute('aria-describedby', 'cookie-consent-description')
   })
 

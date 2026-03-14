@@ -72,6 +72,7 @@ export default async function ToolsPage({ params }: Props) {
   return (
     <div className="container py-8 md:py-12">
       <Breadcrumb
+        locale={locale}
         items={[
           { label: t('breadcrumbHome'), href: '/' },
           { label: t('breadcrumbTools') },

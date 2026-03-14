@@ -1,4 +1,6 @@
 import { Link } from '@/i18n/navigation'
+import { getLocalizedUrl } from '@/lib/utils/seo'
+import { defaultLocale, type Locale } from '@/i18n/config'
 
 interface BreadcrumbItem {
   label: string
@@ -7,9 +9,11 @@ interface BreadcrumbItem {
 
 interface BreadcrumbProps {
   items: BreadcrumbItem[]
+  locale?: string
 }
 
-export default function Breadcrumb({ items }: BreadcrumbProps) {
+export default function Breadcrumb({ items, locale }: BreadcrumbProps) {
+  const resolvedLocale = (locale || defaultLocale) as Locale
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -17,7 +21,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      ...(item.href ? { item: `https://vaxtimyoxdu.com${item.href}` } : {}),
+      ...(item.href ? { item: getLocalizedUrl(item.href, resolvedLocale) } : {}),
     })),
   }
 

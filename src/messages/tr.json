@@ -428,9 +428,27 @@
     "loading": "Yukleniyor..."
   },
   "cookie": {
-    "message": "Bu site deneyiminizi iyilestirmek icin cerezler kullanmaktadir.",
+    "message": "Bu site deneyiminizi iyileştirmek için çerezler kullanmaktadır.",
     "accept": "Kabul et",
-    "reject": "Reddet"
+    "reject": "Reddet",
+    "privacyLink": "Gizlilik Politikası",
+    "ariaLabel": "Çerez onay bildirimi",
+    "ariaReject": "Çerezleri reddet",
+    "ariaAccept": "Çerezleri kabul et"
+  },
+  "installPrompt": {
+    "ariaLabel": "Uygulamayı yükle",
+    "title": "Vaxtim Yoxdu'yu telefonunuza yükleyin!",
+    "description": "Daha hızlı erişim için ana ekrana ekleyin.",
+    "dismiss": "Sonra",
+    "install": "Yükle",
+    "close": "Kapat"
+  },
+  "offline": {
+    "title": "İnternet bağlantınız yok",
+    "description": "Bu sayfayı görüntülemek için internet bağlantısı gereklidir. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.",
+    "retry": "Tekrar dene",
+    "hint": "Sorun devam ederse, internet sağlayıcınızla iletişime geçin."
   },
   "language": {
     "label": "Dil secin",

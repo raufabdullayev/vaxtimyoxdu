@@ -428,9 +428,27 @@
     "loading": "Zagruzka..."
   },
   "cookie": {
-    "message": "Etot sayt ispolzuet cookie dlya uluchsheniya vashego opyta.",
-    "accept": "Prinyat",
-    "reject": "Otklonit"
+    "message": "Этот сайт использует cookie для улучшения вашего опыта.",
+    "accept": "Принять",
+    "reject": "Отклонить",
+    "privacyLink": "Политика конфиденциальности",
+    "ariaLabel": "Баннер согласия на cookie",
+    "ariaReject": "Отклонить cookie",
+    "ariaAccept": "Принять cookie"
+  },
+  "installPrompt": {
+    "ariaLabel": "Установить приложение",
+    "title": "Установите Vaxtim Yoxdu на ваш телефон!",
+    "description": "Добавьте на главный экран для быстрого доступа.",
+    "dismiss": "Позже",
+    "install": "Установить",
+    "close": "Закрыть"
+  },
+  "offline": {
+    "title": "Нет подключения к интернету",
+    "description": "Для отображения этой страницы требуется подключение к интернету. Пожалуйста, проверьте соединение и попробуйте снова.",
+    "retry": "Попробовать снова",
+    "hint": "Если проблема сохраняется, свяжитесь с вашим интернет-провайдером."
   },
   "language": {
     "label": "Vybrat yazyk",

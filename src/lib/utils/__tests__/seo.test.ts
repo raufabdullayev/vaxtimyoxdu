@@ -668,14 +668,22 @@ describe('generateBlogPostMetadata()', () => {
     expect(og.type).toBe('article')
   })
 
-  it('should set openGraph locale to en_US for blog posts', () => {
+  it('should set openGraph locale to az_AZ by default (no locale passed)', () => {
     const og = meta.openGraph as Record<string, unknown>
-    expect(og.locale).toBe('en_US')
+    expect(og.locale).toBe('az_AZ')
   })
 
   it('should set canonical URL under /blog/', () => {
     const alternates = meta.alternates as Record<string, unknown>
     expect(alternates.canonical).toBe(`${SITE_URL}/blog/${blogParams.slug}`)
+  })
+
+  it('should use locale-prefixed URL when locale is en', () => {
+    const enMeta = generateBlogPostMetadata({ ...blogParams, locale: 'en' })
+    const alternates = enMeta.alternates as Record<string, unknown>
+    expect(alternates.canonical).toBe(`${SITE_URL}/en/blog/${blogParams.slug}`)
+    const og = enMeta.openGraph as Record<string, unknown>
+    expect(og.locale).toBe('en_US')
   })
 
   it('should include dynamic OG image with type=blog', () => {
@@ -713,8 +721,8 @@ describe('generateBlogArticleJsonLd()', () => {
     expect(jsonLd.headline).toBe(params.title)
   })
 
-  it('should set the correct URL under /blog/', () => {
-    expect(jsonLd.url).toBe(`${SITE_URL}/blog/${params.slug}`)
+  it('should set the correct URL under /blog/ with locale prefix', () => {
+    expect(jsonLd.url).toBe(`${SITE_URL}/en/blog/${params.slug}`)
   })
 
   it('should set datePublished and dateModified', () => {
@@ -742,7 +750,7 @@ describe('generateBlogArticleJsonLd()', () => {
   })
 
   it('should include mainEntityOfPage matching the blog URL', () => {
-    expect(jsonLd.mainEntityOfPage['@id']).toBe(`${SITE_URL}/blog/${params.slug}`)
+    expect(jsonLd.mainEntityOfPage['@id']).toBe(`${SITE_URL}/en/blog/${params.slug}`)
   })
 
   it('should include a dynamic OG image', () => {

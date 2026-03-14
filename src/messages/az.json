@@ -430,7 +430,25 @@
   "cookie": {
     "message": "Bu sayt təcrübəmizi yaxşılaşdırmaq üçün cookie-lərdən istifadə edir.",
     "accept": "Qəbul et",
-    "reject": "Rədd et"
+    "reject": "Rədd et",
+    "privacyLink": "Məxfilik Siyasəti",
+    "ariaLabel": "Cookie razılıq banneri",
+    "ariaReject": "Cookie-ləri rədd et",
+    "ariaAccept": "Cookie-ləri qəbul et"
+  },
+  "installPrompt": {
+    "ariaLabel": "Tətbiqi yüklə",
+    "title": "Vaxtim Yoxdu-nu telefonunuza yükləyin!",
+    "description": "Daha sürətli giriş üçün ana ekrana əlavə edin.",
+    "dismiss": "Sonra",
+    "install": "Yüklə",
+    "close": "Bağla"
+  },
+  "offline": {
+    "title": "İnternet bağlantınız yoxdur",
+    "description": "Bu səhifəni göstərmək üçün internet bağlantısı lazımdır. Zəhmət olmasa bağlantınızı yoxlayın və yenidən cəhd edin.",
+    "retry": "Yenidən cəhd et",
+    "hint": "Əgər problem davam edirsə, internet provayderinizlə əlaqə saxlayın."
   },
   "language": {
     "label": "Dil seçin",

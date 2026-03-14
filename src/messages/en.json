@@ -430,7 +430,25 @@
   "cookie": {
     "message": "This site uses cookies to improve your experience.",
     "accept": "Accept",
-    "reject": "Reject"
+    "reject": "Reject",
+    "privacyLink": "Privacy Policy",
+    "ariaLabel": "Cookie consent banner",
+    "ariaReject": "Reject cookies",
+    "ariaAccept": "Accept cookies"
+  },
+  "installPrompt": {
+    "ariaLabel": "Install application",
+    "title": "Install Vaxtim Yoxdu on your phone!",
+    "description": "Add to home screen for faster access.",
+    "dismiss": "Later",
+    "install": "Install",
+    "close": "Close"
+  },
+  "offline": {
+    "title": "No internet connection",
+    "description": "An internet connection is required to display this page. Please check your connection and try again.",
+    "retry": "Try again",
+    "hint": "If the problem persists, contact your internet provider."
   },
   "language": {
     "label": "Select language",

@@ -195,6 +195,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       <Breadcrumb
+        locale={locale}
         items={[
           { label: t('breadcrumbHome'), href: '/' },
           { label: t('breadcrumbTools'), href: '/tools' },

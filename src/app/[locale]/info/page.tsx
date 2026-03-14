@@ -98,6 +98,7 @@ export default async function InfoPage({ params }: Props) {
   return (
     <div className="container py-8 md:py-12 max-w-3xl">
       <Breadcrumb
+        locale={locale}
         items={[
           { label: t('breadcrumbHome'), href: '/' },
           { label: t('breadcrumbNews') },

@@ -1,11 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 
 type ConsentStatus = 'accepted' | 'rejected' | null
 
 export default function CookieConsent() {
+  const t = useTranslations('cookie')
   const [status, setStatus] = useState<ConsentStatus>(null)
   const [visible, setVisible] = useState(false)
 
@@ -51,7 +53,7 @@ export default function CookieConsent() {
   return (
     <div
       role="dialog"
-      aria-label="Cookie raziliq banneri"
+      aria-label={t('ariaLabel')}
       aria-describedby="cookie-consent-description"
       className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-500 ease-out ${
         visible ? 'translate-y-0' : 'translate-y-full'
@@ -63,28 +65,28 @@ export default function CookieConsent() {
             id="cookie-consent-description"
             className="flex-1 text-sm text-card-foreground"
           >
-            Bu sayt təcrübənizi yaxşılaşdırmaq üçün cookie-lərdən istifadə edir.{' '}
+            {t('message')}{' '}
             <Link
               href="/privacy"
               className="underline underline-offset-2 hover:text-primary"
             >
-              Məxfilik Siyasəti
+              {t('privacyLink')}
             </Link>
           </p>
           <div className="mt-3 flex items-center gap-2 sm:mt-0 sm:shrink-0">
             <button
               onClick={handleReject}
               className="rounded-md border px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Cookie-ləri rədd et"
+              aria-label={t('ariaReject')}
             >
-              Rədd et
+              {t('reject')}
             </button>
             <button
               onClick={handleAccept}
               className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Cookie-ləri qəbul et"
+              aria-label={t('ariaAccept')}
             >
-              Qəbul et
+              {t('accept')}
             </button>
           </div>
         </div>

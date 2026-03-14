@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     slug,
     date: article.date,
     category: article.category,
+    locale,
   })
   const alternates = generateHreflangAlternates(`/info/${slug}`, locale)
   return { ...metadata, alternates }
@@ -59,6 +60,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Breadcrumb
+        locale={locale}
         items={[
           { label: nav('home'), href: '/' },
           { label: nav('news'), href: '/info' },
