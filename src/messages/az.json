@@ -11,7 +11,8 @@
       "privacy": "Məxfilik Siyasəti",
       "terms": "İstifadə Şərtləri"
     },
-    "skipToContent": "Kontentə keç"
+    "skipToContent": "Kontentə keç",
+    "menu": "Menyu"
   },
   "home": {
     "heroTitle": "Vaxtım",
@@ -653,5 +654,73 @@
     "cssOutput": "CSS çıxışı",
     "htmlInput": "HTML girişi",
     "htmlOutput2": "HTML çıxışı"
+  },
+  "toolComponents": {
+    "wordCounter": {
+      "label": "Mətninizi daxil edin",
+      "placeholder": "Yazmağa başlayın və ya mətninizi bura yapışdırın...",
+      "stats": {
+        "words": "Sözlər",
+        "characters": "Simvollar",
+        "charactersNoSpaces": "Simvollar (boşluq olmadan)",
+        "sentences": "Cümlələr",
+        "paragraphs": "Paraqraflar",
+        "readingTime": "Oxuma Vaxtı",
+        "speakingTime": "Danışma Vaxtı"
+      },
+      "actions": {
+        "clearText": "Mətni Təmizlə"
+      },
+      "time": {
+        "sec": "san",
+        "min": "dəq",
+        "hr": "saat"
+      }
+    },
+    "jsonFormatter": {
+      "indentLabel": "Girinti:",
+      "indentOptions": {
+        "twoSpaces": "2 boşluq",
+        "fourSpaces": "4 boşluq",
+        "tab": "Tab"
+      },
+      "actions": {
+        "loadSample": "Nümunə yüklə",
+        "format": "Formatla / Gözəl Göstər",
+        "minify": "Kiçilt",
+        "copy": "Kopyala"
+      },
+      "labels": {
+        "input": "Giriş",
+        "output": "Çıxış"
+      },
+      "placeholders": {
+        "input": "JSON-u bura yapışdırın...",
+        "output": "Formatlı JSON bura görünəcək..."
+      },
+      "errors": {
+        "empty": "JSON daxil edin",
+        "invalid": "Yanlış JSON"
+      }
+    },
+    "qrCodeGenerator": {
+      "labels": {
+        "textOrUrl": "Mətn və ya URL",
+        "size": "Ölçü (px)",
+        "foreground": "Ön plan",
+        "background": "Arxa plan"
+      },
+      "placeholders": {
+        "textOrUrl": "URL, mətn, email, telefon nömrəsi daxil edin..."
+      },
+      "actions": {
+        "generate": "QR Kod Yarat",
+        "downloadPng": "PNG Endir"
+      },
+      "errors": {
+        "empty": "Mətn və ya URL daxil edin",
+        "failed": "QR kod yaratmaq alınmadı"
+      }
+    }
   }
 }

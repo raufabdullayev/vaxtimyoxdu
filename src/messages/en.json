@@ -11,7 +11,8 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Use"
     },
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "menu": "Menu"
   },
   "home": {
     "heroTitle": "Vaxtim",
@@ -653,5 +654,73 @@
     "cssOutput": "CSS Output",
     "htmlInput": "HTML Input",
     "htmlOutput2": "HTML Output"
+  },
+  "toolComponents": {
+    "wordCounter": {
+      "label": "Enter your text",
+      "placeholder": "Start typing or paste your text here...",
+      "stats": {
+        "words": "Words",
+        "characters": "Characters",
+        "charactersNoSpaces": "Characters (no spaces)",
+        "sentences": "Sentences",
+        "paragraphs": "Paragraphs",
+        "readingTime": "Reading Time",
+        "speakingTime": "Speaking Time"
+      },
+      "actions": {
+        "clearText": "Clear Text"
+      },
+      "time": {
+        "sec": "sec",
+        "min": "min",
+        "hr": "hr"
+      }
+    },
+    "jsonFormatter": {
+      "indentLabel": "Indent:",
+      "indentOptions": {
+        "twoSpaces": "2 spaces",
+        "fourSpaces": "4 spaces",
+        "tab": "Tab"
+      },
+      "actions": {
+        "loadSample": "Load Sample",
+        "format": "Format / Beautify",
+        "minify": "Minify",
+        "copy": "Copy"
+      },
+      "labels": {
+        "input": "Input",
+        "output": "Output"
+      },
+      "placeholders": {
+        "input": "Paste your JSON here...",
+        "output": "Formatted JSON will appear here..."
+      },
+      "errors": {
+        "empty": "Please enter JSON",
+        "invalid": "Invalid JSON"
+      }
+    },
+    "qrCodeGenerator": {
+      "labels": {
+        "textOrUrl": "Text or URL",
+        "size": "Size (px)",
+        "foreground": "Foreground",
+        "background": "Background"
+      },
+      "placeholders": {
+        "textOrUrl": "Enter URL, text, email, phone number..."
+      },
+      "actions": {
+        "generate": "Generate QR Code",
+        "downloadPng": "Download PNG"
+      },
+      "errors": {
+        "empty": "Please enter text or URL",
+        "failed": "Failed to generate QR code"
+      }
+    }
   }
 }

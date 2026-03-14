@@ -11,7 +11,8 @@
       "privacy": "Gizlilik Politikası",
       "terms": "Kullanım Şartları"
     },
-    "skipToContent": "İçeriğe atla"
+    "skipToContent": "İçeriğe atla",
+    "menu": "Menü"
   },
   "home": {
     "heroTitle": "Vaxtim",
@@ -653,5 +654,73 @@
     "cssOutput": "CSS çıkışı",
     "htmlInput": "HTML girişi",
     "htmlOutput2": "HTML çıkışı"
+  },
+  "toolComponents": {
+    "wordCounter": {
+      "label": "Metninizi girin",
+      "placeholder": "Yazıya başlayın veya metninizi buraya yapıştırın...",
+      "stats": {
+        "words": "Kelimeler",
+        "characters": "Karakterler",
+        "charactersNoSpaces": "Karakterler (boşluk yok)",
+        "sentences": "Cümleler",
+        "paragraphs": "Paragraflar",
+        "readingTime": "Okuma Süresi",
+        "speakingTime": "Konuşma Süresi"
+      },
+      "actions": {
+        "clearText": "Metni Temizle"
+      },
+      "time": {
+        "sec": "san",
+        "min": "dak",
+        "hr": "saat"
+      }
+    },
+    "jsonFormatter": {
+      "indentLabel": "Girinti:",
+      "indentOptions": {
+        "twoSpaces": "2 boşluk",
+        "fourSpaces": "4 boşluk",
+        "tab": "Sekme"
+      },
+      "actions": {
+        "loadSample": "Örnek Yükle",
+        "format": "Biçimlendir / Güzelleştir",
+        "minify": "Küçült",
+        "copy": "Kopyala"
+      },
+      "labels": {
+        "input": "Girdi",
+        "output": "Çıktı"
+      },
+      "placeholders": {
+        "input": "JSON'unuzu buraya yapıştırın...",
+        "output": "Biçimlendirilmiş JSON burada görünecek..."
+      },
+      "errors": {
+        "empty": "Lütfen JSON girin",
+        "invalid": "Geçersiz JSON"
+      }
+    },
+    "qrCodeGenerator": {
+      "labels": {
+        "textOrUrl": "Metin veya URL",
+        "size": "Boyut (px)",
+        "foreground": "Ön plan",
+        "background": "Arka plan"
+      },
+      "placeholders": {
+        "textOrUrl": "URL, metin, e-posta, telefon numarası girin..."
+      },
+      "actions": {
+        "generate": "QR Kod Oluştur",
+        "downloadPng": "PNG İndir"
+      },
+      "errors": {
+        "empty": "Lütfen metin veya URL girin",
+        "failed": "QR kod oluşturulamadı"
+      }
+    }
   }
 }

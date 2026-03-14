@@ -11,7 +11,8 @@
       "privacy": "Политика конфиденциальности",
       "terms": "Условия использования"
     },
-    "skipToContent": "Перейти к содержанию"
+    "skipToContent": "Перейти к содержанию",
+    "menu": "Меню"
   },
   "home": {
     "heroTitle": "Vaxtim",
@@ -653,5 +654,73 @@
     "cssOutput": "Вывод CSS",
     "htmlInput": "Ввод HTML",
     "htmlOutput2": "Вывод HTML"
+  },
+  "toolComponents": {
+    "wordCounter": {
+      "label": "Введите ваш текст",
+      "placeholder": "Начните печатать или вставьте ваш текст здесь...",
+      "stats": {
+        "words": "Слова",
+        "characters": "Символы",
+        "charactersNoSpaces": "Символы (без пробелов)",
+        "sentences": "Предложения",
+        "paragraphs": "Параграфы",
+        "readingTime": "Время чтения",
+        "speakingTime": "Время речи"
+      },
+      "actions": {
+        "clearText": "Очистить текст"
+      },
+      "time": {
+        "sec": "сек",
+        "min": "мин",
+        "hr": "ч"
+      }
+    },
+    "jsonFormatter": {
+      "indentLabel": "Отступ:",
+      "indentOptions": {
+        "twoSpaces": "2 пробела",
+        "fourSpaces": "4 пробела",
+        "tab": "Табуляция"
+      },
+      "actions": {
+        "loadSample": "Загрузить пример",
+        "format": "Форматировать / Красиво оформить",
+        "minify": "Минимизировать",
+        "copy": "Копировать"
+      },
+      "labels": {
+        "input": "Ввод",
+        "output": "Вывод"
+      },
+      "placeholders": {
+        "input": "Вставьте ваш JSON здесь...",
+        "output": "Отформатированный JSON появится здесь..."
+      },
+      "errors": {
+        "empty": "Пожалуйста, введите JSON",
+        "invalid": "Неверный JSON"
+      }
+    },
+    "qrCodeGenerator": {
+      "labels": {
+        "textOrUrl": "Текст или URL",
+        "size": "Размер (px)",
+        "foreground": "Передний план",
+        "background": "Фон"
+      },
+      "placeholders": {
+        "textOrUrl": "Введите URL, текст, почту, номер телефона..."
+      },
+      "actions": {
+        "generate": "Создать QR-код",
+        "downloadPng": "Скачать PNG"
+      },
+      "errors": {
+        "empty": "Пожалуйста, введите текст или URL",
+        "failed": "Не удалось создать QR-код"
+      }
+    }
   }
 }
