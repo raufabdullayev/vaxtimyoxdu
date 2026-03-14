@@ -208,7 +208,7 @@ describe('openai-client', () => {
 
     await expect(
       callAI([{ role: 'user', content: 'Hello' }])
-    ).rejects.toThrow('empty response')
+    ).rejects.toThrow('All AI providers are currently unavailable')
   })
 
   it('throws when the provider returns no choices', async () => {

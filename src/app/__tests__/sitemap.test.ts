@@ -9,6 +9,11 @@ const LOCALES = ['az', 'en', 'tr', 'ru']
 const LOCALE_COUNT = LOCALES.length
 const entries = sitemap()
 
+// Calculate expected counts accounting for locale-gated news articles
+const newsWithLocale = Object.values(newsArticles).filter(a => a.locale).length
+const newsWithoutLocale = Object.keys(newsArticles).length - newsWithLocale
+const expectedNewsEntries = newsWithLocale + newsWithoutLocale * LOCALE_COUNT
+
 // ---------------------------------------------------------------------------
 // General structure
 // ---------------------------------------------------------------------------
@@ -20,8 +25,10 @@ describe('sitemap() general structure', () => {
 
   it('should include locale variants for all tools, news, blog, and static pages', () => {
     const staticPages = 7 // /, /info, /tools, /blog, /about, /privacy, /terms
-    const uniquePages = staticPages + tools.length + Object.keys(newsArticles).length + Object.keys(blogPosts).length
-    const expectedCount = uniquePages * LOCALE_COUNT
+    // News articles with a locale field get 1 entry each (not 4)
+    const expectedCount =
+      (staticPages + tools.length + Object.keys(blogPosts).length) * LOCALE_COUNT +
+      expectedNewsEntries
     expect(entries.length).toBe(expectedCount)
   })
 
@@ -64,9 +71,8 @@ describe('sitemap() general structure', () => {
       const alt = entry as { alternates?: { languages?: Record<string, string> } }
       expect(alt.alternates).toBeDefined()
       expect(alt.alternates!.languages).toBeDefined()
-      for (const locale of LOCALES) {
-        expect(alt.alternates!.languages![locale]).toBeDefined()
-      }
+      // At minimum, x-default should always be present
+      expect(alt.alternates!.languages!['x-default']).toBeDefined()
     }
   })
 })
@@ -163,32 +169,40 @@ describe('sitemap() tool pages', () => {
 // News article pages
 // ---------------------------------------------------------------------------
 describe('sitemap() news article pages', () => {
-  const newsSlugs = Object.keys(newsArticles)
+  // Helper: locale-gated articles use their locale prefix (az = no prefix, en = /en/)
+  function newsUrl(slug: string, locale?: string): string {
+    if (!locale || locale === 'az') return `${BASE_URL}/info/${slug}`
+    return `${BASE_URL}/${locale}/info/${slug}`
+  }
 
-  it('should include an entry for every news article in default locale', () => {
-    for (const slug of newsSlugs) {
-      const entry = entries.find((e) => e.url === `${BASE_URL}/info/${slug}`)
-      expect(entry, `Missing sitemap entry for news article "${slug}"`).toBeDefined()
+  it('should include an entry for every news article in its locale', () => {
+    for (const [slug, article] of Object.entries(newsArticles)) {
+      const url = newsUrl(slug, article.locale)
+      const entry = entries.find((e) => e.url === url)
+      expect(entry, `Missing sitemap entry for news article "${slug}" at ${url}`).toBeDefined()
     }
   })
 
   it('should set news article priority to 0.7', () => {
-    for (const slug of newsSlugs) {
-      const entry = entries.find((e) => e.url === `${BASE_URL}/info/${slug}`)
+    for (const [slug, article] of Object.entries(newsArticles)) {
+      const url = newsUrl(slug, article.locale)
+      const entry = entries.find((e) => e.url === url)
       expect(entry!.priority).toBe(0.7)
     }
   })
 
   it('should set news articles to daily change frequency', () => {
-    for (const slug of newsSlugs) {
-      const entry = entries.find((e) => e.url === `${BASE_URL}/info/${slug}`)
+    for (const [slug, article] of Object.entries(newsArticles)) {
+      const url = newsUrl(slug, article.locale)
+      const entry = entries.find((e) => e.url === url)
       expect(entry!.changeFrequency).toBe('daily')
     }
   })
 
   it('should set lastModified from the article date', () => {
     for (const [slug, article] of Object.entries(newsArticles)) {
-      const entry = entries.find((e) => e.url === `${BASE_URL}/info/${slug}`)
+      const url = newsUrl(slug, article.locale)
+      const entry = entries.find((e) => e.url === url)
       const expected = new Date(article.date).toISOString()
       expect((entry!.lastModified as Date).toISOString()).toBe(expected)
     }

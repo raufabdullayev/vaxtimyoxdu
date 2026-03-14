@@ -2,6 +2,20 @@ import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
+// Mock next-intl useTranslations
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => {
+    const translations: Record<string, string> = {
+      'nav.news': 'Xəbərlər',
+      'nav.tools': 'Alətlər',
+      'nav.blog': 'Blog',
+      'nav.about': 'Haqqımızda',
+      menu: 'Menyu',
+    }
+    return translations[key] ?? key
+  },
+}))
+
 // Mock i18n navigation Link
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (

@@ -270,15 +270,15 @@ describe('POST /api/ai/grammar', () => {
   // ---- Error handling (500) ----
 
   describe('error handling', () => {
-    it('returns 500 when callAI throws an error', async () => {
+    it('returns 503 when callAI throws a timeout error', async () => {
       mockCallAI.mockRejectedValue(new Error('Provider timeout'))
 
       const req = createRequest({ text: 'Hello world' })
       const response = await POST(req)
       const data = await response.json()
 
-      expect(response.status).toBe(500)
-      expect(data.error).toContain('Service temporarily unavailable')
+      expect(response.status).toBe(503)
+      expect(data.error).toContain('AI service is responding slowly')
     })
 
     it('returns 500 when rate limiter throws an unexpected error', async () => {
