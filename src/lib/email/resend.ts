@@ -26,7 +26,7 @@ export async function sendWelcomeEmail(
   if (!resend) return false
 
   try {
-    const html = getWelcomeEmailHtml(locale)
+    const html = getWelcomeEmailHtml(locale, email)
 
     await resend.emails.send({
       from: FROM_EMAIL,

@@ -10,7 +10,10 @@ interface AIProvider {
   model: string
 }
 
-const PROVIDER_TIMEOUT_MS = 8000
+/** Total timeout budget across all providers — must fit within Vercel's 10s limit. */
+const TOTAL_TIMEOUT_MS = 9000
+/** Minimum time (ms) to allocate to a provider — below this it's not worth trying. */
+const MIN_PROVIDER_TIMEOUT_MS = 500
 
 function getProviders(): AIProvider[] {
   const providers: AIProvider[] = []
@@ -52,10 +55,11 @@ async function callProvider(
   provider: AIProvider,
   messages: ChatMessage[],
   maxTokens: number,
-  temperature: number
+  temperature: number,
+  timeoutMs: number
 ): Promise<string> {
   const controller = new AbortController()
-  const timeout = setTimeout(() => controller.abort(), PROVIDER_TIMEOUT_MS)
+  const timeout = setTimeout(() => controller.abort(), timeoutMs)
 
   try {
     const res = await fetch(provider.baseUrl, {
@@ -104,10 +108,31 @@ export async function callAI(
     throw new Error('No AI provider configured. Set GROQ_API_KEY or GEMINI_API_KEY.')
   }
 
-  // Try each provider in order, fallback on failure
+  const startTime = Date.now()
+
+  // Try each provider in order, respecting the total timeout budget
   for (let i = 0; i < providers.length; i++) {
+    const elapsed = Date.now() - startTime
+    const remaining = TOTAL_TIMEOUT_MS - elapsed
+
+    // Not enough budget left — skip remaining providers
+    if (remaining < MIN_PROVIDER_TIMEOUT_MS) {
+      throw new Error(
+        `AI timeout budget exhausted after ${elapsed}ms (tried ${i} provider${i !== 1 ? 's' : ''})`
+      )
+    }
+
+    // Divide remaining time: give current provider its share, reserve some for fallbacks
+    const providersLeft = providers.length - i
+    const providerTimeout = Math.max(
+      MIN_PROVIDER_TIMEOUT_MS,
+      Math.floor(remaining / providersLeft) + (providersLeft === 1 ? 0 : Math.floor(remaining * 0.1))
+    )
+    // Cap at remaining budget
+    const timeoutMs = Math.min(providerTimeout, remaining)
+
     try {
-      const result = await callProvider(providers[i], messages, maxTokens, temperature)
+      const result = await callProvider(providers[i], messages, maxTokens, temperature, timeoutMs)
 
       if (i > 0) {
         console.warn(

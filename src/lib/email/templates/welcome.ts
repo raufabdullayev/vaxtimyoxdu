@@ -54,8 +54,9 @@ function getContent(locale: string): WelcomeContent {
   }
 }
 
-export function getWelcomeEmailHtml(locale: string): string {
+export function getWelcomeEmailHtml(locale: string, email: string): string {
   const c = getContent(locale)
+  const token = Buffer.from(email).toString('base64url')
 
   return `<!DOCTYPE html>
 <html lang="${locale}">
@@ -97,7 +98,7 @@ export function getWelcomeEmailHtml(locale: string): string {
                 <a href="${SITE_URL}" style="color:#6366f1;text-decoration:none;">vaxtimyoxdu.com</a>
               </p>
               <p style="margin:8px 0 0;color:#a1a1aa;font-size:12px;">
-                <a href="${SITE_URL}/api/newsletter/unsubscribe?email={{email}}" style="color:#a1a1aa;text-decoration:underline;">${c.unsubscribe}</a>
+                <a href="${SITE_URL}/api/newsletter/unsubscribe?token=${token}" style="color:#a1a1aa;text-decoration:underline;">${c.unsubscribe}</a>
               </p>
             </td>
           </tr>
