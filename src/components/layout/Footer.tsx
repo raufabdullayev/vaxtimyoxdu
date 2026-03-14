@@ -1,22 +1,10 @@
-'use client'
-
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import dynamic from 'next/dynamic'
 import { Github, Twitter, Instagram, Linkedin } from 'lucide-react'
 import { popularToolSlugs } from '@/lib/utils/cross-links'
 import { categories } from '@/config/tools'
 import type { ToolCategory } from '@/types/tool'
-
-// Newsletter is in the footer (below the fold on every page), so it should
-// never block the initial page load. Loading it lazily saves ~3-5 KB from
-// the critical bundle and avoids hydrating form state until needed.
-const Newsletter = dynamic(() => import('./Newsletter'), {
-  ssr: false,
-  loading: () => (
-    <div className="min-h-[72px]" aria-hidden="true" />
-  ),
-})
+import Newsletter from './Newsletter'
 
 const socialLinks = [
   {
@@ -61,10 +49,10 @@ const toolEnglishNames: Record<string, string> = {
 /** Category keys in display order. */
 const categoryOrder: ToolCategory[] = ['ai', 'pdf', 'image', 'dev', 'generators', 'text']
 
-export default function Footer() {
-  const t = useTranslations('footer')
-  const nav = useTranslations('common.nav')
-  const toolsT = useTranslations('tools')
+export default async function Footer() {
+  const t = await getTranslations('footer')
+  const nav = await getTranslations('common.nav')
+  const toolsT = await getTranslations('tools')
 
   return (
     <footer className="border-t bg-muted/50">
