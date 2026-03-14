@@ -1,8 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getSupabaseServer, isSupabaseConfigured } from '@/lib/supabase/client'
 import { trackNewsletterSubscribe } from '@/lib/supabase/analytics'
+import { createRateLimiter } from '@/lib/rate-limiter'
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+const checkRateLimit = createRateLimiter({
+  limit: 5,
+  window: '1 h',
+  prefix: 'rl:newsletter',
+})
 
 // In-memory set used for deduplication when Supabase is not configured.
 // In production with Supabase enabled, the unique constraint on the email
@@ -12,6 +19,21 @@ const subscribedEmails = new Set<string>()
 
 export async function POST(req: NextRequest) {
   try {
+    // ------------------------------------------------------------------
+    // 0. Rate limiting (5 requests per hour per IP)
+    // ------------------------------------------------------------------
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+    const { allowed, retryAfter } = await checkRateLimit(ip)
+
+    if (!allowed) {
+      const headers: Record<string, string> = {}
+      if (retryAfter) headers['Retry-After'] = String(retryAfter)
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429, headers }
+      )
+    }
+
     // ------------------------------------------------------------------
     // 1. Parse & validate request body
     // ------------------------------------------------------------------
