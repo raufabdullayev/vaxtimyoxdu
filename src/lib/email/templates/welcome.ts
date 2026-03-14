@@ -1,3 +1,5 @@
+import { generateUnsubscribeToken } from '@/lib/newsletter/token'
+
 const SITE_URL = 'https://vaxtimyoxdu.com'
 
 interface WelcomeContent {
@@ -56,7 +58,7 @@ function getContent(locale: string): WelcomeContent {
 
 export function getWelcomeEmailHtml(locale: string, email: string): string {
   const c = getContent(locale)
-  const token = Buffer.from(email).toString('base64url')
+  const token = generateUnsubscribeToken(email)
 
   return `<!DOCTYPE html>
 <html lang="${locale}">
