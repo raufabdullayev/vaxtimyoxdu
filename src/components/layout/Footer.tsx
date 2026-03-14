@@ -5,6 +5,7 @@ import { popularToolSlugs } from '@/lib/utils/cross-links'
 import { categories } from '@/config/tools'
 import type { ToolCategory } from '@/types/tool'
 import Newsletter from './Newsletter'
+import CurrentYear from '@/components/common/CurrentYear'
 
 const socialLinks = [
   {
@@ -161,7 +162,7 @@ export default async function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Vaxtim Yoxdu. {t('copyright')}
+          &copy; <CurrentYear /> Vaxtim Yoxdu. {t('copyright')}
         </div>
       </div>
     </footer>
