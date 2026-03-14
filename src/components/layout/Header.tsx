@@ -1,30 +1,15 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
-import { Menu, X, Zap, Moon, Sun } from 'lucide-react'
+import { Menu, X, Zap } from 'lucide-react'
 import LanguageSelector from './LanguageSelector'
+import ThemeToggle from '@/components/common/ThemeToggle'
 
 export default function Header() {
   const t = useTranslations('common')
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [isDark, setIsDark] = useState(false)
-
-  useEffect(() => {
-    const stored = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const shouldBeDark = stored === 'dark' || (!stored && prefersDark)
-    setIsDark(shouldBeDark)
-    document.documentElement.classList.toggle('dark', shouldBeDark)
-  }, [])
-
-  const toggleTheme = () => {
-    const newDark = !isDark
-    setIsDark(newDark)
-    document.documentElement.classList.toggle('dark', newDark)
-    localStorage.setItem('theme', newDark ? 'dark' : 'light')
-  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -43,13 +28,7 @@ export default function Header() {
 
         <div className="flex items-center gap-2">
           <LanguageSelector />
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg hover:bg-accent transition-colors"
-            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
+          <ThemeToggle />
           <button
             className="md:hidden p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
