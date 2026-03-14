@@ -2,8 +2,6 @@ import { Resend } from 'resend'
 import { getWelcomeEmailHtml } from './templates/welcome'
 
 const FROM_EMAIL = 'Vaxtim Yoxdu <noreply@vaxtimyoxdu.com>'
-const MAX_RETRIES = 3
-const RETRY_DELAY_MS = 1000
 
 let resendClient: Resend | null = null
 
@@ -31,7 +29,7 @@ function maskEmail(email: string): string {
 }
 
 /**
- * Send welcome email with retry logic
+ * Send welcome email (single attempt — Resend handles retries on their side)
  */
 export async function sendWelcomeEmail(
   email: string,
@@ -41,48 +39,29 @@ export async function sendWelcomeEmail(
   if (!resend) return false
 
   const maskedEmail = maskEmail(email)
-  let lastError: Error | null = null
 
-  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-    try {
-      const html = getWelcomeEmailHtml(locale, email)
+  try {
+    const html = getWelcomeEmailHtml(locale, email)
 
-      const result = await resend.emails.send({
-        from: FROM_EMAIL,
-        to: email,
-        subject: getWelcomeSubject(locale),
-        html,
-      })
+    const result = await resend.emails.send({
+      from: FROM_EMAIL,
+      to: email,
+      subject: getWelcomeSubject(locale),
+      html,
+    })
 
-      if (result.error) {
-        lastError = new Error(result.error.message)
-        console.warn(
-          `[Email] Welcome email send failed (attempt ${attempt}/${MAX_RETRIES}): ${maskedEmail} - ${result.error.message}`
-        )
-
-        if (attempt < MAX_RETRIES) {
-          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS * attempt))
-          continue
-        }
-      } else {
-        console.info(`[Email] Welcome email sent to ${maskedEmail} (locale: ${locale}, id: ${result.data?.id || 'unknown'})`)
-        return true
-      }
-    } catch (error) {
-      lastError = error instanceof Error ? error : new Error(String(error))
-      console.warn(
-        `[Email] Welcome email error (attempt ${attempt}/${MAX_RETRIES}): ${maskedEmail} - ${lastError.message}`
-      )
-
-      if (attempt < MAX_RETRIES) {
-        await new Promise(resolve => setTimeout(resolve, RETRY_DELAY_MS * attempt))
-        continue
-      }
+    if (result.error) {
+      console.warn(`[Email] Welcome email send failed: ${maskedEmail} - ${result.error.message}`)
+      return false
     }
-  }
 
-  console.error(`[Email] Failed to send welcome email after ${MAX_RETRIES} attempts: ${maskedEmail}`)
-  return false
+    console.info(`[Email] Welcome email sent to ${maskedEmail} (locale: ${locale}, id: ${result.data?.id || 'unknown'})`)
+    return true
+  } catch (error) {
+    const err = error instanceof Error ? error : new Error(String(error))
+    console.error(`[Email] Welcome email error: ${maskedEmail} - ${err.message}`)
+    return false
+  }
 }
 
 /**

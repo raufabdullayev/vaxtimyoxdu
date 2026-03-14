@@ -5,6 +5,10 @@ import { getSupabaseServer, isSupabaseConfigured } from '@/lib/supabase/client'
 // Read version once at module load
 const APP_VERSION = process.env.npm_package_version || '1.0.0'
 
+// In-memory cache for health check results (avoids external calls on every poll)
+const CACHE_TTL_MS = 60_000
+let cachedResult: { data: HealthCheckResult; statusCode: number; expiresAt: number } | null = null
+
 // Initialize Redis client for health checks
 const redis =
   process.env.UPSTASH_REDIS_REST_URL?.trim() && process.env.UPSTASH_REDIS_REST_TOKEN?.trim()
@@ -82,7 +86,15 @@ async function checkRedis(): Promise<{
 }
 
 export async function GET() {
-  const startTime = Date.now()
+  // Return cached result if still valid
+  if (cachedResult && Date.now() < cachedResult.expiresAt) {
+    return NextResponse.json(cachedResult.data, {
+      status: cachedResult.statusCode,
+      headers: {
+        'Cache-Control': 'public, max-age=30, s-maxage=30',
+      },
+    })
+  }
 
   const [supabaseCheck, redisCheck] = await Promise.all([
     checkSupabase(),
@@ -110,5 +122,13 @@ export async function GET() {
 
   const statusCode = overallStatus === 'healthy' ? 200 : overallStatus === 'degraded' ? 200 : 503
 
-  return NextResponse.json(result, { status: statusCode })
+  // Cache the result in memory for 60s
+  cachedResult = { data: result, statusCode, expiresAt: Date.now() + CACHE_TTL_MS }
+
+  return NextResponse.json(result, {
+    status: statusCode,
+    headers: {
+      'Cache-Control': 'public, max-age=30, s-maxage=30',
+    },
+  })
 }
