@@ -72,10 +72,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     localeEntries(`/tools/${tool.slug}`, now, 'weekly', 0.8),
   )
 
-  // News article pages
+  // News article pages — only include locale variants that the article supports
   const infoPages: MetadataRoute.Sitemap = Object.entries(newsArticles).flatMap(
-    ([slug, article]) =>
-      localeEntries(`/info/${slug}`, new Date(article.date), 'daily', 0.7),
+    ([slug, article]) => {
+      // If article has a locale field, only generate entry for that locale
+      if (article.locale) {
+        const articleLocale = article.locale as Locale
+        const url = localizedUrl(`/info/${slug}`, articleLocale)
+        return [{
+          url,
+          lastModified: new Date(article.date),
+          changeFrequency: 'daily' as const,
+          priority: 0.7,
+          alternates: {
+            languages: {
+              [articleLocale]: url,
+              'x-default': url,
+            },
+          },
+        }]
+      }
+      // Articles without locale restriction get all locale variants
+      return localeEntries(`/info/${slug}`, new Date(article.date), 'daily', 0.7)
+    },
   )
 
   // Blog post pages
