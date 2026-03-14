@@ -37,6 +37,9 @@ const serverSchema = z.object({
 
   // Resend email delivery
   RESEND_API_KEY: z.string().min(1).optional(),
+
+  // Newsletter unsubscribe token signing (required in production)
+  UNSUBSCRIBE_SECRET: z.string().min(32).optional(),
 })
 
 // ---------------------------------------------------------------------------
@@ -59,21 +62,25 @@ const clientSchema = z.object({
 // Parse & export
 // ---------------------------------------------------------------------------
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 const serverResult = serverSchema.safeParse(process.env)
 const clientResult = clientSchema.safeParse(process.env)
 
 if (!serverResult.success) {
-  console.error(
-    '[env] Server environment validation failed:',
-    serverResult.error.flatten().fieldErrors
-  )
+  const message = `[env] Server environment validation failed: ${JSON.stringify(serverResult.error.flatten().fieldErrors)}`
+  if (isProduction) {
+    throw new Error(message)
+  }
+  console.error(message)
 }
 
 if (!clientResult.success) {
-  console.error(
-    '[env] Client environment validation failed:',
-    clientResult.error.flatten().fieldErrors
-  )
+  const message = `[env] Client environment validation failed: ${JSON.stringify(clientResult.error.flatten().fieldErrors)}`
+  if (isProduction) {
+    throw new Error(message)
+  }
+  console.error(message)
 }
 
 /** Validated server-only environment variables. */
