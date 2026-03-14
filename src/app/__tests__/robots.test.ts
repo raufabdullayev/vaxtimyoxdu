@@ -53,7 +53,13 @@ describe('robots() rules', () => {
   it('should allow / for the wildcard userAgent', () => {
     const rules = result.rules as Array<Record<string, unknown>>
     const wildcard = rules.find((r) => r.userAgent === '*')
-    expect(wildcard!.allow).toBe('/')
+    expect(wildcard!.allow).toContain('/')
+  })
+
+  it('should allow /api/og for the wildcard userAgent', () => {
+    const rules = result.rules as Array<Record<string, unknown>>
+    const wildcard = rules.find((r) => r.userAgent === '*')
+    expect(wildcard!.allow).toContain('/api/og')
   })
 
   it('should disallow /api/ for the wildcard userAgent', () => {
@@ -65,7 +71,13 @@ describe('robots() rules', () => {
   it('should allow / for Googlebot', () => {
     const rules = result.rules as Array<Record<string, unknown>>
     const googlebot = rules.find((r) => r.userAgent === 'Googlebot')
-    expect(googlebot!.allow).toBe('/')
+    expect(googlebot!.allow).toContain('/')
+  })
+
+  it('should allow /api/og for Googlebot', () => {
+    const rules = result.rules as Array<Record<string, unknown>>
+    const googlebot = rules.find((r) => r.userAgent === 'Googlebot')
+    expect(googlebot!.allow).toContain('/api/og')
   })
 
   it('should disallow /api/ for Googlebot', () => {
