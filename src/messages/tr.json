@@ -237,7 +237,7 @@
         "description": "Pomodoro Tekniği ile odaklanma zamanlayıcısı. 25 dakika çalışma, 5 dakika mola. Ses bildirimleri ve oturum takibi."
       },
       "json-to-yaml": {
-        "name": "JSON-dan YAML-a Çevirici",
+        "name": "JSON'dan YAML'a Dönüştürücü",
         "description": "JSON-u YAML-a ve YAML-ı JSON-a çevrimiçi dönüştürün. Düzgün biçimlendirme ile çift yönlü dönüşüm."
       },
       "xml-formatter": {
@@ -269,7 +269,7 @@
         "description": "Regex desteği, büyük/küçük harf duyarlılığı ve tam kelime eşlemesi ile metin bulun ve değiştirin. Tüm eşlemeleri gerçek zamanlı vurgulayın."
       },
       "yaml-to-json": {
-        "name": "YAML-dan JSON-a Çevirici",
+        "name": "YAML'dan JSON'a Dönüştürücü",
         "description": "YAML-ı çevrimiçi JSON-a dönüştürün ve doğrulayın. İç içe nesneler, diziler, yorumlar ve daha fazlasını destekler."
       },
       "http-status-codes": {
@@ -297,7 +297,7 @@
         "description": "Metni N kez özel ayırıcı, önek, sonek ve numaralandırma seçenekleriyle tekrarlayın."
       },
       "video-to-gif": {
-        "name": "Videodan GIF",
+        "name": "Video'dan GIF'e Dönüştürücü",
         "description": "Video dosyalarından animasyonlu klipler çıkarın. Başlangıç zamanı, süre, FPS ve çözünürlüğü ayarlayın."
       },
       "color-palette-generator": {
@@ -506,7 +506,7 @@
   "share": {
     "title": "Paylaş",
     "shareOn": "{platform} üzerinde paylaş",
-    "copyLink": "Linki kopyala",
+    "copyLink": "Bağlantıyı kopyala",
     "copied": "Kopyalandı!",
     "poweredBy": "VaxtimYoxdu.com ile üretildi"
   },
@@ -531,8 +531,8 @@
     "clear": "Temizle",
     "generate": "Oluştur",
     "convert": "Dönüştür",
-    "input": "Giriş",
-    "output": "Çıkış",
+    "input": "Girdi",
+    "output": "Çıktı",
     "result": "Sonuç",
     "error": "Hata",
     "processing": "İşleniyor...",
@@ -632,8 +632,8 @@
     "hashGenerate": "Hash oluştur",
     "urlEncode": "URL kodla",
     "urlDecode": "URL çöz",
-    "markdownInput": "Markdown girişi",
-    "htmlOutput": "HTML çıkışı",
+    "markdownInput": "Markdown girdisi",
+    "htmlOutput": "HTML çıktısı",
     "paragraphs": "Paragraflar",
     "sentences": "Cümleler",
     "words": "Kelimeler",
@@ -650,10 +650,10 @@
     "testString": "Test dizesi",
     "flags": "Bayraklar",
     "matches": "Eşleşmeler",
-    "cssInput": "CSS girişi",
-    "cssOutput": "CSS çıkışı",
-    "htmlInput": "HTML girişi",
-    "htmlOutput2": "HTML çıkışı"
+    "cssInput": "CSS girdisi",
+    "cssOutput": "CSS çıktısı",
+    "htmlInput": "HTML girdisi",
+    "htmlOutput2": "HTML çıktısı"
   },
   "toolComponents": {
     "wordCounter": {
