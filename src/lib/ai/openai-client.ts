@@ -10,7 +10,7 @@ interface AIProvider {
   model: string
 }
 
-const PROVIDER_TIMEOUT_MS = 15000
+const PROVIDER_TIMEOUT_MS = 8000
 
 function getProviders(): AIProvider[] {
   const providers: AIProvider[] = []
