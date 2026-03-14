@@ -1,6 +1,31 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+
+const toolUITranslations: Record<string, string> = {
+  copy: 'Copy',
+  format: 'Format',
+  formatBeautify: 'Format / Beautify',
+  minify: 'Minify',
+  input: 'Input',
+  output: 'Output',
+  error: 'Error',
+  indent: 'Indent',
+  tab: 'Tab',
+  loadSample: 'Load Sample',
+  pasteJsonHere: 'Paste your JSON here...',
+  formattedJsonHere: 'Formatted JSON will appear here...',
+  pleaseEnterJson: 'Please enter JSON',
+  invalidJson: 'Invalid JSON',
+}
+
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string, params?: Record<string, unknown>) => {
+    if (key === 'spaces' && params?.count) return `${params.count} spaces`
+    return toolUITranslations[key] ?? key
+  },
+}))
+
 import JsonFormatter from '../JsonFormatter'
 
 describe('JsonFormatter', () => {

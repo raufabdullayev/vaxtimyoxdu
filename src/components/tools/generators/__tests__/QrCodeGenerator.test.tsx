@@ -1,7 +1,19 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import QrCodeGenerator from '../QrCodeGenerator'
+
+vi.mock('next-intl', () => ({
+  useTranslations: () => {
+    const translations: Record<string, string> = {
+      textOrUrl: 'Text or URL', enterUrlText: 'Enter URL, text, email, phone number...',
+      size: 'Size', foreground: 'Foreground', background: 'Background',
+      generateQrCode: 'Generate QR Code', downloadPng: 'Download PNG',
+      pleaseEnterTextOrUrl: 'Please enter text or URL',
+      failedToGenerateQr: 'Failed to generate QR code',
+    }
+    return (key: string) => translations[key] ?? key
+  },
+}))
 
 // Mock the qrcode library
 vi.mock('qrcode', () => ({
@@ -9,6 +21,8 @@ vi.mock('qrcode', () => ({
     toDataURL: vi.fn().mockResolvedValue('data:image/png;base64,mockQrCode'),
   },
 }))
+
+import QrCodeGenerator from '../QrCodeGenerator'
 
 describe('QrCodeGenerator', () => {
   beforeEach(() => {

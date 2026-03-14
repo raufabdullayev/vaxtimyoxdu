@@ -1,6 +1,20 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+
+vi.mock('next-intl', () => ({
+  useTranslations: () => {
+    const translations: Record<string, string> = {
+      encode: 'Encode', decode: 'Decode', copy: 'Copy', swap: 'Swap',
+      result: 'Result', textToEncode: 'Text to Encode', base64ToDecode: 'Base64 to Decode',
+      enterText: 'Enter text...', enterBase64: 'Enter Base64 string...',
+      pleaseEnterText: 'Please enter text', failedToEncode: 'Failed to encode',
+      invalidBase64: 'Invalid Base64 string',
+    }
+    return (key: string) => translations[key] ?? key
+  },
+}))
+
 import Base64Codec from '../Base64Codec'
 
 /**

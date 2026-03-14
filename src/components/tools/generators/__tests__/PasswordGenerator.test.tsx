@@ -1,6 +1,21 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+
+vi.mock('next-intl', () => ({
+  useTranslations: () => {
+    const translations: Record<string, string> = {
+      copy: 'Copy', copied: 'Copied!', regenerate: 'Regenerate',
+      strength: 'Strength', length: 'Length',
+      uppercase: 'Uppercase (A-Z)', lowercase: 'Lowercase (a-z)',
+      digits: 'Digits (0-9)', symbols: 'Symbols (!@#$)',
+      selectAtLeastOne: 'Select at least one character set',
+      weak: 'Weak', medium: 'Medium', strong: 'Strong', veryStrong: 'Very Strong',
+    }
+    return (key: string) => translations[key] ?? key
+  },
+}))
+
 import PasswordGenerator from '../PasswordGenerator'
 
 describe('PasswordGenerator', () => {
