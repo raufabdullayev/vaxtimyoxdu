@@ -82,17 +82,23 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
               {children}
             </blockquote>
           ),
-          // Links
-          a: ({ href, children }) => (
-            <a
-              href={href}
-              className="text-primary hover:underline"
-              target={href?.startsWith('/') ? undefined : '_blank'}
-              rel={href?.startsWith('/') ? undefined : 'noopener noreferrer'}
-            >
-              {children}
-            </a>
-          ),
+          // Links — block javascript: protocol to prevent XSS
+          a: ({ href, children }) => {
+            const safeHref = href && /^javascript:/i.test(href.replace(/\s/g, '')) ? undefined : href
+            if (!safeHref) {
+              return <span className="text-primary">{children}</span>
+            }
+            return (
+              <a
+                href={safeHref}
+                className="text-primary hover:underline"
+                target={safeHref.startsWith('/') ? undefined : '_blank'}
+                rel={safeHref.startsWith('/') ? undefined : 'noopener noreferrer'}
+              >
+                {children}
+              </a>
+            )
+          },
           // Images
           img: ({ src, alt }) => (
             <img
