@@ -46,16 +46,15 @@ test.describe('Tools', () => {
   test('base64 encode works correctly', async ({ page }) => {
     await page.goto('/tools/base64-encode-decode')
 
-    // Ensure the Encode mode button is active (it is default)
-    const modeButtons = page.locator('.flex.items-center.gap-3 button')
-    await expect(modeButtons.first()).toContainText('Encode')
+    // Ensure the Encode mode radio is active (it is default)
+    const encodeRadio = page.locator('[role="radio"]', { hasText: 'Encode' })
+    await expect(encodeRadio).toHaveAttribute('aria-checked', 'true')
 
     // Type input text into the first textarea
     const inputArea = page.locator('textarea').first()
     await inputArea.fill('Hello World')
 
-    // Click the action button -- it is the larger button below the textarea.
-    // Use the more specific class selector for the action row button.
+    // Click the action button below the textarea
     const actionButton = page.locator('button.px-6', { hasText: 'Encode' })
     await actionButton.click()
 
@@ -67,9 +66,9 @@ test.describe('Tools', () => {
   test('base64 decode works correctly', async ({ page }) => {
     await page.goto('/tools/base64-encode-decode')
 
-    // Switch to decode mode by clicking the Decode mode-selector button (px-4 class)
-    const decodeModeButton = page.locator('button.px-4', { hasText: 'Decode' })
-    await decodeModeButton.click()
+    // Switch to decode mode by clicking the Decode radio button
+    const decodeRadio = page.locator('[role="radio"]', { hasText: 'Decode' })
+    await decodeRadio.click()
 
     // Type base64 input
     const inputArea = page.locator('textarea').first()
@@ -98,5 +97,67 @@ test.describe('Tools', () => {
 
     // The ToolTemplate renders an "About {tool.name}" section
     await expect(page.getByText('About JSON Formatter')).toBeVisible()
+  })
+
+  test('json-formatter formats JSON correctly', async ({ page }) => {
+    await page.goto('/tools/json-formatter')
+
+    // Enter invalid-looking but valid compact JSON
+    const inputArea = page.locator('textarea').first()
+    await inputArea.fill('{"name":"test","value":42}')
+
+    // Click Format/Beautify button
+    const formatBtn = page.locator('button', { hasText: /Format|Beautify/ })
+    await formatBtn.click()
+
+    // The output textarea should have formatted (pretty-printed) JSON
+    const outputArea = page.locator('textarea').nth(1)
+    const outputValue = await outputArea.inputValue()
+    expect(outputValue).toContain('"name": "test"')
+    expect(outputValue).toContain('"value": 42')
+    // Verify it is multi-line (formatted)
+    expect(outputValue.split('\n').length).toBeGreaterThan(1)
+  })
+
+  test('json-formatter shows error for invalid JSON', async ({ page }) => {
+    await page.goto('/tools/json-formatter')
+
+    const inputArea = page.locator('textarea').first()
+    await inputArea.fill('{invalid json}')
+
+    const formatBtn = page.locator('button', { hasText: /Format|Beautify/ })
+    await formatBtn.click()
+
+    // An error alert should appear
+    const errorAlert = page.locator('[role="alert"]')
+    await expect(errorAlert).toBeVisible()
+  })
+
+  test('password-generator generates a password on load', async ({ page }) => {
+    await page.goto('/tools/password-generator')
+
+    // Password should be generated automatically on mount
+    const passwordDisplay = page.locator('[aria-label="Generated password"]')
+    await expect(passwordDisplay).toBeVisible()
+    const text = await passwordDisplay.textContent()
+    // Default length is 16
+    expect(text!.length).toBeGreaterThanOrEqual(8)
+  })
+
+  test('password-generator regenerate button works', async ({ page }) => {
+    await page.goto('/tools/password-generator')
+
+    // Get the initial password
+    const passwordDisplay = page.locator('[aria-label="Generated password"]')
+    const initialPassword = await passwordDisplay.textContent()
+
+    // Click regenerate
+    const regenBtn = page.locator('button[aria-label="Regenerate password"]')
+    await regenBtn.click()
+
+    // Password should change (with overwhelming probability)
+    const newPassword = await passwordDisplay.textContent()
+    expect(newPassword).toBeTruthy()
+    expect(newPassword!.length).toBeGreaterThanOrEqual(8)
   })
 })
