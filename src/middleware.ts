@@ -50,6 +50,17 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301)
   }
 
+  // ─── /news -> /info redirect (301) ───
+  // The /news URL does not exist; the correct route is /info.
+  // Handles bare /news and locale-prefixed variants (/en/news, /tr/news, /ru/news).
+  const newsRedirectMatch = pathname.match(/^(?:\/(en|tr|ru))?\/news(\/.*)?$/)
+  if (newsRedirectMatch) {
+    const localePrefix = newsRedirectMatch[1] ? `/${newsRedirectMatch[1]}` : ''
+    const trailing = newsRedirectMatch[2] || ''
+    const destination = `${request.nextUrl.origin}${localePrefix}/info${trailing}${request.nextUrl.search}`
+    return NextResponse.redirect(destination, 301)
+  }
+
   // ─── API routes: keep existing CORS / CSRF logic, skip i18n ───
   if (pathname.startsWith('/api/')) {
     const origin = request.headers.get('origin')
