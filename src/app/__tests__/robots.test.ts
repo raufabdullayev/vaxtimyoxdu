@@ -33,9 +33,9 @@ describe('robots() rules', () => {
     expect(Array.isArray(result.rules)).toBe(true)
   })
 
-  it('should have at least 2 rule sets', () => {
+  it('should have at least 3 rule sets (wildcard, Googlebot, bingbot)', () => {
     const rules = result.rules as Array<Record<string, unknown>>
-    expect(rules.length).toBeGreaterThanOrEqual(2)
+    expect(rules.length).toBeGreaterThanOrEqual(3)
   })
 
   it('should have a wildcard userAgent rule', () => {
@@ -84,6 +84,30 @@ describe('robots() rules', () => {
     const rules = result.rules as Array<Record<string, unknown>>
     const googlebot = rules.find((r) => r.userAgent === 'Googlebot')
     expect(googlebot!.disallow).toContain('/api/')
+  })
+
+  it('should have a bingbot-specific rule', () => {
+    const rules = result.rules as Array<Record<string, unknown>>
+    const bingbot = rules.find((r) => r.userAgent === 'bingbot')
+    expect(bingbot).toBeDefined()
+  })
+
+  it('should allow / for bingbot', () => {
+    const rules = result.rules as Array<Record<string, unknown>>
+    const bingbot = rules.find((r) => r.userAgent === 'bingbot')
+    expect(bingbot!.allow).toContain('/')
+  })
+
+  it('should allow /api/og for bingbot', () => {
+    const rules = result.rules as Array<Record<string, unknown>>
+    const bingbot = rules.find((r) => r.userAgent === 'bingbot')
+    expect(bingbot!.allow).toContain('/api/og')
+  })
+
+  it('should disallow /api/ for bingbot', () => {
+    const rules = result.rules as Array<Record<string, unknown>>
+    const bingbot = rules.find((r) => r.userAgent === 'bingbot')
+    expect(bingbot!.disallow).toContain('/api/')
   })
 })
 
