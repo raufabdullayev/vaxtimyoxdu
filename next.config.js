@@ -113,15 +113,34 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            // SECURITY NOTE:
-            // - 'unsafe-inline' is REQUIRED in script-src because Next.js App Router
-            //   generates inline <script>self.__next_f.push(...)</script> tags for RSC
-            //   hydration payload. These have dynamic content per page so SHA256 hashes
-            //   are not feasible. Without 'unsafe-inline', React hydration is blocked
-            //   by the browser, causing a white screen.
-            // - 'unsafe-eval' is NOT included — it is not needed.
-            // - style-src retains 'unsafe-inline' because Next.js and Tailwind CSS inject styles dynamically.
-            // - JSON-LD scripts (application/ld+json) are safe inline data, not executable code.
+            // SECURITY NOTE (last reviewed: 2026-03-23):
+            //
+            // 'unsafe-inline' is REQUIRED in script-src for this project. Here is why:
+            //
+            // NONCE-BASED CSP INVESTIGATION:
+            //   Next.js officially supports nonce-based CSP via middleware, BUT it requires
+            //   ALL pages to be dynamically rendered (no SSG, no ISR, no CDN caching).
+            //   See: https://nextjs.org/docs/app/guides/content-security-policy
+            //
+            //   This project generates 527+ static pages across 4 locales and depends
+            //   heavily on static generation for performance and cost. Switching to nonces
+            //   would:
+            //   - Force dynamic rendering on every page (no SSG/ISR)
+            //   - Break CDN caching and increase server load/cost
+            //   - Be incompatible with Partial Prerendering (PPR)
+            //   - Risk white-screen regressions (previously experienced)
+            //
+            //   DECISION: Keep 'unsafe-inline' until Next.js experimental SRI (Subresource
+            //   Integrity, hash-based CSP) graduates to stable. SRI allows static
+            //   generation while providing script integrity verification.
+            //   Track: https://github.com/vercel/next.js/issues/61694
+            //
+            // CURRENT POLICY:
+            // - 'unsafe-inline' in script-src: required for RSC hydration inline scripts
+            //   (<script>self.__next_f.push(...)</script>) with dynamic per-page content
+            // - 'unsafe-eval' is NOT included — not needed in production
+            // - style-src 'unsafe-inline': required for Next.js/Tailwind dynamic styles
+            // - JSON-LD scripts (application/ld+json) are safe inline data, not executable
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
           },
           {
