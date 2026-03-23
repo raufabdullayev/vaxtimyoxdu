@@ -57,16 +57,17 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
             </li>
           ),
           // Code
-          code: ({ inline, children }: { inline?: boolean; children: ReactNode }) => {
-            if (inline) {
+          code: ({ children, className, ...rest }) => {
+            const isInline = !className;
+            if (isInline) {
               return (
-                <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground">
+                <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-foreground" {...rest}>
                   {children}
                 </code>
               )
             }
             return (
-              <code className="bg-muted px-3 py-2 rounded-md block font-mono text-sm text-foreground overflow-x-auto">
+              <code className={`bg-muted px-3 py-2 rounded-md block font-mono text-sm text-foreground overflow-x-auto ${className || ''}`} {...rest}>
                 {children}
               </code>
             )

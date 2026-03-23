@@ -10,12 +10,11 @@ const CACHE_TTL_MS = 60_000
 let cachedResult: { data: HealthCheckResult; statusCode: number; expiresAt: number } | null = null
 
 // Initialize Redis client for health checks
+const redisUrl = process.env.UPSTASH_REDIS_REST_URL?.trim()
+const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN?.trim()
 const redis =
-  process.env.UPSTASH_REDIS_REST_URL?.trim() && process.env.UPSTASH_REDIS_REST_TOKEN?.trim()
-    ? new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
-      })
+  redisUrl && redisToken
+    ? new Redis({ url: redisUrl, token: redisToken })
     : null
 
 interface HealthCheckResult {
@@ -44,12 +43,13 @@ async function checkSupabase(): Promise<{
   const startTime = Date.now()
   try {
     // Simple health check query - check if auth endpoint responds
-    const { error } = await Promise.race([
+    const result = await Promise.race([
       supabase.auth.getSession(),
       new Promise((_, reject) =>
         setTimeout(() => reject(new Error('Timeout')), 5000)
       ),
-    ])
+    ]) as { error?: unknown }
+    const error = result?.error
 
     const responseTime = Date.now() - startTime
     return error ? { status: 'error', responseTime } : { status: 'ok', responseTime }

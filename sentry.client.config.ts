@@ -31,31 +31,10 @@ export function initSentryClient() {
       /connect\.facebook\.net/i,
     ],
 
-    // Integration settings — Replay is lazy-loaded to avoid ~100KB upfront cost
-    integrations: [
-      Sentry.breadcrumbsIntegration({
-        console: true,
-        dom: true,
-        fetch: true,
-        history: true,
-        http: true,
-        xhr: true,
-      }),
-    ],
-
     // Session replay — sample 10% of sessions to reduce storage costs
     replaysSessionSampleRate: process.env.NODE_ENV === 'production' ? 0.1 : 1.0,
 
     // Capture replay for errors — 100%
     replaysOnErrorSampleRate: 1.0,
-  });
-
-  // Lazy-load Replay integration to keep initial bundle small
-  Sentry.lazyLoadIntegration('replayIntegration').then((replay) => {
-    Sentry.addIntegration(replay({
-      maskAllText: true,
-      blockAllMedia: true,
-      maskAllInputs: true,
-    }));
   });
 }

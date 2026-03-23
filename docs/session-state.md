@@ -103,6 +103,39 @@
 - [ ] RESEND_API_KEY — CEO manual (resend.com dashboard)
 - [ ] Secrets rotate — CEO manual (aşağı prioritet)
 
+## Sprint 5 (2026-03-14, Session 4)
+- [x] Review: 6 reviewer (Arch, Security, SEO, QA, Perf, NextJS) — cowork dəyişiklikləri
+- [x] Cross-team müzakirə — konsensus TOP 5 fix
+- [x] T1: package-lock.json regenerate (BLOCKER fix)
+- [x] T2: GA4 gtag('config') inline Script (CRITICAL — AdSense!)
+- [x] T3: env.ts hard fail production + UNSUBSCRIBE_SECRET Zod
+- [x] T4: MarkdownRenderer 'use client' silindi (60KB qənaət)
+- [x] T5: Sentry CSP connect-src əlavə
+- [x] T6: Sentry init guard + Replay lazy-load (100KB qənaət)
+- [x] T7: theme.js inline revert (LCP fix)
+- [x] T8: Sitemap locale-gating fix (51 URL 404 → düzəldi)
+- [x] T9: Homepage OG metadata (sosial preview)
+- [x] T11: info generateMetadata locale gating
+- [x] T12: error.tsx i18n
+- [x] T14: Header aria-label i18n
+- [x] T15: ToolRadioGroup keyboard navigation (WCAG)
+- [x] T16: Unsubscribe token 30-gün expiry
+- [x] T17: x-real-ip preference (spoofing fix)
+- [x] T18: MarkdownRenderer javascript: XSS filter
+- 1666 test PASS (74 fayl), 17 commit push (c1b7a78..04c2282)
+- 5 teammate: InfraPro, FrontendPro, SeoPro, I18nPro, SecurityPro
+
+## Sprint 6 (2026-03-14, Session 4)
+- [x] T1: Health endpoint 60s cache + Cache-Control headers
+- [x] T2: Email retry setTimeout silindi (Resend öz retry edir)
+- [x] T3: analytics.js beforeInteractive → afterInteractive (TTI fix)
+- [x] T4: Footer CurrentYear client component (year donma fix)
+- [x] T5: i18n namespace split — client bundle ~19% azaldı
+- [x] T6: TR tercümə keyfiyyəti — 8 key düzəldildi
+- [x] T7: +71 yeni test (MarkdownRenderer, unsubscribe, health, errorTracking, rate limiter)
+- 1737 test PASS (79 fayl), 11 commit push (04c2282..4cfd197)
+- 4 teammate: BackendPro, FrontendPro, TranslationPro, QaPro
+
 ## Gözləyən İşlər
 - [ ] RESEND_API_KEY Vercel-ə əlavə etmək (CEO manual)
 - [ ] /tools/word-counter-dən URL submit-ə davam (quota exceeded)
