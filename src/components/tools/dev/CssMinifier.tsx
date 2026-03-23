@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { ToolTextarea, ToolAlert } from '@/components/ui'
 
 function minifyCss(css: string): string {
   let result = css
@@ -151,41 +152,24 @@ export default function CssMinifier() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium mb-1">{t('cssInput')}</label>
-          <textarea
-            className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[300px] focus:outline-none focus:ring-2 focus:ring-primary resize-y"
-            placeholder="Paste your CSS here..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            aria-label="CSS input"
-          />
-        </div>
-        <div>
-          <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">{t('output')}</label>
-            {output && (
-              <button
-                onClick={copy}
-                className="text-xs text-primary hover:underline"
-                aria-label="Copy output"
-              >
-                {copied ? t('copied') : t('copy')}
-              </button>
-            )}
-          </div>
-          <textarea
-            className="w-full rounded-lg border bg-muted/50 px-3 py-2 text-sm font-mono min-h-[300px] focus:outline-none resize-y"
-            value={output}
-            readOnly
-            placeholder="Processed CSS will appear here..."
-            aria-label="CSS output"
-          />
-        </div>
+        <ToolTextarea
+          label={t('cssInput')}
+          className="font-mono min-h-[300px] resize-y"
+          placeholder="Paste your CSS here..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <ToolTextarea
+          label={t('output')}
+          className="font-mono min-h-[300px] bg-muted/50 resize-y"
+          value={output}
+          readOnly
+          placeholder="Processed CSS will appear here..."
+        />
       </div>
 
       {error && (
-        <div className="p-3 rounded-lg bg-destructive/10 text-destructive text-sm">{error}</div>
+        <ToolAlert variant="error">{error}</ToolAlert>
       )}
 
       {stats && (

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { ToolTextarea } from '@/components/ui'
 
 type LineStatus = 'same' | 'added' | 'removed'
 
@@ -122,32 +123,26 @@ export default function TextDiff() {
   return (
     <div className="space-y-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium mb-1">Original Text</label>
-          <textarea
-            className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[200px] focus:outline-none focus:ring-2 focus:ring-primary"
-            placeholder="Paste the original text here..."
-            value={original}
-            onChange={(e) => {
-              setOriginal(e.target.value)
-              setShowDiff(false)
-            }}
-            aria-label="Original text for comparison"
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Modified Text</label>
-          <textarea
-            className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[200px] focus:outline-none focus:ring-2 focus:ring-primary"
-            placeholder="Paste the modified text here..."
-            value={modified}
-            onChange={(e) => {
-              setModified(e.target.value)
-              setShowDiff(false)
-            }}
-            aria-label="Modified text for comparison"
-          />
-        </div>
+        <ToolTextarea
+          label="Original Text"
+          className="font-mono min-h-[200px]"
+          placeholder="Paste the original text here..."
+          value={original}
+          onChange={(e) => {
+            setOriginal(e.target.value)
+            setShowDiff(false)
+          }}
+        />
+        <ToolTextarea
+          label="Modified Text"
+          className="font-mono min-h-[200px]"
+          placeholder="Paste the modified text here..."
+          value={modified}
+          onChange={(e) => {
+            setModified(e.target.value)
+            setShowDiff(false)
+          }}
+        />
       </div>
 
       <div className="flex flex-wrap gap-3">

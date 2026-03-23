@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
+import { ToolAlert } from '@/components/ui'
 
 const CHARSETS = {
   uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',

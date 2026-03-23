@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { ToolTextarea, ToolRadioGroup, ToolAlert } from '@/components/ui'
 
 const lengths = [
   { value: 'short', label: 'Short (1-2 sentences)' },
@@ -72,40 +73,25 @@ export default function TextSummarizer() {
 
   return (
     <div className="space-y-4">
-      <div>
-        <label className="block text-sm font-medium mb-1">Summary Length</label>
-        <div className="flex flex-wrap gap-2">
-          {lengths.map((l) => (
-            <button
-              key={l.value}
-              onClick={() => setLength(l.value)}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                length === l.value
-                  ? 'bg-primary text-primary-foreground'
-                  : 'border hover:bg-accent'
-              }`}
-            >
-              {l.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <ToolRadioGroup
+        label="Summary Length"
+        options={lengths}
+        value={length}
+        onChange={setLength}
+      />
 
-      <div>
-        <label className="block text-sm font-medium mb-1">
-          Text to Summarize <span className="text-muted-foreground">(max 10,000 chars)</span>
-        </label>
-        <textarea
-          className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[200px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Paste your article, essay, or any text..."
-          value={input}
-          onChange={(e) => setInput(e.target.value.slice(0, 10000))}
-        />
-        <div className="text-xs text-muted-foreground text-right">{input.length}/10000</div>
-      </div>
+      <ToolTextarea
+        label="Text to Summarize"
+        maxLength={10000}
+        showCount
+        className="min-h-[200px]"
+        placeholder="Paste your article, essay, or any text..."
+        value={input}
+        onChange={(e) => setInput(e.target.value.slice(0, 10000))}
+      />
 
       {error && (
-        <div className="p-3 rounded-lg bg-destructive/10 text-destructive text-sm">{error}</div>
+        <ToolAlert variant="error">{error}</ToolAlert>
       )}
 
       <button
@@ -119,7 +105,7 @@ export default function TextSummarizer() {
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">{t('result')}</label>
+            <span className="text-sm font-medium">{t('result')}</span>
             <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
           </div>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap">

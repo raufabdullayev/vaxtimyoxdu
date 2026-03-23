@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { ToolTextarea } from '@/components/ui'
 
 async function hashText(text: string, algorithm: string): Promise<string> {
   const encoder = new TextEncoder()
@@ -41,15 +42,13 @@ export default function HashGenerator() {
 
   return (
     <div className="space-y-4">
-      <div>
-        <label className="block text-sm font-medium mb-1">{t('input')}</label>
-        <textarea
-          className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[120px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Enter text to hash..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-      </div>
+      <ToolTextarea
+        label={t('input')}
+        className="min-h-[120px]"
+        placeholder="Enter text to hash..."
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
 
       <button
         onClick={generate}
@@ -64,7 +63,7 @@ export default function HashGenerator() {
           {algorithms.map((algo) => (
             <div key={algo.value}>
               <div className="flex items-center justify-between mb-1">
-                <label className="text-sm font-medium">{algo.label}</label>
+                <span className="text-sm font-medium">{algo.label}</span>
                 <button
                   onClick={() => copy(results[algo.value])}
                   className="text-xs text-primary hover:underline"

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { ToolTextarea } from '@/components/ui'
 
 const SQL_KEYWORDS = [
   'SELECT', 'FROM', 'WHERE', 'AND', 'OR', 'INSERT', 'INTO', 'VALUES',
@@ -176,7 +177,7 @@ export default function SqlFormatter() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Input SQL</label>
+            <span className="text-sm font-medium">Input SQL</span>
             <button
               onClick={loadExample}
               className="text-xs text-primary hover:underline"
@@ -184,35 +185,21 @@ export default function SqlFormatter() {
               Load Example
             </button>
           </div>
-          <textarea
-            className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[250px] focus:outline-none focus:ring-2 focus:ring-primary"
+          <ToolTextarea
+            label="Input SQL"
+            className="font-mono min-h-[250px]"
             placeholder="Paste your SQL query here..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            aria-label="SQL input"
           />
         </div>
-        <div>
-          <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">Formatted Output</label>
-            {output && (
-              <button
-                onClick={copy}
-                className="text-xs text-primary hover:underline"
-                aria-label="Copy output to clipboard"
-              >
-                {copied ? 'Copied!' : 'Copy'}
-              </button>
-            )}
-          </div>
-          <textarea
-            className="w-full rounded-lg border bg-muted/50 px-3 py-2 text-sm font-mono min-h-[250px] focus:outline-none"
-            value={output}
-            readOnly
-            placeholder="Formatted SQL will appear here..."
-            aria-label="SQL output"
-          />
-        </div>
+        <ToolTextarea
+          label="Formatted Output"
+          className="font-mono min-h-[250px] bg-muted/50"
+          value={output}
+          readOnly
+          placeholder="Formatted SQL will appear here..."
+        />
       </div>
 
       <div className="flex flex-wrap gap-3">

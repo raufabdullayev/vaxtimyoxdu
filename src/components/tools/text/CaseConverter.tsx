@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { ToolTextarea, ToolRadioGroup } from '@/components/ui'
 
 type CaseType =
   | 'upper'
@@ -147,59 +148,28 @@ export default function CaseConverter() {
         </div>
       </div>
 
-      <div>
-        <label className="block text-sm font-medium mb-1">Input Text</label>
-        <textarea
-          className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[160px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Enter or paste your text here..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          aria-label="Text input for case conversion"
-        />
-      </div>
+      <ToolTextarea
+        label="Input Text"
+        className="min-h-[160px]"
+        placeholder="Enter or paste your text here..."
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
 
-      <div>
-        <label className="block text-sm font-medium mb-2">Conversion Type</label>
-        <div className="flex flex-wrap gap-2">
-          {caseOptions.map((opt) => (
-            <button
-              key={opt.type}
-              onClick={() => setSelectedCase(opt.type)}
-              className={`px-3 py-1.5 text-sm rounded-lg font-medium transition-colors ${
-                selectedCase === opt.type
-                  ? 'bg-primary text-primary-foreground'
-                  : 'border hover:bg-accent'
-              }`}
-              aria-label={`Convert to ${opt.label}`}
-              aria-pressed={selectedCase === opt.type}
-            >
-              {opt.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <ToolRadioGroup
+        label="Conversion Type"
+        options={caseOptions.map((opt) => ({ value: opt.type, label: opt.label }))}
+        value={selectedCase}
+        onChange={(val) => setSelectedCase(val as CaseType)}
+      />
 
-      <div>
-        <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium">Output</label>
-          {output && (
-            <button
-              onClick={copy}
-              className="text-xs text-primary hover:underline"
-              aria-label="Copy output to clipboard"
-            >
-              {copied ? 'Copied!' : 'Copy'}
-            </button>
-          )}
-        </div>
-        <textarea
-          className="w-full rounded-lg border bg-muted/50 px-3 py-2 text-sm min-h-[160px] focus:outline-none"
-          value={output}
-          readOnly
-          placeholder="Converted text will appear here..."
-          aria-label="Case conversion output"
-        />
-      </div>
+      <ToolTextarea
+        label="Output"
+        className="min-h-[160px] bg-muted/50"
+        value={output}
+        readOnly
+        placeholder="Converted text will appear here..."
+      />
 
       {input.trim() && (
         <button

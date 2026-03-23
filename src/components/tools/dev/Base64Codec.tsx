@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { ToolTextarea, ToolRadioGroup, ToolAlert } from '@/components/ui'
 
 export default function Base64Codec() {
   const t = useTranslations('toolUI')
@@ -42,39 +43,26 @@ export default function Base64Codec() {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center gap-3">
-        <button
-          onClick={() => { setMode('encode'); setError('') }}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            mode === 'encode' ? 'bg-primary text-primary-foreground' : 'border hover:bg-accent'
-          }`}
-        >
-          {t('encode')}
-        </button>
-        <button
-          onClick={() => { setMode('decode'); setError('') }}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            mode === 'decode' ? 'bg-primary text-primary-foreground' : 'border hover:bg-accent'
-          }`}
-        >
-          {t('decode')}
-        </button>
-      </div>
+      <ToolRadioGroup
+        label={t('encode') + ' / ' + t('decode')}
+        options={[
+          { value: 'encode', label: t('encode') },
+          { value: 'decode', label: t('decode') },
+        ]}
+        value={mode}
+        onChange={(val) => { setMode(val as 'encode' | 'decode'); setError('') }}
+      />
 
-      <div>
-        <label className="block text-sm font-medium mb-1">
-          {mode === 'encode' ? t('textToEncode') : t('base64ToDecode')}
-        </label>
-        <textarea
-          className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[150px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder={mode === 'encode' ? t('enterText') : t('enterBase64')}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-      </div>
+      <ToolTextarea
+        label={mode === 'encode' ? t('textToEncode') : t('base64ToDecode')}
+        className="font-mono min-h-[150px]"
+        placeholder={mode === 'encode' ? t('enterText') : t('enterBase64')}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
 
       {error && (
-        <div className="p-3 rounded-lg bg-destructive/10 text-destructive text-sm">{error}</div>
+        <ToolAlert variant="error">{error}</ToolAlert>
       )}
 
       <div className="flex gap-3">
@@ -95,17 +83,12 @@ export default function Base64Codec() {
       </div>
 
       {output && (
-        <div>
-          <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">{t('result')}</label>
-            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
-          </div>
-          <textarea
-            className="w-full rounded-lg border bg-muted/50 px-3 py-2 text-sm font-mono min-h-[150px] focus:outline-none"
-            value={output}
-            readOnly
-          />
-        </div>
+        <ToolTextarea
+          label={t('result')}
+          className="font-mono min-h-[150px] bg-muted/50"
+          value={output}
+          readOnly
+        />
       )}
     </div>
   )

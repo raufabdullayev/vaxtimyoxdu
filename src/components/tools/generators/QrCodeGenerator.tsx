@@ -1,13 +1,14 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
 import QRCode from 'qrcode'
+import { ToolTextarea, ToolSelect, ToolInput, ToolAlert } from '@/components/ui'
 
 export default function QrCodeGenerator() {
   const t = useTranslations('toolUI')
   const [text, setText] = useState('')
-  const [size, setSize] = useState(256)
+  const [size, setSize] = useState('256')
   const [fgColor, setFgColor] = useState('#000000')
   const [bgColor, setBgColor] = useState('#ffffff')
   const [qrDataUrl, setQrDataUrl] = useState<string | null>(null)
@@ -21,7 +22,7 @@ export default function QrCodeGenerator() {
     setError('')
     try {
       const url = await QRCode.toDataURL(text, {
-        width: size,
+        width: Number(size),
         margin: 2,
         color: {
           dark: fgColor,
@@ -32,7 +33,7 @@ export default function QrCodeGenerator() {
     } catch {
       setError(t('failedToGenerateQr'))
     }
-  }, [text, size, fgColor, bgColor])
+  }, [text, size, fgColor, bgColor, t])
 
   const download = () => {
     if (!qrDataUrl) return
@@ -44,67 +45,59 @@ export default function QrCodeGenerator() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium mb-1">{t('textOrUrl')}</label>
-        <textarea
-          className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[80px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder={t('enterUrlText')}
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-      </div>
+      <ToolTextarea
+        label={t('textOrUrl')}
+        className="min-h-[80px]"
+        placeholder={t('enterUrlText')}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <ToolSelect
+          label={`${t('size')} (px)`}
+          value={size}
+          onChange={(e) => setSize(e.target.value)}
+          options={[
+            { value: '128', label: '128x128' },
+            { value: '256', label: '256x256' },
+            { value: '512', label: '512x512' },
+            { value: '1024', label: '1024x1024' },
+          ]}
+        />
         <div>
-          <label className="block text-sm font-medium mb-1">{t('size')} (px)</label>
-          <select
-            className="w-full rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-            value={size}
-            onChange={(e) => setSize(Number(e.target.value))}
-          >
-            <option value={128}>128x128</option>
-            <option value={256}>256x256</option>
-            <option value={512}>512x512</option>
-            <option value={1024}>1024x1024</option>
-          </select>
+          <ToolInput
+            label={t('foreground')}
+            type="text"
+            value={fgColor}
+            onChange={(e) => setFgColor(e.target.value)}
+          />
+          <input
+            type="color"
+            value={fgColor}
+            onChange={(e) => setFgColor(e.target.value)}
+            className="h-9 w-12 rounded border cursor-pointer mt-1"
+            aria-label={t('foreground') + ' color picker'}
+          />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">{t('foreground')}</label>
-          <div className="flex items-center gap-2">
-            <input
-              type="color"
-              value={fgColor}
-              onChange={(e) => setFgColor(e.target.value)}
-              className="h-9 w-12 rounded border cursor-pointer"
-            />
-            <input
-              type="text"
-              value={fgColor}
-              onChange={(e) => setFgColor(e.target.value)}
-              className="flex-1 rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-          </div>
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">{t('background')}</label>
-          <div className="flex items-center gap-2">
-            <input
-              type="color"
-              value={bgColor}
-              onChange={(e) => setBgColor(e.target.value)}
-              className="h-9 w-12 rounded border cursor-pointer"
-            />
-            <input
-              type="text"
-              value={bgColor}
-              onChange={(e) => setBgColor(e.target.value)}
-              className="flex-1 rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-          </div>
+          <ToolInput
+            label={t('background')}
+            type="text"
+            value={bgColor}
+            onChange={(e) => setBgColor(e.target.value)}
+          />
+          <input
+            type="color"
+            value={bgColor}
+            onChange={(e) => setBgColor(e.target.value)}
+            className="h-9 w-12 rounded border cursor-pointer mt-1"
+            aria-label={t('background') + ' color picker'}
+          />
         </div>
       </div>
 
-      {error && <p className="text-sm text-destructive">{error}</p>}
+      {error && <ToolAlert variant="error">{error}</ToolAlert>}
 
       <button
         onClick={generate}
