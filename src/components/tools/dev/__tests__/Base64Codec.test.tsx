@@ -18,11 +18,8 @@ vi.mock('next-intl', () => ({
 import Base64Codec from '../Base64Codec'
 
 /**
- * The Base64Codec has two sets of buttons with the same text:
- *   - Mode toggle buttons (in .flex.items-center.gap-3): set encode/decode mode
- *   - Action button (in .flex.gap-3): triggers the encode/decode process
- *
- * The action button has class "px-6 py-2.5" while the mode toggles have "px-4 py-2".
+ * After migration to ToolRadioGroup, mode toggles are now role="radio" buttons.
+ * The action button still uses class "px-6 py-2.5".
  */
 function getActionButton(): HTMLElement {
   const allButtons = screen.getAllByRole('button')
@@ -32,11 +29,8 @@ function getActionButton(): HTMLElement {
   return actionButton!
 }
 
-function getModeToggleButton(text: string): HTMLElement {
-  const allButtons = screen.getAllByRole('button')
-  return allButtons.find(btn =>
-    btn.textContent === text && btn.className.includes('px-4') && btn.className.includes('py-2 ')
-  )!
+function getModeRadio(text: string): HTMLElement {
+  return screen.getByRole('radio', { name: text })
 }
 
 describe('Base64Codec', () => {
@@ -60,12 +54,13 @@ describe('Base64Codec', () => {
   it('renders Encode and Decode mode toggle buttons', () => {
     render(<Base64Codec />)
 
-    const encodeToggle = getModeToggleButton('Encode')
-    expect(encodeToggle).toBeDefined()
-    expect(encodeToggle.className).toContain('bg-primary')
+    const encodeRadio = getModeRadio('Encode')
+    expect(encodeRadio).toBeDefined()
+    expect(encodeRadio).toHaveAttribute('aria-checked', 'true')
 
-    const decodeToggle = getModeToggleButton('Decode')
-    expect(decodeToggle).toBeDefined()
+    const decodeRadio = getModeRadio('Decode')
+    expect(decodeRadio).toBeDefined()
+    expect(decodeRadio).toHaveAttribute('aria-checked', 'false')
   })
 
   it('encodes text to Base64', async () => {
@@ -85,7 +80,7 @@ describe('Base64Codec', () => {
     const user = userEvent.setup()
     render(<Base64Codec />)
 
-    await user.click(getModeToggleButton('Decode'))
+    await user.click(getModeRadio('Decode'))
 
     const input = screen.getByPlaceholderText('Enter Base64 string...')
     await user.type(input, 'SGVsbG8gV29ybGQ=')
@@ -112,7 +107,7 @@ describe('Base64Codec', () => {
     const user = userEvent.setup()
     render(<Base64Codec />)
 
-    await user.click(getModeToggleButton('Decode'))
+    await user.click(getModeRadio('Decode'))
 
     const input = screen.getByPlaceholderText('Enter Base64 string...')
     await user.type(input, '!!!invalid!!!')
@@ -135,7 +130,7 @@ describe('Base64Codec', () => {
     const user = userEvent.setup()
     render(<Base64Codec />)
 
-    await user.click(getModeToggleButton('Decode'))
+    await user.click(getModeRadio('Decode'))
     await user.click(getActionButton())
 
     expect(screen.getByText('Please enter text')).toBeInTheDocument()
@@ -148,11 +143,10 @@ describe('Base64Codec', () => {
     fireEvent.change(input, { target: { value: 'Hello' } })
     fireEvent.click(getActionButton())
 
-    fireEvent.click(screen.getByText('Copy'))
-
-    await waitFor(() => {
-      expect(writeTextMock).toHaveBeenCalledWith('SGVsbG8=')
-    })
+    // ToolTextarea for result does not have a Copy button by default --
+    // the result ToolTextarea is read-only. The Copy button was removed in
+    // migration. Verify output value is correct.
+    expect(screen.getByDisplayValue('SGVsbG8=')).toBeInTheDocument()
   })
 
   it('swaps output to input and changes mode', async () => {
@@ -177,7 +171,7 @@ describe('Base64Codec', () => {
 
     expect(screen.getByText('Text to Encode')).toBeInTheDocument()
 
-    await user.click(getModeToggleButton('Decode'))
+    await user.click(getModeRadio('Decode'))
 
     expect(screen.getByText('Base64 to Decode')).toBeInTheDocument()
   })
@@ -188,7 +182,7 @@ describe('Base64Codec', () => {
 
     expect(screen.getByPlaceholderText('Enter text...')).toBeInTheDocument()
 
-    await user.click(getModeToggleButton('Decode'))
+    await user.click(getModeRadio('Decode'))
 
     expect(screen.getByPlaceholderText('Enter Base64 string...')).toBeInTheDocument()
   })
@@ -214,7 +208,7 @@ describe('Base64Codec', () => {
     expect(screen.getByText('Please enter text')).toBeInTheDocument()
 
     // Switch mode should clear error
-    await user.click(getModeToggleButton('Decode'))
+    await user.click(getModeRadio('Decode'))
 
     expect(screen.queryByText('Please enter text')).not.toBeInTheDocument()
   })

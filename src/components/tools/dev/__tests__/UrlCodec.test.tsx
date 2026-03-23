@@ -15,11 +15,19 @@ describe('UrlCodec', () => {
     })
   })
 
+  function getInputTextarea(): HTMLTextAreaElement {
+    return screen.getByPlaceholderText('Enter text to encode or decode...') as HTMLTextAreaElement
+  }
+
+  function getOutputTextarea(): HTMLTextAreaElement {
+    return screen.getByPlaceholderText('Result will appear here...') as HTMLTextAreaElement
+  }
+
   it('renders input and output textareas', () => {
     render(<UrlCodec />)
 
-    expect(screen.getByLabelText('URL encode/decode input')).toBeInTheDocument()
-    expect(screen.getByLabelText('URL encode/decode output')).toBeInTheDocument()
+    expect(getInputTextarea()).toBeInTheDocument()
+    expect(getOutputTextarea()).toBeInTheDocument()
   })
 
   it('renders Encode and Decode buttons', () => {
@@ -33,11 +41,11 @@ describe('UrlCodec', () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'hello world')
     await user.click(screen.getByLabelText('URL encode'))
 
-    const output = screen.getByLabelText('URL encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('hello%20world')
   })
 
@@ -45,11 +53,11 @@ describe('UrlCodec', () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'key=value&foo=bar')
     await user.click(screen.getByLabelText('URL encode'))
 
-    const output = screen.getByLabelText('URL encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('key%3Dvalue%26foo%3Dbar')
   })
 
@@ -57,11 +65,11 @@ describe('UrlCodec', () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'hello%20world')
     await user.click(screen.getByLabelText('URL decode'))
 
-    const output = screen.getByLabelText('URL encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('hello world')
   })
 
@@ -69,11 +77,11 @@ describe('UrlCodec', () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'key%3Dvalue%26foo%3Dbar')
     await user.click(screen.getByLabelText('URL decode'))
 
-    const output = screen.getByLabelText('URL encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('key=value&foo=bar')
   })
 
@@ -81,11 +89,11 @@ describe('UrlCodec', () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'hello%20world')
     await user.click(screen.getByLabelText('URL decode'))
 
-    const output = screen.getByLabelText('URL encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('hello world')
   })
 
@@ -111,7 +119,7 @@ describe('UrlCodec', () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, '%ZZ%invalid')
     await user.click(screen.getByLabelText('URL decode'))
 
@@ -121,7 +129,7 @@ describe('UrlCodec', () => {
   it('copies output to clipboard', async () => {
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     fireEvent.change(input, { target: { value: 'hello world' } })
     fireEvent.click(screen.getByLabelText('URL encode'))
 
@@ -132,10 +140,10 @@ describe('UrlCodec', () => {
     })
   })
 
-  it('shows "Copied!" after copying', async () => {
+  it('shows "copied" after copying', async () => {
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     fireEvent.change(input, { target: { value: 'hello world' } })
     fireEvent.click(screen.getByLabelText('URL encode'))
 
@@ -150,28 +158,28 @@ describe('UrlCodec', () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'hello world')
     await user.click(screen.getByLabelText('URL encode'))
 
     await user.click(screen.getByLabelText('Clear all fields'))
 
     expect(input).toHaveValue('')
-    expect(screen.getByLabelText('URL encode/decode output')).toHaveValue('')
+    expect(getOutputTextarea()).toHaveValue('')
   })
 
   it('swaps output to input', async () => {
     const user = userEvent.setup()
     render(<UrlCodec />)
 
-    const input = screen.getByLabelText('URL encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'hello world')
     await user.click(screen.getByLabelText('URL encode'))
 
     await user.click(screen.getByLabelText('Swap output to input'))
 
     expect(input).toHaveValue('hello%20world')
-    expect(screen.getByLabelText('URL encode/decode output')).toHaveValue('')
+    expect(getOutputTextarea()).toHaveValue('')
   })
 
   it('does not show Copy button when output is empty', () => {

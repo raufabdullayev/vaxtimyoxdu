@@ -86,13 +86,20 @@ export default function JsonFormatter() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <ToolTextarea
-          label={t('output')}
-          className="font-mono min-h-[300px] bg-muted/50"
-          value={output}
-          readOnly
-          placeholder={t('formattedJsonHere')}
-        />
+        <div>
+          <ToolTextarea
+            label={t('output')}
+            className="font-mono min-h-[300px] bg-muted/50"
+            value={output}
+            readOnly
+            placeholder={t('formattedJsonHere')}
+          />
+          {output && (
+            <button onClick={copy} className="text-xs text-primary hover:underline mt-1">
+              {t('copy')}
+            </button>
+          )}
+        </div>
       </div>
 
       {error && (

@@ -15,11 +15,23 @@ describe('CaseConverter', () => {
     })
   })
 
+  function getInputTextarea(): HTMLTextAreaElement {
+    return screen.getByPlaceholderText('Enter or paste your text here...') as HTMLTextAreaElement
+  }
+
+  function getOutputTextarea(): HTMLTextAreaElement {
+    return screen.getByPlaceholderText('Converted text will appear here...') as HTMLTextAreaElement
+  }
+
+  function getCaseRadio(name: string): HTMLElement {
+    return screen.getByRole('radio', { name })
+  }
+
   it('renders input and output textareas', () => {
     render(<CaseConverter />)
 
-    expect(screen.getByLabelText('Text input for case conversion')).toBeInTheDocument()
-    expect(screen.getByLabelText('Case conversion output')).toBeInTheDocument()
+    expect(getInputTextarea()).toBeInTheDocument()
+    expect(getOutputTextarea()).toBeInTheDocument()
   })
 
   it('renders all case conversion buttons', () => {
@@ -41,11 +53,11 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'hello world')
 
     // UPPERCASE is the default selection
-    const output = screen.getByLabelText('Case conversion output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('HELLO WORLD')
   })
 
@@ -53,12 +65,12 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'HELLO WORLD')
 
-    await user.click(screen.getByLabelText('Convert to lowercase'))
+    await user.click(getCaseRadio('lowercase'))
 
-    const output = screen.getByLabelText('Case conversion output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('hello world')
   })
 
@@ -66,12 +78,12 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'hello world foo bar')
 
-    await user.click(screen.getByLabelText('Convert to Title Case'))
+    await user.click(getCaseRadio('Title Case'))
 
-    const output = screen.getByLabelText('Case conversion output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('Hello World Foo Bar')
   })
 
@@ -79,12 +91,12 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'hello world foo')
 
-    await user.click(screen.getByLabelText('Convert to camelCase'))
+    await user.click(getCaseRadio('camelCase'))
 
-    const output = screen.getByLabelText('Case conversion output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('helloWorldFoo')
   })
 
@@ -92,12 +104,12 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'hello world foo')
 
-    await user.click(screen.getByLabelText('Convert to snake_case'))
+    await user.click(getCaseRadio('snake_case'))
 
-    const output = screen.getByLabelText('Case conversion output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('hello_world_foo')
   })
 
@@ -105,26 +117,26 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'hello world foo')
 
-    await user.click(screen.getByLabelText('Convert to kebab-case'))
+    await user.click(getCaseRadio('kebab-case'))
 
-    const output = screen.getByLabelText('Case conversion output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('hello-world-foo')
   })
 
   it('handles empty input', () => {
     render(<CaseConverter />)
 
-    const output = screen.getByLabelText('Case conversion output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('')
   })
 
   it('copies output to clipboard', async () => {
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     fireEvent.change(input, { target: { value: 'hello' } })
 
     fireEvent.click(screen.getByLabelText('Copy output to clipboard'))
@@ -138,7 +150,7 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'hello')
 
     await user.click(screen.getByLabelText('Copy output to clipboard'))
@@ -156,10 +168,9 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'hello world')
 
-    // Stats are inside: <div> <div class="text-2xl ...">{value}</div> <div class="text-xs ...">{label}</div> </div>
     const charsLabel = screen.getByText('Characters')
     const charsValue = charsLabel.parentElement!.querySelector('[class*="font-bold"]')
     expect(charsValue).toHaveTextContent('11')
@@ -175,7 +186,7 @@ describe('CaseConverter', () => {
 
     expect(screen.queryByLabelText('Clear all fields')).not.toBeInTheDocument()
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'some text')
 
     expect(screen.getByLabelText('Clear all fields')).toBeInTheDocument()
@@ -185,7 +196,7 @@ describe('CaseConverter', () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const input = screen.getByLabelText('Text input for case conversion')
+    const input = getInputTextarea()
     await user.type(input, 'some text')
 
     await user.click(screen.getByLabelText('Clear all fields'))
@@ -193,18 +204,18 @@ describe('CaseConverter', () => {
     expect(input).toHaveValue('')
   })
 
-  it('highlights the selected case button with aria-pressed', async () => {
+  it('highlights the selected case radio with aria-checked', async () => {
     const user = userEvent.setup()
     render(<CaseConverter />)
 
-    const uppercaseBtn = screen.getByLabelText('Convert to UPPERCASE')
-    expect(uppercaseBtn).toHaveAttribute('aria-pressed', 'true')
+    const uppercaseRadio = getCaseRadio('UPPERCASE')
+    expect(uppercaseRadio).toHaveAttribute('aria-checked', 'true')
 
-    const lowercaseBtn = screen.getByLabelText('Convert to lowercase')
-    expect(lowercaseBtn).toHaveAttribute('aria-pressed', 'false')
+    const lowercaseRadio = getCaseRadio('lowercase')
+    expect(lowercaseRadio).toHaveAttribute('aria-checked', 'false')
 
-    await user.click(lowercaseBtn)
-    expect(lowercaseBtn).toHaveAttribute('aria-pressed', 'true')
-    expect(uppercaseBtn).toHaveAttribute('aria-pressed', 'false')
+    await user.click(lowercaseRadio)
+    expect(lowercaseRadio).toHaveAttribute('aria-checked', 'true')
+    expect(uppercaseRadio).toHaveAttribute('aria-checked', 'false')
   })
 })

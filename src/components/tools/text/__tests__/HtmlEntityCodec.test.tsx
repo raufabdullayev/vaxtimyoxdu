@@ -15,11 +15,19 @@ describe('HtmlEntityCodec', () => {
     })
   })
 
+  function getInputTextarea(): HTMLTextAreaElement {
+    return screen.getByPlaceholderText('Enter text with special characters or HTML entities...') as HTMLTextAreaElement
+  }
+
+  function getOutputTextarea(): HTMLTextAreaElement {
+    return screen.getByPlaceholderText('Result will appear here...') as HTMLTextAreaElement
+  }
+
   it('renders input and output textareas', () => {
     render(<HtmlEntityCodec />)
 
-    expect(screen.getByLabelText('HTML entity encode/decode input')).toBeInTheDocument()
-    expect(screen.getByLabelText('HTML entity encode/decode output')).toBeInTheDocument()
+    expect(getInputTextarea()).toBeInTheDocument()
+    expect(getOutputTextarea()).toBeInTheDocument()
   })
 
   it('renders Encode and Decode buttons', () => {
@@ -33,11 +41,11 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, '<div>')
     await user.click(screen.getByLabelText('Encode to HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('&lt;div&gt;')
   })
 
@@ -45,11 +53,11 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'a > b')
     await user.click(screen.getByLabelText('Encode to HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('a &gt; b')
   })
 
@@ -57,11 +65,11 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'foo & bar')
     await user.click(screen.getByLabelText('Encode to HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('foo &amp; bar')
   })
 
@@ -69,11 +77,11 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'say "hello"')
     await user.click(screen.getByLabelText('Encode to HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('say &quot;hello&quot;')
   })
 
@@ -81,11 +89,11 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, '&lt;div&gt;')
     await user.click(screen.getByLabelText('Decode HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('<div>')
   })
 
@@ -93,11 +101,11 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'foo &amp; bar')
     await user.click(screen.getByLabelText('Decode HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('foo & bar')
   })
 
@@ -105,12 +113,12 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, '<p>Hello & "world"</p>')
     await user.click(screen.getByLabelText('Encode to HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
-    const encoded = (output as HTMLTextAreaElement).value
+    const output = getOutputTextarea()
+    const encoded = output.value
 
     // Now swap and decode
     await user.click(screen.getByLabelText('Swap output to input'))
@@ -145,18 +153,18 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, '&lt;&gt;&amp;&quot;')
     await user.click(screen.getByLabelText('Decode HTML entities'))
 
-    const output = screen.getByLabelText('HTML entity encode/decode output')
+    const output = getOutputTextarea()
     expect(output).toHaveValue('<>&"')
   })
 
   it('copies output to clipboard', async () => {
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     fireEvent.change(input, { target: { value: '<div>' } })
     fireEvent.click(screen.getByLabelText('Encode to HTML entities'))
 
@@ -171,14 +179,14 @@ describe('HtmlEntityCodec', () => {
     const user = userEvent.setup()
     render(<HtmlEntityCodec />)
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, '<div>')
     await user.click(screen.getByLabelText('Encode to HTML entities'))
 
     await user.click(screen.getByLabelText('Clear all fields'))
 
     expect(input).toHaveValue('')
-    expect(screen.getByLabelText('HTML entity encode/decode output')).toHaveValue('')
+    expect(getOutputTextarea()).toHaveValue('')
   })
 
   it('renders the HTML entities reference table', () => {
@@ -197,7 +205,7 @@ describe('HtmlEntityCodec', () => {
 
     expect(screen.queryByLabelText('Swap output to input')).not.toBeInTheDocument()
 
-    const input = screen.getByLabelText('HTML entity encode/decode input')
+    const input = getInputTextarea()
     await user.type(input, 'test')
     await user.click(screen.getByLabelText('Encode to HTML entities'))
 

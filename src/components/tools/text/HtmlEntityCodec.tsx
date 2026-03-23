@@ -170,13 +170,24 @@ export default function HtmlEntityCodec() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <ToolTextarea
-          label="Output"
-          className="font-mono min-h-[200px] bg-muted/50"
-          value={output}
-          readOnly
-          placeholder="Result will appear here..."
-        />
+        <div>
+          <ToolTextarea
+            label="Output"
+            className="font-mono min-h-[200px] bg-muted/50"
+            value={output}
+            readOnly
+            placeholder="Result will appear here..."
+          />
+          {output && (
+            <button
+              onClick={copy}
+              className="text-xs text-primary hover:underline mt-1"
+              aria-label="Copy output to clipboard"
+            >
+              {copied ? 'Copied!' : 'Copy'}
+            </button>
+          )}
+        </div>
       </div>
 
       {error && (

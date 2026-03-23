@@ -186,20 +186,31 @@ export default function SqlFormatter() {
             </button>
           </div>
           <ToolTextarea
-            label="Input SQL"
+            label="SQL input"
             className="font-mono min-h-[250px]"
             placeholder="Paste your SQL query here..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
         </div>
-        <ToolTextarea
-          label="Formatted Output"
-          className="font-mono min-h-[250px] bg-muted/50"
-          value={output}
-          readOnly
-          placeholder="Formatted SQL will appear here..."
-        />
+        <div>
+          <ToolTextarea
+            label="SQL output"
+            className="font-mono min-h-[250px] bg-muted/50"
+            value={output}
+            readOnly
+            placeholder="Formatted SQL will appear here..."
+          />
+          {output && (
+            <button
+              onClick={copy}
+              className="text-xs text-primary hover:underline mt-1"
+              aria-label="Copy output to clipboard"
+            >
+              {copied ? 'Copied!' : 'Copy'}
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-3">

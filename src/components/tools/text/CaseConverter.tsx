@@ -163,13 +163,24 @@ export default function CaseConverter() {
         onChange={(val) => setSelectedCase(val as CaseType)}
       />
 
-      <ToolTextarea
-        label="Output"
-        className="min-h-[160px] bg-muted/50"
-        value={output}
-        readOnly
-        placeholder="Converted text will appear here..."
-      />
+      <div>
+        <ToolTextarea
+          label="Output"
+          className="min-h-[160px] bg-muted/50"
+          value={output}
+          readOnly
+          placeholder="Converted text will appear here..."
+        />
+        {output && (
+          <button
+            onClick={copy}
+            className="text-xs text-primary hover:underline mt-1"
+            aria-label="Copy output to clipboard"
+          >
+            {copied ? 'Copied!' : 'Copy'}
+          </button>
+        )}
+      </div>
 
       {input.trim() && (
         <button
