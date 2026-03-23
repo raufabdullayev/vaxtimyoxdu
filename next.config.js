@@ -113,14 +113,16 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            // SECURITY NOTE: Removed 'unsafe-inline' and 'unsafe-eval' from all directives.
-            // - 'self': Allows scripts from same origin (Next.js runtime)
-            // - Trusted third-party domains: Google Tag Manager, Analytics, AdSense
-            // - Inline theme script whitelisted via SHA256 hash (prevents FOUC)
-            // - External /analytics.js whitelisted via SHA256 hash
-            // - style-src retains 'unsafe-inline' because Next.js and Tailwind CSS inject styles dynamically
-            // - JSON-LD scripts (application/ld+json) are safe inline data, not executable code
-            value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com 'sha256-XPEotMgRK9ibO2p3eF2KD3VH8YL32QAPZgu+4yezoDI=' 'sha256-2If02813LSNViupHa21qAiFzjpWLoKi3GFjUV5B1Cek='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
+            // SECURITY NOTE:
+            // - 'unsafe-inline' is REQUIRED in script-src because Next.js App Router
+            //   generates inline <script>self.__next_f.push(...)</script> tags for RSC
+            //   hydration payload. These have dynamic content per page so SHA256 hashes
+            //   are not feasible. Without 'unsafe-inline', React hydration is blocked
+            //   by the browser, causing a white screen.
+            // - 'unsafe-eval' is NOT included — it is not needed.
+            // - style-src retains 'unsafe-inline' because Next.js and Tailwind CSS inject styles dynamically.
+            // - JSON-LD scripts (application/ld+json) are safe inline data, not executable code.
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
           },
           {
             key: 'Strict-Transport-Security',
