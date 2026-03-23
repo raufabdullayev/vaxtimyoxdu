@@ -15,7 +15,7 @@ describe('checkRateLimit – in-memory fallback (development)', () => {
     delete process.env.UPSTASH_REDIS_REST_URL
     delete process.env.UPSTASH_REDIS_REST_TOKEN
     // Ensure we're in development mode for in-memory fallback
-    process.env.NODE_ENV = 'test'
+    ;(process.env as Record<string, string>).NODE_ENV = 'test'
   })
 
   async function getCheckRateLimit() {
@@ -180,7 +180,7 @@ describe('checkRateLimit – fail-closed in production', () => {
   })
 
   it('rejects all requests when Redis is unavailable in production', async () => {
-    process.env.NODE_ENV = 'production'
+    ;(process.env as Record<string, string>).NODE_ENV = 'production'
     const mod = await import('@/lib/ai/rate-limiter')
     const result = await mod.checkRateLimit('10.0.0.1')
 
