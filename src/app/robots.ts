@@ -13,6 +13,11 @@ export default function robots(): MetadataRoute.Robots {
         allow: ['/', '/api/og'],
         disallow: ['/api/'],
       },
+      {
+        userAgent: 'bingbot',
+        allow: ['/', '/api/og'],
+        disallow: ['/api/'],
+      },
     ],
     sitemap: 'https://vaxtimyoxdu.com/sitemap.xml',
     host: 'https://vaxtimyoxdu.com',
