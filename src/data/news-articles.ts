@@ -2691,6 +2691,396 @@ Liverpool forward Federico Chiesa has left the Italy squad due to physical probl
 
 The 2026 FIFA World Cup will be held across the United States, Canada, and Mexico. For the first time in history, 48 teams will participate. The playoff round will determine the last remaining qualification spots.`,
   },
+  // ==================== 23-24 Mart 2026 (TR) ====================
+  'tr-laguardia-havalimani-ucak-kazasi': {
+    title: 'New York LaGuardia Havalimanı\'nda uçak itfaiye aracıyla çarpıştı: 2 pilot hayatını kaybetti',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `New York'un LaGuardia Havalimanı'nda pazar gecesi ciddi bir kaza meydana geldi. Air Canada'nın Montreal'den gelen AC8646 sefer sayılı uçağı iniş sırasında pist üzerindeki itfaiye aracıyla çarpıştı. Olayda her iki pilot hayatını kaybetti.
+
+## Olayın Ayrıntıları
+
+CRJ-900 tipi uçak, 72 yolcu ve 4 mürettebat üyesiyle yaklaşık gece saat 23:40'ta LaGuardia Havalimanı'na iniş yapıyordu. O sırada pistte Port Authority itfaiye aracı, bir United Airlines uçağından gelen koku ihbarına müdahale ediyordu. Uçak saatte 160 km'den fazla hızla itfaiye aracına çarptı.
+
+## Kayıplar ve Yaralılar
+
+- **Hayatını kaybedenler:** Pilot ve yardımcı pilot (ikisi de hayatını kaybetti)
+- **Yaralılar:** 41 yolcu hastaneye kaldırıldı
+- **İtfaiyeciler:** Araçtaki 2 itfaiyeci de yaralandı
+
+## Havalimanının Kapatılması
+
+Kazanın ardından LaGuardia Havalimanı'na tüm uçuşlar durduruldu. Havalimanı ertesi gün öğleden sonra saat 14:00'te yeniden açıldı. Yüzlerce sefer iptal edildi veya geciktirildi.
+
+## Soruşturma
+
+Federal Havacılık İdaresi (FAA) ve Ulusal Ulaştırma Güvenlik Kurulu olayı soruşturuyor. İlk sorular hava trafik kontrolü (ATC) ve itfaiye aracının aktif piste çıkma iznine odaklanıyor. Hava trafik kontrol ses kayıtları inceleniyor.`,
+  },
+  'tr-kolombiya-askeri-ucak-kazasi': {
+    title: 'Kolombiya\'da askeri uçak kazası: C-130 Hercules kalkışta düştü, 66 kişi hayatını kaybetti',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Kolombiya'nın güneyinde askeri bir uçak kazası meydana geldi — en az 66 kişi hayatını kaybetti, onlarca kişi yaralandı. Bu, son yıllarda Latin Amerika'daki en büyük havacılık felaketlerinden biri olarak değerlendiriliyor.
+
+## Kazanın Ayrıntıları
+
+23 Mart tarihinde C-130H Hercules tipi askeri nakliye uçağı, Putumayo ilinin Puerto Leguizamo şehrindeki Caucaya Havalimanı'ndan kalkış sırasında kaza yaptı. Uçakta 125 kişi bulunuyordu — çoğunluğu askerdi. Uçak kalkıştan sadece 1,5 km sonra yere çakıldı.
+
+## Kayıplar
+
+- **Hava Kuvvetleri:** 6 kişi hayatını kaybetti
+- **Ordu:** 58 asker hayatını kaybetti
+- **Polis:** 2 kişi hayatını kaybetti
+- **Yaralılar:** 83 kişi hastaneye kaldırıldı
+
+Kaza sırasında uçaktaki mühimmat patladı ve yangına neden oldu, bu da kurtarma operasyonlarını zorlaştırdı.
+
+## Uçak Hakkında
+
+Kazaya uğrayan C-130H Hercules, 1965 yılında ilk kez hizmete girmiş ve 2020'de ABD Hava Kuvvetleri tarafından Kolombiya'ya hibe edilmişti. Savunma Bakanı Pedro Sanchez, kazanın nedeninin henüz belirlenmediğini ve bir saldırı ihtimalinin bulunmadığını açıkladı.
+
+## Tepkiler
+
+Kolombiya Cumhurbaşkanı Gustavo Petro ulusal yas ilan etti. Ülkenin savunma kuvvetleri kapsamlı bir soruşturma başlattı. Putumayo ili, Peru ve Ekvador sınırlarındaki uzak bir bölge olup silahlı grupların faaliyet gösterdiği bir alan olarak biliniyor.`,
+  },
+  'tr-elon-musk-terafab-cip-fabrikasi': {
+    title: 'Elon Musk "Terafab"ı duyurdu: Dünyanın en büyük çip fabrikası Teksas\'ta kurulacak',
+    date: '2026-03-23',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Elon Musk, Tesla, SpaceX ve xAI'nin ortak projesi olan "Terafab" çip üretim tesisini duyurdu. 20-25 milyar dolarlık bu fabrika Austin, Teksas'ta inşa edilecek ve dünyanın en büyük yarı iletken üretim tesisi olacak.
+
+## Terafab Nedir?
+
+Terafab — Tesla, SpaceX ve xAI'nin ortak girişimidir. Temel amacı yılda 1 teravattan fazla yapay zeka hesaplama gücü üretmektir. Fabrika, çip tasarımından litografiye, üretimden bellek üretimine, paketlemeden teste kadar tüm aşamaları tek çatı altında birleştirecek.
+
+## Ne Üretilecek?
+
+- **Tesla:** Elektrikli araçlar ve Optimus insansı robotlar için özel çipler
+- **SpaceX:** Uzay araçları için optimize edilmiş işlemciler
+- **xAI:** Yüksek performanslı yapay zeka hesaplama çipleri
+- **AI5:** Tesla'nın 5. nesil yapay zeka çipi ilk ürünlerden biri olacak
+
+## Üretim Planı
+
+Küçük parti üretimi 2026 sonuna, seri üretim ise 2027 yılına planlanıyor.
+
+## Önemi
+
+Musk, projeyi "galaktik medeniyet" inşa etmek için gerekli bir adım olarak nitelendirdi. Terafab, ABD'nin yarı iletken üretiminde Çin'e bağımlılığını azaltma stratejisinin bir parçası. CHIPS Act'in desteğiyle yerli çip üretimi güçlendiriliyor. Ayrıca ABD savcıları bu hafta Super Micro'nun kurucu ortağını 2,5 milyar dolarlık Nvidia AI çiplerinin yasadışı olarak Çin'e ihraç edilmesiyle suçladı — bu da yerli üretimin önemini bir kez daha ortaya koyuyor.`,
+  },
+  'tr-piyasalar-iran-ateskes-umidi': {
+    title: 'Borsalar sert yükseldi: Trump İran\'la müzakere yürüttüğünü açıkladı',
+    date: '2026-03-23',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `ABD Başkanı Donald Trump'ın İran'la müzakere yürüttüğünü ve İran'ın enerji altyapısına yönelik saldırıları durdurduğunu açıklaması dünya borsalarında keskin bir yükselişe neden oldu. Yatırımcılar Orta Doğu çatışmasının sona yaklaştığına dair umutlarını artırdı.
+
+## Borsa Göstergeleri (23 Mart)
+
+- **Dow Jones:** +631 puan (+%1,38), 46.208 puanda kapandı
+- **S&P 500:** +%1,15, 6.581 puanda
+- **Nasdaq:** +%1,38, 21.946 puanda
+
+Bu, son haftaların en güçlü borsa yükselişi oldu. Yatırımcılar İran çatışmasının petrol fiyatlarını düşüreceğini ve küresel resesyonu önleyeceğini bekliyor.
+
+## Federal Rezerv Sistemi
+
+Fed faiz oranını %3,50-%3,75 seviyesinde sabit tuttu. Fed Başkanı Jerome Powell şunları belirtti:
+
+- Enflasyon hala %2 hedefin üzerinde
+- İran çatışması enflasyon beklentilerini artırdı
+- 2026'da bir faiz indirimi daha planlanıyor
+
+## İşsizlik Arttı
+
+İki aylık düşüşün ardından işsizlik oranı %4,4'e yükseldi — bu, iş piyasasının zayıfladığının göstergesi.
+
+## Petrol Piyasası
+
+İran çatışması enerji piyasalarını sarstı. Brent petrol yılbaşından bu yana %75 değer kazandı. Hürmüz Boğazı'nın ablukası Hindistan'ın tarihindeki en ağır doğalgaz tedarik krizine yol açtı. Altın ise 2026'nın en düşük seviyesine — 4.300 doların altına geriledi.
+
+## İran'ın Tutumu
+
+Tahran müzakere iddialarını "yalan haber" olarak nitelendirdi. İran Dışişleri Bakanlığı ABD ile doğrudan müzakerelerin yapıldığını reddetti. Bu çelişkili açıklamalar piyasalardaki belirsizliği artırıyor.`,
+  },
+  'tr-azerbaycan-iran-bolgesel-guvenlik': {
+    title: 'Azerbaycan ve İran bölgesel güvenliği görüştü: Nahçıvan drone saldırıları araştırılıyor',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Azerbaycan Dışişleri Bakanı Ceyhun Bayramov, İran Dışişleri Bakanı Seyyid Abbas Araghçi ile telefon görüşmesi yaptı. Bakanlar bölgesel güvenlik ve askeri gerginliğin azaltılması konularını ele aldı.
+
+## Ana Görüşme Konuları
+
+- **Askeri tırmanma:** Bakanlar Orta Doğu'daki askeri gerginliğin durdurulması için olası tedbirleri tartıştı
+- **Hazar güvenliği:** Hazar bölgesinde güvenliğin sağlanmasının önemi vurgulandı
+- **Nahçıvan:** Bayramov, İran topraklarından Nahçıvan Özerk Cumhuriyeti'ne yönelik drone saldırılarının soruşturmasının tamamlanacağı umudunu dile getirdi
+
+## Diğer Diplomatik Faaliyetler
+
+Aynı gün Azerbaycan Dışişleri Bakanlığı birçok cephede aktif diplomasi yürüttü:
+
+- **Brezilya:** Brezilya Dışişleri Bakanı Mauro Vieira, Bayramov ile ikili işbirliği ve Orta Doğu güvenliği hakkında görüştü
+- **Rusya:** Azerbaycan Dışişleri Bakanlığı, Rusya Dışişleri Bakanlığı sözcüsü Maria Zaharova'nın Azerbaycan'ın Ulusal Lideri Haydar Aliyev'in adını uygunsuz bağlamda kullanmasıyla ilgili açıklama talep etti
+
+## Askeri Faaliyetler
+
+2026 yılı eğitim planına uygun olarak 23 Mart'ta Bakü ve Abşeron istikametlerinde insansız hava araçlarının (İHA) eğitim uçuşları gerçekleştirildi. Uçuşlar saat 16:00 civarında yapıldı.`,
+  },
+  'tr-paris-sosyalist-belediye-baskani-italya-referandumu': {
+    title: 'Avrupa seçimleri: Paris\'te sosyalist belediye başkanı, İtaliya referandumda Meloni\'ye "hayır" dedi',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Avrupa genelinde yapılan yerel seçimler ve referandumlar sürpriz sonuçlar verdi. Fransa ve İtalya'da sonuçlar beklenmedik oldu ve her iki ülkede siyasi tablo değişti.
+
+## Paris: Sosyalist Emmanuel Gregoire Belediye Başkanı Seçildi
+
+Paris'in yeni belediye başkanı sosyalist aday Emmanuel Gregoire oldu. Marine Le Pen'in Ulusal Birlik partisi başkentte ve diğer büyük şehirlerde başarı sağlayamadı.
+
+**Önemi:**
+- Sol kanat Fransa başkentinde konumunu güçlendirdi
+- Le Pen'in partisinin büyük şehirlerdeki zayıflığı bir kez daha teyit edildi
+- Seçim sonucu Fransa siyasetindeki sol-sağ dengesini yansıtıyor
+
+## İtalya: Meloni Referandumda Yenilgiyi Kabul Etti
+
+İtalya Başbakanı Giorgia Meloni, yargı reformu referandumunda yenilgiyi kabul etti. İtalyan vatandaşları Meloni'nin önerdiği yargı sistemi değişikliğine "hayır" dedi.
+
+**Önemi:**
+- Meloni hükümetinin en büyük siyasi darbesi
+- İtalya yargı bağımsızlığı korundu
+- Bu sonuç Meloni'nin gelecekteki reform planlarını zorlaştırabilir
+
+## Diğer Seçim Sonuçları
+
+Slovenya'da da yerel seçimler yapıldı. Avrupa genelinde yapılan seçimler, vatandaşların popülist partilere karşı giderek alternatif aradığını gösterdi. Merkez-sol partiler birçok büyük şehirde konumlarını geri kazandı.`,
+  },
+  'tr-dunya-kupasi-eleme-italya-playoff': {
+    title: 'Dünya Kupası Elemeleri: İtalya playoff\'ta, Gattuso "geçmişi unutmalıyız" dedi',
+    date: '2026-03-24',
+    category: 'Spor',
+    locale: 'tr',
+    content: `2026 Dünya Kupası eleme turlarının playoff aşaması bu hafta başlıyor. İtalya milli takımı perşembe günü Kuzey İrlanda ile yarı finalde karşılaşacak. Teknik direktör Gennaro Gattuso, futbolculardan geçmişteki başarısızlıkları unutmalarını istiyor.
+
+## İtalya - Kuzey İrlanda (Yarı Final)
+
+Gattuso, kritik maç öncesinde takıma seslendi: "Taktikten önce zihnimizde doğru düşünce olmalı. 2022'nin felaketini geride bırakmalıyız."
+
+İtalya, 2022 Dünya Kupası elemelerinde Kuzey Makedonya'ya yenilerek art arda ikinci kez Dünya Kupası'na katılamamıştı. Bu hatıra İtalyan futbolunda hala acı bir konu.
+
+**Olası final rakipleri:** Galip, 31 Mart'ta Galler veya Bosna-Hersek ile Dünya Kupası bileti için final oynayacak.
+
+## Griezmann Transferi
+
+Antoine Griezmann'ın Orlando City SC ile 2 yıllık (1 yıl opsiyon) sözleşme imzalayacağı açıklandı. Fransa milli takımının yıldız forveti MLS'e geçerek kariyerinin yeni sayfasını açıyor.
+
+## Liverpool'da Sorun
+
+Liverpool forveti Federico Chiesa, fiziksel sorunlar nedeniyle İtalya milli takımı kampını terk etti. Bu durum Gattuso için oyuncu seçiminde ek bir sorun yaratıyor.
+
+## Dünya Kupası 2026
+
+Hatırlatalım ki 2026 Dünya Kupası ABD, Kanada ve Meksika'da düzenlenecek. Turnuva tarihte ilk kez 48 takımın katılımıyla oynanacak. Playoff aşaması son kalan katılım biletlerini belirleyecek.`,
+  },
+  // ==================== 23-24 Март 2026 (RU) ====================
+  'ru-laguardia-aeroport-krushenie-samoleta': {
+    title: 'В аэропорту Ла-Гуардия в Нью-Йорке самолёт столкнулся с пожарной машиной: 2 пилота погибли',
+    date: '2026-03-23',
+    category: 'Мир',
+    locale: 'ru',
+    content: `В нью-йоркском аэропорту Ла-Гуардия в воскресенье поздно вечером произошла серьёзная авария. Рейс AC8646 авиакомпании Air Canada, следовавший из Монреаля, при посадке столкнулся с пожарной машиной на взлётно-посадочной полосе. В результате инцидента оба пилота погибли.
+
+## Подробности происшествия
+
+Самолёт типа CRJ-900 с 72 пассажирами и 4 членами экипажа на борту совершал посадку в аэропорту Ла-Гуардия примерно в 23:40. В это время на взлётно-посадочной полосе находилась пожарная машина Port Authority, выехавшая по вызову в связи с сообщением о запахе на борту рейса United Airlines. Самолёт врезался в пожарную машину на скорости более 160 км/ч.
+
+## Жертвы и пострадавшие
+
+- **Погибшие:** Командир и второй пилот (оба погибли)
+- **Пострадавшие:** 41 пассажир доставлен в больницы
+- **Пожарные:** 2 пожарных в машине также получили травмы
+
+## Закрытие аэропорта
+
+После аварии все рейсы в аэропорт Ла-Гуардия были приостановлены. Аэропорт возобновил работу на следующий день в 14:00. Сотни рейсов были отменены или задержаны.
+
+## Расследование
+
+Федеральное управление гражданской авиации (FAA) и Национальный совет по безопасности на транспорте расследуют инцидент. Основные вопросы связаны с координацией управления воздушным движением (УВД) и разрешением на выезд пожарной машины на активную полосу. Аудиозаписи УВД уже изучаются.`,
+  },
+  'ru-kolumbiya-krushenie-voennogo-samoleta': {
+    title: 'Крушение военного самолёта в Колумбии: C-130 Hercules упал при взлёте, 66 человек погибли',
+    date: '2026-03-23',
+    category: 'Мир',
+    locale: 'ru',
+    content: `На юге Колумбии произошла авиакатастрофа военного самолёта — погибли не менее 66 человек, десятки ранены. Это одна из крупнейших авиационных катастроф в Латинской Америке за последние годы.
+
+## Подробности катастрофы
+
+23 марта военно-транспортный самолёт C-130H Hercules потерпел крушение при взлёте из аэропорта Каукая в городе Пуэрто-Легисамо провинции Путумайо. На борту находились 125 человек — преимущественно военнослужащие. Самолёт упал всего в 1,5 км от взлётной полосы.
+
+## Жертвы
+
+- **ВВС:** 6 человек погибли
+- **Армия:** 58 военнослужащих погибли
+- **Полиция:** 2 человека погибли
+- **Раненые:** 83 человека госпитализированы
+
+При крушении сдетонировали боеприпасы на борту, что вызвало пожар и осложнило спасательные операции.
+
+## О самолёте
+
+Разбившийся C-130H Hercules был введён в эксплуатацию в 1965 году и передан Колумбии ВВС США в 2020 году. Министр обороны Педро Санчес заявил, что причина крушения пока не установлена и признаков нападения нет.
+
+## Реакция
+
+Президент Колумбии Густаво Петро объявил национальный траур. Вооружённые силы страны начали полномасштабное расследование. Провинция Путумайо — отдалённый регион на границе с Перу и Эквадором, известный деятельностью вооружённых группировок.`,
+  },
+  'ru-ilon-mask-terafab-chipovyy-zavod': {
+    title: 'Илон Маск анонсировал «Терафаб»: Крупнейший в мире чиповый завод будет построен в Техасе',
+    date: '2026-03-23',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `Илон Маск объявил о создании «Терафаб» — совместного предприятия Tesla, SpaceX и xAI по производству полупроводников. Завод стоимостью 20-25 миллиардов долларов будет построен в Остине, штат Техас, и станет крупнейшим в мире предприятием по производству полупроводников.
+
+## Что такое Терафаб?
+
+Терафаб — это совместное предприятие Tesla, SpaceX и xAI. Его основная цель — производство более одного теравата вычислительных мощностей для искусственного интеллекта в год. Завод объединит под одной крышей все этапы — от проектирования чипов и литографии до производства, памяти, упаковки и тестирования.
+
+## Что будет производиться?
+
+- **Tesla:** Специализированные чипы для электромобилей и гуманоидных роботов Optimus
+- **SpaceX:** Оптимизированные процессоры для космических аппаратов
+- **xAI:** Высокопроизводительные чипы для вычислений ИИ
+- **AI5:** Чип искусственного интеллекта пятого поколения Tesla станет одним из первых продуктов
+
+## План производства
+
+Мелкосерийное производство запланировано на конец 2026 года, массовое — на 2027 год.
+
+## Значение
+
+Маск назвал проект необходимым шагом к построению «галактической цивилизации». Терафаб — часть стратегии США по снижению зависимости от китайского производства полупроводников. При поддержке закона CHIPS Act местное производство чипов укрепляется. Кроме того, на этой неделе федеральные прокуроры обвинили сооснователя Super Micro в незаконном экспорте чипов Nvidia для ИИ на сумму 2,5 миллиарда долларов в Китай — что ещё раз подтверждает важность отечественного производства.`,
+  },
+  'ru-rynki-iran-peremirie-nadezhdy': {
+    title: 'Биржи резко выросли: Трамп заявил о переговорах с Ираном',
+    date: '2026-03-23',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Заявление президента США Дональда Трампа о проведении переговоров с Ираном и прекращении ударов по энергетической инфраструктуре Ирана вызвало резкий рост на мировых биржах. Инвесторы надеются на скорое завершение ближневосточного конфликта.
+
+## Биржевые показатели (23 марта)
+
+- **Dow Jones:** +631 пункт (+1,38%), закрылся на отметке 46 208
+- **S&P 500:** +1,15%, 6 581 пункт
+- **Nasdaq:** +1,38%, 21 946 пунктов
+
+Это самый сильный рост на биржах за последние недели. Инвесторы ожидают, что иранский конфликт снизит цены на нефть и предотвратит глобальную рецессию.
+
+## Федеральная резервная система
+
+ФРС сохранила процентную ставку на уровне 3,50%-3,75%. Председатель ФРС Джером Пауэлл заявил:
+
+- Инфляция по-прежнему выше целевого уровня в 2%
+- Иранский конфликт повысил инфляционные ожидания
+- В 2026 году планируется ещё одно снижение ставки
+
+## Безработица выросла
+
+После двухмесячного снижения уровень безработицы вырос до 4,4% — это свидетельствует об ослаблении рынка труда.
+
+## Нефтяной рынок
+
+Иранский конфликт продолжает сотрясать энергетические рынки. Цена на нефть марки Brent с начала года выросла на 75%. Блокада Ормузского пролива вызвала самый тяжёлый кризис газоснабжения в истории Индии. Золото упало до минимума 2026 года — ниже 4 300 долларов.
+
+## Позиция Ирана
+
+Тегеран назвал заявления о переговорах «фейковой новостью». МИД Ирана отверг проведение каких-либо прямых переговоров с США. Эти противоречивые заявления усиливают неопределённость на рынках.`,
+  },
+  'ru-azerbaydzhan-iran-regionalnaya-bezopasnost': {
+    title: 'Азербайджан и Иран обсудили региональную безопасность: расследование дроновых ударов по Нахчывану продолжается',
+    date: '2026-03-23',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Министр иностранных дел Азербайджана Джейхун Байрамов провёл телефонный разговор с министром иностранных дел Ирана Сейедом Аббасом Арагчи. Министры обсудили вопросы региональной безопасности и снижения военной напряжённости.
+
+## Основные темы обсуждения
+
+- **Военная эскалация:** Министры обсудили возможные меры по прекращению военной эскалации на Ближнем Востоке
+- **Безопасность на Каспии:** Подчёркнута важность обеспечения безопасности в Каспийском регионе
+- **Нахчыван:** Байрамов выразил надежду на завершение расследования дроновых ударов по Нахчыванской Автономной Республике с территории Ирана
+
+## Другая дипломатическая активность
+
+В тот же день МИД Азербайджана вёл активную дипломатическую работу по нескольким направлениям:
+
+- **Бразилия:** Министр иностранных дел Бразилии Мауро Виейра обсудил с Байрамовым двустороннее сотрудничество и безопасность на Ближнем Востоке
+- **Россия:** МИД Азербайджана потребовал разъяснений от России в связи с тем, что представитель МИД РФ Мария Захарова использовала имя Национального лидера Азербайджана Гейдара Алиева в неуместном контексте
+
+## Военная деятельность
+
+В соответствии с планом учений на 2026 год 23 марта в направлении Баку и Абшерона были проведены учебные полёты беспилотных летательных аппаратов (БПЛА). Полёты состоялись около 16:00.`,
+  },
+  'ru-parizh-sotsialist-mer-italiya-referendum': {
+    title: 'Выборы в Европе: в Париже избран мэр-социалист, Италия на референдуме сказала Мелони «нет»',
+    date: '2026-03-23',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Европу потрясли масштабные местные выборы и референдумы. Результаты во Франции и Италии оказались неожиданными, изменив политический ландшафт обеих стран.
+
+## Париж: социалист Эммануэль Грегуар избран мэром
+
+Новым мэром Парижа стал кандидат от социалистов Эммануэль Грегуар. Партия Марин Ле Пен «Национальное объединение» не смогла добиться успеха ни в столице, ни в других крупных городах.
+
+**Значение:**
+- Левые укрепили свои позиции во французской столице
+- Слабость партии Ле Пен в крупных городах подтвердилась в очередной раз
+- Результат выборов отражает баланс левых и правых сил во французской политике
+
+## Италия: Мелони признала поражение на референдуме
+
+Премьер-министр Италии Джорджа Мелони признала поражение на референдуме о реформе судебной системы. Итальянские граждане отвергли предложенные Мелони изменения в судебной системе.
+
+**Значение:**
+- Крупнейшее политическое поражение правительства Мелони
+- Независимость итальянской судебной системы сохранена
+- Этот результат может осложнить будущие реформаторские планы Мелони
+
+## Другие результаты выборов
+
+Местные выборы также прошли в Словении. В целом выборы по всей Европе показали, что избиратели постепенно ищут альтернативу популистским партиям. Левоцентристские силы восстановили свои позиции в ряде крупных городов.`,
+  },
+  'ru-kubik-mira-otbor-italiya-playoff': {
+    title: 'Отбор на ЧМ: Италия в плей-офф, Гаттузо призвал «забыть прошлое»',
+    date: '2026-03-24',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Плей-офф отборочного турнира к чемпионату мира по футболу 2026 стартует на этой неделе. Сборная Италии в четверг встретится с Северной Ирландией в полуфинале. Главный тренер Дженнаро Гаттузо требует от футболистов забыть о прошлых неудачах.
+
+## Италия — Северная Ирландия (полуфинал)
+
+Гаттузо обратился к команде перед решающим матчем: «Прежде тактики нам нужен правильный настрой. Мы должны оставить катастрофу 2022 года позади».
+
+Италия не смогла квалифицироваться на ЧМ-2022, проиграв Северной Македонии в плей-офф, и второй раз подряд осталась без чемпионата мира. Это воспоминание до сих пор является болезненной темой в итальянском футболе.
+
+**Возможные соперники в финале:** Победитель сыграет 31 марта с Уэльсом или Боснией и Герцеговиной за путёвку на чемпионат мира.
+
+## Трансфер Гризманна
+
+Объявлено, что Антуан Гризманн подпишет двухлетний контракт (с опцией на 1 год) с «Орландо Сити». Звёздный нападающий сборной Франции начинает новую главу карьеры в MLS.
+
+## Проблемы в «Ливерпуле»
+
+Нападающий «Ливерпуля» Федерико Кьеза покинул расположение сборной Италии из-за физических проблем. Это создаёт дополнительную головную боль для Гаттузо при выборе состава.
+
+## Чемпионат мира 2026
+
+Напомним, что чемпионат мира 2026 года пройдёт в США, Канаде и Мексике. Впервые в истории в турнире примут участие 48 сборных. Раунд плей-офф определит последние места в финальном турнире.`,
+  },
 }
 
 export const newsSlugs = Object.keys(newsArticles)

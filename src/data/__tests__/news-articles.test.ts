@@ -14,8 +14,8 @@ describe('newsArticles collection', () => {
     expect(slugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 43 articles (24 AZ + 19 EN)', () => {
-    expect(slugs.length).toBe(43)
+  it('should contain exactly 57 articles (24 AZ + 19 EN + 7 TR + 7 RU)', () => {
+    expect(slugs.length).toBe(57)
   })
 
   it('should have 24 AZ articles', () => {
@@ -30,6 +30,20 @@ describe('newsArticles collection', () => {
       (a) => a.locale === 'en'
     )
     expect(enArticles.length).toBe(19)
+  })
+
+  it('should have 7 TR articles', () => {
+    const trArticles = Object.values(newsArticles).filter(
+      (a) => a.locale === 'tr'
+    )
+    expect(trArticles.length).toBe(7)
+  })
+
+  it('should have 7 RU articles', () => {
+    const ruArticles = Object.values(newsArticles).filter(
+      (a) => a.locale === 'ru'
+    )
+    expect(ruArticles.length).toBe(7)
   })
 })
 
@@ -56,7 +70,7 @@ describe('newsSlugs export', () => {
 describe('getArticlesByLocale', () => {
   it('should return all articles when no locale is provided', () => {
     const all = getArticlesByLocale()
-    expect(Object.keys(all).length).toBe(43)
+    expect(Object.keys(all).length).toBe(57)
   })
 
   it('should return only AZ articles for locale "az"', () => {
@@ -75,6 +89,22 @@ describe('getArticlesByLocale', () => {
     }
   })
 
+  it('should return only TR articles for locale "tr"', () => {
+    const tr = getArticlesByLocale('tr')
+    expect(Object.keys(tr).length).toBe(7)
+    for (const article of Object.values(tr)) {
+      expect(article.locale).toBe('tr')
+    }
+  })
+
+  it('should return only RU articles for locale "ru"', () => {
+    const ru = getArticlesByLocale('ru')
+    expect(Object.keys(ru).length).toBe(7)
+    for (const article of Object.values(ru)) {
+      expect(article.locale).toBe('ru')
+    }
+  })
+
   it('should return empty object for unsupported locale', () => {
     const fr = getArticlesByLocale('fr')
     expect(Object.keys(fr).length).toBe(0)
@@ -87,7 +117,7 @@ describe('getArticlesByLocale', () => {
 describe('getSlugsByLocale', () => {
   it('should return all slugs when no locale is provided', () => {
     const all = getSlugsByLocale()
-    expect(all.length).toBe(43)
+    expect(all.length).toBe(57)
   })
 
   it('should return 24 slugs for AZ locale', () => {
@@ -100,6 +130,22 @@ describe('getSlugsByLocale', () => {
     expect(enSlugs.length).toBe(19)
     for (const slug of enSlugs) {
       expect(slug.startsWith('en-')).toBe(true)
+    }
+  })
+
+  it('should return 7 slugs for TR locale', () => {
+    const trSlugs = getSlugsByLocale('tr')
+    expect(trSlugs.length).toBe(7)
+    for (const slug of trSlugs) {
+      expect(slug.startsWith('tr-')).toBe(true)
+    }
+  })
+
+  it('should return 7 slugs for RU locale', () => {
+    const ruSlugs = getSlugsByLocale('ru')
+    expect(ruSlugs.length).toBe(7)
+    for (const slug of ruSlugs) {
+      expect(slug.startsWith('ru-')).toBe(true)
     }
   })
 })
@@ -136,6 +182,20 @@ describe('news article slugs', () => {
     const enSlugs = getSlugsByLocale('en')
     for (const slug of enSlugs) {
       expect(slug.startsWith('en-')).toBe(true)
+    }
+  })
+
+  it('TR slugs should all start with "tr-"', () => {
+    const trSlugs = getSlugsByLocale('tr')
+    for (const slug of trSlugs) {
+      expect(slug.startsWith('tr-')).toBe(true)
+    }
+  })
+
+  it('RU slugs should all start with "ru-"', () => {
+    const ruSlugs = getSlugsByLocale('ru')
+    for (const slug of ruSlugs) {
+      expect(slug.startsWith('ru-')).toBe(true)
     }
   })
 })
@@ -284,9 +344,9 @@ describe('news article locale field', () => {
     }
   })
 
-  it('locale values should be either "az" or "en"', () => {
+  it('locale values should be "az", "en", "tr", or "ru"', () => {
     for (const article of articles) {
-      expect(['az', 'en']).toContain(article.locale)
+      expect(['az', 'en', 'tr', 'ru']).toContain(article.locale)
     }
   })
 })
