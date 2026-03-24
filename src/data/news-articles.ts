@@ -3081,6 +3081,366 @@ Hatırlatalım ki 2026 Dünya Kupası ABD, Kanada ve Meksika'da düzenlenecek. T
 
 Напомним, что чемпионат мира 2026 года пройдёт в США, Канаде и Мексике. Впервые в истории в турнире примут участие 48 сборных. Раунд плей-офф определит последние места в финальном турнире.`,
   },
+  // ── 24 Mart 2026 ──────────────────────────────────────────────────────
+  // News 1: NASA Artemis Ay missiyası (AZ, EN, TR, RU)
+  'elm-nasa-artemis-ay-missiyasi-yenilik': {
+    title: 'NASA Artemis proqramını genişləndirir: 2028-ci ilə qədər astronavtlar Aya qayıdacaq',
+    date: '2026-03-24',
+    category: 'Elm',
+    locale: 'az',
+    content: `NASA 24 mart tarixində keçirdiyi mətbuat konfransında Milli Kosmik Siyasətin icrasına dair mühüm yeniliklər açıqladı. Agentlik Artemis proqramını genişləndirərək 2027-ci ildə əlavə missiya planlaşdırdığını və hər il ən azı bir Ay səthi enişi həyata keçirəcəyini elan etdi.
+
+## Əsas açıqlamalar
+
+NASA administratoru Jared Isaacman Vaşinqtondakı Mary W. Jackson NASA baş qərargahında çıxış edərək proqramın yeni mərhələsini təqdim etdi:
+
+- **Artemis IV missiyası** 2027-ci ilə planlaşdırılıb — bu, əvvəlki cədvəldə nəzərdə tutulmayan əlavə missiyadır
+- 2028-ci ildən etibarən **hər il ən azı bir Ay enişi** həyata keçiriləcək
+- **Daimi Ay bazası** üçün ilkin elementlər qurulacaq
+- **Kosmik nüvə hərəkətləndirmə** texnologiyası üzrə tədqiqatlar sürətləndiriləcək
+
+## SpaceX-in artan rolu
+
+Bloomberg-in məlumatına görə, SpaceX Boeing-i üstələyərək Ay missiyalarında daha böyük rol alıb. SpaceX-in Starship aparatı həm ekipaj, həm də yük daşımalarında əsas vasitə olacaq. Bu qərar Boeing-in SLS raket proqramındakı gecikmələr və büdcə aşmalarından sonra gəlib.
+
+## Tarixi əhəmiyyət
+
+Son dəfə 1972-ci ildə Apollo 17 missiyası ilə insanlar Ayda olub. 50 ildən çox sonra amerikalı astronavtların Ay səthinə qayıdışı kosmik araşdırmalar tarixində yeni səhifə açacaq. Artemis proqramı həm də ilk dəfə bir qadını və rəngli astronavtu Aya göndərməyi hədəfləyir.
+
+## Beynəlxalq əməkdaşlıq
+
+Proqrama Avropa Kosmik Agentliyi (ESA), Yaponiya (JAXA) və Kanada (CSA) da qatılıb. Gateway orbital stansiyası beynəlxalq əməkdaşlıq çərçivəsində inşa ediləcək və Ay səthinə uzunmüddətli missiyalar üçün tranzit nöqtəsi rolunu oynayacaq.`,
+  },
+  'en-nasa-artemis-moon-mission-expansion': {
+    title: 'NASA Expands Artemis Program: Astronauts to Return to the Moon by 2028',
+    date: '2026-03-24',
+    category: 'Science',
+    locale: 'en',
+    content: `NASA announced major updates to its National Space Policy implementation at a press conference held on March 24 at the Mary W. Jackson NASA Headquarters in Washington. The agency revealed an expanded Artemis program with an additional mission planned for 2027 and a commitment to at least one lunar surface landing every year thereafter.
+
+## Key Announcements
+
+NASA Administrator Jared Isaacman outlined the program's new phase during a public event that included high-level panels on mission priorities:
+
+- **Artemis IV mission** is now scheduled for 2027, an additional mission not in the previous timeline
+- **Annual lunar landings** will begin in 2028, establishing a sustained human presence on the Moon
+- **Initial elements of a permanent lunar base** will be deployed
+- **Space nuclear propulsion** research is being accelerated for future deep-space missions
+
+## SpaceX Takes a Larger Role
+
+According to Bloomberg, SpaceX has displaced Boeing from a dominant position in NASA's Moon mission architecture. SpaceX's Starship vehicle will serve as the primary transport for both crew and cargo to the lunar surface. The shift follows persistent delays and cost overruns in Boeing's Space Launch System (SLS) rocket program.
+
+## Historic Significance
+
+The last time humans walked on the Moon was during the Apollo 17 mission in December 1972. More than 50 years later, the Artemis program aims to return American astronauts to the lunar surface. The program also targets landing the first woman and first person of color on the Moon.
+
+## International Collaboration
+
+The European Space Agency (ESA), Japan's JAXA, and the Canadian Space Agency (CSA) are contributing to the program. The Gateway orbital station will be built through international cooperation and serve as a transit point for long-duration lunar surface missions. The March 24 event included panels discussing how partner agencies are aligning their timelines with NASA's accelerated schedule.
+
+## What Comes Next
+
+NASA's renewed lunar ambitions come at a time of growing competition in space exploration. China has announced plans for its own crewed lunar mission by 2030, while India's Chandrayaan program continues to advance. The accelerated Artemis timeline reflects a strategic push to maintain American leadership in deep-space exploration.`,
+  },
+  'tr-nasa-artemis-ay-gorevleri-genisleme': {
+    title: 'NASA Artemis Programını Genişletiyor: Astronotlar 2028\'e Kadar Ay\'a Dönecek',
+    date: '2026-03-24',
+    category: 'Bilim',
+    locale: 'tr',
+    content: `NASA, 24 Mart tarihinde Washington'daki Mary W. Jackson NASA Genel Merkezi'nde düzenlediği basın toplantısında Ulusal Uzay Politikası'nın uygulanmasına ilişkin önemli güncellemeler açıkladı. Ajans, Artemis programını genişleterek 2027'de ek bir görev planladığını ve ardından her yıl en az bir Ay yüzeyi inişi gerçekleştireceğini duyurdu.
+
+## Önemli Açıklamalar
+
+NASA Yöneticisi Jared Isaacman, programın yeni aşamasını kamuya açık bir etkinlikte sundu:
+
+- **Artemis IV görevi** 2027'ye planlandı — önceki takvimde yer almayan ek bir görev
+- 2028'den itibaren **her yıl en az bir Ay inişi** gerçekleştirilecek
+- **Kalıcı Ay üssünün** ilk unsurları kurulacak
+- **Uzay nükleer itki** araştırmaları hızlandırılacak
+
+## SpaceX'in Artan Rolü
+
+Bloomberg'in haberine göre SpaceX, Boeing'i geride bırakarak Ay görevlerinde daha büyük rol üstlendi. SpaceX'in Starship aracı hem mürettebat hem de kargo taşımacılığında ana araç olacak. Bu karar, Boeing'in SLS roket programındaki gecikmeler ve bütçe aşımlarının ardından geldi.
+
+## Tarihi Önem
+
+İnsanlar en son 1972 yılında Apollo 17 göreviyle Ay'da yürüdü. 50 yıldan uzun süre sonra Amerikalı astronotların Ay yüzeyine dönüşü, uzay araştırmaları tarihinde yeni bir sayfa açacak. Program ayrıca ilk kadın ve ilk siyahi astronotu Ay'a göndermeyi hedefliyor.
+
+## Uluslararası İşbirliği
+
+Avrupa Uzay Ajansı (ESA), Japonya'nın JAXA'sı ve Kanada Uzay Ajansı (CSA) programa katkıda bulunuyor. Gateway yörünge istasyonu uluslararası işbirliği çerçevesinde inşa edilecek ve uzun süreli Ay yüzeyi görevleri için aktarma noktası olarak hizmet verecek.`,
+  },
+  'ru-nasa-artemis-lunnaya-missiya-rasshirenie': {
+    title: 'NASA расширяет программу Artemis: астронавты вернутся на Луну к 2028 году',
+    date: '2026-03-24',
+    category: 'Наука',
+    locale: 'ru',
+    content: `NASA объявило о крупных обновлениях реализации Национальной космической политики на пресс-конференции 24 марта в штаб-квартире NASA имени Мэри У. Джексон в Вашингтоне. Агентство расширило программу Artemis, запланировав дополнительную миссию на 2027 год и обязавшись проводить как минимум одну посадку на поверхность Луны ежегодно.
+
+## Ключевые объявления
+
+Администратор NASA Джаред Айзекман представил новый этап программы на публичном мероприятии:
+
+- **Миссия Artemis IV** запланирована на 2027 год — дополнительная миссия, не предусмотренная ранее
+- С 2028 года будут проводиться **ежегодные лунные посадки**
+- Начнётся развёртывание **первых элементов постоянной лунной базы**
+- Ускоряются исследования в области **ядерной космической тяги**
+
+## Возросшая роль SpaceX
+
+По данным Bloomberg, SpaceX вытеснила Boeing с доминирующей позиции в архитектуре лунных миссий NASA. Аппарат Starship от SpaceX станет основным средством доставки экипажа и грузов на лунную поверхность. Решение принято после продолжающихся задержек и превышения бюджета в программе ракеты SLS компании Boeing.
+
+## Историческое значение
+
+Последний раз люди побывали на Луне в декабре 1972 года в рамках миссии «Аполлон-17». Спустя более 50 лет программа Artemis призвана вернуть американских астронавтов на лунную поверхность. Программа также нацелена на отправку первой женщины и первого темнокожего астронавта на Луну.
+
+## Международное сотрудничество
+
+В программе участвуют Европейское космическое агентство (ESA), японское JAXA и Канадское космическое агентство (CSA). Орбитальная станция Gateway будет построена в рамках международного сотрудничества и послужит транзитным пунктом для длительных лунных миссий.`,
+  },
+  // News 2: Çilidə ekoloji etiraz (AZ, EN, TR, RU)
+  'dunya-cilide-ekoloji-etiraz-aksiyasi': {
+    title: 'Çilidə minlərlə insan prezidentin ekoloji qərarlarına etiraz etdi',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Çilinin paytaxtı Santyaqoda və ölkənin 15 digər şəhərində minlərlə insan Dünya Su Günü münasibətilə küçələrə çıxaraq prezident Xose Antonio Kastın ekoloji siyasətinə etirazını bildirib. Aksiya zamanı nümayişçilər polislə toqquşub.
+
+## Etirazın səbəbi
+
+Mühafizəkar prezident Kast vəzifəyə başladığı ilk gün 43 ekoloji müdafiə qaydalarını ləğv edib. Bu qaydalar arasında:
+
+- **Nadir heyvan növlərinin qorunması** — Darwin qurbağası və Humboldt pinqvini kimi növlər
+- **Milli parkların yaradılması** — yeni qoruq ərazilərinin təsis edilməsi
+- **Göl dekonminasiyası** — Villarrica gölünün təmizlənmə planları
+- **İstilik elektrik stansiyalarının emissiya tənzimlənməsi**
+
+Bu qaydalar əvvəlki solçu prezident Gabriel Boriç tərəfindən qəbul edilmişdi.
+
+## Nümayişçilərin tələbləri
+
+Aksiyaçılar "Təbiəti cəzalandırma!" şüarı altında yürüş ediblər. Su Müdafiəsi Hərəkatının sözçüsü Kristobal Rodriges bildirib ki, Çilidə hələ də 1,4 milyon insan təmiz içməli suya çıxışı yoxdur. "Yeni prezident Pinoçet dövrünün irsini təmsil edir və təbiəti əvvəllər görünməmiş səviyyədə əmtəəyə çevirir," — deyə o əlavə edib.
+
+## Beynəlxalq reaksiya
+
+Ekoloji təşkilatlar Kastın qərarlarını kəskin tənqid edib. BMT Ətraf Mühit Proqramı narahatlığını bildirib. Latın Amerikası ölkələrinin çoxunda ekoloji müdafiə qaydalarının gücləndirildiyi bir vaxtda Çilinin əks istiqamətdə hərəkət etməsi beynəlxalq ictimaiyyətin diqqətini cəlb edib.`,
+  },
+  'en-chile-environmental-protest-kast-rollback': {
+    title: 'Thousands Protest in Chile Against President Kast\'s Environmental Rollbacks',
+    date: '2026-03-24',
+    category: 'World',
+    locale: 'en',
+    content: `Thousands of people marched in Santiago and 15 other cities across Chile on World Water Day to protest President Jose Antonio Kast's sweeping rollback of environmental protections. Demonstrators clashed with police during the march organized under the slogan "Don't Kast-igate Nature."
+
+## What Triggered the Protests
+
+The arch-conservative president ordered the halt of 43 environmental protection regulations on his first day in office. The rolled-back measures had been signed by left-wing former President Gabriel Boric and included:
+
+- **Endangered species protections** for Darwin's frog and the Humboldt penguin
+- **New national park designations** across the country
+- **Decontamination plans** for Lake Villarrica and other polluted waterways
+- **Emission regulations** for thermoelectric power plants
+
+## Demonstrators' Demands
+
+Environmental organizations said the rollbacks threaten Chile's biodiversity and public health. Cristobal Rodriguez, national spokesperson for the Movement for the Defense and Access to Water, Land and the Environment, noted that 1.4 million Chileans still lack access to clean drinking water. "The new president represents a setback that reflects his Pinochet-era roots and is commodifying nature to levels never seen before," Rodriguez said.
+
+## Scope of the Protests
+
+The demonstrations drew thousands of participants across the country, making it one of the largest environmental protests in Chile since 2019. Organizers said the response exceeded expectations, with particularly large turnouts in Valparaiso, Concepcion, and Temuco in addition to Santiago.
+
+## International Response
+
+International environmental organizations have sharply criticized Kast's decisions. The UN Environment Programme expressed concern over the scope of the rollbacks. Chile's move stands in contrast to the trend across most of Latin America, where environmental protections have been strengthening in recent years.`,
+  },
+  'tr-sili-cevre-protestolari-kast-karari': {
+    title: 'Şili\'de Binlerce Kişi Başkan Kast\'ın Çevre Kararlarını Protesto Etti',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Şili'nin başkenti Santiago ve 15 diğer şehirde binlerce kişi Dünya Su Günü'nde sokaklara çıkarak Devlet Başkanı José Antonio Kast'ın çevre politikalarını protesto etti. "Doğayı Cezalandırma!" sloganıyla düzenlenen yürüyüşte göstericiler polisle çatıştı.
+
+## Protestoların Nedeni
+
+Aşırı muhafazakâr başkan, göreve başladığı ilk gün 43 çevre koruma düzenlemesini askıya aldı. Kaldırılan düzenlemeler arasında:
+
+- **Nesli tehlike altındaki türlerin korunması** — Darwin kurbağası ve Humboldt pengueni gibi türler
+- **Yeni milli park ilanları**
+- **Villarrica Gölü** ve diğer kirlenmiş su yolları için dekontaminasyon planları
+- **Termik santraller** için emisyon düzenlemeleri
+
+Bu düzenlemeler, önceki sol eğilimli Başkan Gabriel Boric tarafından onaylanmıştı.
+
+## Göstericilerin Talepleri
+
+Su, Toprak ve Çevre Savunma ve Erişim Hareketi sözcüsü Cristóbal Rodríguez, Şili'de hâlâ 1,4 milyon kişinin temiz içme suyuna erişiminin olmadığını belirtti. "Yeni başkan, Pinochet dönemi köklerini yansıtan bir gerilemeyi temsil ediyor ve doğayı daha önce görülmemiş düzeylerde metalaştırıyor," dedi.
+
+## Uluslararası Tepkiler
+
+Uluslararası çevre kuruluşları Kast'ın kararlarını sert bir şekilde eleştirdi. BM Çevre Programı endişelerini dile getirdi. Latin Amerika'nın çoğunda çevre korumalarının güçlendirildiği bir dönemde Şili'nin ters yönde ilerlemesi dikkat çekti.`,
+  },
+  'ru-chili-ekologicheskie-protesty-kast': {
+    title: 'Тысячи людей в Чили вышли на протест против экологических решений президента Каста',
+    date: '2026-03-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Тысячи людей вышли на улицы Сантьяго и 15 других городов Чили во Всемирный день воды, протестуя против отмены экологических норм президентом Хосе Антонио Кастом. Во время марша под лозунгом «Не наказывайте природу!» произошли столкновения демонстрантов с полицией.
+
+## Причина протестов
+
+Ультраконсервативный президент в первый же день вступления в должность приостановил действие 43 нормативных актов в сфере охраны окружающей среды. Отменённые меры были подписаны предыдущим левым президентом Габриэлем Боричем и включали:
+
+- **Защиту исчезающих видов** — лягушки Дарвина и пингвина Гумбольдта
+- **Создание новых национальных парков**
+- **Планы по очистке** озера Вильяррика и других загрязнённых водоёмов
+- **Регулирование выбросов** теплоэлектростанций
+
+## Требования демонстрантов
+
+Экологические организации заявили, что отмена норм угрожает биоразнообразию и здоровью населения Чили. Представитель Движения в защиту воды, земли и окружающей среды Кристобаль Родригес отметил, что 1,4 миллиона чилийцев по-прежнему лишены доступа к чистой питьевой воде. «Новый президент — это откат к временам Пиночета. Он превращает природу в товар в невиданных ранее масштабах», — заявил Родригес.
+
+## Международная реакция
+
+Международные экологические организации резко осудили решения Каста. Программа ООН по окружающей среде выразила обеспокоенность масштабом отмен. На фоне усиления экологической защиты в большинстве стран Латинской Америки движение Чили в обратном направлении привлекло внимание мировой общественности.`,
+  },
+  // News 3: Kuba humanitar böhranı (AZ, EN, TR, RU)
+  'dunya-kuba-humanitar-bohran-yardim': {
+    title: 'Kubaya 33 ölkədən 20 ton humanitar yardım göndərildi: ada dövlətində böhran dərinləşir',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'az',
+    content: `33 ölkədən 120 təşkilatın 650-dən çox nümayəndəsi təxminən 20 ton humanitar yardımla Kubaya gəlib. "Nuestra America" adlı həmrəylik karvanı İtaliya, Fransa, İspaniya, ABŞ və bir neçə Latın Amerikası ölkəsindən hava yolu ilə, Meksikadan isə dəniz yolu ilə yardım çatdırıb.
+
+## Böhranın səbəbləri
+
+Kuba 2026-cı ilin əvvəlindən bəri heç bir damcı yanacaq almayıb. ABŞ-ın neft tədarükünü bloklama qərarı adanın onsuz da zəif iqtisadiyyatını tam humanitar böhrana çevirib:
+
+- **Elektrik kəsintiləri** — uzun müddətli elektrik kəsintiləri bütün ölkəni əhatə edib
+- **Xəstəxanalar** — tibb müəssisələri normal fəaliyyət göstərə bilmir
+- **Ərzaq istehsalı** — kənd təsərrüfatı yanacaqsız iflic olub
+- **Su təchizatı** — nasos stansiyaları işləmir
+- **Nəqliyyat** — ictimai nəqliyyat demək olar ki, dayanıb
+
+## Etirazlar
+
+Kubada 13-cü ardıcıl gün etirazlar davam edir. Əhali elektrik kəsintilərinə, yanacaq çatışmazlığına və dərinləşən iqtisadi böhrana qarşı küçələrə çıxıb.
+
+## Beynəlxalq yardım
+
+Müxtəlif ölkələr yardım göndərib:
+- **Meksika** — iki böyük yardım partiyası
+- **Çili** — multilateral tərəfdaşlar vasitəsilə 1 milyon dollar
+- **İspaniya** — BMT vasitəsilə yardım
+- **ABŞ** — Katolik kilsəsi vasitəsilə 9 milyon dollar
+- **Çin** — 80 milyon dollar maliyyə yardımı və 60.000 ton düyü
+
+## Vəziyyətin qiymətləndirilməsi
+
+Humanitar təşkilatlar vəziyyəti "dönüş nöqtəsi" adlandırıb. Səhiyyə, ərzaq sistemləri, elektrik və ictimai xidmətlər eyni vaxtda sürətlə pisləşir. Mütəxəssislər xəbərdarlıq edir ki, təcili beynəlxalq müdaxilə olmasa, vəziyyət daha da ağırlaşacaq.`,
+  },
+  'en-cuba-humanitarian-crisis-aid-convoy': {
+    title: 'Cuba Receives 20 Tons of Humanitarian Aid from 33 Countries as Crisis Deepens',
+    date: '2026-03-24',
+    category: 'World',
+    locale: 'en',
+    content: `More than 650 delegates from 33 countries and 120 organizations arrived in Cuba carrying approximately 20 tons of humanitarian aid as the island faces its worst crisis in decades. The solidarity convoy, known as "Nuestra America," delivered supplies by air from Italy, France, Spain, the United States, and several Latin American countries, with additional shipments arriving by sea from Mexico.
+
+## Root of the Crisis
+
+Cuba has not received a single drop of fuel since the start of 2026. The US decision to block oil shipments to the island has transformed what was already a fragile economy into a full-blown humanitarian emergency:
+
+- **Prolonged blackouts** affecting the entire country
+- **Hospitals** unable to maintain normal operations
+- **Food production** paralyzed without fuel for agricultural machinery
+- **Water supply** disrupted as pumping stations go offline
+- **Public transportation** virtually halted
+
+## Ongoing Protests
+
+Cuba is experiencing its 13th consecutive day of social unrest. Citizens have taken to the streets across the island to protest blackouts, fuel shortages, and a deepening economic crisis that has left millions struggling to meet basic needs.
+
+## International Aid Response
+
+Multiple countries have stepped in with assistance:
+- **Mexico** dispatched two large batches of aid
+- **Chile** announced a 1 million dollar contribution through multilateral partners
+- **Spain** is channeling aid through the United Nations
+- **United States** is sending approximately 9 million dollars through the Catholic Church
+- **China** approved 80 million dollars in financial assistance and a donation of 60,000 tons of rice
+
+## Assessment
+
+Humanitarian organizations have described the situation as a "tipping point." Healthcare, food systems, electricity, and public services are deteriorating rapidly and simultaneously, leaving Cubans with few avenues for formal support. Experts warn that without urgent international intervention, the crisis will continue to escalate.`,
+  },
+  'tr-kuba-insani-kriz-yardim-konvoyu': {
+    title: 'Küba\'ya 33 Ülkeden 20 Ton İnsani Yardım Gönderildi: Ada Ülkesinde Kriz Derinleşiyor',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `33 ülke ve 120 kuruluştan 650'den fazla temsilci, yaklaşık 20 ton insani yardımla Küba'ya ulaştı. "Nuestra America" adlı dayanışma konvoyu İtalya, Fransa, İspanya, ABD ve çeşitli Latin Amerika ülkelerinden hava yoluyla, Meksika'dan ise deniz yoluyla yardım taşıdı.
+
+## Krizin Kaynağı
+
+Küba 2026 yılının başından bu yana tek damla yakıt almadı. ABD'nin petrol sevkiyatlarını engelleme kararı, zaten kırılgan olan ekonomiyi tam bir insani krize dönüştürdü:
+
+- **Uzun süreli elektrik kesintileri** tüm ülkeyi etkiliyor
+- **Hastaneler** normal işleyişlerini sürdüremiyor
+- **Gıda üretimi** tarım makineleri için yakıt olmadan felç oldu
+- **Su temini** — pompa istasyonları çalışmıyor
+- **Toplu taşıma** neredeyse tamamen durdu
+
+## Devam Eden Protestolar
+
+Küba'da 13. gün üst üste protestolar sürüyor. Vatandaşlar elektrik kesintilerine, yakıt kıtlığına ve derinleşen ekonomik krize karşı sokaklara çıkmaya devam ediyor.
+
+## Uluslararası Yardım
+
+Birçok ülke yardım gönderdi:
+- **Meksika** — iki büyük yardım partisi
+- **Şili** — çok taraflı ortaklar aracılığıyla 1 milyon dolar
+- **İspanya** — BM aracılığıyla yardım
+- **ABD** — Katolik Kilisesi aracılığıyla 9 milyon dolar
+- **Çin** — 80 milyon dolar mali yardım ve 60.000 ton pirinç bağışı
+
+## Değerlendirme
+
+İnsani yardım kuruluşları durumu "dönüm noktası" olarak nitelendirdi. Uzmanlar, acil uluslararası müdahale olmadan krizin daha da derinleşeceği konusunda uyarıyor.`,
+  },
+  'ru-kuba-gumanitarnyj-krizis-pomoshch': {
+    title: 'Куба получила 20 тонн гуманитарной помощи из 33 стран: кризис на острове усугубляется',
+    date: '2026-03-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Более 650 делегатов из 33 стран и 120 организаций прибыли на Кубу с примерно 20 тоннами гуманитарной помощи. Караван солидарности «Nuestra America» доставил грузы по воздуху из Италии, Франции, Испании, США и ряда латиноамериканских стран, а также морским путём из Мексики.
+
+## Причины кризиса
+
+Куба не получила ни капли топлива с начала 2026 года. Решение США заблокировать поставки нефти на остров превратило и без того хрупкую экономику в полномасштабный гуманитарный кризис:
+
+- **Длительные отключения электричества** затрагивают всю страну
+- **Больницы** не могут поддерживать нормальную работу
+- **Производство продовольствия** парализовано без топлива для сельскохозяйственной техники
+- **Водоснабжение** нарушено — насосные станции не работают
+- **Общественный транспорт** практически остановился
+
+## Продолжающиеся протесты
+
+На Кубе 13-й день подряд продолжаются протесты. Граждане выходят на улицы, протестуя против отключений электричества, нехватки топлива и углубляющегося экономического кризиса.
+
+## Международная помощь
+
+Ряд стран направил помощь:
+- **Мексика** — две крупные партии помощи
+- **Чили** — 1 миллион долларов через многосторонних партнёров
+- **Испания** — помощь через ООН
+- **США** — около 9 миллионов долларов через Католическую церковь
+- **Китай** — 80 миллионов долларов финансовой помощи и 60 000 тонн риса
+
+## Оценка ситуации
+
+Гуманитарные организации назвали ситуацию «точкой невозврата». Здравоохранение, продовольственные системы, электроснабжение и государственные услуги ухудшаются стремительно и одновременно. Эксперты предупреждают: без срочного международного вмешательства кризис продолжит усугубляться.`,
+  },
 }
 
 export const newsSlugs = Object.keys(newsArticles)

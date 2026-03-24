@@ -1549,4 +1549,176 @@ QR kodların ən vacib xüsusiyyətlərindən biri daxili xəta düzəltmədir:
 
 Vaxtım Yoxdu-da pulsuz QR Kod Generatorunu sınayın. Bütün məlumat növlərini dəstəkləyir, rəng fərdiləşdirmə və SVG eksportu təklif edir, hər şeyi brauzerinizdə emal edir. Su nişanı olmadan limitsiz QR kodlar yaradın.`,
   },
+  'top-10-free-developer-tools-every-programmer-needs-2026': {
+    title: '2026-da Hər Proqramçının Ehtiyac Duyduğu 10 Ən Yaxşı Pulsuz Developer Aləti',
+    date: '2026-03-24',
+    relatedTools: ['json-formatter', 'regex-tester', 'hash-generator', 'base64-encode-decode', 'jwt-decoder', 'css-minifier', 'html-minifier', 'js-minifier', 'cron-parser', 'json-to-yaml'],
+    content: `2026-cı ildə developer alət dəsti cəmi iki il əvvəlki ilə müqayisədə kökündən fərqlənir. Brauzer əsaslı alətlər o qədər güclənib ki, bir çox developer artıq gündəlik tapşırıqlar üçün masaüstü proqramlar quraşdırmır. Ən yaxşı tərəfi odur ki, ən vacib alətlər indi tamamilə pulsuz, qeydiyyat tələb etmir və maksimum məxfilik və sürət üçün hər şeyi brauzerinizdə emal edir.
+
+2026-cı ildə hər proqramçının əlaqəli siyahısında olmalı olan 10 ən yaxşı pulsuz developer aləti və hər birindən ən yaxşı nəticə əldə etmə yolları.
+
+## 1. JSON Formatlayıcı və Doğrulayıcı
+
+JSON veb API-lərin, konfiqurasiya fayllarının və məlumat mübadiləsinin əsasını təşkil edir. Etibarlı JSON formatlayıcı xam, sıxılmış JSON-u yapışdırıb anında gözəl formatlanmış, sintaksis vurğulanmış görünüş almağa imkan verir. Formatlamanın ötəsinə keçərək, ən yaxşı alətlər JSON-unuzu spesifikasiyaya uyğun doğrulayır və sintaksis xətası olan dəqiq sətir və simvolu göstərir.
+
+**Nə zaman lazım olur:** API cavablarını debug etmək, webhook yüklərini yoxlamaq, konfiqurasiya fayllarını təmizləmək və məlumat ixraclarını göndərməzdən əvvəl doğrulamaq.
+
+## 2. Regex Test Edici
+
+Müntəzəm ifadələr güclüdür amma ilk cəhddə düzgün yazmaq kəskin çətindir. Real vaxt uyğunlaşdırma, tutma qrupu vurğulanması və sürətli istinad vərəqəsi olan regex test edici saatlarla sınaq-səhvdən xilas edir. 2026-cı ildə ən yaxşı test edicilər nümunənizin hər hissəsinin nə etdiyini sadə dildə izah edir.
+
+**Nə zaman lazım olur:** Jurnal fayllarını təhlil etmək, form girişlərini doğrulamaq, sətirlərdən məlumat çıxarmaq, axtarış nümunələri qurmaq və URL yenidən yazma qaydaları hazırlamaq.
+
+## 3. Base64 Kodlayıcı və Dekoder
+
+Base64 kodlaması veb inkişafda daim qarşılaşılır -- CSS və HTML-də şəkillər yerləşdirməkdən autentifikasiya tokenlərinə, e-poçt qoşmalarına və məlumat URI-lərinə qədər. Brauzer əsaslı kodlayıcı həm mətn-dən-Base64-ə, həm də fayl-dan-Base64-ə çevirmələri anında həll edir.
+
+**Nə zaman lazım olur:** Şəkilləri sətirdaxili yerləşdirmək, JWT yüklərini dekod etmək, API autentifikasiya başlıqları ilə işləmək və e-poçt kodlaşdırma problemlərini araşdırmaq.
+
+## 4. Hash Generatoru
+
+Fayl bütövlüyünü doğrulamaq, deployment artefaktları üçün yoxlama cəmləri yaratmaq və ya unikal identifikatorlar yaratmaq istəyirsinizsə -- MD5, SHA-1, SHA-256 və SHA-512 dəstəkləyən hash generatoru əvəzsizdir.
+
+**Nə zaman lazım olur:** Yüklənmiş faylların bütövlüyünü doğrulamaq, kontentə görə ünvanlanabilir identifikatorlar yaratmaq, API imza hashları yaratmaq və fayl versiyalarını müqayisə etmək.
+
+## 5. JWT Dekoder
+
+JSON Web Tokenləri müasir autentifikasiya üçün standartdır. Tokenin başlığını, yükünü və vaxtının bitməsini kod yazmadan tez yoxlaya bilmək auth axınlarını debug etmək üçün vacibdir. Yaxşı JWT dekoder tokeni anında təhlil edir və vaxtının bitib-bitmədiyini vurğulayır.
+
+## 6. CSS Minifikator
+
+Hər kilobayt səhifə yükləmə performansı üçün vacibdir. CSS minifikator şərh, boşluq və artıq sintaksisi silidir və adətən fayl ölçüsünü 20-40 faiz azaldır.
+
+## 7. Cron İfadəsi Ayrıştırıcı
+
+Cron tapşırıqları hər backend sistemdə arxa plan proseslərini idarə edir. Cron ayrıştırıcı \`0 */6 * * 1-5\` kimi ifadələri insanların oxuya biləcəyi cədvəllərə çevirir və cədvəlinizi deploy etməzdən əvvəl doğrulamaq üçün növbəti beş icra vaxtını göstərir.
+
+## 8. JSON-dan YAML-a Çevirici
+
+Kubernetes, Docker Compose və GitHub Actions konfiqurasiyaları mürəkkəbləşdikcə, developerlər tez-tez JSON və YAML formatları arasında keçid etməli olur. İkitərəfli çevirici strukturu, şərhləri və iç-içə obyektləri qoruyaraq əhəmiyyətli manual yenidən formatlama səyindən xilas edir.
+
+## 9. HTML və JavaScript Minifikatorlar
+
+Frontend performans optimizasiyası aktiv ölçülərini minimuma endirməklə başlayır. HTML və JavaScript minifikatorlar mənbə kodunuzdan boşluq, şərh və lazımsız simvolları silir.
+
+## 10. Rəng Seçici və Çevirici
+
+Dizaynerlər rəngləri HEX-də təhvil verir, developerlər JavaScript üçün RGB lazımdır, CSS custom properties isə tez-tez HSL istifadə edir. Hər üç format arasında anında çevirən, tamamlayıcı palitralar yaradan və WCAG kontrast nisbətlərini yoxlayan rəng seçici dizayn-inkişaf boşluğunu aradan qaldırır.
+
+Bu on alətin hamısı Vaxtım Yoxdu-da pulsuzdur. Qeydiyyat yox, gizli limit yox, server yükləmə yox. Aləti açın, işinizi görün, qurmağa qayıdın.`,
+  },
+  'how-to-optimize-pdf-workflow-free-online-tools': {
+    title: 'Pulsuz Onlayn Alətlərlə PDF İş Axınınızı Necə Optimallaşdırmaq Olar',
+    date: '2026-03-24',
+    relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
+    content: `PDF-lər peşəkar həyatın hər yerindədir. Fakturalar, müqavilələr, hesabatlar, təqdimatlar, CV-lər və hüquqi sənədlər -- hamısı PDF olaraq gəlir. 2026-cı ildə brauzer əsaslı PDF alətləri o qədər inkişaf edib ki, əksər peşəkarlar artıq masaüstü proqram quraşdırmağa ehtiyac duymur. Pulsuz onlayn alətlərdən istifadə edərək effektiv PDF iş axını qurmağın yollarını araşdıraq.
+
+## Üç Əsas PDF Əməliyyatı
+
+Hər PDF iş axını üç fundamental əməliyyat ətrafında dövr edir: birləşdirmə, bölmə və sıxışdırma. Bu üçünə hakim olun və masanıza gələn PDF tapşırıqlarının 90 faizini idarə edə bilərsiniz.
+
+### PDF Birləşdirmə
+
+Birləşdirmə birdən çox PDF faylını tək sənəddə birləşdirir. Ayrı fəsillərdən tam hesabat yığmaq, mühasibat üçün birdən çox fakturanı tək faylda birləşdirmək, müxtəlif komanda üzvlərinin töhfələrindən vahid təqdimat yaratmaq lazım olanda bu əməliyyata müraciət edirsiniz.
+
+**Ən yaxşı təcrübələr:**
+- Mənbə fayllarınızı rəqəmsal prefikslə adlandırın (01-giris.pdf, 02-tehlil.pdf) ki, birləşdirmədən əvvəl düzgün sıralansın
+- Yükləməzdən əvvəl birləşdirilmiş nəticəni əvvəlcədən baxın
+- İnteraktiv elementlərin -- form sahələri və hiperlinklərin birləşmədən sonra qaldığını yoxlayın
+
+### PDF Bölmə
+
+Bölmə böyük PDF-dən müəyyən səhifələri ayrı fayllara çıxarır. Həmkarınız üçün uzun hesabatdan tək səhifə çıxarmaq, toplu hesab çıxarışından fərdi fakturaları ayırmaq, dərslikdən xüsusi fəsilləri çıxarmaq lazım olanda istifadə olunur.
+
+### PDF Sıxışdırma
+
+PDF sıxışdırma vizual keyfiyyəti qoruyarkən fayl ölçüsünü azaldır. PDF e-poçt qoşma limitlərini aşanda, fayl ölçüsü məhdudiyyəti olan sistemlərə sənəd yükləyəndə, yavaş şəbəkə bağlantıları üzərindən faylları paylaşanda, böyük sənəd kolleksiyalarını arxivləyəndə vacibdir.
+
+## PDF İş Axını Qurmaq
+
+### Ssenari 1: Aylıq Hesabat Yığma
+
+1. Komandanızdan fərdi hesabat bölmələrini toplayın
+2. Bütün bölmələri düzgün sırada tək PDF-də birləşdirin
+3. Paylanma üçün birləşdirilmiş faylı sıxışdırın
+4. Rəhbərlərə yalnız xülasə lazımdırsa xülasə versiyasını bölün
+
+### Ssenari 2: Müqavilə Emalı
+
+1. Çoxsəhifəli müqavilədən imza səhifəsini ayırın
+2. İmza səhifəsini imzalatdırın
+3. İmzalanmış səhifəni orijinal müqaviləyə yenidən birləşdirin
+4. Arxiv saxlama üçün son versiyanı sıxışdırın
+
+## Məxfilik və Təhlükəsizlik
+
+Həssas məlumat ehtiva edən PDF-lərlə işləyərkən məxfilik çox vacibdir. Ən təhlükəsiz yanaşma faylları tamamilə brauzerinizdə emal edən alətlərdən istifadə etməkdir. Müştəritərəfi emal fayllarınızın cihazınızı heç vaxt tərk etməməsi deməkdir.
+
+Hər üç əsas PDF aləti -- birləşdirmə, bölmə və sıxışdırma -- Vaxtım Yoxdu-da pulsuzdur. Hər şeyi brauzerinizdə emal edir, qeydiyyat tələb etmir və istənilən ölçülü faylları idarə edir.`,
+  },
+  'complete-guide-image-optimization-for-web': {
+    title: 'Veb Üçün Şəkil Optimizasiyasına Tam Bələdçi',
+    date: '2026-03-24',
+    relatedTools: ['image-compress', 'image-convert', 'image-resize', 'image-crop', 'svg-to-png', 'placeholder-image'],
+    content: `Şəkillər müasir vebdə orta hesabla səhifə çəkisinin 50 faizini təşkil edir. Tək optimallaşdırılmamış hero şəkil səhifə yükləmənizə 3-5 MB əlavə edə bilir ki, bu da Core Web Vitals xallarını məhv edir, tərk etmə nisbətlərini artırır və axtarış motoru sıralamalarına mənfi təsir göstərir. 2026-cı ildə şəkil optimizasiyası seçim deyil -- trafik uğrunda mübarizə aparan hər veb-sayt üçün fundamental tələbdir.
+
+Bu bələdçi veb üçün şəkilləri optimallaşdırmaq haqqında bilməli olduğunuz hər şeyi əhatə edir.
+
+## Şəkil Optimizasiyası Niyə Vacibdir
+
+Rəqəmlər özləri danışır:
+
+- **Səhifə sürəti:** Google səhifə yükləmə sürətinin sıralama faktoru olduğunu təsdiqləyib. Şəkillər adətən yavaş yükləmə vaxtlarının ən böyük səbəbidir.
+- **Core Web Vitals:** Ən Böyük Məzmunlu Rəsm (LCP), Google-un üç Core Web Vitals-ından biri, ən böyük görünən elementin nə qədər tez yükləndiyini birbaşa ölçür. Bu element demək olar ki, həmişə şəkildir.
+- **Tərk etmə nisbəti:** Araşdırmalar ardıcıl olaraq göstərir ki, mobil istifadəçilərin 53 faizi 3 saniyədən çox yüklənən səhifələri tərk edir.
+
+## Doğru Şəkil Formatını Seçmək
+
+### WebP
+
+WebP 2026-cı ildə əksər veb şəkillər üçün standart seçimdir. Həm itkili, həm də itkisiz sıxışdırma, şəffaflıq və animasiya dəstəkləyir. WebP faylları adətən eyni vizual keyfiyyətdə ekvivalent JPEG fayllarından 25-35 faiz kiçikdir.
+
+**WebP-ni istifadə edin:** Hero şəkillər, məhsul fotoları, blog illüstrasiyaları, kiçik şəkillər.
+
+### AVIF
+
+AVIF sıxışdırmanı WebP-dən bir addım irəli aparır, ekvivalent keyfiyyətdə 20 faiz daha yaxşı sıxışdırma təklif edir.
+
+### JPEG
+
+JPEG fotoqrafik şəkillər üçün universal alternativ olaraq qalır. E-poçt bülletenləri, sosial media yükləmələri, sənədlər üçün istifadə edin.
+
+### PNG
+
+PNG şəffaflıqla itkisiz sıxışdırma lazım olanda düzgün seçimdir. Loqolar, ikonlar, ekran görüntüləri, diaqramlar üçün istifadə edin.
+
+### SVG
+
+SVG keyfiyyət itkisi olmadan istənilən ölçüyə miqyaslanabilən vektor formatdır. Loqolar, ikonlar, illüstrasiyalar, diaqramlar üçün istifadə edin.
+
+## Sıxışdırma Texnikaları
+
+### İtkili Sıxışdırma
+
+İtkili sıxışdırma fayl ölçüsünü azaltmaq üçün şəkil məlumatlarını birdəfəlik silir. Əsas məsələ deqradasiyanın görünən olduğu keyfiyyət həddini tapmaqdır:
+
+- **Keyfiyyət 80-85:** Orijinaldan demək olar ki, fərqlənmir. Əksər istifadə halları üçün ideal nöqtə.
+- **Keyfiyyət 60-75:** Yaxından baxanda kiçik artefaktlar görünür. Kiçik şəkillər və fon şəkilləri üçün əla.
+
+### İtkisiz Sıxışdırma
+
+İtkisiz sıxışdırma heç bir şəkil məlumatı silmədən fayl ölçüsünü azaldır. Adətən 10-30 faiz ölçü azalması əldə edir.
+
+## Şəkil Optimizasiya Yoxlama Siyahısı
+
+1. **Format:** Fotoqrafik şəkillər üçün WebP və ya AVIF, ikonlar və loqolar üçün SVG istifadə edirsiniz?
+2. **Sıxışdırma:** İtkili formatlar üçün şəkilləri 80-85 keyfiyyətə sıxışdırmısınız?
+3. **Ölçülər:** Şəkillər göstərilmə ölçülərinə uyğundur, daha böyük deyil?
+4. **Responsiv:** Əsas şəkillər üçün srcset ilə birdən çox ölçü təqdim edirsiniz?
+5. **Tənbəl yükləmə:** Ekranın altındakı şəkillər \`loading="lazy"\` istifadə edir?
+6. **Alt mətn:** Hər şəklin əlçatanlıq və SEO üçün təsviri alt mətni var?
+7. **En və hündürlük:** Layout sürüşməsinin qarşısını almaq üçün açıq en və hündürlük atributları təyin olunub?
+
+Bu alətlərin hamısı şəkilləri tamamilə brauzerinizdə emal edir. Fayllarınız heç vaxt cihazınızı tərk etmir. Vaxtım Yoxdu-da pulsuz sınayın -- qeydiyyat yox, fayl ölçüsü limiti yox, su nişanı yox.`,
+  },
 }
