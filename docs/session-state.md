@@ -167,6 +167,25 @@
 - [x] 6 yeni alət: Age Calc, BMI Calc, Percentage Calc, Barcode Gen, CSS Box Shadow, Hashtag Gen (a94a821)
 - [x] UX review + fix: i18n, a11y, dark mode (5ed4129) — UxPro APPROVED
 
+## Sprint 8 (2026-03-24, Session 5)
+- [x] +24 yeni alət → 105 total (fb62e96, 1e2d3fd, 847981d)
+- [x] Claude AI bələdçi EN+AZ (062eb2d)
+- [x] +11 blog → EN: 28, AZ: 33 (062eb2d)
+- [x] +407 test → 2721 total, coverage 51%→68%
+- [x] SEO: homepage 100+, meta fix, sitemap/JSON-LD verified
+- [x] Deploy uğurlu — vaxtimyoxdu.com "100+" (ebc86f7)
+- 4 teammate: DevPro, QaPro, ContentPro, SeoPro
+
+## Post-Sprint (2026-03-24, Session 5)
+- [x] TR + RU blog tərcümələri → 33 TR + 33 RU (492e589)
+- [x] +16 xəbər (4×4dil) → 85 total (589a944)
+- [x] Gmail Send As: hello@vaxtimyoxdu.com → Gmail-dən göndərmə aktiv
+- [x] /email-setup skill yaradıldı (5-ci universal skill)
+- [x] todo-dashboard.html yaradıldı
+- [x] QAYDA 15 (todo dashboard) + QAYDA 16 (4 dil) əlavə edildi
+- [x] NextGen Tools — manual submit lazım (upvote/comment tələbi)
+- [x] Product Hunt — canlı, 0 upvote (sosial media paylaşım lazım)
+
 ## Sprint 7 (2026-03-24, Session 5)
 - [x] 4 yeni alət: Loan Calc, CSS Flexbox, JSON→TS, CSS Grid (faaa1e0)
 - [x] 3 blog yazısı EN+AZ (a54d2dd)

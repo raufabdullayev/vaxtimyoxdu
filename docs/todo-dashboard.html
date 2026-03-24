@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VaxtimYoxdu - Todo Dashboard</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #0f1117;
+      --bg-secondary: #1a1d2e;
+      --bg-card: #1e2235;
+      --bg-card-hover: #252a40;
+      --border-color: #2a2f45;
+      --text-primary: #e8eaf0;
+      --text-secondary: #9ba1b8;
+      --text-muted: #6b7194;
+      --accent-blue: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-cyan: #06b6d4;
+      --accent-orange: #f97316;
+      --gradient-header: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+      --gradient-agent: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      --gradient-ceo: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+      --gradient-waiting: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+      --gradient-limit: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.25);
+      --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.35);
+      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* --- HEADER --- */
+    .header {
+      background: var(--gradient-header);
+      padding: 48px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 30%, rgba(255,255,255,0.06) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .header h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .header p {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: rgba(255, 255, 255, 0.85);
+      position: relative;
+    }
+
+    .header .updated {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.9);
+      position: relative;
+    }
+
+    /* --- CONTAINER --- */
+    .container {
+      max-width: 1200px;
+      margin: -32px auto 0;
+      padding: 0 20px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- STATS ROW --- */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .stat-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--gradient-header);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* --- PROGRESS BARS --- */
+    .progress-section {
+      margin-bottom: 40px;
+    }
+
+    .progress-section h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .progress-items {
+      display: grid;
+      gap: 16px;
+    }
+
+    .progress-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .progress-label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .progress-numbers {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .progress-numbers span {
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .progress-bar-bg {
+      height: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .progress-bar-fill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .fill-blue { background: var(--gradient-agent); }
+    .fill-emerald { background: linear-gradient(90deg, #10b981, #34d399); }
+    .fill-amber { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+
+    /* --- CATEGORY SECTIONS --- */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .category-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .category-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .category-header {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .category-header .cat-icon {
+      font-size: 1.5rem;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+
+    .category-header h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .category-header .cat-count {
+      margin-left: auto;
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+    }
+
+    .cat-agent .category-header { background: var(--gradient-agent); }
+    .cat-ceo .category-header { background: var(--gradient-ceo); }
+    .cat-waiting .category-header { background: var(--gradient-waiting); }
+    .cat-limit .category-header { background: var(--gradient-limit); }
+
+    .cat-agent .cat-icon { background: rgba(255,255,255,0.18); }
+    .cat-ceo .cat-icon { background: rgba(255,255,255,0.18); }
+    .cat-waiting .cat-icon { background: rgba(255,255,255,0.18); }
+    .cat-limit .cat-icon { background: rgba(255,255,255,0.18); }
+
+    .category-body {
+      padding: 8px 16px 16px;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      transition: background var(--transition);
+    }
+
+    .todo-item:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .todo-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .cat-agent .todo-num { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
+    .cat-ceo .todo-num { background: rgba(245,158,11,0.15); color: var(--accent-amber); }
+    .cat-waiting .todo-num { background: rgba(139,92,246,0.15); color: var(--accent-purple); }
+    .cat-limit .todo-num { background: rgba(107,114,148,0.15); color: var(--text-muted); }
+
+    .todo-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .todo-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .todo-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .badge-active {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      animation: pulse-badge 2s infinite;
+    }
+
+    @keyframes pulse-badge {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .badge-important {
+      background: rgba(244, 63, 94, 0.15);
+      color: #fb7185;
+    }
+
+    .badge-low {
+      background: rgba(107, 114, 148, 0.12);
+      color: var(--text-muted);
+    }
+
+    /* --- SPRINTS SECTION --- */
+    .sprints-section {
+      margin-bottom: 40px;
+    }
+
+    .sprints-section > h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .sprint-accordion {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .sprint-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-family: inherit;
+      transition: background var(--transition);
+    }
+
+    .sprint-toggle:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .sprint-toggle .arrow {
+      font-size: 0.8rem;
+      transition: transform var(--transition);
+      color: var(--text-muted);
+    }
+
+    .sprint-accordion.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    .sprint-toggle .sprint-badge {
+      margin-left: 10px;
+      font-size: 0.75rem;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    .sprint-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sprint-accordion.open .sprint-content {
+      max-height: 300px;
+    }
+
+    .sprint-details {
+      padding: 0 20px 16px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .sprint-details ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sprint-details li {
+      padding: 4px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .sprint-details li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: var(--accent-emerald);
+      font-weight: 700;
+    }
+
+    /* --- NUMBERS FOOTER --- */
+    .numbers-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+
+    .numbers-section h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+
+    .number-item {
+      text-align: center;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .number-item .num-icon {
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .number-item .num-val {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .number-item .num-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .footer a {
+      color: var(--accent-blue);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .header {
+        padding: 36px 16px 44px;
+      }
+
+      .container {
+        padding: 0 12px 40px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-value {
+        font-size: 1.6rem;
+      }
+
+      .numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .numbers-section {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>VaxtimYoxdu - Todo Dashboard</h1>
+    <p>Qalan isler, progress ve sprint tarixcesi</p>
+    <div class="updated">Son yenilenme: 24 Mart 2026</div>
+  </header>
+
+  <!-- CONTAINER -->
+  <div class="container">
+
+    <!-- STATS ROW -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon">&#128736;</div>
+        <div class="stat-value">105</div>
+        <div class="stat-label">Aletler</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">&#127760;</div>
+        <div class="stat-value">4</div>
+        <div class="stat-label">Diller (AZ, EN, TR, RU)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">&#9989;</div>
+        <div class="stat-value">2721</div>
+        <div class="stat-label">Testler</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">&#128240;</div>
+        <div class="stat-value">130</div>
+        <div class="stat-label">Kontent (61 blog + 69 xeber)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">&#128196;</div>
+        <div class="stat-value">700+</div>
+        <div class="stat-label">Statik sehifeler</div>
+      </div>
+    </div>
+
+    <!-- PROGRESS BARS -->
+    <section class="progress-section">
+      <h2>&#128200; Progressler</h2>
+      <div class="progress-items">
+        <div class="progress-item">
+          <div class="progress-top">
+            <span class="progress-label">Aletler</span>
+            <span class="progress-numbers"><span>105</span> / 150 hedef</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill fill-blue" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-top">
+            <span class="progress-label">Test Coverage</span>
+            <span class="progress-numbers"><span>68%</span> / 80% hedef</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill fill-amber" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-top">
+            <span class="progress-label">Testler</span>
+            <span class="progress-numbers"><span>2721</span> test pass</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill fill-emerald" style="width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <div class="categories">
+
+      <!-- Agent ede biler -->
+      <div class="category-card cat-agent">
+        <div class="category-header">
+          <div class="cat-icon">&#129302;</div>
+          <h3>Agent ede biler</h3>
+          <span class="cat-count">6 is</span>
+        </div>
+        <div class="category-body">
+          <div class="todo-item">
+            <div class="todo-num">1</div>
+            <div class="todo-content">
+              <div class="todo-title">TR + RU blog tercumeleri <span class="badge badge-active">aktiv</span></div>
+              <div class="todo-desc">28 EN meqale TR/RU-ya tercume olunur</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">2</div>
+            <div class="todo-content">
+              <div class="todo-title">Her gun yeni xeberler <span class="badge badge-active">aktiv</span></div>
+              <div class="todo-desc">4 dilde gundlik xeberler</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">3</div>
+            <div class="todo-content">
+              <div class="todo-title">Daha cox alet elave etmek</div>
+              <div class="todo-desc">105 aletden 150-ye artirmaq</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">4</div>
+            <div class="todo-content">
+              <div class="todo-title">E2E testler genisletmek</div>
+              <div class="todo-desc">35 testden 100-e artirmaq</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">5</div>
+            <div class="todo-content">
+              <div class="todo-title">Performance audit</div>
+              <div class="todo-desc">Lighthouse, Core Web Vitals</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">6</div>
+            <div class="todo-content">
+              <div class="todo-title">Accessibility audit</div>
+              <div class="todo-desc">WCAG tam uygunluq</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CEO manual -->
+      <div class="category-card cat-ceo">
+        <div class="category-header">
+          <div class="cat-icon">&#128100;</div>
+          <h3>CEO manual</h3>
+          <span class="cat-count">4 is</span>
+        </div>
+        <div class="category-body">
+          <div class="todo-item">
+            <div class="todo-num">7</div>
+            <div class="todo-content">
+              <div class="todo-title">Bing Webmaster</div>
+              <div class="todo-desc">Verification kodu almaq</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">8</div>
+            <div class="todo-content">
+              <div class="todo-title">Sosial media hesablari</div>
+              <div class="todo-desc">Instagram, TikTok, Telegram</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">9</div>
+            <div class="todo-content">
+              <div class="todo-title">Product Hunt <span class="badge badge-important">vacib</span></div>
+              <div class="todo-desc">Sosial mediada paylas, upvote topla</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">10</div>
+            <div class="todo-content">
+              <div class="todo-title">Secrets rotate <span class="badge badge-low">asagi prioritet</span></div>
+              <div class="todo-desc">API key-lerin yenilenmesi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gozlemede -->
+      <div class="category-card cat-waiting">
+        <div class="category-header">
+          <div class="cat-icon">&#9203;</div>
+          <h3>Gozlemede</h3>
+          <span class="cat-count">4 is</span>
+        </div>
+        <div class="category-body">
+          <div class="todo-item">
+            <div class="todo-num">11</div>
+            <div class="todo-content">
+              <div class="todo-title">AlternativeTo approval</div>
+              <div class="todo-desc">~24 saat gozleme</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">12</div>
+            <div class="todo-content">
+              <div class="todo-title">SaaSHub approval</div>
+              <div class="todo-desc">~21 gun gozleme</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">13</div>
+            <div class="todo-content">
+              <div class="todo-title">Resend domain verify</div>
+              <div class="todo-desc">Amazon SES uzerinden</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">14</div>
+            <div class="todo-content">
+              <div class="todo-title">AdSense tesdiqi <span class="badge badge-important">en vacib gelir</span></div>
+              <div class="todo-desc">Esas gelir menbeyidir</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texniki limit -->
+      <div class="category-card cat-limit">
+        <div class="category-header">
+          <div class="cat-icon">&#128274;</div>
+          <h3>Texniki limit</h3>
+          <span class="cat-count">2 is</span>
+        </div>
+        <div class="category-body">
+          <div class="todo-item">
+            <div class="todo-num">15</div>
+            <div class="todo-content">
+              <div class="todo-title">Coverage 68% &rarr; 80%</div>
+              <div class="todo-desc">Server components vitest ile test olunmur</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">16</div>
+            <div class="todo-content">
+              <div class="todo-title">Nonce CSP</div>
+              <div class="todo-desc">SSG ile uygunsuz, alternativ axtarilir</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SPRINTS -->
+    <section class="sprints-section">
+      <h2>&#127942; Tamamlanmis Sprint-ler</h2>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 8 <span class="sprint-badge">en son</span></span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>35 yeni alet elave edildi</li>
+              <li>11 blog yazisi (EN)</li>
+              <li>Claude meqalesi neshr olundu</li>
+              <li>407 yeni test elave edildi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 7</span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>4 yeni alet</li>
+              <li>301 yeni test</li>
+              <li>Yeni kontent elave edildi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 6</span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>7 tapshiriq tamamlandi</li>
+              <li>71 yeni test elave edildi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 5</span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>18 BLOCKER/CRITICAL fix</li>
+              <li>Kritik buglar hell edildi</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 4 <span class="sprint-badge">5/5</span></span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>CRITICAL theme bug fix (Header + ThemeToggle)</li>
+              <li>AI timeout 9s total budget</li>
+              <li>Unsubscribe endpoint HMAC-SHA256</li>
+              <li>Rate limiter fail-closed</li>
+              <li>tools.ts + seo.ts decompose</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 3 <span class="sprint-badge">7/7</span></span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>5 accessible primitive komponenti</li>
+              <li>toolUI i18n 20 alet ucun</li>
+              <li>Resend email inteqrasiyasi</li>
+              <li>Dark mode + ThemeToggle</li>
+              <li>Zod env validasiya</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 2 <span class="sprint-badge">8/8</span></span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>Breadcrumb + og:url locale fix</li>
+              <li>RU Cyrillic rewrite + TR fix</li>
+              <li>Cookie/Install/Offline i18n</li>
+              <li>Newsletter rate limiting</li>
+              <li>SEO content optimallasdirma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sprint-accordion">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 1 <span class="sprint-badge">11/12</span></span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>Security ve infra tapshiriqlari</li>
+              <li>11 tapshiriq tamamlandi, 1 CEO manual (secrets rotate)</li>
+              <li>global-error.tsx yaxshilashdirildi</li>
+              <li>1481 test pass</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CURRENT NUMBERS -->
+    <section class="numbers-section">
+      <h2>&#128202; Hazirki reqemler</h2>
+      <div class="numbers-grid">
+        <div class="number-item">
+          <div class="num-icon">&#128736;</div>
+          <div class="num-val">105</div>
+          <div class="num-label">Aletler</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#127760;</div>
+          <div class="num-val">4</div>
+          <div class="num-label">Diller</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#128221;</div>
+          <div class="num-val">61</div>
+          <div class="num-label">Blog yazilari</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#128240;</div>
+          <div class="num-val">69</div>
+          <div class="num-label">Xeberler</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#9989;</div>
+          <div class="num-val">2721</div>
+          <div class="num-label">Testler</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#128200;</div>
+          <div class="num-val">68%</div>
+          <div class="num-label">Coverage</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#128196;</div>
+          <div class="num-val">700+</div>
+          <div class="num-label">Statik sehifeler</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#128231;</div>
+          <div class="num-val">1</div>
+          <div class="num-label">Email (hello@)</div>
+        </div>
+        <div class="number-item">
+          <div class="num-icon">&#128640;</div>
+          <div class="num-val">5</div>
+          <div class="num-label">Platformlar</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p><a href="https://vaxtimyoxdu.com" target="_blank">vaxtimyoxdu.com</a> &mdash; Product Hunt, Dev.to, Medium, SaaSHub, AlternativeTo</p>
+      <p style="margin-top: 6px;">Dashboard son yenilenme: <strong>24 Mart 2026</strong></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
