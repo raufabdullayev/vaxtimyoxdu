@@ -1,26 +1,23 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 import ToolInput from '@/components/ui/ToolInput'
+import ToolRadioGroup from '@/components/ui/ToolRadioGroup'
 
 type Mode = 'percentage-of' | 'is-what-percent' | 'percent-change'
 
-interface ModeConfig {
-  key: Mode
-  label: string
-  description: string
-}
-
-const MODES: ModeConfig[] = [
-  { key: 'percentage-of', label: 'X% of Y', description: 'What is X% of Y?' },
-  { key: 'is-what-percent', label: 'X is what % of Y', description: 'X is what percent of Y?' },
-  { key: 'percent-change', label: 'Change from X to Y', description: 'Percentage change from X to Y' },
-]
-
 export default function PercentageCalculator() {
+  const t = useTranslations('toolUI')
   const [mode, setMode] = useState<Mode>('percentage-of')
   const [valueA, setValueA] = useState('')
   const [valueB, setValueB] = useState('')
+
+  const modeOptions = [
+    { value: 'percentage-of', label: t('percentageOf') },
+    { value: 'is-what-percent', label: t('isWhatPercent') },
+    { value: 'percent-change', label: t('percentChange') },
+  ]
 
   const result = useMemo(() => {
     const a = parseFloat(valueA)
@@ -48,11 +45,11 @@ export default function PercentageCalculator() {
   const getLabels = (): { labelA: string; labelB: string; placeholderA: string; placeholderB: string } => {
     switch (mode) {
       case 'percentage-of':
-        return { labelA: 'Percentage (%)', labelB: 'Of Value', placeholderA: 'e.g., 25', placeholderB: 'e.g., 200' }
+        return { labelA: t('percentage'), labelB: t('ofValue'), placeholderA: 'e.g., 25', placeholderB: 'e.g., 200' }
       case 'is-what-percent':
-        return { labelA: 'Value', labelB: 'Of Total', placeholderA: 'e.g., 50', placeholderB: 'e.g., 200' }
+        return { labelA: t('value'), labelB: t('ofTotal'), placeholderA: 'e.g., 50', placeholderB: 'e.g., 200' }
       case 'percent-change':
-        return { labelA: 'From Value', labelB: 'To Value', placeholderA: 'e.g., 100', placeholderB: 'e.g., 150' }
+        return { labelA: t('fromValue'), labelB: t('toValue'), placeholderA: 'e.g., 100', placeholderB: 'e.g., 150' }
     }
   }
 
@@ -68,27 +65,17 @@ export default function PercentageCalculator() {
     <div className="space-y-4">
       {/* Mode selector */}
       <div>
-        <label className="text-sm font-medium mb-2 block">Calculation Mode</label>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-          {MODES.map((m) => (
-            <button
-              key={m.key}
-              onClick={() => {
-                setMode(m.key)
-                setValueA('')
-                setValueB('')
-              }}
-              className={`px-4 py-3 rounded-lg text-left text-sm transition-colors ${
-                mode === m.key
-                  ? 'bg-primary/10 ring-1 ring-primary'
-                  : 'border hover:bg-accent'
-              }`}
-            >
-              <div className="font-medium">{m.label}</div>
-              <div className="text-xs text-muted-foreground">{m.description}</div>
-            </button>
-          ))}
-        </div>
+        <label className="text-sm font-medium mb-2 block">{t('calculationMode')}</label>
+        <ToolRadioGroup
+          label={t('calculationMode')}
+          options={modeOptions}
+          value={mode}
+          onChange={(val) => {
+            setMode(val as Mode)
+            setValueA('')
+            setValueB('')
+          }}
+        />
       </div>
 
       {/* Inputs */}
@@ -120,8 +107,8 @@ export default function PercentageCalculator() {
             {formatResult(result.value)}{result.unit}
           </div>
           {mode === 'percent-change' && (
-            <div className={`text-sm font-medium mt-2 ${result.value > 0 ? 'text-green-500' : result.value < 0 ? 'text-red-500' : 'text-muted-foreground'}`}>
-              {result.value > 0 ? 'Increase' : result.value < 0 ? 'Decrease' : 'No change'}
+            <div className={`text-sm font-medium mt-2 ${result.value > 0 ? 'text-green-500 dark:text-green-400' : result.value < 0 ? 'text-red-500 dark:text-red-400' : 'text-muted-foreground'}`}>
+              {result.value > 0 ? t('increase') : result.value < 0 ? t('decrease') : t('noChange')}
             </div>
           )}
         </div>

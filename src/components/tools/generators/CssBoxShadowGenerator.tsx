@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useId } from 'react'
+import { useTranslations } from 'next-intl'
 import ToolInput from '@/components/ui/ToolInput'
 
 interface Shadow {
@@ -36,6 +37,8 @@ function shadowToCss(shadow: Shadow): string {
 }
 
 export default function CssBoxShadowGenerator() {
+  const t = useTranslations('toolUI')
+  const colorId = useId()
   const [shadows, setShadows] = useState<Shadow[]>([{ ...DEFAULT_SHADOW }])
   const [boxColor, setBoxColor] = useState('#ffffff')
   const [bgColor, setBgColor] = useState('#f0f0f0')
@@ -75,12 +78,12 @@ export default function CssBoxShadowGenerator() {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const sliders: { key: keyof Shadow; label: string; min: number; max: number }[] = [
-    { key: 'offsetX', label: 'Offset X', min: -50, max: 50 },
-    { key: 'offsetY', label: 'Offset Y', min: -50, max: 50 },
-    { key: 'blur', label: 'Blur', min: 0, max: 100 },
-    { key: 'spread', label: 'Spread', min: -50, max: 50 },
-    { key: 'opacity', label: 'Opacity (%)', min: 0, max: 100 },
+  const sliderKeys: { key: keyof Shadow; tKey: string; min: number; max: number }[] = [
+    { key: 'offsetX', tKey: 'offsetX', min: -50, max: 50 },
+    { key: 'offsetY', tKey: 'offsetY', min: -50, max: 50 },
+    { key: 'blur', tKey: 'blur', min: 0, max: 100 },
+    { key: 'spread', tKey: 'spread', min: -50, max: 50 },
+    { key: 'opacity', tKey: 'opacityPercent', min: 0, max: 100 },
   ]
 
   return (
@@ -103,20 +106,20 @@ export default function CssBoxShadowGenerator() {
       {/* Box options */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <ToolInput
-          label="Box Color"
+          label={t('boxColor')}
           type="color"
           value={boxColor}
           onChange={(e) => setBoxColor(e.target.value)}
         />
         <ToolInput
-          label="Background Color"
+          label={t('backgroundColor')}
           type="color"
           value={bgColor}
           onChange={(e) => setBgColor(e.target.value)}
         />
         <div>
           <label className="block text-sm font-medium mb-1">
-            Border Radius: {borderRadius}px
+            {t('borderRadiusPx', { value: borderRadius })}
           </label>
           <input
             type="range"
@@ -125,6 +128,7 @@ export default function CssBoxShadowGenerator() {
             value={borderRadius}
             onChange={(e) => setBorderRadius(parseInt(e.target.value))}
             className="w-full accent-primary"
+            aria-label={t('borderRadiusPx', { value: borderRadius })}
           />
         </div>
       </div>
@@ -133,7 +137,7 @@ export default function CssBoxShadowGenerator() {
       {shadows.map((shadow, index) => (
         <div key={index} className="rounded-lg border p-4 space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium">Shadow {index + 1}</span>
+            <span className="text-sm font-medium">{t('shadow', { index: index + 1 })}</span>
             <div className="flex items-center gap-3">
               <label className="flex items-center gap-2 text-sm cursor-pointer">
                 <input
@@ -141,23 +145,28 @@ export default function CssBoxShadowGenerator() {
                   checked={shadow.inset}
                   onChange={(e) => updateShadow(index, 'inset', e.target.checked)}
                   className="rounded accent-primary"
+                  aria-label={t('toggleInset', { index: index + 1 })}
                 />
-                Inset
+                {t('inset')}
               </label>
               {shadows.length > 1 && (
                 <button
                   onClick={() => removeShadow(index)}
                   className="text-sm text-destructive hover:underline"
+                  aria-label={t('removeShadow', { index: index + 1 })}
                 >
-                  Remove
+                  {t('remove')}
                 </button>
               )}
             </div>
           </div>
 
           <div className="flex items-center gap-3">
-            <label className="text-sm text-muted-foreground">Color</label>
+            <label htmlFor={`${colorId}-${index}`} className="text-sm text-muted-foreground">
+              {t('shadowColor')}
+            </label>
             <input
+              id={`${colorId}-${index}`}
               type="color"
               value={shadow.color}
               onChange={(e) => updateShadow(index, 'color', e.target.value)}
@@ -166,10 +175,10 @@ export default function CssBoxShadowGenerator() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {sliders.map((s) => (
+            {sliderKeys.map((s) => (
               <div key={s.key}>
                 <label className="flex items-center justify-between text-xs text-muted-foreground mb-1">
-                  <span>{s.label}</span>
+                  <span>{t(s.tKey as Parameters<typeof t>[0])}</span>
                   <span className="font-mono">{shadow[s.key] as number}</span>
                 </label>
                 <input
@@ -179,6 +188,7 @@ export default function CssBoxShadowGenerator() {
                   value={shadow[s.key] as number}
                   onChange={(e) => updateShadow(index, s.key, parseInt(e.target.value))}
                   className="w-full accent-primary"
+                  aria-label={`${t(s.tKey as Parameters<typeof t>[0])}: ${shadow[s.key]}`}
                 />
               </div>
             ))}
@@ -189,19 +199,20 @@ export default function CssBoxShadowGenerator() {
       <button
         onClick={addShadow}
         className="w-full py-2 border border-dashed rounded-lg text-sm text-muted-foreground hover:bg-accent transition-colors"
+        aria-label={t('addNewShadow')}
       >
-        + Add Shadow Layer
+        {t('addShadowLayer')}
       </button>
 
       {/* CSS Output */}
       <div>
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium">CSS Output</label>
+          <label className="text-sm font-medium">{t('cssOutput')}</label>
           <button
             onClick={copy}
             className="text-xs text-primary hover:underline"
           >
-            {copied ? 'Copied!' : 'Copy'}
+            {copied ? t('copied') : t('copy')}
           </button>
         </div>
         <pre className="rounded-lg border bg-muted/50 px-4 py-3 text-sm font-mono overflow-x-auto whitespace-pre-wrap">

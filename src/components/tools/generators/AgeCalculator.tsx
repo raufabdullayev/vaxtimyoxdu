@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import ToolInput from '@/components/ui/ToolInput'
+import ToolAlert from '@/components/ui/ToolAlert'
 
 interface AgeResult {
   years: number
@@ -46,6 +48,7 @@ function calculateAge(birthDate: Date, targetDate: Date): AgeResult | null {
 }
 
 export default function AgeCalculator() {
+  const t = useTranslations('toolUI')
   const [birthDate, setBirthDate] = useState('')
   const [targetDate, setTargetDate] = useState(new Date().toISOString().split('T')[0])
 
@@ -55,10 +58,10 @@ export default function AgeCalculator() {
 
   const stats = result
     ? [
-        { label: 'Total Months', value: result.totalMonths.toLocaleString() },
-        { label: 'Total Weeks', value: result.totalWeeks.toLocaleString() },
-        { label: 'Total Days', value: result.totalDays.toLocaleString() },
-        { label: 'Next Birthday', value: `${result.nextBirthday} days` },
+        { label: t('totalMonths'), value: result.totalMonths.toLocaleString() },
+        { label: t('totalWeeks'), value: result.totalWeeks.toLocaleString() },
+        { label: t('totalDays'), value: result.totalDays.toLocaleString() },
+        { label: t('nextBirthday'), value: `${result.nextBirthday} ${t('daysUnit')}` },
       ]
     : []
 
@@ -66,14 +69,14 @@ export default function AgeCalculator() {
     <div className="space-y-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <ToolInput
-          label="Date of Birth"
+          label={t('dateOfBirth')}
           type="date"
           value={birthDate}
           onChange={(e) => setBirthDate(e.target.value)}
           max={targetDate}
         />
         <ToolInput
-          label="Calculate Age As Of"
+          label={t('calculateAgeAsOf')}
           type="date"
           value={targetDate}
           onChange={(e) => setTargetDate(e.target.value)}
@@ -83,19 +86,19 @@ export default function AgeCalculator() {
       {result && (
         <>
           <div className="rounded-lg border bg-primary/5 p-6 text-center">
-            <div className="text-sm text-muted-foreground mb-2">Your Age</div>
+            <div className="text-sm text-muted-foreground mb-2">{t('yourAge')}</div>
             <div className="flex items-center justify-center gap-4 flex-wrap">
               <div>
                 <span className="text-4xl font-bold text-primary">{result.years}</span>
-                <span className="text-sm text-muted-foreground ml-1">years</span>
+                <span className="text-sm text-muted-foreground ml-1">{t('years')}</span>
               </div>
               <div>
                 <span className="text-4xl font-bold text-primary">{result.months}</span>
-                <span className="text-sm text-muted-foreground ml-1">months</span>
+                <span className="text-sm text-muted-foreground ml-1">{t('months')}</span>
               </div>
               <div>
                 <span className="text-4xl font-bold text-primary">{result.days}</span>
-                <span className="text-sm text-muted-foreground ml-1">days</span>
+                <span className="text-sm text-muted-foreground ml-1">{t('days')}</span>
               </div>
             </div>
           </div>
@@ -112,9 +115,7 @@ export default function AgeCalculator() {
       )}
 
       {birthDate && targetDate && !result && (
-        <div className="rounded-lg border border-destructive/50 bg-destructive/10 p-4 text-sm text-destructive text-center">
-          Birth date must be before the target date.
-        </div>
+        <ToolAlert variant="error">{t('birthDateError')}</ToolAlert>
       )}
     </div>
   )

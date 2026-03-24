@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 import ToolInput from '@/components/ui/ToolInput'
 import ToolSelect from '@/components/ui/ToolSelect'
+import ToolAlert from '@/components/ui/ToolAlert'
 
 // CODE128 encoding tables
 const CODE128_START_B = 104
@@ -35,7 +37,6 @@ const CODE128_PATTERNS: number[][] = [
 
 type BarcodeFormat = 'CODE128' | 'CODE39'
 
-// CODE39 character set
 const CODE39_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%*'
 const CODE39_PATTERNS: string[] = [
   'nnnwwnwnn','wnnnnnnwn','nnwnnnnwn','wnwnnnnnn','nnnwnnnwn','wnnwnnnnn',
@@ -80,14 +81,11 @@ function drawBarcode(
     const codes = encodeCode128(text)
     if (!codes) return false
 
-    // Calculate width
     let totalBars = 0
     for (const code of codes) {
       const pattern = CODE128_PATTERNS[code]
       if (!pattern) return false
-      for (const bar of pattern) {
-        totalBars += bar
-      }
+      for (const bar of pattern) totalBars += bar
     }
 
     const margin = 20
@@ -117,7 +115,6 @@ function drawBarcode(
       ctx.textAlign = 'center'
       ctx.fillText(text, canvas.width / 2, barHeight + margin + 18)
     }
-
     return true
   }
 
@@ -129,7 +126,7 @@ function drawBarcode(
 
     const margin = 20
     const textHeight = showText ? 24 : 0
-    const charWidth = (3 * barWidth * 3 + 6 * barWidth + barWidth) // each char: 3 wide + 6 narrow + gap
+    const charWidth = (3 * barWidth * 3 + 6 * barWidth + barWidth)
     canvas.width = upper.length * charWidth + margin * 2
     canvas.height = barHeight + margin * 2 + textHeight
 
@@ -150,7 +147,7 @@ function drawBarcode(
         }
         x += w
       }
-      x += barWidth // inter-character gap
+      x += barWidth
     }
 
     if (showText) {
@@ -159,7 +156,6 @@ function drawBarcode(
       ctx.textAlign = 'center'
       ctx.fillText(text.toUpperCase(), canvas.width / 2, barHeight + margin + 18)
     }
-
     return true
   }
 
@@ -172,6 +168,7 @@ const FORMATS = [
 ]
 
 export default function BarcodeGenerator() {
+  const t = useTranslations('toolUI')
   const [text, setText] = useState('Hello World')
   const [format, setFormat] = useState<BarcodeFormat>('CODE128')
   const [barWidth, setBarWidth] = useState('2')
@@ -193,8 +190,8 @@ export default function BarcodeGenerator() {
       parseInt(barHeight) || 100,
       showText
     )
-    setError(ok ? '' : `Invalid input for ${format} format`)
-  }, [text, format, barWidth, barHeight, showText])
+    setError(ok ? '' : t('invalidInputForFormat', { format }))
+  }, [text, format, barWidth, barHeight, showText, t])
 
   useEffect(() => {
     render()
@@ -211,22 +208,22 @@ export default function BarcodeGenerator() {
   return (
     <div className="space-y-4">
       <ToolInput
-        label="Barcode Content"
+        label={t('barcodeContent')}
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Enter text or number..."
+        placeholder={t('enterTextOrNumber')}
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <ToolSelect
-          label="Format"
+          label={t('format')}
           value={format}
           onChange={(e) => setFormat(e.target.value as BarcodeFormat)}
           options={FORMATS}
         />
         <ToolInput
-          label="Bar Width (px)"
+          label={t('barWidth')}
           type="number"
           value={barWidth}
           onChange={(e) => setBarWidth(e.target.value)}
@@ -234,7 +231,7 @@ export default function BarcodeGenerator() {
           max="5"
         />
         <ToolInput
-          label="Height (px)"
+          label={t('size')}
           type="number"
           value={barHeight}
           onChange={(e) => setBarHeight(e.target.value)}
@@ -250,17 +247,21 @@ export default function BarcodeGenerator() {
           onChange={(e) => setShowText(e.target.checked)}
           className="rounded accent-primary"
         />
-        Show text below barcode
+        {t('showTextBelowBarcode')}
       </label>
 
       {/* Preview */}
-      <div className="rounded-lg border p-6 bg-white flex justify-center min-h-[160px] items-center">
+      <div className="rounded-lg border p-6 bg-background flex justify-center min-h-[160px] items-center">
         {error ? (
-          <div className="text-sm text-destructive">{error}</div>
+          <ToolAlert variant="error">{error}</ToolAlert>
         ) : !text.trim() ? (
-          <div className="text-sm text-muted-foreground">Enter content to generate barcode</div>
+          <div className="text-sm text-muted-foreground">{t('enterContentToGenerate')}</div>
         ) : (
-          <canvas ref={canvasRef} />
+          <canvas
+            ref={canvasRef}
+            role="img"
+            aria-label={t('barcodePreview', { text })}
+          />
         )}
       </div>
 
@@ -271,7 +272,7 @@ export default function BarcodeGenerator() {
           disabled={!!error || !text.trim()}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
         >
-          Download PNG
+          {t('downloadPng')}
         </button>
       </div>
     </div>
