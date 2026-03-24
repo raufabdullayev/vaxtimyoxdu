@@ -459,6 +459,22 @@
       "stopwatch": {
         "name": "Xronoqraf",
         "description": "Millisaniyə dəqiqliyində xronoqraf"
+      },
+      "css-flexbox-generator": {
+        "name": "CSS Flexbox Generator",
+        "description": "CSS flexbox layout-larını vizual olaraq qurun. flex-direction, justify-content, align-items, flex-wrap və gap parametrlərini canlı önbaxışla tənzimləyin. Yaradılmış CSS kodunu kopyalayın."
+      },
+      "json-to-typescript": {
+        "name": "JSON-dan TypeScript-ə",
+        "description": "JSON obyektlərini TypeScript interfeys və tiplərinə çevirin. İç-içə obyektlər, massivlər və opsional sahələr dəstəklənir. Pulsuz JSON-dan TS çevirici."
+      },
+      "css-grid-generator": {
+        "name": "CSS Grid Generator",
+        "description": "CSS Grid layout-larını vizual olaraq yaradın. Sətir, sütun, boşluq, ölçü və hizalanmanı real vaxt önbaxışla konfiqurasiya edin. Yaradılmış CSS kodunu kopyalayın."
+      },
+      "loan-calculator": {
+        "name": "Kredit/EMI Kalkulyatoru",
+        "description": "Aylıq kredit ödənişlərini, ümumi faizi hesablayın və tam amortizasiya cədvəlinə baxın. Kredit məbləği, faiz dərəcəsi və müddəti dəstəklənir. Pulsuz onlayn EMI kalkulyatoru."
       }
     }
   },

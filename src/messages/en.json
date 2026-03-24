@@ -459,6 +459,22 @@
       "stopwatch": {
         "name": "Stopwatch",
         "description": "Millisecond precision stopwatch with laps"
+      },
+      "css-flexbox-generator": {
+        "name": "CSS Flexbox Generator",
+        "description": "Build CSS flexbox layouts visually. Adjust flex-direction, justify-content, align-items, flex-wrap, and gap with a live preview. Copy generated CSS code."
+      },
+      "json-to-typescript": {
+        "name": "JSON to TypeScript",
+        "description": "Convert JSON objects to TypeScript interfaces and types. Supports nested objects, arrays, and optional fields. Free JSON to TS converter."
+      },
+      "css-grid-generator": {
+        "name": "CSS Grid Generator",
+        "description": "Create CSS Grid layouts visually. Configure rows, columns, gap, sizing, and alignment with a real-time preview. Copy generated CSS code."
+      },
+      "loan-calculator": {
+        "name": "Loan/EMI Calculator",
+        "description": "Calculate monthly loan payments, total interest, and view a full amortization schedule. Supports custom loan amount, interest rate, and term. Free online EMI calculator."
       }
     }
   },

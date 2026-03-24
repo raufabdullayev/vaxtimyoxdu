@@ -459,6 +459,22 @@
       "stopwatch": {
         "name": "Kronometre",
         "description": "Milisaniye hassasiyetinde kronometre"
+      },
+      "css-flexbox-generator": {
+        "name": "CSS Flexbox Oluşturucu",
+        "description": "CSS flexbox düzenlerini görsel olarak oluşturun. flex-direction, justify-content, align-items, flex-wrap ve gap ayarlarını canlı önizleme ile düzenleyin. Oluşturulan CSS kodunu kopyalayın."
+      },
+      "json-to-typescript": {
+        "name": "JSON'dan TypeScript'e",
+        "description": "JSON nesnelerini TypeScript arayüzlerine ve türlerine dönüştürün. İç içe nesneler, diziler ve opsiyonel alanlar desteklenir. Ücretsiz JSON-TS dönüştürücü."
+      },
+      "css-grid-generator": {
+        "name": "CSS Grid Oluşturucu",
+        "description": "CSS Grid düzenlerini görsel olarak oluşturun. Satır, sütun, boşluk, boyutlandırma ve hizalamayı gerçek zamanlı önizleme ile yapılandırın. Oluşturulan CSS kodunu kopyalayın."
+      },
+      "loan-calculator": {
+        "name": "Kredi/EMI Hesaplayıcı",
+        "description": "Aylık kredi ödemelerini, toplam faizi hesaplayın ve tam amortisman tablosunu görüntüleyin. Kredi tutarı, faiz oranı ve vade desteği. Ücretsiz çevrimiçi EMI hesaplayıcı."
       }
     }
   },
