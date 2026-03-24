@@ -166,4 +166,15 @@ export const textTools: Tool[] = [
     isClientSide: true,
     keywords: ['text truncator', 'truncate text', 'shorten text', 'text cutter', 'text ellipsis'],
   },
+  {
+    slug: 'hashtag-generator',
+    name: 'Hashtag Generator',
+    description: 'Generate hashtags from keywords with multiple styles. Browse popular hashtag presets by category. Copy individual or all hashtags. Free online hashtag generator for social media.',
+    shortDescription: 'Generate hashtags from keywords for social media',
+    category: 'text',
+    icon: '#',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['hashtag generator', 'hashtag maker', 'instagram hashtags', 'social media hashtags', 'generate hashtags'],
+  },
 ]

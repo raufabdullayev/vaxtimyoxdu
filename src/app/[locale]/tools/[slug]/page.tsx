@@ -95,6 +95,13 @@ const toolComponents: Record<string, React.ComponentType> = {
   'image-to-base64': dynamic(() => import('@/components/tools/image/ImageToBase64')),
   'base64-to-image': dynamic(() => import('@/components/tools/image/Base64ToImage')),
   'text-truncator': dynamic(() => import('@/components/tools/text/TextTruncator')),
+  // Phase 10 - P1 Tools
+  'age-calculator': dynamic(() => import('@/components/tools/generators/AgeCalculator')),
+  'bmi-calculator': dynamic(() => import('@/components/tools/generators/BmiCalculator')),
+  'percentage-calculator': dynamic(() => import('@/components/tools/generators/PercentageCalculator')),
+  'barcode-generator': dynamic(() => import('@/components/tools/generators/BarcodeGenerator')),
+  'css-box-shadow-generator': dynamic(() => import('@/components/tools/generators/CssBoxShadowGenerator')),
+  'hashtag-generator': dynamic(() => import('@/components/tools/text/HashtagGenerator')),
 }
 
 export async function generateStaticParams() {

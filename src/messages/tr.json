@@ -339,6 +339,30 @@
       "market-tracker": {
         "name": "Piyasa Fiyat Takipçisi",
         "description": "Bitcoin, Ethereum, Altın ve Petrol fiyatlarını canlı izleyin. 24 saatlik değişiklikleri görün, para birimleri arasında dönüştürün (USD, AZN, EUR)."
+      },
+      "age-calculator": {
+        "name": "Yas Hesaplayici",
+        "description": "Dogum tarihinizden tam yasinizi hesaplayin"
+      },
+      "bmi-calculator": {
+        "name": "VKI Hesaplayici",
+        "description": "Boy ve kilodan Vucut Kutle Indeksini hesaplayin"
+      },
+      "percentage-calculator": {
+        "name": "Yuzde Hesaplayici",
+        "description": "Birden fazla modda yuzde hesaplayin"
+      },
+      "barcode-generator": {
+        "name": "Barkod Olusturucu",
+        "description": "Metin veya sayilardan barkod olusturun"
+      },
+      "css-box-shadow-generator": {
+        "name": "CSS Box Shadow Olusturucu",
+        "description": "Gorsel kontrollerle CSS box-shadow olusturun"
+      },
+      "hashtag-generator": {
+        "name": "Hashtag Olusturucu",
+        "description": "Sosyal medya icin anahtar kelimelerden hashtag olusturun"
       }
     }
   },

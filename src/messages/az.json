@@ -339,6 +339,30 @@
       "market-tracker": {
         "name": "Bazar Qiymətləri İzləyicisi",
         "description": "Bitcoin, Ethereum, Qızıl və Neft qiymətlərini canlı izləyin. 24 saatlıq dəyişiklikləri görün, valyutalar arasında çevirin (USD, AZN, EUR)."
+      },
+      "age-calculator": {
+        "name": "Yaş Kalkulyatoru",
+        "description": "Doğum tarixindən dəqiq yaşınızı hesablayın"
+      },
+      "bmi-calculator": {
+        "name": "BMI Kalkulyatoru",
+        "description": "Boy və çəkidən Bədən Kütlə İndeksini hesablayın"
+      },
+      "percentage-calculator": {
+        "name": "Faiz Kalkulyatoru",
+        "description": "Müxtəlif rejimlərdə faiz hesablayın"
+      },
+      "barcode-generator": {
+        "name": "Barkod Generatoru",
+        "description": "Mətn və ya rəqəmlərdən barkod yaradın"
+      },
+      "css-box-shadow-generator": {
+        "name": "CSS Box Shadow Generatoru",
+        "description": "Vizual idarəetmə ilə CSS box-shadow yaradın"
+      },
+      "hashtag-generator": {
+        "name": "Hashtag Generatoru",
+        "description": "Sosial media üçün açar sözlərdən hashtag yaradın"
       }
     }
   },

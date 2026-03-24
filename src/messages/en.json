@@ -339,6 +339,30 @@
       "market-tracker": {
         "name": "Market Price Tracker",
         "description": "Track live prices of Bitcoin, Ethereum, Gold, and Oil. View 24-hour changes, convert between currencies (USD, AZN, EUR), and see market summaries."
+      },
+      "age-calculator": {
+        "name": "Age Calculator",
+        "description": "Calculate your exact age in years, months, and days"
+      },
+      "bmi-calculator": {
+        "name": "BMI Calculator",
+        "description": "Calculate Body Mass Index from height and weight"
+      },
+      "percentage-calculator": {
+        "name": "Percentage Calculator",
+        "description": "Calculate percentages in multiple modes"
+      },
+      "barcode-generator": {
+        "name": "Barcode Generator",
+        "description": "Generate barcodes from text or numbers"
+      },
+      "css-box-shadow-generator": {
+        "name": "CSS Box Shadow Generator",
+        "description": "Generate CSS box-shadow with visual controls"
+      },
+      "hashtag-generator": {
+        "name": "Hashtag Generator",
+        "description": "Generate hashtags from keywords for social media"
       }
     }
   },
