@@ -38,6 +38,9 @@ const serverSchema = z.object({
   // Resend email delivery
   RESEND_API_KEY: z.string().min(1).optional(),
 
+  // Sender email address (defaults to noreply@vaxtimyoxdu.com)
+  SENDER_EMAIL: z.string().email().optional(),
+
   // Newsletter unsubscribe token signing (required in production)
   UNSUBSCRIBE_SECRET: z.string().min(32).optional(),
 })

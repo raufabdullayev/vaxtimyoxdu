@@ -1,7 +1,9 @@
 import { Resend } from 'resend'
 import { getWelcomeEmailHtml } from './templates/welcome'
 
-const FROM_EMAIL = 'Vaxtim Yoxdu <noreply@vaxtimyoxdu.com>'
+const DEFAULT_SENDER = 'noreply@vaxtimyoxdu.com'
+const senderAddress = process.env.SENDER_EMAIL || DEFAULT_SENDER
+const FROM_EMAIL = `Vaxtim Yoxdu <${senderAddress}>`
 
 let resendClient: Resend | null = null
 
