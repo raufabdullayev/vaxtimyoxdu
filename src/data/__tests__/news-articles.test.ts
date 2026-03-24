@@ -14,22 +14,22 @@ describe('newsArticles collection', () => {
     expect(slugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 29 articles (17 AZ + 12 EN)', () => {
-    expect(slugs.length).toBe(29)
+  it('should contain exactly 43 articles (24 AZ + 19 EN)', () => {
+    expect(slugs.length).toBe(43)
   })
 
-  it('should have 17 AZ articles', () => {
+  it('should have 24 AZ articles', () => {
     const azArticles = Object.values(newsArticles).filter(
       (a) => (a.locale || 'az') === 'az'
     )
-    expect(azArticles.length).toBe(17)
+    expect(azArticles.length).toBe(24)
   })
 
-  it('should have 12 EN articles', () => {
+  it('should have 19 EN articles', () => {
     const enArticles = Object.values(newsArticles).filter(
       (a) => a.locale === 'en'
     )
-    expect(enArticles.length).toBe(12)
+    expect(enArticles.length).toBe(19)
   })
 })
 
@@ -56,12 +56,12 @@ describe('newsSlugs export', () => {
 describe('getArticlesByLocale', () => {
   it('should return all articles when no locale is provided', () => {
     const all = getArticlesByLocale()
-    expect(Object.keys(all).length).toBe(29)
+    expect(Object.keys(all).length).toBe(43)
   })
 
   it('should return only AZ articles for locale "az"', () => {
     const az = getArticlesByLocale('az')
-    expect(Object.keys(az).length).toBe(17)
+    expect(Object.keys(az).length).toBe(24)
     for (const article of Object.values(az)) {
       expect(article.locale || 'az').toBe('az')
     }
@@ -69,7 +69,7 @@ describe('getArticlesByLocale', () => {
 
   it('should return only EN articles for locale "en"', () => {
     const en = getArticlesByLocale('en')
-    expect(Object.keys(en).length).toBe(12)
+    expect(Object.keys(en).length).toBe(19)
     for (const article of Object.values(en)) {
       expect(article.locale).toBe('en')
     }
@@ -87,17 +87,17 @@ describe('getArticlesByLocale', () => {
 describe('getSlugsByLocale', () => {
   it('should return all slugs when no locale is provided', () => {
     const all = getSlugsByLocale()
-    expect(all.length).toBe(29)
+    expect(all.length).toBe(43)
   })
 
-  it('should return 17 slugs for AZ locale', () => {
+  it('should return 24 slugs for AZ locale', () => {
     const azSlugs = getSlugsByLocale('az')
-    expect(azSlugs.length).toBe(17)
+    expect(azSlugs.length).toBe(24)
   })
 
-  it('should return 12 slugs for EN locale', () => {
+  it('should return 19 slugs for EN locale', () => {
     const enSlugs = getSlugsByLocale('en')
-    expect(enSlugs.length).toBe(12)
+    expect(enSlugs.length).toBe(19)
     for (const slug of enSlugs) {
       expect(slug.startsWith('en-')).toBe(true)
     }
@@ -263,6 +263,7 @@ describe('news article categories', () => {
       'Culture',
       'Travel',
       'Business',
+      'World',
     ]
     for (const cat of enCategories) {
       expect(validEnCategories).toContain(cat)

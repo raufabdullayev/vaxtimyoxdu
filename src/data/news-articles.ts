@@ -2303,6 +2303,394 @@ Experts forecast that Azerbaijan's startup ecosystem could become one of the str
 
 Azerbaijan's startup ecosystem has already reached critical mass. The investment climate is improving, government support is strengthening, and the younger generation's interest in technology is growing. The key is to sustain this positive trend and transform the ecosystem into a self-sustaining circular economy — where successful startups invest in new startups and experienced entrepreneurs mentor young founders. Once this chain reaction begins, Azerbaijan's startup ecosystem will achieve unstoppable growth momentum.`,
   },
+  // ==================== 23-24 Mart 2026 ====================
+  'dunya-laguardia-hava-limani-qezasi': {
+    title: 'Nyu-Yorkun LaGuardia hava limanında təyyarə yanğınsöndürmə maşını ilə toqquşdu: 2 pilot həlak oldu',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Nyu-Yorkun LaGuardia hava limanında bazar günü gecə saatlarında ciddi qəza baş verib. Air Canada-nın Monrealdan gələn AC8646 nömrəli reysi eniş zamanı uçuş-enmə zolağındakı yanğınsöndürmə maşını ilə toqquşub. Hadisə nəticəsində hər iki pilot həlak olub.
+
+## Hadisənin təfərrüatları
+
+CRJ-900 tipli təyyarə 72 sərnişin və 4 ekipaj üzvü ilə təxminən gecə saat 23:40-da LaGuardia hava limanına eniş edirdi. Həmin anda uçuş-enmə zolağında Port Authority yanğınsöndürmə maşını United Airlines reysindən gələn qoxu xəbərdarlığına cavab verirdi. Təyyarə saatda 160 km-dən çox sürətlə yanğınsöndürmə maşınına çırpılıb.
+
+## İtkilər və yaralılar
+
+- **Həlak olanlar:** Pilot və ikinci pilot (hər ikisi həlak)
+- **Yaralılar:** 41 sərnişin xəstəxanaya aparılıb
+- **Yanğınsöndürənlər:** Maşındakı 2 yanğınsöndürən də yaralanıb
+
+## Hava limanının bağlanması
+
+Qəzadan sonra LaGuardia hava limanına bütün uçuşlar dayandırılıb. Hava limanı günortadan sonra saat 14:00-da yenidən açılıb. Yüzlərlə reys ləğv edilib və ya gecikdirilib.
+
+## Araşdırma
+
+Federal Aviasiya Agentliyi (FAA) və Milli Nəqliyyat Təhlükəsizliyi Şurası hadisəni araşdırır. İlkin suallar hava hərəkətinin idarə edilməsi (ATC) və yanğınsöndürmə maşınının uçuş-enmə zolağına çıxma icazəsi ilə bağlıdır. Hava hərəkəti nəzarəti audio yazıları artıq tədqiq edilir.`,
+  },
+  'dunya-kolumbiya-herbi-teyyare-qezasi': {
+    title: 'Kolumbiyada hərbi təyyarə qəzası: C-130 Hercules qalxarkən düşdü, 66 nəfər həlak',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Kolumbiyanın cənubunda hərbi təyyarə qəzası baş verib — ən azı 66 nəfər həlak olub, onlarla adam yaralanıb. Bu, son illərdə Latın Amerikasında ən böyük aviasiya fəlakətlərindən biri hesab olunur.
+
+## Qəzanın təfərrüatları
+
+23 mart tarixində C-130H Hercules tipli hərbi nəqliyyat təyyarəsi Putumayo vilayətinin Puerto Leguizamo şəhərindəki Caucaya hava limanından qalxış zamanı qəzaya uğrayıb. Təyyarədə 125 nəfər var idi — əsasən hərbi qulluqçular. Təyyarə qalxışdan cəmi 1,5 km sonra yerə düşüb.
+
+## İtkilər
+
+- **Hava Qüvvələri:** 6 nəfər həlak
+- **Ordu:** 58 hərbçi həlak
+- **Polis:** 2 nəfər həlak
+- **Yaralılar:** 83 nəfər xəstəxanaya aparılıb
+
+Qəza zamanı təyyarədəki sursat partlayıb və yanğına səbəb olub ki, bu da xilasetmə əməliyyatlarını çətinləşdirib.
+
+## Təyyarə haqqında
+
+Qəzaya uğrayan C-130H Hercules 1965-ci ildə ilk dəfə istismara verilib və ABŞ Hərbi Hava Qüvvələri tərəfindən 2020-ci ildə Kolumbiyaya hədiyyə edilib. Müdafiə naziri Pedro Sanchez bildirib ki, qəzanın səbəbi hələlik müəyyən edilməyib və hücum ehtimalı yoxdur.
+
+## Reaksiya
+
+Kolumbiya prezidenti Gustavo Petro milli matəm elan edib. Ölkənin müdafiə qüvvələri tam araşdırma başladıb. Putumayo vilayəti Peru və Ekvador sərhədlərindəki uzaq bir bölgədir və silahlı qrupların fəaliyyət göstərdiyi ərazi kimi tanınır.`,
+  },
+  'texnologiya-elon-musk-terafab-cip-zavodu': {
+    title: 'Elon Musk "Terafab" elan etdi: Dünyanın ən böyük çip zavodu Texasda tikiləcək',
+    date: '2026-03-23',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Elon Musk Tesla, SpaceX və xAI-nin birgə layihəsi olan "Terafab" çip istehsal müəssisəsini elan edib. 20-25 milyard dollarlıq bu zavod Ostin, Texas şəhərində tikiləcək və dünyanın ən böyük yarımkeçirici istehsal müəssisəsi olacaq.
+
+## Terafab nədir?
+
+Terafab — Tesla, SpaceX və xAI-nin birgə müəssisəsidir. Onun əsas məqsədi ildə 1 teravattdan çox süni intellekt hesablama gücü istehsal etməkdir. Zavod çip dizaynından litoqrafiya, istehsal, yaddaş, qablaşdırma və sınağa qədər bütün mərhələləri bir dam altında birləşdirəcək.
+
+## Nə istehsal olunacaq?
+
+- **Tesla:** Elektrik avtomobilləri və Optimus humanoid robotları üçün xüsusi çiplər
+- **SpaceX:** Kosmik gəmilər üçün optimallaşdırılmış prosessorlar
+- **xAI:** Yüksək performanslı süni intellekt hesablama çipləri
+- **AI5:** Tesla-nın 5-ci nəsil süni intellekt çipi ilk məhsullardan biri olacaq
+
+## İstehsal planı
+
+Kiçik partiya istehsalı 2026-cı ilin sonuna, kütləvi istehsal isə 2027-ci ilə planlaşdırılır.
+
+## Əhəmiyyəti
+
+Musk layihəni "qalaktik sivilizasiya" qurmaq üçün lazımi addım adlandırıb. Terafab ABŞ-ın yarımkeçirici istehsalında Çindən asılılığını azaltmaq strategiyasının bir hissəsidir. CHIPS Act-ın dəstəyi ilə yerli çip istehsalı gücləndirilir. Bundan əlavə, ABŞ prokurorları bu həftə Super Micro-nun həmtəsisçisini 2,5 milyard dollarlıq Nvidia AI çiplərinin qanunsuz şəkildə Çinə ixrac edilməsində ittiham edib — bu da yerli istehsalın vacibliyini bir daha göstərir.`,
+  },
+  'iqtisadiyyat-bazarlar-iran-ateskesi-umidi': {
+    title: 'Birjalar kəskin yüksəldi: Trump İranla danışıqlar apardığını açıqladı',
+    date: '2026-03-23',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `ABŞ prezidenti Donald Trampın İranla danışıqlar apardığını və İranın enerji infrastrukturuna zərbələri dayandırdığını elan etməsi dünya birjalarında kəskin yüksəlişə səbəb olub. İnvestorlar Yaxın Şərq münaqişəsinin sona yaxınlaşdığına ümid edirlər.
+
+## Birja göstəriciləri (23 mart)
+
+- **Dow Jones:** +631 xal (+1,38%), 46.208 xalda bağlanıb
+- **S&P 500:** +1,15%, 6.581 xalda
+- **Nasdaq:** +1,38%, 21.946 xalda
+
+Bu, son həftələrin ən güclü birja artımıdır. İnvestorlar İran münaqişəsinin neft qiymətlərini aşağı salacağını və qlobal resessiyanın qarşısını alacağını gözləyirlər.
+
+## Federal Ehtiyat Sistemi
+
+Fed faiz dərəcəsini 3,50%-3,75% səviyyəsində saxlayıb. Fed sədri Cerom Pauell bildirib ki:
+
+- İnflyasiya hələ 2% hədəfin üstündədir
+- İran münaqişəsi inflyasiya gözləntilərini artırıb
+- 2026-cı ildə daha bir faiz endirilməsi planlaşdırılır
+
+## İşsizlik artıb
+
+İki ay düşüşdən sonra işsizlik dərəcəsi 4,4%-ə yüksəlib — bu, əmək bazarının zəiflədiyinin göstəricisidir.
+
+## Neft bazarı
+
+İran münaqişəsi enerji bazarlarını sarsıdıb. Brent nefti ilin əvvəlindən 75% bahalaşıb. Hörmüz boğazının blokadası Hindistandakı ən ağır qaz təchizatı böhranına səbəb olub. Qızıl isə 2026-cı ilin ən aşağı səviyyəsinə — 4.300 dolların altına düşüb.
+
+## İranın mövqeyi
+
+Tehran danışıqlar barədə iddiaları "yalan xəbər" adlandırıb. İranın Xarici İşlər Nazirliyi ABŞ ilə birbaşa danışıqların aparıldığını inkar edib. Bu ziddiyyətli açıqlamalar bazarlarda qeyri-müəyyənliyi artırır.`,
+  },
+  'dunya-azerbaycan-iran-regional-tehlukesizlik': {
+    title: 'Azərbaycan və İran regional təhlükəsizliyi müzakirə etdi: Naxçıvan dron hücumları araşdırılır',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Azərbaycan Xarici İşlər naziri Ceyhun Bayramov İranın Xarici İşlər naziri Seyid Abbas Araghçi ilə telefon danışığı aparıb. Nazirlər regional təhlükəsizlik və hərbi gərginliyin azaldılması məsələlərini müzakirə ediblər.
+
+## Əsas müzakirə mövzuları
+
+- **Hərbi eskalasiya:** Nazirlər Yaxın Şərqdə hərbi gərginliyin dayandırılması üçün mümkün tədbirləri müzakirə ediblər
+- **Xəzər təhlükəsizliyi:** Xəzər regionunda təhlükəsizliyin təmin edilməsinin vacibliyi vurğulanıb
+- **Naxçıvan:** Bayramov İran ərazisindən Naxçıvan Muxtar Respublikasına yönəlmiş dron zərbələrinin araşdırılmasının tamamlanmasına ümid ifadə edib
+
+## Digər diplomatik fəaliyyət
+
+Eyni gün Azərbaycan XİN-i bir neçə istiqamətdə aktiv diplomatiya aparıb:
+
+- **Braziliya:** Braziliya Xarici İşlər naziri Mauro Viyeyra Bayramovla ikitərəfli əməkdaşlıq və Yaxın Şərq təhlükəsizliyi barədə danışıb
+- **Rusiya:** Azərbaycan XİN-i Rusiya XİN sözçüsü Mariya Zaxarovanın Azərbaycanın Milli Lideri Heydər Əliyevin adını yersiz kontekstdə istifadə etməsi ilə bağlı açıqlama tələb edib
+
+## Hərbi fəaliyyət
+
+Müdafiə Nazirliyinin 2026-cı il təlim planına uyğun olaraq, 23 mart tarixində Bakı və Abşeron istiqamətlərində pilotsuz uçuş aparatlarının (PUA) təlim uçuşları keçirilib. Bu uçuşlar saat 16:00 ətrafında həyata keçirilib.`,
+  },
+  'dunya-paris-sosialist-mer-italiya-referendumu': {
+    title: 'Avropa seçkiləri: Paris-də sosialist mer, İtaliya referendumda Meloni-yə "yox" dedi',
+    date: '2026-03-23',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Avropa genişmiqyaslı yerli seçkilər və referendumlarla sarsıldı. Fransa və İtaliyada nəticələr gözlənilməz oldu və hər iki ölkədə siyasi mənzərə dəyişdi.
+
+## Paris: Sosialist Emmanüel Qreqor mer seçildi
+
+Parisin yeni meri sosialist namizəd Emmanüel Qreqor oldu. Marin Le Penin Milli Birlik partiyası paytaxtda və digər əsas şəhərlərdə uğur qazana bilmədi.
+
+**Əhəmiyyəti:**
+- Sol cənah Fransa paytaxtında mövqelərini möhkəmləndirdi
+- Le Pen-in partiyasının böyük şəhərlərdə zəifliyi bir daha təsdiqləndi
+- Seçki nəticəsi Fransa siyasətində sol-sağ balansını göstərir
+
+## İtaliya: Meloni referendumda məğlub oldu
+
+İtaliya Baş naziri Corciya Meloni ədalət mühakiməsi islahatı referendumunda məğlubiyyəti qəbul etdi. İtaliya vətəndaşları Meloni-nin təklif etdiyi məhkəmə sistemi dəyişikliyinə "yox" dedi.
+
+**Əhəmiyyəti:**
+- Meloni hökumətinin ən böyük siyasi zərbəsi
+- İtaliya ədalət sisteminin müstəqilliyi saxlanıldı
+- Bu nəticə Meloni-nin gələcək islahat planlarını çətinləşdirə bilər
+
+## Digər seçki nəticələri
+
+Sloveniyada da yerli seçkilər keçirildi. Ümumiyyətlə, Avropa boyu keçirilən seçkilər göstərdi ki, vətəndaşlar populist partiyalara tədricən alternativ axtarırlar. Sol-mərkəz partiyaları bir çox şəhərdə mövqelərini geri qazanıblar.`,
+  },
+  'idman-dunya-kuboku-secme-italiya-playoff': {
+    title: 'Dünya Kuboku seçmə: İtaliya playoff-da, Gattuso "keçmişi unutmalıyıq" dedi',
+    date: '2026-03-24',
+    category: 'İdman',
+    locale: 'az',
+    content: `2026 Dünya Kuboku seçmə turnirinin playoff mərhələsi bu həftə start götürür. İtaliya yığması cümə axşamı Şimali İrlandiya ilə yarımfinalda üz-üzə gələcək. Baş məşqçi Cennaro Qattuso futbolçulardan keçmiş uğursuzluqları unutmağı tələb edir.
+
+## İtaliya - Şimali İrlandiya (yarımfinal)
+
+Qattuso komandasından əvvəl mental hazırlığı ön plana çəkib: "Taktikadan əvvəl beynimizdə düzgün düşüncə olmalıdır. 2022-ci ilin faciəsini arxada qoymalıyıq."
+
+İtaliya 2022 Dünya Kuboku seçməsində Şimali Makedoniyaya məğlub olaraq ardıcıl ikinci dəfə munda kənardan baxmışdı. Bu xatirə hələ də İtaliya futbolunda ağrılı mövzudur.
+
+**Mümkün final rəqibləri:** Qalib Uels və ya Bosniya-Herseqovina ilə 31 martda final oynayacaq.
+
+## Qriezmann transferi
+
+Antoine Qriezmann Orlando City SC ilə 2 illik (1 il opsion) müqavilə imzalayacağı açıqlandı. Fransa millisinin ulduz hücumçusu MLS-ə keçməklə karyerasının yeni səhifəsini açır.
+
+## Liverpool-da problem
+
+Liverpool hücumçusu Federico Kyeza fiziki problemlər səbəbindən İtaliya millisinin düşərgəsini tərk edib. Bu, Qattuso üçün oyunçu seçimində əlavə problem yaradır.
+
+## Dünya Kuboku 2026
+
+Xatırladaq ki, 2026 Dünya Kuboku ABŞ, Kanada və Meksikada keçiriləcək. Turnir tarixdə ilk dəfə 48 komandanın iştirakı ilə oynanılacaq. Playoff mərhələsi sonuncu yerləri bölüşdürəcək.`,
+  },
+  // ==================== 23-24 March 2026 (EN) ====================
+  'en-laguardia-airport-plane-crash-fire-truck': {
+    title: 'LaGuardia Airport: Air Canada Jet Collides with Fire Truck on Runway, Two Pilots Killed',
+    date: '2026-03-23',
+    category: 'World',
+    locale: 'en',
+    content: `Two pilots were killed and dozens were injured when an Air Canada regional jet collided with a fire truck on the runway at LaGuardia Airport in New York City late Sunday night. The incident forced the complete shutdown of New York's second-busiest airport.
+
+## What Happened
+
+Air Canada Flight AC8646, a CRJ-900 aircraft operated by Jazz Aviation, was arriving from Montreal with 72 passengers and four crew members. At approximately 11:40 PM, as the aircraft was landing, it struck a Port Authority fire truck that was on the runway responding to a separate incident involving a United Airlines flight that had reported an odor on board. Preliminary analysis indicates the plane hit the truck at over 100 mph.
+
+## Casualties
+
+- **Killed:** Both the pilot and first officer died in the collision
+- **Passengers:** 41 passengers were transported to area hospitals
+- **Firefighters:** Two firefighters in the truck were also injured
+
+## Airport Closure
+
+All flights into and out of LaGuardia were canceled until 2 PM the following day. Hundreds of flights were affected across the region.
+
+## Investigation
+
+The FAA and the National Transportation Safety Board (NTSB) are investigating the crash. Key questions center on air traffic control coordination and why the fire truck was cleared to be on the active runway during an incoming landing. Air traffic control audio recordings are being examined.`,
+  },
+  'en-colombia-military-plane-crash-66-killed': {
+    title: 'Colombian Military Plane Crash Kills 66: C-130 Hercules Goes Down After Takeoff',
+    date: '2026-03-23',
+    category: 'World',
+    locale: 'en',
+    content: `At least 66 people were killed and 83 others injured when a Colombian Air Force C-130H Hercules transport plane crashed shortly after takeoff in southern Colombia. It is one of the deadliest aviation disasters in Latin America in recent years.
+
+## The Crash
+
+On March 23, the military transport aircraft went down at Caucaya Airport in Puerto Leguizamo, a remote municipality in the Amazonian province of Putumayo near the borders with Peru and Ecuador. The plane, carrying 125 personnel — mostly soldiers — crashed just 1.5 km from the runway.
+
+## Casualties
+
+- **Air Force personnel:** 6 killed
+- **National Army soldiers:** 58 killed
+- **National Police:** 2 killed
+- **Hospitalized:** 83 with injuries of varying severity
+
+The crash triggered the detonation of ammunition on board, setting the wreckage ablaze and complicating rescue operations.
+
+## Aircraft History
+
+The C-130H Hercules was an older model that first entered service in 1965 and was donated to Colombia by the U.S. Air Force in September 2020. Defense Minister Pedro Sanchez stated that the cause has not been determined and there is no indication of an attack by criminal groups.
+
+## Government Response
+
+Colombian President Gustavo Petro declared a period of national mourning. The military has launched a full investigation into the crash, which occurred in a region known for the presence of armed groups.`,
+  },
+  'en-elon-musk-terafab-chip-factory-texas': {
+    title: 'Elon Musk Unveils Terafab: World\'s Largest Chip Factory to Be Built in Austin, Texas',
+    date: '2026-03-23',
+    category: 'Technology',
+    locale: 'en',
+    content: `Elon Musk has announced Terafab, a joint venture between Tesla, SpaceX, and xAI that aims to become the world's largest semiconductor manufacturing facility. The $20-25 billion project will be built in Austin, Texas, and is designed to produce more than one terawatt of AI compute capacity per year.
+
+## What Is Terafab?
+
+Terafab is a vertically integrated chip fabrication facility that will consolidate every stage of semiconductor production under one roof — from chip design and lithography to fabrication, memory production, advanced packaging, and testing.
+
+## Products
+
+- **Tesla:** Custom chips for electric vehicles and Optimus humanoid robots
+- **SpaceX:** Optimized processors for spacecraft systems
+- **xAI:** High-performance AI computing chips
+- **AI5:** Tesla's fifth-generation AI chip will be among the first products
+
+## Production Timeline
+
+Small-batch production is targeted for late 2026, with volume production projected for 2027.
+
+## Strategic Significance
+
+Musk described the venture as a necessary step toward building "a galactic civilization." Terafab is part of a broader U.S. strategy to reduce dependence on foreign chip manufacturing, particularly from China. The announcement comes in the same week that federal prosecutors charged Super Micro co-founder Yih-Shyan Liaw with orchestrating the illegal export of $2.5 billion worth of Nvidia AI chips to Chinese entities.
+
+OpenAI also announced plans to nearly double its headcount to roughly 8,000 employees by end of 2026, reflecting the broader AI industry's rapid expansion.`,
+  },
+  'en-markets-rally-trump-iran-ceasefire-hopes': {
+    title: 'Markets Surge as Trump Claims Iran Talks Progress; Fed Holds Rates Steady',
+    date: '2026-03-23',
+    category: 'Economy',
+    locale: 'en',
+    content: `U.S. stock markets rallied sharply on Monday after President Donald Trump announced that the U.S. and Iran have held talks and that he was halting strikes on Iranian power plants and energy infrastructure. Investors embraced the possibility that the Middle East conflict may be nearing an end.
+
+## Market Performance (March 23)
+
+- **Dow Jones:** +631 points (+1.38%), closed at 46,208
+- **S&P 500:** +1.15%, closed at 6,581
+- **Nasdaq:** +1.38%, closed at 21,947
+
+This marked the strongest single-day rally in weeks, driven by hopes that a de-escalation could bring oil prices down and avert a global recession.
+
+## Federal Reserve Decision
+
+The Fed voted to hold the federal funds rate unchanged at 3.50%-3.75%. Chair Jerome Powell noted that inflation remains above the 2% target and that inflation expectations have risen amid the Iran conflict. The committee reaffirmed guidance for one additional quarter-point cut in 2026.
+
+## Labor Market
+
+After falling for two months, the unemployment rate rose to 4.4%, signaling potential softening in the labor market.
+
+## Energy Markets
+
+The Iran conflict continues to roil energy markets. Brent crude is up roughly 75% year-to-date. The blockade of the Strait of Hormuz has triggered India's worst gas supply crisis in recent history. Gold briefly fell below $4,300 — its lowest level of 2026.
+
+## Iran's Response
+
+Tehran has dismissed claims of talks as "fake news." Iran's Foreign Ministry denied any direct negotiations with the U.S. These contradictory statements maintain market uncertainty despite the day's rally.`,
+  },
+  'en-azerbaijan-iran-regional-security-talks': {
+    title: 'Azerbaijan and Iran Discuss Regional Security: Nakhchivan Drone Strike Investigation Continues',
+    date: '2026-03-23',
+    category: 'World',
+    locale: 'en',
+    content: `Azerbaijani Foreign Minister Jeyhun Bayramov held a phone call with his Iranian counterpart Seyyed Abbas Araghchi on March 23. The ministers discussed measures to stop military escalation in the region and the importance of ensuring security in the Caspian Sea area.
+
+## Key Discussion Points
+
+- **Military de-escalation:** Both ministers exchanged views on possible measures to halt the escalation of hostilities in the Middle East and surrounding regions
+- **Caspian security:** The importance of maintaining security and stability in the Caspian region was emphasized
+- **Nakhchivan:** Minister Bayramov expressed hope that the investigation into drone strikes on the Nakhchivan Autonomous Republic from Iranian territory would be completed
+
+## Other Diplomatic Activity
+
+Azerbaijan's Foreign Ministry was active on multiple diplomatic fronts the same day:
+
+- **Brazil:** Brazilian Foreign Minister Mauro Vieira discussed bilateral cooperation and Middle East security with Bayramov
+- **Russia:** Azerbaijan's MFA sought clarification from Russia over spokesperson Maria Zakharova's remarks that used the name of Azerbaijan's National Leader Heydar Aliyev in an inappropriate context
+
+## Military Activity
+
+In accordance with the 2026 training plan, the Azerbaijan Air Force conducted training flights of unmanned aerial vehicles in the directions of Baku and Absheron district at approximately 4:00 PM on March 23.`,
+  },
+  'en-europe-elections-paris-socialist-mayor-italy-referendum': {
+    title: 'Europe Votes: Paris Elects Socialist Mayor, Italy Rejects Meloni\'s Judiciary Reform',
+    date: '2026-03-23',
+    category: 'World',
+    locale: 'en',
+    content: `Major elections and referendums across Europe delivered surprise results over the weekend, reshaping the political landscape in France and Italy.
+
+## Paris: Socialist Emmanuel Gregoire Elected Mayor
+
+Socialist candidate Emmanuel Gregoire won the Paris mayoral race, defeating Marine Le Pen's National Rally party, which failed to secure victories in the capital and other major French cities.
+
+**Significance:**
+- The left consolidated its hold on the French capital
+- Le Pen's party confirmed its persistent weakness in major urban centers
+- The result reflects the left-right balance in French politics ahead of future national elections
+
+## Italy: Meloni Concedes Referendum Defeat
+
+Italian Prime Minister Giorgia Meloni conceded defeat in the judiciary reform referendum. Italian voters rejected her proposed changes to the judicial system.
+
+**Significance:**
+- The biggest political setback for the Meloni government to date
+- Italian judicial independence was preserved
+- The result could complicate Meloni's future reform agenda
+
+## Slovenia
+
+Local elections were also held in Slovenia. Across the continent, voting patterns suggest a gradual shift away from populist parties, with center-left forces regaining ground in several major cities.`,
+  },
+  'en-world-cup-qualifiers-italy-playoff': {
+    title: 'World Cup Qualifiers: Italy Face Playoff Pressure, Gattuso Demands Mental Reset',
+    date: '2026-03-24',
+    category: 'Sports',
+    locale: 'en',
+    content: `The 2026 FIFA World Cup qualifying playoffs begin this week, with Italy facing Northern Ireland in the semi-final on Thursday. Head coach Gennaro Gattuso has prioritized mental preparation over tactics, urging his players to move past the trauma of past failures.
+
+## Italy vs Northern Ireland (Semi-Final)
+
+Gattuso addressed the squad ahead of the crucial fixture: "Before tactics, we need the right mindset. We must leave the 2022 disaster behind us."
+
+Italy's failure to qualify for the 2022 World Cup — eliminated by North Macedonia in the playoffs — remains one of the most painful episodes in Italian football history. The team is under immense pressure to avoid a repeat.
+
+**Potential final opponents:** The winner will face either Wales or Bosnia & Herzegovina on March 31 for a spot at the World Cup.
+
+## Griezmann to MLS
+
+Antoine Griezmann is set to sign a two-year deal (with a one-year option) with Orlando City SC. The French international star's move to MLS marks a new chapter in his career.
+
+## Liverpool's Chiesa Leaves Camp
+
+Liverpool forward Federico Chiesa has left the Italy squad due to physical problems, creating an additional selection headache for Gattuso.
+
+## World Cup 2026
+
+The 2026 FIFA World Cup will be held across the United States, Canada, and Mexico. For the first time in history, 48 teams will participate. The playoff round will determine the last remaining qualification spots.`,
+  },
 }
 
 export const newsSlugs = Object.keys(newsArticles)
