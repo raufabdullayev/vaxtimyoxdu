@@ -363,6 +363,102 @@
       "hashtag-generator": {
         "name": "Генератор хештегов",
         "description": "Создавайте хештеги из ключевых слов для соцсетей"
+      },
+      "cron-builder": {
+        "name": "Конструктор Cron-выражений",
+        "description": "Визуальный редактор cron-выражений"
+      },
+      "git-command-generator": {
+        "name": "Генератор Git-команд",
+        "description": "Создавайте git-команды визуально"
+      },
+      "http-header-parser": {
+        "name": "Анализатор HTTP-заголовков",
+        "description": "Анализируйте и классифицируйте HTTP-заголовки"
+      },
+      "sql-to-mongodb": {
+        "name": "Конвертер SQL в MongoDB",
+        "description": "Преобразуйте SQL-запросы в команды MongoDB"
+      },
+      "api-response-formatter": {
+        "name": "Форматирование API-ответов",
+        "description": "Форматируйте JSON-ответы API"
+      },
+      "robots-txt-generator": {
+        "name": "Генератор robots.txt",
+        "description": "Создайте robots.txt визуально"
+      },
+      "htaccess-generator": {
+        "name": "Генератор .htaccess",
+        "description": "Создайте правила перенаправления .htaccess"
+      },
+      "privacy-policy-generator": {
+        "name": "Генератор политики конфиденциальности",
+        "description": "Создайте политику конфиденциальности для сайта"
+      },
+      "terms-of-service-generator": {
+        "name": "Генератор условий использования",
+        "description": "Создайте условия использования для сайта"
+      },
+      "sitemap-generator": {
+        "name": "Генератор XML Sitemap",
+        "description": "Создайте XML-карту сайта из URL"
+      },
+      "open-graph-generator": {
+        "name": "Генератор Open Graph тегов",
+        "description": "Создайте OG и Twitter Card мета-теги"
+      },
+      "currency-converter": {
+        "name": "Конвертер валют",
+        "description": "Конвертируйте мировые валюты"
+      },
+      "tax-calculator": {
+        "name": "Калькулятор налогов",
+        "description": "Рассчитайте суммы налогов"
+      },
+      "tip-calculator": {
+        "name": "Калькулятор чаевых",
+        "description": "Рассчитайте чаевые и разделите счёт"
+      },
+      "compound-interest-calculator": {
+        "name": "Калькулятор сложных процентов",
+        "description": "Рассчитайте сложные проценты с вкладами"
+      },
+      "youtube-thumbnail-text": {
+        "name": "Текст для миниатюр YouTube",
+        "description": "Создайте текст для миниатюр YouTube"
+      },
+      "readability-checker": {
+        "name": "Проверка читаемости",
+        "description": "Проверьте читаемость по шкале Flesch-Kincaid"
+      },
+      "lorem-ipsum-alternative": {
+        "name": "Альтернатива Lorem Ipsum",
+        "description": "Тематический текст-заполнитель"
+      },
+      "text-to-handwriting": {
+        "name": "Текст в рукопись",
+        "description": "Преобразуйте текст в рукописный стиль"
+      },
+      "whitespace-remover": {
+        "name": "Удаление пробелов",
+        "description": "Удалите лишние пробелы из текста"
+      },
+      "duplicate-line-remover": {
+        "name": "Удаление дубликатов строк",
+        "description": "Удалите повторяющиеся строки из текста"
+      },
+      "twitter-char-counter": {
+        "name": "Счётчик символов Twitter/X",
+        "description": "Подсчёт символов для твитов"
+      },
+      "instagram-caption-generator": {
+        "name": "Генератор подписей Instagram",
+        "description": "Создайте подписи Instagram с хештегами"
+      },
+      "stopwatch": {
+        "name": "Секундомер",
+        "description": "Секундомер с точностью до миллисекунд"
       }
     }
   },

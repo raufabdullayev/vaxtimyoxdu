@@ -363,6 +363,102 @@
       "hashtag-generator": {
         "name": "Hashtag Olusturucu",
         "description": "Sosyal medya icin anahtar kelimelerden hashtag olusturun"
+      },
+      "cron-builder": {
+        "name": "Cron Ifade Olusturucu",
+        "description": "Gorsel cron ifade duzenleyici"
+      },
+      "git-command-generator": {
+        "name": "Git Komut Olusturucu",
+        "description": "Gorsel aracla git komutlari olusturun"
+      },
+      "http-header-parser": {
+        "name": "HTTP Baslik Ayristirici",
+        "description": "HTTP basliklarini ayristirin ve kategorilere ayirin"
+      },
+      "sql-to-mongodb": {
+        "name": "SQL - MongoDB Donusturucu",
+        "description": "SQL sorgularini MongoDB komutlarina donusturun"
+      },
+      "api-response-formatter": {
+        "name": "API Yanit Biçimleyici",
+        "description": "API JSON yanitlarini biçimlendirin"
+      },
+      "robots-txt-generator": {
+        "name": "robots.txt Olusturucu",
+        "description": "Gorsel duzenleyici ile robots.txt olusturun"
+      },
+      "htaccess-generator": {
+        "name": ".htaccess Olusturucu",
+        "description": ".htaccess yonlendirme kurallari olusturun"
+      },
+      "privacy-policy-generator": {
+        "name": "Gizlilik Politikasi Olusturucu",
+        "description": "Web siteniz icin gizlilik politikasi olusturun"
+      },
+      "terms-of-service-generator": {
+        "name": "Kullanim Sartlari Olusturucu",
+        "description": "Web siteniz icin kullanim sartlari olusturun"
+      },
+      "sitemap-generator": {
+        "name": "XML Sitemap Olusturucu",
+        "description": "URL listelerinden XML sitemap olusturun"
+      },
+      "open-graph-generator": {
+        "name": "Open Graph Etiketi Olusturucu",
+        "description": "OG ve Twitter Card meta etiketleri olusturun"
+      },
+      "currency-converter": {
+        "name": "Doviz Cevirici",
+        "description": "Dunya para birimleri arasinda donusum yapin"
+      },
+      "tax-calculator": {
+        "name": "Vergi Hesaplayici",
+        "description": "Vergi tutarlarini hesaplayin"
+      },
+      "tip-calculator": {
+        "name": "Bahsis Hesaplayici",
+        "description": "Bahsis hesaplayin ve hesabi bolun"
+      },
+      "compound-interest-calculator": {
+        "name": "Bilesik Faiz Hesaplayici",
+        "description": "Katkilarla bilesik faiz hesaplayin"
+      },
+      "youtube-thumbnail-text": {
+        "name": "YouTube Kucuk Resim Metni",
+        "description": "YouTube kucuk resimleri icin metin olusturun"
+      },
+      "readability-checker": {
+        "name": "Okunabilirlik Denetleyici",
+        "description": "Flesch-Kincaid puaniyla okunabilirligi kontrol edin"
+      },
+      "lorem-ipsum-alternative": {
+        "name": "Lorem Ipsum Alternatifi",
+        "description": "Temali yer tutucu metin olusturun"
+      },
+      "text-to-handwriting": {
+        "name": "Metin El Yazisina",
+        "description": "Metni el yazisi stilinde gorsele donusturun"
+      },
+      "whitespace-remover": {
+        "name": "Bosluk Temizleyici",
+        "description": "Metinden fazla bosluklari kaldirin"
+      },
+      "duplicate-line-remover": {
+        "name": "Tekrar Satir Temizleyici",
+        "description": "Metinden tekrarlanan satirlari kaldirin"
+      },
+      "twitter-char-counter": {
+        "name": "Twitter/X Karakter Sayaci",
+        "description": "Twitler icin karakter sayisi"
+      },
+      "instagram-caption-generator": {
+        "name": "Instagram Aciklama Olusturucu",
+        "description": "Hashtaglerle Instagram aciklamalari olusturun"
+      },
+      "stopwatch": {
+        "name": "Kronometre",
+        "description": "Milisaniye hassasiyetinde kronometre"
       }
     }
   },

@@ -363,6 +363,102 @@
       "hashtag-generator": {
         "name": "Hashtag Generatoru",
         "description": "Sosial media üçün açar sözlərdən hashtag yaradın"
+      },
+      "cron-builder": {
+        "name": "Cron İfadə Qurucusu",
+        "description": "Vizual cron ifadə redaktoru"
+      },
+      "git-command-generator": {
+        "name": "Git Əmr Generatoru",
+        "description": "Vizual qurucuyla git əmrləri yaradın"
+      },
+      "http-header-parser": {
+        "name": "HTTP Başlıq Analizi",
+        "description": "HTTP başlıqlarını təhlil edin və kateqoriyalara ayırın"
+      },
+      "sql-to-mongodb": {
+        "name": "SQL-dən MongoDB Çevirici",
+        "description": "SQL sorğularını MongoDB əmrlərinə çevirin"
+      },
+      "api-response-formatter": {
+        "name": "API Cavab Formatı",
+        "description": "API JSON cavablarını formatlaşdırın"
+      },
+      "robots-txt-generator": {
+        "name": "robots.txt Generatoru",
+        "description": "Vizual redaktorla robots.txt yaradın"
+      },
+      "htaccess-generator": {
+        "name": ".htaccess Generatoru",
+        "description": ".htaccess yönləndirmə qaydaları yaradın"
+      },
+      "privacy-policy-generator": {
+        "name": "Məxfilik Siyasəti Generatoru",
+        "description": "Saytınız üçün məxfilik siyasəti yaradın"
+      },
+      "terms-of-service-generator": {
+        "name": "İstifadə Şərtləri Generatoru",
+        "description": "Saytınız üçün istifadə şərtləri yaradın"
+      },
+      "sitemap-generator": {
+        "name": "XML Sitemap Generatoru",
+        "description": "URL siyahısından XML sitemap yaradın"
+      },
+      "open-graph-generator": {
+        "name": "Open Graph Tag Generatoru",
+        "description": "OG və Twitter Card meta tagları yaradın"
+      },
+      "currency-converter": {
+        "name": "Valyuta Çevirici",
+        "description": "Dünya valyutaları arasında çevirin"
+      },
+      "tax-calculator": {
+        "name": "Vergi Kalkulyatoru",
+        "description": "Vergi məbləğlərini hesablayın"
+      },
+      "tip-calculator": {
+        "name": "Bahşiş Kalkulyatoru",
+        "description": "Bahşiş hesablayın və hesabı bölün"
+      },
+      "compound-interest-calculator": {
+        "name": "Mürəkkəb Faiz Kalkulyatoru",
+        "description": "Əlavələrlə mürəkkəb faiz hesablayın"
+      },
+      "youtube-thumbnail-text": {
+        "name": "YouTube Miniatür Mətni",
+        "description": "YouTube miniatürləri üçün mətn yaradın"
+      },
+      "readability-checker": {
+        "name": "Oxunaqlılıq Yoxlayıcısı",
+        "description": "Flesch-Kincaid balı ilə oxunaqlılığı yoxlayın"
+      },
+      "lorem-ipsum-alternative": {
+        "name": "Lorem Ipsum Alternativi",
+        "description": "Tematik əvəzedici mətn yaradın"
+      },
+      "text-to-handwriting": {
+        "name": "Mətn → Əlyazması",
+        "description": "Mətni əlyazması üslublu şəkilə çevirin"
+      },
+      "whitespace-remover": {
+        "name": "Boşluq Silici",
+        "description": "Mətndən artıq boşluqları silin"
+      },
+      "duplicate-line-remover": {
+        "name": "Təkrar Sətir Silici",
+        "description": "Mətndən təkrar sətirləri silin"
+      },
+      "twitter-char-counter": {
+        "name": "Twitter/X Simvol Sayğacı",
+        "description": "Tvitlər üçün simvolları sayın"
+      },
+      "instagram-caption-generator": {
+        "name": "Instagram Başlıq Generatoru",
+        "description": "Hashtaglarla Instagram başlıqları yaradın"
+      },
+      "stopwatch": {
+        "name": "Xronoqraf",
+        "description": "Millisaniyə dəqiqliyində xronoqraf"
       }
     }
   },

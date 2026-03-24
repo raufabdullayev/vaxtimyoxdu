@@ -363,6 +363,102 @@
       "hashtag-generator": {
         "name": "Hashtag Generator",
         "description": "Generate hashtags from keywords for social media"
+      },
+      "cron-builder": {
+        "name": "Cron Expression Builder",
+        "description": "Visual cron expression editor with presets"
+      },
+      "git-command-generator": {
+        "name": "Git Command Generator",
+        "description": "Generate git commands with a visual builder"
+      },
+      "http-header-parser": {
+        "name": "HTTP Header Parser",
+        "description": "Parse and categorize HTTP headers"
+      },
+      "sql-to-mongodb": {
+        "name": "SQL to MongoDB Converter",
+        "description": "Convert SQL queries to MongoDB commands"
+      },
+      "api-response-formatter": {
+        "name": "API Response Formatter",
+        "description": "Format and inspect API JSON responses"
+      },
+      "robots-txt-generator": {
+        "name": "robots.txt Generator",
+        "description": "Generate robots.txt with visual editor"
+      },
+      "htaccess-generator": {
+        "name": ".htaccess Generator",
+        "description": "Generate .htaccess redirect and rewrite rules"
+      },
+      "privacy-policy-generator": {
+        "name": "Privacy Policy Generator",
+        "description": "Generate a privacy policy for your website"
+      },
+      "terms-of-service-generator": {
+        "name": "Terms of Service Generator",
+        "description": "Generate terms of service for your website"
+      },
+      "sitemap-generator": {
+        "name": "XML Sitemap Generator",
+        "description": "Create XML sitemaps from URL lists"
+      },
+      "open-graph-generator": {
+        "name": "Open Graph Tag Generator",
+        "description": "Generate OG and Twitter Card meta tags"
+      },
+      "currency-converter": {
+        "name": "Currency Converter",
+        "description": "Convert between world currencies"
+      },
+      "tax-calculator": {
+        "name": "Tax Calculator",
+        "description": "Calculate tax amounts and totals"
+      },
+      "tip-calculator": {
+        "name": "Tip Calculator",
+        "description": "Calculate tips and split bills"
+      },
+      "compound-interest-calculator": {
+        "name": "Compound Interest Calculator",
+        "description": "Calculate compound interest with contributions"
+      },
+      "youtube-thumbnail-text": {
+        "name": "YouTube Thumbnail Text",
+        "description": "Create text overlays for YouTube thumbnails"
+      },
+      "readability-checker": {
+        "name": "Readability Checker",
+        "description": "Check text readability with Flesch-Kincaid score"
+      },
+      "lorem-ipsum-alternative": {
+        "name": "Lorem Ipsum Alternative",
+        "description": "Generate themed placeholder text"
+      },
+      "text-to-handwriting": {
+        "name": "Text to Handwriting",
+        "description": "Convert text to handwriting-style images"
+      },
+      "whitespace-remover": {
+        "name": "Whitespace Remover",
+        "description": "Remove extra whitespace from text"
+      },
+      "duplicate-line-remover": {
+        "name": "Duplicate Line Remover",
+        "description": "Remove duplicate lines from text"
+      },
+      "twitter-char-counter": {
+        "name": "Twitter/X Character Counter",
+        "description": "Count characters for tweets with preview"
+      },
+      "instagram-caption-generator": {
+        "name": "Instagram Caption Generator",
+        "description": "Generate Instagram captions with hashtags"
+      },
+      "stopwatch": {
+        "name": "Stopwatch",
+        "description": "Millisecond precision stopwatch with laps"
       }
     }
   },
