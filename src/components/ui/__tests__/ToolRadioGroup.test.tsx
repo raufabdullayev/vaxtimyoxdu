@@ -64,4 +64,76 @@ describe('ToolRadioGroup', () => {
       expect(radio).toHaveAttribute('type', 'button')
     })
   })
+
+  it('navigates to next option with ArrowRight', async () => {
+    const user = userEvent.setup()
+    const onChange = vi.fn()
+    render(
+      <ToolRadioGroup label="Tone" options={options} value="professional" onChange={onChange} />
+    )
+    const first = screen.getByRole('radio', { name: 'Professional' })
+    first.focus()
+    await user.keyboard('{ArrowRight}')
+    expect(onChange).toHaveBeenCalledWith('casual')
+  })
+
+  it('navigates to previous option with ArrowLeft', async () => {
+    const user = userEvent.setup()
+    const onChange = vi.fn()
+    render(
+      <ToolRadioGroup label="Tone" options={options} value="casual" onChange={onChange} />
+    )
+    const second = screen.getByRole('radio', { name: 'Casual' })
+    second.focus()
+    await user.keyboard('{ArrowLeft}')
+    expect(onChange).toHaveBeenCalledWith('professional')
+  })
+
+  it('wraps around from last to first with ArrowRight', async () => {
+    const user = userEvent.setup()
+    const onChange = vi.fn()
+    render(
+      <ToolRadioGroup label="Tone" options={options} value="academic" onChange={onChange} />
+    )
+    const last = screen.getByRole('radio', { name: 'Academic' })
+    last.focus()
+    await user.keyboard('{ArrowRight}')
+    expect(onChange).toHaveBeenCalledWith('professional')
+  })
+
+  it('wraps around from first to last with ArrowLeft', async () => {
+    const user = userEvent.setup()
+    const onChange = vi.fn()
+    render(
+      <ToolRadioGroup label="Tone" options={options} value="professional" onChange={onChange} />
+    )
+    const first = screen.getByRole('radio', { name: 'Professional' })
+    first.focus()
+    await user.keyboard('{ArrowLeft}')
+    expect(onChange).toHaveBeenCalledWith('academic')
+  })
+
+  it('navigates with ArrowDown same as ArrowRight', async () => {
+    const user = userEvent.setup()
+    const onChange = vi.fn()
+    render(
+      <ToolRadioGroup label="Tone" options={options} value="professional" onChange={onChange} />
+    )
+    const first = screen.getByRole('radio', { name: 'Professional' })
+    first.focus()
+    await user.keyboard('{ArrowDown}')
+    expect(onChange).toHaveBeenCalledWith('casual')
+  })
+
+  it('navigates with ArrowUp same as ArrowLeft', async () => {
+    const user = userEvent.setup()
+    const onChange = vi.fn()
+    render(
+      <ToolRadioGroup label="Tone" options={options} value="casual" onChange={onChange} />
+    )
+    const second = screen.getByRole('radio', { name: 'Casual' })
+    second.focus()
+    await user.keyboard('{ArrowUp}')
+    expect(onChange).toHaveBeenCalledWith('professional')
+  })
 })
