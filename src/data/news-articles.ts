@@ -3441,6 +3441,379 @@ Birçok ülke yardım gönderdi:
 
 Гуманитарные организации назвали ситуацию «точкой невозврата». Здравоохранение, продовольственные системы, электроснабжение и государственные услуги ухудшаются стремительно и одновременно. Эксперты предупреждают: без срочного международного вмешательства кризис продолжит усугубляться.`,
   },
+  // ── 24 Mart 2026 (batch 2) ─────────────────────────────────────────────
+  // News 5: Pakistan ABŞ-İran sulh danışıqları (AZ, EN, TR, RU)
+  'dunya-pakistan-abs-iran-sulh-danisiqlari': {
+    title: 'Pakistan ABŞ-İran danışıqlarına ev sahibliyi etməyə hazırdır: müharibənin 4-cü həftəsi',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Pakistan Baş naziri Şəhbaz Şərif ölkəsinin ABŞ ilə İran arasında sülh danışıqlarına ev sahibliyi etməyə hazır olduğunu elan edib. Bu, İran müharibəsinin dördüncü həftəsinə daxil olduğu bir vaxtda gəlir.
+
+## Vasitəçilik təşəbbüsü
+
+Pakistan ordu komandanı feldmarşal Asim Münir bazar ertəsi ABŞ prezidenti Donald Trampla telefon danışığı aparıb. Pakistan İslamabadı danışıqların keçirilməsi üçün yer kimi təklif edir. Misir, Pakistan və Türkiyə sülh razılaşması üçün vasitəçilik səylərində öncüllük edir.
+
+## Ziddiyyətli açıqlamalar
+
+Tramp ABŞ-ın İranla "məhsuldar" danışıqlar apardığını deyib. Lakin İran XİN sözçüsü Bağaei bunu təkzib edərək, yalnız "dost ölkələr" vasitəsilə mesajların gəldiyini təsdiqləyib. İsrail rəsmisi NPR-ə bildirib ki, həftə sonuna Pakistan danışıqları planlaşdırılır.
+
+## Hərbi vəziyyət
+
+İran Çərşənbə axşamı İsrailə ən azı 8 dəfə raket atıb. Tel-Əvivdə çoxmərtəbəli binaya zərər dəyib, 6 nəfər yaralanıb. İsrail isə Tehranın mərkəzində İslam İnqilab Keşikçiləri Korpusunun kəşfiyyat mərkəzlərinə zərbələr endirib.
+
+## Əhəmiyyəti
+
+Bu, son illərdə Yaxın Şərqdəki ən böyük hərbi münaqişədir. Pakistan, Misir və Türkiyənin vasitəçilik cəhdləri beynəlxalq ictimaiyyətin müharibəni dayandırmaq istəyinin göstəricisidir. Lakin hər iki tərəfin ziddiyyətli bəyanatları danışıqların uğuruna şübhə yaradır.`,
+  },
+  'en-pakistan-us-iran-peace-talks': {
+    title: 'Pakistan Ready to Host US-Iran Peace Talks as War Enters Fourth Week',
+    date: '2026-03-24',
+    category: 'World',
+    locale: 'en',
+    content: `Pakistani Prime Minister Shehbaz Sharif announced that his country stands ready to host peace talks between the United States and Iran as the conflict enters its fourth week. The diplomatic push comes amid intensifying military exchanges and contradictory signals from Washington and Tehran.
+
+## Mediation Efforts
+
+Pakistan's army chief Field Marshal Asim Munir spoke with US President Donald Trump on Monday to discuss a path to resolution. Egypt, Pakistan, and Turkey are leading efforts to broker a peace deal between the two sides, though conversations remain indirect.
+
+## Mixed Signals
+
+Trump claimed the US had held "productive" talks with Iran, but Iran's Foreign Ministry spokesperson Esmaeil Baghaei denied direct negotiations, confirming only that messages had arrived through "friendly countries." An Israeli official told NPR that talks in Pakistan were being planned for later this week.
+
+## Military Situation
+
+Iran launched missiles at Israel at least eight times on Tuesday, with impacts in four sites including central Tel Aviv, where a multistory building was damaged and six people injured. Israel's military said its jets struck central Tehran on Monday, targeting IRGC intelligence facilities, with more than 50 additional targets hit overnight.
+
+## Significance
+
+The war is the most significant Middle East conflict in decades. The mediation attempts by Pakistan, Egypt, and Turkey reflect growing international urgency to end the fighting. However, the contradictory statements from both sides cast doubt on the near-term prospects for a ceasefire.`,
+  },
+  'tr-pakistan-abd-iran-baris-gorusmeleri': {
+    title: 'Pakistan ABD-İran Barış Görüşmelerine Ev Sahipliği Yapmaya Hazır: Savaşın 4. Haftası',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Pakistan Başbakanı Şahbaz Şerif, ülkesinin ABD ile İran arasındaki barış görüşmelerine ev sahipliği yapmaya hazır olduğunu açıkladı. Çatışmanın dördüncü haftasına girildiği bir dönemde diplomatik arayışlar yoğunlaşıyor.
+
+## Arabuluculuk Girişimi
+
+Pakistan ordu komutanı Mareşal Asim Münir, pazartesi günü ABD Başkanı Donald Trump ile telefonda görüştü. Mısır, Pakistan ve Türkiye barış anlaşması için arabuluculuk çabalarına öncülük ediyor, ancak görüşmeler henüz dolaylı düzeyde kalıyor.
+
+## Çelişkili Açıklamalar
+
+Trump, ABD'nin İran'la "verimli" görüşmeler yaptığını söyledi. Ancak İran Dışişleri Bakanlığı sözcüsü İsmail Bağai doğrudan müzakereleri reddederek, yalnızca "dost ülkeler" aracılığıyla mesaj geldiğini doğruladı. İsrailli bir yetkili NPR'ye hafta sonuna doğru Pakistan'da görüşmeler planlandığını bildirdi.
+
+## Askeri Durum
+
+İran salı günü İsrail'e en az 8 kez füze fırlattı. Tel Aviv'deki çok katlı bir bina hasar gördü, 6 kişi yaralandı. İsrail ise Tahran'ın merkezindeki İslam Devrim Muhafızları istihbarat merkezlerini vurdu, bir gecede 50'den fazla ek hedef imha edildi.
+
+## Önemi
+
+Bu, son on yılların en büyük Ortadoğu çatışmasıdır. Pakistan, Mısır ve Türkiye'nin arabuluculuk girişimleri savaşı durdurmak için artan uluslararası baskıyı yansıtıyor. Ancak her iki tarafın çelişkili açıklamaları ateşkes beklentilerini zayıflatıyor.`,
+  },
+  'ru-pakistan-ssha-iran-mirnye-peregovory': {
+    title: 'Пакистан готов принять мирные переговоры между США и Ираном: война вступает в четвёртую неделю',
+    date: '2026-03-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Премьер-министр Пакистана Шахбаз Шариф объявил о готовности страны принять мирные переговоры между США и Ираном. Дипломатическая активность нарастает на фоне вступления конфликта в четвёртую неделю.
+
+## Посреднические усилия
+
+Командующий пакистанской армией фельдмаршал Асим Мунир в понедельник провёл телефонный разговор с президентом США Дональдом Трампом. Египет, Пакистан и Турция возглавляют посреднические усилия по достижению мирного соглашения, хотя переговоры пока ведутся в непрямом формате.
+
+## Противоречивые заявления
+
+Трамп заявил, что США провели «продуктивные» переговоры с Ираном. Однако представитель МИД Ирана Исмаил Багаи опроверг прямые контакты, подтвердив лишь получение посланий через «дружественные страны». Израильский чиновник сообщил NPR, что на конец недели планируются переговоры в Пакистане.
+
+## Военная обстановка
+
+Иран выпустил ракеты по Израилю не менее 8 раз во вторник. В Тель-Авиве повреждено многоэтажное здание, 6 человек ранены. ВВС Израиля нанесли удары по центру Тегерана, поразив разведывательные объекты КСИР, а также более 50 дополнительных целей за ночь.
+
+## Значение
+
+Это крупнейший ближневосточный конфликт за последние десятилетия. Посреднические попытки Пакистана, Египта и Турции отражают растущую международную потребность в прекращении боевых действий. Однако противоречивые заявления обеих сторон ставят под сомнение ближайшие перспективы перемирия.`,
+  },
+  // News 6: Danimarkada erkən seçkilər (AZ, EN, TR, RU)
+  'dunya-danimarka-erken-seckiler-qrenlandiya': {
+    title: 'Danimarkada erkən seçkilər: Frederiksen Trampın Qrenlandiya təhdidindən güc aldı',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Danimarka seçiciləri çərşənbə axşamı ümumi seçkilərdə səs verir. Baş nazir Mette Frederiksen ABŞ prezidenti Trampın Qrenlandiyanı ələ keçirmək təhdidindən sonra artan populyarlığından istifadə edərək erkən seçki elan edib.
+
+## Niyə erkən seçki?
+
+Frederiksenin Sosial Demokrat Partiyası sorğularda öndədir. 48 yaşlı baş nazir yanvar ayında Trampın Arktik ərazisinə olan iddialarını rədd edərək diplomatik böhranı uğurla idarə etdi. Keçən ilin sonunda rekord aşağı reytinqlərdən sonra bu hadisə ona siyasi həyat verdi.
+
+## Seçki detalları
+
+Təxminən 4,3 milyon danimarkalı seçici qeydiyyatdadır. Səsvermə saat 08:00-da başlayıb və 20:00-da bitəcək. İlk nəticələr axşam saatlarında gözlənilir.
+
+## Kampaniya mövzuları
+
+Maraqlıdır ki, Qrenlandiya məsələsi kampaniyaya hakim olmayıb. Partiyalar daha çox daxili məsələlərə — ərzaq və yanacaq qiymətləri, kənd təsərrüfatının gələcəyi, təmiz içməli su və heyvan rifah standartlarına diqqət yetirib.
+
+## Proqnoz
+
+Frederiksenin üçüncü dəfə qalib gələcəyi proqnozlaşdırılır. Bu, onu Danimarkanın müharibədən sonrakı dövrdə ən uğurlu baş nazirlərdən birinə çevirəcək.`,
+  },
+  'en-denmark-early-elections-greenland-trump': {
+    title: 'Denmark Holds Early Elections: Frederiksen Boosted by Standing Up to Trump on Greenland',
+    date: '2026-03-24',
+    category: 'World',
+    locale: 'en',
+    content: `Danish voters went to the polls on Tuesday in a general election called early by Prime Minister Mette Frederiksen, who capitalized on a popularity surge after standing up to President Trump's threats to seize Greenland.
+
+## Why Early Elections?
+
+Frederiksen's Social Democrats lead opinion polls after she handled a diplomatic crisis in January when Trump revived claims over the Arctic territory. With her image as a steady hand reinforced, the 48-year-old called elections early to capitalize on the rebound after record-low approval ratings late last year.
+
+## Election Details
+
+About 4.3 million Danes are registered to vote. Polls opened at 8am local time and will close at 8pm, with the first results expected in the evening.
+
+## Campaign Focus
+
+Interestingly, the fate of Greenland has not dominated the campaign trail. Instead, parties have focused on domestic issues such as food and fuel prices, the future of agriculture, clean drinking water, and welfare standards. The election has largely been about everyday concerns rather than the geopolitical drama that triggered it.
+
+## Projection
+
+Frederiksen is projected to win a third term, which would make her one of Denmark's most successful postwar prime ministers. Her ability to turn a foreign policy crisis into a domestic political advantage has been widely noted by analysts.`,
+  },
+  'tr-danimarka-erken-secimler-gronland-trump': {
+    title: 'Danimarka\'da Erken Seçimler: Frederiksen, Trump\'ın Grönland Tehdidinden Güç Aldı',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Danimarkalı seçmenler salı günü genel seçimlerde oy kullandı. Başbakan Mette Frederiksen, ABD Başkanı Trump'ın Grönland'ı ele geçirme tehdidine karşı durarak artan popülaritesini kullanıp erken seçim çağrısında bulunmuştu.
+
+## Neden Erken Seçim?
+
+Frederiksen'in Sosyal Demokrat Partisi anketlerde önde gidiyor. 48 yaşındaki başbakan, Ocak ayında Trump'ın Arktik bölge üzerindeki taleplerini reddetmesiyle diplomatik krizi başarıyla yönetti. Geçen yıl sonundaki rekor düşük onay oranlarının ardından bu olay ona siyasi ivme kazandırdı.
+
+## Seçim Detayları
+
+Yaklaşık 4,3 milyon Danimarkalı seçmen kayıtlıdır. Oylama yerel saatle 08.00'de başladı ve 20.00'de sona erecek. İlk sonuçlar akşam saatlerinde bekleniyor.
+
+## Kampanya Odağı
+
+İlginç bir şekilde Grönland meselesi kampanyaya hâkim olmadı. Partiler daha çok gıda ve yakıt fiyatları, tarımın geleceği, temiz içme suyu ve hayvan refahı standartları gibi iç meselelere odaklandı.
+
+## Tahmin
+
+Frederiksen'in üçüncü dönem için zafer kazanması bekleniyor. Bu, onu Danimarka'nın savaş sonrası döneminin en başarılı başbakanlarından biri yapacak.`,
+  },
+  'ru-daniya-dosrochnye-vybory-grenlandiya-tramp': {
+    title: 'Дания проводит досрочные выборы: Фредериксен укрепилась после противостояния с Трампом из-за Гренландии',
+    date: '2026-03-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Датские избиратели пришли на участки во вторник на досрочных всеобщих выборах. Премьер-министр Метте Фредериксен воспользовалась ростом популярности после противостояния с президентом Трампом, угрожавшим забрать Гренландию.
+
+## Почему досрочные выборы?
+
+Социал-демократы Фредериксен лидируют в опросах. 48-летний премьер-министр успешно справилась с дипломатическим кризисом в январе, когда Трамп возобновил претензии на арктическую территорию. После рекордно низких рейтингов в конце прошлого года этот инцидент придал ей политический импульс.
+
+## Детали выборов
+
+Около 4,3 миллиона датчан зарегистрированы для голосования. Избирательные участки открылись в 08:00 по местному времени и закроются в 20:00. Первые результаты ожидаются вечером.
+
+## Предвыборная кампания
+
+Примечательно, что судьба Гренландии не стала главной темой кампании. Партии сосредоточились на внутренних вопросах: ценах на продовольствие и топливо, будущем сельского хозяйства, чистой питьевой воде и стандартах благополучия животных.
+
+## Прогноз
+
+Ожидается, что Фредериксен одержит победу в третий раз, что сделает её одним из самых успешных послевоенных премьер-министров Дании.`,
+  },
+  // News 7: Uber-Rivian robotaksi razılaşması (AZ, EN, TR, RU)
+  'texnologiya-uber-rivian-robotaksi-razilasma': {
+    title: 'Uber Rivian-a $1,25 milyard investisiya edir: 50 min robotaksi yollara çıxacaq',
+    date: '2026-03-24',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Uber texnologiya şirkəti elektrik avtomobil istehsalçısı Rivian ilə 1,25 milyard dollarlıq razılaşma imzalayıb. Sövdələşmə çərçivəsində 2031-ci ilə qədər 50 minə yaxın tam avtonom robotaksi xidmətə buraxılacaq.
+
+## Razılaşmanın detalları
+
+Uber ilkin olaraq Rivian-a 300 milyon dollar investisiya edəcək. Sonrakı dörd investisiya tranşı müəyyən hədəflərin yerinə yetirilməsinə bağlıdır. Ümumi investisiya həcmi 1,25 milyard dollara çata bilər.
+
+## Robotaksilər haqqında
+
+Uber Rivian-ın gələcək R2 elektrik avtomobilinin avtonom versiyasından 10.000 ədəd alacaq, əlavə 40.000 ədəd opsionla. Robotaksilər yalnız Uber-in taksi və çatdırılma platforması vasitəsilə əlçatan olacaq.
+
+## Yayılma planı
+
+İlk robotaksilər 2028-ci ildə San-Fransisko və Mayamidə xidmətə başlayacaq. Ümumiyyətlə, ABŞ, Kanada və Avropanın 25 şəhərində yayılma planlaşdırılır.
+
+## Bazardakı əhəmiyyəti
+
+Bu razılaşma Uber-in robotaksi bazarında ən böyük öhdəliklərindən biridir. Şirkət eyni zamanda Lucid və Amazon-un Zoox bölməsi ilə də tərəfdaşlıq edir. Avtonom taksi xidmətləri sahəsində rəqabət getdikcə kəskinləşir — Waymo və Tesla da öz platformalarını inkişaf etdirir.`,
+  },
+  'en-uber-rivian-robotaxi-deal': {
+    title: 'Uber Invests $1.25 Billion in Rivian to Deploy 50,000 Robotaxis',
+    date: '2026-03-24',
+    category: 'Technology',
+    locale: 'en',
+    content: `Uber has struck a deal worth up to $1.25 billion with electric vehicle maker Rivian to deploy up to 50,000 fully autonomous robotaxis across multiple countries through 2031. The partnership marks one of the largest commitments to autonomous ride-hailing to date.
+
+## Deal Structure
+
+Uber will invest an initial $300 million in Rivian, with four additional tranches tied to milestones. The company plans to purchase 10,000 autonomous versions of Rivian's upcoming R2 electric vehicle, with an option for 40,000 more.
+
+## Deployment Timeline
+
+The R2 robotaxis will be available exclusively through Uber's ride-hailing and delivery platform. The first cities are planned to be San Francisco and Miami in 2028, expanding to 25 cities across the US, Canada, and Europe.
+
+## Market Competition
+
+The deal positions Uber as a major player in the autonomous taxi market alongside its other partnerships with Lucid and Amazon's Zoox. Competition is intensifying as Waymo expands its service areas and Tesla develops its own robotaxi platform.
+
+## Industry Impact
+
+Analysts see the deal as a validation of the robotaxi business model and a sign that autonomous vehicles are moving closer to mainstream deployment. Rivian gains a crucial cash injection and a guaranteed customer base, while Uber secures a fleet of purpose-built autonomous vehicles for its platform.`,
+  },
+  'tr-uber-rivian-robotaksi-anlasmasi': {
+    title: 'Uber Rivian\'a 1,25 Milyar Dolar Yatırım Yapıyor: 50 Bin Robotaksi Yollara Çıkacak',
+    date: '2026-03-24',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Uber, elektrikli araç üreticisi Rivian ile 1,25 milyar dolarlık bir anlaşma imzaladı. Anlaşma çerçevesinde 2031 yılına kadar 50.000'e yakın tam otonom robotaksi hizmete girecek.
+
+## Anlaşma Detayları
+
+Uber başlangıçta Rivian'a 300 milyon dolar yatırım yapacak. Sonraki dört yatırım dilimi belirli hedeflerin karşılanmasına bağlı olacak. Toplam yatırım tutarı 1,25 milyar dolara ulaşabilir.
+
+## Robotaksiler
+
+Uber, Rivian'ın yakında çıkacak R2 elektrikli aracının otonom versiyonundan 10.000 adet satın alacak, ek 40.000 adet opsiyonla. Robotaksiler yalnızca Uber'in çağrı ve teslimat platforması üzerinden kullanılabilecek.
+
+## Yaygınlaşma Planı
+
+İlk robotaksiler 2028'de San Francisco ve Miami'de hizmete başlayacak. Toplamda ABD, Kanada ve Avrupa'nın 25 şehrine yayılma planlanıyor.
+
+## Pazar Etkisi
+
+Bu anlaşma, Uber'in otonom taksi pazarındaki en büyük taahhütlerinden biri. Şirket aynı zamanda Lucid ve Amazon'un Zoox birimi ile de ortaklık yürütüyor. Waymo ve Tesla'nın da kendi platformlarını geliştirmesiyle rekabet giderek kızışıyor.`,
+  },
+  'ru-uber-rivian-robotaksi-sdelka': {
+    title: 'Uber инвестирует $1,25 млрд в Rivian: 50 000 роботакси выйдут на дороги',
+    date: '2026-03-24',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `Uber заключил сделку на сумму до 1,25 миллиарда долларов с производителем электромобилей Rivian для развёртывания до 50 000 полностью автономных роботакси в нескольких странах до 2031 года.
+
+## Структура сделки
+
+Uber первоначально инвестирует 300 миллионов долларов в Rivian. Ещё четыре инвестиционных транша привязаны к достижению определённых показателей. Компания планирует приобрести 10 000 автономных версий будущего электромобиля Rivian R2 с опцией на дополнительные 40 000 единиц.
+
+## План развёртывания
+
+Роботакси R2 будут доступны исключительно через платформу Uber для вызова такси и доставки. Первые города — Сан-Франциско и Майами в 2028 году, с расширением до 25 городов в США, Канаде и Европе.
+
+## Рыночная конкуренция
+
+Сделка позиционирует Uber как крупного игрока на рынке автономного такси наряду с партнёрствами с Lucid и Zoox (Amazon). Конкуренция обостряется: Waymo расширяет зоны обслуживания, а Tesla разрабатывает собственную платформу роботакси.
+
+## Значение для отрасли
+
+Аналитики считают сделку подтверждением жизнеспособности бизнес-модели роботакси. Rivian получает критически важное финансирование и гарантированную клиентскую базу, а Uber — флот специально созданных автономных транспортных средств для своей платформы.`,
+  },
+  // News 8: Ermənistan-Azərbaycan ticarəti genişlənir (AZ, EN, TR, RU)
+  'azerbaycan-ermenistan-ticaret-genislenir': {
+    title: 'Ermənistan və Azərbaycan ticarəti genişləndirir: Rusiyanın regional nüfuzu zəifləyir',
+    date: '2026-03-24',
+    category: 'Azərbaycan',
+    locale: 'az',
+    content: `Uzun illər düşmən olan Ermənistan və Azərbaycan ticarət əlaqələrini genişləndirir. Analitiklər bu addımın sülh quruculuğunu dəstəklədiyini, Ermənistanın uzunmüddətli blokada vəziyyətini yüngülləşdirdiyini və Rusiyanın regiondakı rolunu tədricən zəiflətdiyini bildirir.
+
+## Ticarətin yeni istiqamətləri
+
+Azərbaycan Yerevana enerji məhsulları ixrac etməyə başlayıb və Qazaxıstandan Rusiyadan buğda tranziti üçün marşrut rolunu oynayır. Dekabrda Azərbaycan istehsalı benzin daşıyan 24 vaqonlu qatar Gürcüstandan Ermənistana keçib — bu, müstəqillik dövründə ilk dəfədir.
+
+## Diplomatik irəliləyiş
+
+Fevral ayında Bakı və Yerevan Abu-Dabidə keçirilən görüşdə ikitərəfli ticarəti genişləndirmək barədə razılığa gəlib. Prezident İlham Əliyev və Baş nazir Nikol Paşinyan arasındakı danışıqlar müsbət nəticə verib.
+
+## Rusiyanın mövqeyi
+
+Rusiya Ukrayna müharibəsi ilə məşğul olarkən, Ermənistan və Azərbaycan Kremli keçərək birbaşa ticarət əlaqələri qurur. Bu, Rusiyanın Cənubi Qafqazdakı ənənəvi nüfuzunu sarsıdır.
+
+## 2026-cı il prioritetləri
+
+Hər iki tərəf sülh razılaşmasının bağlanmasını, sərhədlərin hüquqi müəyyənləşdirilməsini və iqtisadi əməkdaşlığın genişləndirilməsini hədəfləyir. Enerji, nəqliyyat və ticarət sahələrində əməkdaşlıq əlaqələri möhkəmləndirəcək.`,
+  },
+  'en-armenia-azerbaijan-trade-expansion': {
+    title: 'Armenia and Azerbaijan Expand Trade, Weakening Russia\'s Regional Grip',
+    date: '2026-03-24',
+    category: 'World',
+    locale: 'en',
+    content: `Longtime rivals Armenia and Azerbaijan are increasing trade in ways that analysts say could support peace-building, ease Armenia's longstanding blockade, and gradually weaken Russia's role in the region as Moscow remains preoccupied with its war in Ukraine.
+
+## New Trade Routes
+
+Azerbaijan has begun exporting energy products to Yerevan and is serving as a transit route for wheat from Kazakhstan and Russia. In December, a train carrying 24 wagons of Azerbaijani-produced gasoline crossed from Georgia into Armenia — a post-Soviet first as trade relations between Yerevan and Baku slowly resurface after more than three decades of conflict.
+
+## Diplomatic Progress
+
+In February, Baku and Yerevan agreed to further explore opportunities to expand bilateral trade and economic cooperation during talks between Azerbaijani President Ilham Aliyev and Armenian Prime Minister Nikol Pashinyan in Abu Dhabi.
+
+## Russia's Declining Role
+
+With Moscow focused on Ukraine, Armenia and Azerbaijan are bypassing the Kremlin and establishing direct trade links. This trend is undermining Russia's traditional influence in the South Caucasus and reshaping regional dynamics.
+
+## 2026 Priorities
+
+Both sides aim to conclude the peace accord, legally establish borders, and expand economic cooperation. Energy, transportation, and trade are identified as the key sectors for anchoring the bilateral relationship.`,
+  },
+  'tr-ermenistan-azerbaycan-ticaret-genislemesi': {
+    title: 'Ermenistan ve Azerbaycan Ticareti Genişletiyor: Rusya\'nın Bölgesel Nüfuzu Zayıflıyor',
+    date: '2026-03-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Uzun yıllar düşman olan Ermenistan ve Azerbaycan, analistlerin barış inşasını destekleyeceğini, Ermenistan'ın uzun süredir devam eden ablukasını hafifleteceğini ve Rusya'nın bölgedeki rolünü kademeli olarak zayıflatacağını söylediği şekillerde ticareti artırıyor.
+
+## Yeni Ticaret Yolları
+
+Azerbaycan, Erivan'a enerji ürünleri ihraç etmeye başladı ve Kazakistan ile Rusya'dan buğday transitinde güzergâh rolü üstleniyor. Aralık ayında Azerbaycan üretimi benzin taşıyan 24 vagonluk bir tren Gürcistan'dan Ermenistan'a geçti — Sovyet sonrası dönemde bir ilk.
+
+## Diplomatik İlerleme
+
+Şubat ayında Bakü ve Erivan, Birleşik Arap Emirlikleri'ndeki Abu Dabi'de Cumhurbaşkanı İlham Aliyev ile Başbakan Nikol Paşinyan arasındaki görüşmelerde ikili ticareti genişletme fırsatlarını keşfetme konusunda anlaştı.
+
+## Rusya'nın Zayıflayan Rolü
+
+Moskova Ukrayna'ya odaklanmışken, Ermenistan ve Azerbaycan Kremlin'i atlayarak doğrudan ticaret bağlantıları kuruyor. Bu eğilim, Rusya'nın Güney Kafkasya'daki geleneksel nüfuzunu sarsmaya devam ediyor.
+
+## 2026 Öncelikleri
+
+Her iki taraf barış anlaşmasını sonuçlandırmayı, sınırları hukuki olarak belirlemeyi ve ekonomik işbirliğini genişletmeyi hedefliyor. Enerji, ulaşım ve ticaret, ikili ilişkileri güçlendirmek için kilit sektörler olarak tanımlanıyor.`,
+  },
+  'ru-armeniya-azerbajdzhan-torgovlya-rasshirenie': {
+    title: 'Армения и Азербайджан расширяют торговлю: региональное влияние России слабеет',
+    date: '2026-03-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Давние соперники Армения и Азербайджан наращивают торговлю. По мнению аналитиков, это может поддержать миростроительство, облегчить длительную блокаду Армении и постепенно ослабить роль России в регионе, пока Москва остаётся поглощённой войной в Украине.
+
+## Новые торговые маршруты
+
+Азербайджан начал экспортировать энергоносители в Ереван и выступает транзитным маршрутом для пшеницы из Казахстана и России. В декабре поезд с 24 вагонами бензина азербайджанского производства проследовал из Грузии в Армению — впервые в постсоветской истории, поскольку торговые связи между Ереваном и Баку постепенно восстанавливаются после более чем трёх десятилетий конфликта.
+
+## Дипломатический прогресс
+
+В феврале Баку и Ереван договорились о дальнейшем изучении возможностей расширения двусторонней торговли и экономического сотрудничества на переговорах между президентом Азербайджана Ильхамом Алиевым и премьер-министром Армении Николом Пашиняном в Абу-Даби.
+
+## Ослабление роли России
+
+Пока Москва сосредоточена на Украине, Армения и Азербайджан обходят Кремль, устанавливая прямые торговые связи. Эта тенденция подрывает традиционное влияние России на Южном Кавказе.
+
+## Приоритеты на 2026 год
+
+Обе стороны стремятся завершить мирное соглашение, юридически установить границы и расширить экономическое сотрудничество. Энергетика, транспорт и торговля определены как ключевые секторы для укрепления двусторонних отношений.`,
+  },
 }
 
 export const newsSlugs = Object.keys(newsArticles)
