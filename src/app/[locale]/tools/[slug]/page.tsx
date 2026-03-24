@@ -102,6 +102,11 @@ const toolComponents: Record<string, React.ComponentType> = {
   'barcode-generator': dynamic(() => import('@/components/tools/generators/BarcodeGenerator')),
   'css-box-shadow-generator': dynamic(() => import('@/components/tools/generators/CssBoxShadowGenerator')),
   'hashtag-generator': dynamic(() => import('@/components/tools/text/HashtagGenerator')),
+  // Phase 10 - P2 Tools
+  'loan-calculator': dynamic(() => import('@/components/tools/generators/LoanCalculator')),
+  'css-flexbox-generator': dynamic(() => import('@/components/tools/dev/CssFlexboxGenerator')),
+  'json-to-typescript': dynamic(() => import('@/components/tools/dev/JsonToTypescript')),
+  'css-grid-generator': dynamic(() => import('@/components/tools/dev/CssGridGenerator')),
 }
 
 export async function generateStaticParams() {

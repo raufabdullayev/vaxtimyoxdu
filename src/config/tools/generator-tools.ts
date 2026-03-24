@@ -254,4 +254,15 @@ export const generatorTools: Tool[] = [
     isClientSide: true,
     keywords: ['box shadow generator', 'css shadow', 'drop shadow', 'css box shadow', 'shadow generator'],
   },
+  {
+    slug: 'loan-calculator',
+    name: 'Loan/EMI Calculator',
+    description: 'Calculate monthly loan payments, total interest, and view a full amortization schedule. Supports custom loan amount, interest rate, and term in months or years. Free online EMI calculator.',
+    shortDescription: 'Calculate loan payments and amortization',
+    category: 'generators',
+    icon: '\uD83C\uDFE6',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['loan calculator', 'emi calculator', 'mortgage calculator', 'interest calculator', 'amortization'],
+  },
 ]

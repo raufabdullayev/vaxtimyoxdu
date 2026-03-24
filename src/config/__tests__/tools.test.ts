@@ -16,8 +16,8 @@ describe('tools configuration', () => {
     expect(tools.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 77 tools', () => {
-    expect(tools.length).toBe(77)
+  it('should contain exactly 81 tools', () => {
+    expect(tools.length).toBe(81)
   })
 
   describe('required fields', () => {
