@@ -1721,4 +1721,770 @@ SVG keyfiyyət itkisi olmadan istənilən ölçüyə miqyaslanabilən vektor for
 
 Bu alətlərin hamısı şəkilləri tamamilə brauzerinizdə emal edir. Fayllarınız heç vaxt cihazınızı tərk etmir. Vaxtım Yoxdu-da pulsuz sınayın -- qeydiyyat yox, fayl ölçüsü limiti yox, su nişanı yox.`,
   },
+  'complete-guide-to-claude-ai': {
+    title: 'Claude AI üçün Tam Bələdçi: Chat, CLI, Code, Desktop App və s.',
+    date: '2026-03-24',
+    relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer'],
+    content: `Claude, süni zəka təhlükəsizliyi və uyğunlaşdırma araşdırmaları üzərində fokuslanmış Anthropic şirkəti tərəfindən hazırlanmış AI köməkçidir. İlk buraxılışından bəri Claude sadə bir çatbotdan veb, masaüstü, əmr sətri və tərtibatçı alətlərini əhatə edən çoxplatformalı ekosistemə çevrilib. İstər daha ağıllı söhbət tərəfdaşı axtaran adi istifadəçi, istər AI-ilə işləyən kodlaşdırma köməkçisi istəyən tərtibatçı, istərsə də təhlükəsiz AI inteqrasiyası axtaran müəssisə komandası olun -- Claude sizin ehtiyaclarınıza uyğun məhsula malikdir. Bu bələdçi hər bir əsas Claude məhsulunu, müqayisələrini və hər birini nə vaxt istifadə etməyi əhatə edir.
+
+## Claude Chat (claude.ai)
+
+Claude Chat claude.ai saytında mövcud olan veb əsaslı interfeysdir. Əksər insanların Claude ilə ilk dəfə tanış olduğu yerdir. Söhbətlər başlaya, suallar verə, sənədləri təhlil edə, mətn yarada, beyin fırtınası edə və mürəkkəb problemlər üzərində interaktiv işləyə bilərsiniz. Claude Chat söhbət daxilində birbaşa təhlil üçün PDF, şəkil və kod faylları daxil olmaqla faylların yüklənməsini dəstəkləyir.
+
+Claude Chat-ın ən görkəmli xüsusiyyətlərindən biri **Artefaktlar**dır -- Claude-un cavabları ilə yanaşı yaratdığı interaktiv çıxışlar. Claude-dan kod yazmağı, sənəd yaratmağı, qrafik qurmağı və ya komponent dizayn etməyi istədikdə, söhbəti tərk etmədən önizləyə, redaktə edə və yükləyə biləcəyiniz canlı artefakt istehsal edir.
+
+**Claude Chat-ın əsas xüsusiyyətləri:**
+- Sessiya daxilində tam kontekst yaddaşı ilə söhbətlər
+- Sənəd təhlili və şəkil anlayışı üçün fayl yükləmələri
+- İnteraktiv kod, sənədlər və vizuallaşdırmalar üçün artefaktlar
+- Əlaqəli söhbətləri qruplaşdırmaq üçün layihə təşkili
+- Söhbətləri və artefaktları başqaları ilə paylaşma
+
+## Claude Desktop Tətbiqi
+
+Claude Desktop tam Claude Chat təcrübəsini macOS və Windows üçün yerli tətbiq kimi masaüstünüzə gətirir. Masaüstü tətbiqi brauzer tabından daha sürətli açılır və klaviatura qısayolları vasitəsilə əlçatan qalır.
+
+Masaüstü tətbiqinin ən güclü xüsusiyyəti **MCP (Model Context Protocol) server dəstəyi**dir. MCP Claude-a maşınınızda işləyən xarici məlumat mənbələrinə və alətlərə qoşulmağa imkan verir. Verilənlər bazaları, fayl sistemləri, API-lər və üçüncü tərəf xidmətləri üçün MCP serverləri konfiqurasiya edə bilərsiniz.
+
+## Claude CLI
+
+Claude CLI terminlınızdan birbaşa Claude ilə əlaqə saxlamağa imkan verən əmr sətri interfeysidir. Terminalda yaşayan tərtibatçılar və güclü istifadəçilər üçün bu, brauzer və inkişaf mühiti arasında kontekst dəyişdirməsini aradan qaldırır.
+
+Claude CLI digər əmrlərdən girişin boru ilə ötürülməsini dəstəkləyir və onu standart Unix iş axınları ilə birləşdirilə bilən edir. Log fayllarını, kod fraqmentlərini, xəta mesajlarını və məlumatları birbaşa Claude-a təhlil üçün ötürə bilərsiniz.
+
+## Claude Code -- Tərtibatçı Güc Mərkəzi
+
+Claude Code proqram mühəndisləri üçün Claude ekosisteminin həqiqətən parlaq olduğu yerdir. Bu, agent rejimində işləyən, bütün kod bazalarını anlayan, eyni anda bir neçə faylı redaktə edən, əmrlər icra edən və git iş axınlarını müstəqil idarə edən tərtibatçıya yönəlik alətdir.
+
+### Agent Rejimi və Çoxfaylı Redaktə
+
+Claude Code layihə strukturunuzu oxuyur, fayllar arasındakı asılılıqları anlayır və kod bazanızda koordinasiyalı dəyişikliklər edir. Xüsusiyyəti və ya xətanı təsvir etdikdə, Claude Code həyata keçirməni planlaşdırır, lazımi faylları yaradır və ya dəyişdirir, düzgünlüyü yoxlamaq üçün testlər işlədir və dəyişiklikləri commit edir.
+
+### Komanda Rejimi (Team Mode)
+
+Claude Code-un ən qabaqcıl imkanlarından biri Komanda Rejimidir. SecurityPro, SeoPro, QaPro və ya ContentPro kimi ixtisaslaşmış rollarla bir neçə AI komanda üzvü yarada bilərsiniz. Bu komanda üzvləri SendMessage vasitəsilə bir-birləri ilə ünsiyyət qurur, işi real vaxtda koordinasiya edir və mürəkkəb layihələr üzərində birgə işləyir.
+
+### Bacarıqlar (Skills)
+
+Claude Code xüsusi bacarıqları dəstəkləyir -- slash prefiksi ilə çağırılan təkrar istifadə edilə bilən əmr qısayolları. /review, /deploy, /security-audit və /browser-action kimi bacarıqlar mürəkkəb iş axınlarını tək əmrə sıxışdırır.
+
+### Hook-lar
+
+Hook-lar Claude Code-un iş axınının müəyyən nöqtələrində xüsusi shell əmrləri işlətməyə imkan verir. PreToolUse hook-ları alət işləməzdən əvvəl, PostToolUse hook-ları sonra və Stop hook-ları Claude cavabı bitirdikdə icra olunur.
+
+### MCP Serverləri
+
+Claude Code GitHub, GitLab, Vercel, Google Search Console və onlarla digər xidmət üçün MCP serverləri ilə inteqrasiya olunur. Bu o deməkdir ki, Claude Code terminalı tərk etmədən pull request yarada, deployment-ləri idarə edə və SEO performansını yoxlaya bilər.
+
+## Claude API
+
+Claude API tərtibatçılara Claude-un imkanlarına proqramatik giriş verir. Real vaxt tətbiqləri üçün axın cavablarını, strukturlaşdırılmış qarşılıqlı əlaqə üçün alət istifadəsini (funksiya çağırışı), şəkil təhlili üçün görmə qabiliyyətini və Claude-un davranışını fərdiləşdirmək üçün sistem göstərişlərini dəstəkləyir.
+
+**API imkanları:**
+- Axın dəstəyi ilə mətn yaratma
+- Strukturlaşdırılmış çıxışlar üçün alət istifadəsi və funksiya çağırışı
+- Görmə və şəkil anlayışı
+- Sistem göstərişləri və xüsusi təlimatlar
+- Yüksək həcmli iş yükləri üçün toplu emal
+- 1 milyon tokenə qədər genişləndirilmiş kontekst pəncərələri
+
+## Müəssisə üçün Claude
+
+Müəssisə üçün Claude SSO (Tək Giriş), admin nəzarətləri, istifadə analitikası, məlumat saxlama siyasətləri və prioritet giriş daxil olmaqla komanda səviyyəli xüsusiyyətlər təklif edir.
+
+## Claude vs ChatGPT vs Gemini
+
+Hər üçü aparıcı AI köməkçiləridir, amma vacib fərqlər var:
+
+**Claude-un güclü tərəfləri:**
+- Uzun formatlı təhlil və nüanslı mühakimədə üstün
+- Claude Code ilə ən yaxşı kod yaratma və çoxfaylı redaktə
+- Ən güclü təhlükəsizlik uyğunlaşdırması
+- Çox agentli əməkdaşlıq üçün Komanda Rejimi (Claude-a xas)
+- Yerli alət inteqrasiyası üçün MCP ekosistemi
+- Genişləndirilmiş kontekst pəncərələri (1M tokenə qədər)
+
+**ChatGPT-nin güclü tərəfləri:**
+- Daha geniş plugin və GPT Store ekosistemi
+- DALL-E şəkil yaratma daxili
+- Daha geniş brend tanınması və istifadəçi bazası
+
+**Gemini-nin güclü tərəfləri:**
+- Dərin Google Workspace inteqrasiyası
+- Video anlayışı ilə multimodal imkanlar
+- Real vaxt məlumat üçün Google Axtarış ilə inteqrasiya
+
+## Niyə Claude?
+
+Claude bir neçə səbəbə görə fərqlənir. Təhlükəsizliyə sadiqliyi həssas mövzuları düşüncəli şəkildə idarə etməsi deməkdir. Genişləndirilmiş kontekst pəncərəsi bütün kod bazalarını və ya uzun sənədləri tək söhbətdə təhlil etməyə imkan verir. Claude Code-un agent rejimi və Komanda Rejimi həqiqətən unikaldır.
+
+## Praktiki İstifadə Nümunələri
+
+- **Yazıçılar və kontent yaradıcıları:** Artefaktlarla beyin fırtınası, qaralama və redaktə üçün Claude Chat istifadə edin
+- **Tərtibatçılar:** Xüsusiyyət həyata keçirmə, xəta düzəltmə, kod nəzərdən keçirmə üçün Claude Code istifadə edin
+- **Araşdırmaçılar:** Uzun məqalələri, məlumat dəstlərini təhlil etmək üçün Claude-un genişləndirilmiş kontekstindən yararlanın
+- **Biznes komandaları:** Təhlükəsiz, komanda miqyaslı AI qəbulu üçün Müəssisə üçün Claude istifadə edin
+- **Tələbələr:** Yeni konsepsiyalar öyrənmək üçün Claude Chat istifadə edin
+
+Claude sadəcə başqa bir çatbot deyil -- qeyri-rəsmi söhbətdən müəssisə səviyyəli proqram təminatına qədər miqyaslanan hərtərəfli AI platformasıdır.`,
+  },
+  'best-free-online-tools-for-students-2026': {
+    title: '2026-da Tələbələr üçün Ən Yaxşı Pulsuz Onlayn Alətlər',
+    date: '2026-03-24',
+    relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer', 'word-counter', 'markdown-preview', 'pdf-merge'],
+    content: `2026-cı ildə tələbə olmaq mühazirələr, tapşırıqlar, araşdırma məqalələri, qrup layihələri və imtahan hazırlığını -- tez-tez eyni vaxtda -- idarə etmək deməkdir. Doğru pulsuz onlayn alətlər dəsti hər həftə saatlarınıza qənaət edə və işinizin keyfiyyətini əhəmiyyətli dərəcədə yaxşılaşdıra bilər. Bu il hər tələbənin əlfəcin etməli olduğu ən yaxşı pulsuz alətlər, ən tez-tez üzləşdiyiniz vəzifələrə görə təşkil edilmişdir.
+
+## Yazı və Redaktə Alətləri
+
+Yazı akademik həyatın təməlidir və AI ilə işləyən alətlər redaktə prosesini əhəmiyyətli dərəcədə sürətləndirib. AI qrammatika yoxlayıcıları standart orfoqrafiya yoxlayıcılarının tamamilə qaçırdığı xətaları tutur -- yerləşdirilməmiş təyinlər, zaman uyğunsuzluqları, passiv səsin həddindən artıq istifadəsi və aydın olmayan əvəzlik istinadları. Onlar sadəcə problemləri qeyd etmir; hər düzəlişin arxasındakı qrammatika qaydasını izah edirlər ki, bu da fərdi səhvləri düzəltmək əvəzinə zamanla yaxşılaşmağınıza kömək edir.
+
+AI mətn yenidən yazıcıları araşdırma materialını məqalələriniz üçün parafraz etmək lazım olanda əvəzsizdir. Mürəkkəb paraqrafı yenidən ifadə etmək üçün mübarizə etmək əvəzinə, bu alətlər orijinal mənası qoruyaraq alternativ sözlər yaradır.
+
+**Vacib yazı alətləri:**
+- **AI Qrammatika Yoxlayıcı:** Qabaqcıl qrammatika, üslub və aydınlıq məsələlərini tutun
+- **AI Mətn Yenidən Yazıcı:** Mənbələri plagiat olmadan düzgün parafraz edin
+- **Söz Sayğacı:** Söz sayını, simvol sayını və oxuma vaxtını izləyin
+- **AI Mətn Xülasəçi:** Uzun araşdırma məqalələrini əsas nöqtələrə sıxışdırın
+
+## Araşdırma və Oxu Alətləri
+
+Universitet səviyyəli araşdırma böyük həcmdə mətni emal etməyi əhatə edir. AI xülasəçilər 30 səhifəlik araşdırma məqaləsini saniyələr ərzində qısa xülasəyə sıxışdıra bilər və mənbənin tam oxunmağa dəyər olub-olmadığına qərar verməyə kömək edir.
+
+PDF birləşdirmə alətləri tələbələr üçün təəccüblü dərəcədə faydalıdır. Mühazirə slaydlarını, əlyazma qeydlərini (skan edilmiş) və əlavə oxu materiallarını hər kurs üçün vahid təşkil edilmiş PDF-ə birləşdirə bilərsiniz.
+
+## Tərtibatçı və STEM Alətləri
+
+İnformatika və mühəndislik tələbələri kurs işləri boyunca ixtisaslaşmış yardımçı proqramlara sürətli giriş lazımdır. JSON formatlayıcılar veb inkişaf tapşırıqları zamanı API cavablarını sazlamağa kömək edir. Regex test ediciləri nümunə uyğunlaşdırma məntiqini vizual olaraq qurmağa və yoxlamağa imkan verir.
+
+## Təqdimat və Dizayn Alətləri
+
+Qrup təqdimatları universitet həyatının daimi hissəsidir. Palitra yaratma ilə rəng seçicilər vizual olaraq uyğun slayd dəstləri yaratmağa kömək edir. QR kod generatorları təqdimatlarınıza skan edilə bilən linklər əlavə etməyə imkan verir. Şəkil sıxışdırıcılar təqdimat fayllarınızın e-poçtla göndərmək və öyrənmə idarəetmə sistemlərinə yükləmək üçün kifayət qədər kiçik qalmasını təmin edir.
+
+## Öyrənmə və Məhsuldarlıq Alətləri
+
+Effektiv öyrənmə sadəcə oxumaqdan daha çox şey tələb edir. Pomodoro taymerləri araşdırmaların davamlı olaraq yaddaşı yaxşılaşdırdığını göstərdiyi strukturlaşdırılmış fasilələrlə fokuslanmış öyrənmə seanslarını saxlamağa kömək edir. Mətndən danışığa alətləri gediş-gəliş zamanı qeydlərinizi dinləməyə imkan verir.
+
+**Tələbələr üçün məsləhətlər:**
+1. Ani giriş üçün ən çox istifadə etdiyiniz alətlərlə əlfəcin qovluğu yaradın
+2. Araşdırma mənbələrinizə prioritet vermək üçün dərin oxumadan əvvəl AI xülasəçilərdən istifadə edin
+3. İmtahan hazırlığı paketləri üçün PDF birləşdirməni təşkil edilmiş fayl adlandırması ilə birləşdirin
+4. Təhvil verməzdən əvvəl son addım olaraq esseləriniziyi qrammatika yoxlayıcısından keçirin
+5. Tükənmənin qarşısını almaq üçün öyrənmə seanslarında Pomodoro taymerindən istifadə edin
+
+## Tələbələr üçün Gizlilik Vacibdir
+
+Onlayn alətlər seçərkən gizlilik ən vacib narahatlıq olmalıdır. Bir çox pulsuz alət fayllarınızı serverlərinə yükləyir ki, bu da dərc edilməmiş araşdırmanızın, şəxsi esseləriniyin və tapşırıq qaralamalarınızın üçüncü tərəflər tərəfindən saxlanıla və ya əldə edilə biləcəyi deməkdir.
+
+Bu məqalədə qeyd olunan bütün alətlər Vaxtım Yoxdu-da pulsuz mövcuddur. Server yükləmələri olmadan faylları brauzerinizdə emal edir, hesab yaratma tələb etmir və gizli istifadə limitləri yoxdur.`,
+  },
+  'how-to-build-side-project-nextjs-deploy-free': {
+    title: 'Next.js ilə Yan Layihə Qurmaq və Pulsuz Deploy Etmək',
+    date: '2026-03-24',
+    relatedTools: ['json-formatter', 'html-minifier', 'js-minifier', 'css-minifier', 'meta-tag-generator', 'markdown-preview'],
+    content: `Yan layihə qurmaq və göndərmək veb inkişafı öyrənməyin, portfolionuzu qurmağın və potensial olaraq insanların həqiqətən istifadə etdiyi bir şey yaratmağın ən yaxşı yollarından biridir. Next.js daxili routing, server tərəfli render, API marşrutları və əla tərtibatçı təcrübəsi sayəsində React tərtibatçıları üçün əsas çərçivəyə çevrilib. Vercel kimi platformaların səxavətli pulsuz səviyyələri təklif etməsi ilə layihənizi bir qəpik xərcləmədən istehsala yerləşdirə bilərsiniz.
+
+## Niyə Yan Layihələr üçün Next.js?
+
+Next.js qərar yorğunluğunu aradan qaldıran fikirli struktur verir. App Router ilə fayl əsaslı routing, daxili layoutlar, yükləmə vəziyyətləri, xəta sərhədləri və server komponentləri qutudan çıxır.
+
+**Next.js-in pulsuz təqdim etdikləri:**
+- İç-içə layoutlarla fayl əsaslı routing
+- Server tərəfli render və statik sayt yaratma
+- Ayrıca server olmadan backend məntiqi üçün API marşrutları
+- next/image komponenti ilə şəkil optimizasiyası
+- Daxili TypeScript dəstəyi
+- Autentifikasiya, yönləndirmələr və daha çoxu üçün middleware
+- Qlobal performans üçün Edge runtime dəstəyi
+
+## Addım 1: Layihə İdeyasını Seçin
+
+Ən yaxşı yan layihələr şəxsən yaşadığınız real problemi həll edir. Yardımçı proqram alətləri əla namizədlərdir -- aydın əhatə dairəsi var, ən sadə formada istifadəçi autentifikasiyası tələb etmir və dərhal dəyər verir.
+
+## Addım 2: İnkişaf Mühitini Qurun
+
+Layihənizi Create Next App ilə başladın:
+
+\`\`\`bash
+npx create-next-app@latest my-side-project --typescript --tailwind --app --src-dir
+\`\`\`
+
+Bu sizə tip təhlükəsizliyi üçün TypeScript, sürətli stil üçün Tailwind CSS, müasir routing nümunələri üçün App Router və təmiz src qovluq strukturu verir.
+
+## Addım 3: Əvvəlcə Əsas Xüsusiyyətləri Qurun
+
+Minimum faydalı versiyanı göndərməyə fokuslanın. Alət saytı qurursunuzsa, yarımçıq iyirmidən çox əvəzinə mükəmməl işləyən üç-beş alətlə başlayın.
+
+## Addım 4: Birinci Gündən SEO Əlavə Edin
+
+Axtarış motoru optimizasiyası sonradan düşünülən olmamalıdır. Next.js metadata API ilə SEO-nu sadələşdirir. Hər səhifədə unikal başlıq, təsvir və Open Graph şəkli olmalıdır. Yeni səhifələr əlavə etdikcə avtomatik daxil edən dinamik sitemap yaradın.
+
+## Addım 5: Performansı Optimallaşdırın
+
+Deploy etməzdən əvvəl layihənizi Lighthouse vasitəsilə yoxlayın:
+
+- **Aktivlərinizi minimumlaşdırın:** HTML, CSS və JavaScript minimumlaşdırıcılardan istifadə edin
+- **Şəkilləri optimallaşdırın:** Bütün şəkilləri sıxışdırın və WebP formatından istifadə edin
+- **Kod bölmə:** Next.js bunu ağır komponentlər üçün dinamik importlarla avtomatik idarə edir
+- **Keş başlıqları:** Statik aktivlər üçün düzgün cache-control başlıqlarını konfiqurasiya edin
+
+## Addım 6: Vercel-ə Pulsuz Deploy Edin
+
+Vercel-ə deploy etmək Next.js layihələri üçün ən sadə yoldur. GitHub və ya GitLab repozitoriyanızı bağlayın və Vercel hər push-da avtomatik qurur və deploy edir. Pulsuz səviyyə daxildir:
+
+- Limitsiz statik saytlar və serverless funksiyalar
+- Pulsuz SSL ilə avtomatik HTTPS
+- Dünya miqyasında sürətli yükləmə üçün qlobal CDN
+- Hər pull request üçün önizləmə deploy-lar
+- Xüsusi domen dəstəyi
+
+## Addım 7: Real İstifadəyə Əsasən Təkmilləşdirin
+
+Layihəniz canlı olduqdan sonra insanların necə istifadə etdiyini anlamaq üçün analitika əlavə edin. Google Analytics 4 pulsuzdur və istifadəçi davranışı, populyar səhifələr və trafik mənbələri haqqında ətraflı məlumat verir.
+
+**Qarşısını almalı ümumi səhvlər:**
+1. İstifadəçiləriniz olmadan həddindən artıq mühəndislik -- sadə göndərin, sürətli təkmilləşdirin
+2. Mobil responsivliyi atlama -- veb trafikin əksəriyyəti mobildir
+3. SEO-nu əhəmiyyətsiz saymaq -- üzvi axtarış alət saytları üçün əsas trafik mənbəyidir
+4. Analitika qurmamaq -- ölçmədiyinizi yaxşılaşdıra bilməzsiniz
+
+Next.js ilə yan layihə qurmaq sizə müasir veb inkişaf nümunələrini öyrədir, portfel parçası verir və insanların etibar etdiyi bir şeyə çevrilə bilər. Giriş maneəsi heç vaxt bu qədər aşağı olmayıb. Bu gün qurmağa başlayın.`,
+  },
+  '10-time-saving-browser-tools-you-didnt-know-existed': {
+    title: 'Mövcudluğunu Bilmədiyiniz 10 Vaxt Qənaət Edən Brauzer Aləti',
+    date: '2026-03-24',
+    relatedTools: ['cron-parser', 'jwt-decoder', 'json-path-finder', 'text-diff', 'lorem-ipsum-generator', 'slug-generator'],
+    content: `Hər kəs populyar onlayn alətləri tanıyır -- şəkil sıxışdırıcılar, PDF birləşdiriciləri və JSON formatlayıcılar bütün diqqəti çəkir. Amma inanılmaz dərəcədə faydalı olmasına baxmayaraq radar altında uçan bütöv bir brauzer əsaslı yardımçı proqramlar kateqoriyası var. Bu alətlər əks halda gününüzün dəqiqələrini yeyən xüsusi, təkrarlanan problemləri həll edir. Budur, çox güman ki hələ sınamadığınız on ədəd.
+
+## 1. Cron İfadə Analizatoru
+
+Planlaşdırılmış tapşırıqlarla işləyirsinizsə, cron ifadələri həyatın bir gerçəyidir. Amma \`0 */6 * * 1-5\` oxuyub dərhal nə demək olduğunu bilmək əksər tərtibatçıların heç vaxt tam inkişaf etdirmədiyi bir bacarıqdır. Cron analizatoru sirli cron sintaksisini sadə dilə çevirir və ifadələri vizual olaraq qurmağa imkan verir.
+
+## 2. JWT Dekoder
+
+JSON Web Tokenləri müasir autentifikasiyada hər yerdədir, amma Base64 ilə kodlanmış və bir baxışda oxunmazdır. JWT dekoder tokeni başlıq, yük və imza bölmələrinə ayırır, dekodlanmış JSON-u sintaksis vurğulaması ilə göstərir və tokenin vaxtının keçib-keçmədiyini yoxlayır.
+
+## 3. JSON Path Tapıcı
+
+API-lərdən dərindən iç-içə JSON cavabları ilə işləyərkən, xüsusi dəyərə dəqiq yolu tapmaq yorucudur. JSON path tapıcı JSON sənədini yapışdırmağa, istənilən dəyərin üzərinə klikləməyə və dərhal nöqtə notasiyası və ya mötərizə notasiyası yolunu almağa imkan verir.
+
+## 4. Mətn Fərq Yoxlayıcısı
+
+İki mətn blokunu müqayisə edərək fərqləri tapmaq daim ortaya çıxan bir tapşırıqdır -- konfiqurasiya fayl dəyişikliklərini yoxlamaq, API cavablarını müqayisə etmək, mətn redaktələrini nəzərdən keçirmək. Mətn fərq aləti əlavələri, silmələri və dəyişiklikləri sətir nömrələri və rəng kodlaması ilə yan-yana vurğulayır.
+
+## 5. Lorem Ipsum Generatoru
+
+Dizaynerlər və tərtibatçılar prototipləmə zamanı daim yer tutucu mətnə ehtiyac duyur. Yaxşı Lorem Ipsum generatoru standart Latın mətnindən kənara çıxır. Nə qədər paraqraf, cümlə və ya söz lazım olduğunu dəqiq təyin etməyə imkan verir.
+
+## 6. Slug Generatoru
+
+Başlıqlardan URL-dostu slug-lar yaratmaq kontent ağırlıqlı saytlar qurarkən onlarla dəfə etdiyiniz kiçik bir tapşırıqdır. Slug generatoru istənilən mətni təmiz, kiçik hərfli, defislə ayrılmış URL slug-a çevirir. Xüsusi simvolları, diakritik işarələri və çoxlu boşluqları düzgün idarə edir.
+
+## 7. Mətndən Binary-yə Çevirici
+
+Bu dar görünür, amma informatika ev tapşırığından kənarda praktiki tətbiqləri var. Mətni binary-yə və əksinə çevirmək kodlaşdırma problemlərini anlamaq, məlumat ötürmə problemlərini sazlamaq üçün faydalıdır.
+
+## 8. ROT13 Kodlayıcı
+
+ROT13 hər hərfi 13 mövqe döndərən sadə hərf əvəzetmə şifrəsidir. Sıfır təhlükəsizlik təmin etsə də, forum və sosial platformalarda spoilerləri, tapmaca cavablarını gizlətmək üçün geniş istifadə olunur.
+
+## 9. Simvol Sayğacı
+
+Söz sayğacından fərqli olaraq, simvol sayğacı boşluqlarla və boşluqsuz simvol sayı, söz sayı, cümlə sayı, paraqraf sayı və təxmini oxuma vaxtı daxil olmaqla dəqiq ölçümlər verir. Bu detal səviyyəsi tweet-lər, meta təsvirlər və ciddi uzunluq tələbləri olan hər hansı kontent üçün vacibdir.
+
+## 10. Tap və Əvəz Et
+
+Brauzer əsaslı tap və əvəz et alətləri mətn redaktorunuzun təklif etdiyindən kənara çıxır. Mürəkkəb əvəzetmələr üçün müntəzəm ifadə nümunələrini dəstəkləyir, tətbiq etməzdən əvvəl bütün dəyişikliklərin önizləməsini göstərir.
+
+## Niyə Brauzer Əsaslı Alətlər Vacibdir
+
+Brauzer əsaslı alətlərin gözəlliyi ondadır ki, onlar sıfır quraşdırma tələb edir, istənilən cihazda işləyir və məlumatları yerli olaraq brauzerinizdə emal edir. Bu alətlərin hamısını və daha çoxunu Vaxtım Yoxdu-da sınayın -- pulsuz, gizli və ani.`,
+  },
+  'developers-guide-to-code-formatting-and-linting-tools': {
+    title: 'Kod Formatlaşdırma və Linting Alətləri üçün Tərtibatçı Bələdçisi',
+    date: '2026-03-24',
+    relatedTools: ['json-formatter', 'html-minifier', 'css-minifier', 'js-minifier', 'sql-formatter', 'xml-formatter'],
+    content: `Kod formatlaşdırma və linting kiçik narahatlıqlar kimi görünə bilər, amma onlar kod keyfiyyəti, komanda məhsuldarlığı və uzunmüddətli saxlanıla bilmə üzərində böyük təsir göstərir. Uyğunsuz formatlaşdırma versiya nəzarətində səs-küylü diff-lərə gətirib çıxarır, kod nəzərdən keçirmələrini çətinləşdirir və lazımsız birləşmə konfliktləri yaradır.
+
+## Niyə Formatlaşdırma Vacibdir
+
+Oxuna bilən kod saxlanıla bilən koddur. Layihədəki hər fayl eyni formatlaşdırma konvensiyalarına əməl etdikdə -- tutarlı girintili, mötərizə yerləşdirmə, aralıq və sətir uzunluğu -- istənilən tərtibatçı istənilən faylı açıb strukturu dərhal anlaya bilər.
+
+Ən ümumi formatlaşdırma mübahisələri (tablar-boşluqlar, nöqtə vergüllər, tək dırnaqlar-cüt dırnaqlar) avtomatlaşdırılmış formatlayıcılar tərəfindən böyük ölçüdə həll edilib. Alət formatlaşdırmanı avtomatik idarə etdikdə, mübahisə əhəmiyyətsiz olur.
+
+## JSON Formatlaşdırma
+
+JSON müasir veb inkişafın ümumi dilidir. API cavabları, konfiqurasiya faylları, paket manifestləri və məlumat ixracatları hamısı JSON istifadə edir. Amma API-lərdən gələn xam JSON tez-tez tək minimumlaşdırılmış sətir kimi gəlir.
+
+JSON formatlayıcı minimumlaşdırılmış JSON-u düzgün girintili və sintaksis vurğulaması ilə gözəlləşdirir. Həmçinin strukturu təsdiqləyir, çatışmayan vergülləri, uyğunsuz mötərizələri tutur.
+
+**JSON formatlayıcıdan nə vaxt istifadə etməli:**
+- Minimumlaşdırılmış gələn API cavablarını sazlayarkən
+- Deploy etməzdən əvvəl konfiqurasiya fayllarını təsdiqləyərkən
+- Fərqləri tapmaq üçün iki JSON obyektini müqayisə edərkən
+
+## SQL Formatlaşdırma
+
+SQL sorğuları, xüsusən çoxlu birləşmə, alt sorğu və pəncərə funksiyaları olan mürəkkəb olanlar, tək sətir kimi yazıldıqda oxunmaz olur. SQL formatlayıcı sorğuları tutarlı girintili, açar söz böyük hərfləri və məntiqi qruplaşdırma ilə yenidən strukturlaşdırır.
+
+## HTML, CSS və JavaScript Minimumlaşdırma
+
+Formatlaşdırma kodu insanlar üçün oxuna bilən edərkən, minimumlaşdırma onu brauzerlər üçün səmərəli edir. Minimumlaşdırıcılar kodunuzdan boşluğu, şərhləri və lazımsız simvolları silir:
+
+- **HTML minimumlaşdırma:** Adətən fayl ölçüsünü 10-25 faiz azaldır
+- **CSS minimumlaşdırma:** Fayl ölçüsünü 15-30 faiz azaldır
+- **JavaScript minimumlaşdırma:** Fayl ölçüsünü 30-50 faiz azaldır
+
+## XML Formatlaşdırma
+
+XML müəssisə proqram təminatında, SOAP API-lərdə, konfiqurasiya fayllarında hələ də geniş yayılıb. XML formatlaşdırma alətləri sənədləri düzgün girintili ilə gözəlləşdirir, sxemlərə qarşı təsdiqləyir.
+
+## Linting -- Formatlaşdırmadan Kənarda
+
+Formatlayıcılar kodun necə göründüyünü idarə edərkən, linter-lər kodun nə etdiyini təhlil edir. Onlar potensial xətaları tutur, kodlaşdırma standartlarını tətbiq edir və anti-nümunələri müəyyən edir:
+
+- **Formatlayıcılar** boşluğu, sətir kəsmələrini və üslubi elementləri dəyişir
+- **Linter-lər** məntiqi problemləri, istifadə edilməmiş dəyişənləri və təhlükəsizlik zəifliklərini qeyd edir
+
+## Peşəkar İş Axını Qurmaq
+
+Möhkəm kod keyfiyyəti iş axını daxildir:
+
+1. **Redaktor inteqrasiyası:** Seçdiyiniz formatlayıcı ilə yadda saxlayarkən formatlaşdırın
+2. **Pre-commit hook-lar:** Hər commit-dən əvvəl səhnələşdirilmiş faylları avtomatik formatlaşdırın
+3. **CI/CD yoxlamaları:** Qaçırılan problemləri tutmaq üçün pipeline-da linter-ləri işlədin
+4. **Paylaşılan konfiqurasiya:** Formatlayıcı və linter konfiqurasiyalarını repozitoriyada saxlayın
+
+Hər tərtibatçı etibarlı formatlaşdırma alətlərinin əlfəcin edilməsindən faydalanır. Vaxtım Yoxdu-da tam tərtibatçı alətləri dəstini sınayın -- pulsuz, sürətli və gizli.`,
+  },
+  'free-seo-tools-every-website-owner-should-use': {
+    title: 'Hər Vebsayt Sahibinin İstifadə Etməli Olduğu Pulsuz SEO Alətləri',
+    date: '2026-03-24',
+    relatedTools: ['meta-tag-generator', 'slug-generator', 'json-formatter', 'word-counter', 'image-compress', 'sitemap-generator'],
+    content: `Axtarış motoru optimizasiyası 2026-cı ildə vebsayt sahibləri üçün isteğe bağlı deyil. Onlayn təcrübələrin 90 faizindən çoxu axtarış motoru ilə başladığından, saytınızın axtarış nəticələrindəki görünürlüyü birbaşa neçə insanın onu tapıb istifadə etdiyini müəyyən edir. Yaxşı xəbər odur ki, başlamaq üçün bahalı SEO proqram təminatına ehtiyacınız yoxdur.
+
+## Meta Tag Generatorları
+
+Meta taglar səhifədaxili SEO-nun təməlidir. Başlıq tagınız və meta təsviriniz axtarış nəticələrində görünəndir və onlar birinin siyahınıza klik edib-etməməsinə birbaşa təsir göstərir.
+
+**Meta taglar üçün ən yaxşı təcrübələr:**
+- **Başlıq tagları:** 60 simvoldan az saxlayın. Əsas açar sözlə başlayın. Hər səhifə başlığını unikal edin.
+- **Meta təsvirlər:** 155 simvoldan az olun. Aydın dəyər təklifi və hərəkətə çağırış daxil edin.
+- **Open Graph tagları:** Sosial media paylaşımı üçün vacibdir.
+
+Yaxşı yazılmış meta tagların təsirini aşağı qiymətləndirməyin. Cəlbedici meta təsvir axtarış sıralamanızı dəyişdirmədən klik nisbətinizi 5-10 faiz artıra bilər.
+
+## URL Slug Optimizasiyası
+
+URL strukturunuz həm SEO, həm də istifadəçi təcrübəsi üçün vacibdir. Təmiz, təsviri URL-lər axtarış nəticələrində daha yaxşı performans göstərir. Slug generatoru səhifə başlıqlarınızı URL dostu formatlara çevirir.
+
+**Yaxşı slug-lar belə görünür:**
+- /best-free-seo-tools-2026
+- /how-to-optimize-images-for-web
+
+**Pis slug-lar belə görünür:**
+- /page?id=12847&cat=seo
+
+Slug-ları qısa, təsviri və açar söz zəngin saxlayın. Sözləri ayırmaq üçün defislər istifadə edin.
+
+## SEO üçün Şəkil Optimizasiyası
+
+Şəkillər SEO-ya iki yolla təsir edir: səhifə sürəti və şəkil axtarışı. Böyük, optimallaşdırılmamış şəkillər səhifələrinizi yavaşladır ki, bu da birbaşa axtarış sıralamasına zərər verir.
+
+**Şəkil optimizasiya yoxlama siyahısı:**
+1. Fayl ölçüsünü 50-80 faiz azaltmaq üçün bütün şəkilləri sıxışdırın
+2. Fotoqraflar üçün WebP, ikonlar və loqolar üçün SVG istifadə edin
+3. Hər şəklə təsviri alt mətn əlavə edin
+4. Sözlər arasında defislərlə təsviri fayl adları istifadə edin
+5. Layout sürüşməsinin qarşısını almaq üçün açıq en və hündürlük atributları təyin edin
+6. Ekranın altındakı şəkilləri tənbəl yükləyin
+
+## Kontent Keyfiyyəti Alətləri
+
+Axtarış motorları getdikcə kontent keyfiyyətinə prioritet verir:
+
+- **Söz sayğacları** kontentinizin minimum uzunluq tələblərinə cavab verdiyini təmin edir
+- **Qrammatika yoxlayıcıları** etibarlılığı sarsıdan xətaları tutur
+- **Mətn xülasəçilər** uzun kontentdən cəlbedici çıxarışlar və meta təsvirlər yaratmağa kömək edir
+
+## Strukturlaşdırılmış Məlumat (JSON-LD)
+
+Strukturlaşdırılmış məlumat axtarış motorlarına kontentinizin nə haqqında olduğunu standart format istifadə edərək dəqiq deyir. JSON-LD markup-ı həyata keçirmək axtarış nəticələrində zəngin fraqmentlər qazandıra bilər.
+
+JSON formatlayıcı strukturlaşdırılmış məlumatla işləmək üçün vacibdir. JSON-LD sintaktik olaraq etibarlı olmalıdır və hətta tək bir çatışmayan vergül belə Google-un markup-ınızı tamamilə nəzərə almamasına səbəb olacaq.
+
+**Ən dəyərli strukturlaşdırılmış məlumat növləri:**
+- **FAQ Səhifəsi:** Sualları və cavabları birbaşa axtarış nəticələrində göstərir
+- **Breadcrumb:** Axtarış siyahılarında səhifə iyerarxiyanızı göstərir
+- **Məqalə:** Axtarış motorlarına bloq kontentinizi anlamağa kömək edir
+- **Təşkilat:** Bilik panelləri üçün şirkət detallarını təmin edir
+
+## Google Search Console
+
+Google Search Console mövcud olan ən vacib pulsuz SEO alətidir. Hansı sorğuların saytınıza trafik gətirdiyini, hər sorğu üçün orta mövqeyinizi, klik nisbətlərini və Google-un saytınızı tararken tapdığı texniki problemləri göstərir.
+
+**İzləməli əsas Search Console ölçüləri:**
+- Zamanla ümumi göstərimlar və kliklər
+- Hədəf açar sözlər üçün orta mövqe
+- İndeksləmə problemləri olan səhifələr
+- Core Web Vitals performansı
+- Mobil istifadəyə yararlılıq problemləri
+
+Bu bələdçidə qeyd olunan bütün alətlər Vaxtım Yoxdu-da pulsuz mövcuddur. Meta taglar yaradın, təmiz URL slug-lar yaradın, şəkilləri sıxışdırın, JSON-LD formatlaşdırın -- hamısı brauzerinizdə, hamısı pulsuz.`,
+  },
+  'pulsuz-proqramci-aletleri-2026': {
+    title: '2026-da Hər Proqramçının Bilməli Olduğu 10 Pulsuz Alət',
+    date: '2026-03-24',
+    relatedTools: ['json-formatter', 'regex-tester', 'hash-generator', 'base64-encode-decode', 'jwt-decoder', 'cron-parser'],
+    content: `Proqramlaşdırma dünyası sürətlə dəyişir və 2026-cı ildə yeni texnologiyalar, çərçivələr və alətlər hər gün ortaya çıxır. Amma bəzi fundamental alətlər var ki, hansı proqramlaşdırma dilində və ya çərçivədə işləməyinizdən asılı olmayaraq, gündəlik işinizi əhəmiyyətli dərəcədə asanlaşdırır. Bu məqalədə hər proqramçının bilməli olduğu 10 pulsuz aləti ətraflı nəzərdən keçirəcəyik.
+
+## 1. JSON Formatlayıcı
+
+JSON müasir veb inkişafın ən geniş istifadə olunan məlumat formatıdır. API-lərlə işləyərkən, konfiqurasiya fayllarını redaktə edərkən və ya məlumat mübadiləsi apararkən JSON formatlayıcı əvəzsizdir. Minimumlaşdırılmış JSON-u oxuna bilən formata çevirir, sintaksis xətalarını aşkar edir və strukturu vizual olaraq aydınlaşdırır. Hər gün API cavablarını sazlayan tərtibatçılar üçün bu, ən çox istifadə olunan alətlərdən biridir.
+
+## 2. Regex Test Edici
+
+Müntəzəm ifadələr (Regular Expressions) mətn emalının ən güclü alətlərindən biridir, amma eyni zamanda ən çətin öyrənilənlərdən. Regex test edici müntəzəm ifadələrinizi real vaxtda sınamağa, uyğunluqları vizual olaraq görməyə və nümunələrinizi mürəkkəb mətn blokları üzərində yoxlamağa imkan verir. Xüsusilə məlumat təsdiqləmə, log fayllarının təhlili və mətn axtarışı vəzifələri üçün əvəzsizdir.
+
+## 3. Hash Generatoru
+
+Fayl bütövlüyünü yoxlamaq, parolları saxlamaq və ya məlumat təsdiqləmə üçün hash funksiyaları vacibdir. Hash generatoru MD5, SHA-1, SHA-256 və digər alqoritmlər istifadə edərək istənilən mətn və ya faylın hash dəyərini anı olaraq hesablayır. Təhlükəsizlik tətbiqlərindən tutmuş verilənlər bazası əməliyyatlarına qədər geniş istifadə sahəsi var.
+
+## 4. Base64 Kodlayıcı/Dekoder
+
+Base64 kodlaşdırma veb inkişafda hər yerdə istifadə olunur -- şəkilləri inline olaraq HTML-ə yerləşdirmək, API autentifikasiya tokenləri, e-poçt əlavələri və daha çoxu. Base64 kodlayıcı/dekoder sətirləri və faylları Base64-ə və əksinə çevirməyi asanlaşdırır. Bu, xüsusilə REST API-lərlə işləyərkən və autentifikasiya başlıqlarını sazlayarkən faydalıdır.
+
+## 5. JWT Dekoder
+
+JSON Web Tokenləri (JWT) müasir veb tətbiqlərində autentifikasiya və avtorizasiya üçün standart halına gəlib. JWT dekoder tokenin header, payload və imza hissələrini ayırır, dekodlanmış məzmunu göstərir və tokenin vaxtının keçib-keçmədiyini yoxlayır. Autentifikasiya problemlərini sazlayarkən vaxt qənaət edir.
+
+## 6. Cron Parser
+
+Planlaşdırılmış tapşırıqlar demək olar ki, hər serverdə mövcuddur və cron ifadələri onların dilsidir. Cron parser mürəkkəb cron sintaksisini oxuna bilən formata çevirir, gələcək icra vaxtlarını göstərir və yeni ifadələr qurmağa vizual kömək edir. Yanlış planlaşdırılmış tapşırıqların qarşısını almaq üçün deploy etməzdən əvvəl həmişə cron ifadələrinizi yoxlayın.
+
+## 7. Rəng Seçici
+
+Frontend tərtibatçılar və dizaynerlər gün ərzində dəfə-dəfə rəng dəyərləri ilə işləyir. Rəng seçici HEX, RGB, HSL və digər formatlar arasında ani çevirməyə, tamamlayıcı rəng palitraları yaratmağa və WCAG əlçatanlıq standartlarına uyğun kontrast nisbətlərini yoxlamağa imkan verir.
+
+## 8. SQL Formatlayıcı
+
+Verilənlər bazası ilə işləyən hər tərtibatçı mürəkkəb SQL sorğuları ilə üzləşir. SQL formatlayıcı sorğuları oxuna bilən formata çevirir, açar sözləri düzgün böyüklükdə yazır, girintiləri tətbiq edir və birləşmə, alt sorğu və şərtləri aydın şəkildə ayırır.
+
+## 9. Markdown Önizləyici
+
+Markdown müasir sənədləşdirmənin standart formatıdır. README faylları, texniki sənədlər, bloq yazıları -- hamısı Markdown-da yazılır. Markdown önizləyici yazdığınız Markdown-u real vaxtda render edilmiş HTML kimi göstərir. Sənədləriniyin son görünüşünü commit etməzdən əvvəl yoxlaya bilərsiniz.
+
+## 10. Şəkil Sıxışdırıcı
+
+Veb performansı tərtibatçıların diqqət etməli olduğu əsas sahədir və şəkillər ən ağır veb aktivləridir. Şəkil sıxışdırıcı fayl ölçüsünü görünən keyfiyyət itirmədən 50-80% azaldır. Bu, səhifə yükləmə sürətini, Core Web Vitals ballarını və nəticə etibarilə axtarış sıralamasını yaxşılaşdırır.
+
+## Niyə Brauzer Əsaslı Alətlər?
+
+Bu alətlərin hamısını masaüstü proqram kimi quraşdıra bilərsiniz, amma brauzer əsaslı versiyalar əhəmiyyətli üstünlüklər verir: sıfır quraşdırma, istənilən cihazda əlçatan, həmişə güncəl, fayllarınız cihazınızda qalır. Xüsusilə müxtəlif maşınlarda işləyən və ya tez bir həll lazım olan tərtibatçılar üçün ideal seçimdir.
+
+Bu alətlərin hamısı Vaxtım Yoxdu-da pulsuz mövcuddur. Qeydiyyat yox, gizli limitlər yox -- sadəcə açın və istifadə edin.`,
+  },
+  'vebsayti-pulsuz-optimallashdirmaq': {
+    title: 'Vebsaytınızı Pulsuz Necə Optimallaşdırmaq Olar',
+    date: '2026-03-24',
+    relatedTools: ['image-compress', 'html-minifier', 'css-minifier', 'js-minifier', 'meta-tag-generator', 'json-formatter'],
+    content: `Vebsaytınızın sürəti istifadəçi təcrübəsindən tutmuş axtarış motoru sıralamasına qədər hər şeyə təsir edir. Google-un Core Web Vitals standartları sıralama faktoru kimi qəbul etməsi ilə sayt performansı artıq lüks deyil, zərurətdir. Yaxşı xəbər budur ki, vebsaytınızı optimallaşdırmaq üçün bahalı alətlərə ehtiyacınız yoxdur. Bu bələdçidə pulsuz alətlər istifadə edərək saytınızı necə sürətləndirəcəyinizi öyrənəcəksiniz.
+
+## Şəkil Optimizasiyası -- Ən Böyük Təsir
+
+Şəkillər ümumiyyətlə veb səhifənin ən ağır elementləridir və optimallaşdırma üçün ən böyük imkan burada gizlənir. Düzgün şəkil optimizasiyası səhifə yükləmə vaxtını 2-5 saniyə azalda bilər.
+
+**Şəkil optimizasiyası addımları:**
+1. **Sıxışdırma:** Bütün şəkilləri onlayn sıxışdırıcı vasitəsilə keçirin. Keyfiyyət 80-85 olaraq təyin ediləndə fayl ölçüsü 50-80% azalır, amma gözdən fərq hiss olunmur.
+2. **Format seçimi:** Fotoqrafik şəkillər üçün WebP formatına keçin. WebP JPEG-dən 25-35% daha kiçik fayl ölçüsü verir. İkonlar və loqolar üçün SVG istifadə edin.
+3. **Ölçü düzəltmə:** Şəkilləri göstəriləcək ölçüyə uyğunlaşdırın. 1920px genişliyində şəkli 400px genişliyində sahədə göstərmək israfçılıqdır.
+4. **Tənbəl yükləmə:** Ekranın altındakı şəkillərə \`loading="lazy"\` əlavə edin. Bu, brauzerə şəkili yalnız görünmə sahəsinə yaxınlaşanda yükləməyi bildirir.
+
+## Kod Minimumlaşdırma
+
+HTML, CSS və JavaScript fayllarınız inkişaf zamanı oxuna bilən formatda olmalıdır, amma istehsalda minimumlaşdırılmalıdır. Minimumlaşdırma boşluqları, şərhləri və lazımsız simvolları silir:
+
+- **HTML minimumlaşdırma** fayl ölçüsünü 10-25% azaldır
+- **CSS minimumlaşdırma** fayl ölçüsünü 15-30% azaldır, təkrar selektorları birləşdirə bilər
+- **JavaScript minimumlaşdırma** fayl ölçüsünü 30-50% azaldır, dəyişən adlarını qısaldır
+
+Müasir build alətləri bunu avtomatik edir, amma statik saytlar və ya tez optimizasiya üçün onlayn minimumlaşdırıcılar əvəzsizdir.
+
+## SEO Optimizasiyası
+
+Texniki performansdan əlavə, SEO optimizasiyası da saytınızın uğuru üçün vacibdir:
+
+**Meta taglar:** Hər səhifədə unikal başlıq (60 simvoldan az) və təsvir (155 simvoldan az) olmalıdır. Meta tag generatoru düzgün uzunluqda optimallaşdırılmış taglar hazırlamağa kömək edir.
+
+**Strukturlaşdırılmış məlumat:** JSON-LD formatında strukturlaşdırılmış məlumat axtarış motorlarına kontentinizin nə haqqında olduğunu dəqiq deyir. FAQ, Breadcrumb, Article və Organization sxemləri ən geniş istifadə olunan növlərdir. JSON formatlayıcıdan istifadə edərək JSON-LD-nin sintaktik olaraq doğru olduğunu təmin edin.
+
+**Sitemap:** Dinamik sitemap axtarış motorlarına saytınızdakı bütün səhifələri tapmağa kömək edir. Yeni kontent əlavə etdikdə avtomatik yenilənən sitemap ən yaxşı seçimdir.
+
+## Brauzer Keşləmə
+
+Düzgün keş başlıqları təkrar ziyarətçilər üçün yükləmə vaxtını dramatik şəkildə azaldır. Statik aktivlər (şəkillər, CSS, JS) uzun keş müddəti (1 il) ilə xidmət edilməlidir, dinamik kontent isə qısa keş müddəti və ya stale-while-revalidate strategiyası istifadə etməlidir.
+
+## Core Web Vitals
+
+Google-un Core Web Vitals üç əsas ölçüdən ibarətdir:
+
+1. **LCP (Largest Contentful Paint):** Səhifənin ən böyük kontent elementinin nə qədər tez yükləndiyini ölçür. Hədəf: 2.5 saniyədən az.
+2. **INP (Interaction to Next Paint):** İstifadəçi qarşılıqlı təsirlərinə cavab sürətini ölçür. Hədəf: 200 millisaniyədən az.
+3. **CLS (Cumulative Layout Shift):** Səhifə elementlərinin gözlənilməz sürüşməsini ölçür. Hədəf: 0.1-dən az.
+
+## Yoxlama Siyahısı
+
+Vebsaytınızı optimallaşdırarkən bu siyahını izləyin:
+
+- [ ] Bütün şəkillər sıxışdırılıb və WebP formatına çevrilib
+- [ ] HTML, CSS və JS faylları minimumlaşdırılıb
+- [ ] Hər səhifədə unikal meta başlıq və təsvir var
+- [ ] JSON-LD strukturlaşdırılmış məlumat əlavə edilib
+- [ ] Tənbəl yükləmə aktivdir
+- [ ] Keş başlıqları konfiqurasiya edilib
+- [ ] Core Web Vitals hədəfləri qarşılanır
+
+Bu məqalədə qeyd olunan bütün alətlər Vaxtım Yoxdu-da pulsuz mövcuddur. Şəkilləri sıxışdırın, kodu minimumlaşdırın, meta taglar yaradın -- hamısı brauzerinizdə, heç bir qeydiyyat olmadan.`,
+  },
+  'pdf-fayllarla-islemek-pulsuz-aletler': {
+    title: 'PDF Fayllarla İşləmək üçün Ən Yaxşı Pulsuz Alətlər',
+    date: '2026-03-24',
+    relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
+    content: `PDF fayllar iş dünyasının, təhsilin və gündəlik həyatın ayrılmaz hissəsidir. Müqavilələr, hesabatlar, fakturalar, akademik məqalələr, dərslik materialları -- hamısı PDF formatında paylaşılır. Amma PDF-lərlə işləmək Adobe Acrobat kimi bahalı proqram olmadan əvvəllər çətin idi. 2026-cı ildə brauzer əsaslı pulsuz alətlər bütün əsas PDF əməliyyatlarını masaüstü proqram quraşdırmadan həll edir.
+
+## PDF Birləşdirmə
+
+PDF birləşdirmə ən tez-tez lazım olan PDF əməliyyatıdır. Praktiki istifadə nümunələri:
+
+- **İş üçün:** Müxtəlif departamentlərdən gələn hesabatları vahid sənədə birləşdirmək
+- **Təhsil üçün:** Mühazirə slaydlarını, qeydləri və əlavə materialları kurs üzrə vahid PDF-ə birləşdirmək
+- **Şəxsi istifadə üçün:** Səyahət sənədlərini (bilet, otel təsdiqi, sığorta) bir faylda toplamaq
+
+Yaxşı PDF birləşdirici faylları sürükle-burax ilə yükləməyə, sıralamanı dəyişməyə və nəticəni anı olaraq yükləməyə imkan verməlidir. Ən vacib xüsusiyyət isə gizlilikdir -- fayllarınız serverə yüklənməməli, tamamilə brauzerinizdə emal edilməlidir.
+
+## PDF Bölmə
+
+PDF bölmə birləşdirmənin əksidir -- böyük bir PDF-i kiçik hissələrə ayırır. Bu alət xüsusilə faydalıdır:
+
+- Uzun hesabatdan yalnız müəyyən səhifələri çıxarmaq
+- Böyük bir sənədi fərqli alıcılara göndərmək üçün bölmək
+- Kitab və ya dərsliyin müəyyən fəsillərini ayırmaq
+- Çox səhifəli skan edilmiş sənəddən xüsusi səhifələri seçmək
+
+Bölmə aləti səhifə aralığı daxil etməyə (məsələn, 1-5, 8, 12-15), hər səhifəni ayrıca fayl kimi çıxarmağa və ya sənədi bərabər hissələrə bölməyə imkan verməlidir.
+
+## PDF Sıxışdırma
+
+PDF faylları bəzən çox böyük ola bilər, xüsusilə yüksək keyfiyyətli şəkillər, qrafiklər və ya çox sayda səhifə ehtiva edəndə. Böyük PDF-ləri e-poçtla göndərmək, bulud yaddaşında saxlamaq və ya veb-saytda paylaşmaq çətin olur.
+
+PDF sıxışdırıcı fayl ölçüsünü əhəmiyyətli dərəcədə azaldır:
+- Daxili şəkillərin keyfiyyətini optimallaşdırır
+- Lazımsız metadata-nı silir
+- Şrift altsetlərini optimallaşdırır
+- Təkrar elementləri sıxışdırır
+
+Adətən 50-80% ölçü azalması əldə etmək mümkündür ki, bu da 10 MB-lıq faylı 2-3 MB-a çevirə bilər.
+
+## Gizlilik və Təhlükəsizlik
+
+PDF fayllarla işləyərkən gizlilik ən vacib məsələlərdən biridir. Müqavilələr, maliyyə hesabatları, tibbi sənədlər və şəxsi məlumatlar ehtiva edən PDF-lər xüsusi diqqət tələb edir.
+
+**Onlayn PDF alətlərindən istifadə edərkən diqqət edin:**
+1. **Yerli emal:** Fayllarınız serverə yüklənir, yoxsa brauzerinizdə yerli olaraq emal edilir? Yerli emal daha təhlükəsizdir.
+2. **Məlumat saxlama:** Alət fayllarınızı emaldan sonra saxlayır? Ən yaxşı alətlər heç bir şey saxlamır.
+3. **Şifrələmə:** Fayl transferi zamanı şifrələmə istifadə olunur?
+4. **Gizlilik siyasəti:** Alətin aydın gizlilik siyasəti var?
+
+Brauzer əsaslı PDF alətləri bu baxımdan üstünlük təşkil edir, çünki fayllar heç vaxt cihazınızı tərk etmir. Emal tamamilə brauzerinizdə baş verir və fayl heç bir serverə göndərilmir.
+
+## PDF Alətləri üçün Ən Yaxşı Təcrübələr
+
+- Birləşdirməzdən əvvəl faylları düzgün sırada adlandırın (01_, 02_, 03_)
+- Böyük PDF-ləri e-poçtla göndərməzdən əvvəl sıxışdırın
+- Həssas sənədlər üçün yalnız yerli emal edən alətlər istifadə edin
+- PDF-ləri bölməzdən əvvəl orijinal faylın ehtiyat nüsxəsini saxlayın
+
+Bütün bu PDF alətləri Vaxtım Yoxdu-da pulsuz mövcuddur. Fayllarınız brauzerinizdə emal edilir, serverə yüklənmir. Qeydiyyat tələb olunmur, fayl ölçüsü limiti yoxdur.`,
+  },
+  'sekil-kompressiyasi-veb-ucun-tam-beledci': {
+    title: 'Şəkil Kompressiyası: Veb üçün Tam Bələdçi',
+    date: '2026-03-24',
+    relatedTools: ['image-compress', 'image-convert', 'image-resize', 'image-crop', 'svg-to-png', 'placeholder-image'],
+    content: `Şəkillər veb səhifələrin ən ağır elementi olaraq qalır və 2026-cı ildə səhifə sürəti həm istifadəçi təcrübəsi, həm də Google sıralamaları üçün hər zamankından daha vacibdir. Bu bələdçidə şəkil kompressiyasının necə işlədiyini, hansı formatları nə vaxt istifadə edəcəyinizi və şəkillərinizi keyfiyyətdən minimum güzəşt edərək necə optimallaşdıracağınızı ətraflı öyrənəcəksiniz.
+
+## Şəkil Kompressiyası Nədir?
+
+Şəkil kompressiyası fayl ölçüsünü azaltmaq prosesidir. İki əsas növü var:
+
+### İtkili (Lossy) Kompressiya
+
+İtkili kompressiya insan gözünün fərq etməyəcəyi detalları silərək fayl ölçüsünü əhəmiyyətli dərəcədə azaldır. JPEG və WebP bu metodu istifadə edir. Keyfiyyət parametri (adətən 0-100 şkalasında) nə qədər məlumat silinəcəyini müəyyən edir:
+
+- **Keyfiyyət 85-95:** Minimum görünən fərq, 20-40% ölçü azalması
+- **Keyfiyyət 75-85:** Əla balans -- fərq demək olar ki, görünmür, 50-70% azalma
+- **Keyfiyyət 60-75:** Kiçik artefaktlar görünə bilər, 70-85% azalma
+- **Keyfiyyət 60-dan az:** Görünən keyfiyyət itkisi, yalnız kiçik thumbnail-lər üçün
+
+Əksər veb istifadə halları üçün keyfiyyət 80-85 optimal seçimdir.
+
+### İtkisiz (Lossless) Kompressiya
+
+İtkisiz kompressiya heç bir vizual məlumat silmədən fayl ölçüsünü azaldır. PNG bu metodu istifadə edir. Azalma daha azdır (adətən 10-30%), amma orijinal keyfiyyət tam qorunur. Transparanlıq, mətn və ya kəskin kənarlar olan şəkillər üçün idealdır.
+
+## Şəkil Formatları Müqayisəsi
+
+### JPEG
+- Fotoqrafik şəkillər üçün ən yaxşı
+- İtkili kompressiya, yaxşı ölçü/keyfiyyət balansı
+- Transparanlıq dəstəkləmir
+- Hər yerdə dəstəklənir
+
+### PNG
+- Transparanlıq lazım olanda
+- İtkisiz kompressiya
+- Mətn, loqolar, ekran görüntüləri üçün ideal
+- JPEG-dən böyük fayl ölçüsü
+
+### WebP
+- Google tərəfindən hazırlanıb
+- Həm itkili, həm itkisiz kompressiya
+- JPEG-dən 25-35% daha kiçik
+- Transparanlıq dəstəkləyir
+- Müasir brauzerlərin hamısında dəstəklənir
+
+### SVG
+- Vektor formatı -- istənilən ölçüyə miqyaslanır
+- İkonlar, loqolar, illüstrasiyalar üçün ideal
+- Çox kiçik fayl ölçüsü
+- CSS ilə stilizasiya edilə bilər
+- Fotoqrafik şəkillər üçün uyğun deyil
+
+### AVIF
+- Ən yeni format, ən yaxşı kompressiya nisbəti
+- WebP-dən 20% daha kiçik
+- Brauzer dəstəyi artır, amma hələ universal deyil
+
+## Veb üçün Şəkil Optimizasiyası Addımları
+
+### 1. Düzgün Format Seçimi
+Fotoqraflar üçün WebP (JPEG fallback ilə), transparanlıq üçün PNG və ya WebP, ikonlar üçün SVG istifadə edin.
+
+### 2. Ölçü Düzəltmə
+Şəkilləri göstəriləcək ölçüyə uyğunlaşdırın. 3000px genişliyində kamera şəklini 800px genişliyində konteynerə yerləşdirmək israfçılıqdır. Şəkil ölçü dəyişdirici ilə dəqiq piksel ölçülərinə miqyaslayın.
+
+### 3. Kompressiya
+Şəkil sıxışdırıcı istifadə edərək fayl ölçüsünü azaldın. Keyfiyyəti 80-85 olaraq təyin edin -- bu, gözlə görünən fərq olmadan maksimum azalma verir.
+
+### 4. Responsiv Şəkillər
+Müxtəlif cihaz ölçüləri üçün bir neçə versiya hazırlayın:
+- 320px mobil telefonlar üçün
+- 640px böyük telefonlar üçün
+- 1024px tabletlər üçün
+- 1440px masaüstü ekranlar üçün
+
+### 5. Tənbəl Yükləmə
+Ekranın altındakı şəkillərə \`loading="lazy"\` əlavə edin. Bu, ilkin səhifə yükləmə vaxtını əhəmiyyətli dərəcədə azaldır. LCP şəklinizi (adətən hero şəkil) tənbəl yükləməyin.
+
+### 6. Alt Mətn
+Hər şəklə təsviri alt mətn əlavə edin. Bu həm əlçatanlıq, həm də SEO üçün vacibdir. Alt mətn şəklin məzmununu dəqiq təsvir etməlidir.
+
+## Şəkil Optimizasiya Yoxlama Siyahısı
+
+Hər hansı səhifəni dərc etməzdən əvvəl yoxlayın:
+
+1. Fotoqrafik şəkillər WebP formatındadır?
+2. İtkili formatlar üçün keyfiyyət 80-85 olaraq təyin edilib?
+3. Şəkillər göstərilmə ölçülərinə uyğundur?
+4. Əsas şəkillər üçün srcset ilə responsiv ölçülər var?
+5. Ekranın altındakı şəkillər tənbəl yüklənir?
+6. Hər şəklin təsviri alt mətni var?
+7. Width və height atributları layout sürüşməsinin qarşısını almaq üçün təyin edilib?
+
+## Alətlər
+
+Bütün bu optimallaşdırma addımlarını Vaxtım Yoxdu-da pulsuz brauzer alətləri ilə edə bilərsiniz: şəkil sıxışdırma, format çevirmə, ölçü dəyişdirmə, kəsmə və daha çoxu. Fayllarınız cihazınızda qalır, serverə yüklənmir.`,
+  },
+  'onlayn-tehlukesizlik-guclu-parol-yaratmaq': {
+    title: 'Onlayn Təhlükəsizlik: Güclü Parol Yaratmağın Yolları',
+    date: '2026-03-24',
+    relatedTools: ['password-generator', 'hash-generator', 'base64-encode-decode'],
+    content: `2026-cı ildə kiberhücumlar hər zamankından daha tez-tez baş verir və zəif parollar hələ də ən böyük təhlükəsizlik zəifliklərindən biridir. Araşdırmalar göstərir ki, məlumat pozuntularının 80%-dən çoxu zəif və ya oğurlanmış parollarla bağlıdır. Bu bələdçidə güclü parollar yaratmağın yollarını, parol təhlükəsizliyinin əsaslarını və onlayn hesablarınızı necə qoruyacağınızı öyrənəcəksiniz.
+
+## Niyə Parollarınız Zəifdir?
+
+Əksər insanlar parol yaradarkən eyni səhvləri edir:
+
+**Ən ümumi səhvlər:**
+- Qısa parollar (8 simvoldan az)
+- Şəxsi məlumatlar (ad gün, ad, telefon nömrəsi)
+- Sadə nümunələr (123456, qwerty, password)
+- Eyni parolu bir neçə saytda istifadə
+- Lüğət sözləri (tək söz, heç bir dəyişiklik olmadan)
+- Sadə əvəzetmələr (p@ssw0rd -- hakerler bunu bilirlər)
+
+Müasir kompüterlər sadə parolları saniyələr ərzində sınaya bilər. 6 simvollu parol saniyələrdə, 8 simvollu parol saatlarda sındırıla bilər. Amma 16 simvollu, qarışıq simvollu parol minlərlə il tələb edir.
+
+## Güclü Parol Necə Olmalıdır?
+
+Güclü parolun xüsusiyyətləri:
+
+1. **Uzunluq:** Minimum 16 simvol. Hər əlavə simvol sındırma çətinliyini eksponensial artırır.
+2. **Mürəkkəblik:** Böyük hərflər (A-Z), kiçik hərflər (a-z), rəqəmlər (0-9) və xüsusi simvollar (!@#$%^&*) qarışığı.
+3. **Unikallıq:** Hər hesab üçün fərqli parol. Bir saytda məlumat pozuntusu olsa, digər hesablarınız təhlükədə olmamalıdır.
+4. **Təsadüfilik:** Əsl təsadüfi simvol ardıcıllığı, nümunə və ya şəxsi məlumat yox.
+
+## Parol Yaratma Strategiyaları
+
+### Strategiya 1: Parol Generatoru İstifadə Edin
+
+Ən təhlükəsiz yol parol generatorundan istifadə etməkdir. Bu alətlər kriptoqrafik olaraq təhlükəsiz təsadüfi parollar yaradır. Uzunluğu, istifadə olunan simvol növlərini seçin və generator tamamilə təsadüfi parol yaradır. İnsan beyni həqiqi təsadüfilik yarada bilmir -- həmişə nümunələrə meyl edirik. Maşın yaratdığı parollar daha təhlükəsizdir.
+
+### Strategiya 2: Passphrase (Parol İfadəsi)
+
+Yadda saxlanması lazım olan parollar üçün passphrase istifadə edin. 4-6 təsadüfi sözdən ibarət bir ifadə yaradın:
+
+\`yaşıl-kürə-buludlu-samavar-güzgü\`
+
+Bu tip parol hem uzun (güclü), hem yadda qalan, hem də yazması asandır. Sözlər arasında xüsusi simvollar əlavə etmək daha da güclü edir.
+
+### Strategiya 3: Modifikasiya Olunmuş İfadə
+
+Yadda qalan bir cümləni götürün və onu modifikasiya edin:
+- Orijinal: "Mən hər gün 7-də işə gedirəm"
+- Parol: "M3n_H3r_Gun_7d3_1$3_G3d1r3m!"
+
+## Parol İdarəetmə
+
+Hər hesab üçün unikal, güclü parol istifadə etdikdə onları yadda saxlamaq mümkün olmur. Həll yolları:
+
+**Parol menecerləri:** Bütün parollarınızı şifrələnmiş verilənlər bazasında saxlayır. Yalnız bir master parol yadda saxlamaq lazımdır. Populyar seçimlər: Bitwarden (pulsuz, açıq mənbəli), 1Password, KeePassXC.
+
+**İki faktorlu autentifikasiya (2FA):** Hər yerdə mümkün olduğu halda 2FA aktivləşdirin. Parolunuz oğurlansa belə, ikinci faktor olmadan hesabınıza daxil olmaq mümkün olmaz.
+
+## Parolunuzun Gücünü Qiymətləndirmə
+
+Parolunuzun nə qədər güclü olduğunu qiymətləndirmək üçün bu amillərə baxın:
+
+- **Uzunluq:** 16+ simvol əla, 12-15 yaxşı, 8-11 zəif
+- **Simvol növləri:** 4 növ (böyük/kiçik hərf, rəqəm, xüsusi) əla
+- **Təsadüfilik:** Nümunə yoxdursa əla
+- **Unikallıq:** Başqa yerdə istifadə edilmirsə əla
+
+## Hash-ləmə Nədir və Niyə Vacibdir?
+
+Vebsaytlar parolunuzu düz mətn kimi saxlamamalıdır. Bunun əvəzinə, hash funksiyası (SHA-256 kimi) istifadə edərək parolun hash-ini saxlayır. Hash funksiyası birtərəflidir -- hash-dən orijinal parolu bərpa etmək praktiki olaraq mümkün deyil.
+
+Hash generatoru ilə müxtəlif hash alqoritmlərinin necə işlədiyini öyrənə bilərsiniz. Bu, parol təhlükəsizliyinin texniki tərəfini anlamağa kömək edir.
+
+## Onlayn Təhlükəsizlik Yoxlama Siyahısı
+
+- [ ] Hər hesab üçün unikal, 16+ simvollu parol istifadə edin
+- [ ] Parol meneceri istifadə edin
+- [ ] Mümkün olan hər yerdə 2FA aktivləşdirin
+- [ ] Şübhəli e-poçt linklərinə klikləməyin (phishing)
+- [ ] Parollarınızı heç kimlə paylaşmayın
+- [ ] İctimai Wi-Fi-da həssas hesablara daxil olmayın
+- [ ] Proqram və əməliyyat sisteminizi güncəl saxlayın
+
+Güclü parollar yaratmaq üçün Vaxtım Yoxdu-dakı pulsuz parol generatorundan istifadə edin. Kriptoqrafik olaraq təhlükəsiz, tamamilə təsadüfi parollar yaradır -- brauzerinizdə, serverə göndərilmədən. Hash generatoru ilə parol hash-ləmənin necə işlədiyini öyrənin.`,
+  },
 }

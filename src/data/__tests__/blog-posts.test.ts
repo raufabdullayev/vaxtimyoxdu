@@ -16,8 +16,8 @@ describe('blogPosts collection', () => {
     expect(slugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 22 blog posts', () => {
-    expect(slugs.length).toBe(22)
+  it('should contain exactly 28 blog posts', () => {
+    expect(slugs.length).toBe(28)
   })
 })
 
@@ -233,12 +233,14 @@ describe('blogPostsAz collection', () => {
     expect(azSlugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 22 AZ blog posts', () => {
-    expect(azSlugs.length).toBe(22)
+  it('should contain exactly 33 AZ blog posts', () => {
+    expect(azSlugs.length).toBe(33)
   })
 
-  it('should have the same slugs as the EN blog posts', () => {
-    expect(azSlugs.sort()).toEqual(slugs.sort())
+  it('should include all EN blog post slugs', () => {
+    for (const slug of slugs) {
+      expect(azSlugs).toContain(slug)
+    }
   })
 })
 
@@ -285,6 +287,7 @@ describe('AZ blog post dates', () => {
   it('should match corresponding EN post dates', () => {
     for (const [slug, azPost] of azEntries) {
       const enPost = blogPosts[slug]
+      if (!enPost) continue // AZ-only post
       expect(azPost.date).toBe(enPost.date)
     }
   })
@@ -331,6 +334,7 @@ describe('AZ blog post relatedTools', () => {
   it('should match the relatedTools of the corresponding EN post', () => {
     for (const [slug, azPost] of azEntries) {
       const enPost = blogPosts[slug]
+      if (!enPost) continue // AZ-only post
       expect(azPost.relatedTools).toEqual(enPost.relatedTools)
     }
   })
