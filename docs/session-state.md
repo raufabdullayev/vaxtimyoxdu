@@ -136,6 +136,44 @@
 - 1737 test PASS (79 fayl), 11 commit push (04c2282..4cfd197)
 - 4 teammate: BackendPro, FrontendPro, TranslationPro, QaPro
 
+## Session 5 (2026-03-23)
+- [x] RESEND_API_KEY — Playwright ilə avtomatik əldə + Vercel-ə yazıldı
+- [x] Build fix: Sentry v7, Redis URL trim, MarkdownRenderer type (6917e3e)
+- [x] White screen fix: CSP unsafe-inline bərpa (3e6b7ae)
+- [x] 3 Stop hook error fix (data plugin-lər disable)
+- [x] QAYDA 14 əlavə edildi
+- [x] 4 universal skill yaradıldı: /review, /deploy, /security-audit, /browser-action
+- [x] Product Hunt — scheduled 24 Mart 11:01 Bakı
+- [x] Dev.to — məqalə publish olundu
+- [x] Medium — məqalə publish olundu
+- [x] SaaSHub — submit olundu (approval gözlənilir)
+- [x] AlternativeTo — submit olundu (24 saat approval)
+- [x] BetaList — draft (pulludur, CEO qərar verəcək)
+- [x] UI Primitives adoption — 12 tool komponent update (92838bd)
+- [x] E2E testlər — 5 yeni Playwright test (06425d9)
+- [x] Test fix — 1737 PASS (9b2e3c6)
+- launch-content.md yaradıldı (sosial media + kataloq mətnləri)
+- [x] /news → /info 301 redirect (49b6ed5)
+- [x] Bing Webmaster: robots.ts bingbot + BingSiteAuth.xml placeholder (80a3089)
+- [x] +58 test → 1795 total (65e0469)
+- [x] Nonce CSP araşdırıldı — unsafe-inline qalır, SSG ilə uyğunsuz (742048c)
+- [x] Pipeline fix verified — lint+tsc+build+test hamısı keçir, deploy uğurlu
+- [x] 14 xəbər məqaləsi əlavə (7 AZ + 7 EN, 23-24 Mart) — c87519a
+- [x] Resend domain verify — 4 DNS record Cloudflare-ə yazıldı, DNS verified
+- [x] Cloudflare Email Routing — hello@ + catch-all → gmail, MX/SPF/DKIM aktiv
+- [x] SENDER_EMAIL=hello@vaxtimyoxdu.com Vercel-ə yazıldı + kod env var-dan oxuyur (21080dc)
+- [x] +14 xəbər TR+RU tərcümələri → 57 məqalə (a6a5aab)
+- [x] +162 test → 2013 total, coverage 38%→41% (e3bd211)
+- [x] 6 yeni alət: Age Calc, BMI Calc, Percentage Calc, Barcode Gen, CSS Box Shadow, Hashtag Gen (a94a821)
+- [x] UX review + fix: i18n, a11y, dark mode (5ed4129) — UxPro APPROVED
+
+## Sprint 7 (2026-03-24, Session 5)
+- [x] 4 yeni alət: Loan Calc, CSS Flexbox, JSON→TS, CSS Grid (faaa1e0)
+- [x] 3 blog yazısı EN+AZ (a54d2dd)
+- [x] 12 xəbər (3 × 4 dil) → 69 total (a54d2dd)
+- [x] +301 test → 2314 total, coverage 41%→51% (6cf0fa2, eb053aa)
+- 3 teammate: DevPro, QaPro, ContentPro
+
 ## Gözləyən İşlər
 - [ ] RESEND_API_KEY Vercel-ə əlavə etmək (CEO manual)
 - [ ] /tools/word-counter-dən URL submit-ə davam (quota exceeded)
