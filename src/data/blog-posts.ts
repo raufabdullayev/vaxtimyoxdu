@@ -2830,19 +2830,23 @@ export const blogSlugs = Object.keys(blogPosts)
 // Locale-aware blog posts
 // ---------------------------------------------------------------------------
 import { blogPostsAz } from './blog-posts-az'
+import { blogPostsTr } from './blog-posts-tr'
+import { blogPostsRu } from './blog-posts-ru'
 import type { Locale } from '@/i18n/config'
 
 /**
  * All blog posts organised by locale.
  * - 'en' is the original set that has been available since launch.
  * - 'az' translations were added to provide native Azerbaijani content.
- * - Additional locales (tr, ru) can be added here in the future.
+ * - 'tr' and 'ru' translations cover all 33 posts (28 EN + 5 AZ-only).
  *
  * Locales that do not yet have their own translations fall back to 'en'.
  */
 export const blogPostsByLocale: Record<string, Record<string, BlogPost>> = {
   en: blogPosts,
   az: blogPostsAz,
+  tr: blogPostsTr,
+  ru: blogPostsRu,
 }
 
 /**

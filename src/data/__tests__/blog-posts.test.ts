@@ -1,6 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { blogPosts, blogSlugs, blogPostsByLocale, getBlogPostsByLocale, getBlogPostBySlug } from '@/data/blog-posts'
 import { blogPostsAz } from '@/data/blog-posts-az'
+import { blogPostsTr } from '@/data/blog-posts-tr'
+import { blogPostsRu } from '@/data/blog-posts-ru'
 import { tools } from '@/config/tools'
 
 const slugs = Object.keys(blogPosts)
@@ -367,12 +369,12 @@ describe('getBlogPostsByLocale', () => {
     expect(getBlogPostsByLocale('az')).toBe(blogPostsAz)
   })
 
-  it('should fall back to EN posts for locale "tr" (no translations yet)', () => {
-    expect(getBlogPostsByLocale('tr')).toBe(blogPosts)
+  it('should return TR posts for locale "tr"', () => {
+    expect(getBlogPostsByLocale('tr')).toBe(blogPostsTr)
   })
 
-  it('should fall back to EN posts for locale "ru" (no translations yet)', () => {
-    expect(getBlogPostsByLocale('ru')).toBe(blogPosts)
+  it('should return RU posts for locale "ru"', () => {
+    expect(getBlogPostsByLocale('ru')).toBe(blogPostsRu)
   })
 })
 
