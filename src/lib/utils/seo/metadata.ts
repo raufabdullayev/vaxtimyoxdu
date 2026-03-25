@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { Tool } from '@/types/tool'
 import { defaultLocale, Locale } from '@/i18n/config'
-import { SITE_URL, SITE_NAME, getLocalizedUrl } from './url'
+import { SITE_URL, SITE_NAME, getLocalizedUrl, generateHreflangAlternates } from './url'
 import { getOgLocale, getOgImageUrl } from './og'
 
 export function generateBaseMetadata(): Metadata {
@@ -35,9 +35,7 @@ export function generateBaseMetadata(): Metadata {
       description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
       images: [ogImage],
     },
-    alternates: {
-      canonical: SITE_URL,
-    },
+    alternates: generateHreflangAlternates('/'),
   }
 }
 
@@ -59,6 +57,7 @@ export function generateToolMetadata(
     title: `${name} - Free Online Tool | ${SITE_NAME}`,
     description,
     keywords: tool.keywords.join(', '),
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
       title: `${name} - ${SITE_NAME}`,
       description,
@@ -114,6 +113,7 @@ export function generateArticleMetadata({
     title: `${title} - ${SITE_NAME}`,
     description,
     keywords: `${category}, xeberler, azerbaycan, ${title.toLowerCase().split(' ').slice(0, 5).join(', ')}`,
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
       title,
       description,
@@ -169,6 +169,7 @@ export function generateBlogPostMetadata({
     title: `${title} - ${SITE_NAME} Blog`,
     description,
     keywords: `${title.toLowerCase().split(' ').slice(0, 5).join(', ')}, online tools, free tools`,
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
       title,
       description,

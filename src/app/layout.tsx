@@ -18,7 +18,10 @@ const inter = Inter({
   preload: true,
 })
 
-export const metadata: Metadata = generateBaseMetadata()
+export const metadata: Metadata = {
+  ...generateBaseMetadata(),
+  metadataBase: new URL('https://vaxtimyoxdu.com'),
+}
 
 export const viewport = {
   themeColor: '#7c3aed',
