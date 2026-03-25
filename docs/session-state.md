@@ -7,6 +7,19 @@
 - Sitemap aktiv: 645 URL, 0 xəta
 - Növbəti: HIGH tapşırıqlar (i18n split, toolUI namespace, CSP, test coverage)
 
+## Sessiya 6 (2026-03-26) — SEO Indexation Fix
+- [x] metadataBase + hreflang alternates fix (commit 91d15cc)
+- [x] www→non-www 301 redirect middleware-ə əlavə (commit 801229b)
+- [x] /xeberler→/info 301 redirect əlavə
+- [x] image-compressor + base64-encoder yanlış URL redirect (next.config.js)
+- [x] Theme localStorage konflikti — Sprint 4-də fix olunub (agent təsdiq)
+- [x] Search Console Service Account → Owner (həm URL prefix, həm domain property)
+- [x] Sitemap resubmit browser ilə (26 mart, 645 URL)
+- [x] 11 URL Request Indexing browser ilə (quota limit bitmədi)
+- [x] 17/20 URL index olunub (85%)
+- [x] +10 yeni test, cəmi 2795 PASS
+- MEMORY.md + dashboard yeniləndi
+
 ## Bu Sessiyada Tamamlanan İşlər (2026-03-14)
 - [x] GSC: vaxtimyoxdu.com verified (meta tag metodu, commit 455be80)
 - [x] GSC: vaxtimyoxdu.com-a service account Full access verildi
@@ -28,14 +41,20 @@
 - [x] Session state sistemi quruldu (QAYDA 8-13)
 - [x] Bing sitemap ping uğurlu
 
-## GSC İndeksasiya Statusu (2026-03-14)
-- vaxtimyoxdu.com/ — ✅ İNDEKSLƏNİB (crawl: 13 mart)
-- vaxtimyoxdu.com/en/ — ✅ İNDEKSLƏNİB (crawl: 11 mart)
-- vaxtimyoxdu.com/tools — ⏳ Discovered, crawl olmayıb (Request Indexing edildi)
-- vaxtimyoxdu.com/info — ⏳ Discovered, crawl olmayıb (Request Indexing edildi)
-- vaxtimyoxdu.com/blog — Request Indexing edildi
-- vaxtimyoxdu.com/news — ❌ 404! Mövcud deyil, düzgün URL: /info
-- Sitemap: 504 URL submitted, 0 indexed (yeni, 1-2 həftə gözlənilir)
+## GSC İndeksasiya Statusu (2026-03-26)
+- vaxtimyoxdu.com/ — ⚠️ www canonical konflikti (middleware fix deploy olunub, Google yeniləyəcək)
+- vaxtimyoxdu.com/tools — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/en/tools — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/info — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/blog — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/tr — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/ru — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/tr/tools — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/ru/tools — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/en/info — ✅ İNDEKSLƏNİB
+- vaxtimyoxdu.com/en/blog — ⏳ Discovered, crawl gözlənilir
+- Sitemap: 645 URL submitted, 17/20 test URL indexed
+- Service Account: siteOwner (həm domain, həm URL prefix)
 
 ## İlk Search Performance (son 28 gün)
 - 14 impression, 0 klik
@@ -191,22 +210,23 @@
 - 3 teammate: DevPro, QaPro, ContentPro
 
 ## Gözləyən İşlər
-- [ ] RESEND_API_KEY Vercel-ə əlavə etmək (CEO manual)
-- [ ] /tools/word-counter-dən URL submit-ə davam (quota exceeded)
-- [ ] /news → /info 301 redirect əlavə etmək
-- [ ] İndeksasiya prosesini izləmək (həftəlik)
-- [ ] Bing Webmaster Tools qoşmaq
-- [ ] Backlink strategiyası (Dev.to, Medium, kataloqlar — pulsuz)
-- [ ] CEO-TODO.md-dəki digər bəndlər
-- [ ] AdSense təsdiqi (daha çox indekslənmiş səhifə lazımdır)
-- [ ] i18n message splitting (30-48KB → namespace-based loading)
-- [ ] UI primitives adoption (ToolTextarea etc.)
-- [ ] TR tercümə keyfiyyəti (27 key AZ ilə eyni)
+- [ ] i18n message splitting (30-48KB → namespace-based loading) — HIGH
+- [ ] toolUI flat namespace refactor — HIGH
+- [ ] Nonce-based CSP migration — HIGH
+- [ ] Test coverage 68% → 85%+ — HIGH
+- [ ] Yeni alətlər (105 → 150) — MEDIUM
+- [ ] E2E testlər (35 → 100) — MEDIUM
+- [ ] Performance/Accessibility audit — MEDIUM
+- [ ] Sosial media hesabları — MEDIUM
+- [ ] AdSense təsdiqi gözlənilir — MEDIUM
+- [ ] Gündəlik xəbər kontenti (4 dil) — MEDIUM
+- [ ] İndeksasiya prosesini həftəlik izləmək
+- [ ] image-compressor fix commit + push
 
 ## Son Commitlər
-- 455be80 — GSC verification meta tag vaxtimyoxdu.com
-- 0c7690b — localeDetection: false (blog redirect fix)
-- cab361a — 301 redirect vaxtimyoxdur.com → vaxtimyoxdu.com
+- 91d15cc — metadataBase + hreflang alternates fix
+- 801229b — www→non-www + /xeberler→/info redirect
+- image-compressor redirect — hələ commit olunmayıb
 
 ## Vacib Qeydlər
 - MCP: həmişə `claude mcp add` ilə əlavə et
