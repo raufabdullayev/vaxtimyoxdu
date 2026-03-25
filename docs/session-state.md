@@ -1,22 +1,19 @@
-# Session State — Son Yenilənmə: 2026-03-14 (Session 4)
+# Session State — Son Yenilənmə: 2026-03-26 (Session 6)
 
 ## Hazırda Nə Edirik
-- Sprint 1 TAMAMLANDI (11/12, secrets rotate qalır)
-- Sprint 2 TAMAMLANDI (8/8, team mode, deployed)
-- Sprint 3 TAMAMLANDI (7/7, team mode, deployed)
-- Sprint 4 TAMAMLANDI (5/5, team mode, deployed)
-- Sprint Review TAMAMLANDI (7 reviewer, 50+ tapıntı)
-- UNSUBSCRIBE_SECRET Vercel-ə əlavə olundu + redeploy (Session 4)
-- GSC tam qurulub, hər iki domen verified, sitemap submit olunub
-- İndeksasiya prosesi gözlənilir (1-2 həftə)
-- AdSense təsdiqi gözlənilir (daha çox indekslənmiş səhifə lazımdır)
+- SEO Indexation fix tamamlandı (26 mart 2026)
+- 17/20 URL artıq Google-da index olunub (85%)
+- 11 URL Request Indexing edildi browser ilə
+- Sitemap aktiv: 645 URL, 0 xəta
+- Növbəti: HIGH tapşırıqlar (i18n split, toolUI namespace, CSP, test coverage)
 
 ## Bu Sessiyada Tamamlanan İşlər (2026-03-14)
 - [x] GSC: vaxtimyoxdu.com verified (meta tag metodu, commit 455be80)
 - [x] GSC: vaxtimyoxdu.com-a service account Full access verildi
 - [x] Site Verification API enabled (GCP)
 - [x] Sitemap submit: vaxtimyoxdu.com/sitemap.xml (504 URL, Google qəbul etdi)
-- [x] CEO ~11 URL GSC-dən Request Indexing etdi: /tools, /info, /blog, /tools/json-formatter, /tools/image-compressor, /tools/pdf-merge, /tools/qr-code-generator, /tools/password-generator, /tools/color-picker, /tools/base64-encoder
+- [x] CEO ~11 URL GSC-dən Request Indexing etdi: /tools, /info, /blog, /tools/json-formatter, /tools/image-compress, /tools/pdf-merge, /tools/qr-code-generator, /tools/password-generator, /tools/color-picker, /tools/base64-encode-decode
+  - QEYD: image-compressor və base64-encoder yanlış slug-lar idi, 301 redirect əlavə edildi (next.config.js)
 - [x] localeDetection: false — /blog EN redirect fix (commit 0c7690b)
 - [x] /news 404 problemi aşkar edildi — düzgün URL /info-dur
 - [x] QAYDA 13 əlavə edildi (avtomatik session-state yeniləmə)

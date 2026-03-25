@@ -46,12 +46,12 @@
 
 **Addim 3: Ilk submit edilecek 10 alet (yuksek axtaris potensiali)**
 1. `/tools/json-formatter` - Developer-ler her zaman axtarir
-2. `/tools/image-compressor` - Genis auditoriya
+2. `/tools/image-compress` - Genis auditoriya
 3. `/tools/pdf-merge` - Universial ehtiyac
 4. `/tools/qr-code-generator` - Cox axtarilan
 5. `/tools/password-generator` - Yuksek axtaris hecmi
 6. `/tools/color-picker` - Dizaynerler ve developerler
-7. `/tools/base64-encoder` - Texniki auditoriya
+7. `/tools/base64-encode-decode` - Texniki auditoriya
 8. `/tools/word-counter` - Yazicilar ve telebler
 9. `/tools/lorem-ipsum-generator` - Developer-ler
 10. `/tools/uuid-generator` - Backend developerler

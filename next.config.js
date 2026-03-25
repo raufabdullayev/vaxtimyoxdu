@@ -38,6 +38,29 @@ const nextConfig = {
         destination: 'https://vaxtimyoxdu.com/:path*',
         permanent: true,
       },
+      // Fix wrong tool slugs that were manually submitted to Google Search Console.
+      // These URLs were shared/indexed with incorrect names; redirect to the real slugs.
+      {
+        source: '/tools/image-compressor',
+        destination: '/tools/image-compress',
+        permanent: true,
+      },
+      {
+        source: '/tools/base64-encoder',
+        destination: '/tools/base64-encode-decode',
+        permanent: true,
+      },
+      // Locale-prefixed variants of the same wrong slugs
+      {
+        source: '/:locale(en|tr|ru)/tools/image-compressor',
+        destination: '/:locale/tools/image-compress',
+        permanent: true,
+      },
+      {
+        source: '/:locale(en|tr|ru)/tools/base64-encoder',
+        destination: '/:locale/tools/base64-encode-decode',
+        permanent: true,
+      },
     ]
   },
   async headers() {

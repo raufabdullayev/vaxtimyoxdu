@@ -24,12 +24,12 @@ Bu siyahıdakı işlər yalnız CEO tərəfindən edilə bilər (hesab yaratma, 
   1. `https://vaxtimyoxdu.com/` (Ana səhifə)
   2. `https://vaxtimyoxdu.com/tools` (Alətlər kataloqu)
   3. `https://vaxtimyoxdu.com/tools/json-formatter`
-  4. `https://vaxtimyoxdu.com/tools/image-compressor`
+  4. `https://vaxtimyoxdu.com/tools/image-compress`
   5. `https://vaxtimyoxdu.com/tools/pdf-merge`
   6. `https://vaxtimyoxdu.com/tools/qr-code-generator`
   7. `https://vaxtimyoxdu.com/tools/password-generator`
   8. `https://vaxtimyoxdu.com/tools/color-picker`
-  9. `https://vaxtimyoxdu.com/tools/base64-encoder`
+  9. `https://vaxtimyoxdu.com/tools/base64-encode-decode`
   10. `https://vaxtimyoxdu.com/tools/word-counter`
   11. `https://vaxtimyoxdu.com/tools/lorem-ipsum-generator`
   12. `https://vaxtimyoxdu.com/tools/uuid-generator`
