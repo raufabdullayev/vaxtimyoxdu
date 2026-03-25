@@ -32,7 +32,7 @@ function isAllowedOrigin(value: string): boolean {
 }
 
 /** Hostnames that must be 301-redirected to the canonical domain. */
-const REDIRECT_HOSTS = ['vaxtimyoxdur.com', 'www.vaxtimyoxdur.com']
+const REDIRECT_HOSTS = ['www.vaxtimyoxdu.com', 'vaxtimyoxdur.com', 'www.vaxtimyoxdur.com']
 const CANONICAL_ORIGIN = 'https://vaxtimyoxdu.com'
 
 // Create the next-intl middleware instance once.
@@ -50,10 +50,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301)
   }
 
-  // ─── /news -> /info redirect (301) ───
-  // The /news URL does not exist; the correct route is /info.
-  // Handles bare /news and locale-prefixed variants (/en/news, /tr/news, /ru/news).
-  const newsRedirectMatch = pathname.match(/^(?:\/(en|tr|ru))?\/news(\/.*)?$/)
+  // ─── /news and /xeberler -> /info redirect (301) ───
+  // Neither /news nor /xeberler exist; the correct route is /info.
+  // Handles bare paths and locale-prefixed variants (/en/news, /tr/xeberler, etc.).
+  const newsRedirectMatch = pathname.match(/^(?:\/(en|tr|ru))?\/(?:news|xeberler)(\/.*)?$/)
   if (newsRedirectMatch) {
     const localePrefix = newsRedirectMatch[1] ? `/${newsRedirectMatch[1]}` : ''
     const trailing = newsRedirectMatch[2] || ''

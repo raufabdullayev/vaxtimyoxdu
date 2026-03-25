@@ -106,6 +106,47 @@ describe('middleware /news -> /info redirect', () => {
   })
 })
 
+describe('middleware /xeberler -> /info redirect', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('redirects /xeberler to /info with 301', () => {
+    const req = createRequest('/xeberler')
+    const response = middleware(req)
+
+    expect(response.status).toBe(301)
+    expect(response.headers.get('location')).toContain('/info')
+    expect(response.headers.get('location')).not.toContain('/xeberler')
+  })
+
+  it('redirects /en/xeberler to /en/info', () => {
+    const req = createRequest('/en/xeberler')
+    const response = middleware(req)
+
+    expect(response.status).toBe(301)
+    expect(response.headers.get('location')).toContain('/en/info')
+  })
+
+  it('redirects /xeberler/some-article to /info/some-article', () => {
+    const req = createRequest('/xeberler/some-article')
+    const response = middleware(req)
+
+    expect(response.status).toBe(301)
+    expect(response.headers.get('location')).toContain('/info/some-article')
+  })
+
+  it('preserves query string on /xeberler redirect', () => {
+    const req = createRequest('/xeberler?page=2')
+    const response = middleware(req)
+
+    expect(response.status).toBe(301)
+    const location = response.headers.get('location') || ''
+    expect(location).toContain('/info')
+    expect(location).toContain('page=2')
+  })
+})
+
 describe('middleware domain redirect', () => {
   it('redirects vaxtimyoxdur.com to vaxtimyoxdu.com with 301', () => {
     const req = createRequest('/some-page', 'vaxtimyoxdur.com')
@@ -122,5 +163,28 @@ describe('middleware domain redirect', () => {
 
     expect(response.status).toBe(301)
     expect(response.headers.get('location')).toContain('vaxtimyoxdu.com')
+  })
+
+  it('redirects www.vaxtimyoxdu.com to vaxtimyoxdu.com with 301', () => {
+    const req = createRequest('/', 'www.vaxtimyoxdu.com')
+    const response = middleware(req)
+
+    expect(response.status).toBe(301)
+    expect(response.headers.get('location')).toBe('https://vaxtimyoxdu.com/')
+  })
+
+  it('redirects www.vaxtimyoxdu.com with path and query', () => {
+    const req = createRequest('/en/tools?q=json', 'www.vaxtimyoxdu.com')
+    const response = middleware(req)
+
+    expect(response.status).toBe(301)
+    expect(response.headers.get('location')).toBe('https://vaxtimyoxdu.com/en/tools?q=json')
+  })
+
+  it('does not redirect non-www vaxtimyoxdu.com', () => {
+    const req = createRequest('/', 'vaxtimyoxdu.com')
+    const response = middleware(req)
+
+    expect(response.status).not.toBe(301)
   })
 })

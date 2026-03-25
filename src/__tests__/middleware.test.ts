@@ -120,6 +120,20 @@ describe('middleware - domain redirect (vaxtimyoxdur.com -> vaxtimyoxdu.com)', (
     expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/api/newsletter')
   })
 
+  it('should 301 redirect from www.vaxtimyoxdu.com to vaxtimyoxdu.com', () => {
+    const req = createRequest('/', { host: 'www.vaxtimyoxdu.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/')
+  })
+
+  it('should 301 redirect www.vaxtimyoxdu.com preserving path and query', () => {
+    const req = createRequest('/en/tools?q=json', { host: 'www.vaxtimyoxdu.com' })
+    const res = middleware(req)
+    expect(res.status).toBe(301)
+    expect(res.headers.get('location')).toBe('https://vaxtimyoxdu.com/en/tools?q=json')
+  })
+
   it('should NOT redirect requests from vaxtimyoxdu.com', () => {
     const req = createRequest('/', { host: 'vaxtimyoxdu.com' })
     const res = middleware(req)
