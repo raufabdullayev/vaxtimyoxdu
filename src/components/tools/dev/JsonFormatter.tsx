@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl'
 import { ToolTextarea, ToolSelect, ToolAlert } from '@/components/ui'
 
 export default function JsonFormatter() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [error, setError] = useState('')
@@ -74,13 +75,13 @@ export default function JsonFormatter() {
           onClick={sample}
           className="px-3 py-1 text-sm border rounded-lg hover:bg-accent transition-colors"
         >
-          {t('loadSample')}
+          {tc('loadSample')}
         </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <ToolTextarea
-          label={t('input')}
+          label={tc('input')}
           className="font-mono min-h-[300px]"
           placeholder={t('pasteJsonHere')}
           value={input}
@@ -88,7 +89,7 @@ export default function JsonFormatter() {
         />
         <div>
           <ToolTextarea
-            label={t('output')}
+            label={tc('output')}
             className="font-mono min-h-[300px] bg-muted/50"
             value={output}
             readOnly
@@ -96,7 +97,7 @@ export default function JsonFormatter() {
           />
           {output && (
             <button onClick={copy} className="text-xs text-primary hover:underline mt-1">
-              {t('copy')}
+              {tc('copy')}
             </button>
           )}
         </div>

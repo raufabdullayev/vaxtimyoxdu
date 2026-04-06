@@ -39,7 +39,7 @@ const GIT_COMMANDS: GitCommand[] = [
 ]
 
 export default function GitCommandGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [selectedCmd, setSelectedCmd] = useState<GitCommand>(GIT_COMMANDS[0])
   const [argValues, setArgValues] = useState<Record<string, string>>({})
   const [copied, setCopied] = useState(false)

@@ -124,11 +124,8 @@ export default async function RootLayout({
         )}
         {GA_ID && (
           <>
-            <Script src="/analytics.js" strategy="afterInteractive" />
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-            <Script id="ga-config" strategy="afterInteractive">
-              {`gtag('config','${GA_ID}')`}
-            </Script>
+            <Script src="/analytics.js" strategy="afterInteractive" />
           </>
         )}
       </body>

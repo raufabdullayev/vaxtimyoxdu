@@ -40,7 +40,7 @@ function describeCron(parts: string[]): string {
 }
 
 export default function CronBuilder() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [minute, setMinute] = useState('*')
   const [hour, setHour] = useState('*')
   const [dom, setDom] = useState('*')

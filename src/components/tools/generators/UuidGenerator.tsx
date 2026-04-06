@@ -25,7 +25,8 @@ function formatUuid(uuid: string, uppercase: boolean, hyphens: boolean): string 
 }
 
 export default function UuidGenerator() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.genTools')
   const [uuid, setUuid] = useState('')
   const [uppercase, setUppercase] = useState(false)
   const [hyphens, setHyphens] = useState(true)
@@ -81,7 +82,7 @@ export default function UuidGenerator() {
             className="text-xs text-primary hover:underline"
             aria-label="Copy UUID"
           >
-            {copiedMain ? t('copied') : t('copy')}
+            {copiedMain ? tc('copied') : tc('copy')}
           </button>
         </div>
         <p className="text-lg font-mono break-all select-all" aria-label="Generated UUID">
@@ -96,7 +97,7 @@ export default function UuidGenerator() {
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
           aria-label="Generate new UUID"
         >
-          {t('generate')}
+          {tc('generate')}
         </button>
         <label className="flex items-center gap-2 text-sm cursor-pointer">
           <input
@@ -149,7 +150,7 @@ export default function UuidGenerator() {
               className="px-4 py-2 border rounded-lg text-sm font-medium hover:bg-accent transition-colors"
               aria-label="Copy all UUIDs"
             >
-              {copiedAll ? t('copied') : t('copy')}
+              {copiedAll ? tc('copied') : tc('copy')}
             </button>
           )}
         </div>
@@ -167,7 +168,7 @@ export default function UuidGenerator() {
                     className="text-xs text-primary hover:underline shrink-0"
                     aria-label={`Copy UUID number ${i + 1}`}
                   >
-                    {copiedIndex === i ? t('copied') : t('copy')}
+                    {copiedIndex === i ? tc('copied') : tc('copy')}
                   </button>
                 </div>
               )

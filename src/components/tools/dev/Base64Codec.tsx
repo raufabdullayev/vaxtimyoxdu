@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl'
 import { ToolTextarea, ToolRadioGroup, ToolAlert } from '@/components/ui'
 
 export default function Base64Codec() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [mode, setMode] = useState<'encode' | 'decode'>('encode')
@@ -13,7 +14,7 @@ export default function Base64Codec() {
 
   const process = () => {
     if (!input.trim()) {
-      setError(t('pleaseEnterText'))
+      setError(tc('pleaseEnterText'))
       setOutput('')
       return
     }
@@ -77,14 +78,14 @@ export default function Base64Codec() {
             onClick={swap}
             className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            {t('swap')}
+            {tc('swap')}
           </button>
         )}
       </div>
 
       {output && (
         <ToolTextarea
-          label={t('result')}
+          label={tc('result')}
           className="font-mono min-h-[150px] bg-muted/50"
           value={output}
           readOnly

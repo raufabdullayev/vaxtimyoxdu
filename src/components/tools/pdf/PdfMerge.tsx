@@ -4,7 +4,8 @@ import { useState, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function PdfMerge() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.pdfTools')
   const [files, setFiles] = useState<File[]>([])
   const [merging, setMerging] = useState(false)
   const [error, setError] = useState('')
@@ -169,7 +170,7 @@ export default function PdfMerge() {
           disabled={files.length < 2 || merging}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
         >
-          {merging ? t('processing') : t('mergeFiles')}
+          {merging ? tc('processing') : t('mergeFiles')}
         </button>
 
         {done && (
@@ -177,7 +178,7 @@ export default function PdfMerge() {
             onClick={download}
             className="px-6 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            {t('download')}
+            {tc('download')}
           </button>
         )}
       </div>

@@ -11,7 +11,8 @@ const lengths = [
 ]
 
 export default function TextSummarizer() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.aiTools')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [length, setLength] = useState('medium')
@@ -21,7 +22,7 @@ export default function TextSummarizer() {
 
   const summarize = async () => {
     if (!input.trim()) {
-      setError(t('pleaseEnterText'))
+      setError(tc('pleaseEnterText'))
       return
     }
     setLoading(true)
@@ -105,8 +106,8 @@ export default function TextSummarizer() {
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <span className="text-sm font-medium">{t('result')}</span>
-            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
+            <span className="text-sm font-medium">{tc('result')}</span>
+            <button onClick={copy} className="text-xs text-primary hover:underline">{tc('copy')}</button>
           </div>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap">
             {output}

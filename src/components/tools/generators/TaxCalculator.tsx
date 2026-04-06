@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function TaxCalculator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [amount, setAmount] = useState('1000')
   const [taxRate, setTaxRate] = useState('18')
   const [mode, setMode] = useState<'exclusive' | 'inclusive'>('exclusive')

@@ -1,13 +1,14 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useRouter, usePathname } from '@/i18n/navigation'
 import { locales, localeNames, localeFlags, type Locale } from '@/i18n/config'
 import { Globe } from 'lucide-react'
 
 export default function LanguageSelector() {
   const locale = useLocale() as Locale
+  const t = useTranslations('common')
   const router = useRouter()
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
@@ -45,7 +46,7 @@ export default function LanguageSelector() {
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-sm font-medium hover:bg-accent transition-colors"
-        aria-label="Select language"
+        aria-label={t('selectLanguage')}
         aria-expanded={open}
         aria-haspopup="listbox"
       >
@@ -57,7 +58,7 @@ export default function LanguageSelector() {
       {open && (
         <div
           role="listbox"
-          aria-label="Select language"
+          aria-label={t('selectLanguage')}
           className="absolute right-0 top-full mt-1 w-40 rounded-lg border bg-background shadow-lg z-50 py-1"
         >
           {locales.map((l) => (

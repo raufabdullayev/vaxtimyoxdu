@@ -10,7 +10,7 @@ interface Redirect {
 }
 
 export default function HtaccessGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [httpsRedirect, setHttpsRedirect] = useState(false)
   const [wwwRedirect, setWwwRedirect] = useState<'none' | 'www' | 'non-www'>('none')
   const [indexFile, setIndexFile] = useState('')

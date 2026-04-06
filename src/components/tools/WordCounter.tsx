@@ -53,7 +53,7 @@ function analyze(text: string): Stats {
 }
 
 export default function WordCounter() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [text, setText] = useState('')
   const stats = useMemo(() => analyze(text), [text])
 

@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function CompoundInterestCalculator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [principal, setPrincipal] = useState('10000')
   const [rate, setRate] = useState('7')
   const [years, setYears] = useState('10')

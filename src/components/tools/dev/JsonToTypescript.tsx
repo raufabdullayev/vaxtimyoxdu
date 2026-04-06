@@ -81,7 +81,8 @@ function jsonToTs(json: string, rootName: string): { output: string; error: stri
 }
 
 export default function JsonToTypescript() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [rootName, setRootName] = useState('Root')
   const [copied, setCopied] = useState(false)
@@ -134,7 +135,7 @@ export default function JsonToTypescript() {
             onClick={loadSample}
             className="w-full py-2 px-4 rounded-lg border text-sm hover:bg-accent transition-colors"
           >
-            {t('loadSample')}
+            {tc('loadSample')}
           </button>
         </div>
       </div>
@@ -154,7 +155,7 @@ export default function JsonToTypescript() {
             <label className="text-sm font-medium">{t('typescriptOutput')}</label>
             {output && (
               <button onClick={copy} className="text-xs text-primary hover:underline">
-                {copied ? t('copied') : t('copy')}
+                {copied ? tc('copied') : tc('copy')}
               </button>
             )}
           </div>

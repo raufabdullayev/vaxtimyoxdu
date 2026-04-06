@@ -4,7 +4,8 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function GrammarChecker() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.aiTools')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -13,7 +14,7 @@ export default function GrammarChecker() {
 
   const check = async () => {
     if (!input.trim()) {
-      setError(t('pleaseEnterText'))
+      setError(tc('pleaseEnterText'))
       return
     }
     setLoading(true)
@@ -93,8 +94,8 @@ export default function GrammarChecker() {
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">{t('result')}</label>
-            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
+            <label className="text-sm font-medium">{tc('result')}</label>
+            <button onClick={copy} className="text-xs text-primary hover:underline">{tc('copy')}</button>
           </div>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap">
             {output}

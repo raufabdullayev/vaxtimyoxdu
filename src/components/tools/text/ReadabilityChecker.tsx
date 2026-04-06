@@ -65,7 +65,7 @@ function getReadabilityLevel(score: number): { label: string; color: string; aud
 }
 
 export default function ReadabilityChecker() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [text, setText] = useState('')
 
   const stats = text.trim() ? analyze(text) : null

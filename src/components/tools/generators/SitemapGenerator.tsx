@@ -11,7 +11,7 @@ interface SitemapUrl {
 }
 
 export default function SitemapGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [urls, setUrls] = useState<SitemapUrl[]>([
     { loc: '', changefreq: 'weekly', priority: '1.0', lastmod: new Date().toISOString().split('T')[0] },
   ])

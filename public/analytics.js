@@ -8,3 +8,17 @@ gtag('consent', 'default', {
   wait_for_update: 500
 });
 gtag('js', new Date());
+
+// Auto-detect GA Measurement ID from the gtag.js script URL on the page.
+// This avoids needing an inline <Script> with dynamic env-var content,
+// which would require 'unsafe-inline' in CSP.
+(function() {
+  var scripts = document.querySelectorAll('script[src*="googletagmanager.com/gtag/js"]');
+  for (var i = 0; i < scripts.length; i++) {
+    var match = scripts[i].src.match(/[?&]id=([^&]+)/);
+    if (match && match[1]) {
+      gtag('config', match[1]);
+      break;
+    }
+  }
+})();

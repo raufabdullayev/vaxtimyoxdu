@@ -48,7 +48,8 @@ function generate(type: string, count: number, startWithLorem: boolean): string 
 }
 
 export default function LoremIpsum() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.genTools')
   const [type, setType] = useState('paragraphs')
   const [count, setCount] = useState(3)
   const [startWithLorem, setStartWithLorem] = useState(true)
@@ -72,9 +73,9 @@ export default function LoremIpsum() {
             onChange={(e) => setType(e.target.value)}
             className="rounded-lg border bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
           >
-            <option value="paragraphs">{t('paragraphs')}</option>
-            <option value="sentences">{t('sentences')}</option>
-            <option value="words">{t('words')}</option>
+            <option value="paragraphs">{tc('paragraphs')}</option>
+            <option value="sentences">{tc('sentences')}</option>
+            <option value="words">{tc('words')}</option>
           </select>
         </div>
         <div>
@@ -103,14 +104,14 @@ export default function LoremIpsum() {
         onClick={handleGenerate}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
       >
-        {t('generate')}
+        {tc('generate')}
       </button>
 
       {output && (
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">{t('result')}</label>
-            <button onClick={copy} className="text-xs text-primary hover:underline">{t('copy')}</button>
+            <label className="text-sm font-medium">{tc('result')}</label>
+            <button onClick={copy} className="text-xs text-primary hover:underline">{tc('copy')}</button>
           </div>
           <div className="rounded-lg border bg-muted/50 p-4 text-sm whitespace-pre-wrap max-h-[400px] overflow-y-auto">
             {output}

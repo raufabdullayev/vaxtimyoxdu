@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function RegexTester() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.devTools')
   const [pattern, setPattern] = useState('')
   const [flags, setFlags] = useState('g')
   const [testString, setTestString] = useState('')

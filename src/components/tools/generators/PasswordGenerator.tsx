@@ -30,7 +30,8 @@ const STRENGTH_COLORS: Record<StrengthLevel, string> = {
 }
 
 export default function PasswordGenerator() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.genTools')
   const [length, setLength] = useState(16)
   const [useUppercase, setUseUppercase] = useState(true)
   const [useLowercase, setUseLowercase] = useState(true)
@@ -94,7 +95,7 @@ export default function PasswordGenerator() {
           className="absolute top-3 right-3 px-3 py-1.5 text-xs font-medium rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
           aria-label="Copy password to clipboard"
         >
-          {copied ? t('copied') : t('copy')}
+          {copied ? tc('copied') : tc('copy')}
         </button>
       </div>
 

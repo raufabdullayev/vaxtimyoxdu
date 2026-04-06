@@ -1,5 +1,5 @@
 import { Link } from '@/i18n/navigation'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { getPopularTools, getToolCategories } from '@/lib/utils/cross-links'
 import { categories } from '@/config/tools'
 import type { ToolCategory } from '@/types/tool'
@@ -14,9 +14,9 @@ const categoryIcons: Record<ToolCategory, string> = {
   text: '📝',
 }
 
-export default function NotFound() {
-  const t = useTranslations('errors')
-  const toolsT = useTranslations('tools')
+export default async function NotFound() {
+  const t = await getTranslations('errors')
+  const toolsT = await getTranslations('tools')
   const popularTools = getPopularTools(10)
   const toolCategories = getToolCategories()
 

@@ -11,7 +11,8 @@ const ALIGN_OPTIONS = ['stretch', 'flex-start', 'flex-end', 'center', 'baseline'
 const WRAP_OPTIONS = ['nowrap', 'wrap', 'wrap-reverse']
 
 export default function CssFlexboxGenerator() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [direction, setDirection] = useState('row')
   const [justify, setJustify] = useState('flex-start')
   const [align, setAlign] = useState('stretch')
@@ -122,9 +123,9 @@ export default function CssFlexboxGenerator() {
       {/* CSS Output */}
       <div>
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium">{t('cssOutput')}</label>
+          <label className="text-sm font-medium">{tc('cssOutput')}</label>
           <button onClick={copy} className="text-xs text-primary hover:underline">
-            {copied ? t('copied') : t('copy')}
+            {copied ? tc('copied') : tc('copy')}
           </button>
         </div>
         <pre className="rounded-lg border bg-muted/50 px-4 py-3 text-sm font-mono overflow-x-auto whitespace-pre-wrap">

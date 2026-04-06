@@ -28,9 +28,15 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages()
 
   // Only pass namespaces needed by client components to reduce bundle size.
-  // Server-only namespaces (home, about, privacy, terms, info, blog, crossLinks)
-  // are used exclusively via getTranslations() in server components.
-  const serverOnlyNamespaces = ['home', 'about', 'privacy', 'terms', 'info', 'blog', 'crossLinks']
+  // Server-only namespaces are used exclusively via getTranslations() in server
+  // components and never by useTranslations() in client components.
+  // - tools (17KB): used in Footer, tools pages, not-found — all server components
+  // - toolUI (7KB): provided per-page via NextIntlClientProvider on tool slug pages
+  // - toolComponents (1KB): same as toolUI
+  const serverOnlyNamespaces = [
+    'home', 'about', 'privacy', 'terms', 'info', 'blog', 'crossLinks',
+    'tools', 'toolUI', 'toolComponents',
+  ]
   const clientMessages = Object.fromEntries(
     Object.entries(messages).filter(([key]) => !serverOnlyNamespaces.includes(key))
   )

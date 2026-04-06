@@ -74,7 +74,7 @@ ETag: "abc123"
 X-Content-Type-Options: nosniff`
 
 export default function HttpHeaderParser() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [input, setInput] = useState('')
   const [parsed, setParsed] = useState<ParsedHeader[]>([])
 

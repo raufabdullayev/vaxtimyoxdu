@@ -6,7 +6,7 @@ import QRCode from 'qrcode'
 import { ToolTextarea, ToolSelect, ToolInput, ToolAlert } from '@/components/ui'
 
 export default function QrCodeGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [text, setText] = useState('')
   const [size, setSize] = useState('256')
   const [fgColor, setFgColor] = useState('#000000')

@@ -54,7 +54,8 @@ function beautifyHtml(html: string): string {
 }
 
 export default function HtmlMinifier() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [copied, setCopied] = useState(false)
@@ -106,14 +107,14 @@ export default function HtmlMinifier() {
         </div>
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label className="text-sm font-medium">{t('output')}</label>
+            <label className="text-sm font-medium">{tc('output')}</label>
             {output && (
               <button
                 onClick={copy}
                 className="text-xs text-primary hover:underline"
                 aria-label="Copy output to clipboard"
               >
-                {copied ? t('copied') : t('copy')}
+                {copied ? tc('copied') : tc('copy')}
               </button>
             )}
           </div>
@@ -165,7 +166,7 @@ export default function HtmlMinifier() {
           onClick={clear}
           className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
         >
-          {t('clear')}
+          {tc('clear')}
         </button>
       </div>
     </div>

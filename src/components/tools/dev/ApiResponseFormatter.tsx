@@ -84,7 +84,7 @@ const SAMPLE_JSON = `{
 }`
 
 export default function ApiResponseFormatter() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [input, setInput] = useState('')
   const [viewMode, setViewMode] = useState<ViewMode>('formatted')
   const [indentSize, setIndentSize] = useState(2)

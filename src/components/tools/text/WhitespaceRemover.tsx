@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function WhitespaceRemover() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [input, setInput] = useState('')
   const [options, setOptions] = useState({
     trimLines: true,

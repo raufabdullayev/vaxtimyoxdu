@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function TipCalculator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [billAmount, setBillAmount] = useState('50')
   const [tipPercent, setTipPercent] = useState(15)
   const [splitCount, setSplitCount] = useState(1)

@@ -37,7 +37,8 @@ function shadowToCss(shadow: Shadow): string {
 }
 
 export default function CssBoxShadowGenerator() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.genTools')
   const colorId = useId()
   const [shadows, setShadows] = useState<Shadow[]>([{ ...DEFAULT_SHADOW }])
   const [boxColor, setBoxColor] = useState('#ffffff')
@@ -207,12 +208,12 @@ export default function CssBoxShadowGenerator() {
       {/* CSS Output */}
       <div>
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium">{t('cssOutput')}</label>
+          <label className="text-sm font-medium">{tc('cssOutput')}</label>
           <button
             onClick={copy}
             className="text-xs text-primary hover:underline"
           >
-            {copied ? t('copied') : t('copy')}
+            {copied ? tc('copied') : tc('copy')}
           </button>
         </div>
         <pre className="rounded-lg border bg-muted/50 px-4 py-3 text-sm font-mono overflow-x-auto whitespace-pre-wrap">

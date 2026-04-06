@@ -4,7 +4,7 @@ import { useState, useRef } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function ImageCompress() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.imageTools')
   const [originalFile, setOriginalFile] = useState<File | null>(null)
   const [originalUrl, setOriginalUrl] = useState<string | null>(null)
   const [compressedUrl, setCompressedUrl] = useState<string | null>(null)

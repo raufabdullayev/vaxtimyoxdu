@@ -13,7 +13,7 @@ function formatTime(ms: number): { hours: string; minutes: string; seconds: stri
 }
 
 export default function Stopwatch() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.textTools')
   const [elapsed, setElapsed] = useState(0)
   const [running, setRunning] = useState(false)
   const [laps, setLaps] = useState<number[]>([])

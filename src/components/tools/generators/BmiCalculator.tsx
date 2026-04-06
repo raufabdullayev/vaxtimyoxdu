@@ -58,7 +58,7 @@ function calculateBmi(weight: number, height: number, unit: string): BmiResult |
 }
 
 export default function BmiCalculator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [unit, setUnit] = useState('metric')
   const [weight, setWeight] = useState('')
   const [height, setHeight] = useState('')

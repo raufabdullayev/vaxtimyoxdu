@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function PrivacyPolicyGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [companyName, setCompanyName] = useState('')
   const [websiteUrl, setWebsiteUrl] = useState('')
   const [email, setEmail] = useState('')

@@ -37,7 +37,8 @@ function generatePalette(hex: string): string[] {
 }
 
 export default function ColorPicker() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.genTools')
   const [color, setColor] = useState('#3b82f6')
   const [copied, setCopied] = useState('')
 
@@ -89,7 +90,7 @@ export default function ColorPicker() {
                 onClick={() => copy(f.value)}
                 className="text-xs text-primary hover:underline"
               >
-                {copied === f.value ? t('copied') : t('copy')}
+                {copied === f.value ? tc('copied') : tc('copy')}
               </button>
             </div>
           ))}

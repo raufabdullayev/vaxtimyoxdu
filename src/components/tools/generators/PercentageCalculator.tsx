@@ -8,7 +8,7 @@ import ToolRadioGroup from '@/components/ui/ToolRadioGroup'
 type Mode = 'percentage-of' | 'is-what-percent' | 'percent-change'
 
 export default function PercentageCalculator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [mode, setMode] = useState<Mode>('percentage-of')
   const [valueA, setValueA] = useState('')
   const [valueB, setValueB] = useState('')

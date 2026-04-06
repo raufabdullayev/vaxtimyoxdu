@@ -147,7 +147,8 @@ function greet(name) {
 That's it!`
 
 export default function MarkdownPreview() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit')
 
@@ -174,7 +175,7 @@ export default function MarkdownPreview() {
           className="px-3 py-1 text-sm border rounded-lg hover:bg-accent transition-colors"
           aria-label="Load sample markdown"
         >
-          {t('loadSample')}
+          {tc('loadSample')}
         </button>
         <div className="lg:hidden flex gap-2">
           <button
@@ -183,7 +184,7 @@ export default function MarkdownPreview() {
               mobileView === 'edit' ? 'bg-primary text-primary-foreground' : 'border hover:bg-accent'
             }`}
           >
-            {t('input')}
+            {tc('input')}
           </button>
           <button
             onClick={() => setMobileView('preview')}

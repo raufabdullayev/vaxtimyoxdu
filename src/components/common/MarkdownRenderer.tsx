@@ -105,6 +105,8 @@ export default function MarkdownRenderer({ content, className = '' }: MarkdownRe
             <img
               src={src}
               alt={alt || ''}
+              loading="lazy"
+              decoding="async"
               className="max-w-full h-auto rounded-lg my-4"
             />
           ),

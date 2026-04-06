@@ -179,20 +179,19 @@ function PriceConverter({ prices }: ConverterProps) {
   const [amount, setAmount] = useState('1')
   const [toCurrency, setToCurrency] = useState<'USD' | 'AZN' | 'EUR'>('USD')
 
-  const currencyRates: Record<string, number> = {
-    USD: 1,
-    AZN: AZN_RATE,
-    EUR: 0.92,
-  }
-
   const result = useMemo(() => {
+    const rates: Record<string, number> = {
+      USD: 1,
+      AZN: AZN_RATE,
+      EUR: 0.92,
+    }
     const asset = prices.find((p) => p.symbol === fromAsset)
     if (!asset) return null
     const num = parseFloat(amount)
     if (isNaN(num) || num < 0) return null
     const usdValue = num * asset.price
-    return usdValue * currencyRates[toCurrency]
-  }, [fromAsset, amount, toCurrency, prices, currencyRates])
+    return usdValue * rates[toCurrency]
+  }, [fromAsset, amount, toCurrency, prices])
 
   if (prices.length === 0) return null
 

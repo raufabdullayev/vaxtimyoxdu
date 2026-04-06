@@ -61,7 +61,7 @@ function fmt(n: number): string {
 }
 
 export default function LoanCalculator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [amount, setAmount] = useState('')
   const [rate, setRate] = useState('')
   const [term, setTerm] = useState('')

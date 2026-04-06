@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import dynamic from 'next/dynamic'
-import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { tools } from '@/config/tools'
 import { getToolBySlug } from '@/lib/tools/registry'
 import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateToolHowToJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
@@ -182,6 +183,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   setRequestLocale(locale)
   const t = await getTranslations('tools')
   const crossT = await getTranslations('crossLinks')
+  const allMessages = await getMessages()
+
+  // Provide only toolUI + toolComponents to client — these are excluded from
+  // the global layout provider to keep non-tool pages lightweight.
+  const toolClientMessages = {
+    toolUI: (allMessages as Record<string, unknown>).toolUI,
+    toolComponents: (allMessages as Record<string, unknown>).toolComponents,
+  }
 
   const tool = getToolBySlug(slug)
   if (!tool) notFound()
@@ -239,8 +248,10 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           { label: displayName },
         ]}
       />
-      <ToolTemplate tool={tool}>
-        <Component />
+      <ToolTemplate tool={tool} aboutTitle={t('aboutTool', { toolName: displayName })}>
+        <NextIntlClientProvider messages={toolClientMessages}>
+          <Component />
+        </NextIntlClientProvider>
       </ToolTemplate>
       <ToolUseTrackerWrapper slug={tool.slug} />
       {richContent && (

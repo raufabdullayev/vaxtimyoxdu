@@ -15,19 +15,18 @@ export default function TextRepeater() {
   const [startNumber, setStartNumber] = useState(1)
   const [copied, setCopied] = useState(false)
 
-  const separatorMap: Record<string, string> = {
-    newline: '\n',
-    space: ' ',
-    comma: ', ',
-    semicolon: '; ',
-    tab: '\t',
-    pipe: ' | ',
-    custom: customSeparator,
-  }
-
   const output = useMemo(() => {
     if (!text) return ''
     const safeCount = Math.max(1, Math.min(10000, count))
+    const separatorMap: Record<string, string> = {
+      newline: '\n',
+      space: ' ',
+      comma: ', ',
+      semicolon: '; ',
+      tab: '\t',
+      pipe: ' | ',
+      custom: customSeparator,
+    }
     const sep = separatorMap[separator] ?? '\n'
 
     const lines: string[] = []

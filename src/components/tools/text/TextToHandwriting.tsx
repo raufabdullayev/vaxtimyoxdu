@@ -27,7 +27,7 @@ const INK_COLORS = [
 ]
 
 export default function TextToHandwriting() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [text, setText] = useState('The quick brown fox jumps over the lazy dog.')
   const [font, setFont] = useState(0)

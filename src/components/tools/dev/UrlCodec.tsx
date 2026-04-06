@@ -5,7 +5,8 @@ import { useTranslations } from 'next-intl'
 import { ToolTextarea, ToolAlert } from '@/components/ui'
 
 export default function UrlCodec() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [error, setError] = useState('')
@@ -64,7 +65,7 @@ export default function UrlCodec() {
     <div className="space-y-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <ToolTextarea
-          label={t('input')}
+          label={tc('input')}
           className="font-mono min-h-[200px]"
           placeholder="Enter text to encode or decode..."
           value={input}
@@ -72,7 +73,7 @@ export default function UrlCodec() {
         />
         <div>
           <ToolTextarea
-            label={t('output')}
+            label={tc('output')}
             className="font-mono min-h-[200px] bg-muted/50"
             value={output}
             readOnly
@@ -84,7 +85,7 @@ export default function UrlCodec() {
               className="text-xs text-primary hover:underline mt-1"
               aria-label="Copy output to clipboard"
             >
-              {copied ? t('copied') : t('copy')}
+              {copied ? tc('copied') : tc('copy')}
             </button>
           )}
         </div>
@@ -115,7 +116,7 @@ export default function UrlCodec() {
             className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
             aria-label="Swap output to input"
           >
-            {t('swap')}
+            {tc('swap')}
           </button>
         )}
         <button
@@ -123,7 +124,7 @@ export default function UrlCodec() {
           className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           aria-label="Clear all fields"
         >
-          {t('clear')}
+          {tc('clear')}
         </button>
       </div>
     </div>

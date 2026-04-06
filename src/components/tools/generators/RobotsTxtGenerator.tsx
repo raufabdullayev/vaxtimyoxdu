@@ -12,7 +12,7 @@ interface Rule {
 const COMMON_DISALLOW = ['/admin', '/api', '/private', '/tmp', '/cgi-bin', '/*.pdf$', '/search', '/login', '/register']
 
 export default function RobotsTxtGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [rules, setRules] = useState<Rule[]>([{ userAgent: '*', allow: ['/'], disallow: [] }])
   const [sitemap, setSitemap] = useState('')
   const [crawlDelay, setCrawlDelay] = useState('')

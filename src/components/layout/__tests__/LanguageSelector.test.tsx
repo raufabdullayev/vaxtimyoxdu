@@ -7,6 +7,13 @@ const mockReplace = vi.fn()
 // Mock next-intl
 vi.mock('next-intl', () => ({
   useLocale: () => 'az',
+  useTranslations: () => (key: string) => {
+    const translations: Record<string, string> = {
+      selectLanguage: 'Select language',
+      menu: 'Menu',
+    }
+    return translations[key] || key
+  },
 }))
 
 // Mock @/i18n/navigation

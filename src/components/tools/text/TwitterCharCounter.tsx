@@ -18,7 +18,7 @@ function countTweetLength(text: string): number {
 }
 
 export default function TwitterCharCounter() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.textTools')
   const [text, setText] = useState('')
 
   const tweetLength = countTweetLength(text)

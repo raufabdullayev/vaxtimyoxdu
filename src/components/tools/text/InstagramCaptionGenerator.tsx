@@ -69,7 +69,7 @@ const TEMPLATES: Record<string, string[]> = {
 }
 
 export default function InstagramCaptionGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [category, setCategory] = useState('Travel')
   const [topic, setTopic] = useState('')
   const [hashtagCount, setHashtagCount] = useState(10)

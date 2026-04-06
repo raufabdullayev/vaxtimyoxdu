@@ -28,7 +28,7 @@ const RATES: Record<string, { rate: number; name: string; symbol: string }> = {
 }
 
 export default function CurrencyConverter() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [amount, setAmount] = useState('100')
   const [from, setFrom] = useState('USD')
   const [to, setTo] = useState('EUR')

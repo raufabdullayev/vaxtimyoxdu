@@ -65,7 +65,7 @@ function generateParagraph(words: string[]): string {
 }
 
 export default function LoremIpsumAlternative() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [style, setStyle] = useState<TextStyle>('hipster')
   const [count, setCount] = useState(3)
   const [unit, setUnit] = useState<'paragraphs' | 'sentences' | 'words'>('paragraphs')

@@ -15,7 +15,7 @@ const BG_COLORS = [
 ]
 
 export default function YouTubeThumbnailText() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [title, setTitle] = useState('AMAZING TITLE')
   const [subtitle, setSubtitle] = useState('Click to watch')

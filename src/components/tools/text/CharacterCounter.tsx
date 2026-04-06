@@ -123,7 +123,7 @@ function getCharFrequency(text: string, top: number = 10): CharFreq[] {
 }
 
 export default function CharacterCounter() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [text, setText] = useState('')
   const [copied, setCopied] = useState(false)
 

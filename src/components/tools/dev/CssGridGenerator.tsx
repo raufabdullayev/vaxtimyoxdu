@@ -9,7 +9,8 @@ const JUSTIFY_ITEMS = ['stretch', 'start', 'end', 'center']
 const ALIGN_ITEMS = ['stretch', 'start', 'end', 'center']
 
 export default function CssGridGenerator() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [columns, setColumns] = useState('3')
   const [rows, setRows] = useState('2')
   const [gap, setGap] = useState('10')
@@ -137,9 +138,9 @@ export default function CssGridGenerator() {
       {/* CSS Output */}
       <div>
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium">{t('cssOutput')}</label>
+          <label className="text-sm font-medium">{tc('cssOutput')}</label>
           <button onClick={copy} className="text-xs text-primary hover:underline">
-            {copied ? t('copied') : t('copy')}
+            {copied ? tc('copied') : tc('copy')}
           </button>
         </div>
         <pre className="rounded-lg border bg-muted/50 px-4 py-3 text-sm font-mono overflow-x-auto whitespace-pre-wrap">

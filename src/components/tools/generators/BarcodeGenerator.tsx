@@ -168,7 +168,7 @@ const FORMATS = [
 ]
 
 export default function BarcodeGenerator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [text, setText] = useState('Hello World')
   const [format, setFormat] = useState<BarcodeFormat>('CODE128')
   const [barWidth, setBarWidth] = useState('2')

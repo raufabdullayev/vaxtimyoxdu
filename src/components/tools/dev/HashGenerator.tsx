@@ -20,7 +20,8 @@ const algorithms = [
 ]
 
 export default function HashGenerator() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [results, setResults] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
@@ -43,7 +44,7 @@ export default function HashGenerator() {
   return (
     <div className="space-y-4">
       <ToolTextarea
-        label={t('input')}
+        label={tc('input')}
         className="min-h-[120px]"
         placeholder="Enter text to hash..."
         value={input}
@@ -55,7 +56,7 @@ export default function HashGenerator() {
         disabled={!input || loading}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
       >
-        {loading ? t('processing') : t('hashGenerate')}
+        {loading ? tc('processing') : t('hashGenerate')}
       </button>
 
       {Object.keys(results).length > 0 && (
@@ -68,7 +69,7 @@ export default function HashGenerator() {
                   onClick={() => copy(results[algo.value])}
                   className="text-xs text-primary hover:underline"
                 >
-                  {t('copy')}
+                  {tc('copy')}
                 </button>
               </div>
               <div className="rounded-lg border bg-muted/50 p-3 text-sm font-mono break-all">

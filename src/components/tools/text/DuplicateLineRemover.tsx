@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function DuplicateLineRemover() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.common')
   const [input, setInput] = useState('')
   const [caseSensitive, setCaseSensitive] = useState(true)
   const [trimWhitespace, setTrimWhitespace] = useState(true)

@@ -48,7 +48,7 @@ function calculateAge(birthDate: Date, targetDate: Date): AgeResult | null {
 }
 
 export default function AgeCalculator() {
-  const t = useTranslations('toolUI')
+  const t = useTranslations('toolUI.genTools')
   const [birthDate, setBirthDate] = useState('')
   const [targetDate, setTargetDate] = useState(new Date().toISOString().split('T')[0])
 

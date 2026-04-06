@@ -97,7 +97,8 @@ const SAMPLES = [
 ]
 
 export default function SqlToMongodb() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [sql, setSql] = useState('')
   const [result, setResult] = useState('')
   const [copied, setCopied] = useState(false)
@@ -149,7 +150,7 @@ export default function SqlToMongodb() {
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium">MongoDB Query</span>
             <button onClick={copy} className="text-xs text-primary hover:underline">
-              {copied ? t('copied') : t('copy')}
+              {copied ? tc('copied') : tc('copy')}
             </button>
           </div>
           <pre className="text-sm font-mono bg-muted/50 rounded-lg p-3 overflow-x-auto whitespace-pre-wrap">{result}</pre>

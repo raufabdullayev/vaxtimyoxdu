@@ -136,35 +136,47 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            // SECURITY NOTE (last reviewed: 2026-03-23):
+            // SECURITY NOTE (last reviewed: 2026-04-06):
             //
-            // 'unsafe-inline' is REQUIRED in script-src for this project. Here is why:
+            // CSP HARDENING (SSG-compatible):
             //
-            // NONCE-BASED CSP INVESTIGATION:
-            //   Next.js officially supports nonce-based CSP via middleware, BUT it requires
-            //   ALL pages to be dynamically rendered (no SSG, no ISR, no CDN caching).
-            //   See: https://nextjs.org/docs/app/guides/content-security-policy
+            //   Nonce-based CSP requires dynamic rendering — incompatible with this
+            //   project's 700+ SSG pages. 'strict-dynamic' is also incompatible
+            //   because it causes 'unsafe-inline' to be ignored in CSP3 browsers,
+            //   which would block Next.js RSC hydration inline scripts
+            //   (<script>self.__next_f.push(...)</script>) that have dynamic
+            //   per-page content and cannot be pre-hashed.
             //
-            //   This project generates 527+ static pages across 4 locales and depends
-            //   heavily on static generation for performance and cost. Switching to nonces
-            //   would:
-            //   - Force dynamic rendering on every page (no SSG/ISR)
-            //   - Break CDN caching and increase server load/cost
-            //   - Be incompatible with Partial Prerendering (PPR)
-            //   - Risk white-screen regressions (previously experienced)
+            //   Track SRI support: https://github.com/vercel/next.js/issues/61694
             //
-            //   DECISION: Keep 'unsafe-inline' until Next.js experimental SRI (Subresource
-            //   Integrity, hash-based CSP) graduates to stable. SRI allows static
-            //   generation while providing script integrity verification.
-            //   Track: https://github.com/vercel/next.js/issues/61694
+            // APPROACH:
+            //   - 'unsafe-inline' in script-src: required for RSC hydration
+            //   - SHA-256 hash for theme script: documents intent, ready for
+            //     when 'unsafe-inline' can be removed (no-op while unsafe-inline present)
+            //   - 'unsafe-eval' is NOT included
+            //   - Inline GA config script eliminated — merged into /analytics.js
+            //   - style-src 'unsafe-inline': required for Next.js/Tailwind
+            //   - base-uri 'self': prevents <base> tag hijacking
+            //   - form-action 'self': prevents form submission to external origins
+            //   - object-src 'none': blocks Flash/Java plugins
+            //   - upgrade-insecure-requests: forces HTTPS for all subresources
+            //   - JSON-LD scripts (application/ld+json) are data, not executable
             //
-            // CURRENT POLICY:
-            // - 'unsafe-inline' in script-src: required for RSC hydration inline scripts
-            //   (<script>self.__next_f.push(...)</script>) with dynamic per-page content
-            // - 'unsafe-eval' is NOT included — not needed in production
-            // - style-src 'unsafe-inline': required for Next.js/Tailwind dynamic styles
-            // - JSON-LD scripts (application/ld+json) are safe inline data, not executable
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io; frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com;",
+            // HASHED SCRIPTS (ready for future unsafe-inline removal):
+            //   sha256-H1c0n0aYlOGsOcmXhv/OOLCwL4Fcw3Hkj/NEAMmvWrE=  → theme FOUC prevention
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'sha256-H1c0n0aYlOGsOcmXhv/OOLCwL4Fcw3Hkj/NEAMmvWrE=' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: https:",
+              "font-src 'self' https://fonts.gstatic.com",
+              "connect-src 'self' https://www.google-analytics.com https://pagead2.googlesyndication.com https://*.ingest.sentry.io",
+              "frame-src https://googleads.g.doubleclick.net https://tpc.googlesyndication.com",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "object-src 'none'",
+              "upgrade-insecure-requests",
+            ].join('; ') + ';',
           },
           {
             key: 'Strict-Transport-Security',

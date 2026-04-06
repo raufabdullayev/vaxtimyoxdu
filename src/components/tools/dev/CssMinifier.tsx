@@ -48,7 +48,8 @@ function getByteSize(str: string): number {
 }
 
 export default function CssMinifier() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.devTools')
   const [input, setInput] = useState('')
   const [output, setOutput] = useState('')
   const [error, setError] = useState('')
@@ -140,14 +141,14 @@ export default function CssMinifier() {
           className="px-3 py-1 text-sm border rounded-lg hover:bg-accent transition-colors"
           aria-label="Load sample CSS"
         >
-          {t('loadSample')}
+          {tc('loadSample')}
         </button>
         <button
           onClick={clear}
           className="px-3 py-1 text-sm border rounded-lg hover:bg-accent transition-colors"
           aria-label="Clear all"
         >
-          {t('clear')}
+          {tc('clear')}
         </button>
       </div>
 
@@ -160,7 +161,7 @@ export default function CssMinifier() {
           onChange={(e) => setInput(e.target.value)}
         />
         <ToolTextarea
-          label={t('output')}
+          label={tc('output')}
           className="font-mono min-h-[300px] bg-muted/50 resize-y"
           value={output}
           readOnly

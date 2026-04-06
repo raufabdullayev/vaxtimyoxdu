@@ -43,7 +43,8 @@ const POPULAR_TOPICS: Record<string, string[]> = {
 }
 
 export default function HashtagGenerator() {
-  const t = useTranslations('toolUI')
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.textTools')
   const [topic, setTopic] = useState('')
   const [style, setStyle] = useState<HashtagStyle>('lowercase')
   const [prefix, setPrefix] = useState('')
@@ -157,7 +158,7 @@ export default function HashtagGenerator() {
               onClick={copyAll}
               className="text-xs text-primary hover:underline"
             >
-              {copied ? t('copied') : t('copyAll')}
+              {copied ? tc('copied') : t('copyAll')}
             </button>
           </div>
           <div className="rounded-lg border p-4 flex flex-wrap gap-2">
