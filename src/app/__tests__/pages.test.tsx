@@ -23,6 +23,10 @@ vi.mock('@/lib/utils/seo', () => ({
   getOgImageUrl: vi.fn(() => 'https://vaxtimyoxdu.com/og.png'),
   SITE_NAME: 'Vaxtim Yoxdu',
   getLocalizedUrl: vi.fn(() => 'https://vaxtimyoxdu.com/'),
+  generateBlogPostMetadata: vi.fn(() => ({ title: 'Test' })),
+  generateBlogArticleJsonLd: vi.fn(() => ({})),
+  generateArticleMetadata: vi.fn(() => ({ title: 'Test' })),
+  generateNewsArticleJsonLd: vi.fn(() => ({})),
 }))
 
 // Mock i18n navigation
@@ -72,11 +76,35 @@ vi.mock('@/components/tools/ToolCard', () => ({
   ),
 }))
 
-// Mock lucide icons
+// Additional component mocks
+vi.mock('@/components/layout/NewsletterInlineCTA', () => ({
+  default: () => <div data-testid="newsletter-cta" />,
+}))
+vi.mock('@/components/common/ShareButtonsWrapper', () => ({
+  default: () => <div data-testid="share-buttons" />,
+}))
+vi.mock('@/components/common/MarkdownRenderer', () => ({
+  default: ({ content }: { content: string }) => (
+    <div data-testid="markdown-renderer">{content.slice(0, 50)}</div>
+  ),
+}))
+vi.mock('@/components/layout/RelatedArticles', () => ({
+  default: () => <div data-testid="related-articles" />,
+}))
+vi.mock('@/components/layout/NewsRelatedTools', () => ({
+  default: () => <div data-testid="news-related-tools" />,
+}))
+vi.mock('next/navigation', () => ({
+  notFound: vi.fn(() => {
+    throw new Error('NOT_FOUND')
+  }),
+}))
 vi.mock('lucide-react', () => ({
   Zap: () => <span data-testid="zap-icon" />,
   Newspaper: () => <span data-testid="newspaper-icon" />,
   Wrench: () => <span data-testid="wrench-icon" />,
+  WifiOff: () => <span data-testid="wifi-off" />,
+  RefreshCw: () => <span data-testid="refresh" />,
 }))
 
 // Mock data
@@ -88,6 +116,45 @@ vi.mock('@/data/blog-posts', () => ({
       content:
         'This is a test blog post content. It has enough characters to produce an excerpt.',
       category: 'Technology',
+    },
+  })),
+  blogPosts: {
+    'test-post': {
+      title: 'Test Blog Post',
+      date: '2025-01-01',
+      content: 'Blog post content here for testing.',
+      category: 'Technology',
+    },
+  },
+  getBlogPostBySlug: vi.fn(
+    () => ({
+      title: 'Test Blog Post',
+      date: '2025-01-01',
+      content: 'Blog post content here for testing.',
+      category: 'Technology',
+    })
+  ),
+}))
+
+vi.mock('@/data/news-articles', () => ({
+  newsArticles: {
+    'test-article': {
+      title: 'Test News Article',
+      date: '2025-01-15',
+      content:
+        'This is a test news article content. It has enough characters.',
+      category: 'Technology',
+      locale: 'en',
+    },
+  },
+  getArticlesByLocale: vi.fn(() => ({
+    'test-article': {
+      title: 'Test News Article',
+      date: '2025-01-15',
+      content:
+        'This is a test news article content. It has enough characters.',
+      category: 'Technology',
+      locale: 'en',
     },
   })),
 }))
@@ -279,5 +346,121 @@ describe('ToolsPage', () => {
     const element = await ToolsPage({ params: makeParams() })
     render(element)
     expect(screen.getByTestId('breadcrumb')).toBeInTheDocument()
+  })
+})
+
+describe('InfoPage', () => {
+  it('renders info page with articles', async () => {
+    const { default: InfoPage } = await import(
+      '@/app/[locale]/info/page'
+    )
+    const element = await InfoPage({ params: makeParams() })
+    render(element)
+    expect(screen.getByText('title')).toBeInTheDocument()
+    expect(screen.getByText('Test News Article')).toBeInTheDocument()
+  })
+
+  it('renders breadcrumb on info page', async () => {
+    const { default: InfoPage } = await import(
+      '@/app/[locale]/info/page'
+    )
+    const element = await InfoPage({ params: makeParams() })
+    render(element)
+    expect(screen.getByTestId('breadcrumb')).toBeInTheDocument()
+  })
+
+  it('renders category badge', async () => {
+    const { default: InfoPage } = await import(
+      '@/app/[locale]/info/page'
+    )
+    const element = await InfoPage({ params: makeParams() })
+    render(element)
+    expect(screen.getByText('Technology')).toBeInTheDocument()
+  })
+})
+
+describe('InfoSlugPage', () => {
+  it('renders article detail page', async () => {
+    const { default: ArticlePage } = await import(
+      '@/app/[locale]/info/[slug]/page'
+    )
+    const params = Promise.resolve({ slug: 'test-article', locale: 'en' })
+    const element = await ArticlePage({ params })
+    render(element)
+    // Title appears in breadcrumb and h1
+    expect(screen.getAllByText('Test News Article').length).toBeGreaterThanOrEqual(1)
+  })
+
+  it('renders markdown content', async () => {
+    const { default: ArticlePage } = await import(
+      '@/app/[locale]/info/[slug]/page'
+    )
+    const params = Promise.resolve({ slug: 'test-article', locale: 'en' })
+    const element = await ArticlePage({ params })
+    render(element)
+    expect(screen.getByTestId('markdown-renderer')).toBeInTheDocument()
+  })
+
+  it('renders share buttons', async () => {
+    const { default: ArticlePage } = await import(
+      '@/app/[locale]/info/[slug]/page'
+    )
+    const params = Promise.resolve({ slug: 'test-article', locale: 'en' })
+    const element = await ArticlePage({ params })
+    render(element)
+    expect(screen.getByTestId('share-buttons')).toBeInTheDocument()
+  })
+
+  it('calls notFound for non-existent article', async () => {
+    const { default: ArticlePage } = await import(
+      '@/app/[locale]/info/[slug]/page'
+    )
+    const params = Promise.resolve({
+      slug: 'does-not-exist',
+      locale: 'en',
+    })
+    await expect(ArticlePage({ params })).rejects.toThrow('NOT_FOUND')
+  })
+})
+
+describe('BlogSlugPage', () => {
+  it('renders blog post detail page', async () => {
+    const { default: BlogPost } = await import(
+      '@/app/[locale]/blog/[slug]/page'
+    )
+    const params = Promise.resolve({ slug: 'test-post', locale: 'en' })
+    const element = await BlogPost({ params })
+    render(element)
+    // Title appears in breadcrumb and h1
+    expect(screen.getAllByText('Test Blog Post').length).toBeGreaterThanOrEqual(1)
+  })
+
+  it('renders markdown content for blog post', async () => {
+    const { default: BlogPost } = await import(
+      '@/app/[locale]/blog/[slug]/page'
+    )
+    const params = Promise.resolve({ slug: 'test-post', locale: 'en' })
+    const element = await BlogPost({ params })
+    render(element)
+    expect(screen.getByTestId('markdown-renderer')).toBeInTheDocument()
+  })
+})
+
+describe('OfflinePage', () => {
+  it('renders offline page', async () => {
+    const { default: OfflinePage } = await import(
+      '@/app/[locale]/offline/page'
+    )
+    render(<OfflinePage />)
+    expect(screen.getByText('title')).toBeInTheDocument()
+    expect(screen.getByText('description')).toBeInTheDocument()
+  })
+
+  it('renders retry button', async () => {
+    const { default: OfflinePage } = await import(
+      '@/app/[locale]/offline/page'
+    )
+    render(<OfflinePage />)
+    expect(screen.getByText('retry')).toBeInTheDocument()
   })
 })

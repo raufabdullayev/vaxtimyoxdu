@@ -601,8 +601,8 @@
       </div>
       <div class="stat-card">
         <div class="stat-icon">&#9989;</div>
-        <div class="stat-value">2785</div>
-        <div class="stat-label">Testler (+ 35 E2E)</div>
+        <div class="stat-value">3067</div>
+        <div class="stat-label">Testler (192 fayl)</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">&#128240;</div>
@@ -641,7 +641,7 @@
         <div class="progress-item">
           <div class="progress-top">
             <span class="progress-label">Testler</span>
-            <span class="progress-numbers"><span>2785</span> test pass</span>
+            <span class="progress-numbers"><span>3067</span> test pass</span>
           </div>
           <div class="progress-bar-bg">
             <div class="progress-bar-fill fill-emerald" style="width: 100%;"></div>
@@ -675,25 +675,25 @@
               <div class="todo-desc">35 testden 100-e artirmaq</div>
             </div>
           </div>
-          <div class="todo-item">
+          <div class="todo-item" style="opacity:0.5;text-decoration:line-through">
             <div class="todo-num">3</div>
             <div class="todo-content">
-              <div class="todo-title">Performance audit</div>
-              <div class="todo-desc">Lighthouse, Core Web Vitals</div>
+              <div class="todo-title">Performance audit &#10004; Sprint 9</div>
+              <div class="todo-desc">PerfPro tamamladi</div>
             </div>
           </div>
-          <div class="todo-item">
+          <div class="todo-item" style="opacity:0.5;text-decoration:line-through">
             <div class="todo-num">4</div>
             <div class="todo-content">
-              <div class="todo-title">Accessibility audit</div>
-              <div class="todo-desc">WCAG tam uygunluq</div>
+              <div class="todo-title">Accessibility audit &#10004; Sprint 9</div>
+              <div class="todo-desc">PerfPro tamamladi</div>
             </div>
           </div>
           <div class="todo-item">
             <div class="todo-num">5</div>
             <div class="todo-content">
               <div class="todo-title">Her gun yeni xeberler</div>
-              <div class="todo-desc">4 dilde gundlik xeberler</div>
+              <div class="todo-desc">4 dilde gundlik xeberler — Sprint 9-da 7-8 Aprel elave edildi</div>
             </div>
           </div>
         </div>
@@ -704,7 +704,7 @@
         <div class="category-header">
           <div class="cat-icon">&#128100;</div>
           <h3>CEO manual</h3>
-          <span class="cat-count">6 is</span>
+          <span class="cat-count">7 is</span>
         </div>
         <div class="category-body">
           <div class="todo-item">
@@ -747,6 +747,13 @@
             <div class="todo-content">
               <div class="todo-title">Secrets rotate <span class="badge badge-low">asagi prioritet</span></div>
               <div class="todo-desc">API key-lerin yenilenmesi</div>
+            </div>
+          </div>
+          <div class="todo-item">
+            <div class="todo-num">18</div>
+            <div class="todo-content">
+              <div class="todo-title">GitLab token yenile <span class="badge badge-important">vacib</span></div>
+              <div class="todo-desc">Token expired — git push ve pipeline islemir</div>
             </div>
           </div>
         </div>
@@ -806,11 +813,11 @@
               <div class="todo-desc">Server components test olunmur</div>
             </div>
           </div>
-          <div class="todo-item">
+          <div class="todo-item" style="opacity:0.5;text-decoration:line-through">
             <div class="todo-num">17</div>
             <div class="todo-content">
-              <div class="todo-title">Nonce CSP</div>
-              <div class="todo-desc">SSG ile uygunsuz</div>
+              <div class="todo-title">CSP Hardening &#10004; Sprint 9</div>
+              <div class="todo-desc">Hash-based CSP tetbiq edildi (nonce SSG ile uygunsuz)</div>
             </div>
           </div>
         </div>
@@ -822,9 +829,31 @@
     <section class="sprints-section">
       <h2>&#127942; Tamamlanmis Sprint-ler</h2>
 
+      <div class="sprint-accordion open">
+        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
+          <span>Sprint 9 (6 Aprel 2026) <span class="sprint-badge">en son</span></span>
+          <span class="arrow">&#9660;</span>
+        </button>
+        <div class="sprint-content">
+          <div class="sprint-details">
+            <ul>
+              <li>i18n messages lazy loading — namespace split (I18nPro)</li>
+              <li>toolUI flat namespace refactor — 105 alet (FrontendPro)</li>
+              <li>CSP hash-based hardening (SecurityPro)</li>
+              <li>Performance + Accessibility audit (PerfPro)</li>
+              <li>7-8 Aprel xeber kontenti, 4 dilde (ContentPro)</li>
+              <li>SEO heftelik indeksasiya izleme (SeoPro)</li>
+              <li>Test coverage + E2E artirma (QaPro)</li>
+              <li>3067 test PASS, 192 fayl, commit f3cce86</li>
+              <li>9 agent team mode</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="sprint-accordion">
         <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Post-Sprint isler <span class="sprint-badge">en son</span></span>
+          <span>Post-Sprint isler</span>
           <span class="arrow">&#9660;</span>
         </button>
         <div class="sprint-content">
