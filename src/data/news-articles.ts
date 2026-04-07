@@ -587,7 +587,7 @@ Tramp ağ ev Pasxa yumurta yığma mərasimində jurnalistlərə bildirib: "45 g
 
 ## Qlobal təsir
 
-EIA qlobal neft və benzin qiymət proqnozlarını kəskin yuxarıya revizyа edib. ABŞ-da benzin qiymətlərinin bu ay qallon başına 4,30 dollara qalxması gözlənilir. Son tarixin gecə saatlarında başa çatması ilə qlobal bazarlar yüksək dalğalanmaya hazırlaşır.`,
+EIA qlobal neft və benzin qiymət proqnozlarını kəskin yuxarıya revizya edib. ABŞ-da benzin qiymətlərinin bu ay qallon başına 4,30 dollara qalxması gözlənilir. Son tarixin gecə saatlarında başa çatması ilə qlobal bazarlar yüksək dalğalanmaya hazırlaşır.`,
   },
   'en-iran-us-deadline-day-april-8': {
     title: 'Iran-US Crisis Reaches Deadline Day: Trump\'s April 8 Ultimatum, Strikes on Kharg Island',
@@ -751,7 +751,7 @@ S&P 500 indeksi 6.582 səviyyəsində dolaşmaqdadır. 7 aprel ticarət gününd
 
 ## ABŞ benzin qiymətləri
 
-ABŞ Enerji İnformasiya İdarəsi (EIA) neft və benzin qiymət proqnozlarını kəskin yuxarıya revizyа edib. ABŞ orta benzin qiymətlərinin bu ay qallon başına 4,30 dollar zirvəsinə çatması gözlənilir. Bu, istehlak inflyasiyasına ciddi təzyiq yaradır.
+ABŞ Enerji İnformasiya İdarəsi (EIA) neft və benzin qiymət proqnozlarını kəskin yuxarıya revizya edib. ABŞ orta benzin qiymətlərinin bu ay qallon başına 4,30 dollar zirvəsinə çatması gözlənilir. Bu, istehlak inflyasiyasına ciddi təzyiq yaradır.
 
 ## Trader reaksiyası
 
@@ -839,7 +839,7 @@ Yeni model 2,5 dəfə daha sürətli cavab müddəti və əvvəlki Gemini versiy
 
 ## Lyria 3 Pro — musiqi generasiyası
 
-Lyria 3 Pro Google-un ən təkmil musiqi modeli olaraq daha çox məhsula daxil edilir. Model metn təlimatlarından tam orkestral parçalar, vokalar və janrlar arası kompozisyalar yarada bilir. Developer API-si vasitəsilə inteqrasiya olunan sistem YouTube, Google Fotos və yeni musiqi yaradıcılığı alətlərində istifadə olunacaq.
+Lyria 3 Pro Google-un ən təkmil musiqi modeli olaraq daha çox məhsula daxil edilir. Model mətn təlimatlarından tam orkestral parçalar, vokalar və janrlar arası kompozisyalar yarada bilir. Developer API-si vasitəsilə inteqrasiya olunan sistem YouTube, Google Fotos və yeni musiqi yaradıcılığı alətlərində istifadə olunacaq.
 
 ## Rəqabət kontekstində
 
@@ -919,7 +919,7 @@ Lyria 3 Pro развёртывается как самая передовая м
 Разработчики могут получить доступ к новой модели Gemini прямо сейчас через Vertex AI и Google AI Studio. Lyria 3 Pro будет развёрнута поэтапно для пользователей в разных регионах в ближайшие недели. Google отметила, что проверки ответственного ИИ и водяные знаки включены по умолчанию для всего аудио, созданного Lyria.`,
   },
   'google-maps-gemini-ask-maps-sohbet-asistani': {
-    title: 'Google Maps Gemini ilə yenilənir: "Ask Maps" söhbət asisistanı yola çıxanlara kömək edəcək',
+    title: 'Google Maps Gemini ilə yenilənir: "Ask Maps" söhbət asistanı yola çıxanlara kömək edəcək',
     date: '2026-04-08',
     category: 'Texnologiya',
     locale: 'az',

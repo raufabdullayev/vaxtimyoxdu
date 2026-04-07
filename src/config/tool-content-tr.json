@@ -8,178 +8,178 @@
   "json-formatter": {
     "howToUse": [
       "Ham JSON verilerinizi editörün sol tarafındaki giriş alanına yapıştırın. API yanıtları, yapılandırma dosyaları veya veritabani disa aktarımları dahil olmak uzere herhangi bir kaynaktan JSON yapıştırabilirsiniz.",
-      "JSON'unuzu düzgün girintileme ve satir sonlariyla biçimlendirmek için Formatla dugmesine tıklayın. Bicimlendirici otomatik olarak yapisi algılar ve kolay okuma için tutarli bosluklar uygular.",
-      "Tum boşlukları kaldirarak JSON'unuzu sıkıştırmaniz gerekiyorsa Küçült dugmesini kullanin. Bu, API istekleri için veri hazirlarken veya uretim ortaminda yukun boyutunu azaltirken kullanislidir.",
-      "Soz dizimi hatalarini açıklayıcı mesajlarla vurgulayan cikis panelini inceleyin. JSON'unuzda hata varsa doğrulayıcı sorunun tam satirini ve karakterini işaretler.",
-      "Bimlendirmis sonucu tek bir tiklamayla panonuza kopyalayın veya yerel kullanim için .json dosyasi olarak indirin."
+      "JSON'unuzu düzgün girintileme ve satir sonlariyla biçimlendirmek için Formatla düğmesine tıklayın. Biçimlendirici otomatik olarak yapısı algılar ve kolay okuma için tutarli boşluklar uygular.",
+      "Tüm boşlukları kaldirarak JSON'unuzu sıkıştırmaniz gerekiyorsa Küçült düğmesini kullanin. Bu, API istekleri için veri hazirlarken veya üretim ortamında yukun boyutunu azaltirken kullanislidir.",
+      "Söz dizimi hatalarini açıklayıcı mesajlarla vurgulayan çıkış panelini inceleyin. JSON'unuzda hata varsa doğrulayıcı sorunun tam satirini ve karakterini işaretler.",
+      "Bimlendirmis sonucu tek bir tıklamayla panonuza kopyalayın veya yerel kullanım için .json dosyasi olarak indirin."
     ],
     "whyUse": [
-      "API yanıtlarınin hata ayiklama işlemi, JSON verileri düzgün girintileme ve soz dizimi vurgulamasi ile biçimlendirinildiginde önemli olcude hızlanır. Tek okunamaz bir satir olarak gorunen ic ice nesneler net bir hiyerarsik yapiya dönüşür.",
-      "Yerlesik doğrulayıcı, uygulamanizda çalışma zamani hatalarina yol acmadan once yaygin JSON hatalarini yakalar: sondaki virgullu, anahtarlarin cevresinde eksik tırnaklar, cift tırnak yerine tek tırnak ve kacis yapilmamis ozel karakterler.",
-      "Her sey tamamen tarayıcınızda JavaScript kullanılarak çalışır. Hassas yapılandırma verileriniz, API anahtarlariniz ve ozel bilgileriniz cihazinizdan asla çıkmaz, bu da araci kurumsal ve uretim verileri için güvenli kilar.",
-      "Kurulum gerektiren masaustu uygulamalardan farkli olarak bu arac web tarayıcısı olan herhangi bir cihazda aninda çalışır. Ister is istasyonunuzda, ister toplanti sirasinda tabletinizde, ister sorun giderme sirasinda telefonunuzda olun - JSON biçimlendiriçiniz her zaman elinizin altindadir.",
-      "Profesyonel gelistiriciler REST API'leri, GraphQL yanıtları, NoSQL veritabanlari, yapılandırma yonetimi ve mikro hizmetler arasi veri alisi verisi ile çalışırken her gun JSON biçimlendirme araclari kullanır."
+      "API yanıtlarınin hata ayiklama işlemi, JSON verileri düzgün girintileme ve söz dizimi vurgulaması ile biçimlendirinildiginde önemli ölçüde hızlanır. Tek okunamaz bir satir olarak görünen iç içe nesneler net bir hiyerarsik yapiya dönüşür.",
+      "Yerlesik doğrulayıcı, uygulamanizda çalışma zamanı hatalarina yol acmadan önce yaygın JSON hatalarini yakalar: sondaki virgüller, anahtarlarin çevresinde eksik tırnaklar, çift tırnak yerine tek tırnak ve kaçış yapılmamış özel karakterler.",
+      "Her şey tamamen tarayıcınızda JavaScript kullanılarak çalışır. Hassas yapılandırma verileriniz, API anahtarlariniz ve özel bilgileriniz cihazinizdan asla çıkmaz, bu da aracı kurumsal ve üretim verileri için güvenli kilar.",
+      "Kurulum gerektiren masaüstü uygulamalardan farkli olarak bu araç web tarayıcısı olan herhangi bir cihazda anında çalışır. Ister is istasyonunuzda, ister toplanti sırasında tabletinizde, ister sorun giderme sırasında telefonunuzda olun - JSON biçimlendiriçiniz her zaman elinizin altindadir.",
+      "Profesyonel geliştiriciler REST API'leri, GraphQL yanıtları, NoSQL veritabanlari, yapılandırma yönetimi ve mikro hizmetler arasi veri alisi verisi ile çalışırken her gün JSON biçimlendirme araçları kullanır."
     ],
     "tips": [
-      "Büyük JSON dosyalarıyla (1MB'in uzerinde) çalışırken daha iyi performans için belgenin tamami yerine yalnizca incelemek istediginiz bolumu biçimlendirin.",
-      "JSON'u veritabanlarinda depolarken veya ag uzerinden gonderirken bant genisligi kullanimini ve depolama maliyetlerini azaltmak için küçültülmüş ciktiyi kullanin.",
-      "JSON doğrulamadan gecmezse yaygin sorunlari kontrol edin: dizilerde veya nesnelerde son ogeden sonraki virgullu, cift tırnak yerine tek tırnak ve tırnaksiz özellik adlari.",
-      "Cok seviyeli ic ice JSON için genel yapida kaybolmamak için belirli bolumlere odaklanmak amaciyla daralt/genislet özelliğini kullanin."
+      "Büyük JSON dosyalarıyla (1MB'in üzerinde) çalışırken daha iyi performans için belgenin tamami yerine yalnizca incelemek istediğiniz bölümü biçimlendirin.",
+      "JSON'u veritabanlarinda depolarken veya ag üzerinden gonderirken bant genişliği kullanımını ve depolama maliyetlerini azaltmak için küçültülmüş çıktıyı kullanin.",
+      "JSON doğrulamadan geçmezse yaygın sorunlari kontrol edin: dizilerde veya nesnelerde son öğeden sonraki virgüller, çift tırnak yerine tek tırnak ve tırnaksiz özellik adlari.",
+      "Çok seviyeli iç içe JSON için genel yapida kaybolmamak için belirli bölümlere odaklanmak amaciyla daralt/genişlet özelliğini kullanin."
     ],
     "faqs": [
       {
         "question": "JSON Biçimlendirici nedir ve neden ihtiyacim var?",
-        "answer": "JSON Biçimlendirici, ham, küçültülmüş veya kotyu yapilandirilmis JSON verilerini düzgün girintileme ile iyi duzenlenimis, insan tarafindan okunabilir bir bicime donusturen bir aractir. Gelistiriciler API yanıtlarıyla çalışırken, veri yapilarinin hata ayiklamasini yaparken, yapılandırma dosyalarıni incelerken ve belgeleme hazirlarken her gun JSON biçimlendiricilere ihtiyac duyar."
+        "answer": "JSON Biçimlendirici, ham, küçültülmüş veya kotyu yapilandirilmis JSON verilerini düzgün girintileme ile iyi duzenlenimis, insan tarafindan okunabilir bir bicime dönüştüren bir aractir. Gelistiriciler API yanıtlarıyla çalışırken, veri yapilarinin hata ayiklamasini yaparken, yapılandırma dosyalarını incelerken ve belgeleme hazirlarken her gün JSON biçimlendiricilere ihtiyaç duyar."
       },
       {
-        "question": "Bu cevrimici biçimlendiriciyi kullanırken JSON verilerim güvenli mi?",
-        "answer": "Evet, verileriniz tamamen güvendedir. Bu JSON biçimlendirici tamamen tarayıcınızda istemci tarafli JavaScript ile çalışır. JSON verileriniz asla herhangi bir sunucuya gonderilmez, herhangi bir veritabaninda depolanmaz ve hicbir yerde kaydedilmez. Isleme cihazinizda yerel olarak gerçekleşir."
+        "question": "Bu çevrimiçi biçimlendiriciyi kullanırken JSON verilerim güvenli mi?",
+        "answer": "Evet, verileriniz tamamen güvendedir. Bu JSON biçimlendirici tamamen tarayıcınızda istemci tarafli JavaScript ile çalışır. JSON verileriniz asla herhangi bir sunucuya gonderilmez, herhangi bir veritabaninda depolanmaz ve hiçbir yerde kaydedilmez. Isleme cihazinizda yerel olarak gerçekleşir."
       },
       {
-        "question": "JSON biçimlendirme ile JSON küçültme arasindaki fark nedir?",
-        "answer": "JSON biçimlendirme bosluklar, girintiler ve satir sonlari ekleyerek JSON'u insan tarafindan okunabilir hale getirir. JSON küçültme tam tersini yapar: mumkun olan en küçük dosya boyutunu elde etmek için tum gereksiz boşlukları kaldirir. Biçimlendirilmiş JSON gelistirme ve hata ayiklama için idealdir, küçültülmüş JSON ise dosya boyutu ve bant genisliginin önemli oldugu uretim kullanimi için tercih edilir."
+        "question": "JSON biçimlendirme ile JSON küçültme arasındaki fark nedir?",
+        "answer": "JSON biçimlendirme boşluklar, girintiler ve satir sonlari ekleyerek JSON'u insan tarafindan okunabilir hale getirir. JSON küçültme tam tersini yapar: mumkun olan en küçük dosya boyutunu elde etmek için tüm gereksiz boşlukları kaldirir. Biçimlendirilmiş JSON geliştirme ve hata ayiklama için idealdir, küçültülmüş JSON ise dosya boyutu ve bant genisliginin önemli olduğu üretim kullanımı için tercih edilir."
       },
       {
-        "question": "Bu arac ic ice nesneler ve dizilerle JSON'u dogrulayabilir mi?",
-        "answer": "Evet, doğrulayıcı derin ic ice nesneler, cok boyutlu diziler, karisik veri turleri, Unicode karakterler ve kacis yapilmis ozel karakterler dahil olmak uzere her turlu karmaşıklikta JSON'u işler. Dogru parantez eslesmesini, dogru virgul yerlesimini ve JSON belirtimine (RFC 8259) uygunlugu kontrol eder."
+        "question": "Bu araç iç içe nesneler ve dizilerle JSON'u dogrulayabilir mi?",
+        "answer": "Evet, doğrulayıcı derin iç içe nesneler, çok boyutlu diziler, karisik veri turleri, Unicode karakterler ve kaçış yapılmış özel karakterler dahil olmak uzere her turlu karmaşıklikta JSON'u işler. Doğru parantez eslesmesini, doğru virgül yerlesimini ve JSON belirtimine (RFC 8259) uygunlugu kontrol eder."
       },
       {
-        "question": "Doğrulayıcı hangi yaygin JSON hatalarini tespit eder?",
-        "answer": "Doğrulayıcı tum yaygin JSON soz dizimi hatalarini tespit eder: dizilerde veya nesnelerde son ogeden sonraki virgullu, dizeler ve anahtarlar cevresinde tek tırnak, tırnaksiz özellik adlari, anahtar ve degerler arasinda eksik iki nokta, kapatilmamis parantezler, gecersiz kacis dizileri ve ayni nesne seviyesinde yinelenen anahtarlar."
+        "question": "Doğrulayıcı hangi yaygın JSON hatalarini tespit eder?",
+        "answer": "Doğrulayıcı tüm yaygın JSON söz dizimi hatalarini tespit eder: dizilerde veya nesnelerde son öğeden sonraki virgüller, dizeler ve anahtarlar çevresinde tek tırnak, tırnaksiz özellik adlari, anahtar ve degerler arasında eksik iki nokta, kapatilmamis parantezler, gecersiz kaçış dizileri ve aynı nesne seviyesinde yinelenen anahtarlar."
       },
       {
         "question": "Bu JSON biçimlendiriciyi büyük dosyalar için kullanabilir miyim?",
-        "answer": "Evet, biçimlendirinici her seyi tarayıcınızda işlediği için büyük JSON dosyalarıni verimli bir sekilde işler. Cok büyük dosyalar için Chrome veya Firefox gibi modern bir tarayıcı kullanmanizi ve cihazinizin yeterli bellege sahip olmasini saglamanizi öneririz."
+        "answer": "Evet, biçimlendirinici her seyi tarayıcınızda işlediği için büyük JSON dosyalarını verimli bir şekilde işler. Çok büyük dosyalar için Chrome veya Firefox gibi modern bir tarayıcı kullanmanizi ve cihazinizin yeterli bellege sahip olmasini saglamanizi öneririz."
       },
       {
-        "question": "Bu arac JSON5 veya JSONC (yorumlu JSON) destekliyor mu?",
-        "answer": "Bu arac standart JSON belirtimine (RFC 8259) uyar ve yorumlara veya sondaki virgullere izin vermez. JSON5 veya JSONC içeriği yapistirirsiniz, doğrulayıcı yorumlari ve standart disi soz dizimini hata olarak isaretleyecektir. Bicmlendirmek için once yorumlari kaldirmaniz gerekir."
+        "question": "Bu araç JSON5 veya JSONC (yorumlu JSON) destekliyor mu?",
+        "answer": "Bu araç standart JSON belirtimine (RFC 8259) uyar ve yorumlara veya sondaki virgullere izin vermez. JSON5 veya JSONC içeriği yapistirirsiniz, doğrulayıcı yorumlari ve standart dışı söz dizimini hata olarak isaretleyecektir. Bicmlendirmek için önce yorumlari kaldirmaniz gerekir."
       }
     ]
   },
   "image-compress": {
     "howToUse": [
-      "Yukleme alanına tıklayın veya görsel dosyanizi aracin uzerine sürükleyip birakin. Desteklenen formatlar arasinda herhangi bir cozunurlukteki JPEG, PNG ve WebP görseller bulunur.",
-      "Istediginiz sıkıştırma seviyesini ayarlamak için kalite kaydiricicisini ayarlayin. Dusuk degerler daha küçük dosyalar oluşturur ancak görünür kalite kaybina neden olabilir, yuksek degerler ise daha büyük dosya boyutu pahasina kaliteyi korur.",
-      "Kaliteyi görsel olarak karşılaştırmak için sıkıştırılmış sonucu orijinalle yan yana on izleyin. Arac her iki dosya boyutunu gostererek tam olarak ne kadar alan tasarruf ettiginizi gormenizi saglar.",
-      "Kalite-boyut oranindan memnun oldugunuzda sıkıştırılmış görseli indirin. Cikis dosyasi web siteleri, e-postalar veya sosyal medyada kullanima hazirdir."
+      "Yukleme alanına tıklayın veya görsel dosyanizi aracın uzerine sürükleyip bırakın. Desteklenen formatlar arasında herhangi bir çözünürlükteki JPEG, PNG ve WebP görseller bulunur.",
+      "İstediğiniz sıkıştırma seviyesini ayarlamak için kalite kaydiricicisini ayarlayin. Düşük degerler daha küçük dosyalar oluşturur ancak görünür kalite kaybina neden olabilir, yüksek degerler ise daha büyük dosya boyutu pahasina kaliteyi korur.",
+      "Kaliteyi görsel olarak karşılaştırmak için sıkıştırılmış sonucu orijinalle yan yana on izleyin. Araç her iki dosya boyutunu göstererek tam olarak ne kadar alan tasarruf ettiginizi gormenizi sağlar.",
+      "Kalite-boyut oranindan memnun oldugunuzda sıkıştırılmış görseli indirin. Çıkış dosyasi web siteleri, e-postalar veya sosyal medyada kullanima hazirdir."
     ],
     "whyUse": [
-      "Web sitesi sayfa yükleme hizi arama motorlari için kritik bir sıralama faktorudur. Gorselleri web sitenize yüklemeden once sıkıştırmak sayfa yükleme sürelerini %40-70 azaltabilir ve doğrudan SEO sıralamanizi ve kullanıcı deneyimini iyileştirir.",
-      "Sosyal medya platformlari, e-posta hizmetleri ve içerik yonetim sistemleri genellikle dosya boyutu sınırlamaları uygular. Gorselleri sıkıştırmak görsel netligi feda etmeden yükleme gereksinimlerini karsilamanizi saglar.",
-      "Tum görsel işleme doğrudan tarayıcınızda gerçekleşir. Fotograflariniz, ekran goruntuleriniz ve hassas görselleriniz hicbir zaman herhangi bir sunucuya yüklenmez, tam gizlilik garanti edilir.",
-      "Azaltilmis görsel boyutlari web sitesi operatorleri için daha dusuk bant genisligi maliyetleri ve yavas baglantilardaki ziyaretciler için daha hizli indirmeler anlamina gelir.",
-      "Filigran ekleyen, dosya boyutlarini sınırlandıran veya ücretli abonelik gerektiren bircok cevrimici sıkıştırıcıdardan farkli olarak bu arac hicbir kisitlama olmadan tamamen ücretsizdir."
+      "Web sitesi sayfa yükleme hizi arama motorlari için kritik bir sıralama faktorudur. Gorselleri web sitenize yüklemeden önce sıkıştırmak sayfa yükleme sürelerini %40-70 azaltabilir ve doğrudan SEO sıralamanizi ve kullanıcı deneyimini iyileştirir.",
+      "Sosyal medya platformlari, e-posta hizmetleri ve içerik yönetim sistemleri genellikle dosya boyutu sınırlamaları uygular. Gorselleri sıkıştırmak görsel netligi feda etmeden yükleme gereksinimlerini karsilamanizi sağlar.",
+      "Tüm görsel işleme doğrudan tarayıcınızda gerçekleşir. Fotograflariniz, ekran goruntuleriniz ve hassas görselleriniz hiçbir zaman herhangi bir sunucuya yüklenmez, tam gizlilik garanti edilir.",
+      "Azaltilmis görsel boyutlari web sitesi operatorleri için daha düşük bant genişliği maliyetleri ve yavas baglantilardaki ziyaretciler için daha hızlı indirmeler anlamina gelir.",
+      "Filigran ekleyen, dosya boyutlarini sınırlandıran veya ücretli abonelik gerektiren birçok çevrimiçi sıkıştırıcıdardan farkli olarak bu araç hiçbir kisitlama olmadan tamamen ücretsizdir."
     ],
     "tips": [
-      "Fotograflar için %75-85 kalitede JPEG sıkıştırmasi genellikle cogu izleyiçinin orijinalden ayirt edemeyecegi dosya boyutu ve görsel kalite arasinda mukemmel bir denge saglar.",
-      "Büyük duz renkli alanlara sahip PNG görseller cok iyi sikisir. Karmasik fotograflari önemli olcude daha iyi sıkıştırma oranlari için PNG'den JPEG'e dönüştürmeyi dusunun.",
-      "WebP formati genellikle es deger görsel kalitede JPEG'den %25-35 daha küçük dosyalar oluşturur. Hedef platformlariniz WebP destekliyorsa maksimum sıkıştırma için bu formati tercih edin.",
-      "Sikistirmadan once önemli görsellerin orijinal kopyasini her zaman saklayin. JPEG ve WebP için sıkıştırma kayipli bir surectir, yani azaltilmis kalite geri yuklenemez."
+      "Fotograflar için %75-85 kalitede JPEG sıkıştırmasi genellikle çoğu izleyiçinin orijinalden ayirt edemeyecegi dosya boyutu ve görsel kalite arasında mükemmel bir denge sağlar.",
+      "Büyük düz renkli alanlara sahip PNG görseller çok iyi sikisir. Karmasik fotograflari önemli ölçüde daha iyi sıkıştırma oranlari için PNG'den JPEG'e dönüştürmeyi düşünün.",
+      "WebP formati genellikle eş değer görsel kalitede JPEG'den %25-35 daha küçük dosyalar oluşturur. Hedef platformlariniz WebP destekliyorsa maksimum sıkıştırma için bu formati tercih edin.",
+      "Sikistirmadan önce önemli görsellerin orijinal kopyasini her zaman saklayin. JPEG ve WebP için sıkıştırma kayipli bir süreçtir, yani azaltilmis kalite geri yuklenemez."
     ],
     "faqs": [
       {
         "question": "Kalite kaybetmeden görsel dosya boyutunu ne kadar azaltabilirim?",
-        "answer": "JPEG görseller için %70-85 kalite ayarinda minimum görünür kalite kaybiyla dosya boyutunu genellikle %60-80 azaltabilirsiniz. PNG görseller ise hicbir kalite kaybi olmadan kayipsiz optimizasyon ile %30-50 azaltilabilir."
+        "answer": "JPEG görseller için %70-85 kalite ayarinda minimum görünür kalite kaybiyla dosya boyutunu genellikle %60-80 azaltabilirsiniz. PNG görseller ise hiçbir kalite kaybi olmadan kayipsiz optimizasyon ile %30-50 azaltilabilir."
       },
       {
         "question": "Sikistirdigimda görsellerim bir sunucuya yukleniyor mu?",
-        "answer": "Hayir, tum görsel sıkıştırmasi tamamen tarayıcınızda istemci tarfli JavaScript ve HTML5 Canvas API kullanılarak gerçekleşir. Gorselleriniz asla cihazinizdan çıkmaz, hicbir sunucuya yüklenmez ve hicbir yerde depolanmaz."
+        "answer": "Hayir, tüm görsel sıkıştırmasi tamamen tarayıcınızda istemci tarfli JavaScript ve HTML5 Canvas API kullanılarak gerçekleşir. Gorselleriniz asla cihazinizdan çıkmaz, hiçbir sunucuya yüklenmez ve hiçbir yerde depolanmaz."
       },
       {
-        "question": "Web kullanimi için en iyi görsel formati hangisidir?",
-        "answer": "WebP su anda web görselleri için en iyi formattir, es deger kalitede JPEG'den %25-35 daha küçük dosyalar sunar. JPEG genis uyumluluk gerektiginde fotograflar için mukemmel olmaya devam eder. PNG seffaflik gerektiren veya metin, logo ve keskin kenarlara sahip görseller için idealdir."
+        "question": "Web kullanımı için en iyi görsel formati hangisidir?",
+        "answer": "WebP su anda web görselleri için en iyi formattir, eş değer kalitede JPEG'den %25-35 daha küçük dosyalar sunar. JPEG geniş uyumluluk gerektiginde fotograflar için mükemmel olmaya devam eder. PNG seffaflik gerektiren veya metin, logo ve keskin kenarlara sahip görseller için idealdir."
       },
       {
-        "question": "Gorsel sıkıştırmasi SEO ve sayfa hizini etkiler mi?",
-        "answer": "Kesinlikle. Google sayfa hizini sıralama faktoru olarak değerlendirir ve görseller genellikle sayfa boyutuna en büyük katkida bulunanlardir. Duzgun sıkıştırılmış görseller Core Web Vitals puanlarinizi iyileştirebilir, Largest Contentful Paint sürelerini azaltabilir ve daha iyi arama motoru sıralamalarına yol açabilir."
+        "question": "Görsel sıkıştırmasi SEO ve sayfa hizini etkiler mi?",
+        "answer": "Kesinlikle. Google sayfa hizini sıralama faktoru olarak değerlendirir ve görseller genellikle sayfa boyutuna en büyük katkida bulunanlardir. Düzgün sıkıştırılmış görseller Core Web Vitals puanlarinizi iyileştirebilir, Largest Contentful Paint sürelerini azaltabilir ve daha iyi arama motoru sıralamalarına yol açabilir."
       },
       {
-        "question": "Birden fazla görseli ayni anda sikistirabilir miyim?",
-        "answer": "Mevcut surum maksimum kalite kontrolu için bir seferde bir görsel işler. Her görsel için kalite kaydiricicisini ayarlayabilir ve indirmeden once sonucu on izleyebilirsiniz."
+        "question": "Birden fazla görseli aynı anda sikistirabilir miyim?",
+        "answer": "Mevcut sürüm maksimum kalite kontrolü için bir seferde bir görsel işler. Her görsel için kalite kaydiricicisini ayarlayabilir ve indirmeden önce sonucu on izleyebilirsiniz."
       },
       {
-        "question": "JPEG, PNG ve WebP arasindaki fark nedir?",
-        "answer": "JPEG fotograflar için en uygun kayipli formattir ve küçük dosya boyutlari saglar. PNG seffaflik destekleyen kayipsiz bir formattir, logolar ve metin içeren görseller için idealdir. WebP her ikisinin avantajlarini birlestirerek hem kayipli hem de kayipsiz sıkıştırma sunar ve genellikle en küçük dosya boyutlarini oluşturur."
+        "question": "JPEG, PNG ve WebP arasındaki fark nedir?",
+        "answer": "JPEG fotograflar için en uygun kayipli formattir ve küçük dosya boyutlari sağlar. PNG seffaflik destekleyen kayipsiz bir formattir, logolar ve metin içeren görseller için idealdir. WebP her ikisinin avantajlarini birleştirerek hem kayipli hem de kayipsiz sıkıştırma sunar ve genellikle en küçük dosya boyutlarini oluşturur."
       }
     ]
   },
   "pdf-merge": {
     "howToUse": [
-      "Birlestirmek istediginiz PDF dosyalarıni yükleme alanına sürükleyip birakin veya gozat dugmesine tiklayarak dosya seciciden secin. Birden fazla PDF dosyasini ayni anda yukleyebilirsiniz.",
-      "Yuklenen dosyaları sürükleyerek istediginiz siraya dizin. Dosyalar listede gorunme sirasina gore birlestirilecektir.",
-      "Birden fazla dosyayi eklemeniz gerekiyorsa yükleme alanini tekrar kullanarak ek PDF dosyaları ekleyin. Dosya sayisinda sinir yoktur.",
-      "Birlestir dugmesine tiklayarak tum PDF dosyalarıni tek bir belgede birlestirin. Islem tamamen tarayıcınızda gerçekleşir ve dosyalarıniz sunucuya gonderilmez.",
-      "Birlestirilen PDF'i indirin. Orijinal dosyaların tum sayfalari, yer imleri ve bicmlendirmesi korunur."
+      "Birlestirmek istediğiniz PDF dosyalarını yükleme alanına sürükleyip bırakın veya gözat düğmesine tıklayarak dosya seçiciden seçin. Birden fazla PDF dosyasini aynı anda yukleyebilirsiniz.",
+      "Yuklenen dosyaları sürükleyerek istediğiniz sıraya dizin. Dosyalar listede gorunme sırasına göre birleştirilecektir.",
+      "Birden fazla dosyayi eklemeniz gerekiyorsa yükleme alanini tekrar kullanarak ek PDF dosyaları ekleyin. Dosya sayısında sınır yoktur.",
+      "Birleştir düğmesine tıklayarak tüm PDF dosyalarını tek bir belgede birlestirin. İşlem tamamen tarayıcınızda gerçekleşir ve dosyalarıniz sunucuya gonderilmez.",
+      "Birlestirilen PDF'i indirin. Orijinal dosyaların tüm sayfaları, yer imleri ve bicmlendirmesi korunur."
     ],
     "whyUse": [
-      "Birden fazla PDF raporunu, faturayi veya belgeyi tek bir dosyada birlestirmek belge yonetimini basitleştirerek dosya kalabaligini azaltir ve paylasimi kolaylaştırır.",
-      "Tum PDF işleme doğrudan tarayıcınızda gerçekleşir. Hassas is belgeleri, sozlesmeler ve kisisel dosyalar hicbir zaman sunucuya yüklenmez, tam veri gizliligi saglanir.",
-      "Profesyonel sunumlar, proje teklifleri ve akademik çalışmalarda birden fazla bolumu tek bir belgede birlestirmeniz gerektiginde bu arac zamandan tasarruf saglar.",
-      "Ücretsiz ve sınırsız kullanim imkani sunar. Büyük PDF dosyaları ve cok sayida belge ile calisabilirsiniz.",
-      "Mobil cihazlar dahil herhangi bir platformda çalışan web tabanli arac kurulum gerektirmez."
+      "Birden fazla PDF raporunu, faturayi veya belgeyi tek bir dosyada birleştirmek belge yönetimini basitleştirerek dosya kalabaligini azaltir ve paylasimi kolaylaştırır.",
+      "Tüm PDF işleme doğrudan tarayıcınızda gerçekleşir. Hassas is belgeleri, sözleşmeler ve kisisel dosyalar hiçbir zaman sunucuya yüklenmez, tam veri gizliligi saglanir.",
+      "Profesyonel sunumlar, proje teklifleri ve akademik çalışmalarda birden fazla bölümü tek bir belgede birleştirmeniz gerektiginde bu araç zamandan tasarruf sağlar.",
+      "Ücretsiz ve sınırsız kullanım imkani sunar. Büyük PDF dosyaları ve çok sayıda belge ile calisabilirsiniz.",
+      "Mobil cihazlar dahil herhangi bir platformda çalışan web tabanli araç kurulum gerektirmez."
     ],
     "tips": [
-      "Birlestirmeden once PDF dosyalarınizin dogru sirada oldugundan emin olun. Surukle-birak özelliği ile sıralamayi kolayca değiştirebilirsiniz.",
-      "Cok büyük PDF dosyalarıni birlestirirken tarayıcınin yeterli bellege sahip oldugundan emin olun. Modern tarayıcılar yuzlerce sayfali dosyaları rahatca işleyebilir.",
-      "Birlestirmeden once gereksiz sayfalari cikarmak isterseniz once PDF bolme aracimizi kullanarak yalnizca ihtiyaciniz olan sayfalari secin.",
+      "Birlestirmeden önce PDF dosyalarınizin doğru sirada olduğundan emin olun. Surukle-bırak özelliği ile sıralamayi kolayca değiştirebilirsiniz.",
+      "Çok büyük PDF dosyalarını birlestirirken tarayıcınin yeterli bellege sahip olduğundan emin olun. Modern tarayıcılar yuzlerce sayfali dosyaları rahatca işleyebilir.",
+      "Birlestirmeden önce gereksiz sayfaları çıkarmak isterseniz önce PDF bölme aracimizi kullanarak yalnizca ihtiyaciniz olan sayfaları seçin.",
       "Birlestirilen belgenin toplam boyutu orijinal dosyaların toplam boyutuna yakin olacaktir. Boyutu azaltmak istiyorsaniz PDF sıkıştırma aracimizi kullanin."
     ],
     "faqs": [
       {
-        "question": "PDF dosyalarıni birlestirmek neden gereklidir?",
-        "answer": "PDF birlestirme, birden fazla belgeyi tek bir dosyada toplamak için kullanılır. Bu özellikle cok sayfalik raporlar oluşturma, farkli kaynaklardan gelen belgeleri birlestirme, basvuru dosyaları hazirlama ve arsivleme amaciyla yaygin olarak kullanılır. Tek bir PDF dosyasi paylasmak, birden fazla dosya gondermekten cok daha pratiktir."
+        "question": "PDF dosyalarını birleştirmek neden gereklidir?",
+        "answer": "PDF birleştirme, birden fazla belgeyi tek bir dosyada toplamak için kullanılır. Bu özellikle çok sayfalık raporlar oluşturma, farkli kaynaklardan gelen belgeleri birleştirme, başvuru dosyaları hazirlama ve arsivleme amaciyla yaygın olarak kullanılır. Tek bir PDF dosyasi paylasmak, birden fazla dosya gondermekten çok daha pratiktir."
       },
       {
-        "question": "PDF dosyalarım birlestirme sirasinda güvenli mi?",
-        "answer": "Evet, tamamen güvendedir. Tum PDF işleme tarayıcınızda yerel olarak gerçekleşir. Dosyalariniz hicbir sunucuya yüklenmez ve hicbir yerde depolanmaz. Bu, gizli is belgeleri, sozlesmeler ve kisisel dosyalar için tamamen güvenli olmasini saglar."
+        "question": "PDF dosyalarım birleştirme sırasında güvenli mi?",
+        "answer": "Evet, tamamen güvendedir. Tüm PDF işleme tarayıcınızda yerel olarak gerçekleşir. Dosyalariniz hiçbir sunucuya yüklenmez ve hiçbir yerde depolanmaz. Bu, gizli is belgeleri, sözleşmeler ve kisisel dosyalar için tamamen güvenli olmasini sağlar."
       },
       {
-        "question": "Kac tane PDF dosyasini birlestrebilrim?",
-        "answer": "Dosya sayisinda herhangi bir sinir yoktur. Ihtiyaciniz kadar PDF dosyasini birlestrebilirsiniz. Ancak cok sayida veya büyük boyutlu dosyalarla çalışırken tarayıcınızin bellek kullanimina dikkat etmeniz önerilir."
+        "question": "Kac tane PDF dosyasini birleştirebilirim?",
+        "answer": "Dosya sayısında herhangi bir sınır yoktur. Ihtiyaciniz kadar PDF dosyasini birleştirebilirsiniz. Ancak çok sayıda veya büyük boyutlu dosyalarla çalışırken tarayıcınızin bellek kullanimina dikkat etmeniz önerilir."
       },
       {
-        "question": "Birlestirme sirasi degistirilebilir mi?",
-        "answer": "Evet, yukledikten sonra dosyaları sürükleyip birakarak istediginiz siraya yerlestirebilirsiniz. Dosyalar listede gorunme sirasina gore birlestirilir, bu nedenle birlestirmeden once sıralamayi kontrol etmeniz önemlidir."
+        "question": "Birlestirme sırası degistirilebilir mi?",
+        "answer": "Evet, yukledikten sonra dosyaları sürükleyip bırakarak istediğiniz sıraya yerlestirebilirsiniz. Dosyalar listede gorunme sırasına göre birleştirilir, bu nedenle birleştirmeden önce sıralamayi kontrol etmeniz önemlidir."
       },
       {
-        "question": "Birlestirilen PDF'in kalitesi degisir mi?",
-        "answer": "Hayir, birlestirme işlemi orijinal dosyaların içeriğini degistirmez. Metin, görseller, yer imleri ve diger tum içerik tam olarak korunur. Sonuc dosyasi orijinal dosyaların tum sayfalarini değişmeden içerir."
+        "question": "Birlestirilen PDF'in kalitesi değişir mi?",
+        "answer": "Hayir, birleştirme işlemi orijinal dosyaların içeriğini degistirmez. Metin, görseller, yer imleri ve diğer tüm içerik tam olarak korunur. Sonuç dosyasi orijinal dosyaların tüm sayfalarini değişmeden içerir."
       },
       {
-        "question": "Sifre korumali PDF dosyalarıni birlestirebilir miyim?",
-        "answer": "Sifre korumali PDF dosyaları birlestirmeden once şifrenin cikarilmasi gerekir. Arac şifreli dosyaları doğrudan işleyemez. Once şifreyi kaldırın, ardnidan dosyaları birlestirin ve gerekiyorsa sonuc dosyasina yeni sifre ekleyin."
+        "question": "Şifre korumali PDF dosyalarını birleştirebilir miyim?",
+        "answer": "Şifre korumali PDF dosyaları birleştirmeden önce şifrenin cikarilmasi gerekir. Araç şifreli dosyaları doğrudan işleyemez. Önce şifreyi kaldırın, ardnidan dosyaları birlestirin ve gerekiyorsa sonuç dosyasina yeni şifre ekleyin."
       }
     ]
   },
   "qr-code-generator": {
     "howToUse": [
-      "Giris alanına QR koduna dönüştürmek istediginiz metni, URL'yi veya veriyi girin. URL'ler, duz metin, e-posta adresleri ve WiFi yapılandırma bilgileri desteklenir.",
-      "Istediginiz QR kod boyutunu ve hata duzeltme seviyesini secin. Daha yuksek hata duzeltme, QR kodun kismi hasar gorsa bile okunabilir kalmasini saglar.",
-      "QR kodun rengini ve arka plan rengini markaniza uygun olacak sekilde özelleştirin. Yuksek kontrast korunmali, aksi takdirde tarayıcılar kodu okuyamayabilir.",
-      "Olusturulan QR kodu on izleyin ve PNG veya SVG formtinda indirin. SVG baski için, PNG ise dijital kullanim için idealdir."
+      "Giriş alanına QR koduna dönüştürmek istediğiniz metni, URL'yi veya veriyi girin. URL'ler, düz metin, e-posta adresleri ve WiFi yapılandırma bilgileri desteklenir.",
+      "İstediğiniz QR kod boyutunu ve hata düzeltme seviyesini seçin. Daha yüksek hata düzeltme, QR kodun kısmi hasar gorsa bile okunabilir kalmasini sağlar.",
+      "QR kodun rengini ve arka plan rengini markaniza uygun olacak şekilde özelleştirin. Yüksek kontrast korunmali, aksi takdirde tarayıcılar kodu okuyamayabilir.",
+      "Olusturulan QR kodu on izleyin ve PNG veya SVG formtinda indirin. SVG baski için, PNG ise dijital kullanım için idealdir."
     ],
     "whyUse": [
-      "QR kodlar fiziksel dunya ile dijital içerik arasinda aninda baglanti kurar. Restoran menuleri, kartvizitler, urun ambalajlari ve etkinlik biletlerinden sik kullanılır.",
-      "Pazarlama kampanyalrinda QR kodlar kullanıcılari doğrudan web sitelerine, sosyal medya profillerine veya ozel tekliflere yönlendirir. Basilg materyallardan dijital etkilesime gecisi basitleştirirler.",
-      "Isletmeler envanter yonetimi, varlik takibi ve lojistik işlemlerinde QR kodlardan yaygin olarak yararlanir. Her bir urun veya varlk benzersiz bir QR kodla tanilanabilir.",
-      "Bu arac tamamen ücretsiz ve sınırsızdir. Istediginiz kadar QR kod olusturabilir, filigran veya sınırlama yoktur.",
-      "Tum QR kod oluşturma tarayıcınızda yerel olarak gerçekleşir, verileriniz hicbir sunucuya gonderilmez."
+      "QR kodlar fiziksel dünya ile dijital içerik arasında anında bağlantı kurar. Restoran menuleri, kartvizitler, ürün ambalajlari ve etkinlik biletlerinden sik kullanılır.",
+      "Pazarlama kampanyalrinda QR kodlar kullanıcılari doğrudan web sitelerine, sosyal medya profillerine veya özel tekliflere yönlendirir. Basilg materyallardan dijital etkilesime geçişi basitleştirirler.",
+      "Isletmeler envanter yönetimi, varlık takibi ve lojistik işlemlerinde QR kodlardan yaygın olarak yararlanir. Her bir ürün veya varlık benzersiz bir QR kodla tanilanabilir.",
+      "Bu araç tamamen ücretsiz ve sınırsızdir. İstediğiniz kadar QR kod olusturabilir, filigran veya sınırlama yoktur.",
+      "Tüm QR kod oluşturma tarayıcınızda yerel olarak gerçekleşir, verileriniz hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "QR koda kodlamadan once URL'lerin dogru ve eksiksiz oldugundan emin olun. https:// onekini eklemeyi unutmayin.",
-      "Yuksek hata duzeltme seviyesi (H) kullanin, özellikle QR kodu basili materyallerde kullanacaksaniz. Bu, kodun kismi hasar veya kirlenme durumunda bile okunabilir kalmasini saglar.",
-      "QR kodu basmadan once farkli cihazlarla tarama testi yapin. Tum akilli telefonlarin kamerasindan kolayca taranabildiginden emin olun.",
-      "Cok kisa URL'ler veya URL kisaltma hizmetleri kullanmak QR kodn daha basit ve daha kolay taranabilir olmasini saglar."
+      "QR koda kodlamadan önce URL'lerin doğru ve eksiksiz olduğundan emin olun. https:// onekini eklemeyi unutmayin.",
+      "Yüksek hata düzeltme seviyesi (H) kullanin, özellikle QR kodu basili materyallerde kullanacaksaniz. Bu, kodun kısmi hasar veya kirlenme durumunda bile okunabilir kalmasini sağlar.",
+      "QR kodu basmadan önce farkli cihazlarla tarama testi yapin. Tüm akilli telefonlarin kamerasindan kolayca taranabildiginden emin olun.",
+      "Çok kisa URL'ler veya URL kisaltma hizmetleri kullanmak QR kodn daha basit ve daha kolay taranabilir olmasini sağlar."
     ],
     "faqs": [
       {
-        "question": "QR kod nedir ve nasil çalışır?",
-        "answer": "QR (Quick Response) kod, veriyi kodlayan iki boyutlu bir barkod turudur. Akilli telefonlar ve ozel tarayıcılr tarafindan okunabilir. Veriyi siyah-beyaz kare desenlerde depolar ve hata duzeltme özelliği sayesinde kismi hasar durumunda bile kodlanmis bilgiyi koruyabilir."
+        "question": "QR kod nedir ve nasıl çalışır?",
+        "answer": "QR (Quick Response) kod, veriyi kodlayan iki boyutlu bir barkod turudur. Akilli telefonlar ve özel tarayıcılr tarafindan okunabilir. Veriyi siyah-beyaz kare desenlerde depolar ve hata düzeltme özelliği sayesinde kısmi hasar durumunda bile kodlanmis bilgiyi koruyabilir."
       },
       {
-        "question": "Olusturulan QR kodlarin suresi doluyor mu?",
-        "answer": "Hayir, statik QR kodlarin suresi dolmaz. Kodlanan bilgi QR kodun kendisinde depolanir, herhangi bir sunucuya bagli degildir. URL, metin veya iletisim bilgisi içeren QR kodlar sonsuza dek geçerli kalir, ancak kodlanan URL'nin aktif oldugundan emin olmaniz gerekir."
+        "question": "Olusturulan QR kodlarin süresi doluyor mu?",
+        "answer": "Hayir, statik QR kodlarin süresi dolmaz. Kodlanan bilgi QR kodun kendisinde depolanir, herhangi bir sunucuya bağlı degildir. URL, metin veya iletişim bilgisi içeren QR kodlar sonsuza dek geçerli kalir, ancak kodlanan URL'nin aktif olduğundan emin olmaniz gerekir."
       },
       {
         "question": "QR kodlara ne kadar veri kodlanabilir?",
@@ -187,276 +187,276 @@
       },
       {
         "question": "QR kod renkleri ozellestirebilir miyim?",
-        "answer": "Evet, on plan ve arka plan renklerini ozgurlukle değiştirebilirsiniz. Ancak yeterli kontrast saglanmalidir - koyu renkli modullerin acik renkli arka plan uzerinde olmasi taranabilirlik için önemlidir. Dusuk kontrastli renk kombinasyonlari tarama sorunlarina yol açabilir."
+        "answer": "Evet, on plan ve arka plan renklerini ozgurlukle değiştirebilirsiniz. Ancak yeterli kontrast saglanmalidir - koyu renkli modullerin açık renkli arka plan üzerinde olmasi taranabilirlik için önemlidir. Düşük kontrastli renk kombinasyonlari tarama sorunlarina yol açabilir."
       },
       {
         "question": "QR kodlar güvenli mi?",
-        "answer": "QR kodlarin kendisi güvenlidir ancak yönlendirdikleri URL'lere dikkat etmek önemlidir. Bu aracla olusturdgunuz QR kodlar tamamen sizin kontrolunuzdedir. Taradiginiiz QR kodlarin güvenligi ise hedef URL'ye baglidir."
+        "answer": "QR kodlarin kendisi güvenlidir ancak yönlendirdikleri URL'lere dikkat etmek önemlidir. Bu araçla olusturdgunuz QR kodlar tamamen sizin kontrolunuzdedir. Taradiginiiz QR kodlarin güvenligi ise hedef URL'ye bağlıdır."
       },
       {
         "question": "QR kodu hangi formatta indirmeliyim?",
-        "answer": "SVG formatini vektorel oldugundan herhangi bir boyutta kalite kaybi olmadan olceklenebilen baski işleri için tercih edin. PNG formatini web siteleri, sosyal medya ve dijital materyaller için kullanin. Her iki format da tum yazdirma ve dijital platformlarda genis destek gorur."
+        "answer": "SVG formatini vektorel olduğundan herhangi bir boyutta kalite kaybi olmadan ölçeklenebilen baski işleri için tercih edin. PNG formatini web siteleri, sosyal medya ve dijital materyaller için kullanin. Her iki format da tüm yazdirma ve dijital platformlarda geniş destek görür."
       },
       {
-        "question": "WiFi bilglerini QR koda kodlayabilir miyim?",
-        "answer": "Evet, WiFi ag adi (SSID), sifre ve şifreleme turu (WPA/WPA2) bilgilerini içeren bir QR kod olusturabilirsiniz. Kullanicilar bu QR kodu tarynalrk otomatik olarak WiFi agina baglannabilir, sifre girmelerine gerek kalmaz."
+        "question": "WiFi bilgilerini QR koda kodlayabilir miyim?",
+        "answer": "Evet, WiFi ag adı (SSID), şifre ve şifreleme turu (WPA/WPA2) bilgilerini içeren bir QR kod olusturabilirsiniz. Kullanicilar bu QR kodu tarynalrk otomatik olarak WiFi agina baglannabilir, şifre girmelerine gerek kalmaz."
       }
     ]
   },
   "password-generator": {
     "howToUse": [
-      "Parola uzunlugunu belirleyin. Guvenli parolalar için en az 12, yuksek güvenlik gerektiren hesaplar için 16 veya daha fazla karakter önerilir.",
-      "Parolaya dahil edilecek karakter turlerini secin: büyük harfler, küçük harfler, rakamlar ve ozel karakterler. Ne kadar cok karakter turu eklerseniz parola o kadar güçlü olur.",
-      "Olustur dugmesine tıklayın ve aninda rastgele, güçlü bir parola alin. Parola kriptografik olarak güvenli rastgele sayi ureteciyle olusturulur.",
-      "Olusturulan parolayi tek tikla panoya kopyalyin. Begenmediyseniz yeni parola oluşturmak için tekrar tıklayın."
+      "Parola uzunlugunu belirleyin. Guvenli parolalar için en az 12, yüksek güvenlik gerektiren hesaplar için 16 veya daha fazla karakter önerilir.",
+      "Parolaya dahil edilecek karakter turlerini seçin: büyük harfler, küçük harfler, rakamlar ve özel karakterler. Ne kadar çok karakter turu eklerseniz parola o kadar güçlü olur.",
+      "Olustur düğmesine tıklayın ve anında rastgele, güçlü bir parola alin. Parola kriptografik olarak güvenli rastgele sayı üreteciyle olusturulur.",
+      "Olusturulan parolayi tek tıkla panoya kopyalyin. Begenmediyseniz yeni parola oluşturmak için tekrar tıklayın."
     ],
     "whyUse": [
-      "Zayif ve tahmin edilebilir parolalar veri ihlallerinin en yaygin nedenlerinden biridir. Rastgele olusturulan güçlü parolalar kaba kuvvet saldirilarina karsi önemli olcude koruma saglar.",
-      "Insanlar genellikle hatirlayabildikleri basit parolalar oluşturur, bu da onlari tahmin edilebilir kilar. Bir parola ureteci olusumsal yasaya karsı tamamiyla rastgele kombinasyonlar oluşturur.",
-      "Her hesap için benzersiz bir parola kullanmak, bir hesabin ihlal edilmesi durumunda diger hesaplarinizin güvenligini korur.",
-      "Tum parola oluşturma islemci tarayıcınızda yerel olarak gerçekleşir. Olusturulan parolalar hicbir sunucuya gonderilmez veya kaydedilmez.",
-      "NIST ve diger güvenlik standartlarina uygun parolalar oluşturur. Minimum uzunluk, karmaşıklik ve rastgelelik gereksinimleri karsilanir."
+      "Zayif ve tahmin edilebilir parolalar veri ihlallerinin en yaygın nedenlerinden biridir. Rastgele olusturulan güçlü parolalar kaba kuvvet saldirilarina karsi önemli ölçüde koruma sağlar.",
+      "Insanlar genellikle hatirlayabildikleri basit parolalar oluşturur, bu da onlari tahmin edilebilir kilar. Bir parola üreteci olusumsal yasaya karsı tamamiyla rastgele kombinasyonlar oluşturur.",
+      "Her hesap için benzersiz bir parola kullanmak, bir hesabin ihlal edilmesi durumunda diğer hesaplarinizin güvenligini korur.",
+      "Tüm parola oluşturma islemci tarayıcınızda yerel olarak gerçekleşir. Olusturulan parolalar hiçbir sunucuya gonderilmez veya kaydedilmez.",
+      "NIST ve diğer güvenlik standartlarina uygun parolalar oluşturur. Minimum uzunluk, karmaşıklik ve rastgelelik gereksinimleri karsilanir."
     ],
     "tips": [
       "Her zaman en az 12 karakter uzunlugunda parola kullanin. Her ek karakter, parola kirma suresnini katlanarak arttirir.",
-      "Tum karakter turlerini (büyük/küçük harf, rakam, ozel karakter) dahil edin. Bu, olasi kombinasyon sayisini önemli olcude arttirir.",
-      "Her hesap için farkli bir parola kullanin. Bir parola yonetici uygulamasi tum benzersiz parolalarinizi guvenle saklamaniza yardimci olabilir.",
-      "Parolalarinizi duzenli olarak değiştirin, özellikle hassas hesaplar için. Herhangi bir veri ihlali haberi duydugunuzda ilgili parollarinizi hemen değiştirin.",
+      "Tüm karakter turlerini (büyük/küçük harf, rakam, özel karakter) dahil edin. Bu, olasi kombinasyon sayısını önemli ölçüde arttirir.",
+      "Her hesap için farkli bir parola kullanin. Bir parola yönetici uygulamasi tüm benzersiz parolalarinizi guvenle saklamaniza yardımcı olabilir.",
+      "Parolalarinizi düzenli olarak değiştirin, özellikle hassas hesaplar için. Herhangi bir veri ihlali haberi duydugunuzda ilgili parollarinizi hemen değiştirin.",
       "Iki faktorlu kimlik doğrulama (2FA) ile gucllu parolalari birlestrin. Bu, ek bir güvenlik katmani ekler."
     ],
     "faqs": [
       {
-        "question": "Guclu bir parola ne kadar uzun olmalidir?",
+        "question": "Güçlü bir parola ne kadar uzun olmalidir?",
         "answer": "Guvenlik uzmanlari minimum 12 karakter onerir, ancak 16 veya daha fazla karakter kritik hesaplar için idealdir. Her ek karakter kaba kuvvet saldirisi için gereken sureyi katlanarak artirir. 8 karakterli bir parola saatler içinde kiriabilirken, 16 karakterli bir parola mevcut teknolojiyle trilyonlarca yil alabilir."
       },
       {
-        "question": "Olusturulan parolalar gercekten rastgele mi?",
-        "answer": "Evet, arac tarayıcınızin kriptografik olarak güvenli rastgele sayi uretecisini (Crypto.getRandomValues API) kullanır. Bu, olusturulan her parolanin gercekten rastgele ve tahmin edilemez olmasini saglar. Insan tarafindan olusturulan parolalardaki onsezilir kaliplarin aksine, bu yontem gercek rastgelelik garanti eder."
+        "question": "Olusturulan parolalar gerçekten rastgele mi?",
+        "answer": "Evet, araç tarayıcınızin kriptografik olarak güvenli rastgele sayı uretecisini (Crypto.getRandomValues API) kullanır. Bu, olusturulan her parolanin gerçekten rastgele ve tahmin edilemez olmasini sağlar. Insan tarafindan olusturulan parolalardaki onsezilir kaliplarin aksine, bu yöntem gerçek rastgelelik garanti eder."
       },
       {
         "question": "Parola oluşturucu güvenli mi? Parolalarim kaydediliyor mu?",
-        "answer": "Tamamen güvenlidir. Parola oluşturma tamamen tarayıcınızda gerçekleşir. Hicbir parola herhangi bir sunucuya gonderilmez, kaydedilmez veya depolanmaz. Sayfa yenilendiginde veya kapatildiginda olusturulan parolalar bellekten tamamen silinir."
+        "answer": "Tamamen güvenlidir. Parola oluşturma tamamen tarayıcınızda gerçekleşir. Hicbir parola herhangi bir sunucuya gonderilmez, kaydedilmez veya depolanmaz. Sayfa yenilendiginde veya kapatıldığında olusturulan parolalar bellekten tamamen silinir."
       },
       {
         "question": "Neden her hesap için farkli parola kullanmaliyim?",
-        "answer": "Ayni parolayi birden fazla hesapta kullanmak büyük bir güvenlik riskidir. Bir hizmetin veri tabani ihlal edildiginde, saldiganlar ayni parolayi diger hesaplarinizda deneyecektir (kimlik doldurma saldirisi). Benzersiz parolalar bu zincirleme etkiyi onler."
+        "answer": "Aynı parolayi birden fazla hesapta kullanmak büyük bir güvenlik riskidir. Bir hizmetin veri tabani ihlal edildiginde, saldiganlar aynı parolayi diğer hesaplarinizda deneyecektir (kimlik doldurma saldirisi). Benzersiz parolalar bu zincirleme etkiyi onler."
       },
       {
-        "question": "Ozel karakterler parolayi ne kadar güçlü kilar?",
-        "answer": "Ozel karakterler (!@#$%^&*) olasi karakter havuzunu önemli olcude genisletir. Yalnizca küçük harflerle 26 olasi karakter varken, tum karakter turlerini eklemek bunu 90'in uzerine cikarir. Bu, ayni uzunluktaki bir parolanin kaba kuvvet saldirisiyla kirilma suresini milyon kat artirir."
+        "question": "Özel karakterler parolayi ne kadar güçlü kilar?",
+        "answer": "Özel karakterler (!@#$%^&*) olasi karakter havuzunu önemli ölçüde genisletir. Yalnizca küçük harflerle 26 olasi karakter varken, tüm karakter turlerini eklemek bunu 90'in uzerine çıkarır. Bu, aynı uzunluktaki bir parolanin kaba kuvvet saldirisiyla kirilma suresini milyon kat artirir."
       },
       {
         "question": "Parolayi ne siklikla degistirmeliyim?",
-        "answer": "Modern güvenlik önerileri, güçlü ve benzersiz bir parola kullandigniz surece rutin degisiklik gerektirmez. Ancak bir veri ihlali oldugundan supheleniyorsaniz, hesabinizda suphelei etkinlik goruyorsaniz veya parolanizi birisiyle paylasmak zorunda kaldysaniz hemen değiştirin."
+        "answer": "Modern güvenlik önerileri, güçlü ve benzersiz bir parola kullandigniz sürece rutin degisiklik gerektirmez. Ancak bir veri ihlali olduğundan supheleniyorsaniz, hesabinizda suphelei etkinlik goruyorsaniz veya parolanizi birisiyle paylasmak zorunda kaldysaniz hemen değiştirin."
       },
       {
-        "question": "Parola yoneticisi kullanmali miyim?",
-        "answer": "Evet, bir parola yoneticisi kesinlikle önerilir. Duzinelerce benzersiz, karmaşık parolayi hatilamak insanlar için pratik degildir. Bir parola yoneticisi tum parolalanizi sifrelenmis bir kasada guvenle depolar ve ihtiyac duydugunuzda otomatik olarak doldurur."
+        "question": "Parola yöneticisi kullanmali miyim?",
+        "answer": "Evet, bir parola yöneticisi kesinlikle önerilir. Duzinelerce benzersiz, karmaşık parolayi hatilamak insanlar için pratik degildir. Bir parola yöneticisi tüm parolalanizi şifrelenmiş bir kasada guvenle depolar ve ihtiyaç duydugunuzda otomatik olarak doldurur."
       }
     ]
   },
   "color-picker": {
     "howToUse": [
-      "Renk secici aracini kullanarak genis bir renk paletinden istediginiz rengi secin. Fare isaretcisini renk yuzeyinde gezdirerek ton, doygunluk ve parlaklik degerlerini ayarlayin.",
-      "HEX, RGB, HSL veya HSV renk kodlarini doğrudan giriş alanına yazarak belirli bir rengi hizlica secin.",
-      "Sectiginiz rengin önizlemesini gorun ve farkli arka planlr uzerinde nasil gorunecegini kontrol edin.",
-      "Renk kodunu istediginiz formatta (HEX, RGB, HSL) tek tikla panoya kopyalayın ve projelerinizde kullanin."
+      "Renk seçici aracini kullanarak geniş bir renk paletinden istediğiniz rengi seçin. Fare isaretcisini renk yuzeyinde gezdirerek ton, doygunluk ve parlaklık değerlerini ayarlayin.",
+      "HEX, RGB, HSL veya HSV renk kodlarini doğrudan giriş alanına yazarak belirli bir rengi hizlica seçin.",
+      "Sectiginiz rengin önizlemesini gorun ve farkli arka planlr üzerinde nasıl gorunecegini kontrol edin.",
+      "Renk kodunu istediğiniz formatta (HEX, RGB, HSL) tek tıkla panoya kopyalayın ve projelerinizde kullanin."
     ],
     "whyUse": [
-      "Web tasarimcilari ve gelistiricler CSS, HTML ve tasarim dosyaları için dogru renk kodlarina surekli ihtiyac duyar. Bu arac farki formatlar arasinda aninda dönüşüm saglar.",
-      "Marka renk tutarliligi için tam renk degerlerini bilmek önemlidir. Bir tasarim projesinde kullanilan her rengin kesin kodunu bulabilirsiniz.",
-      "Erisilebirlk kontrolleri için renk kontrast oranlarini değerlendirmek önemlidir. Yeterli kontrastin saglanmasi web içeriğinin herkesein erisebilecegi sekilde olmalsini saglar.",
-      "Tamamen ücretsiz, kurulum gerektirmez ve herhangi bir cihazda çalışır. Profesyonel tasarim araclarina alternatif bir cozum sunar."
+      "Web tasarımcıları ve gelistiricler CSS, HTML ve tasarım dosyaları için doğru renk kodlarina sürekli ihtiyaç duyar. Bu araç farki formatlar arasında anında dönüşüm sağlar.",
+      "Marka renk tutarliligi için tam renk değerlerini bilmek önemlidir. Bir tasarım projesinde kullanilan her rengin kesin kodunu bulabilirsiniz.",
+      "Erisilebirlk kontrolleri için renk kontrast oranlarini değerlendirmek önemlidir. Yeterli kontrastin saglanmasi web içeriğinin herkesein erisebilecegi şekilde olmalsini sağlar.",
+      "Tamamen ücretsiz, kurulum gerektirmez ve herhangi bir cihazda çalışır. Profesyonel tasarım araclarina alternatif bir çözüm sunar."
     ],
     "tips": [
-      "Web erisilebilrligi için metin ve arka plan arasinda en az 4.5:1 kontrast oranin saglayin (WCAG AA standardi).",
+      "Web erisilebilrligi için metin ve arka plan arasında en az 4.5:1 kontrast oranin saglayin (WCAG AA standardı).",
       "Renk paletleri oluştururken tamamlayici renkleri (renk carkinda karsi taraftaki renkler) kullanarak görsel uyum saglayin.",
-      "HEX kodlarini kullanırken kisaltilmis notasyonu bilin: #RGB, #RRGGBB ile ayni sonucu verir (ornegin #F00 = #FF0000).",
+      "HEX kodlarini kullanırken kisaltilmis notasyonu bilin: #RGB, #RRGGBB ile aynı sonucu verir (ornegin #F00 = #FF0000).",
       "Tasarim sisteminizde kullandiginiz renkleri belgeleyin. Marka kilavuzunuzda HEX, RGB ve HSL degerlerinin tumunu kaydedin."
     ],
     "faqs": [
       {
-        "question": "HEX, RGB ve HSL renk formatlari arasindaki fark nedir?",
-        "answer": "HEX bir rengi 6 haneli onaltlik sistemde temsil eder (#RRGGBB), web gelistirmede en yaygin kullanlan formattir. RGB kirmizi, yesil ve mavi kanal degerlerini 0-255 araliginda belirtir. HSL ise rengi ton (0-360), doygunluk (0-100%) ve parlaklik (0-100%) olarak tanimlar ve renklerin insan tarafindan daha sezgisel alglanmasini saglar."
+        "question": "HEX, RGB ve HSL renk formatlari arasındaki fark nedir?",
+        "answer": "HEX bir rengi 6 haneli onaltlik sistemde temsil eder (#RRGGBB), web geliştirmede en yaygın kullanlan formattir. RGB kirmizi, yesil ve mavi kanal değerlerini 0-255 araliginda belirtir. HSL ise rengi ton (0-360), doygunluk (0-100%) ve parlaklık (0-100%) olarak tanimlar ve renklerin insan tarafindan daha sezgisel alglanmasini sağlar."
       },
       {
-        "question": "Bir web sitesindeki rengin kodunu nasil bulabilirim?",
-        "answer": "Tarayiçinizin gelistirici araclrini (F12) acarak elemanlari inceleyebilir ve CSS özelliklerinden renk kodlarini gorebilirsiniz. Ayrica tarayıcı eklentleri veya bu aractaki renk secici özelliğini kullanarak herhangi bir goruntudan renk kodunu alabilirsiniz."
+        "question": "Bir web sitesindeki rengin kodunu nasıl bulabilirim?",
+        "answer": "Tarayiçinizin geliştirici araclrini (F12) acarak elemanlari inceleyebilir ve CSS özelliklerinden renk kodlarini gorebilirsiniz. Ayrica tarayıcı eklentleri veya bu aractaki renk seçici özelliğini kullanarak herhangi bir goruntudan renk kodunu alabilirsiniz."
       },
       {
         "question": "Web erisilebilrligi için renk kontrast orani neden önemlidir?",
-        "answer": "WCAG (Web Icerik Erisilebirlik Yonergeleri) minimum kontrast oranlarini belirler: normal metin için 4.5:1, büyük metin için 3:1. Yetersiz kontrast, gorme zorluklari olan kullanıcılar ve parlak gunes isiginda mobil kullananlar için içeriğizi okunaklasiz hale getirir."
+        "answer": "WCAG (Web İçerik Erisilebirlik Yonergeleri) minimum kontrast oranlarini belirler: normal metin için 4.5:1, büyük metin için 3:1. Yetersiz kontrast, görme zorluklari olan kullanıcılar ve parlak güneş isiginda mobil kullananlar için içeriğizi okunaklasiz hale getirir."
       },
       {
-        "question": "CSS'de alfa (seffaflik) degeri nasil kullanılır?",
-        "answer": "CSS'de rgba() ve hsla() fonksiyonlari 0 ile 1 arasinda bir alfa degeri alir: rgba(255, 0, 0, 0.5) %50 seffaf kirmizi oluşturur. HEX formtnda 8 haneli notasyon kullanilabilir: #FF000080. Modern CSS'de rgb() fonksiyonu da seffaflik destekler: rgb(255 0 0 / 50%)."
+        "question": "CSS'de alfa (seffaflik) degeri nasıl kullanılır?",
+        "answer": "CSS'de rgba() ve hsla() fonksiyonlari 0 ile 1 arasında bir alfa degeri alir: rgba(255, 0, 0, 0.5) %50 seffaf kirmizi oluşturur. HEX formtnda 8 haneli notasyon kullanilabilir: #FF000080. Modern CSS'de rgb() fonksiyonu da seffaflik destekler: rgb(255 0 0 / 50%)."
       },
       {
-        "question": "Renk korlugu olan kullanıcılar için tasarim nasil yapilir?",
-        "answer": "Bilgiyi yalnizca renkle iletmekten kacinin; simgeler, desenler ve metin etiketleri ile destekleyin. Renk korlugu simul atorlerini kullanarak tasarimlarinizi test edin. En yaygin renk korlugu turu olan kirmizi-yesil korlugu için bu iki rengi ayirt edici olarak kullanmaktan kacinin."
+        "question": "Renk korlugu olan kullanıcılar için tasarım nasıl yapılır?",
+        "answer": "Bilgiyi yalnizca renkle iletmekten kacinin; simgeler, desenler ve metin etiketleri ile destekleyin. Renk korlugu simul atorlerini kullanarak tasarimlarinizi test edin. En yaygın renk korlugu turu olan kirmizi-yesil korlugu için bu iki rengi ayirt edici olarak kullanmaktan kacinin."
       },
       {
-        "question": "Uyumlu renk paletleri nasil olusturulur?",
-        "answer": "Renk teorisi ilkelerini kullanin: tamamlayici renkler (karsi taraf), analog renkler (yanyana), uclu renkler (120 derece aralikli) ve bolumlenmis tamamlayici renkler. Bir ana renk secin ve bu ilkelerle uyumlu tonlar oluşturun. Genellikle bir ana renk, bir vurgu rengi ve nötr tonlar yeterlidir."
+        "question": "Uyumlu renk paletleri nasıl olusturulur?",
+        "answer": "Renk teorisi ilkelerini kullanin: tamamlayici renkler (karsi taraf), analog renkler (yanyana), üçlü renkler (120 derece aralikli) ve bolumlenmis tamamlayici renkler. Bir ana renk seçin ve bu ilkelerle uyumlu tonlar oluşturun. Genellikle bir ana renk, bir vurgu rengi ve nötr tonlar yeterlidir."
       }
     ]
   },
   "base64-encode-decode": {
     "howToUse": [
-      "Kodlamak veya cozumlemek istediginiz metni veya veriyi giriş alanına yapıştırın.",
-      "Islem turunu secin: Kodla (Encode) secenegi duz metni Base64 formatina donusturur, Coz (Decode) ise Base64 kodlanmis veriyi orijinal metne geri cevirir.",
-      "Donustur dugmesine tıklayın ve sonucu aninda gorun. Sonuc otomatik olarak cikis alaninda goruntulenir.",
-      "Sonucu tek tikla panoya kopyalayın ve ihtiyac duydugunuz yerde kullanin."
+      "Kodlamak veya çözümlemek istediğiniz metni veya veriyi giriş alanına yapıştırın.",
+      "İşlem turunu seçin: Kodla (Encode) seçeneği düz metni Base64 formatina donusturur, Çöz (Decode) ise Base64 kodlanmis veriyi orijinal metne geri çevirir.",
+      "Dönüştür düğmesine tıklayın ve sonucu anında gorun. Sonuç otomatik olarak çıkış alaninda goruntulenir.",
+      "Sonucu tek tıkla panoya kopyalayın ve ihtiyaç duydugunuz yerde kullanin."
     ],
     "whyUse": [
-      "Base64 kodlama, ikili verileri (görseller, dosyalar) metin tabanli ortamlarda guvenle iletmek için gereklidir. E-posta ekleri, veri URI'leri ve API isteklerinde yaygin olarak kullanılır.",
-      "Web gelistirmede görselleri doğrudan HTML veya CSS'e gomermek için Base64 kodlama kullanılır. Bu, ek HTTP isteklerini azaltarak küçük görseller için sayfa yükleme sulesini iyileştirebilir.",
-      "JWT token'lari, HTTP kimlik doğrulama baskliklari ve çeşitli API yanıtları Base64 kodlanmis veri içerir. Bu verilerin hizlica kodlanmasi ve cozumlenmesi gelistirme surecini hizlandirir.",
-      "Tum kodlama ve cozumleme tarayıcınızda yerel olarak gerçekleşir. Hassas verileriniz hicbir sunucuya gonderilmez."
+      "Base64 kodlama, ikili verileri (görseller, dosyalar) metin tabanli ortamlarda guvenle iletmek için gereklidir. E-posta ekleri, veri URI'leri ve API isteklerinde yaygın olarak kullanılır.",
+      "Web geliştirmede görselleri doğrudan HTML veya CSS'e gomermek için Base64 kodlama kullanılır. Bu, ek HTTP isteklerini azaltarak küçük görseller için sayfa yükleme süresini iyileştirebilir.",
+      "JWT token'lari, HTTP kimlik doğrulama baskliklari ve çeşitli API yanıtları Base64 kodlanmis veri içerir. Bu verilerin hizlica kodlanmasi ve cozumlenmesi geliştirme sürecini hizlandirir.",
+      "Tüm kodlama ve çözümleme tarayıcınızda yerel olarak gerçekleşir. Hassas verileriniz hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "Base64 kodlama şifreleme degildir. Base64 kodlanmis veri kolayca cozumlenebilir, bu nedenle hassas bilgileri güvenli iletmek için Base64 yerine uygun şifreleme yontemleri kullanin.",
-      "Base64 kodlama veri boyutunu yaklasik %33 arttirir. Büyük dosyaları kodlarken bunu goz onunde bulundurun.",
-      "Veri URI'lerinde Base64 kullanırken dogru MIME turunu belirtin: data:image/png;base64, veya data:application/pdf;base64, gibi.",
+      "Base64 kodlama şifreleme degildir. Base64 kodlanmis veri kolayca çözümlenebilir, bu nedenle hassas bilgileri güvenli iletmek için Base64 yerine uygun şifreleme yöntemleri kullanin.",
+      "Base64 kodlama veri boyutunu yaklaşık %33 arttirir. Büyük dosyaları kodlarken bunu göz önünde bulundurun.",
+      "Veri URI'lerinde Base64 kullanırken doğru MIME turunu belirtin: data:image/png;base64, veya data:application/pdf;base64, gibi.",
       "URL-güvenli Base64 gereken durumlarda standart Base64'teki + ve / karakterleri sirasiyla - ve _ ile degistirilir."
     ],
     "faqs": [
       {
         "question": "Base64 kodlama nedir?",
-        "answer": "Base64, ikili verileri 64 yazdirilabilir ASCII karakterden olusan bir karakter setine donusturen bir kodlama semasidir. A-Z, a-z, 0-9, + ve / karakterlerini kullanır. Ikili verilerin metin tabanli protokollerr uzerinden guvenle iletilebilmesini saglar."
+        "answer": "Base64, ikili verileri 64 yazdirilabilir ASCII karakterden olusan bir karakter setine dönüştüren bir kodlama semasidir. A-Z, a-z, 0-9, + ve / karakterlerini kullanır. Ikili verilerin metin tabanli protokollerr üzerinden guvenle iletilebilmesini sağlar."
       },
       {
         "question": "Base64 şifreleme midir?",
-        "answer": "Hayir, Base64 şifreleme degildir. Base64 kodlanmis herhangi bir veri kolayca cozumlenebilir cunku gizli bir anahtar kullanilmaz. Base64'un amaci veri gizlemek degil, ikili verilerin metin kanallarinda bozulmadan iletilebilmesini saglamaktir."
+        "answer": "Hayir, Base64 şifreleme degildir. Base64 kodlanmis herhangi bir veri kolayca çözümlenebilir çünkü gizli bir anahtar kullanilmaz. Base64'un amaci veri gizlemek değil, ikili verilerin metin kanallarinda bozulmadan iletilebilmesini saglamaktir."
       },
       {
         "question": "Base64 kodlama neden dosya boyutunu artirir?",
-        "answer": "Base64 her 3 baytlik ikili veriyi 4 ASCII karaktere donusturur, bu da yaklasik %33'luk bir boyut artisina neden olur. Bunun nedeni 8 bitlik ikili verinin 6 bitlik gruplara bolunmesi ve her grubun tek bir Base64 karakteriyle temsil edilmesidir."
+        "answer": "Base64 her 3 baytlik ikili veriyi 4 ASCII karaktere donusturur, bu da yaklaşık %33'luk bir boyut artisina neden olur. Bunun nedeni 8 bitlik ikili verinin 6 bitlik gruplara bolunmesi ve her grubun tek bir Base64 karakteriyle temsil edilmesidir."
       },
       {
-        "question": "Base64 web gelistirmede nasil kullanılır?",
-        "answer": "Web gelistirmede Base64 çeşitli amaclara hizmet eder: küçük görselleri HTML/CSS icne gomme (veri URI'leri), e-posta eklerini MIME formatinda kodlama, JWT token'larinda veri tasima, HTTP temel kimlik doğrulama basliklarinda kullanıcı adi ve sifre kodlama ve API'ler arasinda ikili veri alisverisi."
+        "question": "Base64 web geliştirmede nasıl kullanılır?",
+        "answer": "Web geliştirmede Base64 çeşitli amaclara hizmet eder: küçük görselleri HTML/CSS icne gomme (veri URI'leri), e-posta eklerini MIME formatinda kodlama, JWT token'larinda veri tasima, HTTP temel kimlik doğrulama basliklarinda kullanıcı adı ve şifre kodlama ve API'ler arasında ikili veri alisverisi."
       },
       {
         "question": "URL-güvenli Base64 nedir?",
-        "answer": "Standart Base64'teki + ve / karakterleri URL'lerde ozel anlam tasir. URL-güvenli Base64 (Base64url) bu karakterleri sirasiyla - ve _ ile degistirerek kodlanmis verinin URL parametrelerinde guvenle kullanilabilmesini saglar. JWT token'lari URL-güvenli Base64 kullanır."
+        "answer": "Standart Base64'teki + ve / karakterleri URL'lerde özel anlam tasir. URL-güvenli Base64 (Base64url) bu karakterleri sirasiyla - ve _ ile degistirerek kodlanmis verinin URL parametrelerinde guvenle kullanilabilmesini sağlar. JWT token'lari URL-güvenli Base64 kullanır."
       },
       {
         "question": "Base64 ile kodlanan verilerim güvenli mi?",
-        "answer": "Arac acsindan evet - tum kodlama ve cozumleme tarayıcınızda yerel olarak gerçekleşir, verileriniz hicbir sunucuya gonderilmez. Ancak Base64'un kendisi güvenlik saglamamz cunku herkes tarafindan kolayca cozumlenebilir. Hassas veriler için AES veya RSA gibi gercek şifreleme algoritmalri kullanin."
+        "answer": "Araç acsindan evet - tüm kodlama ve çözümleme tarayıcınızda yerel olarak gerçekleşir, verileriniz hiçbir sunucuya gonderilmez. Ancak Base64'un kendisi güvenlik saglamamz çünkü herkes tarafindan kolayca çözümlenebilir. Hassas veriler için AES veya RSA gibi gerçek şifreleme algoritmalri kullanin."
       }
     ]
   },
   "word-counter": {
     "howToUse": [
-      "Metninizi giriş alanına yapıştırın veya doğrudan yazmaya baslayin. Arac metin girdikce gercek zamanli olarak istatistikleri gunceller.",
-      "Kelime sayisi, karakter sayisi (bosluklu ve bosluksuz), cumle sayisi ve paragraf sayisi dahil detayli istatistikleri aninda gorun.",
-      "Tahmini okuma suresi ve konusma suresi bilgileri içerik planlamasi için kullanislidir.",
-      "Metninizi tek tikla temizleyebilir veya istatistikleri sifirlayabilirsiniz."
+      "Metninizi giriş alanına yapıştırın veya doğrudan yazmaya başlayın. Araç metin girdikce gerçek zamanlı olarak istatistikleri gunceller.",
+      "Kelime sayısı, karakter sayısı (boşluklu ve boşluksuz), cümle sayısı ve paragraf sayısı dahil detayli istatistikleri anında gorun.",
+      "Tahmini okuma süresi ve konuşma süresi bilgileri içerik planlamasi için kullanislidir.",
+      "Metninizi tek tıkla temizleyebilir veya istatistikleri sifirlayabilirsiniz."
     ],
     "whyUse": [
-      "Icerik yazarlari blog yazilar, makaleler ve sosyal medya gonderileri için belirli kelime sayisi gereksinimlerini karsilamak zorundadir. Bu arac gercek zamanli sayim saglayarak isinizi kolaylaştırır.",
-      "Akademik çalışmalarda odev ve tez kelime sinirlar önemlidir. Kelime sayaci belirtilen limitlere uymanizi saglar.",
-      "SEO için meta açıklamalar (155 karakter), basliklar (60 karakter) ve içerik uzunlugu önemlir. Bu arac karakter sayiminizi aninda gosterir.",
-      "Sosyal medya platformlarinin karakter sinirlari vardir: Twitter/X 280, Instagram biyografi 150, LinkedIn gonderi 3000. Gondermenizden once içerik uzunlugunuzu kontrol edin."
+      "İçerik yazarlari blog yazilar, makaleler ve sosyal medya gonderileri için belirli kelime sayısı gereksinimlerini karsilamak zorundadir. Bu araç gerçek zamanlı sayim sağlayarak isinizi kolaylaştırır.",
+      "Akademik çalışmalarda odev ve tez kelime sinirlar önemlidir. Kelime sayaci belirtilen limitlere uymanizi sağlar.",
+      "SEO için meta açıklamalar (155 karakter), başlıklar (60 karakter) ve içerik uzunluğu önemlir. Bu araç karakter sayiminizi anında gösterir.",
+      "Sosyal medya platformlarinin karakter sinirlari vardır: Twitter/X 280, Instagram biyografi 150, LinkedIn gonderi 3000. Gondermenizden önce içerik uzunluğunuzu kontrol edin."
     ],
     "tips": [
-      "SEO için blog yazilari genellikle 1500-2500 kelime arasinda en iyi performansi gosterir. Aracla yazdikca uzunlugunuzu takip edin.",
-      "Okuma suresi tahmini dakikada 200-250 kelime okuma hizina dayanir. Teknik içerik için okuyucular genellikle daha yavas okur.",
-      "Karakter sayisini bosluklu ve bosluksuz olarak kontrol edin. Bazi platformlar ve sistemler bosliklari karakter sayisina dahil ederken digerleri dahil etmez.",
-      "Paragraf sayisi metin bicmlendirmsi ve okunabilirlik için önemli bir göstergedir. Kisa paragraflar web içeriğinde daha iyi okunur."
+      "SEO için blog yazilari genellikle 1500-2500 kelime arasında en iyi performansi gösterir. Aracla yazdikca uzunluğunuzu takip edin.",
+      "Okuma süresi tahmini dakikada 200-250 kelime okuma hizina dayanir. Teknik içerik için okuyucular genellikle daha yavas okur.",
+      "Karakter sayısını boşluklu ve boşluksuz olarak kontrol edin. Bazi platformlar ve sistemler bosliklari karakter sayısına dahil ederken diğerleri dahil etmez.",
+      "Paragraf sayısı metin biçimlendirmesi ve okunabilirlik için önemli bir göstergedir. Kisa paragraflar web içeriğinde daha iyi okunur."
     ],
     "faqs": [
       {
-        "question": "Kelime sayaci nasil çalışır?",
-        "answer": "Kelime sayaci metni bosluk, sekme ve satir sonu karakterlerine gore ayirir ve ortaya cikan kelimeleri sayar. Cumleler noktalama işaretlerine gore, paragraflar ise bos satirlara gore belirlenir. Sayim gercek zamanli olarak metni girdikce veya degistirdikce guncellenir."
+        "question": "Kelime sayaci nasıl çalışır?",
+        "answer": "Kelime sayaci metni boşluk, sekme ve satir sonu karakterlerine göre ayırır ve ortaya cikan kelimeleri sayar. Cümleler noktalama işaretlerine göre, paragraflar ise bos satirlara göre belirlenir. Sayim gerçek zamanlı olarak metni girdikce veya degistirdikce güncellenir."
       },
       {
-        "question": "Okuma suresi tahmini ne kadar dogrudur?",
-        "answer": "Okuma suresi tahmini yetiskin ortalama okuma hizina (dakikada yaklasik 200-250 kelime) dayanir. Gercek okuma suresi içerik karmaşıkligina, okurun dil yeterliligine ve metin formatlamaisna bagli olarak degisebilir. Teknik ve akademik içerik genellikle daha yavas okunur."
+        "question": "Okuma süresi tahmini ne kadar doğrudur?",
+        "answer": "Okuma süresi tahmini yetiskin ortalama okuma hizina (dakikada yaklaşık 200-250 kelime) dayanir. Gerçek okuma süresi içerik karmaşıkligina, okurun dil yeterliligine ve metin formatlamaisna bağlı olarak degisebilir. Teknik ve akademik içerik genellikle daha yavas okunur."
       },
       {
-        "question": "Blog yazisi için ideal kelime sayisi nedir?",
-        "answer": "SEO arastirmalarina gore uzun form içerik (1500-2500 kelime) arama motorlarinda genellikle daha iyi sıralama elde eder. Ancak kalite nicelten her zaman daha önemlidir. Konu kapsamli sekilde islenmeli ve okuyucuya deger saglmalidir. Kisa blog yazilari (500-1000 kelime) belirli konular için yeterli olabilir."
+        "question": "Blog yazisi için ideal kelime sayısı nedir?",
+        "answer": "SEO arastirmalarina göre uzun form içerik (1500-2500 kelime) arama motorlarinda genellikle daha iyi sıralama elde eder. Ancak kalite nicelten her zaman daha önemlidir. Konu kapsamli şekilde islenmeli ve okuyucuya değer saglmalidir. Kisa blog yazilari (500-1000 kelime) belirli konular için yeterli olabilir."
       },
       {
-        "question": "Karakter sayisi neden önemlidir?",
-        "answer": "Karakter sayisi pek cok platformda kritik oneme sahiptir: Google meta açıklamalari ~155 karakter, Google basliklar ~60 karakter, Twitter/X 280 karakter, SMS mesajlari 160 karakter. Bu sinirlari asmak içeriğiniznin kesilmesine ve mesajinzin tam iletilememesine neden olur."
+        "question": "Karakter sayısı neden önemlidir?",
+        "answer": "Karakter sayısı pek çok platformda kritik oneme sahiptir: Google meta açıklamalari ~155 karakter, Google başlıklar ~60 karakter, Twitter/X 280 karakter, SMS mesajlari 160 karakter. Bu sinirlari asmak içeriğiniznin kesilmesine ve mesajinzin tam iletilememesine neden olur."
       },
       {
         "question": "Farkli dillerde kelime sayimi farkli midir?",
-        "answer": "Evet, kelime sayimi dile gore degisir. Turkce ve Ingilizce gibi boslukla ayrilan dillerde kelimeler bosluklar arasinda sayilir. Ancak Cince veya Japonca gibi bosluksuz dillerde kelime sinirlarini belirlemek farkli yaklasimlar gerektirir. Bu arac bosluga dayali sayim yapar."
+        "answer": "Evet, kelime sayimi dile göre değişir. Türkçe ve Ingilizce gibi boslukla ayrilan dillerde kelimeler boşluklar arasında sayilir. Ancak Cince veya Japonca gibi boşluksuz dillerde kelime sinirlarini belirlemek farkli yaklasimlar gerektirir. Bu araç boşluğa dayali sayim yapar."
       },
       {
-        "question": "Bu arac ücretsiz mi ve sınırlama var mi?",
-        "answer": "Evet, tamamen ücretsizdir ve kullanim sinirlamasi yoktur. Istediginiz kadar metin analiz edebilirsiniz. Tum islem tarayıcınızda yerel olarak gerçekleşir, metniniiz hicbir sunucuya gonderilmez veya depolanmaz."
+        "question": "Bu araç ücretsiz mi ve sınırlama var mi?",
+        "answer": "Evet, tamamen ücretsizdir ve kullanım sinirlamasi yoktur. İstediğiniz kadar metin analiz edebilirsiniz. Tüm işlem tarayıcınızda yerel olarak gerçekleşir, metniniiz hiçbir sunucuya gonderilmez veya depolanmaz."
       }
     ]
   },
   "lorem-ipsum-generator": {
     "howToUse": [
-      "Olusturmak istediginiz Lorem Ipsum içerik turunu secin: paragraflar, cumleler veya kelimeler.",
-      "Miktari belirleyin - kac paragraf, cumle veya kelime olusturulmasi gerektigini girin.",
-      "Olustur dugmesine tıklayın ve aninda yer tutucu metin alin. Metin gercek Latince yapiyi takip eden dogal gorunumlu bir içerik oluşturur.",
-      "Olusturulan metni tek tikla kopyalayın ve tasarim projelerinizde, web sayfalariniizda veya belge sabonlarinizda kullanin."
+      "Olusturmak istediğiniz Lorem Ipsum içerik turunu seçin: paragraflar, cümleler veya kelimeler.",
+      "Miktari belirleyin - kac paragraf, cümle veya kelime olusturulmasi gerektigini girin.",
+      "Olustur düğmesine tıklayın ve anında yer tutucu metin alin. Metin gerçek Latince yapiyi takip eden doğal gorunumlu bir içerik oluşturur.",
+      "Olusturulan metni tek tıkla kopyalayın ve tasarım projelerinizde, web sayfalariniizda veya belge sabonlarinizda kullanin."
     ],
     "whyUse": [
-      "Tasarimcilar tipografi, sayfa duzeni ve görsel hiyerarsiyi değerlendirmek için gercekci gorunumlu yer tutucu metne ihtiyac duyar. Lorem Ipsum dikkat dagitmadan metin akisini simule eder.",
-      "Web gelistirmede sayfarin metin içeren bolumlernin nasil gorunecegini test etmek için yer tutucu içerik gereklidir. Gercek içerik hazir olmadan sayfa duzenini doğrulama imkani saglar.",
-      "Musteri sunumlarinda son içerik hazir olmadan once tasarimin genel gorunumunu gostermek için kullanılır. Lorem Ipsum, içerik yerine tasarima odaklanmayi kolaylaştırır.",
-      "Tamamen ücretsiz, sınırsız ve kurulum gerektirmeyen bir arac. Istediginiz kadar yer tutucu metin olusturabilirsiniz."
+      "Tasarimcilar tipografi, sayfa duzeni ve görsel hiyerarsiyi değerlendirmek için gerçekçi gorunumlu yer tutucu metne ihtiyaç duyar. Lorem Ipsum dikkat dagitmadan metin akisini simule eder.",
+      "Web geliştirmede sayfarin metin içeren bolumlernin nasıl gorunecegini test etmek için yer tutucu içerik gereklidir. Gerçek içerik hazir olmadan sayfa duzenini doğrulama imkani sağlar.",
+      "Musteri sunumlarinda son içerik hazir olmadan önce tasarimin genel görünümünü göstermek için kullanılır. Lorem Ipsum, içerik yerine tasarima odaklanmayi kolaylaştırır.",
+      "Tamamen ücretsiz, sınırsız ve kurulum gerektirmeyen bir araç. İstediğiniz kadar yer tutucu metin olusturabilirsiniz."
     ],
     "tips": [
-      "Web sayfa tasarimi için genellikle 3-5 paragraf yeterlidir. Gercek içerik uzunluguna yakin miktar kullanmak daha gercekci önizleme saglar.",
-      "Tek satirlik yer tutucu için cumle modunu, kisa etiketler için ise kelime modunu kullanin.",
-      "Lorem Ipsum son kullanıcıya gosterilmemelidir. Yayinlamadan once tum yer tutucu metinlerin gercek içerikle degistirildiginden emin olun.",
-      "Farkli metin uzunluklaiyla test ederek tasarimnizin kisa ve uzun içeriklerle nasil davrandigini doğrulayın."
+      "Web sayfa tasarımı için genellikle 3-5 paragraf yeterlidir. Gerçek içerik uzunluguna yakin miktar kullanmak daha gerçekçi önizleme sağlar.",
+      "Tek satirlik yer tutucu için cümle modunu, kisa etiketler için ise kelime modunu kullanin.",
+      "Lorem Ipsum son kullanıcıya gosterilmemelidir. Yayinlamadan önce tüm yer tutucu metinlerin gerçek içerikle degistirildiginden emin olun.",
+      "Farkli metin uzunluklaiyla test ederek tasarimnizin kisa ve uzun içeriklerle nasıl davrandigini doğrulayın."
     ],
     "faqs": [
       {
         "question": "Lorem Ipsum nedir?",
-        "answer": "Lorem Ipsum, matbaacilik ve dizgi endustrsinde standart yer tutucu metin olarak kullanilan yapay bir Latince metindir. 1500'lerden beri kullanilmaktadir ve Cicero'nun 'de Finibus Bonorum et Malorum' eserinden turetilmistir. Anlamsiz gorunse de Latince kelime kaliplari kullanarak dogal metin akisi simule eder."
+        "answer": "Lorem Ipsum, matbaacilik ve dizgi endustrsinde standart yer tutucu metin olarak kullanilan yapay bir Latince metindir. 1500'lerden beri kullanilmaktadir ve Cicero'nun 'de Finibus Bonorum et Malorum' eserinden turetilmistir. Anlamsiz gorunse de Latince kelime kaliplari kullanarak doğal metin akisi simule eder."
       },
       {
         "question": "Neden Lorem Ipsum rastgele metin yerine kullanılır?",
-        "answer": "Lorem Ipsum'un dogal dil kaliplarina benzer kelime uzunluklari ve cumle yapilari vardir. Tamamen rastgele metin tekrarci ve yapay görünür, dikkat dagitir. Lorem Ipsum ise okunabilir gorunumde yer tutucu metin saglar, boylece izleyiciler içerik yerine tasarima odaklanabilir."
+        "answer": "Lorem Ipsum'un doğal dil kaliplarina benzer kelime uzunluklari ve cümle yapilari vardır. Tamamen rastgele metin tekrarci ve yapay görünür, dikkat dagitir. Lorem Ipsum ise okunabilir gorunumde yer tutucu metin sağlar, boylece izleyiciler içerik yerine tasarima odaklanabilir."
       },
       {
-        "question": "Lorem Ipsum gercek Latince mi?",
-        "answer": "Kismin. Lorem Ipsum Cicero'nun MO 45 yilinda yazdigi 'de Finibus Bonorum et Malorum' (Iyi ve Kotunun Sinirlari Hakkinda) eserinden turetilmistir. Ancak zaman içinde kelimeler degistirilmis, eklenimis ve cikarilmistir, bu nedenle gercek anlamli bir Latince metin degildir."
+        "question": "Lorem Ipsum gerçek Latince mi?",
+        "answer": "Kismin. Lorem Ipsum Cicero'nun MO 45 yilinda yazdigi 'de Finibus Bonorum et Malorum' (Iyi ve Kotunun Sinirlari Hakkinda) eserinden turetilmistir. Ancak zaman içinde kelimeler degistirilmis, eklenimis ve cikarilmistir, bu nedenle gerçek anlamli bir Latince metin degildir."
       },
       {
         "question": "Web tasariminda Lorem Ipsum kullanmak uygun mu?",
-        "answer": "Evet, tasarim ve gelistirme asamasinda tamamen uygundur. Ancak yayinlanan web sitelerinde Lorem Ipsum kesinlikle bulunmamalidir. Arama motorlari yer tutucu metni dusuk kaliteli içerik olarak degerlendirebilir ve profesyonel olmayan bir izlenim yaratir."
+        "answer": "Evet, tasarım ve geliştirme asamasinda tamamen uygundur. Ancak yayinlanan web sitelerinde Lorem Ipsum kesinlikle bulunmamalidir. Arama motorlari yer tutucu metni düşük kaliteli içerik olarak degerlendirebilir ve profesyonel olmayan bir izlenim yaratir."
       },
       {
         "question": "Lorem Ipsum'a alternatifler nelerdir?",
-        "answer": "Populer alternatifler arasinda Hipster Ipsum, Bacon Ipsum, Cupcake Ipsum gibi tematik yer tutucu metinler bulunur. Daha ciddi projeler için gercek içerikle benzer uzunlukta ornek metinler kullanmak tasarim doğrulamasi için daha etkili olabilir."
+        "answer": "Populer alternatifler arasında Hipster Ipsum, Bacon Ipsum, Cupcake Ipsum gibi tematik yer tutucu metinler bulunur. Daha ciddi projeler için gerçek içerikle benzer uzunlukta ornek metinler kullanmak tasarım doğrulamasi için daha etkili olabilir."
       },
       {
         "question": "Olusturulan Lorem Ipsum metninde telif hakki var mi?",
-        "answer": "Hayir, Lorem Ipsum kamu malıdir ve herhangi bir telif hakki kisitlamasi yoktur. Herhangi bir projede ticari veya kisisel amacla serbestce kullanabilirsiniz. Zaten yuzyllardir yaygin olarak kullanilmaktadir."
+        "answer": "Hayir, Lorem Ipsum kamu malıdir ve herhangi bir telif hakki kisitlamasi yoktur. Herhangi bir projede ticari veya kisisel amacla serbestce kullanabilirsiniz. Zaten yuzyllardir yaygın olarak kullanilmaktadir."
       }
     ]
   },
   "uuid-generator": {
     "howToUse": [
-      "UUID turunuzu secin. UUID v4 (rastgele) en yaygin kullanilani olup tamamen rastgele degerler uretir.",
-      "Olusturmak istediginiz UUID sayisini belirleyin. Toplu olarak birden fazla UUID ayni anda olusturulabilir.",
-      "Olustur dugmesine tıklayın ve aninda benzersiz tanmilayicilar alin.",
-      "UUID'leri tek tikla panoya kopyalayın veya liste olarak indirin."
+      "UUID turunuzu seçin. UUID v4 (rastgele) en yaygın kullanilani olup tamamen rastgele degerler uretir.",
+      "Olusturmak istediğiniz UUID sayısını belirleyin. Toplu olarak birden fazla UUID aynı anda olusturulabilir.",
+      "Olustur düğmesine tıklayın ve anında benzersiz tanmilayicilar alin.",
+      "UUID'leri tek tıkla panoya kopyalayın veya liste olarak indirin."
     ],
     "whyUse": [
-      "UUID'ler dagitik sistemlerde merkezi bir koordinasyon olmadan benzersiz tanimlayicilar oluşturmak için standart yontemdir. Veritabani kayitlari, API kaynaklari ve dosya adlandirma için idealdir.",
+      "UUID'ler dağıtık sistemlerde merkezi bir koordinasyon olmadan benzersiz tanimlayicilar oluşturmak için standart yontemdir. Veritabani kayitlari, API kaynaklari ve dosya adlandirma için idealdir.",
       "Otomatik artan sayisal ID'lerin aksine UUID'ler tahmin edilemez, bu da onlari güvenlik acisindan daha uygun kilar. Saldiranlar mevcut kaynaklari tahmin edemez.",
-      "UUID'ler 128 bitlik olup pratik olarak cakisma olasiligi yok denecek kadar dusuktur. Milyarlarca UUID olusturulsa bile ayni UUID'nin tekrar olusma olasiligi astronomik olarak küçüktur.",
-      "Tum UUID oluşturma tarayıcınızda yerel olarak gerçekleşir. Olusturulan degerler hicbir sunucuya gonderilmez."
+      "UUID'ler 128 bitlik olup pratik olarak cakisma olasiligi yok denecek kadar dusuktur. Milyarlarca UUID olusturulsa bile aynı UUID'nin tekrar olusma olasiligi astronomik olarak küçüktur.",
+      "Tüm UUID oluşturma tarayıcınızda yerel olarak gerçekleşir. Olusturulan degerler hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "Cogu kullanim senaryosu için UUID v4 (rastgele) en iyi sectir. Basit, hizli ve yeterli benzersizlik saglar.",
-      "UUID'leri veritabanlarnda dizin olarak kullanırken performans etkisini goz onunde bulundurun. Bazi veritabanlari UUID dizinlemede sayisal ID'lere gore daha yavas olabilir.",
+      "Çoğu kullanım senaryosu için UUID v4 (rastgele) en iyi seçtir. Basit, hızlı ve yeterli benzersizlik sağlar.",
+      "UUID'leri veritabanlarnda dizin olarak kullanırken performans etkisini göz önünde bulundurun. Bazi veritabanlari UUID dizinlemede sayisal ID'lere göre daha yavas olabilir.",
       "UUID formatinda tireleri (550e8400-e29b-41d4-a716-446655440000) korumaniz okunabilirlik için önerilir, ancak tiresiz format da geçerlidir.",
-      "Zaman damgasi içeren UUID v1 gizlilik endiselerine yol açabilir cunku oluşturma zamani ve MAC adresi bilgisi içerir."
+      "Zaman damgasi içeren UUID v1 gizlilik endiselerine yol açabilir çünkü oluşturma zamanı ve MAC adresi bilgisi içerir."
     ],
     "faqs": [
       {
@@ -464,488 +464,488 @@
         "answer": "UUID (Universally Unique Identifier) 128 bitlik bir tanimlayicidir ve 32 onaltlik rakam ile 4 tireden olusan standart bir formata sahiptir: 550e8400-e29b-41d4-a716-446655440000. Dagitik sistemlerde merkezi bir otorite olmadan benzersiz tanimlayicilar oluşturmak için tasarlanmistir."
       },
       {
-        "question": "UUID turleri arasindaki fark nedir?",
-        "answer": "UUID v1 zaman damgasi ve MAC adresi kullanır. UUID v3 ve v5 isim ve ad alani kullanarak deterministik UUID'ler oluşturur (v3 MD5, v5 SHA-1 kullanır). UUID v4 tamamen rastgeledir ve en yaygin kullanilanidir. Her tur farkli kullanim senaryolari için optimize edilmistir."
+        "question": "UUID turleri arasındaki fark nedir?",
+        "answer": "UUID v1 zaman damgasi ve MAC adresi kullanır. UUID v3 ve v5 isim ve ad alani kullanarak deterministik UUID'ler oluşturur (v3 MD5, v5 SHA-1 kullanır). UUID v4 tamamen rastgeledir ve en yaygın kullanilanidir. Her tur farkli kullanım senaryolari için optimize edilmistir."
       },
       {
-        "question": "Iki ayni UUID olusturulabilir mi?",
-        "answer": "Teorik olarak mumkun olsa da pratikte yok denecek kadar dusuk bir olasiliktr. UUID v4 için 2^122 olasi deger vardir. Cakisma olasiligi için saniyede 1 milyar UUID olusturseniz bile tekrar olusma için yaklasik 85 yil beklemeniz gerekir ve bu bile %50 olasiliktir."
+        "question": "Iki aynı UUID olusturulabilir mi?",
+        "answer": "Teorik olarak mumkun olsa da pratikte yok denecek kadar düşük bir olasiliktr. UUID v4 için 2^122 olasi değer vardır. Cakisma olasiligi için saniyede 1 milyar UUID olusturseniz bile tekrar olusma için yaklaşık 85 yil beklemeniz gerekir ve bu bile %50 olasiliktir."
       },
       {
         "question": "UUID veritabaninda birincil anahtar olarak kullanilmali mi?",
-        "answer": "Kullanilabilir ve dagitik sistemlerde özellikle faydalidir. Ancak UUID'ler sayisal ID'lere gore daha fazla depolama alani kaplar (16 bayt vs 4-8 bayt) ve rastgele yapilari nedeniyle dizin performansini olumsuz etkileyebilir. PostgreSQL'in uuid turunu veya MySQL'de BINARY(16) kullanmak alan tasarrufu saglar."
+        "answer": "Kullanilabilir ve dağıtık sistemlerde özellikle faydalidir. Ancak UUID'ler sayisal ID'lere göre daha fazla depolama alani kaplar (16 bayt vs 4-8 bayt) ve rastgele yapilari nedeniyle dizin performansini olumsuz etkileyebilir. PostgreSQL'in uuid turunu veya MySQL'de BINARY(16) kullanmak alan tasarrufu sağlar."
       },
       {
         "question": "UUID'ler güvenli midir?",
-        "answer": "UUID v4 kriptografik olarak güvenli rastgele sayi ureteci kullanır ve tahmin edilemez. Ancak UUID v1 zaman damgasi ve MAC adresi icerdiginden gizlilik endişlerine yol açabilir. Guvenlik kritik uygulamalarda UUID v4 tercih edilmelidir."
+        "answer": "UUID v4 kriptografik olarak güvenli rastgele sayı üreteci kullanır ve tahmin edilemez. Ancak UUID v1 zaman damgasi ve MAC adresi icerdiginden gizlilik endişlerine yol açabilir. Guvenlik kritik uygulamalarda UUID v4 tercih edilmelidir."
       },
       {
-        "question": "GUID ile UUID arasindaki fark nedir?",
-        "answer": "GUID (Globally Unique Identifier) ve UUID esasen ayni seydir. GUID terimi Microsoft ekosstemnde yaygin olarak kullanılırken, UUID RFC 4122 standardinda tanimlanan resmi terimdir. Her ikisi de 128 bitlik benzersiz tanimlayicilardir ve ayni format ve yapiya sahiptir."
+        "question": "GUID ile UUID arasındaki fark nedir?",
+        "answer": "GUID (Globally Unique Identifier) ve UUID esasen aynı seydir. GUID terimi Microsoft ekosstemnde yaygın olarak kullanılırken, UUID RFC 4122 standardinda tanimlanan resmi terimdir. Her ikisi de 128 bitlik benzersiz tanimlayicilardir ve aynı format ve yapiya sahiptir."
       }
     ]
   },
   "json-to-csv": {
     "howToUse": [
       "JSON verilerinizi giriş alanına yapıştırın. Veri, nesnelerden olusan bir dizi formatinda olmalidir. Her nesne bir satiri, nesne anahtarlari ise sutun basliklarini temsil eder.",
-      "Ayirici karakteri secin: virgul (,) standart CSV için, noktali virgul (;) Avrupa Excel formati için veya sekme karakteri TSV formatai için.",
-      "Donustur dugmesine tiklayarak JSON'unuzu CSV formatina dönüştürün. Arac otomatik olarak nesne anahtarlarindan sutun basliklarini cikarir ve tum degerleri satirlara hizalar.",
-      "CSV ciktisini on izleyin, ardindan panoya kopyalayın veya .csv dosyasi olarak indirerek Excel, Google Sheets veya veri analizi araclarinda kullanin."
+      "Ayirici karakteri seçin: virgül (,) standart CSV için, noktali virgül (;) Avrupa Excel formati için veya sekme karakteri TSV formatai için.",
+      "Dönüştür düğmesine tıklayarak JSON'unuzu CSV formatina dönüştürün. Araç otomatik olarak nesne anahtarlarindan sutun basliklarini çıkarır ve tüm değerleri satirlara hizalar.",
+      "CSV çıktısını on izleyin, ardindan panoya kopyalayın veya .csv dosyasi olarak indirerek Excel, Google Sheets veya veri analizi araçlarında kullanin."
     ],
     "whyUse": [
       "Veri analistleri API yanıtlarıni ve JSON veri kumelerini Excel, Google Sheets, R, Python pandas ve SQL veritabanlari gibi araclarda analiz için siklikla CSV formatina dönüştürmek zorundadir.",
-      "Teknik olmayan paydlaslar genellikle verileri tablolama formtinda talep eder. JSON'u CSV'ye dönüştürmek veritabani disa aktarımlarıni, analitik verilerini ve API sonuçlarıni kolayca paylasmanzii saglar.",
-      "Donusturucu ic ice JSON yapilarini duz bir CSV formatina donusturerek saatlerce suren manuel veri yeniden yapılandırma isinizi otomatiklestirir.",
-      "Tum dönüşüm tarayıcınızda gerçekleşir. API'lerinizden, veritabanlarinizdan ve uygulamalarinizdan gelen hassas veriler dönüşüm sirasinda hicbir sunucuya gonderilmez."
+      "Teknik olmayan paydlaslar genellikle verileri tablolama formtinda talep eder. JSON'u CSV'ye dönüştürmek veritabani disa aktarımlarıni, analitik verilerini ve API sonuçlarıni kolayca paylasmanzii sağlar.",
+      "Donusturucu iç içe JSON yapilarini düz bir CSV formatina donusturerek saatlerce suren manuel veri yeniden yapılandırma isinizi otomatiklestirir.",
+      "Tüm dönüşüm tarayıcınızda gerçekleşir. API'lerinizden, veritabanlarinizdan ve uygulamalarinizdan gelen hassas veriler dönüşüm sırasında hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "JSON'unuzun düzgün biçimlendirinilmis bir nesne dizisi oldugundan emin olun. Tek nesneler veya ic ice yapilar donustumeden once yeniden yapilandirilmasi gerekebilir.",
-      "Verileriniz degerler içinde virgul iceriyorsa (adresler gibi), dönüştürücü CSV yapisini korumak için bu alanlari otomatik olarak tırnak içine alir.",
-      "Avrupa bolgeleri için ayiriciyi noktali virgule gecirin cunku bircok Avrupa yerel ayarinda Excel alan ayirici olarak noktali virgul bekler.",
-      "Donusturmeden once JSON'unuzu JSON formatlayici aracimizla doğrulayın. Gecersiz JSON dönüşüm hatalisna yol acar."
+      "JSON'unuzun düzgün biçimlendirinilmis bir nesne dizisi olduğundan emin olun. Tek nesneler veya iç içe yapilar donustumeden önce yeniden yapilandirilmasi gerekebilir.",
+      "Verileriniz degerler içinde virgül iceriyorsa (adresler gibi), dönüştürücü CSV yapısını korumak için bu alanlari otomatik olarak tırnak içine alir.",
+      "Avrupa bolgeleri için ayiriciyi noktali virgule gecirin çünkü birçok Avrupa yerel ayarinda Excel alan ayirici olarak noktali virgül bekler.",
+      "Donusturmeden önce JSON'unuzu JSON formatlayici aracimizla doğrulayın. Gecersiz JSON dönüşüm hatalisna yol açar."
     ],
     "faqs": [
       {
         "question": "JSON'u neden CSV'ye dönüştürmeliyim?",
-        "answer": "CSV, tablolama programlari (Excel, Google Sheets), veritabanlari ve veri analizi araclari tarafindan evrensel olarak desteklenir. API'ler ve modern uygulamlar genellikle JSON formatinda veri dondurur, ancak veri analizi, raporlama ve teknik olmayan paydaislarla paylasim için CSV daha uygun ve erisilebilir bir formattir."
+        "answer": "CSV, tablolama programlari (Excel, Google Sheets), veritabanlari ve veri analizi araçları tarafindan evrensel olarak desteklenir. API'ler ve modern uygulamlar genellikle JSON formatinda veri dondurur, ancak veri analizi, raporlama ve teknik olmayan paydaislarla paylasim için CSV daha uygun ve erisilebilir bir formattir."
       },
       {
         "question": "Ic ice JSON yapilari CSV'ye donusturulabilir mi?",
-        "answer": "Evet, dönüştürücü ic ice nesneleri duzlestirerek CSV'ye donusturur. Ic ice anahtar yollari nokta notasyonuyla (ornegin address.city, address.country) sutun basliklarinda gosterilir. Cok derin veya karmaşık ic ice yapilar için once JSON'u yeniden yapılandırmaniz daha iyi sonuclar verebilir."
+        "answer": "Evet, dönüştürücü iç içe nesneleri duzlestirerek CSV'ye donusturur. Ic ice anahtar yollari nokta notasyonuyla (ornegin address.city, address.country) sutun basliklarinda gosterilir. Çok derin veya karmaşık iç içe yapilar için önce JSON'u yeniden yapılandırmaniz daha iyi sonuclar verebilir."
       },
       {
-        "question": "CSV dosyasini Excel'de nasil acarim?",
-        "answer": "CSV dosyasini cift tiklayarak doğrudan Excel'de açabilirsiniz. Turk Excel ayarlariyla calisiyorsaniz alan ayirici olarak noktali virgul (;) kullanmaniz gerekebilir. Veya Excel'de Veri sekmesinden Metinden/CSV'den ice aktarma secenegini kullanarak kodlama ve ayirici ayarlarini elle belirleyebilirsiniz."
+        "question": "CSV dosyasini Excel'de nasıl acarim?",
+        "answer": "CSV dosyasini çift tıklayarak doğrudan Excel'de açabilirsiniz. Türk Excel ayarlariyla calisiyorsaniz alan ayirici olarak noktali virgül (;) kullanmaniz gerekebilir. Veya Excel'de Veri sekmesinden Metinden/CSV'den ice aktarma secenegini kullanarak kodlama ve ayirici ayarlarini elle belirleyebilirsiniz."
       },
       {
-        "question": "Büyük JSON dosyalarıni donusturebilir miyim?",
-        "answer": "Evet, dönüştürücü tarayıcınızda calisitr ve modern tarayıcılar büyük veri kumelerini etkili bir sekilde işleyebilir. Ancak cok büyük dosyalar (10MB+) için tarayıcı bellegi yeterli olmayabilir. Bu durumda veriyi daha küçük parcalara bolmeniz önerilir."
+        "question": "Büyük JSON dosyalarını donusturebilir miyim?",
+        "answer": "Evet, dönüştürücü tarayıcınızda calisitr ve modern tarayıcılar büyük veri kumelerini etkili bir şekilde işleyebilir. Ancak çok büyük dosyalar (10MB+) için tarayıcı bellegi yeterli olmayabilir. Bu durumda veriyi daha küçük parcalara bolmeniz önerilir."
       },
       {
-        "question": "CSV'de Turkce karakterler bozuluyor, ne yapmaliyim?",
-        "answer": "Bu genellikle karakter kodlamasi sorunudur. Indirdginiz CSV dosyasini Excel'de acarken UTF-8 kodlamasi secin. Google Sheets genellikle UTF-8'i otomatik algılar. Sorun devam ederse dosyayi Not Defteri ile acip UTF-8 olarak yeniden kaydedin."
+        "question": "CSV'de Türkçe karakterler bozuluyor, ne yapmaliyim?",
+        "answer": "Bu genellikle karakter kodlamasi sorunudur. Indirdginiz CSV dosyasini Excel'de acarken UTF-8 kodlamasi seçin. Google Sheets genellikle UTF-8'i otomatik algılar. Sorun devam ederse dosyayi Not Defteri ile acip UTF-8 olarak yeniden kaydedin."
       },
       {
-        "question": "Donusum sirasinda verilerim guvende mi?",
-        "answer": "Evet, tum dönüşüm tarayıcınızda yerel olarak gerçekleşir. JSON verileriniz hicbir sunucuya gonderilmez, depolanmaz veya kaydedilmez. Bu, hassas is verileri, kisisel bilgiler ve gizli API yanıtları için tamamen güvenlidir."
+        "question": "Donusum sırasında verilerim güvende mi?",
+        "answer": "Evet, tüm dönüşüm tarayıcınızda yerel olarak gerçekleşir. JSON verileriniz hiçbir sunucuya gonderilmez, depolanmaz veya kaydedilmez. Bu, hassas is verileri, kisisel bilgiler ve gizli API yanıtları için tamamen güvenlidir."
       }
     ]
   },
   "markdown-to-html": {
     "howToUse": [
-      "Markdown metninizi sol taraftaki giriş alanına yapıştırın veya doğrudan yazin. Basliklar, listeler, baglantilar, görseller ve kod bloklari dahil tum standart Markdown soz dizimi desteklenir.",
-      "Donusum otomatik olarak gerçekleşir - yazdiginiz anda HTML ciktisi sag tarafta guncellenir. Gercek zamanli on izleme sayesinde sonucu aninda gorebilirsiniz.",
-      "HTML ciktisini inceleyerek bicmlendirmenin beklenildigi gibi oldugundna emin olun. Basliklar, listeler, tablolar ve kod bloklari doğrulamaya özellikle dikkat edin.",
+      "Markdown metninizi sol taraftaki giriş alanına yapıştırın veya doğrudan yazin. Basliklar, listeler, bağlantılar, görseller ve kod bloklari dahil tüm standart Markdown söz dizimi desteklenir.",
+      "Donusum otomatik olarak gerçekleşir - yazdiginiz anda HTML ciktisi sag tarafta güncellenir. Gerçek zamanlı on izleme sayesinde sonucu anında gorebilirsiniz.",
+      "HTML çıktısını inceleyerek bicmlendirmenin beklenildigi gibi oldugundna emin olun. Basliklar, listeler, tablolar ve kod bloklari doğrulamaya özellikle dikkat edin.",
       "Olusturulan HTML'i kopyalayın ve web sayfaniza, blog yazniza veya e-posta sabonunuza yapıştırın."
     ],
     "whyUse": [
-      "Markdown yazmasi kolay ve okunabilir bir bicmlendirme dilidir, ancak web sayfalarinda goruntlenmek için HTML'e donusturulmesi gerekir. Bu arac aninda dönüşüm saglar.",
+      "Markdown yazmasi kolay ve okunabilir bir biçimlendirme dilidir, ancak web sayfalarinda goruntlenmek için HTML'e donusturulmesi gerekir. Bu araç anında dönüşüm sağlar.",
       "Blog yazarlari ve içerik oluşturucular genellikle Markdown ile yazar ve HTML olarak yayinlar. Bu is akisini hizlandirmak için güvenilir bir dönüştürücü gereklidir.",
-      "GitHub README dosyaları, teknik belgeler ve wiki sayfalari Markdown kullanır. Bu içerikleri web sayfalarianfda goruntlemek için HTML'e donusturm gerekir.",
-      "Tum dönüşüm tarayıcınızda gerçekleşir, içerikleriniz hicbir sunucuya gonderilmez."
+      "GitHub README dosyaları, teknik belgeler ve wiki sayfaları Markdown kullanır. Bu içerikleri web sayfalarianfda goruntlemek için HTML'e donusturm gerekir.",
+      "Tüm dönüşüm tarayıcınızda gerçekleşir, içerikleriniz hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "Markdown basliklarinda # isareti ile baslik metni arasinda bosluk birakin: '# Baslik' dogru, '#Baslik' yanlistir.",
+      "Markdown basliklarinda # isareti ile başlık metni arasında boşluk bırakın: '# Baslik' doğru, '#Baslik' yanlistir.",
       "Tablolar için boru (|) karakteri ve tire (-) kullanin. Hucre içeriklerini hizalamak için iki nokta (:) kullnabilirsiniz.",
-      "Kod bloklari için uc geri tırnak (```) kullanin ve dil adini belirterek soz dizimi vurgulamasi ekleyin.",
-      "Gorseller için ![alt metin](url) soz dizimini kullanin ve her zaman anlamli alt metin ekleyin."
+      "Kod bloklari için üç geri tırnak (```) kullanin ve dil adını belirterek söz dizimi vurgulaması ekleyin.",
+      "Gorseller için ![alt metin](url) söz dizimini kullanin ve her zaman anlamli alt metin ekleyin."
     ],
     "faqs": [
       {
         "question": "Markdown nedir?",
-        "answer": "Markdown, 2004 yilinda John Gruber tarafindan olusturulan hafif bir bicmlendirme dilidir. Duz metin bicmlendirme soz dizimi kullanarak yapilandirilms belgeler oluşturmayi saglar. Baslik, liste, baglanti, görsel, kalin/italik metin ve kod bloklari gibi HTML ogelrrni basit isretlerle tanimlamaniza olanak tanir."
+        "answer": "Markdown, 2004 yilinda John Gruber tarafindan olusturulan hafif bir biçimlendirme dilidir. Duz metin biçimlendirme söz dizimi kullanarak yapilandirilms belgeler oluşturmayi sağlar. Baslik, liste, bağlantı, görsel, kalin/italik metin ve kod bloklari gibi HTML ogelrrni basit isretlerle tanimlamaniza olanak tanir."
       },
       {
         "question": "Markdown HTML'den neden daha kolay?",
-        "answer": "Markdown'da baslik için '# Baslik' yazarken HTML'de '<h1>Baslik</h1>' yazmak gerekir. Kalin metin için '**metin**' vs '<strong>metin</strong>'. Markdown daha az karakter gerektirir, okunabilir kalir ve yazi akisini bozmaz. Ancak Markdown, HTML'in tum özelliklerini desteklemez."
+        "answer": "Markdown'da başlık için '# Baslik' yazarken HTML'de '<h1>Baslik</h1>' yazmak gerekir. Kalin metin için '**metin**' vs '<strong>metin</strong>'. Markdown daha az karakter gerektirir, okunabilir kalir ve yazi akisini bozmaz. Ancak Markdown, HTML'in tüm özelliklerini desteklemez."
       },
       {
         "question": "GitHub Flavored Markdown (GFM) destekleniyor mu?",
-        "answer": "Evet, aracimiz standart Markdown'a ek olarak GitHub Flavored Markdown özelliklerini de destekler: tablolar, gorev listeleri (kontrol kutulari), ustui cizili metin, otomatik baglanti algialama ve cerceveli kod bloklari ile soz dizimi vurgulamsi."
+        "answer": "Evet, aracımız standart Markdown'a ek olarak GitHub Flavored Markdown özelliklerini de destekler: tablolar, gorev listeleri (kontrol kutulari), ustui cizili metin, otomatik bağlantı algialama ve cerceveli kod bloklari ile söz dizimi vurgulamsi."
       },
       {
         "question": "Olusturulan HTML'de inline stil var mi?",
-        "answer": "Arac temiz, semantik HTML uretir. Inline stiller yerine standart HTML etiketleri (h1-h6, p, ul, ol, a, img, code, pre, table vb.) kullanılır. Gorsel bicmlendirme için kendi CSS dosyanizi veya cerceve stillerini uyglayabilirsiniz."
+        "answer": "Araç temiz, semantik HTML uretir. Inline stiller yerine standart HTML etiketleri (h1-h6, p, ul, ol, a, img, code, pre, table vb.) kullanılır. Görsel biçimlendirme için kendi CSS dosyanizi veya cerceve stillerini uyglayabilirsiniz."
       },
       {
         "question": "LaTeX veya matematiksel formuller destekleniyor mu?",
-        "answer": "Standart Markdown LaTeX veya matematiksel formulleri desteklemez. Bu tur içerikler için MathJax veya KaTeX gibi ek kutuaphneler gereklidir. Aracimiz standart Markdown ve GFM soz dizimini destekler."
+        "answer": "Standart Markdown LaTeX veya matematiksel formulleri desteklemez. Bu tur içerikler için MathJax veya KaTeX gibi ek kutuaphneler gereklidir. Aracimiz standart Markdown ve GFM söz dizimini destekler."
       },
       {
-        "question": "Markdown'da tablo nasil olusturulur?",
-        "answer": "Boru karakterleri (|) ile sutunlari, tireler (-) ile baslik ayriciyi belirleyin. Ornek: '| Baslik 1 | Baslik 2 |' ve altienda '|---|---|' ile baslayni. Hizalama için iki nokta kullanin: ':---' sola, ':---:' ortaya, '---:' saga hizalar."
+        "question": "Markdown'da tablo nasıl olusturulur?",
+        "answer": "Boru karakterleri (|) ile sutunlari, tireler (-) ile başlık ayriciyi belirleyin. Ornek: '| Baslik 1 | Baslik 2 |' ve altienda '|---|---|' ile baslayni. Hizalama için iki nokta kullanin: ':---' sola, ':---:' ortaya, '---:' saga hizalar."
       }
     ]
   },
   "html-minifier": {
     "howToUse": [
       "HTML kodunuzu giriş alanına yapıştırın. Tam HTML belgelerini veya HTML parcalarini işleyebilirsiniz.",
-      "Küçültme seceneklerini belirleyin: bosluk kaldirma, yorum silme, bos oznitelik kaldirma ve optional etiket kaldirma gibi seenekleri etkinlestirin.",
-      "Küçült dugmesine tıklayın ve optimize edilmis HTML'i aninda alin. Orijinal ve küçültülmüş boyutlar karsilastirilir.",
-      "Küçültulmus HTML'i kopyalayın ve uretim web sitenizde kullanin."
+      "Küçültme seceneklerini belirleyin: boşluk kaldirma, yorum silme, bos oznitelik kaldirma ve optional etiket kaldirma gibi seenekleri etkinlestirin.",
+      "Küçült düğmesine tıklayın ve optimize edilmis HTML'i anında alin. Orijinal ve küçültülmüş boyutlar karsilastirilir.",
+      "Küçültulmus HTML'i kopyalayın ve üretim web sitenizde kullanin."
     ],
     "whyUse": [
-      "HTML küçültme dosya boyutunu %20-50 azaltabilir, sayfa yuklme sürelerini önemli olcude iyilestrir ve bant genisligi maliyetlerini dusurur.",
-      "Google sayfa hizini sıralama faktoru olarak değerlendirir. Küçültulmus HTML daha hizli yuklenir, Core Web Vitals puanlarini iyileştirir ve SEO siralamnizi yukselttir.",
-      "Mobil kullanıcılar için bant genisligi sinirli olabilir. Küçültulmus HTML daha az veri aktarimi gerektirir, mobil deneyimi iyileştirir.",
-      "Tum islem tarayıcınızda gerçekleşir, HTML kodunuz hicbir sunucuya gonderilmez."
+      "HTML küçültme dosya boyutunu %20-50 azaltabilir, sayfa yuklme sürelerini önemli ölçüde iyilestrir ve bant genişliği maliyetlerini dusurur.",
+      "Google sayfa hizini sıralama faktoru olarak değerlendirir. Küçültulmus HTML daha hızlı yuklenir, Core Web Vitals puanlarini iyileştirir ve SEO siralamnizi yukselttir.",
+      "Mobil kullanıcılar için bant genişliği sinirli olabilir. Küçültulmus HTML daha az veri aktarimi gerektirir, mobil deneyimi iyileştirir.",
+      "Tüm işlem tarayıcınızda gerçekleşir, HTML kodunuz hiçbir sunucuya gonderilmez."
     ],
     "tips": [
       "Küçültmeyi her zaman build veya deploy surecinin bir parcasi olarak otomtikletierin. Manuel küçültme hataya aciktir ve tekrarlayan bir istir.",
-      "Küçültmeden once HTML'inizin geçerli oldugundan emin olun. Hatali HTML küçültme sirasinda beklenmedik sonuclara yol açabilir.",
-      "Uretim oncesi ve sonrasi dosya boyutlarinii karsilastirarak tasrrufu olcun. Bu bilgi performans optimizasyonu raporlari için degerlidir.",
-      "Inline JavaScript ve CSS icerrn HTML için JavaScript ve CSS küçültmeyi de etkinlestiren araclari birlikte kullanin."
+      "Küçültmeden önce HTML'inizin geçerli olduğundan emin olun. Hatali HTML küçültme sırasında beklenmedik sonuclara yol açabilir.",
+      "Üretim oncesi ve sonrasi dosya boyutlarinii karsilastirarak tasrrufu olcun. Bu bilgi performans optimizasyonu raporlari için degerlidir.",
+      "Inline JavaScript ve CSS icerrn HTML için JavaScript ve CSS küçültmeyi de etkinlestiren araçları birlikte kullanin."
     ],
     "faqs": [
       {
         "question": "HTML küçültme nedir?",
-        "answer": "HTML küçültme, HTML dosyalarındinn işlevselligii degistirmeden gereksiz karakterleri kaldirma islemdir. Bosluklar, satir sonlari, yorumlar, gereksiz tırnak işaretleri ve isteeg bagli kapatma etiketleri kaldiriliarak dosya boyutu azaltilir. Sonuc tarayıcı tarafindan ayni sekilde yorumlanir ancak daha küçük dosya boyutuna sahiptir."
+        "answer": "HTML küçültme, HTML dosyalarındinn işlevselligii degistirmeden gereksiz karakterleri kaldirma islemdir. Bosluklar, satir sonlari, yorumlar, gereksiz tırnak işaretleri ve isteeg bağlı kapatma etiketleri kaldiriliarak dosya boyutu azaltilir. Sonuç tarayıcı tarafindan aynı şekilde yorumlanir ancak daha küçük dosya boyutuna sahiptir."
       },
       {
         "question": "HTML küçültme sayfa hizini ne kadar iyileştirir?",
-        "answer": "Tipik bir HTML belgesi için küçültme %20-50 dosya boyutu azaltmasi saglayabilir. Gercek hiz iyilestirmesi icerige, sunucu yapılandırmasina ve kullanilan diger optimizasyonlara (sıkistirma, onbellekleme) baglidir. Gzip ile birlikte kullannildiginda kazanım daha belirgin olur."
+        "answer": "Tipik bir HTML belgesi için küçültme %20-50 dosya boyutu azaltmasi saglayabilir. Gerçek hiz iyilestirmesi içeriğe, sunucu yapılandırmasina ve kullanilan diğer optimizasyonlara (sıkistirma, onbellekleme) bağlıdır. Gzip ile birlikte kullannildiginda kazanım daha belirgin olur."
       },
       {
         "question": "Küçültme HTML'in çalışmasini etkiler mi?",
-        "answer": "Hayir, dogru yapildiginda küçültme HTML'in işlevsellignii degistirmez. Tarayicilar küçültülmüş HTML'i orijinalyle ayni sekilde yorumlar. Ancak inline JavaScript içeren HTML'de dikkatli olunmalidir cunku bazi küçültme işlemleri JavaScript'i bozabilir."
+        "answer": "Hayir, doğru yapıldığında küçültme HTML'in işlevsellignii degistirmez. Tarayicilar küçültülmüş HTML'i orijinalyle aynı şekilde yorumlar. Ancak inline JavaScript içeren HTML'de dikkatli olunmalidir çünkü bazi küçültme işlemleri JavaScript'i bozabilir."
       },
       {
         "question": "HTML yorumlarini kaldirmak güvenli mi?",
-        "answer": "Uretim HTML'inden yorumlari kaldirmak genellikle güvenlidir ve önerilir. Ancak kosullu yorumlar (Internet Explorer için) veya bazi JavaScript cercevelerinin kullandigi ozel yorumlar işlevsel olabilir. Bu tur yorumlarin korunmasi gerekebilir."
+        "answer": "Üretim HTML'inden yorumlari kaldirmak genellikle güvenlidir ve önerilir. Ancak kosullu yorumlar (Internet Explorer için) veya bazi JavaScript cercevelerinin kullandigi özel yorumlar işlevsel olabilir. Bu tur yorumlarin korunmasi gerekebilir."
       },
       {
         "question": "CSS ve JavaScript da kucultulmeli mi?",
-        "answer": "Evet, kesinlikle. HTML küçültme ile birlikte CSS ve JavaScript küçültme de uygulanmalidir. CSS küçültme dosya boyutunu %10-30, JavaScript küçültme %20-60 azaltabilir. Tum kaynaklarin birlikte kucultulmesi toplam sayfa boyutunda önemli azalma saglar."
+        "answer": "Evet, kesinlikle. HTML küçültme ile birlikte CSS ve JavaScript küçültme de uygulanmalidir. CSS küçültme dosya boyutunu %10-30, JavaScript küçültme %20-60 azaltabilir. Tüm kaynaklarin birlikte kucultulmesi toplam sayfa boyutunda önemli azalma sağlar."
       },
       {
         "question": "Küçültulmus HTML'i tekrar okunkli hale getirmek mumkun mu?",
-        "answer": "Evet, HTML bicmlendirme araclari küçültülmüş HTML'i tekrar girintili ve okunakli hale getirebilir. Ancak kaldirilan yorumlar ve bazi bosluk bilgileri geri yuklenemez. Bu nedenle her zaman kaynak HTML dosyalarınizi saklayin ve yalnizca uretim için küçültülmüş versiyonu kullanin."
+        "answer": "Evet, HTML biçimlendirme araçları küçültülmüş HTML'i tekrar girintili ve okunakli hale getirebilir. Ancak kaldirilan yorumlar ve bazi boşluk bilgileri geri yuklenemez. Bu nedenle her zaman kaynak HTML dosyalarınizi saklayin ve yalnizca üretim için küçültülmüş versiyonu kullanin."
       }
     ]
   },
   "css-minifier": {
     "howToUse": [
       "CSS kodunuzu giriş alanına yapıştırın. Harici stil dosyaları, embed stiller veya CSS parcalarini işleyebilirsiniz.",
-      "Küçült dugmesine tıklayın. Arac gereksiz bosluklar, yorumlar ve isteege bagli soz dizimini kaldirir.",
+      "Küçült düğmesine tıklayın. Araç gereksiz boşluklar, yorumlar ve isteege bağlı söz dizimini kaldirir.",
       "Orijinal ve küçültülmüş dosya boyutlarini karşılaştırın. Tasarruf yuzdesini gorun.",
-      "Küçültulmus CSS'i kopyalayın ve uretim web sitenizde kullanin."
+      "Küçültulmus CSS'i kopyalayın ve üretim web sitenizde kullanin."
     ],
     "whyUse": [
-      "CSS dosyalri genellikle sayfa yükleme zincirnde engelleme kaynagidir. Daha küçük CSS dosyaları daha hizli indirilir ve sayfanin daha cabuk goruntulenmesini saglar.",
-      "CSS küçültme dosya boyutunu %10-30 azaltabilir, bu da özellikle büyük stil dosyaları için önemli bant genisligi tasarrufu saglar.",
+      "CSS dosyalri genellikle sayfa yükleme zincirnde engelleme kaynagidir. Daha küçük CSS dosyaları daha hızlı indirilir ve sayfanin daha çabuk goruntulenmesini sağlar.",
+      "CSS küçültme dosya boyutunu %10-30 azaltabilir, bu da özellikle büyük stil dosyaları için önemli bant genişliği tasarrufu sağlar.",
       "Google PageSpeed Insights ve Lighthouse kucultulmmis kaynaklari onerrir. CSS küçültme performans puanlarinizi iyileştirir.",
-      "Tum islem tarayıcınızda yerel olarak gerçekleşir, CSS kodunuz guvenle işlenir."
+      "Tüm işlem tarayıcınızda yerel olarak gerçekleşir, CSS kodunuz guvenle işlenir."
     ],
     "tips": [
-      "Küçültmeyi build surecine entegre edin. PostCSS, cssnano veya benzer araclari CI/CD boru hattinizda kullanin.",
-      "Kaynak haritalarini (source maps) küçültülmüş CSS ile birlikte oluturun. Bu, uretim ortaminda hata ayiklamayi kolaylaştırır.",
-      "Kullanilmayan CSS kurallarini küçültmeden once kaldırın. PurgeCSS veya UnCSS gibi araclar kullanilayan stilleri tespit eder.",
+      "Küçültmeyi build surecine entegre edin. PostCSS, cssnano veya benzer araçları CI/CD boru hattinizda kullanin.",
+      "Kaynak haritalarini (source maps) küçültülmüş CSS ile birlikte oluturun. Bu, üretim ortamında hata ayiklamayi kolaylaştırır.",
+      "Kullanilmayan CSS kurallarini küçültmeden önce kaldırın. PurgeCSS veya UnCSS gibi araçlar kullanilayan stilleri tespit eder.",
       "CSS degiskenlerini ve modern CSS özelliklerini kullanarak temelden daha verimli stil dosyaları yazin."
     ],
     "faqs": [
       {
         "question": "CSS küçültme nedir?",
-        "answer": "CSS küçültme, CSS dosyalarındakn gereksiz karakterleri kaldirarak dosya boyutunu azaltma islemdir. Bosluklar, satir sonlari, yorumlar, gereksiz noktali virgiller ve isteege bagli soz dizimi kaldirilir. Sonuc tarayıcı tarafindan ayni sekilde yorumlanir ancak daha küçük dosya boyutuna sahiptir."
+        "answer": "CSS küçültme, CSS dosyalarındakn gereksiz karakterleri kaldirarak dosya boyutunu azaltma islemdir. Bosluklar, satir sonlari, yorumlar, gereksiz noktali virgiller ve isteege bağlı söz dizimi kaldirilir. Sonuç tarayıcı tarafindan aynı şekilde yorumlanir ancak daha küçük dosya boyutuna sahiptir."
       },
       {
         "question": "CSS küçültme stilleri bozar mi?",
-        "answer": "Hayir, dogru yapildiginda küçültme CSS'in görsel sonucunu degistirmez. Tarayicilar küçültülmüş CSS'i orijinalyle ayni sekilde uygular. Ancak bazi nadir durumlarda CSS hack'leri veya tarayıcıya ozel geciis cozumleri etkilenebilir."
+        "answer": "Hayir, doğru yapıldığında küçültme CSS'in görsel sonucunu degistirmez. Tarayicilar küçültülmüş CSS'i orijinalyle aynı şekilde uygular. Ancak bazi nadir durumlarda CSS hack'leri veya tarayıcıya özel geciis cozumleri etkilenebilir."
       },
       {
-        "question": "CSS küçültme ile CSS sıkıştırma (gzip) arasindaki fark nedir?",
-        "answer": "CSS küçültme dosyadakn gereksiz karakterleri fiziksel olarak kaldirir. Gzip ise dosyayi transfer sirasinda sikistirir ve tarayıcıda acar. Her ikisi birlikte kullanildiginda en iyi sonucu verir: once küçültme uygulanir, ardndan sunucu gzip ile sıkıştırılmış halini gonderir."
+        "question": "CSS küçültme ile CSS sıkıştırma (gzip) arasındaki fark nedir?",
+        "answer": "CSS küçültme dosyadakn gereksiz karakterleri fiziksel olarak kaldirir. Gzip ise dosyayi transfer sırasında sikistirir ve tarayıcıda açar. Her ikisi birlikte kullanıldığında en iyi sonucu verir: önce küçültme uygulanir, ardndan sunucu gzip ile sıkıştırılmış halini gonderir."
       },
       {
         "question": "Kaynak haritasi neden önemlidir?",
-        "answer": "Kaynak haritasi (source map) küçültülmüş CSS'i orijinal kaynak dosyayla eslesitirir. Uretim ortaminda hata ayiklarken tarayıcınin gelistirici araclari küçültülmüş kod yerine orijinal, okunakli kodu gosterir. Bu, uretim sorunlarinin tespitini önemli olcude kolaylaştırır."
+        "answer": "Kaynak haritasi (source map) küçültülmüş CSS'i orijinal kaynak dosyayla eslesitirir. Üretim ortamında hata ayiklarken tarayıcınin geliştirici araçları küçültülmüş kod yerine orijinal, okunakli kodu gösterir. Bu, üretim sorunlarinin tespitini önemli ölçüde kolaylaştırır."
       },
       {
-        "question": "Kullanilmayan CSS'i nasil tespit edebilirm?",
-        "answer": "Chrome DevTools Coverage sekmesi sayfa tarafindan kullanilan ve kullanilmayan CSS kurallarini gosterir. Otomatik tespit için PurgeCSS, UnCSS veya Tailwind CSS'in purge özelliği kullanilabilir. Kullanilmayan CSS'i kaldirmak küçültmeden daha büyük boyut azaltmisi saglayabilir."
+        "question": "Kullanilmayan CSS'i nasıl tespit edebilirm?",
+        "answer": "Chrome DevTools Coverage sekmesi sayfa tarafindan kullanilan ve kullanilmayan CSS kurallarini gösterir. Otomatik tespit için PurgeCSS, UnCSS veya Tailwind CSS'in purge özelliği kullanilabilir. Kullanilmayan CSS'i kaldirmak küçültmeden daha büyük boyut azaltmisi saglayabilir."
       },
       {
         "question": "CSS küçültme SEO için önemli mi?",
-        "answer": "Evet, CSS sayfa yükleme zincirinde render-engelleyici bir kaynaktir. Daha küçük CSS dosyaları daha hizli indirilir ve islenri, bu da First Contentful Paint (FCP) ve Largest Contentful Paint (LCP) gibi Core Web Vitals metriklerini iyileştirir. Google bu metrikleri sıralama faktoru olarak değerlendirir."
+        "answer": "Evet, CSS sayfa yükleme zincirinde render-engelleyici bir kaynaktir. Daha küçük CSS dosyaları daha hızlı indirilir ve islenri, bu da First Contentful Paint (FCP) ve Largest Contentful Paint (LCP) gibi Core Web Vitals metriklerini iyileştirir. Google bu metrikleri sıralama faktoru olarak değerlendirir."
       }
     ]
   },
   "text-to-speech": {
     "howToUse": [
-      "Seslendirilmesini istediginiz metni giriş alanına yazin veya yapıştırın.",
-      "Dil ve ses seceneklerini belirleyin. Farkli diller ve ses tonlari arasinda tercih yapabilirsiniz.",
-      "Konusma hizini ve ses seviyeini ihtiyaciniza gore ayarlayin. Yavas hiz dil ogrenimi için, normal hiz gunluk dinleme için uygundur.",
-      "Oynat dugmesine tiklayarak metni dinleyin. Ses dosyasini indirebilir veya farkli ayarlarla tekrar olusturabilirsiniz."
+      "Seslendirilmesini istediğiniz metni giriş alanına yazin veya yapıştırın.",
+      "Dil ve ses seceneklerini belirleyin. Farkli diller ve ses tonlari arasında tercih yapabilirsiniz.",
+      "Konusma hizini ve ses seviyeini ihtiyaciniza göre ayarlayin. Yavas hiz dil ogrenimi için, normal hiz günlük dinleme için uygundur.",
+      "Oynat düğmesine tıklayarak metni dinleyin. Ses dosyasini indirebilir veya farkli ayarlarla tekrar olusturabilirsiniz."
     ],
     "whyUse": [
-      "Gorme engelli kullanıcılar için web içeriğini sesli formata donusturerek erisilebilirliigi önemli olcude artirir.",
-      "Dil ogrencileri dogru telaffuzu duymak için metin-sesle ceviriden yararlanır. Farkli hiz ayarlari ogrenme seviyesine gore uyarlanabilir.",
-      "Icerik oluşturucullar blog yazilarini, makaleleri ve egitim materyallerini sesli formata donusturerek daha genis bir kitleye ulasabilir.",
-      "Coklu gorev yapan kullanıcılr metin içeriğini dinleyerek arac kulanirken, spor yaparken veya ev işleri sirasinda bilgiye erisebilir."
+      "Gorme engelli kullanıcılar için web içeriğini sesli formata donusturerek erisilebilirliigi önemli ölçüde artirir.",
+      "Dil ogrencileri doğru telaffuzu duymak için metin-sesle ceviriden yararlanır. Farkli hiz ayarlari ogrenme seviyesine göre uyarlanabilir.",
+      "İçerik oluşturucullar blog yazilarini, makaleleri ve egitim materyallerini sesli formata donusturerek daha geniş bir kitleye ulasabilir.",
+      "Coklu gorev yapan kullanıcılr metin içeriğini dinleyerek araç kulanirken, spor yaparken veya ev işleri sırasında bilgiye erisebilir."
     ],
     "tips": [
-      "Uzun metinler için paragraflari tek tek seslendirin. Bu, daha iyi ses kalitesi saglar ve dinleme deneyimini iyileştirir.",
-      "Konusma hizini dinleyici kitlenize gore ayarlayin. Egitim içeriği için daha yavas, genel bilgilendirme için normal hiz uygun olabilir.",
-      "Farkli sesleri deneyerek içerik turunuze en uygun olanini secin. Resmi içerik için profesyonel ton, gundelik içerik için samimi ton.",
-      "Noktalama işaretlerine dikkat edin. Dogru noktalama daha dogal duraklamalar ve vurgular oluşturur."
+      "Uzun metinler için paragraflari tek tek seslendirin. Bu, daha iyi ses kalitesi sağlar ve dinleme deneyimini iyileştirir.",
+      "Konusma hizini dinleyici kitlenize göre ayarlayin. Egitim içeriği için daha yavas, genel bilgilendirme için normal hiz uygun olabilir.",
+      "Farkli sesleri deneyerek içerik turunuze en uygun olanini seçin. Resmi içerik için profesyonel ton, gundelik içerik için samimi ton.",
+      "Noktalama işaretlerine dikkat edin. Doğru noktalama daha doğal duraklamalar ve vurgular oluşturur."
     ],
     "faqs": [
       {
-        "question": "Metin-sese cevirme (TTS) nasil çalışır?",
-        "answer": "TTS teknolojisi yazili metni insan sesine benzer konusmaya donusturur. Modern TTS sistemleri sinir aglari ve derin ogrenme kullanarak dogal ses kaliplairni, vurgu ve tonlamayi taklit eder. Tarayici tabanli TTS, cihaznizin yerlesik ses motorunu kullanır."
+        "question": "Metin-sese çevirme (TTS) nasıl çalışır?",
+        "answer": "TTS teknolojisi yazili metni insan sesine benzer konuşmaya donusturur. Modern TTS sistemleri sınır aglari ve derin ogrenme kullanarak doğal ses kaliplairni, vurgu ve tonlamayi taklit eder. Tarayici tabanli TTS, cihaznizin yerleşik ses motorunu kullanır."
       },
       {
         "question": "Hangi diller destekleniyor?",
-        "answer": "Desteklenen diller cihazinizin ve tarayıcınızin yerlesik ses motoruna baglidir. Cogu modern tarayıcı Ingilizce, Turkce, Almanca, Fransizca, Ispanyolca ve daha bircok dili destekler. Mevcut seslerin listesi secenekler menusunde goruntulenir."
+        "answer": "Desteklenen diller cihazinizin ve tarayıcınızin yerleşik ses motoruna bağlıdır. Çoğu modern tarayıcı Ingilizce, Türkçe, Almanca, Fransizca, Ispanyolca ve daha birçok dili destekler. Mevcut seslerin listesi seçenekler menusunde goruntulenir."
       },
       {
         "question": "Ses kalitesi ne kadar iyidir?",
-        "answer": "Ses kalitesi cihazinizin TTS motoruna baglidir. Modern isletim sistemleri (iOS, Android, Windows 11, macOS) yuksek kaliteli sinirsel sesler sunar. Eski sistemlerde ses daha robotik olabilir. En iyi sonuclar için cihazinizin en son TTS ses paketlerini yuklediginizden emin olun."
+        "answer": "Ses kalitesi cihazinizin TTS motoruna bağlıdır. Modern isletim sistemleri (iOS, Android, Windows 11, macOS) yüksek kaliteli sinirsel sesler sunar. Eski sistemlerde ses daha robotik olabilir. En iyi sonuclar için cihazinizin en son TTS ses paketlerini yuklediginizden emin olun."
       },
       {
         "question": "Olusturulan sesi indirebilir miyim?",
-        "answer": "Ses ciktisinii inidirme özelliği tarayıcı destegine baglidir. Bazi tarayıcılar ses dosyasini kaydetmeye izin verirken digerleri yalnizca gercek zamanli oynatma sunar. Uzun metinler için harici ses kayit yazilimi kullanarak TTS ciktisini kaydedebilirsiniz."
+        "answer": "Ses ciktisinii inidirme özelliği tarayıcı destegine bağlıdır. Bazi tarayıcılar ses dosyasini kaydetmeye izin verirken diğerleri yalnizca gerçek zamanlı oynatma sunar. Uzun metinler için harici ses kayit yazilimi kullanarak TTS çıktısını kaydedebilirsiniz."
       },
       {
-        "question": "Metin-sese cevirme ücretsiz mi?",
-        "answer": "Evet, aracimiz tamamen ücretsizdir. Cihazinizin yerlesik TTS motorunu kullandigindann ek maliyet yoktur. Metin uzunlugu veya kullanim sayisinda sınırlama yoktur. Tum islem cihazinizda yerel olarak gerçekleşir."
+        "question": "Metin-sese çevirme ücretsiz mi?",
+        "answer": "Evet, aracımız tamamen ücretsizdir. Cihazinizin yerleşik TTS motorunu kullandigindann ek maliyet yoktur. Metin uzunluğu veya kullanım sayısında sınırlama yoktur. Tüm işlem cihazinizda yerel olarak gerçekleşir."
       },
       {
         "question": "TTS erisilebilirlik için neden önemlidir?",
-        "answer": "TTS gorme engeli olan kullanıcılar için web içeriğine erisimin temel aracidir. Ayrica disleksi, ogrenme güçlügu ve dusuk okuma becerisi olan kullanıcılar için de faydalidir. WCAG erisilebirlk yonergeleri alternatif içerik formatlari olarak sesli secenekleri onerir."
+        "answer": "TTS görme engeli olan kullanıcılar için web içeriğine erisimin temel aracidir. Ayrica disleksi, ogrenme güçlügu ve düşük okuma becerisi olan kullanıcılar için de faydalidir. WCAG erisilebirlk yonergeleri alternatif içerik formatlari olarak sesli seçenekleri onerir."
       }
     ]
   },
   "pdf-compress": {
     "howToUse": [
-      "PDF dosyanizi yükleme alanına sürükleyip birakin veya dosya seciciden secin.",
-      "Sikistirma seviyesini secin: dusuk sıkıştırma yuksek kalite korur, yuksek sıkıştırma maksimum boyut azaltmasi saglar.",
-      "Sikistir dugmesine tıklayın ve işlemin tamamlanmasini bekleyin. Orijinal ve sıkıştırılmış dosya boyutlari karsilastirilir.",
+      "PDF dosyanizi yükleme alanına sürükleyip bırakın veya dosya seçiciden seçin.",
+      "Sikistirma seviyesini seçin: düşük sıkıştırma yüksek kalite korur, yüksek sıkıştırma maksimum boyut azaltmasi sağlar.",
+      "Sikistir düğmesine tıklayın ve işlemin tamamlanmasini bekleyin. Orijinal ve sıkıştırılmış dosya boyutlari karsilastirilir.",
       "Sikistirilmis PDF'i indirin. Belge içeriği, metin aranabilirlgi ve baglanitilar korunur."
     ],
     "whyUse": [
-      "E-posta hizmetleri genellikle 10-25MB ek boyutu siniri uygular. PDF sıkıştırma büyük belgeleri e-posta ile paylasmaniza olanak saglar.",
-      "Büyük PDF dosyaları web sitelerinden indirilmesi yavas olan içerikler oluşturur. Sikistirilmis PDF'ler daha hizli yuklenir ve kullanıcı deneyimnii iyileştirir.",
-      "Bulut depolama ve sunucu alani sinirli olabilir. PDF sıkıştırma depolama maliyetlerini azaltir ve dosya yonetimini kolaylaştırır.",
-      "Tum islem tarayıcınızda yerel olarak gerçekleşir. Hassas belgeler, sozlesmeler ve gizli dosyalar hicbir sunucuya gonderilmez."
+      "E-posta hizmetleri genellikle 10-25MB ek boyutu sınırı uygular. PDF sıkıştırma büyük belgeleri e-posta ile paylasmaniza olanak sağlar.",
+      "Büyük PDF dosyaları web sitelerinden indirilmesi yavas olan içerikler oluşturur. Sikistirilmis PDF'ler daha hızlı yuklenir ve kullanıcı deneyimnii iyileştirir.",
+      "Bulut depolama ve sunucu alani sinirli olabilir. PDF sıkıştırma depolama maliyetlerini azaltir ve dosya yönetimini kolaylaştırır.",
+      "Tüm işlem tarayıcınızda yerel olarak gerçekleşir. Hassas belgeler, sözleşmeler ve gizli dosyalar hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "Taranmis PDF'ler genellikle büyük görsel dosyalri içerir ve sıkıştırmadan en cok fayda goren dosya turleridir.",
-      "Sikistirma seviyesini belge turunue gore ayarlayin: metin agirlikli belgeler için yuksek sıkıştırma, görsel agirlikli belgeler için orta sıkıştırma uygun olabilir.",
-      "Sikistirmadan sonra belgeyi kontrol edin. Metinlerin okunakli, görsellerin yeterli kalitede ve baglantilarin çalışır oldugundan emin olun.",
-      "Arsivleme amacli PDF'ler için orijinal yuksek kaliteli versiyonu saklayin ve paylasim için sıkıştırılmış versiyonu kullanin."
+      "Taranmis PDF'ler genellikle büyük görsel dosyalri içerir ve sıkıştırmadan en çok fayda goren dosya turleridir.",
+      "Sikistirma seviyesini belge turunue göre ayarlayin: metin ağırlıklı belgeler için yüksek sıkıştırma, görsel ağırlıklı belgeler için orta sıkıştırma uygun olabilir.",
+      "Sikistirmadan sonra belgeyi kontrol edin. Metinlerin okunakli, görsellerin yeterli kalitede ve baglantilarin çalışır olduğundan emin olun.",
+      "Arsivleme amacli PDF'ler için orijinal yüksek kaliteli versiyonu saklayin ve paylasim için sıkıştırılmış versiyonu kullanin."
     ],
     "faqs": [
       {
         "question": "PDF sıkıştırma kaliteyi ne kadar etkiler?",
-        "answer": "Etkisi sıkıştırma seviyesine ve içerik turune baglidir. Metin agirlikli PDF'ler minimum kalite kaybiyla önemli boyut azaltmasi saglar. Gorsel agirlikli PDF'lerde yuksek sıkıştırma görsellerin çözünürlüğünu dusureblir. Dusuk ve orta sıkıştırma genellikle gozle gorulur fark yaratmaz."
+        "answer": "Etkisi sıkıştırma seviyesine ve içerik turune bağlıdır. Metin ağırlıklı PDF'ler minimum kalite kaybiyla önemli boyut azaltmasi sağlar. Görsel ağırlıklı PDF'lerde yüksek sıkıştırma görsellerin çözünürlüğünu dusureblir. Düşük ve orta sıkıştırma genellikle gozle gorulur fark yaratmaz."
       },
       {
-        "question": "PDF dosyalarım sıkıştırma sirasinda güvenli mi?",
-        "answer": "Evet, tamamen güvendedir. Tum PDF işleme tarayıcınızda yerel olarak gerçekleşir. Dosyalariniz hicbir sunucuya yüklenmez ve hicbir yerde depolanmaz. Bu, gizli is belgeleri, tibbi kayitlar ve hukuki dosyalar için tamamen güvenlidir."
+        "question": "PDF dosyalarım sıkıştırma sırasında güvenli mi?",
+        "answer": "Evet, tamamen güvendedir. Tüm PDF işleme tarayıcınızda yerel olarak gerçekleşir. Dosyalariniz hiçbir sunucuya yüklenmez ve hiçbir yerde depolanmaz. Bu, gizli is belgeleri, tibbi kayitlar ve hukuki dosyalar için tamamen güvenlidir."
       },
       {
         "question": "Ne kadar boyut azaltmasi bekleyebilirim?",
-        "answer": "Tipik bir PDF için %30-70 boyut azaltmasi beklenebilir. Gercek sonuc icerge baglidir: taranmis belgeler ve görsel agirlikli PDF'ler en yuksek orani verirken, zaten optimize edilmis veya metin agirlikli PDF'ler daha az azaltma gosterebilir."
+        "answer": "Tipik bir PDF için %30-70 boyut azaltmasi beklenebilir. Gerçek sonuç içerge bağlıdır: taranmis belgeler ve görsel ağırlıklı PDF'ler en yüksek orani verirken, zaten optimize edilmis veya metin ağırlıklı PDF'ler daha az azaltma gosterebilir."
       },
       {
         "question": "Sikistirma PDF'deki metni etkiler mi?",
-        "answer": "Hayir, metin içeriği ve metin aranabilirligi sikistrmadan etkilenmez. Metin vektorel formatta depolandigindan boyut degisikligine ugramaz. Sikistirma esasen görselleri ve gomulu yazitiplerini optimize eder."
+        "answer": "Hayir, metin içeriği ve metin aranabilirligi sikistrmadan etkilenmez. Metin vektorel formatta depolandigindan boyut değişikliğine ugramaz. Sikistirma esasen görselleri ve gomulu yazitiplerini optimize eder."
       },
       {
-        "question": "Sifre korumali PDF'leri sikistirabilir miyim?",
-        "answer": "Sifre korumali PDF'ler sıkıştırmadan once şifrenin girilmesi gerekebilir. Bazi şifreleme turleri dosyanin islenmesinni engeller. Bu durumda once şifreyi kaldırın, dosyayi sıkıştırın ve ardindan gerekiyorsa yeni sifre ekleyin."
+        "question": "Şifre korumali PDF'leri sikistirabilir miyim?",
+        "answer": "Şifre korumali PDF'ler sıkıştırmadan önce şifrenin girilmesi gerekebilir. Bazi şifreleme turleri dosyanin islenmesinni engeller. Bu durumda önce şifreyi kaldırın, dosyayi sıkıştırın ve ardindan gerekiyorsa yeni şifre ekleyin."
       },
       {
-        "question": "Birden fazla PDF'i ayni anda sikistirabilir miyim?",
-        "answer": "Mevcut surum bir seferde bir PDF dosyasi işler. Bu, her dosya için en uygun sıkıştırma ayarlarini secmenize ve sonucu kontrol etmenize olanak tanir. Birden fazla dosya için işlemi sirayla tekrarlayabilirsiniz."
+        "question": "Birden fazla PDF'i aynı anda sikistirabilir miyim?",
+        "answer": "Mevcut sürüm bir seferde bir PDF dosyasi işler. Bu, her dosya için en uygun sıkıştırma ayarlarini secmenize ve sonucu kontrol etmenize olanak tanir. Birden fazla dosya için işlemi sirayla tekrarlayabilirsiniz."
       }
     ]
   },
   "image-convert": {
     "howToUse": [
-      "Donusturmek istediginiz görsel dosyasini yükleme alanına sürükleyip birakin veya dosya seciciden secin. JPEG, PNG, WebP ve diger yaygin formatlar desteklenir.",
-      "Hedef formatinizi secin: WebP daha küçük dosya boyutlari için, PNG seffaflik gerektiren görseller için, JPEG fotograflar için idealdir.",
-      "Kalite ayarini ihtiyaciniza gore belirleyin. Daha yuksek kalite daha büyük dosya boyutu, daha dusuk kalite daha küçük dosya boyutu anlamina gelir.",
-      "Donustur dugmesine tıklayın ve yeni formattaki görseli indirin."
+      "Donusturmek istediğiniz görsel dosyasini yükleme alanına sürükleyip bırakın veya dosya seçiciden seçin. JPEG, PNG, WebP ve diğer yaygın formatlar desteklenir.",
+      "Hedef formatinizi seçin: WebP daha küçük dosya boyutlari için, PNG seffaflik gerektiren görseller için, JPEG fotograflar için idealdir.",
+      "Kalite ayarini ihtiyaciniza göre belirleyin. Daha yüksek kalite daha büyük dosya boyutu, daha düşük kalite daha küçük dosya boyutu anlamina gelir.",
+      "Dönüştür düğmesine tıklayın ve yeni formattaki görseli indirin."
     ],
     "whyUse": [
       "WebP formatina dönüşüm web siteleri için görsel boyutlarini %25-35 azaltarak sayfa yükleme hizini ve SEO performansini iyileştirir.",
-      "Farkli platformlar farkli görsel formatlari gerektirir. Bu arac tum yaygin formatlar arasinda aninda dönüşüm saglar.",
-      "Seffaflik gerektiren görselller PNG formatina, fotogaflar JPEG formatina donusturulerek en uygun format secimi yapilabilir.",
-      "Tum görsel dönüşümu tarayıcınızda yerel olarak gerçekleşir. Gorselleriniz hicbir sunucuya gonderilmez ve gizliliginiz korunur."
+      "Farkli platformlar farkli görsel formatlari gerektirir. Bu araç tüm yaygın formatlar arasında anında dönüşüm sağlar.",
+      "Seffaflik gerektiren görselller PNG formatina, fotogaflar JPEG formatina donusturulerek en uygun format seçimi yapilabilir.",
+      "Tüm görsel dönüşümu tarayıcınızda yerel olarak gerçekleşir. Gorselleriniz hiçbir sunucuya gonderilmez ve gizliliginiz korunur."
     ],
     "tips": [
-      "Web siteleri için görselleri WebP formatina donusturerek önemli boyut tasarrufu saglayin. Tum modern tarayıcılar WebP destekler.",
+      "Web siteleri için görselleri WebP formatina donusturerek önemli boyut tasarrufu saglayin. Tüm modern tarayıcılar WebP destekler.",
       "Logo ve ikon gibi seffaflik gerektiren görseller için PNG formtini kullanin. JPEG seffaflik desteklemez.",
-      "Fotograflar için JPEG genellikle en iyi boyut-kalite oranini sunar. %80-85 kalite ayari cogu durumda idealdir.",
-      "Bir görseli daha büyük bir formata dönüştürmek (ornegin JPEG'den PNG'ye) dosya boyutunu artirabilir. Format secimini içeriğinize gore yapin."
+      "Fotograflar için JPEG genellikle en iyi boyut-kalite oranini sunar. %80-85 kalite ayari çoğu durumda idealdir.",
+      "Bir görseli daha büyük bir formata dönüştürmek (ornegin JPEG'den PNG'ye) dosya boyutunu artirabilir. Format seçimini içeriğinize göre yapin."
     ],
     "faqs": [
       {
         "question": "En iyi görsel formati hangisidir?",
-        "answer": "En iyi format kullanim amacina baglidir: WebP web siteleri için en verimli formattir, JPEG fotograflar için en iyi boyut-kalite oranini sunar, PNG seffaflik gerektiren görseller ve keskin kenarlari olan grafikler için idealdir, SVG vektorel grafikler ve logolar için en iyisidir."
+        "answer": "En iyi format kullanım amacina bağlıdır: WebP web siteleri için en verimli formattir, JPEG fotograflar için en iyi boyut-kalite oranini sunar, PNG seffaflik gerektiren görseller ve keskin kenarlari olan grafikler için idealdir, SVG vektorel grafikler ve logolar için en iyisidir."
       },
       {
         "question": "Format dönüşümu kaliteyi etkiler mi?",
-        "answer": "Kayipli formatlara dönüşüm (JPEG, WebP kayipli mod) miktar kalite kaybina neden olabilir. Kayipsiz formatlar arasinda dönüşüm (PNG'den WebP kayipsiz'a) kalite kaybini onler. Her dönüşümde bir miktar kalite kaybi olabilecegini goz onunde bulundurarak birden fazla kez dönüşüm yapmaktan kacinin."
+        "answer": "Kayipli formatlara dönüşüm (JPEG, WebP kayipli mod) miktar kalite kaybina neden olabilir. Kayipsiz formatlar arasında dönüşüm (PNG'den WebP kayipsiz'a) kalite kaybini onler. Her dönüşümde bir miktar kalite kaybi olabilecegini göz önünde bulundurarak birden fazla kez dönüşüm yapmaktan kacinin."
       },
       {
         "question": "WebP formatini neden kullanmaliyim?",
-        "answer": "WebP hem kayipli hem kayipsiz sıkıştırma destekler, JPEG'den %25-35 daha küçük dosya boyutlari sunar, seffaflik destekler (PNG gibi) ve animasyon destekler (GIF gibi). Tum modern tarayıcılar (Chrome, Firefox, Safari, Edge) WebP'yi destekler, bu da onu web görselleri için en versatil format yapar."
+        "answer": "WebP hem kayipli hem kayipsiz sıkıştırma destekler, JPEG'den %25-35 daha küçük dosya boyutlari sunar, seffaflik destekler (PNG gibi) ve animasyon destekler (GIF gibi). Tüm modern tarayıcılar (Chrome, Firefox, Safari, Edge) WebP'yi destekler, bu da önü web görselleri için en versatil format yapar."
       },
       {
-        "question": "Gorsel dönüşümu sirasinda verilerim güvenli mi?",
-        "answer": "Evet, tum görsel işleme tarayıcınızda yerel olarak gerçekleşir. Gorselleriniz hicbir sunucuya yüklenmez, depolanmaz veya ucuncu taraflarla paylasilmaz. Kisisel fotograflar, is görselleri ve hassas içerikler için tamamen güvenlidir."
+        "question": "Görsel dönüşümu sırasında verilerim güvenli mi?",
+        "answer": "Evet, tüm görsel işleme tarayıcınızda yerel olarak gerçekleşir. Gorselleriniz hiçbir sunucuya yüklenmez, depolanmaz veya üçüncü taraflarla paylasilmaz. Kisisel fotograflar, is görselleri ve hassas içerikler için tamamen güvenlidir."
       },
       {
         "question": "Animasyonlu GIF'leri donusturebilir miyim?",
-        "answer": "Statik formatlara dönüştürme (JPEG, PNG) yalnizca GIF'in ilk karesini korur. Animasyonu korumak istiyorsaniz WebP veya APNG gibi animasyon destekleyen formatlari secin. Ancak tum dönüşüm araclari animasyonlu dönüşümu desteklemeyebilir."
+        "answer": "Statik formatlara dönüştürme (JPEG, PNG) yalnizca GIF'in ilk karesini korur. Animasyonu korumak istiyorsaniz WebP veya APNG gibi animasyon destekleyen formatlari seçin. Ancak tüm dönüşüm araçları animasyonlu dönüşümu desteklemeyebilir."
       },
       {
         "question": "HEIC/HEIF formatini donusturebilir miyim?",
-        "answer": "HEIC/HEIF Apple cihazlarin varsayilan foto formatidir. Tarayici destegine bagli olarak bu formatlari JPEG, PNG veya WebP'ye donusturebilirsiniz. Tum tarayıcılar HEIC'i doğrudan desteklemez, bu nedenle sonuc tarayıcınıza bagli olabilir."
+        "answer": "HEIC/HEIF Apple cihazlarin varsayılan foto formatidir. Tarayici destegine bağlı olarak bu formatlari JPEG, PNG veya WebP'ye donusturebilirsiniz. Tüm tarayıcılar HEIC'i doğrudan desteklemez, bu nedenle sonuç tarayıcınıza bağlı olabilir."
       }
     ]
   },
   "regex-tester": {
     "howToUse": [
-      "Regex deseninizi ust giriş alanına yazin. Desen girdikce gercek zamanli olarak eslesmeler vurgulanir.",
+      "Regex deseninizi ust giriş alanına yazin. Desen girdikce gerçek zamanlı olarak eslesmeler vurgulanir.",
       "Test metnzinizi alt giriş alanına yapıştırın veya yazin. Eslesen kisimlar otomatik olarak renklendiriir.",
-      "Bayraklari (flags) ayarlayin: g (global - tum eslesmeler), i (büyük/küçük harf duyarsiz), m (cok satirli) gibi secenekleri etkinlestirin.",
+      "Bayraklari (flags) ayarlayin: g (global - tüm eslesmeler), i (büyük/küçük harf duyarsiz), m (çok satirli) gibi seçenekleri etkinlestirin.",
       "Esleme sonuçlarıni, gruplari ve yakalama bilgilerini inceleyin. Her eslemenin pozisyonu ve içeriği gosterilir."
     ],
     "whyUse": [
-      "Regex desenleri karmaşık olabilir ve küçük hatalar beklenmedik sonuclara yol açabilir. Gercek zamanli test ile desenlernizi aninda dogrulayabilirsiniz.",
-      "Farkli programlama dillerinde regex soz dizimi küçük farkliliklar gosterebilir. Bu arac JavaScript regex motorunu kullanır ve web gelistirme için idealdir.",
-      "E-posta doğrulama, telefon numarası formatlarma, URL ayristirma ve metin arama gibi yaygin kaliplari hizlica test edebilirsiniz.",
-      "Tum islem tarayıcınızda gerçekleşir, test metinleriniz ve desenleriniz hicbir sunucuya gonderilmez."
+      "Regex desenleri karmaşık olabilir ve küçük hatalar beklenmedik sonuclara yol açabilir. Gerçek zamanlı test ile desenlernizi anında dogrulayabilirsiniz.",
+      "Farkli programlama dillerinde regex söz dizimi küçük farkliliklar gosterebilir. Bu araç JavaScript regex motorunu kullanır ve web geliştirme için idealdir.",
+      "E-posta doğrulama, telefon numarası formatlarma, URL ayristirma ve metin arama gibi yaygın kaliplari hizlica test edebilirsiniz.",
+      "Tüm işlem tarayıcınızda gerçekleşir, test metinleriniz ve desenleriniz hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "Karmasik desenleri küçük parcalara bolerek test edin ve kademeli olarak birlestirin. Bu, hata ayiklamayi önemli olcude kolaylaştırır.",
-      "Ozel anlamli karakterleri (. * + ? ^ $ { } [ ] ( ) | \\) literal olarak eslestrrmek için ters bolu (\\) ile kacis yapin.",
-      "Acgozlu (greedy) ve tembel (lazy) nicelikleri arasindaki farki bilin: .* mumkun olan en cok, .*? mumkun olan en az eslestir.",
+      "Karmasik desenleri küçük parcalara bolerek test edin ve kademeli olarak birlestirin. Bu, hata ayiklamayi önemli ölçüde kolaylaştırır.",
+      "Özel anlamli karakterleri (. * + ? ^ $ { } [ ] ( ) | \\) literal olarak eslestrrmek için ters bölü (\\) ile kaçış yapin.",
+      "Açgözlü (greedy) ve tembel (lazy) nicelikleri arasındaki farki bilin: .* mumkun olan en çok, .*? mumkun olan en az eşleştir.",
       "Yakalama gruplari () ile eslesen alt ifadeleri ayirin. Isimlendirmis gruplar (?<ad>...) kodu daha okunakli kilar."
     ],
     "faqs": [
       {
-        "question": "Regex (Duzenli Ifade) nedir?",
-        "answer": "Regex (Regular Expression), metin içinde desen aramak, eslemek ve degistirmek için kullanilan güçlü bir soz dizimi sistemidir. Programlama, metin işleme, veri doğrulama ve arama-degistirme işlemlerinde yaygin olarak kullanılır. Hemen hemen tum programlama dilleri ve metin editorleri regex destekler."
+        "question": "Regex (Düzenli Ifade) nedir?",
+        "answer": "Regex (Regular Expression), metin içinde desen aramak, eslemek ve degistirmek için kullanilan güçlü bir söz dizimi sistemidir. Programlama, metin işleme, veri doğrulama ve arama-değiştirme işlemlerinde yaygın olarak kullanılır. Hemen hemen tüm programlama dilleri ve metin editorleri regex destekler."
       },
       {
         "question": "Regex ogrenrmek zor mu?",
-        "answer": "Temel regex kaliplari (literal esleme, karakter sinflari, nicleikler) oldukca basittir ve hizla ogrenilebilir. Ileri seviye özellikler (lookahead, lookbehind, geri basvuru) daha karmaşıktir ancak cogu gunluk gorev temel kaliplarla cozulbilir. Pratik yaparak ve gercek orneklerle calisarak ogrenme sureci hızlanır."
+        "answer": "Temel regex kaliplari (literal esleme, karakter sinflari, nicleikler) oldukça basittir ve hızla ogrenilebilir. Ileri seviye özellikler (lookahead, lookbehind, geri başvuru) daha karmaşıktir ancak çoğu günlük gorev temel kaliplarla cozulbilir. Pratik yaparak ve gerçek orneklerle calisarak ogrenme sureci hızlanır."
       },
       {
-        "question": "E-posta adresi için dogru regex deseni nedir?",
-        "answer": "Basit bir e-posta regex'i: ^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$ Ancak RFC 5322 standardina tamamen uyumlu bir e-posta regex'i cok karamksiktir. Cogu uygulama için temel format kontrolu yeterlidir ve ek doğrulama sunucu tarafinda yapilmalidir."
+        "question": "E-posta adresi için doğru regex deseni nedir?",
+        "answer": "Basit bir e-posta regex'i: ^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$ Ancak RFC 5322 standardina tamamen uyumlu bir e-posta regex'i çok karamksiktir. Çoğu uygulama için temel format kontrolü yeterlidir ve ek doğrulama sunucu tarafinda yapilmalidir."
       },
       {
-        "question": "JavaScript ve Python regex arasinda fark var mi?",
-        "answer": "Temel soz dizimi aynidir ancak bazi farkliliklar vardir. Python lookbehind için degisken uzunluk desteklerken JavaScript desteklemez (ES2018 oncesi). Python re modulu ek bayraklar (re.VERBOSE gibi) sunar. Python r'' ham dizeler kullanırken JavaScript /desen/bayraklar literal soz dizimini kullanır."
+        "question": "JavaScript ve Python regex arasında fark var mi?",
+        "answer": "Temel söz dizimi aynidir ancak bazi farkliliklar vardır. Python lookbehind için değişken uzunluk desteklerken JavaScript desteklemez (ES2018 oncesi). Python re modulu ek bayraklar (re.VERBOSE gibi) sunar. Python r'' ham dizeler kullanırken JavaScript /desen/bayraklar literal söz dizimini kullanır."
       },
       {
         "question": "Regex performans sorunlarina yol açabilir mi?",
-        "answer": "Evet, kotuy tasarlanmis regex desenleri felaket geri izleme (catastrophic backtracking) nedeniyle cok yavas calisabilir. Ic ice nicleikler ((.+)+) ve carpisan alternatifler en yaygin nedenlerdir. Atomik gruplar, sahpilenic nicleikler ve deseni basitlestirme bu sorunlari onler."
+        "answer": "Evet, kotuy tasarlanmis regex desenleri felaket geri izleme (catastrophic backtracking) nedeniyle çok yavas calisabilir. Ic ice nicleikler ((.+)+) ve çarpışan alternatifler en yaygın nedenlerdir. Atomik gruplar, sahpilenic nicleikler ve deseni basitlestirme bu sorunlari onler."
       },
       {
-        "question": "Yaygin regex bayraklari nelerdir?",
-        "answer": "g (global): tum eslesmeleri bulur, yalnizca ilkini degil. i (case-insensitive): büyük/küçük harf farkini yok sayar. m (multiline): ^ ve $ her satirin basina/sonuna eslesir. s (dotAll): . karakteri satir sonlarini da eslestirir. u (unicode): tam Unicode destegi saglar."
+        "question": "Yaygın regex bayraklari nelerdir?",
+        "answer": "g (global): tüm eslesmeleri bulur, yalnizca ilkini değil. i (case-insensitive): büyük/küçük harf farkini yok sayar. m (multiline): ^ ve $ her satirin basina/sonuna eslesir. s (dotAll): . karakteri satir sonlarini da eslestirir. u (unicode): tam Unicode destegi sağlar."
       },
       {
         "question": "Regex'te lookahead ve lookbehind nedir?",
-        "answer": "Lookahead (?=...) ve lookbehind (?<=...) belirli bir desenin onunde veya arkasinda olup olmadigini kontrol eder ancak esleme sonucuna dahil etmez. Negatif versiyonlari (?!...) ve (?<!...) ise belirtilen desenin OLMAMASI gerektigini ifade eder. Ornegin \\d+(?= TL) yalnizca 'TL' oncesindeki sayilari eslestirir."
+        "answer": "Lookahead (?=...) ve lookbehind (?<=...) belirli bir desenin önünde veya arkasında olup olmadigini kontrol eder ancak esleme sonucuna dahil etmez. Negatif versiyonlari (?!...) ve (?<!...) ise belirtilen desenin OLMAMASI gerektigini ifade eder. Ornegin \\d+(?= TL) yalnizca 'TL' oncesindeki sayıları eslestirir."
       }
     ]
   },
   "hash-generator": {
     "howToUse": [
-      "Hash'lemek istediginiz metni veya veriyi giriş alanına yazin veya yapıştırın.",
-      "Hash algortimasini secin: MD5, SHA-1, SHA-256, SHA-384 veya SHA-512. SHA-256 cogu kullanim senaryosu için önerilir.",
-      "Hash degerini aninda gorun. Hash, giriş verisine ozgu sabit uzunlukta bir karakter dizsidir.",
-      "Hash degerini tek tikla kopyalayın ve ihtiyac duydugunuz yerde kullanin."
+      "Hash'lemek istediğiniz metni veya veriyi giriş alanına yazin veya yapıştırın.",
+      "Hash algortimasini seçin: MD5, SHA-1, SHA-256, SHA-384 veya SHA-512. SHA-256 çoğu kullanım senaryosu için önerilir.",
+      "Hash degerini anında gorun. Hash, giriş verisine özgü sabit uzunlukta bir karakter dizsidir.",
+      "Hash degerini tek tıkla kopyalayın ve ihtiyaç duydugunuz yerde kullanin."
     ],
     "whyUse": [
-      "Hash fonksiyonlari veri butunlugunu doğrulamak için kullanılır. Bir dosya veya verinin degistirilip degistirilmedigini hash degerlerini karsilastirarak kontrol edebilirsiniz.",
-      "Parolalar veritabanlarinda duz metin olarak degil hash olarak saklanmalidir. Bir veri ihlali durumunda hash'ler orijinal parolalari doğrudan aciga cikarmaz.",
-      "Yazilim dagitiminda dosya butunlugunu doğrulamak için hash'ler yaygin olarak kullanılır. Indirdgiiniz dosyanin hash'ini yayinciinin sagladigi hash ile karşılaştırın.",
-      "Tum hash oluşturma tarayıcınızda yerel olarak gerçekleşir. Verileriniz hicbir sunucuya gonderilmez."
+      "Hash fonksiyonlari veri butunlugunu doğrulamak için kullanılır. Bir dosya veya verinin degistirilip degistirilmedigini hash değerlerini karsilastirarak kontrol edebilirsiniz.",
+      "Parolalar veritabanlarinda düz metin olarak değil hash olarak saklanmalidir. Bir veri ihlali durumunda hash'ler orijinal parolalari doğrudan aciga cikarmaz.",
+      "Yazilim dagitiminda dosya butunlugunu doğrulamak için hash'ler yaygın olarak kullanılır. Indirdgiiniz dosyanin hash'ini yayinciinin sagladigi hash ile karşılaştırın.",
+      "Tüm hash oluşturma tarayıcınızda yerel olarak gerçekleşir. Verileriniz hiçbir sunucuya gonderilmez."
     ],
     "tips": [
       "Guvenlik gerektiren uygulamalar için SHA-256 veya daha güçlü algoritmalari tercih edin. MD5 ve SHA-1 cakisma saldirilarina karsi savunmasiz olduklari için güvenlik amaciyla onerilmez.",
-      "Parola hash'leme için doğrudan SHA-256 kullanmak yerine bcrypt, scrypt veya Argon2 gibi ozel parola hash'leme algoritmalari kullanin.",
-      "Ayni giriş her zaman ayni hash'i uretir. Giristeki en küçük degisiklik bile tamamen farkli bir hash oluşturur (celenme etkisi).",
+      "Parola hash'leme için doğrudan SHA-256 kullanmak yerine bcrypt, scrypt veya Argon2 gibi özel parola hash'leme algoritmalari kullanin.",
+      "Aynı giriş her zaman aynı hash'i uretir. Giristeki en küçük degisiklik bile tamamen farkli bir hash oluşturur (celenme etkisi).",
       "Hash fonksiyonlari tek yonludur - hash'ten orijinal veriyi geri elde etmek matematiksel olarak mumkun degildir."
     ],
     "faqs": [
       {
         "question": "Hash fonksiyonu nedir?",
-        "answer": "Hash fonksiyonu herhangi bir boyuttaki veriyi sabit boyutta bir ciktiya (hash degeri) donusturen matematiksel bir fonksiyondur. Tek yonludur (hash'ten orijinal veri elde edilemez), determinisitktir (ayni giriş her zaman ayni ciktiyi uretir) ve cig etkisine sahiptir (küçük giriş degisikligi tamamen farkli cikti oluşturur)."
+        "answer": "Hash fonksiyonu herhangi bir boyuttaki veriyi sabit boyutta bir ciktiya (hash degeri) dönüştüren matematiksel bir fonksiyondur. Tek yonludur (hash'ten orijinal veri elde edilemez), determinisitktir (aynı giriş her zaman aynı çıktıyı uretir) ve cig etkisine sahiptir (küçük giriş değişikliği tamamen farkli çıktı oluşturur)."
       },
       {
         "question": "MD5 neden güvenli sayilmiyor?",
-        "answer": "MD5 cakisma saldirilarina karsi savunmasiz olduug kanitlanmistir, yani farkli girişlerin ayni MD5 hash'ini uretmesi mumkundur. Bu, dijitla imzalar ve sertifika doğrulamasi gibi güvenlik uygulamalarinda ciddi bir zaafiyettir. Dosya kontrol toplamlari gibi güvenlik disi amaclr için hala kullanilabilir ancak güvenlik için SHA-256+ önerilir."
+        "answer": "MD5 cakisma saldirilarina karsi savunmasiz olduug kanitlanmistir, yani farkli girişlerin aynı MD5 hash'ini uretmesi mumkundur. Bu, dijitla imzalar ve sertifika doğrulamasi gibi güvenlik uygulamalarinda ciddi bir zaafiyettir. Dosya kontrol toplamlari gibi güvenlik dışı amaclr için hala kullanilabilir ancak güvenlik için SHA-256+ önerilir."
       },
       {
-        "question": "SHA-256 ile SHA-512 arasindaki fark nedir?",
-        "answer": "SHA-256 256 bitlik (64 onaltili karakter) hash uretirken SHA-512 512 bitlik (128 onaltili karakter) hash uretir. SHA-512 daha uzun hash degeri saglar ve teorik olarak daha güçlüdur. Ancak cogu uygulama için SHA-256 yeterli güvenlik saglar. SHA-512 64 bitlik sistemlerde daha verimli calisabilir."
+        "question": "SHA-256 ile SHA-512 arasındaki fark nedir?",
+        "answer": "SHA-256 256 bitlik (64 onaltili karakter) hash uretirken SHA-512 512 bitlik (128 onaltili karakter) hash uretir. SHA-512 daha uzun hash degeri sağlar ve teorik olarak daha güçlüdur. Ancak çoğu uygulama için SHA-256 yeterli güvenlik sağlar. SHA-512 64 bitlik sistemlerde daha verimli calisabilir."
       },
       {
-        "question": "Hash ile şifreleme arasindaki fark nedir?",
-        "answer": "Hash tek yonlu bir islemdir - orijinal veri geri elde edilemez. Sifreleme iki yonludur - dogru anahtarla şifreli veri cozulebilir. Hash veri butunlugu ve parola depolama için, şifreleme ise veri gizliligi için kullanılır. Ikisi farkli amaclara hizmet eder ve birbirinin yerine kullanilamaz."
+        "question": "Hash ile şifreleme arasındaki fark nedir?",
+        "answer": "Hash tek yonlu bir islemdir - orijinal veri geri elde edilemez. Sifreleme iki yonludur - doğru anahtarla şifreli veri cozulebilir. Hash veri butunlugu ve parola depolama için, şifreleme ise veri gizliligi için kullanılır. Ikisi farkli amaclara hizmet eder ve birbirinin yerine kullanilamaz."
       },
       {
         "question": "Hash cakismasi nedir?",
-        "answer": "Hash cakismasi iki farkli girsin ayni hash degerini uretmesi durumudur. Ideal bir hash fonksiyonu cakisma olasligini minimuma indirir. MD5 ve SHA-1 için pratik cakisma saldirilari gosterlimistir, bu nedenle güvenlik gerektiren uygulamalarda SHA-256 veya daha güçlü algoritmalar tercih edilmelidir."
+        "answer": "Hash cakismasi iki farkli girsin aynı hash degerini uretmesi durumudur. Ideal bir hash fonksiyonu cakisma olasligini minimuma indirir. MD5 ve SHA-1 için pratik cakisma saldirilari gosterlimistir, bu nedenle güvenlik gerektiren uygulamalarda SHA-256 veya daha güçlü algoritmalar tercih edilmelidir."
       },
       {
         "question": "Parola hash'leme için hangi algoritma kullanilmali?",
-        "answer": "Parolalar için bcrypt, scrypt veya Argon2 gibi ozel parola hash'leme algoritmalari kullanin. Bu algoritmalar kasitli olarak yavas çalışır (kaba kuvvet saldirlariini zorlastirir), tuz (salt) kullanır (gokkkusagi tablosu saldirlarina karsi korur) ve yapilandiriilabilir zorluk seviyesine sahiptir. Duz SHA-256 parola hash'leme için yeterli degildir."
+        "answer": "Parolalar için bcrypt, scrypt veya Argon2 gibi özel parola hash'leme algoritmalari kullanin. Bu algoritmalar kasitli olarak yavas çalışır (kaba kuvvet saldirlariini zorlastirir), tuz (salt) kullanır (gokkkusagi tablosu saldirlarina karsi korur) ve yapilandiriilabilir zorluk seviyesine sahiptir. Duz SHA-256 parola hash'leme için yeterli degildir."
       }
     ]
   },
   "url-encode-decode": {
     "howToUse": [
-      "Kodlamak veya cozumlemek istediginiz URL'yi veya metni giriş alanına yapıştırın.",
-      "Islem turunu secin: Kodla (Encode) ozel karakterleri yuzde kodlamaya donusturur, Coz (Decode) yuzde kodlanmis degerleri orijinal karakterlere cevirir.",
-      "Donustur dugmesine tıklayın ve sonucu aninda gorun.",
+      "Kodlamak veya çözümlemek istediğiniz URL'yi veya metni giriş alanına yapıştırın.",
+      "İşlem turunu seçin: Kodla (Encode) özel karakterleri yuzde kodlamaya donusturur, Çöz (Decode) yuzde kodlanmis değerleri orijinal karakterlere çevirir.",
+      "Dönüştür düğmesine tıklayın ve sonucu anında gorun.",
       "Sonucu panoya kopyalayın ve uygulamrinizda kullanin."
     ],
     "whyUse": [
-      "URL'ler yalnizca sinrli bir ASCII karakter setini destekler. Turkce karakterler, bosluklar ve ozel semboller gibi karakterler URL'lerde guvenle iletilebilmek için kodlanmalidir.",
-      "API isteklerinde sorgu parametreleri URL kodlamasi gerektirir. Ozel karakterler kodlanmazsa istekler basarisiz olabilir veya yanlis yorumlanabilir.",
-      "Web gelistirmede form verileri, çerez degerleri ve yonlendirme URL'leri genellikle URL kodlamasi gerektirir.",
-      "Tum kodlama ve cozumleme tarayıcınızda yerel olarak gerçekleşir. URL'leriniz hicbir sunucuya gonderilmez."
+      "URL'ler yalnizca sinrli bir ASCII karakter setini destekler. Türkçe karakterler, boşluklar ve özel semboller gibi karakterler URL'lerde guvenle iletilebilmek için kodlanmalidir.",
+      "API isteklerinde sorgu parametreleri URL kodlamasi gerektirir. Özel karakterler kodlanmazsa istekler basarisiz olabilir veya yanlis yorumlanabilir.",
+      "Web geliştirmede form verileri, çerez değerleri ve yonlendirme URL'leri genellikle URL kodlamasi gerektirir.",
+      "Tüm kodlama ve çözümleme tarayıcınızda yerel olarak gerçekleşir. URL'leriniz hiçbir sunucuya gonderilmez."
     ],
     "tips": [
-      "URL'nin tamamini degil, yalnizca deger kisimlarini kodlayin. Protokol (https://), alan adi ve yol ayiricilari (/) kodlanmamalidir.",
-      "Cift kodlamadan kacinin - zaten kodlanmis bir degeri tekrar kodlamak bozuk URL'lere yol acar.",
-      "JavaScript'te encodeURIComponent() ve encodeURI() arasindaki farki bilin: ilki parametr degerlerini, ikincisi tam URL'leri kodlar.",
-      "URL kodlamasi yuzde isareti (%) ve iki onaltili rakam kullanır: bosluk %20, Turkce i %C4%B0 olur."
+      "URL'nin tamamini değil, yalnizca değer kisimlarini kodlayin. Protokol (https://), alan adı ve yol ayiricilari (/) kodlanmamalidir.",
+      "Çift kodlamadan kacinin - zaten kodlanmis bir degeri tekrar kodlamak bozuk URL'lere yol açar.",
+      "JavaScript'te encodeURIComponent() ve encodeURI() arasındaki farki bilin: ilki parametr değerlerini, ikincisi tam URL'leri kodlar.",
+      "URL kodlamasi yuzde isareti (%) ve iki onaltili rakam kullanır: boşluk %20, Türkçe i %C4%B0 olur."
     ],
     "faqs": [
       {
         "question": "URL kodlamasi nedir?",
-        "answer": "URL kodlamasi (yuzde kodlamasi), URL'lerde güvenli olmayan veya ozel anlam tasiyan karakterleri yuzde isareti (%) ve ardnindan iki onaltili rakamla degistirme işlemidir. Ornegin bosluk %20, & isareti %26 olur. Bu, URL'lerin tum sistemlerde dogru yorumlanmasini saglar."
+        "answer": "URL kodlamasi (yuzde kodlamasi), URL'lerde güvenli olmayan veya özel anlam tasiyan karakterleri yuzde isareti (%) ve ardnindan iki onaltili rakamla değiştirme işlemidir. Ornegin boşluk %20, & isareti %26 olur. Bu, URL'lerin tüm sistemlerde doğru yorumlanmasini sağlar."
       },
       {
         "question": "Hangi karakterlerin kodlanmasi gerekir?",
-        "answer": "Bosluklar, Turkce karakterler (c, g, i, o, s, u), ozel semboller (&, =, ?, #, +, %, @) ve diger ASCII disi karakterler URL'lerde kodlanmalidir. Harfler (A-Z, a-z), rakamlar (0-9) ve bazi ozel karakterler (-, _, ., ~) kodlama gerektirmez."
+        "answer": "Bosluklar, Türkçe karakterler (c, g, i, o, s, u), özel semboller (&, =, ?, #, +, %, @) ve diğer ASCII dışı karakterler URL'lerde kodlanmalidir. Harfler (A-Z, a-z), rakamlar (0-9) ve bazi özel karakterler (-, _, ., ~) kodlama gerektirmez."
       },
       {
-        "question": "encodeURI ile encodeURIComponent arasindaki fark nedir?",
-        "answer": "encodeURI() tam bir URL'yi kodlar ve URL yapisi için gerekli karakterleri (://?#&=) korur. encodeURIComponent() tek bir parametr degerini kodlar ve bu ozel karakterleri de kodlar. Sorgu parametreleri için encodeURIComponent(), tam URL'ler için encodeURI() kullanin."
+        "question": "encodeURI ile encodeURIComponent arasındaki fark nedir?",
+        "answer": "encodeURI() tam bir URL'yi kodlar ve URL yapısı için gerekli karakterleri (://?#&=) korur. encodeURIComponent() tek bir parametr degerini kodlar ve bu özel karakterleri de kodlar. Sorgu parametreleri için encodeURIComponent(), tam URL'ler için encodeURI() kullanin."
       },
       {
         "question": "Bosluk %20 mi yoksa + mi olarak kodlanir?",
-        "answer": "Her ikisi de geçerlidir ancak farkli baglamlarda kullanılır. URL yollarnda ve sorgu parametrelerinde %20 standart kodlamadir (RFC 3986). Form verilerinde (application/x-www-form-urlencoded) bosluk + olarak kodlanir. Cogu web uygulamasi her iki formati da dogru sekilde cozumler."
+        "answer": "Her ikisi de geçerlidir ancak farkli baglamlarda kullanılır. URL yollarnda ve sorgu parametrelerinde %20 standart kodlamadir (RFC 3986). Form verilerinde (application/x-www-form-urlencoded) boşluk + olarak kodlanir. Çoğu web uygulamasi her iki formati da doğru şekilde çözümler."
       },
       {
         "question": "URL kodlamasi SEO'yu etkiler mi?",
-        "answer": "Dogru URL kodlamasi SEO'yu olumsuz etkilmez. Arama motorlari kodlanmis URL'leri dogru sekilde yorumlar. Ancak okunabilir URL'ler (insan için anlasilir slug'lar) kullanıcı deneyimi ve tiklanma oranlar acisindan tercih edilir. Turkce URL'lerde ozel karakterler yerine transliterasyon kullanmak iyi bir uygulamadir."
+        "answer": "Doğru URL kodlamasi SEO'yu olumsuz etkilmez. Arama motorlari kodlanmis URL'leri doğru şekilde yorumlar. Ancak okunabilir URL'ler (insan için anlasilir slug'lar) kullanıcı deneyimi ve tiklanma oranlar acisindan tercih edilir. Türkçe URL'lerde özel karakterler yerine transliterasyon kullanmak iyi bir uygulamadir."
       },
       {
-        "question": "Cift URL kodlamasi nedir ve neden sorunludur?",
-        "answer": "Cift kodlama, zaten kodlanmis bir degerin tekrar kodlanmasidir. Ornegin %20 -> %2520 olur. Bu, sunucu tarafinda cozumleme hatalarina, 404 sayfa bulunamadi hatslarina ve bozuk baglantilara yol acar. Kodlamadan once degerin zaten kodlanmis olup olmadigini kontrol edin."
+        "question": "Çift URL kodlamasi nedir ve neden sorunludur?",
+        "answer": "Çift kodlama, zaten kodlanmis bir degerin tekrar kodlanmasidir. Ornegin %20 -> %2520 olur. Bu, sunucu tarafinda çözümleme hatalarina, 404 sayfa bulunamadi hatslarina ve bozuk baglantilara yol açar. Kodlamadan önce degerin zaten kodlanmis olup olmadigini kontrol edin."
       }
     ]
   }

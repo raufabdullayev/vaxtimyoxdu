@@ -12,7 +12,7 @@ interface RelatedArticlesProps {
   title?: string
 }
 
-export default function RelatedArticles({ items, title = 'Oxsar xerberler' }: RelatedArticlesProps) {
+export default function RelatedArticles({ items, title = 'Oxşar xəbərlər' }: RelatedArticlesProps) {
   if (items.length === 0) return null
 
   return (

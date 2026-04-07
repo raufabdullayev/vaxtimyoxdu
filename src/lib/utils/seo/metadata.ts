@@ -7,12 +7,12 @@ import { getOgLocale, getOgImageUrl } from './og'
 export function generateBaseMetadata(): Metadata {
   const ogImage = getOgImageUrl({
     title: 'Vaxtim Yoxdu',
-    subtitle: 'Qisa xeberler ve pulsuz onlayn aletler',
+    subtitle: 'Qısa xəbərlər və pulsuz onlayn alətlər',
   })
   return {
-    title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
-    description: 'Vaxtiniz yoxdursa, biz variq. Gunluk xeber xulasaleri, pulsuz AI aletleri, PDF birlesdirici, sekil sixma, QR kod yaradici ve daha cox.',
-    keywords: 'vaxtim yoxdu, xeberler, online tools, ai tools, pdf merger, image compressor, qr code generator, azerbaycan',
+    title: `${SITE_NAME} - Qısa Xəbərlər və Pulsuz Onlayn Alətlər`,
+    description: 'Vaxtınız yoxdursa, biz varıq. Gündəlik xəbər xülasələri, pulsuz AI alətləri, PDF birləşdirici, şəkil sıxma, QR kod yaradıcı və daha çox.',
+    keywords: 'vaxtim yoxdu, xəbərlər, online tools, ai tools, pdf merger, image compressor, qr code generator, azərbaycan',
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     verification: {
       google: [
@@ -21,8 +21,8 @@ export function generateBaseMetadata(): Metadata {
       ],
     },
     openGraph: {
-      title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
-      description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
+      title: `${SITE_NAME} - Qısa Xəbərlər və Pulsuz Onlayn Alətlər`,
+      description: 'Vaxtınız yoxdursa, biz varıq. Qısa xəbərlər və pulsuz alətlər.',
       url: SITE_URL,
       siteName: SITE_NAME,
       type: 'website',
@@ -31,8 +31,8 @@ export function generateBaseMetadata(): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${SITE_NAME} - Qisa Xeberler ve Pulsuz Onlayn Aletler`,
-      description: 'Vaxtiniz yoxdursa, biz variq. Qisa xeberler ve pulsuz aletler.',
+      title: `${SITE_NAME} - Qısa Xəbərlər və Pulsuz Onlayn Alətlər`,
+      description: 'Vaxtınız yoxdursa, biz varıq. Qısa xəbərlər və pulsuz alətlər.',
       images: [ogImage],
     },
     alternates: generateHreflangAlternates('/'),
@@ -112,7 +112,7 @@ export function generateArticleMetadata({
   return {
     title: `${title} - ${SITE_NAME}`,
     description,
-    keywords: `${category}, xeberler, azerbaycan, ${title.toLowerCase().split(' ').slice(0, 5).join(', ')}`,
+    keywords: `${category}, xəbərlər, azərbaycan, ${title.toLowerCase().split(' ').slice(0, 5).join(', ')}`,
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
       title,

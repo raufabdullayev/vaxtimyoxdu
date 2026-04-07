@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const title = searchParams.get('title') || 'Vaxtim Yoxdu'
   const subtitle =
-    searchParams.get('subtitle') || 'Qisa xeberler ve pulsuz onlayn aletler'
+    searchParams.get('subtitle') || 'Qısa xəbərlər və pulsuz onlayn alətlər'
   const type = searchParams.get('type') || 'default' // default, tool, blog, news
 
   // Choose colors based on type
