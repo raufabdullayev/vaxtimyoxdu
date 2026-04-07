@@ -1,14 +1,39 @@
-# Session State — Son Yenilənmə: 2026-04-07 (Session 8 — Post-Sprint 9 Cleanup)
+# Session State — Son Yenilənmə: 2026-04-07 (Session 9 — P0 INCIDENT FIX)
 
 ## Hazırda Nə Edirik
+- P0 INCIDENT FIX (7 aprel 2026, axşam) — vaxtimyoxdu.com white screen FIX EDİLDİ
 - Sprint 9 tamamlandı (6 aprel 2026)
 - Post-Sprint 9 cleanup tamamlandı (7 aprel 2026)
-- GitLab token yeniləndi, push uğurlu (origin remote URL updated)
-- 4 fail olan deep test faylı silindi (29 broken test), 4 keçən saxlanıldı (80 test)
-- GitLab Pipeline #93 SUCCESS (validate + build + test)
-- GitHub + GitLab hər ikisi synced, son commit: 26bfb0f
-- Vercel deploy aktiv, vaxtimyoxdu.com HTTP 200
+- GitLab + GitHub hər ikisi synced, son commit: 7bcef09 (CSP fix)
+- Vercel deploy aktiv (12ku3ohef), vaxtimyoxdu.com HTTP 200, browser-də render OK
 - Növbəti: yeni alətlər (105→150), AdSense, sosial media
+
+## P0 INCIDENT — 2026-04-07 (CSP White Screen)
+**Symptom:** vaxtimyoxdu.com browser-də tamamilə qara/boş səhifə (CEO bildirdi)
+**Root cause:** `next.config.js` CSP-də `script-src` həm `'unsafe-inline'`, həm
+`'sha256-H1c0n0aYlOGsOcmXhv...'` saxlayırdı. W3C CSP3 spec-ə görə hash/nonce
+mövcud olduqda browser `'unsafe-inline'`-ı IGNORE edir. Nəticə: bütün Next.js
+RSC hydration inline scripts (`self.__next_f.push(...)`) bloklandı, SSR HTML
+gəldi amma React heç vaxt hydrate olmadı → tam ağ/qara ekran.
+**Sprint 9-da SecurityPro tərəfindən əlavə edilmişdi** — comment-də iddia olunurdu
+ki "no-op while unsafe-inline present". Bu səhv idi.
+**Diagnosis:** chrome-devtools-mcp ilə real browser test, screenshot tamamən qara,
+console-da 28+ "Executing inline script violates CSP" + "unsafe-inline is ignored
+if either a hash or nonce value is present" warning.
+**Fix:** sha256 hash silindi, CRITICAL comment əlavə edildi (regression olmasın).
+- Commit: 7bcef09 (`fix(csp): remove sha256 hash from script-src — production white screen fix`)
+- Direct Vercel deploy: vaxtimyoxdu-12ku3ohef-... → aliased to vaxtimyoxdu.com
+- Sonra git push GitLab + GitHub
+**Verification:**
+- AZ/EN/TR/RU homes + /tools + /blog + /info hamısı HTTP 200
+- /tools/ai-text-rewriter + /tools/pdf-merger HTTP 200
+- Browser screenshot: tam render (header, hero, ticker, kartlar, cookie banner)
+- CSP header artıq sha256 daşımır
+- Console error 28+ → 2 (favicon 404 + Google sodar — bağlı deyil)
+**Lessons:**
+- CSP-yə hash/nonce əlavə etmədən əvvəl HƏMİŞƏ real browser-də test et
+- "no-op" iddiası reqression test-lə təsdiq edilməlidir
+- Bütün CSP dəyişiklikləri Sprint review-dan sonra browser test tələb edir
 
 ## Sessiya 6 (2026-03-26) — SEO Indexation Fix
 - [x] metadataBase + hreflang alternates fix (commit 91d15cc)
