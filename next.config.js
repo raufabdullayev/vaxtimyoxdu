@@ -136,7 +136,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            // SECURITY NOTE (last reviewed: 2026-04-06):
+            // SECURITY NOTE (last reviewed: 2026-04-07):
             //
             // CSP HARDENING (SSG-compatible):
             //
@@ -149,10 +149,14 @@ const nextConfig = {
             //
             //   Track SRI support: https://github.com/vercel/next.js/issues/61694
             //
+            // CRITICAL: DO NOT add a sha256-/nonce- to script-src.
+            //   Per W3C CSP3 spec, when a hash or nonce is present, browsers
+            //   IGNORE 'unsafe-inline'. Adding any hash to this directive
+            //   blocks ALL Next.js inline RSC hydration scripts, producing a
+            //   white-screen production outage. (Incident: 2026-04-07)
+            //
             // APPROACH:
             //   - 'unsafe-inline' in script-src: required for RSC hydration
-            //   - SHA-256 hash for theme script: documents intent, ready for
-            //     when 'unsafe-inline' can be removed (no-op while unsafe-inline present)
             //   - 'unsafe-eval' is NOT included
             //   - Inline GA config script eliminated — merged into /analytics.js
             //   - style-src 'unsafe-inline': required for Next.js/Tailwind
@@ -161,12 +165,9 @@ const nextConfig = {
             //   - object-src 'none': blocks Flash/Java plugins
             //   - upgrade-insecure-requests: forces HTTPS for all subresources
             //   - JSON-LD scripts (application/ld+json) are data, not executable
-            //
-            // HASHED SCRIPTS (ready for future unsafe-inline removal):
-            //   sha256-H1c0n0aYlOGsOcmXhv/OOLCwL4Fcw3Hkj/NEAMmvWrE=  → theme FOUC prevention
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'sha256-H1c0n0aYlOGsOcmXhv/OOLCwL4Fcw3Hkj/NEAMmvWrE=' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com",
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https:",
               "font-src 'self' https://fonts.gstatic.com",
