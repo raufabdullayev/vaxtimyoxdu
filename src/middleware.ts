@@ -61,6 +61,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(destination, 301)
   }
 
+  // ─── Health Day slug typo fix (301) ───
+  // Old AZ slug had typo 'uzumlunya' (nonsense); correct is 'umumdunya' (ümumdünya).
+  // Renamed in news-articles.ts; this preserves the old URL's SEO value.
+  if (pathname === '/az/info/uzumlunya-saglamliq-gunu-2026-elm-ile-birge') {
+    const destination = `${request.nextUrl.origin}/az/info/umumdunya-saglamliq-gunu-2026-elm-ile-birge${request.nextUrl.search}`
+    return NextResponse.redirect(destination, 301)
+  }
+
   // ─── API routes: keep existing CORS / CSRF logic, skip i18n ───
   if (pathname.startsWith('/api/')) {
     const origin = request.headers.get('origin')
