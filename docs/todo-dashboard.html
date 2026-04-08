@@ -1,1078 +1,188 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VaxtimYoxdu - Todo Dashboard</title>
-  <style>
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg-primary: #0f1117;
-      --bg-secondary: #1a1d2e;
-      --bg-card: #1e2235;
-      --bg-card-hover: #252a40;
-      --border-color: #2a2f45;
-      --text-primary: #e8eaf0;
-      --text-secondary: #9ba1b8;
-      --text-muted: #6b7194;
-      --accent-blue: #3b82f6;
-      --accent-purple: #8b5cf6;
-      --accent-emerald: #10b981;
-      --accent-amber: #f59e0b;
-      --accent-rose: #f43f5e;
-      --accent-cyan: #06b6d4;
-      --accent-orange: #f97316;
-      --gradient-header: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-      --gradient-agent: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-      --gradient-ceo: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
-      --gradient-waiting: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
-      --gradient-limit: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
-      --radius-xl: 20px;
-      --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.25);
-      --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.35);
-      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    /* --- HEADER --- */
-    .header {
-      background: var(--gradient-header);
-      padding: 48px 24px 56px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 30%, rgba(255,255,255,0.06) 0%, transparent 40%);
-      pointer-events: none;
-    }
-
-    .header h1 {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-      position: relative;
-    }
-
-    .header p {
-      font-size: clamp(0.95rem, 2vw, 1.1rem);
-      color: rgba(255, 255, 255, 0.85);
-      position: relative;
-    }
-
-    .header .updated {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 6px 16px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      border-radius: 999px;
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.9);
-      position: relative;
-    }
-
-    /* --- CONTAINER --- */
-    .container {
-      max-width: 1200px;
-      margin: -32px auto 0;
-      padding: 0 20px 60px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* --- STATS ROW --- */
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-
-    .stat-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      text-align: center;
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .stat-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-card-hover);
-    }
-
-    .stat-icon {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      background: var(--gradient-header);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-top: 2px;
-    }
-
-    /* --- PROGRESS BARS --- */
-    .progress-section {
-      margin-bottom: 40px;
-    }
-
-    .progress-section h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: var(--text-primary);
-    }
-
-    .progress-items {
-      display: grid;
-      gap: 16px;
-    }
-
-    .progress-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 20px 24px;
-    }
-
-    .progress-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .progress-label {
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .progress-numbers {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-
-    .progress-numbers span {
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .progress-bar-bg {
-      height: 10px;
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      border-radius: 999px;
-      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-    }
-
-    .progress-bar-fill::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
-      animation: shimmer 2s infinite;
-    }
-
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .fill-blue { background: var(--gradient-agent); }
-    .fill-emerald { background: linear-gradient(90deg, #10b981, #34d399); }
-    .fill-amber { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
-
-    /* --- CATEGORY SECTIONS --- */
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-
-    .category-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-
-    .category-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-card-hover);
-    }
-
-    .category-header {
-      padding: 20px 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .category-header .cat-icon {
-      font-size: 1.5rem;
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: var(--radius-sm);
-      flex-shrink: 0;
-    }
-
-    .category-header h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .category-header .cat-count {
-      margin-left: auto;
-      font-size: 0.8rem;
-      padding: 4px 12px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 600;
-    }
-
-    .cat-agent .category-header { background: var(--gradient-agent); }
-    .cat-ceo .category-header { background: var(--gradient-ceo); }
-    .cat-waiting .category-header { background: var(--gradient-waiting); }
-    .cat-limit .category-header { background: var(--gradient-limit); }
-
-    .cat-agent .cat-icon { background: rgba(255,255,255,0.18); }
-    .cat-ceo .cat-icon { background: rgba(255,255,255,0.18); }
-    .cat-waiting .cat-icon { background: rgba(255,255,255,0.18); }
-    .cat-limit .cat-icon { background: rgba(255,255,255,0.18); }
-
-    .category-body {
-      padding: 8px 16px 16px;
-    }
-
-    .todo-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 12px;
-      border-radius: var(--radius-sm);
-      transition: background var(--transition);
-    }
-
-    .todo-item:hover {
-      background: var(--bg-card-hover);
-    }
-
-    .todo-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .cat-agent .todo-num { background: rgba(59,130,246,0.15); color: var(--accent-blue); }
-    .cat-ceo .todo-num { background: rgba(245,158,11,0.15); color: var(--accent-amber); }
-    .cat-waiting .todo-num { background: rgba(139,92,246,0.15); color: var(--accent-purple); }
-    .cat-limit .todo-num { background: rgba(107,114,148,0.15); color: var(--text-muted); }
-
-    .todo-content {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .todo-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--text-primary);
-      line-height: 1.4;
-    }
-
-    .todo-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    .badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 999px;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-
-    .badge-active {
-      background: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-      animation: pulse-badge 2s infinite;
-    }
-
-    @keyframes pulse-badge {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
-    }
-
-    .badge-important {
-      background: rgba(244, 63, 94, 0.15);
-      color: #fb7185;
-    }
-
-    .badge-low {
-      background: rgba(107, 114, 148, 0.12);
-      color: var(--text-muted);
-    }
-
-    /* --- SPRINTS SECTION --- */
-    .sprints-section {
-      margin-bottom: 40px;
-    }
-
-    .sprints-section > h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .sprint-accordion {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      margin-bottom: 8px;
-    }
-
-    .sprint-toggle {
-      width: 100%;
-      background: none;
-      border: none;
-      color: var(--text-primary);
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 600;
-      font-family: inherit;
-      transition: background var(--transition);
-    }
-
-    .sprint-toggle:hover {
-      background: var(--bg-card-hover);
-    }
-
-    .sprint-toggle .arrow {
-      font-size: 0.8rem;
-      transition: transform var(--transition);
-      color: var(--text-muted);
-    }
-
-    .sprint-accordion.open .arrow {
-      transform: rotate(180deg);
-    }
-
-    .sprint-toggle .sprint-badge {
-      margin-left: 10px;
-      font-size: 0.75rem;
-      padding: 2px 10px;
-      border-radius: 999px;
-      background: rgba(16, 185, 129, 0.12);
-      color: #34d399;
-      font-weight: 600;
-    }
-
-    .sprint-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .sprint-accordion.open .sprint-content {
-      max-height: 350px;
-    }
-
-    .sprint-details {
-      padding: 0 20px 16px;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-    }
-
-    .sprint-details ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sprint-details li {
-      padding: 4px 0;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .sprint-details li::before {
-      content: '\2713';
-      position: absolute;
-      left: 0;
-      color: var(--accent-emerald);
-      font-weight: 700;
-    }
-
-    /* --- NUMBERS FOOTER --- */
-    .numbers-section {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-xl);
-      padding: 32px;
-      margin-bottom: 40px;
-    }
-
-    .numbers-section h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .numbers-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-    }
-
-    .number-item {
-      text-align: center;
-      padding: 16px;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .number-item .num-icon {
-      font-size: 1.5rem;
-      margin-bottom: 6px;
-    }
-
-    .number-item .num-val {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--text-primary);
-    }
-
-    .number-item .num-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
-
-    /* --- FOOTER --- */
-    .footer {
-      text-align: center;
-      padding: 24px;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-
-    .footer a {
-      color: var(--accent-blue);
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 768px) {
-      .header {
-        padding: 36px 16px 44px;
-      }
-
-      .container {
-        padding: 0 12px 40px;
-      }
-
-      .categories {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-row {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .numbers-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .stats-row {
-        grid-template-columns: 1fr;
-      }
-
-      .stat-value {
-        font-size: 1.6rem;
-      }
-
-      .numbers-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
-
-      .numbers-section {
-        padding: 20px 16px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaxtim Yoxdu - Qalan Isler Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#e2e8f0;padding:20px;max-width:900px;margin:0 auto}
+h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradient(135deg,#38bdf8,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{text-align:center;color:#94a3b8;margin-bottom:24px;font-size:.9rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:24px}
+.stat{background:#1e293b;border-radius:12px;padding:16px;text-align:center;border:1px solid #334155}
+.stat .num{font-size:1.8rem;font-weight:700;color:#38bdf8}
+.stat .label{font-size:.75rem;color:#94a3b8;margin-top:4px}
+.progress-bar{background:#1e293b;border-radius:12px;padding:16px;margin-bottom:24px;border:1px solid #334155}
+.progress-bar .bar{background:#334155;border-radius:8px;height:24px;overflow:hidden;margin-top:8px}
+.progress-bar .fill{background:linear-gradient(90deg,#22c55e,#38bdf8);height:100%;border-radius:8px;transition:width .5s}
+.progress-bar .text{display:flex;justify-content:space-between;font-size:.85rem;color:#94a3b8}
+.section{margin-bottom:20px}
+.section h2{font-size:1.1rem;margin-bottom:12px;padding-left:8px;border-left:3px solid #38bdf8}
+.task{background:#1e293b;border-radius:10px;padding:14px 16px;margin-bottom:8px;border-left:4px solid #334155;display:flex;align-items:flex-start;gap:12px}
+.task.critical{border-left-color:#ef4444}
+.task.high{border-left-color:#f97316}
+.task.medium{border-left-color:#eab308}
+.task.low{border-left-color:#3b82f6}
+.task.done{border-left-color:#22c55e;opacity:.6}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:10px;font-weight:600;white-space:nowrap;flex-shrink:0}
+.badge.critical{background:#7f1d1d;color:#fca5a5}
+.badge.high{background:#7c2d12;color:#fdba74}
+.badge.medium{background:#713f12;color:#fde047}
+.badge.low{background:#1e3a8a;color:#93c5fd}
+.badge.done{background:#14532d;color:#86efac}
+.task-text{font-size:.9rem;line-height:1.4}
+.task-text small{color:#64748b;display:block;margin-top:4px;font-size:.78rem}
+.done-section{margin-top:24px}
+.done-section h2{border-left-color:#22c55e}
+.footer{text-align:center;color:#475569;font-size:.75rem;margin-top:32px;padding-top:16px;border-top:1px solid #1e293b}
+.links{background:#1e293b;border-radius:12px;padding:14px;margin-bottom:24px;border:1px solid #334155;font-size:.8rem}
+.links a{color:#38bdf8;text-decoration:none}
+.links code{background:#0f172a;padding:2px 6px;border-radius:4px;color:#94a3b8;font-size:.75rem}
+</style>
 </head>
 <body>
+<h1>vaxtimyoxdu.com</h1>
+<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 8 Aprel 2026 (Session 15)</p>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1>VaxtimYoxdu - Todo Dashboard</h1>
-    <p>Qalan isler, progress ve sprint tarixcesi</p>
-    <div class="updated">Son yenilenme: 24 Mart 2026</div>
-  </header>
+<div class="links">
+<strong>Bagli fayllar:</strong>
+<code>~/CLAUDE.md</code> (entry) →
+<code>MEMORY.md</code> (hub) →
+<code>session-state.md</code> (cari) →
+<code>todo-dashboard.html</code> (bu)
+</div>
 
-  <!-- CONTAINER -->
-  <div class="container">
+<div class="stats">
+<div class="stat"><div class="num">105</div><div class="label">Aletler</div></div>
+<div class="stat"><div class="num">4</div><div class="label">Dil</div></div>
+<div class="stat"><div class="num">936</div><div class="label">Sehifeler</div></div>
+<div class="stat"><div class="num">3074</div><div class="label">Testler</div></div>
+<div class="stat"><div class="num">88</div><div class="label">Xeberler</div></div>
+<div class="stat"><div class="num">68%</div><div class="label">Coverage</div></div>
+</div>
 
-    <!-- STATS ROW -->
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-icon">&#128736;</div>
-        <div class="stat-value">105</div>
-        <div class="stat-label">Aletler</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">&#127760;</div>
-        <div class="stat-value">4</div>
-        <div class="stat-label">Diller (AZ, EN, TR, RU)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">&#9989;</div>
-        <div class="stat-value">3067</div>
-        <div class="stat-label">Testler (192 fayl)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">&#128240;</div>
-        <div class="stat-value">217</div>
-        <div class="stat-label">Kontent (132 blog + 85 xeber)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">&#128196;</div>
-        <div class="stat-value">924</div>
-        <div class="stat-label">Statik sehifeler</div>
-      </div>
-    </div>
+<div class="progress-bar">
+<div class="text"><span>Umumi progress</span><span>85%</span></div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
 
-    <!-- PROGRESS BARS -->
-    <section class="progress-section">
-      <h2>&#128200; Progressler</h2>
-      <div class="progress-items">
-        <div class="progress-item">
-          <div class="progress-top">
-            <span class="progress-label">Aletler</span>
-            <span class="progress-numbers"><span>105</span> / 150 hedef</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar-fill fill-blue" style="width: 70%;"></div>
-          </div>
-        </div>
-        <div class="progress-item">
-          <div class="progress-top">
-            <span class="progress-label">Test Coverage</span>
-            <span class="progress-numbers"><span>68%</span> / 80% hedef</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar-fill fill-amber" style="width: 85%;"></div>
-          </div>
-        </div>
-        <div class="progress-item">
-          <div class="progress-top">
-            <span class="progress-label">Testler</span>
-            <span class="progress-numbers"><span>3067</span> test pass</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar-fill fill-emerald" style="width: 100%;"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="section">
+<h2>CRITICAL (0)</h2>
+<div class="task done"><span class="badge done">-</span><div class="task-text" style="color:#64748b">Helelik CRITICAL problem yoxdur</div></div>
+</div>
 
-    <!-- CATEGORIES -->
-    <div class="categories">
+<div class="section">
+<h2>HIGH (4)</h2>
+<div class="task high">
+<span class="badge high">HIGH</span>
+<div class="task-text">Test coverage 68% &rarr; 85%+<small>3074 test PASS, amma branch coverage hele asagi</small></div>
+</div>
+<div class="task high">
+<span class="badge high">HIGH</span>
+<div class="task-text">E2E testler 35 &rarr; 100<small>Playwright testlerini genislendirmek</small></div>
+</div>
+<div class="task high">
+<span class="badge high">HIGH</span>
+<div class="task-text">Nonce-based CSP migration<small>SSG ile uygunsuz - DIQQET: hash + unsafe-inline qoyma! W3C ignore edir, white screen yaradir (P0 incident dersi)</small></div>
+</div>
+<div class="task high">
+<span class="badge high">HIGH</span>
+<div class="task-text">Hreflang generation bug - news article pages cross-locale slug mismatch<small>src/app/[locale]/info/[slug]/page.tsx:36 - generateHreflangAlternates('/info/${slug}', locale) uses same slug across all 4 locale alternates, but news slugs differ per locale (AZ "chempionlar-liqasi...", EN "en-champions-league...", TR "tr-sampiyonlar-ligi...", RU "ru-liga-chempionov..."). Impact: every news article (88 total) has hreflang links pointing to 404 URLs sitewide, harms international SEO indexing. Fix strategy: cross-locale slug mapping in news-articles data or lookup helper. Test strategy: Playwright /info/* x 4 locales verifying hreflang &lt;link&gt; targets return 200. Effort: ~2-3 hours. Discovered by SeoPro during Session 15.</small></div>
+</div>
+</div>
 
-      <!-- Agent ede biler -->
-      <div class="category-card cat-agent">
-        <div class="category-header">
-          <div class="cat-icon">&#129302;</div>
-          <h3>Agent ede biler</h3>
-          <span class="cat-count">5 is</span>
-        </div>
-        <div class="category-body">
-          <div class="todo-item">
-            <div class="todo-num">1</div>
-            <div class="todo-content">
-              <div class="todo-title">Daha cox alet elave etmek</div>
-              <div class="todo-desc">105 aletden 150-ye artirmaq</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">2</div>
-            <div class="todo-content">
-              <div class="todo-title">E2E testler genisletmek</div>
-              <div class="todo-desc">35 testden 100-e artirmaq</div>
-            </div>
-          </div>
-          <div class="todo-item" style="opacity:0.5;text-decoration:line-through">
-            <div class="todo-num">3</div>
-            <div class="todo-content">
-              <div class="todo-title">Performance audit &#10004; Sprint 9</div>
-              <div class="todo-desc">PerfPro tamamladi</div>
-            </div>
-          </div>
-          <div class="todo-item" style="opacity:0.5;text-decoration:line-through">
-            <div class="todo-num">4</div>
-            <div class="todo-content">
-              <div class="todo-title">Accessibility audit &#10004; Sprint 9</div>
-              <div class="todo-desc">PerfPro tamamladi</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">5</div>
-            <div class="todo-content">
-              <div class="todo-title">Her gun yeni xeberler</div>
-              <div class="todo-desc">4 dilde gundlik xeberler — Sprint 9-da 7-8 Aprel elave edildi</div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="section">
+<h2>MEDIUM (8)</h2>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">Yeni aletler 105 &rarr; 150<small>45 yeni alet elave etmek</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">Performance/Accessibility audit<small>Lighthouse 100, Core Web Vitals optimallasdirma</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">Sosial media hesablari<small>Instagram, TikTok, Telegram, Twitter/X</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">AdSense tesdiqi<small>Google tesdiqini gozleyir</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">Gundelik xeber kontenti (4 dil)<small>Her gun 5-6 meqale: AZ, EN, TR, RU</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">Indeksasiya heftlik izleme<small>GSC MCP tool ile her hefte hesabat</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">Bing sitemap full indexing<small>bingbot allow OK, sitemap submitted</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">MEDIUM</span>
+<div class="task-text">CTR optimizasiya 0.77% &rarr; 2-3%<small>Meta description rewrite</small></div>
+</div>
+</div>
 
-      <!-- CEO manual -->
-      <div class="category-card cat-ceo">
-        <div class="category-header">
-          <div class="cat-icon">&#128100;</div>
-          <h3>CEO manual</h3>
-          <span class="cat-count">7 is</span>
-        </div>
-        <div class="category-body">
-          <div class="todo-item">
-            <div class="todo-num">6</div>
-            <div class="todo-content">
-              <div class="todo-title">Bing Webmaster</div>
-              <div class="todo-desc">Verification kodu almaq</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">7</div>
-            <div class="todo-content">
-              <div class="todo-title">Sosial media hesablari</div>
-              <div class="todo-desc">Instagram, TikTok, Telegram</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">8</div>
-            <div class="todo-content">
-              <div class="todo-title">Product Hunt <span class="badge badge-important">vacib</span></div>
-              <div class="todo-desc">Sosial mediada paylas</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">9</div>
-            <div class="todo-content">
-              <div class="todo-title">NextGen Tools</div>
-              <div class="todo-desc">Manual submit (upvote/comment telebesi)</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">10</div>
-            <div class="todo-content">
-              <div class="todo-title">GitLab CI kvotasi</div>
-              <div class="todo-desc">Ay sonunu gozle ve ya Pro plan</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">11</div>
-            <div class="todo-content">
-              <div class="todo-title">Secrets rotate <span class="badge badge-low">asagi prioritet</span></div>
-              <div class="todo-desc">API key-lerin yenilenmesi</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">18</div>
-            <div class="todo-content">
-              <div class="todo-title">GitLab token yenile <span class="badge badge-important">vacib</span></div>
-              <div class="todo-desc">Token expired — git push ve pipeline islemir</div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="section">
+<h2>LOW (4)</h2>
+<div class="task low">
+<span class="badge low">LOW</span>
+<div class="task-text">Telegram bot funksionalliq genisletme<small>Hazirda yalniz mesaj reply</small></div>
+</div>
+<div class="task low">
+<span class="badge low">LOW</span>
+<div class="task-text">Newsletter populyarlasdirma<small>Popup CTR artirmaq</small></div>
+</div>
+<div class="task low">
+<span class="badge low">LOW</span>
+<div class="task-text">Blog yazilari 61 &rarr; 100<small>Yeni movzular, 4 dil</small></div>
+</div>
+<div class="task low">
+<span class="badge low">LOW</span>
+<div class="task-text">Tool detail SEO schema enhancement<small>schema.org structured data</small></div>
+</div>
+</div>
 
-      <!-- Gozlemede -->
-      <div class="category-card cat-waiting">
-        <div class="category-header">
-          <div class="cat-icon">&#9203;</div>
-          <h3>Gozlemede</h3>
-          <span class="cat-count">4 is</span>
-        </div>
-        <div class="category-body">
-          <div class="todo-item">
-            <div class="todo-num">12</div>
-            <div class="todo-content">
-              <div class="todo-title">AlternativeTo approval</div>
-              <div class="todo-desc">Tesdiq gozlenilir</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">13</div>
-            <div class="todo-content">
-              <div class="todo-title">SaaSHub approval</div>
-              <div class="todo-desc">Tesdiq gozlenilir</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">14</div>
-            <div class="todo-content">
-              <div class="todo-title">Resend domain verify</div>
-              <div class="todo-desc">Amazon SES uzerinden</div>
-            </div>
-          </div>
-          <div class="todo-item">
-            <div class="todo-num">15</div>
-            <div class="todo-content">
-              <div class="todo-title">AdSense tesdiqi <span class="badge badge-important">en vacib gelir</span></div>
-              <div class="todo-desc">Esas gelir menbeyidir</div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="section">
+<h2>MANUAL (CEO eli ile)</h2>
+<div class="task low">
+<span class="badge low">MANUAL</span>
+<div class="task-text">Secrets rotate<small>Kohne secret-lar (asagi prioritet)</small></div>
+</div>
+<div class="task low">
+<span class="badge low">MANUAL</span>
+<div class="task-text">AdSense tesdiqinden sonra ads.txt yoxla</div>
+</div>
+<div class="task low">
+<span class="badge low">MANUAL</span>
+<div class="task-text">Sosial media post-lari paylas<small>launch-content.md hazirdir</small></div>
+</div>
+</div>
 
-      <!-- Texniki limit -->
-      <div class="category-card cat-limit">
-        <div class="category-header">
-          <div class="cat-icon">&#128274;</div>
-          <h3>Texniki limit</h3>
-          <span class="cat-count">2 is</span>
-        </div>
-        <div class="category-body">
-          <div class="todo-item">
-            <div class="todo-num">16</div>
-            <div class="todo-content">
-              <div class="todo-title">Coverage 68% &rarr; 80%</div>
-              <div class="todo-desc">Server components test olunmur</div>
-            </div>
-          </div>
-          <div class="todo-item" style="opacity:0.5;text-decoration:line-through">
-            <div class="todo-num">17</div>
-            <div class="todo-content">
-              <div class="todo-title">CSP Hardening &#10004; Sprint 9</div>
-              <div class="todo-desc">Hash-based CSP tetbiq edildi (nonce SSG ile uygunsuz)</div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="done-section">
+<h2>SON TAMAMLANANLAR (Session 11 + Sprint 9 + P0 Fix)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Session 11 - News cleanup + 04-08 content refresh<small>8 aprel - 85 kohne silindi, 24 yeni 04-08 meqale (6 movzu x 4 dil): Iran-USA, UEFA QF, markets, Gemini 3.1, Ask Maps, AZ-TR (commit 9e4ed6f)</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">P0 INCIDENT FIX - CSP white screen<small>7 aprel - sha256 hash silindi, browser test edildi (commit 7bcef09)</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">GitLab token yenilendi<small>7 aprel - origin URL embed, push successful</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Pipeline #93 SUCCESS<small>4 fail deep test silindi, 3227 test PASS</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Sprint 9 - 9 tapsiriq, 9 agent team mode<small>i18n split, toolUI refactor, CSP, perf/a11y, news, SEO, test coverage</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">i18n messages split (87% payload reduction)<small>Non-tool pages: 29.6KB &rarr; 3.9KB</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">toolUI 7 namespace refactor<small>54 component, 4 lang, 1124 test PASS</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Performance/A11y 6 fix<small>WCAG accordion, lazy img, useMemo, i18n a11y</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">24 xeber kontenti (6 movzu x 4 dil)<small>Iran-USA, OPEC+, Microsoft AI, DeepSeek, Saglamliq, Pakistan</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">SEO indexation +175x<small>Impression 14 &rarr; 2455, click 0 &rarr; 19, 30+ URL indexed</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">CSP 4 yeni direktiv + GA inline silindi<small>base-uri, form-action, object-src, upgrade-insecure</small></div></div>
+</div>
 
-    </div>
-
-    <!-- SPRINTS -->
-    <section class="sprints-section">
-      <h2>&#127942; Tamamlanmis Sprint-ler</h2>
-
-      <div class="sprint-accordion open">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 9 (6 Aprel 2026) <span class="sprint-badge">en son</span></span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>i18n messages lazy loading — namespace split (I18nPro)</li>
-              <li>toolUI flat namespace refactor — 105 alet (FrontendPro)</li>
-              <li>CSP hash-based hardening (SecurityPro)</li>
-              <li>Performance + Accessibility audit (PerfPro)</li>
-              <li>7-8 Aprel xeber kontenti, 4 dilde (ContentPro)</li>
-              <li>SEO heftelik indeksasiya izleme (SeoPro)</li>
-              <li>Test coverage + E2E artirma (QaPro)</li>
-              <li>3067 test PASS, 192 fayl, commit f3cce86</li>
-              <li>9 agent team mode</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Post-Sprint isler</span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>Product Hunt launch (24 Mart)</li>
-              <li>Dev.to + Medium meqaleler</li>
-              <li>SaaSHub + AlternativeTo submit</li>
-              <li>Kontent genisletme (blog + xeberler)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 8</span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>35 yeni alet elave edildi</li>
-              <li>11 blog yazisi (EN)</li>
-              <li>Claude meqalesi neshr olundu</li>
-              <li>407 yeni test elave edildi</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 7</span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>4 yeni alet</li>
-              <li>301 yeni test</li>
-              <li>Yeni kontent elave edildi</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 6</span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>7 tapshiriq tamamlandi</li>
-              <li>71 yeni test elave edildi</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 5</span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>18 BLOCKER/CRITICAL fix</li>
-              <li>Kritik buglar hell edildi</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 4 <span class="sprint-badge">5/5</span></span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>CRITICAL theme bug fix (Header + ThemeToggle)</li>
-              <li>AI timeout 9s total budget</li>
-              <li>Unsubscribe endpoint HMAC-SHA256</li>
-              <li>Rate limiter fail-closed</li>
-              <li>tools.ts + seo.ts decompose</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 3 <span class="sprint-badge">7/7</span></span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>5 accessible primitive komponenti</li>
-              <li>toolUI i18n 20 alet ucun</li>
-              <li>Resend email inteqrasiyasi</li>
-              <li>Dark mode + ThemeToggle</li>
-              <li>Zod env validasiya</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 2 <span class="sprint-badge">8/8</span></span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>Breadcrumb + og:url locale fix</li>
-              <li>RU Cyrillic rewrite + TR fix</li>
-              <li>Cookie/Install/Offline i18n</li>
-              <li>Newsletter rate limiting</li>
-              <li>SEO content optimallasdirma</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="sprint-accordion">
-        <button class="sprint-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span>Sprint 1 <span class="sprint-badge">11/12</span></span>
-          <span class="arrow">&#9660;</span>
-        </button>
-        <div class="sprint-content">
-          <div class="sprint-details">
-            <ul>
-              <li>Security ve infra tapshiriqlari</li>
-              <li>11 tapshiriq tamamlandi, 1 CEO manual (secrets rotate)</li>
-              <li>global-error.tsx yaxshilashdirildi</li>
-              <li>1481 test pass</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- CURRENT NUMBERS -->
-    <section class="numbers-section">
-      <h2>&#128202; Hazirki reqemler</h2>
-      <div class="numbers-grid">
-        <div class="number-item">
-          <div class="num-icon">&#128736;</div>
-          <div class="num-val">105</div>
-          <div class="num-label">Aletler</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#127760;</div>
-          <div class="num-val">4</div>
-          <div class="num-label">Diller</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#128221;</div>
-          <div class="num-val">132</div>
-          <div class="num-label">Blog (33x4 dil)</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#128240;</div>
-          <div class="num-val">85</div>
-          <div class="num-label">Xeberler</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#9989;</div>
-          <div class="num-val">2785</div>
-          <div class="num-label">Unit testler</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#128200;</div>
-          <div class="num-val">68%</div>
-          <div class="num-label">Coverage</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#128196;</div>
-          <div class="num-val">924</div>
-          <div class="num-label">Statik sehifeler</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#128231;</div>
-          <div class="num-val">hello@</div>
-          <div class="num-label">Email</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#127919;</div>
-          <div class="num-val">35</div>
-          <div class="num-label">E2E testler</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#9889;</div>
-          <div class="num-val">5</div>
-          <div class="num-label">Skills</div>
-        </div>
-        <div class="number-item">
-          <div class="num-icon">&#128220;</div>
-          <div class="num-val">16</div>
-          <div class="num-label">Qaydalar</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <p><a href="https://vaxtimyoxdu.com" target="_blank">vaxtimyoxdu.com</a> &mdash; Product Hunt, Dev.to, Medium, SaaSHub, AlternativeTo</p>
-      <p style="margin-top: 6px;">Dashboard son yenilenme: <strong>24 Mart 2026</strong></p>
-    </footer>
-
-  </div>
-
+<div class="footer">
+Status: AKTIV | Son commit: 4f3dbe7 (news refresh +5 topics, Session 15) | Vercel deploy: AKTIV (g2pza1tvq)<br>
+Production: <a href="https://vaxtimyoxdu.com" style="color:#38bdf8">vaxtimyoxdu.com</a> HTTP 200<br>
+Detali: docs/session-state.md
+</div>
 </body>
 </html>

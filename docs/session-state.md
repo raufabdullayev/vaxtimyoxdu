@@ -1,8 +1,8 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-08 (Session 10 — Memory Refactor)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com HTTP 200, Vercel aktiv)
-**Son commit:** 7bcef09 (CSP fix), 4de6326 (incident docs)
+**Son yenilənmə:** 2026-04-08 (Session 15 — Afternoon News Refresh +5 Topics)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com HTTP 200)
+**Son commit:** 4f3dbe7 (feat(news): add 5 breaking topics for 2026-04-08 afternoon (4 locales))
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -19,10 +19,11 @@
 | Parametr | Status |
 |----------|--------|
 | **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 |
-| **Deploy** | ✅ Vercel aktiv (12ku3ohef) |
+| **Deploy** | ✅ Vercel aktiv (g2pza1tvq) |
 | **GitLab + GitHub** | ✅ Synced |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Testlər** | 3227 PASS (192 fayl) |
+| **Testlər** | 3074 PASS (196 fayl) |
+| **Xəbərlər** | 88 (24 × 04-07 + 64 × 04-08, 4 dildə) |
 | **Coverage** | 68% (hədəf: 85%) |
 | **Aletler** | 105 (hədəf: 150) |
 | **CRITICAL problem** | 0 ✅ |
@@ -39,6 +40,83 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 15 (2026-04-08) — Afternoon News Refresh: +5 Topics 📰
+**Məqsəd:** Günün ikinci yarısında ortaya çıxan breaking mövzular əlavə et.
+**Team mode:** news-refresh-team (NewsResearchPro + ContentPro + SeoPro + QaDeployPro)
+
+- [x] 5 new diverse topics researched via WebSearch (NewsResearchPro)
+- [x] Topics (newest → oldest per CEO ordering):
+  1. Səudiyyə Şərq-Qərb neft boru xəttinə İran dron zərbəsi (7M bpd)
+  2. Gilgo Beach seri qatili Rex Heuermann 8 qətlin etirafı
+  3. Əliyev-Pezeşkian telefon danışığı + SOCAR Müşahidə Şurası dəyişikliyi
+  4. NASA Cygnus XL startı hava səbəbilə təxirə salındı (yeni tarix 10 aprel)
+  5. "The Testaments" Hulu premyerası ("Xidmətçi nağılı" davamı)
+- [x] 20 new entries written (5 topics × 4 locales, ContentPro)
+- [x] SEO review PASS: all titles ≤75 chars, T5 AZ slug fixed (muqayede → musahide-shurasi), T5 AZ vocab (fərman → sərəncam), topics reordered T1→T2→T5→T4→T3 (SeoPro)
+- [x] Typo QA: clean (0 AZ/TR typos, 0 Cyrillic leakage outside RU, 0 self-correction regressions)
+- [x] Tests: 3074 PASS (+80, was 2994)
+- [x] Build: SUCCESS (936 static pages, +80, was 856)
+- [x] Commit: 4f3dbe7
+- [x] GitLab (origin) + GitHub (mirror) push OK, Vercel auto-deploy OK
+- [x] Production HTTP 200 verified: 20/20 URLs (5 topics × 4 locales)
+- [x] Ordering maintained: newest → oldest within 2026-04-08 block
+
+**Nəticə:** Xəbər sayı 68 → 88. 2026-04-08 bloku 44 → 64 entry. Deploy uğurlu.
+
+### Session 14 (2026-04-08) — PSG-Liverpool Watch Link Added 🔗
+- [x] Added `## Watch PSG vs Liverpool match` section to 4 CL news article entries (AZ/EN/TR/RU)
+- [x] New YouTube URL: https://www.youtube.com/watch?v=8RVV1-D0dEo
+- [x] Existing Barcelona-Atletico link (Y_sVL33_drM) unchanged
+- [x] Tests: 2994 PASS (no count change — content-only edit)
+- [x] Build: SUCCESS (856 static pages)
+- [x] Commit: bac3a41
+- [x] GitLab + GitHub push OK, Vercel auto-deploy OK
+- [x] Production verified: all 4 locale URLs return the new link
+
+### Session 12 (2026-04-08) — Massive i18n Typo Fix 🔤
+**Məqsəd:** AZ/TR diakritik səhvlərinin kütləvi təmizlənməsi (6 fixer + mop-up + QA + deploy agent).
+
+- [x] **AZ messages:** ~110 fix (Paylaş, Oxşar, Kopyalandı, ilə hazırlanıb, ...)
+- [x] **TR messages:** ~95 fix (AZ leakage TR key-lərində də düzəldildi)
+- [x] **TR tool-content.json:** ~1,774 fix (kütləvi Turkish cleanup)
+- [x] **SEO metadata.ts:** 6 kritik fix (homepage title/description/OG)
+- [x] **Blog AZ:** 5 fix (rəhbər, hakerlər, həm-həm-həm)
+- [x] **News articles:** 3 fix (+ Cyrillic 'а' mixed-script bug)
+- [x] **RelatedArticles.tsx:** 'Oxşar xəbərlər' default
+- [x] **OG route:** sosial paylaşım title fix
+- [x] QA PASS: 2914/2914 test, Build SUCCESS (776 static pages)
+- [x] **Deploy:** commit e05b80c → GitLab push → Vercel pipeline SUCCESS (12.5 dəq)
+- [x] HTTP 200 doğrulandı, diakritiklər canlıda render olunur
+- [x] Cəmi dəyişiklik: ~2000 fix (16 fayl, +1561/-593 sətir)
+
+### Session 13 (2026-04-08) — News Expansion: +5 Breaking Topics 📰
+**Məqsəd:** 2026-04-08 üçün 5 yeni vacib xəbər mövzusu əlavə et (4 dildə).
+
+- [x] Research (WebSearch): 5 diverse topics for April 7-8, 2026
+- [x] 20 new entries written to `src/data/news-articles.ts` (+465 lines)
+- [x] Topics added:
+  1. İran-ABŞ iki həftəlik atəşkəs: Hörmüz boğazı yenidən açılır
+  2. Anthropic Claude Mythos Preview: minlərlə sıfır gün boşluğu aşkarladı
+  3. Morgan Stanley Bitcoin ETF MSBT NYSE-də ticarətə başladı
+  4. Artemis II ekipajı Aydan qayıdır: Apollo 13 məsafə rekordu qırıldı
+  5. Londonda Wireless Festivalı ləğv edildi: Britaniya Kanye Westi buraxmadı
+- [x] Typo QA: clean (0 AZ Cyrillic leaks, 0 TR diacritic leaks, 0 common typos)
+- [x] Tests: 2994 PASS (196 fayl)
+- [x] Build: SUCCESS (856 static pages, up from 776)
+- [x] Commit: 4e83b1a
+- [x] GitLab pipeline: pushed (auto-deploy), Vercel auto-deploy
+- [x] Production: HTTP 200 verified
+
+**Nəticə:** Xəbər sayı 48 → 68 (17 per dil). Vercel deploy uğurlu.
+
+### Session 13 davam (2026-04-08) — News Order Refactor
+- [x] 68 news entries reordered: 2026-04-08 (top) → 2026-04-07 (bottom)
+- [x] Within each date: grouped by topic (AZ→EN→TR→RU), topics ordered by category priority (World → Economy → Tech → Science → Culture)
+- [x] Tests: 2994 PASS (196 files)
+- [x] Build: SUCCESS
+- [x] Commit: e646267
+- [x] Production: HTTP 200
 
 ### Session 11 (2026-04-08) — News Cleanup + 04-08 Content Refresh 📰
 **Məqsəd:** CEO tapşırığı: köhnə xəbərləri sil, yalnız 04-07 və 04-08-i saxla.
