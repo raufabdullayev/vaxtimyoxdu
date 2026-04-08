@@ -13,7 +13,9 @@
  * - Offline fallback page when network is unavailable
  */
 
-const CACHE_VERSION = 2
+// Bump this version whenever static assets in PRECACHE_ASSETS change (icons, logo, etc.)
+// v3 (2026-04-09): New brand favicon (blue Zap lightning bolt, #2563eb) + PWA icons refresh
+const CACHE_VERSION = 3
 const CACHE_NAME = `vaxtimyoxdu-v${CACHE_VERSION}`
 const OFFLINE_URL = '/offline'
 

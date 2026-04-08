@@ -1,179 +1,127 @@
 /**
- * Generate PWA icons as static PNG files.
+ * Generate brand icons for vaxtimyoxdu.com.
  *
- * This script creates simple placeholder icons using a raw PNG approach
- * (no external dependencies). The icons feature a purple-to-blue gradient
- * background with a white "V" letter, matching the site's branding.
+ * Renders a Zap (lightning bolt) lucide-react symbol on a solid #2563eb
+ * (Tailwind blue-600, matches globals.css --primary and the Header icon).
  *
- * For production, replace these with professionally designed icons.
+ * Outputs (all written to public/):
+ *   icons/icon-192.png          — PWA any
+ *   icons/icon-192-maskable.png — PWA maskable (80% safe zone)
+ *   icons/icon-512.png          — PWA any
+ *   icons/icon-512-maskable.png — PWA maskable (80% safe zone)
+ *   favicon.ico                 — multi-res (16 + 32 + 48) legacy fallback
+ *
+ * Keep the COLOR and SVG path in sync with:
+ *   src/app/icon.tsx
+ *   src/app/apple-icon.tsx
+ *   src/components/layout/Header.tsx (Zap from lucide-react)
+ *   public/manifest.json theme_color
+ *   src/app/layout.tsx viewport.themeColor
  *
  * Usage: node scripts/generate-icons.js
  */
 
 const fs = require('fs')
 const path = require('path')
+const sharp = require('sharp')
+// png-to-ico ships both a default export (ESM) and a CJS wrapper.
+// Pick whichever form is present so the script works in both environments.
+const pngToIcoModule = require('png-to-ico')
+const pngToIco = pngToIcoModule.default || pngToIcoModule
 
-// Minimal PNG generator - creates a solid-color PNG with a simple "V" shape
-// This is intentionally simple; for better icons, use a design tool.
+// ── Brand tokens ─────────────────────────────────────────────────────
+const BRAND_BG = '#2563eb' // Tailwind blue-600 = globals.css --primary (light mode)
+const BRAND_FG = '#ffffff'
 
-function createPNG(size) {
-  // We'll create a simple canvas-like approach using raw pixel data
-  const pixels = new Uint8Array(size * size * 4)
+// lucide-react Zap path, same source of truth as src/app/icon.tsx
+// https://github.com/lucide-icons/lucide/blob/main/icons/zap.svg
+const ZAP_PATH = 'M13 2 3 14h9l-1 8 10-12h-9l1-8z'
 
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const idx = (y * size + x) * 4
+/**
+ * Build an SVG string for a square icon of the given canvas size.
+ *
+ * @param {number} canvas  Total width/height of the PNG to generate
+ * @param {object} options
+ * @param {number} options.boltScale  Bolt size as a fraction of canvas (0..1)
+ * @param {number} options.radiusRatio Background corner radius as a fraction of canvas
+ */
+function buildSvg(canvas, { boltScale, radiusRatio }) {
+  const radius = Math.round(canvas * radiusRatio)
+  const boltSize = Math.round(canvas * boltScale)
+  const boltOffset = Math.round((canvas - boltSize) / 2)
 
-      // Gradient from purple (#7c3aed) to blue (#2563eb)
-      const t = (x + y) / (size * 2)
-      const r = Math.round(124 * (1 - t) + 37 * t)
-      const g = Math.round(58 * (1 - t) + 99 * t)
-      const b = Math.round(237 * (1 - t) + 235 * t)
-
-      // Round corners
-      const cx = x - size / 2
-      const cy = y - size / 2
-      const cornerRadius = size * 0.2
-      const edgeDist = size / 2 - cornerRadius
-
-      let inside = true
-      if (Math.abs(cx) > edgeDist && Math.abs(cy) > edgeDist) {
-        const dx = Math.abs(cx) - edgeDist
-        const dy = Math.abs(cy) - edgeDist
-        if (dx * dx + dy * dy > cornerRadius * cornerRadius) {
-          inside = false
-        }
-      }
-
-      if (!inside) {
-        pixels[idx] = 0
-        pixels[idx + 1] = 0
-        pixels[idx + 2] = 0
-        pixels[idx + 3] = 0
-        continue
-      }
-
-      // Draw "V" letter
-      const nx = x / size
-      const ny = y / size
-      const letterTop = 0.22
-      const letterBottom = 0.78
-      const letterLeft = 0.2
-      const letterRight = 0.8
-      const letterCenter = 0.5
-      const strokeWidth = 0.1
-
-      let isLetter = false
-      if (ny >= letterTop && ny <= letterBottom) {
-        const progress = (ny - letterTop) / (letterBottom - letterTop)
-        // Left stroke of V
-        const leftX = letterLeft + progress * (letterCenter - letterLeft)
-        if (Math.abs(nx - leftX) < strokeWidth / 2) {
-          isLetter = true
-        }
-        // Right stroke of V
-        const rightX = letterRight - progress * (letterRight - letterCenter)
-        if (Math.abs(nx - rightX) < strokeWidth / 2) {
-          isLetter = true
-        }
-      }
-
-      if (isLetter) {
-        pixels[idx] = 255
-        pixels[idx + 1] = 255
-        pixels[idx + 2] = 255
-        pixels[idx + 3] = 255
-      } else {
-        pixels[idx] = r
-        pixels[idx + 1] = g
-        pixels[idx + 2] = b
-        pixels[idx + 3] = 255
-      }
-    }
-  }
-
-  return encodePNG(pixels, size, size)
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${canvas}" height="${canvas}" viewBox="0 0 ${canvas} ${canvas}">
+    <rect width="${canvas}" height="${canvas}" rx="${radius}" ry="${radius}" fill="${BRAND_BG}"/>
+    <g transform="translate(${boltOffset} ${boltOffset}) scale(${boltSize / 24})">
+      <path d="${ZAP_PATH}" fill="${BRAND_FG}"/>
+    </g>
+  </svg>`
 }
 
-function encodePNG(pixels, width, height) {
-  // PNG file structure
-  const signature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])
-
-  // IHDR chunk
-  const ihdr = Buffer.alloc(13)
-  ihdr.writeUInt32BE(width, 0)
-  ihdr.writeUInt32BE(height, 4)
-  ihdr[8] = 8 // bit depth
-  ihdr[9] = 6 // color type: RGBA
-  ihdr[10] = 0 // compression
-  ihdr[11] = 0 // filter
-  ihdr[12] = 0 // interlace
-
-  // Raw image data with filter bytes
-  const rawData = Buffer.alloc(height * (1 + width * 4))
-  for (let y = 0; y < height; y++) {
-    rawData[y * (1 + width * 4)] = 0 // No filter
-    for (let x = 0; x < width; x++) {
-      const srcIdx = (y * width + x) * 4
-      const dstIdx = y * (1 + width * 4) + 1 + x * 4
-      rawData[dstIdx] = pixels[srcIdx]
-      rawData[dstIdx + 1] = pixels[srcIdx + 1]
-      rawData[dstIdx + 2] = pixels[srcIdx + 2]
-      rawData[dstIdx + 3] = pixels[srcIdx + 3]
-    }
-  }
-
-  // Compress using zlib
-  const zlib = require('zlib')
-  const compressed = zlib.deflateSync(rawData)
-
-  // Build chunks
-  function makeChunk(type, data) {
-    const typeBuffer = Buffer.from(type, 'ascii')
-    const length = Buffer.alloc(4)
-    length.writeUInt32BE(data.length, 0)
-    const combined = Buffer.concat([typeBuffer, data])
-    const crc = crc32(combined)
-    const crcBuffer = Buffer.alloc(4)
-    crcBuffer.writeUInt32BE(crc, 0)
-    return Buffer.concat([length, combined, crcBuffer])
-  }
-
-  const ihdrChunk = makeChunk('IHDR', ihdr)
-  const idatChunk = makeChunk('IDAT', compressed)
-  const iendChunk = makeChunk('IEND', Buffer.alloc(0))
-
-  return Buffer.concat([signature, ihdrChunk, idatChunk, iendChunk])
+async function renderPng(svg, outPath) {
+  await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toFile(outPath)
+  const bytes = fs.statSync(outPath).size
+  console.log(`  ✓ ${path.relative(process.cwd(), outPath)} (${bytes} bytes)`)
 }
 
-// CRC32 implementation
-function crc32(buf) {
-  let crc = 0xffffffff
-  for (let i = 0; i < buf.length; i++) {
-    crc ^= buf[i]
-    for (let j = 0; j < 8; j++) {
-      if (crc & 1) {
-        crc = (crc >>> 1) ^ 0xedb88320
-      } else {
-        crc = crc >>> 1
-      }
-    }
+async function main() {
+  const projectRoot = path.join(__dirname, '..')
+  const iconsDir = path.join(projectRoot, 'public', 'icons')
+  const publicDir = path.join(projectRoot, 'public')
+
+  if (!fs.existsSync(iconsDir)) {
+    fs.mkdirSync(iconsDir, { recursive: true })
   }
-  return (crc ^ 0xffffffff) >>> 0
+
+  console.log('Rendering brand icons…')
+
+  // ── PWA icons: "any" purpose ───────────────────────────────────────
+  // Full-bleed background, bolt ~55% of canvas for a balanced look.
+  // rx ≈ 22% matches iOS squircle feel for Android adaptive backgrounds.
+  for (const size of [192, 512]) {
+    const svg = buildSvg(size, { boltScale: 0.55, radiusRatio: 0.22 })
+    await renderPng(svg, path.join(iconsDir, `icon-${size}.png`))
+  }
+
+  // ── PWA icons: "maskable" purpose ──────────────────────────────────
+  // Android applies a circle mask. W3C spec: content must live inside
+  // the inner 80% (40% radius from center). We shrink the bolt to 40%
+  // of the canvas so it fits well inside the safe zone, and keep the
+  // background full-bleed (no rounded corners — the mask handles it).
+  for (const size of [192, 512]) {
+    const svg = buildSvg(size, { boltScale: 0.4, radiusRatio: 0 })
+    await renderPng(svg, path.join(iconsDir, `icon-${size}-maskable.png`))
+  }
+
+  // ── favicon.ico (16 + 32 + 48 multi-resolution) ────────────────────
+  // Tiny sizes: use a smaller corner radius (~6px for 32, scaled) and
+  // a chunkier bolt (~62%) so the shape survives aggressive downscaling.
+  console.log('Rendering favicon.ico sources…')
+  const icoSizes = [16, 32, 48]
+  const tmpIcoPngs = []
+  for (const size of icoSizes) {
+    const svg = buildSvg(size, { boltScale: 0.62, radiusRatio: 0.19 })
+    const tmpPath = path.join(iconsDir, `.tmp-favicon-${size}.png`)
+    await renderPng(svg, tmpPath)
+    tmpIcoPngs.push(tmpPath)
+  }
+
+  const icoBuffer = await pngToIco(tmpIcoPngs)
+  const icoPath = path.join(publicDir, 'favicon.ico')
+  fs.writeFileSync(icoPath, icoBuffer)
+  console.log(
+    `  ✓ ${path.relative(process.cwd(), icoPath)} (${icoBuffer.length} bytes, ${icoSizes.length} resolutions)`
+  )
+
+  // Clean up temp files
+  for (const tmp of tmpIcoPngs) {
+    fs.unlinkSync(tmp)
+  }
+
+  console.log('\nBrand icons generated successfully.')
 }
 
-// Generate icons
-const iconsDir = path.join(__dirname, '..', 'public', 'icons')
-if (!fs.existsSync(iconsDir)) {
-  fs.mkdirSync(iconsDir, { recursive: true })
-}
-
-const sizes = [192, 512]
-sizes.forEach((size) => {
-  const png = createPNG(size)
-  const filePath = path.join(iconsDir, `icon-${size}.png`)
-  fs.writeFileSync(filePath, png)
-  console.log(`Generated ${filePath} (${png.length} bytes)`)
+main().catch((err) => {
+  console.error('Icon generation failed:', err)
+  process.exit(1)
 })
-
-console.log('PWA icons generated successfully!')

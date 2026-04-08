@@ -30,11 +30,11 @@
     "qrcode": "^1.5.4",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
     "resend": "^6.9.3",
     "tailwind-merge": "^3.5.0",
-    "zod": "^4.3.6",
-    "react-markdown": "^9.0.1",
-    "remark-gfm": "^4.0.0"
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^16.1.6",
@@ -56,7 +56,9 @@
     "eslint-config-next": "^15.5.9",
     "happy-dom": "^20.8.3",
     "jsdom": "^28.1.0",
+    "png-to-ico": "^3.0.1",
     "postcss": "^8",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "vitest": "^4.0.18"

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport = {
-  themeColor: '#7c3aed',
+  themeColor: '#2563eb',
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover' as const,
@@ -90,8 +90,10 @@ export default async function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Vaxtim Yoxdu" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#7c3aed" />
-        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        {/* Note: apple-touch-icon is auto-emitted by src/app/apple-icon.tsx file convention.
+            Do NOT add a manual <link rel="apple-touch-icon"> here — it causes a conflict
+            with the file-based convention and browsers may ignore the auto-generated icon. */}
 
         {/* DNS prefetch and preconnect for external domains */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
