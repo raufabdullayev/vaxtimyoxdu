@@ -1102,6 +1102,471 @@ Görüşme aynı zamanda Bakü-Erivan barış süreci zemininde gerçekleşti. A
 
 Встреча также прошла на фоне мирного процесса Баку-Ереван. Азербайджан представил полную мирную повестку с Арменией на 2026 год, и продолжают поступать сообщения о заметном прогрессе в делимитации границ, взаимном признании и переговорах по транспортному коридору между двумя бывшими противниками.`,
   },
+  // --- News April 8, 2026: Iran-ABŞ iki həftəlik atəşkəs ---
+  'iran-abs-iki-heftelik-ateshkes-razilashma': {
+    title: 'İran-ABŞ iki həftəlik atəşkəs razılaşdı: Hörmüz boğazı yenidən açılır',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ və İran Trampın son tarixindən iki saat əvvəl iki həftəlik atəşkəs razılaşmasına gəldilər. Razılaşmaya görə, ABŞ və İsrail İranın ərazisinə bomba atmağı dayandıracaq, əvəzində İran Hörmüz boğazını təhlükəsiz keçid üçün yenidən açır. Diplomatik danışıqlar 10 apreldə Pakistanda davam edəcək.
+
+## Razılaşmanın şərtləri
+
+İranın Ali Milli Təhlükəsizlik Şurası atəşkəsi rəsmən qəbul etdiyini elan etdi. İranın xarici işlər naziri Abbas Əraqçi iki həftəlik müddətin "diplomatiyaya şans" yaratdığını bildirdi. Bu müddət ərzində tərəflər geniş razılaşma üzərində işləyəcəklər — nüvə proqramı, sanksiyalar və dondurulmuş aktivlər əsas mövzulardır.
+
+## Pakistan vasitəçiliyi
+
+Pakistan ABŞ və İran nümayəndə heyətlərini 10 apreldə İslamabadda qəbul edəcək. Pakistanın baş naziri bu təşəbbüsü "qlobal təhlükənin qarşısını alan tarixi bir addım" kimi xarakterizə etdi. Pakistan həmçinin razılaşmanın icrasına nəzarət mexanizmlərini müzakirə edir.
+
+## Bazarların reaksiyası
+
+Neft qiymətləri xəbərdən sonra kəskin düşüb — Brent nefti 92 dollara qədər endi. S&P 500 indeksi gün ərzində 2,7% artdı, Asiya bazarları da müsbət reaksiya göstərdi. Hava yolları və turizm sektoru səhmləri ən yüksək qazanc əldə edənlər arasındadır.
+
+## Regional nəticələr
+
+Atəşkəs Yaxın Şərqdə gərginliyi azaltsa da, İran dronlarının Səudiyyə Ərəbistanındakı SABIC petrokimya kompleksinə vurduğu zərər hələ araşdırılır. Regional liderlər dialoqun davam etməsini dəstəklədiklərini açıqladılar.`,
+  },
+  'en-iran-us-two-week-ceasefire-hormuz-reopening': {
+    title: 'Iran and US Reach Two-Week Ceasefire: Strait of Hormuz to Reopen',
+    date: '2026-04-08',
+    category: 'World',
+    locale: 'en',
+    content: `The United States and Iran reached a two-week ceasefire agreement less than two hours before President Trump's deadline for wide-scale strikes. Under the deal, the US and Israel will suspend bombing Iran in exchange for Iran reopening the Strait of Hormuz for safe passage. Diplomatic talks will continue in Pakistan on April 10.
+
+## Terms of the Deal
+
+Iran's Supreme National Security Council formally accepted the ceasefire, and Iranian Foreign Minister Abbas Araghchi confirmed the two-week window gives diplomacy "a fighting chance." During this period, both sides will work on a broader agreement covering Iran's nuclear program, sanctions relief, and the release of frozen assets that have been at the center of the dispute for years.
+
+## Pakistani Mediation
+
+Pakistan will host delegations from both the US and Iran in Islamabad on April 10. Islamabad's prime minister described the initiative as a "historic step that averts global catastrophe." Pakistan is also reportedly discussing verification mechanisms to monitor compliance with the ceasefire terms on both sides.
+
+## Market Response
+
+Oil prices dropped sharply on the news — Brent crude fell to $92 per barrel, down from recent peaks above $110. The S&P 500 gained 2.7% during the session, and Asian markets opened higher. Airlines and tourism stocks were among the biggest gainers as jet fuel futures retreated substantially.
+
+## Regional Implications
+
+While the ceasefire eased tensions across the Middle East, damage from Iranian drone strikes on a SABIC petrochemical complex in Jubail, Saudi Arabia remains under investigation. Regional leaders from Gulf states and Turkey welcomed the diplomatic breakthrough and pledged continued support for the negotiation process.`,
+  },
+  'tr-iran-abd-iki-haftalik-ateskes-hormuz-acildi': {
+    title: 'İran ve ABD İki Haftalık Ateşkeste Anlaştı: Hürmüz Boğazı Yeniden Açılıyor',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Amerika Birleşik Devletleri ve İran, Başkan Trump'ın kapsamlı saldırı son teslim tarihinden iki saat önce iki haftalık bir ateşkes anlaşmasına vardı. Anlaşmaya göre ABD ve İsrail İran'a yönelik bombardımanı durduracak, karşılığında İran Hürmüz Boğazı'nı güvenli geçiş için yeniden açacak. Diplomatik görüşmeler 10 Nisan'da Pakistan'da devam edecek.
+
+## Anlaşmanın Şartları
+
+İran Yüksek Ulusal Güvenlik Konseyi ateşkesi resmi olarak kabul etti ve İran Dışişleri Bakanı Abbas Arakçi iki haftalık sürenin diplomasiye "bir şans" tanıdığını doğruladı. Bu süre zarfında iki taraf İran'ın nükleer programı, yaptırımların hafifletilmesi ve yıllardır anlaşmazlığın merkezinde olan dondurulmuş varlıkların serbest bırakılmasını kapsayan daha geniş bir anlaşma üzerinde çalışacak.
+
+## Pakistan Arabuluculuğu
+
+Pakistan, ABD ve İran heyetlerini 10 Nisan'da İslamabad'da ağırlayacak. Pakistan başbakanı girişimi "küresel felaketi önleyen tarihi bir adım" olarak nitelendirdi. Pakistan'ın ayrıca her iki tarafta ateşkes şartlarına uyumu izlemek için doğrulama mekanizmalarını müzakere ettiği bildirildi.
+
+## Piyasaların Tepkisi
+
+Haberler üzerine petrol fiyatları sert düştü — Brent ham petrol son zirvelerden 110 doların üzerinden 92 dolara geriledi. S&P 500 seansta yüzde 2,7 kazandı ve Asya piyasaları yükselişle açıldı. Jet yakıtı vadeli işlemleri önemli ölçüde gerilerken havayolları ve turizm hisseleri en büyük kazananlar arasında yer aldı.
+
+## Bölgesel Etkiler
+
+Ateşkes Orta Doğu'daki gerginlikleri hafifletse de, İran insansız hava araçlarının Suudi Arabistan'ın Jubail kentindeki SABIC petrokimya tesisine verdiği hasar hâlâ soruşturuluyor. Körfez ülkeleri ve Türkiye'den bölgesel liderler diplomatik atılımı memnuniyetle karşıladı ve müzakere sürecine sürekli desteklerini taahhüt etti.`,
+  },
+  'ru-iran-ssha-dvuhnedelnoe-peremirie-hormuz': {
+    title: 'Иран и США согласовали двухнедельное перемирие: Ормузский пролив вновь открывается',
+    date: '2026-04-08',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Соединённые Штаты и Иран достигли соглашения о двухнедельном перемирии менее чем за два часа до истечения срока, установленного президентом Трампом для масштабных ударов. По условиям сделки США и Израиль приостановят бомбардировки Ирана в обмен на открытие Ираном Ормузского пролива для безопасного прохода судов. Дипломатические переговоры продолжатся в Пакистане 10 апреля.
+
+## Условия соглашения
+
+Высший совет национальной безопасности Ирана официально принял перемирие, а министр иностранных дел Ирана Аббас Арагчи подтвердил, что двухнедельный период даёт дипломатии "реальный шанс". В этот период обе стороны будут работать над более широким соглашением, охватывающим ядерную программу Ирана, ослабление санкций и освобождение замороженных активов, находящихся в центре спора уже много лет.
+
+## Посредничество Пакистана
+
+Пакистан примет делегации США и Ирана в Исламабаде 10 апреля. Премьер-министр Пакистана охарактеризовал инициативу как "исторический шаг, предотвращающий глобальную катастрофу". По имеющимся данным, Пакистан также обсуждает механизмы верификации для мониторинга соблюдения условий перемирия обеими сторонами.
+
+## Реакция рынков
+
+Цены на нефть резко упали после сообщения — нефть марки Brent опустилась до 92 долларов за баррель по сравнению с недавними пиками выше 110 долларов. Индекс S&P 500 вырос на 2,7% за сессию, а азиатские рынки открылись повышением. Акции авиакомпаний и туристического сектора оказались в числе наибольших бенефициаров, поскольку фьючерсы на авиационное топливо существенно снизились.
+
+## Региональные последствия
+
+Хотя перемирие ослабило напряжённость на Ближнем Востоке, ущерб, нанесённый иранскими беспилотниками нефтехимическому комплексу SABIC в саудовском Джубайле, всё ещё расследуется. Региональные лидеры из стран Персидского залива и Турции приветствовали дипломатический прорыв и пообещали дальнейшую поддержку переговорного процесса.`,
+  },
+  // --- News April 7, 2026: Anthropic Claude Mythos Preview ---
+  'anthropic-claude-mythos-kibertehlukesizlik-sifir-gun': {
+    title: 'Anthropic Claude Mythos Preview-u açıqladı: süni intellekt minlərlə sıfır gün boşluğu aşkarladı',
+    date: '2026-04-08',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Süni intellekt şirkəti Anthropic 7 apreldə indiyədək yaratdığı ən güclü model olan Claude Mythos Preview-u təqdim etdi. Model artıq minlərlə sıfır gün boşluğu — o cümlədən kritik əməliyyat sistemlərində və brauzerlərdə onilliklərdir aşkar edilməyən zəifliklər — tapıb. Lakin Anthropic kiberhücumlarda sui-istifadə qorxusu səbəbindən modeli ümumi istifadəyə buraxmır.
+
+## Project Glasswing təşəbbüsü
+
+Mythos Preview yalnız 12 tərəfdaş təşkilata — o cümlədən Amazon, Apple, Broadcom, Cisco, CrowdStrike, Microsoft, Palo Alto Networks və Linux Foundation-a "defensive security" — müdafiə təhlükəsizliyi məqsədləri üçün verilib. Anthropic bu məhdud buraxılışı "Project Glasswing" adlandırıb. Bu yanaşmanın məqsədi müdafiəçilərə hücum edənlərdən əvvəl zəiflikləri bağlamaq imkanı verməkdir.
+
+## Modelin imkanları
+
+Anthropic rəsmilərinə görə, şirkətin rəsmi təhlükəsizlik təhsili olmayan mühəndisləri Mythos-a gecə ərzində "remote code execution" boşluqları tapmağı tapşırıb və səhər saatlarında tam işlək exploit hazır vəziyyətdə qarşılaşıb. Claude Opus 4.6 yalnız sıfıra yaxın uğur göstərirdi, Mythos Preview isə 72,4% halda işlək exploit yaradıb.
+
+## Yayım məhdudiyyəti
+
+Bu, Anthropic-in tarixdə ilk dəfə modeli təhlükəsizlik səbəbilə ictimai buraxılışdan saxladığı haldır. Şirkət bəyan etdi ki, model SWE-bench üzrə 93,9% nəticə göstərir — indiyədək qeydə alınmış ən yüksək balldır. İctimai istifadə yalnız müəyyən edilmiş zəifliklər üçün yamaqlar yayımlandıqdan sonra düşünüləcək.
+
+## Sənaye reaksiyası
+
+Böyük texnologiya şirkətləri dərhal reaksiya verdilər — Microsoft, Apple və Google onilliklərdir aşkar edilməmiş boşluqlar üçün təcili yamaqlar hazırlayır. Kiber təhlükəsizlik mütəxəssisləri bunu "süni intellekt kiber dövrünün başlanğıcı" kimi qiymətləndirdilər.`,
+  },
+  'en-anthropic-claude-mythos-preview-cybersecurity-zero-days': {
+    title: 'Anthropic Unveils Claude Mythos Preview: AI Finds Thousands of Zero-Day Vulnerabilities',
+    date: '2026-04-08',
+    category: 'Technology',
+    locale: 'en',
+    content: `AI company Anthropic on April 7 unveiled Claude Mythos Preview, its most powerful model yet, which has already identified thousands of zero-day vulnerabilities — including critical flaws in operating systems and web browsers that have gone undiscovered for decades. However, Anthropic is withholding the model from general release over concerns about its potential misuse in cyberattacks.
+
+## Project Glasswing Initiative
+
+Mythos Preview is being provided to only 12 partner organizations — including Amazon, Apple, Broadcom, Cisco, CrowdStrike, Microsoft, Palo Alto Networks, and the Linux Foundation — for defensive security work. Anthropic has named this limited rollout "Project Glasswing." The approach aims to give defenders the opportunity to patch vulnerabilities before attackers can exploit them.
+
+## Model Capabilities
+
+According to Anthropic officials, company engineers with no formal security training directed Mythos to find remote code execution vulnerabilities overnight and woke up to find complete, working exploits waiting for them. Where Claude Opus 4.6 managed an exploit development success rate of just over zero percent, Mythos Preview generated working exploits 72.4 percent of the time on the same test suite.
+
+## Release Restrictions
+
+This marks the first time in Anthropic's history that the company has withheld a model from public release on security grounds. Anthropic said the model achieved 93.9% on SWE-bench — the highest score ever recorded. Public access will be considered only once patches for the identified vulnerabilities are distributed and verified.
+
+## Industry Response
+
+Major tech companies reacted immediately — Microsoft, Apple, and Google are now racing to prepare emergency patches for flaws that had remained undiscovered for decades. Cybersecurity experts hailed the event as "the dawn of the AI cyber era" and warned that offensive AI capabilities may soon outpace traditional defense methods.`,
+  },
+  'tr-anthropic-claude-mythos-siber-guvenlik-sifir-gun': {
+    title: 'Anthropic Claude Mythos Önizlemesini Tanıttı: Yapay Zeka Binlerce Sıfırıncı Gün Açığı Buldu',
+    date: '2026-04-08',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Yapay zeka şirketi Anthropic 7 Nisan'da şimdiye kadarki en güçlü modeli olan Claude Mythos Preview'u tanıttı. Model şimdiden binlerce sıfırıncı gün açığı tespit etti — bunların arasında işletim sistemlerinde ve web tarayıcılarında onlarca yıldır keşfedilmemiş kritik kusurlar da bulunuyor. Ancak Anthropic, modelin siber saldırılarda kötüye kullanılma endişesiyle onu genel kullanıma sunmuyor.
+
+## Project Glasswing Girişimi
+
+Mythos Preview yalnızca 12 ortak kuruluşa — aralarında Amazon, Apple, Broadcom, Cisco, CrowdStrike, Microsoft, Palo Alto Networks ve Linux Vakfı'nın da bulunduğu — savunma güvenliği çalışmaları için veriliyor. Anthropic bu sınırlı dağıtımı "Project Glasswing" olarak adlandırdı. Yaklaşımın amacı, savunmacıların saldırganlardan önce açıkları kapatmasına fırsat tanımaktır.
+
+## Modelin Yetenekleri
+
+Anthropic yetkililerine göre, resmi güvenlik eğitimi olmayan şirket mühendisleri Mythos'a geceleyin uzaktan kod yürütme açıkları bulmasını söyledi ve sabaha kadar tamamen çalışır durumda exploit'ler hazır halde buldular. Claude Opus 4.6 sıfıra yakın başarı oranı gösterirken, Mythos Preview aynı test paketinde yüzde 72,4 oranında çalışan exploit üretti.
+
+## Yayın Kısıtlamaları
+
+Bu, Anthropic'in tarihinde bir modeli güvenlik gerekçesiyle kamuya açık yayından alıkoyduğu ilk durumdur. Anthropic, modelin SWE-bench'te yüzde 93,9 skor elde ettiğini — şimdiye kadar kaydedilen en yüksek puan olduğunu — açıkladı. Kamuya açık erişim yalnızca tespit edilen açıklar için yamalar dağıtılıp doğrulandıktan sonra değerlendirilecek.
+
+## Sektör Tepkisi
+
+Büyük teknoloji şirketleri hemen tepki verdi — Microsoft, Apple ve Google onlarca yıldır keşfedilmemiş kusurlar için acil yamalar hazırlamak üzere yarışıyor. Siber güvenlik uzmanları bu olayı "yapay zeka siber çağının şafağı" olarak nitelendirdi ve saldırgan yapay zeka yeteneklerinin yakında geleneksel savunma yöntemlerini geride bırakabileceği uyarısında bulundu.`,
+  },
+  'ru-anthropic-claude-mythos-kiberbezopasnost-nulevye-dni': {
+    title: 'Anthropic представил Claude Mythos Preview: ИИ нашёл тысячи уязвимостей нулевого дня',
+    date: '2026-04-08',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `ИИ-компания Anthropic 7 апреля представила Claude Mythos Preview — свою самую мощную модель на сегодняшний день, которая уже выявила тысячи уязвимостей нулевого дня, включая критические недостатки в операционных системах и веб-браузерах, остававшиеся необнаруженными десятилетиями. Однако Anthropic не выпускает модель в общее пользование из-за опасений по поводу её возможного злоупотребления в кибератаках.
+
+## Инициатива Project Glasswing
+
+Mythos Preview предоставляется только 12 организациям-партнёрам — включая Amazon, Apple, Broadcom, Cisco, CrowdStrike, Microsoft, Palo Alto Networks и Linux Foundation — для работы в области оборонительной безопасности. Anthropic назвала это ограниченное развёртывание "Project Glasswing". Подход нацелен на то, чтобы дать защитникам возможность закрыть уязвимости до того, как злоумышленники смогут их использовать.
+
+## Возможности модели
+
+По словам представителей Anthropic, инженеры компании без формального образования в области безопасности поручили Mythos за ночь найти уязвимости удалённого выполнения кода и утром обнаружили полностью рабочие эксплойты. Там, где Claude Opus 4.6 показывал успех близкий к нулю, Mythos Preview создавал рабочие эксплойты в 72,4% случаев на том же наборе тестов.
+
+## Ограничения выпуска
+
+Это первый случай в истории Anthropic, когда компания отказалась от публичного выпуска модели по соображениям безопасности. Anthropic сообщила, что модель достигла 93,9% на SWE-bench — самый высокий результат в истории. Публичный доступ будет рассмотрен только после распространения и проверки патчей для выявленных уязвимостей.
+
+## Реакция индустрии
+
+Крупные технологические компании отреагировали немедленно — Microsoft, Apple и Google спешат подготовить экстренные патчи для недостатков, оставшихся необнаруженными десятилетиями. Эксперты по кибербезопасности охарактеризовали это событие как "рассвет эры ИИ-кибербезопасности" и предупредили, что наступательные возможности ИИ могут вскоре превзойти традиционные методы защиты.`,
+  },
+  // --- News April 8, 2026: Morgan Stanley Bitcoin ETF launch ---
+  'morgan-stanley-bitcoin-etf-msbt-nyse-liste': {
+    title: 'Morgan Stanley Bitcoin ETF MSBT NYSE-də ticarətə başladı: böyük ABŞ bankından ilk spot Bitcoin fondu',
+    date: '2026-04-08',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Morgan Stanley bank qrupunun Bitcoin birja ticarət fondu (ETF) "MSBT" tikeri altında 8 aprel tarixində NYSE Arca birjasında ticarətə başladı. Bu, böyük bir ABŞ bankının buraxdığı ilk spot Bitcoin ETF-dir və Morgan Stanley-i kriptoya birbaşa investisiya məhsulu təqdim edən ən iri ənənəvi bank edir.
+
+## Məhsulun xüsusiyyətləri
+
+MSBT 0,14% illik komissiya ilə bazarda ən aşağı rüsum tutan fondlardan biridir — bu, BlackRock-un IBIT fondundan və bir çox rəqibdən daha ucuzdur. Fond gerçək Bitcoin saxlayır, CoinDesk Bitcoin Benchmark 4 PM NY Settlement Rate tarifini izləyir və leverage, derivativ və ya aktiv ticarət istifadə etmir. Storage BNY və Coinbase Custody tərəfindən təmin olunur.
+
+## Bazara təsiri
+
+16 min Morgan Stanley məsləhətçisi fondu müştərilərə təqdim etməyə hazırdır. Analitiklər fondun ilk günlərində böyük axın gözləyirlər, çünki bank 9,3 trilyon dollarlıq müştəri aktivlərinə xidmət edir. Bitcoin-in qiyməti xəbərin yayılmasından sonra sabah ticarət seansında yüngül yüksəliş göstərdi.
+
+## Kriptonun institusionallaşması
+
+Spot Bitcoin ETF-ləri indiyədək 56 milyard dollardan çox xalis axın cəlb edib və bazarın dalğalanma xüsusiyyətlərini yenidən formalaşdırıb. Morgan Stanley-in daxil olması digər böyük Wall Street banklarının — JPMorgan, Bank of America və Wells Fargo — bənzər məhsullarla irəli çıxa biləcəyinin işarəsidir.
+
+## Gələcək perspektivlər
+
+Şirkət rəsmiləri bildirdilər ki, MSBT daha geniş "digital asset strategy"nin yalnız başlanğıcıdır — Ethereum ETF və strukturlaşdırılmış kripto məhsulları da hazırlanır. Fondun ilk həftə axınları institutlar arasında kripto marağının ən yaxşı ölçüsü olacaq.`,
+  },
+  'en-morgan-stanley-bitcoin-etf-msbt-nyse-launch': {
+    title: 'Morgan Stanley Bitcoin ETF MSBT Debuts on NYSE: First Spot BTC Fund From Major US Bank',
+    date: '2026-04-08',
+    category: 'Economy',
+    locale: 'en',
+    content: `Morgan Stanley's Bitcoin exchange-traded fund began trading on the NYSE Arca exchange under the ticker MSBT on April 8. It is the first spot Bitcoin ETF issued by a major US bank, making Morgan Stanley the largest traditional financial institution to offer direct crypto investment exposure to clients.
+
+## Product Details
+
+MSBT carries a low 0.14% annual expense ratio, undercutting BlackRock's iShares Bitcoin Trust (IBIT) and most competitors. The fund holds actual bitcoin, tracks the CoinDesk Bitcoin Benchmark 4 PM NY Settlement Rate, and does not use leverage, derivatives, or active trading. Custody is handled by BNY and Coinbase Custody, two of the most trusted names in institutional digital asset safekeeping.
+
+## Market Impact
+
+Morgan Stanley's 16,000 financial advisors are ready to offer MSBT to clients, and analysts expect large inflows in the opening days given that the bank serves $9.3 trillion in client assets. Bitcoin's price ticked up in early trading as news of the launch spread and demand for institutional crypto exposure continued to accelerate.
+
+## Institutionalization of Crypto
+
+Spot Bitcoin ETFs have attracted more than $56 billion in net inflows since their debut, and they have reshaped the market's volatility profile. Morgan Stanley's entry signals that other major Wall Street banks — including JPMorgan, Bank of America, and Wells Fargo — may soon follow with similar products, according to industry analysts.
+
+## Forward Outlook
+
+Company executives said MSBT is just the beginning of a broader digital asset strategy, with an Ethereum ETF and structured crypto products in development. The first week of inflows will be closely watched as a barometer of institutional appetite for crypto, with some projections suggesting $2-4 billion in assets under management within the first month.`,
+  },
+  'tr-morgan-stanley-bitcoin-etf-msbt-nyse-halka-arz': {
+    title: 'Morgan Stanley Bitcoin ETF MSBT NYSE\'de İşlem Görmeye Başladı: Büyük ABD Bankasından İlk Spot BTC Fonu',
+    date: '2026-04-08',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Morgan Stanley'nin Bitcoin borsa yatırım fonu 8 Nisan'da NYSE Arca borsasında MSBT tickerı altında işlem görmeye başladı. Bu, büyük bir ABD bankası tarafından çıkarılan ilk spot Bitcoin ETF'idir ve Morgan Stanley'yi müşterilerine doğrudan kripto yatırım fırsatı sunan en büyük geleneksel finans kurumu haline getirmiştir.
+
+## Ürün Detayları
+
+MSBT yüzde 0,14 gibi düşük bir yıllık gider oranına sahip olup, BlackRock'ın iShares Bitcoin Trust (IBIT) ürününü ve çoğu rakibi geride bırakıyor. Fon gerçek bitcoin tutuyor, CoinDesk Bitcoin Benchmark 4 PM NY Settlement Rate endeksini izliyor ve kaldıraç, türev veya aktif ticaret kullanmıyor. Saklama hizmeti kurumsal dijital varlık güvenliğinde en güvenilir isimler arasında yer alan BNY ve Coinbase Custody tarafından sağlanıyor.
+
+## Piyasa Etkisi
+
+Morgan Stanley'nin 16 bin finansal danışmanı MSBT'yi müşterilere sunmaya hazır ve analistler bankanın 9,3 trilyon dolarlık müşteri varlığına hizmet verdiği düşünüldüğünde açılış günlerinde büyük girişler bekliyor. Lansman haberi yayılırken Bitcoin fiyatı erken işlem seanslarında hafif yükseldi ve kurumsal kripto talebi hızlanmaya devam etti.
+
+## Kriptonun Kurumsallaşması
+
+Spot Bitcoin ETF'leri ilk lansmanlarından bu yana 56 milyar doları aşan net giriş çekti ve piyasanın volatilite profilini yeniden şekillendirdi. Morgan Stanley'nin girişi, sektör analistlerine göre diğer büyük Wall Street bankalarının — JPMorgan, Bank of America ve Wells Fargo dahil — benzer ürünlerle yakında takip edebileceğinin işareti.
+
+## İleriye Dönük Bakış
+
+Şirket yöneticileri MSBT'nin daha geniş bir dijital varlık stratejisinin yalnızca başlangıcı olduğunu belirtti — bir Ethereum ETF ve yapılandırılmış kripto ürünleri de geliştirme aşamasında. İlk haftanın girişleri kurumsal kripto iştahının barometresi olarak yakından izlenecek; bazı tahminler ilk ay içinde 2-4 milyar dolar yönetilen varlık öngörüyor.`,
+  },
+  'ru-morgan-stanley-bitcoin-etf-msbt-nyse-zapusk': {
+    title: 'Bitcoin-ETF Morgan Stanley MSBT начал торги на NYSE: первый спот-фонд BTC от крупного банка США',
+    date: '2026-04-08',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Биржевой фонд Bitcoin от Morgan Stanley начал торги на бирже NYSE Arca под тикером MSBT 8 апреля. Это первый спот-ETF на биткоин, выпущенный крупным банком США, что делает Morgan Stanley крупнейшим традиционным финансовым институтом, предлагающим клиентам прямой доступ к инвестициям в криптовалюту.
+
+## Характеристики продукта
+
+MSBT имеет низкий годовой коэффициент расходов 0,14%, опережая iShares Bitcoin Trust (IBIT) от BlackRock и большинство конкурентов. Фонд держит реальный биткоин, отслеживает индекс CoinDesk Bitcoin Benchmark 4 PM NY Settlement Rate и не использует кредитное плечо, деривативы или активную торговлю. Кастодиальные услуги предоставляют BNY и Coinbase Custody — два наиболее доверенных имени в области институционального хранения цифровых активов.
+
+## Влияние на рынок
+
+16 тысяч финансовых советников Morgan Stanley готовы предлагать MSBT клиентам, и аналитики ожидают значительных притоков в первые дни торгов, учитывая, что банк обслуживает клиентские активы на 9,3 триллиона долларов. Цена биткоина слегка выросла в ранних торгах по мере распространения новостей о запуске, а спрос на институциональный доступ к криптовалюте продолжает ускоряться.
+
+## Институционализация криптовалюты
+
+Спот-ETF на биткоин привлекли более 56 миллиардов долларов чистых притоков с момента их дебюта и изменили профиль волатильности рынка. По мнению отраслевых аналитиков, вход Morgan Stanley сигнализирует о том, что другие крупные банки Уолл-стрит — включая JPMorgan, Bank of America и Wells Fargo — вскоре могут последовать их примеру с аналогичными продуктами.
+
+## Перспективы
+
+Руководители компании заявили, что MSBT — это только начало более широкой стратегии в области цифровых активов, ETF на Ethereum и структурированные криптопродукты также находятся в разработке. Первая неделя притоков будет внимательно отслеживаться как барометр институционального аппетита к криптовалюте, некоторые прогнозы предполагают 2-4 миллиарда долларов под управлением в течение первого месяца.`,
+  },
+  // --- News April 8, 2026: Artemis II lunar flyby return ---
+  'artemis-2-ay-ucushu-tarixi-rekord-qayidish': {
+    title: 'Artemis II ekipajı Aydan qayıdır: Apollo 13-ün tarixi məsafə rekordu qırıldı',
+    date: '2026-04-08',
+    category: 'Elm',
+    locale: 'az',
+    content: `NASA-nın Artemis II ekipajı 7 apreldə Ayın o biri tərəfində tarixi uçuşdan sonra Yerə qayıtmağa başladı. Kosmonavtlar Reid Wiseman, Victor Glover, Christina Koch və Kanada Kosmik Agentliyindən Jeremy Hansen Apollo 13-ün 1970-ci ildə qoyduğu 248 655 millik məsafə rekordunu qırdılar. Bu, 1972-ci ildəki Apollo 17 missiyasından sonra insanın Aya ilk yaxın səfəridir.
+
+## Tarixi uçuş
+
+Ekipaj 1 apreldə Space Launch System (SLS) raketi ilə Orion "Integrity" kosmos gəmisində kosmosa buraxıldı. 6 apreldə onlar Ayın uzaq tərəfini 7 saatlıq keçid zamanı fotoşəkillər çəkdilər — bu, bəşəriyyətin Aya bu qədər yaxın olduğu ilk andır yarım əsrdən bəri. Missiya 10 günlük Ay yaxın keçid uçuşudur və Orion kosmos gəminin ilk ekipajlı sınaqıdır.
+
+## Günəş tutulması kosmosda
+
+Uçuş zamanı ekipaj nadir hadisəyə şahid oldu — kosmosda günəş tutulması. Ay Günəşi tamamilə örtdü və təxminən 54 dəqiqəlik tam tutulma yaratdı, bu, Yer kürəsindən mümkün olandan çox daha uzundur. Kosmonavtlar bu hadisənin fotoşəkillərini və videolarını ictimaiyyətlə paylaşdılar.
+
+## Tarixi məsafə
+
+NASA təsdiqlədi ki, Artemis II insanlı uçuşların Yerdən ən uzaq məsafəsi rekordunu qırdı — 248 655 milin üzərində. Əvvəlki rekord 1970-ci ildə Apollo 13 missiyasından idi, lakin o hadisədə rekord bir qəza nəticəsində yaradılmışdı. Artemis II planlı şəkildə bu məsafəyə çatdı.
+
+## Yerə qayıdış
+
+Ekipaj Pasifik okeanına enmə üçün hazırlaşır — splashdown təxminən 11 apreldə gözlənilir. Missiya SLS və Orion-un ekipajlı şəraitdə ilk sınaqıdır və 2027-ci il üçün planlaşdırılan Artemis III Ay səthinə eniş missiyasının əsasını təşkil edir.`,
+  },
+  'en-artemis-2-moon-flyby-apollo-record-return': {
+    title: 'Artemis II Crew Returning From Moon: Apollo 13 Distance Record Broken',
+    date: '2026-04-08',
+    category: 'Science',
+    locale: 'en',
+    content: `NASA's Artemis II crew began their journey back to Earth on April 7 after a historic flyby around the far side of the Moon. Astronauts Reid Wiseman, Victor Glover, Christina Koch, and Canadian Space Agency astronaut Jeremy Hansen broke the Apollo 13 distance record of 248,655 miles set in 1970. It is humanity's closest approach to the Moon since the Apollo 17 mission in 1972.
+
+## A Historic Flight
+
+The crew launched on April 1 aboard the Orion spacecraft "Integrity" atop the Space Launch System (SLS) rocket. On April 6, they completed a seven-hour pass over the lunar far side, capturing photographs that mark humanity's first close encounter with the Moon in over half a century. The mission is a ten-day lunar flyby and the first crewed test of the Orion spacecraft.
+
+## Solar Eclipse From Space
+
+During the flight, the crew witnessed a rare event — a solar eclipse from space. The Moon completely blocked the Sun, creating approximately 54 minutes of totality, far longer than what is possible from Earth. The astronauts shared photographs and video of the event with the public in a live broadcast from deep space.
+
+## Record Distance
+
+NASA confirmed that Artemis II broke the record for the farthest distance from Earth traveled by a human spaceflight — exceeding 248,655 miles. The previous record was set by Apollo 13 in 1970, though that record was established accidentally during an emergency. Artemis II reached this distance as part of a planned trajectory, making it the first deliberate record of its kind.
+
+## Return to Earth
+
+The crew is preparing for a Pacific Ocean splashdown, expected around April 11. The mission is the first crewed test of both the SLS and Orion in flight conditions, and it lays the foundation for the Artemis III mission scheduled for 2027, which is planned to land humans on the lunar surface for the first time since 1972.`,
+  },
+  'tr-artemis-2-ay-ucusu-apollo-rekoru-donus': {
+    title: 'Artemis II Ekibi Ay\'dan Dönüyor: Apollo 13\'ün Mesafe Rekoru Kırıldı',
+    date: '2026-04-08',
+    category: 'Bilim',
+    locale: 'tr',
+    content: `NASA'nın Artemis II ekibi, Ay'ın uzak tarafı etrafında tarihi bir geçiş uçuşundan sonra 7 Nisan'da Dünya'ya dönüş yolculuğuna başladı. Astronotlar Reid Wiseman, Victor Glover, Christina Koch ve Kanada Uzay Ajansı astronotu Jeremy Hansen, Apollo 13'ün 1970'te koyduğu 248.655 millik mesafe rekorunu kırdılar. Bu, 1972'deki Apollo 17 görevinden bu yana insanlığın Ay'a en yakın yaklaşımıdır.
+
+## Tarihi Bir Uçuş
+
+Ekip, 1 Nisan'da Space Launch System (SLS) roketine monte edilmiş "Integrity" adlı Orion uzay aracıyla fırlatıldı. 6 Nisan'da Ay'ın uzak tarafı üzerinde yedi saatlik bir geçiş tamamladılar ve yarım yüzyıldan fazla bir sürenin ardından insanlığın Ay ile ilk yakın temasını kaydeden fotoğraflar çektiler. Görev on günlük bir Ay geçiş uçuşu ve Orion uzay aracının ilk mürettebatlı testidir.
+
+## Uzaydan Güneş Tutulması
+
+Uçuş sırasında ekip nadir bir olaya tanık oldu — uzaydan bir güneş tutulması. Ay, Güneş'i tamamen kapattı ve yaklaşık 54 dakikalık bir tam tutulma yarattı; bu, Dünya'dan mümkün olandan çok daha uzun. Astronotlar olayın fotoğraflarını ve videolarını derin uzaydan canlı bir yayınla kamuoyuyla paylaştı.
+
+## Rekor Mesafe
+
+NASA, Artemis II'nin bir insanlı uzay uçuşunun Dünya'dan kat ettiği en uzak mesafe rekorunu kırdığını — 248.655 mili aştığını — doğruladı. Önceki rekor 1970'te Apollo 13 tarafından kurulmuştu; ancak o rekor bir acil durum sırasında kazara oluşmuştu. Artemis II bu mesafeye planlı bir yörüngenin parçası olarak ulaştı ve bu alandaki ilk kasıtlı rekoru oluşturdu.
+
+## Dünya\'ya Dönüş
+
+Ekip Pasifik Okyanusu'na iniş için hazırlanıyor — splashdown yaklaşık 11 Nisan'da bekleniyor. Görev hem SLS hem de Orion'un uçuş koşullarındaki ilk mürettebatlı testidir ve 2027 için planlanan Artemis III görevinin temelini atmaktadır; bu görev 1972'den bu yana ilk kez insanları Ay yüzeyine indirmeyi hedefliyor.`,
+  },
+  'ru-artemis-2-lunnyj-oblet-rekord-apollo-vozvrashchenie': {
+    title: 'Экипаж Artemis II возвращается с Луны: рекорд расстояния Apollo 13 побит',
+    date: '2026-04-08',
+    category: 'Наука',
+    locale: 'ru',
+    content: `Экипаж Artemis II от NASA 7 апреля начал путь обратно на Землю после исторического облёта обратной стороны Луны. Астронавты Рид Уайзман, Виктор Гловер, Кристина Кох и астронавт Канадского космического агентства Джереми Хансен побили рекорд расстояния в 248 655 миль, установленный Apollo 13 в 1970 году. Это самое близкое приближение человека к Луне со времён миссии Apollo 17 в 1972 году.
+
+## Исторический полёт
+
+Экипаж стартовал 1 апреля на космическом корабле Orion под названием "Integrity", установленном на ракете Space Launch System (SLS). 6 апреля они завершили семичасовой проход над обратной стороной Луны и сделали фотографии, знаменующие первую за более чем полвека близкую встречу человечества с Луной. Миссия представляет собой десятидневный облёт Луны и первое пилотируемое испытание космического корабля Orion.
+
+## Солнечное затмение из космоса
+
+Во время полёта экипаж стал свидетелем редкого события — солнечного затмения из космоса. Луна полностью закрыла Солнце, создав около 54 минут полной фазы, что значительно дольше того, что возможно наблюдать с Земли. Астронавты поделились фотографиями и видеозаписями события с общественностью в прямой трансляции из глубокого космоса.
+
+## Рекордное расстояние
+
+NASA подтвердило, что Artemis II побил рекорд самого дальнего расстояния от Земли, пройденного пилотируемым космическим полётом — более 248 655 миль. Предыдущий рекорд был установлен Apollo 13 в 1970 году, но тот рекорд был создан случайно во время аварийной ситуации. Artemis II достиг этого расстояния как часть запланированной траектории, установив первый преднамеренный рекорд такого рода.
+
+## Возвращение на Землю
+
+Экипаж готовится к приводнению в Тихом океане, ожидаемому примерно 11 апреля. Миссия является первым пилотируемым испытанием как SLS, так и Orion в лётных условиях и закладывает основу для миссии Artemis III, запланированной на 2027 год, которая впервые с 1972 года должна высадить людей на лунную поверхность.`,
+  },
+  // --- News April 7, 2026: Wireless Festival canceled after UK bans Ye ---
+  'wireless-festivali-legv-edildi-ye-britaniya-qadagha': {
+    title: 'Londonda Wireless Festivalı ləğv edildi: Britaniya Kanye Westi ölkəyə buraxmadı',
+    date: '2026-04-08',
+    category: 'Mədəniyyət',
+    locale: 'az',
+    content: `Böyük Britaniya Daxili İşlər Nazirliyi 7 apreldə reper Kanye Westin (Ye) ölkəyə girməsinə qadağa qoyduqdan sonra London Wireless Festivalı ləğv edildi. Festival iyulun 10-12-də keçirilməli idi və Ye üç gün boyu əsas iştirakçı kimi planlaşdırılmışdı. Bütün biletlər avtomatik olaraq tam geri qaytarılacaq.
+
+## Qadağanın səbəbi
+
+Daxili İşlər Nazirliyi Westin ölkəyə daxil olmasının "ictimai xeyir üçün uyğun olmayacağı" əsasına əsaslanaraq vizasını rədd etdi. Qərar reperin son illərdə davam edən antisemit açıqlamalarından sonra verildi. Böyük Britaniya Baş Naziri Keir Starmer X platformasında yazdı: "Kanye West heç vaxt Wireless üçün dəvət olunmamalı idi."
+
+## Sponsorların geri çəkilməsi
+
+Elanın ardından bir neçə iri sponsor festivaldan imtina etdi — Pepsi və içki şirkəti Diageo geri çəkildi. Yəhudi cəmiyyətləri, siyasi liderlər və musiqi sənayesindəki səslər aylardır rap ulduzunun iştirakına etiraz edirdi. Festivalın təşkilatçıları ləğv qərarını məcburi kimi xarakterizə etdilər.
+
+## Biletlərin geri qaytarılması
+
+Biletli bütün pərəstişkarlar avtomatik tam geri qaytarma alacaqlar. Festival təşkilatçıları narazı pərəstişkarlara üzr istədilər və gələcək tədbirlər üçün yeni planlar hazırladıqlarını bildirdilər. Wireless Festivalı 2005-ci ildən London musiqi mənzərəsinin mərkəzi olmuşdur.
+
+## Ye-nin cavabı
+
+Kanye West Britaniyanın Yəhudi cəmiyyəti ilə görüşməyi təklif etdi, lakin qadağa qüvvədə qalır. Rapçı bundan əvvəl də bir sıra ölkələrdə iştirak problemləri ilə qarşılaşmışdır. Bu hadisə musiqi sənayesində nifrət nitqi və beynəlxalq gastrol təhlükəsizliyi haqqında yeni müzakirələr açıb.`,
+  },
+  'en-wireless-festival-canceled-ye-uk-travel-ban': {
+    title: 'Wireless Festival Canceled After UK Bars Kanye West From Entry',
+    date: '2026-04-08',
+    category: 'Culture',
+    locale: 'en',
+    content: `London's Wireless Festival was canceled on April 7 after the UK Home Office banned rapper Kanye West (Ye) from entering the country. The festival was scheduled to take place July 10-12, with Ye planned as the headliner for all three days. All ticket holders will receive an automatic full refund.
+
+## Reason for the Ban
+
+The Home Office rejected West's visa on the grounds that his presence in the country would "not be conducive to the public good." The decision followed years of continued antisemitic remarks by the rapper. UK Prime Minister Keir Starmer posted on X: "Kanye West should never have been invited to headline Wireless." Jewish community groups had campaigned against his appearance for months.
+
+## Sponsors Withdraw
+
+Following the announcement, several major sponsors had already pulled out of the festival — Pepsi and beverage giant Diageo withdrew their backing. Jewish community groups, political leaders, and voices from within the music industry had been protesting the rapper's inclusion for weeks. The festival organizers described the cancellation as unavoidable given the combination of the visa denial and sponsor departures.
+
+## Ticket Refunds
+
+All ticketed fans will automatically receive a full refund. Festival organizers issued an apology to disappointed attendees and said they are working on new plans for future events. Wireless Festival has been a centerpiece of London's music scene since 2005 and regularly draws more than 100,000 fans over its three-day run.
+
+## Ye's Response
+
+Kanye West offered to meet with the UK Jewish community, but the ban remains in effect. The rapper has previously faced performance issues in multiple countries. The incident has opened new discussions within the music industry about hate speech, artist accountability, and the complexity of international touring in the current political climate.`,
+  },
+  'tr-wireless-festivali-iptal-ye-ingiltere-yasak': {
+    title: 'Wireless Festivali İptal Edildi: İngiltere Kanye West\'i Ülkeye Almadı',
+    date: '2026-04-08',
+    category: 'Kültür',
+    locale: 'tr',
+    content: `Londra'daki Wireless Festivali, Birleşik Krallık İçişleri Bakanlığı'nın rapçi Kanye West'e (Ye) ülkeye giriş yasağı getirmesinin ardından 7 Nisan'da iptal edildi. Festival 10-12 Temmuz tarihlerinde gerçekleştirilecekti ve Ye üç gün boyunca ana isim olarak planlanmıştı. Tüm bilet sahipleri otomatik olarak tam iade alacaklar.
+
+## Yasağın Nedeni
+
+İçişleri Bakanlığı, West'in ülkedeki varlığının "kamu yararına uygun olmayacağı" gerekçesiyle vizesini reddetti. Karar, rapçinin son yıllarda sürdürdüğü antisemitik açıklamaların ardından alındı. Birleşik Krallık Başbakanı Keir Starmer X platformunda şunları yazdı: "Kanye West hiçbir zaman Wireless'a ana isim olarak davet edilmemeliydi." Yahudi topluluk grupları aylardır rapçinin sahne almasına karşı kampanya yürütüyordu.
+
+## Sponsorların Geri Çekilmesi
+
+Duyurunun ardından festival için çeşitli büyük sponsor zaten çekilmişti — Pepsi ve içecek devi Diageo desteklerini geri çekti. Yahudi topluluk grupları, siyasi liderler ve müzik endüstrisinin içinden sesler haftalardır rapçinin katılımına itiraz ediyordu. Festival organizatörleri iptali, vize reddi ve sponsor ayrılmalarının birleşimi karşısında kaçınılmaz olarak nitelendirdi.
+
+## Bilet İadeleri
+
+Biletli tüm hayranlar otomatik olarak tam iade alacak. Festival organizatörleri hayal kırıklığına uğramış katılımcılara özür mesajı yayınladı ve gelecekteki etkinlikler için yeni planlar üzerinde çalıştıklarını söyledi. Wireless Festivali 2005'ten bu yana Londra müzik sahnesinin merkezinde yer alıyor ve üç günlük süreçte düzenli olarak 100 binden fazla hayrana ev sahipliği yapıyor.
+
+## Ye\'nin Tepkisi
+
+Kanye West Birleşik Krallık Yahudi topluluğuyla görüşmeyi teklif etti, ancak yasak yürürlükte kalıyor. Rapçi daha önce birçok ülkede konser sorunlarıyla karşılaşmıştı. Bu olay müzik endüstrisinde nefret söylemi, sanatçı sorumluluğu ve mevcut siyasi iklimde uluslararası turnelerin karmaşıklığı hakkında yeni tartışmaları başlattı.`,
+  },
+  'ru-wireless-festival-otmenen-ye-velikobritaniya-zapret': {
+    title: 'Фестиваль Wireless отменён: Великобритания запретила Канье Уэсту въезд в страну',
+    date: '2026-04-08',
+    category: 'Культура',
+    locale: 'ru',
+    content: `Лондонский фестиваль Wireless был отменён 7 апреля после того, как Министерство внутренних дел Великобритании запретило рэперу Канье Уэсту (Ye) въезд в страну. Фестиваль должен был пройти с 10 по 12 июля, причём Ye планировался как хедлайнер на все три дня. Все владельцы билетов получат автоматический полный возврат средств.
+
+## Причина запрета
+
+Министерство внутренних дел отклонило визу Уэста на том основании, что его присутствие в стране "не будет способствовать общественному благу". Решение последовало за годами продолжающихся антисемитских высказываний рэпера. Премьер-министр Великобритании Кир Стармер написал в X: "Канье Уэста никогда не должны были приглашать выступить хедлайнером Wireless". Еврейские общественные группы месяцами проводили кампанию против его выступления.
+
+## Отзыв спонсоров
+
+После объявления несколько крупных спонсоров уже вышли из фестиваля — Pepsi и напиточный гигант Diageo отозвали свою поддержку. Еврейские общественные группы, политические лидеры и голоса изнутри музыкальной индустрии неделями протестовали против участия рэпера. Организаторы фестиваля охарактеризовали отмену как неизбежную на фоне сочетания отказа в визе и ухода спонсоров.
+
+## Возврат билетов
+
+Все владельцы билетов автоматически получат полный возврат. Организаторы фестиваля принесли извинения разочарованным посетителям и сообщили, что работают над новыми планами для будущих мероприятий. Фестиваль Wireless является центральным событием лондонской музыкальной сцены с 2005 года и регулярно собирает более 100 тысяч поклонников за три дня своего проведения.
+
+## Реакция Ye
+
+Канье Уэст предложил встретиться с еврейской общиной Великобритании, но запрет остаётся в силе. Ранее рэпер сталкивался с проблемами выступлений в нескольких странах. Инцидент открыл новые дискуссии в музыкальной индустрии о языке ненависти, ответственности артистов и сложности международных гастролей в нынешнем политическом климате.`,
+  },
 }
 
 export const newsSlugs = Object.keys(newsArticles)
