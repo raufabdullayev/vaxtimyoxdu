@@ -212,7 +212,11 @@ Hər iki cüt cavab matçı 14-15 aprel tarixlərində oynanılacaq. Yarımfinal
 
 ## Barcelona - Atletico oyununu izləyin
 
-Oyunun tam baxışını burada izləyə bilərsiniz: [YouTube-da bax](https://www.youtube.com/watch?v=Y_sVL33_drM)`,
+Oyunun tam baxışını burada izləyə bilərsiniz: [YouTube-da bax](https://www.youtube.com/watch?v=Y_sVL33_drM)
+
+## PSJ - Liverpul oyununu izləyin
+
+Oyunun tam baxışını burada izləyə bilərsiniz: [YouTube-da bax](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
   },
   'en-champions-league-quarter-final-april-8': {
     title: 'Champions League Quarter-Finals Tonight: Barcelona-Atletico and PSG-Liverpool',
@@ -235,7 +239,11 @@ Return fixtures will be played on April 14 and 15, with the semi-final pairings 
 
 ## Watch Barcelona vs Atletico match
 
-You can watch the full match here: [Watch on YouTube](https://www.youtube.com/watch?v=Y_sVL33_drM)`,
+You can watch the full match here: [Watch on YouTube](https://www.youtube.com/watch?v=Y_sVL33_drM)
+
+## Watch PSG vs Liverpool match
+
+You can watch the full match here: [Watch on YouTube](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
   },
   'tr-sampiyonlar-ligi-ceyrek-final-8-nisan': {
     title: 'Şampiyonlar Ligi Çeyrek Final Bu Akşam: Barcelona-Atletico ve PSG-Liverpool',
@@ -258,7 +266,11 @@ Rövanş karşılaşmaları 14 ve 15 Nisan tarihlerinde oynanacak. Yarı final e
 
 ## Barcelona - Atletico maçını izleyin
 
-Maçın tamamını buradan izleyebilirsiniz: [YouTube\'da izle](https://www.youtube.com/watch?v=Y_sVL33_drM)`,
+Maçın tamamını buradan izleyebilirsiniz: [YouTube\'da izle](https://www.youtube.com/watch?v=Y_sVL33_drM)
+
+## PSG - Liverpool maçını izleyin
+
+Maçın tamamını buradan izleyebilirsiniz: [YouTube\'da izle](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
   },
   'ru-liga-chempionov-chetvertfinal-8-aprelya': {
     title: 'Четвертьфинал Лиги чемпионов сегодня: Барселона-Атлетико и ПСЖ-Ливерпуль',
@@ -281,7 +293,11 @@ Maçın tamamını buradan izleyebilirsiniz: [YouTube\'da izle](https://www.yout
 
 ## Смотреть матч Барселона - Атлетико
 
-Полный матч можно посмотреть здесь: [Смотреть на YouTube](https://www.youtube.com/watch?v=Y_sVL33_drM)`,
+Полный матч можно посмотреть здесь: [Смотреть на YouTube](https://www.youtube.com/watch?v=Y_sVL33_drM)
+
+## Смотреть матч ПСЖ - Ливерпуль
+
+Полный матч можно посмотреть здесь: [Смотреть на YouTube](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
   },
   'azerbaycan-turkiye-huquqi-emekdashliq-prokurorlar-gorusu': {
     title: 'Azərbaycan-Türkiyə hüquqi əməkdaşlığı güclənir: prezident Aliyev Türkiyə prokurorunu qəbul etdi',
