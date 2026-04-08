@@ -7,6 +7,386 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  'seudiyye-sherq-qerb-neft-boru-xetti-iran-dron-zerbesi-8-aprel': {
+    title: 'Səudiyyə Şərq-Qərb boru xəttinə İran dron zərbəsi: 7 milyon barrel',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Səudiyyə Ərəbistanının strateji Şərq-Qərb xam neft boru xəttinə bu gün, 8 aprel 2026-cı ildə İran dronları zərbə endirib və ABŞ-İran atəşkəsindən cəmi bir neçə saat sonra qlobal enerji bazarını yenidən sarsıdıb. Boru xətti Hörmüz boğazını keçmək üçün əsas alternativ marşrut idi.
+
+## Hücumun təfərrüatları
+
+Səudiyyə Müdafiə Nazirliyi doqquz dronun hava hücumundan müdafiə sistemləri tərəfindən ələ keçirildiyini və vurulduğunu təsdiqləyib, lakin ən azı biri müdafiəni keçərək boru xəttinin infrastrukturuna ziyan vurub. Zərərin miqyasını qiymətləndirmək hələ davam edir, rəsmilər partlayışın dəqiq yerini və neft axınına təsirini açıqlamayıb. Boru xətti ölkənin neftlə zəngin Şərq əyalətindən Qırmızı dəniz sahilindəki Yanbu limanına xam neft daşıyır.
+
+## Atəşkəsdən sonra gərginlik
+
+Zərbə ABŞ və İran arasında iki həftəlik atəşkəsin elan edilməsindən cəmi bir neçə saat sonra baş verib və bu, Tehranın öz vəkil qüvvələri üzərində nəzarətinə dair ciddi suallar doğurur. Şərq-Qərb boru xəttinin gündəlik təqribən 7 milyon barrel tutumu var və 2026-cı il Hörmüz böhranı dövründə qlobal neft tədarükü üçün həyati əhəmiyyətli marşrut rolu oynayıb.
+
+## Bazarlara təsir
+
+Ekspertlər zərbəni onilliklərin ən ciddi enerji böhranının daha da dərinləşməsi kimi qiymətləndirir. Hadisə göstərir ki, atəşkəs elan edilsə də, qlobal neft təchizatı zəncirində zəifliklər davam edir. Səudiyyə Ərəbistanı və beynəlxalq tərəfdaşlar vəziyyəti diqqətlə izləyir, neft qiymətləri yenidən yüksəlişə başlayıb.`,
+  },
+  'en-saudi-east-west-oil-pipeline-iran-drone-strike-april-8': {
+    title: 'Saudi East-West Pipeline Struck by Iran Drones: 7M Barrel Route Hit',
+    date: '2026-04-08',
+    category: 'World',
+    locale: 'en',
+    content: `Saudi Arabia\'s strategic East-West Crude Oil Pipeline was struck by Iranian drones on Wednesday, April 8, 2026, just hours after a US-Iran two-week ceasefire was announced, sending shockwaves through already-fragile global energy markets. The pipeline has been the key route bypassing the blocked Strait of Hormuz.
+
+## Details of the Attack
+
+Saudi Arabia\'s Defense Ministry confirmed that nine drones were intercepted and shot down by air defense systems, but at least one breached the defenses and caused damage to the pipeline infrastructure. Damage assessment is ongoing, and officials have not yet disclosed the precise location of the impact or its effect on crude flows. The pipeline carries oil from the oil-rich Eastern Province to the Red Sea port of Yanbu.
+
+## Post-Ceasefire Escalation
+
+The strike occurred only hours after the US and Iran announced a two-week ceasefire agreement, raising urgent questions about Tehran\'s command-and-control over its proxy forces. The East-West pipeline has a capacity of roughly 7 million barrels per day and has been a critical lifeline for global oil supply during the 2026 Strait of Hormuz crisis, providing an overland alternative to tanker shipments through contested waters.
+
+## Market Impact
+
+Experts characterize the strike as a sharp escalation that threatens to deepen what many call the world\'s worst energy crisis in decades. The incident demonstrates that even with a declared ceasefire, vulnerabilities in the global oil supply chain remain significant. Saudi Arabia and international partners are closely monitoring the situation, and oil prices have already begun climbing again on the news, with Brent futures reversing the gains made after the ceasefire announcement.`,
+  },
+  'tr-suudi-arabistan-dogu-bati-petrol-boru-hatti-iran-drone-saldirisi-8-nisan': {
+    title: 'Suudi Doğu-Batı Petrol Boru Hattına İran Drone Saldırısı: 7 Milyon Varil',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Suudi Arabistan\'ın stratejik Doğu-Batı Ham Petrol Boru Hattı, 8 Nisan 2026 Çarşamba günü İran drone\'ları tarafından vuruldu. Saldırı ABD-İran iki haftalık ateşkesinin açıklanmasından sadece saatler sonra gerçekleşti ve zaten kırılgan olan küresel enerji piyasalarını yeniden sarstı. Boru hattı, kapalı Hürmüz Boğazı\'nı baypas eden kilit güzergahtı.
+
+## Saldırının Ayrıntıları
+
+Suudi Arabistan Savunma Bakanlığı, hava savunma sistemleri tarafından dokuz drone\'un ele geçirilip düşürüldüğünü, ancak en az birinin savunmayı aşarak boru hattı altyapısına zarar verdiğini doğruladı. Hasar değerlendirmesi devam ediyor ve yetkililer henüz isabetin kesin yerini veya ham petrol akışına etkisini açıklamadı. Boru hattı petrol zengini Doğu Eyaleti\'nden Kızıldeniz limanı Yanbu\'ya ham petrol taşıyor.
+
+## Ateşkes Sonrası Tırmanma
+
+Saldırı, ABD ve İran\'ın iki haftalık ateşkes anlaşmasını açıklamasından sadece saatler sonra gerçekleşti ve Tahran\'ın vekil güçleri üzerindeki komuta-kontrolü hakkında acil sorular gündeme getirdi. Doğu-Batı boru hattı yaklaşık günde 7 milyon varillik kapasiteye sahip ve 2026 Hürmüz Boğazı krizinde küresel petrol arzı için kritik bir can damarı olmuştur. Tartışmalı sularda tanker sevkiyatına kara yoluyla alternatif sağlamıştır.
+
+## Piyasa Etkisi
+
+Uzmanlar saldırıyı, birçoklarının onlarca yılın en ciddi enerji krizi olarak nitelendirdiği durumu daha da derinleştirme tehdidi taşıyan keskin bir tırmanma olarak değerlendiriyor. Olay, ilan edilmiş bir ateşkese rağmen bile küresel petrol tedarik zincirindeki zafiyetlerin önemli kaldığını gösteriyor. Suudi Arabistan ve uluslararası ortaklar durumu yakından takip ediyor ve petrol fiyatları haberler üzerine yeniden yükselmeye başladı; Brent vadeli işlemleri ateşkes açıklamasından sonraki kazanımları tersine çevirdi.`,
+  },
+  'ru-saudovskiy-vostok-zapad-neftyanoy-truboprovod-iran-drony-8-aprelya': {
+    title: 'Саудовский нефтепровод Восток-Запад атакован дронами Ирана',
+    date: '2026-04-08',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Стратегический нефтепровод Саудовской Аравии Восток-Запад для транспортировки сырой нефти был атакован иранскими беспилотниками в среду, 8 апреля 2026 года, всего через несколько часов после объявления двухнедельного перемирия между США и Ираном. Удар вновь встряхнул и без того хрупкие глобальные энергетические рынки. Нефтепровод был ключевым маршрутом, обходящим заблокированный Ормузский пролив.
+
+## Детали нападения
+
+Министерство обороны Саудовской Аравии подтвердило, что девять беспилотников были перехвачены и сбиты системами ПВО, однако по меньшей мере один прорвался через оборону и нанёс ущерб инфраструктуре нефтепровода. Оценка ущерба продолжается, официальные лица пока не раскрыли точное место удара или его влияние на поток нефти. Нефтепровод транспортирует нефть из богатой нефтью Восточной провинции в порт Янбу на Красном море.
+
+## Эскалация после перемирия
+
+Удар произошёл всего через несколько часов после того, как США и Иран объявили о двухнедельном соглашении о прекращении огня, что вызывает острые вопросы о командовании и контроле Тегерана над своими прокси-силами. Нефтепровод Восток-Запад имеет пропускную способность примерно 7 миллионов баррелей в сутки и был критически важной артерией для глобального предложения нефти во время кризиса Ормузского пролива 2026 года, обеспечивая сухопутную альтернативу танкерным отгрузкам через спорные воды.
+
+## Влияние на рынок
+
+Эксперты характеризуют удар как резкую эскалацию, угрожающую углубить то, что многие называют худшим энергетическим кризисом за десятилетия. Инцидент демонстрирует, что даже при объявленном перемирии уязвимости в глобальной цепочке поставок нефти остаются значительными. Саудовская Аравия и международные партнёры внимательно следят за ситуацией, цены на нефть уже начали снова расти на новостях.`,
+  },
+  'rex-heuermann-gilqo-beach-seri-qatil-gunahkar-tanidi-8-aprel': {
+    title: 'Gilgo Beach qatili Rex Heuermann səkkiz qadının qətlini etiraf etdi',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Uzun Ayland memarı Rex Heuermann bu gün, 8 aprel 2026-cı ildə Riverhead məhkəməsində 17 il ərzində səkkiz qadını öldürdüyünü rəsmən etiraf etdi və bu, Amerika tarixinin ən məşhur həll olunmamış seriyalı qatil işlərindən birini bağladı. 62 yaşlı Heuermann üç ardıcıl ömürlük həbsə və dörd ardıcıl 25 ildən ömürlük müddətə razılaşdı.
+
+## Qurbanların adları
+
+Heuermann 1993-cü ildən 2010-cu ilə qədər olan dövrdə səkkiz qadını öldürdüyünü etiraf etdi: Melissa Barthelemy, Megan Waterman, Amber Costello, Sandra Costilla, Valerie Mack, Jessica Taylor, Maureen Brainard-Barnes və Karen Vergata. Dəyişdirilmiş ittiham elanı dinləməsi dramatik oldu və qurbanların ailələri məhkəmə zalında idi. Rəsmi cəza hökmü 17 iyun 2026-cı il tarixinə təyin edilib.
+
+## İşin tarixi
+
+Gilgo Beach araşdırması 2010-cu ildə Uzun Aylandın cənub sahilində ucqar bir çimərlik yolu boyunca insan qalıqlarının aşkarlanması ilə başlamışdı. Heuermann yalnız 2022-ci ildə yeni bir xüsusi qüvvənin yaradılmasından sonra avtomobil qeydiyyatı məlumat bazası vasitəsilə müəyyən edildi. Memar illərlə rahat Uzun Ayland şəhərində yaşayırdı, bu isə ictimaiyyəti şok etdi.
+
+## Qlobal maraq
+
+İş qlobal maraq yaratdı və Hollivud filminə ilham verdi. Amerika hüquq-mühafizə orqanları bu etirafı ölkənin tarixindəki ən dəhşətli seriyalı qatilliklərin rəsmən bağlanması kimi qeyd edir. Qurbanların bəzi ailə üzvləri məhkəmədən sonra bəyanatlar verərək, onilliklərdən bəri gözlədikləri ədalətin nəhayət bərpa olunduğunu söylədilər.`,
+  },
+  'en-rex-heuermann-gilgo-beach-serial-killer-guilty-plea-april-8': {
+    title: 'Gilgo Beach Serial Killer Rex Heuermann Pleads Guilty to Eight Murders',
+    date: '2026-04-08',
+    category: 'World',
+    locale: 'en',
+    content: `Long Island architect Rex Heuermann pleaded guilty on Wednesday, April 8, 2026, in a Riverhead, New York courtroom to murdering eight women over a 17-year period, closing one of the most infamous unsolved serial killer cases in modern American history. The 62-year-old agreed to three consecutive life sentences followed by four consecutive 25-years-to-life sentences.
+
+## The Victims Named
+
+In the changed-plea hearing, Heuermann admitted killing Melissa Barthelemy, Megan Waterman, Amber Costello, Sandra Costilla, Valerie Mack, Jessica Taylor, Maureen Brainard-Barnes, and Karen Vergata. The confessions covered murders committed between 1993 and 2010. Family members of the victims were present in the courtroom during the dramatic proceedings. Formal sentencing has been set for June 17, 2026.
+
+## Case History
+
+The Gilgo Beach investigation began in 2010 when multiple sets of human remains were discovered along a remote beach highway on Long Island\'s South Shore. For more than a decade the case remained unsolved and became the subject of intense public scrutiny, documentaries, and true-crime coverage. Heuermann was finally identified in 2022 through a vehicle registration database after a new task force was formed to re-examine the evidence using updated investigative techniques.
+
+## Global Interest
+
+The case attracted worldwide interest and inspired a Hollywood film. American law enforcement officials describe the guilty plea as the formal closing of one of the most horrific serial killing cases in the country\'s history. Some family members of the victims issued statements after the hearing, saying that the justice they had awaited for decades was finally being delivered. The quiet Long Island community where Heuermann lived for years remains shocked by the revelations.`,
+  },
+  'tr-rex-heuermann-gilgo-beach-seri-katili-suclu-savunmasi-8-nisan': {
+    title: 'Gilgo Beach Seri Katili Rex Heuermann Sekiz Cinayeti Kabul Etti',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Long Island mimarı Rex Heuermann, 8 Nisan 2026 Çarşamba günü Riverhead, New York mahkeme salonunda 17 yıllık bir süre boyunca sekiz kadını öldürdüğünü itiraf etti ve modern Amerikan tarihinin en kötü şöhretli çözülmemiş seri katil davalarından birini kapattı. 62 yaşındaki mimar, üç ardışık müebbet hapis cezasını ve ardından dört ardışık 25 yıldan müebbete kadar hapis cezasını kabul etti.
+
+## Kurbanların İsimleri
+
+Değiştirilen savunma duruşmasında Heuermann, Melissa Barthelemy, Megan Waterman, Amber Costello, Sandra Costilla, Valerie Mack, Jessica Taylor, Maureen Brainard-Barnes ve Karen Vergata\'yı öldürdüğünü kabul etti. İtiraflar 1993 ile 2010 yılları arasında işlenen cinayetleri kapsıyordu. Kurbanların aile üyeleri dramatik duruşma boyunca mahkeme salonundaydı. Resmi ceza duruşması 17 Haziran 2026 olarak belirlendi.
+
+## Davanın Tarihi
+
+Gilgo Beach soruşturması 2010 yılında Long Island\'ın Güney Kıyısı\'nda uzak bir sahil otoyolu boyunca birden fazla insan kalıntısının bulunmasıyla başladı. On yılı aşkın bir süre boyunca dava çözümsüz kaldı ve yoğun kamuoyu denetimi, belgeseller ve gerçek suç haberlerinin konusu oldu. Heuermann nihayet 2022\'de kanıtları güncel araştırma tekniklerini kullanarak yeniden incelemek üzere oluşturulan yeni bir görev gücünün ardından bir araç tescil veritabanı aracılığıyla tespit edildi.
+
+## Küresel İlgi
+
+Dava dünya çapında ilgi gördü ve bir Hollywood filmine ilham verdi. Amerikalı kolluk kuvvetleri yetkilileri suçlu savunmasını ülkenin tarihindeki en korkunç seri cinayet davalarından birinin resmi olarak kapatılması olarak tanımlıyor. Kurbanların bazı aile üyeleri duruşmadan sonra açıklamalar yayınlayarak onlarca yıldır bekledikleri adaletin nihayet yerini bulduğunu söyledi. Heuermann\'ın yıllarca yaşadığı sessiz Long Island topluluğu ifşaattan hâlâ şoke olmuş durumda.`,
+  },
+  'ru-reks-heuermann-gilgo-bich-seriynyy-ubiytsa-priznal-vinu-8-aprelya': {
+    title: 'Серийный убийца с пляжа Гилго Рекс Хойерманн признал вину в 8 убийствах',
+    date: '2026-04-08',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Архитектор с Лонг-Айленда Рекс Хойерманн в среду, 8 апреля 2026 года, в зале суда в Риверхеде, штат Нью-Йорк, признал себя виновным в убийстве восьми женщин на протяжении 17 лет, закрыв одно из самых печально известных нераскрытых дел о серийных убийствах в современной американской истории. 62-летний обвиняемый согласился на три последовательных пожизненных срока с последующими четырьмя последовательными сроками от 25 лет до пожизненного заключения.
+
+## Имена жертв
+
+На слушании об изменении признания Хойерманн признался в убийстве Мелиссы Бартелеми, Меган Уотерман, Эмбер Костелло, Сандры Костиллы, Валери Мак, Джессики Тейлор, Морин Брейнард-Барнс и Карен Вергаты. Признания охватывали убийства, совершённые с 1993 по 2010 год. Члены семей жертв присутствовали в зале суда во время драматического процесса. Формальное вынесение приговора назначено на 17 июня 2026 года.
+
+## История дела
+
+Расследование на пляже Гилго началось в 2010 году, когда вдоль отдалённой пляжной дороги на Южном берегу Лонг-Айленда были обнаружены многочисленные человеческие останки. Более десяти лет дело оставалось нераскрытым и стало предметом пристального внимания общественности, документальных фильмов и освещения в жанре тру-крайм. Хойерманн был наконец идентифицирован в 2022 году через базу данных регистрации транспортных средств после создания новой рабочей группы для повторного анализа доказательств с использованием современных следственных методов.
+
+## Мировой интерес
+
+Дело привлекло всемирный интерес и вдохновило на создание голливудского фильма. Американские правоохранительные органы описывают признание вины как формальное закрытие одного из самых ужасающих дел о серийных убийствах в истории страны. Некоторые члены семей жертв выступили с заявлениями после слушания, сказав, что справедливость, которую они ждали десятилетиями, наконец восстанавливается. Тихое сообщество Лонг-Айленда, где Хойерманн жил годами, всё ещё потрясено разоблачениями.`,
+  },
+  'aliyev-pezeshkian-telefon-socar-musahide-shurasi-8-aprel': {
+    title: 'Əliyev Pezeşkiana atəşkəs təbriki, SOCAR Müşahidə Şurasında dəyişiklik',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Azərbaycan Respublikasının Prezidenti İlham Əliyev bu gün, 8 aprel 2026-cı ildə İran İslam Respublikasının Prezidenti Məsud Pezeşkian ilə telefon danışığı keçirərək İran-ABŞ arasında əldə edilmiş iki həftəlik atəşkəs münasibətilə təbrik etdi. Eyni gündə Əliyev SOCAR-ın Müşahidə Şurası üzvlüyünə dair mühüm tərkib dəyişikliyi barədə sərəncam imzaladı.
+
+## Prezidentlər arasında danışıq
+
+Telefon danışığında Prezident Pezeşkian İran xalqına göstərilən həmrəyliyə, xüsusən son böhran zamanı Azərbaycanın göndərdiyi humanitar yardım üçün Prezident Əliyevə təşəkkür etdi. İki lider ikitərəfli əməkdaşlıq və regional sabitlik məsələlərini müzakirə etdilər. Azərbaycan İran-ABŞ de-eskalasiyasında regional körpü rolunu davam etdirir və bu mövqeyini beynəlxalq səviyyədə gücləndirir.
+
+## SOCAR Müşahidə Şurasında dəyişiklik
+
+Eyni gün Prezident Əliyev SOCAR-ın Müşahidə Şurası tərkibini dəyişdirən sərəncam imzaladı: Maliyyə nazirinin sabiq müavini Azər Bayramov dövlət neft şirkətinin ali nəzarət orqanında Maliyyə nazirinin birinci müavini Anar Kərimov ilə əvəz olundu. Şura dəyişikliyi Azərbaycanın enerji sektoru üçün həssas bir anda — İran-ABŞ atəşkəsinin ardından regional neft bazarlarının sabitləşdiyi dövrdə — baş verir.
+
+## Qazaxıstan nümayəndə heyəti
+
+Həmçinin həmin gün Əliyev Qazaxıstanın xarici işlər naziri Yermek Koşerbayev və nəqliyyat naziri Nurlan Sauranbayevi Bakıda qəbul etdi. Görüşdə üçtərəfli və ikitərəfli əməkdaşlıq, Orta Koridor nəqliyyat marşrutları və Xəzər regionu iqtisadi təşəbbüsləri müzakirə edildi. Bu ziyarət Azərbaycan-Qazaxıstan strateji tərəfdaşlığının daha da dərinləşməsinin göstəricisidir.`,
+  },
+  'en-aliyev-pezeshkian-phone-call-socar-board-april-8': {
+    title: 'Aliyev Congratulates Pezeshkian on Ceasefire, Updates SOCAR Board',
+    date: '2026-04-08',
+    category: 'World',
+    locale: 'en',
+    content: `Azerbaijan\'s President Ilham Aliyev held a phone call with Iranian President Masoud Pezeshkian on Wednesday, April 8, 2026, congratulating him on the two-week ceasefire reached between Iran and the United States. On the same day, Aliyev signed a presidential decree updating the composition of SOCAR\'s Supervisory Board with a key personnel change.
+
+## The Presidential Phone Call
+
+During the phone call, President Pezeshkian thanked Aliyev both for the congratulations and for the humanitarian aid Azerbaijan had provided to Iran during the recent crisis. The two leaders discussed bilateral cooperation and regional stability. Azerbaijan has positioned itself as a regional bridge in the Iran-US de-escalation, a role that officials say strengthens Baku\'s standing as a credible diplomatic actor in the South Caucasus and the broader region during one of the most consequential geopolitical crises in years.
+
+## SOCAR Supervisory Board Change
+
+On the same day, President Aliyev signed a decree amending the composition of SOCAR\'s Supervisory Board: former Deputy Minister of Finance Azer Bayramov was replaced by First Deputy Minister of Finance Anar Karimov on the state oil company\'s top oversight body. The board change comes at a sensitive moment for Azerbaijan\'s energy sector, as regional oil markets begin stabilizing following the Iran-US ceasefire. Analysts see the personnel move as part of broader Finance Ministry coordination with strategic state assets.
+
+## Kazakh Delegation in Baku
+
+Separately, Aliyev hosted Kazakhstan\'s Foreign Minister Yermek Kosherbayev and Transport Minister Nurlan Sauranbayev in Baku on the same day. The meeting covered trilateral and bilateral cooperation, Middle Corridor transport routes, and Caspian regional economic initiatives. The visit underscores the continued deepening of the Azerbaijan-Kazakhstan strategic partnership, which has become increasingly important as Eurasian trade flows reroute away from Russia amid ongoing geopolitical tensions.`,
+  },
+  'tr-aliyev-pezeskiyan-telefon-gorusmesi-socar-kurulu-8-nisan': {
+    title: 'Aliyev Pezeşkiyan\'ı Ateşkes İçin Tebrik Etti, SOCAR Kurulunu Güncelledi',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Azerbaycan Cumhurbaşkanı İlham Aliyev 8 Nisan 2026 Çarşamba günü İran Cumhurbaşkanı Mesud Pezeşkiyan ile telefon görüşmesi gerçekleştirerek İran ve Amerika Birleşik Devletleri arasında varılan iki haftalık ateşkes dolayısıyla onu tebrik etti. Aynı gün Aliyev, SOCAR Denetim Kurulu\'nun bileşiminde önemli bir personel değişikliği içeren cumhurbaşkanlığı kararnamesi imzaladı.
+
+## Cumhurbaşkanlığı Telefon Görüşmesi
+
+Telefon görüşmesi sırasında Cumhurbaşkanı Pezeşkiyan, hem tebrikler için hem de son kriz sırasında Azerbaycan\'ın İran\'a sağladığı insani yardım için Aliyev\'e teşekkür etti. İki lider ikili işbirliği ve bölgesel istikrar konularını ele aldı. Azerbaycan, İran-ABD gerginliğinin azaltılmasında bölgesel bir köprü rolünü üstlenmiştir ve yetkililere göre bu rol, yılların en önemli jeopolitik krizlerinden biri sırasında Bakü\'nün Güney Kafkasya\'da ve daha geniş bölgede güvenilir bir diplomatik aktör olarak konumunu güçlendirmektedir.
+
+## SOCAR Denetim Kurulu Değişikliği
+
+Aynı gün Cumhurbaşkanı Aliyev, SOCAR Denetim Kurulu\'nun bileşimini değiştiren bir kararname imzaladı: eski Maliye Bakan Yardımcısı Azer Bayramov, devlet petrol şirketinin üst denetim organında Maliye Birinci Bakan Yardımcısı Anar Karimov ile değiştirildi. Kurul değişikliği, İran-ABD ateşkesinin ardından bölgesel petrol piyasalarının istikrara kavuşmaya başladığı hassas bir anda Azerbaycan\'ın enerji sektörü için geliyor. Analistler bu personel hareketini Maliye Bakanlığı\'nın stratejik devlet varlıklarıyla daha geniş koordinasyonunun bir parçası olarak görüyor.
+
+## Kazak Heyeti Bakü\'de
+
+Ayrıca Aliyev, aynı gün Kazakistan Dışişleri Bakanı Yermek Koşerbayev ve Ulaştırma Bakanı Nurlan Sauranbayev\'i Bakü\'de ağırladı. Görüşmede üçlü ve ikili işbirliği, Orta Koridor ulaşım güzergahları ve Hazar bölgesi ekonomik girişimleri ele alındı. Ziyaret, devam eden jeopolitik gerginlikler arasında Avrasya ticaret akışlarının Rusya\'dan uzaklaşarak yeniden yönlendirildiği bir dönemde giderek daha önemli hale gelen Azerbaycan-Kazakistan stratejik ortaklığının derinleşmesinin altını çiziyor.`,
+  },
+  'ru-aliev-pezeshkian-telefonnyy-razgovor-socar-sovet-8-aprelya': {
+    title: 'Алиев поздравил Пезешкиана с перемирием, обновил совет SOCAR',
+    date: '2026-04-08',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Президент Азербайджанской Республики Ильхам Алиев в среду, 8 апреля 2026 года, провёл телефонный разговор с президентом Исламской Республики Иран Масудом Пезешкианом, поздравив его с двухнедельным перемирием, достигнутым между Ираном и Соединёнными Штатами. В тот же день Алиев подписал президентский указ, обновляющий состав Наблюдательного совета SOCAR с ключевым кадровым изменением.
+
+## Президентский телефонный разговор
+
+Во время телефонного разговора президент Пезешкиан поблагодарил Алиева как за поздравления, так и за гуманитарную помощь, оказанную Азербайджаном Ирану во время недавнего кризиса. Два лидера обсудили двустороннее сотрудничество и региональную стабильность. Азербайджан позиционирует себя как региональный мост в деэскалации между Ираном и США, роль, которая, по словам официальных лиц, укрепляет положение Баку как надёжного дипломатического актора на Южном Кавказе и в более широком регионе во время одного из самых значимых геополитических кризисов за последние годы.
+
+## Изменение в Наблюдательном совете SOCAR
+
+В тот же день президент Алиев подписал указ, вносящий изменения в состав Наблюдательного совета SOCAR: бывший заместитель министра финансов Азер Байрамов был заменён первым заместителем министра финансов Анаром Каримовым в высшем надзорном органе государственной нефтяной компании. Смена совета происходит в чувствительный для энергетического сектора Азербайджана момент, когда региональные нефтяные рынки начинают стабилизироваться после перемирия между Ираном и США. Аналитики рассматривают это кадровое движение как часть более широкой координации Министерства финансов со стратегическими государственными активами.
+
+## Казахстанская делегация в Баку
+
+Отдельно Алиев принял в Баку в тот же день министра иностранных дел Казахстана Ермека Кошербаева и министра транспорта Нурлана Сауранбаева. Встреча охватила трёхстороннее и двустороннее сотрудничество, транспортные маршруты Среднего коридора и экономические инициативы Каспийского региона. Визит подчёркивает продолжающееся углубление стратегического партнёрства Азербайджана и Казахстана, которое становится всё более важным в условиях, когда евразийские торговые потоки перенаправляются в обход России на фоне продолжающейся геополитической напряжённости.`,
+  },
+  'cygnus-xl-nasa-spacex-start-tehir-hava-10-aprel': {
+    title: 'NASA Cygnus XL startı pis hava səbəbilə təxirə salındı: yeni tarix 10 aprel',
+    date: '2026-04-08',
+    category: 'Elm',
+    locale: 'az',
+    content: `NASA, Northrop Grumman və SpaceX bu gün, 8 aprel 2026-cı ildə Cygnus XL yük kosmik gəmisinin Beynəlxalq Kosmik Stansiyaya planlaşdırılan startını Florida ştatındakı Kanaveral burnunda gözlənilən pis hava şəraiti səbəbindən rəsmən ləğv etdi. Yeni start tarixi 10 aprel cümə günü səhər 8:03-də gözlənilir.
+
+## Start dəyişikliyi
+
+Northrop Grumman-ın Kommersiya Təchizat Xidmətləri-24 (CRS-24 / NG-24) missiyası indi ən tez 10 aprel cümə günü şərq yay vaxtı ilə səhər 8:03-də SpaceX Falcon 9 raketi ilə yeni start cəhdi etməyi hədəfləyir. Ehtiyac olarsa, 11 aprel səhər 7:40 da ehtiyat imkan kimi qalır. Start edilən yer Cape Canaveral Space Force Station-da 40 nömrəli Kosmik Start Kompleksi olacaq.
+
+## Cygnus XL və yük
+
+Cygnus XL — Northrop Grumman-ın yük gəmisinin böyüdülmüş versiyasıdır və təxminən 11,000 funt (5,000 kq) yük, o cümlədən qida, elmi eksperimentlər və avadanlıq daşıyır. Bu, Cygnus XL üçün tarixi missiyadır, çünki o, NASA üçün yük daşıma gücünü əhəmiyyətli dərəcədə artıracaq. Missiya NASA-nın ISS təchizat strategiyasında əhəmiyyətli rol oynayır.
+
+## Stansiyada qəbul
+
+Startdan sonra Beynəlxalq Kosmik Stansiyadakı astronavtlar Canadarm2 robot qolundan istifadə edərək kosmik gəmini tutacaq və yük boşaltması üçün onu Unity modulunun Yer istiqamətli portuna quraşdıracaqlar. Bu proses bir neçə saat sürür və astronomiya həvəskarları üçün NASA TV-də canlı yayımlanacaq. Artemis II missiyasından sonra bu, NASA-nın kosmos proqramında növbəti vacib addımdır.`,
+  },
+  'en-nasa-cygnus-xl-launch-scrubbed-weather-april-8': {
+    title: 'NASA Cygnus XL Launch Scrubbed Due to Weather: New Target April 10',
+    date: '2026-04-08',
+    category: 'Science',
+    locale: 'en',
+    content: `NASA, Northrop Grumman, and SpaceX officially scrubbed the planned launch of the Cygnus XL cargo spacecraft to the International Space Station on Wednesday, April 8, 2026, due to forecasted inclement weather at Cape Canaveral in Florida. The Northrop Grumman Commercial Resupply Services-24 mission is now targeting Friday, April 10 at 8:03 a.m. EDT.
+
+## Launch Delay Details
+
+The CRS-24 / NG-24 mission is now targeting no earlier than 8:03 a.m. EDT on Friday, April 10 for its next launch attempt aboard a SpaceX Falcon 9 rocket. If needed, Saturday, April 11 at 7:40 a.m. remains a backup opportunity. The launch will take place from Space Launch Complex 40 at Cape Canaveral Space Force Station, the same pad used for many of SpaceX\'s operational Falcon 9 missions in recent years.
+
+## Cygnus XL and Cargo
+
+The Cygnus XL — the enlarged version of Northrop Grumman\'s cargo freighter — is carrying approximately 11,000 pounds (5,000 kilograms) of supplies, including food, scientific experiments, and equipment for the station\'s Expedition 75 crew. This is a milestone mission for the Cygnus XL variant, which significantly increases the cargo capacity available to NASA compared to the original Cygnus design. The mission plays a critical role in NASA\'s ongoing ISS resupply strategy.
+
+## Station Capture
+
+After launch, astronauts aboard the International Space Station will use the Canadarm2 robotic arm to capture the spacecraft and install it on the Unity module\'s Earth-facing port for cargo unloading. The rendezvous and capture process typically takes several hours and will be broadcast live on NASA TV for space enthusiasts worldwide. Following the Artemis II mission, this marks another important step in NASA\'s active 2026 space operations calendar.`,
+  },
+  'tr-nasa-cygnus-xl-firlatma-ertelendi-hava-10-nisan': {
+    title: 'NASA Cygnus XL Fırlatması Hava Nedeniyle Ertelendi: Yeni Hedef 10 Nisan',
+    date: '2026-04-08',
+    category: 'Bilim',
+    locale: 'tr',
+    content: `NASA, Northrop Grumman ve SpaceX, 8 Nisan 2026 Çarşamba günü Uluslararası Uzay İstasyonu\'na Cygnus XL kargo uzay aracının planlanan fırlatmasını Florida\'daki Cape Canaveral\'da beklenen olumsuz hava koşulları nedeniyle resmi olarak iptal etti. Northrop Grumman Ticari İkmal Hizmetleri-24 görevi şimdi 10 Nisan Cuma günü saat 08:03 EDT\'yi hedefliyor.
+
+## Fırlatma Erteleme Detayları
+
+CRS-24 / NG-24 görevi, SpaceX Falcon 9 roketi ile bir sonraki fırlatma denemesi için artık en erken 10 Nisan Cuma günü EDT saatiyle 08:03\'ü hedefliyor. Gerekirse, 11 Nisan Cumartesi sabah 07:40 yedek bir fırsat olarak kalıyor. Fırlatma, son yıllarda SpaceX\'in Falcon 9 görevlerinin birçoğu için kullanılan Cape Canaveral Uzay Kuvvetleri İstasyonu\'ndaki Uzay Fırlatma Kompleksi 40\'tan gerçekleşecek.
+
+## Cygnus XL ve Kargo
+
+Cygnus XL — Northrop Grumman\'ın kargo nakliye aracının büyütülmüş versiyasıdır — istasyonun Expedition 75 mürettebatı için yaklaşık 11.000 pound (5.000 kilogram) erzak, bilimsel deneyler ve ekipman taşıyor. Bu, Cygnus XL varyantı için kilit bir görevdir ve NASA\'ya sunulan kargo kapasitesini orijinal Cygnus tasarımına göre önemli ölçüde artırmaktadır. Görev NASA\'nın devam eden ISS ikmal stratejisinde kritik bir rol oynuyor.
+
+## İstasyonda Yakalama
+
+Fırlatmadan sonra Uluslararası Uzay İstasyonu\'ndaki astronotlar, uzay aracını yakalamak ve kargo boşaltması için Unity modülünün Dünya\'ya bakan limanına takmak üzere Canadarm2 robotik kolunu kullanacak. Buluşma ve yakalama süreci tipik olarak birkaç saat sürer ve dünya çapındaki uzay meraklıları için NASA TV\'de canlı yayınlanacak. Artemis II görevinin ardından bu, NASA\'nın aktif 2026 uzay operasyonları takviminde bir başka önemli adımı temsil ediyor.`,
+  },
+  'ru-nasa-cygnus-xl-start-otmenen-pogoda-10-aprelya': {
+    title: 'Запуск NASA Cygnus XL отменён из-за плохой погоды: новая дата 10 апреля',
+    date: '2026-04-08',
+    category: 'Наука',
+    locale: 'ru',
+    content: `NASA, Northrop Grumman и SpaceX в среду, 8 апреля 2026 года, официально отменили запланированный запуск грузового космического корабля Cygnus XL к Международной космической станции из-за прогнозируемых неблагоприятных погодных условий на мысе Канаверал во Флориде. Миссия Northrop Grumman Commercial Resupply Services-24 теперь нацелена на пятницу, 10 апреля, 8:03 утра по восточному летнему времени.
+
+## Детали отсрочки запуска
+
+Миссия CRS-24 / NG-24 теперь нацелена не ранее чем на 8:03 утра по восточному времени в пятницу, 10 апреля, для своей следующей попытки запуска на ракете SpaceX Falcon 9. При необходимости, суббота, 11 апреля, 7:40 утра остаётся резервной возможностью. Запуск состоится со Стартового комплекса 40 станции космических сил на мысе Канаверал — той же площадки, которая использовалась для многих операционных миссий Falcon 9 компании SpaceX в последние годы.
+
+## Cygnus XL и груз
+
+Cygnus XL — увеличенная версия грузового корабля Northrop Grumman — везёт примерно 11 000 фунтов (5 000 килограммов) припасов, включая продовольствие, научные эксперименты и оборудование для экипажа Экспедиции 75 станции. Это знаковая миссия для варианта Cygnus XL, который значительно увеличивает грузовместимость, доступную NASA, по сравнению с оригинальной конструкцией Cygnus. Миссия играет критически важную роль в текущей стратегии снабжения МКС агентством NASA.
+
+## Захват на станции
+
+После запуска астронавты на борту Международной космической станции будут использовать роботизированную руку Canadarm2, чтобы захватить космический корабль и установить его на обращённый к Земле порт модуля Unity для разгрузки груза. Процесс сближения и захвата обычно занимает несколько часов и будет транслироваться в прямом эфире на NASA TV для любителей космоса по всему миру. После миссии Artemis II это ещё один важный шаг в активном космическом календаре NASA на 2026 год.`,
+  },
+  'testaments-xidmetci-nagili-davamiyyeti-hulu-premyerasi-8-aprel': {
+    title: '"Testaments" Hulu-da premyera: "Xidmətçi nağılı"nın davamı bu gün başlayır',
+    date: '2026-04-08',
+    category: 'Mədəniyyət',
+    locale: 'az',
+    content: `"Testaments" serialı — məşhur "Xidmətçinin nağılı"nın uzun müddət gözlənilən davamı — bu gün, 8 aprel 2026-cı ildə Hulu platformasında premyera edib. İlk üç epizod dərhal təqdim olunub, sonrakı epizodlar həftəlik çıxacaq. Serial Gilead distopik teokratiyasında orijinal şounun hadisələrindən 15 il sonra baş verir.
+
+## Ssenarinin əsası
+
+Serial Kanadalı yazıçı Marqaret Etvudun 2019-cu ildə Buker mükafatına layiq görülmüş eyniadlı romanı əsasında çəkilib. Showrunner Bruce Miller orijinal "Xidmətçinin nağılı" serialının da yaradıcısıdır, bu isə kreativ davamlılıq təmin edir. Gələn yaş hekayəsi iki gənc qadının — Gileadda yetişdirilmiş itaətkar Agnes və Gilead sərhədlərindən gələn yeni din dəyişdirmiş Daisy — önlərində duran qaranlıq gələcəklə mübarizəsini izləyir.
+
+## Aktyor heyəti və personajlar
+
+Ann Dowd orijinal rolu olan Xala Lidiyaya qayıdır və bu, fanatlar üçün böyük həyəcan yaratdı. Yeni nəsil aktyorlar Agnes və Daisy rollarını ifa edir və onların kəşfi epizodların əsas hekayə xəttini təşkil edir. Serial Gileadın yetkin qızlara qoyduğu sərt qaydaları və direnişin yeni formalarını göstərir.
+
+## Beynəlxalq yayım
+
+Serial ABŞ-da Hulu və Disney+ bundle abunəçiləri üçün mövcuddur, beynəlxalq olaraq isə Disney+ üzərindən yayımlanır. Bu o deməkdir ki, Azərbaycanda, Türkiyədə və dünyanın əksər yerlərində tamaşaçılar serialı ilk gündən izləyə bilərlər. Tənqidçilər ilk epizodları yüksək qiymətləndirib və serialı son illərin ən gözlənilən premyeralarından biri kimi təsvir ediblər.`,
+  },
+  'en-the-testaments-handmaids-tale-sequel-hulu-premiere-april-8': {
+    title: '"The Testaments" Premieres on Hulu: Handmaid\'s Tale Sequel Drops Today',
+    date: '2026-04-08',
+    category: 'Culture',
+    locale: 'en',
+    content: `"The Testaments," the highly anticipated sequel series to "The Handmaid\'s Tale," premiered on Hulu on Wednesday, April 8, 2026, with its first three episodes dropping at once and subsequent installments releasing weekly. The series is set in the dystopian theocracy of Gilead more than 15 years after the events of the original show.
+
+## Source Material
+
+The series is based on Canadian author Margaret Atwood\'s 2019 Booker Prize-winning novel of the same name. Showrunner Bruce Miller, who created the original "Handmaid\'s Tale" adaptation, returns to ensure creative continuity across the two shows. The coming-of-age story follows two young women — Agnes, a dutiful young woman raised within Gilead\'s rigid system, and Daisy, a new arrival and convert from beyond Gilead\'s borders — as they grapple with the bleak future awaiting them in the theocratic regime.
+
+## Cast and Characters
+
+Ann Dowd reprises her iconic role as Aunt Lydia, a return that has generated intense excitement among fans of the original series. A new generation of actors plays Agnes and Daisy, and their journey of discovery forms the central narrative of the early episodes. The series explores Gilead\'s harsh rules for young women reaching adulthood and introduces new forms of resistance emerging within the regime itself.
+
+## International Release
+
+The series is available on Hulu and Hulu on Disney+ for bundle subscribers in the US, and on Disney+ internationally — meaning viewers in Azerbaijan, Turkey, Russia, and most of the world can stream it from day one. Critics have praised the opening episodes and describe the series as one of the most anticipated premieres of recent years. The reaction from longtime fans has been overwhelmingly positive.`,
+  },
+  'tr-testaments-damizlik-kizin-oykusu-devami-hulu-premieri-8-nisan': {
+    title: '"The Testaments" Hulu\'da Başladı: Damızlık Kızın Öyküsü\'nün Devamı Bugün',
+    date: '2026-04-08',
+    category: 'Kültür',
+    locale: 'tr',
+    content: `Uzun süredir beklenen "Damızlık Kızın Öyküsü"nün devam dizisi "The Testaments," 8 Nisan 2026 Çarşamba günü Hulu\'da yayın hayatına başladı. İlk üç bölümü aynı anda yayınlandı, sonraki bölümler haftalık olarak çıkacak. Dizi, orijinal şovun olaylarından 15 yıldan fazla bir süre sonra Gilead distopik teokrasisinde geçiyor.
+
+## Kaynak Materyal
+
+Dizi, Kanadalı yazar Margaret Atwood\'un 2019 Man Booker Ödülü kazanan aynı adlı romanına dayanıyor. Showrunner Bruce Miller, orijinal "Damızlık Kızın Öyküsü" uyarlamasını da yaratan isim olarak görevine dönüyor ve iki dizi arasında yaratıcı süreklilik sağlıyor. Yetişkinliğe geçiş hikâyesi iki genç kadını takip ediyor — Gilead\'ın katı sisteminde yetiştirilmiş itaatkâr Agnes ve Gilead sınırlarının ötesinden gelen yeni bir din değiştiren Daisy — teokratik rejimde kendilerini bekleyen kasvetli geleceği kavramaya çalışırken.
+
+## Kadro ve Karakterler
+
+Ann Dowd, hayranlar arasında yoğun heyecan yaratan bir dönüşle ikonik rolü Aunt Lydia\'ya geri dönüyor. Yeni nesil oyuncular Agnes ve Daisy\'yi canlandırıyor ve onların keşif yolculuğu ilk bölümlerin merkezi anlatısını oluşturuyor. Dizi, Gilead\'ın yetişkinliğe ulaşan genç kadınlar için katı kurallarını araştırıyor ve rejimin içinden çıkan yeni direniş biçimlerini tanıtıyor.
+
+## Uluslararası Yayın
+
+Dizi, ABD\'de paket abonelik müşterileri için Hulu ve Hulu on Disney+ üzerinden, uluslararası olarak ise Disney+ üzerinden yayınlanıyor — bu, Azerbaycan, Türkiye, Rusya ve dünyanın çoğu yerindeki izleyicilerin ilk günden itibaren diziyi izleyebileceği anlamına geliyor. Eleştirmenler açılış bölümlerini övdüler ve diziyi son yılların en çok beklenen prömiyerlerinden biri olarak tanımladılar.`,
+  },
+  'ru-testaments-rasskaz-sluzhanki-prodolzhenie-hulu-premyera-8-aprelya': {
+    title: '"Заветы" — сериал-продолжение "Рассказа служанки" вышел сегодня на Hulu',
+    date: '2026-04-08',
+    category: 'Культура',
+    locale: 'ru',
+    content: `Долгожданный сериал-продолжение "Рассказа служанки" под названием "Заветы" вышел на платформе Hulu в среду, 8 апреля 2026 года. Первые три эпизода стали доступны одновременно, последующие будут выходить еженедельно. Действие сериала происходит в антиутопической теократии Галаад более чем через 15 лет после событий оригинального шоу.
+
+## Литературная основа
+
+Сериал основан на одноимённом романе канадской писательницы Маргарет Этвуд 2019 года, получившем Букеровскую премию. Шоураннер Брюс Миллер, создавший оригинальную адаптацию "Рассказа служанки", возвращается, чтобы обеспечить творческую преемственность между двумя сериалами. История взросления следит за двумя молодыми женщинами — Агнес, послушной девушкой, выросшей в жёсткой системе Галаада, и Дейзи, новообращённой из-за границ Галаада — по мере того, как они пытаются осмыслить мрачное будущее, ожидающее их в теократическом режиме.
+
+## Актёрский состав и персонажи
+
+Энн Дауд возвращается к своей культовой роли тёти Лидии, что вызвало огромное волнение среди поклонников оригинального сериала. Новое поколение актрис играет Агнес и Дейзи, и их путь открытий формирует центральное повествование первых эпизодов. Сериал исследует суровые правила Галаада для молодых женщин, достигающих совершеннолетия, и вводит новые формы сопротивления, возникающие внутри самого режима.
+
+## Международный релиз
+
+Сериал доступен на Hulu и Hulu on Disney+ для подписчиков пакетных сервисов в США, а на международном уровне — через Disney+, что означает, что зрители в Азербайджане, Турции, России и большинстве других стран мира могут транслировать его с первого дня. Критики высоко оценили стартовые эпизоды и назвали сериал одной из самых ожидаемых премьер последних лет. Реакция давних поклонников оказалась исключительно положительной.`,
+  },
   'iran-abs-iki-heftelik-ateshkes-razilashma': {
     title: 'İran-ABŞ iki həftəlik atəşkəs razılaşdı: Hörmüz boğazı yenidən açılır',
     date: '2026-04-08',
