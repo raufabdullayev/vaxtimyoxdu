@@ -7,6 +7,98 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  'iran-abs-iki-heftelik-ateshkes-razilashma': {
+    title: 'İran-ABŞ iki həftəlik atəşkəs razılaşdı: Hörmüz boğazı yenidən açılır',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ və İran Trampın son tarixindən iki saat əvvəl iki həftəlik atəşkəs razılaşmasına gəldilər. Razılaşmaya görə, ABŞ və İsrail İranın ərazisinə bomba atmağı dayandıracaq, əvəzində İran Hörmüz boğazını təhlükəsiz keçid üçün yenidən açır. Diplomatik danışıqlar 10 apreldə Pakistanda davam edəcək.
+
+## Razılaşmanın şərtləri
+
+İranın Ali Milli Təhlükəsizlik Şurası atəşkəsi rəsmən qəbul etdiyini elan etdi. İranın xarici işlər naziri Abbas Əraqçi iki həftəlik müddətin "diplomatiyaya şans" yaratdığını bildirdi. Bu müddət ərzində tərəflər geniş razılaşma üzərində işləyəcəklər — nüvə proqramı, sanksiyalar və dondurulmuş aktivlər əsas mövzulardır.
+
+## Pakistan vasitəçiliyi
+
+Pakistan ABŞ və İran nümayəndə heyətlərini 10 apreldə İslamabadda qəbul edəcək. Pakistanın baş naziri bu təşəbbüsü "qlobal təhlükənin qarşısını alan tarixi bir addım" kimi xarakterizə etdi. Pakistan həmçinin razılaşmanın icrasına nəzarət mexanizmlərini müzakirə edir.
+
+## Bazarların reaksiyası
+
+Neft qiymətləri xəbərdən sonra kəskin düşüb — Brent nefti 92 dollara qədər endi. S&P 500 indeksi gün ərzində 2,7% artdı, Asiya bazarları da müsbət reaksiya göstərdi. Hava yolları və turizm sektoru səhmləri ən yüksək qazanc əldə edənlər arasındadır.
+
+## Regional nəticələr
+
+Atəşkəs Yaxın Şərqdə gərginliyi azaltsa da, İran dronlarının Səudiyyə Ərəbistanındakı SABIC petrokimya kompleksinə vurduğu zərər hələ araşdırılır. Regional liderlər dialoqun davam etməsini dəstəklədiklərini açıqladılar.`,
+  },
+  'en-iran-us-two-week-ceasefire-hormuz-reopening': {
+    title: 'Iran and US Reach Two-Week Ceasefire: Strait of Hormuz to Reopen',
+    date: '2026-04-08',
+    category: 'World',
+    locale: 'en',
+    content: `The United States and Iran reached a two-week ceasefire agreement less than two hours before President Trump's deadline for wide-scale strikes. Under the deal, the US and Israel will suspend bombing Iran in exchange for Iran reopening the Strait of Hormuz for safe passage. Diplomatic talks will continue in Pakistan on April 10.
+
+## Terms of the Deal
+
+Iran's Supreme National Security Council formally accepted the ceasefire, and Iranian Foreign Minister Abbas Araghchi confirmed the two-week window gives diplomacy "a fighting chance." During this period, both sides will work on a broader agreement covering Iran's nuclear program, sanctions relief, and the release of frozen assets that have been at the center of the dispute for years.
+
+## Pakistani Mediation
+
+Pakistan will host delegations from both the US and Iran in Islamabad on April 10. Islamabad's prime minister described the initiative as a "historic step that averts global catastrophe." Pakistan is also reportedly discussing verification mechanisms to monitor compliance with the ceasefire terms on both sides.
+
+## Market Response
+
+Oil prices dropped sharply on the news — Brent crude fell to $92 per barrel, down from recent peaks above $110. The S&P 500 gained 2.7% during the session, and Asian markets opened higher. Airlines and tourism stocks were among the biggest gainers as jet fuel futures retreated substantially.
+
+## Regional Implications
+
+While the ceasefire eased tensions across the Middle East, damage from Iranian drone strikes on a SABIC petrochemical complex in Jubail, Saudi Arabia remains under investigation. Regional leaders from Gulf states and Turkey welcomed the diplomatic breakthrough and pledged continued support for the negotiation process.`,
+  },
+  'tr-iran-abd-iki-haftalik-ateskes-hormuz-acildi': {
+    title: 'İran ve ABD İki Haftalık Ateşkeste Anlaştı: Hürmüz Boğazı Yeniden Açılıyor',
+    date: '2026-04-08',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Amerika Birleşik Devletleri ve İran, Başkan Trump'ın kapsamlı saldırı son teslim tarihinden iki saat önce iki haftalık bir ateşkes anlaşmasına vardı. Anlaşmaya göre ABD ve İsrail İran'a yönelik bombardımanı durduracak, karşılığında İran Hürmüz Boğazı'nı güvenli geçiş için yeniden açacak. Diplomatik görüşmeler 10 Nisan'da Pakistan'da devam edecek.
+
+## Anlaşmanın Şartları
+
+İran Yüksek Ulusal Güvenlik Konseyi ateşkesi resmi olarak kabul etti ve İran Dışişleri Bakanı Abbas Arakçi iki haftalık sürenin diplomasiye "bir şans" tanıdığını doğruladı. Bu süre zarfında iki taraf İran'ın nükleer programı, yaptırımların hafifletilmesi ve yıllardır anlaşmazlığın merkezinde olan dondurulmuş varlıkların serbest bırakılmasını kapsayan daha geniş bir anlaşma üzerinde çalışacak.
+
+## Pakistan Arabuluculuğu
+
+Pakistan, ABD ve İran heyetlerini 10 Nisan'da İslamabad'da ağırlayacak. Pakistan başbakanı girişimi "küresel felaketi önleyen tarihi bir adım" olarak nitelendirdi. Pakistan'ın ayrıca her iki tarafta ateşkes şartlarına uyumu izlemek için doğrulama mekanizmalarını müzakere ettiği bildirildi.
+
+## Piyasaların Tepkisi
+
+Haberler üzerine petrol fiyatları sert düştü — Brent ham petrol son zirvelerden 110 doların üzerinden 92 dolara geriledi. S&P 500 seansta yüzde 2,7 kazandı ve Asya piyasaları yükselişle açıldı. Jet yakıtı vadeli işlemleri önemli ölçüde gerilerken havayolları ve turizm hisseleri en büyük kazananlar arasında yer aldı.
+
+## Bölgesel Etkiler
+
+Ateşkes Orta Doğu'daki gerginlikleri hafifletse de, İran insansız hava araçlarının Suudi Arabistan'ın Jubail kentindeki SABIC petrokimya tesisine verdiği hasar hâlâ soruşturuluyor. Körfez ülkeleri ve Türkiye'den bölgesel liderler diplomatik atılımı memnuniyetle karşıladı ve müzakere sürecine sürekli desteklerini taahhüt etti.`,
+  },
+  'ru-iran-ssha-dvuhnedelnoe-peremirie-hormuz': {
+    title: 'Иран и США согласовали двухнедельное перемирие: Ормузский пролив вновь открывается',
+    date: '2026-04-08',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Соединённые Штаты и Иран достигли соглашения о двухнедельном перемирии менее чем за два часа до истечения срока, установленного президентом Трампом для масштабных ударов. По условиям сделки США и Израиль приостановят бомбардировки Ирана в обмен на открытие Ираном Ормузского пролива для безопасного прохода судов. Дипломатические переговоры продолжатся в Пакистане 10 апреля.
+
+## Условия соглашения
+
+Высший совет национальной безопасности Ирана официально принял перемирие, а министр иностранных дел Ирана Аббас Арагчи подтвердил, что двухнедельный период даёт дипломатии "реальный шанс". В этот период обе стороны будут работать над более широким соглашением, охватывающим ядерную программу Ирана, ослабление санкций и освобождение замороженных активов, находящихся в центре спора уже много лет.
+
+## Посредничество Пакистана
+
+Пакистан примет делегации США и Ирана в Исламабаде 10 апреля. Премьер-министр Пакистана охарактеризовал инициативу как "исторический шаг, предотвращающий глобальную катастрофу". По имеющимся данным, Пакистан также обсуждает механизмы верификации для мониторинга соблюдения условий перемирия обеими сторонами.
+
+## Реакция рынков
+
+Цены на нефть резко упали после сообщения — нефть марки Brent опустилась до 92 долларов за баррель по сравнению с недавними пиками выше 110 долларов. Индекс S&P 500 вырос на 2,7% за сессию, а азиатские рынки открылись повышением. Акции авиакомпаний и туристического сектора оказались в числе наибольших бенефициаров, поскольку фьючерсы на авиационное топливо существенно снизились.
+
+## Региональные последствия
+
+Хотя перемирие ослабило напряжённость на Ближнем Востоке, ущерб, нанесённый иранскими беспилотниками нефтехимическому комплексу SABIC в саудовском Джубайле, всё ещё расследуется. Региональные лидеры из стран Персидского залива и Турции приветствовали дипломатический прорыв и пообещали дальнейшую поддержку переговорного процесса.`,
+  },
   'iran-abs-son-tarix-gunu-8-aprel': {
     title: 'İran-ABŞ böhranı son tarix günü: Trampın 8 aprel ultimatumu, Kharg adasına zərbə',
     date: '2026-04-08',
@@ -266,98 +358,6 @@ Görüşme aynı zamanda Bakü-Erivan barış süreci zemininde gerçekleşti. A
 ## Мирный процесс с Арменией
 
 Встреча также прошла на фоне мирного процесса Баку-Ереван. Азербайджан представил полную мирную повестку с Арменией на 2026 год, и продолжают поступать сообщения о заметном прогрессе в делимитации границ, взаимном признании и переговорах по транспортному коридору между двумя бывшими противниками.`,
-  },
-  'iran-abs-iki-heftelik-ateshkes-razilashma': {
-    title: 'İran-ABŞ iki həftəlik atəşkəs razılaşdı: Hörmüz boğazı yenidən açılır',
-    date: '2026-04-08',
-    category: 'Dünya',
-    locale: 'az',
-    content: `ABŞ və İran Trampın son tarixindən iki saat əvvəl iki həftəlik atəşkəs razılaşmasına gəldilər. Razılaşmaya görə, ABŞ və İsrail İranın ərazisinə bomba atmağı dayandıracaq, əvəzində İran Hörmüz boğazını təhlükəsiz keçid üçün yenidən açır. Diplomatik danışıqlar 10 apreldə Pakistanda davam edəcək.
-
-## Razılaşmanın şərtləri
-
-İranın Ali Milli Təhlükəsizlik Şurası atəşkəsi rəsmən qəbul etdiyini elan etdi. İranın xarici işlər naziri Abbas Əraqçi iki həftəlik müddətin "diplomatiyaya şans" yaratdığını bildirdi. Bu müddət ərzində tərəflər geniş razılaşma üzərində işləyəcəklər — nüvə proqramı, sanksiyalar və dondurulmuş aktivlər əsas mövzulardır.
-
-## Pakistan vasitəçiliyi
-
-Pakistan ABŞ və İran nümayəndə heyətlərini 10 apreldə İslamabadda qəbul edəcək. Pakistanın baş naziri bu təşəbbüsü "qlobal təhlükənin qarşısını alan tarixi bir addım" kimi xarakterizə etdi. Pakistan həmçinin razılaşmanın icrasına nəzarət mexanizmlərini müzakirə edir.
-
-## Bazarların reaksiyası
-
-Neft qiymətləri xəbərdən sonra kəskin düşüb — Brent nefti 92 dollara qədər endi. S&P 500 indeksi gün ərzində 2,7% artdı, Asiya bazarları da müsbət reaksiya göstərdi. Hava yolları və turizm sektoru səhmləri ən yüksək qazanc əldə edənlər arasındadır.
-
-## Regional nəticələr
-
-Atəşkəs Yaxın Şərqdə gərginliyi azaltsa da, İran dronlarının Səudiyyə Ərəbistanındakı SABIC petrokimya kompleksinə vurduğu zərər hələ araşdırılır. Regional liderlər dialoqun davam etməsini dəstəklədiklərini açıqladılar.`,
-  },
-  'en-iran-us-two-week-ceasefire-hormuz-reopening': {
-    title: 'Iran and US Reach Two-Week Ceasefire: Strait of Hormuz to Reopen',
-    date: '2026-04-08',
-    category: 'World',
-    locale: 'en',
-    content: `The United States and Iran reached a two-week ceasefire agreement less than two hours before President Trump's deadline for wide-scale strikes. Under the deal, the US and Israel will suspend bombing Iran in exchange for Iran reopening the Strait of Hormuz for safe passage. Diplomatic talks will continue in Pakistan on April 10.
-
-## Terms of the Deal
-
-Iran's Supreme National Security Council formally accepted the ceasefire, and Iranian Foreign Minister Abbas Araghchi confirmed the two-week window gives diplomacy "a fighting chance." During this period, both sides will work on a broader agreement covering Iran's nuclear program, sanctions relief, and the release of frozen assets that have been at the center of the dispute for years.
-
-## Pakistani Mediation
-
-Pakistan will host delegations from both the US and Iran in Islamabad on April 10. Islamabad's prime minister described the initiative as a "historic step that averts global catastrophe." Pakistan is also reportedly discussing verification mechanisms to monitor compliance with the ceasefire terms on both sides.
-
-## Market Response
-
-Oil prices dropped sharply on the news — Brent crude fell to $92 per barrel, down from recent peaks above $110. The S&P 500 gained 2.7% during the session, and Asian markets opened higher. Airlines and tourism stocks were among the biggest gainers as jet fuel futures retreated substantially.
-
-## Regional Implications
-
-While the ceasefire eased tensions across the Middle East, damage from Iranian drone strikes on a SABIC petrochemical complex in Jubail, Saudi Arabia remains under investigation. Regional leaders from Gulf states and Turkey welcomed the diplomatic breakthrough and pledged continued support for the negotiation process.`,
-  },
-  'tr-iran-abd-iki-haftalik-ateskes-hormuz-acildi': {
-    title: 'İran ve ABD İki Haftalık Ateşkeste Anlaştı: Hürmüz Boğazı Yeniden Açılıyor',
-    date: '2026-04-08',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `Amerika Birleşik Devletleri ve İran, Başkan Trump'ın kapsamlı saldırı son teslim tarihinden iki saat önce iki haftalık bir ateşkes anlaşmasına vardı. Anlaşmaya göre ABD ve İsrail İran'a yönelik bombardımanı durduracak, karşılığında İran Hürmüz Boğazı'nı güvenli geçiş için yeniden açacak. Diplomatik görüşmeler 10 Nisan'da Pakistan'da devam edecek.
-
-## Anlaşmanın Şartları
-
-İran Yüksek Ulusal Güvenlik Konseyi ateşkesi resmi olarak kabul etti ve İran Dışişleri Bakanı Abbas Arakçi iki haftalık sürenin diplomasiye "bir şans" tanıdığını doğruladı. Bu süre zarfında iki taraf İran'ın nükleer programı, yaptırımların hafifletilmesi ve yıllardır anlaşmazlığın merkezinde olan dondurulmuş varlıkların serbest bırakılmasını kapsayan daha geniş bir anlaşma üzerinde çalışacak.
-
-## Pakistan Arabuluculuğu
-
-Pakistan, ABD ve İran heyetlerini 10 Nisan'da İslamabad'da ağırlayacak. Pakistan başbakanı girişimi "küresel felaketi önleyen tarihi bir adım" olarak nitelendirdi. Pakistan'ın ayrıca her iki tarafta ateşkes şartlarına uyumu izlemek için doğrulama mekanizmalarını müzakere ettiği bildirildi.
-
-## Piyasaların Tepkisi
-
-Haberler üzerine petrol fiyatları sert düştü — Brent ham petrol son zirvelerden 110 doların üzerinden 92 dolara geriledi. S&P 500 seansta yüzde 2,7 kazandı ve Asya piyasaları yükselişle açıldı. Jet yakıtı vadeli işlemleri önemli ölçüde gerilerken havayolları ve turizm hisseleri en büyük kazananlar arasında yer aldı.
-
-## Bölgesel Etkiler
-
-Ateşkes Orta Doğu'daki gerginlikleri hafifletse de, İran insansız hava araçlarının Suudi Arabistan'ın Jubail kentindeki SABIC petrokimya tesisine verdiği hasar hâlâ soruşturuluyor. Körfez ülkeleri ve Türkiye'den bölgesel liderler diplomatik atılımı memnuniyetle karşıladı ve müzakere sürecine sürekli desteklerini taahhüt etti.`,
-  },
-  'ru-iran-ssha-dvuhnedelnoe-peremirie-hormuz': {
-    title: 'Иран и США согласовали двухнедельное перемирие: Ормузский пролив вновь открывается',
-    date: '2026-04-08',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Соединённые Штаты и Иран достигли соглашения о двухнедельном перемирии менее чем за два часа до истечения срока, установленного президентом Трампом для масштабных ударов. По условиям сделки США и Израиль приостановят бомбардировки Ирана в обмен на открытие Ираном Ормузского пролива для безопасного прохода судов. Дипломатические переговоры продолжатся в Пакистане 10 апреля.
-
-## Условия соглашения
-
-Высший совет национальной безопасности Ирана официально принял перемирие, а министр иностранных дел Ирана Аббас Арагчи подтвердил, что двухнедельный период даёт дипломатии "реальный шанс". В этот период обе стороны будут работать над более широким соглашением, охватывающим ядерную программу Ирана, ослабление санкций и освобождение замороженных активов, находящихся в центре спора уже много лет.
-
-## Посредничество Пакистана
-
-Пакистан примет делегации США и Ирана в Исламабаде 10 апреля. Премьер-министр Пакистана охарактеризовал инициативу как "исторический шаг, предотвращающий глобальную катастрофу". По имеющимся данным, Пакистан также обсуждает механизмы верификации для мониторинга соблюдения условий перемирия обеими сторонами.
-
-## Реакция рынков
-
-Цены на нефть резко упали после сообщения — нефть марки Brent опустилась до 92 долларов за баррель по сравнению с недавними пиками выше 110 долларов. Индекс S&P 500 вырос на 2,7% за сессию, а азиатские рынки открылись повышением. Акции авиакомпаний и туристического сектора оказались в числе наибольших бенефициаров, поскольку фьючерсы на авиационное топливо существенно снизились.
-
-## Региональные последствия
-
-Хотя перемирие ослабило напряжённость на Ближнем Востоке, ущерб, нанесённый иранскими беспилотниками нефтехимическому комплексу SABIC в саудовском Джубайле, всё ещё расследуется. Региональные лидеры из стран Персидского залива и Турции приветствовали дипломатический прорыв и пообещали дальнейшую поддержку переговорного процесса.`,
   },
   'bazarlar-son-tarix-gunu-neft-113-dollar': {
     title: 'Bazarlar son tarix günü: neft 113 dollarda, S&P 500 həyəcanlı, qlobal dalğalanma',
