@@ -4,8 +4,9 @@ import dynamic from 'next/dynamic'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { tools } from '@/config/tools'
-import { getToolBySlug } from '@/lib/tools/registry'
-import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateToolHowToJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
+import { getToolBySlug, getToolsByCategory } from '@/lib/tools/registry'
+import { ToolCategory } from '@/types/tool'
+import { generateToolMetadata, generateToolJsonLd, generateToolFaqJsonLd, generateToolHowToJsonLd, generateHreflangAlternates, getOgLocale, SITE_URL } from '@/lib/utils/seo'
 import { getToolRichContent } from '@/lib/utils/tool-content-loader'
 import ToolTemplate from '@/components/tools/ToolTemplate'
 import ToolContentSection from '@/components/tools/ToolContentSection'
@@ -15,6 +16,17 @@ import RelatedTools from '@/components/tools/RelatedTools'
 import RelatedBlogPosts from '@/components/tools/RelatedBlogPosts'
 import ToolUseTrackerWrapper from '@/components/analytics/ToolUseTrackerWrapper'
 import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
+import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
+import BackToTop from '@/components/common/BackToTop'
+import TrustBadge from '@/components/common/TrustBadge'
+import ToolCard from '@/components/tools/ToolCard'
+import CategoryHeader from '@/components/tools/CategoryHeader'
+
+const validCategories: ToolCategory[] = ['pdf', 'image', 'ai', 'dev', 'text', 'generators']
+
+function isCategory(slug: string): slug is ToolCategory {
+  return validCategories.includes(slug as ToolCategory)
+}
 
 const toolComponents: Record<string, React.ComponentType> = {
   // AI Tools
@@ -137,9 +149,11 @@ const toolComponents: Record<string, React.ComponentType> = {
 }
 
 export async function generateStaticParams() {
-  return tools
+  const toolParams = tools
     .filter((t) => toolComponents[t.slug])
     .map((tool) => ({ slug: tool.slug }))
+  const categoryParams = validCategories.map((category) => ({ slug: category }))
+  return [...toolParams, ...categoryParams]
 }
 
 export async function generateMetadata({
@@ -148,6 +162,37 @@ export async function generateMetadata({
   params: Promise<{ slug: string; locale: string }>
 }): Promise<Metadata> {
   const { slug, locale } = await params
+
+  // Category page metadata
+  if (isCategory(slug)) {
+    const t = await getTranslations({ locale, namespace: 'tools' })
+    const categoryName = t(`categories.${slug}` as Parameters<typeof t>[0])
+    const categoryDesc = t(`categories.${slug}Desc` as Parameters<typeof t>[0])
+    const categoryTools = getToolsByCategory(slug)
+    const alternates = generateHreflangAlternates(`/tools/${slug}`, locale)
+    const ogLocale = getOgLocale(locale)
+
+    const title = `${categoryName} - Vaxtim Yoxdu`
+    const description = `${categoryDesc}. ${categoryTools.length}+ ${t('breadcrumbTools').toLowerCase()}.`
+
+    return {
+      title,
+      description,
+      openGraph: {
+        title,
+        description,
+        url: alternates.canonical,
+        siteName: 'Vaxtim Yoxdu',
+        type: 'website',
+        locale: ogLocale,
+        images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: `Vaxtim Yoxdu - ${categoryName}` }],
+      },
+      twitter: { card: 'summary_large_image', title, description, images: [`${SITE_URL}/og-image.png`] },
+      alternates,
+    }
+  }
+
+  // Tool page metadata
   const tool = getToolBySlug(slug)
   if (!tool) return {}
 
@@ -182,6 +227,65 @@ export async function generateMetadata({
 export default async function ToolPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
   const { slug, locale } = await params
   setRequestLocale(locale)
+
+  // --- Category page rendering ---
+  if (isCategory(slug)) {
+    const t = await getTranslations('tools')
+    const categoryTools = getToolsByCategory(slug)
+    if (categoryTools.length === 0) notFound()
+
+    const categoryName = t(`categories.${slug}` as Parameters<typeof t>[0])
+    const categoryDesc = t(`categories.${slug}Desc` as Parameters<typeof t>[0])
+    const categorySeoDesc = t(`categories.${slug}SeoDesc` as Parameters<typeof t>[0])
+
+    const itemListJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: categoryName,
+      description: categoryDesc,
+      numberOfItems: categoryTools.length,
+      itemListElement: categoryTools.map((tool, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: tool.name,
+        url: `${SITE_URL}/${locale === 'az' ? '' : `${locale}/`}tools/${tool.slug}`,
+      })),
+    }
+
+    // Server-controlled JSON-LD data, safe to serialize directly
+    const jsonLdStr = JSON.stringify(itemListJsonLd)
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdStr }}
+        />
+        <Breadcrumb
+          locale={locale}
+          items={[
+            { label: t('breadcrumbHome'), href: '/' },
+            { label: t('breadcrumbTools'), href: '/tools' },
+            { label: categoryName },
+          ]}
+        />
+        <CategoryHeader
+          name={categoryName}
+          description={categoryDesc}
+          seoDescription={categorySeoDesc}
+          toolCount={categoryTools.length}
+          toolCountLabel={t('breadcrumbTools').toLowerCase()}
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {categoryTools.map((tool) => (
+            <ToolCard key={tool.slug} tool={tool} />
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  // --- Tool page rendering ---
   const t = await getTranslations('tools')
   const crossT = await getTranslations('crossLinks')
   const allMessages = await getMessages()
@@ -260,6 +364,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         title={displayName}
         description={localizedDescription || tool.shortDescription}
       />
+      <NewsletterInlineCTA variant="tool" />
       {richContent && (
         <ToolContentSection
           howToUseTitle={richContent.sectionTitles.howToUse}
@@ -278,6 +383,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       )}
       <RelatedTools currentTool={tool} />
       <RelatedBlogPosts toolSlug={tool.slug} title={crossT('relatedBlogPosts')} />
+      <TrustBadge />
+      <BackToTop />
     </>
   )
 }

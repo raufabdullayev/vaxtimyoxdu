@@ -20,6 +20,8 @@ interface ShareButtonsProps {
   title: string
   /** A short description for share messages */
   description?: string
+  /** Slug identifier for analytics tracking (e.g. tool slug or blog slug) */
+  slug?: string
 }
 
 interface SharePlatform {
@@ -40,10 +42,22 @@ function buildShareUrl(
   return `${baseUrl}${separator}utm_source=share&utm_medium=${utmMedium}&utm_campaign=${campaign}`
 }
 
+function trackShareClick(platform: string, shareUrl: string, slug?: string) {
+  fetch('/api/analytics/track', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_type: 'share_click',
+      event_data: { platform, toolSlug: slug, url: shareUrl },
+    }),
+  }).catch(() => {})
+}
+
 export default function ShareButtons({
   url,
   title,
   description = '',
+  slug,
 }: ShareButtonsProps) {
   const t = useTranslations('share')
   const [copied, setCopied] = useState(false)
@@ -108,6 +122,7 @@ export default function ShareButtons({
 
   const handleCopyLink = useCallback(async () => {
     const trackedUrl = buildShareUrl(url, 'copy_link', 'tool_share')
+    trackShareClick('copy_link', url, slug)
     try {
       await navigator.clipboard.writeText(trackedUrl)
       setCopied(true)
@@ -125,7 +140,7 @@ export default function ShareButtons({
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     }
-  }, [url])
+  }, [url, slug])
 
   return (
     <div className="mt-8 mb-2">
@@ -142,6 +157,7 @@ export default function ShareButtons({
             href={platform.getUrl(url, title, description)}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackShareClick(platform.name.toLowerCase(), url, slug)}
             aria-label={t('shareOn', { platform: platform.name })}
             className={`
               inline-flex items-center gap-2 rounded-lg border border-border/50

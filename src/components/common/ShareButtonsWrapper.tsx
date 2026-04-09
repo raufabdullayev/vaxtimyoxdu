@@ -30,7 +30,10 @@ export default function ShareButtonsWrapper({
   const localePath = locale === 'az' ? '' : `/${locale}`
   const fullUrl = `${base}${localePath}${path}`
 
+  // Extract slug from path for analytics (e.g. /tools/json-formatter -> json-formatter)
+  const slug = path.split('/').filter(Boolean).pop()
+
   return (
-    <ShareButtons url={fullUrl} title={title} description={description} />
+    <ShareButtons url={fullUrl} title={title} description={description} slug={slug} />
   )
 }

@@ -3,6 +3,7 @@ import { BlogPost } from './blog-posts'
 export const blogPostsAz: Record<string, BlogPost> = {
   'best-free-online-tools-2026': {
     title: '2026-da İstifadə Etməniz Gərəkən Ən Yaxşı Pulsuz Onlayn Alətlər',
+    description: 'Pulsuz PDF birləşdirici, şəkil sıxma, QR kod yaratma, AI mətn alətləri və daha çoxu. Qeydiyyatsız, brauzerinizdə işləyən ən yaxşı onlayn alətlər.',
     date: '2026-03-07',
     relatedTools: ['ai-text-rewriter', 'image-compress', 'pdf-merge', 'qr-code-generator', 'color-picker', 'json-formatter'],
     content: `İnternet pulsuz onlayn alətlərlə doludur, amma etibarlı və həqiqətən pulsuz olanları tapmaq çox vaxt alır. "Pulsuz" adlandırılan bir çox alət gizli ödəniş divarları qoyur, qeydiyyat tələb edir və ya fayllarınızı naməlum serverlərə yükləyir. 2026-cı ildə vəziyyət kökündən dəyişib. Brauzer əsaslı alətlər indi hər şeyi birbaşa cihazınızda emal edir, məlumatlarınızı qoruyaraq peşəkar səviyyəli nəticələr verir. Bu il istifadə etməniz gərəkən ən yaxşı pulsuz onlayn alətlər və onların gündəlik iş axınınız üçün niyə vacib olduğu haqqında danışaq.
@@ -69,6 +70,7 @@ Bu alətlərin hamısı və daha çoxu Vaxtım Yoxdu-da pulsuz mövcuddur. Qeydi
   },
   'how-ai-text-rewriting-works': {
     title: 'AI Mətn Yenidən Yazma Necə İşləyir',
+    description: 'AI mətn yenidən yazma texnologiyası necə işləyir? Pulsuz AI parafraz aləti ilə mətnlərinizi keyfiyyətli şəkildə yenidən yazın.',
     date: '2026-03-05',
     relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer'],
     content: `AI mətn yenidən yazma böyük dil modellərindən istifadə edərək mətninizi anlayır və orijinal mənası qoruyaraq yenidən ifadə edir. Bu, müasir süni zekanın ən praktik tətbiqlərindən biridir və yazıçılar, marketoloqlar, tələbələr və peşəkarlar tərəfindən hər gün istifadə olunur. Texniki tərəfdən necə işləyir, bəzi alətləri digərlərindən üstün edən nədir və ən yaxşı nəticələri necə əldə edə bilərsiniz.
@@ -136,6 +138,7 @@ Vaxtım Yoxdu-dakı AI Mətn Yenidən Yazıcı kimi alətlər sizə bu imkanlara
   },
   'compress-images-without-losing-quality': {
     title: 'Keyfiyyəti İtirmədən Şəkilləri Necə Sıxışdırmalı',
+    description: 'Pulsuz şəkil sıxma aləti ilə JPEG, PNG və WebP fayllarınızı keyfiyyəti qoruyaraq kiçildin. Veb-saytınızın sürətini artırın.',
     date: '2026-03-04',
     relatedTools: ['image-compress', 'image-convert'],
     content: `Böyük şəkil faylları veb-saytları yavaşladır, yaddaşı tükədir və paylaşmağı çətinləşdirir. Səhifə sürətinin birbaşa axtarış sıralamalarına, istifadəçi təcrübəsinə və konversiya dərəcələrinə təsir etdiyi dövrdə şəkillərin effektiv sıxışdırılmasını bilmək rəqəmsal kontentlə işləyən hər kəs üçün təməl bacarıqdır. Vizual keyfiyyətdən güzəşt vermədən fayl ölçüsünü azaltmaq üçün ehtiyac olan hər şeyi bu bələdçidə tapacaqsınız.
@@ -207,6 +210,7 @@ Vaxtım Yoxdu-dakı pulsuz Şəkil Sıxışdırıcısını sınayaraq şəkillə
   },
   'regex-guide-for-beginners': {
     title: 'Müntəzəm İfadələr: Yeni Başlayanlar üçün Bələdçi',
+    description: 'Regex öyrənmək istəyirsiniz? Pulsuz regex test aləti ilə müntəzəm ifadələri praktik nümunələrlə addım-addım öyrənin.',
     date: '2026-03-03',
     relatedTools: ['regex-tester', 'json-formatter', 'hash-generator'],
     content: `Müntəzəm ifadələr (regex) mətn axtarışı, uyğunlaşdırma və manipulyasiyası üçün güclü naxışlardır. İlk baxışda qorxuducu görünə bilər -- \`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\` kimi bir sətir yad dilə bənzəyə bilər. Amma əsaslar təəccübləndirici qədər sadədir və quruluş elementlərini anladıqdan sonra regex naxışları etibarlı və yaradıcı ola bilərsiniz. Bu bələdçi sizi sıfırdan praktik bacarığa çatdırır.
@@ -318,6 +322,7 @@ Müntəzəm ifadələr proqramlaşdırma və məlumat işləri üçün ən ümum
   },
   'why-grammar-matters-in-professional-writing': {
     title: 'Peşəkar Yazıda Qrammatikanın Niyə Vacib Olması',
+    description: 'Pulsuz AI qrammatika yoxlayıcısı ilə yazı xətalarınızı aradan qaldırın. Peşəkar yazıda qrammatikanın niyə vacib olduğunu öyrənin.',
     date: '2026-03-02',
     relatedTools: ['ai-grammar-checker', 'ai-text-rewriter', 'word-counter'],
     content: `Yaxşı qrammatika sadəcə qaydalara riayətdən ibarət deyil -- aydın ünsiyyətdir, etibardır və doğru təsir yaratmaqdır. Peşəkar əlaqələrin əksəriyyətinin mətn vasitəsilə (e-poçt, Slack mesajlar, hesabatlar, təkliflər, sosial media) baş verdiyi bir dünyada yazınız çox vaxt insanların sizin bacarığınızı qiymətləndirmək üçün istifadə etdiyi ilk və yeganə vasitədir. Qrammatikanın niyə hər zamankından daha vacib olduğu və stil bələdçilərini illərlə öyrənmədən sizinkinini necə yaxşılaşdırılacağı haqqında danışaq.
@@ -395,6 +400,7 @@ Vaxtım Yoxdu AI qrammatika yoxlayıcısı, oxunabilirlik alətləri və söz sa
   },
   'pdf-tools-guide-merge-split-compress': {
     title: 'PDF Alətlərinə Tam Bələdçi: Birləşdirmə, Bölmə və Sıxışdırma',
+    description: 'Pulsuz PDF birləşdirici ilə sənədlərinizi birləşdirin, bölün və sıxışdırın. Fayllarınız serverə yüklənmir, hər şey brauzerdə işləyir.',
     date: '2026-03-10',
     relatedTools: ['pdf-merge', 'image-compress', 'base64-encode-decode'],
     content: `PDF fayllar müasir sənəd idarəçiliyinin əsasını təşkil edir. Müqavilələrdən və fakturalardan tədqiqat məqalələrinə və portfoliolara qədər PDF-lər hər cihazda eyni görünən sənədlərin paylaşılması üçün universal formatdır. Amma PDF-lərlə işləmək əndişəli bahalı proqram tələb edirdi. 2026-cı ildə brauzer əsaslı PDF alətləri oyun qaydalarını dəyişib -- tam gizliliklə pulsuz peşəkar səviyyəli sənəd idarəçiliyi təklif edir. Bu bələdçi PDF-lərin birləşdirilməsi, bölünməsi və sıxışdırılması haqqında bilməniz gərəkən hər şeyi əhatə edir.
@@ -461,6 +467,7 @@ Bütün bu xüsusiyyətlər Vaxtım Yoxdu-dakı pulsuz PDF alətlərində mövcu
   },
   'qr-codes-everything-you-need-to-know': {
     title: 'QR Kodlar: 2026-da Bilməniz Gərəkən Hər Şey',
+    description: 'Pulsuz QR kod yaratma aləti ilə URL, mətn, Wi-Fi və vCard kodları yaradın. QR kodların iş dünyasında istifadəsi haqqında tam bələdçi.',
     date: '2026-03-09',
     relatedTools: ['qr-code-generator', 'color-picker', 'image-convert'],
     content: `QR kodlar niş sənaye izləmə texnologiyasından planetdəki ən geniş tanınan rəqəmsal alətlərdən birinə çevrilib. 2026-cı ildə onlar hər yerdədir -- restoran menyuları, məhsul qablaşdırmaları, vizit kartları, tədbirlərin biletləri, muzey ekspozisiyaları və nəqliyyat sistemləri. QR kodların necə işlədiyini, hansı növlərin mövcud olduğunu və effektiv QR kodların necə yaradılacağını başa düşmək fiziki və rəqəmsal təcrübələri bir-birinə bağlamaq istəyən hər kəs üçün praktik bacarıqdır.
@@ -530,6 +537,7 @@ QR kodlar artıq trend deyil -- infrastrukturdur. Onları effektiv yaratmağı v
   },
   'developer-productivity-tools-you-should-use': {
     title: 'İstifadə Etməniz Gərəkən 10 Tərtibatçı Məhsuldarlıq Aləti',
+    description: 'JSON formatlayıcı, regex test, Base64 kodlayıcı və digər pulsuz developer alətləri. Proqramçılar üçün ən yaxşı onlayn alətlər siyahısı.',
     date: '2026-03-08',
     relatedTools: ['json-formatter', 'regex-tester', 'hash-generator', 'base64-encode-decode'],
     content: `Tərtibatçı məhsuldarlığı daha sürətli kod yazmaq deyil -- iş axınından sürtünmə aradan qaldıraraq real problemləri həll etməyə daha çox vaxt, təkrarlanan tapşırıqlara daha az vaxt sərf etməkdir. Ən yaxşı tərtibatçılar mühitlərini optimallaşdırmış, düzgün alətləri seçmiş və darboğazları aradan qaldırmış olanlardır. 2026-cı ildə gündəlik inkişaf iş axınınızı yaxşılaşdıracaq on məhsuldarlıq aləti haqqında danışaq.
@@ -606,6 +614,7 @@ Məqsəd ən çox alətə sahib olmaq deyil -- düzgün alətlərə sahib olmaq 
   },
   'cybersecurity-tools-guide': {
     title: '2026-cı il üçün Vacib Kibertəhlükəsizlik Alətləri və Təcrübələri',
+    description: 'Güclü parol yaratma, heş generatoru və JWT dekoder kimi pulsuz təhlükəsizlik alətləri. Onlayn təhlükəsizliyinizi artırın.',
     date: '2026-03-06',
     relatedTools: ['password-generator', 'hash-generator', 'base64-encode-decode', 'jwt-decoder'],
     content: `Kibertəhlükəsizlik 2026-cı ildə hər zamankından daha vacibdir. Məlumat sızmaları hər həftə xəbərlərə düşür, ransomware hücumları hər ölçüdə təşkilatları hədəfə alır və AI dəstəkli təhdidlər müdafiə sistemlərindən daha sürətli inkişaf edir. Sizi onlayn təhlükəsiz saxlayan alətləri və təcrübələri anlamaq hər kəs üçün -- yalnız İT mütəxəssisləri üçün deyil -- zəruri bilgidir.
@@ -704,6 +713,7 @@ Vaxtım Yoxdu-dakı pulsuz təhlükəsizlik alətləri -- Şifrə Generatoru, He
   },
   'api-testing-guide': {
     title: 'API Testinə Tam Bələdçi: Alətlər, Texnikalar və Ən Yaxşı Təcrübələr',
+    description: 'API test etmək üçün pulsuz alətlər və texnikalar. JSON formatlayıcı, JWT dekoder və URL kodlayıcı ilə API inkişafını sürətləndirin.',
     date: '2026-03-01',
     relatedTools: ['json-formatter', 'base64-encode-decode', 'jwt-decoder', 'url-encode-decode'],
     content: `API testi müasir proqram təminatının inkişafında ən mühüm bacarıqlardan biridir. Tətbiqlərin getdikcə daha çox mikroxidmətlər arxitekturasına, üçüncü tərəf inteqrasiyalarına və mobil arxaplanlarına asılılığa keçdiyi bir dövrdə API-lərin keyfiyyəti və etibarlılığı onların üzərinə qurulan məhsulların keyfiyyətini birbaşa müəyyən edir.

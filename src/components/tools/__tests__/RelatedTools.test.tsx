@@ -3,6 +3,10 @@ import { render, screen } from '@testing-library/react'
 import RelatedTools from '../RelatedTools'
 import { Tool } from '@/types/tool'
 
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => key,
+}))
+
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: { href: string; children: React.ReactNode }) => (
     <a href={href} {...props}>{children}</a>
@@ -85,7 +89,7 @@ describe('RelatedTools', () => {
 
     render(<RelatedTools currentTool={currentTool} />)
 
-    expect(screen.getByText('Related Tools')).toBeInTheDocument()
+    expect(screen.getByText('relatedTools')).toBeInTheDocument()
   })
 
   it('renders related tools from the same category', () => {
@@ -174,17 +178,17 @@ describe('RelatedTools', () => {
     expect(screen.getByText('Compare two texts and find differences')).toBeInTheDocument()
   })
 
-  it('shows "Client-side" badge for client-side tools', () => {
+  it('shows "clientSide" badge for client-side tools', () => {
     mockedGetToolsByCategory.mockReturnValue(mockTextTools)
     const currentTool = mockTextTools[0]
 
     render(<RelatedTools currentTool={currentTool} />)
 
-    const badges = screen.getAllByText('Client-side')
+    const badges = screen.getAllByText('clientSide')
     expect(badges.length).toBeGreaterThan(0)
   })
 
-  it('shows "AI-Powered" badge for AI tools', () => {
+  it('shows "aiPowered" badge for AI tools', () => {
     const aiTools: Tool[] = [
       {
         slug: 'ai-tool-1',
@@ -215,7 +219,7 @@ describe('RelatedTools', () => {
 
     render(<RelatedTools currentTool={currentTool} />)
 
-    expect(screen.getByText('AI-Powered')).toBeInTheDocument()
+    expect(screen.getByText('aiPowered')).toBeInTheDocument()
   })
 
   it('calls getToolsByCategory with the current tool category', () => {

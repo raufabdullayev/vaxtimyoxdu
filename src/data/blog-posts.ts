@@ -9,6 +9,7 @@ export interface BlogPost {
 export const blogPosts: Record<string, BlogPost> = {
   'best-free-online-tools-2026': {
     title: 'Best Free Online Tools in 2026',
+    description: 'Discover the best free online tools for 2026: PDF merger, image compressor, QR code generator, AI text tools and more. No signup, 100% browser-based.',
     date: '2026-03-07',
     relatedTools: ['ai-text-rewriter', 'image-compress', 'pdf-merge', 'qr-code-generator', 'color-picker', 'json-formatter'],
     content: `The internet is full of online tools, but finding reliable, free ones can be challenging. Many so-called "free" tools hit you with hidden paywalls, force account creation, or upload your private files to unknown servers. In 2026, the landscape has shifted dramatically. Browser-based tools now process everything locally on your device, keeping your data safe while delivering professional-grade results. Here are the best free online tools you should be using this year and why they matter for your daily workflow.
@@ -79,6 +80,7 @@ All of these tools and more are available for free at Vaxtim Yoxdu. No signup re
   },
   'how-ai-text-rewriting-works': {
     title: 'How AI Text Rewriting Works',
+    description: 'Learn how AI text rewriting technology works under the hood. Use our free AI paraphrase tool to rewrite content while preserving original meaning.',
     date: '2026-03-05',
     relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer'],
     content: `AI text rewriting uses large language models to understand and rephrase your text while preserving the original meaning. It is one of the most practical applications of modern artificial intelligence, used daily by writers, marketers, students, and professionals across every industry. Here is how it works under the hood, what makes some tools better than others, and how you can get the best results.
@@ -147,6 +149,7 @@ Tools like the AI Text Rewriter on Vaxtim Yoxdu give you access to these capabil
   },
   'compress-images-without-losing-quality': {
     title: 'How to Compress Images Without Losing Quality',
+    description: 'Compress JPEG, PNG and WebP images without visible quality loss using our free browser-based tool. Speed up your website with optimized images.',
     date: '2026-03-04',
     relatedTools: ['image-compress', 'image-convert'],
     content: `Large image files slow down websites, eat up storage, and make sharing difficult. In an era where page speed directly impacts search rankings, user experience, and conversion rates, knowing how to compress images effectively is a fundamental skill for anyone who works with digital content. Here is a comprehensive guide to reducing file sizes while maintaining the visual quality your audience expects.
@@ -238,6 +241,7 @@ Try the free Image Compressor at Vaxtim Yoxdu to compress your images directly i
   },
   'regex-guide-for-beginners': {
     title: "Regular Expressions: A Beginner's Guide",
+    description: 'Master regular expressions step by step with practical examples. Test your regex patterns instantly with our free online regex tester tool.',
     date: '2026-03-03',
     relatedTools: ['regex-tester', 'json-formatter', 'hash-generator'],
     content: `Regular expressions (regex) are powerful patterns for searching, matching, and manipulating text. They might look intimidating at first -- a string like \`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\` can seem like an alien language. But the basics are surprisingly simple, and once you understand the building blocks, you can read and write regex patterns with confidence. This guide will take you from zero to practical competence.
@@ -362,6 +366,7 @@ Regular expressions are one of the most universally useful skills in programming
   },
   'why-grammar-matters-in-professional-writing': {
     title: 'Why Grammar Matters in Professional Writing',
+    description: 'Fix grammar mistakes instantly with our free AI grammar checker. Learn why correct grammar is critical for professional credibility and clear writing.',
     date: '2026-03-02',
     relatedTools: ['ai-grammar-checker', 'ai-text-rewriter', 'word-counter'],
     content: `Good grammar is not just about following rules -- it is about clear communication, credibility, and making the right impression. In a world where most professional interactions happen through text (emails, Slack messages, reports, proposals, social media), your writing is often the first and only thing people use to judge your competence. Here is why grammar matters more than ever and how to improve yours without spending years studying style guides.
@@ -451,6 +456,7 @@ Your words represent you. Make sure they represent you well.`,
   },
   'pdf-tools-guide-merge-split-compress': {
     title: 'The Complete Guide to PDF Tools: Merge, Split, and Compress',
+    description: 'Merge, split and compress PDF files for free directly in your browser. No uploads, no signup -- your documents never leave your device.',
     date: '2026-03-10',
     relatedTools: ['pdf-merge', 'image-compress', 'base64-encode-decode'],
     content: `PDF files are the backbone of modern document management. From contracts and invoices to research papers and portfolios, PDFs are the universal format for sharing documents that look the same on every device. But working with PDFs has traditionally required expensive software. In 2026, browser-based PDF tools have changed the game, giving you professional-grade document management for free with complete privacy. This guide covers everything you need to know about merging, splitting, and compressing PDFs effectively.
@@ -530,6 +536,7 @@ All of these features are available in the free PDF tools at Vaxtim Yoxdu. Your 
   },
   'qr-codes-everything-you-need-to-know': {
     title: 'QR Codes: Everything You Need to Know in 2026',
+    description: 'Create free QR codes for URLs, text, Wi-Fi and vCards with our online generator. Complete guide to QR code types, best practices and business uses.',
     date: '2026-03-09',
     relatedTools: ['qr-code-generator', 'color-picker', 'image-convert'],
     content: `QR codes have evolved from a niche industrial tracking technology into one of the most widely recognized digital tools on the planet. In 2026, they are everywhere -- restaurant menus, product packaging, business cards, event tickets, museum exhibits, and transit systems. Understanding how QR codes work, what types exist, and how to create effective ones is a practical skill for anyone who wants to bridge the gap between physical and digital experiences. Here is everything you need to know.
@@ -599,6 +606,7 @@ QR codes are no longer a trend -- they are infrastructure. Understanding how to 
   },
   'developer-productivity-tools-you-should-use': {
     title: '10 Developer Productivity Tools You Should Be Using',
+    description: 'Top 10 free developer tools: JSON formatter, regex tester, Base64 encoder, hash generator and more. All browser-based, no installation needed.',
     date: '2026-03-08',
     relatedTools: ['json-formatter', 'regex-tester', 'hash-generator', 'base64-encode-decode'],
     content: `Developer productivity is not about writing code faster -- it is about removing friction from your workflow so you can spend more time solving real problems and less time on repetitive tasks. The best developers are the ones who have optimized their environment, chosen the right tools, and eliminated bottlenecks. Here are ten productivity tools that will improve your daily development workflow in 2026.
@@ -677,6 +685,7 @@ The goal is not to have the most tools -- it is to have the right tools, always 
   },
   'cybersecurity-tools-guide': {
     title: 'Essential Cybersecurity Tools and Practices for 2026',
+    description: 'Strengthen your online security with free tools: password generator, hash checker, JWT decoder and more. Essential cybersecurity guide for 2026.',
     date: '2026-03-06',
     relatedTools: ['password-generator', 'hash-generator', 'base64-encode-decode', 'jwt-decoder'],
     content: `Cybersecurity has never been more critical than it is in 2026. With data breaches making headlines weekly, ransomware attacks targeting organizations of every size, and AI-powered threats evolving faster than defenses, understanding the tools and practices that keep you safe online is essential knowledge for everyone -- not just IT professionals. This comprehensive guide covers the cybersecurity tools you should be using, the practices you should be following, and the threats you should be aware of.
@@ -787,6 +796,7 @@ The free security tools on Vaxtim Yoxdu -- Password Generator, Hash Generator, B
   },
   'api-testing-guide': {
     title: 'The Complete Guide to API Testing: Tools, Techniques, and Best Practices',
+    description: 'Complete API testing guide with free tools: JSON formatter, JWT decoder, URL encoder and Base64 converter. Speed up your API development workflow.',
     date: '2026-03-01',
     relatedTools: ['json-formatter', 'base64-encode-decode', 'jwt-decoder', 'url-encode-decode'],
     content: `API testing is one of the most important skills in modern software development. As applications increasingly rely on microservices architectures, third-party integrations, and mobile backends, the quality and reliability of APIs directly determines the quality of the products built on top of them. This guide covers everything you need to know about testing APIs effectively -- from fundamental concepts to advanced techniques.

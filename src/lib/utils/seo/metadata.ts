@@ -1,8 +1,13 @@
 import { Metadata } from 'next'
 import { Tool } from '@/types/tool'
 import { defaultLocale, Locale } from '@/i18n/config'
+import { locales } from '@/i18n/config'
 import { SITE_URL, SITE_NAME, getLocalizedUrl, generateHreflangAlternates } from './url'
 import { getOgLocale, getOgImageUrl } from './og'
+
+function getAlternateOgLocales(locale: string): string[] {
+  return locales.filter((l) => l !== locale).map((l) => getOgLocale(l))
+}
 
 export function generateBaseMetadata(): Metadata {
   const ogImage = getOgImageUrl({
@@ -68,6 +73,7 @@ export function generateToolMetadata(
       siteName: SITE_NAME,
       type: 'website',
       locale: ogLocale,
+      alternateLocale: getAlternateOgLocales(locale),
       images: [
         {
           url: ogImage,
@@ -124,6 +130,7 @@ export function generateArticleMetadata({
       siteName: SITE_NAME,
       type: 'article',
       locale: ogLocale,
+      alternateLocale: getAlternateOgLocales(resolvedLocale),
       publishedTime: date,
       section: category,
       images: [
@@ -180,6 +187,7 @@ export function generateBlogPostMetadata({
       siteName: SITE_NAME,
       type: 'article',
       locale: ogLocale,
+      alternateLocale: getAlternateOgLocales(resolvedLocale),
       publishedTime: date,
       images: [
         {

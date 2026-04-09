@@ -27,6 +27,7 @@ vi.mock('@/lib/utils/seo', () => ({
   generateBlogArticleJsonLd: vi.fn(() => ({})),
   generateArticleMetadata: vi.fn(() => ({ title: 'Test' })),
   generateNewsArticleJsonLd: vi.fn(() => ({})),
+  generateToolsItemListJsonLd: vi.fn(() => ({})),
 }))
 
 // Mock i18n navigation
@@ -88,6 +89,11 @@ vi.mock('@/components/common/MarkdownRenderer', () => ({
     <div data-testid="markdown-renderer">{content.slice(0, 50)}</div>
   ),
 }))
+vi.mock('@/components/analytics/ScrollDepthTracker', () => ({
+  default: ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="scroll-depth-tracker">{children}</div>
+  ),
+}))
 vi.mock('@/components/layout/RelatedArticles', () => ({
   default: () => <div data-testid="related-articles" />,
 }))
@@ -104,8 +110,18 @@ vi.mock('lucide-react', () => ({
   Newspaper: () => <span data-testid="newspaper-icon" />,
   Wrench: () => <span data-testid="wrench-icon" />,
   CheckCircle: () => <span data-testid="check-circle-icon" />,
+  Shield: () => <span data-testid="shield-icon" />,
+  Search: () => <span data-testid="search-icon" />,
   WifiOff: () => <span data-testid="wifi-off" />,
   RefreshCw: () => <span data-testid="refresh" />,
+}))
+
+// Mock ToolOfTheDay and RecentlyUsedTools
+vi.mock('@/components/tools/ToolOfTheDay', () => ({
+  default: () => <div data-testid="tool-of-the-day" />,
+}))
+vi.mock('@/components/tools/RecentlyUsedTools', () => ({
+  default: () => <div data-testid="recently-used-tools" />,
 }))
 
 // Mock data

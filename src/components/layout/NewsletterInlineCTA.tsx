@@ -7,7 +7,7 @@ import {
   isSubscribed,
 } from '@/hooks/useNewsletterSubscribe'
 
-type Variant = 'blog' | 'news'
+type Variant = 'blog' | 'news' | 'tool'
 
 interface NewsletterInlineCTAProps {
   /** Controls headline/description text. 'blog' for blog posts, 'news' for news articles. */
@@ -56,9 +56,10 @@ export default function NewsletterInlineCTA({
     )
   }
 
-  const title = variant === 'blog' ? t('blogTitle') : t('newsTitle')
-  const description =
-    variant === 'blog' ? t('blogDescription') : t('newsDescription')
+  const titleKey = variant === 'blog' ? 'blogTitle' : variant === 'tool' ? 'toolTitle' : 'newsTitle'
+  const descKey = variant === 'blog' ? 'blogDescription' : variant === 'tool' ? 'toolDescription' : 'newsDescription'
+  const title = t(titleKey)
+  const description = t(descKey)
 
   return (
     <div className="mt-12 rounded-xl border border-border/60 bg-gradient-to-br from-primary/5 via-card to-primary/5 p-6 sm:p-8">

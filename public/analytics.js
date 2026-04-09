@@ -7,6 +7,8 @@ gtag('consent', 'default', {
   ad_personalization: 'denied',
   wait_for_update: 500
 });
+gtag('set', 'url_passthrough', true);
+gtag('set', 'ads_data_redaction', true);
 gtag('js', new Date());
 
 // Auto-detect GA Measurement ID from the gtag.js script URL on the page.

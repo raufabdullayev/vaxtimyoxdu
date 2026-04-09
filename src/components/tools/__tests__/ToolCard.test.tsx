@@ -3,6 +3,10 @@ import { render, screen } from '@testing-library/react'
 import ToolCard from '../ToolCard'
 import { Tool } from '@/types/tool'
 
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => key,
+}))
+
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: { href: string; children: React.ReactNode }) => (
     <a href={href} {...props}>{children}</a>
@@ -83,42 +87,42 @@ describe('ToolCard', () => {
     expect(link).toHaveAttribute('href', '/tools/word-counter')
   })
 
-  it('shows "AI-Powered" badge for AI tools', () => {
+  it('shows "aiPowered" badge for AI tools', () => {
     render(<ToolCard tool={aiTool} />)
 
-    expect(screen.getByText('AI-Powered')).toBeInTheDocument()
+    expect(screen.getByText('aiPowered')).toBeInTheDocument()
   })
 
-  it('does not show "AI-Powered" badge for non-AI tools', () => {
+  it('does not show "aiPowered" badge for non-AI tools', () => {
     render(<ToolCard tool={baseTool} />)
 
-    expect(screen.queryByText('AI-Powered')).not.toBeInTheDocument()
+    expect(screen.queryByText('aiPowered')).not.toBeInTheDocument()
   })
 
-  it('shows "Client-side" badge for client-side tools', () => {
+  it('shows "clientSide" badge for client-side tools', () => {
     render(<ToolCard tool={baseTool} />)
 
-    expect(screen.getByText('Client-side')).toBeInTheDocument()
+    expect(screen.getByText('clientSide')).toBeInTheDocument()
   })
 
-  it('does not show "Client-side" badge for server-side tools', () => {
+  it('does not show "clientSide" badge for server-side tools', () => {
     render(<ToolCard tool={aiTool} />)
 
-    expect(screen.queryByText('Client-side')).not.toBeInTheDocument()
+    expect(screen.queryByText('clientSide')).not.toBeInTheDocument()
   })
 
   it('shows both badges when tool is AI and client-side', () => {
     render(<ToolCard tool={bothBadgesTool} />)
 
-    expect(screen.getByText('AI-Powered')).toBeInTheDocument()
-    expect(screen.getByText('Client-side')).toBeInTheDocument()
+    expect(screen.getByText('aiPowered')).toBeInTheDocument()
+    expect(screen.getByText('clientSide')).toBeInTheDocument()
   })
 
   it('shows no badges when tool is neither AI nor client-side', () => {
     render(<ToolCard tool={noBadgesTool} />)
 
-    expect(screen.queryByText('AI-Powered')).not.toBeInTheDocument()
-    expect(screen.queryByText('Client-side')).not.toBeInTheDocument()
+    expect(screen.queryByText('aiPowered')).not.toBeInTheDocument()
+    expect(screen.queryByText('clientSide')).not.toBeInTheDocument()
   })
 
   it('has hover-related CSS classes on the link', () => {

@@ -3,6 +3,7 @@ import { BlogPost } from './blog-posts'
 export const blogPostsTr: Record<string, BlogPost> = {
   'best-free-online-tools-2026': {
     title: '2026\'da Kullanmanız Gereken En İyi Ücretsiz Çevrimiçi Araçlar',
+    description: 'Ücretsiz PDF birleştirici, resim sıkıştırma, QR kod oluşturucu, AI metin araçları ve daha fazlası. Kayıt gerektirmeyen, tarayıcıda çalışan araçlar.',
     date: '2026-03-07',
     relatedTools: ['ai-text-rewriter', 'image-compress', 'pdf-merge', 'qr-code-generator', 'color-picker', 'json-formatter'],
     content: `İnternet ücretsiz çevrimiçi araçlarla dolu, ancak güvenilir ve gerçekten ücretsiz olanları bulmak çoğu zaman çok zaman alıyor. "Ücretsiz" olarak adlandırılan birçok araç gizli ödeme duvarları koyuyor, kayıt gerektiriyor veya dosyalarınızı bilinmeyen sunuculara yüklüyor. 2026'da durum kökten değişti. Tarayıcı tabanlı araçlar artık her şeyi doğrudan cihazınızda işliyor, verilerinizi koruyarak profesyonel düzeyde sonuçlar veriyor. Bu yıl kullanmanız gereken en iyi ücretsiz çevrimiçi araçlar ve bunların günlük iş akışınız için neden önemli olduğu hakkında konuşalım.
@@ -65,6 +66,7 @@ Tüm bu araçlar ve daha fazlası Vaxtim Yoxdu'da ücretsiz olarak mevcuttur. Ka
   },
   'how-ai-text-rewriting-works': {
     title: 'Yapay Zeka Metin Yeniden Yazma Nasıl Çalışır',
+    description: 'AI metin yeniden yazma teknolojisi nasıl çalışır? Ücretsiz AI parafraz aracıyla metinlerinizi kaliteli şekilde yeniden yazın.',
     date: '2026-03-05',
     relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer'],
     content: `Yapay zeka metin yeniden yazma, büyük dil modellerini kullanarak metninizi anlayıp orijinal anlamını koruyarak yeniden ifade eder. Bu, modern yapay zekanın en pratik uygulamalarından biridir ve yazarlar, pazarlamacılar, öğrenciler ve profesyoneller tarafından her gün kullanılır.
@@ -116,6 +118,7 @@ Vaxtim Yoxdu'daki Yapay Zeka Metin Yeniden Yazıcı gibi araçlar, bu yetenekler
   },
   'compress-images-without-losing-quality': {
     title: 'Kalite Kaybı Olmadan Görüntüleri Nasıl Sıkıştırırsınız',
+    description: 'Ücretsiz resim sıkıştırma aracıyla JPEG, PNG ve WebP dosyalarınızı kaliteyi koruyarak küçültün. Web sitenizin hızını artırın.',
     date: '2026-03-04',
     relatedTools: ['image-compress', 'image-convert'],
     content: `Büyük görüntü dosyaları web sitelerini yavaşlatır, depolama alanını tüketir ve paylaşımı zorlaştırır. Sayfa hızının arama sıralamalarını, kullanıcı deneyimini ve dönüşüm oranlarını doğrudan etkilediği bir çağda, görüntüleri etkili bir şekilde sıkıştırmayı bilmek dijital içerikle çalışan herkes için temel bir beceridir.
@@ -157,6 +160,7 @@ Vaxtim Yoxdu'daki ücretsiz Görüntü Sıkıştırıcıyı deneyin ve tam gizli
   },
   'regex-guide-for-beginners': {
     title: 'Düzenli İfadeler: Yeni Başlayanlar İçin Rehber',
+    description: 'Regex öğrenmek mi istiyorsunuz? Ücretsiz regex test aracıyla düzenli ifadeleri pratik örneklerle adım adım öğrenin.',
     date: '2026-03-03',
     relatedTools: ['regex-tester', 'json-formatter', 'hash-generator'],
     content: `Düzenli ifadeler (regex), metin arama, eşleştirme ve manipülasyon için güçlü kalıplardır. İlk bakışta göz korkutucu görünebilirler, ancak temeller şaşırtıcı derecede basittir ve yapı taşlarını anladığınızda, regex kalıplarını güvenle okuyup yazabilirsiniz.
@@ -214,6 +218,7 @@ Düzenli ifadeler, programlama ve veri çalışmalarındaki en evrensel olarak f
   },
   'why-grammar-matters-in-professional-writing': {
     title: 'Profesyonel Yazımda Dilbilgisi Neden Önemlidir',
+    description: 'Ücretsiz AI dilbilgisi denetleyicisiyle yazım hatalarınızı anında düzeltin. Profesyonel yazımda doğru dilbilgisinin neden kritik olduğunu öğrenin.',
     date: '2026-03-02',
     relatedTools: ['ai-grammar-checker', 'ai-text-rewriter', 'word-counter'],
     content: `İyi dilbilgisi sadece kurallara uymakla ilgili değildir -- net iletişim, güvenilirlik ve doğru izlenim bırakmakla ilgilidir. Profesyonel etkileşimlerin çoğunun metin yoluyla gerçekleştiği bir dünyada, yazınız genellikle insanların yetkinliğinizi değerlendirmek için kullandığı ilk ve tek şeydir.
@@ -268,6 +273,7 @@ Kelimeleriniz sizi temsil eder. İyi temsil ettiklerinden emin olun.`,
   },
   'pdf-tools-guide-merge-split-compress': {
     title: 'PDF Araçları Rehberi: Birleştirme, Bölme ve Sıkıştırma',
+    description: 'Ücretsiz PDF birleştirici ile belgelerinizi birleştirin, bölün ve sıkıştırın. Dosyalarınız sunucuya yüklenmez, her şey tarayıcıda çalışır.',
     date: '2026-03-10',
     relatedTools: ['pdf-merge', 'image-compress', 'base64-encode-decode'],
     content: `PDF dosyaları modern belge yönetiminin temel taşıdır. Sözleşmelerden faturalara, araştırma makalelerinden portföylere kadar PDF'ler, her cihazda aynı görünen belgeleri paylaşmak için evrensel formattır. 2026'da tarayıcı tabanlı PDF araçları oyunu değiştirdi ve size tam gizlilikle ücretsiz profesyonel düzeyde belge yönetimi sunuyor.
@@ -311,6 +317,7 @@ Vaxtim Yoxdu'daki ücretsiz PDF araçlarında tüm bu özellikler mevcuttur.`,
   },
   'qr-codes-everything-you-need-to-know': {
     title: 'QR Kodlar: 2026\'da Bilmeniz Gereken Her Şey',
+    description: 'Ücretsiz QR kod oluşturucu ile URL, metin, Wi-Fi ve vCard kodları oluşturun. QR kodların iş hayatında kullanımı hakkında kapsamlı rehber.',
     date: '2026-03-09',
     relatedTools: ['qr-code-generator', 'color-picker', 'image-convert'],
     content: `QR kodlar, niş bir endüstriyel izleme teknolojisinden gezegendeki en yaygın tanınan dijital araçlardan birine dönüştü. 2026'da her yerdeler -- restoran menüleri, ürün ambalajları, kartvizitler, etkinlik biletleri ve toplu taşıma sistemleri.
@@ -353,6 +360,7 @@ Vaxtim Yoxdu'daki QR Kod Oluşturucu ile URL'ler, metin, e-posta, telefon numara
   },
   'developer-productivity-tools-you-should-use': {
     title: 'Kullanmanız Gereken 10 Geliştirici Verimlilik Aracı',
+    description: 'JSON biçimlendirici, regex test, Base64 kodlayıcı ve diğer ücretsiz geliştirici araçları. Programcılar için en iyi çevrimiçi araçlar listesi.',
     date: '2026-03-08',
     relatedTools: ['json-formatter', 'regex-tester', 'hash-generator', 'base64-encode-decode'],
     content: `Geliştirici verimliliği daha hızlı kod yazmakla ilgili değildir -- iş akışınızdaki sürtünmeyi kaldırarak gerçek sorunları çözmeye daha fazla zaman ayırabilmenizle ilgilidir. İşte 2026'da günlük geliştirme iş akışınızı iyileştirecek on verimlilik aracı.
@@ -409,6 +417,7 @@ Bu araçların tamamı Vaxtim Yoxdu'da ücretsiz olarak mevcuttur. Kayıt gerekt
   },
   'cybersecurity-tools-guide': {
     title: '2026 İçin Temel Siber Güvenlik Araçları ve Uygulamaları',
+    description: 'Güçlü şifre oluşturucu, hash kontrolü ve JWT çözücü gibi ücretsiz güvenlik araçları. Çevrimiçi güvenliğinizi güçlendirin.',
     date: '2026-03-06',
     relatedTools: ['password-generator', 'hash-generator', 'base64-encode-decode', 'jwt-decoder'],
     content: `Siber güvenlik 2026'da hiç olmadığı kadar kritik. Veri ihlalleri her hafta manşetlerde yer alıyor, fidye yazılımı saldırıları her boyuttaki kuruluşu hedef alıyor ve yapay zeka destekli tehditler savunmalardan daha hızlı gelişiyor.
@@ -472,6 +481,7 @@ Vaxtim Yoxdu'daki ücretsiz güvenlik araçları -- tümü tarayıcınızda tama
   },
   'api-testing-guide': {
     title: 'API Testi Rehberi: Araçlar, Teknikler ve En İyi Uygulamalar',
+    description: 'Ücretsiz araçlarla kapsamlı API test rehberi: JSON biçimlendirici, JWT çözücü, URL kodlayıcı. API geliştirme iş akışınızı hızlandırın.',
     date: '2026-03-01',
     relatedTools: ['json-formatter', 'base64-encode-decode', 'jwt-decoder', 'url-encode-decode'],
     content: `API testi, modern yazılım geliştirmede en önemli becerilerden biridir. Uygulamalar giderek daha fazla mikro hizmet mimarilerine, üçüncü taraf entegrasyonlarına ve mobil arka uçlara dayandıkça, API'lerin kalitesi ve güvenilirliği doğrudan ürün kalitesini belirler.

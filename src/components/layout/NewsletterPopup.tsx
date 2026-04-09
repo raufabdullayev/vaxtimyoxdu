@@ -205,7 +205,7 @@ export default function NewsletterPopup() {
                     ) : (
                       <Mail className="h-4 w-4" aria-hidden="true" />
                     )}
-                    <span className="hidden sm:inline">
+                    <span>
                       {status === 'loading' ? t('sending') : t('subscribe')}
                     </span>
                   </button>

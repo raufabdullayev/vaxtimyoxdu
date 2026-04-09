@@ -127,7 +127,7 @@ export default async function Footer() {
                 }
                 return (
                   <li key={catKey}>
-                    <Link href="/tools" className="hover:text-foreground transition-colors">
+                    <Link href={`/tools#${catKey}`} className="hover:text-foreground transition-colors">
                       {displayName}
                     </Link>
                   </li>

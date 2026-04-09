@@ -31,7 +31,13 @@
     "statRegistration": "Kayıt gerekmez",
     "statAvailability": "Erişilebilirlik",
     "marketTitle": "Piyasa Fiyatları",
-    "marketViewAll": "Tümünü gör"
+    "marketViewAll": "Tümünü gör",
+    "heroTagline": "Vaxtim yoxdu — ama her şey hazır",
+    "trustStrip": "105+ ücretsiz araç | 4 dil | Kayıt gerekmez | 100% tarayıcı tabanlı",
+    "toolOfTheDay": "Günün Aracı",
+    "tryNow": "Şimdi dene",
+    "recentlyUsed": "Son Kullanılan Araçlar",
+    "openTool": "Aracı aç"
   },
   "tools": {
     "pageTitle": "Ücretsiz Online Araçlar",
@@ -42,21 +48,28 @@
     "clientSide": "Tarayıcı Tabanlı",
     "aiPowered": "AI Destekli",
     "filterAll": "Tümünü Göster",
+    "noToolsFound": "Araç bulunamadı. Farklı bir arama terimi deneyin.",
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbTools": "Araçlar",
     "categories": {
       "ai": "AI Araçları",
       "aiDesc": "Yapay zeka destekli metin işleme araçları",
+      "aiSeoDesc": "Vaxtim Yoxdu AI araçları, gelişmiş yapay zeka teknolojisini kullanarak metin işleme görevlerinizi kolaylaştırır. AI Metin Yeniden Yazıcı ile makalelerinizi, denemelerinizi ve iş belgelerinizi saniyeler içinde yeniden düzenleyebilirsiniz — tonu değiştirin, karmaşık dili sadeleştirin veya yazınızı daha profesyonel bir üsluba yükseltin. AI Dilbilgisi Denetleyicisi yazım hataları, noktalama yanlışlıkları ve cümle yapısı sorunlarını tespit eder, anında düzeltme önerileri sunar. AI Metin Özetleyici uzun makaleleri, raporları ve belgeleri önemli noktaları kapsayan kısa özetlere dönüştürür, değerli zamanınızdan tasarruf etmenizi sağlar. Tüm araçlar tamamen ücretsizdir ve kayıt gerektirmez. Azerbaycan, İngilizce, Türkçe ve Rusça dillerini destekler. Hızlı ve güvenilir metin işleme ihtiyacı duyan öğrenciler, yazarlar, gazeteciler, pazarlamacılar ve profesyoneller için idealdir. Verileriniz güvende kalır — dosyalar doğrudan tarayıcınızda işlenir ve hiçbir sunucuya yüklenmez.",
       "pdf": "PDF Araçları",
       "pdfDesc": "PDF dosyalarını birleştirin, bölüştürüp, sıkıştırın",
+      "pdfSeoDesc": "Vaxtim Yoxdu PDF araçları ile PDF dosyalarınızı çevrimiçi yönetin — hiçbir yazılım kurulumu gerekmez. PDF Birleştirici ile birden fazla PDF dosyasını tek bir belgede birleştirin, tercih ettiğiniz sayfa sırasını kendiniz belirleyin. PDF Sayfa Bölücü ile belirli sayfaları çıkarın, büyük belgeleri daha küçük bölümlere ayırın. PDF Sıkıştırıcı ile meta verileri temizleyerek ve belge yapısını optimize ederek dosya boyutunu azaltın — e-posta veya mesajlaşma uygulamaları ile paylaşıma hazır hale getirin. Tüm işlemler doğrudan tarayıcınızda çalışır — dosyalarınız hiçbir zaman bir sunucuya yüklenmez, tam gizlilik ve güvenlik sağlanır. Kayıt gerekmez, tamamen ücretsizdir. Ofis çalışanları, öğrenciler, öğretmenler, avukatlar ve serbest çalışanlar için günlük PDF ihtiyaçlarını karşılayan profesyonel bir araç paketi.",
       "image": "Görüntü Araçları",
       "imageDesc": "Görüntüleri sıkıştırın, yeniden boyutlandırın, kırpın ve dönüştürün",
+      "imageSeoDesc": "Vaxtim Yoxdu görüntü araçları ile resimlerinizi profesyonel düzeyde işleyin. Görüntü Sıkıştırıcı ile JPEG, PNG ve WebP formatlarında fark edilir kalite kaybı olmadan dosya boyutunu küçültün — web siteleri, e-posta ekleri ve sosyal medya paylaşımları için ideal. Görüntü Yeniden Boyutlandırıcı ile tam piksel boyutları veya yüzde ölçeklendirme ayarlayın, en-boy oranını koruyun. Görüntü Kırpıcı ile istenmeyen alanları kaldırın, profil resimleri ve banner'lar oluşturun. Görüntü Dönüştürücü ile JPEG, PNG ve WebP formatları arasında sorunsuz geçiş yapın. Tüm araçlar doğrudan tarayıcınızda çalışır — dosyalarınız cihazınızdan çıkmaz, kişisel fotoğraflarınız tamamen güvende kalır. Kayıt gerekmez, sınırsız kullanım, tamamen ücretsiz. Fotoğrafçılar, tasarımcılar, bloggerlar, sosyal medya yöneticileri ve web geliştiriciler için vazgeçilmez bir araç seti.",
       "dev": "Geliştirici Araçları",
       "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV ve daha fazlası",
+      "devSeoDesc": "Vaxtim Yoxdu geliştirici araçları, programcılar ve web geliştiriciler için günlük iş akışlarını hızlandırmak amacıyla tasarlanmış profesyonel bir araç setidir. JSON Biçimlendirici ile JSON verilerini güzel ve okunabilir çıktıda biçimlendirin ve doğrulayın. Base64 Kodek ile metin ve dosyaları kodlayın ve çözün. Regex Test Aracı ile düzenli ifadeleri gerçek zamanlı olarak test edin. JWT Çözücü ile token'ları analiz edin. Diğer araçlar arasında SQL Biçimlendirici, CSS/HTML/JS Küçültücü, Cron Ayrıştırıcı, CSV-JSON dönüştürücüleri, URL kodlama, Hash Oluşturucu, Zaman Damgası Dönüştürücü ve onlarca daha fazlası bulunur. Tüm araçlar tarayıcı tabanlıdır — verileriniz hiçbir zaman bir sunucuya gönderilmez. Kayıt gerekmez, tamamen ücretsiz. Frontend, backend ve full-stack geliştiriciler, DevOps mühendisleri ve QA testçileri için vazgeçilmez bir kaynak.",
       "generators": "Jeneratörler",
       "generatorsDesc": "Şifreler, UUID, QR kodlar, gradyanlar, emojiler ve renkler oluşturun",
+      "generatorsSeoDesc": "Vaxtim Yoxdu jeneratörleri ile çeşitli içerik ve kodlar oluşturun. Güçlü Şifre Oluşturucu ile güvenli parolalar oluşturun — uzunluk, özel karakterler, rakamlar ve daha fazlasını yapılandırabilirsiniz. UUID Oluşturucu ile uygulamalarınız için benzersiz tanımlayıcılar üretin. QR Kod Oluşturucu ile URL, metin, e-posta adresleri ve telefon numaraları için QR kodlar oluşturun — PNG veya SVG formatında indirin. Renk Seçici ile HEX, RGB ve HSL formatları arasında dönüştürme yapın ve güzel renk paletleri oluşturun. Lorem Ipsum Oluşturucu ile tasarım taslakları için yer tutucu metin elde edin. Diğer araçlar arasında Gradyan Oluşturucu, Meta Etiket Oluşturucu, Favicon Oluşturucu, Barkod Oluşturucu, Fatura Oluşturucu ve çok daha fazlası bulunur. Tüm araçlar ücretsiz, kayıt gerektirmez ve tamamen tarayıcınızda çalışır. Tasarımcılar, geliştiriciler, pazarlamacılar ve girişimciler için ideal yaratıcı araçlar.",
       "text": "Metin Araçları",
-      "textDesc": "Büyük/küçük harf çevirici, binary, ROT13, fark kontrolü, zamanlayıcı, kelime sayacı"
+      "textDesc": "Büyük/küçük harf çevirici, binary, ROT13, fark kontrolü, zamanlayıcı, kelime sayacı",
+      "textSeoDesc": "Vaxtim Yoxdu metin araçları ile metinlerinizi hızla işleyin ve dönüştürün. Büyük/Küçük Harf Çevirici ile metni BÜYÜK HARF, küçük harf, Başlık Harfi, camelCase, snake_case ve kebab-case arasında dönüştürün. Kelime Sayacı ile kelime, karakter, cümle ve paragraf sayılarını bulun, okuma süresini hesaplayın. Metin Fark Denetleyicisi ile iki metni karşılaştırın, eklemeleri ve silmeleri satır satır görün. Slug Oluşturucu ile herhangi bir metinden SEO dostu URL'ler oluşturun. Ek araçlar arasında Binary dönüştürücü, ROT13 kodlayıcı, HTML Entity kodek, Pomodoro Zamanlayıcı, Metinden Konuşmaya dönüştürücü, Karakter Sayacı, Bul ve Değiştir aracı, Morse Kodu dönüştürücü, Hashtag Oluşturucu ve daha fazlası bulunur. Tüm araçlar kayıt gerektirmez, tamamen ücretsizdir ve tarayıcınızda çalışır — verileriniz tamamen güvende kalır. Yazarlar, öğrenciler, editörler, içerik yöneticileri ve SEO uzmanları için günlük iş arkadaşı."
     },
     "toolNames": {
       "ai-text-rewriter": {
@@ -602,7 +615,8 @@
     "subtitle": "Kısa ve doğru haberler - zamanınız yoksa, biz buradayız.",
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbNews": "Haberler",
-    "noArticles": "Bu dilde henüz haber bulunmamaktadır."
+    "noArticles": "Bu dilde henüz haber bulunmamaktadır.",
+    "readingTime": "{minutes} dk okuma"
   },
   "blog": {
     "metaTitle": "Blog - Vaxtim Yoxdu",
@@ -611,7 +625,9 @@
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbBlog": "Blog",
     "noArticles": "Bu dilde henüz blog yazısı bulunmamaktadır.",
-    "readMore": "Devamını oku"
+    "readMore": "Devamını oku",
+    "readingTime": "{minutes} dk okuma",
+    "featured": "Öne Çıkan"
   },
   "newsletterPopup": {
     "title": "Yeniliklerden geri kalmayın!",
@@ -634,6 +650,8 @@
     "blogDescription": "Yeni blog yazıları ve faydalı araçlar hakkında bilgilendirilmek için abone olun.",
     "newsTitle": "Haberleri kaçırmayın!",
     "newsDescription": "En önemli haberlerin haftalık özetini e-postanıza alın.",
+    "toolTitle": "Bu aracı beğendiniz mi?",
+    "toolDescription": "Yeni araçlar ve özellikler hakkında bildirim almak için abone olun.",
     "placeholder": "E-posta adresiniz",
     "subscribe": "Abone ol",
     "sending": "Gönderiliyor...",
@@ -662,6 +680,7 @@
     "relatedTools": "Faydalı Araçlar",
     "relatedBlogPosts": "İlgili Blog Yazıları",
     "tryTheseTool": "Bu araçları deneyin",
+    "relatedNews": "Benzer Haberler",
     "readMore": "Daha fazla oku"
   },
   "toolUI": {

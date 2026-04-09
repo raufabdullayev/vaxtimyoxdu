@@ -31,7 +31,13 @@
     "statRegistration": "No registration needed",
     "statAvailability": "Availability",
     "marketTitle": "Market Prices",
-    "marketViewAll": "View all"
+    "marketViewAll": "View all",
+    "heroTagline": "No time — but everything is ready",
+    "trustStrip": "105+ free tools | 4 languages | No registration needed | 100% browser-based",
+    "toolOfTheDay": "Tool of the Day",
+    "tryNow": "Try now",
+    "recentlyUsed": "Recently Used Tools",
+    "openTool": "Open tool"
   },
   "tools": {
     "pageTitle": "Free Online Tools",
@@ -42,21 +48,28 @@
     "clientSide": "Browser Based",
     "aiPowered": "AI Powered",
     "filterAll": "All",
+    "noToolsFound": "No tools found. Try a different search term.",
     "breadcrumbHome": "Home",
     "breadcrumbTools": "Tools",
     "categories": {
       "ai": "AI Tools",
       "aiDesc": "AI-powered text processing tools",
+      "aiSeoDesc": "Vaxtim Yoxdu AI tools leverage advanced artificial intelligence to streamline your text processing tasks. The AI Text Rewriter helps you rephrase articles, essays, and business documents in seconds — adjust the tone, simplify complex language, or elevate your writing to a more professional style. The AI Grammar Checker scans your text for spelling mistakes, punctuation errors, and sentence structure issues, providing instant correction suggestions. The AI Text Summarizer condenses lengthy articles, reports, and documents into concise summaries that capture the key points, saving you valuable time. All tools are completely free to use with no registration required. They support Azerbaijani, English, Turkish, and Russian languages. Ideal for students, writers, journalists, marketers, and professionals who need fast, reliable text processing. Your data remains secure — files are processed directly in your browser and never uploaded to any server.",
       "pdf": "PDF Tools",
       "pdfDesc": "Merge, split, and compress PDF files",
+      "pdfSeoDesc": "Manage your PDF files online with Vaxtim Yoxdu PDF tools — no software installation required. Use the PDF Merger to combine multiple PDF files into a single document, choosing your preferred page order. The PDF Page Splitter lets you extract specific pages or split large documents into smaller sections. The PDF Compressor reduces file size by cleaning metadata and optimizing document structure, making files ready for email or messenger sharing. All operations run directly in your browser — your files are never uploaded to any server, ensuring complete privacy and security. No registration needed, completely free to use. A professional suite of tools for office workers, students, teachers, lawyers, and freelancers to handle everyday PDF needs. Unlike image formats like JPEG or PNG, your PDF documents maintain their original formatting throughout processing.",
       "image": "Image Tools",
       "imageDesc": "Compress, resize, crop, and convert images",
+      "imageSeoDesc": "Process your images at a professional level with Vaxtim Yoxdu image tools. The Image Compressor reduces file size in JPEG, PNG, and WebP formats without noticeable quality loss — ideal for websites, email attachments, and social media posts. The Image Resizer lets you set exact pixel dimensions or percentage scaling while preserving aspect ratio. The Image Cropper removes unwanted areas, perfect for creating profile pictures and banners. The Image Converter switches between JPEG, PNG, and WebP formats seamlessly. All tools operate directly in your browser — your files never leave your device, keeping personal photos completely secure. No registration required, unlimited usage, entirely free. An indispensable toolkit for photographers, designers, bloggers, social media managers, and web developers. Batch processing support allows you to compress multiple images simultaneously for maximum efficiency.",
       "dev": "Developer Tools",
       "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV and more for developers",
+      "devSeoDesc": "Vaxtim Yoxdu developer tools are a professional toolkit designed to accelerate daily workflows for programmers and web developers. Format and validate JSON data with the JSON Formatter for beautiful, readable output. Encode and decode text and files with the Base64 Codec. Test regular expressions in real-time with the Regex Tester. Analyze JWT tokens with the JWT Decoder. Additional tools include SQL Formatter, CSS/HTML/JS Minifier, Cron Parser, CSV-JSON converters, URL encoding, Hash Generator, Timestamp Converter, and dozens more. All tools are browser-based — your data is never sent to any server. No registration required, completely free. An essential resource for frontend, backend, and full-stack developers, DevOps engineers, and QA testers. These are everyday tools worth bookmarking for quick access during development.",
       "generators": "Generators",
       "generatorsDesc": "Generate passwords, UUIDs, QR codes, gradients, emojis, and colors",
+      "generatorsSeoDesc": "Create various content and codes with Vaxtim Yoxdu generators. The Strong Password Generator creates secure passwords — configure length, special characters, numbers, and more. The UUID Generator produces unique identifiers for your applications. The QR Code Generator creates QR codes for URLs, text, email addresses, and phone numbers — download in PNG or SVG format. The Color Picker converts between HEX, RGB, and HSL formats and creates beautiful color palettes. The Lorem Ipsum Generator provides placeholder text for design mockups. Additional tools include Gradient Generator, Meta Tag Generator, Favicon Generator, Barcode Generator, Invoice Generator, and many more. All tools are free, require no registration, and run entirely in your browser. Ideal creative tools for designers, developers, marketers, and entrepreneurs looking to boost productivity.",
       "text": "Text Tools",
-      "textDesc": "Case converter, binary, ROT13, diff checker, timer, word count"
+      "textDesc": "Case converter, binary, ROT13, diff checker, timer, word count",
+      "textSeoDesc": "Quickly process and transform your text with Vaxtim Yoxdu text tools. The Case Converter switches text between UPPERCASE, lowercase, Title Case, camelCase, snake_case, and kebab-case. The Word Counter finds word, character, sentence, and paragraph counts with reading time estimates. The Text Diff Checker compares two texts and highlights additions and deletions line by line. The Slug Generator creates SEO-friendly URLs from any text. Additional tools include Binary converter, ROT13 encoder, HTML Entity codec, Pomodoro Timer, Text-to-Speech converter, Character Counter, Find and Replace tool, Morse Code converter, Hashtag Generator, and more. All tools require no registration, are completely free, and run in your browser — your data stays completely secure. An everyday companion for writers, students, editors, content managers, and SEO specialists."
     },
     "toolNames": {
       "ai-text-rewriter": {
@@ -602,7 +615,8 @@
     "subtitle": "Short and accurate news - when you have no time, we are here.",
     "breadcrumbHome": "Home",
     "breadcrumbNews": "News",
-    "noArticles": "No news articles available in this language yet."
+    "noArticles": "No news articles available in this language yet.",
+    "readingTime": "{minutes} min read"
   },
   "blog": {
     "metaTitle": "Blog - Vaxtim Yoxdu",
@@ -611,7 +625,9 @@
     "breadcrumbHome": "Home",
     "breadcrumbBlog": "Blog",
     "noArticles": "No blog posts available in this language yet.",
-    "readMore": "Read more"
+    "readMore": "Read more",
+    "readingTime": "{minutes} min read",
+    "featured": "Featured"
   },
   "newsletterPopup": {
     "title": "Stay ahead of the curve!",
@@ -634,6 +650,8 @@
     "blogDescription": "Subscribe to get notified about new blog posts and useful tools.",
     "newsTitle": "Never miss the news!",
     "newsDescription": "Get weekly summaries of the most important news delivered to your inbox.",
+    "toolTitle": "Like this tool?",
+    "toolDescription": "Subscribe to get notified about new tools and features.",
     "placeholder": "Your email address",
     "subscribe": "Subscribe",
     "sending": "Sending...",
@@ -662,6 +680,7 @@
     "relatedTools": "Useful Tools",
     "relatedBlogPosts": "Related Blog Posts",
     "tryTheseTool": "Try these tools",
+    "relatedNews": "Related News",
     "readMore": "Read more"
   },
   "toolUI": {

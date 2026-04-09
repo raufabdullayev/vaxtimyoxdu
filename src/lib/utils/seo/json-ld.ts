@@ -246,6 +246,22 @@ function generateToolFaqs(
   return faqs
 }
 
+export function generateToolsItemListJsonLd(
+  tools: Tool[],
+  locale: string = 'az'
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: tools.map((tool, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: tool.name,
+      url: getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale),
+    })),
+  }
+}
+
 export function generateNewsArticleJsonLd({
   title,
   description,

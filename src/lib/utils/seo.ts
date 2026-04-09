@@ -12,6 +12,7 @@ export {
   generateToolJsonLd,
   generateToolHowToJsonLd,
   generateToolFaqJsonLd,
+  generateToolsItemListJsonLd,
   generateNewsArticleJsonLd,
   generateBlogArticleJsonLd,
 } from './seo/index'

@@ -36,6 +36,20 @@ export default function PageViewTracker() {
       const referrer =
         typeof document !== 'undefined' ? document.referrer : ''
 
+      // Parse UTM parameters from the current URL
+      const searchParams = new URLSearchParams(window.location.search)
+      const utmSource = searchParams.get('utm_source')
+      const utmMedium = searchParams.get('utm_medium')
+      const utmCampaign = searchParams.get('utm_campaign')
+      const utm =
+        utmSource || utmMedium || utmCampaign
+          ? {
+              ...(utmSource && { utm_source: utmSource }),
+              ...(utmMedium && { utm_medium: utmMedium }),
+              ...(utmCampaign && { utm_campaign: utmCampaign }),
+            }
+          : null
+
       fetch('/api/analytics/track', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -45,6 +59,7 @@ export default function PageViewTracker() {
           locale,
           event_data: {
             referrer: referrer || null,
+            ...(utm && { utm }),
             // User agent is available server-side from headers; adding a
             // timestamp here helps correlate client/server clocks.
             client_ts: new Date().toISOString(),

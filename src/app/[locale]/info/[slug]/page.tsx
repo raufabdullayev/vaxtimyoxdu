@@ -41,6 +41,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug, locale } = await params
   setRequestLocale(locale)
   const nav = await getTranslations('common.nav')
+  const infoT = await getTranslations('info')
   const crossT = await getTranslations('crossLinks')
 
   const article = newsArticles[slug]
@@ -81,6 +82,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           {article.category}
         </span>
         <time className="text-sm text-muted-foreground">{article.date}</time>
+        <span className="text-sm text-muted-foreground">
+          {infoT('readingTime', { minutes: Math.ceil(article.content.split(/\s+/).length / 200) })}
+        </span>
       </div>
       <h1 className="text-3xl font-bold mt-2 mb-8">{article.title}</h1>
       <MarkdownRenderer content={article.content} />
@@ -89,15 +93,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         title={article.title}
         description={description}
       />
-      <NewsletterInlineCTA variant="news" />
       <NewsRelatedTools category={article.category} title={crossT('tryTheseTool')} />
+      <NewsletterInlineCTA variant="news" />
       <LazyAdBanner slot="info-article-bottom" format="in-article" className="mt-8" />
       <RelatedArticles
+        title={crossT('relatedNews')}
         items={Object.entries(newsArticles)
-          .filter(([s]) => s !== slug)
+          .filter(([s, a]) => s !== slug && (!a.locale || a.locale === locale))
+          .sort((a, b) => {
+            // Prioritize same category
+            const aCat = a[1].category === article.category ? 1 : 0
+            const bCat = b[1].category === article.category ? 1 : 0
+            if (bCat !== aCat) return bCat - aCat
+            // Then by recency
+            return new Date(b[1].date).getTime() - new Date(a[1].date).getTime()
+          })
           .slice(0, 2)
-          .map(([slug, a]) => ({
-            slug,
+          .map(([s, a]) => ({
+            slug: s,
             title: a.title,
             category: a.category,
             date: a.date,

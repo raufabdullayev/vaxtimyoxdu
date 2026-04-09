@@ -31,7 +31,13 @@
     "statRegistration": "Qeydiyyat lazım deyil",
     "statAvailability": "Əlçatanlıq",
     "marketTitle": "Bazar Qiymətləri",
-    "marketViewAll": "Hamısına bax"
+    "marketViewAll": "Hamısına bax",
+    "heroTagline": "Vaxtim yoxdu — amma hər şey hazırdır",
+    "trustStrip": "105+ pulsuz alət | 4 dil | Qeydiyyat lazım deyil | 100% brauzer əsaslı",
+    "toolOfTheDay": "Günün Aləti",
+    "tryNow": "İndi sına",
+    "recentlyUsed": "Son İstifadə Edilən Alətlər",
+    "openTool": "Aləti aç"
   },
   "tools": {
     "pageTitle": "Pulsuz Onlayn Alətlər",
@@ -42,21 +48,28 @@
     "clientSide": "Brauzer Əsaslı",
     "aiPowered": "AI ilə işləyən",
     "filterAll": "Hamısı",
+    "noToolsFound": "Heç bir alət tapılmadı. Başqa axtarış sözü yoxlayın.",
     "breadcrumbHome": "Ana səhifə",
     "breadcrumbTools": "Alətlər",
     "categories": {
       "ai": "AI Alətləri",
       "aiDesc": "Süni zəkayla işlənən mətn emal alətləri",
+      "aiSeoDesc": "Vaxtim Yoxdu platformasının AI alətləri süni intellekt texnologiyasından istifadə edərək mətn emalını asanlaşdırır. AI Mətn Yenidənyazma aləti ilə məqalələrinizi, esselerinizi və iş sənədlərinizi saniyələr ərzində yenidən formalaşdıra bilərsiniz — tonallığı dəyişdirmək, sadələşdirmək və ya daha akademik üslubda ifadə etmək mümkündür. AI Qrammatika Yoxlayıcı orfoqrafiya, durğu işarəsi və cümlə quruluşu səhvlərini aşkar edir, düzəliş təklifləri verir. AI Mətn Xülasələyici isə uzun məqalələri, hesabatları və sənədləri əsas fikirlərə yığır, sizin vaxtınıza qənaət edir. Bütün alətlər qeydiyyat tələb etmir, tamamilə pulsuzdur və Azərbaycan, İngilis, Türk, Rus dillərini dəstəkləyir. Tələbələr, yazıçılar, jurnalistlər, marketoloqlar və peşəkarlar üçün ideal həlldir. Məlumatlarınız təhlükəsizdir — fayllar serverə yüklənmir, emal brauzerdə baş verir.",
       "pdf": "PDF Alətləri",
       "pdfDesc": "PDF fayllarını birləşdirin, bölüşdürüb, sıxın",
+      "pdfSeoDesc": "Vaxtim Yoxdu PDF alətləri ilə PDF fayllarınızı onlayn idarə edin — heç bir proqram quraşdırmadan. PDF Birləşdirici ilə bir neçə PDF-i tək bir sənədə birləşdirin, səhifələrin ardıcıllığını özünüz seçin. PDF Səhifə Bölücü ilə lazımlı səhifələri çıxarın, böyük sənədləri kiçik hissələrə ayırın. PDF Sıxıcı ilə fayl ölçüsünü azaldın — metadataları təmizləyin, strukturu optimallaşdırın, email və ya messencer ilə göndərmək üçün hazır edin. Bütün əməliyyatlar birbaşa brauzerinizdə icra olunur, fayllarınız heç vaxt serverə yüklənmir. Bu, məxfiliyin və təhlükəsizliyin tam qorunması deməkdir. Qeydiyyat lazım deyil, tamamilə pulsuzdur. Ofis işçiləri, tələbələr, müəllimlər, hüquqşünaslar və freelancerlər üçün gündəlik PDF ehtiyaclarını həll edən peşəkar alətlər toplusudur. JPEG, PNG formatlarından fərqli olaraq, PDF sənədləriniz orijinal formatını qoruyur.",
       "image": "Şəkil Alətləri",
       "imageDesc": "Şəkilləri sıxın, ölçüsünü dəyişin, kəsin və çevirdi edin",
+      "imageSeoDesc": "Vaxtim Yoxdu şəkil alətləri ilə şəkillərinizi peşəkar səviyyədə emal edin. Şəkil Sıxıcı ilə JPEG, PNG və WebP formatlarında fayl ölçüsünü keyfiyyəti itirmədən azaldın — veb saytlar, email və sosial media üçün ideal. Şəkil Ölçü Dəyişdirici ilə dəqiq piksel və ya faiz ölçüsü təyin edin, nisbəti qoruyun. Şəkil Kəsici ilə lazımsız sahələri kəsin, profil şəkilləri və bannerlər hazırlayın. Şəkil Çeviricisi ilə JPEG, PNG və WebP formatları arasında keçid edin. Bütün alətlər birbaşa brauzerdə işləyir — fayllarınız serverə yüklənmir, şəxsi şəkilləriniz tam təhlükəsizdir. Qeydiyyat tələb olunmur, limitsiz istifadə, tamamilə pulsuz. Fotoqraflar, dizaynerlər, bloqqerlər, sosial media menecerləri və veb developerlar üçün əvəzolunmaz alətlər toplusu. Toplu emal dəstəyi ilə bir neçə şəkili eyni anda sıxa bilərsiniz.",
       "dev": "Developer Alətləri",
       "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV və daha çox",
+      "devSeoDesc": "Vaxtim Yoxdu developer alətləri proqramçılar və veb developerlar üçün gündəlik iş prosesini sürətləndirən peşəkar alətlər toplusudur. JSON Formatlayıcı ilə JSON məlumatlarını gözəl göstərişdə formatlaşdırın və doğrulayın. Base64 Kodlama/Dekodlama ilə mətn və faylları çevirin. Regex Test Aləti ilə requlyar ifadələri real vaxtda sınaqdan keçirin. JWT Dekoderi ilə tokenləri analiz edin. SQL Formatlayıcı, CSS/HTML/JS Kiçildici, Cron Parser, CSV-JSON çeviriciləri, URL kodlama, Hash generatoru, Timestamp çeviricisi və daha onlarla alət mövcuddur. Bütün alətlər brauzer əsaslıdır — məlumatlarınız serverə göndərilmir. Qeydiyyat lazım deyil, tamamilə pulsuz. Frontend, backend, full-stack developerlar, DevOps mühəndisləri və QA testçiləri üçün vazkeçilməz resurs. Hər gün istifadə edə biləcəyiniz, bookmark etməyə dəyər alətlər.",
       "generators": "Generatorlar",
       "generatorsDesc": "Şifrələr, UUID, QR kodlar, gradientlər, emojilər, rənglər yaratmaq",
+      "generatorsSeoDesc": "Vaxtim Yoxdu generatorları ilə müxtəlif məzmun və kodlar yaradın. Güclü Şifrə Generatoru ilə təhlükəsiz parollar hazırlayın — uzunluq, xüsusi simvollar, rəqəmlər konfiqurasiya edilə bilər. UUID Generatoru ilə unikal identifikatorlar yaradın. QR Kod Generatoru ilə URL, mətn, email, telefon nömrəsi üçün QR kodlar hazırlayın — PNG və SVG formatlarında endirin. Rəng Seçici ilə HEX, RGB, HSL formatları arasında çevirin, gözəl rəng paletləri yaradın. Lorem Ipsum Generatoru ilə dizayn maketləri üçün yer tutucu mətn əldə edin. Gradient Generatoru, Meta Tag Generatoru, Favicon Generatoru, Barcode Generatoru, Invoice Generatoru və daha çox alət mövcuddur. Bütün alətlər pulsuz, qeydiyyatsız və brauzer əsaslıdır. Dizaynerlər, developerlar, marketoloqlar və sahibkarlar üçün ideal yaradıcılıq alətləri.",
       "text": "Mətn Alətləri",
-      "textDesc": "Registr çevirməsi, binary, ROT13, fərq yoxlayıcı, taymer, söz sayacı"
+      "textDesc": "Registr çevirməsi, binary, ROT13, fərq yoxlayıcı, taymer, söz sayacı",
+      "textSeoDesc": "Vaxtim Yoxdu mətn alətləri ilə mətnlərinizi sürətlə emal edin və çevirin. Registr Çeviricisi ilə mətni BÖYÜK HƏRF, kiçik hərf, Başlıq Hərfi, camelCase, snake_case və kebab-case arasında çevirin. Söz Sayacı ilə söz, simvol, cümlə və paraqraf sayını tapın, oxuma vaxtını hesablayın. Mətn Fərq Yoxlayıcı ilə iki mətni müqayisə edin, əlavələri və silmələri sətir-sətir görün. Slug Generatoru ilə SEO-dost URL-lər yaradın. Binary çevirici, ROT13 kodlayıcı, HTML Entity kodlayıcı, Pomodoro Taymeri, Mətn-Nitqə çevirici, Simvol Sayacı, Tap-Əvəz Et aləti, Morse Kodu çeviricisi, Hashtag Generatoru və daha çox. Bütün alətlər qeydiyyatsız, pulsuz və brauzer əsaslıdır — məlumatlarınız tam təhlükəsizdir. Yazıçılar, tələbələr, redaktorlar, kontent menecerləri və SEO mütəxəssisləri üçün gündəlik iş yoldaşı."
     },
     "toolNames": {
       "ai-text-rewriter": {
@@ -602,7 +615,8 @@
     "subtitle": "Qısa və dəqiq xəbərlər — vaxtınız yoxdursa, biz varıq.",
     "breadcrumbHome": "Ana səhifə",
     "breadcrumbNews": "Xəbərlər",
-    "noArticles": "Hazırda bu dildə xəbər yoxdur."
+    "noArticles": "Hazırda bu dildə xəbər yoxdur.",
+    "readingTime": "{minutes} dəq oxunuş"
   },
   "blog": {
     "metaTitle": "Blog - Vaxtim Yoxdu",
@@ -611,7 +625,9 @@
     "breadcrumbHome": "Ana səhifə",
     "breadcrumbBlog": "Blog",
     "noArticles": "Hazırda bu dildə blog yazısı yoxdur.",
-    "readMore": "Daha çox oxu"
+    "readMore": "Daha çox oxu",
+    "readingTime": "{minutes} dəq oxunuş",
+    "featured": "Seçilmiş"
   },
   "newsletterPopup": {
     "title": "Yeniliklərdən geri qalmayın!",
@@ -634,6 +650,8 @@
     "blogDescription": "Yeni blog yazıları və faydalı alətlər haqqında məlumat almaq üçün abunə olun.",
     "newsTitle": "Xəbərlərdən geri qalmayın!",
     "newsDescription": "Ən vacib xəbərlərin qısa xülasəsini hər həftə e-poçtunuza alın.",
+    "toolTitle": "Bu alət xoşunuza gəldi?",
+    "toolDescription": "Yeni alətlər və funksiyalar haqqında məlumat almaq üçün abunə olun.",
     "placeholder": "Email ünvanınız",
     "subscribe": "Abunə ol",
     "sending": "Göndərilir...",
@@ -662,6 +680,7 @@
     "relatedTools": "Faydalı Alətlər",
     "relatedBlogPosts": "Əlaqəli Blog Yazıları",
     "tryTheseTool": "Bu alətləri sınayın",
+    "relatedNews": "Oxşar xəbərlər",
     "readMore": "Daha çox oxu"
   },
   "toolUI": {

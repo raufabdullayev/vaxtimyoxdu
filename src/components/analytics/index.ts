@@ -1,4 +1,5 @@
 export { default as PageViewTracker } from './PageViewTracker'
+export { default as ScrollDepthTracker } from './ScrollDepthTracker'
 export { default as ToolUseTracker } from './ToolUseTracker'
 export { default as ToolUseTrackerWrapper } from './ToolUseTrackerWrapper'
 export { useTrackToolUse } from './useTrackToolUse'

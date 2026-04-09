@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
-import QRCode from 'qrcode'
 import { ToolTextarea, ToolSelect, ToolInput, ToolAlert } from '@/components/ui'
 
 export default function QrCodeGenerator() {
@@ -21,6 +20,7 @@ export default function QrCodeGenerator() {
     }
     setError('')
     try {
+      const QRCode = (await import('qrcode')).default
       const url = await QRCode.toDataURL(text, {
         width: Number(size),
         margin: 2,

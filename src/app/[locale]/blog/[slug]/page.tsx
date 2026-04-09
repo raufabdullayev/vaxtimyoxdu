@@ -7,8 +7,9 @@ import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
 import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
+import ScrollDepthTracker from '@/components/analytics/ScrollDepthTracker'
 import MarkdownRenderer from '@/components/common/MarkdownRenderer'
-import { blogPosts, getBlogPostBySlug } from '@/data/blog-posts'
+import { blogPosts, getBlogPostBySlug, getBlogPostsByLocale } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
 import type { Locale } from '@/i18n/config'
 
@@ -39,12 +40,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const { slug, locale: rawLocale } = await params
   setRequestLocale(rawLocale)
   const nav = await getTranslations('common.nav')
+  const blogT = await getTranslations('blog')
+  const crossT = await getTranslations('crossLinks')
 
   const locale = (rawLocale ?? 'az') as Locale
   const post = getBlogPostBySlug(slug, locale)
   if (!post) notFound()
 
   const description = post.description || post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
+  const readingTime = Math.ceil(post.content.split(/\s+/).length / 200)
 
   const jsonLd = generateBlogArticleJsonLd({
     title: post.title,
@@ -54,8 +58,24 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     locale,
   })
 
+  // Find related blog posts that share at least one relatedTool
+  const allPosts = getBlogPostsByLocale(locale)
+  const currentTools = new Set(post.relatedTools ?? [])
+  const relatedBlogPosts = Object.entries(allPosts)
+    .filter(([s]) => s !== slug)
+    .map(([s, p]) => ({
+      slug: s,
+      title: p.title,
+      date: p.date,
+      overlap: (p.relatedTools ?? []).filter(t => currentTools.has(t)).length,
+    }))
+    .filter(p => p.overlap > 0)
+    .sort((a, b) => b.overlap - a.overlap || new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3)
+
   return (
     <div className="container py-12 max-w-3xl">
+      {/* JSON-LD structured data from trusted internal data only */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -68,13 +88,20 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           { label: post.title },
         ]}
       />
-      <time className="text-sm text-muted-foreground">{post.date}</time>
+      <div className="flex items-center gap-3 mb-2">
+        <time className="text-sm text-muted-foreground">{post.date}</time>
+        <span className="text-sm text-muted-foreground">
+          {blogT('readingTime', { minutes: readingTime })}
+        </span>
+      </div>
       <h1 className="text-3xl font-bold mt-2 mb-8">{post.title}</h1>
       <LazyAdBanner slot="blog-post-top" format="banner" className="mb-8" />
-      <MarkdownRenderer content={post.content} />
+      <ScrollDepthTracker slug={slug}>
+        <MarkdownRenderer content={post.content} />
+      </ScrollDepthTracker>
       {post.relatedTools && post.relatedTools.length > 0 && (
         <div className="mt-12 pt-8 border-t">
-          <h2 className="text-xl font-semibold mb-4">Related Tools</h2>
+          <h2 className="text-xl font-semibold mb-4">{crossT('relatedTools')}</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {post.relatedTools.map((toolSlug) => {
               const tool = tools.find(t => t.slug === toolSlug)
@@ -89,6 +116,23 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 </Link>
               )
             })}
+          </div>
+        </div>
+      )}
+      {relatedBlogPosts.length > 0 && (
+        <div className="mt-12 pt-8 border-t">
+          <h2 className="text-xl font-semibold mb-4">{crossT('relatedBlogPosts')}</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {relatedBlogPosts.map((related) => (
+              <Link
+                key={related.slug}
+                href={`/blog/${related.slug}`}
+                className="p-4 rounded-lg border hover:border-primary/50 hover:shadow-sm transition-all"
+              >
+                <p className="font-medium text-sm">{related.title}</p>
+                <time className="text-xs text-muted-foreground mt-2 block">{related.date}</time>
+              </Link>
+            ))}
           </div>
         </div>
       )}

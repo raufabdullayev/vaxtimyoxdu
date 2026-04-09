@@ -16,11 +16,12 @@ vi.mock('next-intl', () => ({
   },
 }))
 
-// Mock i18n navigation Link
+// Mock i18n navigation Link + usePathname
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (
     <a href={href} {...props}>{children}</a>
   ),
+  usePathname: () => '/',
 }))
 
 // Mock ThemeToggle

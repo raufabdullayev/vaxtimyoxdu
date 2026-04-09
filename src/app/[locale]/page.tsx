@@ -1,10 +1,12 @@
 import { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
-import { Zap, Newspaper, Wrench, CheckCircle } from 'lucide-react'
+import { Zap, Newspaper, Wrench, CheckCircle, Shield } from 'lucide-react'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import NewsletterHomeSection from '@/components/layout/NewsletterHomeSection'
 import MarketTicker from '@/components/market/MarketTicker'
+import ToolOfTheDay from '@/components/tools/ToolOfTheDay'
+import RecentlyUsedTools from '@/components/tools/RecentlyUsedTools'
 import { generateHreflangAlternates, getOgLocale, getOgImageUrl, SITE_NAME, getLocalizedUrl } from '@/lib/utils/seo'
 import type { Locale } from '@/i18n/config'
 
@@ -64,10 +66,13 @@ export default async function HomePage({ params }: Props) {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           {t('heroTitle')} <span className="text-primary">{t('heroTitleHighlight')}</span>
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-3">
           {t('heroDescription')}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <p className="text-base text-muted-foreground/80 italic mb-8">
+          {t('heroTagline')}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <Link
             href="/tools"
             className="bg-primary text-primary-foreground rounded-lg px-8 py-3 font-semibold text-lg hover:opacity-90 transition-opacity"
@@ -81,12 +86,19 @@ export default async function HomePage({ params }: Props) {
             {t('heroCtaNews')}
           </Link>
         </div>
+        <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+          <Shield className="h-4 w-4 text-primary shrink-0" />
+          <span>{t('trustStrip')}</span>
+        </div>
       </section>
 
       {/* Market Ticker */}
       <section className="max-w-4xl mx-auto mb-10">
         <MarketTicker />
       </section>
+
+      {/* Tool of the Day */}
+      <ToolOfTheDay />
 
       {/* Two columns */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -151,6 +163,9 @@ export default async function HomePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Recently Used Tools */}
+      <RecentlyUsedTools />
 
       {/* Newsletter */}
       <NewsletterHomeSection />

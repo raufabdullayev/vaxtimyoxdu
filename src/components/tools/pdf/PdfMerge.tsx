@@ -103,7 +103,10 @@ export default function PdfMerge() {
         <label className="block text-sm font-medium mb-1">Select PDF Files</label>
         <div
           className="border-2 border-dashed rounded-lg p-8 text-center cursor-pointer hover:border-primary transition-colors"
+          role="button"
+          tabIndex={0}
           onClick={() => fileInputRef.current?.click()}
+          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInputRef.current?.click() } }}
         >
           <input
             ref={fileInputRef}

@@ -69,6 +69,16 @@ export default function WordCounter() {
 
   return (
     <div className="space-y-6">
+      <div>
+        <label className="block text-sm font-medium mb-1">Enter your text</label>
+        <textarea
+          className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[250px] focus:outline-none focus:ring-2 focus:ring-primary"
+          placeholder="Start typing or paste your text here..."
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+      </div>
+
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {statItems.slice(0, 4).map((item) => (
           <div key={item.label} className="rounded-lg bg-muted/50 p-3 text-center">
@@ -85,16 +95,6 @@ export default function WordCounter() {
             <div className="text-xs text-muted-foreground mt-1">{item.label}</div>
           </div>
         ))}
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium mb-1">Enter your text</label>
-        <textarea
-          className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[250px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Start typing or paste your text here..."
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
       </div>
 
       {text.trim() && (

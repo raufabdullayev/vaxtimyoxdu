@@ -58,12 +58,7 @@ const jsonLdOrganization = {
   url: 'https://vaxtimyoxdu.com',
   logo: 'https://vaxtimyoxdu.com/logo.png',
   description: 'Qısa xəbərlər və pulsuz onlayn alətlər - Azərbaycan',
-  sameAs: [
-    'https://github.com/vaxtimyoxdu',
-    'https://x.com/vaxtimyoxdu',
-    'https://instagram.com/vaxtimyoxdu',
-    'https://linkedin.com/company/vaxtimyoxdu',
-  ],
+  sameAs: [],
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'hello@vaxtimyoxdu.com',

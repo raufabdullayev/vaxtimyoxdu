@@ -1,3 +1,6 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { Tool } from '@/types/tool'
 import { getToolsByCategory } from '@/lib/tools/registry'
@@ -7,6 +10,7 @@ interface RelatedToolsProps {
 }
 
 export default function RelatedTools({ currentTool }: RelatedToolsProps) {
+  const t = useTranslations('tools')
   const categoryTools = getToolsByCategory(currentTool.category)
   const related = categoryTools
     .filter((t) => t.slug !== currentTool.slug)
@@ -16,7 +20,7 @@ export default function RelatedTools({ currentTool }: RelatedToolsProps) {
 
   return (
     <div className="mt-10">
-      <h2 className="text-xl font-semibold mb-4">Related Tools</h2>
+      <h2 className="text-xl font-semibold mb-4">{t('relatedTools')}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {related.map((tool) => (
           <Link
@@ -34,12 +38,12 @@ export default function RelatedTools({ currentTool }: RelatedToolsProps) {
             <div className="mt-2 flex items-center gap-2">
               {tool.isAI && (
                 <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full font-medium">
-                  AI-Powered
+                  {t('aiPowered')}
                 </span>
               )}
               {tool.isClientSide && (
                 <span className="text-xs bg-green-500/10 text-green-600 dark:text-green-400 px-2 py-0.5 rounded-full font-medium">
-                  Client-side
+                  {t('clientSide')}
                 </span>
               )}
             </div>
