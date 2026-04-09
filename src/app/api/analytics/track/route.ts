@@ -36,6 +36,7 @@ const ALLOWED_EVENT_TYPES = new Set([
   'search_query',
   'outbound_click',
   '404_error',
+  'session_engagement',
 ])
 
 /** Maximum length for string fields to prevent abuse. */

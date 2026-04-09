@@ -50,6 +50,9 @@ export default function PageViewTracker() {
             }
           : null
 
+      // Parse ?ref= parameter for referral tracking
+      const refParam = searchParams.get('ref')
+
       fetch('/api/analytics/track', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -60,6 +63,7 @@ export default function PageViewTracker() {
           event_data: {
             referrer: referrer || null,
             ...(utm && { utm }),
+            ...(refParam && { ref: refParam }),
             // User agent is available server-side from headers; adding a
             // timestamp here helps correlate client/server clocks.
             client_ts: new Date().toISOString(),

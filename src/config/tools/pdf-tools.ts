@@ -24,6 +24,17 @@ export const pdfTools: Tool[] = [
     keywords: ['pdf split', 'pdf extract pages', 'pdf page splitter', 'split pdf'],
   },
   {
+    slug: 'pdf-to-word',
+    name: 'PDF to Word Converter — Free Online, No Upload',
+    description: 'Convert PDF files to editable Word documents (.docx) online. Extract text from PDF and download as Word file. Free client-side converter - your files never leave your browser.',
+    shortDescription: 'Convert PDF to editable Word document',
+    category: 'pdf',
+    icon: '\uD83D\uDCDD',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['pdf to word', 'pdf to docx', 'pdf converter', 'convert pdf to word', 'pdf to word converter'],
+  },
+  {
     slug: 'pdf-compress',
     name: 'PDF Compressor',
     description: 'Reduce PDF file size online. Remove metadata and optimize structure to compress PDFs. Free client-side PDF compressor - your files never leave your browser.',

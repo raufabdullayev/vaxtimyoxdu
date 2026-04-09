@@ -1,6 +1,8 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import { useSessionEngagement } from '@/hooks/useSessionEngagement'
+import { useOutboundTracking } from '@/hooks/useOutboundTracking'
 
 // Lazy load below-the-fold / post-interactive components.
 // These are only needed after the page is interactive, so deferring them
@@ -21,6 +23,9 @@ const NewsletterPopup = dynamic(() => import('@/components/layout/NewsletterPopu
 })
 
 export default function ClientShell() {
+  useSessionEngagement()
+  useOutboundTracking()
+
   return (
     <>
       <CookieConsent />

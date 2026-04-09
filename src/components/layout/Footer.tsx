@@ -1,32 +1,45 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
-import { Github, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { Instagram, Send, Twitter, Youtube } from 'lucide-react'
 import { popularToolSlugs } from '@/lib/utils/cross-links'
 import { categories } from '@/config/tools'
 import type { ToolCategory } from '@/types/tool'
 import Newsletter from './Newsletter'
 import CurrentYear from '@/components/common/CurrentYear'
 
+function TikTokIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+    </svg>
+  )
+}
+
 const socialLinks = [
-  {
-    href: 'https://github.com/vaxtimyoxdu',
-    label: 'GitHub',
-    icon: Github,
-  },
-  {
-    href: 'https://x.com/vaxtimyoxdu',
-    label: 'Twitter',
-    icon: Twitter,
-  },
   {
     href: 'https://instagram.com/vaxtimyoxdu',
     label: 'Instagram',
     icon: Instagram,
   },
   {
-    href: 'https://linkedin.com/company/vaxtimyoxdu',
-    label: 'LinkedIn',
-    icon: Linkedin,
+    href: 'https://tiktok.com/@vaxtimyoxdu',
+    label: 'TikTok',
+    icon: TikTokIcon,
+  },
+  {
+    href: 'https://t.me/vaxtimyoxdu',
+    label: 'Telegram',
+    icon: Send,
+  },
+  {
+    href: 'https://youtube.com/@vaxtimyoxdu',
+    label: 'YouTube',
+    icon: Youtube,
+  },
+  {
+    href: 'https://x.com/vaxtimyoxdu',
+    label: 'X / Twitter',
+    icon: Twitter,
   },
 ]
 

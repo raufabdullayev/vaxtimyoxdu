@@ -1,7 +1,9 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
 import { useTranslations } from 'next-intl'
+import { usePathname } from 'next/navigation'
+import { useLocale } from 'next-intl'
 import { Search } from 'lucide-react'
 import { Tool, ToolCategory } from '@/types/tool'
 import ToolCard from './ToolCard'
@@ -14,8 +16,44 @@ interface ToolsPageClientProps {
 
 export default function ToolsPageClient({ tools }: ToolsPageClientProps) {
   const t = useTranslations('tools')
+  const pathname = usePathname()
+  const locale = useLocale()
   const [search, setSearch] = useState('')
   const [activeCategory, setActiveCategory] = useState<ToolCategory | null>(null)
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const trackSearchQuery = useCallback(
+    (query: string) => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current)
+      debounceTimer.current = setTimeout(() => {
+        const trimmed = query.trim()
+        if (!trimmed) return
+        try {
+          fetch('/api/analytics/track', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              event_type: 'search_query',
+              page_path: pathname,
+              locale,
+              event_data: { query: trimmed },
+            }),
+            keepalive: true,
+          }).catch(() => {})
+        } catch {
+          // Silently swallow -- analytics must never degrade UX
+        }
+      }, 1000)
+    },
+    [pathname, locale]
+  )
+
+  // Clean up debounce timer on unmount
+  useEffect(() => {
+    return () => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current)
+    }
+  }, [])
 
   const filtered = useMemo(() => {
     let result = tools
@@ -65,7 +103,10 @@ export default function ToolsPageClient({ tools }: ToolsPageClientProps) {
         <input
           type="search"
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value)
+            trackSearchQuery(e.target.value)
+          }}
           placeholder={t('searchPlaceholder')}
           className="w-full rounded-xl border bg-card pl-10 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           aria-label={t('searchPlaceholder')}

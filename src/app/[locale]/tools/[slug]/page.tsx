@@ -36,6 +36,7 @@ const toolComponents: Record<string, React.ComponentType> = {
   // PDF Tools
   'pdf-merge': dynamic(() => import('@/components/tools/pdf/PdfMerge')),
   'pdf-split': dynamic(() => import('@/components/tools/pdf/PdfSplit')),
+  'pdf-to-word': dynamic(() => import('@/components/tools/pdf/PdfToWord')),
   'pdf-compress': dynamic(() => import('@/components/tools/pdf/PdfCompress')),
   // Image Tools
   'image-compress': dynamic(() => import('@/components/tools/image/ImageCompress')),
@@ -146,6 +147,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'twitter-char-counter': dynamic(() => import('@/components/tools/text/TwitterCharCounter')),
   'instagram-caption-generator': dynamic(() => import('@/components/tools/text/InstagramCaptionGenerator')),
   'stopwatch': dynamic(() => import('@/components/tools/text/Stopwatch')),
+  // Time Calculator
+  'time-calculator': dynamic(() => import('@/components/tools/generators/TimeCalculator')),
 }
 
 export async function generateStaticParams() {

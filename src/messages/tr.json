@@ -92,6 +92,10 @@
         "name": "PDF Sayfa Bölücü",
         "description": "PDF dosyasından belirli sayfaları çevrimiçi çıkarın. Sayfa aralıklarını seçin, bölün ve indirin."
       },
+      "pdf-to-word": {
+        "name": "PDF'den Word'e Dönüştürücü",
+        "description": "PDF dosyalarını düzenlenebilir Word belgelerine (.docx) çevrimiçi dönüştürün. PDF'den metin çıkarın ve Word dosyası olarak indirin."
+      },
       "pdf-compress": {
         "name": "PDF Sıkıştırıcı",
         "description": "PDF dosya boyutunu çevrimiçi azaltın. Meta verileri kaldırın ve yapıyı optimize ederek sıkıştırın."
@@ -491,6 +495,10 @@
       "loan-calculator": {
         "name": "Kredi/EMI Hesaplayıcı",
         "description": "Aylık kredi ödemelerini, toplam faizi hesaplayın ve tam amortisman tablosunu görüntüleyin. Kredi tutarı, faiz oranı ve vade desteği. Ücretsiz çevrimiçi EMI hesaplayıcı."
+      },
+      "time-calculator": {
+        "name": "Zaman ve Tarih Hesaplayıcı",
+        "description": "Tarih farklarını hesaplayın, zaman ekleyin veya çıkarın, etkinliklere geri sayım yapın ve saat dilimleri arasında dönüştürün. Ücretsiz çevrimiçi zaman hesaplayıcı."
       }
     },
     "aboutTool": "{toolName} hakkında"
@@ -666,7 +674,8 @@
     "shareOn": "{platform} üzerinde paylaş",
     "copyLink": "Bağlantıyı kopyala",
     "copied": "Kopyalandı!",
-    "poweredBy": "VaxtimYoxdu.com ile üretildi"
+    "poweredBy": "VaxtimYoxdu.com ile üretildi",
+    "shareMessage": "Bu ücretsiz aracı deneyin: {title} - {url}"
   },
   "newsletterHome": {
     "title": "Haftalık teknoloji bültenimize katılın",
@@ -902,6 +911,38 @@
       "payment": "Ödeme",
       "balance": "Bakiye"
     },
+    "timeCalc": {
+      "dateDifference": "Tarih Farkı",
+      "addSubtract": "Ekle / Çıkar",
+      "countdown": "Geri Sayım",
+      "timezoneConverter": "Saat Dilimi",
+      "startDate": "Başlangıç Tarihi",
+      "endDate": "Bitiş Tarihi",
+      "timeBetween": "Tarihler Arası Süre",
+      "years": "yıl",
+      "months": "ay",
+      "days": "gün",
+      "totalDays": "Toplam Gün",
+      "totalWeeks": "Toplam Hafta",
+      "totalHours": "Toplam Saat",
+      "totalMinutes": "Toplam Dakika",
+      "baseDate": "Temel Tarih",
+      "add": "Ekle",
+      "subtract": "Çıkar",
+      "resultDate": "Sonuç Tarihi",
+      "targetDate": "Hedef Tarih",
+      "targetTime": "Hedef Saat",
+      "calculate": "Hesapla",
+      "dateInPast": "Bu tarih geçmişte. O zamandan bu yana geçen süre gösterilmektedir.",
+      "hours": "saat",
+      "minutesUnit": "dakika",
+      "seconds": "saniye",
+      "date": "Tarih",
+      "time": "Saat",
+      "fromTimezone": "Kaynak Saat Dilimi",
+      "toTimezone": "Hedef Saat Dilimi",
+      "convertedTime": "Dönüştürülen Saat"
+    },
     "imageTools": {
       "compress": "Sıkıştır",
       "compressing": "Sıkıştırılıyor...",
@@ -919,7 +960,18 @@
       "pleaseSelectImage": "Görüntü dosyası seçin (JPEG, PNG, WebP)"
     },
     "pdfTools": {
-      "mergeFiles": "Dosyaları birleştir"
+      "mergeFiles": "Dosyaları birleştir",
+      "selectPdf": "PDF Dosyası Seçin",
+      "clickToSelectPdf": "PDF dosyası seçmek için tıklayın veya sürükleyip bırakın",
+      "maxFileSize": "Maksimum dosya boyutu: 50MB",
+      "onlyPdfAllowed": "Yalnızca PDF dosyalarına izin verilir",
+      "fileTooLarge": "Dosya çok büyük. Maksimum boyut 50MB.",
+      "convertToWord": "Word'e dönüştür",
+      "convertSuccess": "PDF başarıyla dönüştürüldü! .docx dosyanızı kaydetmek için \"İndir\" düğmesine tıklayın.",
+      "convertError": "PDF dönüştürülemedi. Dosyanın geçerli bir PDF olduğundan emin olun.",
+      "scannedPdfNote": "Bu PDF taranmış veya görüntü tabanlı görünüyor. Bu tür dosyalar için metin çıkarma sınırlıdır.",
+      "pageLabel": "Sayfa",
+      "noTextExtracted": "çıkarılabilir metin bulunamadı"
     },
     "textTools": {
       "reset": "Sıfırla",

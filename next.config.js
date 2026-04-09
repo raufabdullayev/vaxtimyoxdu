@@ -218,7 +218,4 @@ const sentryConfig = {
   release: process.env.VERCEL_GIT_COMMIT_SHA || '0.0.0',
 }
 
-module.exports = withSentryConfig(
-  withNextIntl(withBundleAnalyzer(nextConfig)),
-  sentryConfig
-)
+module.exports = withSentryConfig(withNextIntl(withBundleAnalyzer(nextConfig)), sentryConfig)

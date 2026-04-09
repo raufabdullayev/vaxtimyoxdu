@@ -2,10 +2,6 @@
 
 import { useEffect } from 'react'
 import * as Sentry from '@sentry/nextjs'
-import { initSentryClient } from '../../sentry.client.config'
-
-// Initialize Sentry on client
-initSentryClient()
 
 /**
  * Global error boundary that catches errors in the root layout.

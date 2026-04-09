@@ -6,10 +6,7 @@ import './globals.css'
 import ServiceWorkerRegistrar from '@/components/layout/ServiceWorkerRegistrar'
 import { generateBaseMetadata } from '@/lib/utils/seo'
 import { themeBlockingScript } from '@/lib/theme'
-import { initSentryServer } from '../../sentry.server.config'
-
-// Initialize Sentry for server-side error tracking
-initSentryServer()
+// Sentry server-side init is handled by instrumentation.ts
 
 const inter = Inter({
   subsets: ['latin'],

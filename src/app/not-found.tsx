@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { getPopularTools, getToolCategories } from '@/lib/utils/cross-links'
 import type { ToolCategory } from '@/types/tool'
@@ -22,6 +23,31 @@ const categoryIcons: Record<ToolCategory, string> = {
 export default function RootNotFound() {
   const popularTools = getPopularTools(10)
   const toolCategories = getToolCategories()
+  const hasFired = useRef(false)
+
+  useEffect(() => {
+    if (hasFired.current) return
+    hasFired.current = true
+
+    try {
+      fetch('/api/analytics/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          event_type: '404_error',
+          page_path: window.location.pathname,
+          event_data: {
+            attempted_url: window.location.pathname + window.location.search,
+            referrer: document.referrer || null,
+            client_ts: new Date().toISOString(),
+          },
+        }),
+        keepalive: true,
+      }).catch(() => {})
+    } catch {
+      // Ignore errors -- analytics must never break the UX
+    }
+  }, [])
 
   return (
     <div className="container py-12 md:py-20">

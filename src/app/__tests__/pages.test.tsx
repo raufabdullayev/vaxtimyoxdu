@@ -104,6 +104,7 @@ vi.mock('next/navigation', () => ({
   notFound: vi.fn(() => {
     throw new Error('NOT_FOUND')
   }),
+  usePathname: () => '/test',
 }))
 vi.mock('lucide-react', () => ({
   Zap: () => <span data-testid="zap-icon" />,
@@ -114,6 +115,14 @@ vi.mock('lucide-react', () => ({
   Search: () => <span data-testid="search-icon" />,
   WifiOff: () => <span data-testid="wifi-off" />,
   RefreshCw: () => <span data-testid="refresh" />,
+  Twitter: (props: Record<string, unknown>) => <svg {...props} />,
+  MessageCircle: (props: Record<string, unknown>) => <svg {...props} />,
+  Send: (props: Record<string, unknown>) => <svg {...props} />,
+  Facebook: (props: Record<string, unknown>) => <svg {...props} />,
+  Linkedin: (props: Record<string, unknown>) => <svg {...props} />,
+  Link2: (props: Record<string, unknown>) => <svg {...props} />,
+  Check: (props: Record<string, unknown>) => <svg {...props} />,
+  Share2: (props: Record<string, unknown>) => <svg {...props} />,
 }))
 
 // Mock ToolOfTheDay and RecentlyUsedTools

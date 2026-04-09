@@ -92,6 +92,10 @@
         "name": "PDF Səhifə Bölücü",
         "description": "PDF fayldan müəyyən səhifələri çıxarın. Səhifə aralığını seçin, bölün və yükləyin."
       },
+      "pdf-to-word": {
+        "name": "PDF-dən Word-a Çevirici",
+        "description": "PDF fayllarını redaktə edilə bilən Word sənədlərinə (.docx) onlayn çevirin. PDF-dən mətni çıxarın və Word faylı olaraq yükləyin."
+      },
       "pdf-compress": {
         "name": "PDF Sıxıcı",
         "description": "PDF fayl ölçüsünü onlayn azaldın. Metadataları silin və strukturu optimallaşdırın."
@@ -491,6 +495,10 @@
       "loan-calculator": {
         "name": "Kredit/EMI Kalkulyatoru",
         "description": "Aylıq kredit ödənişlərini, ümumi faizi hesablayın və tam amortizasiya cədvəlinə baxın. Kredit məbləği, faiz dərəcəsi və müddəti dəstəklənir. Pulsuz onlayn EMI kalkulyatoru."
+      },
+      "time-calculator": {
+        "name": "Vaxt və Tarix Kalkulyatoru",
+        "description": "Tarix fərqlərini hesablayın, vaxt əlavə edin və ya çıxın, hadisələrə geri sayım edin və saat qurşaqları arasında çevirin. Pulsuz onlayn vaxt kalkulyatoru."
       }
     },
     "aboutTool": "{toolName} haqqında"
@@ -666,7 +674,8 @@
     "shareOn": "{platform}-da paylaş",
     "copyLink": "Linki kopyala",
     "copied": "Kopyalandı!",
-    "poweredBy": "VaxtimYoxdu.com ilə hazırlanıb"
+    "poweredBy": "VaxtimYoxdu.com ilə hazırlanıb",
+    "shareMessage": "Bu pulsuz aləti yoxlayın: {title} - {url}"
   },
   "newsletterHome": {
     "title": "Həftəlik texno bülletenimizə qoşulun",
@@ -902,6 +911,38 @@
       "payment": "Ödəniş",
       "balance": "Qalıq"
     },
+    "timeCalc": {
+      "dateDifference": "Tarix Fərqi",
+      "addSubtract": "Əlavə et / Çıx",
+      "countdown": "Geri Sayım",
+      "timezoneConverter": "Saat Qurşağı",
+      "startDate": "Başlanğıc Tarix",
+      "endDate": "Son Tarix",
+      "timeBetween": "Tarixlər Arasındakı Vaxt",
+      "years": "il",
+      "months": "ay",
+      "days": "gün",
+      "totalDays": "Ümumi Günlər",
+      "totalWeeks": "Ümumi Həftələr",
+      "totalHours": "Ümumi Saatlar",
+      "totalMinutes": "Ümumi Dəqiqələr",
+      "baseDate": "Əsas Tarix",
+      "add": "Əlavə et",
+      "subtract": "Çıx",
+      "resultDate": "Nəticə Tarixi",
+      "targetDate": "Hədəf Tarix",
+      "targetTime": "Hədəf Vaxt",
+      "calculate": "Hesabla",
+      "dateInPast": "Bu tarix keçmişdədir. O vaxtdan keçən müddət göstərilir.",
+      "hours": "saat",
+      "minutesUnit": "dəqiqə",
+      "seconds": "saniyə",
+      "date": "Tarix",
+      "time": "Vaxt",
+      "fromTimezone": "Hansı Saat Qurşağından",
+      "toTimezone": "Hansı Saat Qurşağına",
+      "convertedTime": "Çevrilmiş Vaxt"
+    },
     "imageTools": {
       "compress": "Sıx",
       "compressing": "Sıxılır...",
@@ -919,7 +960,18 @@
       "pleaseSelectImage": "Şəkil faylı seçin (JPEG, PNG, WebP)"
     },
     "pdfTools": {
-      "mergeFiles": "Faylları birləşdir"
+      "mergeFiles": "Faylları birləşdir",
+      "selectPdf": "PDF Fayl Seçin",
+      "clickToSelectPdf": "PDF faylı seçmək üçün klikləyin və ya sürükləyib buraxın",
+      "maxFileSize": "Maksimum fayl ölçüsü: 50MB",
+      "onlyPdfAllowed": "Yalnız PDF fayllarına icazə verilir",
+      "fileTooLarge": "Fayl çox böyükdür. Maksimum ölçü 50MB.",
+      "convertToWord": "Word-a çevir",
+      "convertSuccess": "PDF uğurla çevrildi! .docx faylınızı saxlamaq üçün \"Yüklə\" düyməsinə klikləyin.",
+      "convertError": "PDF-ni çevirmək mümkün olmadı. Faylın düzgün PDF olduğundan əmin olun.",
+      "scannedPdfNote": "Bu PDF skan edilmiş və ya şəkil əsaslı görünür. Belə fayllar üçün mətn çıxarma məhduddur.",
+      "pageLabel": "Səhifə",
+      "noTextExtracted": "çıxarıla bilən mətn tapılmadı"
     },
     "textTools": {
       "reset": "Sıfırla",

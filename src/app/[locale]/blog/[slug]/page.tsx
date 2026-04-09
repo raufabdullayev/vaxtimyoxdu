@@ -7,6 +7,7 @@ import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
 import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
+import SocialShareBar from '@/components/common/SocialShareBar'
 import ScrollDepthTracker from '@/components/analytics/ScrollDepthTracker'
 import MarkdownRenderer from '@/components/common/MarkdownRenderer'
 import { blogPosts, getBlogPostBySlug, getBlogPostsByLocale } from '@/data/blog-posts'
@@ -75,6 +76,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <div className="container py-12 max-w-3xl">
+      <SocialShareBar
+        path={`/blog/${slug}`}
+        title={post.title}
+        description={description}
+      />
       {/* JSON-LD structured data from trusted internal data only */}
       <script
         type="application/ld+json"

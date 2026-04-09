@@ -70,7 +70,8 @@ export default function ShareButtons({
       hoverBg: 'hover:bg-[#25D366]/10',
       getUrl: (shareUrl, shareTitle) => {
         const trackedUrl = buildShareUrl(shareUrl, 'whatsapp', 'tool_share')
-        return `https://wa.me/?text=${encodeURIComponent(`${shareTitle} ${trackedUrl}`)}`
+        const message = t('shareMessage', { title: shareTitle, url: trackedUrl })
+        return `https://wa.me/?text=${encodeURIComponent(message)}`
       },
       utmMedium: 'whatsapp',
     },
@@ -81,7 +82,8 @@ export default function ShareButtons({
       hoverBg: 'hover:bg-[#0088cc]/10',
       getUrl: (shareUrl, shareTitle) => {
         const trackedUrl = buildShareUrl(shareUrl, 'telegram', 'tool_share')
-        return `https://t.me/share/url?url=${encodeURIComponent(trackedUrl)}&text=${encodeURIComponent(shareTitle)}`
+        const message = t('shareMessage', { title: shareTitle, url: trackedUrl })
+        return `https://t.me/share/url?url=${encodeURIComponent(trackedUrl)}&text=${encodeURIComponent(message)}`
       },
       utmMedium: 'telegram',
     },
@@ -92,7 +94,8 @@ export default function ShareButtons({
       hoverBg: 'hover:bg-foreground/10',
       getUrl: (shareUrl, shareTitle) => {
         const trackedUrl = buildShareUrl(shareUrl, 'twitter', 'tool_share')
-        return `https://twitter.com/intent/tweet?url=${encodeURIComponent(trackedUrl)}&text=${encodeURIComponent(shareTitle)}`
+        const message = t('shareMessage', { title: shareTitle, url: trackedUrl })
+        return `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`
       },
       utmMedium: 'twitter',
     },

@@ -1,7 +1,6 @@
 import * as Sentry from "@sentry/nextjs";
 
-export function initSentryServer() {
-  Sentry.init({
+Sentry.init({
     dsn: process.env.SENTRY_DSN,
 
     // Environment
@@ -22,7 +21,6 @@ export function initSentryServer() {
     // Server-specific integrations
     integrations: [
       Sentry.httpIntegration({
-        tracing: true,
         breadcrumbs: true,
       }),
       Sentry.onUncaughtExceptionIntegration(),
@@ -34,5 +32,4 @@ export function initSentryServer() {
       /^https:\/\/vaxtimyoxdu\.com\//,
       /localhost/,
     ],
-  });
-}
+});

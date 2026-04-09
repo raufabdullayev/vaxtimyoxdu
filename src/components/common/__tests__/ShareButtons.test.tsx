@@ -69,8 +69,17 @@ describe('ShareButtons', () => {
     render(<ShareButtons {...defaultProps} />)
     const shareLinks = screen.getAllByLabelText(/shareOn/)
     const firstHref = shareLinks[0].getAttribute('href') || ''
-    // UTM params are URL-encoded inside WhatsApp text param
-    expect(firstHref).toContain('utm_source')
+    // WhatsApp link wraps the message in a text param
+    // With mock translations, shareMessage key returns "shareMessage" as-is,
+    // but the underlying URL construction still adds utm params.
+    // Check that the share link points to the correct platform.
+    expect(firstHref).toContain('wa.me')
+    // Check that a non-WhatsApp platform (e.g. Facebook) includes utm_source in its direct URL
+    const facebookLink = shareLinks.find(link =>
+      (link.getAttribute('href') || '').includes('facebook.com')
+    )
+    expect(facebookLink).toBeTruthy()
+    expect(facebookLink!.getAttribute('href')).toContain('utm_source')
   })
 
   it('copies link to clipboard on click', async () => {

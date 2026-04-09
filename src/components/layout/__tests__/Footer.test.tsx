@@ -70,11 +70,10 @@ vi.mock('@/config/tools', () => ({
 
 // Mock lucide-react icons
 vi.mock('lucide-react', () => ({
-  Github: (props: Record<string, unknown>) => <svg data-testid="icon-github" {...props} />,
-  Twitter: (props: Record<string, unknown>) => <svg data-testid="icon-twitter" {...props} />,
   Instagram: (props: Record<string, unknown>) => <svg data-testid="icon-instagram" {...props} />,
-  Linkedin: (props: Record<string, unknown>) => <svg data-testid="icon-linkedin" {...props} />,
-  Mail: (props: Record<string, unknown>) => <svg data-testid="icon-mail" {...props} />,
+  Send: (props: Record<string, unknown>) => <svg data-testid="icon-send" {...props} />,
+  Twitter: (props: Record<string, unknown>) => <svg data-testid="icon-twitter" {...props} />,
+  Youtube: (props: Record<string, unknown>) => <svg data-testid="icon-youtube" {...props} />,
   Loader2: (props: Record<string, unknown>) => <svg data-testid="icon-loader" {...props} />,
 }))
 
@@ -104,23 +103,26 @@ describe('Footer', () => {
   it('renders social media links', async () => {
     await renderFooter()
 
-    const githubLink = screen.getByLabelText('GitHub')
-    expect(githubLink).toBeInTheDocument()
-    expect(githubLink).toHaveAttribute('href', 'https://github.com/vaxtimyoxdu')
-    expect(githubLink).toHaveAttribute('target', '_blank')
-    expect(githubLink).toHaveAttribute('rel', 'noopener noreferrer')
+    const instagramLink = screen.getByLabelText('Instagram')
+    expect(instagramLink).toBeInTheDocument()
+    expect(instagramLink).toHaveAttribute('href', 'https://instagram.com/vaxtimyoxdu')
+    expect(instagramLink).toHaveAttribute('target', '_blank')
+    expect(instagramLink).toHaveAttribute('rel', 'noopener noreferrer')
 
-    expect(screen.getByLabelText('Twitter')).toBeInTheDocument()
-    expect(screen.getByLabelText('Instagram')).toBeInTheDocument()
-    expect(screen.getByLabelText('LinkedIn')).toBeInTheDocument()
+    expect(screen.getByLabelText('TikTok')).toBeInTheDocument()
+    expect(screen.getByLabelText('Telegram')).toBeInTheDocument()
+    expect(screen.getByLabelText('YouTube')).toBeInTheDocument()
+    expect(screen.getByLabelText('X / Twitter')).toBeInTheDocument()
   })
 
-  it('renders all four social media icons', async () => {
+  it('renders all five social media icons', async () => {
     await renderFooter()
-    expect(screen.getByTestId('icon-github')).toBeInTheDocument()
-    expect(screen.getByTestId('icon-twitter')).toBeInTheDocument()
     expect(screen.getByTestId('icon-instagram')).toBeInTheDocument()
-    expect(screen.getByTestId('icon-linkedin')).toBeInTheDocument()
+    expect(screen.getByTestId('icon-send')).toBeInTheDocument()
+    expect(screen.getByTestId('icon-youtube')).toBeInTheDocument()
+    expect(screen.getByTestId('icon-twitter')).toBeInTheDocument()
+    // TikTok uses a custom SVG, not a lucide icon
+    expect(screen.getByLabelText('TikTok')).toBeInTheDocument()
   })
 
   it('renders "Follow Us" text', async () => {

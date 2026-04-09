@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { getPopularTools, getToolCategories } from '@/lib/utils/cross-links'
 import { categories } from '@/config/tools'
 import type { ToolCategory } from '@/types/tool'
+import NotFoundTracker from '@/components/analytics/NotFoundTracker'
 
 /** Category icon mapping for visual consistency in the 404 page. */
 const categoryIcons: Record<ToolCategory, string> = {
@@ -22,6 +23,7 @@ export default async function NotFound() {
 
   return (
     <div className="container py-12 md:py-20">
+      <NotFoundTracker />
       {/* Hero section */}
       <div className="text-center mb-12">
         <p className="text-8xl md:text-9xl font-bold text-primary/20 mb-2 select-none">404</p>

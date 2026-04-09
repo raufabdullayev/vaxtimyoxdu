@@ -386,4 +386,15 @@ export const generatorTools: Tool[] = [
     isClientSide: true,
     keywords: ['youtube thumbnail', 'thumbnail maker', 'thumbnail text', 'youtube banner', 'video thumbnail'],
   },
+  {
+    slug: 'time-calculator',
+    name: 'Time & Date Calculator — Difference, Countdown, Timezone',
+    description: 'Calculate date differences, add or subtract time from dates, countdown to events, and convert between timezones. Free online time and date calculator.',
+    shortDescription: 'Calculate date differences, countdown & timezone',
+    category: 'generators',
+    icon: '\u23F0',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['time calculator', 'date calculator', 'date difference', 'countdown timer', 'timezone converter', 'days between dates'],
+  },
 ]

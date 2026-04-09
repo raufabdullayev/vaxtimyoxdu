@@ -6,10 +6,8 @@ vi.mock('@sentry/nextjs', () => ({
   captureException: vi.fn(),
 }))
 
-// Mock sentry client config
-vi.mock('../../../sentry.client.config', () => ({
-  initSentryClient: vi.fn(),
-}))
+// Mock sentry client config (v10 uses top-level init via instrumentation-client.ts)
+vi.mock('../../../sentry.client.config', () => ({}))
 
 import GlobalError from '../global-error'
 import * as Sentry from '@sentry/nextjs'

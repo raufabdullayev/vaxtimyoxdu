@@ -92,6 +92,10 @@
         "name": "PDF Page Splitter",
         "description": "Extract specific pages from a PDF file online. Select page ranges to split and download."
       },
+      "pdf-to-word": {
+        "name": "PDF to Word Converter",
+        "description": "Convert PDF files to editable Word documents (.docx) online. Extract text from PDF and download as Word file."
+      },
       "pdf-compress": {
         "name": "PDF Compressor",
         "description": "Reduce PDF file size online. Remove metadata and optimize structure to compress PDFs."
@@ -491,6 +495,10 @@
       "loan-calculator": {
         "name": "Loan/EMI Calculator",
         "description": "Calculate monthly loan payments, total interest, and view a full amortization schedule. Supports custom loan amount, interest rate, and term. Free online EMI calculator."
+      },
+      "time-calculator": {
+        "name": "Time & Date Calculator",
+        "description": "Calculate date differences, add or subtract time, countdown to events, and convert between timezones. Free online time calculator."
       }
     },
     "aboutTool": "About {toolName}"
@@ -666,7 +674,8 @@
     "shareOn": "Share on {platform}",
     "copyLink": "Copy link",
     "copied": "Copied!",
-    "poweredBy": "Powered by VaxtimYoxdu.com"
+    "poweredBy": "Powered by VaxtimYoxdu.com",
+    "shareMessage": "Check out this free tool: {title} - {url}"
   },
   "newsletterHome": {
     "title": "Join our weekly tech newsletter",
@@ -902,6 +911,38 @@
       "payment": "Payment",
       "balance": "Balance"
     },
+    "timeCalc": {
+      "dateDifference": "Date Difference",
+      "addSubtract": "Add / Subtract",
+      "countdown": "Countdown",
+      "timezoneConverter": "Timezone",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "timeBetween": "Time Between Dates",
+      "years": "years",
+      "months": "months",
+      "days": "days",
+      "totalDays": "Total Days",
+      "totalWeeks": "Total Weeks",
+      "totalHours": "Total Hours",
+      "totalMinutes": "Total Minutes",
+      "baseDate": "Base Date",
+      "add": "Add",
+      "subtract": "Subtract",
+      "resultDate": "Result Date",
+      "targetDate": "Target Date",
+      "targetTime": "Target Time",
+      "calculate": "Calculate",
+      "dateInPast": "This date is in the past. Showing time elapsed since then.",
+      "hours": "hours",
+      "minutesUnit": "minutes",
+      "seconds": "seconds",
+      "date": "Date",
+      "time": "Time",
+      "fromTimezone": "From Timezone",
+      "toTimezone": "To Timezone",
+      "convertedTime": "Converted Time"
+    },
     "imageTools": {
       "compress": "Compress",
       "compressing": "Compressing...",
@@ -919,7 +960,18 @@
       "pleaseSelectImage": "Please select an image file (JPEG, PNG, WebP)"
     },
     "pdfTools": {
-      "mergeFiles": "Merge Files"
+      "mergeFiles": "Merge Files",
+      "selectPdf": "Select PDF File",
+      "clickToSelectPdf": "Click or drag & drop a PDF file",
+      "maxFileSize": "Max file size: 50MB",
+      "onlyPdfAllowed": "Only PDF files are allowed",
+      "fileTooLarge": "File too large. Maximum size is 50MB.",
+      "convertToWord": "Convert to Word",
+      "convertSuccess": "PDF converted successfully! Click \"Download\" to save your .docx file.",
+      "convertError": "Failed to convert PDF. Please make sure the file is a valid PDF.",
+      "scannedPdfNote": "This PDF appears to be scanned or image-based. Text extraction is limited for such files.",
+      "pageLabel": "Page",
+      "noTextExtracted": "no extractable text found"
     },
     "textTools": {
       "reset": "Reset",

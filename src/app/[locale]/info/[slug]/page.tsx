@@ -6,6 +6,7 @@ import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
 import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
+import SocialShareBar from '@/components/common/SocialShareBar'
 import MarkdownRenderer from '@/components/common/MarkdownRenderer'
 import RelatedArticles from '@/components/layout/RelatedArticles'
 import NewsRelatedTools from '@/components/layout/NewsRelatedTools'
@@ -65,6 +66,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="container py-12 max-w-3xl">
+      <SocialShareBar
+        path={`/info/${slug}`}
+        title={article.title}
+        description={description}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
