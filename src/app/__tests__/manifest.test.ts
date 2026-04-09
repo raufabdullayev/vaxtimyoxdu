@@ -20,12 +20,12 @@ const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8')) as {
 
 describe('public/manifest.json — PWA manifest', () => {
   describe('brand colors', () => {
-    it('has theme_color set to brand blue #2563eb (matches globals.css --primary)', () => {
-      expect(manifest.theme_color).toBe('#2563eb')
+    it('has theme_color set to warm amber #E68A00 (matches globals.css --primary)', () => {
+      expect(manifest.theme_color).toBe('#E68A00')
     })
 
-    it('has background_color set to white', () => {
-      expect(manifest.background_color).toBe('#ffffff')
+    it('has background_color set to warm cream', () => {
+      expect(manifest.background_color).toBe('#FFFCF5')
     })
   })
 

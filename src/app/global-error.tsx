@@ -59,7 +59,7 @@ export default function GlobalError({
             style={{
               fontSize: '5rem',
               fontWeight: 700,
-              color: 'rgba(124, 58, 237, 0.2)',
+              color: 'rgba(230, 138, 0, 0.2)',
               marginBottom: '0.5rem',
               lineHeight: 1,
               userSelect: 'none',
@@ -90,7 +90,7 @@ export default function GlobalError({
             onClick={() => reset()}
             style={{
               padding: '0.625rem 1.5rem',
-              backgroundColor: '#7c3aed',
+              backgroundColor: '#E68A00',
               color: '#ffffff',
               border: 'none',
               borderRadius: '0.5rem',

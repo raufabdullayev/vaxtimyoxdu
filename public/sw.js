@@ -14,8 +14,8 @@
  */
 
 // Bump this version whenever static assets in PRECACHE_ASSETS change (icons, logo, etc.)
-// v3 (2026-04-09): New brand favicon (blue Zap lightning bolt, #2563eb) + PWA icons refresh
-const CACHE_VERSION = 3
+// v4 (2026-04-09): Explicit favicon metadata + warm amber color palette (#E68A00)
+const CACHE_VERSION = 4
 const CACHE_NAME = `vaxtimyoxdu-v${CACHE_VERSION}`
 const OFFLINE_URL = '/offline'
 

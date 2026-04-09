@@ -160,7 +160,7 @@ export default function PdfCompress() {
             </div>
             <div className="text-center">
               <p className="text-xs text-muted-foreground">Saved</p>
-              <p className={`font-medium text-sm ${savings > 0 ? 'text-green-600' : 'text-muted-foreground'}`}>
+              <p className={`font-medium text-sm ${savings > 0 ? 'text-green-600 dark:text-green-400' : 'text-muted-foreground'}`}>
                 {savings > 0 ? `${savings}%` : 'No reduction'}
               </p>
             </div>

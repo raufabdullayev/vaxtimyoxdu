@@ -21,10 +21,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   ...generateBaseMetadata(),
   metadataBase: new URL('https://vaxtimyoxdu.com'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-icon', type: 'image/png', sizes: '180x180' },
+    ],
+  },
 }
 
 export const viewport = {
-  themeColor: '#2563eb',
+  themeColor: '#E68A00',
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover' as const,
@@ -79,7 +88,7 @@ export default async function RootLayout({
   const locale = await getLocale()
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         {/* Blocking inline script to prevent dark mode FOUC — zero network overhead */}
         <script dangerouslySetInnerHTML={{ __html: themeBlockingScript }} />
@@ -90,7 +99,7 @@ export default async function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Vaxtim Yoxdu" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="msapplication-TileColor" content="#E68A00" />
         {/* Note: apple-touch-icon is auto-emitted by src/app/apple-icon.tsx file convention.
             Do NOT add a manual <link rel="apple-touch-icon"> here — it causes a conflict
             with the file-based convention and browsers may ignore the auto-generated icon. */}

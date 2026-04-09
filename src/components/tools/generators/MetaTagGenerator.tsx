@@ -118,7 +118,7 @@ export default function MetaTagGenerator() {
   const descLen = form.description.length
   const descColor =
     descLen === 0 ? 'text-muted-foreground' :
-    descLen >= 150 && descLen <= 160 ? 'text-green-600' :
+    descLen >= 150 && descLen <= 160 ? 'text-green-600 dark:text-green-400' :
     descLen > 160 ? 'text-red-500' : 'text-yellow-600'
 
   const previewTitle = form.title || 'Page Title'

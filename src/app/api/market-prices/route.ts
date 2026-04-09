@@ -29,7 +29,7 @@ async function fetchCryptoPrices(): Promise<MarketPrice[]> {
   try {
     const res = await fetch(
       'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true',
-      { signal: AbortSignal.timeout(8000) }
+      { signal: AbortSignal.timeout(4000) }
     )
 
     if (!res.ok) throw new Error(`CoinGecko API error: ${res.status}`)
@@ -71,7 +71,7 @@ async function fetchGoldPrice(): Promise<MarketPrice | null> {
     // Using a free metals API (no key required)
     const res = await fetch(
       'https://api.coingecko.com/api/v3/simple/price?ids=tether-gold&vs_currencies=usd&include_24hr_change=true',
-      { signal: AbortSignal.timeout(8000) }
+      { signal: AbortSignal.timeout(4000) }
     )
 
     if (!res.ok) throw new Error(`Gold API error: ${res.status}`)
@@ -207,34 +207,32 @@ async function fetchAllPrices(): Promise<MarketPricesResponse> {
   }
 }
 
+const EMPTY_RESPONSE: MarketPricesResponse = {
+  prices: [],
+  updatedAt: new Date().toISOString(),
+}
+
 export async function GET() {
-  try {
-    const now = Date.now()
+  const now = Date.now()
 
-    // Return cached data if still fresh
-    if (cachedData && now - cacheTimestamp < CACHE_TTL) {
-      return NextResponse.json(cachedData, {
-        headers: {
-          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60',
-          'X-Cache': 'HIT',
-        },
-      })
-    }
-
-    const data = await fetchAllPrices()
-
-    // Update cache
-    cachedData = data
-    cacheTimestamp = now
-
-    return NextResponse.json(data, {
+  // Return cached data if still fresh
+  if (cachedData && now - cacheTimestamp < CACHE_TTL) {
+    return NextResponse.json(cachedData, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60',
-        'X-Cache': 'MISS',
+        'X-Cache': 'HIT',
       },
     })
+  }
+
+  // Wrap the entire fetch in a try/catch so this route NEVER throws.
+  // A thrown error during SSR would cascade and break hydration for
+  // every component on the page.
+  let data: MarketPricesResponse
+  try {
+    data = await fetchAllPrices()
   } catch {
-    // If everything fails, return cached data even if stale
+    // If fetchAllPrices throws, prefer stale cache over an error response
     if (cachedData) {
       return NextResponse.json(cachedData, {
         headers: {
@@ -244,9 +242,24 @@ export async function GET() {
       })
     }
 
-    return NextResponse.json(
-      { error: 'Failed to fetch market prices', prices: [], updatedAt: new Date().toISOString() },
-      { status: 503 }
-    )
+    // Absolute last resort: return a valid (empty) response rather than
+    // an error status that would cause the client hook to throw
+    return NextResponse.json(EMPTY_RESPONSE, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=30',
+        'X-Cache': 'EMPTY',
+      },
+    })
   }
+
+  // Update cache
+  cachedData = data
+  cacheTimestamp = now
+
+  return NextResponse.json(data, {
+    headers: {
+      'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60',
+      'X-Cache': 'MISS',
+    },
+  })
 }

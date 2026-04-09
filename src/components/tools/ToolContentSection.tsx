@@ -42,7 +42,7 @@ export default function ToolContentSection({
       {/* Why Use This Tool Section */}
       <section>
         <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-          <span className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-600 text-sm font-bold">
+          <span className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-600 dark:text-green-400 text-sm font-bold">
             +
           </span>
           {whyUseTitle}
@@ -51,7 +51,7 @@ export default function ToolContentSection({
           <ul className="space-y-3">
             {whyUseReasons.map((reason, index) => (
               <li key={index} className="flex gap-3">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 text-green-600 text-xs flex items-center justify-center mt-0.5">
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 text-green-600 dark:text-green-400 text-xs flex items-center justify-center mt-0.5">
                   &#10003;
                 </span>
                 <p className="text-muted-foreground leading-relaxed">{reason}</p>

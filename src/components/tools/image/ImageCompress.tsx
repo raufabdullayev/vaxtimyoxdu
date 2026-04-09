@@ -192,7 +192,7 @@ export default function ImageCompress() {
             </div>
             <div className="text-center">
               <p className="text-xs text-muted-foreground">{t('saved')}</p>
-              <p className="font-medium text-sm text-green-600">{savings}%</p>
+              <p className="font-medium text-sm text-green-600 dark:text-green-400">{savings}%</p>
             </div>
           </div>
 

@@ -129,9 +129,9 @@ export default function PomodoroTimer() {
   }
 
   const modeColors: Record<TimerMode, string> = {
-    work: 'text-red-500',
-    break: 'text-green-500',
-    longBreak: 'text-blue-500',
+    work: 'text-red-500 dark:text-red-400',
+    break: 'text-green-500 dark:text-green-400',
+    longBreak: 'text-blue-500 dark:text-blue-400',
   }
 
   const modeRingColors: Record<TimerMode, string> = {

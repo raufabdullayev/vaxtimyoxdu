@@ -1,8 +1,9 @@
 import { ImageResponse } from 'next/og'
 
-// Brand favicon: lucide-react Zap icon (matches Header symbol next to "Vaxtım Yoxdu" text)
-// Background #2563eb = Tailwind blue-600 = globals.css --primary variable in light mode
-// Keep in sync with apple-icon.tsx and src/components/layout/Header.tsx
+// Brand favicon: bold "V" for "Vaxtım Yoxdu" rendered via Satori built-in font
+// Note: Satori/ImageResponse does NOT bundle emoji fonts — only plain text characters work
+// Background #E68A00 = warm amber = globals.css --primary variable in light mode
+// Keep in sync with apple-icon.tsx
 export const size = { width: 32, height: 32 }
 export const contentType = 'image/png'
 
@@ -13,16 +14,21 @@ export default function Icon() {
         style={{
           width: '100%',
           height: '100%',
-          background: '#2563eb',
+          background: '#E68A00',
           borderRadius: 6,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff">
-          <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
+        <div style={{
+          fontSize: 24,
+          fontWeight: 700,
+          color: '#ffffff',
+          letterSpacing: '-0.02em'
+        }}>
+          V
+        </div>
       </div>
     ),
     { ...size }

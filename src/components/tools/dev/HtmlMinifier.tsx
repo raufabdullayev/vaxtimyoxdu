@@ -140,7 +140,7 @@ export default function HtmlMinifier() {
           </div>
           <div className="text-center">
             <span className="text-muted-foreground">Change: </span>
-            <span className={`font-medium ${savings > 0 ? 'text-green-600' : ''}`}>
+            <span className={`font-medium ${savings > 0 ? 'text-green-600 dark:text-green-400' : ''}`}>
               {savings > 0 ? `-${savings}%` : `+${Math.abs(savings)}%`}
             </span>
           </div>

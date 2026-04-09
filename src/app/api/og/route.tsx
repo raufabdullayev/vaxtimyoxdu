@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
 
   // Choose colors based on type
   const gradients: Record<string, [string, string]> = {
-    default: ['#3b82f6', '#1d4ed8'],
+    default: ['#E68A00', '#CC7A00'],
     tool: ['#8b5cf6', '#6d28d9'],
     blog: ['#10b981', '#059669'],
     news: ['#f59e0b', '#d97706'],

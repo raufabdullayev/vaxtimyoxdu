@@ -82,14 +82,14 @@ export default function Stopwatch() {
         {!running ? (
           <button
             onClick={start}
-            className="px-4 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors text-sm"
+            className="px-4 py-3 bg-green-600 dark:bg-green-700 text-white rounded-lg font-medium hover:bg-green-700 dark:hover:bg-green-600 transition-colors text-sm"
           >
             {elapsed > 0 ? 'Resume' : 'Start'}
           </button>
         ) : (
           <button
             onClick={stop}
-            className="px-4 py-3 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors text-sm"
+            className="px-4 py-3 bg-red-600 dark:bg-red-700 text-white rounded-lg font-medium hover:bg-red-700 dark:hover:bg-red-600 transition-colors text-sm"
           >
             Stop
           </button>

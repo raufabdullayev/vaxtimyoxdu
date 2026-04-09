@@ -1,8 +1,8 @@
 /**
  * Generate brand icons for vaxtimyoxdu.com.
  *
- * Renders a Zap (lightning bolt) lucide-react symbol on a solid #2563eb
- * (Tailwind blue-600, matches globals.css --primary and the Header icon).
+ * Renders a Zap (lightning bolt) lucide-react symbol on a solid #E68A00
+ * (warm amber, matches globals.css --primary and the Header icon).
  *
  * Outputs (all written to public/):
  *   icons/icon-192.png          — PWA any
@@ -30,7 +30,7 @@ const pngToIcoModule = require('png-to-ico')
 const pngToIco = pngToIcoModule.default || pngToIcoModule
 
 // ── Brand tokens ─────────────────────────────────────────────────────
-const BRAND_BG = '#2563eb' // Tailwind blue-600 = globals.css --primary (light mode)
+const BRAND_BG = '#E68A00' // Warm amber = globals.css --primary (light mode)
 const BRAND_FG = '#ffffff'
 
 // lucide-react Zap path, same source of truth as src/app/icon.tsx

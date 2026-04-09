@@ -2,7 +2,8 @@ import { ImageResponse } from 'next/og'
 
 // iOS home screen icon (180x180). iOS applies its own rounded-corner mask,
 // but we still set a 36px border-radius for consistent preview in metadata/crawlers.
-// Keep in sync with icon.tsx and src/components/layout/Header.tsx
+// Note: Satori/ImageResponse does NOT bundle emoji fonts — only plain text characters work
+// Keep in sync with icon.tsx
 export const size = { width: 180, height: 180 }
 export const contentType = 'image/png'
 
@@ -13,16 +14,21 @@ export default function AppleIcon() {
         style={{
           width: '100%',
           height: '100%',
-          background: '#2563eb',
+          background: '#E68A00',
           borderRadius: 36,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <svg width="120" height="120" viewBox="0 0 24 24" fill="#ffffff">
-          <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
+        <div style={{
+          fontSize: 120,
+          fontWeight: 700,
+          color: '#ffffff',
+          letterSpacing: '-0.02em'
+        }}>
+          V
+        </div>
       </div>
     ),
     { ...size }

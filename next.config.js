@@ -7,6 +7,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const { withSentryConfig } = require('@sentry/nextjs')
 
+const isDev = process.env.NODE_ENV !== 'production'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -157,7 +159,7 @@ const nextConfig = {
             //
             // APPROACH:
             //   - 'unsafe-inline' in script-src: required for RSC hydration
-            //   - 'unsafe-eval' is NOT included
+            //   - 'unsafe-eval' is added in dev only (webpack uses eval for source maps)
             //   - Inline GA config script eliminated — merged into /analytics.js
             //   - style-src 'unsafe-inline': required for Next.js/Tailwind
             //   - base-uri 'self': prevents <base> tag hijacking
@@ -167,7 +169,7 @@ const nextConfig = {
             //   - JSON-LD scripts (application/ld+json) are data, not executable
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com",
+              `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com`,
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https:",
               "font-src 'self' https://fonts.gstatic.com",

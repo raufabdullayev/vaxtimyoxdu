@@ -29,8 +29,8 @@ describe('app/layout.tsx icon + theme color setup', () => {
     expect(match).toBeNull()
   })
 
-  it('uses brand blue #2563eb for viewport.themeColor', () => {
-    expect(layoutSource).toMatch(/themeColor:\s*['"]#2563eb['"]/)
+  it('uses brand blue #E68A00 for viewport.themeColor', () => {
+    expect(layoutSource).toMatch(/themeColor:\s*['"]#E68A00['"]/)
   })
 
   it('does NOT use the legacy purple #7c3aed anywhere', () => {
@@ -39,10 +39,14 @@ describe('app/layout.tsx icon + theme color setup', () => {
     expect(layoutSource).not.toContain('#7c3aed')
   })
 
-  it('uses brand blue #2563eb for msapplication-TileColor meta tag', () => {
+  it('uses brand blue #E68A00 for msapplication-TileColor meta tag', () => {
     expect(layoutSource).toMatch(
-      /msapplication-TileColor["']\s+content=["']#2563eb["']/
+      /msapplication-TileColor["']\s+content=["']#E68A00["']/
     )
+  })
+
+  it('exports metadata with explicit icons field for favicon.ico', () => {
+    expect(layoutSource).toMatch(/favicon\.ico/)
   })
 
   it('still links the web app manifest', () => {

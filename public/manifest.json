@@ -4,8 +4,8 @@
   "description": "Vaxt q\u0259na\u0259t ed\u0259n pulsuz onlayn al\u0259tl\u0259r v\u0259 q\u0131sa x\u0259b\u0259r x\u00fclas\u0259l\u0259ri",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "background_color": "#FFFCF5",
+  "theme_color": "#E68A00",
   "orientation": "any",
   "categories": ["utilities", "productivity"],
   "icons": [

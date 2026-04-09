@@ -23,7 +23,7 @@ export default function ToolCard({ tool }: ToolCardProps) {
           </span>
         )}
         {tool.isClientSide && (
-          <span className="text-xs bg-green-500/10 text-green-600 px-2 py-0.5 rounded-full font-medium">
+          <span className="text-xs bg-green-500/10 text-green-600 dark:text-green-400 px-2 py-0.5 rounded-full font-medium">
             Client-side
           </span>
         )}

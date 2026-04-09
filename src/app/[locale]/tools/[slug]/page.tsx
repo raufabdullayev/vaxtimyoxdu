@@ -83,8 +83,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'morse-code': dynamic(() => import('@/components/tools/text/MorseCode')),
   'random-text-generator': dynamic(() => import('@/components/tools/text/RandomTextGenerator')),
   'text-repeater': dynamic(() => import('@/components/tools/text/TextRepeater')),
-  // Market Tracker
-  'market-tracker': dynamic(() => import('@/components/tools/generators/MarketTracker')),
+  // Market Tracker — uses MarketTrackerClient wrapper which internally applies
+  // ssr:false to prevent SSR bail-out that cascades hydration failures
+  'market-tracker': dynamic(() => import('@/components/tools/generators/MarketTrackerClient')),
   // Phase 9 - New Tools
   'video-to-gif': dynamic(() => import('@/components/tools/generators/VideoToGif')),
   'color-palette-generator': dynamic(() => import('@/components/tools/generators/ColorPaletteGenerator')),
