@@ -825,7 +825,8 @@ QR (Hızlı Yanıt) kodu, bilgiyi siyah ve beyaz karelerden oluşan bir ızgarad
 Vaxtim Yoxdu'daki ücretsiz QR Kod Oluşturucuyu deneyin.`,
   },
   'easiest-way-to-merge-pdf-files': {
-    title: '2026\'da PDF Dosyalarını Birleştirmenin En Kolay Yolu',
+    title: 'PDF Dosyalarini Ucretsiz Cevrimici Birlestirin — Kayit Yok, Yukleme Yok',
+    description: 'PDF dosyalarini tarayicinizda aninda birlestirin — sunucu yuklemesi yok, kayit yok, filigran yok. Ucretsiz cevrimici aracla PDF birlestirme rehberi.',
     date: '2026-03-11',
     relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
     content: `PDF dosyalarını birleştirmek pahalı yazılım, hesap oluşturma veya hassas belgeleri bilinmeyen sunuculara yükleme gerektirmemelidir. 2026'da tarayıcı tabanlı araçlar süreci son derece basit hale getirdi.

@@ -255,6 +255,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </NextIntlClientProvider>
       </ToolTemplate>
       <ToolUseTrackerWrapper slug={tool.slug} />
+      <ShareButtonsWrapper
+        path={`/tools/${tool.slug}`}
+        title={displayName}
+        description={localizedDescription || tool.shortDescription}
+      />
       {richContent && (
         <ToolContentSection
           howToUseTitle={richContent.sectionTitles.howToUse}
@@ -271,11 +276,6 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           faqs={richContent.faqs}
         />
       )}
-      <ShareButtonsWrapper
-        path={`/tools/${tool.slug}`}
-        title={displayName}
-        description={localizedDescription || tool.shortDescription}
-      />
       <RelatedTools currentTool={tool} />
       <RelatedBlogPosts toolSlug={tool.slug} title={crossT('relatedBlogPosts')} />
     </>

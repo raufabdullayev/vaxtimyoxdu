@@ -3,7 +3,7 @@ import { Tool } from '@/types/tool'
 export const pdfTools: Tool[] = [
   {
     slug: 'pdf-merge',
-    name: 'PDF Merge',
+    name: 'Merge PDF Files Online Free — No Upload, 100% Private',
     description: 'Merge multiple PDF files into one document online. Rearrange pages, combine PDFs in any order. Free client-side PDF merger - your files never leave your browser.',
     shortDescription: 'Combine multiple PDFs into one',
     category: 'pdf',

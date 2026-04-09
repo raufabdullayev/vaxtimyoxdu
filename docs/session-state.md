@@ -1,8 +1,8 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-08 (Session 15 — Afternoon News Refresh +5 Topics)
+**Son yenilənmə:** 2026-04-09 (Session 16 Part 2 — Team Mode: Full Site Audit + 92 Developer Tasks)
 **Sayt:** ✅ CANLI (vaxtimyoxdu.com HTTP 200)
-**Son commit:** 4f3dbe7 (feat(news): add 5 breaking topics for 2026-04-08 afternoon (4 locales))
+**Son commit:** ff7d086 (fix: favicon, theme hydration, dark mode, and brand color fixes)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -22,14 +22,17 @@
 | **Deploy** | ✅ Vercel aktiv (g2pza1tvq) |
 | **GitLab + GitHub** | ✅ Synced |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Testlər** | 3074 PASS (196 fayl) |
-| **Xəbərlər** | 88 (24 × 04-07 + 64 × 04-08, 4 dildə) |
+| **Son commit** | ff7d086 |
+| **Testlər** | 3099 PASS (200 fayl) |
+| **Xəbərlər** | 108 (88+20, test+deploy gözləyir) |
 | **Coverage** | 68% (hədəf: 85%) |
 | **Aletler** | 105 (hədəf: 150) |
 | **CRITICAL problem** | 0 ✅ |
-| **HIGH problem** | 3 (test coverage, E2E, CSP nonce) |
+| **HIGH problem** | 2 + 85 pending developer tasks (seo-growth-team audit) |
 
 **Növbəti potensial işlər:**
+- 85 pending developer tasks (seo-growth-team audit)
+- Xəbər kontenti (108 məqalə) test+deploy gözləyir
 - Yeni alətlər (105 → 150)
 - Test coverage 68% → 85%
 - E2E testlər 35 → 100
@@ -40,6 +43,43 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 16 Part 2 (2026-04-09) — Team Mode: Full Site Audit + 92 Developer Tasks
+**Məqsəd:** Saytı axtarışlarda öndə çıxarmaq üçün tam audit və developer task planı.
+**Team mode:** seo-growth-team (7 agent: seo-expert, smm-expert, analytics-expert, ux-expert, creative-expert, performance-expert, business-expert)
+
+- [x] CTR 0.45% — əsas səbəb: title/description generic, privacy üstünlüyü gizli
+- [x] AZ bazarında HEÇ BİR rəqib yoxdur — first mover advantage
+- [x] Google AI Overviews CTR-i 58% azaldır — sosial media vacib
+- [x] Sentry Replay 70-100KB artıq JS yükü — silinməli
+- [x] 30+ komponentdə hardcoded İngiliscə stringlər
+- [x] ShareButtons tool output-dan 2000+ pixel aşağıda
+- [x] Homepage-də CTA düymə yoxdur
+- [x] Blog meta description content.slice(0,160) ilə auto-generate olunur
+- [x] CL preview → nəticələrə dəyişdirildi (4 oyun × 4 dil)
+- [x] 5 yeni mövzu əlavə edildi (4 dildə = 20 entry)
+- [x] 88 → 108 məqalə, yenidən köhnəyə sıralanıb
+- [ ] Xəbər kontenti hələ test + deploy edilməyib!
+
+**Nəticə:** 92 task açıldı (85 pending developer task). Sprint planı hazır.
+
+### Session 16 (2026-04-09) — Favicon, Theme Hydration, Dark Mode & Brand Color Fixes
+**Məqsəd:** Favicon görünmür, dark/light mode xətaları, brend rəng uyğunsuzluqları.
+**Team mode:** react-nextjs-engineer, qa-engineer, frontend-quality-tech-lead, seo-specialist, devops-infrastructure-engineer
+
+- [x] Favicon: SVG path → unicode emoji → bold "V" hərfi (Satori uyğun, 32x32 + 180x180)
+- [x] suppressHydrationWarning əlavə edildi (layout.tsx html tag)
+- [x] CSP: unsafe-eval dev mode üçün əlavə edildi (prod təhlükəsiz)
+- [x] MarketTracker SSR fix: ssr:false wrapper + API error handling gücləndirildi
+- [x] Brand rəngləri: global-error.tsx bənövşəyi→amber, OG route mavi→amber
+- [x] Dark mode: 12 edit, 9 faylda dark: variant əlavə edildi
+- [x] Favicon metadata: sizes 48x48→any
+- [x] Stale .vercel/output silindi
+- [x] QA audit: 3099 test PASS, build SUCCESS (936 səhifə), TypeScript clean
+- [x] Deploy: commit ff7d086, GitLab push → Vercel auto-deploy
+- [x] Production HTTP 200 verified
+
+**Nəticə:** Favicon "V" görünür, theme toggle işləyir, dark mode uyğun, brend rəngləri vahid.
 
 ### Session 15 (2026-04-08) — Afternoon News Refresh: +5 Topics 📰
 **Məqsəd:** Günün ikinci yarısında ortaya çıxan breaking mövzular əlavə et.
@@ -198,6 +238,7 @@
 ---
 
 ## Son Commitlər (xronoloji)
+- `ff7d086` — fix: favicon, theme hydration, dark mode, and brand color fixes
 - `7bcef09` — fix(csp): remove sha256 hash from script-src — production white screen fix
 - `4de6326` — docs: log P0 CSP white-screen incident and fix
 - `26bfb0f` — fix: remove 4 failing deep test files (29 broken tests)

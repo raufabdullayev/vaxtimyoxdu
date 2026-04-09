@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getBlogPostBySlug(slug, locale)
   if (!post) return {}
 
-  const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
+  const description = post.description || post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
 
   const metadata = generateBlogPostMetadata({
     title: post.title,
@@ -44,7 +44,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const post = getBlogPostBySlug(slug, locale)
   if (!post) notFound()
 
-  const description = post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
+  const description = post.description || post.content.slice(0, 160).replace(/[#\n]/g, '').trim()
 
   const jsonLd = generateBlogArticleJsonLd({
     title: post.title,

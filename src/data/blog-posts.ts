@@ -1,5 +1,6 @@
 export interface BlogPost {
   title: string
+  description?: string
   date: string
   content: string
   relatedTools: string[]
@@ -1920,7 +1921,8 @@ The best QR code generators in 2026 offer:
 Try the free QR Code Generator on Vaxtim Yoxdu. It supports all data types listed above, offers color customization and SVG export, and processes everything locally in your browser. Generate unlimited QR codes with no watermarks, no account required, and complete privacy.`,
   },
   'easiest-way-to-merge-pdf-files': {
-    title: 'The Easiest Way to Merge PDF Files in 2026',
+    title: 'How to Merge PDF Files Free Online in 2026 — No Signup, No Upload',
+    description: 'Merge PDF files instantly in your browser — no server uploads, no signup, no watermarks. Step-by-step guide to combining PDFs safely with a free online tool.',
     date: '2026-03-11',
     relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
     content: `Merging PDF files should not require expensive software, account creation, or uploading sensitive documents to unknown servers. In 2026, browser-based tools have made the process remarkably simple: open a tool, drop your files in, arrange them in the right order, and click merge. The result downloads to your device in seconds, and your files never leave your machine. Here is a step-by-step guide to merging PDFs the easy way, along with best practices for getting clean results every time.

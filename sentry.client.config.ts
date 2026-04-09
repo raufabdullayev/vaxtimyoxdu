@@ -31,10 +31,10 @@ export function initSentryClient() {
       /connect\.facebook\.net/i,
     ],
 
-    // Session replay — sample 10% of sessions to reduce storage costs
-    replaysSessionSampleRate: process.env.NODE_ENV === 'production' ? 0.1 : 1.0,
+    // Session replay disabled — saves ~70-100KB client JS, not useful at current traffic
+    replaysSessionSampleRate: 0,
 
-    // Capture replay for errors — 100%
-    replaysOnErrorSampleRate: 1.0,
+    // Replay on error disabled — not enough traffic to justify bundle cost
+    replaysOnErrorSampleRate: 0,
   });
 }

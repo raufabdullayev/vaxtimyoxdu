@@ -50,10 +50,14 @@ function TickerSkeleton() {
 export default function MarketTicker() {
   const { prices, isLoading, error } = useMarketPrices()
 
-  if (error && prices.length === 0) return null
+  if (error && prices.length === 0) {
+    return (
+      <div className="w-full overflow-hidden rounded-xl border bg-card/50 backdrop-blur-sm" style={{ minHeight: '52px' }} />
+    )
+  }
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border bg-card/50 backdrop-blur-sm">
+    <div className="w-full overflow-hidden rounded-xl border bg-card/50 backdrop-blur-sm" style={{ minHeight: '52px' }}>
       <div className="flex items-center justify-between px-4 py-2.5">
         <div className="flex-1 min-w-0 overflow-x-auto scrollbar-hide">
           {isLoading && prices.length === 0 ? (

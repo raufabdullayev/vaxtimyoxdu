@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
-import { Zap, Newspaper, Wrench } from 'lucide-react'
+import { Zap, Newspaper, Wrench, CheckCircle } from 'lucide-react'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import NewsletterHomeSection from '@/components/layout/NewsletterHomeSection'
@@ -64,9 +64,23 @@ export default async function HomePage({ params }: Props) {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           {t('heroTitle')} <span className="text-primary">{t('heroTitleHighlight')}</span>
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
           {t('heroDescription')}
         </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/tools"
+            className="bg-primary text-primary-foreground rounded-lg px-8 py-3 font-semibold text-lg hover:opacity-90 transition-opacity"
+          >
+            {t('heroCta')}
+          </Link>
+          <Link
+            href="/info"
+            className="rounded-lg px-8 py-3 font-semibold text-lg border border-border hover:bg-accent transition-colors"
+          >
+            {t('heroCtaNews')}
+          </Link>
+        </div>
       </section>
 
       {/* Market Ticker */}
@@ -128,7 +142,7 @@ export default async function HomePage({ params }: Props) {
             <p className="text-sm text-muted-foreground">{t('statTools')}</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-primary">0</p>
+            <CheckCircle className="h-8 w-8 text-primary mx-auto mb-1" />
             <p className="text-sm text-muted-foreground">{t('statRegistration')}</p>
           </div>
           <div>

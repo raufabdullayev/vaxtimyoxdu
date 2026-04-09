@@ -30,6 +30,12 @@ const ALLOWED_EVENT_TYPES = new Set([
   'page_view',
   'tool_use',
   'newsletter_subscribe',
+  'share_click',
+  'tool_complete',
+  'scroll_depth',
+  'search_query',
+  'outbound_click',
+  '404_error',
 ])
 
 /** Maximum length for string fields to prevent abuse. */

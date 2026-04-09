@@ -1149,7 +1149,8 @@ Tək başına alətlər sizi məhsuldar etmir. Bu vərdişlər təməli yaradır
 Yadda saxlayın: məhsuldarlıq alətləri vasitələrdir, məqsəd deyil. Məqsəd mənalı işi ardıcıl görmək, davamlı enerji saxlamaq və sizin üçün ən çox əhəmiyyətli olan şeylərdən irəliyə getməkdir.`,
   },
   'easiest-way-to-merge-pdf-files': {
-    title: 'PDF Fayllarını Birləşdirməyin Ən Asan Yolu',
+    title: 'PDF Fayllarını Pulsuz Onlayn Birləşdirin — Qeydiyyat Yoxdur, Yükləmə Yoxdur',
+    description: 'PDF fayllarını brauzerinizdə dərhal birləşdirin — serverə yükləmə yoxdur, qeydiyyat tələb olunmur, su nişanı yoxdur. Pulsuz onlayn alətlə PDF-ləri təhlükəsiz birləşdirmə təlimatı.',
     date: '2026-03-11',
     relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
     content: `PDF faylları ilə işləmək gündəlik həyatın ayrılmaz hissəsidir. İstər tələbə olun, istər ofis işçisi, istərsə də sərbəst işləyən peşəkar -- müxtəlif PDF sənədlərini bir faylda birləşdirmək ehtiyacı mütləq qarşınıza çıxır. Hesabatlar, fakturalar, müqavilələr, diplom əlavələri, portfolio materialları -- bunların hamısını tək bir sənəddə birləşdirmək həm vaxt qənaəti edir, həm də sənəd idarəçiliyini sadələşdirir. Bu təlimatda PDF birləşdirmənin ən asan və təhlükəsiz yolunu addım-addım izah edəcəyik.

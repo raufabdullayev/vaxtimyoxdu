@@ -45,7 +45,10 @@ export function generateToolMetadata(
 ): Metadata {
   const locale = options?.locale || 'en'
   const name = options?.localizedName || tool.name
-  const description = options?.localizedDescription || tool.description
+  const baseDescription = options?.localizedDescription || tool.description
+  const description = tool.isClientSide
+    ? `${baseDescription} 100% browser-based — your files never leave your device.`
+    : baseDescription
   const ogLocale = getOgLocale(locale)
   const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
   const ogImage = getOgImageUrl({
@@ -54,7 +57,7 @@ export function generateToolMetadata(
     type: 'tool',
   })
   return {
-    title: `${name} - Free Online Tool | ${SITE_NAME}`,
+    title: `${name} — Free, No Upload Required | ${SITE_NAME}`,
     description,
     keywords: tool.keywords.join(', '),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },

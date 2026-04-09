@@ -34,18 +34,19 @@ export function useMarketPrices(): UseMarketPricesResult {
       const data: MarketPricesResponse = await res.json()
 
       // Store previous prices for animation comparison
-      const prevMap = new Map<string, number>()
-      prices.forEach((p) => prevMap.set(p.symbol, p.price))
-      previousPricesRef.current = prevMap
-
-      setPrices(data.prices)
+      setPrices((prev) => {
+        const prevMap = new Map<string, number>()
+        prev.forEach((p) => prevMap.set(p.symbol, p.price))
+        previousPricesRef.current = prevMap
+        return data.prices
+      })
       setUpdatedAt(data.updatedAt)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch prices')
     } finally {
       setIsLoading(false)
     }
-  }, [prices])
+  }, [])
 
   useEffect(() => {
     fetchPrices()

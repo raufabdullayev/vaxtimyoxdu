@@ -67,9 +67,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localeEntries('/terms', monthAgo, 'monthly', 0.2),
   ]
 
-  // Tool pages
+  // Tool pages — fixed date for static tools (avoids lastModified changing every build)
+  const toolsLastModified = new Date('2026-04-09')
   const toolPages: MetadataRoute.Sitemap = tools.flatMap((tool) =>
-    localeEntries(`/tools/${tool.slug}`, now, 'weekly', 0.8),
+    localeEntries(`/tools/${tool.slug}`, toolsLastModified, 'weekly', 0.8),
   )
 
   // News article pages — only include locale variants that the article supports

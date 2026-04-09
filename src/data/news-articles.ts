@@ -7,6 +7,549 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-09 ==========
+
+  // --- Champions League Quarter-Final Results ---
+  'chempionlar-liqasi-ceyrek-final-neticeler-9-aprel': {
+    title: 'Cempionlar Liqasi 1/4 final neticeleri: Atletiko sok, PSJ dominantliq, Arsenal son deqiqe, Bavariya qelebe',
+    date: '2026-04-09',
+    category: 'Idman',
+    locale: 'az',
+    content: `UEFA Cempionlar Liqasinin 1/4 final merhelesinin ilk oyunlari basa catdi. 7-8 aprel tarixlerinde oynanan dord matcda boyuk surprizler ve unudulmaz anlar yasandi. Budur butun neticeler ve etraflari.
+
+## Barselona 0-2 Atletiko Madrid (8 aprel)
+
+Kamp Nouda Atletiko Madrid gozlenilmez qelebe qazandi ve Barselonanin evde Atletikoya qarsi 25 matcliq meglubiyyetsizlik serisini (20 il!) sona catirdi. 44-cu deqiqede VAR arasdirmasindan sonra Cubarsi qirmizi kart aldi (DOGSO) -- bu qerar boyuk mubarise yaratdi. Thierry Henry "bu qirmizi deyildi" dedi. Bir deqiqe sonra, 45-ci deqiqede Alvarez serbest zerbeden hesabi acdi. 70-ci deqiqede Sorloth bas ile hesabi 2-0 etdi. Bundan elave, Pubillin el oyunu meqami da penalti verilmemesi ile mubarise dogurdu.
+
+Flik: "Bizde geri donmek ucun keyfiyyet var."
+
+## PSJ 2-0 Liverpul (8 aprel)
+
+Paris Sent-Jermen Parc de Pransda Liverpulun uzerinde tam dominantliq qurdu. Doue 11-ci deqiqede defleksiya ile hesabi acdi, Kvaratsxeliya ise 65-ci deqiqede mohtesem ferdi qol vurdu -- ardicil 4-cu CL qolu. Liverpul qapiya hec bir zerbesi yox idi! PSJ topu 74% saxladi, 17-ye qarsi 3 zerbesi oldu. PSJ muddea olunan Cempionlar Liqasi cempionudur.
+
+## Sportinq 0-1 Arsenal (7 aprel)
+
+Arsenalda evez oyuncusu Havertz 90+1-ci deqiqede Martinellinin asisinden sonra qol vurdu ve kritik sefer qelebesi qazandi.
+
+## Real Madrid 1-2 Bavariya Munhen (7 aprel)
+
+Diaz 41-ci deqiqede hesabi acdi, lakin Kane 46-ci deqiqede -- ikinci hissenin cemi 21-ci saniyesinde! -- beraberlik qolu vurdu. Mbappe 74-cu deqiqede Real ucun cavab versede, Kane-in qolu ve asisti Bavariyanin 2-1 qelebesi ile neticelendi. Kane zededen ugurlu sekilde qayitdi.
+
+## Cavab matclari
+
+Ikinci oyunlar 14-15 aprel tarixlerinde kecirilecek. Butun cutlerde mubarize aciq qalir.`,
+  },
+  'en-champions-league-quarter-final-results-april-9': {
+    title: 'Champions League QF Results: Atletico Shock Barca, PSG Dominate Liverpool, Arsenal Late Winner, Bayern Stun Madrid',
+    date: '2026-04-09',
+    category: 'Sports',
+    locale: 'en',
+    content: `The UEFA Champions League quarter-final first legs are complete. Four matches played on April 7-8 delivered surprises, controversy, and unforgettable moments across Europe.
+
+## Barcelona 0-2 Atletico Madrid (April 8)
+
+Atletico Madrid stunned Barcelona at Camp Nou, ending Barca\'s remarkable 25-match unbeaten home record against Atletico stretching back 20 years. The game turned in the 44th minute when Cubarsi received a red card following a VAR review for denial of a goal-scoring opportunity (DOGSO) -- a decision that sparked fierce debate. Pundit Thierry Henry declared it "not a red card." Just a minute later, Alvarez curled in a free kick to open the scoring at 45\'. Sorloth added a header in the 70th minute to seal a 2-0 away win. A Pubill handball that went unpunished added further controversy.
+
+Flick post-match: "We have the quality to come back."
+
+## PSG 2-0 Liverpool (April 8)
+
+Paris Saint-Germain delivered a masterclass at Parc des Princes, completely dominating Liverpool. Doue opened the scoring in the 11th minute with a deflected effort, while Kvaratskhelia produced a stunning solo goal in the 65th minute -- his 4th consecutive Champions League goal. The stat line was damning for Liverpool: zero shots on target. PSG controlled 74% of possession and outshot Liverpool 17 to 3. The defending CL champions looked every bit the part.
+
+## Sporting 0-1 Arsenal (April 7)
+
+Substitute Kai Havertz scored a dramatic stoppage-time winner in the 90+1st minute, converting a Martinelli assist to give Arsenal a crucial away victory in Lisbon.
+
+## Real Madrid 1-2 Bayern Munich (April 7)
+
+A thriller at the Bernabeu saw Diaz give Real Madrid the lead in the 41st minute. But Harry Kane equalized just 21 seconds into the second half at 46\' -- one of the fastest goals in Champions League knockout history. Kane, returning from injury, also provided the assist for Bayern\'s winner. Mbappe pulled one back for Madrid in the 74th minute, but Bayern held on for a 2-1 away win.
+
+## Second Legs
+
+Return fixtures are scheduled for April 14-15. All four ties remain alive heading into the second legs.`,
+  },
+  'tr-sampiyonlar-ligi-ceyrek-final-sonuclari-9-nisan': {
+    title: 'Sampiyonlar Ligi Ceyrek Final Sonuclari: Atletico Sok, PSG Hakimiyet, Arsenal Son Dakika, Bayern Galibiyeti',
+    date: '2026-04-09',
+    category: 'Spor',
+    locale: 'tr',
+    content: `UEFA Sampiyonlar Ligi ceyrek final ilk maclari tamamlandi. 7-8 Nisan tarihlerinde oynanan dort macta buyuk surprizler, tartismali kararlar ve unutulmaz anlar yasandi.
+
+## Barcelona 0-2 Atletico Madrid (8 Nisan)
+
+Atletico Madrid, Camp Nou\'da Barcelona\'yi yenerek 20 yillik ve 25 maclik yenilmezlik serisine son verdi. 44. dakikada VAR incelemesinin ardindan Cubarsi kirmizi kart gordu (DOGSO) -- bu karar buyuk tartisma yaratti. Thierry Henry "kirmizi degil" dedi. 45. dakikada Alvarez serbest vurustan golunu atti. 70. dakikada Sorloth kafa vurusuyla skoru 2-0 yapti. Pubill\'in el oyunu da penalti verilmemesiyle tartisma dogurdu.
+
+Flick: "Geri donecek kalitemiz var."
+
+## PSG 2-0 Liverpool (8 Nisan)
+
+Paris Saint-Germain, Parc des Princes\'te Liverpool\'a tam hakimiyet kurdu. Doue 11. dakikada defleksiyonla golunu atti, Kvaratskhelia ise 65. dakikada muhtesem bireysel golunu kaydetti -- art arda 4. SL golu. Liverpool\'un kaleye tek sutu bile yoktu! PSG topu %74 oraninda kontrol etti, 17\'ye karsi 3 isabetli sut kaydetti. PSG mevcut Sampiyonlar Ligi sampiyonu.
+
+## Sporting 0-1 Arsenal (7 Nisan)
+
+Yedek oyuncu Havertz, 90+1. dakikada Martinelli\'nin asistinden gol atarak Arsenal\'e kritik deplasman galibiyeti kazandirdi.
+
+## Real Madrid 1-2 Bayern Munih (7 Nisan)
+
+Diaz 41. dakikada Real Madrid\'i one gecirdi, ancak Kane ikinci yarinin 21. saniyesinde (46\') beraberlik golunu atti -- sakatliktan donen Kane asist de yapti. Mbappe 74. dakikada Real icin golunu atti, ancak Bayern 2-1 deplasman galibiyetiyle ayrildi.
+
+## Rovans Maclari
+
+Ikinci maclar 14-15 Nisan\'da oynanacak. Tum eslesmelerde mucadele acik.`,
+  },
+  'ru-liga-chempionov-chetvertfinal-rezultaty-9-aprelya': {
+    title: 'Rezultaty 1/4 finala Ligi chempionov: shok Atletiko, dominirovaniye PSZh, Arsenol v kontse, Bavariya pobezhdayet',
+    date: '2026-04-09',
+    category: 'Sport',
+    locale: 'ru',
+    content: `Pervye matchi chetvertfinala Ligi chempionov UEFA zaversheny. Chetyre matcha 7-8 aprelya prinesli syurprizy, spornyye resheniya i nezabyvayemyye momenty.
+
+## Barselona 0-2 Atletiko Madrid (8 aprelya)
+
+Atletiko Madrid osholomil Barselonu na Kamp Nou, prekrativ yeyo 25-matchevuyu domashnyuyu bespoygrazhnyuyu seriyu protiv Atletiko, dlyvshuyusya 20 let! Na 44-y minute posle proverki VAR Kubarsi poluchil krasnuyu kartochku (DOGSO) -- eto resheniye vyzvalo ozhestochyonnuye debaty. Ekspert T\'yerri Anri zayavil: "Eto ne krasnaya kartochka." Na 45-y minute Al\'vares zabil so shtrafnogo, a na 70-y Sorlot dobavil golovoy -- 2:0. Takzhe vyzval spory moment s igroyrukov Pubilya, za kotoruyu ne byl naznachen penalti.
+
+Flik posle matcha: "U nas yest kachestvo, chtoby vernut'sya."
+
+## PSZh 2-0 Liverpul\' (8 aprelya)
+
+Pari Sen-Zhermen polnost\'yu dominiroval nad Liverpulem na Park de Prens. Due otkryl schyot na 11-y minute (otskochivshiy udar), a Kvaratsxeliya na 65-y minute zabil velikolepnyy sol\'nyy gol -- yego 4-y podryad gol v LCh. Liverpul\' ne nanesudio ni odnogo udara v stvorbwh vorot! PSZh vladel myachom 74%, nanosya 17 udarov protiv 3. PSZh -- deystvuyushchiy champion Ligi chempionov.
+
+## Sporting 0-1 Arsenal (7 aprelya)
+
+Zaregistrirnyy na zamenu Xaverts zabil dramaticheskiy gol na 90+1-y minute s peredachi Martinell\'i, prinesya Arsenalu vazhneyshuyu gostevuyu pobedu.
+
+## Real Madrid 1-2 Bavariya Myunkhen (7 aprelya)
+
+Dias vyveldyenot Real na 41-y minute, no Keyn sravnyal schyot na 46-y -- vsego cherez 21 sekundu posle nachala vtorogo tayma! Keyn, vernuvshiysya posle travmy, takzhe otdal golevuyu peredachu. Mbappe sokratil razryv na 74-y minute, no Bavariya uderzhala pobedu 2:1.
+
+## Otvetnyye matchi
+
+Vtoryye matchi sostoyatsya 14-15 aprelya. Vo vsekh parakh bor'ba ostaetsya otkrytoy.`,
+  },
+
+  // --- US-Iran Ceasefire ---
+  'absh-iran-ateshkes-2-heftelik-pakistan-vasitechiliyi': {
+    title: 'ABSh-Iran ateshkes: 2 heftelik ateshkes elan edildi, lakin Iran pozulma iddialari ile tehdit edir',
+    date: '2026-04-09',
+    category: 'Dunya',
+    locale: 'az',
+    content: `Prezident Donald Tramp ABSh ile Iran arasinda 2 heftelik ateshkes elan edib. Razilasma Pakistan bash nazirinin vasitechiliyi ile elde edilib ve massiv herbi zerbelere 2 saatdan az qalmis imzalanib.
+
+## Ateshkesin sertleri
+
+Iran Hormuz bogazini yeniden acmaga razi olub -- bu, qlobal neft techizcatini temin eden strateji su yoludur. Lakin ateshkesin imzalanmasindan bir nece saat sonra Iran ABSh-ni razilasmanin sertlerini pozmaqda ittiham edib ve ateshkesden cekilmeye hazir oldugunu bildirib.
+
+## Danisiqlar davam edir
+
+Vitse-prezident JD Vens senbe gunu Islamabadda danisiqlareyehberliq edecek. Pakistan vasitechilik rolunu davam etdirir. Herterefli geopolitik gerginlik regionda yuksek seviyyede qalir ve ekspertler ateshkesin dayaniqliligina sual isaresi qoyurlar.
+
+## Beynelxalq reaksiyalar
+
+Avropa Birliyi ve BMT ateshkesi alqislayib, lakin hami bunun uzunmuddetli sabitliye apardib-aparmayacagini gormek ucun gozleyir. Neft bazarlari ilkin sevincden sonra yeniden dalganma ile uzlesdi.`,
+  },
+  'en-us-iran-ceasefire-2-week-pakistan-brokered': {
+    title: 'US-Iran Ceasefire: 2-Week Deal Announced but Iran Threatens Pullout Over Violations',
+    date: '2026-04-09',
+    category: 'World',
+    locale: 'en',
+    content: `President Donald Trump announced a 2-week ceasefire with Iran, brokered by Pakistan\'s Prime Minister, less than 2 hours before massive military strikes were planned to commence.
+
+## Terms of the Agreement
+
+Iran agreed to reopen the Strait of Hormuz -- the strategic waterway critical to global oil supply. The deal represents a dramatic de-escalation from weeks of mounting tensions, military buildups, and retaliatory strikes across the Middle East.
+
+## Iran\'s Accusations
+
+However, within hours of the announcement, Iran accused the United States of violating the terms of the ceasefire agreement and threatened to withdraw entirely. Tehran has not specified the exact nature of the alleged violations, but the accusation has already rattled global markets.
+
+## Upcoming Negotiations
+
+Vice President JD Vance will lead negotiations in Islamabad on Saturday, with Pakistan continuing its mediation role. The fragile truce underscores how quickly any progress can unravel in the volatile geopolitical landscape of the Middle East. The international community watches closely.`,
+  },
+  'tr-abd-iran-ateskes-2-haftalik-pakistan-aracilik': {
+    title: 'ABD-Iran Ateskes: 2 Haftalik Anlasma, Iran Ihlal Iddialariyla Cekilme Tehdidi',
+    date: '2026-04-09',
+    category: 'Dunya',
+    locale: 'tr',
+    content: `Baskan Donald Trump, ABD ile Iran arasinda 2 haftalik ateskes ilan etti. Anlasma Pakistan Basbakani\'nin araciligyla saglanidi ve buyuk askeri saldirilara 2 saatten az kala imzalandi.
+
+## Anlasmanin Sartlari
+
+Iran, kuresel petrol arz icin kritik oneme sahip stratejik su yolu olan Hurmuz Bogazi\'ni yeniden acmayi kabul etti. Anlasma, Orta Dogu\'daki haftalarca suren artan gerilim, askeri yiginaklar ve misilleme saldirilari sonrasi dramatik bir gerileme oldu.
+
+## Iran\'in Iddialari
+
+Ancak duyurudan yalnizca saatler sonra Iran, ABD\'yi ateskes sartlarini ihlal etmekle sucladi ve tamamen cekilmekle tehdit etti. Tahran ihlallerin tam icerigini belirtmedi, ancak suclamalar kuresel piyasalari zaten sarsti.
+
+## Yaklasan Muzakereler
+
+Baskan Yardimcisi JD Vance cumartesi gunu Islamabad\'da muzakerelere liderlik edecek. Pakistan aracilik rolunu surduruyor. Kirilgan baris, Orta Dogu\'daki oynak jeopolitik ortamda herhangi bir ilerlemenin ne kadar cabuk curutulebileceginin altini ciziyor.`,
+  },
+  'ru-ssha-iran-peremiriye-2-nedeli-posrednichestvo-pakistana': {
+    title: 'Peremiriye SShA-Iran: 2-nedel\'noye soglasheniye, Iran ugrorzhayet vykhodom iz-za narusheniy',
+    date: '2026-04-09',
+    category: 'Mir',
+    locale: 'ru',
+    content: `Prezident Donald Tramp ob\'yavil o 2-nedel\'nom peremiriyi s Iranom, dostignutom pri posrednichestve prem\'yer-ministra Pakistana. Soglasheniye bylo podpisano menee chem za 2 chasa do nachala massivnykh voennykh udarov.
+
+## Usloviya soglasheniya
+
+Iran soglasitsya vnov otkryt Ormuzkiy proliv -- strategicheskiy vodnyy put\', kriticheski vazhnyy dlya mirovykh postavok nefti. Sdelka predstavlyayet soboy dramaticheskuyu deeskalatsiyu posle nedel\' rastushchey napryazhennosti, voennykh nakoreniy i otvetnykhyakh udarov na Blizhnem Vostoke.
+
+## Obvineniya Irana
+
+Odnako cherez neskol\'ko chasov posle ob\'yavleniya Iran obvinilykh SShA v narushenii usloviy peremiriya i prigrozil polnym vykhodom. Tegeran ne utochnil tochnuyu sut\' predpolagayemykh narusheniy, no obvineniya uzhe vstryakhuli mirovyye rynki.
+
+## Predstoyashchiye peregovory
+
+Vitse-prezident Dzhey Di Vens vozglavit peregovory v Islamabadbade v subbotu. Pakistan prodolzhayet posrednicheskuyu rol\'. Khrupkiy mir podchyorkivayet, naskol\'ko bystro lyuboy progress mozhet sorvat\'sya v nesta-bil\'nom geopoliticheskom landshafte.`,
+  },
+
+  // --- Israel Attacks Lebanon ---
+  'israil-livan-hucum-254-olum-100-hezbollah-hedefe': {
+    title: 'Israil Livana hucum: 254+ olum, 1160+ yaralanan -- 10 deqiqede 100+ hedef vuruldu',
+    date: '2026-04-09',
+    category: 'Dunya',
+    locale: 'az',
+    content: `ABSh-Iran ateshkesinden bir nece saat sonra Israil Livanda 100-den cox Hizbullah hedefine herbi emeliyyat kecirib. 10 deqiqe erzinde hava zerbeleri ile 254 nefer olub ve 1160-dan cox adam yaralanib.
+
+## Herbi emeliyyatin tefsilleri
+
+Israil ordusu Livandaki Hizbullah moqvqelerini eyni vaxtda vurub. Hedeflerin arasinda silah anbarlari, komanda merkezleri ve strateji moqvqeler var idi. Zerbelerin miqyasi ve koordinasiyasi bu emeliyyati sonuncu onillikin en boyuk herbi aksiyalarindan birine cevirib.
+
+## Livan milli matam elan etdi
+
+Livan hokumeti milli matam gunu elan edib. Xesteexanalarin hemm tutumu asib, yasayis menaetqelerindeki dagintlar genislenmekde davam edir. Beynelxalq yardim teshkilatlari bolgeye kecid ucun cagiris edib.
+
+## Ateshkes mubaohisesi
+
+Tramp administrasiyasi bildirib ki, Livan ateshkes razilasmasina daxil deyildi. Lakin Iran bunun eksine iddia edir -- Tehrana gore Livan ateshkesin hissesi idi ve Israilin herbi emeliyyati razilasmanin aciq pozuntusdur. Bu fikir ayriligi Iran-in ateshkesden cekilme tehdidinin esaslandirmasina cevrilib.`,
+  },
+  'en-israel-attacks-lebanon-254-killed-hezbollah-targets': {
+    title: 'Israel Strikes Lebanon: 254+ Dead, 1160+ Wounded -- 100+ Hezbollah Targets Hit in 10 Minutes',
+    date: '2026-04-09',
+    category: 'World',
+    locale: 'en',
+    content: `Just hours after the US-Iran ceasefire was announced, Israel launched a massive military operation against Hezbollah targets in Lebanon, striking over 100 positions in approximately 10 minutes. The attacks killed at least 254 people and wounded more than 1,160.
+
+## Scale of the Operation
+
+The Israeli military conducted simultaneous airstrikes on Hezbollah positions across Lebanon, targeting weapons depots, command centers, and strategic installations. The speed and coordination of the strikes made this one of the largest single military operations in the region in recent decades.
+
+## National Mourning in Lebanon
+
+Lebanon declared a national day of mourning. Hospitals are overwhelmed beyond capacity, and destruction in residential areas continues to be assessed. International aid organizations have called for immediate humanitarian access to affected zones.
+
+## Ceasefire Dispute
+
+The Trump administration stated that Lebanon was NOT included in the US-Iran ceasefire agreement. However, Iran directly contradicts this position, claiming Lebanon was part of the deal and that Israel\'s military action constitutes a clear violation of the agreement. This fundamental disagreement over the scope of the ceasefire has become Iran\'s primary justification for threatening to withdraw from the deal entirely.`,
+  },
+  'tr-israil-lubnan-saldiri-254-olum-hezbollah-hedefler': {
+    title: 'Israil Lubnan\'a Saldirdi: 254+ Olu, 1160+ Yarali -- 10 Dakikada 100+ Hedef Vuruldu',
+    date: '2026-04-09',
+    category: 'Dunya',
+    locale: 'tr',
+    content: `ABD-Iran ateskesinden saatler sonra Israil, Lubnan\'daki 100\'den fazla Hizbullah hedefine buyuk capli askeri operasyon duzenleadi. Yaklasik 10 dakika icinde gerceklestirilen hava saldirilari sonucu en az 254 kisi hayatini kaybetti ve 1.160\'tan fazla kisi yaralandi.
+
+## Operasyonun Boyutu
+
+Israil ordusu Lubnan genelindeki Hizbullah mevzilerine es zamanli hava saldirilari gerceklestirdi. Hedefler arasinda silah depolari, komuta merkezleri ve stratejik tesisler yer aliyor. Saldirilarin hizi ve koordinasyonu, bu operasyonu bolgedeki son on yillarin en buyuk tekil askeri eylemlerinden biri haline getirdi.
+
+## Lubnan Ulusal Yas Ilan Etti
+
+Lubnan hukumeti ulusal yas gunu ilan etti. Hastaneler kapasitenin ustunde, yerlesim alanlarindaki hasar degerlendirmesi devam ediyor. Uluslararasi yardim kuruluslari etkilenen bolgelere acil insani erisim cagrisi yapti.
+
+## Ateskes Tartismasi
+
+Trump yonetimi, Lubnan\'in ABD-Iran ateskes anlasmasi kapsaminda OLMADIGINI belirtti. Ancak Iran bu gorus farkliliginin tam tersini savunuyor -- Tahran\'a gore Lubnan anlasmanin parcasiydi ve Israil\'in askeri eylemi acik bir ihlaldir. Bu temel anlasmazlik, Iran\'in atestkesten cekilme tehdidinin ana gerekcelendirmesi haline geldi.`,
+  },
+  'ru-izrail-atakuyet-livan-254-pogibshikh-hezbollah-tseli': {
+    title: 'Izrail\' atakoval Livan: 254+ pogibshikh, 1160+ ranennykh -- 100+ tseley Khizbally za 10 minut',
+    date: '2026-04-09',
+    category: 'Mir',
+    locale: 'ru',
+    content: `Vsego cherez neskol\'ko chasov posle ob\'yavleniya peremiriya mezhdu SShA i Iranom Izrail\' nanyes massirovannyy udar po tselyam Khizball\'i v Livane, poraziv bolee 100 pozitsiy priblizitel\'no za 10 minut. V rezultate pogibli ne menee 254 chelovek, bolee 1160 poluchili raneniya.
+
+## Masshtab operatsii
+
+Izrail\'skiye voyennyye proveli odnovremennyye aviacudary po pozitsiyam Khizball\'i po vsemu Livanu, nanosat udary po skladam oruzhiya, komandnym tsentram i strategicheskim ob\'yektam. Skorost\' i koordinatsiya udarov sdelali etu operatsiyu odnoy iz krupneyshikh voyennykh aktsiy v regione za posledniye desyatiletiya.
+
+## Natsional\'nyy traur v Livane
+
+Livan ob\'yavil natsional\'nyy den\' traura. Bol\'nitsy perepolneny, razrusheniya v zhilykh rayonakh prodolzhayut otsenvyat\'sya. Mezhdunarodnye gumanitarnye organizatsii prizvali k nemedlennomu dostupu v postradavshiye zony.
+
+## Spor vokrug peremiriya
+
+Administratsiya Trampa zayavila, chto Livan NE byl vklyuchyon v soglasheniye o peremiriyi mezhdu SShA i Iranom. Odnako Iran zanimacyet pryamo protivopolozhnuyu pozitsiyu, utverzhladaya, chto Livan byl chast\'yu sdelki i voyennye deystviya Izrailya yavlyayutsya yavnym narusheniyem soglasheniya. Eto fundamental\'noye raznoglasiye stalo glavnym obosnovaniyem Irana dlya ugrozy vykhoda iz sdelki.`,
+  },
+
+  // --- Oil Prices Back Above $100 ---
+  'neft-qiymetleri-100-dollar-yeniden-hormuz-bogazi': {
+    title: 'Neft qiymetleri yeniden $100-un uzerinde: WTI 6%+ yukseldi, Hormuz bogazi hale bagli',
+    date: '2026-04-09',
+    category: 'Iqtisadiyyat',
+    locale: 'az',
+    content: `Neft qiymetleri dramatik sekilde yeniden yukseldi. WTI 6%-den cox artaraq $100.27-ye catdi, Brent ise $98.26-ya yukseldi. Bu, bir gun evvel ateshkes xeberine gore WTI-nin 16% dusmesindn sonra bas verib.
+
+## Niye qiymetler yeniden yukseldi?
+
+Hormuz bogazi hale mehdud qalir -- gemilerin kecidi ucun Tehran icazesi teleb olunur. Ateshkes elan edilse de, bogaz tam acilmayib ve qlobal neft techizcati hala tehdit altindadir. Bundan elave, Iranin ateshkes razilasmasinin pozuldugunu iddia etmesi bazarlari yeniden narahat edib.
+
+## Goldman Sachs proqnozu
+
+Goldman Sachs analitikleri bildiirib ki, eger Hormuz bogazi bagli qalsa, Brent nefti butun il boyu $100-un uzerinde qala biler. Bu, xususile Avropa ve Asiya olkeleri ucun ciddi enerji bohrani demekdir.
+
+## Qlobal tesir
+
+Neft qiymetlerinin yeniden yukselisi benzin, qaz ve umumi inflasiya uzerinde tezyiq yaradir. ABSh-de benzin qiymetlerinin qalon basina $4.30-a catmasi gozlenilir. Olkeler alternativ enerji menbeleri ve strateji ehtiyatlar uzerinde isleyi suretlendrir.`,
+  },
+  'en-oil-prices-back-above-100-wti-surge-hormuz': {
+    title: 'Oil Prices Surge Back Above $100: WTI Jumps 6%+, Strait of Hormuz Still Restricted',
+    date: '2026-04-09',
+    category: 'Economy',
+    locale: 'en',
+    content: `Oil prices have reversed dramatically. WTI crude jumped over 6% to $100.27, while Brent rose to $98.26. This comes just one day after WTI had crashed 16% on ceasefire news, in one of the most volatile 48-hour periods in oil market history.
+
+## Why Prices Bounced Back
+
+The Strait of Hormuz remains restricted -- ships still require Tehran\'s permission for passage. Despite the ceasefire announcement, the strait has not been fully reopened, and global oil supply remains under threat. Additionally, Iran\'s accusations that the US is violating the ceasefire terms have unsettled markets and reignited supply fears.
+
+## Goldman Sachs Forecast
+
+Goldman Sachs analysts have warned that if the Strait of Hormuz remains closed or restricted, Brent crude could stay above $100 per barrel for the entire year. This would represent a sustained energy crisis with severe implications for Europe and Asia in particular.
+
+## Global Impact
+
+The renewed oil price surge is putting pressure on gasoline prices, natural gas, and overall inflation worldwide. US gasoline prices are expected to reach $4.30 per gallon this month. Countries are accelerating work on alternative energy sources and strategic reserves to reduce vulnerability to Middle East disruptions.`,
+  },
+  'tr-petrol-fiyatlari-100-dolar-uzerinde-wti-yukselis-hurmuz': {
+    title: 'Petrol Fiyatlari Yeniden $100 Uzerinde: WTI %6+ Yukseldi, Hurmuz Bogazi Hala Kisitli',
+    date: '2026-04-09',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Petrol fiyatlari dramatik bir sekilde geri tepti. WTI ham petrolu %6\'dan fazla artarak 100,27 dolara yikseldi, Brent ise 98,26 dolara cikti. Bu, bir gun once ateskes haberiyile WTI\'nin %16 dusmesinin ardindan gerceklesti.
+
+## Fiyatlar Neden Yeniden Yukseldi?
+
+Hurmuz Bogazi hala kisitli -- gemilerin gecisi icin Tahran izni gerekiyor. Ateskes ilan edilmis olmasina ragmen bogaz tamamen acilmadi ve kuresel petrol arzi hala tehdit altinda. Ayrica Iran\'in, ABD\'nin ateskes sartlarini ihlal ettigini iddia etmesi piyasalari yeniden sarstdi.
+
+## Goldman Sachs Tahmini
+
+Goldman Sachs analistleri, Hurmuz Bogazi\'nin kapali veya kisitli kalmasi durumunda Brent ham petrolun tum yil boyunca varil basina 100 dolarin uzerinde kalabilecegini uyardi. Bu ozellikle Avropa ve Asya icin ciddi bir enerji krizi anlamina geliyor.
+
+## Kuresel Etki
+
+Petrol fiyatlarindaki yeniden yukselis benzin, dogal gaz ve genel enflasyon uzerinde baski yaratmaya devam ediyor. ABD\'de benzin fiyatlarinin bu ay galon basina 4,30 dolara ulasmasibekleniyor. Ulkeler Orta Dogu kaynakli kesintilere karsiliklarini azaltmak icin alternatif enerji kaynaklari ve stratejik rezervler uzerindeki calismalarini hizlandiriyor.`,
+  },
+  'ru-tseny-na-neft-snova-vyshe-100-wti-rost-ormuz': {
+    title: 'Tseny na neft\' snova vyshe $100: WTI podskochil na 6%+, Ormuzkiy proliv po-prezhnemu ogranichen',
+    date: '2026-04-09',
+    category: 'Ekonomika',
+    locale: 'ru',
+    content: `Tseny na neft\' rezkokrazvotnulis\'. WTI podskochil bolee chem na 6% do $100,27, a Brent vyros do $98,26. Eto proizoshlo vsego cherez den\' posle togo, kak WTI upalgal na 16% na novostyakh o peremiriyi -- odin iz samykh volatil\'nykh 48-chasovykh periodov v istorii neftyanogo rynka.
+
+## Pochemu tseny otskochili
+
+Ormuzkiy proliv po-prezhnemu ogranichen -- dlya prokhoda sudov po-prezhnemu trebuetsya razresheniye Tegerana. Nesmotrya na ob\'yavleniye o peremiriyi, proliv ne byl polnost\'yu otkryt, i mirovyye postavki nefti ostayutsya pod ugrozoy. Krome togo, obvineniya Irana v tom, chto SShA narushayut usloviya peremiriya, destabilizirovali rynki.
+
+## Prognoz Goldman Sachs
+
+Analitiki Goldman Sachs predupredili, chto yesli Ormuzkiy proliv ostanetsya zakrytym ili ogranichennykham, neft\' Brent mozhet ostavat\'sya vyshe $100 za barrel\' v techeniye vsego goda. Eto oznachayet ustoychivyy energeticheskiy krizis s seryoznymi posledstviyami, osobenno dlya Yevropy i Azii.
+
+## Global\'noye vozdeystviye
+
+Vozobnovivshiysya rost tsen na neft\' okazyvayet davleniye na tseny na benzin, prirodnyy gaz i obshchuyu inflyatsiyu vo vsyom mire. Ozhidayetsya, chto tseny na benzin v SShA dostignut $4,30 za gallon v etom mesyatse.`,
+  },
+
+  // --- Meta Launches Muse Spark ---
+  'meta-muse-spark-yeni-ai-modeli-alexandr-wang': {
+    title: 'Meta "Muse Spark" suni intellekt modelini teqdim etdi: Alexandr Wang dovrunde ilk boyuk model',
+    date: '2026-04-09',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Meta yeni suni intellekt modeli "Muse Spark"-i teqdim edib. Bu, $14 milyarda ise goturulen Alexandr Wang-in rehberliyi altinda yaradilan ilk boyuk AI modelidir.
+
+## Modelin xususiyyetleri
+
+Muse Spark "kicik ve suretli" model kimi teqdim edilib, lakin murakkeb suallari menteqi tefekkur ile cavablandira bilir. Model ses, metn ve sekil daxil ede bilir (yalniz metn cixisi verir). Bu, onu coxfunksiyali bir assistent kimi ideal edir.
+
+## Strateji deyisiklik: aciq menbeden imtina
+
+Muse Spark PROPRIETARdir -- Llama seriyasindan ferqli olaraq aciq menbeli deyil. Bu, Meta ucun boyuk strateji deyisiklikdir. Sirket illerdir aciq menbeli AI-ya investisiya edirdi, lakin Muse Spark ile ticarete yoneldi. Bunun sebebi olaraq reqabet ve pul qazanma modeli gosterilir.
+
+## Harada istifade olunacaq?
+
+Model Facebook, Instagram, WhatsApp ve Meta Ray-Ban eyneklerinde istifadeye verirecek. Bu, milyardlarla istifadecinin AI assistent funksiyalarindan faydalanamasi demekdir.
+
+## Seneye tesiri
+
+Muse Spark, Google Gemini, OpenAI GPT ve Anthropic Claude ile birbasa reqabetdir. Meta-nin proprietary yanasmaya kecmesi AI senayesinde yeni guc muvazinesni yarada biler.`,
+  },
+  'en-meta-muse-spark-ai-model-alexandr-wang': {
+    title: 'Meta Launches "Muse Spark" AI Model: First Major Model Under Alexandr Wang',
+    date: '2026-04-09',
+    category: 'Technology',
+    locale: 'en',
+    content: `Meta has unveiled its new AI model "Muse Spark" -- the first major artificial intelligence model developed under the leadership of Alexandr Wang, who was hired for a reported $14 billion.
+
+## Model Capabilities
+
+Muse Spark is described as "small and fast" but capable of reasoning through complex questions with sophisticated logical chains. The model accepts voice, text, and image inputs but produces text output only. This multimodal input capability makes it a versatile assistant for everyday tasks.
+
+## Strategic Shift: Proprietary, Not Open-Source
+
+In a major departure from Meta\'s previous strategy, Muse Spark is PROPRIETARY -- unlike the Llama series, it will not be released as open-source. This represents a significant strategic pivot for Meta, which had invested heavily in open-source AI for years. The shift is attributed to competitive pressures and the need to monetize AI capabilities directly.
+
+## Where It Will Be Available
+
+The model will be integrated into Facebook, Instagram, WhatsApp, and Meta Ray-Ban smart glasses, potentially reaching billions of users worldwide with AI assistant functionality.
+
+## Industry Impact
+
+Muse Spark enters direct competition with Google Gemini, OpenAI GPT, and Anthropic Claude. Meta\'s move to proprietary AI could reshape the competitive landscape and signal a broader industry trend away from open-source large language models.`,
+  },
+  'tr-meta-muse-spark-yapay-zeka-modeli-alexandr-wang': {
+    title: 'Meta "Muse Spark" Yapay Zeka Modelini Tanitti: Alexandr Wang Doneminde Ilk Buyuk Model',
+    date: '2026-04-09',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Meta, yeni yapay zeka modeli "Muse Spark"i tanitti. Bu, 14 milyar dolarla transfer edilen Alexandr Wang\'in lideerliginde gelistirilen ilk buyuk AI modelidir.
+
+## Modelin Ozellikleri
+
+Muse Spark "kucuk ve hizli" olarak tanimlaniyor, ancak karmasik sorulari sofistike mantiksal zincirlerle cevaplayabiliyor. Model ses, metin ve gorsel girdi kabul ediyor, ancak yalnizca metin ciktisi uretiyor. Bu cok modlu girdi kapasitesi, onu gunluk gorevler icin cok yonlu bir asistan haline getiriyor.
+
+## Stratejik Degisim: Acik Kaynak Degil
+
+Meta\'nin onceki stratejisinden buyuk bir sapma olarak Muse Spark TESCILLI bir model -- Llama serisinden farkli olarak acik kaynak olarak yayinlanmayacak. Bu, yillardir acik kaynak yapay zekaya yatirim yapan Meta icin onemli bir stratejik donus noktasi. Degisimin rekabet baskilari ve AI yeteneklerini dogrudan paraya cevirme ihtiyacindan kaynaklandigi belirtiliyor.
+
+## Nerede Kullanilacak?
+
+Model Facebook, Instagram, WhatsApp ve Meta Ray-Ban akilli gozluklere entegre edilecek ve potansiyel olarak dunya capinda milyarlarca kullaniciya AI asistan islevinligi sunacak.
+
+## Sektore Etkisi
+
+Muse Spark, Google Gemini, OpenAI GPT ve Anthropic Claude ile dogrudan rekabete giriyor. Meta\'nin tescilli yapay zekaya gecisi, rekabet ortamini yeniden sekillendirelebilir.`,
+  },
+  'ru-meta-muse-spark-model-ii-alexandr-wang': {
+    title: 'Meta zapustila model\' II "Muse Spark": pervaya krupnaya model\' pod rukovodstvom Aleksandra Wanga',
+    date: '2026-04-09',
+    category: 'Tekhnologii',
+    locale: 'ru',
+    content: `Meta predstavila novuyu model\' iskusstvennogo intellekta "Muse Spark" -- pervuyu krupnuyu model\' II, razrabotannuyu pod rukovodstvom Aleksandra Vanga, nanyatogo za $14 mlrd.
+
+## Vozmozhnosti modeli
+
+Muse Spark opisyyaetsya kak "malen\'kaya i bystraya", no sposobnaya rassuzdat\' nad slozhnymi voprosami s pomoshch\'yu sofistisirovannykh logicheskikh tsepochek. Model\' prinimaet golosovoy, tekstovyy i izobrazitel\'nyy vvod, no vydayot tol\'ko tekstovoy vykhod. Eta mul\'timodal\'nost\' delayet yeyo universal\'nym pomoshchnikon dlya povsednevnykh zadach.
+
+## Strategicheskiy sdvig: zakirytoye, ne otkrytoye PO
+
+V otlichiye ot serii Llama, Muse Spark yavlyaetskya PROPRPIETARNYM produktom -- on ne budet vypushchen kak otkrytoye programnoye obespecheniye. Eto znachitel\'nyy strategichesski povorot dlya Meta, kototaya godami investirovala v otkrytyy II. Sdvig svyazyvayut s konkurentnym davleniyem i neobkhodimost\'yu pryamoy monetizatsii.
+
+## Gde budet dostupna
+
+Model\' budet integrirovana v Facebook, Instagram, WhatsApp i umnye ochki Meta Ray-Ban, potentsial\'no okhryvyot milliardov pol\'zovateley po vsemu miru funktsiyami II-assistenta.
+
+## Vliyaniye na otrasl\'
+
+Muse Spark vstupayot v pryamuyu konkurentsiyu s Google Gemini, OpenAI GPT i Anthropic Claude. Perekhod Meta k propreptarnomu II mozhet perestroit\' konkurentnyy landshaft.`,
+  },
+
+  // --- Stock Markets Surge Then Reverse ---
+  'fond-bazarlari-yukselis-sonra-geridonus-tarifler': {
+    title: 'Fond bazarlari: Dow +1.325 bal yukseldi, sonra Iran iddialari ile geri dondu -- Tramp yeni tariflereddi',
+    date: '2026-04-09',
+    category: 'Iqtisadiyyat',
+    locale: 'az',
+    content: `ABSh fond bazarlari iki gun erzinde dramatik dalganma yasadi. 8 aprelde ateshkes xeberine gore guclu yukselis oldu, lakin 9 aprelde Iran-in pozulma iddialari ve neft qiymetlerinin geri donmesi ile bazar istiqamert deyisdi.
+
+## 8 aprel: Boyuk yukselis
+
+Dow Jones 1.325 xal artdi (+2.9%), S&P 500 2.5% yukseldi, Nasdaq ise 2.8% boyudu. Ateshkes elaninin yarattigi nikbinlik bazarlari guclu sekilde yuxari itelerdi. Enerji sehmleri ilkin olaraq dusdu, texnologiya ve istehlaekci sehmleri ise liderlik etdi.
+
+## 9 aprel: Geri donus
+
+Iran-in ABSh-ni ateshkes pozuntusunda ittiham etmesi, Israelim Livana zerbeleri ve neft qiymetlerinin yeniden $100-u kecmesi bazarlari yeniden geriletdi. Investorlar risk istahi itirdiler ve defansiv sehmlere yoneldiler.
+
+## Tramp-in yeni tarif tehdidleri
+
+Prezident Tramp polad, aluminium ve misdesa 50% tarif, farmasetivka mehsullarina 100% tarif elan etdi. Bundan elave, Irana silah temin eden olkelere 50% tarif tehdidi gosterdi. Bu aggressiv ticarert siyaseti bazarlarda elave narahatliq yaratdi.
+
+## Qlobal bazar veziyyeti
+
+Avropa ve Asiya bazarlari da dalganmali sessiysalar keciirdi. Qyzyl ve dollar indeksi "tehlukesiz liman" kimi yukseldi. Analitikler qisa muddtede volatilliyin davam edeceyini proqnozlasdirir.`,
+  },
+  'en-stock-markets-surge-then-reverse-tariffs': {
+    title: 'Stock Markets Whipsaw: Dow Surges +1,325 Then Reverses as Iran Disputes Ceasefire -- Trump Announces New Tariffs',
+    date: '2026-04-09',
+    category: 'Economy',
+    locale: 'en',
+    content: `US stock markets experienced a dramatic two-day whipsaw. On April 8, markets surged on ceasefire optimism. By April 9, those gains were unwinding as Iran accused the US of violations and oil prices bounced back above $100.
+
+## April 8: The Surge
+
+The Dow Jones Industrial Average soared 1,325 points (+2.9%), the S&P 500 climbed 2.5%, and the Nasdaq rose 2.8%. Ceasefire optimism drove a broad-based rally, with technology and consumer discretionary stocks leading the charge while energy names initially pulled back.
+
+## April 9: The Reversal
+
+Iran\'s accusations of US ceasefire violations, Israel\'s strikes on Lebanon, and oil prices surging back above $100 triggered a sharp reversal. Investors moved to risk-off positioning, rotating into defensive stocks, treasuries, and gold.
+
+## Trump\'s New Tariff Threats
+
+President Trump announced 50% tariffs on steel, aluminum, and copper, plus 100% tariffs on pharmaceutical products. He also threatened 50% tariffs on countries supplying weapons to Iran. These aggressive trade measures added further uncertainty to already jittery markets.
+
+## Global Market Outlook
+
+European and Asian markets also experienced volatile sessions. Gold and the US dollar index rose as safe-haven assets. Analysts forecast continued short-term volatility as markets digest the rapidly evolving geopolitical situation in the Middle East and new trade barriers.`,
+  },
+  'tr-borsa-yukselis-sonra-geri-donus-tarifeler': {
+    title: 'Borsalar: Dow +1.325 Puan Yukseldi, Sonra Iran Iddialariyla Geri Dondu -- Trump Yeni Tarifeler',
+    date: '2026-04-09',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `ABD borsalari iki gun icerisinde dramatik bir dalgalanma yasadi. 8 Nisan\'da ateskes iyimserligiyle sert yukselisdpsonra, 9 Nisan\'da Iran\'in ihlal iddialari ve petrol fiyatlaarinin geri tepmesiyle kazanclar eridi.
+
+## 8 Nisan: Buyuk Yukselis
+
+Dow Jones 1.325 puan artti (%2,9), S&P 500 %2,5 yukseldi ve Nasdaq %2,8 buyudu. Ateskes iyimserligi genis tabanli bir rallye yol acti. Teknoloji ve tuketici hisseleri liderlik ederken enerji hisseleri baslangicta geriledi.
+
+## 9 Nisan: Geri Donus
+
+Iran\'in ABD\'yi ateskes ihlaliyle suclamasi, Israil\'in Lubnan\'a saldirilari ve petrol fiyatlarinin 100 dolarin uzerine geri cikmasi sert bir geri donusu tetikledi. Yatirimcilar savunma hisselerine, hazine bonosularina ve altina yoneldi.
+
+## Trump\'in Yeni Tarife Tehditleri
+
+Baskan Trump celik, aluminyum ve bakira %50, ilaclara %100 tarife acikladi. Ayrica Iran\'a silah tedarik eden ulkelere %50 tarife tehdidinde bulundu. Bu agresif ticaret tedbirleri piyasalardaki belirsizligi daha da artirdi.
+
+## Kuresel Piyasa Gorunumu
+
+Avrupa ve Asya borsalari da dalgali seanslar yasadi. Guvenli liman varliklari olarak altin ve ABD dolari endeksi yukseldi. Analistler kisa vadede dalgalanmanin devam edecegini tahmin ediyor.`,
+  },
+  'ru-fondovyye-rynki-rost-zatem-razvorot-tarify': {
+    title: 'Fondovyye rynki: Dow +1325 punktov, zatem razvorot na fone obvineniy Irana -- Tramp ob\'yavil novyye tarify',
+    date: '2026-04-09',
+    category: 'Ekonomika',
+    locale: 'ru',
+    content: `Fondovyye rynki SShA perezhili dramaticheskiy razvorot za dva dnya. 8 aprelya rynki reezko vyrosli na optimizme ot peremiriya. K 9 aprelya eti dostiyzheniya nachali stehochivat\'sya, kogda Iran obvinl SShA v narusheniyakh, a tseny na neft\' vernulis\' vyshe $100.
+
+## 8 aprelya: Moshhnyy rost
+
+Dow Jones vyros na 1325 punktov (+2,9%), S&P 500 podnalsya na 2,5%, Nasdaq vyros na 2,8%. Optimizm ot peremiriya privyol k shirokomu ralli. Tekhnologicheskiye i potrebitel\'skiye aktsii lidirovesali, togda kak energeticheskiye nazvaniya snachala snizhalis\'.
+
+## 9 aprelya: Razvorot
+
+Obvineniya Irana v narushenii peremiriya SShA, udary Izrailya po Livanu i rost tsen na neft\' vyshe $100 sprvotsirovali rezkoey snizheniyr. Investory pereshli k zashchitnym pozitsiyam, pokupaya zoloto, kaznaacheyskiye obligatsii i stabil\'nyye aktsii.
+
+## Novyye tarifnyye ugrozy Trampa
+
+Prezident Tramp ob\'yavil 50% poshliny na stal\', alyuminiy i med\', a takzhe 100% poshliny na farmatsevticheskuyu produktsiyu. On takzhe prigrozil 50% poshlinami stranam, postavlyayushchim oruzhiye Iranu. Eti agressivnyye torgovyye mery dobavili dopolnitel\'nuyu neopredelyonnost\'.
+
+## Global\'nyy prognoz
+
+Yevropeyskiye i aziatskiye rynki takzhe perezhili volatil\'nyye sessii. Zoloto i indeks dollara SShA vyrosli kak aktivy-ubezhishcha. Analitiki prognoziruyut sokhraneniye kratkosrochnoy volatil\'nosti.`,
+  },
+
+  // ========== 2026-04-08 ==========
   'seudiyye-sherq-qerb-neft-boru-xetti-iran-dron-zerbesi-8-aprel': {
     title: 'Səudiyyə Şərq-Qərb boru xəttinə İran dron zərbəsi: 7 milyon barrel',
     date: '2026-04-08',
@@ -570,114 +1113,6 @@ EIA petrol ve benzin fiyat tahminlerini keskin biçimde yukarı revize etti. ABD
 ## Глобальные последствия
 
 EIA резко пересмотрело прогнозы цен на нефть и бензин в сторону повышения. Ожидается, что цены на бензин в США в этом месяце достигнут пика в $4,30 за галлон. По мере приближения дедлайна в 20:00 по восточному времени США, мировые рынки готовятся к значительной волатильности этой ночью.`,
-  },
-  'chempionlar-liqasi-ceyrek-final-8-aprel': {
-    title: 'Çempionlar Liqası 1/4 finalı bu axşam: Barselona-Atletiko və PSJ-Liverpul',
-    date: '2026-04-08',
-    category: 'Dünya',
-    locale: 'az',
-    content: `UEFA Çempionlar Liqasının 1/4 final mərhələsinin ilk oyun günü bu axşam davam edir. 8 aprel, çərşənbə günü iki böyük mübarizə futbolsevərləri gözləyir: Barselona Kamp Nouda Atletiko Madridi qəbul edir, PSJ isə Parc de Pransda Liverpulu qarşılayır. Hər iki qarşılaşma mövsümün ən böyük futbol hadisələrindən biri olacaq.
-
-## Barselona - Atletiko Madrid
-
-Kamp Nouda keçiriləcək bu klassik İspaniya dərbisi Barselonanın evdə mövsümdə göstərdiyi güclü forma ilə Atletikonun möhkəm müdafiəsi arasında mübarizəyə çevriləcək. Barselona Çempionlar Liqasında son illərdə üzləşdiyi böhranı arxada qoyub final mərhələsinə böyük ümidlərlə gəlir. Diyeqo Simeonenin Atletikosu isə mövsümün ən effektiv qol balansı ilə bu oyuna qonaq kimi gəlir.
-
-## PSJ - Liverpul
-
-Parc de Pransda keçiriləcək ikinci nəhəng matçda Paris Sent-Jermen Premyer Liqasının liderlərindən Liverpulu qəbul edir. PSJ bu mövsüm Çempionlar Liqasında güclü oyun nümayiş etdirib. Liverpul isə Arne Slotun komandası kimi titul yarışında qala bilər. Hər iki komandanın bombardir hücumçuları — PSJ-də Dembele və Liverpulda Salah — mövsümə möhtəşəm performans ilə daxil olublar.
-
-## Cavab matçları
-
-Hər iki cüt cavab matçı 14-15 aprel tarixlərində oynanılacaq. Yarımfinalda hansı cütün iştirak edəcəyi bu həftəlik oyun sonrası tam bəlli olmayacaq. Çempionlar Liqası final oyunu bu il Budapeştdə keçiriləcək.
-
-## Barcelona - Atletico oyununu izləyin
-
-Oyunun tam baxışını burada izləyə bilərsiniz: [YouTube-da bax](https://www.youtube.com/watch?v=Y_sVL33_drM)
-
-## PSJ - Liverpul oyununu izləyin
-
-Oyunun tam baxışını burada izləyə bilərsiniz: [YouTube-da bax](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
-  },
-  'en-champions-league-quarter-final-april-8': {
-    title: 'Champions League Quarter-Finals Tonight: Barcelona-Atletico and PSG-Liverpool',
-    date: '2026-04-08',
-    category: 'World',
-    locale: 'en',
-    content: `The UEFA Champions League quarter-final first leg continues tonight. On Wednesday, April 8, two heavyweight clashes await football fans: Barcelona hosts Atletico Madrid at Camp Nou, while Paris Saint-Germain welcomes Liverpool to Parc des Princes. Both ties are set to be among the most consequential matches of the season.
-
-## Barcelona vs Atletico Madrid
-
-The Camp Nou will host a classic Spanish derby where Barcelona\'s formidable home form this season meets Atletico\'s disciplined defensive structure. Barcelona arrives hoping to bury the Champions League doubts of recent years, with Lamine Yamal leading a confident attack. Diego Simeone\'s Atletico, boasting one of the most efficient goal differentials in Europe, travels to Catalonia as the underdog but with a proven knockout pedigree.
-
-## PSG vs Liverpool
-
-At Parc des Princes, Paris Saint-Germain takes on Premier League pace-setters Liverpool. PSG has displayed vintage Champions League form this campaign, while Arne Slot\'s Liverpool remains firmly in the title hunt in England. The attacking firepower on both sides — Dembele for PSG and Salah for Liverpool — promises fireworks. Both managers face tough tactical calls balancing attack and defensive solidity.
-
-## The Second Legs
-
-Return fixtures will be played on April 14 and 15, with the semi-final pairings not fully confirmed until after next week\'s games. The Champions League final is scheduled for Budapest in June. Every quarter-finalist believes they have a genuine chance of lifting the trophy this year.
-
-## Watch Barcelona vs Atletico match
-
-You can watch the full match here: [Watch on YouTube](https://www.youtube.com/watch?v=Y_sVL33_drM)
-
-## Watch PSG vs Liverpool match
-
-You can watch the full match here: [Watch on YouTube](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
-  },
-  'tr-sampiyonlar-ligi-ceyrek-final-8-nisan': {
-    title: 'Şampiyonlar Ligi Çeyrek Final Bu Akşam: Barcelona-Atletico ve PSG-Liverpool',
-    date: '2026-04-08',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `UEFA Şampiyonlar Ligi çeyrek final ilk maçları bu akşam devam ediyor. 8 Nisan Çarşamba günü iki büyük karşılaşma futbolseverleri bekliyor: Barcelona, Camp Nou\'da Atlético Madrid\'i ağırlıyor, Paris Saint-Germain ise Parc des Princes\'te Liverpool\'u kabul ediyor. Her iki eşleşme de sezonun en kritik maçları arasında yer alıyor.
-
-## Barcelona - Atlético Madrid
-
-Camp Nou\'da oynanacak bu klasik İspanyol derbisinde Barcelona\'nın bu sezonki güçlü iç saha formu ile Atlético\'nun disiplinli savunma anlayışı karşı karşıya gelecek. Barcelona son yılların Şampiyonlar Ligi hayal kırıklıklarını geride bırakmayı umuyor ve Lamine Yamal\'ın öncülüğündeki güvenli bir hücum hattıyla sahaya çıkıyor. Diego Simeone\'nin Atlético\'su ise Avrupa\'nın en verimli gol averajlarından birine sahip ve elemelerdeki tecrübesiyle Katalonya\'ya meydan okuyor.
-
-## PSG - Liverpool
-
-Parc des Princes\'te Paris Saint-Germain, Premier Lig\'in en iddialı takımlarından Liverpool\'u ağırlıyor. PSG bu sezon klasik Şampiyonlar Ligi formunu sergiliyor, Arne Slot yönetimindeki Liverpool ise İngiltere\'de hâlâ şampiyonluk yarışında. İki tarafın hücum gücü — PSG\'den Dembélé ve Liverpool\'dan Salah — sahada havai fişek gösterisi vaat ediyor. Her iki teknik direktör de saldırı ve savunma dengesi konusunda kritik kararlar verecek.
-
-## Rövanş Maçları
-
-Rövanş karşılaşmaları 14 ve 15 Nisan tarihlerinde oynanacak. Yarı final eşleşmeleri önümüzdeki haftaki oyunların ardından netleşecek. Şampiyonlar Ligi finali Haziran ayında Budapeşte\'de oynanacak.
-
-## Barcelona - Atletico maçını izleyin
-
-Maçın tamamını buradan izleyebilirsiniz: [YouTube\'da izle](https://www.youtube.com/watch?v=Y_sVL33_drM)
-
-## PSG - Liverpool maçını izleyin
-
-Maçın tamamını buradan izleyebilirsiniz: [YouTube\'da izle](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
-  },
-  'ru-liga-chempionov-chetvertfinal-8-aprelya': {
-    title: 'Четвертьфинал Лиги чемпионов сегодня: Барселона-Атлетико и ПСЖ-Ливерпуль',
-    date: '2026-04-08',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Сегодня вечером продолжаются первые матчи четвертьфинала Лиги чемпионов УЕФА. В среду, 8 апреля, любителей футбола ждут две масштабные битвы: Барселона принимает Атлетико Мадрид на Камп Ноу, а Пари Сен-Жермен встречает Ливерпуль на Парк де Пренс. Обе пары обещают стать одними из самых важных матчей сезона.
-
-## Барселона - Атлетико Мадрид
-
-На Камп Ноу состоится классическое испанское дерби, где внушительная домашняя форма Барселоны в этом сезоне столкнётся с дисциплинированной обороной Атлетико. Каталонцы надеются похоронить сомнения последних лет в Лиге чемпионов, имея в атаке уверенного Ламина Ямаля. Атлетико Диего Симеоне, обладающий одной из лучших разниц забитых и пропущенных мячей в Европе, приезжает в Каталонию в роли аутсайдера, но с проверенным опытом в плей-офф.
-
-## ПСЖ - Ливерпуль
-
-На Парк де Пренс Пари Сен-Жермен принимает лидеров Премьер-лиги Ливерпуль. ПСЖ демонстрирует в этом сезоне классическую форму Лиги чемпионов, а Ливерпуль Арне Слота по-прежнему борется за чемпионство в Англии. Атакующая мощь обеих команд — Дембеле у ПСЖ и Салах у Ливерпуля — обещает фейерверк. Обоим тренерам предстоит принимать сложные тактические решения.
-
-## Ответные матчи
-
-Ответные встречи состоятся 14 и 15 апреля. Пары полуфинала окончательно определятся только после игр следующей недели. Финал Лиги чемпионов в этом году пройдёт в Будапеште в июне. Каждый из участников четвертьфинала верит, что у него есть реальный шанс поднять трофей.
-
-## Смотреть матч Барселона - Атлетико
-
-Полный матч можно посмотреть здесь: [Смотреть на YouTube](https://www.youtube.com/watch?v=Y_sVL33_drM)
-
-## Смотреть матч ПСЖ - Ливерпуль
-
-Полный матч можно посмотреть здесь: [Смотреть на YouTube](https://www.youtube.com/watch?v=8RVV1-D0dEo)`,
   },
   'azerbaycan-turkiye-huquqi-emekdashliq-prokurorlar-gorusu': {
     title: 'Azərbaycan-Türkiyə hüquqi əməkdaşlığı güclənir: prezident Aliyev Türkiyə prokurorunu qəbul etdi',
@@ -1415,559 +1850,6 @@ Kanye West Birleşik Krallık Yahudi topluluğuyla görüşmeyi teklif etti, anc
 
 Канье Уэст предложил встретиться с еврейской общиной Великобритании, но запрет остаётся в силе. Ранее рэпер сталкивался с проблемами выступлений в нескольких странах. Инцидент открыл новые дискуссии в музыкальной индустрии о языке ненависти, ответственности артистов и сложности международных гастролей в нынешнем политическом климате.`,
   },
-  'iran-abs-danisiqlar-son-tarix-7-aprel': {
-    title: 'İran-ABŞ gərginliyi: Trampın 7 aprel son tarixi yaxınlaşır, bazarlar dalğalanır',
-    date: '2026-04-07',
-    category: 'Dünya',
-    locale: 'az',
-    content: `ABŞ prezidenti Donald Tramp İrana qarşı 7 aprel son tarixini təyin edib. Hörmüz boğazının açılması tələb olunur, əks halda İranın enerji infrastrukturuna kütləvi hücumlar hədələnir. Pakistan vasitəçiliyi ilə hazırlanan "İslamabad Razılaşması" ümid yaradır.
-
-## Son tarix və hədələr
-
-Tramp bəyan edib: "Əgər razılaşma olmazsa, oradakı hər şeyi partladacağam." O, İranın 48 saat ərzində sazişə gəlməsini tələb edib. Boğazın bağlanması qlobal neft tədarükünə ciddi zərbə vurub.
-
-## Pakistan vasitəçiliyi
-
-Pakistan tərəfindən hazırlanan "İslamabad Razılaşması" adlı 45 günlük atəşkəs planı hər iki tərəfə təqdim edilib. Bu plana görə Hörmüz boğazı dərhal açılacaq, 15-20 gün ərzində daha geniş razılaşma — İranın nüvə öhdəlikləri, sanksiyaların yüngülləşdirilməsi və dondurulmuş aktivlərin azad edilməsi müzakirə olunacaq.
-
-## Bazarların reaksiyası
-
-6 aprel tarixində qlobal bazarlar kəskin yüksəlib. Brent nefti 109 dollara, WTI 104 dollara düşüb. S&P 500 həftəlik 3,4% artıb. Aviasiya sektoru — Delta Air Lines və United Airlines səhmləri xüsusilə yüksəlib, çünki reaktiv yanacaq fyuçersləri geri çəkilib.
-
-## Nəticə
-
-Son tarix yaxınlaşdıqca bazarlar böyük dalğalanma gözləyir. Diplomatik həllin olub-olmayacağı bu gecə bəlli olacaq.`,
-  },
-  'en-iran-us-negotiations-april-7-deadline': {
-    title: 'Iran-US Tensions Peak: Trump\'s April 7 Deadline Looms as Markets Swing on Ceasefire Hopes',
-    date: '2026-04-07',
-    category: 'World',
-    locale: 'en',
-    content: `US President Donald Trump has set April 7 as the deadline for Iran to reopen the Strait of Hormuz, threatening massive strikes on Iranian energy infrastructure if no deal is reached. A Pakistani-mediated ceasefire proposal offers a glimmer of hope.
-
-## The Ultimatum
-
-"If they don't make a deal, I'm blowing up everything over there," Trump declared, giving Iran 48 hours to reach an agreement. The closure of the Strait of Hormuz — the world's most vital oil shipping lane — has disrupted global energy supplies for weeks.
-
-## The Islamabad Accord
-
-Pakistan has proposed a 45-day ceasefire framework dubbed the "Islamabad Accord." Under this plan, the Strait of Hormuz would reopen immediately, with 15 to 20 days allocated to finalize a broader settlement including Iranian nuclear commitments, sanctions relief, and the release of frozen assets.
-
-## Market Response
-
-Global markets surged on April 6 as investors bet on a diplomatic resolution. Brent crude eased to approximately $109 per barrel, while WTI retreated toward $104. The S&P 500 posted a 3.4% weekly gain. Airlines like Delta and United saw sharp gains as jet fuel futures retreated from doubled levels.
-
-## What's Next
-
-Markets brace for significant volatility as the Tuesday evening deadline approaches. The outcome of negotiations will determine whether the crisis escalates or de-escalates.`,
-  },
-  'tr-iran-abd-muzakereleri-7-nisan-son-tarih': {
-    title: 'İran-ABD Gerilimi Zirveye Ulaştı: Trump\'ın 7 Nisan Son Tarihi ve Ateşkes Umudu',
-    date: '2026-04-07',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `ABD Başkanı Donald Trump, İran'a Hürmüz Boğazı'nı yeniden açması için 7 Nisan son tarihini belirledi. Anlaşma sağlanamazsa İran'ın enerji altyapısına büyük çaplı saldırılar düzenleyeceğini açıkladı. Pakistan arabuluculuğundaki "İslamabad Anlaşması" umut veriyor.
-
-## Ültimatom
-
-Trump "Anlaşma yapmazlarsa oradaki her şeyi havaya uçuracağım" dedi ve İran'a 48 saat süre tanıdı. Dünyanın en kritik petrol taşımacılık güzergahı olan Hürmüz Boğazı'nın kapatılması küresel enerji arzını ciddi şekilde aksattı.
-
-## İslamabad Anlaşması
-
-Pakistan tarafından hazırlanan 45 günlük ateşkes çerçevesi "İslamabad Anlaşması" olarak adlandırıldı. Bu plana göre Hürmüz Boğazı derhal açılacak, 15-20 gün içinde İran'ın nükleer taahhütleri, yaptırımların hafifletilmesi ve dondurulan varlıkların serbest bırakılması konularında kapsamlı bir anlaşma sonuçlandırılacak.
-
-## Piyasaların Tepkisi
-
-6 Nisan'da küresel piyasalar güçlü bir yükseliş yaşadı. Brent petrolü varil başına 109 dolara, WTI ise 104 dolara geriledi. S&P 500 haftalık bazda %3,4 arttı. Havayolu şirketleri Delta Air Lines ve United Airlines'ın hisseleri, jet yakıtı vadeli işlemlerinin geri çekilmesiyle sert yükseldi.
-
-## Sonuç
-
-Son tarih yaklaştıkça piyasalarda büyük dalgalanma bekleniyor. Müzakerelerin sonucu bu gece belli olacak.`,
-  },
-  'ru-iran-ssha-peregovory-7-aprelya-dedlajn': {
-    title: 'Кризис Иран-США: Дедлайн Трампа 7 апреля приближается, рынки лихорадит',
-    date: '2026-04-07',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Президент США Дональд Трамп установил 7 апреля крайний срок для Ирана по открытию Ормузского пролива, угрожая массированными ударами по энергетической инфраструктуре страны. Пакистанское посредничество в рамках «Исламабадского соглашения» даёт проблеск надежды.
-
-## Ультиматум
-
-«Если они не заключат сделку, я взорву там всё», — заявил Трамп, дав Ирану 48 часов на достижение соглашения. Закрытие Ормузского пролива — важнейшего нефтяного маршрута в мире — на протяжении недель нарушает глобальные поставки энергоносителей.
-
-## Исламабадское соглашение
-
-Пакистан предложил 45-дневный план прекращения огня под названием «Исламабадское соглашение». Согласно плану, Ормузский пролив откроется немедленно, а в течение 15–20 дней будет завершено более широкое урегулирование, включающее ядерные обязательства Ирана, смягчение санкций и разморозку активов.
-
-## Реакция рынков
-
-6 апреля мировые рынки резко выросли на ожиданиях дипломатического решения. Нефть Brent откатилась к $109 за баррель, WTI — к $104. S&P 500 прибавил 3,4% за неделю. Акции авиакомпаний Delta и United резко подорожали на фоне снижения фьючерсов на авиационное топливо.
-
-## Перспективы
-
-По мере приближения крайнего срока рынки готовятся к значительной волатильности. Исход переговоров определит, пойдёт ли кризис на спад или обострится.`,
-  },
-  'pakistan-sel-felaketi-50-olum-xayber-paxtunxva': {
-    title: 'Pakistanın Xayber Paxtunxva əyalətində sel: 50 ölü, 111 yaralı',
-    date: '2026-04-07',
-    category: 'Dünya',
-    locale: 'az',
-    content: `Pakistanın şimal-qərbindəki Xayber Paxtunxva əyalətində 25 martdan bəri davam edən güclü yağışlar nəticəsində ən azı 50 nəfər həlak olub, 111 nəfər yaralanıb. Ölənlər arasında 26 uşaq, 17 kişi və 7 qadın var.
-
-## Təsirlənən bölgələr
-
-Fəlakət Abbottabad, Kohat, Peşəvər, Novşera, Mansehra, Bataqram, Kurram, Dera İsmail Xan, Bannu, Hanqu, Svat, Malakand, Dir, Çarsadda, Mardan, Şanqla, Buner, Yuxarı Kohistan, Aşağı Kohistan və Torqhar rayonlarını əhatə edib.
-
-## Dağıntılar
-
-Cəmi 470 ev zərər görüb. Bunlardan 409-u qismən, 61-i isə tamamilə dağılıb. Xilasetmə əməliyyatları davam edir. Peşəvərdə 120-dən çox insan xilas edilib.
-
-## Karaçi rekordu
-
-Karaçi şəhəri aprel ayının ən yüksək yağış rekordunu qeydə alıb. Ölkə üzrə yağışlarla əlaqədar ölüm sayı keçən aydan bəri 70-ə yaxınlaşır.
-
-## Gələcək proqnoz
-
-Meteoroloqlar 16-19 aprel tarixlərində yeni yağış dalğası gözlədiklərini açıqlayıb. Əyalətdə sel xəbərdarlığı elan edilib.`,
-  },
-  'en-pakistan-floods-50-dead-khyber-pakhtunkhwa': {
-    title: 'Pakistan Floods Kill 50 in Khyber Pakhtunkhwa as Heavy Rains Continue',
-    date: '2026-04-07',
-    category: 'World',
-    locale: 'en',
-    content: `Heavy rains in Pakistan's northwestern Khyber Pakhtunkhwa province have killed at least 50 people and injured 111 others since March 25. The victims include 26 children, 17 men, and 7 women.
-
-## Affected Regions
-
-The disaster has struck across 20 districts including Abbottabad, Kohat, Peshawar, Nowshera, Mansehra, Battagram, Kurram, Dera Ismail Khan, Bannu, Hangu, Swat, Malakand, Dir, Charsadda, Mardan, Shangla, Buner, Upper Kohistan, Lower Kohistan, and Torghar.
-
-## Property Damage
-
-A total of 470 houses have been damaged, with 409 sustaining partial damage and 61 completely destroyed. Rescue operations continue across the province. Over 120 people have been rescued in Peshawar alone.
-
-## Record Rainfall in Karachi
-
-Karachi recorded its highest-ever April rainfall as the nationwide death toll from rain-related incidents nears 70 since last month. Additional fatalities have been reported in Punjab province.
-
-## Weather Forecast
-
-Meteorologists warn of another spell of heavy rainfall expected from April 16 to 19 across the province. Flood alerts have been issued for low-lying areas near rivers and streams. Afghanistan has also been heavily affected, with combined deaths across both countries exceeding 121 in two weeks.`,
-  },
-  'tr-pakistan-sel-felaketi-50-olu-hayber-pahtunhva': {
-    title: 'Pakistan\'ın Hayber Pahtunhva Eyaletinde Sel Felaketi: 50 Ölü, 111 Yaralı',
-    date: '2026-04-07',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `Pakistan'ın kuzeybatısındaki Hayber Pahtunhva eyaletinde 25 Mart'tan bu yana süren şiddetli yağışlar sonucunda en az 50 kişi hayatını kaybetti, 111 kişi yaralandı. Hayatını kaybedenler arasında 26 çocuk, 17 erkek ve 7 kadın bulunuyor.
-
-## Etkilenen Bölgeler
-
-Felaket, Abbottabad, Kohat, Peşaver, Novşera, Mansehra, Battagram, Kurram, Dera İsmail Han, Bannu, Hangu, Svat, Malakand, Dir, Çarsadda, Mardan, Shangla, Buner, Yukarı Kohistan, Aşağı Kohistan ve Torghar olmak üzere 20 ilçeyi etkisi altına aldı.
-
-## Maddi Hasar
-
-Toplam 470 ev hasar gördü. Bunlardan 409'u kısmen, 61'i ise tamamen yıkıldı. Kurtarma operasyonları devam ediyor. Yalnızca Peşaver'de 120'den fazla kişi kurtarıldı.
-
-## Karaçi'de Rekor Yağış
-
-Karaçi, Nisan ayının en yüksek yağış rekorunu kırdı. Ülke genelinde geçen aydan bu yana yağışla ilişkili ölüm sayısı 70'e yaklaşıyor.
-
-## Hava Tahmini
-
-Meteorolojistler, 16-19 Nisan tarihlerinde eyalette yeni bir yağış dalgası beklediklerini açıkladı. Alçak bölgelerde sel uyarısı yayınlandı. Afganistan da ciddi şekilde etkileniyor; iki ülkedeki toplam can kaybı iki haftada 121'i aştı.`,
-  },
-  'ru-pakistan-navodneniya-50-pogibshih-hajber-pahtunhva': {
-    title: 'Наводнения в Пакистане: 50 погибших в провинции Хайбер-Пахтунхва',
-    date: '2026-04-07',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Сильные дожди в северо-западной провинции Пакистана Хайбер-Пахтунхва унесли жизни не менее 50 человек и ранили 111 с 25 марта. Среди погибших — 26 детей, 17 мужчин и 7 женщин.
-
-## Пострадавшие районы
-
-Стихия затронула 20 районов, включая Абботтабад, Кохат, Пешавар, Новшеру, Мансехру, Баттаграм, Куррам, Дера-Исмаил-Хан, Банну, Хангу, Сват, Малаканд, Дир, Чарсадду, Мардан, Шангла, Бунер, Верхний и Нижний Кохистан и Торгхар.
-
-## Ущерб
-
-Всего повреждено 470 домов: 409 частично и 61 полностью разрушен. Спасательные операции продолжаются. Только в Пешаваре спасено более 120 человек.
-
-## Рекорд осадков в Карачи
-
-В Карачи зафиксирован рекордный уровень осадков за всю историю апрельских наблюдений. Общее число жертв ливней по стране с прошлого месяца приближается к 70.
-
-## Прогноз погоды
-
-Метеорологи предупреждают о новой волне ливней с 16 по 19 апреля. Объявлено предупреждение о наводнении в низменных районах. Афганистан также сильно пострадал — совокупное число жертв в двух странах за две недели превысило 121.`,
-  },
-  'opec-plus-may-hasilat-artimi-206-min-barel': {
-    title: 'OPEC+ mayda neft hasilatını 206 min barel artıracaq: İran böhranı fonunda qərar',
-    date: '2026-04-07',
-    category: 'İqtisadiyyat',
-    locale: 'az',
-    content: `Səkkiz aparıcı OPEC+ ölkəsi — Səudiyyə Ərəbistanı, Rusiya, İraq, BƏƏ, Küveyt, Qazaxıstan, Əlcəzair və Oman — 5 apreldə keçirilən virtual görüşdə may ayında neft hasilatını gündəlik 206 min barel artırmaq qərarına gəlib.
-
-## Qərarın konteksti
-
-Artım 2023-cü ilin aprelində elan edilmiş gündəlik 1,65 milyon barel könüllü kəsintinin mərhələli ləğvinin bir hissəsidir. Qərar İran müharibəsi fonunda qlobal neft bazarlarının gərgin dövrünə düşür.
-
-## Hörmüz boğazı faktoru
-
-Hörmüz boğazının bağlanması qlobal neft daşımalarına ciddi zərbə vurub. Lakin 206 min barel/gün artım boğazın bağlanması nəticəsində itən tədarükün cəmi 2%-dən azını kompensasiya edə bilir. Bu, OPEC+-ın çatışmazlığı aradan qaldırmaq imkanının məhdud olduğunu göstərir.
-
-## Neft qiymətləri
-
-Brent nefti hazırda 109 dollar/barel ətrafında, WTI isə 104 dollar səviyyəsində qərar tutub. Atəşkəs ümidləri qiymətləri bir qədər aşağı çəksə də, İran gərginliyinin davam etməsi qiymətləri yüksək saxlayır.
-
-## İraq mövqeyi
-
-İraq may 2026 kvotalarında ilk üç OPEC+ istehsalçısı arasında yer alır. Ölkə hasilat artımından ən çox faydalanan tərəflərdən biridir.`,
-  },
-  'en-opec-plus-may-production-increase-206k-barrels': {
-    title: 'OPEC+ to Boost Oil Output by 206,000 Barrels Per Day in May Amid Iran Crisis',
-    date: '2026-04-07',
-    category: 'Economy',
-    locale: 'en',
-    content: `Eight leading OPEC+ nations — Saudi Arabia, Russia, Iraq, UAE, Kuwait, Kazakhstan, Algeria, and Oman — agreed during a virtual meeting on April 5 to increase oil production by 206,000 barrels per day starting in May 2026.
-
-## Context of the Decision
-
-The increase is part of a gradual phase-out of the 1.65 million barrels per day voluntary cuts announced in April 2023. The decision comes during a challenging period for global oil markets amid the ongoing US-Israeli conflict with Iran.
-
-## The Hormuz Factor
-
-The Strait of Hormuz — the world's most vital oil shipping lane — has been effectively closed since the conflict began. However, the planned 206,000 bpd increase represents less than 2% of the supply disrupted by the closure, highlighting OPEC+'s limited ability to offset the shortfall.
-
-## Oil Prices
-
-Brent crude currently hovers around $109 per barrel, while WTI trades near $104. Ceasefire hopes have pulled prices back slightly, but ongoing Iran tensions keep them elevated.
-
-## Iraq's Position
-
-Iraq ranks among the top three OPEC+ producers under May 2026 quotas. The country stands to benefit significantly from the production increase. Analysts note that the modest increase signals OPEC+ caution in an uncertain geopolitical environment.`,
-  },
-  'tr-opec-plus-mayis-uretim-artisi-206-bin-varil': {
-    title: 'OPEC+ Mayıs\'ta Petrol Üretimini Günlük 206 Bin Varil Artıracak',
-    date: '2026-04-07',
-    category: 'Ekonomi',
-    locale: 'tr',
-    content: `Sekiz önde gelen OPEC+ ülkesi — Suudi Arabistan, Rusya, Irak, BAE, Kuveyt, Kazakistan, Cezayir ve Umman — 5 Nisan'daki sanal toplantıda Mayıs ayında petrol üretimini günlük 206 bin varil artırma kararı aldı.
-
-## Kararın Bağlamı
-
-Artış, Nisan 2023'te açıklanan günlük 1,65 milyon varillik gönüllü kesintinin aşamalı olarak kaldırılmasının bir parçası. Karar, İran ile ABD-İsrail çatışmasının sürdüğü zorlu bir dönemde alındı.
-
-## Hürmüz Faktörü
-
-Dünyanın en kritik petrol taşımacılık güzergahı olan Hürmüz Boğazı çatışmanın başlamasından bu yana fiilen kapalı. Ancak planlanan günlük 206 bin varillik artış, boğazın kapatılmasıyla kesintiye uğrayan arzın %2'sinden daha azını karşılayabiliyor.
-
-## Petrol Fiyatları
-
-Brent petrolü şu anda varil başına 109 dolar civarında, WTI ise 104 dolar seviyesinde işlem görüyor. Ateşkes umutları fiyatları bir miktar aşağı çekse de İran gerginliği fiyatları yüksek tutmaya devam ediyor.
-
-## Piyasa Etkisi
-
-Analistler, mütevazı artışın OPEC+'nın belirsiz jeopolitik ortamda temkinli davrandığına işaret ettiğini belirtiyor. Üretim artışının petrol fiyatları üzerindeki etkisi sınırlı kalacak gibi görünüyor.`,
-  },
-  'ru-opec-plus-uvelichenie-dobychi-206-tysyach-barrelej': {
-    title: 'OPEC+ увеличит добычу нефти на 206 тыс. баррелей в сутки в мае',
-    date: '2026-04-07',
-    category: 'Экономика',
-    locale: 'ru',
-    content: `Восемь ведущих стран OPEC+ — Саудовская Аравия, Россия, Ирак, ОАЭ, Кувейт, Казахстан, Алжир и Оман — на виртуальной встрече 5 апреля договорились увеличить добычу нефти на 206 тысяч баррелей в сутки с мая 2026 года.
-
-## Контекст решения
-
-Увеличение является частью постепенной отмены добровольного сокращения на 1,65 млн баррелей в сутки, объявленного в апреле 2023 года. Решение принято в сложный период для мировых нефтяных рынков на фоне продолжающегося конфликта США и Израиля с Ираном.
-
-## Фактор Ормузского пролива
-
-Ормузский пролив — важнейший нефтяной маршрут в мире — фактически закрыт с начала конфликта. Однако запланированное увеличение на 206 тыс. баррелей составляет менее 2% от объёма поставок, нарушенных закрытием пролива, что демонстрирует ограниченные возможности OPEC+ по компенсации дефицита.
-
-## Цены на нефть
-
-Brent торгуется около $109 за баррель, WTI — около $104. Надежды на прекращение огня немного снизили цены, но напряжённость вокруг Ирана удерживает их на высоком уровне.
-
-## Позиция Ирака
-
-Ирак входит в тройку крупнейших производителей OPEC+ по квотам на май 2026 года. Аналитики отмечают, что скромное увеличение добычи сигнализирует об осторожности OPEC+ в условиях геополитической неопределённости.`,
-  },
-  'microsoft-10-milyard-yaponiya-ai-investisiyasi': {
-    title: 'Microsoft Yaponiyaya $10 milyard AI investisiyası elan etdi: Texnologiya, Təhlükəsizlik, Kadr',
-    date: '2026-04-07',
-    category: 'Texnologiya',
-    locale: 'az',
-    content: `Microsoft 2026-2029-cu illər ərzində Yaponiyaya 10 milyard dollar (təqribən 1,6 trilyon yen) investisiya planını elan edib. İnvestisiya üç əsas istiqaməti əhatə edir: Texnologiya, Etimad və Kadr hazırlığı.
-
-## İnvestisiyanın əhatə dairəsi
-
-Plan ölkədaxili infrastrukturun genişləndirilməsini, yerli tərəfdaşlarla əməkdaşlıqla AI infrastruktur imkanlarının artırılmasını, Yaponiya milli qurumları ilə dərin kibertəhlükəsizlik tərəfdaşlığını və 2030-cu ilə qədər 1 milyondan çox mühəndis, developer və işçinin təlimini nəzərdə tutur.
-
-## Tərəfdaşlar
-
-Microsoft AI infrastrukturunu Sakura Internet və telekommunikasiya operatoru SoftBank ilə birgə inkişaf etdirəcək. Yapon şirkətləri GPU və digər hesablama resursları təmin edəcək. Sakura Internet səhmləri xəbərdən sonra 20% yüksəlib.
-
-## Əvvəlki investisiyalar
-
-Bu investisiya Microsoft-un 2024-cü ilin aprelində Yaponiyaya yatırdığı 2,9 milyard dollarlıq investisiyanın davamıdır. Elanlar Microsoft vitse-prezidenti Brad Smitin Tokio səfəri zamanı edilib.
-
-## Qlobal AI yarışı
-
-Qərar Microsoft-un qlobal AI dominantlığını möhkəmləndirmək strategiyasının bir hissəsidir. Yaponiya süni intellekt infrastrukturu üçün böyük tələbat olan bazarlardan biri olaraq qiymətləndirilir.`,
-  },
-  'en-microsoft-10-billion-japan-ai-investment': {
-    title: 'Microsoft Announces $10 Billion AI Investment in Japan: Infrastructure, Cybersecurity, Talent',
-    date: '2026-04-07',
-    category: 'Technology',
-    locale: 'en',
-    content: `Microsoft has announced a $10 billion (approximately 1.6 trillion yen) investment in Japan from 2026 through 2029, built around three pillars: Technology, Trust, and Talent.
-
-## Investment Scope
-
-The commitments include expanding in-country AI infrastructure, collaborating with domestic partners to expand AI infrastructure options, deepening public-private cybersecurity partnerships with Japan's national institutions, and training more than one million engineers, developers, and workers across Japan's most strategically important industries by 2030.
-
-## Key Partnerships
-
-Microsoft will develop AI infrastructure alongside Sakura Internet and telecom operator SoftBank, with the two Japanese entities supplying graphics processing units and other computing resources. Sakura Internet shares jumped 20% following the announcement.
-
-## Building on Prior Investment
-
-The new commitment builds on the $2.9 billion investment Microsoft made in Japan in April 2024. The announcements were made during a visit to Tokyo by Microsoft Vice Chair and President Brad Smith.
-
-## Strategic Significance
-
-The deal positions Microsoft as the dominant AI infrastructure provider in one of the world's largest technology markets. Japan has been identified as a key market with growing demand for AI capabilities across manufacturing, healthcare, and financial services sectors.`,
-  },
-  'tr-microsoft-10-milyar-japonya-ai-yatirimi': {
-    title: 'Microsoft Japonya\'ya 10 Milyar Dolarlık AI Yatırımı Yapacak',
-    date: '2026-04-07',
-    category: 'Teknoloji',
-    locale: 'tr',
-    content: `Microsoft, 2026-2029 yılları arasında Japonya'ya 10 milyar dolar (yaklaşık 1,6 trilyon yen) yatırım yapacağını açıkladı. Yatırım üç temel sütun üzerine inşa edildi: Teknoloji, Güven ve Yetenek.
-
-## Yatırımın Kapsamı
-
-Plan, ülke içi AI altyapısının genişletilmesini, yerli ortaklarla iş birliği yaparak AI altyapı seçeneklerinin artırılmasını, Japonya'nın ulusal kurumlarıyla derinleştirilmiş kamu-özel sektör siber güvenlik ortaklıklarını ve 2030 yılına kadar 1 milyondan fazla mühendisin, geliştiricinin ve çalışanın eğitilmesini kapsıyor.
-
-## Ortaklıklar
-
-Microsoft, AI altyapısını Sakura Internet ve telekomünikasyon operatörü SoftBank ile birlikte geliştirecek. Japon şirketleri GPU ve diğer bilgi işlem kaynakları sağlayacak. Sakura Internet hisseleri açıklamanın ardından %20 yükseldi.
-
-## Önceki Yatırımlar
-
-Bu yatırım, Microsoft'un Nisan 2024'te Japonya'ya yaptığı 2,9 milyar dolarlık yatırımın devamı niteliğinde. Açıklamalar, Microsoft Başkan Yardımcısı Brad Smith'in Tokyo ziyareti sırasında yapıldı.
-
-## Stratejik Önemi
-
-Anlaşma, Microsoft'u dünyanın en büyük teknoloji pazarlarından birinde baskın AI altyapı sağlayıcısı konumuna getiriyor. Japonya üretim, sağlık ve finans sektörlerinde artan AI talebiyle öne çıkıyor.`,
-  },
-  'ru-microsoft-10-mlrd-yaponiya-ai-investicii': {
-    title: 'Microsoft вложит $10 млрд в AI-инфраструктуру Японии',
-    date: '2026-04-07',
-    category: 'Технологии',
-    locale: 'ru',
-    content: `Microsoft объявила об инвестициях в размере $10 млрд (примерно 1,6 трлн иен) в Японию на период 2026–2029 годов. Инвестиции базируются на трёх столпах: Технологии, Доверие и Кадры.
-
-## Объём инвестиций
-
-Планы включают расширение AI-инфраструктуры внутри страны, сотрудничество с японскими партнёрами для развития вычислительных мощностей, углубление государственно-частного партнёрства в сфере кибербезопасности с национальными институтами Японии и обучение более 1 млн инженеров, разработчиков и специалистов в стратегически важных отраслях к 2030 году.
-
-## Партнёрства
-
-Microsoft будет развивать AI-инфраструктуру совместно с Sakura Internet и телеком-оператором SoftBank. Японские компании обеспечат GPU и другие вычислительные ресурсы. Акции Sakura Internet выросли на 20% после объявления.
-
-## Предыдущие инвестиции
-
-Новые обязательства расширяют инвестиции Microsoft в Японию в размере $2,9 млрд, сделанные в апреле 2024 года. Объявления были сделаны во время визита вице-председателя Microsoft Брэда Смита в Токио.
-
-## Стратегическое значение
-
-Сделка укрепляет позиции Microsoft как доминирующего поставщика AI-инфраструктуры на одном из крупнейших технологических рынков мира. Япония выделяется растущим спросом на AI в производстве, здравоохранении и финансовых услугах.`,
-  },
-  'deepseek-v4-1-trilyon-parametr-ai-modeli': {
-    title: 'DeepSeek V4 gəlir: 1 trilyon parametrli açıq mənbə AI modeli Huawei çiplərində işləyəcək',
-    date: '2026-04-07',
-    category: 'Texnologiya',
-    locale: 'az',
-    content: `Çinli süni intellekt şirkəti DeepSeek aprelin sonlarında V4 modelini buraxmağa hazırlaşır. 1 trilyon parametrli bu Mixture-of-Experts modeli açıq mənbə kimi Apache 2.0 lisenziyası altında paylaşılacaq.
-
-## Texniki xüsusiyyətlər
-
-DeepSeek V4 təqribən 1 trilyon ümumi parametrə malikdir, lakin hər token üçün yalnız 37 milyard parametr aktivləşir. Bu, inferens xərclərini V3 səviyyəsində saxlayır. 1 milyon tokenlik kontekst pəncərəsi Engram şərti yaddaş arxitekturası ilə təmin edilir və Needle-in-a-Haystack testində 97% dəqiqlik göstərir.
-
-## Multimodal imkanlar
-
-V3-dən fərqli olaraq, V4 mətn, şəkil və video yaratmanı əvvəlcədən təlim mərhələsində inteqrasiya edir. Bu, daha əlaqəli cross-modal düşünmə imkanı verir.
-
-## Huawei çipləri
-
-Reuters 4 apreldə təsdiq edib ki, DeepSeek V4 Huawei Ascend 950PR çiplərində işləyəcək. Bu, Çin yarımkeçirici infrastrukturunda qurulmuş ilk sərhəd AI modelidir.
-
-## Qlobal rəqabət
-
-DeepSeek V4 OpenAI-nin GPT-5.4, Anthropic-in Claude Mythos 5 və Google-un Gemini modelləri ilə rəqabət edəcək. Açıq mənbə olması onu xüsusilə fərqləndirən amildir. SWE-bench-də 81% nəticə göstərdiyi bildirilir.`,
-  },
-  'en-deepseek-v4-trillion-parameter-open-source-ai': {
-    title: 'DeepSeek V4 Incoming: Trillion-Parameter Open-Source AI Model to Run on Huawei Chips',
-    date: '2026-04-07',
-    category: 'Technology',
-    locale: 'en',
-    content: `Chinese AI company DeepSeek is preparing to release its V4 model later in April. The trillion-parameter Mixture-of-Experts model will be released as open source under the Apache 2.0 license, marking a major milestone in open AI development.
-
-## Technical Specifications
-
-DeepSeek V4 scales to approximately 1 trillion total parameters but activates only 37 billion per token, keeping inference costs comparable to V3. A 1-million-token context window is powered by the Engram conditional memory architecture, achieving 97% accuracy on the Needle-in-a-Haystack benchmark at million-token scale.
-
-## Native Multimodality
-
-Unlike models that bolt on vision capabilities, V4 integrates text, image, and video generation during pre-training, enabling more coherent cross-modal reasoning.
-
-## Huawei Hardware
-
-Reuters confirmed on April 4 that DeepSeek V4 will run on Huawei's Ascend 950PR chips. This represents the first frontier AI model built to run on Chinese semiconductor infrastructure, a significant development amid ongoing US-China tech competition.
-
-## Competitive Landscape
-
-DeepSeek V4 will compete with OpenAI's GPT-5.4, Anthropic's Claude Mythos 5, and Google's Gemini models. Its open-source nature is a key differentiator. The model reportedly scores 81% on SWE-bench, signaling strong performance in software engineering tasks.`,
-  },
-  'tr-deepseek-v4-trilyon-parametre-acik-kaynak-ai': {
-    title: 'DeepSeek V4 Geliyor: Trilyon Parametreli Açık Kaynak AI Modeli Huawei Çiplerinde Çalışacak',
-    date: '2026-04-07',
-    category: 'Teknoloji',
-    locale: 'tr',
-    content: `Çinli yapay zeka şirketi DeepSeek, V4 modelini Nisan sonunda piyasaya sürmeye hazırlanıyor. Trilyon parametreli bu Mixture-of-Experts modeli Apache 2.0 lisansı altında açık kaynak olarak paylaşılacak.
-
-## Teknik Özellikler
-
-DeepSeek V4 yaklaşık 1 trilyon toplam parametreye sahip ancak her token başına yalnızca 37 milyar parametre aktifleştiriyor. Bu, çıkarım maliyetlerini V3 düzeyinde tutuyor. Engram koşullu bellek mimarisiyle desteklenen 1 milyon tokenlik bağlam penceresi, milyon token ölçeğinde Needle-in-a-Haystack testinde %97 doğruluk sağlıyor.
-
-## Doğal Çok Modluluk
-
-Görüntü yeteneklerini sonradan ekleyen modellerin aksine, V4 metin, görüntü ve video oluşturmayı ön eğitim aşamasında entegre ediyor. Bu, daha tutarlı çapraz modal akıl yürütme imkanı sağlıyor.
-
-## Huawei Donanımı
-
-Reuters, 4 Nisan'da DeepSeek V4'ün Huawei Ascend 950PR çiplerinde çalışacağını doğruladı. Bu, Çin yarı iletken altyapısında çalışmak üzere tasarlanan ilk sınır AI modeli oluyor.
-
-## Rekabet Ortamı
-
-DeepSeek V4, OpenAI'nin GPT-5.4'ü, Anthropic'in Claude Mythos 5'i ve Google'ın Gemini modelleriyle rekabet edecek. Açık kaynak olması onu özellikle farklı kılıyor. SWE-bench'te %81 puan aldığı bildiriliyor.`,
-  },
-  'ru-deepseek-v4-trillion-parametrov-otkrytaja-model': {
-    title: 'DeepSeek V4: Триллион-параметровая open-source AI-модель будет работать на чипах Huawei',
-    date: '2026-04-07',
-    category: 'Технологии',
-    locale: 'ru',
-    content: `Китайская компания DeepSeek готовится выпустить модель V4 в конце апреля. Модель с триллионом параметров на архитектуре Mixture-of-Experts будет распространяться как открытый исходный код под лицензией Apache 2.0.
-
-## Технические характеристики
-
-DeepSeek V4 масштабируется примерно до 1 триллиона параметров, но активирует лишь 37 миллиардов на один токен, сохраняя стоимость инференса на уровне V3. Контекстное окно в 1 миллион токенов реализовано на архитектуре условной памяти Engram, достигая 97% точности в тесте Needle-in-a-Haystack на миллионном масштабе.
-
-## Нативная мультимодальность
-
-В отличие от моделей, к которым зрительные способности добавляются позже, V4 интегрирует генерацию текста, изображений и видео на этапе предобучения, обеспечивая более связное межмодальное рассуждение.
-
-## Чипы Huawei
-
-Reuters подтвердил 4 апреля, что DeepSeek V4 будет работать на чипах Huawei Ascend 950PR. Это первая фронтирная AI-модель, созданная для работы на китайской полупроводниковой инфраструктуре.
-
-## Конкурентная среда
-
-DeepSeek V4 будет конкурировать с GPT-5.4 от OpenAI, Claude Mythos 5 от Anthropic и моделями Gemini от Google. Открытый исходный код — ключевое отличие. Модель показывает 81% на SWE-bench, что демонстрирует высокую производительность в задачах разработки ПО.`,
-  },
-  'umumdunya-saglamliq-gunu-2026-elm-ile-birge': {
-    title: 'Ümumdünya Sağlamlıq Günü 2026: "Sağlamlıq üçün birlikdə. Elmlə birlikdə"',
-    date: '2026-04-07',
-    category: 'Səhiyyə',
-    locale: 'az',
-    content: `7 aprel — Ümumdünya Sağlamlıq Təşkilatının (ÜST) yaranma günü — bu il "Sağlamlıq üçün birlikdə. Elmlə birlikdə" şüarı altında qeyd edilir. Kampaniya elmi əməkdaşlığın insanların, heyvanların, bitkilərin və planetin sağlamlığını qorumaq gücünü vurğulayır.
-
-## Əsas tədbirlər
-
-7 apreldə Fransa hökumətinin G7 sədrliyi çərçivəsində Beynəlxalq Vahid Sağlamlıq Sammiti keçirilir. 7-9 aprel tarixlərində isə ÜST Əməkdaşlıq Mərkəzlərinin ilk Qlobal Forumu — 80-dən çox ölkədən təqribən 800 elmi qurumun iştirakı ilə baş tutur.
-
-## Vahid Sağlamlıq yanaşması
-
-Kampaniya "Vahid Sağlamlıq" yanaşmasına xüsusi diqqət yetirir — insan, heyvan və ətraf mühit sağlamlığının bir-birinə bağlı olduğunu vurğulayan bu konsepsiya pandemiyaların qarşısının alınmasında əhəmiyyətli rol oynayır.
-
-## Nəyə çağırış edilir
-
-ÜST bütün ölkələri elmi sübutlara əsaslanan sağlamlıq siyasətləri həyata keçirməyə, elmi araşdırmalara investisiya qoymağa və dezinformasiyaya qarşı mübarizəni gücləndirməyə çağırır.
-
-## Elm nailiyyətləri
-
-Bu ilin kampaniyasında gen terapiyasının karlara eşitmə imkanı verməsi, kvant batareyaları, proqramlaşdırıla bilən dərman sistemləri və beyin qocalmasına təsir edən FTL1 zülalının kəşfi kimi son nailiyyətlər vurğulanır.`,
-  },
-  'en-world-health-day-2026-stand-with-science': {
-    title: 'World Health Day 2026: "Together for Health. Stand with Science"',
-    date: '2026-04-07',
-    category: 'Health',
-    locale: 'en',
-    content: `April 7 marks World Health Day 2026, observed under the theme "Together for health. Stand with science." The campaign celebrates the power of scientific collaboration to protect the health of people, animals, plants, and the planet.
-
-## Key Events
-
-The International One Health Summit is hosted on April 7 by the Government of France under its G7 Presidency. From April 7 to 9, the inaugural Global Forum of WHO Collaborating Centres gathers nearly 800 scientific institutions from over 80 countries.
-
-## One Health Approach
-
-The campaign spotlights the One Health approach — recognizing the interconnection between human, animal, and environmental health. This framework is considered essential for preventing future pandemics and addressing antimicrobial resistance.
-
-## Call to Action
-
-WHO calls on all countries to implement evidence-based health policies, invest in scientific research, and strengthen the fight against misinformation. The organization emphasizes that science-backed public health measures save millions of lives annually.
-
-## Scientific Achievements Highlighted
-
-The 2026 campaign celebrates recent breakthroughs including gene therapy giving deaf individuals the ability to hear within weeks, quantum batteries that store energy using quantum physics, programmable drug delivery systems targeting cancer cells with unprecedented accuracy, and the discovery of the FTL1 protein linked to brain aging.`,
-  },
-  'tr-dunya-saglik-gunu-2026-bilimle-birlikte': {
-    title: 'Dünya Sağlık Günü 2026: "Sağlık İçin Birlikte. Bilimle Birlikte"',
-    date: '2026-04-07',
-    category: 'Sağlık',
-    locale: 'tr',
-    content: `7 Nisan, Dünya Sağlık Örgütü'nün (DSÖ) kuruluş yıl dönümü olarak "Sağlık için birlikte. Bilimle birlikte" temasıyla kutlanıyor. Kampanya, bilimsel iş birliğinin insanların, hayvanların, bitkilerin ve gezegenin sağlığını koruma gücünü öne çıkarıyor.
-
-## Önemli Etkinlikler
-
-7 Nisan'da Fransa hükümetinin G7 Başkanlığı çerçevesinde Uluslararası Tek Sağlık Zirvesi düzenleniyor. 7-9 Nisan tarihlerinde ise DSÖ İş Birliği Merkezlerinin ilk Küresel Forumu — 80'den fazla ülkeden yaklaşık 800 bilimsel kurumun katılımıyla gerçekleşiyor.
-
-## Tek Sağlık Yaklaşımı
-
-Kampanya, insan, hayvan ve çevre sağlığının birbirine bağlı olduğunu vurgulayan "Tek Sağlık" yaklaşımına odaklanıyor. Bu çerçeve, gelecekteki pandemilerin önlenmesi ve antimikrobiyal dirençle mücadelede kilit rol oynuyor.
-
-## Çağrı
-
-DSÖ, tüm ülkeleri kanıta dayalı sağlık politikaları uygulamaya, bilimsel araştırmalara yatırım yapmaya ve dezenformasyonla mücadeleyi güçlendirmeye çağırıyor.
-
-## Vurgulanan Bilimsel Başarılar
-
-Gen terapisiyle doğuştan sağır bireylerin birkaç hafta içinde işitebilmesi, kuantum bataryaları, programlanabilir kanser ilaç sistemleri ve beyin yaşlanmasını etkileyen FTL1 proteininin keşfi bu yılın öne çıkan başarıları arasında.`,
-  },
-  'ru-vsemirnyj-den-zdorovya-2026-vmeste-s-naukoj': {
-    title: 'Всемирный день здоровья 2026: «Вместе за здоровье. Вместе с наукой»',
-    date: '2026-04-07',
-    category: 'Здоровье',
-    locale: 'ru',
-    content: `7 апреля отмечается Всемирный день здоровья 2026 года под девизом «Вместе за здоровье. Вместе с наукой». Кампания прославляет силу научного сотрудничества в защите здоровья людей, животных, растений и планеты.
-
-## Ключевые мероприятия
-
-7 апреля правительство Франции в рамках председательства в G7 проводит Международный саммит «Единое здоровье». С 7 по 9 апреля проходит первый Глобальный форум сотрудничающих центров ВОЗ, собирающий почти 800 научных институтов из более чем 80 стран.
-
-## Подход «Единое здоровье»
-
-Кампания подчёркивает подход «Единое здоровье» — концепцию взаимосвязи здоровья людей, животных и окружающей среды. Эта модель считается ключевой для предотвращения будущих пандемий и борьбы с антимикробной резистентностью.
-
-## Призыв к действию
-
-ВОЗ призывает все страны внедрять политику здравоохранения, основанную на научных данных, инвестировать в исследования и усилить борьбу с дезинформацией.
-
-## Научные достижения
-
-Кампания 2026 года отмечает прорывы: генная терапия возвращает слух глухим от рождения за считанные недели, квантовые батареи, программируемые системы доставки лекарств для борьбы с раком и открытие белка FTL1, связанного со старением мозга.`,
-  },
-
 }
 
 export const newsSlugs = Object.keys(newsArticles)
