@@ -103,6 +103,7 @@ vi.mock('lucide-react', () => ({
   Zap: () => <span data-testid="zap-icon" />,
   Newspaper: () => <span data-testid="newspaper-icon" />,
   Wrench: () => <span data-testid="wrench-icon" />,
+  CheckCircle: () => <span data-testid="check-circle-icon" />,
   WifiOff: () => <span data-testid="wifi-off" />,
   RefreshCw: () => <span data-testid="refresh" />,
 }))

@@ -140,7 +140,7 @@ describe('MarketTicker - error with no prices', () => {
     }))
     const { default: MarketTicker } = await import('../../market/MarketTicker')
     const { container } = render(<MarketTicker />)
-    expect(container.innerHTML).toBe('')
+    expect(container.innerHTML).toContain('min-height: 52px')
   })
 })
 

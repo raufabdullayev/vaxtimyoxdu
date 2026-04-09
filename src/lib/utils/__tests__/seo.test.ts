@@ -135,7 +135,7 @@ describe('generateToolMetadata()', () => {
   })
 
   it('should use tool description as metadata description', () => {
-    expect(meta.description).toBe(tool.description)
+    expect(meta.description).toBe(`${tool.description} 100% browser-based — your files never leave your device.`)
   })
 
   it('should join tool keywords with commas', () => {
@@ -192,10 +192,10 @@ describe('generateToolMetadata()', () => {
       localizedDescription: 'Kapsamli bir test araci aciklamasi.',
     })
     expect(localizedMeta.title).toContain('Test Araci')
-    expect(localizedMeta.description).toBe('Kapsamli bir test araci aciklamasi.')
+    expect(localizedMeta.description).toBe('Kapsamli bir test araci aciklamasi. 100% browser-based — your files never leave your device.')
     const og = localizedMeta.openGraph as Record<string, unknown>
     expect(og.title).toContain('Test Araci')
-    expect(og.description).toBe('Kapsamli bir test araci aciklamasi.')
+    expect(og.description).toBe('Kapsamli bir test araci aciklamasi. 100% browser-based — your files never leave your device.')
     expect(og.locale).toBe('tr_TR')
     expect(og.url).toBe(`${SITE_URL}/tr/tools/${tool.slug}`)
   })
@@ -215,7 +215,7 @@ describe('generateToolMetadata()', () => {
   it('should fall back to tool defaults when no localized options are given', () => {
     const defaultMeta = generateToolMetadata(tool)
     expect(defaultMeta.title).toContain(tool.name)
-    expect(defaultMeta.description).toBe(tool.description)
+    expect(defaultMeta.description).toBe(`${tool.description} 100% browser-based — your files never leave your device.`)
   })
 })
 
