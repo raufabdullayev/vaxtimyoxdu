@@ -14,9 +14,13 @@ import { NextRequest } from 'next/server'
  * make the whole thing thenable so both patterns work.
  */
 function createChainMock(resolvedValue: Record<string, unknown> = { count: 0, data: [], error: null }) {
-  // Terminal mock -- satisfies both awaiting directly and calling .limit()
+  // Terminal mock -- satisfies both awaiting directly and calling .limit() / .order()
   const terminal: Record<string, unknown> = {
     limit: vi.fn().mockResolvedValue(resolvedValue),
+    order: vi.fn().mockReturnValue({
+      limit: vi.fn().mockResolvedValue(resolvedValue),
+      then: (resolve: (v: unknown) => void) => resolve(resolvedValue),
+    }),
     // Make the object itself thenable
     then: (resolve: (v: unknown) => void) => resolve(resolvedValue),
   }
@@ -126,9 +130,16 @@ describe('GET /api/analytics/stats', () => {
       expect(data).toHaveProperty('popular_tools')
       expect(data).toHaveProperty('visitors_by_locale')
       expect(data).toHaveProperty('top_pages')
+      expect(data).toHaveProperty('share_clicks')
+      expect(data).toHaveProperty('tool_completions')
+      expect(data).toHaveProperty('errors_404')
+      expect(data).toHaveProperty('range')
       expect(Array.isArray(data.popular_tools)).toBe(true)
       expect(Array.isArray(data.visitors_by_locale)).toBe(true)
       expect(Array.isArray(data.top_pages)).toBe(true)
+      expect(Array.isArray(data.share_clicks)).toBe(true)
+      expect(Array.isArray(data.tool_completions)).toBe(true)
+      expect(Array.isArray(data.errors_404)).toBe(true)
     })
 
     it('should return zero counts when no data exists', async () => {
@@ -145,6 +156,9 @@ describe('GET /api/analytics/stats', () => {
       expect(data.popular_tools).toEqual([])
       expect(data.visitors_by_locale).toEqual([])
       expect(data.top_pages).toEqual([])
+      expect(data.share_clicks).toEqual([])
+      expect(data.tool_completions).toEqual([])
+      expect(data.errors_404).toEqual([])
     })
 
     it('should call supabase.from with analytics_events', async () => {

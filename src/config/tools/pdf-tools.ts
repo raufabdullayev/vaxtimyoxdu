@@ -35,6 +35,17 @@ export const pdfTools: Tool[] = [
     keywords: ['pdf to word', 'pdf to docx', 'pdf converter', 'convert pdf to word', 'pdf to word converter'],
   },
   {
+    slug: 'word-to-pdf',
+    name: 'Word to PDF Converter — Free Online, No Upload',
+    description: 'Convert Word documents (.docx) to PDF online. Preview your document and save as PDF using browser print. Free client-side converter - your files never leave your browser.',
+    shortDescription: 'Convert Word documents to PDF',
+    category: 'pdf',
+    icon: '\uD83D\uDCC4',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['word to pdf', 'docx to pdf', 'word converter', 'convert word to pdf', 'word to pdf converter'],
+  },
+  {
     slug: 'pdf-compress',
     name: 'PDF Compressor',
     description: 'Reduce PDF file size online. Remove metadata and optimize structure to compress PDFs. Free client-side PDF compressor - your files never leave your browser.',

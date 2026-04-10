@@ -62,7 +62,7 @@ describe('getToolsByCategory()', () => {
 
   it('should return AI tools for the "ai" category', () => {
     const aiTools = getToolsByCategory('ai')
-    expect(aiTools.length).toBe(3)
+    expect(aiTools.length).toBe(4)
     for (const tool of aiTools) {
       expect(tool.isAI).toBe(true)
     }

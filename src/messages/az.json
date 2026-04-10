@@ -100,6 +100,10 @@
         "name": "PDF Sıxıcı",
         "description": "PDF fayl ölçüsünü onlayn azaldın. Metadataları silin və strukturu optimallaşdırın."
       },
+      "word-to-pdf": {
+        "name": "Word-dan PDF-ə Çevirici",
+        "description": "Word sənədlərini (.docx) onlayn PDF-ə çevirin. Sənədinizi önbaxışla izləyin və PDF olaraq saxlayın."
+      },
       "image-compress": {
         "name": "Şəkil Sıxıcı",
         "description": "Şəkilləri onlayn sıxın və ölçüsünü dəyişin. Keyfiyyəti qoruyaraq fayl ölçüsünü azaldın. JPEG, PNG və WebP dəstəkləyir."
@@ -352,6 +356,10 @@
         "name": "Base64-dən Şəkilə",
         "description": "Base64 mətn sətirlərini yenidən şəkillərə çevirin. JPEG, PNG, GIF, WebP, SVG avtomatik tanınır."
       },
+      "background-remover": {
+        "name": "Şəkil Fonu Silici",
+        "description": "AI ilə şəkil fonlarını dərhal silin. İstənilən şəkli yükləyin və şəffaf PNG alın. Bütün emal brauzerinizdə baş verir."
+      },
       "text-truncator": {
         "name": "Mətn Qısaldıcı",
         "description": "Mətni hərf, söz və ya cümlə sayı ilə qısaldın. Elips mövqeyini və bütöv söz qorunmasını seçin."
@@ -499,6 +507,14 @@
       "time-calculator": {
         "name": "Vaxt və Tarix Kalkulyatoru",
         "description": "Tarix fərqlərini hesablayın, vaxt əlavə edin və ya çıxın, hadisələrə geri sayım edin və saat qurşaqları arasında çevirin. Pulsuz onlayn vaxt kalkulyatoru."
+      },
+      "image-to-text": {
+        "name": "Şəkildən Mətnə (OCR)",
+        "description": "OCR ilə şəkillərdən mətn çıxarın. İngilis, Azərbaycan, Türk və Rus dillərini dəstəkləyir."
+      },
+      "meme-generator": {
+        "name": "Mem Yaradıcı",
+        "description": "Populyar şablonlar və ya öz şəkillərinizlə memlər yaradın. Yuxarı və aşağı mətn əlavə edin, şrift və rəngləri fərdiləşdirin."
       }
     },
     "aboutTool": "{toolName} haqqında"
@@ -959,6 +975,20 @@
       "fileTooLarge": "Fayl çox böyükdür. Maksimum ölçü 20MB.",
       "pleaseSelectImage": "Şəkil faylı seçin (JPEG, PNG, WebP)"
     },
+    "backgroundRemover": {
+      "selectImage": "Şəkil Seçin",
+      "clickToSelect": "Şəkil seçmək üçün klikləyin və ya sürükləyib buraxın (JPEG, PNG, WebP)",
+      "maxFileSize": "Maksimum fayl ölçüsü: 20MB",
+      "pleaseSelectImage": "Şəkil faylı seçin (JPEG, PNG, WebP)",
+      "fileTooLarge": "Fayl çox böyükdür. Maksimum ölçü 20MB.",
+      "removeBg": "Fonu Sil",
+      "processing": "Fon silinir...",
+      "processingNote": "AI şəklinizi emal edir. Bu bir az vaxt ala bilər.",
+      "original": "Orijinal",
+      "result": "Nəticə (şəffaf)",
+      "success": "Fon uğurla silindi! Şəffaf PNG-ni saxlamaq üçün \"Yüklə\" düyməsinə klikləyin.",
+      "processError": "Şəkli emal etmək mümkün olmadı. Başqa şəkillə yenidən cəhd edin."
+    },
     "pdfTools": {
       "mergeFiles": "Faylları birləşdir",
       "selectPdf": "PDF Fayl Seçin",
@@ -972,6 +1002,31 @@
       "scannedPdfNote": "Bu PDF skan edilmiş və ya şəkil əsaslı görünür. Belə fayllar üçün mətn çıxarma məhduddur.",
       "pageLabel": "Səhifə",
       "noTextExtracted": "çıxarıla bilən mətn tapılmadı"
+    },
+    "wordToPdf": {
+      "selectDocx": "Word Sənədi Seçin",
+      "clickToSelectDocx": ".docx faylı seçmək üçün klikləyin və ya sürükləyib buraxın",
+      "maxFileSize": "Maksimum fayl ölçüsü: 50MB",
+      "onlyDocxAllowed": "Yalnız .docx fayllarına icazə verilir",
+      "fileTooLarge": "Fayl çox böyükdür. Maksimum ölçü 50MB.",
+      "convertToPdf": "PDF-ə çevir",
+      "savePdf": "PDF olaraq saxla",
+      "convertSuccess": "Sənəd uğurla çevrildi! PDF olaraq saxlamaq üçün \"PDF olaraq saxla\" düyməsinə klikləyin.",
+      "convertError": "Sənədi çevirmək mümkün olmadı. Faylın düzgün .docx olduğundan əmin olun.",
+      "emptyDocument": "Sənəd boş görünür və ya çıxarıla bilən məzmun yoxdur.",
+      "preview": "Önbaxış"
+    },
+    "memeGenerator": {
+      "selectTemplate": "Şablon Seçin",
+      "orUploadImage": "Və ya öz şəklinizi yükləyin",
+      "clickToUpload": "Şəkil yükləmək üçün klikləyin",
+      "imageUploaded": "Xüsusi şəkil yükləndi",
+      "topText": "Yuxarı Mətn",
+      "bottomText": "Aşağı Mətn",
+      "topTextPlaceholder": "Yuxarı mətni daxil edin...",
+      "bottomTextPlaceholder": "Aşağı mətni daxil edin...",
+      "fontSize": "Şrift Ölçüsü",
+      "textColor": "Mətn Rəngi"
     },
     "textTools": {
       "reset": "Sıfırla",
@@ -991,7 +1046,58 @@
       "copyReadyText": "Kopyalamağa Hazır Mətn",
       "selectTopic": "{topic} hashtag-larını seç",
       "deselectTopic": "{topic} hashtag-larını ləğv et",
-      "copyHashtag": "{tag} kopyala"
+      "copyHashtag": "{tag} kopyala",
+      "find": "Tap",
+      "replaceWith": "Ilə əvəz et",
+      "caseSensitive": "Hərfə həssas",
+      "regex": "Regex",
+      "wholeWord": "Tam söz",
+      "matchesFound": "{count} uyğunluq tapıldı",
+      "matchesFoundPlural": "{count} uyğunluq tapıldı",
+      "replaceFirst": "Birincini əvəz et",
+      "replaceAll": "Hamısını əvəz et",
+      "regexError": "Regex xətası",
+      "text": "Mətn",
+      "sample": "Nümunə",
+      "matchHighlights": "Uyğunluq vurğuları",
+      "clearAll": "Hamısını təmizlə",
+      "enterRegexPattern": "Regex nümunəsi daxil edin...",
+      "enterTextToFind": "Axtarılacaq mətni daxil edin...",
+      "enterReplacementText": "Əvəzedici mətni daxil edin...",
+      "enterOrPasteText": "Mətninizi daxil edin və ya yapışdırın...",
+      "invalidRegex": "Yanlış reqular ifadə",
+      "lines": "Sətirlər",
+      "avgWordLength": "Ort. söz uzunluğu",
+      "uniqueWords": "Unikal sözlər",
+      "longestWord": "Ən uzun söz",
+      "yourText": "Mətniniz",
+      "topCharFrequency": "Ən çox istifadə edilən simvollar",
+      "char": "Simvol",
+      "bar": "Bar",
+      "count": "Say",
+      "noSpaces": "(boşluqsuz)",
+      "startTypingHere": "Mətni yazmağa başlayın və ya yapışdırın..."
+    },
+    "ocrTool": {
+      "selectLanguage": "OCR Dili",
+      "langEnglish": "İngilis",
+      "langAzerbaijani": "Azərbaycan",
+      "langTurkish": "Türk",
+      "langRussian": "Rus",
+      "selectImage": "Şəkil seçin",
+      "clickToSelectImage": "Şəkil seçmək üçün klikləyin və ya sürükləyib buraxın",
+      "supportedFormats": "PNG, JPG, JPEG, WebP, BMP (maks. 20MB)",
+      "imagePreview": "Şəkil önizləmə",
+      "onlyImagesAllowed": "Yalnız şəkil faylları qəbul edilir (PNG, JPG, WebP, BMP)",
+      "fileTooLarge": "Fayl çox böyükdür. Maksimum ölçü 20MB.",
+      "extractText": "Mətni çıxar",
+      "extractedText": "Çıxarılmış mətn",
+      "extractionFailed": "Mətn çıxarıla bilmədi. Başqa bir şəkillə yenidən cəhd edin.",
+      "loadingEngine": "OCR mühərriki yüklənir...",
+      "loadingLanguage": "Dil məlumatları yüklənir...",
+      "initializingEngine": "Mühərrik işə salınır...",
+      "recognizingText": "Mətn tanınır...",
+      "characters": "simvol"
     }
   },
   "toolComponents": {
@@ -1060,6 +1166,93 @@
         "empty": "Mətn və ya URL daxil edin",
         "failed": "QR kod yaratmaq alınmadı"
       }
+    }
+  },
+  "toolChain": {
+    "nextStep": "İş axınında növbəti addım",
+    "suggestion": "{toolName} ilə davam edin"
+  },
+  "dailyChallenge": {
+    "title": "Günün Çağırışı",
+    "streak": "{count} günlük seriya",
+    "completed": "Tamamlandı!",
+    "startChallenge": "Çağırışa Başla",
+    "challenges": {
+      "mergePdf": "İki və ya daha çox PDF faylını bir sənəddə birləşdirin",
+      "compressImage": "Şəklin ölçüsünü azaltmaq üçün sıxışdırın",
+      "generatePassword": "Təhlükəsiz təsadüfi parol yaradın",
+      "generateQr": "Hər hansı link və ya mətn üçün QR kod yaradın",
+      "formatJson": "JSON parçasını formatlaşdırın və gözəlləşdirin",
+      "rewriteText": "AI ilə bir paraqrafı yenidən yazın",
+      "calculateAge": "Yaşınızı il, ay və gün olaraq hesablayın"
+    }
+  },
+  "toolUsage": {
+    "usedTimes": "{count} dəfə istifadə olunub"
+  },
+  "badges": {
+    "metaTitle": "Nailiyyət Nişanları | Vaxtim Yoxdu",
+    "metaDescription": "Alətləri istifadə edərək nailiyyət nişanları qazanın. İrəliləyişinizi izləyin.",
+    "title": "Nailiyyət Nişanları",
+    "subtitle": "Alətləri istifadə edərək nişanlar qazanın",
+    "badgesEarned": "Qazanılan",
+    "totalBadges": "Cəmi",
+    "dayStreak": "Gün Seriyası",
+    "earned": "Qazanıldı",
+    "share": "Paylaş",
+    "shareText": "Mən vaxtimyoxdu.com-da {badge} nişanını qazandım!",
+    "items": {
+      "first-step": {
+        "name": "İlk Addım",
+        "description": "İstənilən aləti bir dəfə istifadə et"
+      },
+      "explorer": {
+        "name": "Kəşfçi",
+        "description": "5 fərqli alət istifadə et"
+      },
+      "expert": {
+        "name": "Ekspert",
+        "description": "10 fərqli alət istifadə et"
+      },
+      "speed-runner": {
+        "name": "Sürətli",
+        "description": "Bir sessiyada 3 alət istifadə et"
+      },
+      "category-master": {
+        "name": "Hər Kateqoriya",
+        "description": "Hər 6 kateqoriyadan 1 alət istifadə et"
+      },
+      "seven-day-streak": {
+        "name": "7 Gün Seriya",
+        "description": "7 ardıcıl gün alət istifadə et"
+      }
+    }
+  },
+  "suggest": {
+    "metaTitle": "Alət Təklif Et | Vaxtim Yoxdu",
+    "metaDescription": "Yeni alət təklifləri göndərin və başqalarının təkliflərinə səs verin.",
+    "title": "Alət Təklif Lövhəsi",
+    "subtitle": "Hansı alətləri görmək istəyirsiniz? Təklif edin və səs verin!",
+    "formTitle": "Yeni Alət Təklif Et",
+    "nameLabel": "Alət Adı",
+    "namePlaceholder": "Məsələn: Şəkil Fon Silici",
+    "descriptionLabel": "Təsvir",
+    "descriptionPlaceholder": "Bu alət nə etməlidir?",
+    "categoryLabel": "Kateqoriya",
+    "submitButton": "Təklif Göndər",
+    "submitSuccess": "Təklifiniz əlavə olundu!",
+    "suggestionsTitle": "Təkliflər",
+    "voteButton": "Səs ver",
+    "voted": "Səs verildi",
+    "noSuggestions": "Hələ təklif yoxdur. İlk təklifi siz göndərin!",
+    "categories": {
+      "pdf": "PDF",
+      "image": "Şəkil",
+      "ai": "AI",
+      "dev": "Developer",
+      "text": "Mətn",
+      "generators": "Generatorlar",
+      "other": "Digər"
     }
   }
 }

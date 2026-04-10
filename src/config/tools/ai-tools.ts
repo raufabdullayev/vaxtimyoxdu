@@ -34,4 +34,15 @@ export const aiTools: Tool[] = [
     isClientSide: false,
     keywords: ['grammar checker', 'spell check', 'punctuation', 'proofreader'],
   },
+  {
+    slug: 'image-to-text',
+    name: 'Image to Text (OCR)',
+    description: 'Extract text from images using OCR. Supports multiple languages including English, Azerbaijani, Turkish, and Russian. Free online OCR tool.',
+    shortDescription: 'Extract text from images with OCR',
+    category: 'ai',
+    icon: '\uD83D\uDD0D',
+    isAI: true,
+    isClientSide: true,
+    keywords: ['ocr', 'image to text', 'text extraction', 'optical character recognition', 'scan text'],
+  },
 ]

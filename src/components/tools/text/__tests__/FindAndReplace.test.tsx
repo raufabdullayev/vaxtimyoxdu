@@ -17,20 +17,20 @@ describe('FindAndReplace', () => {
   it('renders with all required UI elements', () => {
     render(<FindAndReplace />)
 
-    expect(screen.getByText('Find')).toBeInTheDocument()
-    expect(screen.getByText('Replace with')).toBeInTheDocument()
-    expect(screen.getByText('Text')).toBeInTheDocument()
-    expect(screen.getByText('Case Sensitive')).toBeInTheDocument()
-    expect(screen.getByText('Regex')).toBeInTheDocument()
-    expect(screen.getByText('Whole Word')).toBeInTheDocument()
+    expect(screen.getByText('find')).toBeInTheDocument()
+    expect(screen.getByText('replaceWith')).toBeInTheDocument()
+    expect(screen.getByText('text')).toBeInTheDocument()
+    expect(screen.getByText('caseSensitive')).toBeInTheDocument()
+    expect(screen.getByText('regex')).toBeInTheDocument()
+    expect(screen.getByText('wholeWord')).toBeInTheDocument()
   })
 
   it('renders input fields with correct placeholders', () => {
     render(<FindAndReplace />)
 
-    expect(screen.getByPlaceholderText('Enter text to find...')).toBeInTheDocument()
-    expect(screen.getByPlaceholderText('Enter replacement text...')).toBeInTheDocument()
-    expect(screen.getByPlaceholderText('Enter or paste your text here...')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('enterTextToFind')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('enterReplacementText')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('enterOrPasteText')).toBeInTheDocument()
   })
 
   it('finds text and shows match count', () => {
@@ -39,10 +39,10 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'The cat and the cat sat on the mat' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'cat' } })
 
-    expect(screen.getByText('2 matches found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFoundPlural')).toBeInTheDocument()
   })
 
   it('shows singular match text for single match', () => {
@@ -51,10 +51,10 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'The cat sat on the mat' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'cat' } })
 
-    expect(screen.getByText('1 match found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFound')).toBeInTheDocument()
   })
 
   it('shows 0 matches when search term is not found', () => {
@@ -63,10 +63,10 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Hello world' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'xyz' } })
 
-    expect(screen.getByText('0 matches found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFoundPlural')).toBeInTheDocument()
   })
 
   it('replaces first occurrence only', () => {
@@ -75,13 +75,13 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'aaa bbb aaa bbb aaa' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'aaa' } })
 
-    const replaceInput = screen.getByLabelText('Replace text')
+    const replaceInput = screen.getByLabelText('replaceWith')
     fireEvent.change(replaceInput, { target: { value: 'xxx' } })
 
-    fireEvent.click(screen.getByText('Replace First'))
+    fireEvent.click(screen.getByText('replaceFirst'))
 
     expect(textInput).toHaveValue('xxx bbb aaa bbb aaa')
   })
@@ -92,13 +92,13 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'aaa bbb aaa bbb aaa' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'aaa' } })
 
-    const replaceInput = screen.getByLabelText('Replace text')
+    const replaceInput = screen.getByLabelText('replaceWith')
     fireEvent.change(replaceInput, { target: { value: 'xxx' } })
 
-    fireEvent.click(screen.getByText('Replace All'))
+    fireEvent.click(screen.getByText('replaceAll'))
 
     expect(textInput).toHaveValue('xxx bbb xxx bbb xxx')
   })
@@ -109,10 +109,10 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Hello HELLO hello' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'hello' } })
 
-    expect(screen.getByText('3 matches found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFoundPlural')).toBeInTheDocument()
   })
 
   it('performs case-sensitive search when enabled', () => {
@@ -121,14 +121,14 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Hello HELLO hello' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'hello' } })
 
     // Enable case sensitive
-    const caseSensitiveCheckbox = screen.getByText('Case Sensitive').previousElementSibling as HTMLInputElement
+    const caseSensitiveCheckbox = screen.getByText('caseSensitive').previousElementSibling as HTMLInputElement
     fireEvent.click(caseSensitiveCheckbox)
 
-    expect(screen.getByText('1 match found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFound')).toBeInTheDocument()
   })
 
   it('uses regex mode when enabled', () => {
@@ -138,13 +138,13 @@ describe('FindAndReplace', () => {
     fireEvent.change(textInput, { target: { value: 'cat bat sat mat' } })
 
     // Enable regex
-    const regexCheckbox = screen.getByText('Regex').previousElementSibling as HTMLInputElement
+    const regexCheckbox = screen.getByText('regex').previousElementSibling as HTMLInputElement
     fireEvent.click(regexCheckbox)
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: '[cb]at' } })
 
-    expect(screen.getByText('2 matches found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFoundPlural')).toBeInTheDocument()
   })
 
   it('shows regex error for invalid regex pattern', () => {
@@ -154,33 +154,33 @@ describe('FindAndReplace', () => {
     fireEvent.change(textInput, { target: { value: 'some text' } })
 
     // Enable regex
-    const regexCheckbox = screen.getByText('Regex').previousElementSibling as HTMLInputElement
+    const regexCheckbox = screen.getByText('regex').previousElementSibling as HTMLInputElement
     fireEvent.click(regexCheckbox)
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: '[invalid' } })
 
-    expect(screen.getByText(/Regex Error:/)).toBeInTheDocument()
+    expect(screen.getByText(/regexError/)).toBeInTheDocument()
   })
 
   it('changes placeholder when regex mode is enabled', () => {
     render(<FindAndReplace />)
 
-    expect(screen.getByPlaceholderText('Enter text to find...')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('enterTextToFind')).toBeInTheDocument()
 
-    const regexCheckbox = screen.getByText('Regex').previousElementSibling as HTMLInputElement
+    const regexCheckbox = screen.getByText('regex').previousElementSibling as HTMLInputElement
     fireEvent.click(regexCheckbox)
 
-    expect(screen.getByPlaceholderText('Enter regex pattern...')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('enterRegexPattern')).toBeInTheDocument()
   })
 
   it('disables Whole Word checkbox when regex mode is enabled', () => {
     render(<FindAndReplace />)
 
-    const regexCheckbox = screen.getByText('Regex').previousElementSibling as HTMLInputElement
+    const regexCheckbox = screen.getByText('regex').previousElementSibling as HTMLInputElement
     fireEvent.click(regexCheckbox)
 
-    const wholeWordCheckbox = screen.getByText('Whole Word').previousElementSibling as HTMLInputElement
+    const wholeWordCheckbox = screen.getByText('wholeWord').previousElementSibling as HTMLInputElement
     expect(wholeWordCheckbox).toBeDisabled()
   })
 
@@ -190,7 +190,7 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Some text here' } })
 
-    expect(screen.queryByText(/match/)).not.toBeInTheDocument()
+    expect(screen.queryByText(/matchesFound/)).not.toBeInTheDocument()
   })
 
   it('does not show Replace buttons when no matches exist', () => {
@@ -199,11 +199,11 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Hello world' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'xyz' } })
 
-    expect(screen.queryByText('Replace First')).not.toBeInTheDocument()
-    expect(screen.queryByText('Replace All')).not.toBeInTheDocument()
+    expect(screen.queryByText('replaceFirst')).not.toBeInTheDocument()
+    expect(screen.queryByText('replaceAll')).not.toBeInTheDocument()
   })
 
   it('shows Replace buttons when matches exist', () => {
@@ -212,11 +212,11 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Hello world' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'Hello' } })
 
-    expect(screen.getByText('Replace First')).toBeInTheDocument()
-    expect(screen.getByText('Replace All')).toBeInTheDocument()
+    expect(screen.getByText('replaceFirst')).toBeInTheDocument()
+    expect(screen.getByText('replaceAll')).toBeInTheDocument()
   })
 
   it('shows match highlights when matches exist', () => {
@@ -225,19 +225,19 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'The fox and the fox' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'fox' } })
 
-    expect(screen.getByText('Match Highlights (2)')).toBeInTheDocument()
+    expect(screen.getByText(/matchHighlights/)).toBeInTheDocument()
   })
 
   it('handles empty text with no matches', () => {
     render(<FindAndReplace />)
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'search' } })
 
-    expect(screen.getByText('0 matches found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFoundPlural')).toBeInTheDocument()
   })
 
   it('copies text to clipboard', async () => {
@@ -246,7 +246,7 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Some text' } })
 
-    fireEvent.click(screen.getByLabelText('Copy text'))
+    fireEvent.click(screen.getByLabelText('copy'))
 
     await waitFor(() => {
       expect(writeTextMock).toHaveBeenCalledWith('Some text')
@@ -256,15 +256,15 @@ describe('FindAndReplace', () => {
   it('loads sample data when Sample button is clicked', () => {
     render(<FindAndReplace />)
 
-    fireEvent.click(screen.getByText('Sample'))
+    fireEvent.click(screen.getByText('sample'))
 
     const textInput = screen.getByLabelText('Text input for find and replace') as HTMLTextAreaElement
     expect(textInput.value).toContain('quick brown fox')
 
-    const findInput = screen.getByLabelText('Find text') as HTMLInputElement
+    const findInput = screen.getByLabelText('find') as HTMLInputElement
     expect(findInput.value).toBe('quick')
 
-    const replaceInput = screen.getByLabelText('Replace text') as HTMLInputElement
+    const replaceInput = screen.getByLabelText('replaceWith') as HTMLInputElement
     expect(replaceInput.value).toBe('fast')
   })
 
@@ -274,10 +274,10 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Some text' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'Some' } })
 
-    const replaceInput = screen.getByLabelText('Replace text')
+    const replaceInput = screen.getByLabelText('replaceWith')
     fireEvent.change(replaceInput, { target: { value: 'Other' } })
 
     fireEvent.click(screen.getByLabelText('Clear all fields'))
@@ -293,13 +293,13 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'Remove this word from text' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'this ' } })
 
-    const replaceInput = screen.getByLabelText('Replace text')
+    const replaceInput = screen.getByLabelText('replaceWith')
     fireEvent.change(replaceInput, { target: { value: '' } })
 
-    fireEvent.click(screen.getByText('Replace All'))
+    fireEvent.click(screen.getByText('replaceAll'))
 
     expect(textInput).toHaveValue('Remove word from text')
   })
@@ -310,16 +310,16 @@ describe('FindAndReplace', () => {
     const textInput = screen.getByLabelText('Text input for find and replace')
     fireEvent.change(textInput, { target: { value: 'cat catch concatenate' } })
 
-    const findInput = screen.getByLabelText('Find text')
+    const findInput = screen.getByLabelText('find')
     fireEvent.change(findInput, { target: { value: 'cat' } })
 
     // Without whole word, should match 3
-    expect(screen.getByText('3 matches found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFoundPlural')).toBeInTheDocument()
 
     // Enable whole word
-    const wholeWordCheckbox = screen.getByText('Whole Word').previousElementSibling as HTMLInputElement
+    const wholeWordCheckbox = screen.getByText('wholeWord').previousElementSibling as HTMLInputElement
     fireEvent.click(wholeWordCheckbox)
 
-    expect(screen.getByText('1 match found')).toBeInTheDocument()
+    expect(screen.getByText('matchesFound')).toBeInTheDocument()
   })
 })

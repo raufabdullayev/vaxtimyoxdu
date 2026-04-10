@@ -124,6 +124,7 @@ function getCharFrequency(text: string, top: number = 10): CharFreq[] {
 
 export default function CharacterCounter() {
   const t = useTranslations('toolUI.common')
+  const tt = useTranslations('toolUI.textTools')
   const [text, setText] = useState('')
   const [copied, setCopied] = useState(false)
 
@@ -189,7 +190,7 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.lines}</div>
-          <div className="text-xs text-muted-foreground mt-1">Lines</div>
+          <div className="text-xs text-muted-foreground mt-1">{tt('lines')}</div>
         </div>
         <div className="rounded-lg bg-muted/50 p-3 text-center">
           <div className="text-2xl font-bold text-primary">{stats.readingTime}</div>
@@ -206,11 +207,11 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
         <div className="grid grid-cols-3 gap-3">
           <div className="rounded-lg bg-muted/50 p-3 text-center">
             <div className="text-xl font-bold text-primary">{stats.avgWordLength}</div>
-            <div className="text-xs text-muted-foreground mt-1">Avg Word Length</div>
+            <div className="text-xs text-muted-foreground mt-1">{tt('avgWordLength')}</div>
           </div>
           <div className="rounded-lg bg-muted/50 p-3 text-center">
             <div className="text-xl font-bold text-primary">{stats.uniqueWords}</div>
-            <div className="text-xs text-muted-foreground mt-1">Unique Words</div>
+            <div className="text-xs text-muted-foreground mt-1">{tt('uniqueWords')}</div>
           </div>
           <div className="rounded-lg bg-muted/50 p-3 text-center">
             <div
@@ -219,7 +220,7 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
             >
               {stats.longestWord || '-'}
             </div>
-            <div className="text-xs text-muted-foreground mt-1">Longest Word</div>
+            <div className="text-xs text-muted-foreground mt-1">{tt('longestWord')}</div>
           </div>
         </div>
       )}
@@ -227,7 +228,7 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
       {/* Text input */}
       <div>
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium">Your Text</label>
+          <label className="text-sm font-medium">{tt('yourText')}</label>
           <div className="flex gap-2">
             {text.trim() && (
               <button
@@ -248,7 +249,7 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
         </div>
         <textarea
           className="w-full rounded-lg border bg-background px-3 py-2 text-sm min-h-[200px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Start typing or paste your text here to see detailed character statistics..."
+          placeholder={tt('startTypingHere')}
           value={text}
           onChange={(e) => setText(e.target.value)}
           aria-label="Text input for character counting"
@@ -259,13 +260,13 @@ Another well-known pangram is: "Pack my box with five dozen liquor jugs." Both s
       {charFreq.length > 0 && (
         <div>
           <label className="block text-sm font-medium mb-2">
-            Top Character Frequency
+            {tt('topCharFrequency')}
           </label>
           <div className="rounded-lg border overflow-hidden">
             <div className="grid grid-cols-[60px_1fr_80px_80px] text-xs font-medium bg-muted/50 px-3 py-2 border-b">
-              <span>Char</span>
-              <span>Bar</span>
-              <span className="text-right">Count</span>
+              <span>{tt('char')}</span>
+              <span>{tt('bar')}</span>
+              <span className="text-right">{tt('count')}</span>
               <span className="text-right">%</span>
             </div>
             {charFreq.map((item) => (

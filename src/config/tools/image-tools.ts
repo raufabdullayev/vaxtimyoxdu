@@ -57,6 +57,17 @@ export const imageTools: Tool[] = [
     keywords: ['image to base64', 'base64 image', 'data uri', 'image encoder', 'base64 converter'],
   },
   {
+    slug: 'background-remover',
+    name: 'Image Background Remover — Free Online, AI-Powered',
+    description: 'Remove image backgrounds instantly using AI. Upload any photo and get a transparent PNG. Free client-side background remover - your files never leave your browser.',
+    shortDescription: 'Remove image backgrounds with AI',
+    category: 'image',
+    icon: '\u2728',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['background remover', 'remove background', 'transparent background', 'image background', 'png transparent'],
+  },
+  {
     slug: 'base64-to-image',
     name: 'Base64 to Image',
     description: 'Decode Base64 strings back to images. Auto-detects JPEG, PNG, GIF, WebP, and SVG formats. Preview and download the decoded image. Free client-side decoder.',

@@ -100,6 +100,10 @@
         "name": "PDF Compressor",
         "description": "Reduce PDF file size online. Remove metadata and optimize structure to compress PDFs."
       },
+      "word-to-pdf": {
+        "name": "Word to PDF Converter",
+        "description": "Convert Word documents (.docx) to PDF online. Preview your document and save as PDF. Free client-side converter."
+      },
       "image-compress": {
         "name": "Image Compressor",
         "description": "Compress and resize images online. Reduce file size while maintaining quality. Supports JPEG, PNG, and WebP."
@@ -352,6 +356,10 @@
         "name": "Base64 to Image",
         "description": "Decode Base64 strings back to images. Auto-detects JPEG, PNG, GIF, WebP, and SVG formats."
       },
+      "background-remover": {
+        "name": "Image Background Remover",
+        "description": "Remove image backgrounds instantly using AI. Upload any photo and get a transparent PNG. All processing happens in your browser."
+      },
       "text-truncator": {
         "name": "Text Truncator",
         "description": "Truncate text by characters, words, or sentences with customizable ellipsis position and whole-word preservation."
@@ -499,6 +507,14 @@
       "time-calculator": {
         "name": "Time & Date Calculator",
         "description": "Calculate date differences, add or subtract time, countdown to events, and convert between timezones. Free online time calculator."
+      },
+      "image-to-text": {
+        "name": "Image to Text (OCR)",
+        "description": "Extract text from images using OCR. Supports English, Azerbaijani, Turkish, and Russian."
+      },
+      "meme-generator": {
+        "name": "Meme Generator",
+        "description": "Create memes with popular templates or your own images. Add top and bottom text, customize font and colors. Download as PNG."
       }
     },
     "aboutTool": "About {toolName}"
@@ -959,6 +975,20 @@
       "fileTooLarge": "File too large. Maximum size is 20MB.",
       "pleaseSelectImage": "Please select an image file (JPEG, PNG, WebP)"
     },
+    "backgroundRemover": {
+      "selectImage": "Select Image",
+      "clickToSelect": "Click or drag & drop an image (JPEG, PNG, WebP)",
+      "maxFileSize": "Max file size: 20MB",
+      "pleaseSelectImage": "Please select an image file (JPEG, PNG, WebP)",
+      "fileTooLarge": "File too large. Maximum size is 20MB.",
+      "removeBg": "Remove Background",
+      "processing": "Removing background...",
+      "processingNote": "AI is processing your image. This may take a moment.",
+      "original": "Original",
+      "result": "Result (transparent)",
+      "success": "Background removed successfully! Click \"Download\" to save your transparent PNG.",
+      "processError": "Failed to process image. Please try again with a different image."
+    },
     "pdfTools": {
       "mergeFiles": "Merge Files",
       "selectPdf": "Select PDF File",
@@ -972,6 +1002,31 @@
       "scannedPdfNote": "This PDF appears to be scanned or image-based. Text extraction is limited for such files.",
       "pageLabel": "Page",
       "noTextExtracted": "no extractable text found"
+    },
+    "wordToPdf": {
+      "selectDocx": "Select Word Document",
+      "clickToSelectDocx": "Click or drag & drop a .docx file",
+      "maxFileSize": "Max file size: 50MB",
+      "onlyDocxAllowed": "Only .docx files are allowed",
+      "fileTooLarge": "File too large. Maximum size is 50MB.",
+      "convertToPdf": "Convert to PDF",
+      "savePdf": "Save as PDF",
+      "convertSuccess": "Document converted successfully! Click \"Save as PDF\" to open the print dialog and save as PDF.",
+      "convertError": "Failed to convert document. Please make sure the file is a valid .docx file.",
+      "emptyDocument": "The document appears to be empty or contains no extractable content.",
+      "preview": "Preview"
+    },
+    "memeGenerator": {
+      "selectTemplate": "Select Template",
+      "orUploadImage": "Or upload your own image",
+      "clickToUpload": "Click to upload an image",
+      "imageUploaded": "Custom image loaded",
+      "topText": "Top Text",
+      "bottomText": "Bottom Text",
+      "topTextPlaceholder": "Enter top text...",
+      "bottomTextPlaceholder": "Enter bottom text...",
+      "fontSize": "Font Size",
+      "textColor": "Text Color"
     },
     "textTools": {
       "reset": "Reset",
@@ -991,7 +1046,58 @@
       "copyReadyText": "Copy-Ready Text",
       "selectTopic": "Select {topic} hashtags",
       "deselectTopic": "Deselect {topic} hashtags",
-      "copyHashtag": "Copy {tag}"
+      "copyHashtag": "Copy {tag}",
+      "find": "Find",
+      "replaceWith": "Replace with",
+      "caseSensitive": "Case Sensitive",
+      "regex": "Regex",
+      "wholeWord": "Whole Word",
+      "matchesFound": "{count} match found",
+      "matchesFoundPlural": "{count} matches found",
+      "replaceFirst": "Replace First",
+      "replaceAll": "Replace All",
+      "regexError": "Regex Error",
+      "text": "Text",
+      "sample": "Sample",
+      "matchHighlights": "Match Highlights",
+      "clearAll": "Clear All",
+      "enterRegexPattern": "Enter regex pattern...",
+      "enterTextToFind": "Enter text to find...",
+      "enterReplacementText": "Enter replacement text...",
+      "enterOrPasteText": "Enter or paste your text here...",
+      "invalidRegex": "Invalid regular expression",
+      "lines": "Lines",
+      "avgWordLength": "Avg Word Length",
+      "uniqueWords": "Unique Words",
+      "longestWord": "Longest Word",
+      "yourText": "Your Text",
+      "topCharFrequency": "Top Character Frequency",
+      "char": "Char",
+      "bar": "Bar",
+      "count": "Count",
+      "noSpaces": "(no spaces)",
+      "startTypingHere": "Start typing or paste your text here..."
+    },
+    "ocrTool": {
+      "selectLanguage": "OCR Language",
+      "langEnglish": "English",
+      "langAzerbaijani": "Azerbaijani",
+      "langTurkish": "Turkish",
+      "langRussian": "Russian",
+      "selectImage": "Select Image",
+      "clickToSelectImage": "Click or drag & drop an image",
+      "supportedFormats": "PNG, JPG, JPEG, WebP, BMP (max 20MB)",
+      "imagePreview": "Image preview",
+      "onlyImagesAllowed": "Only image files are allowed (PNG, JPG, WebP, BMP)",
+      "fileTooLarge": "File too large. Maximum size is 20MB.",
+      "extractText": "Extract Text",
+      "extractedText": "Extracted Text",
+      "extractionFailed": "Failed to extract text. Please try again with a different image.",
+      "loadingEngine": "Loading OCR engine...",
+      "loadingLanguage": "Loading language data...",
+      "initializingEngine": "Initializing engine...",
+      "recognizingText": "Recognizing text...",
+      "characters": "characters"
     }
   },
   "toolComponents": {
@@ -1060,6 +1166,93 @@
         "empty": "Please enter text or URL",
         "failed": "Failed to generate QR code"
       }
+    }
+  },
+  "toolChain": {
+    "nextStep": "Next step in your workflow",
+    "suggestion": "Continue with {toolName}"
+  },
+  "dailyChallenge": {
+    "title": "Daily Challenge",
+    "streak": "{count}-day streak",
+    "completed": "Completed!",
+    "startChallenge": "Start Challenge",
+    "challenges": {
+      "mergePdf": "Merge two or more PDF files into one document",
+      "compressImage": "Compress an image to reduce its file size",
+      "generatePassword": "Generate a secure random password",
+      "generateQr": "Create a QR code for any link or text",
+      "formatJson": "Format and beautify a JSON snippet",
+      "rewriteText": "Rewrite a paragraph using AI",
+      "calculateAge": "Calculate your exact age in years, months and days"
+    }
+  },
+  "toolUsage": {
+    "usedTimes": "Used {count} times"
+  },
+  "badges": {
+    "metaTitle": "Achievement Badges | Vaxtim Yoxdu",
+    "metaDescription": "Earn achievement badges by using tools. Track your progress.",
+    "title": "Achievement Badges",
+    "subtitle": "Earn badges by using tools",
+    "badgesEarned": "Earned",
+    "totalBadges": "Total",
+    "dayStreak": "Day Streak",
+    "earned": "Earned",
+    "share": "Share",
+    "shareText": "I earned the {badge} badge on vaxtimyoxdu.com!",
+    "items": {
+      "first-step": {
+        "name": "First Step",
+        "description": "Use any tool once"
+      },
+      "explorer": {
+        "name": "Explorer",
+        "description": "Use 5 different tools"
+      },
+      "expert": {
+        "name": "Expert",
+        "description": "Use 10 different tools"
+      },
+      "speed-runner": {
+        "name": "Speed Runner",
+        "description": "Use 3 tools in one session"
+      },
+      "category-master": {
+        "name": "Category Master",
+        "description": "Use 1 tool from each of 6 categories"
+      },
+      "seven-day-streak": {
+        "name": "7-Day Streak",
+        "description": "Use a tool 7 consecutive days"
+      }
+    }
+  },
+  "suggest": {
+    "metaTitle": "Suggest a Tool | Vaxtim Yoxdu",
+    "metaDescription": "Submit new tool suggestions and vote on ideas from others.",
+    "title": "Tool Suggestion Board",
+    "subtitle": "Which tools would you like to see? Suggest and vote!",
+    "formTitle": "Suggest a New Tool",
+    "nameLabel": "Tool Name",
+    "namePlaceholder": "e.g. Image Background Remover",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "What should this tool do?",
+    "categoryLabel": "Category",
+    "submitButton": "Submit Suggestion",
+    "submitSuccess": "Your suggestion has been added!",
+    "suggestionsTitle": "Suggestions",
+    "voteButton": "Vote",
+    "voted": "Voted",
+    "noSuggestions": "No suggestions yet. Be the first to submit one!",
+    "categories": {
+      "pdf": "PDF",
+      "image": "Image",
+      "ai": "AI",
+      "dev": "Developer",
+      "text": "Text",
+      "generators": "Generators",
+      "other": "Other"
     }
   }
 }

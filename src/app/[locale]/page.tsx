@@ -6,6 +6,7 @@ import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import NewsletterHomeSection from '@/components/layout/NewsletterHomeSection'
 import MarketTicker from '@/components/market/MarketTicker'
 import ToolOfTheDay from '@/components/tools/ToolOfTheDay'
+import DailyChallenge from '@/components/gamification/DailyChallenge'
 import RecentlyUsedTools from '@/components/tools/RecentlyUsedTools'
 import { generateHreflangAlternates, getOgLocale, getOgImageUrl, SITE_NAME, getLocalizedUrl } from '@/lib/utils/seo'
 import type { Locale } from '@/i18n/config'
@@ -99,6 +100,9 @@ export default async function HomePage({ params }: Props) {
 
       {/* Tool of the Day */}
       <ToolOfTheDay />
+
+      {/* Daily Challenge */}
+      <DailyChallenge />
 
       {/* Two columns */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

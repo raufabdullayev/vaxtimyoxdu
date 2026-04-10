@@ -2,13 +2,19 @@
 
 import { useState, useEffect, useCallback } from 'react'
 
+type DateRange = '24h' | '7d' | '30d' | '90d'
+
 interface StatsData {
   generated_at: string
+  range: string
   page_views: { last_24h: number; last_7d: number; last_30d: number }
   tool_uses: { last_24h: number; last_7d: number; last_30d: number }
   popular_tools: Array<{ tool: string; count: number }>
   visitors_by_locale: Array<{ locale: string; count: number }>
   top_pages: Array<{ page_path: string; count: number }>
+  share_clicks: Array<{ platform: string; count: number }>
+  tool_completions: Array<{ tool: string; completions: number; uses: number; rate: number }>
+  errors_404: Array<{ page_path: string; created_at: string }>
 }
 
 export default function AnalyticsDashboard() {
@@ -16,8 +22,9 @@ export default function AnalyticsDashboard() {
   const [stats, setStats] = useState<StatsData | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const [range, setRange] = useState<DateRange>('30d')
 
-  const fetchStats = useCallback(async () => {
+  const fetchStats = useCallback(async (selectedRange: DateRange) => {
     if (!apiKey.trim()) {
       setError('Please enter an API key')
       return
@@ -25,7 +32,7 @@ export default function AnalyticsDashboard() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('/api/analytics/stats', {
+      const res = await fetch(`/api/analytics/stats?range=${selectedRange}`, {
         headers: { 'x-api-key': apiKey.trim() },
       })
       if (!res.ok) {
@@ -52,9 +59,23 @@ export default function AnalyticsDashboard() {
   const handleKeySubmit = () => {
     if (apiKey.trim()) {
       sessionStorage.setItem('analytics_api_key', apiKey.trim())
-      fetchStats()
+      fetchStats(range)
     }
   }
+
+  const handleRangeChange = (newRange: DateRange) => {
+    setRange(newRange)
+    if (apiKey.trim() && stats) {
+      fetchStats(newRange)
+    }
+  }
+
+  const rangeOptions: { value: DateRange; label: string }[] = [
+    { value: '24h', label: 'Last 24h' },
+    { value: '7d', label: 'Last 7 days' },
+    { value: '30d', label: 'Last 30 days' },
+    { value: '90d', label: 'Last 90 days' },
+  ]
 
   return (
     <div className="container py-8 max-w-5xl">
@@ -87,9 +108,27 @@ export default function AnalyticsDashboard() {
 
       {stats && (
         <>
-          <p className="text-xs text-muted-foreground mb-6">
-            Generated at: {new Date(stats.generated_at).toLocaleString()}
-          </p>
+          {/* Date range selector + timestamp */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6">
+            <p className="text-xs text-muted-foreground">
+              Generated at: {new Date(stats.generated_at).toLocaleString()}
+            </p>
+            <div className="flex gap-1 rounded-lg border bg-muted/30 p-1">
+              {rangeOptions.map((opt) => (
+                <button
+                  key={opt.value}
+                  onClick={() => handleRangeChange(opt.value)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                    range === opt.value
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
 
           {/* Page Views & Tool Uses */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -129,7 +168,76 @@ export default function AnalyticsDashboard() {
             </div>
           </div>
 
-          {/* Visitors by Locale */}
+          {/* Share Clicks & Tool Completion Rates */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* Share Clicks Breakdown */}
+            <div>
+              <h2 className="text-lg font-semibold mb-3">Share Clicks by Platform</h2>
+              <div className="rounded-lg border overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="text-left px-4 py-2 font-medium">Platform</th>
+                      <th className="text-right px-4 py-2 font-medium">Clicks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {stats.share_clicks.map((item) => (
+                      <tr key={item.platform} className="border-t">
+                        <td className="px-4 py-2 capitalize">{item.platform}</td>
+                        <td className="px-4 py-2 text-right font-mono">{item.count.toLocaleString()}</td>
+                      </tr>
+                    ))}
+                    {stats.share_clicks.length === 0 && (
+                      <tr>
+                        <td colSpan={2} className="px-4 py-4 text-center text-muted-foreground">
+                          No share data yet
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Tool Completion Rates */}
+            <div>
+              <h2 className="text-lg font-semibold mb-3">Tool Completion Rates</h2>
+              <div className="rounded-lg border overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50">
+                    <tr>
+                      <th className="text-left px-4 py-2 font-medium">Tool</th>
+                      <th className="text-right px-4 py-2 font-medium">Done</th>
+                      <th className="text-right px-4 py-2 font-medium">Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {stats.tool_completions.slice(0, 10).map((item) => (
+                      <tr key={item.tool} className="border-t">
+                        <td className="px-4 py-2 truncate max-w-[150px]" title={item.tool}>{item.tool}</td>
+                        <td className="px-4 py-2 text-right font-mono">{item.completions.toLocaleString()}</td>
+                        <td className="px-4 py-2 text-right">
+                          <span className={`font-mono ${item.rate >= 50 ? 'text-green-600 dark:text-green-400' : 'text-muted-foreground'}`}>
+                            {item.rate}%
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                    {stats.tool_completions.length === 0 && (
+                      <tr>
+                        <td colSpan={3} className="px-4 py-4 text-center text-muted-foreground">
+                          No completion data yet
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          {/* Visitors by Locale & Top Pages */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div>
               <h2 className="text-lg font-semibold mb-3">Visitors by Locale</h2>
@@ -176,6 +284,40 @@ export default function AnalyticsDashboard() {
                   </tbody>
                 </table>
               </div>
+            </div>
+          </div>
+
+          {/* 404 Error Log */}
+          <div className="mb-8">
+            <h2 className="text-lg font-semibold mb-3">Recent 404 Errors</h2>
+            <div className="rounded-lg border overflow-hidden">
+              <table className="w-full text-sm">
+                <thead className="bg-muted/50">
+                  <tr>
+                    <th className="text-left px-4 py-2 font-medium">Path</th>
+                    <th className="text-right px-4 py-2 font-medium">When</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {stats.errors_404.map((err, i) => (
+                    <tr key={`${err.page_path}-${i}`} className="border-t">
+                      <td className="px-4 py-2 truncate max-w-[300px] font-mono text-xs" title={err.page_path}>
+                        {err.page_path}
+                      </td>
+                      <td className="px-4 py-2 text-right text-xs text-muted-foreground whitespace-nowrap">
+                        {new Date(err.created_at).toLocaleString()}
+                      </td>
+                    </tr>
+                  ))}
+                  {stats.errors_404.length === 0 && (
+                    <tr>
+                      <td colSpan={2} className="px-4 py-4 text-center text-muted-foreground">
+                        No 404 errors recorded
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
         </>

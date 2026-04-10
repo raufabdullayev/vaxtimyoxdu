@@ -43,7 +43,7 @@ describe('CharacterCounter', () => {
     render(<CharacterCounter />)
 
     expect(getStatValue('paragraphs')).toBe('0')
-    expect(getStatValue('Lines')).toBe('0')
+    expect(getStatValue('lines')).toBe('0')
     expect(getStatValue('readingTime')).toBe('0s')
     expect(getStatValue('speakingTime')).toBe('0s')
   })
@@ -52,14 +52,14 @@ describe('CharacterCounter', () => {
     render(<CharacterCounter />)
 
     expect(
-      screen.getByPlaceholderText('Start typing or paste your text here to see detailed character statistics...')
+      screen.getByPlaceholderText('startTypingHere')
     ).toBeInTheDocument()
   })
 
   it('renders label and Load Sample button', () => {
     render(<CharacterCounter />)
 
-    expect(screen.getByText('Your Text')).toBeInTheDocument()
+    expect(screen.getByText('yourText')).toBeInTheDocument()
     expect(screen.getByText('loadSample')).toBeInTheDocument()
   })
 
@@ -125,7 +125,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'Line 1\nLine 2\nLine 3\nLine 4' } })
 
-    expect(getStatValue('Lines')).toBe('4')
+    expect(getStatValue('lines')).toBe('4')
   })
 
   it('calculates reading time for short text', () => {
@@ -199,7 +199,7 @@ describe('CharacterCounter', () => {
       target: { value: 'Line one.\n\nLine two.\n\nLine three.' },
     })
 
-    expect(getStatValue('Lines')).toBe('5')
+    expect(getStatValue('lines')).toBe('5')
     expect(getStatValue('paragraphs')).toBe('3')
     expect(getStatValue('sentences')).toBe('3')
   })
@@ -210,17 +210,17 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'The quick brown fox' } })
 
-    expect(screen.getByText('Avg Word Length')).toBeInTheDocument()
-    expect(screen.getByText('Unique Words')).toBeInTheDocument()
-    expect(screen.getByText('Longest Word')).toBeInTheDocument()
+    expect(screen.getByText('avgWordLength')).toBeInTheDocument()
+    expect(screen.getByText('uniqueWords')).toBeInTheDocument()
+    expect(screen.getByText('longestWord')).toBeInTheDocument()
   })
 
   it('does not show additional stats when text is empty', () => {
     render(<CharacterCounter />)
 
-    expect(screen.queryByText('Avg Word Length')).not.toBeInTheDocument()
-    expect(screen.queryByText('Unique Words')).not.toBeInTheDocument()
-    expect(screen.queryByText('Longest Word')).not.toBeInTheDocument()
+    expect(screen.queryByText('avgWordLength')).not.toBeInTheDocument()
+    expect(screen.queryByText('uniqueWords')).not.toBeInTheDocument()
+    expect(screen.queryByText('longestWord')).not.toBeInTheDocument()
   })
 
   it('counts unique words correctly', () => {
@@ -229,7 +229,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'hello hello world world world' } })
 
-    expect(getStatValue('Unique Words')).toBe('2')
+    expect(getStatValue('uniqueWords')).toBe('2')
   })
 
   it('identifies the longest word correctly', () => {
@@ -238,7 +238,7 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'Hi there supercalifragilistic' } })
 
-    expect(getStatValue('Longest Word')).toBe('supercalifragilistic')
+    expect(getStatValue('longestWord')).toBe('supercalifragilistic')
   })
 
   it('shows character frequency table when text is entered', () => {
@@ -247,13 +247,13 @@ describe('CharacterCounter', () => {
     const textarea = screen.getByLabelText('Text input for character counting')
     fireEvent.change(textarea, { target: { value: 'aaa bbb ccc' } })
 
-    expect(screen.getByText('Top Character Frequency')).toBeInTheDocument()
+    expect(screen.getByText('topCharFrequency')).toBeInTheDocument()
   })
 
   it('does not show character frequency table when text is empty', () => {
     render(<CharacterCounter />)
 
-    expect(screen.queryByText('Top Character Frequency')).not.toBeInTheDocument()
+    expect(screen.queryByText('topCharFrequency')).not.toBeInTheDocument()
   })
 
   it('copies stats report to clipboard', async () => {

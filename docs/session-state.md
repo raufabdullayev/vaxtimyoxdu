@@ -1,8 +1,8 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-09 (Session 16 Part 2 — Team Mode: Full Site Audit + 92 Developer Tasks)
+**Son yenilənmə:** 2026-04-10 (Session 17 — Sprint 1+2+3: 72 task, SEO/UX/Perf/Analytics/New Tools)
 **Sayt:** ✅ CANLI (vaxtimyoxdu.com HTTP 200)
-**Son commit:** ff7d086 (fix: favicon, theme hydration, dark mode, and brand color fixes)
+**Son commit:** 909515b (feat: Sprint 3 — analytics, a11y, PDF-to-Word, Time Calculator, Sentry v10)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -22,18 +22,16 @@
 | **Deploy** | ✅ Vercel aktiv (g2pza1tvq) |
 | **GitLab + GitHub** | ✅ Synced |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | ff7d086 |
-| **Testlər** | 3099 PASS (200 fayl) |
-| **Xəbərlər** | 108 (88+20, test+deploy gözləyir) |
+| **Son commit** | 909515b |
+| **Testlər** | 3085 PASS (200 fayl) |
+| **Xəbərlər** | 84 (04-07 silindi) |
 | **Coverage** | 68% (hədəf: 85%) |
-| **Aletler** | 105 (hədəf: 150) |
+| **Aletler** | 107 (hədəf: 150) |
 | **CRITICAL problem** | 0 ✅ |
-| **HIGH problem** | 2 + 85 pending developer tasks (seo-growth-team audit) |
+| **HIGH problem** | 1 (test coverage 68%→85%) |
 
 **Növbəti potensial işlər:**
-- 85 pending developer tasks (seo-growth-team audit)
-- Xəbər kontenti (108 məqalə) test+deploy gözləyir
-- Yeni alətlər (105 → 150)
+- Yeni alətlər (107 → 150)
 - Test coverage 68% → 85%
 - E2E testlər 35 → 100
 - Gündəlik xəbər kontenti (4 dil)
@@ -43,6 +41,48 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 17 (2026-04-09/10) — Sprint 1+2+3: Full Site Overhaul
+**Məqsəd:** SEO, UX, Performance, Analytics, yeni alətlər — 72 task icra edildi.
+
+**Sprint 1 (16 task):**
+- [x] SEO title/description rewrite (CTR optimization)
+- [x] Blog meta description fix (content.slice → post.description)
+- [x] Privacy messaging ("files never leave your device")
+- [x] Sentry Replay disabled (-70-100KB)
+- [x] MarketTicker CLS fix, useMarketPrices hook fix
+- [x] Sitemap lastModified fix
+- [x] Analytics API event types expanded (BLOCKER açıldı)
+- [x] Commits: c833bb5, 881f9ec
+
+**Sprint 2 (36 task):**
+- [x] Homepage hero CTA + tagline + trust strip
+- [x] Tool of the Day widget, Recently Used Tools
+- [x] Tools page search/filter + category pages (6)
+- [x] ShareButtons yuxarı köçürüldü, Newsletter CTA tool pages
+- [x] BackToTop, TrustBadge, TimeSaved components
+- [x] Active nav state, footer hash anchors
+- [x] Blog visual hierarchy, reading time, RelatedArticles fix
+- [x] Share click tracking, tool completion, scroll depth, UTM parsing
+- [x] i18n localization (30+ hardcoded string fix)
+- [x] WCAG contrast fix, keyboard a11y, mobile touch targets
+- [x] ItemList JSON-LD, OG alternateLocale, blog descriptions (4 dil)
+- [x] Commit: 4e9374a
+
+**Sprint 3 (20+ task):**
+- [x] Session engagement tracking, analytics dashboard
+- [x] 404/outbound/search query tracking, referral tracking
+- [x] Header server component refactor, focus trap, inert
+- [x] PDF-to-Word converter (YENİ ALƏT)
+- [x] Time Calculator (YENİ ALƏT, 4 tab)
+- [x] SocialShareBar floating bar
+- [x] Sentry v7→v10 upgrade
+- [x] GA4 consent mode fix
+- [x] Social media links in Footer
+- [x] 4 QA bug fix (test mocks)
+- [x] Commit: 909515b
+
+**Nəticə:** 72 task, 5 commit, 2 yeni alət (107 ümumi), 3085 test PASS, production CANLI.
 
 ### Session 16 Part 2 (2026-04-09) — Team Mode: Full Site Audit + 92 Developer Tasks
 **Məqsəd:** Saytı axtarışlarda öndə çıxarmaq üçün tam audit və developer task planı.
@@ -238,6 +278,10 @@
 ---
 
 ## Son Commitlər (xronoloji)
+- `909515b` — feat: Sprint 3 — analytics, a11y, PDF-to-Word, Time Calculator, Sentry v10
+- `4e9374a` — feat: Sprint 2 — UX, SEO, analytics, i18n, a11y overhaul (36 task)
+- `881f9ec` — feat: Sprint 1 batch 2 — SEO, analytics, privacy, performance
+- `c833bb5` — feat: Sprint 1 batch 1 — SEO title/description, blog meta, sitemap fix
 - `ff7d086` — fix: favicon, theme hydration, dark mode, and brand color fixes
 - `7bcef09` — fix(csp): remove sha256 hash from script-src — production white screen fix
 - `4de6326` — docs: log P0 CSP white-screen incident and fix

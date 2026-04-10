@@ -101,9 +101,9 @@ describe('tools configuration', () => {
       }
     })
 
-    it('AI tools should have isClientSide set to false', () => {
-      const aiTools = tools.filter((t) => t.isAI)
-      for (const tool of aiTools) {
+    it('server-side AI tools should have isClientSide set to false', () => {
+      const serverAiTools = tools.filter((t) => t.isAI && t.slug !== 'image-to-text')
+      for (const tool of serverAiTools) {
         expect(tool.isClientSide).toBe(false)
       }
     })

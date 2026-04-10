@@ -387,6 +387,17 @@ export const generatorTools: Tool[] = [
     keywords: ['youtube thumbnail', 'thumbnail maker', 'thumbnail text', 'youtube banner', 'video thumbnail'],
   },
   {
+    slug: 'meme-generator',
+    name: 'Meme Generator — Free Online Meme Maker',
+    description: 'Create memes with popular templates or your own images. Add top and bottom text, customize font size and color. Download as PNG. Free client-side meme generator.',
+    shortDescription: 'Create memes with templates or custom images',
+    category: 'generators',
+    icon: '\uD83D\uDE02',
+    isAI: false,
+    isClientSide: true,
+    keywords: ['meme generator', 'meme maker', 'meme creator', 'create meme', 'meme template'],
+  },
+  {
     slug: 'time-calculator',
     name: 'Time & Date Calculator — Difference, Countdown, Timezone',
     description: 'Calculate date differences, add or subtract time from dates, countdown to events, and convert between timezones. Free online time and date calculator.',

@@ -123,6 +123,8 @@ vi.mock('lucide-react', () => ({
   Link2: (props: Record<string, unknown>) => <svg {...props} />,
   Check: (props: Record<string, unknown>) => <svg {...props} />,
   Share2: (props: Record<string, unknown>) => <svg {...props} />,
+  Target: (props: Record<string, unknown>) => <svg {...props} />,
+  Flame: (props: Record<string, unknown>) => <svg {...props} />,
 }))
 
 // Mock ToolOfTheDay and RecentlyUsedTools
@@ -131,6 +133,9 @@ vi.mock('@/components/tools/ToolOfTheDay', () => ({
 }))
 vi.mock('@/components/tools/RecentlyUsedTools', () => ({
   default: () => <div data-testid="recently-used-tools" />,
+}))
+vi.mock('@/components/gamification/DailyChallenge', () => ({
+  default: () => <div data-testid="daily-challenge" />,
 }))
 
 // Mock data

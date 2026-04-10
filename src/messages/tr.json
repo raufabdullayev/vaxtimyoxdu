@@ -100,6 +100,10 @@
         "name": "PDF Sıkıştırıcı",
         "description": "PDF dosya boyutunu çevrimiçi azaltın. Meta verileri kaldırın ve yapıyı optimize ederek sıkıştırın."
       },
+      "word-to-pdf": {
+        "name": "Word'den PDF'ye Dönüştürücü",
+        "description": "Word belgelerini (.docx) çevrimiçi PDF'ye dönüştürün. Belgenizi önizleyin ve PDF olarak kaydedin."
+      },
       "image-compress": {
         "name": "Görüntü Sıkıştırıcı",
         "description": "Görüntüleri çevrimiçi sıkıştırın ve yeniden boyutlandırın. Kaliteyi koruyarak dosya boyutunu azaltın. JPEG, PNG ve WebP destekler."
@@ -352,6 +356,10 @@
         "name": "Base64'ten Görüntüye",
         "description": "Base64 metinlerini tekrar görüntülere dönüştürün. JPEG, PNG, GIF, WebP, SVG otomatik algılanır."
       },
+      "background-remover": {
+        "name": "Görüntü Arka Plan Kaldırıcı",
+        "description": "AI ile görsel arka planlarını anında kaldırın. Herhangi bir fotoğraf yükleyin ve şeffaf PNG alın. Tüm işlem tarayıcınızda gerçekleşir."
+      },
       "text-truncator": {
         "name": "Metin Kısaltıcı",
         "description": "Metni karakter, kelime veya cümle sayısına göre kısaltın. Üç nokta konumunu ve tam kelime korumasını seçin."
@@ -499,6 +507,14 @@
       "time-calculator": {
         "name": "Zaman ve Tarih Hesaplayıcı",
         "description": "Tarih farklarını hesaplayın, zaman ekleyin veya çıkarın, etkinliklere geri sayım yapın ve saat dilimleri arasında dönüştürün. Ücretsiz çevrimiçi zaman hesaplayıcı."
+      },
+      "image-to-text": {
+        "name": "Görselden Metne (OCR)",
+        "description": "OCR ile görsellerden metin çıkarın. İngilizce, Azerbaycanca, Türkçe ve Rusça desteklenir."
+      },
+      "meme-generator": {
+        "name": "Meme Oluşturucu",
+        "description": "Popüler şablonlar veya kendi resimlerinizle memeler oluşturun. Üst ve alt metin ekleyin, yazı tipi ve renkleri özelleştirin."
       }
     },
     "aboutTool": "{toolName} hakkında"
@@ -959,6 +975,20 @@
       "fileTooLarge": "Dosya çok büyük. Maksimum boyut 20MB.",
       "pleaseSelectImage": "Görüntü dosyası seçin (JPEG, PNG, WebP)"
     },
+    "backgroundRemover": {
+      "selectImage": "Görsel Seçin",
+      "clickToSelect": "Görsel seçmek için tıklayın veya sürükleyip bırakın (JPEG, PNG, WebP)",
+      "maxFileSize": "Maksimum dosya boyutu: 20MB",
+      "pleaseSelectImage": "Görüntü dosyası seçin (JPEG, PNG, WebP)",
+      "fileTooLarge": "Dosya çok büyük. Maksimum boyut 20MB.",
+      "removeBg": "Arka Planı Kaldır",
+      "processing": "Arka plan kaldırılıyor...",
+      "processingNote": "AI görselinizi işliyor. Bu biraz zaman alabilir.",
+      "original": "Orijinal",
+      "result": "Sonuç (şeffaf)",
+      "success": "Arka plan başarıyla kaldırıldı! Şeffaf PNG'yi kaydetmek için \"İndir\" düğmesine tıklayın.",
+      "processError": "Görsel işlenemedi. Farklı bir görselle tekrar deneyin."
+    },
     "pdfTools": {
       "mergeFiles": "Dosyaları birleştir",
       "selectPdf": "PDF Dosyası Seçin",
@@ -972,6 +1002,31 @@
       "scannedPdfNote": "Bu PDF taranmış veya görüntü tabanlı görünüyor. Bu tür dosyalar için metin çıkarma sınırlıdır.",
       "pageLabel": "Sayfa",
       "noTextExtracted": "çıkarılabilir metin bulunamadı"
+    },
+    "wordToPdf": {
+      "selectDocx": "Word Belgesi Seçin",
+      "clickToSelectDocx": ".docx dosyası seçmek için tıklayın veya sürükleyip bırakın",
+      "maxFileSize": "Maksimum dosya boyutu: 50MB",
+      "onlyDocxAllowed": "Yalnızca .docx dosyalarına izin verilir",
+      "fileTooLarge": "Dosya çok büyük. Maksimum boyut 50MB.",
+      "convertToPdf": "PDF'ye dönüştür",
+      "savePdf": "PDF olarak kaydet",
+      "convertSuccess": "Belge başarıyla dönüştürüldü! PDF olarak kaydetmek için \"PDF olarak kaydet\" düğmesine tıklayın.",
+      "convertError": "Belge dönüştürülemedi. Dosyanın geçerli bir .docx dosyası olduğundan emin olun.",
+      "emptyDocument": "Belge boş görünüyor veya çıkarılabilir içerik yok.",
+      "preview": "Önizleme"
+    },
+    "memeGenerator": {
+      "selectTemplate": "Şablon Seçin",
+      "orUploadImage": "Veya kendi resminizi yükleyin",
+      "clickToUpload": "Resim yüklemek için tıklayın",
+      "imageUploaded": "Özel resim yüklendi",
+      "topText": "Üst Metin",
+      "bottomText": "Alt Metin",
+      "topTextPlaceholder": "Üst metni girin...",
+      "bottomTextPlaceholder": "Alt metni girin...",
+      "fontSize": "Yazı Boyutu",
+      "textColor": "Metin Rengi"
     },
     "textTools": {
       "reset": "Sıfırla",
@@ -991,7 +1046,58 @@
       "copyReadyText": "Kopyalamaya Hazır Metin",
       "selectTopic": "{topic} hashtag'larını seç",
       "deselectTopic": "{topic} hashtag'larını kaldır",
-      "copyHashtag": "{tag} kopyala"
+      "copyHashtag": "{tag} kopyala",
+      "find": "Bul",
+      "replaceWith": "Şununla değiştir",
+      "caseSensitive": "Büyük/küçük harf duyarlı",
+      "regex": "Regex",
+      "wholeWord": "Tam kelime",
+      "matchesFound": "{count} eşleşme bulundu",
+      "matchesFoundPlural": "{count} eşleşme bulundu",
+      "replaceFirst": "İlkini değiştir",
+      "replaceAll": "Tümünü değiştir",
+      "regexError": "Regex hatası",
+      "text": "Metin",
+      "sample": "Örnek",
+      "matchHighlights": "Eşleşme vurguları",
+      "clearAll": "Tümünü temizle",
+      "enterRegexPattern": "Regex deseni girin...",
+      "enterTextToFind": "Aranacak metni girin...",
+      "enterReplacementText": "Değiştirme metnini girin...",
+      "enterOrPasteText": "Metninizi girin veya yapıştırın...",
+      "invalidRegex": "Geçersiz düzenli ifade",
+      "lines": "Satırlar",
+      "avgWordLength": "Ort. kelime uzunluğu",
+      "uniqueWords": "Benzersiz kelimeler",
+      "longestWord": "En uzun kelime",
+      "yourText": "Metniniz",
+      "topCharFrequency": "En çok kullanılan karakterler",
+      "char": "Karakter",
+      "bar": "Bar",
+      "count": "Sayı",
+      "noSpaces": "(boşluksuz)",
+      "startTypingHere": "Yazmaya başlayın veya metni yapıştırın..."
+    },
+    "ocrTool": {
+      "selectLanguage": "OCR Dili",
+      "langEnglish": "İngilizce",
+      "langAzerbaijani": "Azerbaycanca",
+      "langTurkish": "Türkçe",
+      "langRussian": "Rusça",
+      "selectImage": "Görsel Seçin",
+      "clickToSelectImage": "Görsel seçmek için tıklayın veya sürükleyip bırakın",
+      "supportedFormats": "PNG, JPG, JPEG, WebP, BMP (maks. 20MB)",
+      "imagePreview": "Görsel önizleme",
+      "onlyImagesAllowed": "Yalnızca görsel dosyaları kabul edilir (PNG, JPG, WebP, BMP)",
+      "fileTooLarge": "Dosya çok büyük. Maksimum boyut 20MB.",
+      "extractText": "Metni Çıkar",
+      "extractedText": "Çıkarılan Metin",
+      "extractionFailed": "Metin çıkarılamadı. Lütfen farklı bir görsel ile tekrar deneyin.",
+      "loadingEngine": "OCR motoru yükleniyor...",
+      "loadingLanguage": "Dil verileri yükleniyor...",
+      "initializingEngine": "Motor başlatılıyor...",
+      "recognizingText": "Metin tanınıyor...",
+      "characters": "karakter"
     }
   },
   "toolComponents": {
@@ -1060,6 +1166,93 @@
         "empty": "Lütfen metin veya URL girin",
         "failed": "QR kod oluşturulamadı"
       }
+    }
+  },
+  "toolChain": {
+    "nextStep": "Sonraki adim",
+    "suggestion": "{toolName} ile devam edin"
+  },
+  "dailyChallenge": {
+    "title": "Günün Görevi",
+    "streak": "{count} günlük seri",
+    "completed": "Tamamlandı!",
+    "startChallenge": "Göreve Başla",
+    "challenges": {
+      "mergePdf": "İki veya daha fazla PDF dosyasını tek belgede birleştirin",
+      "compressImage": "Dosya boyutunu küçültmek için bir görseli sıkıştırın",
+      "generatePassword": "Güvenli rastgele bir şifre oluşturun",
+      "generateQr": "Herhangi bir bağlantı veya metin için QR kod oluşturun",
+      "formatJson": "Bir JSON parçasını biçimlendirin ve güzelleştirin",
+      "rewriteText": "AI ile bir paragrafı yeniden yazın",
+      "calculateAge": "Yaşınızı yıl, ay ve gün olarak hesaplayın"
+    }
+  },
+  "toolUsage": {
+    "usedTimes": "{count} kez kullanildi"
+  },
+  "badges": {
+    "metaTitle": "Basari Rozetleri | Vaxtim Yoxdu",
+    "metaDescription": "Aracları kullanarak basari rozetleri kazanın. İlerlemenizi takip edin.",
+    "title": "Basari Rozetleri",
+    "subtitle": "Aracları kullanarak rozetler kazanın",
+    "badgesEarned": "Kazanılan",
+    "totalBadges": "Toplam",
+    "dayStreak": "Gun Serisi",
+    "earned": "Kazanıldı",
+    "share": "Paylas",
+    "shareText": "vaxtimyoxdu.com'da {badge} rozetini kazandım!",
+    "items": {
+      "first-step": {
+        "name": "Ilk Adım",
+        "description": "Herhangi bir aracı bir kez kullanın"
+      },
+      "explorer": {
+        "name": "Kasif",
+        "description": "5 farklı arac kullanın"
+      },
+      "expert": {
+        "name": "Uzman",
+        "description": "10 farklı arac kullanın"
+      },
+      "speed-runner": {
+        "name": "Hızlı Kosan",
+        "description": "Bir oturumda 3 arac kullanın"
+      },
+      "category-master": {
+        "name": "Kategori Ustası",
+        "description": "6 kategorinin her birinden 1 arac kullanın"
+      },
+      "seven-day-streak": {
+        "name": "7 Gun Serisi",
+        "description": "7 ardısık gun arac kullanın"
+      }
+    }
+  },
+  "suggest": {
+    "metaTitle": "Arac Oner | Vaxtim Yoxdu",
+    "metaDescription": "Yeni arac onerileri gonderin ve baskaların onerilerine oy verin.",
+    "title": "Arac Oneri Panosu",
+    "subtitle": "Hangi aracları gormek istersiniz? Onerin ve oy verin!",
+    "formTitle": "Yeni Arac Oner",
+    "nameLabel": "Arac Adı",
+    "namePlaceholder": "Ornegin: Gorsel Arka Plan Kaldırıcı",
+    "descriptionLabel": "Acıklama",
+    "descriptionPlaceholder": "Bu arac ne yapmalı?",
+    "categoryLabel": "Kategori",
+    "submitButton": "Oneri Gonder",
+    "submitSuccess": "Oneriniz eklendi!",
+    "suggestionsTitle": "Oneriler",
+    "voteButton": "Oy ver",
+    "voted": "Oy verildi",
+    "noSuggestions": "Henuz oneri yok. Ilk oneriyi siz gonderin!",
+    "categories": {
+      "pdf": "PDF",
+      "image": "Gorsel",
+      "ai": "AI",
+      "dev": "Gelistirici",
+      "text": "Metin",
+      "generators": "Uretecler",
+      "other": "Diger"
     }
   }
 }

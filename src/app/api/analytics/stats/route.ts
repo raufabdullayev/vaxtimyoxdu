@@ -106,6 +106,16 @@ export async function GET(req: NextRequest) {
     )
   }
 
+  // ── Parse date range from query params ──
+  const { searchParams } = new URL(req.url)
+  const rangeParam = searchParams.get('range') // '24h' | '7d' | '30d' | '90d'
+  const rangeHours = rangeParam === '24h' ? 24
+    : rangeParam === '90d' ? 24 * 90
+    : rangeParam === '30d' ? 24 * 30
+    : rangeParam === '7d' ? 24 * 7
+    : 24 * 30 // default 30d
+  const sinceDate = new Date(Date.now() - rangeHours * 60 * 60 * 1000).toISOString()
+
   try {
     // ── Gather stats in parallel ──
     const [
@@ -118,6 +128,9 @@ export async function GET(req: NextRequest) {
       popularToolsResult,
       localeResult,
       topPagesResult,
+      shareClicksResult,
+      toolCompletesResult,
+      errorsResult,
     ] = await Promise.all([
       // Page views
       countEvents(supabase, 'page_view', 24),
@@ -129,29 +142,54 @@ export async function GET(req: NextRequest) {
       countEvents(supabase, 'tool_use', 24 * 7),
       countEvents(supabase, 'tool_use', 24 * 30),
 
-      // Popular tools (last 30 days, top 20)
+      // Popular tools (within selected range)
       supabase
         .from('analytics_events')
         .select('event_data')
         .eq('event_type', 'tool_use')
-        .gte('created_at', new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString())
+        .gte('created_at', sinceDate)
         .limit(10000),
 
-      // Visitors by locale (last 30 days)
+      // Visitors by locale (within selected range)
       supabase
         .from('analytics_events')
         .select('locale')
         .eq('event_type', 'page_view')
-        .gte('created_at', new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString())
+        .gte('created_at', sinceDate)
         .limit(10000),
 
-      // Top pages (last 30 days)
+      // Top pages (within selected range)
       supabase
         .from('analytics_events')
         .select('page_path')
         .eq('event_type', 'page_view')
-        .gte('created_at', new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString())
+        .gte('created_at', sinceDate)
         .limit(10000),
+
+      // Share clicks (within selected range)
+      supabase
+        .from('analytics_events')
+        .select('event_data')
+        .eq('event_type', 'share_click')
+        .gte('created_at', sinceDate)
+        .limit(10000),
+
+      // Tool completions (within selected range)
+      supabase
+        .from('analytics_events')
+        .select('event_data')
+        .eq('event_type', 'tool_complete')
+        .gte('created_at', sinceDate)
+        .limit(10000),
+
+      // 404 errors (within selected range)
+      supabase
+        .from('analytics_events')
+        .select('page_path, created_at')
+        .eq('event_type', '404_error')
+        .gte('created_at', sinceDate)
+        .order('created_at', { ascending: false })
+        .limit(50),
     ])
 
     // ── Aggregate popular tools ──
@@ -194,8 +232,50 @@ export async function GET(req: NextRequest) {
       .sort((a, b) => b.count - a.count)
       .slice(0, 20)
 
+    // ── Aggregate share clicks by platform ──
+    const sharePlatformCounts = new Map<string, number>()
+    if (shareClicksResult.data) {
+      for (const row of shareClicksResult.data) {
+        const platform = (row.event_data as Record<string, unknown> | null)?.platform
+        if (typeof platform === 'string') {
+          sharePlatformCounts.set(platform, (sharePlatformCounts.get(platform) ?? 0) + 1)
+        }
+      }
+    }
+    const share_clicks = Array.from(sharePlatformCounts.entries())
+      .map(([platform, count]) => ({ platform, count }))
+      .sort((a, b) => b.count - a.count)
+
+    // ── Aggregate tool completion rates ──
+    // Note: tool_complete events use 'toolSlug' key, tool_use events use 'tool' key
+    const toolCompleteCounts = new Map<string, number>()
+    if (toolCompletesResult.data) {
+      for (const row of toolCompletesResult.data) {
+        const data = row.event_data as Record<string, unknown> | null
+        const tool = data?.toolSlug ?? data?.tool
+        if (typeof tool === 'string') {
+          toolCompleteCounts.set(tool, (toolCompleteCounts.get(tool) ?? 0) + 1)
+        }
+      }
+    }
+    const tool_completions = Array.from(toolCompleteCounts.entries())
+      .map(([tool, completions]) => {
+        const uses = toolCounts.get(tool) ?? 0
+        const rate = uses > 0 ? Math.round((completions / uses) * 100) : 0
+        return { tool, completions, uses, rate }
+      })
+      .sort((a, b) => b.completions - a.completions)
+      .slice(0, 20)
+
+    // ── 404 errors ──
+    const errors_404 = (errorsResult.data ?? []).map((row) => ({
+      page_path: (row.page_path as string) ?? 'unknown',
+      created_at: row.created_at as string,
+    }))
+
     return NextResponse.json({
       generated_at: new Date().toISOString(),
+      range: rangeParam || '30d',
       page_views: {
         last_24h: pageViews24h,
         last_7d: pageViews7d,
@@ -209,6 +289,9 @@ export async function GET(req: NextRequest) {
       popular_tools,
       visitors_by_locale,
       top_pages,
+      share_clicks,
+      tool_completions,
+      errors_404,
     })
   } catch (error) {
     console.error('[Analytics Stats] Unexpected error:', error)

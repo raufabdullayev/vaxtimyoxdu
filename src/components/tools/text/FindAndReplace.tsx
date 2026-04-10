@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo, useCallback } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface MatchInfo {
   index: number
@@ -9,6 +10,8 @@ interface MatchInfo {
 }
 
 export default function FindAndReplace() {
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.textTools')
   const [text, setText] = useState('')
   const [findValue, setFindValue] = useState('')
   const [replaceValue, setReplaceValue] = useState('')
@@ -60,7 +63,7 @@ export default function FindAndReplace() {
       return result
     } catch (e) {
       if (useRegex) {
-        setRegexError(e instanceof Error ? e.message : 'Invalid regular expression')
+        setRegexError(e instanceof Error ? e.message : t('invalidRegex'))
       }
       return []
     }
@@ -171,25 +174,25 @@ The QUICK brown fox jumps over the lazy dog.`
       {/* Find & Replace inputs */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Find</label>
+          <label className="block text-sm font-medium mb-1">{t('find')}</label>
           <input
             type="text"
             value={findValue}
             onChange={(e) => setFindValue(e.target.value)}
-            placeholder={useRegex ? 'Enter regex pattern...' : 'Enter text to find...'}
+            placeholder={useRegex ? t('enterRegexPattern') : t('enterTextToFind')}
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary"
-            aria-label="Find text"
+            aria-label={t('find')}
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Replace with</label>
+          <label className="block text-sm font-medium mb-1">{t('replaceWith')}</label>
           <input
             type="text"
             value={replaceValue}
             onChange={(e) => setReplaceValue(e.target.value)}
-            placeholder="Enter replacement text..."
+            placeholder={t('enterReplacementText')}
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary"
-            aria-label="Replace text"
+            aria-label={t('replaceWith')}
           />
         </div>
       </div>
@@ -203,7 +206,7 @@ The QUICK brown fox jumps over the lazy dog.`
             onChange={(e) => setCaseSensitive(e.target.checked)}
             className="rounded"
           />
-          <span className="text-sm">Case Sensitive</span>
+          <span className="text-sm">{t('caseSensitive')}</span>
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -215,7 +218,7 @@ The QUICK brown fox jumps over the lazy dog.`
             }}
             className="rounded"
           />
-          <span className="text-sm">Regex</span>
+          <span className="text-sm">{t('regex')}</span>
         </label>
         <label className="flex items-center gap-2 cursor-pointer">
           <input
@@ -226,7 +229,7 @@ The QUICK brown fox jumps over the lazy dog.`
             className="rounded"
           />
           <span className={`text-sm ${useRegex ? 'text-muted-foreground' : ''}`}>
-            Whole Word
+            {t('wholeWord')}
           </span>
         </label>
       </div>
@@ -239,7 +242,9 @@ The QUICK brown fox jumps over the lazy dog.`
               matches.length > 0 ? 'text-primary' : 'text-muted-foreground'
             }`}
           >
-            {matches.length} match{matches.length !== 1 ? 'es' : ''} found
+            {matches.length === 1
+              ? t('matchesFound', { count: matches.length })
+              : t('matchesFoundPlural', { count: matches.length })}
           </span>
           {matches.length > 0 && (
             <>
@@ -247,13 +252,13 @@ The QUICK brown fox jumps over the lazy dog.`
                 onClick={replaceFirst}
                 className="px-3 py-1.5 text-sm border rounded-lg hover:bg-accent transition-colors"
               >
-                Replace First
+                {t('replaceFirst')}
               </button>
               <button
                 onClick={replaceAll}
                 className="px-3 py-1.5 text-sm bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
               >
-                Replace All
+                {t('replaceAll')}
               </button>
             </>
           )}
@@ -262,35 +267,35 @@ The QUICK brown fox jumps over the lazy dog.`
 
       {regexError && (
         <div className="p-3 rounded-lg bg-destructive/10 text-destructive text-sm">
-          Regex Error: {regexError}
+          {t('regexError')}: {regexError}
         </div>
       )}
 
       {/* Text input */}
       <div>
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium">Text</label>
+          <label className="text-sm font-medium">{t('text')}</label>
           <div className="flex gap-2">
             {text && (
               <button
                 onClick={copy}
                 className="text-xs text-primary hover:underline"
-                aria-label="Copy text"
+                aria-label={tc('copy')}
               >
-                {copied ? 'Copied!' : 'Copy'}
+                {copied ? tc('copied') : tc('copy')}
               </button>
             )}
             <button
               onClick={loadSample}
               className="text-xs text-primary hover:underline"
             >
-              Sample
+              {t('sample')}
             </button>
           </div>
         </div>
         <textarea
           className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono min-h-[200px] focus:outline-none focus:ring-2 focus:ring-primary"
-          placeholder="Enter or paste your text here..."
+          placeholder={t('enterOrPasteText')}
           value={text}
           onChange={(e) => setText(e.target.value)}
           aria-label="Text input for find and replace"
@@ -301,7 +306,7 @@ The QUICK brown fox jumps over the lazy dog.`
       {highlightedHtml && highlightedHtml.length > 0 && (
         <div>
           <label className="block text-sm font-medium mb-1">
-            Match Highlights ({matches.length})
+            {t('matchHighlights')} ({matches.length})
           </label>
           <div className="w-full rounded-lg border bg-muted/30 px-3 py-2 text-sm font-mono min-h-[100px] max-h-[300px] overflow-auto whitespace-pre-wrap break-words">
             {highlightedHtml.map((part, i) =>
@@ -326,7 +331,7 @@ The QUICK brown fox jumps over the lazy dog.`
           className="px-4 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           aria-label="Clear all fields"
         >
-          Clear All
+          {t('clearAll')}
         </button>
       )}
     </div>

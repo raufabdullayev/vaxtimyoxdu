@@ -21,6 +21,8 @@ import BackToTop from '@/components/common/BackToTop'
 import TrustBadge from '@/components/common/TrustBadge'
 import ToolCard from '@/components/tools/ToolCard'
 import CategoryHeader from '@/components/tools/CategoryHeader'
+import ToolChainBanner from '@/components/tools/ToolChainBanner'
+import ToolUsageCounter from '@/components/tools/ToolUsageCounter'
 
 const validCategories: ToolCategory[] = ['pdf', 'image', 'ai', 'dev', 'text', 'generators']
 
@@ -33,16 +35,19 @@ const toolComponents: Record<string, React.ComponentType> = {
   'ai-text-rewriter': dynamic(() => import('@/components/tools/ai/TextRewriter')),
   'ai-text-summarizer': dynamic(() => import('@/components/tools/ai/TextSummarizer')),
   'ai-grammar-checker': dynamic(() => import('@/components/tools/ai/GrammarChecker')),
+  'image-to-text': dynamic(() => import('@/components/tools/ai/ImageToText')),
   // PDF Tools
   'pdf-merge': dynamic(() => import('@/components/tools/pdf/PdfMerge')),
   'pdf-split': dynamic(() => import('@/components/tools/pdf/PdfSplit')),
   'pdf-to-word': dynamic(() => import('@/components/tools/pdf/PdfToWord')),
   'pdf-compress': dynamic(() => import('@/components/tools/pdf/PdfCompress')),
+  'word-to-pdf': dynamic(() => import('@/components/tools/pdf/WordToPdf')),
   // Image Tools
   'image-compress': dynamic(() => import('@/components/tools/image/ImageCompress')),
   'image-convert': dynamic(() => import('@/components/tools/image/ImageConvert')),
   'image-resize': dynamic(() => import('@/components/tools/image/ImageResize')),
   'image-crop': dynamic(() => import('@/components/tools/image/ImageCrop')),
+  'background-remover': dynamic(() => import('@/components/tools/image/BackgroundRemover')),
   // Developer Tools
   'json-formatter': dynamic(() => import('@/components/tools/dev/JsonFormatter')),
   'base64-encode-decode': dynamic(() => import('@/components/tools/dev/Base64Codec')),
@@ -149,6 +154,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'stopwatch': dynamic(() => import('@/components/tools/text/Stopwatch')),
   // Time Calculator
   'time-calculator': dynamic(() => import('@/components/tools/generators/TimeCalculator')),
+  // Meme Generator
+  'meme-generator': dynamic(() => import('@/components/tools/generators/MemeGenerator')),
 }
 
 export async function generateStaticParams() {
@@ -298,6 +305,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   const toolClientMessages = {
     toolUI: (allMessages as Record<string, unknown>).toolUI,
     toolComponents: (allMessages as Record<string, unknown>).toolComponents,
+    toolChain: (allMessages as Record<string, unknown>).toolChain,
+    toolUsage: (allMessages as Record<string, unknown>).toolUsage,
+    tools: (allMessages as Record<string, unknown>).tools,
   }
 
   const tool = getToolBySlug(slug)
@@ -356,17 +366,19 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           { label: displayName },
         ]}
       />
-      <ToolTemplate tool={tool} aboutTitle={t('aboutTool', { toolName: displayName })}>
-        <NextIntlClientProvider messages={toolClientMessages}>
+      <NextIntlClientProvider messages={toolClientMessages}>
+        <ToolTemplate tool={tool} aboutTitle={t('aboutTool', { toolName: displayName })}>
           <Component />
-        </NextIntlClientProvider>
-      </ToolTemplate>
-      <ToolUseTrackerWrapper slug={tool.slug} />
-      <ShareButtonsWrapper
-        path={`/tools/${tool.slug}`}
-        title={displayName}
-        description={localizedDescription || tool.shortDescription}
-      />
+        </ToolTemplate>
+        <ToolUsageCounter slug={tool.slug} />
+        <ToolUseTrackerWrapper slug={tool.slug} />
+        <ShareButtonsWrapper
+          path={`/tools/${tool.slug}`}
+          title={displayName}
+          description={localizedDescription || tool.shortDescription}
+        />
+        <ToolChainBanner currentSlug={tool.slug} />
+      </NextIntlClientProvider>
       <NewsletterInlineCTA variant="tool" />
       {richContent && (
         <ToolContentSection
