@@ -11,33 +11,33 @@ export const newsArticles: Record<string, NewsArticle> = {
 
   // --- Champions League Quarter-Final Results ---
   'chempionlar-liqasi-ceyrek-final-neticeler-9-aprel': {
-    title: 'Cempionlar Liqasi 1/4 final neticeleri: Atletiko sok, PSJ dominantliq, Arsenal son deqiqe, Bavariya qelebe',
+    title: 'Çempionlar Liqası 1/4 final nəticələri: Atletiko şok, PSJ dominantlıq, Arsenal son dəqiqə, Bavariya qələbə',
     date: '2026-04-09',
-    category: 'Idman',
+    category: 'İdman',
     locale: 'az',
-    content: `UEFA Cempionlar Liqasinin 1/4 final merhelesinin ilk oyunlari basa catdi. 7-8 aprel tarixlerinde oynanan dord matcda boyuk surprizler ve unudulmaz anlar yasandi. Budur butun neticeler ve etraflari.
+    content: `UEFA Çempionlar Liqasının 1/4 final mərhələsinin ilk oyunları başa çatdı. 7-8 aprel tarixlərində oynanan dörd matçda böyük sürprizlər və unudulmaz anlar yaşandı. Budur bütün nəticələr və ətraflari.
 
 ## Barselona 0-2 Atletiko Madrid (8 aprel)
 
-Kamp Nouda Atletiko Madrid gozlenilmez qelebe qazandi ve Barselonanin evde Atletikoya qarsi 25 matcliq meglubiyyetsizlik serisini (20 il!) sona catirdi. 44-cu deqiqede VAR arasdirmasindan sonra Cubarsi qirmizi kart aldi (DOGSO) -- bu qerar boyuk mubarise yaratdi. Thierry Henry "bu qirmizi deyildi" dedi. Bir deqiqe sonra, 45-ci deqiqede Alvarez serbest zerbeden hesabi acdi. 70-ci deqiqede Sorloth bas ile hesabi 2-0 etdi. Bundan elave, Pubillin el oyunu meqami da penalti verilmemesi ile mubarise dogurdu.
+Kamp Nouda Atletiko Madrid gözlənilməz qələbə qazandı və Barselonanın evdə Atletikoya qarşı 25 matçlıq məğlubiyyətsizlik serisini (20 il!) sona çatırdı. 44-cü dəqiqədə VAR araşdırmasından sonra Cubarsi qırmızı kart aldı (DOGSO) -- bu qərar böyük mübahisə yaratdı. Thierry Henry "bu qırmızı deyildi" dedi. Bir dəqiqə sonra, 45-ci dəqiqədə Alvarez sərbəst zərbədən hesabı açdı. 70-ci dəqiqədə Sorloth baş ilə hesabı 2-0 etdi. Bundan əlavə, Pubillin əl oyunu məqamı da penalti verilməməsi ilə mübahisə doğurdu.
 
-Flik: "Bizde geri donmek ucun keyfiyyet var."
+Flik: "Bizdə geri dönmək üçün keyfiyyət var."
 
 ## PSJ 2-0 Liverpul (8 aprel)
 
-Paris Sent-Jermen Parc de Pransda Liverpulun uzerinde tam dominantliq qurdu. Doue 11-ci deqiqede defleksiya ile hesabi acdi, Kvaratsxeliya ise 65-ci deqiqede mohtesem ferdi qol vurdu -- ardicil 4-cu CL qolu. Liverpul qapiya hec bir zerbesi yox idi! PSJ topu 74% saxladi, 17-ye qarsi 3 zerbesi oldu. PSJ muddea olunan Cempionlar Liqasi cempionudur.
+Paris Sent-Jermen Parc de Pransda Liverpulun üzərində tam dominantlıq qurdu. Doue 11-ci dəqiqədə defleksiya ilə hesabı açdı, Kvaratsxeliya isə 65-ci dəqiqədə möhtəşəm fərdi qol vurdu -- ardıcıl 4-cü CL qolu. Liverpul qapıya heç bir zərbəsi yox idi! PSJ topu 74% saxladı, 17-yə qarşı 3 zərbəsi oldu. PSJ müddəa olunan Çempionlar Liqası çempionudur.
 
 ## Sportinq 0-1 Arsenal (7 aprel)
 
-Arsenalda evez oyuncusu Havertz 90+1-ci deqiqede Martinellinin asisinden sonra qol vurdu ve kritik sefer qelebesi qazandi.
+Arsenalda əvəz oyunçusu Havertz 90+1-ci dəqiqədə Martinellinin asistindən sonra qol vurdu və kritik səfər qələbəsi qazandı.
 
-## Real Madrid 1-2 Bavariya Munhen (7 aprel)
+## Real Madrid 1-2 Bavariya Münhen (7 aprel)
 
-Diaz 41-ci deqiqede hesabi acdi, lakin Kane 46-ci deqiqede -- ikinci hissenin cemi 21-ci saniyesinde! -- beraberlik qolu vurdu. Mbappe 74-cu deqiqede Real ucun cavab versede, Kane-in qolu ve asisti Bavariyanin 2-1 qelebesi ile neticelendi. Kane zededen ugurlu sekilde qayitdi.
+Diaz 41-ci dəqiqədə hesabı açdı, lakin Kane 46-cı dəqiqədə -- ikinci hissənin cəmi 21-ci saniyəsində! -- bərabərlik qolu vurdu. Mbappe 74-cü dəqiqədə Real üçün cavab versədə, Kane-in qolu və asisti Bavariyanın 2-1 qələbəsi ilə nəticələndi. Kane zədədən uğurlu şəkildə qayıtdı.
 
-## Cavab matclari
+## Cavab matçları
 
-Ikinci oyunlar 14-15 aprel tarixlerinde kecirilecek. Butun cutlerde mubarize aciq qalir.`,
+İkinci oyunlar 14-15 aprel tarixlərində keçiriləcək. Bütün cütlərdə mübarizə açıq qalır.`,
   },
   'en-champions-league-quarter-final-results-april-9': {
     title: 'Champions League QF Results: Atletico Shock Barca, PSG Dominate Liverpool, Arsenal Late Winner, Bayern Stun Madrid',
@@ -69,83 +69,83 @@ A thriller at the Bernabeu saw Diaz give Real Madrid the lead in the 41st minute
 Return fixtures are scheduled for April 14-15. All four ties remain alive heading into the second legs.`,
   },
   'tr-sampiyonlar-ligi-ceyrek-final-sonuclari-9-nisan': {
-    title: 'Sampiyonlar Ligi Ceyrek Final Sonuclari: Atletico Sok, PSG Hakimiyet, Arsenal Son Dakika, Bayern Galibiyeti',
+    title: 'Şampiyonlar Ligi Çeyrek Final Sonuçları: Atletico Şok, PSG Hâkimiyet, Arsenal Son Dakika, Bayern Galibiyeti',
     date: '2026-04-09',
     category: 'Spor',
     locale: 'tr',
-    content: `UEFA Sampiyonlar Ligi ceyrek final ilk maclari tamamlandi. 7-8 Nisan tarihlerinde oynanan dort macta buyuk surprizler, tartismali kararlar ve unutulmaz anlar yasandi.
+    content: `UEFA Şampiyonlar Ligi çeyrek final ilk maçları tamamlandı. 7-8 Nisan tarihlerinde oynanan dört maçta büyük sürprizler, tartışmalı kararlar ve unutulmaz anlar yaşandı.
 
 ## Barcelona 0-2 Atletico Madrid (8 Nisan)
 
-Atletico Madrid, Camp Nou\'da Barcelona\'yi yenerek 20 yillik ve 25 maclik yenilmezlik serisine son verdi. 44. dakikada VAR incelemesinin ardindan Cubarsi kirmizi kart gordu (DOGSO) -- bu karar buyuk tartisma yaratti. Thierry Henry "kirmizi degil" dedi. 45. dakikada Alvarez serbest vurustan golunu atti. 70. dakikada Sorloth kafa vurusuyla skoru 2-0 yapti. Pubill\'in el oyunu da penalti verilmemesiyle tartisma dogurdu.
+Atletico Madrid, Camp Nou\'da Barcelona\'yı yenerek 20 yıllık ve 25 maçlık yenilmezlik serisine son verdi. 44. dakikada VAR incelemesinin ardından Cubarsi kırmızı kart gördü (DOGSO) -- bu karar büyük tartışma yarattı. Thierry Henry "kırmızı değil" dedi. 45. dakikada Alvarez serbest vuruştan golünü attı. 70. dakikada Sorloth kafa vuruşuyla skoru 2-0 yaptı. Pubill\'in el oyunu da penaltı verilmemesiyle tartışma doğurdu.
 
-Flick: "Geri donecek kalitemiz var."
+Flick: "Geri dönecek kalitemiz var."
 
 ## PSG 2-0 Liverpool (8 Nisan)
 
-Paris Saint-Germain, Parc des Princes\'te Liverpool\'a tam hakimiyet kurdu. Doue 11. dakikada defleksiyonla golunu atti, Kvaratskhelia ise 65. dakikada muhtesem bireysel golunu kaydetti -- art arda 4. SL golu. Liverpool\'un kaleye tek sutu bile yoktu! PSG topu %74 oraninda kontrol etti, 17\'ye karsi 3 isabetli sut kaydetti. PSG mevcut Sampiyonlar Ligi sampiyonu.
+Paris Saint-Germain, Parc des Princes\'te Liverpool\'a tam hâkimiyet kurdu. Doue 11. dakikada defleksiyonla golünü attı, Kvaratskhelia ise 65. dakikada müthişem bireysel golünü kaydetti -- art arda 4. ŞL golü. Liverpool\'un kaleye tek şutu bile yoktu! PSG topu %74 oranında kontrol etti, 17\'ye karşı 3 isabetli şut kaydetti. PSG mevcut Şampiyonlar Ligi şampiyonu.
 
 ## Sporting 0-1 Arsenal (7 Nisan)
 
-Yedek oyuncu Havertz, 90+1. dakikada Martinelli\'nin asistinden gol atarak Arsenal\'e kritik deplasman galibiyeti kazandirdi.
+Yedek oyuncu Havertz, 90+1. dakikada Martinelli\'nin asistinden gol atarak Arsenal\'e kritik deplasman galibiyeti kazandırdı.
 
-## Real Madrid 1-2 Bayern Munih (7 Nisan)
+## Real Madrid 1-2 Bayern Münih (7 Nisan)
 
-Diaz 41. dakikada Real Madrid\'i one gecirdi, ancak Kane ikinci yarinin 21. saniyesinde (46\') beraberlik golunu atti -- sakatliktan donen Kane asist de yapti. Mbappe 74. dakikada Real icin golunu atti, ancak Bayern 2-1 deplasman galibiyetiyle ayrildi.
+Diaz 41. dakikada Real Madrid\'i öne geçirdi, ancak Kane ikinci yarının 21. saniyesinde (46\') beraberlik golünü attı -- sakatlıktan dönen Kane asist de yaptı. Mbappe 74. dakikada Real için golünü attı, ancak Bayern 2-1 deplasman galibiyetiyle ayrıldı.
 
-## Rovans Maclari
+## Rövanş Maçları
 
-Ikinci maclar 14-15 Nisan\'da oynanacak. Tum eslesmelerde mucadele acik.`,
+İkinci maçlar 14-15 Nisan\'da oynanacak. Tüm eşleşmelerde mücadele açık.`,
   },
   'ru-liga-chempionov-chetvertfinal-rezultaty-9-aprelya': {
-    title: 'Rezultaty 1/4 finala Ligi chempionov: shok Atletiko, dominirovaniye PSZh, Arsenol v kontse, Bavariya pobezhdayet',
+    title: 'Результаты 1/4 финала Лиги чемпионов: шок Атлетико, доминирование ПСЖ, Арсенал в концовке, Бавария побеждает',
     date: '2026-04-09',
-    category: 'Sport',
+    category: 'Спорт',
     locale: 'ru',
-    content: `Pervye matchi chetvertfinala Ligi chempionov UEFA zaversheny. Chetyre matcha 7-8 aprelya prinesli syurprizy, spornyye resheniya i nezabyvayemyye momenty.
+    content: `Первые матчи четвертьфинала Лиги чемпионов УЕФА завершены. Четыре матча 7-8 апреля принесли сюрпризы, спорные решения и незабываемые моменты.
 
-## Barselona 0-2 Atletiko Madrid (8 aprelya)
+## Барселона 0-2 Атлетико Мадрид (8 апреля)
 
-Atletiko Madrid osholomil Barselonu na Kamp Nou, prekrativ yeyo 25-matchevuyu domashnyuyu bespoygrazhnyuyu seriyu protiv Atletiko, dlyvshuyusya 20 let! Na 44-y minute posle proverki VAR Kubarsi poluchil krasnuyu kartochku (DOGSO) -- eto resheniye vyzvalo ozhestochyonnuye debaty. Ekspert T\'yerri Anri zayavil: "Eto ne krasnaya kartochka." Na 45-y minute Al\'vares zabil so shtrafnogo, a na 70-y Sorlot dobavil golovoy -- 2:0. Takzhe vyzval spory moment s igroyrukov Pubilya, za kotoruyu ne byl naznachen penalti.
+Атлетико Мадрид ошеломил Барселону на Камп Ноу, прекратив её 25-матчевую домашнюю беспроигрышную серию против Атлетико, длившуюся 20 лет! На 44-й минуте после проверки VAR Кубарси получил красную карточку (DOGSO) -- это решение вызвало ожесточённые дебаты. Эксперт Тьерри Анри заявил: "Это не красная карточка." На 45-й минуте Альварес забил со штрафного, а на 70-й Сорлот добавил головой -- 2:0. Также вызвал споры момент с игрой рукой Пубиля, за которую не был назначен пенальти.
 
-Flik posle matcha: "U nas yest kachestvo, chtoby vernut'sya."
+Флик после матча: "У нас есть качество, чтобы вернуться."
 
-## PSZh 2-0 Liverpul\' (8 aprelya)
+## ПСЖ 2-0 Ливерпуль (8 апреля)
 
-Pari Sen-Zhermen polnost\'yu dominiroval nad Liverpulem na Park de Prens. Due otkryl schyot na 11-y minute (otskochivshiy udar), a Kvaratsxeliya na 65-y minute zabil velikolepnyy sol\'nyy gol -- yego 4-y podryad gol v LCh. Liverpul\' ne nanesudio ni odnogo udara v stvorbwh vorot! PSZh vladel myachom 74%, nanosya 17 udarov protiv 3. PSZh -- deystvuyushchiy champion Ligi chempionov.
+Пари Сен-Жермен полностью доминировал над Ливерпулем на Парк де Пренс. Дуэ открыл счёт на 11-й минуте (отскочивший удар), а Кварацхелия на 65-й минуте забил великолепный сольный гол -- его 4-й подряд гол в ЛЧ. Ливерпуль не нанёс ни одного удара в створ ворот! ПСЖ владел мячом 74%, нанося 17 ударов против 3. ПСЖ -- действующий чемпион Лиги чемпионов.
 
-## Sporting 0-1 Arsenal (7 aprelya)
+## Спортинг 0-1 Арсенал (7 апреля)
 
-Zaregistrirnyy na zamenu Xaverts zabil dramaticheskiy gol na 90+1-y minute s peredachi Martinell\'i, prinesya Arsenalu vazhneyshuyu gostevuyu pobedu.
+Вышедший на замену Хаверц забил драматический гол на 90+1-й минуте с передачи Мартинелли, принеся Арсеналу важнейшую гостевую победу.
 
-## Real Madrid 1-2 Bavariya Myunkhen (7 aprelya)
+## Реал Мадрид 1-2 Бавария Мюнхен (7 апреля)
 
-Dias vyveldyenot Real na 41-y minute, no Keyn sravnyal schyot na 46-y -- vsego cherez 21 sekundu posle nachala vtorogo tayma! Keyn, vernuvshiysya posle travmy, takzhe otdal golevuyu peredachu. Mbappe sokratil razryv na 74-y minute, no Bavariya uderzhala pobedu 2:1.
+Диас вывел Реал вперёд на 41-й минуте, но Кейн сравнял счёт на 46-й -- всего через 21 секунду после начала второго тайма! Кейн, вернувшийся после травмы, также отдал голевую передачу. Мбаппе сократил разрыв на 74-й минуте, но Бавария удержала победу 2:1.
 
-## Otvetnyye matchi
+## Ответные матчи
 
-Vtoryye matchi sostoyatsya 14-15 aprelya. Vo vsekh parakh bor'ba ostaetsya otkrytoy.`,
+Вторые матчи состоятся 14-15 апреля. Во всех парах борьба остаётся открытой.`,
   },
 
   // --- US-Iran Ceasefire ---
   'absh-iran-ateshkes-2-heftelik-pakistan-vasitechiliyi': {
-    title: 'ABSh-Iran ateshkes: 2 heftelik ateshkes elan edildi, lakin Iran pozulma iddialari ile tehdit edir',
+    title: 'ABŞ-İran atəşkəs: 2 həftəlik atəşkəs elan edildi, lakin İran pozulma iddiaları ilə təhdit edir',
     date: '2026-04-09',
-    category: 'Dunya',
+    category: 'Dünya',
     locale: 'az',
-    content: `Prezident Donald Tramp ABSh ile Iran arasinda 2 heftelik ateshkes elan edib. Razilasma Pakistan bash nazirinin vasitechiliyi ile elde edilib ve massiv herbi zerbelere 2 saatdan az qalmis imzalanib.
+    content: `Prezident Donald Tramp ABŞ ilə İran arasında 2 həftəlik atəşkəs elan edib. Razılaşma Pakistan baş nazirinin vasitəçiliyi ilə əldə edilib və massiv hərbi zərbələrə 2 saatdan az qalmış imzalanıb.
 
-## Ateshkesin sertleri
+## Atəşkəsin şərtləri
 
-Iran Hormuz bogazini yeniden acmaga razi olub -- bu, qlobal neft techizcatini temin eden strateji su yoludur. Lakin ateshkesin imzalanmasindan bir nece saat sonra Iran ABSh-ni razilasmanin sertlerini pozmaqda ittiham edib ve ateshkesden cekilmeye hazir oldugunu bildirib.
+İran Hörmüz boğazını yenidən açmağa razı olub -- bu, qlobal neft təchizatını təmin edən strateji su yoludur. Lakin atəşkəsin imzalanmasından bir neçə saat sonra İran ABŞ-ni razılaşmanın şərtlərini pozmaqda ittiham edib və atəşkəsdən çəkilməyə hazır olduğunu bildirib.
 
-## Danisiqlar davam edir
+## Danışıqlar davam edir
 
-Vitse-prezident JD Vens senbe gunu Islamabadda danisiqlareyehberliq edecek. Pakistan vasitechilik rolunu davam etdirir. Herterefli geopolitik gerginlik regionda yuksek seviyyede qalir ve ekspertler ateshkesin dayaniqliligina sual isaresi qoyurlar.
+Vitse-prezident JD Vens şənbə günü İslamabadda danışıqlara rəhbərlik edəcək. Pakistan vasitəçilik rolunu davam etdirir. Hərtərəfli geopolitik gərginlik regionda yüksək səviyyədə qalır və ekspertlər atəşkəsin dayanıqlılığına sual işarəsi qoyurlar.
 
-## Beynelxalq reaksiyalar
+## Beynəlxalq reaksiyalar
 
-Avropa Birliyi ve BMT ateshkesi alqislayib, lakin hami bunun uzunmuddetli sabitliye apardib-aparmayacagini gormek ucun gozleyir. Neft bazarlari ilkin sevincden sonra yeniden dalganma ile uzlesdi.`,
+Avropa Birliyi və BMT atəşkəsi alqışlayıb, lakin hamı bunun uzunmüddətli sabitliyə aparıb-aparmayacağını görmək üçün gözləyir. Neft bazarları ilkin sevincdən sonra yenidən dalğalanma ilə üzləşdi.`,
   },
   'en-us-iran-ceasefire-2-week-pakistan-brokered': {
     title: 'US-Iran Ceasefire: 2-Week Deal Announced but Iran Threatens Pullout Over Violations',
@@ -167,63 +167,63 @@ However, within hours of the announcement, Iran accused the United States of vio
 Vice President JD Vance will lead negotiations in Islamabad on Saturday, with Pakistan continuing its mediation role. The fragile truce underscores how quickly any progress can unravel in the volatile geopolitical landscape of the Middle East. The international community watches closely.`,
   },
   'tr-abd-iran-ateskes-2-haftalik-pakistan-aracilik': {
-    title: 'ABD-Iran Ateskes: 2 Haftalik Anlasma, Iran Ihlal Iddialariyla Cekilme Tehdidi',
+    title: 'ABD-İran Ateşkes: 2 Haftalık Anlaşma, İran İhlal İddialarıyla Çekilme Tehdidi',
     date: '2026-04-09',
-    category: 'Dunya',
+    category: 'Dünya',
     locale: 'tr',
-    content: `Baskan Donald Trump, ABD ile Iran arasinda 2 haftalik ateskes ilan etti. Anlasma Pakistan Basbakani\'nin araciligyla saglanidi ve buyuk askeri saldirilara 2 saatten az kala imzalandi.
+    content: `Başkan Donald Trump, ABD ile İran arasında 2 haftalık ateşkes ilan etti. Anlaşma Pakistan Başbakanı\'nın aracılığıyla sağlandı ve büyük askeri saldırılara 2 saatten az kala imzalandı.
 
-## Anlasmanin Sartlari
+## Anlaşmanın Şartları
 
-Iran, kuresel petrol arz icin kritik oneme sahip stratejik su yolu olan Hurmuz Bogazi\'ni yeniden acmayi kabul etti. Anlasma, Orta Dogu\'daki haftalarca suren artan gerilim, askeri yiginaklar ve misilleme saldirilari sonrasi dramatik bir gerileme oldu.
+İran, küresel petrol arzı için kritik öneme sahip stratejik su yolu olan Hürmüz Boğazı\'nı yeniden açmayı kabul etti. Anlaşma, Orta Doğu\'daki haftalarca süren artan gerilim, askeri yığınaklar ve misilleme saldırıları sonrası dramatik bir gerileme oldu.
 
-## Iran\'in Iddialari
+## İran\'ın İddiaları
 
-Ancak duyurudan yalnizca saatler sonra Iran, ABD\'yi ateskes sartlarini ihlal etmekle sucladi ve tamamen cekilmekle tehdit etti. Tahran ihlallerin tam icerigini belirtmedi, ancak suclamalar kuresel piyasalari zaten sarsti.
+Ancak duyurudan yalnızca saatler sonra İran, ABD\'yi ateşkes şartlarını ihlal etmekle suçladı ve tamamen çekilmekle tehdit etti. Tahran ihlallerin tam içeriğini belirtmedi, ancak suçlamalar küresel piyasaları zaten sarstı.
 
-## Yaklasan Muzakereler
+## Yaklaşan Müzakereler
 
-Baskan Yardimcisi JD Vance cumartesi gunu Islamabad\'da muzakerelere liderlik edecek. Pakistan aracilik rolunu surduruyor. Kirilgan baris, Orta Dogu\'daki oynak jeopolitik ortamda herhangi bir ilerlemenin ne kadar cabuk curutulebileceginin altini ciziyor.`,
+Başkan Yardımcısı JD Vance cumartesi günü İslamabad\'da müzakerelere liderlik edecek. Pakistan aracılık rolünü sürdürüyor. Kırılgan barış, Orta Doğu\'daki oynak jeopolitik ortamda herhangi bir ilerlemenin ne kadar çabuk çürütülebileceğinin altını çiziyor.`,
   },
   'ru-ssha-iran-peremiriye-2-nedeli-posrednichestvo-pakistana': {
-    title: 'Peremiriye SShA-Iran: 2-nedel\'noye soglasheniye, Iran ugrorzhayet vykhodom iz-za narusheniy',
+    title: 'Перемирие США-Иран: 2-недельное соглашение, Иран угрожает выходом из-за нарушений',
     date: '2026-04-09',
-    category: 'Mir',
+    category: 'Мир',
     locale: 'ru',
-    content: `Prezident Donald Tramp ob\'yavil o 2-nedel\'nom peremiriyi s Iranom, dostignutom pri posrednichestve prem\'yer-ministra Pakistana. Soglasheniye bylo podpisano menee chem za 2 chasa do nachala massivnykh voennykh udarov.
+    content: `Президент Дональд Трамп объявил о 2-недельном перемирии с Ираном, достигнутом при посредничестве премьер-министра Пакистана. Соглашение было подписано менее чем за 2 часа до начала массивных военных ударов.
 
-## Usloviya soglasheniya
+## Условия соглашения
 
-Iran soglasitsya vnov otkryt Ormuzkiy proliv -- strategicheskiy vodnyy put\', kriticheski vazhnyy dlya mirovykh postavok nefti. Sdelka predstavlyayet soboy dramaticheskuyu deeskalatsiyu posle nedel\' rastushchey napryazhennosti, voennykh nakoreniy i otvetnykhyakh udarov na Blizhnem Vostoke.
+Иран согласился вновь открыть Ормузский пролив -- стратегический водный путь, критически важный для мировых поставок нефти. Сделка представляет собой драматическую деэскалацию после недель растущей напряжённости, военных наращиваний и ответных ударов на Ближнем Востоке.
 
-## Obvineniya Irana
+## Обвинения Ирана
 
-Odnako cherez neskol\'ko chasov posle ob\'yavleniya Iran obvinilykh SShA v narushenii usloviy peremiriya i prigrozil polnym vykhodom. Tegeran ne utochnil tochnuyu sut\' predpolagayemykh narusheniy, no obvineniya uzhe vstryakhuli mirovyye rynki.
+Однако через несколько часов после объявления Иран обвинил США в нарушении условий перемирия и пригрозил полным выходом. Тегеран не уточнил точную суть предполагаемых нарушений, но обвинения уже встряхнули мировые рынки.
 
-## Predstoyashchiye peregovory
+## Предстоящие переговоры
 
-Vitse-prezident Dzhey Di Vens vozglavit peregovory v Islamabadbade v subbotu. Pakistan prodolzhayet posrednicheskuyu rol\'. Khrupkiy mir podchyorkivayet, naskol\'ko bystro lyuboy progress mozhet sorvat\'sya v nesta-bil\'nom geopoliticheskom landshafte.`,
+Вице-президент Джей Ди Вэнс возглавит переговоры в Исламабаде в субботу. Пакистан продолжает посредническую роль. Хрупкий мир подчёркивает, насколько быстро любой прогресс может сорваться в нестабильном геополитическом ландшафте.`,
   },
 
   // --- Israel Attacks Lebanon ---
   'israil-livan-hucum-254-olum-100-hezbollah-hedefe': {
-    title: 'Israil Livana hucum: 254+ olum, 1160+ yaralanan -- 10 deqiqede 100+ hedef vuruldu',
+    title: 'İsrail Livana hücum: 254+ ölüm, 1160+ yaralanan -- 10 dəqiqədə 100+ hədəf vuruldu',
     date: '2026-04-09',
-    category: 'Dunya',
+    category: 'Dünya',
     locale: 'az',
-    content: `ABSh-Iran ateshkesinden bir nece saat sonra Israil Livanda 100-den cox Hizbullah hedefine herbi emeliyyat kecirib. 10 deqiqe erzinde hava zerbeleri ile 254 nefer olub ve 1160-dan cox adam yaralanib.
+    content: `ABŞ-İran atəşkəsindən bir neçə saat sonra İsrail Livanda 100-dən çox Hizbullah hədəfinə hərbi əməliyyat keçirib. 10 dəqiqə ərzində hava zərbələri ilə 254 nəfər ölüb və 1160-dan çox adam yaralanıb.
 
-## Herbi emeliyyatin tefsilleri
+## Hərbi əməliyyatın təfərrüatları
 
-Israil ordusu Livandaki Hizbullah moqvqelerini eyni vaxtda vurub. Hedeflerin arasinda silah anbarlari, komanda merkezleri ve strateji moqvqeler var idi. Zerbelerin miqyasi ve koordinasiyasi bu emeliyyati sonuncu onillikin en boyuk herbi aksiyalarindan birine cevirib.
+İsrail ordusu Livandakı Hizbullah mövqelərini eyni vaxtda vurub. Hədəflərin arasında silah anbarları, komanda mərkəzləri və strateji mövqelər var idi. Zərbələrin miqyası və koordinasiyası bu əməliyyatı sonuncu onilliyin ən böyük hərbi aksiyalarından birinə çevirib.
 
-## Livan milli matam elan etdi
+## Livan milli matəm elan etdi
 
-Livan hokumeti milli matam gunu elan edib. Xesteexanalarin hemm tutumu asib, yasayis menaetqelerindeki dagintlar genislenmekde davam edir. Beynelxalq yardim teshkilatlari bolgeye kecid ucun cagiris edib.
+Livan hökuməti milli matəm günü elan edib. Xəstəxanaların həcm tutumu aşıb, yaşayış məntəqələrindəki dağıntılar genişlənməkdə davam edir. Beynəlxalq yardım təşkilatları bölgəyə keçid üçün çağırış edib.
 
-## Ateshkes mubaohisesi
+## Atəşkəs mübahisəsi
 
-Tramp administrasiyasi bildirib ki, Livan ateshkes razilasmasina daxil deyildi. Lakin Iran bunun eksine iddia edir -- Tehrana gore Livan ateshkesin hissesi idi ve Israilin herbi emeliyyati razilasmanin aciq pozuntusdur. Bu fikir ayriligi Iran-in ateshkesden cekilme tehdidinin esaslandirmasina cevrilib.`,
+Tramp administrasiyası bildirib ki, Livan atəşkəs razılaşmasına daxil deyildi. Lakin İran bunun əksinə iddia edir -- Tehrana görə Livan atəşkəsin hissəsi idi və İsrailin hərbi əməliyyatı razılaşmanın açıq pozuntusudur. Bu fikir ayrılığı İranın atəşkəsdən çəkilmə təhdidinin əsaslandırmasına çevrilib.`,
   },
   'en-israel-attacks-lebanon-254-killed-hezbollah-targets': {
     title: 'Israel Strikes Lebanon: 254+ Dead, 1160+ Wounded -- 100+ Hezbollah Targets Hit in 10 Minutes',
@@ -245,63 +245,63 @@ Lebanon declared a national day of mourning. Hospitals are overwhelmed beyond ca
 The Trump administration stated that Lebanon was NOT included in the US-Iran ceasefire agreement. However, Iran directly contradicts this position, claiming Lebanon was part of the deal and that Israel\'s military action constitutes a clear violation of the agreement. This fundamental disagreement over the scope of the ceasefire has become Iran\'s primary justification for threatening to withdraw from the deal entirely.`,
   },
   'tr-israil-lubnan-saldiri-254-olum-hezbollah-hedefler': {
-    title: 'Israil Lubnan\'a Saldirdi: 254+ Olu, 1160+ Yarali -- 10 Dakikada 100+ Hedef Vuruldu',
+    title: 'İsrail Lübnan\'a Saldırdı: 254+ Ölü, 1160+ Yaralı -- 10 Dakikada 100+ Hedef Vuruldu',
     date: '2026-04-09',
-    category: 'Dunya',
+    category: 'Dünya',
     locale: 'tr',
-    content: `ABD-Iran ateskesinden saatler sonra Israil, Lubnan\'daki 100\'den fazla Hizbullah hedefine buyuk capli askeri operasyon duzenleadi. Yaklasik 10 dakika icinde gerceklestirilen hava saldirilari sonucu en az 254 kisi hayatini kaybetti ve 1.160\'tan fazla kisi yaralandi.
+    content: `ABD-İran ateşkesinden saatler sonra İsrail, Lübnan\'daki 100\'den fazla Hizbullah hedefine büyük çaplı askeri operasyon düzenledi. Yaklaşık 10 dakika içinde gerçekleştirilen hava saldırıları sonucu en az 254 kişi hayatını kaybetti ve 1.160\'tan fazla kişi yaralandı.
 
 ## Operasyonun Boyutu
 
-Israil ordusu Lubnan genelindeki Hizbullah mevzilerine es zamanli hava saldirilari gerceklestirdi. Hedefler arasinda silah depolari, komuta merkezleri ve stratejik tesisler yer aliyor. Saldirilarin hizi ve koordinasyonu, bu operasyonu bolgedeki son on yillarin en buyuk tekil askeri eylemlerinden biri haline getirdi.
+İsrail ordusu Lübnan genelindeki Hizbullah mevzilerine eş zamanlı hava saldırıları gerçekleştirdi. Hedefler arasında silah depoları, komuta merkezleri ve stratejik tesisler yer alıyor. Saldırıların hızı ve koordinasyonu, bu operasyonu bölgedeki son on yılların en büyük tekil askeri eylemlerinden biri haline getirdi.
 
-## Lubnan Ulusal Yas Ilan Etti
+## Lübnan Ulusal Yas İlan Etti
 
-Lubnan hukumeti ulusal yas gunu ilan etti. Hastaneler kapasitenin ustunde, yerlesim alanlarindaki hasar degerlendirmesi devam ediyor. Uluslararasi yardim kuruluslari etkilenen bolgelere acil insani erisim cagrisi yapti.
+Lübnan hükümeti ulusal yas günü ilan etti. Hastaneler kapasitenin üstünde, yerleşim alanlarındaki hasar değerlendirmesi devam ediyor. Uluslararası yardım kuruluşları etkilenen bölgelere acil insani erişim çağrısı yaptı.
 
-## Ateskes Tartismasi
+## Ateşkes Tartışması
 
-Trump yonetimi, Lubnan\'in ABD-Iran ateskes anlasmasi kapsaminda OLMADIGINI belirtti. Ancak Iran bu gorus farkliliginin tam tersini savunuyor -- Tahran\'a gore Lubnan anlasmanin parcasiydi ve Israil\'in askeri eylemi acik bir ihlaldir. Bu temel anlasmazlik, Iran\'in atestkesten cekilme tehdidinin ana gerekcelendirmesi haline geldi.`,
+Trump yönetimi, Lübnan\'ın ABD-İran ateşkes anlaşması kapsamında OLMADIĞINI belirtti. Ancak İran bu görüş farklılığının tam tersini savunuyor -- Tahran\'a göre Lübnan anlaşmanın parçasıydı ve İsrail\'in askeri eylemi açık bir ihlaldir. Bu temel anlaşmazlık, İran\'ın ateşkesten çekilme tehdidinin ana gerekçelendirmesi haline geldi.`,
   },
   'ru-izrail-atakuyet-livan-254-pogibshikh-hezbollah-tseli': {
-    title: 'Izrail\' atakoval Livan: 254+ pogibshikh, 1160+ ranennykh -- 100+ tseley Khizbally za 10 minut',
+    title: 'Израиль атаковал Ливан: 254+ погибших, 1160+ раненых -- 100+ целей Хезболлы за 10 минут',
     date: '2026-04-09',
-    category: 'Mir',
+    category: 'Мир',
     locale: 'ru',
-    content: `Vsego cherez neskol\'ko chasov posle ob\'yavleniya peremiriya mezhdu SShA i Iranom Izrail\' nanyes massirovannyy udar po tselyam Khizball\'i v Livane, poraziv bolee 100 pozitsiy priblizitel\'no za 10 minut. V rezultate pogibli ne menee 254 chelovek, bolee 1160 poluchili raneniya.
+    content: `Всего через несколько часов после объявления перемирия между США и Ираном Израиль нанёс массированный удар по целям Хезболлы в Ливане, поразив более 100 позиций приблизительно за 10 минут. В результате погибли не менее 254 человек, более 1160 получили ранения.
 
-## Masshtab operatsii
+## Масштаб операции
 
-Izrail\'skiye voyennyye proveli odnovremennyye aviacudary po pozitsiyam Khizball\'i po vsemu Livanu, nanosat udary po skladam oruzhiya, komandnym tsentram i strategicheskim ob\'yektam. Skorost\' i koordinatsiya udarov sdelali etu operatsiyu odnoy iz krupneyshikh voyennykh aktsiy v regione za posledniye desyatiletiya.
+Израильские военные провели одновременные авиаудары по позициям Хезболлы по всему Ливану, нанося удары по складам оружия, командным центрам и стратегическим объектам. Скорость и координация ударов сделали эту операцию одной из крупнейших военных акций в регионе за последние десятилетия.
 
-## Natsional\'nyy traur v Livane
+## Национальный траур в Ливане
 
-Livan ob\'yavil natsional\'nyy den\' traura. Bol\'nitsy perepolneny, razrusheniya v zhilykh rayonakh prodolzhayut otsenvyat\'sya. Mezhdunarodnye gumanitarnye organizatsii prizvali k nemedlennomu dostupu v postradavshiye zony.
+Ливан объявил национальный день траура. Больницы переполнены, разрушения в жилых районах продолжают оцениваться. Международные гуманитарные организации призвали к немедленному доступу в пострадавшие зоны.
 
-## Spor vokrug peremiriya
+## Спор вокруг перемирия
 
-Administratsiya Trampa zayavila, chto Livan NE byl vklyuchyon v soglasheniye o peremiriyi mezhdu SShA i Iranom. Odnako Iran zanimacyet pryamo protivopolozhnuyu pozitsiyu, utverzhladaya, chto Livan byl chast\'yu sdelki i voyennye deystviya Izrailya yavlyayutsya yavnym narusheniyem soglasheniya. Eto fundamental\'noye raznoglasiye stalo glavnym obosnovaniyem Irana dlya ugrozy vykhoda iz sdelki.`,
+Администрация Трампа заявила, что Ливан НЕ был включён в соглашение о перемирии между США и Ираном. Однако Иран занимает прямо противоположную позицию, утверждая, что Ливан был частью сделки и военные действия Израиля являются явным нарушением соглашения. Это фундаментальное разногласие стало главным обоснованием Ирана для угрозы выхода из сделки.`,
   },
 
   // --- Oil Prices Back Above $100 ---
   'neft-qiymetleri-100-dollar-yeniden-hormuz-bogazi': {
-    title: 'Neft qiymetleri yeniden $100-un uzerinde: WTI 6%+ yukseldi, Hormuz bogazi hale bagli',
+    title: 'Neft qiymətləri yenidən $100-un üzərində: WTI 6%+ yüksəldi, Hörmüz boğazı hələ bağlı',
     date: '2026-04-09',
-    category: 'Iqtisadiyyat',
+    category: 'İqtisadiyyat',
     locale: 'az',
-    content: `Neft qiymetleri dramatik sekilde yeniden yukseldi. WTI 6%-den cox artaraq $100.27-ye catdi, Brent ise $98.26-ya yukseldi. Bu, bir gun evvel ateshkes xeberine gore WTI-nin 16% dusmesindn sonra bas verib.
+    content: `Neft qiymətləri dramatik şəkildə yenidən yüksəldi. WTI 6%-dən çox artaraq $100.27-yə çatdı, Brent isə $98.26-ya yüksəldi. Bu, bir gün əvvəl atəşkəs xəbərinə görə WTI-nin 16% düşməsindən sonra baş verib.
 
-## Niye qiymetler yeniden yukseldi?
+## Niyə qiymətlər yenidən yüksəldi?
 
-Hormuz bogazi hale mehdud qalir -- gemilerin kecidi ucun Tehran icazesi teleb olunur. Ateshkes elan edilse de, bogaz tam acilmayib ve qlobal neft techizcati hala tehdit altindadir. Bundan elave, Iranin ateshkes razilasmasinin pozuldugunu iddia etmesi bazarlari yeniden narahat edib.
+Hörmüz boğazı hələ məhdud qalır -- gəmilərin keçidi üçün Tehran icazəsi tələb olunur. Atəşkəs elan edilsə də, boğaz tam açılmayıb və qlobal neft təchizatı hala təhdid altındadır. Bundan əlavə, İranın atəşkəs razılaşmasının pozulduğunu iddia etməsi bazarları yenidən narahat edib.
 
 ## Goldman Sachs proqnozu
 
-Goldman Sachs analitikleri bildiirib ki, eger Hormuz bogazi bagli qalsa, Brent nefti butun il boyu $100-un uzerinde qala biler. Bu, xususile Avropa ve Asiya olkeleri ucun ciddi enerji bohrani demekdir.
+Goldman Sachs analitikləri bildirib ki, əgər Hörmüz boğazı bağlı qalsa, Brent nefti bütün il boyu $100-un üzərində qala bilər. Bu, xüsusilə Avropa və Asiya ölkələri üçün ciddi enerji böhranı deməkdir.
 
-## Qlobal tesir
+## Qlobal təsir
 
-Neft qiymetlerinin yeniden yukselisi benzin, qaz ve umumi inflasiya uzerinde tezyiq yaradir. ABSh-de benzin qiymetlerinin qalon basina $4.30-a catmasi gozlenilir. Olkeler alternativ enerji menbeleri ve strateji ehtiyatlar uzerinde isleyi suretlendrir.`,
+Neft qiymətlərinin yenidən yüksəlişi benzin, qaz və ümumi inflyasiya üzərində təzyiq yaradır. ABŞ-də benzin qiymətlərinin qallon başına $4.30-a çatması gözlənilir. Ölkələr alternativ enerji mənbələri və strateji ehtiyatlar üzərində işləyi sürətləndirir.`,
   },
   'en-oil-prices-back-above-100-wti-surge-hormuz': {
     title: 'Oil Prices Surge Back Above $100: WTI Jumps 6%+, Strait of Hormuz Still Restricted',
@@ -323,67 +323,67 @@ Goldman Sachs analysts have warned that if the Strait of Hormuz remains closed o
 The renewed oil price surge is putting pressure on gasoline prices, natural gas, and overall inflation worldwide. US gasoline prices are expected to reach $4.30 per gallon this month. Countries are accelerating work on alternative energy sources and strategic reserves to reduce vulnerability to Middle East disruptions.`,
   },
   'tr-petrol-fiyatlari-100-dolar-uzerinde-wti-yukselis-hurmuz': {
-    title: 'Petrol Fiyatlari Yeniden $100 Uzerinde: WTI %6+ Yukseldi, Hurmuz Bogazi Hala Kisitli',
+    title: 'Petrol Fiyatları Yeniden $100 Üzerinde: WTI %6+ Yükseldi, Hürmüz Boğazı Hâlâ Kısıtlı',
     date: '2026-04-09',
     category: 'Ekonomi',
     locale: 'tr',
-    content: `Petrol fiyatlari dramatik bir sekilde geri tepti. WTI ham petrolu %6\'dan fazla artarak 100,27 dolara yikseldi, Brent ise 98,26 dolara cikti. Bu, bir gun once ateskes haberiyile WTI\'nin %16 dusmesinin ardindan gerceklesti.
+    content: `Petrol fiyatları dramatik bir şekilde geri tepti. WTI ham petrolü %6\'dan fazla artarak 100,27 dolara yükseldi, Brent ise 98,26 dolara çıktı. Bu, bir gün önce ateşkes haberiyle WTI\'nin %16 düşmesinin ardından gerçekleşti.
 
-## Fiyatlar Neden Yeniden Yukseldi?
+## Fiyatlar Neden Yeniden Yükseldi?
 
-Hurmuz Bogazi hala kisitli -- gemilerin gecisi icin Tahran izni gerekiyor. Ateskes ilan edilmis olmasina ragmen bogaz tamamen acilmadi ve kuresel petrol arzi hala tehdit altinda. Ayrica Iran\'in, ABD\'nin ateskes sartlarini ihlal ettigini iddia etmesi piyasalari yeniden sarstdi.
+Hürmüz Boğazı hâlâ kısıtlı -- gemilerin geçişi için Tahran izni gerekiyor. Ateşkes ilan edilmiş olmasına rağmen boğaz tamamen açılmadı ve küresel petrol arzı hâlâ tehdit altında. Ayrıca İran\'ın, ABD\'nin ateşkes şartlarını ihlal ettiğini iddia etmesi piyasaları yeniden sarstı.
 
 ## Goldman Sachs Tahmini
 
-Goldman Sachs analistleri, Hurmuz Bogazi\'nin kapali veya kisitli kalmasi durumunda Brent ham petrolun tum yil boyunca varil basina 100 dolarin uzerinde kalabilecegini uyardi. Bu ozellikle Avropa ve Asya icin ciddi bir enerji krizi anlamina geliyor.
+Goldman Sachs analistleri, Hürmüz Boğazı\'nın kapalı veya kısıtlı kalması durumunda Brent ham petrolün tüm yıl boyunca varil başına 100 doların üzerinde kalabileceğini uyardı. Bu özellikle Avrupa ve Asya için ciddi bir enerji krizi anlamına geliyor.
 
-## Kuresel Etki
+## Küresel Etki
 
-Petrol fiyatlarindaki yeniden yukselis benzin, dogal gaz ve genel enflasyon uzerinde baski yaratmaya devam ediyor. ABD\'de benzin fiyatlarinin bu ay galon basina 4,30 dolara ulasmasibekleniyor. Ulkeler Orta Dogu kaynakli kesintilere karsiliklarini azaltmak icin alternatif enerji kaynaklari ve stratejik rezervler uzerindeki calismalarini hizlandiriyor.`,
+Petrol fiyatlarındaki yeniden yükseliş benzin, doğal gaz ve genel enflasyon üzerinde baskı yaratmaya devam ediyor. ABD\'de benzin fiyatlarının bu ay galon başına 4,30 dolara ulaşması bekleniyor. Ülkeler Orta Doğu kaynaklı kesintilere karşı kırılganlıklarını azaltmak için alternatif enerji kaynakları ve stratejik rezervler üzerindeki çalışmalarını hızlandırıyor.`,
   },
   'ru-tseny-na-neft-snova-vyshe-100-wti-rost-ormuz': {
-    title: 'Tseny na neft\' snova vyshe $100: WTI podskochil na 6%+, Ormuzkiy proliv po-prezhnemu ogranichen',
+    title: 'Цены на нефть снова выше $100: WTI подскочил на 6%+, Ормузский пролив по-прежнему ограничен',
     date: '2026-04-09',
-    category: 'Ekonomika',
+    category: 'Экономика',
     locale: 'ru',
-    content: `Tseny na neft\' rezkokrazvotnulis\'. WTI podskochil bolee chem na 6% do $100,27, a Brent vyros do $98,26. Eto proizoshlo vsego cherez den\' posle togo, kak WTI upalgal na 16% na novostyakh o peremiriyi -- odin iz samykh volatil\'nykh 48-chasovykh periodov v istorii neftyanogo rynka.
+    content: `Цены на нефть резко развернулись. WTI подскочил более чем на 6% до $100,27, а Brent вырос до $98,26. Это произошло всего через день после того, как WTI упал на 16% на новостях о перемирии -- один из самых волатильных 48-часовых периодов в истории нефтяного рынка.
 
-## Pochemu tseny otskochili
+## Почему цены отскочили
 
-Ormuzkiy proliv po-prezhnemu ogranichen -- dlya prokhoda sudov po-prezhnemu trebuetsya razresheniye Tegerana. Nesmotrya na ob\'yavleniye o peremiriyi, proliv ne byl polnost\'yu otkryt, i mirovyye postavki nefti ostayutsya pod ugrozoy. Krome togo, obvineniya Irana v tom, chto SShA narushayut usloviya peremiriya, destabilizirovali rynki.
+Ормузский пролив по-прежнему ограничен -- для прохода судов по-прежнему требуется разрешение Тегерана. Несмотря на объявление о перемирии, пролив не был полностью открыт, и мировые поставки нефти остаются под угрозой. Кроме того, обвинения Ирана в том, что США нарушают условия перемирия, дестабилизировали рынки.
 
-## Prognoz Goldman Sachs
+## Прогноз Goldman Sachs
 
-Analitiki Goldman Sachs predupredili, chto yesli Ormuzkiy proliv ostanetsya zakrytym ili ogranichennykham, neft\' Brent mozhet ostavat\'sya vyshe $100 za barrel\' v techeniye vsego goda. Eto oznachayet ustoychivyy energeticheskiy krizis s seryoznymi posledstviyami, osobenno dlya Yevropy i Azii.
+Аналитики Goldman Sachs предупредили, что если Ормузский пролив останется закрытым или ограниченным, нефть Brent может оставаться выше $100 за баррель в течение всего года. Это означает устойчивый энергетический кризис с серьёзными последствиями, особенно для Европы и Азии.
 
-## Global\'noye vozdeystviye
+## Глобальное воздействие
 
-Vozobnovivshiysya rost tsen na neft\' okazyvayet davleniye na tseny na benzin, prirodnyy gaz i obshchuyu inflyatsiyu vo vsyom mire. Ozhidayetsya, chto tseny na benzin v SShA dostignut $4,30 za gallon v etom mesyatse.`,
+Возобновившийся рост цен на нефть оказывает давление на цены на бензин, природный газ и общую инфляцию во всём мире. Ожидается, что цены на бензин в США достигнут $4,30 за галлон в этом месяце.`,
   },
 
   // --- Meta Launches Muse Spark ---
   'meta-muse-spark-yeni-ai-modeli-alexandr-wang': {
-    title: 'Meta "Muse Spark" suni intellekt modelini teqdim etdi: Alexandr Wang dovrunde ilk boyuk model',
+    title: 'Meta "Muse Spark" süni intellekt modelini təqdim etdi: Alexandr Wang dövründə ilk böyük model',
     date: '2026-04-09',
     category: 'Texnologiya',
     locale: 'az',
-    content: `Meta yeni suni intellekt modeli "Muse Spark"-i teqdim edib. Bu, $14 milyarda ise goturulen Alexandr Wang-in rehberliyi altinda yaradilan ilk boyuk AI modelidir.
+    content: `Meta yeni süni intellekt modeli "Muse Spark"-i təqdim edib. Bu, $14 milyarda işə götürülən Alexandr Wang-in rəhbərliyi altında yaradılan ilk böyük AI modelidir.
 
-## Modelin xususiyyetleri
+## Modelin xüsusiyyətləri
 
-Muse Spark "kicik ve suretli" model kimi teqdim edilib, lakin murakkeb suallari menteqi tefekkur ile cavablandira bilir. Model ses, metn ve sekil daxil ede bilir (yalniz metn cixisi verir). Bu, onu coxfunksiyali bir assistent kimi ideal edir.
+Muse Spark "kiçik və sürətli" model kimi təqdim edilib, lakin mürəkkəb sualları məntiqi təfəkkür ilə cavablandıra bilir. Model səs, mətn və şəkil daxil edə bilir (yalnız mətn çıxışı verir). Bu, onu çoxfunksiyalı bir assistent kimi ideal edir.
 
-## Strateji deyisiklik: aciq menbeden imtina
+## Strateji dəyişiklik: açıq mənbədən imtina
 
-Muse Spark PROPRIETARdir -- Llama seriyasindan ferqli olaraq aciq menbeli deyil. Bu, Meta ucun boyuk strateji deyisiklikdir. Sirket illerdir aciq menbeli AI-ya investisiya edirdi, lakin Muse Spark ile ticarete yoneldi. Bunun sebebi olaraq reqabet ve pul qazanma modeli gosterilir.
+Muse Spark PROPRIETARdır -- Llama seriyasından fərqli olaraq açıq mənbəli deyil. Bu, Meta üçün böyük strateji dəyişiklikdir. Şirkət illərdir açıq mənbəli AI-ya investisiya edirdi, lakin Muse Spark ilə ticarətə yönəldi. Bunun səbəbi olaraq rəqabət və pul qazanma modeli göstərilir.
 
-## Harada istifade olunacaq?
+## Harada istifadə olunacaq?
 
-Model Facebook, Instagram, WhatsApp ve Meta Ray-Ban eyneklerinde istifadeye verirecek. Bu, milyardlarla istifadecinin AI assistent funksiyalarindan faydalanamasi demekdir.
+Model Facebook, Instagram, WhatsApp və Meta Ray-Ban eynəklərində istifadəyə veriləcək. Bu, milyardlarla istifadəçinin AI assistent funksiyalarından faydalanması deməkdir.
 
-## Seneye tesiri
+## Sənayeyə təsiri
 
-Muse Spark, Google Gemini, OpenAI GPT ve Anthropic Claude ile birbasa reqabetdir. Meta-nin proprietary yanasmaya kecmesi AI senayesinde yeni guc muvazinesni yarada biler.`,
+Muse Spark, Google Gemini, OpenAI GPT və Anthropic Claude ilə birbaşa rəqabətdir. Meta-nin proprietary yanaşmaya keçməsi AI sənayesində yeni güc müvazinəsini yarada bilər.`,
   },
   'en-meta-muse-spark-ai-model-alexandr-wang': {
     title: 'Meta Launches "Muse Spark" AI Model: First Major Model Under Alexandr Wang',
@@ -409,75 +409,75 @@ The model will be integrated into Facebook, Instagram, WhatsApp, and Meta Ray-Ba
 Muse Spark enters direct competition with Google Gemini, OpenAI GPT, and Anthropic Claude. Meta\'s move to proprietary AI could reshape the competitive landscape and signal a broader industry trend away from open-source large language models.`,
   },
   'tr-meta-muse-spark-yapay-zeka-modeli-alexandr-wang': {
-    title: 'Meta "Muse Spark" Yapay Zeka Modelini Tanitti: Alexandr Wang Doneminde Ilk Buyuk Model',
+    title: 'Meta "Muse Spark" Yapay Zeka Modelini Tanıttı: Alexandr Wang Döneminde İlk Büyük Model',
     date: '2026-04-09',
     category: 'Teknoloji',
     locale: 'tr',
-    content: `Meta, yeni yapay zeka modeli "Muse Spark"i tanitti. Bu, 14 milyar dolarla transfer edilen Alexandr Wang\'in lideerliginde gelistirilen ilk buyuk AI modelidir.
+    content: `Meta, yeni yapay zeka modeli "Muse Spark"ı tanıttı. Bu, 14 milyar dolarla transfer edilen Alexandr Wang\'ın liderliğinde geliştirilen ilk büyük AI modelidir.
 
-## Modelin Ozellikleri
+## Modelin Özellikleri
 
-Muse Spark "kucuk ve hizli" olarak tanimlaniyor, ancak karmasik sorulari sofistike mantiksal zincirlerle cevaplayabiliyor. Model ses, metin ve gorsel girdi kabul ediyor, ancak yalnizca metin ciktisi uretiyor. Bu cok modlu girdi kapasitesi, onu gunluk gorevler icin cok yonlu bir asistan haline getiriyor.
+Muse Spark "küçük ve hızlı" olarak tanımlanıyor, ancak karmaşık soruları sofistike mantıksal zincirlerle cevaplayabiliyor. Model ses, metin ve görsel girdi kabul ediyor, ancak yalnızca metin çıktısı üretiyor. Bu çok modlu girdi kapasitesi, onu günlük görevler için çok yönlü bir asistan haline getiriyor.
 
-## Stratejik Degisim: Acik Kaynak Degil
+## Stratejik Değişim: Açık Kaynak Değil
 
-Meta\'nin onceki stratejisinden buyuk bir sapma olarak Muse Spark TESCILLI bir model -- Llama serisinden farkli olarak acik kaynak olarak yayinlanmayacak. Bu, yillardir acik kaynak yapay zekaya yatirim yapan Meta icin onemli bir stratejik donus noktasi. Degisimin rekabet baskilari ve AI yeteneklerini dogrudan paraya cevirme ihtiyacindan kaynaklandigi belirtiliyor.
+Meta\'nın önceki stratejisinden büyük bir sapma olarak Muse Spark TESCİLLİ bir model -- Llama serisinden farklı olarak açık kaynak olarak yayınlanmayacak. Bu, yıllardır açık kaynak yapay zekaya yatırım yapan Meta için önemli bir stratejik dönüş noktası. Değişimin rekabet baskıları ve AI yeteneklerini doğrudan paraya çevirme ihtiyacından kaynaklandığı belirtiliyor.
 
-## Nerede Kullanilacak?
+## Nerede Kullanılacak?
 
-Model Facebook, Instagram, WhatsApp ve Meta Ray-Ban akilli gozluklere entegre edilecek ve potansiyel olarak dunya capinda milyarlarca kullaniciya AI asistan islevinligi sunacak.
+Model Facebook, Instagram, WhatsApp ve Meta Ray-Ban akıllı gözlüklere entegre edilecek ve potansiyel olarak dünya çapında milyarlarca kullanıcıya AI asistan işlevselliği sunacak.
 
-## Sektore Etkisi
+## Sektöre Etkisi
 
-Muse Spark, Google Gemini, OpenAI GPT ve Anthropic Claude ile dogrudan rekabete giriyor. Meta\'nin tescilli yapay zekaya gecisi, rekabet ortamini yeniden sekillendirelebilir.`,
+Muse Spark, Google Gemini, OpenAI GPT ve Anthropic Claude ile doğrudan rekabete giriyor. Meta\'nın tescilli yapay zekaya geçişi, rekabet ortamını yeniden şekillendirebilir.`,
   },
   'ru-meta-muse-spark-model-ii-alexandr-wang': {
-    title: 'Meta zapustila model\' II "Muse Spark": pervaya krupnaya model\' pod rukovodstvom Aleksandra Wanga',
+    title: 'Meta запустила модель ИИ "Muse Spark": первая крупная модель под руководством Александра Ванга',
     date: '2026-04-09',
-    category: 'Tekhnologii',
+    category: 'Технологии',
     locale: 'ru',
-    content: `Meta predstavila novuyu model\' iskusstvennogo intellekta "Muse Spark" -- pervuyu krupnuyu model\' II, razrabotannuyu pod rukovodstvom Aleksandra Vanga, nanyatogo za $14 mlrd.
+    content: `Meta представила новую модель искусственного интеллекта "Muse Spark" -- первую крупную модель ИИ, разработанную под руководством Александра Ванга, нанятого за $14 млрд.
 
-## Vozmozhnosti modeli
+## Возможности модели
 
-Muse Spark opisyyaetsya kak "malen\'kaya i bystraya", no sposobnaya rassuzdat\' nad slozhnymi voprosami s pomoshch\'yu sofistisirovannykh logicheskikh tsepochek. Model\' prinimaet golosovoy, tekstovyy i izobrazitel\'nyy vvod, no vydayot tol\'ko tekstovoy vykhod. Eta mul\'timodal\'nost\' delayet yeyo universal\'nym pomoshchnikon dlya povsednevnykh zadach.
+Muse Spark описывается как "маленькая и быстрая", но способная рассуждать над сложными вопросами с помощью софистицированных логических цепочек. Модель принимает голосовой, текстовый и изобразительный ввод, но выдаёт только текстовый выход. Эта мультимодальность делает её универсальным помощником для повседневных задач.
 
-## Strategicheskiy sdvig: zakirytoye, ne otkrytoye PO
+## Стратегический сдвиг: закрытое, не открытое ПО
 
-V otlichiye ot serii Llama, Muse Spark yavlyaetskya PROPRPIETARNYM produktom -- on ne budet vypushchen kak otkrytoye programnoye obespecheniye. Eto znachitel\'nyy strategichesski povorot dlya Meta, kototaya godami investirovala v otkrytyy II. Sdvig svyazyvayut s konkurentnym davleniyem i neobkhodimost\'yu pryamoy monetizatsii.
+В отличие от серии Llama, Muse Spark является ПРОПРИЕТАРНЫМ продуктом -- он не будет выпущен как открытое программное обеспечение. Это значительный стратегический поворот для Meta, которая годами инвестировала в открытый ИИ. Сдвиг связывают с конкурентным давлением и необходимостью прямой монетизации.
 
-## Gde budet dostupna
+## Где будет доступна
 
-Model\' budet integrirovana v Facebook, Instagram, WhatsApp i umnye ochki Meta Ray-Ban, potentsial\'no okhryvyot milliardov pol\'zovateley po vsemu miru funktsiyami II-assistenta.
+Модель будет интегрирована в Facebook, Instagram, WhatsApp и умные очки Meta Ray-Ban, потенциально охватывая миллиарды пользователей по всему миру функциями ИИ-ассистента.
 
-## Vliyaniye na otrasl\'
+## Влияние на отрасль
 
-Muse Spark vstupayot v pryamuyu konkurentsiyu s Google Gemini, OpenAI GPT i Anthropic Claude. Perekhod Meta k propreptarnomu II mozhet perestroit\' konkurentnyy landshaft.`,
+Muse Spark вступает в прямую конкуренцию с Google Gemini, OpenAI GPT и Anthropic Claude. Переход Meta к проприетарному ИИ может перестроить конкурентный ландшафт.`,
   },
 
   // --- Stock Markets Surge Then Reverse ---
   'fond-bazarlari-yukselis-sonra-geridonus-tarifler': {
-    title: 'Fond bazarlari: Dow +1.325 bal yukseldi, sonra Iran iddialari ile geri dondu -- Tramp yeni tariflereddi',
+    title: 'Fond bazarları: Dow +1.325 bal yüksəldi, sonra İran iddiaları ilə geri döndü -- Tramp yeni tariflər elan etdi',
     date: '2026-04-09',
-    category: 'Iqtisadiyyat',
+    category: 'İqtisadiyyat',
     locale: 'az',
-    content: `ABSh fond bazarlari iki gun erzinde dramatik dalganma yasadi. 8 aprelde ateshkes xeberine gore guclu yukselis oldu, lakin 9 aprelde Iran-in pozulma iddialari ve neft qiymetlerinin geri donmesi ile bazar istiqamert deyisdi.
+    content: `ABŞ fond bazarları iki gün ərzində dramatik dalğalanma yaşadı. 8 apreldə atəşkəs xəbərinə görə güclü yüksəliş oldu, lakin 9 apreldə İranın pozulma iddiaları və neft qiymətlərinin geri dönməsi ilə bazar istiqaməti dəyişdi.
 
-## 8 aprel: Boyuk yukselis
+## 8 aprel: Böyük yüksəliş
 
-Dow Jones 1.325 xal artdi (+2.9%), S&P 500 2.5% yukseldi, Nasdaq ise 2.8% boyudu. Ateshkes elaninin yarattigi nikbinlik bazarlari guclu sekilde yuxari itelerdi. Enerji sehmleri ilkin olaraq dusdu, texnologiya ve istehlaekci sehmleri ise liderlik etdi.
+Dow Jones 1.325 xal artdı (+2.9%), S&P 500 2.5% yüksəldi, Nasdaq isə 2.8% böyüdü. Atəşkəs elanının yaratdığı nikbinlik bazarları güclü şəkildə yuxarı itələrdi. Enerji səhmləri ilkin olaraq düşdü, texnologiya və istehlakçı səhmləri isə liderlik etdi.
 
-## 9 aprel: Geri donus
+## 9 aprel: Geri dönüş
 
-Iran-in ABSh-ni ateshkes pozuntusunda ittiham etmesi, Israelim Livana zerbeleri ve neft qiymetlerinin yeniden $100-u kecmesi bazarlari yeniden geriletdi. Investorlar risk istahi itirdiler ve defansiv sehmlere yoneldiler.
+İranın ABŞ-ni atəşkəs pozuntusunda ittiham etməsi, İsrailin Livana zərbələri və neft qiymətlərinin yenidən $100-u keçməsi bazarları yenidən gerilərtdi. İnvestorlar risk iştahı itirdilər və defansiv səhmlərə yönəldilər.
 
-## Tramp-in yeni tarif tehdidleri
+## Trampın yeni tarif təhdidləri
 
-Prezident Tramp polad, aluminium ve misdesa 50% tarif, farmasetivka mehsullarina 100% tarif elan etdi. Bundan elave, Irana silah temin eden olkelere 50% tarif tehdidi gosterdi. Bu aggressiv ticarert siyaseti bazarlarda elave narahatliq yaratdi.
+Prezident Tramp polad, alüminium və misə 50% tarif, farmasevtika məhsullarına 100% tarif elan etdi. Bundan əlavə, İrana silah təmin edən ölkələrə 50% tarif təhdidi göstərdi. Bu aqressiv ticarət siyasəti bazarlarda əlavə narahatlıq yaratdı.
 
-## Qlobal bazar veziyyeti
+## Qlobal bazar vəziyyəti
 
-Avropa ve Asiya bazarlari da dalganmali sessiysalar keciirdi. Qyzyl ve dollar indeksi "tehlukesiz liman" kimi yukseldi. Analitikler qisa muddtede volatilliyin davam edeceyini proqnozlasdirir.`,
+Avropa və Asiya bazarları da dalğalanmalı sessiyalar keçirdi. Qızıl və dollar indeksi "təhlükəsiz liman" kimi yüksəldi. Analitiklər qısa müddətdə volatilliyin davam edəcəyini proqnozlaşdırır.`,
   },
   'en-stock-markets-surge-then-reverse-tariffs': {
     title: 'Stock Markets Whipsaw: Dow Surges +1,325 Then Reverses as Iran Disputes Ceasefire -- Trump Announces New Tariffs',
@@ -503,50 +503,50 @@ President Trump announced 50% tariffs on steel, aluminum, and copper, plus 100% 
 European and Asian markets also experienced volatile sessions. Gold and the US dollar index rose as safe-haven assets. Analysts forecast continued short-term volatility as markets digest the rapidly evolving geopolitical situation in the Middle East and new trade barriers.`,
   },
   'tr-borsa-yukselis-sonra-geri-donus-tarifeler': {
-    title: 'Borsalar: Dow +1.325 Puan Yukseldi, Sonra Iran Iddialariyla Geri Dondu -- Trump Yeni Tarifeler',
+    title: 'Borsalar: Dow +1.325 Puan Yükseldi, Sonra İran İddialarıyla Geri Döndü -- Trump Yeni Tarifeler',
     date: '2026-04-09',
     category: 'Ekonomi',
     locale: 'tr',
-    content: `ABD borsalari iki gun icerisinde dramatik bir dalgalanma yasadi. 8 Nisan\'da ateskes iyimserligiyle sert yukselisdpsonra, 9 Nisan\'da Iran\'in ihlal iddialari ve petrol fiyatlaarinin geri tepmesiyle kazanclar eridi.
+    content: `ABD borsaları iki gün içerisinde dramatik bir dalgalanma yaşadı. 8 Nisan\'da ateşkes iyimserliğiyle sert yükselişin ardından, 9 Nisan\'da İran\'ın ihlal iddiaları ve petrol fiyatlarının geri tepmesiyle kazançlar eridi.
 
-## 8 Nisan: Buyuk Yukselis
+## 8 Nisan: Büyük Yükseliş
 
-Dow Jones 1.325 puan artti (%2,9), S&P 500 %2,5 yukseldi ve Nasdaq %2,8 buyudu. Ateskes iyimserligi genis tabanli bir rallye yol acti. Teknoloji ve tuketici hisseleri liderlik ederken enerji hisseleri baslangicta geriledi.
+Dow Jones 1.325 puan arttı (%2,9), S&P 500 %2,5 yükseldi ve Nasdaq %2,8 büyüdü. Ateşkes iyimserliği geniş tabanlı bir ralliye yol açtı. Teknoloji ve tüketici hisseleri liderlik ederken enerji hisseleri başlangıçta geriledi.
 
-## 9 Nisan: Geri Donus
+## 9 Nisan: Geri Dönüş
 
-Iran\'in ABD\'yi ateskes ihlaliyle suclamasi, Israil\'in Lubnan\'a saldirilari ve petrol fiyatlarinin 100 dolarin uzerine geri cikmasi sert bir geri donusu tetikledi. Yatirimcilar savunma hisselerine, hazine bonosularina ve altina yoneldi.
+İran\'ın ABD\'yi ateşkes ihlaliyle suçlaması, İsrail\'in Lübnan\'a saldırıları ve petrol fiyatlarının 100 doların üzerine geri çıkması sert bir geri dönüşü tetikledi. Yatırımcılar savunma hisselerine, hazine bonolarına ve altına yöneldi.
 
-## Trump\'in Yeni Tarife Tehditleri
+## Trump\'ın Yeni Tarife Tehditleri
 
-Baskan Trump celik, aluminyum ve bakira %50, ilaclara %100 tarife acikladi. Ayrica Iran\'a silah tedarik eden ulkelere %50 tarife tehdidinde bulundu. Bu agresif ticaret tedbirleri piyasalardaki belirsizligi daha da artirdi.
+Başkan Trump çelik, alüminyum ve bakıra %50, ilaçlara %100 tarife açıkladı. Ayrıca İran\'a silah tedarik eden ülkelere %50 tarife tehdidinde bulundu. Bu agresif ticaret tedbirleri piyasalardaki belirsizliği daha da artırdı.
 
-## Kuresel Piyasa Gorunumu
+## Küresel Piyasa Görünümü
 
-Avrupa ve Asya borsalari da dalgali seanslar yasadi. Guvenli liman varliklari olarak altin ve ABD dolari endeksi yukseldi. Analistler kisa vadede dalgalanmanin devam edecegini tahmin ediyor.`,
+Avrupa ve Asya borsaları da dalgalı seanslar yaşadı. Güvenli liman varlıkları olarak altın ve ABD doları endeksi yükseldi. Analistler kısa vadede dalgalanmanın devam edeceğini tahmin ediyor.`,
   },
   'ru-fondovyye-rynki-rost-zatem-razvorot-tarify': {
-    title: 'Fondovyye rynki: Dow +1325 punktov, zatem razvorot na fone obvineniy Irana -- Tramp ob\'yavil novyye tarify',
+    title: 'Фондовые рынки: Dow +1325 пунктов, затем разворот на фоне обвинений Ирана -- Трамп объявил новые тарифы',
     date: '2026-04-09',
-    category: 'Ekonomika',
+    category: 'Экономика',
     locale: 'ru',
-    content: `Fondovyye rynki SShA perezhili dramaticheskiy razvorot za dva dnya. 8 aprelya rynki reezko vyrosli na optimizme ot peremiriya. K 9 aprelya eti dostiyzheniya nachali stehochivat\'sya, kogda Iran obvinl SShA v narusheniyakh, a tseny na neft\' vernulis\' vyshe $100.
+    content: `Фондовые рынки США пережили драматический разворот за два дня. 8 апреля рынки резко выросли на оптимизме от перемирия. К 9 апреля эти достижения начали сходить на нет, когда Иран обвинил США в нарушениях, а цены на нефть вернулись выше $100.
 
-## 8 aprelya: Moshhnyy rost
+## 8 апреля: Мощный рост
 
-Dow Jones vyros na 1325 punktov (+2,9%), S&P 500 podnalsya na 2,5%, Nasdaq vyros na 2,8%. Optimizm ot peremiriya privyol k shirokomu ralli. Tekhnologicheskiye i potrebitel\'skiye aktsii lidirovesali, togda kak energeticheskiye nazvaniya snachala snizhalis\'.
+Dow Jones вырос на 1325 пунктов (+2,9%), S&P 500 поднялся на 2,5%, Nasdaq вырос на 2,8%. Оптимизм от перемирия привёл к широкому ралли. Технологические и потребительские акции лидировали, тогда как энергетические названия сначала снижались.
 
-## 9 aprelya: Razvorot
+## 9 апреля: Разворот
 
-Obvineniya Irana v narushenii peremiriya SShA, udary Izrailya po Livanu i rost tsen na neft\' vyshe $100 sprvotsirovali rezkoey snizheniyr. Investory pereshli k zashchitnym pozitsiyam, pokupaya zoloto, kaznaacheyskiye obligatsii i stabil\'nyye aktsii.
+Обвинения Ирана в нарушении перемирия США, удары Израиля по Ливану и рост цен на нефть выше $100 спровоцировали резкое снижение. Инвесторы перешли к защитным позициям, покупая золото, казначейские облигации и стабильные акции.
 
-## Novyye tarifnyye ugrozy Trampa
+## Новые тарифные угрозы Трампа
 
-Prezident Tramp ob\'yavil 50% poshliny na stal\', alyuminiy i med\', a takzhe 100% poshliny na farmatsevticheskuyu produktsiyu. On takzhe prigrozil 50% poshlinami stranam, postavlyayushchim oruzhiye Iranu. Eti agressivnyye torgovyye mery dobavili dopolnitel\'nuyu neopredelyonnost\'.
+Президент Трамп объявил 50% пошлины на сталь, алюминий и медь, а также 100% пошлины на фармацевтическую продукцию. Он также пригрозил 50% пошлинами странам, поставляющим оружие Ирану. Эти агрессивные торговые меры добавили дополнительную неопределённость.
 
-## Global\'nyy prognoz
+## Глобальный прогноз
 
-Yevropeyskiye i aziatskiye rynki takzhe perezhili volatil\'nyye sessii. Zoloto i indeks dollara SShA vyrosli kak aktivy-ubezhishcha. Analitiki prognoziruyut sokhraneniye kratkosrochnoy volatil\'nosti.`,
+Европейские и азиатские рынки также пережили волатильные сессии. Золото и индекс доллара США выросли как активы-убежища. Аналитики прогнозируют сохранение краткосрочной волатильности.`,
   },
 
   // ========== 2026-04-08 ==========

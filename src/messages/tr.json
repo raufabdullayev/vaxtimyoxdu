@@ -369,120 +369,120 @@
         "description": "Bitcoin, Ethereum, Altın ve Petrol fiyatlarını canlı izleyin. 24 saatlik değişiklikleri görün, para birimleri arasında dönüştürün (USD, AZN, EUR)."
       },
       "age-calculator": {
-        "name": "Yas Hesaplayici",
-        "description": "Dogum tarihinizden tam yasinizi hesaplayin"
+        "name": "Yaş Hesaplayıcı",
+        "description": "Doğum tarihinizden tam yaşınızı hesaplayın"
       },
       "bmi-calculator": {
-        "name": "VKI Hesaplayici",
-        "description": "Boy ve kilodan Vucut Kutle Indeksini hesaplayin"
+        "name": "VKİ Hesaplayıcı",
+        "description": "Boy ve kilodan Vücut Kütle İndeksini hesaplayın"
       },
       "percentage-calculator": {
-        "name": "Yuzde Hesaplayici",
-        "description": "Birden fazla modda yuzde hesaplayin"
+        "name": "Yüzde Hesaplayıcı",
+        "description": "Birden fazla modda yüzde hesaplayın"
       },
       "barcode-generator": {
-        "name": "Barkod Olusturucu",
-        "description": "Metin veya sayilardan barkod olusturun"
+        "name": "Barkod Oluşturucu",
+        "description": "Metin veya sayılardan barkod oluşturun"
       },
       "css-box-shadow-generator": {
-        "name": "CSS Box Shadow Olusturucu",
-        "description": "Gorsel kontrollerle CSS box-shadow olusturun"
+        "name": "CSS Box Shadow Oluşturucu",
+        "description": "Görsel kontrollerle CSS box-shadow oluşturun"
       },
       "hashtag-generator": {
-        "name": "Hashtag Olusturucu",
-        "description": "Sosyal medya icin anahtar kelimelerden hashtag olusturun"
+        "name": "Hashtag Oluşturucu",
+        "description": "Sosyal medya için anahtar kelimelerden hashtag oluşturun"
       },
       "cron-builder": {
-        "name": "Cron Ifade Olusturucu",
-        "description": "Gorsel cron ifade duzenleyici"
+        "name": "Cron İfade Oluşturucu",
+        "description": "Görsel cron ifade düzenleyici"
       },
       "git-command-generator": {
-        "name": "Git Komut Olusturucu",
-        "description": "Gorsel aracla git komutlari olusturun"
+        "name": "Git Komut Oluşturucu",
+        "description": "Görsel araçla git komutları oluşturun"
       },
       "http-header-parser": {
-        "name": "HTTP Baslik Ayristirici",
-        "description": "HTTP basliklarini ayristirin ve kategorilere ayirin"
+        "name": "HTTP Başlık Ayrıştırıcı",
+        "description": "HTTP başlıklarını ayrıştırın ve kategorilere ayırın"
       },
       "sql-to-mongodb": {
-        "name": "SQL - MongoDB Donusturucu",
-        "description": "SQL sorgularini MongoDB komutlarina donusturun"
+        "name": "SQL - MongoDB Dönüştürücü",
+        "description": "SQL sorgularını MongoDB komutlarına dönüştürün"
       },
       "api-response-formatter": {
-        "name": "API Yanit Biçimleyici",
-        "description": "API JSON yanitlarini biçimlendirin"
+        "name": "API Yanıt Biçimleyici",
+        "description": "API JSON yanıtlarını biçimlendirin"
       },
       "robots-txt-generator": {
-        "name": "robots.txt Olusturucu",
-        "description": "Gorsel duzenleyici ile robots.txt olusturun"
+        "name": "robots.txt Oluşturucu",
+        "description": "Görsel düzenleyici ile robots.txt oluşturun"
       },
       "htaccess-generator": {
-        "name": ".htaccess Olusturucu",
-        "description": ".htaccess yonlendirme kurallari olusturun"
+        "name": ".htaccess Oluşturucu",
+        "description": ".htaccess yönlendirme kuralları oluşturun"
       },
       "privacy-policy-generator": {
-        "name": "Gizlilik Politikasi Olusturucu",
-        "description": "Web siteniz icin gizlilik politikasi olusturun"
+        "name": "Gizlilik Politikası Oluşturucu",
+        "description": "Web siteniz için gizlilik politikası oluşturun"
       },
       "terms-of-service-generator": {
-        "name": "Kullanim Sartlari Olusturucu",
-        "description": "Web siteniz icin kullanim sartlari olusturun"
+        "name": "Kullanım Şartları Oluşturucu",
+        "description": "Web siteniz için kullanım şartları oluşturun"
       },
       "sitemap-generator": {
-        "name": "XML Sitemap Olusturucu",
-        "description": "URL listelerinden XML sitemap olusturun"
+        "name": "XML Sitemap Oluşturucu",
+        "description": "URL listelerinden XML sitemap oluşturun"
       },
       "open-graph-generator": {
-        "name": "Open Graph Etiketi Olusturucu",
-        "description": "OG ve Twitter Card meta etiketleri olusturun"
+        "name": "Open Graph Etiketi Oluşturucu",
+        "description": "OG ve Twitter Card meta etiketleri oluşturun"
       },
       "currency-converter": {
-        "name": "Doviz Cevirici",
-        "description": "Dunya para birimleri arasinda donusum yapin"
+        "name": "Döviz Çevirici",
+        "description": "Dünya para birimleri arasında dönüşüm yapın"
       },
       "tax-calculator": {
-        "name": "Vergi Hesaplayici",
-        "description": "Vergi tutarlarini hesaplayin"
+        "name": "Vergi Hesaplayıcı",
+        "description": "Vergi tutarlarını hesaplayın"
       },
       "tip-calculator": {
-        "name": "Bahsis Hesaplayici",
-        "description": "Bahsis hesaplayin ve hesabi bolun"
+        "name": "Bahşiş Hesaplayıcı",
+        "description": "Bahşiş hesaplayın ve hesabı bölün"
       },
       "compound-interest-calculator": {
-        "name": "Bilesik Faiz Hesaplayici",
-        "description": "Katkilarla bilesik faiz hesaplayin"
+        "name": "Bileşik Faiz Hesaplayıcı",
+        "description": "Katkılarla bileşik faiz hesaplayın"
       },
       "youtube-thumbnail-text": {
-        "name": "YouTube Kucuk Resim Metni",
-        "description": "YouTube kucuk resimleri icin metin olusturun"
+        "name": "YouTube Küçük Resim Metni",
+        "description": "YouTube küçük resimleri için metin oluşturun"
       },
       "readability-checker": {
-        "name": "Okunabilirlik Denetleyici",
-        "description": "Flesch-Kincaid puaniyla okunabilirligi kontrol edin"
+        "name": "Okunabilirlik Denetleyicisi",
+        "description": "Flesch-Kincaid puanıyla okunabilirliği kontrol edin"
       },
       "lorem-ipsum-alternative": {
         "name": "Lorem Ipsum Alternatifi",
-        "description": "Temali yer tutucu metin olusturun"
+        "description": "Temalı yer tutucu metin oluşturun"
       },
       "text-to-handwriting": {
-        "name": "Metin El Yazisina",
-        "description": "Metni el yazisi stilinde gorsele donusturun"
+        "name": "Metin El Yazısına",
+        "description": "Metni el yazısı stilinde görsele dönüştürün"
       },
       "whitespace-remover": {
-        "name": "Bosluk Temizleyici",
-        "description": "Metinden fazla bosluklari kaldirin"
+        "name": "Boşluk Temizleyici",
+        "description": "Metinden fazla boşlukları kaldırın"
       },
       "duplicate-line-remover": {
-        "name": "Tekrar Satir Temizleyici",
-        "description": "Metinden tekrarlanan satirlari kaldirin"
+        "name": "Tekrar Satır Temizleyici",
+        "description": "Metinden tekrarlanan satırları kaldırın"
       },
       "twitter-char-counter": {
-        "name": "Twitter/X Karakter Sayaci",
-        "description": "Twitler icin karakter sayisi"
+        "name": "Twitter/X Karakter Sayacı",
+        "description": "Tweetler için karakter sayısı"
       },
       "instagram-caption-generator": {
-        "name": "Instagram Aciklama Olusturucu",
-        "description": "Hashtaglerle Instagram aciklamalari olusturun"
+        "name": "Instagram Açıklama Oluşturucu",
+        "description": "Hashtaglerle Instagram açıklamaları oluşturun"
       },
       "stopwatch": {
         "name": "Kronometre",
@@ -540,7 +540,7 @@
     "collectTitle": "Toplanan Bilgiler",
     "collectDescription": "Hizmetlerimizi sunmak için minimum düzeyde bilgi topluyoruz. İstemci taraflı araçlar tüm verileri tamamen tarayıcınızda işler - sunucularımıza hiçbir şey gönderilmez.",
     "aiTitle": "AI Destekli Araçlar",
-    "aiDescription": "AI destekli araçlar için girdağınız metin işlenmek üzere güvenli sunucularımıza gönderilir. Girdağınız verileri saklamıyoruz, kayıt etmiyoruz veya eğitim amacıyla kullanmıyoruz. Veriler işlemden hemen sonra silinir.",
+    "aiDescription": "AI destekli araçlar için girdiğiniz metin işlenmek üzere güvenli sunucularımıza gönderilir. Girdiğiniz verileri saklamıyoruz, kayıt etmiyoruz veya eğitim amacıyla kullanmıyoruz. Veriler işlemden hemen sonra silinir.",
     "analyticsTitle": "Analitik",
     "analyticsDescription": "Ziyaretçilerin sitemizi nasıl kullandığını anlamak için Google Analytics kullanıyoruz. Bu, sayfa görüntülemeleri, tarayıcı türü ve genel konum gibi anonim kullanım verilerini toplar.",
     "advertisingTitle": "Reklamcılık",
@@ -1169,7 +1169,7 @@
     }
   },
   "toolChain": {
-    "nextStep": "Sonraki adim",
+    "nextStep": "Sonraki adım",
     "suggestion": "{toolName} ile devam edin"
   },
   "dailyChallenge": {
@@ -1191,68 +1191,68 @@
     "usedTimes": "{count} kez kullanildi"
   },
   "badges": {
-    "metaTitle": "Basari Rozetleri | Vaxtim Yoxdu",
-    "metaDescription": "Aracları kullanarak basari rozetleri kazanın. İlerlemenizi takip edin.",
-    "title": "Basari Rozetleri",
-    "subtitle": "Aracları kullanarak rozetler kazanın",
+    "metaTitle": "Başarı Rozetleri | Vaxtim Yoxdu",
+    "metaDescription": "Araçları kullanarak başarı rozetleri kazanın. İlerlemenizi takip edin.",
+    "title": "Başarı Rozetleri",
+    "subtitle": "Araçları kullanarak rozetler kazanın",
     "badgesEarned": "Kazanılan",
     "totalBadges": "Toplam",
-    "dayStreak": "Gun Serisi",
+    "dayStreak": "Gün Serisi",
     "earned": "Kazanıldı",
-    "share": "Paylas",
+    "share": "Paylaş",
     "shareText": "vaxtimyoxdu.com'da {badge} rozetini kazandım!",
     "items": {
       "first-step": {
-        "name": "Ilk Adım",
+        "name": "İlk Adım",
         "description": "Herhangi bir aracı bir kez kullanın"
       },
       "explorer": {
-        "name": "Kasif",
-        "description": "5 farklı arac kullanın"
+        "name": "Kaşif",
+        "description": "5 farklı araç kullanın"
       },
       "expert": {
         "name": "Uzman",
-        "description": "10 farklı arac kullanın"
+        "description": "10 farklı araç kullanın"
       },
       "speed-runner": {
-        "name": "Hızlı Kosan",
-        "description": "Bir oturumda 3 arac kullanın"
+        "name": "Hızlı Koşan",
+        "description": "Bir oturumda 3 araç kullanın"
       },
       "category-master": {
         "name": "Kategori Ustası",
-        "description": "6 kategorinin her birinden 1 arac kullanın"
+        "description": "6 kategorinin her birinden 1 araç kullanın"
       },
       "seven-day-streak": {
-        "name": "7 Gun Serisi",
-        "description": "7 ardısık gun arac kullanın"
+        "name": "7 Gün Serisi",
+        "description": "7 ardışık gün araç kullanın"
       }
     }
   },
   "suggest": {
-    "metaTitle": "Arac Oner | Vaxtim Yoxdu",
-    "metaDescription": "Yeni arac onerileri gonderin ve baskaların onerilerine oy verin.",
-    "title": "Arac Oneri Panosu",
-    "subtitle": "Hangi aracları gormek istersiniz? Onerin ve oy verin!",
-    "formTitle": "Yeni Arac Oner",
-    "nameLabel": "Arac Adı",
-    "namePlaceholder": "Ornegin: Gorsel Arka Plan Kaldırıcı",
-    "descriptionLabel": "Acıklama",
-    "descriptionPlaceholder": "Bu arac ne yapmalı?",
+    "metaTitle": "Araç Öner | Vaxtim Yoxdu",
+    "metaDescription": "Yeni araç önerileri gönderin ve başkalarının önerilerine oy verin.",
+    "title": "Araç Öneri Panosu",
+    "subtitle": "Hangi araçları görmek istersiniz? Önerin ve oy verin!",
+    "formTitle": "Yeni Araç Öner",
+    "nameLabel": "Araç Adı",
+    "namePlaceholder": "Örneğin: Görsel Arka Plan Kaldırıcı",
+    "descriptionLabel": "Açıklama",
+    "descriptionPlaceholder": "Bu araç ne yapmalı?",
     "categoryLabel": "Kategori",
-    "submitButton": "Oneri Gonder",
-    "submitSuccess": "Oneriniz eklendi!",
-    "suggestionsTitle": "Oneriler",
+    "submitButton": "Öneri Gönder",
+    "submitSuccess": "Öneriniz eklendi!",
+    "suggestionsTitle": "Öneriler",
     "voteButton": "Oy ver",
     "voted": "Oy verildi",
-    "noSuggestions": "Henuz oneri yok. Ilk oneriyi siz gonderin!",
+    "noSuggestions": "Henüz öneri yok. İlk öneriyi siz gönderin!",
     "categories": {
       "pdf": "PDF",
-      "image": "Gorsel",
+      "image": "Görsel",
       "ai": "AI",
-      "dev": "Gelistirici",
+      "dev": "Geliştirici",
       "text": "Metin",
-      "generators": "Uretecler",
-      "other": "Diger"
+      "generators": "Üretecler",
+      "other": "Diğer"
     }
   }
 }

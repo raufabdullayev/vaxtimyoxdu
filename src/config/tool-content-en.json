@@ -84,7 +84,7 @@
       },
       {
         "question": "Is my image data safe when using this online compressor?",
-        "answer": "No, all image compression happens entirely in your browser using client-side JavaScript and the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for personal photos, sensitive documents, and confidential business images."
+        "answer": "Yes, all image compression happens entirely in your browser using client-side JavaScript and the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for personal photos, sensitive documents, and confidential business images."
       },
       {
         "question": "What is the best image format for web use?",
@@ -132,7 +132,7 @@
       },
       {
         "question": "Is it safe to merge PDF files using this online tool?",
-        "answer": "No. This PDF merger processes everything directly in your web browser using client-side JavaScript libraries. Your files never leave your computer, are never uploaded to any server, and are never stored in any cloud storage. This makes it safe for confidential documents including contracts, financial records, legal papers, and personal information."
+        "answer": "Yes. This PDF merger processes everything directly in your web browser using client-side JavaScript libraries. Your files never leave your computer, are never uploaded to any server, and are never stored in any cloud storage. This makes it safe for confidential documents including contracts, financial records, legal papers, and personal information."
       },
       {
         "question": "Is there a limit on how many PDFs I can merge?",
@@ -818,7 +818,7 @@
       },
       {
         "question": "Is it safe to convert images using this online tool?",
-        "answer": "No. All image conversion processing happens entirely in your browser using the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for private photos, confidential product images, and any other sensitive visual content."
+        "answer": "Yes. All image conversion processing happens entirely in your browser using the HTML5 Canvas API. Your images never leave your device, are never uploaded to any server, and are never stored anywhere. This makes the tool completely safe for private photos, confidential product images, and any other sensitive visual content."
       }
     ]
   },

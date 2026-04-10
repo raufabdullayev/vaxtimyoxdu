@@ -56,10 +56,10 @@
       "aiDesc": "Süni zəkayla işlənən mətn emal alətləri",
       "aiSeoDesc": "Vaxtim Yoxdu platformasının AI alətləri süni intellekt texnologiyasından istifadə edərək mətn emalını asanlaşdırır. AI Mətn Yenidənyazma aləti ilə məqalələrinizi, esselerinizi və iş sənədlərinizi saniyələr ərzində yenidən formalaşdıra bilərsiniz — tonallığı dəyişdirmək, sadələşdirmək və ya daha akademik üslubda ifadə etmək mümkündür. AI Qrammatika Yoxlayıcı orfoqrafiya, durğu işarəsi və cümlə quruluşu səhvlərini aşkar edir, düzəliş təklifləri verir. AI Mətn Xülasələyici isə uzun məqalələri, hesabatları və sənədləri əsas fikirlərə yığır, sizin vaxtınıza qənaət edir. Bütün alətlər qeydiyyat tələb etmir, tamamilə pulsuzdur və Azərbaycan, İngilis, Türk, Rus dillərini dəstəkləyir. Tələbələr, yazıçılar, jurnalistlər, marketoloqlar və peşəkarlar üçün ideal həlldir. Məlumatlarınız təhlükəsizdir — fayllar serverə yüklənmir, emal brauzerdə baş verir.",
       "pdf": "PDF Alətləri",
-      "pdfDesc": "PDF fayllarını birləşdirin, bölüşdürüb, sıxın",
+      "pdfDesc": "PDF fayllarını birləşdirin, bölün, sıxın",
       "pdfSeoDesc": "Vaxtim Yoxdu PDF alətləri ilə PDF fayllarınızı onlayn idarə edin — heç bir proqram quraşdırmadan. PDF Birləşdirici ilə bir neçə PDF-i tək bir sənədə birləşdirin, səhifələrin ardıcıllığını özünüz seçin. PDF Səhifə Bölücü ilə lazımlı səhifələri çıxarın, böyük sənədləri kiçik hissələrə ayırın. PDF Sıxıcı ilə fayl ölçüsünü azaldın — metadataları təmizləyin, strukturu optimallaşdırın, email və ya messencer ilə göndərmək üçün hazır edin. Bütün əməliyyatlar birbaşa brauzerinizdə icra olunur, fayllarınız heç vaxt serverə yüklənmir. Bu, məxfiliyin və təhlükəsizliyin tam qorunması deməkdir. Qeydiyyat lazım deyil, tamamilə pulsuzdur. Ofis işçiləri, tələbələr, müəllimlər, hüquqşünaslar və freelancerlər üçün gündəlik PDF ehtiyaclarını həll edən peşəkar alətlər toplusudur. JPEG, PNG formatlarından fərqli olaraq, PDF sənədləriniz orijinal formatını qoruyur.",
       "image": "Şəkil Alətləri",
-      "imageDesc": "Şəkilləri sıxın, ölçüsünü dəyişin, kəsin və çevirdi edin",
+      "imageDesc": "Şəkilləri sıxın, ölçüsünü dəyişin, kəsin və çevirin",
       "imageSeoDesc": "Vaxtim Yoxdu şəkil alətləri ilə şəkillərinizi peşəkar səviyyədə emal edin. Şəkil Sıxıcı ilə JPEG, PNG və WebP formatlarında fayl ölçüsünü keyfiyyəti itirmədən azaldın — veb saytlar, email və sosial media üçün ideal. Şəkil Ölçü Dəyişdirici ilə dəqiq piksel və ya faiz ölçüsü təyin edin, nisbəti qoruyun. Şəkil Kəsici ilə lazımsız sahələri kəsin, profil şəkilləri və bannerlər hazırlayın. Şəkil Çeviricisi ilə JPEG, PNG və WebP formatları arasında keçid edin. Bütün alətlər birbaşa brauzerdə işləyir — fayllarınız serverə yüklənmir, şəxsi şəkilləriniz tam təhlükəsizdir. Qeydiyyat tələb olunmur, limitsiz istifadə, tamamilə pulsuz. Fotoqraflar, dizaynerlər, bloqqerlər, sosial media menecerləri və veb developerlar üçün əvəzolunmaz alətlər toplusu. Toplu emal dəstəyi ilə bir neçə şəkili eyni anda sıxa bilərsiniz.",
       "dev": "Developer Alətləri",
       "devDesc": "JSON, Base64, Regex, SQL, HTML, JS, CSV və daha çox",
@@ -82,7 +82,7 @@
       },
       "ai-grammar-checker": {
         "name": "AI Qrammatika Yoxlayıcı",
-        "description": "AI ilə qrammatika, orfoqrafiya və durğu işarəsi xətalarını yoxlayın və düzəltdirin. Ani düzəlişlər alın."
+        "description": "AI ilə qrammatika, orfoqrafiya və durğu işarəsi xətalarını yoxlayın və düzəldin. Ani düzəlişlər alın."
       },
       "pdf-merge": {
         "name": "PDF Birləşdirici",
@@ -560,7 +560,7 @@
     "useTitle": "Xidmətlərin İstifadəsi",
     "useDescription": "Alətlərimiz şəxsi və kommersiya istifadəsi üçün pulsuz təqdim olunur. Xidmətlərimizdən heç bir qanunsuz və ya icazəsiz məqsəd üçün istifadə edə bilməzsiniz.",
     "limitationsTitle": "Məhdudiyyətlər",
-    "limitationsDescription": "AI ilə işləyən alətlərin bütün istifadəçilər üçün ədalətli giriş təmin etmək üçün istifadə məhdudiyyətləri var. Xidmətlərimizi sui-istifadə edən istifadəçilərin girişini məhdudlaşdırmaq hüququmu özümüzdə saxlayırıq.",
+    "limitationsDescription": "AI ilə işləyən alətlərin bütün istifadəçilər üçün ədalətli giriş təmin etmək üçün istifadə məhdudiyyətləri var. Xidmətlərimizi sui-istifadə edən istifadəçilərin girişini məhdudlaşdırmaq hüququmuzu özümüzdə saxlayırıq.",
     "disclaimerTitle": "Boyunagötürmə",
     "disclaimerDescription": "Alətlərimiz heç bir növ zəmanət olmadan \"olduğu kimi\" təqdim olunur. Xidmətlərimizin istifadəsindən yaranan hər hansı məlumat itkisi və ya zərərlərə görə məsuliyyət daşımırıq.",
     "changesTitle": "Dəyişikliklər",
@@ -1048,7 +1048,7 @@
       "deselectTopic": "{topic} hashtag-larını ləğv et",
       "copyHashtag": "{tag} kopyala",
       "find": "Tap",
-      "replaceWith": "Ilə əvəz et",
+      "replaceWith": "İlə əvəz et",
       "caseSensitive": "Hərfə həssas",
       "regex": "Regex",
       "wholeWord": "Tam söz",
