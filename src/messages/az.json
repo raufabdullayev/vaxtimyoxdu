@@ -9,7 +9,8 @@
       "blog": "Blog",
       "about": "Haqqımızda",
       "privacy": "Məxfilik Siyasəti",
-      "terms": "İstifadə Şərtləri"
+      "terms": "İstifadə Şərtləri",
+      "viewAll": "Hamısına bax"
     },
     "skipToContent": "Kontentə keç",
     "menu": "Menyu",
@@ -37,7 +38,9 @@
     "toolOfTheDay": "Günün Aləti",
     "tryNow": "İndi sına",
     "recentlyUsed": "Son İstifadə Edilən Alətlər",
-    "openTool": "Aləti aç"
+    "openTool": "Aləti aç",
+    "metaTitle": "Vaxtım Yoxdu — Pulsuz Onlayn Alətlər və Qısa Xəbərlər",
+    "metaDescription": "Vaxtınız yoxdursa, biz varıq. 111+ pulsuz onlayn alət: PDF birləşdirici, şəkil sıxma, AI mətn redaktoru, QR kod generatoru və daha çox. Qeydiyyat tələb olunmur."
   },
   "tools": {
     "pageTitle": "Pulsuz Onlayn Alətlər",
@@ -47,10 +50,14 @@
     "allTools": "Bütün Alətlər",
     "clientSide": "Brauzer Əsaslı",
     "aiPowered": "AI ilə işləyən",
+    "relatedTools": "Əlaqəli Alətlər",
+    "popularTools": "Populyar Alətlər",
     "filterAll": "Hamısı",
     "noToolsFound": "Heç bir alət tapılmadı. Başqa axtarış sözü yoxlayın.",
     "breadcrumbHome": "Ana səhifə",
     "breadcrumbTools": "Alətlər",
+    "metaTitleSuffix": "Pulsuz, Yükləmə Tələb Olunmur",
+    "metaBrowserBased": "100% brauzer əsaslı — fayllarınız cihazınızdan çıxmır.",
     "categories": {
       "ai": "AI Alətləri",
       "aiDesc": "Süni zəkayla işlənən mətn emal alətləri",

@@ -46,13 +46,22 @@ export function generateBaseMetadata(): Metadata {
 
 export function generateToolMetadata(
   tool: Tool,
-  options?: { locale?: string; localizedName?: string; localizedDescription?: string }
+  options?: {
+    locale?: string
+    localizedName?: string
+    localizedDescription?: string
+    titleSuffix?: string
+    browserBasedNote?: string
+  }
 ): Metadata {
   const locale = options?.locale || 'en'
   const name = options?.localizedName || tool.name
   const baseDescription = options?.localizedDescription || tool.description
+  const titleSuffix = options?.titleSuffix || 'Free, No Upload Required'
+  const browserBasedNote =
+    options?.browserBasedNote || '100% browser-based — your files never leave your device.'
   const description = tool.isClientSide
-    ? `${baseDescription} 100% browser-based — your files never leave your device.`
+    ? `${baseDescription} ${browserBasedNote}`
     : baseDescription
   const ogLocale = getOgLocale(locale)
   const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
@@ -62,7 +71,7 @@ export function generateToolMetadata(
     type: 'tool',
   })
   return {
-    title: `${name} — Free, No Upload Required | ${SITE_NAME}`,
+    title: `${name} — ${titleSuffix} | ${SITE_NAME}`,
     description,
     keywords: tool.keywords.join(', '),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },

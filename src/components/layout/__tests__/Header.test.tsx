@@ -4,15 +4,33 @@ import userEvent from '@testing-library/user-event'
 
 // Mock next-intl useTranslations
 vi.mock('next-intl', () => ({
-  useTranslations: () => (key: string) => {
+  useTranslations: (namespace?: string) => (key: string) => {
     const translations: Record<string, string> = {
       'nav.news': 'Xəbərlər',
       'nav.tools': 'Alətlər',
       'nav.blog': 'Blog',
       'nav.about': 'Haqqımızda',
+      'nav.viewAll': 'Hamısına bax',
       menu: 'Menyu',
+      tools: 'Alətlər',
+      viewAll: 'Hamısına bax',
+      'categories.ai': 'AI',
+      'categories.pdf': 'PDF',
+      'categories.image': 'Şəkil',
+      'categories.dev': 'Developer',
+      'categories.generators': 'Generatorlar',
+      'categories.text': 'Mətn',
+      'tools.categories.ai': 'AI',
+      'tools.categories.pdf': 'PDF',
+      'tools.categories.image': 'Şəkil',
+      'tools.categories.dev': 'Developer',
+      'tools.categories.generators': 'Generatorlar',
+      'tools.categories.text': 'Mətn',
+      'common.nav.tools': 'Alətlər',
+      'common.nav.viewAll': 'Hamısına bax',
     }
-    return translations[key] ?? key
+    const full = namespace ? `${namespace}.${key}` : key
+    return translations[full] ?? translations[key] ?? key
   },
 }))
 
@@ -64,11 +82,14 @@ describe('Header', () => {
     const nav = screen.getByLabelText('Main navigation')
     expect(nav).toBeInTheDocument()
     const links = nav.querySelectorAll('a')
-    expect(links).toHaveLength(4)
+    // Tools is now a MegaMenu dropdown (button), so direct links: news, blog, about
+    expect(links).toHaveLength(3)
     expect(links[0]).toHaveAttribute('href', '/info')
-    expect(links[1]).toHaveAttribute('href', '/tools')
-    expect(links[2]).toHaveAttribute('href', '/blog')
-    expect(links[3]).toHaveAttribute('href', '/about')
+    expect(links[1]).toHaveAttribute('href', '/blog')
+    expect(links[2]).toHaveAttribute('href', '/about')
+    // MegaMenu trigger button exists
+    const toolsButton = nav.querySelector('button[aria-haspopup="true"]')
+    expect(toolsButton).toBeInTheDocument()
   })
 
   it('renders ThemeToggle component', async () => {
@@ -130,22 +151,32 @@ describe('Header', () => {
     expect(mobileNav.closest('[aria-hidden]')).toHaveAttribute('aria-hidden', 'true')
   })
 
-  it('mobile nav links have tabIndex -1 when menu is closed', async () => {
+  it('mobile top-level nav links have tabIndex -1 when menu is closed', async () => {
     await renderHeader()
-    const mobileLinks = screen.getByLabelText('Mobile navigation').querySelectorAll('a')
-    mobileLinks.forEach(link => {
+    const mobileNav = screen.getByLabelText('Mobile navigation')
+    const topLinks = Array.from(mobileNav.querySelectorAll('a')).filter(a => {
+      const href = a.getAttribute('href') || ''
+      return ['/info', '/blog', '/about'].includes(href)
+    })
+    expect(topLinks.length).toBeGreaterThan(0)
+    topLinks.forEach(link => {
       expect(link).toHaveAttribute('tabindex', '-1')
     })
   })
 
-  it('mobile nav links have tabIndex 0 when menu is open', async () => {
+  it('mobile top-level nav links have tabIndex 0 when menu is open', async () => {
     const user = userEvent.setup()
     await renderHeader()
 
     await user.click(screen.getByLabelText('Menyu'))
 
-    const mobileLinks = screen.getByLabelText('Mobile navigation').querySelectorAll('a')
-    mobileLinks.forEach(link => {
+    const mobileNav = screen.getByLabelText('Mobile navigation')
+    const topLinks = Array.from(mobileNav.querySelectorAll('a')).filter(a => {
+      const href = a.getAttribute('href') || ''
+      return ['/info', '/blog', '/about'].includes(href)
+    })
+    expect(topLinks.length).toBeGreaterThan(0)
+    topLinks.forEach(link => {
       expect(link).toHaveAttribute('tabindex', '0')
     })
   })

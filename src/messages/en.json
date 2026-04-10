@@ -9,7 +9,8 @@
       "blog": "Blog",
       "about": "About",
       "privacy": "Privacy Policy",
-      "terms": "Terms of Use"
+      "terms": "Terms of Use",
+      "viewAll": "View all"
     },
     "skipToContent": "Skip to content",
     "menu": "Menu",
@@ -37,7 +38,9 @@
     "toolOfTheDay": "Tool of the Day",
     "tryNow": "Try now",
     "recentlyUsed": "Recently Used Tools",
-    "openTool": "Open tool"
+    "openTool": "Open tool",
+    "metaTitle": "Vaxtim Yoxdu — Free Online Tools & Quick News Summaries",
+    "metaDescription": "No time to waste? We got you. 111+ free online tools: PDF merger, image compressor, AI text editor, QR code generator and more. No registration needed."
   },
   "tools": {
     "pageTitle": "Free Online Tools",
@@ -47,10 +50,14 @@
     "allTools": "All Tools",
     "clientSide": "Browser Based",
     "aiPowered": "AI Powered",
+    "relatedTools": "Related Tools",
+    "popularTools": "Popular Tools",
     "filterAll": "All",
     "noToolsFound": "No tools found. Try a different search term.",
     "breadcrumbHome": "Home",
     "breadcrumbTools": "Tools",
+    "metaTitleSuffix": "Free, No Upload Required",
+    "metaBrowserBased": "100% browser-based — your files never leave your device.",
     "categories": {
       "ai": "AI Tools",
       "aiDesc": "AI-powered text processing tools",

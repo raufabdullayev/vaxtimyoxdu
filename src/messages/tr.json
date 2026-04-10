@@ -9,7 +9,8 @@
       "blog": "Blog",
       "about": "Hakkımızda",
       "privacy": "Gizlilik Politikası",
-      "terms": "Kullanım Şartları"
+      "terms": "Kullanım Şartları",
+      "viewAll": "Tümünü gör"
     },
     "skipToContent": "İçeriğe atla",
     "menu": "Menü",
@@ -37,7 +38,9 @@
     "toolOfTheDay": "Günün Aracı",
     "tryNow": "Şimdi dene",
     "recentlyUsed": "Son Kullanılan Araçlar",
-    "openTool": "Aracı aç"
+    "openTool": "Aracı aç",
+    "metaTitle": "Vaxtim Yoxdu — Ücretsiz Online Araçlar ve Kısa Haberler",
+    "metaDescription": "Zamanınız yoksa, biz varız. 111+ ücretsiz online araç: PDF birleştirici, görüntü sıkıştırma, AI metin editörü, QR kod üreteci ve daha fazlası. Kayıt gerekmez."
   },
   "tools": {
     "pageTitle": "Ücretsiz Online Araçlar",
@@ -47,10 +50,14 @@
     "allTools": "Tüm Araçlar",
     "clientSide": "Tarayıcı Tabanlı",
     "aiPowered": "AI Destekli",
+    "relatedTools": "İlgili Araçlar",
+    "popularTools": "Popüler Araçlar",
     "filterAll": "Tümünü Göster",
     "noToolsFound": "Araç bulunamadı. Farklı bir arama terimi deneyin.",
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbTools": "Araçlar",
+    "metaTitleSuffix": "Ücretsiz, Yükleme Gerekmez",
+    "metaBrowserBased": "100% tarayıcı tabanlı — dosyalarınız cihazınızdan çıkmaz.",
     "categories": {
       "ai": "AI Araçları",
       "aiDesc": "Yapay zeka destekli metin işleme araçları",

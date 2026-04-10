@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations('home')
   const alternates = generateHreflangAlternates('/', locale)
 
-  const title = `${t('heroTitle')} ${t('heroTitleHighlight')}`
-  const description = t('heroDescription')
+  const title = t('metaTitle')
+  const description = t('metaDescription')
 
   const ogImage = getOgImageUrl({
     title: SITE_NAME,

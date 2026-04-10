@@ -6,10 +6,11 @@ import { Link, usePathname } from '@/i18n/navigation'
 import { Menu, X } from 'lucide-react'
 import LanguageSelector from './LanguageSelector'
 import ThemeToggle from '@/components/common/ThemeToggle'
+import MegaMenu from './MegaMenu'
+import MobileToolsAccordion from './MobileToolsAccordion'
 
 const navLinks = [
   { href: '/info', label: 'nav.news' },
-  { href: '/tools', label: 'nav.tools' },
   { href: '/blog', label: 'nav.blog' },
   { href: '/about', label: 'nav.about' },
 ] as const
@@ -26,18 +27,34 @@ export default function HeaderClient({ children }: { children?: ReactNode }) {
       {children}
 
       <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-        {navLinks.map(({ href, label }) => (
-          <Link
-            key={href}
-            href={href}
-            className={`text-sm font-medium transition-colors ${
-              isActive(href) ? 'text-primary font-semibold' : 'hover:text-primary'
-            }`}
-            {...(isActive(href) ? { 'aria-current': 'page' as const } : {})}
-          >
-            {t(label)}
-          </Link>
-        ))}
+        <Link
+          href="/info"
+          className={`text-sm font-medium transition-colors ${
+            isActive('/info') ? 'text-primary font-semibold' : 'hover:text-primary'
+          }`}
+          {...(isActive('/info') ? { 'aria-current': 'page' as const } : {})}
+        >
+          {t('nav.news')}
+        </Link>
+        <MegaMenu />
+        <Link
+          href="/blog"
+          className={`text-sm font-medium transition-colors ${
+            isActive('/blog') ? 'text-primary font-semibold' : 'hover:text-primary'
+          }`}
+          {...(isActive('/blog') ? { 'aria-current': 'page' as const } : {})}
+        >
+          {t('nav.blog')}
+        </Link>
+        <Link
+          href="/about"
+          className={`text-sm font-medium transition-colors ${
+            isActive('/about') ? 'text-primary font-semibold' : 'hover:text-primary'
+          }`}
+          {...(isActive('/about') ? { 'aria-current': 'page' as const } : {})}
+        >
+          {t('nav.about')}
+        </Link>
       </nav>
 
       <div className="flex items-center gap-2">
@@ -57,7 +74,7 @@ export default function HeaderClient({ children }: { children?: ReactNode }) {
       <div
         id="mobile-menu"
         className={`md:hidden border-t overflow-hidden transition-[max-height] duration-300 ease-in-out basis-full ${
-          mobileOpen ? 'max-h-60' : 'max-h-0'
+          mobileOpen ? 'max-h-[32rem] overflow-y-auto' : 'max-h-0'
         }`}
         aria-hidden={!mobileOpen}
         inert={!mobileOpen}
@@ -77,6 +94,7 @@ export default function HeaderClient({ children }: { children?: ReactNode }) {
               {t(label)}
             </Link>
           ))}
+          <MobileToolsAccordion onNavigate={() => setMobileOpen(false)} />
         </nav>
       </div>
     </>

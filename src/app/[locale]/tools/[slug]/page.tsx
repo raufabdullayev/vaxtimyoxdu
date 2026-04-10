@@ -227,6 +227,8 @@ export async function generateMetadata({
     locale,
     localizedName,
     localizedDescription,
+    titleSuffix: t('metaTitleSuffix'),
+    browserBasedNote: t('metaBrowserBased'),
   }
 
   const metadata = generateToolMetadata(tool, localeOpts)
@@ -308,6 +310,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     toolChain: (allMessages as Record<string, unknown>).toolChain,
     toolUsage: (allMessages as Record<string, unknown>).toolUsage,
     tools: (allMessages as Record<string, unknown>).tools,
+    share: (allMessages as Record<string, unknown>).share,
   }
 
   const tool = getToolBySlug(slug)
@@ -367,7 +370,13 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         ]}
       />
       <NextIntlClientProvider messages={toolClientMessages}>
-        <ToolTemplate tool={tool} aboutTitle={t('aboutTool', { toolName: displayName })}>
+        <ToolTemplate
+          tool={tool}
+          aboutTitle={t('aboutTool', { toolName: displayName })}
+          displayName={displayName}
+          displayShortDescription={localizedDescription || tool.shortDescription}
+          displayDescription={localizedDescription || tool.description}
+        >
           <Component />
         </ToolTemplate>
         <ToolUsageCounter slug={tool.slug} />

@@ -18,6 +18,15 @@ export default function RelatedTools({ currentTool }: RelatedToolsProps) {
 
   if (related.length === 0) return null
 
+  const localize = (slug: string, field: 'name' | 'description', fallback: string) => {
+    const key = `toolNames.${slug}.${field}` as Parameters<typeof t>[0]
+    try {
+      const translated = t(key)
+      if (translated && translated !== key) return translated
+    } catch { /* fallback */ }
+    return fallback
+  }
+
   return (
     <div className="mt-10">
       <h2 className="text-xl font-semibold mb-4">{t('relatedTools')}</h2>
@@ -30,10 +39,10 @@ export default function RelatedTools({ currentTool }: RelatedToolsProps) {
           >
             <div className="text-2xl mb-2">{tool.icon}</div>
             <h3 className="font-semibold text-sm mb-1 group-hover:text-primary transition-colors">
-              {tool.name}
+              {localize(tool.slug, 'name', tool.name)}
             </h3>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              {tool.shortDescription}
+              {localize(tool.slug, 'description', tool.shortDescription)}
             </p>
             <div className="mt-2 flex items-center gap-2">
               {tool.isAI && (

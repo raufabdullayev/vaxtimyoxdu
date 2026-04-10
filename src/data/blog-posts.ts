@@ -79,8 +79,8 @@ With so many options available, here are the criteria that matter most when sele
 All of these tools and more are available for free at Vaxtim Yoxdu. No signup required, no hidden fees, no file uploads to remote servers. Just open the tool, get your work done, and move on with your day. Because when time is short, your tools should never be the bottleneck.`,
   },
   'how-ai-text-rewriting-works': {
-    title: 'How AI Text Rewriting Works',
-    description: 'Learn how AI text rewriting technology works under the hood. Use our free AI paraphrase tool to rewrite content while preserving original meaning.',
+    title: 'How AI Text Rewriting Actually Works (Explained Simply)',
+    description: 'Discover how AI paraphrases text in seconds. Learn what makes AI rewriters accurate and try our free tool with no registration.',
     date: '2026-03-05',
     relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer'],
     content: `AI text rewriting uses large language models to understand and rephrase your text while preserving the original meaning. It is one of the most practical applications of modern artificial intelligence, used daily by writers, marketers, students, and professionals across every industry. Here is how it works under the hood, what makes some tools better than others, and how you can get the best results.
@@ -1931,8 +1931,8 @@ The best QR code generators in 2026 offer:
 Try the free QR Code Generator on Vaxtim Yoxdu. It supports all data types listed above, offers color customization and SVG export, and processes everything locally in your browser. Generate unlimited QR codes with no watermarks, no account required, and complete privacy.`,
   },
   'easiest-way-to-merge-pdf-files': {
-    title: 'How to Merge PDF Files Free Online in 2026 — No Signup, No Upload',
-    description: 'Merge PDF files instantly in your browser — no server uploads, no signup, no watermarks. Step-by-step guide to combining PDFs safely with a free online tool.',
+    title: 'How to Merge PDF Files in Seconds — No Upload Required',
+    description: 'Combine multiple PDF files online in 3 simple steps. Free, private, no signup needed. Works in any browser on any device.',
     date: '2026-03-11',
     relatedTools: ['pdf-merge', 'pdf-split', 'pdf-compress'],
     content: `Merging PDF files should not require expensive software, account creation, or uploading sensitive documents to unknown servers. In 2026, browser-based tools have made the process remarkably simple: open a tool, drop your files in, arrange them in the right order, and click merge. The result downloads to your device in seconds, and your files never leave your machine. Here is a step-by-step guide to merging PDFs the easy way, along with best practices for getting clean results every time.

@@ -7,6 +7,13 @@ vi.mock('@/i18n/navigation', () => ({
   ),
 }))
 
+vi.mock('next-intl', () => ({
+  useTranslations: () => (key: string) => {
+    if (key === 'popularTools') return 'Popular Tools'
+    return key
+  },
+}))
+
 vi.mock('@/config/tools', () => ({
   tools: [
     { slug: 'json-formatter', name: 'JSON Formatter', icon: '{}' },
