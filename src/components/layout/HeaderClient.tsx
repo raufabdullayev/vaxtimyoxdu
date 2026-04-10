@@ -56,7 +56,7 @@ export default function HeaderClient({ children }: { children?: ReactNode }) {
 
       <div
         id="mobile-menu"
-        className={`md:hidden border-t overflow-hidden transition-[max-height] duration-300 ease-in-out col-span-full ${
+        className={`md:hidden border-t overflow-hidden transition-[max-height] duration-300 ease-in-out basis-full ${
           mobileOpen ? 'max-h-60' : 'max-h-0'
         }`}
         aria-hidden={!mobileOpen}

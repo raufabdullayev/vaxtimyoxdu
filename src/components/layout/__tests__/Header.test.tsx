@@ -16,6 +16,16 @@ vi.mock('next-intl', () => ({
   },
 }))
 
+// Mock next-intl/server getTranslations
+vi.mock('next-intl/server', () => ({
+  getTranslations: () => {
+    const translations: Record<string, string> = {
+      siteName: 'Vaxtim Yoxdu',
+    }
+    return Promise.resolve((key: string) => translations[key] ?? key)
+  },
+}))
+
 // Mock i18n navigation Link + usePathname
 vi.mock('@/i18n/navigation', () => ({
   Link: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (
@@ -36,15 +46,21 @@ vi.mock('../LanguageSelector', () => ({
 
 import Header from '../Header'
 
+// Helper to render async server component in tests
+async function renderHeader() {
+  const jsx = await Header()
+  render(jsx)
+}
+
 describe('Header', () => {
-  it('renders the logo with link to homepage', () => {
-    render(<Header />)
+  it('renders the logo with link to homepage', async () => {
+    await renderHeader()
     const logoLink = screen.getByRole('link', { name: /vaxtim yoxdu/i })
     expect(logoLink).toHaveAttribute('href', '/')
   })
 
-  it('renders desktop navigation links', () => {
-    render(<Header />)
+  it('renders desktop navigation links', async () => {
+    await renderHeader()
     const nav = screen.getByLabelText('Main navigation')
     expect(nav).toBeInTheDocument()
     const links = nav.querySelectorAll('a')
@@ -55,18 +71,18 @@ describe('Header', () => {
     expect(links[3]).toHaveAttribute('href', '/about')
   })
 
-  it('renders ThemeToggle component', () => {
-    render(<Header />)
+  it('renders ThemeToggle component', async () => {
+    await renderHeader()
     expect(screen.getByTestId('theme-toggle')).toBeInTheDocument()
   })
 
-  it('renders LanguageSelector component', () => {
-    render(<Header />)
+  it('renders LanguageSelector component', async () => {
+    await renderHeader()
     expect(screen.getByTestId('language-selector')).toBeInTheDocument()
   })
 
-  it('does not have inline theme toggle logic', () => {
-    render(<Header />)
+  it('does not have inline theme toggle logic', async () => {
+    await renderHeader()
     // Header should delegate theme to ThemeToggle, not have its own toggle
     const themeToggle = screen.getByTestId('theme-toggle')
     expect(themeToggle).toBeInTheDocument()
@@ -76,21 +92,21 @@ describe('Header', () => {
     expect(themeButtons).toHaveLength(1)
   })
 
-  it('renders mobile menu button', () => {
-    render(<Header />)
+  it('renders mobile menu button', async () => {
+    await renderHeader()
     const menuButton = screen.getByLabelText('Menyu')
     expect(menuButton).toBeInTheDocument()
   })
 
-  it('mobile menu is hidden by default', () => {
-    render(<Header />)
+  it('mobile menu is hidden by default', async () => {
+    await renderHeader()
     const mobileNav = screen.getByLabelText('Mobile navigation')
     expect(mobileNav.closest('[aria-hidden]')).toHaveAttribute('aria-hidden', 'true')
   })
 
   it('toggles mobile menu on button click', async () => {
     const user = userEvent.setup()
-    render(<Header />)
+    await renderHeader()
     const menuButton = screen.getByLabelText('Menyu')
 
     await user.click(menuButton)
@@ -100,7 +116,7 @@ describe('Header', () => {
 
   it('closes mobile menu when a nav link is clicked', async () => {
     const user = userEvent.setup()
-    render(<Header />)
+    await renderHeader()
 
     // Open menu
     await user.click(screen.getByLabelText('Menyu'))
@@ -114,8 +130,8 @@ describe('Header', () => {
     expect(mobileNav.closest('[aria-hidden]')).toHaveAttribute('aria-hidden', 'true')
   })
 
-  it('mobile nav links have tabIndex -1 when menu is closed', () => {
-    render(<Header />)
+  it('mobile nav links have tabIndex -1 when menu is closed', async () => {
+    await renderHeader()
     const mobileLinks = screen.getByLabelText('Mobile navigation').querySelectorAll('a')
     mobileLinks.forEach(link => {
       expect(link).toHaveAttribute('tabindex', '-1')
@@ -124,7 +140,7 @@ describe('Header', () => {
 
   it('mobile nav links have tabIndex 0 when menu is open', async () => {
     const user = userEvent.setup()
-    render(<Header />)
+    await renderHeader()
 
     await user.click(screen.getByLabelText('Menyu'))
 
@@ -134,8 +150,8 @@ describe('Header', () => {
     })
   })
 
-  it('header is sticky with correct classes', () => {
-    render(<Header />)
+  it('header is sticky with correct classes', async () => {
+    await renderHeader()
     const header = screen.getByRole('banner')
     expect(header.className).toContain('sticky')
     expect(header.className).toContain('top-0')
@@ -143,7 +159,7 @@ describe('Header', () => {
 
   it('menu button has aria-expanded attribute', async () => {
     const user = userEvent.setup()
-    render(<Header />)
+    await renderHeader()
     const menuButton = screen.getByLabelText('Menyu')
 
     expect(menuButton).toHaveAttribute('aria-expanded', 'false')

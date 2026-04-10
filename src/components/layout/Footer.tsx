@@ -65,6 +65,7 @@ const categoryOrder: ToolCategory[] = ['ai', 'pdf', 'image', 'dev', 'generators'
 
 export default async function Footer() {
   const t = await getTranslations('footer')
+  const common = await getTranslations('common')
   const nav = await getTranslations('common.nav')
   const toolsT = await getTranslations('tools')
 
@@ -74,7 +75,7 @@ export default async function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="font-bold text-lg mb-3">Vaxtim Yoxdu</h3>
+            <h3 className="font-bold text-lg mb-3">{common('siteName')}</h3>
             <p className="text-sm text-muted-foreground">
               {t('description')}
             </p>
@@ -175,7 +176,7 @@ export default async function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          &copy; <CurrentYear /> Vaxtim Yoxdu. {t('copyright')}
+          &copy; <CurrentYear /> {common('siteName')}. {t('copyright')}
         </div>
       </div>
     </footer>

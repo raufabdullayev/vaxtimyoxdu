@@ -14,6 +14,9 @@ vi.mock('next-intl/server', () => ({
         legalTitle: 'Legal',
         copyright: 'All rights reserved.',
       },
+      common: {
+        siteName: 'Vaxtim Yoxdu',
+      },
       'common.nav': {
         news: 'News',
         tools: 'Tools',

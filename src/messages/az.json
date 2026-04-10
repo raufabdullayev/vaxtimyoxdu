@@ -1,6 +1,6 @@
 {
   "common": {
-    "siteName": "Vaxtim Yoxdu",
+    "siteName": "Vaxtım Yoxdu",
     "siteDescription": "Vaxtınız yoxdursa, biz varıq. Qısa xəbər xülasələri və pulsuz AI onlayn alətlər.",
     "nav": {
       "home": "Ana Səhifə",
@@ -32,7 +32,7 @@
     "statAvailability": "Əlçatanlıq",
     "marketTitle": "Bazar Qiymətləri",
     "marketViewAll": "Hamısına bax",
-    "heroTagline": "Vaxtim yoxdu — amma hər şey hazırdır",
+    "heroTagline": "Vaxtım yoxdu — amma hər şey hazırdır",
     "trustStrip": "105+ pulsuz alət | 4 dil | Qeydiyyat lazım deyil | 100% brauzer əsaslı",
     "toolOfTheDay": "Günün Aləti",
     "tryNow": "İndi sına",
@@ -616,7 +616,7 @@
   },
   "installPrompt": {
     "ariaLabel": "Tətbiqi yüklə",
-    "title": "Vaxtim Yoxdu-nu telefonunuza yükləyin!",
+    "title": "Vaxtım Yoxdu-nu telefonunuza yükləyin!",
     "description": "Daha sürətli giriş üçün ana ekrana əlavə edin.",
     "dismiss": "Sonra",
     "install": "Yüklə",
@@ -633,7 +633,7 @@
     "current": "Hazırkı dil"
   },
   "info": {
-    "metaTitle": "Xəbərlər - Vaxtim Yoxdu",
+    "metaTitle": "Xəbərlər - Vaxtım Yoxdu",
     "metaDescription": "Günlük vacib xəbərlərin qısa xülasəsi. İqtisadiyyat, texnologiya, təhsil, idman - hər şeyi bir baxışda.",
     "title": "Xəbərlər",
     "subtitle": "Qısa və dəqiq xəbərlər — vaxtınız yoxdursa, biz varıq.",
@@ -643,7 +643,7 @@
     "readingTime": "{minutes} dəq oxunuş"
   },
   "blog": {
-    "metaTitle": "Blog - Vaxtim Yoxdu",
+    "metaTitle": "Blog - Vaxtım Yoxdu",
     "metaDescription": "Onlayn alətlər, AI və məhsuldarlıq haqqında məsləhətlər, dərsliklər və bələdçilər.",
     "title": "Blog",
     "breadcrumbHome": "Ana səhifə",
@@ -1191,7 +1191,7 @@
     "usedTimes": "{count} dəfə istifadə olunub"
   },
   "badges": {
-    "metaTitle": "Nailiyyət Nişanları | Vaxtim Yoxdu",
+    "metaTitle": "Nailiyyət Nişanları | Vaxtım Yoxdu",
     "metaDescription": "Alətləri istifadə edərək nailiyyət nişanları qazanın. İrəliləyişinizi izləyin.",
     "title": "Nailiyyət Nişanları",
     "subtitle": "Alətləri istifadə edərək nişanlar qazanın",
@@ -1229,7 +1229,7 @@
     }
   },
   "suggest": {
-    "metaTitle": "Alət Təklif Et | Vaxtim Yoxdu",
+    "metaTitle": "Alət Təklif Et | Vaxtım Yoxdu",
     "metaDescription": "Yeni alət təklifləri göndərin və başqalarının təkliflərinə səs verin.",
     "title": "Alət Təklif Lövhəsi",
     "subtitle": "Hansı alətləri görmək istəyirsiniz? Təklif edin və səs verin!",
