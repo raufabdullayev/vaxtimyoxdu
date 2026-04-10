@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { generateArticleMetadata, generateNewsArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
+import { generateArticleMetadata, generateNewsArticleJsonLd, getLocalizedUrl } from '@/lib/utils/seo'
+import type { Locale } from '@/i18n/config'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
@@ -34,7 +35,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     category: article.category,
     locale,
   })
-  const alternates = generateHreflangAlternates(`/info/${slug}`, locale)
+  // News articles have locale-specific slugs (e.g., AZ slug differs from EN slug),
+  // so cross-locale hreflang would point to non-existent pages (404).
+  // Only emit self-referencing hreflang for the article's own locale.
+  const articleUrl = getLocalizedUrl(`/info/${slug}`, locale as Locale)
+  const alternates = {
+    canonical: articleUrl,
+    languages: {
+      [locale]: articleUrl,
+      'x-default': articleUrl,
+    },
+  }
   return { ...metadata, alternates }
 }
 
