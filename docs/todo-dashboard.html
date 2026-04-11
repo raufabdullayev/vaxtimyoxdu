@@ -43,7 +43,7 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </head>
 <body>
 <h1>vaxtimyoxdu.com</h1>
-<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 8 Aprel 2026 (Session 15)</p>
+<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 11 Aprel 2026 (Session 23 — Hreflang Bug Fix)</p>
 
 <div class="links">
 <strong>Bagli fayllar:</strong>
@@ -54,11 +54,11 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="stats">
-<div class="stat"><div class="num">105</div><div class="label">Aletler</div></div>
+<div class="stat"><div class="num">111</div><div class="label">Aletler</div></div>
 <div class="stat"><div class="num">4</div><div class="label">Dil</div></div>
-<div class="stat"><div class="num">936</div><div class="label">Sehifeler</div></div>
-<div class="stat"><div class="num">3074</div><div class="label">Testler</div></div>
-<div class="stat"><div class="num">88</div><div class="label">Xeberler</div></div>
+<div class="stat"><div class="num">820</div><div class="label">Sehifeler</div></div>
+<div class="stat"><div class="num">2949</div><div class="label">Testler</div></div>
+<div class="stat"><div class="num">44</div><div class="label">Xeberler</div></div>
 <div class="stat"><div class="num">68%</div><div class="label">Coverage</div></div>
 </div>
 
@@ -73,10 +73,10 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="section">
-<h2>HIGH (4)</h2>
+<h2>HIGH (3)</h2>
 <div class="task high">
 <span class="badge high">HIGH</span>
-<div class="task-text">Test coverage 68% &rarr; 85%+<small>3074 test PASS, amma branch coverage hele asagi</small></div>
+<div class="task-text">Test coverage 68% &rarr; 85%+<small>2949 test PASS, amma branch coverage hele asagi</small></div>
 </div>
 <div class="task high">
 <span class="badge high">HIGH</span>
@@ -85,10 +85,6 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <div class="task high">
 <span class="badge high">HIGH</span>
 <div class="task-text">Nonce-based CSP migration<small>SSG ile uygunsuz - DIQQET: hash + unsafe-inline qoyma! W3C ignore edir, white screen yaradir (P0 incident dersi)</small></div>
-</div>
-<div class="task high">
-<span class="badge high">HIGH</span>
-<div class="task-text">Hreflang generation bug - news article pages cross-locale slug mismatch<small>src/app/[locale]/info/[slug]/page.tsx:36 - generateHreflangAlternates('/info/${slug}', locale) uses same slug across all 4 locale alternates, but news slugs differ per locale (AZ "chempionlar-liqasi...", EN "en-champions-league...", TR "tr-sampiyonlar-ligi...", RU "ru-liga-chempionov..."). Impact: every news article (88 total) has hreflang links pointing to 404 URLs sitewide, harms international SEO indexing. Fix strategy: cross-locale slug mapping in news-articles data or lookup helper. Test strategy: Playwright /info/* x 4 locales verifying hreflang &lt;link&gt; targets return 200. Effort: ~2-3 hours. Discovered by SeoPro during Session 15.</small></div>
 </div>
 </div>
 
@@ -165,6 +161,10 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="done-section">
+<h2>Session 23 (2026-04-11) — Hreflang Bug Fix (4 kommit)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Hreflang bug TOTAL fix — Team Mode parallel<small>11 aprel - 3 bug P0 fix (A: /en/ 308 redirect, B: blog/[slug] 404 cross-locale probe, C: sitemap duplicate helper) + 1 P1 (sitemap DRY). 2 parallel agent + 1 serial + PO visual verify. 2949 test PASS (+6 yeni), 820 static page, zero regression. Plan: docs/superpowers/plans/2026-04-11-hreflang-bugfix.md. Commits: 6cc4ab0, b6ae5e4, 0fc6318, ec9d88b, 18890db</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Production visual verification (chrome-devtools-mcp)<small>11 aprel - Canli DOM inspection: AZ/EN home + tool page full 4-locale set, AZ-only blog post EN omitted, sitemap 628 URL zero trailing slash. 4 screenshot arxivlenib.</small></div></div>
+
 <h2>SON TAMAMLANANLAR (Session 11 + Sprint 9 + P0 Fix)</h2>
 <div class="task done"><span class="badge done">DONE</span><div class="task-text">Session 11 - News cleanup + 04-08 content refresh<small>8 aprel - 85 kohne silindi, 24 yeni 04-08 meqale (6 movzu x 4 dil): Iran-USA, UEFA QF, markets, Gemini 3.1, Ask Maps, AZ-TR (commit 9e4ed6f)</small></div></div>
 <div class="task done"><span class="badge done">DONE</span><div class="task-text">P0 INCIDENT FIX - CSP white screen<small>7 aprel - sha256 hash silindi, browser test edildi (commit 7bcef09)</small></div></div>
