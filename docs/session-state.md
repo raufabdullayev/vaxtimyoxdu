@@ -42,6 +42,9 @@
 - **Task #15** — Tool meta description overflow: 38 AZ tool (117-dən) 160 char-ı aşır. Həll: `tools.metaBrowserBased`-i 4 dildə 20-25 char-a endir (AZ "Brauzer əsaslı, pulsuz" (23), EN "Browser-based, free" (19), TR "Tarayıcı tabanlı, ücretsiz" (25), RU "В браузере, бесплатно" (21))
 - **Task #21** — PdfMerge/PdfSplit/PdfCompress və digər upload-based tool widget-lərinin daxili string-ləri ("Select PDF Files", "Click to add PDF files") 4 dildə lokalizə edilməli
 
+**🖱 UX Polish (Session 23-dən sonra aşkarlandı):**
+- **Header "Alətlər" mega menu click nav** — `src/components/layout/MegaMenu.tsx:100` `<button>{navT('tools')}</button>` hazırda yalnız dropdown açıb-bağlayır, **click ilə `/tools` səhifəsinə navigate etmir**. Həll: button-u `<Link href="/tools">` + hover/focus ilə mega menu açan şəklə çevir. Mobile accordion pattern-ı dəyişməsin (ayrıca handle et). Effort: ~30 dəq. Prioritet: MEDIUM (UX improvement).
+
 **Digər:**
 - Yeni alətlər (111 → 150)
 - Test coverage 68% → 85%
