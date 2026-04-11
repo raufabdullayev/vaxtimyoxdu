@@ -115,9 +115,9 @@ describe('generateBaseMetadata()', () => {
     const languages = alternates.languages as Record<string, string>
     expect(languages).toBeDefined()
     expect(languages['az']).toBe(`${SITE_URL}/`)
-    expect(languages['en']).toBe(`${SITE_URL}/en/`)
-    expect(languages['tr']).toBe(`${SITE_URL}/tr/`)
-    expect(languages['ru']).toBe(`${SITE_URL}/ru/`)
+    expect(languages['en']).toBe(`${SITE_URL}/en`)
+    expect(languages['tr']).toBe(`${SITE_URL}/tr`)
+    expect(languages['ru']).toBe(`${SITE_URL}/ru`)
     expect(languages['x-default']).toBe(`${SITE_URL}/`)
   })
 })
