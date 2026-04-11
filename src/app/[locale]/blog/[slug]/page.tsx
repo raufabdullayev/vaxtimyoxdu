@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { generateBlogPostMetadata, generateBlogArticleJsonLd, generateHreflangAlternates } from '@/lib/utils/seo'
+import { generateBlogPostMetadata, generateBlogArticleJsonLd, getLocalizedUrl } from '@/lib/utils/seo'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import NewsletterInlineCTA from '@/components/layout/NewsletterInlineCTA'
@@ -10,8 +10,9 @@ import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
 import SocialShareBar from '@/components/common/SocialShareBar'
 import ScrollDepthTracker from '@/components/analytics/ScrollDepthTracker'
 import MarkdownRenderer from '@/components/common/MarkdownRenderer'
-import { blogPosts, getBlogPostBySlug, getBlogPostsByLocale } from '@/data/blog-posts'
+import { blogPosts, blogPostsByLocale, getBlogPostBySlug, getBlogPostsByLocale } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
+import { locales, defaultLocale } from '@/i18n/config'
 import type { Locale } from '@/i18n/config'
 
 export function generateStaticParams() {
@@ -33,7 +34,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     date: post.date,
     locale: rawLocale,
   })
-  const alternates = generateHreflangAlternates(`/blog/${slug}`, rawLocale)
+
+  // Blog posts use per-locale slug sets (src/data/blog-posts.ts::blogPostsByLocale).
+  // A post available only in some locales would 404 on the missing ones if we
+  // emitted the full 4-language hreflang set — so probe each locale and only
+  // emit a hreflang entry when the slug actually resolves there.
+  // This mirrors the pattern established in src/app/[locale]/info/[slug]/page.tsx
+  // (commit af6d684) but tolerates the case where the same slug DOES exist in
+  // multiple locales (which is the norm for translated posts).
+  const languages: Record<string, string> = {}
+  for (const loc of locales) {
+    if (blogPostsByLocale[loc]?.[slug]) {
+      languages[loc] = getLocalizedUrl(`/blog/${slug}`, loc)
+    }
+  }
+  // x-default: prefer default locale if it has the post, otherwise fall back to self.
+  languages['x-default'] =
+    languages[defaultLocale] ?? getLocalizedUrl(`/blog/${slug}`, locale)
+
+  const alternates = {
+    canonical: getLocalizedUrl(`/blog/${slug}`, locale),
+    languages,
+  }
   return { ...metadata, alternates }
 }
 
