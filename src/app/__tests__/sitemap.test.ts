@@ -88,11 +88,17 @@ describe('sitemap() static pages', () => {
   })
 
   it('should include root page for all locales', () => {
-    // az: vaxtimyoxdu.com/, en: vaxtimyoxdu.com/en/, etc.
+    // az: vaxtimyoxdu.com/, en: vaxtimyoxdu.com/en, tr: vaxtimyoxdu.com/tr, ru: vaxtimyoxdu.com/ru
+    // Non-default locales drop the trailing slash on root to avoid 308 redirects —
+    // see docs/superpowers/plans/2026-04-11-hreflang-bugfix.md (Bug A).
     const azRoot = entries.find((e) => e.url === `${BASE_URL}/`)
-    const enRoot = entries.find((e) => e.url === `${BASE_URL}/en/`)
+    const enRoot = entries.find((e) => e.url === `${BASE_URL}/en`)
+    const trRoot = entries.find((e) => e.url === `${BASE_URL}/tr`)
+    const ruRoot = entries.find((e) => e.url === `${BASE_URL}/ru`)
     expect(azRoot).toBeDefined()
     expect(enRoot).toBeDefined()
+    expect(trRoot).toBeDefined()
+    expect(ruRoot).toBeDefined()
   })
 
   it('should include the /info page', () => {

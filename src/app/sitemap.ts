@@ -3,32 +3,23 @@ import { tools } from '@/config/tools'
 import { newsArticles } from '@/data/news-articles'
 import { blogPosts } from '@/data/blog-posts'
 import { locales, defaultLocale, Locale } from '@/i18n/config'
-
-const baseUrl = 'https://vaxtimyoxdu.com'
-
-/**
- * Build a locale-prefixed URL.
- * The default locale (az) gets no prefix.
- */
-function localizedUrl(path: string, locale: Locale): string {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`
-  if (locale === defaultLocale) {
-    return `${baseUrl}${cleanPath}`
-  }
-  return `${baseUrl}/${locale}${cleanPath}`
-}
+import { getLocalizedUrl } from '@/lib/utils/seo/url'
 
 /**
  * Build an alternates object with hreflang entries for every locale.
+ *
+ * Delegates to the shared getLocalizedUrl() helper so the sitemap cannot
+ * drift from the HTML <link rel="alternate"> emissions (single source of
+ * truth for hreflang URL shape).
  */
 function buildAlternates(path: string): {
   languages: Record<string, string>
 } {
   const languages: Record<string, string> = {}
   for (const locale of locales) {
-    languages[locale] = localizedUrl(path, locale)
+    languages[locale] = getLocalizedUrl(path, locale)
   }
-  languages['x-default'] = localizedUrl(path, defaultLocale)
+  languages['x-default'] = getLocalizedUrl(path, defaultLocale)
   return { languages }
 }
 
@@ -44,7 +35,7 @@ function localeEntries(
   const alternates = buildAlternates(path)
 
   return locales.map((locale) => ({
-    url: localizedUrl(path, locale),
+    url: getLocalizedUrl(path, locale),
     lastModified,
     changeFrequency,
     priority,
@@ -79,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // If article has a locale field, only generate entry for that locale
       if (article.locale) {
         const articleLocale = article.locale as Locale
-        const url = localizedUrl(`/info/${slug}`, articleLocale)
+        const url = getLocalizedUrl(`/info/${slug}`, articleLocale)
         return [{
           url,
           lastModified: new Date(article.date),
