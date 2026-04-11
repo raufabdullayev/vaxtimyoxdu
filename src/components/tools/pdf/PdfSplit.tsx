@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function PdfSplit() {
+  const t = useTranslations('toolUI.pdfTools')
   const [file, setFile] = useState<File | null>(null)
   const [pageCount, setPageCount] = useState(0)
   const [pageRange, setPageRange] = useState('')
@@ -17,11 +19,11 @@ export default function PdfSplit() {
     if (!selected) return
 
     if (selected.type !== 'application/pdf') {
-      setError('Only PDF files are allowed')
+      setError(t('onlyPdfAllowed'))
       return
     }
     if (selected.size > 50 * 1024 * 1024) {
-      setError('File must be under 50MB')
+      setError(t('fileTooLarge'))
       return
     }
 
@@ -37,7 +39,7 @@ export default function PdfSplit() {
       setPageCount(count)
       setPageRange(`1-${count}`)
     } catch {
-      setError('Failed to read PDF. The file may be corrupted or password-protected.')
+      setError(t('failedReadPdf'))
       setFile(null)
       setPageCount(0)
     }
@@ -53,7 +55,7 @@ export default function PdfSplit() {
         const start = parseInt(startStr, 10)
         const end = parseInt(endStr, 10)
         if (isNaN(start) || isNaN(end) || start < 1 || end > total || start > end) {
-          throw new Error(`Invalid range: ${part}. Pages must be between 1 and ${total}.`)
+          throw new Error(t('pageRangeInvalid', { range: part, total }))
         }
         for (let i = start; i <= end; i++) {
           pages.add(i - 1)
@@ -61,7 +63,7 @@ export default function PdfSplit() {
       } else {
         const num = parseInt(part, 10)
         if (isNaN(num) || num < 1 || num > total) {
-          throw new Error(`Invalid page: ${part}. Pages must be between 1 and ${total}.`)
+          throw new Error(t('pageNumberInvalid', { page: part, total }))
         }
         pages.add(num - 1)
       }
@@ -72,11 +74,11 @@ export default function PdfSplit() {
 
   const split = async () => {
     if (!file) {
-      setError('Please select a PDF file')
+      setError(t('pleaseSelectPdf'))
       return
     }
     if (!pageRange.trim()) {
-      setError('Please enter a page range')
+      setError(t('enterPageRange'))
       return
     }
 
@@ -87,7 +89,7 @@ export default function PdfSplit() {
     try {
       const indices = parsePageRange(pageRange, pageCount)
       if (indices.length === 0) {
-        setError('No valid pages selected')
+        setError(t('noValidPages'))
         setProcessing(false)
         return
       }
@@ -106,7 +108,7 @@ export default function PdfSplit() {
       })
       setDone(true)
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Failed to split PDF')
+      setError(e instanceof Error ? e.message : t('failedSplit'))
     } finally {
       setProcessing(false)
     }
@@ -131,7 +133,7 @@ export default function PdfSplit() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-1">Select PDF File</label>
+        <label className="block text-sm font-medium mb-1">{t('selectPdf')}</label>
         <div
           className="border-2 border-dashed rounded-lg p-8 text-center cursor-pointer hover:border-primary transition-colors"
           role="button"
@@ -150,13 +152,13 @@ export default function PdfSplit() {
             <p className="text-sm">
               <span className="font-medium">{file.name}</span>
               <span className="text-muted-foreground ml-2">
-                ({formatSize(file.size)} &middot; {pageCount} pages)
+                ({formatSize(file.size)} &middot; {t('pagesCount', { count: pageCount })})
               </span>
             </p>
           ) : (
             <div>
-              <p className="text-sm font-medium">Click to select a PDF file</p>
-              <p className="text-xs text-muted-foreground mt-1">Max 50MB</p>
+              <p className="text-sm font-medium">{t('clickToSelectPdf')}</p>
+              <p className="text-xs text-muted-foreground mt-1">{t('maxFileSize')}</p>
             </div>
           )}
         </div>
@@ -165,21 +167,21 @@ export default function PdfSplit() {
       {file && pageCount > 0 && (
         <div>
           <label className="block text-sm font-medium mb-1">
-            Page Range (1-{pageCount})
+            {t('pageRangeLabel', { total: pageCount })}
           </label>
           <input
             type="text"
             className="w-full rounded-lg border bg-background px-3 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary"
-            placeholder="e.g., 1-3, 5, 7-10"
+            placeholder={t('pageRangePlaceholder')}
             value={pageRange}
             onChange={(e) => {
               setPageRange(e.target.value)
               setDone(false)
             }}
-            aria-label="Page range input"
+            aria-label={t('pageRangeAria')}
           />
           <p className="text-xs text-muted-foreground mt-1">
-            Use commas and dashes. Examples: &quot;1-3&quot; or &quot;1,3,5-7&quot;
+            {t('pageRangeHint')}
           </p>
         </div>
       )}
@@ -194,7 +196,7 @@ export default function PdfSplit() {
           disabled={!file || processing}
           className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
         >
-          {processing ? 'Extracting...' : 'Extract Pages'}
+          {processing ? t('extracting') : t('extractPages')}
         </button>
 
         {done && (
@@ -202,14 +204,14 @@ export default function PdfSplit() {
             onClick={download}
             className="px-6 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            Download PDF
+            {t('downloadPdf')}
           </button>
         )}
       </div>
 
       {done && (
         <div className="p-4 rounded-lg bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-400 text-sm">
-          Pages extracted successfully! Click &ldquo;Download PDF&rdquo; to save.
+          {t('pagesExtractedSuccess')}
         </div>
       )}
     </div>

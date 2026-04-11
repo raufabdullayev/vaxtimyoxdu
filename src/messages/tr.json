@@ -56,8 +56,8 @@
     "noToolsFound": "Araç bulunamadı. Farklı bir arama terimi deneyin.",
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbTools": "Araçlar",
-    "metaTitleSuffix": "Ücretsiz, Yükleme Gerekmez",
-    "metaBrowserBased": "100% tarayıcı tabanlı — dosyalarınız cihazınızdan çıkmaz.",
+    "metaTitleSuffix": "Ücretsiz Online",
+    "metaBrowserBased": "Tarayıcı tabanlı, ücretsiz.",
     "categories": {
       "ai": "AI Araçları",
       "aiDesc": "Yapay zeka destekli metin işleme araçları",
@@ -212,7 +212,7 @@
         "description": "HTML-i dosya boyutunu azaltmak için küçültün veya küçültülmüş HTML-i okunabilir hale getirin. Yorumları ve boşlukları kaldırın."
       },
       "js-minifier": {
-        "name": "JavaScript Küçültücüsü ve Güzelleştiricisi",
+        "name": "JavaScript Küçültücü/Güzelleştirici",
         "description": "JavaScript-i dosya boyutunu azaltmak için küçültün veya küçültülmüş JS-i okunabilir hale getirin. Yorumları ve boşlukları kaldırın."
       },
       "sql-formatter": {
@@ -297,7 +297,7 @@
       },
       "find-and-replace": {
         "name": "Bul ve Değiştir",
-        "description": "Regex desteği, büyük/küçük harf duyarlılığı ve tam kelime eşlemesi ile metin bulun ve değiştirin. Tüm eşlemeleri gerçek zamanlı vurgulayın."
+        "description": "Regex, büyük/küçük harf duyarlılığı ve tam kelime eşleşmesiyle metin bulun ve değiştirin. Gerçek zamanlı vurgulama."
       },
       "yaml-to-json": {
         "name": "YAML'dan JSON'a Dönüştürücü",
@@ -365,7 +365,7 @@
       },
       "background-remover": {
         "name": "Görüntü Arka Plan Kaldırıcı",
-        "description": "AI ile görsel arka planlarını anında kaldırın. Herhangi bir fotoğraf yükleyin ve şeffaf PNG alın. Tüm işlem tarayıcınızda gerçekleşir."
+        "description": "AI ile görsel arka planlarını anında kaldırın. Fotoğraf yükleyin ve şeffaf PNG alın. Tüm işlem tarayıcınızda gerçekleşir."
       },
       "text-truncator": {
         "name": "Metin Kısaltıcı",
@@ -497,23 +497,23 @@
       },
       "css-flexbox-generator": {
         "name": "CSS Flexbox Oluşturucu",
-        "description": "CSS flexbox düzenlerini görsel olarak oluşturun. flex-direction, justify-content, align-items, flex-wrap ve gap ayarlarını canlı önizleme ile düzenleyin. Oluşturulan CSS kodunu kopyalayın."
+        "description": "CSS flexbox düzenlerini görsel oluşturun. flex-direction, justify-content, align-items ve gap ayarlarını canlı önizleyin."
       },
       "json-to-typescript": {
         "name": "JSON'dan TypeScript'e",
-        "description": "JSON nesnelerini TypeScript arayüzlerine ve türlerine dönüştürün. İç içe nesneler, diziler ve opsiyonel alanlar desteklenir. Ücretsiz JSON-TS dönüştürücü."
+        "description": "JSON nesnelerini TypeScript arayüz ve türlerine dönüştürün. İç içe nesneler ve opsiyonel alanlar desteklenir."
       },
       "css-grid-generator": {
         "name": "CSS Grid Oluşturucu",
-        "description": "CSS Grid düzenlerini görsel olarak oluşturun. Satır, sütun, boşluk, boyutlandırma ve hizalamayı gerçek zamanlı önizleme ile yapılandırın. Oluşturulan CSS kodunu kopyalayın."
+        "description": "CSS Grid düzenlerini görsel oluşturun. Satır, sütun, boşluk ve hizalamayı gerçek zamanlı önizlemeyle yapılandırın."
       },
       "loan-calculator": {
         "name": "Kredi/EMI Hesaplayıcı",
-        "description": "Aylık kredi ödemelerini, toplam faizi hesaplayın ve tam amortisman tablosunu görüntüleyin. Kredi tutarı, faiz oranı ve vade desteği. Ücretsiz çevrimiçi EMI hesaplayıcı."
+        "description": "Aylık kredi ödemelerini, toplam faizi hesaplayın ve amortisman tablosunu görüntüleyin. Tutar, faiz ve vade desteği."
       },
       "time-calculator": {
         "name": "Zaman ve Tarih Hesaplayıcı",
-        "description": "Tarih farklarını hesaplayın, zaman ekleyin veya çıkarın, etkinliklere geri sayım yapın ve saat dilimleri arasında dönüştürün. Ücretsiz çevrimiçi zaman hesaplayıcı."
+        "description": "Tarih farklarını hesaplayın, zaman ekleyin veya çıkarın, etkinliklere geri sayın ve saat dilimlerini dönüştürün."
       },
       "image-to-text": {
         "name": "Görselden Metne (OCR)",
@@ -999,10 +999,49 @@
     "pdfTools": {
       "mergeFiles": "Dosyaları birleştir",
       "selectPdf": "PDF Dosyası Seçin",
+      "selectPdfFiles": "PDF Dosyalarını Seçin",
       "clickToSelectPdf": "PDF dosyası seçmek için tıklayın veya sürükleyip bırakın",
+      "clickToAddPdfs": "PDF dosyaları eklemek için tıklayın",
       "maxFileSize": "Maksimum dosya boyutu: 50MB",
+      "maxSize50mbEach": "Birden fazla PDF seçin (her biri maks. 50 MB)",
       "onlyPdfAllowed": "Yalnızca PDF dosyalarına izin verilir",
       "fileTooLarge": "Dosya çok büyük. Maksimum boyut 50MB.",
+      "fileTooLargeEach": "Her dosya 50 MB'dan küçük olmalıdır",
+      "addAtLeast2": "Lütfen en az 2 PDF dosyası ekleyin",
+      "failedMerge": "PDF'ler birleştirilemedi. Tüm dosyaların geçerli PDF olduğundan emin olun.",
+      "filesToMerge": "Birleştirilecek Dosyalar ({count})",
+      "moveUp": "Yukarı taşı",
+      "moveDown": "Aşağı taşı",
+      "remove": "Kaldır",
+      "pdfsMergedSuccess": "PDF'ler başarıyla birleştirildi! Kaydetmek için \"Birleştirilmiş PDF'i İndir\" düğmesine tıklayın.",
+      "failedReadPdf": "PDF okunamadı. Dosya bozuk veya parola korumalı olabilir.",
+      "pleaseSelectPdf": "Lütfen bir PDF dosyası seçin",
+      "enterPageRange": "Lütfen bir sayfa aralığı girin",
+      "noValidPages": "Geçerli sayfa seçilmedi",
+      "failedSplit": "PDF bölünemedi",
+      "pageRangeInvalid": "Geçersiz aralık: {range}. Sayfalar 1 ile {total} arasında olmalıdır.",
+      "pageNumberInvalid": "Geçersiz sayfa: {page}. Sayfalar 1 ile {total} arasında olmalıdır.",
+      "pagesCount": "{count} sayfa",
+      "pageRangeLabel": "Sayfa Aralığı (1-{total})",
+      "pageRangePlaceholder": "ör., 1-3, 5, 7-10",
+      "pageRangeAria": "Sayfa aralığı girişi",
+      "pageRangeHint": "Virgül ve tire kullanın. Örnekler: \"1-3\" veya \"1,3,5-7\"",
+      "howItWorks": "Nasıl çalışır",
+      "howItWorks1": "Meta verileri kaldırır (başlık, yazar, anahtar kelimeler)",
+      "howItWorks2": "Kullanılmayan nesneleri siler ve PDF yapısını yeniden oluşturur",
+      "howItWorks3": "Tüm işlemler tarayıcınızda gerçekleşir — dosyalar hiçbir zaman yüklenmez",
+      "original": "Orijinal",
+      "compressed": "Sıkıştırılmış",
+      "saved": "Tasarruf",
+      "noReduction": "Azalma yok",
+      "extractPages": "Sayfaları Çıkar",
+      "extracting": "Çıkarılıyor...",
+      "downloadPdf": "PDF'i İndir",
+      "pagesExtractedSuccess": "Sayfalar başarıyla çıkarıldı! Kaydetmek için \"PDF'i İndir\" düğmesine tıklayın.",
+      "failedCompress": "PDF sıkıştırılamadı. Dosya bozuk veya parola korumalı olabilir.",
+      "compressing": "Sıkıştırılıyor...",
+      "downloadCompressed": "Sıkıştırılmış PDF'i İndir",
+      "alreadyOptimized": "Bu PDF zaten iyi optimize edilmiş. Sıkıştırılmış sürüm benzer boyutta olabilir.",
       "convertToWord": "Word'e dönüştür",
       "convertSuccess": "PDF başarıyla dönüştürüldü! .docx dosyanızı kaydetmek için \"İndir\" düğmesine tıklayın.",
       "convertError": "PDF dönüştürülemedi. Dosyanın geçerli bir PDF olduğundan emin olun.",

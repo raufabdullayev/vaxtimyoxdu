@@ -34,7 +34,7 @@ describe('PdfMerge - file validation', () => {
     const textFile = createMockFile('doc.txt', 100, 'text/plain')
     fireEvent.change(fileInput, { target: { files: [textFile] } })
 
-    expect(screen.getByText(/Only PDF files are allowed/)).toBeInTheDocument()
+    expect(screen.getByText(/onlyPdfAllowed/)).toBeInTheDocument()
   })
 
   it('rejects files over 50MB', () => {
@@ -50,7 +50,7 @@ describe('PdfMerge - file validation', () => {
     )
     fireEvent.change(fileInput, { target: { files: [bigFile] } })
 
-    expect(screen.getByText(/Each file must be under 50MB/)).toBeInTheDocument()
+    expect(screen.getByText(/fileTooLargeEach/)).toBeInTheDocument()
   })
 
   it('accepts valid PDF files and adds to list', () => {
@@ -92,7 +92,7 @@ describe('PdfMerge - file validation', () => {
     expect(screen.getByText('test.pdf')).toBeInTheDocument()
 
     // Click remove button (the "Remove" title button)
-    const removeBtn = screen.getByTitle('Remove')
+    const removeBtn = screen.getByTitle('remove')
     fireEvent.click(removeBtn)
 
     expect(screen.queryByText('test.pdf')).not.toBeInTheDocument()
@@ -107,7 +107,7 @@ describe('PdfMerge - file validation', () => {
     fireEvent.change(fileInput, { target: { files: null } })
     // No error should appear
     expect(
-      screen.queryByText(/Only PDF files are allowed/)
+      screen.queryByText(/onlyPdfAllowed/)
     ).not.toBeInTheDocument()
   })
 })
@@ -132,7 +132,7 @@ describe('PdfSplit - file validation', () => {
     const textFile = createMockFile('doc.txt', 100, 'text/plain')
     fireEvent.change(fileInput, { target: { files: [textFile] } })
 
-    expect(screen.getByText(/Only PDF files are allowed/)).toBeInTheDocument()
+    expect(screen.getByText(/onlyPdfAllowed/)).toBeInTheDocument()
   })
 
   it('rejects files over 50MB', () => {
@@ -148,7 +148,7 @@ describe('PdfSplit - file validation', () => {
     )
     fireEvent.change(fileInput, { target: { files: [bigFile] } })
 
-    expect(screen.getByText(/File must be under 50MB/)).toBeInTheDocument()
+    expect(screen.getByText(/fileTooLarge/)).toBeInTheDocument()
   })
 })
 
@@ -172,7 +172,7 @@ describe('PdfCompress - file validation', () => {
     const textFile = createMockFile('doc.docx', 100, 'application/msword')
     fireEvent.change(fileInput, { target: { files: [textFile] } })
 
-    expect(screen.getByText(/Only PDF files are allowed/)).toBeInTheDocument()
+    expect(screen.getByText(/onlyPdfAllowed/)).toBeInTheDocument()
   })
 
   it('rejects files over 50MB', () => {
@@ -188,7 +188,7 @@ describe('PdfCompress - file validation', () => {
     )
     fireEvent.change(fileInput, { target: { files: [bigFile] } })
 
-    expect(screen.getByText(/File must be under 50MB/)).toBeInTheDocument()
+    expect(screen.getByText(/fileTooLarge/)).toBeInTheDocument()
   })
 
   it('accepts valid PDF and tracks original size', () => {
@@ -206,14 +206,14 @@ describe('PdfCompress - file validation', () => {
 
     // Should not show error
     expect(
-      screen.queryByText(/Only PDF files are allowed/)
+      screen.queryByText(/onlyPdfAllowed/)
     ).not.toBeInTheDocument()
   })
 
   it('compress button is disabled when no file is selected', () => {
     render(<PdfCompress />)
 
-    const compressBtn = screen.getByText('Compress PDF')
+    const compressBtn = screen.getByText('compressPdf')
     expect(compressBtn).toBeDisabled()
   })
 
@@ -226,7 +226,7 @@ describe('PdfCompress - file validation', () => {
     fireEvent.change(fileInput, { target: { files: [] } })
     // No error should appear
     expect(
-      screen.queryByText(/Only PDF files are allowed/)
+      screen.queryByText(/onlyPdfAllowed/)
     ).not.toBeInTheDocument()
   })
 })

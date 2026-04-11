@@ -56,8 +56,8 @@
     "noToolsFound": "Heç bir alət tapılmadı. Başqa axtarış sözü yoxlayın.",
     "breadcrumbHome": "Ana səhifə",
     "breadcrumbTools": "Alətlər",
-    "metaTitleSuffix": "Pulsuz, Yükləmə Tələb Olunmur",
-    "metaBrowserBased": "100% brauzer əsaslı — fayllarınız cihazınızdan çıxmır.",
+    "metaTitleSuffix": "Pulsuz Onlayn",
+    "metaBrowserBased": "Brauzer əsaslı, pulsuz.",
     "categories": {
       "ai": "AI Alətləri",
       "aiDesc": "Süni zəkayla işlənən mətn emal alətləri",
@@ -337,7 +337,7 @@
       },
       "backlink-generator": {
         "name": "Geri Keçidin Generatoru",
-        "description": "HTML, Markdown, BBCode, Textile, Wiki və reStructuredText formatlarında keçidlə yaratmaq. Rel atributlarını və hədəfə konfiqurasiya edin."
+        "description": "HTML, Markdown, BBCode, Textile, Wiki və reStructuredText formatlarında link yaradın. Rel və hədəf dəstəklənir."
       },
       "json-path-finder": {
         "name": "JSON Yol Tapıcı",
@@ -497,23 +497,23 @@
       },
       "css-flexbox-generator": {
         "name": "CSS Flexbox Generator",
-        "description": "CSS flexbox layout-larını vizual olaraq qurun. flex-direction, justify-content, align-items, flex-wrap və gap parametrlərini canlı önbaxışla tənzimləyin. Yaradılmış CSS kodunu kopyalayın."
+        "description": "CSS flexbox layout-larını vizual qurun. flex-direction, justify-content, align-items və gap-i canlı önbaxışla tənzimləyin."
       },
       "json-to-typescript": {
         "name": "JSON-dan TypeScript-ə",
-        "description": "JSON obyektlərini TypeScript interfeys və tiplərinə çevirin. İç-içə obyektlər, massivlər və opsional sahələr dəstəklənir. Pulsuz JSON-dan TS çevirici."
+        "description": "JSON obyektlərini TypeScript interfeys və tiplərinə çevirin. İç-içə obyektlər və opsional sahələr dəstəklənir."
       },
       "css-grid-generator": {
         "name": "CSS Grid Generator",
-        "description": "CSS Grid layout-larını vizual olaraq yaradın. Sətir, sütun, boşluq, ölçü və hizalanmanı real vaxt önbaxışla konfiqurasiya edin. Yaradılmış CSS kodunu kopyalayın."
+        "description": "CSS Grid layout-larını vizual yaradın. Sətir, sütun, boşluq və hizalanmanı canlı önbaxışla konfiqurasiya edin."
       },
       "loan-calculator": {
         "name": "Kredit/EMI Kalkulyatoru",
-        "description": "Aylıq kredit ödənişlərini, ümumi faizi hesablayın və tam amortizasiya cədvəlinə baxın. Kredit məbləği, faiz dərəcəsi və müddəti dəstəklənir. Pulsuz onlayn EMI kalkulyatoru."
+        "description": "Aylıq ödənişləri, ümumi faizi hesablayın və tam amortizasiya cədvəlinə baxın. Məbləğ, faiz və müddət dəstəklənir."
       },
       "time-calculator": {
         "name": "Vaxt və Tarix Kalkulyatoru",
-        "description": "Tarix fərqlərini hesablayın, vaxt əlavə edin və ya çıxın, hadisələrə geri sayım edin və saat qurşaqları arasında çevirin. Pulsuz onlayn vaxt kalkulyatoru."
+        "description": "Tarix fərqlərini hesablayın, vaxt əlavə edin və ya çıxın, geri sayım edin və saat qurşaqları arasında çevirin."
       },
       "image-to-text": {
         "name": "Şəkildən Mətnə (OCR)",
@@ -999,10 +999,49 @@
     "pdfTools": {
       "mergeFiles": "Faylları birləşdir",
       "selectPdf": "PDF Fayl Seçin",
+      "selectPdfFiles": "PDF Fayllarını Seçin",
       "clickToSelectPdf": "PDF faylı seçmək üçün klikləyin və ya sürükləyib buraxın",
+      "clickToAddPdfs": "PDF fayllarını əlavə etmək üçün klikləyin",
       "maxFileSize": "Maksimum fayl ölçüsü: 50MB",
+      "maxSize50mbEach": "Çox PDF seçin (hər biri maks. 50 MB)",
       "onlyPdfAllowed": "Yalnız PDF fayllarına icazə verilir",
       "fileTooLarge": "Fayl çox böyükdür. Maksimum ölçü 50MB.",
+      "fileTooLargeEach": "Hər fayl 50 MB-dan az olmalıdır",
+      "addAtLeast2": "Zəhmət olmasa ən az 2 PDF faylı əlavə edin",
+      "failedMerge": "PDF-ləri birləşdirmək alınmadı. Bütün faylların etibarlı PDF olduğundan əmin olun.",
+      "filesToMerge": "Birləşdiriləcək Fayllar ({count})",
+      "moveUp": "Yuxarı köçür",
+      "moveDown": "Aşağı köçür",
+      "remove": "Sil",
+      "pdfsMergedSuccess": "PDF-lər uğurla birləşdirildi! Saxlamaq üçün \"Birləşmiş PDF-i Yüklə\" düyməsinə basın.",
+      "failedReadPdf": "PDF-i oxumaq alınmadı. Fayl zədələnmiş və ya parolla qorunmuş ola bilər.",
+      "pleaseSelectPdf": "Zəhmət olmasa PDF faylı seçin",
+      "enterPageRange": "Zəhmət olmasa səhifə aralığını daxil edin",
+      "noValidPages": "Heç bir etibarlı səhifə seçilməyib",
+      "failedSplit": "PDF-i bölmək alınmadı",
+      "pageRangeInvalid": "Yanlış aralıq: {range}. Səhifələr 1 ilə {total} arasında olmalıdır.",
+      "pageNumberInvalid": "Yanlış səhifə: {page}. Səhifələr 1 ilə {total} arasında olmalıdır.",
+      "pagesCount": "{count} səhifə",
+      "pageRangeLabel": "Səhifə aralığı (1-{total})",
+      "pageRangePlaceholder": "məs., 1-3, 5, 7-10",
+      "pageRangeAria": "Səhifə aralığı girişi",
+      "pageRangeHint": "Vergül və tire istifadə edin. Nümunələr: \"1-3\" və ya \"1,3,5-7\"",
+      "howItWorks": "Necə işləyir",
+      "howItWorks1": "Metadata silir (başlıq, müəllif, açar sözlər)",
+      "howItWorks2": "İstifadə edilməyən obyektləri silir və PDF strukturunu yenidən qurur",
+      "howItWorks3": "Bütün emal brauzerinizdə baş verir — fayllar heç vaxt yüklənmir",
+      "original": "Orijinal",
+      "compressed": "Sıxılmış",
+      "saved": "Qənaət",
+      "noReduction": "Azalma yoxdur",
+      "extractPages": "Səhifələri çıxar",
+      "extracting": "Çıxarılır...",
+      "downloadPdf": "PDF-i Yüklə",
+      "pagesExtractedSuccess": "Səhifələr uğurla çıxarıldı! Saxlamaq üçün \"PDF-i Yüklə\" düyməsinə basın.",
+      "failedCompress": "PDF-i sıxmaq alınmadı. Fayl zədələnmiş və ya parolla qorunmuş ola bilər.",
+      "compressing": "Sıxılır...",
+      "downloadCompressed": "Sıxılmış PDF-i Yüklə",
+      "alreadyOptimized": "Bu PDF artıq yaxşı optimallaşdırılıb. Sıxılmış versiya eyni ölçüdə ola bilər.",
       "convertToWord": "Word-a çevir",
       "convertSuccess": "PDF uğurla çevrildi! .docx faylınızı saxlamaq üçün \"Yüklə\" düyməsinə klikləyin.",
       "convertError": "PDF-ni çevirmək mümkün olmadı. Faylın düzgün PDF olduğundan əmin olun.",

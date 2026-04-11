@@ -22,11 +22,11 @@ export default function PdfMerge() {
     const newFiles: File[] = []
     for (let i = 0; i < selected.length; i++) {
       if (selected[i].type !== 'application/pdf') {
-        setError('Only PDF files are allowed')
+        setError(t('onlyPdfAllowed'))
         return
       }
       if (selected[i].size > 50 * 1024 * 1024) {
-        setError('Each file must be under 50MB')
+        setError(t('fileTooLargeEach'))
         return
       }
       newFiles.push(selected[i])
@@ -52,7 +52,7 @@ export default function PdfMerge() {
 
   const merge = async () => {
     if (files.length < 2) {
-      setError('Please add at least 2 PDF files')
+      setError(t('addAtLeast2'))
       return
     }
 
@@ -75,7 +75,7 @@ export default function PdfMerge() {
       mergedBlobRef.current = new Blob([new Uint8Array(mergedBytes) as BlobPart], { type: 'application/pdf' })
       setDone(true)
     } catch (e) {
-      setError('Failed to merge PDFs. Please make sure all files are valid PDFs.')
+      setError(t('failedMerge'))
     } finally {
       setMerging(false)
     }
@@ -100,7 +100,7 @@ export default function PdfMerge() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-1">Select PDF Files</label>
+        <label className="block text-sm font-medium mb-1">{t('selectPdfFiles')}</label>
         <div
           className="border-2 border-dashed rounded-lg p-8 text-center cursor-pointer hover:border-primary transition-colors"
           role="button"
@@ -116,14 +116,14 @@ export default function PdfMerge() {
             onChange={handleFileSelect}
             className="hidden"
           />
-          <p className="text-sm font-medium">Click to add PDF files</p>
-          <p className="text-xs text-muted-foreground mt-1">Select multiple PDFs (max 50MB each)</p>
+          <p className="text-sm font-medium">{t('clickToAddPdfs')}</p>
+          <p className="text-xs text-muted-foreground mt-1">{t('maxSize50mbEach')}</p>
         </div>
       </div>
 
       {files.length > 0 && (
         <div>
-          <label className="text-sm font-medium mb-2 block">Files to Merge ({files.length})</label>
+          <label className="text-sm font-medium mb-2 block">{t('filesToMerge', { count: files.length })}</label>
           <div className="rounded-lg border divide-y">
             {files.map((file, i) => (
               <div key={i} className="flex items-center justify-between p-3 text-sm">
@@ -137,7 +137,7 @@ export default function PdfMerge() {
                     onClick={() => moveFile(i, -1)}
                     disabled={i === 0}
                     className="p-1 hover:bg-accent rounded disabled:opacity-30"
-                    title="Move up"
+                    title={t('moveUp')}
                   >
                     ↑
                   </button>
@@ -145,14 +145,14 @@ export default function PdfMerge() {
                     onClick={() => moveFile(i, 1)}
                     disabled={i === files.length - 1}
                     className="p-1 hover:bg-accent rounded disabled:opacity-30"
-                    title="Move down"
+                    title={t('moveDown')}
                   >
                     ↓
                   </button>
                   <button
                     onClick={() => removeFile(i)}
                     className="p-1 hover:bg-destructive/10 text-destructive rounded ml-1"
-                    title="Remove"
+                    title={t('remove')}
                   >
                     ✕
                   </button>
@@ -188,7 +188,7 @@ export default function PdfMerge() {
 
       {done && (
         <div className="p-4 rounded-lg bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-400 text-sm">
-          PDFs merged successfully! Click &ldquo;Download Merged PDF&rdquo; to save.
+          {t('pdfsMergedSuccess')}
         </div>
       )}
     </div>

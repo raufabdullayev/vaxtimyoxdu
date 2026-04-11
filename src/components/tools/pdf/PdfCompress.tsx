@@ -1,8 +1,11 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function PdfCompress() {
+  const tc = useTranslations('toolUI.common')
+  const t = useTranslations('toolUI.pdfTools')
   const [file, setFile] = useState<File | null>(null)
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState('')
@@ -17,11 +20,11 @@ export default function PdfCompress() {
     if (!selected) return
 
     if (selected.type !== 'application/pdf') {
-      setError('Only PDF files are allowed')
+      setError(t('onlyPdfAllowed'))
       return
     }
     if (selected.size > 50 * 1024 * 1024) {
-      setError('File must be under 50MB')
+      setError(t('fileTooLarge'))
       return
     }
 
@@ -34,7 +37,7 @@ export default function PdfCompress() {
 
   const compress = async () => {
     if (!file) {
-      setError('Please select a PDF file')
+      setError(t('pleaseSelectPdf'))
       return
     }
 
@@ -70,7 +73,7 @@ export default function PdfCompress() {
       setCompressedSize(blob.size)
       setDone(true)
     } catch {
-      setError('Failed to compress PDF. The file may be corrupted or password-protected.')
+      setError(t('failedCompress'))
     } finally {
       setProcessing(false)
     }
@@ -100,7 +103,7 @@ export default function PdfCompress() {
   return (
     <div className="space-y-4">
       <div>
-        <label className="block text-sm font-medium mb-1">Select PDF File</label>
+        <label className="block text-sm font-medium mb-1">{t('selectPdf')}</label>
         <div
           className="border-2 border-dashed rounded-lg p-8 text-center cursor-pointer hover:border-primary transition-colors"
           role="button"
@@ -122,19 +125,19 @@ export default function PdfCompress() {
             </p>
           ) : (
             <div>
-              <p className="text-sm font-medium">Click to select a PDF file</p>
-              <p className="text-xs text-muted-foreground mt-1">Max 50MB</p>
+              <p className="text-sm font-medium">{t('clickToSelectPdf')}</p>
+              <p className="text-xs text-muted-foreground mt-1">{t('maxFileSize')}</p>
             </div>
           )}
         </div>
       </div>
 
       <div className="p-4 rounded-lg bg-muted/50 text-sm text-muted-foreground">
-        <p className="font-medium text-foreground mb-1">How it works</p>
+        <p className="font-medium text-foreground mb-1">{t('howItWorks')}</p>
         <ul className="list-disc list-inside space-y-1">
-          <li>Removes metadata (title, author, keywords)</li>
-          <li>Strips unused objects and rebuilds the PDF structure</li>
-          <li>All processing happens in your browser — files are never uploaded</li>
+          <li>{t('howItWorks1')}</li>
+          <li>{t('howItWorks2')}</li>
+          <li>{t('howItWorks3')}</li>
         </ul>
       </div>
 
@@ -147,24 +150,24 @@ export default function PdfCompress() {
         disabled={!file || processing}
         className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
       >
-        {processing ? 'Compressing...' : 'Compress PDF'}
+        {processing ? t('compressing') : tc('compressPdf')}
       </button>
 
       {done && (
         <div className="space-y-4">
           <div className="grid grid-cols-3 gap-4 p-4 rounded-lg bg-muted/50">
             <div className="text-center">
-              <p className="text-xs text-muted-foreground">Original</p>
+              <p className="text-xs text-muted-foreground">{t('original')}</p>
               <p className="font-medium text-sm">{formatSize(originalSize)}</p>
             </div>
             <div className="text-center">
-              <p className="text-xs text-muted-foreground">Compressed</p>
+              <p className="text-xs text-muted-foreground">{t('compressed')}</p>
               <p className="font-medium text-sm">{formatSize(compressedSize)}</p>
             </div>
             <div className="text-center">
-              <p className="text-xs text-muted-foreground">Saved</p>
+              <p className="text-xs text-muted-foreground">{t('saved')}</p>
               <p className={`font-medium text-sm ${savings > 0 ? 'text-green-600 dark:text-green-400' : 'text-muted-foreground'}`}>
-                {savings > 0 ? `${savings}%` : 'No reduction'}
+                {savings > 0 ? `${savings}%` : t('noReduction')}
               </p>
             </div>
           </div>
@@ -173,12 +176,12 @@ export default function PdfCompress() {
             onClick={download}
             className="w-full sm:w-auto px-6 py-2.5 border rounded-lg font-medium hover:bg-accent transition-colors"
           >
-            Download Compressed PDF
+            {t('downloadCompressed')}
           </button>
 
           {savings <= 0 && (
             <div className="p-3 rounded-lg bg-yellow-50 dark:bg-yellow-950/30 text-yellow-700 dark:text-yellow-400 text-sm">
-              This PDF is already well-optimized. The compressed version may be similar in size.
+              {t('alreadyOptimized')}
             </div>
           )}
         </div>
