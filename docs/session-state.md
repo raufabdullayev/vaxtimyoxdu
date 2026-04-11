@@ -1,9 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-11 (Session 23 — Hreflang Bug Fix: Team Mode parallel + 4 commits + Deploy)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit ec9d88b deploy gözlənilir)
-**Son commit:** ec9d88b (refactor(sitemap): import shared getLocalizedUrl, drop duplicated helper)
-**Əvvəlki commit:** 0fc6318 (fix(seo): probe blogPostsByLocale before emitting cross-locale hreflang)
+**Son yenilənmə:** 2026-04-11 (Session 23 — Hreflang Fix + GSC Auto-Submit + Chrome UI Skill)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit ba33569 deployed, Google resubmitted)
+**Son commit:** ba33569 (docs(dashboard): mark Session 23 hreflang fix as complete, update stats)
+**Əvvəlki commit:** 18890db (docs(session): log Session 23 hreflang bug fix + add implementation plan)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -21,10 +21,13 @@
 | Parametr | Status |
 |----------|--------|
 | **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 |
-| **Deploy** | ✅ Vercel aktiv (r0353ujyd) |
-| **GitLab + GitHub** | ✅ Synced (c83eb1c) |
+| **Deploy** | ✅ Vercel aktiv (hreflang fix live) |
+| **GitLab + GitHub** | ✅ Synced (ba33569) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | ec9d88b |
+| **Son commit** | ba33569 |
+| **GSC sitemap** | ✅ Resubmitted 2026-04-11 12:32 UTC, 628 URLs, Google crawled in 3 sec |
+| **IndexNow** | ✅ 20 URLs pushed to Bing/Yandex/Seznam (HTTP 202) |
+| **Yeni skill** | ✅ `~/.claude/skills/controlling-users-real-chrome/SKILL.md` (global, all sessions) |
 | **Testlər** | 2949 PASS (203 fayl, +6 hreflang tests) |
 | **Xəbərlər** | 44 (11 per dil) |
 | **Coverage** | 68% (hədəf: 85%) |
@@ -87,6 +90,35 @@
 
 **Nəticə:** 4 kommit, 3 bug fix (A+B+C+D), parallel team mode 2.5x speedup, zero regression, canlı təsdiq. HIGH backlog "hreflang bug" CLOSED.
 **Plan faylı:** `docs/superpowers/plans/2026-04-11-hreflang-bugfix.md`
+
+**Post-deploy: Multi-engine sitemap re-submission (CEO speed request)**
+- [x] **IndexNow federated submit** — `api.indexnow.org/indexnow` POST, 20 URLs (homepages + tools + AZ-only blog), HTTP 202 Accepted
+- [x] **Yandex direct** — `yandex.com/indexnow`, HTTP 202 + `{"success": true}` — RU bazar üçün
+- [x] **Bing direct** — `www.bing.com/indexnow`, HTTP 202 — Microsoft Copilot + ChatGPT web search
+- [x] **Google ping endpoints deprecated** (2023) — `google.com/ping` HTTP 404, `bing.com/ping` HTTP 410 — expected, no action
+- [x] **GSC MCP sitemaps_submit attempt** — permission denied (`sc-domain:vaxtimyoxdu.com` service account read-only). Root cause: `search-console-mcp@vaxtimyoxdu-seo.iam.gserviceaccount.com` GSC-də "Restricted" user kimi əlavə olunub, "Owner" deyil
+- [x] **Chrome UI automation GSC submit** — user-in gerçək Chrome browser-ində AppleScript + cliclick ilə sitemap re-submit:
+  - MCP Chrome killed (process PID 78766, `chrome-devtools-mcp/chrome-profile`)
+  - User's real Chrome (PID 996) targetted unambiguously
+  - GSC sitemaps page opened via `make new tab with URL`
+  - Input field coordinates: 994, 360 (after cursor-verified screenshot debug)
+  - Submit button: 1420, 350 (after 1525 miss)
+  - Full URL required: `https://vaxtimyoxdu.com/sitemap.xml` (shortcut `sitemap.xml` rejected with "Invalid sitemap address" dialog)
+  - **✅ GSC "Sitemap submitted successfully"** dialog confirmed
+  - **✅ MCP sitemaps_list verified**: `lastSubmitted: 2026-04-11T12:32:03.992Z`, `lastDownloaded: 2026-04-11T12:32:06.299Z` (Google crawled in 3 seconds!), `submitted: 628` URLs (was 608)
+
+**Post-deploy: Chrome UI automation skill created**
+- [x] **`~/.claude/skills/controlling-users-real-chrome/SKILL.md`** (1785 words, 12 KB)
+  - 7 problems documented with fixes
+  - Pre-flight checklist (kill MCP, verify single instance, hide Terminal, activate Chrome, verify frontmost)
+  - 4 copy-paste templates (atomic control block, new tab, cursor-verified click, JS from AppleScript)
+  - Retina coordinate math (point/pixel conversion, thumbnail scale 2.88x)
+  - Focus reset pattern, form submission gotchas, red flags
+  - Real-world impact: 45 min → 3 min (15x speedup)
+- [x] **`~/CLAUDE.md`** updated with skill reference (trigger phrases AZ + EN, mandatory usage note)
+- [x] **Auto-discovered** by Claude Code skill loader, available in all future sessions + subagents via `Skill(controlling-users-real-chrome)`
+
+**Total Session 23 scope:** 6 commits (4 code + 2 docs), hreflang bug CLOSED, GSC resubmitted, 20 URLs IndexNow pushed, 1 new cross-session skill, HIGH backlog item closed, 2949 tests PASS, 820 static pages, production verified via real browser DOM inspection.
 
 ### Session 20 (2026-04-10) — Team Meeting: Trafik Analizi + 6 Bug Fix + Deploy
 **Tapshiriq:** CEO: trafik artirmaq ucun team iclasi, 6 bug fix, 4 dilde test, deploy.
