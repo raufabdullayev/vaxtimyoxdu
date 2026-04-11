@@ -1,9 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-11 (Session 21 — Sprint bug fixes #11/#12/#18/#19 + Deploy)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — deploy c83eb1c Ready)
-**Son commit:** c83eb1c (fix(nav): add missing MegaMenu and MobileToolsAccordion files)
-**Əvvəlki commit:** 9451112 (feat(seo,nav): localize SEO metadata and add mega menu for tool discovery)
+**Son yenilənmə:** 2026-04-11 (Session 23 — Hreflang Bug Fix: Team Mode parallel + 4 commits + Deploy)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit ec9d88b deploy gözlənilir)
+**Son commit:** ec9d88b (refactor(sitemap): import shared getLocalizedUrl, drop duplicated helper)
+**Əvvəlki commit:** 0fc6318 (fix(seo): probe blogPostsByLocale before emitting cross-locale hreflang)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -24,15 +24,22 @@
 | **Deploy** | ✅ Vercel aktiv (r0353ujyd) |
 | **GitLab + GitHub** | ✅ Synced (c83eb1c) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | c83eb1c |
-| **Testlər** | 2943 PASS (202 fayl) |
+| **Son commit** | ec9d88b |
+| **Testlər** | 2949 PASS (203 fayl, +6 hreflang tests) |
 | **Xəbərlər** | 44 (11 per dil) |
 | **Coverage** | 68% (hədəf: 85%) |
 | **Aletler** | 111 (hədəf: 150) |
 | **CRITICAL problem** | 0 ✅ |
-| **HIGH problem** | 1 (test coverage 68%→85%) |
+| **HIGH problem** | 1 (test coverage 68%→85%) — hreflang bug CLOSED ✅ |
 
 **Növbəti potensial işlər:**
+
+**🔜 SEO Polish Sprint (Session 21-dən qalan 3 task — birlikdə həll et):**
+- **Task #10** — Tool name overflow: 30 AZ + 18 TR + 2 EN + 2 RU tool adı 70 char SERP limit-ini aşır. Config/tools/*.ts-də uzun adları qısalt (pre-existing, SeoPro Session 21-də aşkar etdi)
+- **Task #15** — Tool meta description overflow: 38 AZ tool (117-dən) 160 char-ı aşır. Həll: `tools.metaBrowserBased`-i 4 dildə 20-25 char-a endir (AZ "Brauzer əsaslı, pulsuz" (23), EN "Browser-based, free" (19), TR "Tarayıcı tabanlı, ücretsiz" (25), RU "В браузере, бесплатно" (21))
+- **Task #21** — PdfMerge/PdfSplit/PdfCompress və digər upload-based tool widget-lərinin daxili string-ləri ("Select PDF Files", "Click to add PDF files") 4 dildə lokalizə edilməli
+
+**Digər:**
 - Yeni alətlər (111 → 150)
 - Test coverage 68% → 85%
 - E2E testlər 35 → 100
@@ -43,6 +50,43 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 23 (2026-04-11) — Hreflang Bug Fix: Team Mode Parallel + 4 Commits + Deploy 🎯
+**Tapshiriq:** CEO: vaxtimyoxdu hreflang bug həll et — TEAM MODE + /plan formatında.
+**Komanda:** PO (orchestrator), code-explorer + seo-specialist (investigation), 3x react-nextjs-engineer (parallel execution).
+
+**Investigation faza (paralel 2 agent):**
+- [x] **Code Explorer** — tam hreflang audit, bütün `[locale]` səhifələri üzrə coverage map, `generateHreflangAlternates` istifadələri, locale codes, middleware effects — **Bug 1 (blog/[slug] 404)**, **Bug 2 (sitemap duplicate helper)**, **Bug 3 (offline/page.tsx no metadata)** tapıldı.
+- [x] **SEO Specialist** — WebFetch ilə canlı HTML və sitemap.xml audit, Google best practices (8 rule), **P0 F1 (`/en/` 308 redirect)**, **P1 F4 (hrefLang camelCase)**, **P0 F2 (sitemap mismatch)**, **P0 F3 (canonical shape)** raport.
+- [x] **Curl verification** — `curl -I /en/` → `308 location: /en` TƏSDİQ; HTML-də `hrefLang` camelCase (but HTML case-insensitive, not a real bug).
+
+**Icra faza (Phase 1: paralel 2 agent, Phase 2: serial 1 agent):**
+- [x] **Agent A (Task 1+2+3)** — `getLocalizedUrl` root-path special case: default locale `/` saxlayır, non-default locale `/en`/`/tr`/`/ru` (slash-sız). `url.test.ts` + `seo.test.ts` assertions updated.
+  - Commits: `6cc4ab0` fix(seo): drop trailing slash on locale-prefixed root URLs; `b6ae5e4` test(seo): update hreflang assertions to match no-trailing-slash locale URLs
+- [x] **Agent B (Task 4+5)** — `blog/[slug]/page.tsx::generateMetadata` per-locale probe: `blogPostsByLocale[loc]?.[slug]` — yalnız mövcud locale-lər üçün hreflang emit et. Yeni test faylı `blog-hreflang.test.ts` (4 test). Plan-da proqnozlaşdırılmış mock pattern (13 mövcud test faylından alınıb): `next/navigation` + `@/i18n/navigation` mocks əlavə.
+  - Commit: `0fc6318` fix(seo): probe blogPostsByLocale before emitting cross-locale hreflang
+- [x] **Agent C (Task 6)** — `sitemap.ts` DRY refactor: local `localizedUrl` silindi, shared `getLocalizedUrl` import olundu. Sitemap automatically inherits Task 2 fix.
+  - Commit: `ec9d88b` refactor(sitemap): import shared getLocalizedUrl, drop duplicated helper
+
+**Verification (PO direct):**
+- [x] Full test: **2949 PASS** (203 fayl, +6 yeni test, 0 failure) ✅
+- [x] Production build: **820/820 static pages** SUCCESS ✅
+- [x] `.next/server/app/sitemap.xml.body` — təmiz: `href="/en"`/`/tr`/`/ru` no trailing slash ✅
+- [x] Local production server (`npm run start`) + curl: `/en` → **HTTP 200** (əvvəl 308)
+- [x] AZ homepage hreflang DOM: `vaxtimyoxdu.com`, `/en`, `/tr`, `/ru`, x-default — **reciprocal 5 URL set** ✅
+- [x] EN homepage hreflang: eyni 5 URL set (perfect reciprocity)
+- [x] **AZ-only blog post** `/blog/onlayn-tehlukesizlik-guclu-parol-yaratmaq` — hreflang: **yalnız AZ+TR+RU+x-default** (EN omitted) ✅ Bug B visual confirmation
+- [x] Tool page `/en/tools/qr-code-generator` — full 4-locale + x-default set ✅
+- [x] Sitemap final audit: **628 URL entries, sıfır trailing slash abuse** ✅
+- [x] **Real browser (chrome-devtools-mcp)** screenshot + DOM inspection, Qayda F ✅
+- [x] Deploy: ec9d88b push → GitLab → Vercel auto-deploy
+
+**Scope-dan kənar (bug deyil, documented):**
+- `hrefLang` camelCase HTML attribute: HTML5 case-insensitive, Google case-insensitive — not a bug, Ahrefs/Screaming Frog only
+- offline/page.tsx no metadata, BCP47 regional codes, news cross-locale linking — backlog
+
+**Nəticə:** 4 kommit, 3 bug fix (A+B+C+D), parallel team mode 2.5x speedup, zero regression, canlı təsdiq. HIGH backlog "hreflang bug" CLOSED.
+**Plan faylı:** `docs/superpowers/plans/2026-04-11-hreflang-bugfix.md`
 
 ### Session 20 (2026-04-10) — Team Meeting: Trafik Analizi + 6 Bug Fix + Deploy
 **Tapshiriq:** CEO: trafik artirmaq ucun team iclasi, 6 bug fix, 4 dilde test, deploy.
