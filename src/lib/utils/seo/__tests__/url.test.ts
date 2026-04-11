@@ -37,8 +37,22 @@ describe('seo/url', () => {
       expect(getLocalizedUrl('/', 'az')).toBe('https://vaxtimyoxdu.com/')
     })
 
-    it('handles root path for non-default locale', () => {
-      expect(getLocalizedUrl('/', 'en')).toBe('https://vaxtimyoxdu.com/en/')
+    it('handles root path for non-default locale without trailing slash', () => {
+      // Root path must not produce a trailing-slash variant that Next.js
+      // 308-redirects to the canonical no-slash form.
+      // See docs/superpowers/plans/2026-04-11-hreflang-bugfix.md (Bug A).
+      expect(getLocalizedUrl('/', 'en')).toBe('https://vaxtimyoxdu.com/en')
+      expect(getLocalizedUrl('/', 'tr')).toBe('https://vaxtimyoxdu.com/tr')
+      expect(getLocalizedUrl('/', 'ru')).toBe('https://vaxtimyoxdu.com/ru')
+    })
+
+    it('handles root path for default locale with trailing slash', () => {
+      // Default locale root is the canonical home; keep trailing slash.
+      expect(getLocalizedUrl('/', 'az')).toBe('https://vaxtimyoxdu.com/')
+    })
+
+    it('handles empty path as root for non-default locale', () => {
+      expect(getLocalizedUrl('', 'en')).toBe('https://vaxtimyoxdu.com/en')
     })
   })
 
