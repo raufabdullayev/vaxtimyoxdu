@@ -470,47 +470,37 @@
 
 **Start time:** ~19:40 UTC
 **Plan file:** `/Users/raufabdullayev/.claude/plans/vast-tickling-thimble.md`
-**Status:** Sprint 1 in progress, race condition recovery phase
+**Status:** Sprint 0+1 COMPLETED ✅. Sprint 2 NÖVBƏTİ.
 
 ### Sprint 0 — Gate Infrastructure (COMPLETED ✅)
 - Team: gate-infra (4 agents: SeoPro, SmmPro, QaPro, VisualTester)
-- Delivered 5 docs (not yet committed):
-  - `docs/SEO_TRACKING_INVARIANTS.md` (37 KB, 10 invariants, schema v1.0.0)
-  - `docs/SMM_CONTENT_INVARIANTS.md` (23 KB, 10 invariants)
-  - `docs/review-cowork.md` (51 KB, 10 sections + 2 appendices, pre-existing archived to `review-cowork-archive-pre-sprint0.md`)
-  - `docs/sprint-injection-log.md` (147+ lines, 10+ real Sprint 1 injection entries)
-  - `docs/agent-reports/visual-review-playbook.md` (17 KB, 8 sections with chrome-devtools-mcp patterns)
+- 5 sənəd: SEO_TRACKING_INVARIANTS.md, SMM_CONTENT_INVARIANTS.md, review-cowork.md, sprint-injection-log.md, visual-review-playbook.md
+- Committed in a5832bf
 
-### Sprint 1 — MegaMenu warm-up (IN PROGRESS 🔄)
+### Sprint 1 — MegaMenu warm-up (COMPLETED ✅)
 - Team: megamenu-warmup (7 agents: ReactDev, UiDev, ContentDev, SeoPro, SmmPro, QaPro, VisualTester)
-- **Workstream B (CTR drafts):** APPROVED by both reviewers (SeoPro + SmmPro)
-  - `docs/CTR_REWRITES.md` v2 on disk — 20 pages × 4 locales, 74 titles + 74 metas all PASS §6/§7
-  - Paper-only, no commit required (Sprint 2 applies)
-- **Workstream A (MegaMenu + Footer):** BLOCKED, waiting for ReactDev e2e re-run
-  - Code changes ready in 6 files: MegaMenu.tsx, Footer.tsx, Footer.test.tsx, MegaMenu.test.tsx, Header.test.tsx, e2e/navigation.spec.ts
-  - Local gate: vitest 2951/2951 ✅, tsc CLEAN, lint CLEAN, build 820/820 SUCCESS
-  - E2E was BLOCKED by QaPro parallel-gate race condition (next.config.js hijack, .next-qapro-gate shim)
-  - PO intervention: QaPro hands-off, ReactDev authorized to re-run e2e atomically
-  - SeoPro verdict on RT-1-01: APPROVE_WITH_FOLLOWUP ✅
-  - SmmPro verdict on RT-1-01: NOT YET ISSUED (ReactDev ticket not sent yet due to e2e block)
+- **Commit:** a5832bf (16 files, +5957/-1727 lines)
+- **Workstream A:** MegaMenu.tsx button→Link + Footer.tsx IG fix + 3 test updates + 1 new E2E
+- **Workstream B:** docs/CTR_REWRITES.md (20 page × 4 locale, paper-only)
+- **Gate:** vitest 2951/2951, e2e 89/113 (24 pre-existing, 0 new), tsc CLEAN, lint CLEAN, build 820/820
+- **Reviews:** SeoPro APPROVE_WITH_FOLLOWUP, SmmPro APPROVE, QaPro PASS, UiDev visual sign-off
+- **Incident:** QaPro next.config.js race condition → PO intervention → resolved
+- **GitLab + GitHub push OK, Vercel auto-deploy triggered**
 
-### Sprint Injection Log Summary (Sprint 1)
-Total injections: 10+ (exceeds 3/ticket + 8/sprint caps). All non-immediate follow-ups to Sprint 2 or later. PO ratified cap exceedance because no mid-sprint scope creep occurred — injections are post-review Sprint 2 prerequisites.
+### Sprint Injection Log (10+ entries for Sprint 2)
+P0/P1 Sprint 2 prerequisites:
+- **F1 P0:** RU blog missing description (`blog-posts-ru.ts:948`)
+- **F2 P1:** RU password-generator §7 + dup note (1126 impr/ay)
+- **F3 P1 prereq:** Tool type metaTitle/metaDescription fields (Path 2)
+- **F4 P1:** Build-time §6/§7 assertions
+- **Factory §5 AZ diacritic:** `Vaxtim Yoxdu` → `Vaxtım Yoxdu` (ı ilə)
 
-Key P0/P1 Sprint 2 prerequisites discovered:
-- **F1 P0:** `src/data/blog-posts-ru.ts:948` missing description (118 impr/month serving undefined)
-- **F2 P1:** `/ru/tools/password-generator` §7 + dup bug (1126 impr/month 0.09% CTR)
-- **F3 P1 (hard prereq):** Add `metaTitle?` + `metaDescription?` fields to Tool type (scaffolding for overrides)
-- **F4 P1 (pairs with F3):** Build-time assertions in seo.test.ts
-- **Factory §5 AZ diacritic bug:** Generator emits `Vaxtim Yoxdu` (plain `i`) instead of `Vaxtım Yoxdu` (with ı) in AZ
-
-### Coordination Lesson Learned
-Multi-agent parallel file manipulation is dangerous when agents share `next.config.js` / `.next/` dist directory. Future sprints should use `EnterWorktree` for parallel test gate runs OR enforce single-process build sequentially. Documented in injection log as P2 follow-up.
-
-### Next Steps (if session resumes)
-1. Verify ReactDev's MegaMenu + Footer changes are in working tree (check `git status src/components/layout/`)
-2. If present, request SmmPro verdict for RT-1-01 (SeoPro already approved)
-3. VisualTester 4×3 matrix (task #8 pending)
-4. Commit Sprint 1 once all approvals land
-5. Transition to Sprint 2 (with F1/F2/F3/F4 prereqs included in scope)
-6. Current Sprint 0 docs are uncommitted — include in Sprint 1 commit or separate Sprint 0 commit
+### Next Session — Sprint 2 (CTR Apply + Schema + P0 fixes)
+Plan: `~/.claude/plans/vast-tickling-thimble.md` §3 Sprint 2
+1. Fix 3 P0/P1 production bugs (factory diacritic, RU blog desc, RU password-gen)
+2. Implement Path 2: metaTitle/metaDescription fields on Tool type
+3. Apply CTR rewrites from docs/CTR_REWRITES.md to src/config/tools/*.ts
+4. Add JSON-LD schema.org (SoftwareApplication for tools, Article for blog)
+5. Build-time §6/§7 assertions in seo.test.ts
+6. GSC weekly monitoring + Bing sitemap verification (MCP)
+Team: `seo-apply` per plan §4
