@@ -1561,8 +1561,8 @@ Mümkün olan her yerde 2FA'yı etkinleştirin. Parolanız çalınsa bile, ikinc
 Güçlü parolalar oluşturmak için Vaxtim Yoxdu'daki ücretsiz parola oluşturucuyu kullanın.`,
   },
   'how-to-compress-images-without-quality-loss': {
-    title: 'Görüntüleri Kalite Kaybetmeden Nasıl Sıkıştırılır',
-    metaTitle: 'Kalite Kaybetmeden Görüntü Sıkıştırma',
+    title: 'Kalitesiz Görüntü Sıkıştırma',
+    metaTitle: 'Kalitesiz Görüntü Sıkıştırma',
     description: 'Görüntü dosya boyutlarını %80\'e kadar azaltmanın pratik yolları. Formatlar, araçlar ve optimizasyon ipuçları dahil.',
     date: '2026-04-12',
     relatedTools: ['image-compress', 'image-convert'],
@@ -1593,8 +1593,8 @@ Web siteniz görüntüleri 800 piksel genişliğinde gösteriyorsa, 4000 piksel 
 Vaxtim Yoxdu'daki ücretsiz görüntü sıkıştırıcıyı deneyin. Her şeyi tarayıcınızda işler, birden fazla formatı destekler ve dosyalarınızı hiçbir sunucuya yüklemez.`,
   },
   '5-ways-to-use-qr-codes-for-business': {
-    title: 'İşletmeniz İçin QR Kod Kullanmanın 5 Yolu',
-    metaTitle: 'İşletmeniz İçin QR Kod Kullanmanın 5 Yolu',
+    title: 'QR Kod ile İşletme: 5 Yol',
+    metaTitle: 'QR Kod ile İşletme: 5 Yol',
     description: 'QR kodlarının işletmeler için beş pratik uygulaması: pazarlama, ödemeler, menüler, ağ oluşturma ve envanter. Ücretsiz oluşturma ipuçları dahil.',
     date: '2026-04-12',
     relatedTools: ['qr-code-generator'],
@@ -1681,8 +1681,8 @@ Adobe Acrobat güçlü ama pahalı. Tarayıcı tabanlı PDF araçları birleşti
 Vaxtim Yoxdu'daki ücretsiz PDF birleştirici ve bölücüyü deneyin. Belgelerinizi dosya yüklemeden tamamen tarayıcınızda işleyin.`,
   },
   'color-theory-for-web-designers-guide': {
-    title: 'Web Tasarımcılar İçin Renk Teorisi Rehberi',
-    metaTitle: 'Web Tasarımcılar İçin Renk Teorisi',
+    title: 'Renk Teorisi: Web Tasarım',
+    metaTitle: 'Renk Teorisi: Web Tasarım',
     description: 'Web tasarım için renk teorisi: renk modelleri, uyum kuralları, kontrast oranları, erişilebilirlik ve ücretsiz araçlarla palet oluşturma.',
     date: '2026-04-12',
     relatedTools: ['color-picker'],

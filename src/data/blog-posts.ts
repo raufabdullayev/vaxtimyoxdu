@@ -2865,7 +2865,7 @@ SEO is not a one-time task. It is an ongoing process of creating quality content
 All of the content creation and optimization tools mentioned in this guide are available free at Vaxtim Yoxdu. Generate meta tags, create clean URL slugs, compress images, format JSON-LD, and count words -- all in your browser, all for free.`,
   },
   'how-to-compress-images-without-quality-loss': {
-    title: 'How to Compress Images Without Losing Quality',
+    title: 'Compress Images Without Quality Loss',
     metaTitle: 'Compress Images Without Quality Loss',
     description: 'Learn practical techniques to reduce image file sizes by up to 80% while keeping visual quality intact. Covers formats, tools, and optimization tips.',
     date: '2026-04-12',
@@ -2905,8 +2905,8 @@ One of the most overlooked optimization techniques is matching image resolution 
 Try the free image compressor at Vaxtim Yoxdu. It processes everything in your browser, supports multiple formats, and never uploads your files to any server.`,
   },
   '5-ways-to-use-qr-codes-for-business': {
-    title: '5 Ways to Use QR Codes for Business Growth',
-    metaTitle: '5 Ways to Use QR Codes for Business',
+    title: 'QR Codes for Business: 5 Ways',
+    metaTitle: 'QR Codes for Business: 5 Ways',
     description: 'Discover five practical business applications for QR codes: marketing, payments, menus, networking, and inventory. Free generation tips included.',
     date: '2026-04-12',
     relatedTools: ['qr-code-generator'],
@@ -3048,8 +3048,8 @@ When working with sensitive PDFs, always verify that your tool processes files l
 Try the free PDF merger and splitter at Vaxtim Yoxdu. Process your documents entirely in your browser with no file uploads and no server processing.`,
   },
   'color-theory-for-web-designers-guide': {
-    title: 'Color Theory for Web Designers: A Practical Guide',
-    metaTitle: 'Color Theory for Web Designers Guide',
+    title: 'Color Theory for Web Design',
+    metaTitle: 'Color Theory for Web Design',
     description: 'Master color theory for web design: color models, harmony rules, contrast ratios, accessibility, and practical palette building tips with free tools.',
     date: '2026-04-12',
     relatedTools: ['color-picker'],
