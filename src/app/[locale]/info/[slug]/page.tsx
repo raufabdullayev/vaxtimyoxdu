@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // Match the same locale gating as the page component
   if (article.locale && article.locale !== locale) return {}
 
-  const description = article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim()
+  const description = article.content.slice(0, 150).replace(/[#\n*-]/g, '').trim()
 
   const metadata = generateArticleMetadata({
     title: article.title,
@@ -64,7 +64,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     notFound()
   }
 
-  const description = article.content.slice(0, 160).replace(/[#\n*-]/g, '').trim()
+  const description = article.content.slice(0, 150).replace(/[#\n*-]/g, '').trim()
 
   const jsonLd = generateNewsArticleJsonLd({
     title: article.title,

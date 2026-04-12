@@ -1560,4 +1560,154 @@ Mümkün olan her yerde 2FA'yı etkinleştirin. Parolanız çalınsa bile, ikinc
 
 Güçlü parolalar oluşturmak için Vaxtim Yoxdu'daki ücretsiz parola oluşturucuyu kullanın.`,
   },
+  'how-to-compress-images-without-quality-loss': {
+    title: 'Görüntüleri Kalite Kaybetmeden Nasıl Sıkıştırılır',
+    metaTitle: 'Kalite Kaybetmeden Görüntü Sıkıştırma',
+    description: 'Görüntü dosya boyutlarını %80\'e kadar azaltmanın pratik yolları. Formatlar, araçlar ve optimizasyon ipuçları dahil.',
+    date: '2026-04-12',
+    relatedTools: ['image-compress', 'image-convert'],
+    content: `Büyük görüntüler web sitelerinin yavaş yüklenmesinin bir numaralı nedenidir. Optimize edilmemiş tek bir hero görüntü sayfa yüklenme süresine birkaç saniye ekleyebilir. Modern sıkıştırma teknikleri dosya boyutlarını insan gözüne hiçbir fark olmadan %50-80 oranında azaltabilir.
+
+## Kayıplı ve Kayıpsız Sıkıştırma
+
+İki temel sıkıştırma yaklaşımı vardır. Kayıpsız sıkıştırma hiçbir görüntü verisini silmeden dosya boyutunu azaltır. PNG ve GIF kayıpsız sıkıştırma kullanır. Kayıplı sıkıştırma ise insan görüşünün en az duyarlı olduğu verileri seçici olarak kaldırır. JPEG ve WebP kayıplı sıkıştırma kullanır.
+
+Fotoğraflar için %75-85 kalitede kayıplı sıkıştırma en iyi dengeyi sunar. Ekran görüntüleri ve metin içeren görüntüler için kayıpsız PNG veya WebP keskin kenarları korur.
+
+## WebP Avantajı
+
+WebP web görüntüleri için modern standarttır. Aynı görsel kalitede eşdeğer JPEG veya PNG dosyalarından %25-35 daha küçük dosyalar üretir. Tüm modern tarayıcılar WebP'yi destekler.
+
+## Toplu İşleme
+
+Birden fazla görüntüyle çalışırken toplu işleme büyük zaman tasarrufu sağlar. Tüm görüntülerinizi bir seferde yükleyin, hedef kalite seviyesi belirleyin ve aynı anda işleyin.
+
+## Metadata Temizleme
+
+Dijital kameralar her fotoğrafa kapsamlı metadata yerleştirir. Bu metadata her dosyaya 50-200 KB ekleyebilir. Sıkıştırma sırasında metadata temizleme görsel değişiklik olmadan dosya boyutunu daha da azaltır.
+
+## Çözünürlük Eşleştirme
+
+Web siteniz görüntüleri 800 piksel genişliğinde gösteriyorsa, 4000 piksel genişliğinde orijinal yüklemek bant genişliğini israf eder.
+
+Vaxtim Yoxdu'daki ücretsiz görüntü sıkıştırıcıyı deneyin. Her şeyi tarayıcınızda işler, birden fazla formatı destekler ve dosyalarınızı hiçbir sunucuya yüklemez.`,
+  },
+  '5-ways-to-use-qr-codes-for-business': {
+    title: 'İşletmeniz İçin QR Kod Kullanmanın 5 Yolu',
+    metaTitle: 'İşletmeniz İçin QR Kod Kullanmanın 5 Yolu',
+    description: 'QR kodlarının işletmeler için beş pratik uygulaması: pazarlama, ödemeler, menüler, ağ oluşturma ve envanter. Ücretsiz oluşturma ipuçları dahil.',
+    date: '2026-04-12',
+    relatedTools: ['qr-code-generator'],
+    content: `QR kodları pandemi döneminin zorunluluğundan iş operasyonlarının kalıcı bir parçasına dönüştü. 2026'da kartvizitlerden ürün ambalajlarına, restoran menülerinden etkinlik biletlerine kadar her yerdeler. İşletmelerin büyüme için QR kodlarını kullandığı beş güçlü yol.
+
+## 1. Temassız Menüler ve Ürün Bilgisi
+
+Restoranlar, kafeler ve perakende mağazalar QR kodları aracılığıyla detaylı bilgiye anında erişim sağlıyor. Masa başı QR kodu gerçek zamanlı güncellenebilen dijital menüye yönlendiriyor.
+
+## 2. Dijital Kartvizitler ve Ağ Oluşturma
+
+QR kodu tam iletişim bilgilerinizi içeren bir vCard kodlayabilir. Tarandığında alıcının telefonu kişiyi doğrudan kaydetmeyi teklif eder.
+
+## 3. Ödeme Hızlandırma
+
+QR tabanlı ödeme sistemleri birçok pazarda standart. İşletmeler kasada ödeme sayfasına yönlendiren QR kod gösterir. Pahalı satış noktası donanımı gereksinimini ortadan kaldırır.
+
+## 4. Pazarlama Kampanyası İzleme
+
+Her QR kodu izleme parametreleri olan benzersiz URL kodlayabilir. Basılı reklamlar, el ilanları her biri kendi QR koduyla aynı açılış sayfasına farklı UTM parametreleriyle yönlendirir.
+
+## 5. Envanter ve Varlık Yönetimi
+
+Depolar ve ofisler QR kodlarıyla fiziksel varlıkları izler. Her öğe satın alma tarihi, bakım geçmişi ve durumla veritabanı kaydına bağlanan benzersiz QR kodu alır.
+
+Vaxtim Yoxdu'da ücretsiz profesyonel QR kodlar oluşturun. Renkleri ve boyutları özelleştirin, URL veya vCard kodlayın, SVG veya PNG formatında indirin.`,
+  },
+  'password-security-best-practices-2026': {
+    title: 'Parola Güvenliği: 2026 İçin Tam Rehber',
+    metaTitle: 'Parola Güvenliği: 2026 Rehberi',
+    description: 'Parola güvenliği rehberi: uzunluk karmaşıklıktan önemlidir, parola yöneticileri, 2FA ve yaygın hatalar. Hesaplarınızı koruyun.',
+    date: '2026-04-12',
+    relatedTools: ['password-generator', 'hash-generator'],
+    content: `Yalnızca 2025'te 8 milyardan fazla kayıt veri ihlalleri sonucu ifşa oldu ve zayıf parolalar saldırganların birincil giriş noktası olmaya devam ediyor. 2026'da parola güvenliği için gerçekten neyin işe yaradığını burada açıklıyoruz.
+
+## Uzunluk Karmaşıklığı Yener
+
+Büyük-küçük harf, rakam ve sembolleri 8 karakterlik bir parolaya karıştırmak eski bir tavsiye. Modern parola kırma GPU kümeleri saniyede milyarlarca kombinasyonu test edebilir. 8 karakterlik parola saatler içinde kırılır. 16 karakterlik parola ifadesi yüzyıllar alır.
+
+NIST yönergelerini minimum 12 karakter ve zorunlu karmaşıklık gerekliliği olmadan güncelledi.
+
+## Her Hesap İçin Benzersiz Parola
+
+Credential stuffing saldırıları bir ihlalden sızan kullanıcı adı-parola çiftlerini binlerce başka hizmette dener. Parolaları tekrar kullanırsanız, bir ihlal tüm hesaplarınızı tehlikeye atar.
+
+## Parola Yöneticileri Zorunlu
+
+Hiçbir insan düzinelerce hesap için benzersiz 16 karakterlik parolaları ezberleyemez. Parola yöneticileri her hizmet için benzersiz parolalar oluşturur, saklar ve otomatik doldurur.
+
+## İki Faktörlü Kimlik Doğrulama
+
+Mükemmel parola bile phishing veya sunucu ihlallerinden tehlikeye girebilir. 2FA ikinci bir doğrulama adımı ekler. Donanım güvenlik anahtarları en güçlü korumayı sunar.
+
+Vaxtim Yoxdu'daki ücretsiz parola oluşturucu ile kriptografik olarak güvenli parolalar oluşturun. Her parola tamamen tarayıcınızda oluşturulur.`,
+  },
+  'pdf-workflow-automation-tips': {
+    title: 'PDF İş Akışı Otomasyon İpuçları',
+    metaTitle: 'PDF İş Akışı Otomasyon İpuçları 2026',
+    description: 'Ücretsiz tarayıcı araçlarıyla PDF birleştirme, bölme, düzenleme ve belge görevlerini basitleştirmek için pratik ipuçları.',
+    date: '2026-04-12',
+    relatedTools: ['pdf-merge', 'pdf-split'],
+    content: `PDF belgeler profesyonel iletişimin temelini oluşturuyor: sözleşmeler, faturalar, raporlar, teklifler ve düzenleyici dosyalamalar hep PDF formatında. Ancak çoğu kişi hala PDF'lerle manuel olarak çalışıyor. 2026'da PDF iş akışınızı otomatikleştirmenin pratik ipuçları.
+
+## Göndermeden Önce Birleştirin
+
+Birden fazla PDF eki göndermek profesyonel değildir. İlgili PDF'leri tek bir dosyada birleştirin. Kapak mektubunuzu, teklifinizi ve eklerini tek bir belgede birleştirin. Aylık faturaları üç aylık özete birleştirin.
+
+## Dağıtım İçin Bölün
+
+Büyük PDF'ler farklı hedef kitleler için uygun bölümler içerir. Tüm belgeyi göndermek yerine PDF'i bölün ve her kişiye yalnızca ihtiyacı olanı gönderin.
+
+## Sayfa Sırasını Düzenleyin
+
+Taranmış PDF'lerde sayfalar genellikle yanlış sıradadır. Yeniden taramak yerine sayfaları dijital olarak yeniden sıralayın.
+
+## Toplu İşleme Stratejileri
+
+Tekrarlayan belge görevleri için tutarlı bir toplu işleme rutini geliştirin. Her Cuma haftanın gider makbuzlarını tek bir dosyada birleştirin.
+
+## Tarayıcı Tabanlı vs Masaüstü Araçlar
+
+Adobe Acrobat güçlü ama pahalı. Tarayıcı tabanlı PDF araçları birleştirme, bölme ve sayfa yeniden sıralama işlemlerini sıfır kurulumla halleder. Kritik avantaj gizliliktir: modern tarayıcı tabanlı araçlar dosyaları tamamen cihazınızda işler.
+
+Vaxtim Yoxdu'daki ücretsiz PDF birleştirici ve bölücüyü deneyin. Belgelerinizi dosya yüklemeden tamamen tarayıcınızda işleyin.`,
+  },
+  'color-theory-for-web-designers-guide': {
+    title: 'Web Tasarımcılar İçin Renk Teorisi Rehberi',
+    metaTitle: 'Web Tasarımcılar İçin Renk Teorisi',
+    description: 'Web tasarım için renk teorisi: renk modelleri, uyum kuralları, kontrast oranları, erişilebilirlik ve ücretsiz araçlarla palet oluşturma.',
+    date: '2026-04-12',
+    relatedTools: ['color-picker'],
+    content: `Renk, web tasarımcının cephaneliğindeki en güçlü araçlardan biridir. Ruh hali iletir, hiyerarşi oluşturur, dikkati yönlendirir ve marka tanınırlığı oluşturur. Web tasarım için renk teorisinin pratik rehberi.
+
+## Renk Modelleri: HEX, RGB ve HSL
+
+Web tasarımcılar üç temel renk modeliyle çalışır. HEX kodlar CSS'de en yaygın olandır. RGB renkleri 0-255 arası kırmızı, yeşil ve mavi değerlerin birleşimi olarak tanımlar. HSL renkleri ton, doygunluk ve açıklıkla tanımlar -- ayarlamalar yapmak için en sezgisel model budur.
+
+## Renk Uyumu Kuralları
+
+- **Tamamlayıcı:** Renk çarkında karşı karşıya iki renk. Yüksek kontrast, enerjik.
+- **Benzer:** Çarkta yan yana üç renk. Uyumlu ve sakin.
+- **Üçlü:** Çarkta eşit aralıklı üç renk. Canlı ve dengeli.
+- **Bölünmüş tamamlayıcı:** Ana renk artı tamamlayıcısına bitişik iki renk.
+- **Monokromatik:** Tek tonun farklı doygunluk ve açıklık seviyelerindeki varyasyonları.
+
+## 60-30-10 Kuralı
+
+Tasarımınızın %60'ı baskın rengi, %30'u ikincil rengi, %10'u aksan rengi kullanır. Bu, görsel denge yaratır.
+
+## Erişilebilirlik ve Kontrast
+
+WCAG 2.1 normal metin için minimum 4,5:1 kontrast oranı gerektirir. Birçok güzel renk kombinasyonu erişilebilirlik gereksinimlerini karşılamaz.
+
+Vaxtim Yoxdu'daki ücretsiz renk seçici ile renk paletinizi oluşturun. HEX, RGB ve HSL arasında dönüştürün, uyum paletleri oluşturun ve kontrast oranlarını tek bir araçta kontrol edin.`,
+  },
 }

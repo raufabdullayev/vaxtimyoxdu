@@ -2498,4 +2498,156 @@ Hash generatoru ilə müxtəlif hash alqoritmlərinin necə işlədiyini öyrən
 
 Güclü parollar yaratmaq üçün Vaxtım Yoxdu-dakı pulsuz parol generatorundan istifadə edin. Kriptoqrafik olaraq təhlükəsiz, tamamilə təsadüfi parollar yaradır -- brauzerinizdə, serverə göndərilmədən. Hash generatoru ilə parol hash-ləmənin necə işlədiyini öyrənin.`,
   },
+  'how-to-compress-images-without-quality-loss': {
+    title: 'Şəkilləri Keyfiyyət İtirmədən Necə Sıxışdırmaq Olar',
+    metaTitle: 'Keyfiyyət İtirmədən Şəkil Sıxışdırma',
+    description: 'Şəkil fayllarının ölçüsünü 80%-ə qədər azaltmağın praktiki üsulları. Formatlar, alətlər və optimallaşdırma məsləhətləri daxildir.',
+    date: '2026-04-12',
+    relatedTools: ['image-compress', 'image-convert'],
+    content: `Böyük şəkillər veb-saytların yavaş yüklənməsinin bir nömrəli səbəbidir. Bir optimallaşdırılmamış qəhrəman şəkli səhifənin yüklənmə müddətinə bir neçə saniyə əlavə edə bilər. Müasir sıxışdırma texnikaları fayl ölçülərini insan gözünə heç bir fərq olmadan 50-80% azalda bilər. Keyfiyyəti qoruyaraq şəkilləri effektiv sıxışdırmağın yolları bunlardır.
+
+## İtkili və İtkisiz Sıxışdırma
+
+İki əsas sıxışdırma yanaşması var. İtkisiz sıxışdırma heç bir şəkil datasını silmədən fayl ölçüsünü azaldır. PNG və GIF itkisiz sıxışdırma istifadə edir. İtkili sıxışdırma isə insan görmə qabiliyyətinin ən az həssas olduğu dataları seçici şəkildə silir. JPEG və WebP itkili sıxışdırma istifadə edir. Mülayim keyfiyyət parametrlərində silinən data əksər tamaşaçılar üçün qəbuledilməzdir.
+
+Fotoşəkillər və mürəkkəb şəkillər üçün 75-85% keyfiyyətdə itkili sıxışdırma ən yaxşı balansı təmin edir. Ekran şəkilləri və mətn olan şəkillər üçün itkisiz PNG və ya WebP kəskin kənarları qoruyur.
+
+## WebP Üstünlüyü
+
+WebP veb şəkillər üçün müasir standartdır. Eyni vizual keyfiyyətdə ekvivalent JPEG və ya PNG fayllarından 25-35% daha kiçik fayllar yaradır. Bütün müasir brauzerlər WebP-ni dəstəkləyir. Əgər hələ WebP istifadə etmirsinizsə, format dəyişikliyi edə biləcəyiniz ən böyük optimallaşdırmadır.
+
+## Toplu Emal
+
+Bir neçə şəkillə işləyərkən toplu emal böyük vaxt qənaəti edir. Bütün şəkillərinizi bir dəfəyə yükləyin, hədəf keyfiyyət səviyyəsi təyin edin və eyni vaxtda emal edin.
+
+## Metadata Silmə
+
+Rəqəmsal kameralar hər fotoşəkilə geniş metadata yerləşdirir: GPS koordinatları, kamera parametrləri, vaxt damğaları. Bu metadata hər fayla 50-200 KB əlavə edə bilər. Sıxışdırma zamanı metadatanın silinməsi heç bir vizual dəyişiklik olmadan fayl ölçüsünü daha da azaldır.
+
+## Ölçü Uyğunlaşdırması
+
+Ən çox diqqətdən qaçan optimallaşdırma texnikası şəkil ölçüsünü göstərmə ölçüsünə uyğunlaşdırmaqdır. Veb-saytınız şəkilləri 800 piksel enində göstərirsə, 4000 piksel genişliyində orijinal yükləmək bant genişliyini israf edir.
+
+Vaxtım Yoxdu-dakı pulsuz şəkil sıxışdırıcısını sınayın. Hər şeyi brauzerinizdə emal edir, bir neçə formatı dəstəkləyir və fayllarınızı heç bir serverə yükləmir.`,
+  },
+  '5-ways-to-use-qr-codes-for-business': {
+    title: 'Biznes Artımı üçün QR Kodları İstifadə Etməyin 5 Yolu',
+    metaTitle: 'Biznes Üçün QR Kod İstifadəsinin 5 Yolu',
+    description: 'QR kodlarının biznes üçün beş praktiki tətbiqi: marketinq, ödənişlər, menyular, şəbəkələşmə və inventar. Pulsuz yaratma məsləhətləri daxildir.',
+    date: '2026-04-12',
+    relatedTools: ['qr-code-generator'],
+    content: `QR kodları pandemiya dövrünün zəruriyyətindən biznes əməliyyatlarının daimi hissəsinə çevrilib. 2026-cı ildə onlar vizit kartlarından məhsul qablaşdırmasına, restoran menyularından tədbir biletlərinə qədər hər yerdə mövcuddur. Bizneslər QR kodlarından artım üçün beş güclü istifadə yolu.
+
+## 1. Təmassız Menyular və Məhsul Məlumatı
+
+Restoranlar, kafelər və pərakəndə mağazalar QR kodları vasitəsilə ətraflı məlumata anı çıxış təmin edir. Restoranlar üçün masa üstü QR kodu real vaxt rejimində yenilənə bilən rəqəmsal menyuya yönəldir. Qiymətlər dəyişəndə yenidən çap xərcləri yoxdur.
+
+## 2. Rəqəmsal Vizit Kartlar və Şəbəkələşmə
+
+Fiziki vizit kartlar itirilir. QR kodu tam əlaqə məlumatlarınızı ehtiva edən vCard kodlaya bilər. Skan edildikdə, alıcının telefonu kontaktı birbaşa saxlamağı təklif edir.
+
+## 3. Ödəniş Sürətləndirmə
+
+QR əsaslı ödəniş sistemləri bir çox bazarda standartdır. Bizneslər kassada ödəniş səhifəsinə yönləndirən QR kod göstərir. Bu, bahalı satış nöqtəsi avadanlığının ehtiyacını aradan qaldırır.
+
+## 4. Marketinq Kampaniyası İzləmə
+
+Hər QR kodu izləmə parametrləri olan unikal URL kodlaya bilər. Çap reklamları, flyerlər, billboard-lar hər biri öz QR kodu ilə eyni açılış səhifəsinə, lakin fərqli UTM parametrləri ilə yönlənir. Bu, hansı fiziki toxunma nöqtəsinin hər veb-sayt ziyarətini gətirdiyini göstərir.
+
+## 5. İnventar və Aktiv İdarəetmə
+
+Anbarlar və ofislər QR kodları ilə fiziki aktivləri izləyir. Hər maddə alış tarixi, texniki xidmət tarixçəsi, məkan və status ilə verilənlər bazası qeydinə yönləndirən unikal QR kodu alır.
+
+Vaxtım Yoxdu-da pulsuz peşəkar QR kodlar yaradın. Rəngləri və ölçüləri fərdiləşdirin, URL və ya vCard kodlayın, SVG və ya PNG formatında yükləyin.`,
+  },
+  'password-security-best-practices-2026': {
+    title: 'Parol Təhlükəsizliyi: 2026-cı İl Üçün Tam Bələdçi',
+    metaTitle: 'Parol Təhlükəsizliyi: 2026 Bələdçisi',
+    description: 'Parol təhlükəsizliyi bələdçisi: uzunluq mürəkkəblikdən vacibdir, parol menecerləri, 2FA və yayılmış səhvlər. Hesablarınızı qoruyun.',
+    date: '2026-04-12',
+    relatedTools: ['password-generator', 'hash-generator'],
+    content: `2025-ci ildə təkcə 8 milyarddan çox qeyd data pozuntuları nəticəsində ifşa olunub və zəif parollar hücumçuların əsas giriş nöqtəsi olaraq qalır. Parol təhlükəsizliyi üçün 2026-cı ildə həqiqətən nəyin işlədiyini və hansı köhnəlmiş məsləhətlərə əməl etməyi dayandırmalı olduğunuzu burada izah edirik.
+
+## Uzunluq Mürəkkəblikdən Üstündür
+
+Böyük və kiçik hərflər, rəqəmlər və simvolları 8 simvollu parola qarışdırmaq köhnə məsləhətidir. Müasir parol sındırma GPU klasterləri saniyədə milyardlarla kombinasiya sınaya bilər. 8 simvollu parol saatlar ərzində sındırılır. 16 simvollu parol ifadəsi əsrlərlə vaxt tələb edir.
+
+NIST təlimatlarını minimum 12 simvol və heç bir məcburi mürəkkəblik tələbi ilə yeniləyib. Uzunluq ən vacib amildir.
+
+## Hər Hesab Üçün Unikal Parol
+
+Credential stuffing hücumları bir pozuntudan sızan istifadəçi adı-parol cütlərini minlərlə digər xidmətdə sınayır. Parolları təkrar istifadə etsəniz, bir pozuntu bütün hesablarınızı təhlükəyə atır.
+
+## Parol Menecerləri Zəruridir
+
+Heç bir insan onlarla hesab üçün unikal 16 simvollu parolları əzbərləyə bilməz. Parol menecerləri hər xidmət üçün unikal parollar yaradır, saxlayır və avtomatik doldurur. Yalnız bir güclü master parol yadda saxlamaq lazımdır.
+
+## İki Faktorlu Autentifikasiya
+
+Mükəmməl parol belə phishing, keylogger və ya server pozuntularından təhlükəyə məruz qala bilər. 2FA ikinci verifikasiya addımı əlavə edir. Hardware açarları ən güclü müdafiəni təklif edir. Autentifikator tətbiqləri ikinci ən yaxşı seçimdir.
+
+Vaxtım Yoxdu-dakı pulsuz parol generatoru ilə kriptoqrafik təhlükəsiz parollar yaradın. Hər parol tamamilə brauzerinizdə yaradılır, heç bir serverə ötürülmür.`,
+  },
+  'pdf-workflow-automation-tips': {
+    title: 'PDF İş Axını Avtomatlaşdırma Məsləhətləri',
+    metaTitle: 'PDF İş Axını Avtomatlaşdırma Məsləhətləri',
+    description: 'Pulsuz brauzer alətləri ilə PDF birləşdirmə, bölmə, təşkil etmə və sənəd tapşırıqlarını sadələşdirmək üçün praktiki məsləhətlər.',
+    date: '2026-04-12',
+    relatedTools: ['pdf-merge', 'pdf-split'],
+    content: `PDF sənədlər peşəkar ünsiyyətin əsasını təşkil edir: müqavilələr, fakturalar, hesabatlar, təkliflər və tənzimləyici sənədlər hamısı PDF formatındadır. Yenə də əksər insanlar PDF-lərlə əl ilə, bir-bir işləyir. 2026-cı ildə PDF iş axınınızı avtomatlaşdırmağın praktiki məsləhətləri.
+
+## Göndərməzdən Əvvəl Birləşdirin
+
+Bir neçə PDF əlavəsi göndərmək qeyri-peşəkardır. Əlaqəli PDF-ləri bir fayla birləşdirin. Örtük məktubunuzu, təklifinizi və əlavələrinizi bir sənədə birləşdirin. Aylıq fakturaları rüblük xülasəyə birləşdirin.
+
+## Paylamaq Üçün Bölün
+
+Böyük PDF-lər tez-tez müxtəlif auditoriyalar üçün uyğun bölmələr ehtiva edir. Bütün sənədi göndərmək əvəzinə, PDF-i bölün və hər adama yalnız lazım olanı göndərin. Müxtəlif şöbələr üçün xüsusi səhifə aralıqlarını çıxarın.
+
+## Səhifə Sırasını Təşkil Edin
+
+Skan edilmiş PDF-lərdə tez-tez səhifələr səhv sıradadır. Yenidən skan etmək əvəzinə, səhifələri rəqəmsal olaraq yenidən sıralayın.
+
+## Toplu Emal Strategiyaları
+
+Təkrarlanan sənəd tapşırıqları üçün ardıcıl toplu emal qaydası hazırlayın. Hər cümə günü həftənin xərc qəbzlərini bir fayla birləşdirin. Ay sonunda bütün müştəri hesabatlarını bir arxivə toplayın.
+
+## Brauzer Əsaslı vs Masa Üstü Alətlər
+
+Adobe Acrobat kimi masa üstü PDF proqramları güclüdür, amma bahalıdır. Brauzer əsaslı PDF alətləri birləşdirmə, bölmə və səhifə yenidən sıralama işlərini sıfır quraşdırma ilə idarə edir. Kritik üstünlük gizlilikdir: müasir brauzer əsaslı alətlər faylları tamamilə cihazınızda emal edir.
+
+Vaxtım Yoxdu-dakı pulsuz PDF birləşdirici və bölücüsünü sınayın. Sənədlərinizi fayl yükləmədən, tamamilə brauzerinizdə emal edin.`,
+  },
+  'color-theory-for-web-designers-guide': {
+    title: 'Veb Dizaynerlər Üçün Rəng Teoriyası Bələdçisi',
+    metaTitle: 'Veb Dizaynerlər Üçün Rəng Teoriyası',
+    description: 'Veb dizayn üçün rəng nəzəriyyəsi: rəng modelləri, harmoniya qaydaları, kontrast nisbətləri, əlçatanlıq və pulsuz alətlərlə praktiki paletr qurma.',
+    date: '2026-04-12',
+    relatedTools: ['color-picker'],
+    content: `Rəng veb dizaynerin arsenalında ən güclü alətlərdən biridir. O, əhval-ruhiyyə ötürür, iyerarxiya yaradır, diqqəti yönləndirir və brend tanınmasını qurur. Veb dizayn üçün rəng nəzəriyyəsinin praktiki bələdçisi budur.
+
+## Rəng Modelləri: HEX, RGB və HSL
+
+Veb dizaynerlər üç əsas rəng modeli ilə işləyir. HEX kodlar kimi #FF5733 CSS-də ən çox istifadə olunur. RGB rəngləri 0-dan 255-ə qədər qırmızı, yaşıl və mavi dəyərlərin birləşməsi kimi təyin edir. HSL rəngləri ton, doyğunluq və açıqlıqla təyin edir -- bu, düzəlişlər etmək üçün ən intuitiv modeldir.
+
+Rəngi tündləşdirmək lazımdırsa, HSL bunu sadə edir: açıqlıq dəyərini azaldın. Daha solğun versiya lazımdırsa, doyğunluğu azaldın.
+
+## Rəng Harmoniyası Qaydaları
+
+- **Tamamlayıcı:** Rəng dairəsində bir-birinə əks iki rəng. Yüksək kontrast, enerjili.
+- **Oxşar:** Dairədə yan-yana üç rəng. Harmonik və sakit.
+- **Triadik:** Dairədə bərabər aralıqlı üç rəng. Canlı və balanslı.
+- **Bölünmüş tamamlayıcı:** Əsas rəng üstəgəl tamamlayıcısına bitişik iki rəng.
+- **Monoxromatik:** Tək tonun müxtəlif doyğunluq və açıqlıq səviyyələrində variasiyaları.
+
+## 60-30-10 Qaydası
+
+Dizaynınızın 60%-i dominant rəngdən, 30%-i ikinci dərəcəli rəngdən, 10%-i aksent rəngdən istifadə edir. Bu, vizual balans yaradır.
+
+## Əlçatanlıq və Kontrast
+
+WCAG 2.1 normal mətn üçün minimum 4.5:1 kontrast nisbəti tələb edir. Bir çox gözəl rəng kombinasiyası əlçatanlıq tələblərinə cavab vermir. Paletr yaratmazdan əvvəl həmişə mətn-fon kontrast nisbətlərini yoxlayın.
+
+Vaxtım Yoxdu-dakı pulsuz rəng seçici ilə rəng paletrinizi qurun. HEX, RGB və HSL arasında keçid edin, harmoniya paletləri yaradın və kontrast nisbətlərini bir alətdə yoxlayın.`,
+  },
 }

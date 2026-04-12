@@ -18,8 +18,8 @@ describe('blogPosts collection', () => {
     expect(slugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 28 blog posts', () => {
-    expect(slugs.length).toBe(28)
+  it('should contain exactly 33 blog posts', () => {
+    expect(slugs.length).toBe(33)
   })
 })
 
@@ -235,8 +235,8 @@ describe('blogPostsAz collection', () => {
     expect(azSlugs.length).toBeGreaterThan(0)
   })
 
-  it('should contain exactly 33 AZ blog posts', () => {
-    expect(azSlugs.length).toBe(33)
+  it('should contain exactly 38 AZ blog posts', () => {
+    expect(azSlugs.length).toBe(38)
   })
 
   it('should include all EN blog post slugs', () => {
