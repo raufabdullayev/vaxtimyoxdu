@@ -4,6 +4,14 @@ export const SITE_URL = 'https://vaxtimyoxdu.com'
 export const SITE_NAME = 'Vaxtim Yoxdu'
 
 /**
+ * Returns the brand name with correct diacritics per locale.
+ * AZ uses `Vaxtım Yoxdu` (dotless ı); all others use `Vaxtim Yoxdu`.
+ */
+export function getSiteName(locale?: string): string {
+  return locale === 'az' ? 'Vaxtım Yoxdu' : 'Vaxtim Yoxdu'
+}
+
+/**
  * Build a locale-prefixed absolute URL.
  *
  * The default locale (az) has no prefix; others get /{locale}/path.

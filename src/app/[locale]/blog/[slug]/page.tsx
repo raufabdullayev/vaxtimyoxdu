@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     slug,
     date: post.date,
     locale: rawLocale,
+    metaTitle: post.metaTitle,
   })
 
   // Blog posts use per-locale slug sets (src/data/blog-posts.ts::blogPostsByLocale).

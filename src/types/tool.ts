@@ -10,4 +10,8 @@ export interface Tool {
   isAI: boolean
   isClientSide: boolean
   keywords: string[]
+  /** Per-locale title override — bypasses factory suffix composition when set */
+  metaTitle?: Partial<Record<string, string>>
+  /** Per-locale description override — bypasses factory browserBasedNote appending when set */
+  metaDescription?: Partial<Record<string, string>>
 }

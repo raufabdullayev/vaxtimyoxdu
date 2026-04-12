@@ -11,6 +11,12 @@ export const imageTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['image compress', 'image resize', 'reduce image size', 'image optimizer'],
+    metaDescription: {
+      az: 'Şəkil sıxma — JPEG, PNG və WebP formatlarında fayl ölçüsünü 70%-ə qədər azalt, keyfiyyəti qoru. Heç nə yüklənmir.',
+      en: 'Image compressor — shrink JPEG, PNG, and WebP files up to 70% with minimal quality loss. No upload, no tracking, private.',
+      tr: 'Görüntü sıkıştırma — JPEG, PNG ve WebP dosyalarını %70\'e kadar küçült, kaliteyi koru. Yükleme yok, iz bırakmaz.',
+      ru: 'Сжатие изображений — уменьши JPEG, PNG и WebP файлы до 70% с минимальной потерей качества. Без загрузки, анонимно.',
+    },
   },
   {
     slug: 'image-convert',
@@ -22,6 +28,12 @@ export const imageTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['image converter', 'png to jpg', 'jpg to png', 'webp converter'],
+    metaDescription: {
+      az: 'Şəkil çevirici — JPEG, PNG, WebP və HEIC arasında konvertasiya. Heç nə yüklənmir, metadata silinir, hər şey brauzerində.',
+      en: 'Image converter — JPEG, PNG, WebP, and HEIC conversions. Nothing uploaded, metadata stripped, everything runs in your browser.',
+      tr: 'Görüntü dönüştürücü — JPEG, PNG, WebP ve HEIC dönüşümleri. Hiçbir şey yüklenmez, metaveri silinir, her şey tarayıcında.',
+      ru: 'Конвертер изображений — JPEG, PNG, WebP и HEIC. Ничего не загружается, метаданные удаляются, всё в браузере.',
+    },
   },
   {
     slug: 'image-resize',

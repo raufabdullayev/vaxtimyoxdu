@@ -11,6 +11,18 @@ export const pdfTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['pdf merge', 'combine pdf', 'join pdf', 'pdf combiner'],
+    metaTitle: {
+      az: 'PDF Birləşdirmə — Pulsuz, Yüklənmədən',
+      en: 'Merge PDF Files Online — No Upload, No Watermark',
+      tr: 'PDF Birleştirme — Ücretsiz, Filigransız, Yüklemesiz',
+      ru: 'Объединить PDF Онлайн — Бесплатно, Без Загрузки',
+    },
+    metaDescription: {
+      az: 'PDF faylları brauzerində birləşdir — sürüklə-at, səhifələri sırala, tək sənəd al. Heç bir fayl serverə göndərilmir.',
+      en: 'Merge PDF files in your browser — drag, drop, reorder, download. Files never leave your device. Free, no signup, no watermark.',
+      tr: 'PDF dosyalarını tarayıcında birleştir — sürükle-bırak, sırala, indir. Dosyaların cihazından çıkmaz. Ücretsiz, filigransız.',
+      ru: 'Объедини PDF-файлы прямо в браузере — перетащи, сортируй, скачай. Файлы не покидают устройство. Бесплатно, без водяного знака.',
+    },
   },
   {
     slug: 'pdf-split',
@@ -55,5 +67,17 @@ export const pdfTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['pdf compress', 'reduce pdf size', 'pdf compressor', 'shrink pdf'],
+    metaTitle: {
+      az: 'PDF Sıxma — Ölçünü 70%-ə Qədər Azalt, Pulsuz',
+      en: 'PDF Compressor — Shrink Up To 70%, No Upload',
+      tr: 'PDF Sıkıştırma — %70\'e Kadar Küçült, Yüklemesiz',
+      ru: 'Сжатие PDF Бесплатно — Уменьши до 70%, Без Загрузки',
+    },
+    metaDescription: {
+      az: 'PDF-nin ölçüsünü 70%-ə qədər azalt — keyfiyyət saxlanılır, metadata silinir. Email və mesajlaşma üçün ideal. Brauzerdə, pulsuz.',
+      en: 'Shrink PDFs up to 70% smaller — quality preserved, metadata stripped. Perfect for email and messaging. Browser-only, free, private.',
+      tr: 'PDF boyutunu %70\'e kadar küçült — kalite korunur, meta veri silinir. E-posta ve mesajlaşma için ideal. Tarayıcıda, ücretsiz.',
+      ru: 'Сожми PDF до 70% меньше — качество сохраняется, метаданные удаляются. Идеально для email и мессенджеров. В браузере, бесплатно.',
+    },
   },
 ]

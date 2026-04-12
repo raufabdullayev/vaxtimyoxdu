@@ -11,6 +11,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['json formatter', 'json validator', 'json beautifier', 'json minifier'],
+    metaTitle: {
+      az: 'Pulsuz JSON Formatlayıcı və Validator | Brauzerdə',
+      en: 'JSON Formatter, Validator & Beautifier — Free',
+      tr: 'Ücretsiz JSON Biçimlendirici & Doğrulayıcı | Anlık',
+      ru: 'Бесплатный JSON Форматтер & Валидатор | В браузере',
+    },
+    metaDescription: {
+      az: 'JSON-u brauzerində formatla, doğrula, kiçilt və ya gözəl göstər. Sintaksis rəngi, xəta vurğulaması. Məlumat serverə göndərilmir.',
+      en: 'Format, validate, minify or prettify JSON in your browser. Syntax highlighting, error detection. Your data never leaves your device.',
+      tr: 'JSON\'u tarayıcında biçimlendir, doğrula, küçült veya güzelleştir. Söz dizimi renklendirme, hata tespiti. Verin cihazından çıkmaz.',
+      ru: 'Форматируй, валидируй, минифицируй или украшай JSON в браузере. Подсветка синтаксиса, ошибки. Данные не покидают устройство.',
+    },
   },
   {
     slug: 'base64-encode-decode',
@@ -22,6 +34,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['base64', 'encode', 'decode', 'base64 converter'],
+    metaTitle: {
+      az: 'Base64 Kodla/Dekodla — Pulsuz, Brauzerdə',
+      en: 'Base64 Encode & Decode — Free, Instant, Private',
+      tr: 'Base64 Kodla/Çöz — Ücretsiz, Anlık',
+      ru: 'Base64 Кодировать/Декодировать — Бесплатно',
+    },
+    metaDescription: {
+      az: 'Mətn və faylları Base64-ə kodla, yenidən dekodla. UTF-8 dəstəyi, copy-paste, anındadır. Heç bir məlumat serverə göndərilmir.',
+      en: 'Encode and decode Base64 strings and files — UTF-8 support, instant, copy-paste friendly. Nothing uploaded, nothing logged.',
+      tr: 'Metin ve dosyaları Base64 olarak kodla ve çöz — UTF-8 desteği, anlık, copy-paste dostu. Hiçbir şey yüklenmez, iz bırakmaz.',
+      ru: 'Кодируй и декодируй Base64 — поддержка UTF-8, файлов, мгновенно. Ничего не загружается, всё в браузере.',
+    },
   },
   {
     slug: 'regex-tester',
@@ -44,6 +68,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['hash generator', 'sha256', 'sha512', 'hash calculator'],
+    metaTitle: {
+      az: 'Hash Generatoru — SHA-1, 256, 384, 512 | Pulsuz',
+      en: 'Hash Generator — SHA-1, 256, 384, 512, Free',
+      tr: 'Hash Üreteci — SHA-1, 256, 384, 512 | Ücretsiz',
+      ru: 'Генератор Хешей — SHA-1, 256, 384, 512 | Бесплатно',
+    },
+    metaDescription: {
+      az: 'Mətn və ya fayllardan SHA-1, SHA-256, SHA-384, SHA-512 hash yarat. Bütün hesablama brauzerində — məlumat göndərilmir.',
+      en: 'Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text or files. All hashing runs in your browser — nothing transmitted.',
+      tr: 'Metin veya dosyalardan SHA-1, SHA-256, SHA-384, SHA-512 hash oluştur. Tüm hesaplama tarayıcıda — veri gönderilmez.',
+      ru: 'Создай SHA-1, SHA-256, SHA-384, SHA-512 хеши из текста или файлов. Всё хеширование в браузере — данные не передаются.',
+    },
   },
   {
     slug: 'url-encode-decode',
@@ -143,6 +179,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['html minifier', 'html beautifier', 'html formatter', 'minify html'],
+    metaTitle: {
+      az: 'HTML Minify & Beautify — Pulsuz, Anlıq',
+      en: 'HTML Minifier & Beautifier — Free, Instant',
+      tr: 'HTML Minify & Beautify — Ücretsiz, Anlık',
+      ru: 'HTML Минификатор & Форматтер — Бесплатно',
+    },
+    metaDescription: {
+      az: 'HTML-i minify et (boşluq, şərh sil) və ya minified HTML-i formatla. 70%-ə qədər ölçü qənaəti. Brauzerdə, pulsuz.',
+      en: 'Minify HTML (strip whitespace, comments) or beautify minified HTML. Up to 70% size savings. Browser-based, free.',
+      tr: 'HTML-i minify et (boşluk, yorum sil) veya minified HTML-i formatla. %70\'e kadar tasarruf. Tarayıcıda, ücretsiz.',
+      ru: 'Минифицируй HTML (убери пробелы, комментарии) или отформатируй минифицированный HTML. До 70% экономии. В браузере.',
+    },
   },
   {
     slug: 'js-minifier',

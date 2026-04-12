@@ -1,6 +1,7 @@
 export {
   SITE_URL,
   SITE_NAME,
+  getSiteName,
   getLocalizedUrl,
   generateHreflangAlternates,
   getOgLocale,

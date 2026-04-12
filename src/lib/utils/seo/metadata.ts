@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Tool } from '@/types/tool'
 import { defaultLocale, Locale } from '@/i18n/config'
 import { locales } from '@/i18n/config'
-import { SITE_URL, SITE_NAME, getLocalizedUrl, generateHreflangAlternates } from './url'
+import { SITE_URL, SITE_NAME, getSiteName, getLocalizedUrl, generateHreflangAlternates } from './url'
 import { getOgLocale, getOgImageUrl } from './og'
 
 function getAlternateOgLocales(locale: string): string[] {
@@ -55,14 +55,25 @@ export function generateToolMetadata(
   }
 ): Metadata {
   const locale = options?.locale || 'en'
+  const siteName = getSiteName(locale)
   const name = options?.localizedName || tool.name
   const baseDescription = options?.localizedDescription || tool.description
   const titleSuffix = options?.titleSuffix || 'Free, No Upload Required'
   const browserBasedNote =
     options?.browserBasedNote || '100% browser-based — your files never leave your device.'
-  const description = tool.isClientSide
-    ? `${baseDescription} ${browserBasedNote}`
-    : baseDescription
+
+  // If tool has a metaTitle override for this locale, use it directly (no suffix appending)
+  const title = tool.metaTitle?.[locale]
+    ? tool.metaTitle[locale]!
+    : `${name} — ${titleSuffix} | ${siteName}`
+
+  // If tool has a metaDescription override for this locale, use it directly (no browserBasedNote appending)
+  const description = tool.metaDescription?.[locale]
+    ? tool.metaDescription[locale]!
+    : tool.isClientSide
+      ? `${baseDescription} ${browserBasedNote}`
+      : baseDescription
+
   const ogLocale = getOgLocale(locale)
   const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
   const ogImage = getOgImageUrl({
@@ -71,15 +82,15 @@ export function generateToolMetadata(
     type: 'tool',
   })
   return {
-    title: `${name} — ${titleSuffix} | ${SITE_NAME}`,
+    title,
     description,
     keywords: tool.keywords.join(', '),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
-      title: `${name} - ${SITE_NAME}`,
+      title: `${name} - ${siteName}`,
       description,
       url,
-      siteName: SITE_NAME,
+      siteName: siteName,
       type: 'website',
       locale: ogLocale,
       alternateLocale: getAlternateOgLocales(locale),
@@ -88,13 +99,13 @@ export function generateToolMetadata(
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: `${name} - ${SITE_NAME}`,
+          alt: `${name} - ${siteName}`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${name} - ${SITE_NAME}`,
+      title: `${name} - ${siteName}`,
       description,
       images: [ogImage],
     },
@@ -169,14 +180,17 @@ export function generateBlogPostMetadata({
   slug,
   date,
   locale,
+  metaTitle,
 }: {
   title: string
   description: string
   slug: string
   date: string
   locale?: string
+  metaTitle?: string
 }): Metadata {
   const resolvedLocale = (locale || defaultLocale) as Locale
+  const siteName = getSiteName(resolvedLocale)
   const url = getLocalizedUrl(`/blog/${slug}`, resolvedLocale)
   const ogLocale = getOgLocale(resolvedLocale)
   const ogImage = getOgImageUrl({
@@ -185,7 +199,7 @@ export function generateBlogPostMetadata({
     type: 'blog',
   })
   return {
-    title: `${title} - ${SITE_NAME} Blog`,
+    title: metaTitle || `${title} - ${siteName} Blog`,
     description,
     keywords: `${title.toLowerCase().split(' ').slice(0, 5).join(', ')}, online tools, free tools`,
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },

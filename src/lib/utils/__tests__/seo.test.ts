@@ -9,7 +9,9 @@ import {
   generateNewsArticleJsonLd,
   generateBlogPostMetadata,
   generateBlogArticleJsonLd,
+  getSiteName,
 } from '@/lib/utils/seo'
+import { tools } from '@/config/tools'
 import type { Tool, ToolCategory } from '@/types/tool'
 
 const SITE_URL = 'https://vaxtimyoxdu.com'
@@ -768,4 +770,149 @@ describe('generateBlogArticleJsonLd()', () => {
     expect(jsonLd.image).toContain(`${SITE_URL}/api/og`)
     expect(jsonLd.image).toContain('type=blog')
   })
+})
+
+// ---------------------------------------------------------------------------
+// getSiteName — locale-aware brand diacritic
+// ---------------------------------------------------------------------------
+describe('getSiteName()', () => {
+  it('should return "Vaxtım Yoxdu" for AZ locale', () => {
+    expect(getSiteName('az')).toBe('Vaxtım Yoxdu')
+  })
+
+  it('should return "Vaxtim Yoxdu" for EN locale', () => {
+    expect(getSiteName('en')).toBe('Vaxtim Yoxdu')
+  })
+
+  it('should return "Vaxtim Yoxdu" for TR locale', () => {
+    expect(getSiteName('tr')).toBe('Vaxtim Yoxdu')
+  })
+
+  it('should return "Vaxtim Yoxdu" for RU locale', () => {
+    expect(getSiteName('ru')).toBe('Vaxtim Yoxdu')
+  })
+
+  it('should return "Vaxtim Yoxdu" when no locale is provided', () => {
+    expect(getSiteName()).toBe('Vaxtim Yoxdu')
+  })
+})
+
+// ---------------------------------------------------------------------------
+// generateToolMetadata — metaTitle/metaDescription overrides
+// ---------------------------------------------------------------------------
+describe('generateToolMetadata() with overrides', () => {
+  it('should use metaTitle override when set for the locale', () => {
+    const tool = makeTool({
+      metaTitle: { en: 'Custom EN Title' },
+    })
+    const meta = generateToolMetadata(tool, { locale: 'en' })
+    expect(meta.title).toBe('Custom EN Title')
+  })
+
+  it('should fall back to composed title when metaTitle is not set for the locale', () => {
+    const tool = makeTool({
+      metaTitle: { en: 'Custom EN Title' },
+    })
+    const meta = generateToolMetadata(tool, { locale: 'ru' })
+    expect(meta.title).toContain(tool.name)
+    expect(meta.title).toContain('Vaxtim Yoxdu')
+  })
+
+  it('should use metaDescription override when set for the locale', () => {
+    const tool = makeTool({
+      metaDescription: { en: 'Custom EN description.' },
+    })
+    const meta = generateToolMetadata(tool, { locale: 'en' })
+    expect(meta.description).toBe('Custom EN description.')
+  })
+
+  it('should fall back to composed description with browserBasedNote when no override', () => {
+    const tool = makeTool({
+      metaDescription: { en: 'Custom EN description.' },
+    })
+    const meta = generateToolMetadata(tool, { locale: 'ru' })
+    expect(meta.description).toContain(tool.description)
+    expect(meta.description).toContain('browser-based')
+  })
+
+  it('should use AZ diacritic in composed title for AZ locale', () => {
+    const tool = makeTool()
+    const meta = generateToolMetadata(tool, { locale: 'az' })
+    expect(meta.title).toContain('Vaxtım Yoxdu')
+  })
+})
+
+// ---------------------------------------------------------------------------
+// generateBlogPostMetadata — metaTitle override
+// ---------------------------------------------------------------------------
+describe('generateBlogPostMetadata() with metaTitle', () => {
+  it('should use metaTitle when provided', () => {
+    const meta = generateBlogPostMetadata({
+      title: 'Long Blog Post Title',
+      description: 'Some description.',
+      slug: 'test',
+      date: '2026-01-01',
+      metaTitle: 'Short SERP Title - Vaxtim Yoxdu Blog',
+    })
+    expect(meta.title).toBe('Short SERP Title - Vaxtim Yoxdu Blog')
+  })
+
+  it('should fall back to composed title when metaTitle is not provided', () => {
+    const meta = generateBlogPostMetadata({
+      title: 'Blog Title',
+      description: 'Desc.',
+      slug: 'test',
+      date: '2026-01-01',
+    })
+    expect(meta.title).toContain('Blog Title')
+    expect(meta.title).toContain('Blog')
+  })
+})
+
+// ---------------------------------------------------------------------------
+// §6/§7 Build-time assertions for tools with metaTitle/metaDescription
+// ---------------------------------------------------------------------------
+describe('§6/§7 budget enforcement for tools with overrides', () => {
+  const LOCALES = ['az', 'en', 'tr', 'ru']
+
+  const toolsWithMetaTitle = tools.filter((t) => t.metaTitle)
+  const toolsWithMetaDescription = tools.filter((t) => t.metaDescription)
+
+  for (const tool of toolsWithMetaTitle) {
+    describe(`${tool.slug} metaTitle`, () => {
+      for (const locale of LOCALES) {
+        const value = tool.metaTitle?.[locale]
+        if (value) {
+          it(`${locale}: "${value}" should be <= 60 chars (is ${value.length})`, () => {
+            expect(value.length).toBeLessThanOrEqual(60)
+          })
+        }
+      }
+
+      it('should have all 4 locales when metaTitle is set', () => {
+        for (const locale of LOCALES) {
+          expect(tool.metaTitle?.[locale]).toBeDefined()
+        }
+      })
+    })
+  }
+
+  for (const tool of toolsWithMetaDescription) {
+    describe(`${tool.slug} metaDescription`, () => {
+      for (const locale of LOCALES) {
+        const value = tool.metaDescription?.[locale]
+        if (value) {
+          it(`${locale}: should be <= 155 chars (is ${value.length})`, () => {
+            expect(value.length).toBeLessThanOrEqual(155)
+          })
+        }
+      }
+
+      it('should have all 4 locales when metaDescription is set', () => {
+        for (const locale of LOCALES) {
+          expect(tool.metaDescription?.[locale]).toBeDefined()
+        }
+      })
+    })
+  }
 })

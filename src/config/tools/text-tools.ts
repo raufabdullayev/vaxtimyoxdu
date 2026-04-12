@@ -66,6 +66,18 @@ export const textTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['text to binary', 'binary converter', 'hex converter', 'octal converter'],
+    metaTitle: {
+      az: 'Mətn-Binary Çevirici — Binary, Hex, Oktal | Pulsuz',
+      en: 'Text to Binary — Binary, Hex, Octal Converter',
+      tr: 'Metin-Binary — İkili, Onaltılı, Sekizli Çevirici',
+      ru: 'Конвертер Текст-Двоичный — Binary, Hex, Octal',
+    },
+    metaDescription: {
+      az: 'Mətni binary (ikilik), hex (onaltılıq) və ya oktal (səkkizlik) koda çevir — və ya əksinə. Developerlər və öyrənənlər üçün pulsuz alət.',
+      en: 'Convert text to binary, hex, or octal — or back. Supports ASCII, UTF-8. Free browser tool for developers and students learning encoding.',
+      tr: 'Metni ikili, on altılı veya sekizlik koda dönüştür veya tam tersi. ASCII, UTF-8 desteği. Geliştirici ve öğrenciler için ücretsiz.',
+      ru: 'Конвертируй текст в двоичный, шестнадцатеричный или восьмеричный код — и обратно. ASCII, UTF-8. Для разработчиков.',
+    },
   },
   {
     slug: 'rot13-encoder',
@@ -77,6 +89,18 @@ export const textTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['rot13', 'caesar cipher', 'rot13 encoder', 'cipher decoder'],
+    metaTitle: {
+      az: 'ROT13 Sezar Şifri — Kodla/Dekodla, 1-25 Sürmə',
+      en: 'ROT13 & Caesar Cipher — Encode/Decode, Shift 1\u201325',
+      tr: 'ROT13 Sezar Şifresi — Kodla/Çöz, 1\u201325 Kaydırma',
+      ru: 'ROT13 Шифр Цезаря — Кодируй/Декодируй, 1\u201325',
+    },
+    metaDescription: {
+      az: 'ROT13 ilə mətni kodla və ya dekod et. Xüsusi sürmə dəyəri (1-25) ilə Sezar şifri. Klassik kriptoqrafiya üçün pulsuz brauzer aləti.',
+      en: 'Encode and decode text with ROT13 or any Caesar cipher shift (1\u201325). Free browser tool for classic cryptography and CTF puzzles.',
+      tr: 'ROT13 veya herhangi bir Sezar şifresi kaydırmasıyla (1\u201325) metni kodla ve çöz. Klasik kriptografi için ücretsiz tarayıcı aracı.',
+      ru: 'Кодируй и декодируй текст шифром ROT13 или любым сдвигом Цезаря (1\u201325). Для классической криптографии и CTF.',
+    },
   },
   {
     slug: 'pomodoro-timer',
@@ -99,6 +123,18 @@ export const textTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['text to speech', 'tts', 'read aloud', 'speech synthesis', 'voice reader'],
+    metaTitle: {
+      az: 'Mətnə Səs — Pulsuz Onlayn Text-to-Speech',
+      en: 'Free Text to Speech — Online, Instant, No Signup',
+      tr: 'Metni Sese Dönüştürücü — Ücretsiz, Anlık',
+      ru: 'Онлайн Озвучка Текста — Бесплатно, Без Установки',
+    },
+    metaDescription: {
+      az: 'Mətnini brauzerində nitqə çevir — səs, sürət və ton seç. AZ, EN, RU, TR dəstəyi. Qeydiyyat yoxdur, fayl yüklənmir.',
+      en: 'Read text aloud in your browser — pick voice, speed, and pitch. Supports English, Russian, Turkish, Azerbaijani. No signup, instant playback.',
+      tr: 'Metni tarayıcında sese dönüştür — ses, hız ve ton seç. TR, EN, RU, AZ desteği. Kayıt yok, anında dinle.',
+      ru: 'Озвучь текст в браузере — выбери голос, скорость и тон. Поддержка русского, английского, турецкого, азербайджанского.',
+    },
   },
   {
     slug: 'character-counter',
@@ -143,6 +179,18 @@ export const textTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['random text', 'random generator', 'mock data', 'test data', 'random names', 'random emails'],
+    metaTitle: {
+      az: 'Təsadüfi Mətn — Söz, Cümlə, Ad, Email, Telefon',
+      en: 'Random Text Generator — Words, Names, Emails, Phones',
+      tr: 'Rastgele Metin — Kelime, Cümle, İsim, E-posta, Telefon',
+      ru: 'Генератор Случайного Текста — Слова, Имена, Email',
+    },
+    metaDescription: {
+      az: 'Testlər və maketlər üçün təsadüfi söz, cümlə, paraqraf, ad, email, telefon yaradır. Kopyala-yapışdır, toplu ixrac mümkündür.',
+      en: 'Generate random words, sentences, paragraphs, names, emails, and phone numbers for tests and mockups. Copy-paste friendly, bulk export.',
+      tr: 'Test ve maketler için rastgele kelime, cümle, paragraf, isim, e-posta ve telefon numarası üret. Kopyala-yapıştır, toplu dışa aktar.',
+      ru: 'Генерируй случайные слова, предложения, абзацы, имена, email и телефоны для тестов и макетов. Копирование и массовый экспорт.',
+    },
   },
   {
     slug: 'text-repeater',

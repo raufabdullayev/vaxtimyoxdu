@@ -11,6 +11,18 @@ export const generatorTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['qr code', 'qr generator', 'barcode', 'qr maker'],
+    metaTitle: {
+      az: 'Pulsuz QR Kod Generatoru — Brauzerdə, Yükləməsiz',
+      en: 'Free QR Code Generator — No Upload, Browser Only',
+      tr: 'Ücretsiz QR Kod Oluşturucu — Yüklemesiz',
+      ru: 'Бесплатный Генератор QR-кодов — Без Загрузки',
+    },
+    metaDescription: {
+      az: 'URL, mətn, email və ya telefon üçün QR kod yarat. PNG və ya SVG olaraq endir. Fayl yüklənmir — hər şey brauzerində işləyir.',
+      en: 'Generate QR codes for URLs, text, email, or phone numbers. Download as PNG or SVG. No upload — everything runs in your browser.',
+      tr: 'URL, metin, e-posta veya telefon için QR kod oluştur. PNG veya SVG olarak indir. Yükleme yok — her şey tarayıcında çalışır.',
+      ru: 'Создай QR-код для URL, текста, email или телефона. Скачай в PNG или SVG. Без загрузки — всё работает в твоём браузере.',
+    },
   },
   {
     slug: 'color-picker',
@@ -22,6 +34,18 @@ export const generatorTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['color picker', 'color palette', 'hex to rgb', 'color converter'],
+    metaTitle: {
+      az: 'Rəng Seçici — HEX, RGB, HSL + Palet Generatoru',
+      en: 'Color Picker — HEX, RGB, HSL + Palette Generator',
+      tr: 'Renk Seçici — HEX, RGB, HSL + Palet Üretici',
+      ru: 'Цветовая Палитра — HEX, RGB, HSL, Пипетка Цветов',
+    },
+    metaDescription: {
+      az: 'Google axtarışına uyğun rəng seçici: HEX/RGB/HSL arasında çevir, tamamlayıcı palet yarat. Dizaynerlər üçün pulsuz brauzer aləti.',
+      en: 'Pick colors, convert HEX/RGB/HSL, and generate complementary palettes. Free browser tool for designers and developers.',
+      tr: 'Renk seç, HEX/RGB/HSL arasında dönüştür, tamamlayıcı paletler oluştur. Tasarımcı ve geliştiriciler için ücretsiz tarayıcı aracı.',
+      ru: 'Выбирай цвета, конвертируй HEX/RGB/HSL и создавай цветовые палитры. Бесплатный браузерный инструмент для дизайнеров и разработчиков.',
+    },
   },
   {
     slug: 'lorem-ipsum-generator',
@@ -44,6 +68,18 @@ export const generatorTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['password generator', 'random password', 'secure password', 'strong password'],
+    metaTitle: {
+      az: 'Güclü Şifrə Generatoru — Pulsuz, Yaddaşsız',
+      en: 'Strong Password Generator — Free, No Storage',
+      tr: 'Güçlü Şifre Oluşturucu — Ücretsiz, Anlık',
+      ru: 'Генератор Паролей — Бесплатно, Без Регистрации',
+    },
+    metaDescription: {
+      az: 'Təsadüfi, güclü şifrə yarat — 8-64 simvol, rəqəm, hərf, xüsusi işarə. Heç nə yaddaşa yazılmır, hər şey brauzerində.',
+      en: 'Generate strong random passwords — 8 to 64 chars with numbers, letters, and symbols. Nothing saved, nothing sent, runs in your browser.',
+      tr: 'Rastgele güçlü şifre oluştur — 8 ila 64 karakter, rakam, harf, özel işaret. Hiçbir şey kaydedilmez, tarayıcında çalışır.',
+      ru: 'Создай надёжный пароль — от 8 до 64 символов, цифры, буквы, спецсимволы. Ничего не сохраняется, всё в браузере.',
+    },
   },
   {
     slug: 'uuid-generator',
@@ -55,6 +91,18 @@ export const generatorTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['uuid generator', 'guid generator', 'uuid v4', 'unique id'],
+    metaTitle: {
+      az: 'UUID v4 Generatoru — Bulk, Pulsuz, Brauzerdə',
+      en: 'UUID v4 Generator — Bulk, Instant, Offline, Free',
+      tr: 'UUID v4 Oluşturucu — Toplu, Anlık, Ücretsiz',
+      ru: 'Генератор UUID v4 — Массово, Мгновенно, Бесплатно',
+    },
+    metaDescription: {
+      az: 'UUID v4 yarat — fərdi və ya toplu (1-10000), tirəli/tirəsiz, böyük/kiçik hərf. Developerlər üçün sürətli və pulsuz.',
+      en: 'Generate UUID v4 — single or bulk (1–10000), with/without hyphens, upper/lowercase. Fast, free, and runs in your browser.',
+      tr: 'UUID v4 oluştur — tek veya toplu (1–10000), tireli/tiresiz, büyük/küçük harf. Geliştiriciler için hızlı ve ücretsiz.',
+      ru: 'Создай UUID v4 — один или массово (1–10000), с дефисом или без, верхний/нижний регистр. Быстро, бесплатно, в браузере.',
+    },
   },
   {
     slug: 'meta-tag-generator',
@@ -198,6 +246,18 @@ export const generatorTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['backlink generator', 'link generator', 'html link', 'markdown link', 'bbcode link'],
+    metaTitle: {
+      az: 'Link Generatoru — HTML, Markdown, BBCode, Wiki',
+      en: 'Link Code Generator — HTML, Markdown, BBCode, Wiki',
+      tr: 'Bağlantı Oluşturucu — HTML, Markdown, BBCode, Wiki',
+      ru: 'Генератор Ссылок — HTML, Markdown, BBCode, Wiki',
+    },
+    metaDescription: {
+      az: 'HTML, Markdown, BBCode, Textile, Wiki, reStructuredText formatlarında link kodu yarat. rel, target və anchor text tənzimləyici daxildir.',
+      en: 'Generate link code in HTML, Markdown, BBCode, Textile, Wiki, and reStructuredText. rel, target, and anchor text controls included.',
+      tr: 'HTML, Markdown, BBCode, Textile, Wiki, reStructuredText formatlarında bağlantı kodu oluştur. rel, target ve anchor text kontrolleri dahil.',
+      ru: 'Создавай код ссылок в HTML, Markdown, BBCode, Textile, Wiki, reStructuredText. Управление rel, target и анкором.',
+    },
   },
   {
     slug: 'age-calculator',
@@ -242,6 +302,18 @@ export const generatorTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['barcode generator', 'barcode maker', 'code128', 'code39', 'barcode creator'],
+    metaTitle: {
+      az: 'Bar Kod Generatoru — CODE128, CODE39 | Pulsuz',
+      en: 'Barcode Generator — CODE128, CODE39, PNG Download',
+      tr: 'Barkod Oluşturucu — CODE128, CODE39, PNG İndir',
+      ru: 'Генератор Штрих-кодов — CODE128, CODE39, PNG',
+    },
+    metaDescription: {
+      az: 'Mətn və ya rəqəmlərdən CODE128 / CODE39 barkodları yarat. Bar eni, hündürlük və mətn göstərmə parametri. PNG olaraq endir.',
+      en: 'Generate CODE128 and CODE39 barcodes from text or numbers. Customize bar width, height, and text display. Download as PNG.',
+      tr: 'Metin veya sayılardan CODE128 ve CODE39 barkodlar oluştur. Çubuk genişliği, yüksekliği ve metni özelleştir. PNG olarak indir.',
+      ru: 'Создай штрих-коды CODE128 и CODE39 из текста или чисел. Настрой ширину, высоту и отображение текста. Скачай в PNG.',
+    },
   },
   {
     slug: 'css-box-shadow-generator',

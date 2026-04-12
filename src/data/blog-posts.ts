@@ -1,6 +1,8 @@
 export interface BlogPost {
   title: string
   description?: string
+  /** Override for SERP title — bypasses factory `${title} - ${SITE_NAME} Blog` composition */
+  metaTitle?: string
   date: string
   content: string
   relatedTools: string[]
@@ -80,7 +82,8 @@ All of these tools and more are available for free at Vaxtim Yoxdu. No signup re
   },
   'how-ai-text-rewriting-works': {
     title: 'How AI Text Rewriting Actually Works (Explained Simply)',
-    description: 'Discover how AI paraphrases text in seconds. Learn what makes AI rewriters accurate and try our free tool with no registration.',
+    description: 'How AI paraphrases text — large language models, context, and accuracy. Try our free AI Text Rewriter, no signup, no credit card, instant output.',
+    metaTitle: 'AI Rewriter Explained — Free, No Signup - Vaxtim Yoxdu Blog',
     date: '2026-03-05',
     relatedTools: ['ai-text-rewriter', 'ai-grammar-checker', 'ai-text-summarizer'],
     content: `AI text rewriting uses large language models to understand and rephrase your text while preserving the original meaning. It is one of the most practical applications of modern artificial intelligence, used daily by writers, marketers, students, and professionals across every industry. Here is how it works under the hood, what makes some tools better than others, and how you can get the best results.
