@@ -77,4 +77,19 @@ test.describe('Navigation', () => {
     await expect(nav).toBeVisible()
     await expect(nav.locator('a')).toHaveCount(4)
   })
+
+  test('desktop mega menu click navigates to /tools', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.goto('/')
+
+    const nav = page.locator('nav[aria-label="Main navigation"]')
+    const toolsTrigger = nav
+      .locator('a')
+      .filter({ hasText: /Alətlər|Tools|Araçlar|Инструменты/i })
+      .first()
+    await toolsTrigger.click()
+
+    await expect(page).toHaveURL(/\/(az|en|tr|ru)?\/?tools$/)
+    await expect(page.locator('h1')).toBeVisible()
+  })
 })

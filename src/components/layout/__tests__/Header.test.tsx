@@ -82,14 +82,17 @@ describe('Header', () => {
     const nav = screen.getByLabelText('Main navigation')
     expect(nav).toBeInTheDocument()
     const links = nav.querySelectorAll('a')
-    // Tools is now a MegaMenu dropdown (button), so direct links: news, blog, about
-    expect(links).toHaveLength(3)
-    expect(links[0]).toHaveAttribute('href', '/info')
-    expect(links[1]).toHaveAttribute('href', '/blog')
-    expect(links[2]).toHaveAttribute('href', '/about')
-    // MegaMenu trigger button exists
-    const toolsButton = nav.querySelector('button[aria-haspopup="true"]')
-    expect(toolsButton).toBeInTheDocument()
+    // MegaMenu trigger is now a Link to /tools with aria-haspopup; 4 direct links total
+    expect(links).toHaveLength(4)
+    const hrefs = Array.from(links).map(a => a.getAttribute('href'))
+    expect(hrefs).toContain('/tools')
+    expect(hrefs).toContain('/info')
+    expect(hrefs).toContain('/blog')
+    expect(hrefs).toContain('/about')
+    // MegaMenu trigger is the Link with aria-haspopup="true"
+    const megaMenuTrigger = nav.querySelector('a[aria-haspopup="true"]')
+    expect(megaMenuTrigger).toBeInTheDocument()
+    expect(megaMenuTrigger).toHaveAttribute('href', '/tools')
   })
 
   it('renders ThemeToggle component', async () => {

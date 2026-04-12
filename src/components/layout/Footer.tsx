@@ -17,7 +17,7 @@ function TikTokIcon({ size = 20 }: { size?: number }) {
 
 const socialLinks = [
   {
-    href: 'https://instagram.com/vaxtimyoxdu',
+    href: 'https://instagram.com/vaxtimyoxdu_',
     label: 'Instagram',
     icon: Instagram,
   },

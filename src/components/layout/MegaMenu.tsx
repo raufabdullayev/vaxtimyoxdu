@@ -87,19 +87,18 @@ export default function MegaMenu() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button
-        type="button"
+      <Link
+        href="/tools"
         className={`flex items-center gap-1 text-sm font-medium transition-colors ${
           isActive ? 'text-primary font-semibold' : 'hover:text-primary'
         }`}
         aria-expanded={open}
         aria-haspopup="true"
         aria-controls="mega-menu-panel"
-        onClick={() => setOpen(true)}
       >
         {navT('tools')}
         <ChevronDown className={`h-4 w-4 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
-      </button>
+      </Link>
 
       {open && (
         <div

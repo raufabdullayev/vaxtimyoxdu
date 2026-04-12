@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent, act, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 vi.mock('next-intl', () => ({
@@ -51,10 +51,24 @@ vi.mock('@/config/tools', () => ({
 
 import MegaMenu from '../MegaMenu'
 
+function getTrigger() {
+  return screen.getAllByRole('link', { name: /alətlər/i })[0]
+}
+
 describe('MegaMenu', () => {
-  it('renders trigger button with Alətlər label', () => {
+  it('renders trigger as a Link with href="/tools"', () => {
     render(<MegaMenu />)
-    expect(screen.getByRole('button', { name: /alətlər/i })).toBeInTheDocument()
+    const trigger = getTrigger()
+    expect(trigger).toBeInTheDocument()
+    expect(trigger).toHaveAttribute('href', '/tools')
+  })
+
+  it('trigger preserves aria attributes', () => {
+    render(<MegaMenu />)
+    const trigger = getTrigger()
+    expect(trigger).toHaveAttribute('aria-haspopup', 'true')
+    expect(trigger).toHaveAttribute('aria-controls', 'mega-menu-panel')
+    expect(trigger).toHaveAttribute('aria-expanded', 'false')
   })
 
   it('dropdown is closed by default', () => {
@@ -62,26 +76,43 @@ describe('MegaMenu', () => {
     expect(screen.queryByRole('menu')).not.toBeInTheDocument()
   })
 
-  it('opens dropdown on trigger click', async () => {
-    const user = userEvent.setup()
-    render(<MegaMenu />)
-    await user.click(screen.getByRole('button', { name: /alətlər/i }))
+  it('opens dropdown on hover (mouseEnter)', () => {
+    const { container } = render(<MegaMenu />)
+    const wrapper = container.firstChild as HTMLElement
+    fireEvent.mouseEnter(wrapper)
     expect(screen.getByRole('menu')).toBeInTheDocument()
   })
 
-  it('trigger has aria-expanded matching open state', async () => {
-    const user = userEvent.setup()
-    render(<MegaMenu />)
-    const trigger = screen.getByRole('button', { name: /alətlər/i })
+  it('trigger aria-expanded reflects open state after hover', () => {
+    const { container } = render(<MegaMenu />)
+    const wrapper = container.firstChild as HTMLElement
+    const trigger = getTrigger()
     expect(trigger).toHaveAttribute('aria-expanded', 'false')
-    await user.click(trigger)
+    fireEvent.mouseEnter(wrapper)
     expect(trigger).toHaveAttribute('aria-expanded', 'true')
   })
 
-  it('renders all 6 categories when open', async () => {
-    const user = userEvent.setup()
-    render(<MegaMenu />)
-    await user.click(screen.getByRole('button', { name: /alətlər/i }))
+  it('closes dropdown 150ms after mouseLeave', async () => {
+    vi.useFakeTimers()
+    try {
+      const { container } = render(<MegaMenu />)
+      const wrapper = container.firstChild as HTMLElement
+      fireEvent.mouseEnter(wrapper)
+      expect(screen.getByRole('menu')).toBeInTheDocument()
+      fireEvent.mouseLeave(wrapper)
+      expect(screen.getByRole('menu')).toBeInTheDocument()
+      act(() => {
+        vi.advanceTimersByTime(150)
+      })
+      expect(screen.queryByRole('menu')).not.toBeInTheDocument()
+    } finally {
+      vi.useRealTimers()
+    }
+  })
+
+  it('renders all 6 categories when open', () => {
+    const { container } = render(<MegaMenu />)
+    fireEvent.mouseEnter(container.firstChild as HTMLElement)
     expect(screen.getByRole('heading', { name: 'AI' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'PDF' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Şəkil' })).toBeInTheDocument()
@@ -90,18 +121,16 @@ describe('MegaMenu', () => {
     expect(screen.getByRole('heading', { name: 'Mətn' })).toBeInTheDocument()
   })
 
-  it('renders 6 "view all" links (one per category)', async () => {
-    const user = userEvent.setup()
-    render(<MegaMenu />)
-    await user.click(screen.getByRole('button', { name: /alətlər/i }))
+  it('renders 6 "view all" links (one per category)', () => {
+    const { container } = render(<MegaMenu />)
+    fireEvent.mouseEnter(container.firstChild as HTMLElement)
     const viewAllLinks = screen.getAllByRole('link', { name: /hamısına bax/i })
     expect(viewAllLinks).toHaveLength(6)
   })
 
-  it('renders 3 popular tools per category (18 total tool links)', async () => {
-    const user = userEvent.setup()
-    render(<MegaMenu />)
-    await user.click(screen.getByRole('button', { name: /alətlər/i }))
+  it('renders 3 popular tools per category (18 total tool links inside panel)', () => {
+    const { container } = render(<MegaMenu />)
+    fireEvent.mouseEnter(container.firstChild as HTMLElement)
     const panel = screen.getByRole('menu')
     const toolLinks = Array.from(panel.querySelectorAll('a')).filter(
       a => !/hamısına bax/i.test(a.textContent || '')
@@ -109,26 +138,28 @@ describe('MegaMenu', () => {
     expect(toolLinks).toHaveLength(18)
   })
 
-  it('closes on Escape key', async () => {
-    const user = userEvent.setup()
-    render(<MegaMenu />)
-    await user.click(screen.getByRole('button', { name: /alətlər/i }))
+  it('closes on Escape key', () => {
+    const { container } = render(<MegaMenu />)
+    fireEvent.mouseEnter(container.firstChild as HTMLElement)
     expect(screen.getByRole('menu')).toBeInTheDocument()
-    await user.keyboard('{Escape}')
+    fireEvent.keyDown(document, { key: 'Escape' })
     expect(screen.queryByRole('menu')).not.toBeInTheDocument()
   })
 
   it('closes on click outside', async () => {
     const user = userEvent.setup()
-    render(
+    const { container } = render(
       <div>
         <MegaMenu />
         <button type="button">outside</button>
       </div>
     )
-    await user.click(screen.getByRole('button', { name: /alətlər/i }))
+    const wrapper = container.querySelector('.relative') as HTMLElement
+    fireEvent.mouseEnter(wrapper)
     expect(screen.getByRole('menu')).toBeInTheDocument()
     await user.click(screen.getByRole('button', { name: /outside/i }))
-    expect(screen.queryByRole('menu')).not.toBeInTheDocument()
+    await waitFor(() => {
+      expect(screen.queryByRole('menu')).not.toBeInTheDocument()
+    })
   })
 })

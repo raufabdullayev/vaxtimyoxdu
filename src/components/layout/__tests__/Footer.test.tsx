@@ -108,7 +108,7 @@ describe('Footer', () => {
 
     const instagramLink = screen.getByLabelText('Instagram')
     expect(instagramLink).toBeInTheDocument()
-    expect(instagramLink).toHaveAttribute('href', 'https://instagram.com/vaxtimyoxdu')
+    expect(instagramLink).toHaveAttribute('href', 'https://instagram.com/vaxtimyoxdu_')
     expect(instagramLink).toHaveAttribute('target', '_blank')
     expect(instagramLink).toHaveAttribute('rel', 'noopener noreferrer')
 
