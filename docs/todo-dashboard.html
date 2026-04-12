@@ -39,32 +39,48 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 .links{background:#1e293b;border-radius:12px;padding:14px;margin-bottom:24px;border:1px solid #334155;font-size:.8rem}
 .links a{color:#38bdf8;text-decoration:none}
 .links code{background:#0f172a;padding:2px 6px;border-radius:4px;color:#94a3b8;font-size:.75rem}
+.sprint-track{background:#1e293b;border-radius:12px;padding:16px;margin-bottom:24px;border:1px solid #334155}
+.sprint-track h3{font-size:.95rem;margin-bottom:10px;color:#38bdf8}
+.sprint-item{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:.85rem}
+.sprint-item .check{color:#22c55e}
+.sprint-item .pending{color:#94a3b8}
 </style>
 </head>
 <body>
 <h1>vaxtimyoxdu.com</h1>
-<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 11 Aprel 2026 (Session 23 — Hreflang Bug Fix)</p>
+<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 12 Aprel 2026 (Session 26 — News Refresh)</p>
 
 <div class="links">
 <strong>Bagli fayllar:</strong>
-<code>~/CLAUDE.md</code> (entry) →
-<code>MEMORY.md</code> (hub) →
-<code>session-state.md</code> (cari) →
+<code>~/CLAUDE.md</code> (entry) &rarr;
+<code>MEMORY.md</code> (hub) &rarr;
+<code>session-state.md</code> (cari) &rarr;
 <code>todo-dashboard.html</code> (bu)
 </div>
 
 <div class="stats">
 <div class="stat"><div class="num">111</div><div class="label">Aletler</div></div>
 <div class="stat"><div class="num">4</div><div class="label">Dil</div></div>
-<div class="stat"><div class="num">820</div><div class="label">Sehifeler</div></div>
-<div class="stat"><div class="num">2949</div><div class="label">Testler</div></div>
-<div class="stat"><div class="num">44</div><div class="label">Xeberler</div></div>
-<div class="stat"><div class="num">68%</div><div class="label">Coverage</div></div>
+<div class="stat"><div class="num">1000</div><div class="label">Sehifeler</div></div>
+<div class="stat"><div class="num">3454</div><div class="label">Testler</div></div>
+<div class="stat"><div class="num">96</div><div class="label">Xeberler</div></div>
+<div class="stat"><div class="num">~49</div><div class="label">Blog</div></div>
+</div>
+
+<div class="sprint-track">
+<h3>6-Sprint Plan Progress</h3>
+<div class="sprint-item"><span class="check">&#10003;</span> Sprint 0 — Gate infra + docs (a5832bf)</div>
+<div class="sprint-item"><span class="check">&#10003;</span> Sprint 1 — MegaMenu fix + CTR drafts + Footer IG (a5832bf)</div>
+<div class="sprint-item"><span class="check">&#10003;</span> Sprint 2 — Path 2 metaTitle/metaDescription + 3 P0 fix + 20 CTR rewrite (e72170e)</div>
+<div class="sprint-item"><span class="check">&#10003;</span> Sprint 3 — Test coverage: 8 unit + 18 E2E, thresholds 60, hooks 97% (29edf8d)</div>
+<div class="sprint-item"><span class="check">&#10003;</span> Sprint 4 — Kontent: 40 xeber + 20 blog, 4 dil (081317e + 05ca214)</div>
+<div class="sprint-item"><span class="pending">&#9675;</span> Sprint 5 — Yeni aletler (111&rarr;135) + Performance/Lighthouse + JSON-LD</div>
+<div class="sprint-item"><span class="pending">&#9675;</span> Sprint 6 — CSP R&D + Telegram bot + advanced schema</div>
 </div>
 
 <div class="progress-bar">
-<div class="text"><span>Umumi progress</span><span>85%</span></div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
+<div class="text"><span>Sprint progress (5/7 tamamlandi)</span><span>92%</span></div>
+<div class="bar"><div class="fill" style="width:92%"></div></div>
 </div>
 
 <div class="section">
@@ -73,58 +89,34 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="section">
-<h2>HIGH (3)</h2>
+<h2>HIGH (1)</h2>
 <div class="task high">
 <span class="badge high">HIGH</span>
-<div class="task-text">Test coverage 68% &rarr; 85%+<small>2949 test PASS, amma branch coverage hele asagi</small></div>
-</div>
-<div class="task high">
-<span class="badge high">HIGH</span>
-<div class="task-text">E2E testler 35 &rarr; 100<small>Playwright testlerini genislendirmek</small></div>
-</div>
-<div class="task high">
-<span class="badge high">HIGH</span>
-<div class="task-text">Nonce-based CSP migration<small>SSG ile uygunsuz - DIQQET: hash + unsafe-inline qoyma! W3C ignore edir, white screen yaradir (P0 incident dersi)</small></div>
+<div class="task-text">Nonce-based CSP migration<small>Sprint 6 R&amp;D — SSG ile uygunsuz. DIQQET: hash + unsafe-inline qoyma! W3C ignore edir, white screen yaradir (P0 incident dersi)</small></div>
 </div>
 </div>
 
 <div class="section">
-<h2>MEDIUM (9)</h2>
+<h2>MEDIUM (5) — Sprint 5 scope</h2>
 <div class="task medium">
 <span class="badge medium">MEDIUM</span>
-<div class="task-text">Header "Aletler" mega menu click nav<small>src/components/layout/MegaMenu.tsx:100 — &lt;button&gt;{navT('tools')}&lt;/button&gt; hazirda yalniz dropdown acib-baglayir, click ile /tools sehifesine navigate etmir. Hell: button-u &lt;Link href="/tools"&gt; + hover/focus ile mega menu acan shekle cevir. Mobile accordion pattern-i ayrica handle et. Effort: ~30 deq. Sesssion 23 sonunda CEO-dan feedback.</small></div>
+<div class="task-text">Yeni aletler 111 &rarr; 135<small>AI +6, PDF +6, Image +6 (Sprint 5)</small></div>
 </div>
 <div class="task medium">
 <span class="badge medium">MEDIUM</span>
-<div class="task-text">Yeni aletler 105 &rarr; 150<small>45 yeni alet elave etmek</small></div>
+<div class="task-text">Performance/Accessibility audit<small>Lighthouse 100, Core Web Vitals (Sprint 5)</small></div>
 </div>
 <div class="task medium">
 <span class="badge medium">MEDIUM</span>
-<div class="task-text">Performance/Accessibility audit<small>Lighthouse 100, Core Web Vitals optimallasdirma</small></div>
+<div class="task-text">JSON-LD schema.org<small>SoftwareApplication (tools) + Article (blog) — Sprint 2-den qalan, Sprint 5-e kecdi</small></div>
 </div>
 <div class="task medium">
 <span class="badge medium">MEDIUM</span>
-<div class="task-text">Sosial media hesablari<small>Instagram, TikTok, Telegram, Twitter/X</small></div>
+<div class="task-text">Sosial media hesablari<small>Instagram OK, TikTok/Telegram/YouTube/X/LinkedIn pending (CEO manual)</small></div>
 </div>
 <div class="task medium">
 <span class="badge medium">MEDIUM</span>
 <div class="task-text">AdSense tesdiqi<small>Google tesdiqini gozleyir</small></div>
-</div>
-<div class="task medium">
-<span class="badge medium">MEDIUM</span>
-<div class="task-text">Gundelik xeber kontenti (4 dil)<small>Her gun 5-6 meqale: AZ, EN, TR, RU</small></div>
-</div>
-<div class="task medium">
-<span class="badge medium">MEDIUM</span>
-<div class="task-text">Indeksasiya heftlik izleme<small>GSC MCP tool ile her hefte hesabat</small></div>
-</div>
-<div class="task medium">
-<span class="badge medium">MEDIUM</span>
-<div class="task-text">Bing sitemap full indexing<small>bingbot allow OK, sitemap submitted</small></div>
-</div>
-<div class="task medium">
-<span class="badge medium">MEDIUM</span>
-<div class="task-text">CTR optimizasiya 0.77% &rarr; 2-3%<small>Meta description rewrite</small></div>
 </div>
 </div>
 
@@ -132,7 +124,7 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <h2>LOW (4)</h2>
 <div class="task low">
 <span class="badge low">LOW</span>
-<div class="task-text">Telegram bot funksionalliq genisletme<small>Hazirda yalniz mesaj reply</small></div>
+<div class="task-text">Telegram bot funksionalliq genisletme<small>Sprint 6</small></div>
 </div>
 <div class="task low">
 <span class="badge low">LOW</span>
@@ -140,16 +132,20 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 <div class="task low">
 <span class="badge low">LOW</span>
-<div class="task-text">Blog yazilari 61 &rarr; 100<small>Yeni movzular, 4 dil</small></div>
+<div class="task-text">Blog yazilari ~49 &rarr; 100<small>Wave 2+</small></div>
 </div>
 <div class="task low">
 <span class="badge low">LOW</span>
-<div class="task-text">Tool detail SEO schema enhancement<small>schema.org structured data</small></div>
+<div class="task-text">Tool detail SEO advanced schema<small>Sprint 6</small></div>
 </div>
 </div>
 
 <div class="section">
 <h2>MANUAL (CEO eli ile)</h2>
+<div class="task low">
+<span class="badge low">MANUAL</span>
+<div class="task-text">TikTok, Telegram, YouTube, X, LinkedIn hesablari ac<small>Instagram OK (@vaxtimyoxdu_)</small></div>
+</div>
 <div class="task low">
 <span class="badge low">MANUAL</span>
 <div class="task-text">Secrets rotate<small>Kohne secret-lar (asagi prioritet)</small></div>
@@ -165,26 +161,29 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="done-section">
-<h2>Session 23 (2026-04-11) — Hreflang Bug Fix (4 kommit)</h2>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">Hreflang bug TOTAL fix — Team Mode parallel<small>11 aprel - 3 bug P0 fix (A: /en/ 308 redirect, B: blog/[slug] 404 cross-locale probe, C: sitemap duplicate helper) + 1 P1 (sitemap DRY). 2 parallel agent + 1 serial + PO visual verify. 2949 test PASS (+6 yeni), 820 static page, zero regression. Plan: docs/superpowers/plans/2026-04-11-hreflang-bugfix.md. Commits: 6cc4ab0, b6ae5e4, 0fc6318, ec9d88b, 18890db</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">Production visual verification (chrome-devtools-mcp)<small>11 aprel - Canli DOM inspection: AZ/EN home + tool page full 4-locale set, AZ-only blog post EN omitted, sitemap 628 URL zero trailing slash. 4 screenshot arxivlenib.</small></div></div>
+<h2>Sprint 4 (2026-04-12) — Kontent (081317e + 05ca214)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">40 xeber (10 movzu x 4 dil) + 20 blog (5 movzu x 4 dil)<small>3406 test, 1000 sehife. 15 blog title <=60 char qisaldildi.</small></div></div>
 
-<h2>SON TAMAMLANANLAR (Session 11 + Sprint 9 + P0 Fix)</h2>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">Session 11 - News cleanup + 04-08 content refresh<small>8 aprel - 85 kohne silindi, 24 yeni 04-08 meqale (6 movzu x 4 dil): Iran-USA, UEFA QF, markets, Gemini 3.1, Ask Maps, AZ-TR (commit 9e4ed6f)</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">P0 INCIDENT FIX - CSP white screen<small>7 aprel - sha256 hash silindi, browser test edildi (commit 7bcef09)</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">GitLab token yenilendi<small>7 aprel - origin URL embed, push successful</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">Pipeline #93 SUCCESS<small>4 fail deep test silindi, 3227 test PASS</small></div></div>
+<h2>Sprint 3 (2026-04-12) — Test Coverage (29edf8d)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">8 unit test + 18 E2E spec, thresholds 35&rarr;60, hooks 44%&rarr;97%<small>3206 test, 30 E2E fayl. useGamification, useScrollDepth, useToolComplete, AdBanner, ClientShell, HeaderClient.</small></div></div>
+
+<h2>Sprint 2 (2026-04-12) — SEO Path 2 + P0 Fix (e72170e)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">metaTitle/metaDescription fields + 3 P0 bug fix + 20 CTR rewrite<small>P0: RU blog desc, RU password-gen dup, AZ diacritic. 3133 test, 820 sehife.</small></div></div>
+
+<h2>Sprint 0+1 (2026-04-11) — Gate + MegaMenu (a5832bf)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">MegaMenu button&rarr;Link + Footer IG fix + CTR drafts + 5 gate doc<small>2951 test, 820 sehife.</small></div></div>
+
+<h2>Session 23 (2026-04-11) — Hreflang Bug Fix</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Hreflang bug TOTAL fix — Team Mode parallel<small>3 bug P0 fix + sitemap DRY. 2949 test, 820 sehife. Commits: 6cc4ab0, b6ae5e4, 0fc6318, ec9d88b</small></div></div>
+
+<h2>Kohne tamamlananlar</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">SEO Polish: Task #10, #15, #21 (Session 22)<small>Title/desc overflow fix + PDF widget i18n. 2943 test.</small></div></div>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">P0 INCIDENT FIX - CSP white screen (7 aprel)<small>sha256 hash silindi, browser test edildi (7bcef09)</small></div></div>
 <div class="task done"><span class="badge done">DONE</span><div class="task-text">Sprint 9 - 9 tapsiriq, 9 agent team mode<small>i18n split, toolUI refactor, CSP, perf/a11y, news, SEO, test coverage</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">i18n messages split (87% payload reduction)<small>Non-tool pages: 29.6KB &rarr; 3.9KB</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">toolUI 7 namespace refactor<small>54 component, 4 lang, 1124 test PASS</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">Performance/A11y 6 fix<small>WCAG accordion, lazy img, useMemo, i18n a11y</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">24 xeber kontenti (6 movzu x 4 dil)<small>Iran-USA, OPEC+, Microsoft AI, DeepSeek, Saglamliq, Pakistan</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">SEO indexation +175x<small>Impression 14 &rarr; 2455, click 0 &rarr; 19, 30+ URL indexed</small></div></div>
-<div class="task done"><span class="badge done">DONE</span><div class="task-text">CSP 4 yeni direktiv + GA inline silindi<small>base-uri, form-action, object-src, upgrade-insecure</small></div></div>
 </div>
 
 <div class="footer">
-Status: AKTIV | Son commit: 4f3dbe7 (news refresh +5 topics, Session 15) | Vercel deploy: AKTIV (g2pza1tvq)<br>
+Status: AKTIV | Son commit: d4c3a48 (content(news): refresh — remove false/outdated, add 15 topics) | Vercel deploy: AKTIV<br>
 Production: <a href="https://vaxtimyoxdu.com" style="color:#38bdf8">vaxtimyoxdu.com</a> HTTP 200<br>
 Detali: docs/session-state.md
 </div>

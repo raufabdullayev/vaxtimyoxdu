@@ -1,9 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-11 (Session 23 — Hreflang Fix + GSC Auto-Submit + Chrome UI Skill)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit ba33569 deployed, Google resubmitted)
-**Son commit:** ba33569 (docs(dashboard): mark Session 23 hreflang fix as complete, update stats)
-**Əvvəlki commit:** 18890db (docs(session): log Session 23 hreflang bug fix + add implementation plan)
+**Son yenilənmə:** 2026-04-12 (Session 26 — News Refresh: audit + remove false/outdated + add verified)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit d4c3a48 deployed)
+**Son commit:** d4c3a48 (content(news): refresh — remove false/outdated, add 15 verified topics)
+**Əvvəlki commit:** 05ca214 (fix(seo): shorten 15 blog titles per SeoPro review)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -21,41 +21,72 @@
 | Parametr | Status |
 |----------|--------|
 | **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 |
-| **Deploy** | ✅ Vercel aktiv (hreflang fix live) |
-| **GitLab + GitHub** | ✅ Synced (ba33569) |
+| **Deploy** | ✅ Vercel aktiv |
+| **GitLab + GitHub** | ✅ Synced (d4c3a48) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | ba33569 |
-| **GSC sitemap** | ✅ Resubmitted 2026-04-11 12:32 UTC, 628 URLs, Google crawled in 3 sec |
-| **IndexNow** | ✅ 20 URLs pushed to Bing/Yandex/Seznam (HTTP 202) |
-| **Yeni skill** | ✅ `~/.claude/skills/controlling-users-real-chrome/SKILL.md` (global, all sessions) |
-| **Testlər** | 2949 PASS (203 fayl, +6 hreflang tests) |
-| **Xəbərlər** | 44 (11 per dil) |
-| **Coverage** | 68% (hədəf: 85%) |
-| **Aletler** | 111 (hədəf: 150) |
-| **CRITICAL problem** | 0 ✅ |
-| **HIGH problem** | 1 (test coverage 68%→85%) — hreflang bug CLOSED ✅ |
+| **Son commit** | d4c3a48 |
+| **Testlər** | **3454** PASS (vitest) |
+| **E2E** | **30 fayl** (18 yeni Sprint 3-də) |
+| **Statik səhifələr** | **1000** |
+| **Blog** | **~49** (29 + 20 yeni Sprint 4) |
+| **Xəbərlər** | **96** (24/locale — S26 refresh: d4c3a48) |
+| **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
+| **Hooks coverage** | **97%** (əvvəl 44%) |
+| **Aletler** | 111 (hədəf: 135) |
+| **P0 buglar** | **0** ✅ (3 P0 Sprint 2-də fix: e72170e) |
+| **CRITICAL** | 0 ✅ |
 
-**Növbəti potensial işlər:**
+**6-Sprint Plan Progress:**
+- ✅ Sprint 0 — Gate infra + docs (a5832bf)
+- ✅ Sprint 1 — MegaMenu fix + CTR drafts + Footer IG (a5832bf)
+- ✅ Sprint 2 — Path 2 metaTitle/metaDescription + 3 P0 fix + 20 CTR rewrite (e72170e)
+- ✅ Sprint 3 — Test coverage: 8 unit + 18 E2E + thresholds 60 (29edf8d)
+- ✅ Sprint 4 — Kontent: 40 xəbər + 20 blog, 4 dil (081317e + 05ca214)
+- 🔜 **Sprint 5** — Yeni alətlər (111→135) + Performance/Lighthouse
+- 🔜 **Sprint 6** — CSP R&D + Telegram bot + advanced schema
 
-**🔜 SEO Polish Sprint (Session 21-dən qalan 3 task — birlikdə həll et):**
-- **Task #10** — Tool name overflow: 30 AZ + 18 TR + 2 EN + 2 RU tool adı 70 char SERP limit-ini aşır. Config/tools/*.ts-də uzun adları qısalt (pre-existing, SeoPro Session 21-də aşkar etdi)
-- **Task #15** — Tool meta description overflow: 38 AZ tool (117-dən) 160 char-ı aşır. Həll: `tools.metaBrowserBased`-i 4 dildə 20-25 char-a endir (AZ "Brauzer əsaslı, pulsuz" (23), EN "Browser-based, free" (19), TR "Tarayıcı tabanlı, ücretsiz" (25), RU "В браузере, бесплатно" (21))
-- **Task #21** — PdfMerge/PdfSplit/PdfCompress və digər upload-based tool widget-lərinin daxili string-ləri ("Select PDF Files", "Click to add PDF files") 4 dildə lokalizə edilməli
-
-**🖱 UX Polish (Session 23-dən sonra aşkarlandı):**
-- **Header "Alətlər" mega menu click nav** — `src/components/layout/MegaMenu.tsx:100` `<button>{navT('tools')}</button>` hazırda yalnız dropdown açıb-bağlayır, **click ilə `/tools` səhifəsinə navigate etmir**. Həll: button-u `<Link href="/tools">` + hover/focus ilə mega menu açan şəklə çevir. Mobile accordion pattern-ı dəyişməsin (ayrıca handle et). Effort: ~30 dəq. Prioritet: MEDIUM (UX improvement).
-
-**Digər:**
-- Yeni alətlər (111 → 150)
-- Test coverage 68% → 85%
-- E2E testlər 35 → 100
-- Gündəlik xəbər kontenti (4 dil)
-- Sosial media hesabları
+**Qalan işlər:**
+- Yeni alətlər (111 → 135) — Sprint 5
+- Performance/Accessibility audit — Sprint 5
+- JSON-LD schema.org (Sprint 2 scope-dan qalıb?) — yoxlamaq
+- Nonce-based CSP migration (R&D) — Sprint 6
+- Telegram bot genişlətmə — Sprint 6
+- GSC həftəlik monitoring — ongoing
+- Sosial media hesabları (CEO manual)
 - AdSense təsdiqi (gözlənilir)
 
 ---
 
 ## Son 3 Sessiya
+
+### Session 26 (2026-04-12) — News Refresh: Audit + Remove False/Outdated + Add 15 Verified Topics
+**Tapshiriq:** CEO: son xəbər batch-ində yanlış xəbərlər var. Tam audit, təmizlənmə, yeni real xəbərlər əlavə et.
+**Komanda:** 13 agent team — news-auditor, news-researcher, 4x content writer (AZ/EN/TR/RU), lead-dev, 4x tester, seo-pro, smm-pro.
+
+**Audit faza (paralel):**
+- [x] **news-auditor** — 12 aprel mövzuları fact-check: Claude Mythos 5, GPT-5.4, Gemini 3.1 Ultra, AI Energy 100x, Mario Galaxy Movie — hamısı FALSE. Hungary Election, Iran-US Nuke — qismən doğru amma şişirdilmiş.
+- [x] **news-researcher** — WebSearch ilə 5 yeni real mövzu tapıldı: Trump Hormuz boğazı blokadası, Pasxa atəşkəsi Rusiya-Ukrayna, EBRD 5 mlrd, Masters 2026 Makılroy, Tech layoffs + Intel alışı.
+- [x] 9 aprel xəbərləri (8 məqalə) köhnə → REMOVE
+- [x] 12 aprel false xəbərlər (~28 məqalə) → REMOVE
+
+**Kontent faza (4 writer PARALEL):**
+- [x] AZ, EN, TR, RU — hər biri 15 mövzu üzrə məqalə yazdı (5 yeni + 10 düzəldilmiş)
+- [x] Hər məqalə >500 chars, title <=59 chars, markdown formatda
+
+**İnteqrasiya + test:**
+- [x] lead-dev: atomik silmə + əlavə əməliyyatı
+- [x] 3454 test PASS (211 fayl), production build OK
+- [x] 4 dildə visual test (tester-az/en/tr/ru): OK
+- [x] SEO audit (seo-pro): OK — title/desc/hreflang düzgün
+- [x] SMM audit (smm-pro): OK — OG/share/brand voice düzgün
+
+**Nəticə:**
+- Silindi: 8 apr-9 köhnə + ~28 apr-12 false = ~36 məqalə
+- Əlavə edildi: 15 mövzu × 4 locale = 60 yeni məqalə
+- Saxlanıldı: 36 apr-10 məqalə (spot-checked, hələ aktual)
+- **Cəmi: 96 məqalə (24 per locale)**
+- Commit: d4c3a48, deploy: Vercel auto-deploy via GitLab push
+- **3454 test PASS, 1000 statik səhifə**
 
 ### Session 23 (2026-04-11) — Hreflang Bug Fix: Team Mode Parallel + 4 Commits + Deploy 🎯
 **Tapshiriq:** CEO: vaxtimyoxdu hreflang bug həll et — TEAM MODE + /plan formatında.
@@ -495,12 +526,35 @@ P0/P1 Sprint 2 prerequisites:
 - **F4 P1:** Build-time §6/§7 assertions
 - **Factory §5 AZ diacritic:** `Vaxtim Yoxdu` → `Vaxtım Yoxdu` (ı ilə)
 
-### Next Session — Sprint 2 (CTR Apply + Schema + P0 fixes)
-Plan: `~/.claude/plans/vast-tickling-thimble.md` §3 Sprint 2
-1. Fix 3 P0/P1 production bugs (factory diacritic, RU blog desc, RU password-gen)
-2. Implement Path 2: metaTitle/metaDescription fields on Tool type
-3. Apply CTR rewrites from docs/CTR_REWRITES.md to src/config/tools/*.ts
-4. Add JSON-LD schema.org (SoftwareApplication for tools, Article for blog)
-5. Build-time §6/§7 assertions in seo.test.ts
-6. GSC weekly monitoring + Bing sitemap verification (MCP)
-Team: `seo-apply` per plan §4
+### Sprint 2 — CTR Apply + P0 fixes (COMPLETED ✅)
+- Commit: e72170e (15 files, +397/-13)
+- 3 P0 bug fix (factory diacritic, RU blog desc, RU password-gen dup)
+- Path 2 metaTitle/metaDescription fields on Tool type
+- 20 CTR rewrites applied from docs/CTR_REWRITES.md
+- Build-time §6/§7 assertions in seo.test.ts
+- SeoPro APPROVE, SmmPro APPROVE_WITH_FOLLOWUP
+- GSC weekly report: docs/agent-reports/seo-weekly-2026-04-12.md
+
+### Sprint 3 — Test Coverage (COMPLETED ✅)
+- Commit: 29edf8d (27 files, +2222/-4)
+- vitest 2951→3206 (+255 test, 8 yeni fayl), coverage 64.4%, thresholds 35→60%
+- E2E 12→30 fayl (+18 spec, 104 yeni test)
+- Hooks coverage 44%→97%, layout 83%
+- SeoPro VETO→fix→APPROVE, SmmPro APPROVE_WITH_FOLLOWUP
+- VisualTester: production clean (stale dev server false positive)
+
+### Sprint 4 — Content Wave 1 (COMPLETED ✅ — amma P0 HALLUCINATION BUG!)
+- Commits: 081317e + 05ca214 (7 files, +1542/-50)
+- 40 yeni xəbər (10 mövzu × 4 dil) + 20 yeni blog (5 mövzu × 4 dil)
+- Description slice 160→150 fix, 84 news title shortened, blog metaTitle Path 2
+- SeoPro APPROVE, SmmPro APPROVE, VisualTester 4/4 PASS
+- **🚨 P0 BUG:** 04-12 xəbərləri HALLUCINATED — ContentDev WebSearch istifadə etməyib, uydurub (Claude Mythos 5, GPT-5.4 kimi saxta xəbərlər). MUST DELETE + rewrite with real WebSearch.
+
+### Next Session — P0 Fix + Wave 2
+1. **P0: Delete 40 fake 04-12 news** from src/data/news-articles.ts
+2. **P0: Add §11 factual accuracy invariant** to SEO_TRACKING_INVARIANTS.md
+3. **P0: Write real 04-12 news** with WebSearch + source URLs
+4. Consider deleting old 04-09/04-10 news (3 gün köhnə)
+5. Sprint 5 (Wave 2): New tools 111→135 + Lighthouse
+6. Sprint 6: CSP R&D + polish
+7. Backlog: 127 blog title fix, Bing Webmaster setup (CEO manual)
