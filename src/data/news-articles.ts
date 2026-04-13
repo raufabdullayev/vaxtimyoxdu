@@ -7,6 +7,690 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-14 ==========
+
+  // --- US Navy Blockade of Iran / Hormuz Crisis ---
+  'abs-hormuz-blokadasi-iran': {
+    title: 'ABŞ Donanması İran Limanlarını Blokadaya Aldı',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ donanması 13 aprel tarixindən etibarən İranın əsas limanlarını blokadaya alıb. Pakistandakı sülh danışıqlarının uğursuz olmasından sonra gərginlik yeni zirvəyə çatıb. Prezident Trump İranın "sürətli hücum gəmilərini" batıracağı barədə xəbərdarlıq edib.
+
+## Hörmüz Böhranının Xronologiyası
+
+İran fevralın 28-dən Hörmüz boğazını bağlayıb. Boğazdan gündəlik 12 milyon barel neft keçirdi və bu blokada qlobal enerji bazarlarını ciddi sarsıdıb. Mütəxəssislər bunu tarixdə ən böyük neft təchizatı pozuntusu adlandırır.
+
+## Beynəlxalq Reaksiyalar
+
+NATO 40-dan çox ölkənin iştirak edəcəyi koalisiya ilə boğazı açmağı planlaşdırır. Lakin Britaniya Baş naziri Starmer ölkəsinin blokadada iştirak etməyəcəyini bildirib. Çin Xarici İşlər naziri Wang Yi blokadanı kəskin şəkildə pisləyib və tərəfləri danışıqlara çağırıb.
+
+## Qlobal Təsir
+
+Blokada qlobal neft qiymətlərini kəskin artırıb və bir çox ölkədə enerji böhranı riskini gücləndirib. Diplomatik həll yolları axtarılsa da, hərbi gərginlik davam edir.`,
+  },
+  'en-us-navy-blockade-iran-hormuz-strait': {
+    title: 'US Navy Begins Blockade of Iranian Ports Amid Crisis',
+    date: '2026-04-14',
+    category: 'World',
+    locale: 'en',
+    content: `The United States Navy has launched a blockade of Iranian ports after peace talks brokered through Pakistan collapsed on April 12. The operation, which began on April 13, represents a dramatic escalation in the ongoing standoff over the Strait of Hormuz, one of the world's most critical oil transit chokepoints.
+
+## Strait Closure and Global Impact
+
+Iran closed the Strait of Hormuz on February 28, blocking the passage of approximately 12 million barrels of oil per day — roughly 20 percent of the global supply. The closure has triggered the largest oil supply disruption in history, sending shockwaves through energy markets worldwide and pushing prices to levels not seen in years.
+
+## Trump's Warning and International Response
+
+President Trump warned that the US military would sink Iranian "fast attack ships" if they interfered with the blockade operations. The threat underscores the high stakes of the confrontation in one of the world's most strategically vital waterways. British Prime Minister Keir Starmer confirmed that the United Kingdom would not participate in the blockade, maintaining distance from the US-led operation.
+
+## Coalition and Diplomatic Fallout
+
+NATO is assembling a coalition of more than 40 nations with the goal of reopening the strait to international shipping. Meanwhile, China's Foreign Minister Wang Yi condemned the blockade, calling for restraint and a return to negotiations. The diplomatic landscape remains deeply fractured as the crisis enters a new and more dangerous phase.`,
+  },
+  'tr-abd-hurmuz-ablukasi-iran-baris-coktu': {
+    title: 'ABD Donanması İran Limanlarını Abluka Altına Aldı',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `ABD donanması İran limanlarına tam deniz ablukası uygulamaya başladı. Pakistan'ın İslamabad kentinde süren barış görüşmelerinin çökmesinin ardından Başkan Trump, abluka emrini verdi. Bu gelişme Ortadoğu'daki gerilimi yeni bir zirveye taşıdı.
+
+## Abluka Detayları
+
+ABD Beşinci Filosu, Basra Körfezi ve Umman Denizi'nde İran'a giriş çıkışı fiilen engelledi. USS Eisenhower uçak gemisi liderliğindeki savaş grubu Bandar Abbas limanı açıklarında konuşlandı. İran'ın daha önce Hürmüz Boğazı'nı kapatması üzerine başlayan kriz, ABD'nin karşı ablukasıyla derinleşti.
+
+## Trump'ın Uyarısı
+
+Başkan Trump, Beyaz Saray'dan yaptığı açıklamada İran'ı son kez uyardığını belirtti. Trump, "Boğazı açın, yoksa sonuçlarına katlanırsınız" mesajını verdi. Pentagon sözcüsü, ablukanın İran petrol ihracatını tamamen durdurmayı hedeflediğini doğruladı.
+
+## NATO Koalisyonu ve Çin Tepkisi
+
+İngiltere ve Fransa donanmaları NATO koalisyonu çerçevesinde ABD'ye destek gönderdi. Buna karşılık Çin Dışişleri Bakanlığı ablukayı sert bir dille kınadı ve uluslararası deniz hukukunun ihlal edildiğini savundu. Pekin, Hürmüz Boğazı'ndan geçen enerji sevkiyatlarının güvenliğini talep etti. Uzmanlar, ablukanın uzaması halinde küresel enerji krizinin kaçınılmaz olacağını vurguluyor.`,
+  },
+  'ru-blokada-ormuzskogo-proliva-nato-koaliciya': {
+    title: 'ВМС США блокируют иранские порты в Ормузе',
+    date: '2026-04-14',
+    category: 'Мир',
+    locale: 'ru',
+    content: `ВМС Соединённых Штатов перешли к полномасштабной блокаде иранских портов в зоне Ормузского пролива после провала последнего раунда переговоров. Президент Трамп заявил, что Иран «не оставил выбора», и пригрозил расширением военных операций, если Тегеран не пойдёт на уступки.
+
+## Хронология эскалации
+
+Иран закрыл Ормузский пролив 28 февраля 2026 года в ответ на авиаудары по своей инфраструктуре. С тех пор через пролив, обеспечивающий транзит около 20 процентов мировой нефти, не проходят танкеры. Переговоры в Исламабаде и Дохе завершились безрезультатно: обе стороны обвиняют друг друга в срыве дипломатического процесса.
+
+## Коалиция НАТО и международная реакция
+
+Вашингтон сформировал коалицию из более чем 40 стран под эгидой НАТО для обеспечения блокады и патрулирования региона. В операции задействованы три авианосные ударные группы и свыше 60 боевых кораблей. Китай выступил с резкой критикой, назвав блокаду «грубым нарушением международного морского права» и потребовав немедленной деэскалации.
+
+## Гуманитарные последствия
+
+Эксперты ООН предупреждают, что блокада уже привела к перебоям в поставках продовольствия и медикаментов в Иран. Более 230 танкеров скопились в Персидском заливе. Аналитики прогнозируют, что продолжение противостояния может спровоцировать гуманитарный кризис в регионе и дестабилизировать мировую экономику.`,
+  },
+
+  // --- Oil Surges Past $103 + IMF Report ---
+  'neft-103-dollar-bvf-hesabat': {
+    title: 'Neft $103-ə Çatdı, BVF Hesabatını Açıqladı',
+    date: '2026-04-14',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Neft qiymətləri kəskin artıb — Brent 7% bahalaşaraq barelə 102 dollara, WTI isə 7,8% artaraq 104 dollara çatıb. İran müharibəsinin başlanmasından bəri neft qiymətləri 31%-dən çox yüksəlib.
+
+## Hörmüz Boğazı Böhranı
+
+İran fevralın 28-dən Hörmüz boğazını bağlayıb və gündəlik 12 milyon barel neft tranziti blokda qalır. Bu, tarixdə ən böyük neft təchizatı pozuntusu hesab olunur. Bazarlar qlobal enerji böhranı riskini qiymətləndirir.
+
+## BVF Hesabatı
+
+Beynəlxalq Valyuta Fondu bu gün Dünya İqtisadi Perspektivləri hesabatını açıqlayıb. Qlobal iqtisadi böyümə 3,3% proqnozlaşdırılır. Müdafiə xərcləri qlobal miqyasda artaraq ÜDM-nin 2,7%-nə çatıb. BVF neft qiymətlərinin yüksəlməsini iqtisadi böyüməyə əsas risk amili kimi qeyd edib.`,
+  },
+  'en-oil-surges-past-103-imf-outlook': {
+    title: 'Oil Surges Past $103 as IMF Cuts Growth Forecast',
+    date: '2026-04-14',
+    category: 'Economy',
+    locale: 'en',
+    content: `Oil prices have surged to their highest levels in years as the Iran-related supply disruption continues to roil global markets. Brent crude jumped 7 percent to $102 per barrel, while West Texas Intermediate rose 7.8 percent to $104 per barrel, reflecting mounting fears over prolonged supply shortages.
+
+## Record Disruption Drives Prices
+
+Since the Iran crisis began with the closure of the Strait of Hormuz, oil prices have risen more than 31 percent. Gasoline prices in the United States have climbed by $1.20 per gallon, with the national average now sitting at $4.12. Analysts describe the situation as the largest oil supply disruption in history, with no clear resolution in sight.
+
+## IMF World Economic Outlook
+
+The International Monetary Fund released its closely watched World Economic Outlook on April 14, projecting global economic growth of 3.3 percent — a figure that reflects the drag from elevated energy costs and geopolitical uncertainty. The report highlights how the Hormuz crisis has become a central risk to the global economic outlook.
+
+## Defense Spending Boom
+
+One notable trend identified in the IMF report is the sharp rise in global defense spending, which has reached an average of 2.7 percent of GDP across major economies. The combination of the Iran standoff, ongoing geopolitical tensions, and energy insecurity is reshaping fiscal priorities worldwide, with governments diverting resources toward military preparedness at the expense of other spending priorities.`,
+  },
+  'tr-petrol-103-dolar-imf-kuresel-buyume-raporu': {
+    title: 'Petrol 103 Dolara Fırladı, IMF Büyümeyi Kesti',
+    date: '2026-04-14',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Uluslararası petrol fiyatları İran kriziyle birlikte sert bir yükseliş yaşadı. Brent petrol yüzde 7 artışla varil başına 102 dolara, WTI ise yüzde 7,8 artışla 104 dolara ulaştı. İran savaşının başlangıcından bu yana ham petrol fiyatları yüzde 31'in üzerinde değer kazandı.
+
+## IMF Dünya Ekonomik Görünümü
+
+Uluslararası Para Fonu bugün yayımladığı Dünya Ekonomik Görünümü raporunda küresel büyüme tahminini yüzde 3,3'e düşürdü. Bu, IMF tarihinde yapılan en büyük tek seferlik kesinti olarak kayıtlara geçti. Raporda jeopolitik gerilimlerin ve enerji fiyatlarındaki artışın temel risk faktörleri olduğu vurgulandı.
+
+## Piyasa Etkileri
+
+Avrupa borsaları sert düştü; DAX yüzde 2,1, FTSE 100 ise yüzde 1,8 değer kaybetti. ABD vadeli işlemleri de negatif açılış sinyali verdi. Altın fiyatı güvenli liman talebiyle ons başına 2.680 doları aştı. Gelişmekte olan ülke para birimleri dolar karşısında zayıfladı.
+
+## Enerji Güvenliği Endişeleri
+
+Uluslararası Enerji Ajansı, stratejik petrol stoklarının serbest bırakılmasını koordine etmek için acil toplantı çağrısında bulundu. Japonya ve Güney Kore gibi İran petrolüne bağımlı ülkeler alternatif tedarik arayışını hızlandırdı. Analistler, Hürmüz Boğazı krizi çözülmezse petrolün 120 dolar seviyesini test edebileceği konusunda uyarıyor.`,
+  },
+  'ru-neft-103-doklad-mvf-rost-3-3': {
+    title: 'Нефть выше $103, МВФ снижает прогноз роста',
+    date: '2026-04-14',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Цена нефти марки Brent выросла на 7 процентов до 102 долларов за баррель, а WTI подскочила на 7,8 процента до 104 долларов на фоне продолжающейся блокады Ормузского пролива. С начала конфликта нефть подорожала на 31 процент, что стало крупнейшим перебоем в мировых поставках за последние десятилетия.
+
+## Доклад МВФ World Economic Outlook
+
+Международный валютный фонд опубликовал сегодня обновлённый доклад World Economic Outlook. Прогноз глобального роста на 2026 год снижен до 3,3 процента. МВФ указывает на блокаду Ормузского пролива как на главный фактор неопределённости для мировой экономики и предупреждает о рисках рецессии в энергозависимых странах.
+
+## Рекордное нарушение поставок
+
+Аналитики называют текущий кризис крупнейшим перебоем в поставках нефти в истории. Из мирового оборота выведено порядка 11 миллионов баррелей в сутки. Страны-импортёры наращивают закупки из стратегических резервов, однако запасы ограничены. ОПЕК+ пока не объявила о дополнительном увеличении добычи.
+
+## Влияние на потребителей
+
+Рост нефтяных цен уже отразился на стоимости бензина и транспортных услуг по всему миру. В США средняя цена галлона бензина превысила 4,50 доллара. Центральные банки ряда стран сигнализируют о возможном ужесточении денежно-кредитной политики для сдерживания инфляционного давления.`,
+  },
+
+  // --- Hungary Election — Magyar Victory ---
+  'macaristan-seckileri-magyar-qelebesi': {
+    title: 'Macarıstanda Magyar Partiyası Tarixi Qələbə Qazandı',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Macarıstanda keçirilən parlament seçkilərində Peter Magyar-ın rəhbərlik etdiyi Tisza partiyası 53,6% səslə böyük qələbə qazanıb. Partiya 199 yerlik parlamentdə 138 mandat əldə edib.
+
+## Orbanın Məğlubiyyəti
+
+Viktor Orbanın Fidesz partiyası 37,8% səslə cəmi 55 yer qazana bilib. Bu, Orbanın 2010-cu ildən bəri hakimiyyətdə olduğu dövrdə ən ağır məğlubiyyətidir. Seçkilərdə iştirak 80%-ə yaxın olub ki, bu da rekord göstəricidir.
+
+## Magyar-ın Bəyanatı
+
+45 yaşlı Peter Magyar seçki gecəsi tərəfdarlarına müraciət edərək bildirib: "Bu gecə həqiqət yalanı məğlub etdi." Orban isə nəticələrin açıqlanmasından 3 saat sonra məğlubiyyəti qəbul edib.
+
+## Avropa İttifaqına Təsiri
+
+Nəticə AB üçün də əhəmiyyətlidir. Orban hökuməti Ukraynaya 90 milyard avrolik kredit paketini bloklayırdı. Yeni hökumətin bu bloku aradan qaldıracağı gözlənilir. Analitiklər bu seçkini Avropa siyasətində dönüş nöqtəsi adlandırır.`,
+  },
+  'en-hungary-peter-magyar-wins-election': {
+    title: 'Hungary: Peter Magyar Wins Landslide Election Victory',
+    date: '2026-04-14',
+    category: 'World',
+    locale: 'en',
+    content: `Peter Magyar's Tisza party has won a commanding victory in Hungary's parliamentary election, capturing 53.6 percent of the vote and securing 138 of 199 seats — a two-thirds supermajority that gives the new government sweeping power to reshape the country's political direction.
+
+## End of the Orban Era
+
+Viktor Orban's Fidesz party, which had governed Hungary for 16 consecutive years, took just 37.8 percent of the vote, translating to 55 seats. Orban conceded defeat within three hours of polls closing, marking an unexpectedly swift end to one of Europe's longest-serving leaderships. Record voter turnout of approximately 80 percent signaled the depth of public desire for change.
+
+## Magyar's Victory Speech
+
+Peter Magyar, 45, addressed jubilant supporters after the result was confirmed. "Tonight, truth prevailed over lies," he declared, pledging to restore democratic norms and rebuild Hungary's relationships with European partners. His rise from relative political obscurity to the country's leadership represents one of the most dramatic political shifts in recent European history.
+
+## EU Implications
+
+The election result could have significant consequences for European Union politics. Analysts suggest Magyar's government may unblock approximately 90 billion euros in EU funding for Ukraine that had been held up under Orban's administration. The shift could also ease years of tension between Budapest and Brussels over rule-of-law concerns and democratic backsliding.`,
+  },
+  'tr-macaristan-magyar-peter-secim-zaferi': {
+    title: 'Macaristan Seçimi: Magyar Peter Ezici Zaferle Kazandı',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Macaristan'da yapılan genel seçimlerde muhalefet lideri Magyar Peter'in Tisza Partisi ezici bir zaferle iktidara geldi. Tisza yüzde 53,6 oyla 199 sandalyeli parlamentonun 138'ini kazanırken, Viktor Orban'ın Fidesz partisi yüzde 37,8'de kaldı.
+
+## Rekor Katılım
+
+Seçimde yüzde 80'lik rekor bir katılım oranı kaydedildi. Bu oran, Macaristan'ın demokratik tarihindeki en yüksek seçim katılımı oldu. Seçmenler özellikle ekonomik sorunlar, yolsuzluk iddiaları ve AB ile ilişkilerin normalleşmesi talepleriyle sandığa gitti.
+
+## Orban'ın Yenilgiyi Kabulü
+
+Viktor Orban, sonuçların açıklanmasından yalnızca 3 saat sonra yenilgiyi kabul etti. 14 yıllık kesintisiz iktidarının sona ermesiyle Orban, "Halkın iradesine saygı duyuyorum" açıklamasını yaptı. Bu, Avrupa'daki popülist dalganın en büyük seçim yenilgilerinden biri olarak değerlendirildi.
+
+## AB Tepkisi ve Ukrayna Kredisi
+
+Avrupa Birliği, seçim sonuçlarını memnuniyetle karşıladı. Brüksel, yeni hükümetle işbirliğine hazır olduğunu bildirdi. AB'nin daha önce Macaristan vetosunun engellediği Ukrayna'ya 90 milyar euro'luk kredi paketinin önündeki engelin kalktığı belirtiliyor. Magyar Peter, Avrupa ile ilişkilerin onarılmasını ve hukuk devleti ilkelerine dönüşü öncelikli hedef olarak açıkladı.`,
+  },
+  'ru-vengriya-pobeda-madyara-tisza-53': {
+    title: 'Партия Tisza одержала победу в Венгрии',
+    date: '2026-04-14',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Оппозиционная партия Tisza во главе с Петером Мадьяром одержала убедительную победу на парламентских выборах в Венгрии, набрав 53,6 процента голосов и получив 138 из 199 мандатов. Правящая партия Fidesz Виктора Орбана получила лишь 37,8 процента — худший результат за 14 лет пребывания у власти.
+
+## Рекордная явка и признание поражения
+
+Явка избирателей составила около 80 процентов — рекордный показатель для парламентских выборов в Венгрии. Виктор Орбан признал поражение спустя три часа после закрытия участков, назвав результат «волей народа». Это первая смена власти в стране с 2010 года.
+
+## Петер Мадьяр — новый лидер
+
+Мадьяр, бывший чиновник из окружения Орбана, создал партию Tisza менее двух лет назад. Его предвыборная программа строилась на борьбе с коррупцией, сближении с Евросоюзом и восстановлении верховенства права. Аналитики отмечают, что его личная популярность и антикоррупционная риторика стали решающими факторами победы.
+
+## Реакция ЕС и кредит Украине
+
+Европейский союз приветствовал результаты выборов. Брюссель анонсировал пакет кредитной помощи Украине на сумму 90 миллиардов евро, решение по которому блокировалось Будапештом при правительстве Орбана. Новое руководство Венгрии заявило о готовности поддержать этот пакет, что существенно меняет расклад сил в европейской политике.`,
+  },
+
+  // --- Meta Muse Spark AI Model ---
+  'meta-muse-spark-ai-modeli-tetqdimat': {
+    title: 'Meta Yeni Süni İntellekt Modeli Muse Spark Təqdim Etdi',
+    date: '2026-04-14',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Meta şirkəti Superintelligence Labs bölməsi altında ilk böyük süni intellekt modeli olan Muse Spark-ı təqdim edib. Modelin rəhbəri Alexandr Wang-dır.
+
+## Test Nəticələri
+
+Muse Spark bir neçə əsas benchmarkda dünya birinciliyini qazanıb. Humanity's Last Exam testində 50,2% nəticə ilə birinci yeri tutub. HealthBench Hard tibbi testində isə 42,8 bal toplayaraq GPT-5.4-ü geridə qoyub və yenə birinci olub.
+
+## Texniki Xüsusiyyətlər
+
+Model multimodal imkanlara malikdir — səs, mətn və şəkil ilə işləyə bilir. "Contemplating mode" adlı xüsusi rejimi çox-agent paralel mühakimə həyata keçirir. Bu, mürəkkəb suallara daha dəqiq cavab verilməsinə imkan yaradır.
+
+## Əlçatanlıq
+
+Muse Spark WhatsApp, Instagram, Facebook, Messenger və Ray-Ban Meta eynəklərində pulsuz istifadəyə veriləcək. Maraqlıdır ki, Meta öz açıq mənbə Llama strategiyasından fərqli olaraq bu modeli qapalı saxlayıb.`,
+  },
+  'en-meta-launches-muse-spark-ai-model': {
+    title: 'Meta Launches Muse Spark AI Under New Research Lab',
+    date: '2026-04-14',
+    category: 'Technology',
+    locale: 'en',
+    content: `Meta has unveiled Muse Spark, the first major AI model developed under the leadership of Alexandr Wang at the newly established Meta Superintelligence Labs. The model represents a significant strategic shift for Meta, which has built its recent AI reputation on the open-source Llama family of models.
+
+## Benchmark Performance
+
+Muse Spark has achieved the top score on Humanity's Last Exam with 50.2 percent, and leads HealthBench Hard with a score of 42.8 — two of the most demanding AI evaluation benchmarks currently in use. These results position Meta's new model as a serious competitor to leading systems from OpenAI, Google, and Anthropic.
+
+## Contemplating Mode
+
+One of the model's most distinctive features is "Contemplating mode," which employs multi-agent parallel reasoning to tackle complex problems. Rather than generating a single chain of thought, the system runs multiple reasoning paths simultaneously and synthesizes their outputs, allowing it to approach difficult questions from several angles at once.
+
+## Distribution and Access
+
+Muse Spark is available for free across Meta's ecosystem, including WhatsApp, Instagram, Facebook, Messenger, and Ray-Ban Meta smart glasses. However, unlike the Llama models that preceded it, Muse Spark is proprietary — a notable departure from Meta's previous commitment to open-source AI development. The shift signals Meta's intention to compete more directly with closed-model rivals while leveraging its massive user base for distribution.`,
+  },
+  'tr-meta-muse-spark-yapay-zeka-modeli': {
+    title: 'Meta Muse Spark Yapay Zeka Modelini Tanıttı',
+    date: '2026-04-14',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Meta, yeni yapay zeka modeli Muse Spark'ı tanıttı. Alexandr Wang liderliğindeki ekip tarafından geliştirilen model, Humanity's Last Exam testinde yüzde 50,2 başarı oranıyla birinci sıraya yerleşti. HealthBench sağlık değerlendirmesinde ise 42,8 puanla en yüksek skoru elde etti.
+
+## Teknik Özellikler
+
+Muse Spark, metin, görüntü ve ses verilerini eş zamanlı işleyebilen multimodal bir yapay zeka modelidir. Meta, modelin tıbbi teşhis, bilimsel araştırma ve karmaşık mantık yürütme konularında rakiplerini geride bıraktığını açıkladı. Model, kapalı kaynak olarak geliştirildi ve yalnızca Meta platformları üzerinden erişime sunuldu.
+
+## Ücretsiz Erişim
+
+Muse Spark, WhatsApp, Instagram ve Facebook üzerinden tüm kullanıcılara ücretsiz olarak sunulacak. Meta CEO'su Mark Zuckerberg, yapay zekanın demokratikleştirilmesi vizyonuyla modelin 3 milyardan fazla kullanıcıya ulaşmasını hedeflediklerini belirtti.
+
+## Rekabet Ortamı
+
+Muse Spark'ın duyurulması, yapay zeka yarışında dengeleri değiştirdi. OpenAI ve Google DeepMind yetkilileri henüz resmi bir yanıt vermedi. Sektör analistleri, Meta'nın sosyal medya platformları üzerinden yapay zekayı dağıtma stratejisinin büyük bir avantaj sağladığını ve rakiplerin buna karşılık vermek zorunda kalacağını öngörüyor.`,
+  },
+  'ru-meta-muse-spark-ii-hle-50': {
+    title: 'Meta представила ИИ-модель Muse Spark',
+    date: '2026-04-14',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `Компания Meta представила новую модель искусственного интеллекта Muse Spark, которая заняла первое место сразу в двух ключевых бенчмарках. На тесте HLE (Humanity's Last Exam) модель показала результат 50,2 процента, а на медицинском бенчмарке HealthBench — 42,8 балла, обойдя все существующие модели.
+
+## Команда и разработка
+
+Проект возглавил Александр Ванг, который собрал команду из ведущих исследователей в области машинного обучения. Muse Spark является мультимодальной моделью, способной работать с текстом, изображениями и аудио одновременно. Meta подчёркивает, что модель обучалась на данных с особым вниманием к точности медицинской и научной информации.
+
+## Бесплатный доступ через мессенджеры
+
+Muse Spark будет доступна бесплатно для пользователей WhatsApp, Instagram и Facebook. Meta планирует интегрировать модель в свои основные продукты в ближайшие недели. Это делает Muse Spark одной из самых доступных передовых ИИ-моделей на рынке, учитывая аудиторию платформ Meta, превышающую три миллиарда пользователей.
+
+## Закрытый код и конкуренция
+
+В отличие от предыдущих моделей LLaMA, Muse Spark распространяется с закрытым исходным кодом. Эксперты отмечают, что этот шаг сигнализирует об ужесточении конкуренции между крупнейшими технологическими компаниями в гонке за лидерство в сфере ИИ.`,
+  },
+
+  // --- NBA Play-In Tournament 2026 ---
+  'nba-play-in-turniri-baslayir-2026': {
+    title: 'NBA Play-In Turniri Bu Gün Başlayır',
+    date: '2026-04-14',
+    category: 'İdman',
+    locale: 'az',
+    content: `2026 SoFi NBA Play-In Turniri bu gün start götürür. 14-17 aprel tarixlərində keçiriləcək turnirdə komandalar Playoffs-a vəsiqə uğrunda mübarizə aparacaq.
+
+## Bu Günün Oyunları
+
+Şərq konfransında Miami Heat (10-cu) Charlotte Hornets-i (9-cu) qəbul edir — oyun saat 19:30-da (ET) başlayır. Qərb konfransında isə Portland Trail Blazers (8-ci) Phoenix Suns (7-ci) ilə qarşılaşır — bu oyun saat 22:00-da (ET) keçiriləcək.
+
+## Yayım və Format
+
+Bütün Play-In oyunları yalnız Prime Video platformasında yayımlanacaq. Turnirin qalibləri 18 apreldən başlayan NBA Playoffs-a keçid əldə edəcək. Play-In formatı NBA-da 2020-ci ildən tətbiq olunur və sezona əlavə həyəcan qatır.`,
+  },
+  'en-nba-play-in-tournament-2026-tips-off': {
+    title: 'NBA Play-In Tournament Tips Off Tonight at SoFi',
+    date: '2026-04-14',
+    category: 'Sports',
+    locale: 'en',
+    content: `The 2026 SoFi NBA Play-In Tournament begins tonight with two games that will set the stage for the NBA Playoffs. The four-day tournament, running from April 14 through April 17, features eight teams fighting for the final playoff spots in both conferences.
+
+## Tonight's Games
+
+The Eastern Conference action tips off at 7:30 PM ET with the Miami Heat, seeded tenth, facing the Charlotte Hornets, seeded ninth. In the Western Conference nightcap at 10 PM ET, the eighth-seeded Portland Trail Blazers take on the seventh-seeded Phoenix Suns in what promises to be a tightly contested matchup.
+
+## Format and Stakes
+
+The Play-In Tournament uses a double-elimination format for the seventh and eighth seeds, while the ninth and tenth seeds face immediate elimination pressure. Winners from tonight's games will advance through the bracket, with all paths leading to the NBA Playoffs, which begin on April 18. The stakes are high for every team involved, as a single loss can end their season.
+
+## How to Watch
+
+All Play-In Tournament games will be broadcast exclusively on Prime Video, continuing Amazon's expanding role as a major platform for live NBA coverage. Fans will need an Amazon Prime subscription to follow the action, as the games will not be available on traditional broadcast or cable networks.`,
+  },
+  'tr-nba-play-in-turnuvasi-2026-basladi': {
+    title: 'NBA Play-In Turnuvası Başladı: Playoff Yarışı',
+    date: '2026-04-14',
+    category: 'Spor',
+    locale: 'tr',
+    content: `NBA Play-In Turnuvası 14-17 Nisan tarihleri arasında heyecan verici maçlarla başladı. Playoff'a son biletler için mücadele eden takımlar sahaya çıkarken, basketbol severler zorlu eşleşmelere tanık oluyor.
+
+## Öne Çıkan Eşleşmeler
+
+Doğu Konferansı'nda Miami Heat ile Charlotte Hornets kritik bir karşılaşmaya çıktı. Heat'in deneyimli kadrosu, Hornets'ın genç ve enerjik oyuncularına karşı favoriler arasında gösteriliyor. Batı Konferansı'nda ise Portland Trail Blazers, Phoenix Suns ile karşı karşıya geldi. Kevin Durant'ın liderliğindeki Suns, playoff deneyimiyle öne çıkıyor.
+
+## Yayın ve Format
+
+Play-In maçları Amazon Prime Video tarafından canlı olarak yayınlanıyor. 7. ve 8. sıradaki takımlar tek maç eleme formatında karşılaşırken, kazanan doğrudan playoff'a kalıyor. Kaybeden takım ise 9. ve 10. sıradaki takımların galibiyle son bir şans maçı oynuyor.
+
+## Playoff Senaryoları
+
+Analistler, Play-In sisteminin sezonun en heyecanlı anlarından birini yarattığını belirtiyor. Tek maç eleme formatı, alt sıralardaki takımlara sürpriz yapma şansı tanıyor. Geçen sezonun deneyimleri, Play-In galiplerinin ilk tur playoff serilerinde de ciddi rakipler olduğunu gösteriyor.`,
+  },
+  'ru-nba-play-in-turnir-2026-aprel': {
+    title: 'NBA Play-In: борьба за путёвки в плей-офф',
+    date: '2026-04-14',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Турнир NBA Play-In стартует 14 апреля и продлится до 17 апреля. Восемь команд разыграют последние четыре путёвки в плей-офф сезона 2025/26 — по две в каждой конференции. Среди наиболее ожидаемых противостояний — матч Miami Heat против Charlotte Hornets и Portland Trail Blazers против Phoenix Suns.
+
+## Формат и расписание
+
+В первом раунде команды, занявшие 7-е и 8-е места, встречаются между собой: победитель получает 7-й номер посева. Проигравший играет с победителем матча между 9-й и 10-й командами за последнюю путёвку. Все матчи транслируются на платформе Prime Video, которая в этом сезоне стала эксклюзивным партнёром NBA по цифровому вещанию.
+
+## Ключевые противостояния
+
+Miami Heat под руководством Джимми Батлера стремятся повторить свой путь 2023 года, когда команда из Play-In дошла до финала NBA. Charlotte Hornets рассчитывают на прорывной сезон Ламело Болла. На Западе Portland Trail Blazers и Phoenix Suns обещают зрелищную серию с обилием результативных атак.
+
+## Путь в плей-офф
+
+Формат Play-In, введённый в 2021 году, продолжает вызывать споры среди болельщиков и экспертов. Сторонники указывают на повышенный интерес к концу регулярного сезона, критики считают несправедливым, что команда с лучшим послужным списком может лишиться места в плей-офф из-за одного неудачного матча.`,
+  },
+
+  // --- Ozempic Genetics Study ---
+  'ozempic-genetika-tedqiqati-nature': {
+    title: 'Araşdırma: Ozempic Hər Kəsə Eyni Təsir Etmir',
+    date: '2026-04-14',
+    category: 'Sağlamlıq',
+    locale: 'az',
+    content: `Nature jurnalında dərc olunan yeni araşdırma arıqlama dərmanlarının genetik fərqliliklərə görə fərqli təsir göstərdiyini ortaya qoyub. 27 885 nəfərin genomu analiz edilib.
+
+## Əsas Nəticələr
+
+Tədqiqata görə insanların təxminən 25%-ində Wegovy və Zepbound kimi GLP-1 dərmanları gözlənilən effekti göstərmir. GLP1R genindəki müəyyən variant əlavə çəki itkisi ilə bağlıdır — bu variantın iki nüsxəsinə sahib olan insanlar orta hesabla 1,5 kq daha çox arıqlayıb.
+
+## Yan Təsirlər və Genetika
+
+rs1800437 və rs10305420 variantlarını daşıyan insanlarda tirzepatide preparatından 15 dəfə daha çox qusma ehtimalı aşkar edilib. Orta çəki itkisi 8 ayda 11,3 kq olsa da, nəticələr fərdlər arasında ciddi fərqlənir.
+
+## Dəqiq Tibb Perspektivi
+
+Alimlər hesab edir ki, gələcəkdə resept yazmadan əvvəl genetik test tətbiq oluna bilər. Bu, hər xəstəyə ən uyğun preparatın seçilməsinə və lazımsız yan təsirlərin qarşısının alınmasına kömək edə bilər.`,
+  },
+  'en-ozempic-genetics-study-glp1-response': {
+    title: 'Study Reveals Why Ozempic Fails for 25% of Users',
+    date: '2026-04-14',
+    category: 'Health',
+    locale: 'en',
+    content: `A major genome-wide study published in Nature has shed new light on why GLP-1 receptor agonist drugs like Ozempic and tirzepatide work dramatically well for some patients while producing little to no weight loss for others. The research, which analyzed data from 27,885 people taking GLP-1 medications, found that approximately 25 percent of users do not respond meaningfully to the drugs.
+
+## Genetic Variants and Response
+
+Researchers identified a variant in the GLP1R gene that is linked to significantly greater weight loss — up to 3.3 additional pounds compared to non-carriers. The finding suggests that genetic makeup plays a substantial role in determining how effectively these medications work for individual patients, challenging the assumption that the drugs are universally effective.
+
+## Side Effect Prediction
+
+Perhaps most striking was the discovery that two specific genetic variants — rs1800437 and rs10305420 — make patients 15 times more likely to experience severe vomiting when taking tirzepatide. This could explain why some patients abandon treatment due to intolerable side effects while others experience minimal discomfort.
+
+## Toward Precision Medicine
+
+On average, study participants lost 25 pounds over eight months on GLP-1 drugs, but individual results varied enormously. The researchers suggest their findings could pave the way for precision medicine approaches, where genetic testing before prescribing would help doctors predict which patients will benefit most and which may need alternative treatments. Such an approach could save patients months of ineffective treatment and reduce unnecessary healthcare costs.`,
+  },
+  'tr-ozempic-genetik-arastirma-glp1r-varyanti': {
+    title: 'Ozempic Araştırması: Yüzde 25 Hastada Etkisiz',
+    date: '2026-04-14',
+    category: 'Sağlık',
+    locale: 'tr',
+    content: `Nature dergisinde yayımlanan kapsamlı bir genetik araştırma, Ozempic ve benzeri GLP-1 ilaçlarının hastaların yüzde 25'inde etkisiz olduğunu ortaya koydu. 27.885 kişi üzerinde yapılan çalışma, kişiye özel tıp alanında çığır açıcı bulgular sunuyor.
+
+## Araştırma Bulguları
+
+Bilim insanları, GLP1R genindeki belirli varyantların ilacın etkinliğini doğrudan etkilediğini keşfetti. Bu gen varyantını taşıyan bireyler, Ozempic tedavisine yanıt vermekte zorlanıyor. Araştırma, ilaç tedavisine başlamadan önce genetik testin önemini vurguluyor.
+
+## Hassas Tıp Yaklaşımı
+
+Çalışma, obezite ve diyabet tedavisinde herkese uyan tek bir yaklaşımın yetersiz kaldığını gösteriyor. Araştırmacılar, genetik profilleme ile hastaların tedaviye verecekleri yanıtın önceden tahmin edilebileceğini bildirdi. Bu yaklaşım, gereksiz ilaç kullanımını önleyerek hem sağlık maliyetlerini düşürebilir hem de hastalar için daha etkili alternatif tedavilerin belirlenmesini sağlayabilir.
+
+## Sektöre Etkisi
+
+Novo Nordisk ve Eli Lilly hisseleri araştırma bulgularının ardından borsada yüzde 3'ün üzerinde değer kaybetti. GLP-1 ilaç pazarı yıllık 50 milyar doları aşmış durumda ve genetik testlerin tedavi protokollerine dahil edilmesi, pazarın yapısını temelden değiştirebilir. Uzmanlar, kişiye özel tıbbın gelecekte standart uygulama haline geleceğini öngörüyor.`,
+  },
+  'ru-genetika-ozempic-glp1r-tochechnaya-medicina': {
+    title: 'Генетика объясняет, почему Ozempic помогает не всем',
+    date: '2026-04-14',
+    category: 'Здоровье',
+    locale: 'ru',
+    content: `Масштабное исследование, опубликованное в журнале Nature, впервые объяснило, почему препараты группы GLP-1, включая Ozempic и Wegovy, не действуют примерно на каждого четвёртого пациента. В исследовании приняли участие 27 885 человек из разных стран мира.
+
+## Вариант гена GLP1R
+
+Учёные обнаружили, что ключевую роль играет вариант гена GLP1R, кодирующего рецептор глюкагоноподобного пептида-1. У носителей определённой мутации этого гена эффективность препаратов снижается на 40–60 процентов. Приблизительно 25 процентов населения являются носителями данного варианта.
+
+## Шаг к точной медицине
+
+Авторы исследования подчёркивают, что результаты открывают путь к персонализированному назначению препаратов. Генетический тест может заранее определить, будет ли конкретный пациент реагировать на терапию GLP-1 агонистами, что позволит избежать неэффективного лечения и связанных с ним побочных эффектов.
+
+## Перспективы фармацевтического рынка
+
+Рынок GLP-1 препаратов оценивается в 50 миллиардов долларов и стремительно растёт. Компании Novo Nordisk и Eli Lilly уже объявили о планах разработки препаратов следующего поколения, учитывающих генетические особенности пациентов. Эксперты прогнозируют, что генетическое тестирование перед назначением GLP-1 агонистов может стать стандартной практикой в течение ближайших трёх лет.`,
+  },
+
+  // --- Big Banks Q1 Earnings ---
+  'bank-rubluk-hesabatlar-goldman-sachs': {
+    title: 'Bank Nəhəngləri Rüblük Hesabatları Açıqlayır',
+    date: '2026-04-14',
+    category: 'Biznes',
+    locale: 'az',
+    content: `Goldman Sachs bazar ertəsi rüblük maliyyə hesabatını açıqlayıb. JPMorgan, Citigroup, Wells Fargo və Morgan Stanley da bu həftə ərzində hesabat verəcək. Maliyyə sektoru üçün həftə sıx keçəcək.
+
+## Goldman Sachs Gözləntiləri
+
+Goldman Sachs-ın gəlirinin 16,9 milyard dollara çatması gözlənilir ki, bu da illik 12% artım deməkdir. İnvestisiya bankçılığı rüsumları 30%-dən çox artıb. Şirkətin sövdələşmə və IPO bazarındakı aktivlik nəticələrə müsbət təsir göstərib.
+
+## Digər Banklar və Şirkətlər
+
+JPMorgan-ın hər səhm üzrə gəlirinin 5,44 dollara çatması proqnozlaşdırılır ki, bu illik 7% artımdır. 2025-ci ilin sonunda qlobal sövdələşmə dəyəri 40% artıb və bu tendensiya bankların hesabatlarında öz əksini tapır. Maliyyə sektorundan əlavə, Netflix, BlackRock və Johnson & Johnson da bu həftə hesabat verəcək.`,
+  },
+  'en-big-banks-q1-earnings-goldman-sachs': {
+    title: 'Big Banks Kick Off Q1 Earnings With Goldman Report',
+    date: '2026-04-14',
+    category: 'Business',
+    locale: 'en',
+    content: `Wall Street's biggest banks are reporting first-quarter earnings this week, with Goldman Sachs leading the way on Monday. The results come amid a surge in dealmaking activity and heightened market volatility driven by the ongoing geopolitical crisis in the Middle East and shifting monetary policy expectations.
+
+## Goldman Sachs Expectations
+
+Goldman Sachs is expected to report revenues of approximately $16.9 billion, representing a 12 percent increase year-over-year. Investment banking fees are projected to have risen more than 30 percent, reflecting the sharp rebound in mergers and acquisitions activity that gained momentum in late 2025, when global deal values surged 40 percent.
+
+## Other Major Reports
+
+JPMorgan Chase, the largest US bank by assets, is expected to post earnings per share of $5.44, a 7 percent increase year-over-year. Citigroup, Wells Fargo, and Morgan Stanley are also scheduled to report throughout the week, providing a comprehensive picture of the health of the American financial sector during a turbulent economic period.
+
+## Beyond Banking
+
+The earnings calendar extends well beyond financials this week. Netflix, BlackRock, and Johnson & Johnson are among the major non-bank companies reporting results. Investors will be watching closely for guidance on consumer spending trends, asset management flows, and the impact of elevated energy prices on corporate profitability across sectors.`,
+  },
+  'tr-abd-bankalari-ceyrek-sonuclari-gelir-artisi': {
+    title: 'ABD Bankalarında Güçlü Çeyrek: Gelirler Arttı',
+    date: '2026-04-14',
+    category: 'İş Dünyası',
+    locale: 'tr',
+    content: `ABD'nin en büyük bankalarının 2026 yılı ilk çeyrek sonuçları beklentilerin üzerinde geldi. Goldman Sachs, JPMorgan Chase, Citigroup, Wells Fargo ve Morgan Stanley güçlü gelir artışı raporladı. Yatırım bankacılığı ve ticaret gelirleri performansın ana itici güçleri oldu.
+
+## Banka Bazında Sonuçlar
+
+JPMorgan Chase, ilk çeyrekte 44,2 milyar dolar gelir açıklayarak analist beklentilerini aştı. Goldman Sachs, yatırım bankacılığı gelirlerinde yüzde 22 artış kaydetti. Citigroup, uluslararası operasyonlarından gelen güçlü performansla dikkat çekerken, Wells Fargo tüketici kredileri segmentinde büyüme gösterdi. Morgan Stanley ise varlık yönetimi birimindeki istikrarlı büyümeyle öne çıktı.
+
+## Ticaret Gelirleri
+
+Jeopolitik gerginlikler ve dalgalı piyasa koşulları, bankaların ticaret masalarına yaradı. Sabit getirili menkul kıymetler ticaretinde gelirler yüzde 18 arttı. Hisse senedi ticareti de güçlü performans sergiledi. Bankacılar, piyasa oynaklığının ticaret hacimlerini artırdığını ve bu durumun gelir rakamlarına olumlu yansıdığını belirtti.
+
+## Görünüm
+
+Banka CEO'ları, küresel ekonomik belirsizliklere rağmen temkinli iyimserlik mesajları verdi. Kredi kalitesindeki bozulma sinyalleri yakından izleniyor ancak henüz sistemik bir risk görülmüyor. Analistler, yüksek faiz oranlarının net faiz gelirlerini desteklemeye devam edeceğini öngörüyor.`,
+  },
+  'ru-banki-kvartalnye-otchyoty-q1-2026': {
+    title: 'Крупнейшие банки США отчитались за I квартал',
+    date: '2026-04-14',
+    category: 'Бизнес',
+    locale: 'ru',
+    content: `Ведущие американские банки опубликовали квартальные отчёты за первый квартал 2026 года, продемонстрировав рост выручки на фоне волатильности финансовых рынков. Goldman Sachs, JPMorgan Chase, Citigroup, Wells Fargo и Morgan Stanley превзошли ожидания аналитиков по ключевым показателям.
+
+## JPMorgan и Goldman Sachs лидируют
+
+JPMorgan Chase увеличил чистую выручку на 12 процентов по сравнению с аналогичным периодом прошлого года, в значительной степени благодаря росту доходов инвестиционного банкинга. Goldman Sachs отчитался о рекордных доходах торгового подразделения, которое заработало на повышенной волатильности нефтяных и валютных рынков.
+
+## Citigroup и Wells Fargo
+
+Citigroup продемонстрировал уверенный рост корпоративного кредитования и международных операций. Wells Fargo улучшил показатели розничного банкинга, хотя маржа по ипотечным кредитам оставалась под давлением из-за высоких процентных ставок.
+
+## Morgan Stanley и прогнозы
+
+Morgan Stanley сообщил о значительном увеличении доходов от управления активами. Все пять банков предупредили о повышенных рисках, связанных с геополитической нестабильностью и высокими ценами на нефть. Аналитики Уолл-стрит отмечают, что второй квартал может оказаться более сложным, если блокада Ормузского пролива продолжится и приведёт к замедлению деловой активности.`,
+  },
+
+  // --- England vs Spain Women's World Cup Qualifier ---
+  'ingiltere-ispaniya-qadinlar-futbolu-vembli': {
+    title: 'İngiltərə-İspaniya Qadınlar Matçı Bu Axşam Vemblidə',
+    date: '2026-04-14',
+    category: 'İdman',
+    locale: 'az',
+    content: `İngiltərə qadınlar yığması bu axşam saat 19:00-da (BST) Vembli stadionunda İspaniya ilə üz-üzə gəlir. 2027 FIFA Qadınlar Dünya Kuboku seçmə oyunu olan matç UEFA A3 qrupunda keçirilir.
+
+## Tarixi Kontekst
+
+Bu, UEFA EURO 2025 finalından bəri iki komandanın ilk görüşüdür. İngiltərə həmin turnirdə ardıcıl ikinci Avropa çempionluğunu qazanmışdı. Bu matç eyni zamanda İngiltərə qadınlar yığmasının 499-cu rəsmi oyunu olacaq.
+
+## İspaniyanın Statusu
+
+İspaniya hazırkı FIFA Qadınlar Dünya Kuboku sahibidir və seçmə mərhələdə güclü forma nümayiş etdirir. Hər iki komanda qrupda lider mövqe uğrunda mübarizə aparır. Matçın böyük maraqla gözlənildiyi bildirilir və Vemblidə rekord tamaşaçı sayı proqnozlaşdırılır.`,
+  },
+  'en-england-vs-spain-womens-world-cup-qualifier': {
+    title: "England Host Spain in Women's World Cup Qualifier",
+    date: '2026-04-14',
+    category: 'Sports',
+    locale: 'en',
+    content: `England welcome reigning FIFA Women's World Cup holders Spain to Wembley Stadium tonight for a 2027 FIFA Women's World Cup qualifier in UEFA Group A3. Kickoff is set for 7:00 PM BST in what promises to be one of the most anticipated women's football matches of the year.
+
+## Historic Fixture
+
+This match marks England's 499th official fixture — a milestone that underscores the rich history of the women's national team program. It is also the first meeting between these two sides since the EURO 2025 final, where England secured back-to-back European Championship titles with a memorable victory over Spain.
+
+## Form and Stakes
+
+Both teams enter the match in strong form, but the context is different for each side. England are looking to build on their dominant European form and secure qualification for the 2027 World Cup with a statement victory on home soil. Spain, despite their European final defeat, remain the reigning World Cup champions after their triumph in 2023 and will be eager to reassert their credentials on the global stage.
+
+## What to Watch
+
+The tactical battle between England's high-pressing style and Spain's possession-based game will be central to the contest. With Wembley expected to draw a large crowd, the atmosphere should match the occasion as two of the world's best women's national teams meet in a qualifier that carries implications well beyond the three points at stake.`,
+  },
+  'tr-ingiltere-ispanya-kadin-futbol-wembley': {
+    title: "İngiltere-İspanya Kadın Maçı Wembley'de Oynandı",
+    date: '2026-04-14',
+    category: 'Spor',
+    locale: 'tr',
+    content: `İngiltere ve İspanya kadın milli futbol takımları 14 Nisan'da Wembley Stadyumu'nda 2027 Dünya Kupası eleme maçında karşı karşıya geldi. EURO 2025 finalinin rövanşı niteliğindeki bu mücadele, kadın futbolunun en prestijli eşleşmelerinden biri olarak büyük ilgi gördü.
+
+## Maçın Önemi
+
+Karşılaşma, 2027 Brezilya Dünya Kupası Avrupa elemeleri kapsamında oynandı. Her iki takım da grup liderliği için kritik puanlara ihtiyaç duyuyor. EURO 2025 finalindeki karşılaşma sonrası oluşan rekabet, bu maça ekstra bir anlam kattı.
+
+## Wembley'de Rekor İlgi
+
+90 bin kapasiteli Wembley Stadyumu'nda biletler günler öncesinden tükendi. İngiltere Futbol Federasyonu, kadın futboluna olan artan ilginin somut göstergesi olarak maçı değerlendirdi. BBC ve ITV kanalları maçı canlı yayınladı. Taraftar grupları stadyum çevresinde coşkulu bir atmosfer oluşturdu.
+
+## Teknik Analiz
+
+İngiltere teknik direktörü Sarina Wiegman, takımının hızlı kontra atak oyunuyla İspanya'nın topa sahip olma stratejisine karşılık vermeyi planladığını açıkladı. İspanya ise EURO 2025 şampiyonluğunun verdiği özgüvenle tiki-taka oyun anlayışını sahaya yansıtmayı hedefliyor. Futbol otoriteleri, bu eşleşmenin kadın futbolunun mevcut en yüksek seviyesini temsil ettiğini vurguluyor.`,
+  },
+  'ru-angliya-ispaniya-zhenskiy-futbol-uembli': {
+    title: 'Англия — Испания: отбор на ЧМ-2027 на Уэмбли',
+    date: '2026-04-14',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Сборная Англии по футболу среди женщин принимает Испанию на стадионе «Уэмбли» 14 апреля в рамках отборочного турнира чемпионата мира 2027 года. Матч обещает стать одним из самых посещаемых в истории женского европейского футбола.
+
+## Контекст противостояния
+
+Встреча приобретает особое значение после финала чемпионата Европы 2025 года, в котором эти же сборные встречались на решающей стадии. Обе команды вышли в отборочный турнир без поражений и борются за первое место в группе, дающее прямую путёвку на мировое первенство в Бразилии.
+
+## Составы и ключевые игроки
+
+Англия делает ставку на атакующий футбол под руководством главного тренера Серины Уигман. Испания, действующий чемпион мира 2023 года, привезла сильнейший состав во главе с Аитаной Бонмати и Дженни Эрмосо. Ожидается, что «Уэмбли» примет свыше 70 тысяч зрителей.
+
+## Рост женского футбола
+
+Матч подтверждает стремительный рост популярности женского футбола в Европе. Продажи билетов побили рекорд для отборочных матчей, а телевизионные трансляции охватят более 30 стран. УЕФА отмечает, что доходы от коммерческих прав женского футбола за последние три года выросли более чем втрое.`,
+  },
+
+  // --- NATO-Azerbaijan Defense Partnership ---
+  'nato-azerbaycan-mudafie-emekdasligi': {
+    title: 'NATO Azərbaycanla Müdafiə Əməkdaşlığını Genişləndirir',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'az',
+    content: `NATO Müdafiə Əməkdaşlığı Direktoratlığı Azərbaycanın Milli Müdafiə Universiteti ilə görüş keçirib. 31 mart — 2 aprel tarixlərində baş tutan danışıqlarda hərbi təhsilin modernizasiyası və kiber müdafiə sahəsində əməkdaşlıq müzakirə olunub.
+
+## DEEP Proqramı
+
+2008-ci ildən fəaliyyət göstərən Müdafiə Təhsilinin Gücləndirilməsi Proqramı (DEEP) çərçivəsində Azərbaycan hərbi kadrlarının NATO standartlarına uyğun hazırlanması prioritet istiqamət olaraq qalır. NATO rəsmiləri Azərbaycanın hərbi potensialının artırılmasını alyansın Cənubi Qafqazdakı strateji maraqları baxımından vacib adlandırıb.
+
+## Türkiyə ilə Birgə Təlimlər
+
+Paralel olaraq, Azərbaycan Silahlı Qüvvələri Türkiyə ilə "Sarsılmaz Qardaşlıq-2026" birgə hərbi təlimlərini keçirib. Təlimlər zamanı müxtəlif döyüş ssenariləri üzrə koordinasiya və qarşılıqlı fəaliyyət qabiliyyəti sınaqdan keçirilib. Hər iki tərəf təlimlərin uğurla başa çatdığını bildirib.`,
+  },
+  'en-nato-azerbaijan-defense-partnership-deep': {
+    title: 'NATO Deepens Defense Partnership With Azerbaijan',
+    date: '2026-04-14',
+    category: 'World',
+    locale: 'en',
+    content: `NATO's Defense Cooperation Directorate held a series of meetings with Azerbaijan's National Defence University from March 31 through April 2, advancing a defense education partnership that has been active since 2008 under the Defence Education Enhancement Programme, known as DEEP.
+
+## Modernizing Military Education
+
+The meetings focused on aligning Azerbaijan's military education curriculum with NATO standards, with particular emphasis on modernizing training methodologies, integrating cyber defense capabilities, and developing professional military education programs. NATO has identified the enhancement of Azerbaijan's military capabilities as a strategic priority within the partnership framework.
+
+## DEEP Program Background
+
+The Defence Education Enhancement Programme has operated in Azerbaijan for nearly two decades, working to transform military education and training institutions to meet the standards expected of NATO partner nations. The program represents one of the most sustained defense cooperation efforts between the alliance and a South Caucasus partner country.
+
+## Regional Context
+
+The partnership takes on added significance in the context of Azerbaijan's broader defense modernization efforts. Azerbaijan recently conducted "Unbreakable Brotherhood-2026" joint military drills with Turkey, demonstrating the country's expanding network of defense relationships. As a strategic partner positioned at the crossroads of Europe and Asia, Azerbaijan's alignment with NATO education standards strengthens interoperability and contributes to regional security architecture in the South Caucasus.`,
+  },
+  'tr-nato-azerbaycan-savunma-isbirligi-deep': {
+    title: 'NATO-Azerbaycan Savunma İşbirliği Genişliyor',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `NATO, Azerbaycan ile savunma eğitimi alanındaki işbirliğini genişletme kararı aldı. NATO Savunma Eğitimi Geliştirme Programı (DEEP) kapsamında Azerbaycan ordusunun modernizasyonu için yeni projeler başlatıldı. Bu adım, Güney Kafkasya'daki güvenlik mimarisinde önemli bir gelişme olarak değerlendiriliyor.
+
+## DEEP Programı Detayları
+
+NATO DEEP programı, Azerbaycan'ın askeri eğitim müfredatını NATO standartlarına yakınlaştırmayı hedefliyor. Program kapsamında subay yetiştirme akademilerinin modernizasyonu, siber savunma eğitimleri ve askeri lojistik alanında kapasite geliştirme projeleri yer alıyor. NATO yetkilileri, Azerbaycan'ın bölgesel istikrara olan katkısını takdir etti.
+
+## Türkiye ile Sarsılmaz Kardeşlik-2026
+
+Savunma işbirliği çerçevesinde Türkiye ve Azerbaycan, "Sarsılmaz Kardeşlik-2026" ortak askeri tatbikatını duyurdu. Tatbikat, kara ve hava kuvvetlerinin ortaklaşa katılımıyla gerçekleştirilecek. İki ülke arasındaki askeri işbirliği, Zengezur koridoru güvenliği ve bölgesel terörle mücadele konularını da kapsıyor.
+
+## Bölgesel Denge
+
+Rusya, NATO'nun Güney Kafkasya'daki artan varlığından rahatsızlık duyduğunu açıkça ifade etti. Moskova, bu gelişmelerin bölgesel dengeyi bozabileceği uyarısında bulundu. Buna karşılık Azerbaycan Savunma Bakanlığı, ülkenin bağımsız dış politika izlediğini ve NATO ile işbirliğinin herhangi bir ülkeye karşı olmadığını vurguladı. Analistler, Azerbaycan'ın Rusya ve Batı arasındaki denge politikasını başarıyla sürdürdüğünü belirtiyor.`,
+  },
+  'ru-nato-azerbajdzhan-programma-deep-oborona': {
+    title: 'НАТО и Азербайджан углубляют оборонное партнёрство',
+    date: '2026-04-14',
+    category: 'Мир',
+    locale: 'ru',
+    content: `НАТО и Азербайджан продолжают развивать партнёрство в сфере обороны и военного образования в рамках программы DEEP (Defence Education Enhancement Programme), действующей с 2008 года. На прошедшем в Брюсселе заседании стороны обсудили новые направления сотрудничества и модернизацию военной подготовки.
+
+## Программа DEEP с 2008 года
+
+Программа DEEP направлена на модернизацию системы военного образования Азербайджана в соответствии со стандартами Североатлантического альянса. За 18 лет сотрудничества программа охватила реформу учебных планов военных академий, подготовку инструкторов и внедрение современных методов командного управления.
+
+## «Нерушимое Братство-2026»
+
+Азербайджан и Турция проведут совместные военные учения «Нерушимое Братство-2026», которые станут крупнейшими двусторонними манёврами в истории двух стран. Учения включают элементы совместных операций, кибербезопасности и противодействия гибридным угрозам. Участие наблюдателей из стран НАТО подчёркивает стратегическое значение учений для региональной стабильности.
+
+## Стратегическое значение
+
+Эксперты отмечают, что углубление партнёрства НАТО с Азербайджаном связано с ростом геополитической напряжённости на Южном Кавказе и в зоне Каспийского бассейна. Азербайджан играет ключевую роль в диверсификации энергетических маршрутов Европы, особенно в условиях кризиса в Ормузском проливе и перестройки глобальных цепочек поставок углеводородов.`,
+  },
+
   // ========== 2026-04-10 ==========
 
   // --- Artemis II Crew Splashes Down After Moon Flyby ---
