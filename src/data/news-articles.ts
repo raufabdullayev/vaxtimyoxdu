@@ -131,7 +131,7 @@ One notable trend identified in the IMF report is the sharp rise in global defen
 
 ## IMF Dünya Ekonomik Görünümü
 
-Uluslararası Para Fonu bugün yayımladığı Dünya Ekonomik Görünümü raporunda küresel büyüme tahminini yüzde 3,3'e düşürdü. Bu, IMF tarihinde yapılan en büyük tek seferlik kesinti olarak kayıtlara geçti. Raporda jeopolitik gerilimlerin ve enerji fiyatlarındaki artışın temel risk faktörleri olduğu vurgulandı.
+Uluslararası Para Fonu bugün yayımladığı Dünya Ekonomik Görünümü raporunda küresel büyüme tahminini yüzde 3,3'e düşürdü. Raporda jeopolitik gerilimlerin ve enerji fiyatlarındaki artışın temel risk faktörleri olduğu vurgulandı.
 
 ## Piyasa Etkileri
 
@@ -154,11 +154,11 @@ Uluslararası Enerji Ajansı, stratejik petrol stoklarının serbest bırakılma
 
 ## Рекордное нарушение поставок
 
-Аналитики называют текущий кризис крупнейшим перебоем в поставках нефти в истории. Из мирового оборота выведено порядка 11 миллионов баррелей в сутки. Страны-импортёры наращивают закупки из стратегических резервов, однако запасы ограничены. ОПЕК+ пока не объявила о дополнительном увеличении добычи.
+Аналитики называют текущий кризис крупнейшим перебоем в поставках нефти в истории. Из мирового оборота выведено порядка 12 миллионов баррелей в сутки. Страны-импортёры наращивают закупки из стратегических резервов, однако запасы ограничены. ОПЕК+ пока не объявила о дополнительном увеличении добычи.
 
 ## Влияние на потребителей
 
-Рост нефтяных цен уже отразился на стоимости бензина и транспортных услуг по всему миру. В США средняя цена галлона бензина превысила 4,50 доллара. Центральные банки ряда стран сигнализируют о возможном ужесточении денежно-кредитной политики для сдерживания инфляционного давления.`,
+Рост нефтяных цен уже отразился на стоимости бензина и транспортных услуг по всему миру. В США средняя цена галлона бензина достигла 4,12 доллара. Центральные банки ряда стран сигнализируют о возможном ужесточении денежно-кредитной политики для сдерживания инфляционного давления.`,
   },
 
   // --- Hungary Election — Magyar Victory ---
@@ -213,7 +213,7 @@ Seçimde yüzde 80'lik rekor bir katılım oranı kaydedildi. Bu oran, Macarista
 
 ## Orban'ın Yenilgiyi Kabulü
 
-Viktor Orban, sonuçların açıklanmasından yalnızca 3 saat sonra yenilgiyi kabul etti. 14 yıllık kesintisiz iktidarının sona ermesiyle Orban, "Halkın iradesine saygı duyuyorum" açıklamasını yaptı. Bu, Avrupa'daki popülist dalganın en büyük seçim yenilgilerinden biri olarak değerlendirildi.
+Viktor Orban, sonuçların açıklanmasından yalnızca 3 saat sonra yenilgiyi kabul etti. 16 yıllık kesintisiz iktidarının sona ermesiyle Orban, "Halkın iradesine saygı duyuyorum" açıklamasını yaptı. Bu, Avrupa'daki popülist dalganın en büyük seçim yenilgilerinden biri olarak değerlendirildi.
 
 ## AB Tepkisi ve Ukrayna Kredisi
 
@@ -224,7 +224,7 @@ Avrupa Birliği, seçim sonuçlarını memnuniyetle karşıladı. Brüksel, yeni
     date: '2026-04-14',
     category: 'Мир',
     locale: 'ru',
-    content: `Оппозиционная партия Tisza во главе с Петером Мадьяром одержала убедительную победу на парламентских выборах в Венгрии, набрав 53,6 процента голосов и получив 138 из 199 мандатов. Правящая партия Fidesz Виктора Орбана получила лишь 37,8 процента — худший результат за 14 лет пребывания у власти.
+    content: `Оппозиционная партия Tisza во главе с Петером Мадьяром одержала убедительную победу на парламентских выборах в Венгрии, набрав 53,6 процента голосов и получив 138 из 199 мандатов. Правящая партия Fidesz Виктора Орбана получила лишь 37,8 процента — худший результат за 16 лет пребывания у власти.
 
 ## Рекордная явка и признание поражения
 
@@ -579,7 +579,7 @@ Both teams enter the match in strong form, but the context is different for each
 The tactical battle between England's high-pressing style and Spain's possession-based game will be central to the contest. With Wembley expected to draw a large crowd, the atmosphere should match the occasion as two of the world's best women's national teams meet in a qualifier that carries implications well beyond the three points at stake.`,
   },
   'tr-ingiltere-ispanya-kadin-futbol-wembley': {
-    title: "İngiltere-İspanya Kadın Maçı Wembley'de Oynandı",
+    title: "İngiltere-İspanya Kadın Maçı Wembley'de Oynanacak",
     date: '2026-04-14',
     category: 'Spor',
     locale: 'tr',
@@ -676,7 +676,7 @@ Rusya, NATO'nun Güney Kafkasya'daki artan varlığından rahatsızlık duyduğu
     date: '2026-04-14',
     category: 'Мир',
     locale: 'ru',
-    content: `НАТО и Азербайджан продолжают развивать партнёрство в сфере обороны и военного образования в рамках программы DEEP (Defence Education Enhancement Programme), действующей с 2008 года. На прошедшем в Брюсселе заседании стороны обсудили новые направления сотрудничества и модернизацию военной подготовки.
+    content: `НАТО и Азербайджан продолжают развивать партнёрство в сфере обороны и военного образования в рамках программы DEEP (Defence Education Enhancement Programme), действующей с 2008 года. На прошедшем в Баку заседании стороны обсудили новые направления сотрудничества и модернизацию военной подготовки.
 
 ## Программа DEEP с 2008 года
 
