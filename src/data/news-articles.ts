@@ -29,10 +29,10 @@ Paris Saint-Germain Parc des Princes-də Liverpoolu 2-0 məğlub edib. Desire Do
 
 Bu axşamkı qaliblər yarımfinalda Bayern Münhen və ya Real Madrid ilə qarşılaşacaq. Turnirin bu mərhələsində Avropa futbolunun ən güclü komandaları arasında amansız mübarizə gözlənilir.
 
-## Oyun Xülasələri
+## Canlı Yayım
 
-- [Liverpool — PSG (İlk oyun xülasəsi)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
-- [Barselona — Atletiko Madrid (İlk oyun xülasəsi)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
+- [Liverpool — PSG (Canlı izlə)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
+- [Barselona — Atletiko Madrid (Canlı izlə)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
   },
   'en-champions-league-qf-atletico-barca-liverpool-psg': {
     title: 'Champions League QF: Atletico, PSG Defend 2-0 Leads',
@@ -53,10 +53,10 @@ At Anfield, Liverpool must overturn a 2-0 deficit. Desire Doue and Khvicha Kvara
 
 In Champions League history, teams trailing 2-0 after the first leg advance less than 15% of the time. Yet both clubs have the pedigree to make it happen.
 
-## Match Highlights
+## Watch Live
 
-- [Liverpool vs PSG (First Leg Highlights)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
-- [Barcelona vs Atletico Madrid (First Leg Highlights)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
+- [Liverpool vs PSG (Watch Live)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
+- [Barcelona vs Atletico Madrid (Watch Live)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
   },
   'tr-sampiyonlar-ligi-ceyrek-final': {
     title: 'Devler Ligi\'nde Atletico-Barça ve Liverpool-PSG',
@@ -77,10 +77,10 @@ PSG, Parc des Princes'te Doue ve Kvaratskhelia'nın golleriyle Liverpool'u 2-0 m
 
 Galip takımlar yarı finalde Bayern Münih veya Real Madrid ile eşleşecek. Her iki maç 14 Nisan saat 21:00 CET'te başlayacak.
 
-## Maç Özetleri
+## Canlı İzle
 
-- [Liverpool — PSG (İlk Maç Özeti)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
-- [Barcelona — Atletico Madrid (İlk Maç Özeti)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
+- [Liverpool — PSG (Canlı İzle)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
+- [Barcelona — Atletico Madrid (Canlı İzle)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
   },
   'ru-liga-chempionov-atletiko-barsa-liverpul-pszh': {
     title: 'Лига чемпионов: Атлетико и ПСЖ ведут 2:0 после первых матчей',
@@ -101,10 +101,10 @@ Galip takımlar yarı finalde Bayern Münih veya Real Madrid ile eşleşecek. He
 
 Оба ответных матча запланированы на 14 апреля в 21:00 по центральноевропейскому времени. Победители выйдут на Баварию или Реал Мадрид в полуфинале.
 
-## Обзоры матчей
+## Прямая трансляция
 
-- [Ливерпуль — ПСЖ (обзор первого матча)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
-- [Барселона — Атлетико Мадрид (обзор первого матча)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
+- [Ливерпуль — ПСЖ (Смотреть онлайн)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
+- [Барселона — Атлетико Мадрид (Смотреть онлайн)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
   },
 
   // --- Israel-Lebanon Direct Talks ---
