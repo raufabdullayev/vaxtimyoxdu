@@ -1,9 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-14 (Session 27 — News Refresh: 9 new topics, 36 articles, 12 bug fixes)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit c1a7b32 deployed)
-**Son commit:** c1a7b32 (fix(news): correct IMF forecast wording in EN/TR/RU)
-**Əvvəlki commit:** 57a596c (content(news): add 9 new topics for Apr 14)
+**Son yenilənmə:** 2026-04-14 (Session 28 — News Refresh: 8 new topics, 32 articles)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit 8215c81 deployed)
+**Son commit:** 8215c81 (content(news): add 8 new topics for Apr 14 — Session 28)
+**Əvvəlki commit:** 3030bdf (fix(seo): AZ blog title fix)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -24,12 +24,12 @@
 | **Deploy** | ✅ Vercel aktiv |
 | **GitLab + GitHub** | ✅ Synced (d4c3a48) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | c1a7b32 |
-| **Testlər** | **3598** PASS (vitest) |
+| **Son commit** | 8215c81 |
+| **Testlər** | **3726** PASS (vitest) |
 | **E2E** | **30 fayl** (18 yeni Sprint 3-də) |
-| **Statik səhifələr** | **1192** |
+| **Statik səhifələr** | **~1240** |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **132** (33/locale — S27 refresh: 57a596c + c1a7b32) |
+| **Xəbərlər** | **164** (41/locale — S28: +32 yeni: 8215c81) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
