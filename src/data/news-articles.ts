@@ -9,6 +9,84 @@ export interface NewsArticle {
 export const newsArticles: Record<string, NewsArticle> = {
   // ========== 2026-04-14 ==========
 
+  // --- Champions League Quarter-Finals ---
+  'cempionlar-liqasi-atletiko-barsa-liverpool-psg': {
+    title: 'ÇL: Atletiko və PSG Cavab Oyunlarına Üstünlüklə Gəlir',
+    date: '2026-04-14',
+    category: 'İdman',
+    locale: 'az',
+    content: `Çempionlar Liqasının dörddəbir final mərhələsində bu axşam iki həlledici cavab oyunu keçiriləcək. Hər iki matç 14 aprel saat 21:00 CET-də başlayacaq.
+
+## Atletiko Madrid — Barselona
+
+Atletiko Madrid ilk oyunu evdə 2-0 hesabı ilə qazanıb. Qolları Julian Alvarez və Alexander Sorloth vurub. Barselona Camp Nou-da tarixi geri dönüş etməyə çalışacaq, lakin iki qol fərqi ciddi maneədir.
+
+## Liverpool — PSG
+
+Paris Saint-Germain Parc des Princes-də Liverpoolu 2-0 məğlub edib. Desire Doue və Xviça Kvaratskheliya hərəsi bir qol vurub. Liverpool Anfield-də eynilə möhtəşəm geri dönüşlər etmişdi, lakin PSG-nin güclü hücum xətti ciddi təhlükə yaradır.
+
+## Yarımfinal Perspektivi
+
+Bu axşamkı qaliblər yarımfinalda Bayern Münhen və ya Real Madrid ilə qarşılaşacaq. Turnirin bu mərhələsində Avropa futbolunun ən güclü komandaları arasında amansız mübarizə gözlənilir.`,
+  },
+  'en-champions-league-qf-atletico-barca-liverpool-psg': {
+    title: 'Champions League QF: Atletico, PSG Defend 2-0 Leads',
+    date: '2026-04-14',
+    category: 'Sports',
+    locale: 'en',
+    content: `The Champions League quarterfinals reach a decisive point on April 14, with Atletico Madrid hosting Barcelona and Liverpool welcoming PSG — both trailing sides needing historic comebacks to advance.
+
+## Atletico Madrid vs Barcelona (21:00 CET)
+
+Atletico hold a commanding 2-0 advantage. Goals from Julian Alvarez and Alexander Sorloth in the first leg gave Simeone's side a significant cushion.
+
+## Liverpool vs PSG (21:00 CET)
+
+At Anfield, Liverpool must overturn a 2-0 deficit. Desire Doue and Khvicha Kvaratskhelia struck in Paris.
+
+## The Comeback Challenge
+
+In Champions League history, teams trailing 2-0 after the first leg advance less than 15% of the time. Yet both clubs have the pedigree to make it happen.`,
+  },
+  'tr-sampiyonlar-ligi-ceyrek-final': {
+    title: 'Devler Ligi\'nde Atletico-Barça ve Liverpool-PSG',
+    date: '2026-04-14',
+    category: 'Spor',
+    locale: 'tr',
+    content: `Şampiyonlar Ligi çeyrek final rövanş maçlarında iki büyük karşılaşma oynanacak. İlk maçlarda Atletico Madrid Barcelona'yı 2-0, PSG ise Liverpool'u 2-0 yenerek avantajı ele geçirmişti.
+
+## Atletico Madrid — Barcelona
+
+Atletico Madrid ilk maçta Alvarez ve Sorloth'un golleriyle Barcelona'yı 2-0 yendi. Rövanşta Metropolitano'da bu avantajını korumaya çalışacak. Barcelona'nın iki gollük farkı kapatması gerekiyor.
+
+## PSG — Liverpool
+
+PSG, Parc des Princes'te Doue ve Kvaratskhelia'nın golleriyle Liverpool'u 2-0 mağlup etti. Rövanş Anfield'da oynanacak. Liverpool'un tarihi geri dönüş geleneği olsa da iki gollük açığı kapatması kolay olmayacak.
+
+## Yarı Final Yolu
+
+Galip takımlar yarı finalde Bayern Münih veya Real Madrid ile eşleşecek. Her iki maç 14 Nisan saat 21:00 CET'te başlayacak.`,
+  },
+  'ru-liga-chempionov-atletiko-barsa-liverpul-pszh': {
+    title: 'Лига чемпионов: Атлетико и ПСЖ ведут 2:0 после первых матчей',
+    date: '2026-04-14',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `В четвертьфиналах Лиги чемпионов УЕФА Атлетико Мадрид и ПСЖ одержали победы в первых матчах со счётом 2:0 и имеют преимущество перед ответными встречами.
+
+## Атлетико — Барселона 2:0
+
+Атлетико Мадрид на своём поле обыграл Барселону благодаря голам Альвареса и Сорлота. Команда Диего Симеоне продемонстрировала оборонительную стойкость. В ответном матче Барселоне предстоит отыграть два мяча.
+
+## ПСЖ — Ливерпуль 2:0
+
+В Париже ПСЖ уверенно обыграл Ливерпуль. Голы Дуэ и Кварацхелия обеспечили французскому клубу комфортное преимущество. Ответный матч состоится на «Энфилде», где Ливерпуль попытается совершить камбэк.
+
+## Ответные матчи
+
+Оба ответных матча запланированы на 14 апреля в 21:00 по центральноевропейскому времени. Победители выйдут на Баварию или Реал Мадрид в полуфинале.`,
+  },
+
   // --- Israel-Lebanon Direct Talks ---
   'israil-livan-birbasa-danisiqlar': {
     title: 'İsrail-Livan: 30 İldən Sonra İlk Birbaşa Danışıqlar',
@@ -151,84 +229,6 @@ Haiti yetkilileri olay yerine acil ekipler sevk etti. Ölü sayısının artabil
 ## Реакция властей
 
 Власти Гаити объявили национальный траур по погибшим и начали расследование обстоятельств трагедии. Международные организации выразили соболезнования и предложили гуманитарную помощь. ЮНЕСКО призвала пересмотреть стандарты безопасности при проведении массовых мероприятий на территории объектов культурного наследия.`,
-  },
-
-  // --- Champions League Quarter-Finals ---
-  'cempionlar-liqasi-atletiko-barsa-liverpool-psg': {
-    title: 'ÇL: Atletiko və PSG Cavab Oyunlarına Üstünlüklə Gəlir',
-    date: '2026-04-14',
-    category: 'İdman',
-    locale: 'az',
-    content: `Çempionlar Liqasının dörddəbir final mərhələsində bu axşam iki həlledici cavab oyunu keçiriləcək. Hər iki matç 14 aprel saat 21:00 CET-də başlayacaq.
-
-## Atletiko Madrid — Barselona
-
-Atletiko Madrid ilk oyunu evdə 2-0 hesabı ilə qazanıb. Qolları Julian Alvarez və Alexander Sorloth vurub. Barselona Camp Nou-da tarixi geri dönüş etməyə çalışacaq, lakin iki qol fərqi ciddi maneədir.
-
-## Liverpool — PSG
-
-Paris Saint-Germain Parc des Princes-də Liverpoolu 2-0 məğlub edib. Desire Doue və Xviça Kvaratskheliya hərəsi bir qol vurub. Liverpool Anfield-də eynilə möhtəşəm geri dönüşlər etmişdi, lakin PSG-nin güclü hücum xətti ciddi təhlükə yaradır.
-
-## Yarımfinal Perspektivi
-
-Bu axşamkı qaliblər yarımfinalda Bayern Münhen və ya Real Madrid ilə qarşılaşacaq. Turnirin bu mərhələsində Avropa futbolunun ən güclü komandaları arasında amansız mübarizə gözlənilir.`,
-  },
-  'en-champions-league-qf-atletico-barca-liverpool-psg': {
-    title: 'Champions League QF: Atletico, PSG Defend 2-0 Leads',
-    date: '2026-04-14',
-    category: 'Sports',
-    locale: 'en',
-    content: `The Champions League quarterfinals reach a decisive point on April 14, with Atletico Madrid hosting Barcelona and Liverpool welcoming PSG — both trailing sides needing historic comebacks to advance.
-
-## Atletico Madrid vs Barcelona (21:00 CET)
-
-Atletico hold a commanding 2-0 advantage. Goals from Julian Alvarez and Alexander Sorloth in the first leg gave Simeone's side a significant cushion.
-
-## Liverpool vs PSG (21:00 CET)
-
-At Anfield, Liverpool must overturn a 2-0 deficit. Desire Doue and Khvicha Kvaratskhelia struck in Paris.
-
-## The Comeback Challenge
-
-In Champions League history, teams trailing 2-0 after the first leg advance less than 15% of the time. Yet both clubs have the pedigree to make it happen.`,
-  },
-  'tr-sampiyonlar-ligi-ceyrek-final': {
-    title: 'Devler Ligi\'nde Atletico-Barça ve Liverpool-PSG',
-    date: '2026-04-14',
-    category: 'Spor',
-    locale: 'tr',
-    content: `Şampiyonlar Ligi çeyrek final rövanş maçlarında iki büyük karşılaşma oynanacak. İlk maçlarda Atletico Madrid Barcelona'yı 2-0, PSG ise Liverpool'u 2-0 yenerek avantajı ele geçirmişti.
-
-## Atletico Madrid — Barcelona
-
-Atletico Madrid ilk maçta Alvarez ve Sorloth'un golleriyle Barcelona'yı 2-0 yendi. Rövanşta Metropolitano'da bu avantajını korumaya çalışacak. Barcelona'nın iki gollük farkı kapatması gerekiyor.
-
-## PSG — Liverpool
-
-PSG, Parc des Princes'te Doue ve Kvaratskhelia'nın golleriyle Liverpool'u 2-0 mağlup etti. Rövanş Anfield'da oynanacak. Liverpool'un tarihi geri dönüş geleneği olsa da iki gollük açığı kapatması kolay olmayacak.
-
-## Yarı Final Yolu
-
-Galip takımlar yarı finalde Bayern Münih veya Real Madrid ile eşleşecek. Her iki maç 14 Nisan saat 21:00 CET'te başlayacak.`,
-  },
-  'ru-liga-chempionov-atletiko-barsa-liverpul-pszh': {
-    title: 'Лига чемпионов: Атлетико и ПСЖ ведут 2:0 после первых матчей',
-    date: '2026-04-14',
-    category: 'Спорт',
-    locale: 'ru',
-    content: `В четвертьфиналах Лиги чемпионов УЕФА Атлетико Мадрид и ПСЖ одержали победы в первых матчах со счётом 2:0 и имеют преимущество перед ответными встречами.
-
-## Атлетико — Барселона 2:0
-
-Атлетико Мадрид на своём поле обыграл Барселону благодаря голам Альвареса и Сорлота. Команда Диего Симеоне продемонстрировала оборонительную стойкость. В ответном матче Барселоне предстоит отыграть два мяча.
-
-## ПСЖ — Ливерпуль 2:0
-
-В Париже ПСЖ уверенно обыграл Ливерпуль. Голы Дуэ и Кварацхелия обеспечили французскому клубу комфортное преимущество. Ответный матч состоится на «Энфилде», где Ливерпуль попытается совершить камбэк.
-
-## Ответные матчи
-
-Оба ответных матча запланированы на 14 апреля в 21:00 по центральноевропейскому времени. Победители выйдут на Баварию или Реал Мадрид в полуфинале.`,
   },
 
   // --- Stanford AI Index 2026 ---
