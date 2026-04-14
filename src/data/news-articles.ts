@@ -101,7 +101,7 @@ Mütəxəssislər bu faciəni Karib regionu tarixinin ən ölümcül izdiham had
 
 ## Araşdırma və Reaksiyalar
 
-Haiti hökuməti hadisə ilə bağlı təhqiqat başladıb. Beynəlxalq təşkilatlar humanitar yardım təklif edib. UNESCO idarəçiliyindən abidədə kütləvi tədbirlərin təhlükəsizlik standartlarının yenidən nəzərdən keçirilməsini tələb edib.`,
+Haiti hökuməti hadisə ilə bağlı təhqiqat başladıb. Beynəlxalq təşkilatlar humanitar yardım təklif edib. UNESCO-dan abidədə kütləvi tədbirlərin təhlükəsizlik standartlarının yenidən nəzərdən keçirilməsi tələb edilib.`,
   },
   'en-haiti-stampede-citadelle-kills-dozens': {
     title: 'Deadly Stampede at Haiti Citadelle Kills at Least 25',
@@ -197,38 +197,38 @@ In Champions League history, teams trailing 2-0 after the first leg advance less
     date: '2026-04-14',
     category: 'Spor',
     locale: 'tr',
-    content: `Şampiyonlar Ligi çeyrek final ilk maçlarında iki karşılaşma da 2-0'lık skorlarla sona erdi. Atletico Madrid kendi sahasında Barcelona'yı 2-0 yenerken, Liverpool da PSG karşısında aynı skorla galip ayrıldı.
+    content: `Şampiyonlar Ligi çeyrek final rövanş maçlarında iki büyük karşılaşma oynanacak. İlk maçlarda Atletico Madrid Barcelona'yı 2-0, PSG ise Liverpool'u 2-0 yenerek avantajı ele geçirmişti.
 
-## Atletico Madrid, Barcelona'yı Durdurdu
+## Atletico Madrid — Barcelona
 
-Wanda Metropolitano'da oynanan maçta Atletico Madrid disiplinli savunmasıyla Barcelona'ya geçit vermedi.
+Atletico Madrid ilk maçta Alvarez ve Sorloth'un golleriyle Barcelona'yı 2-0 yendi. Rövanşta Metropolitano'da bu avantajını korumaya çalışacak. Barcelona'nın iki gollük farkı kapatması gerekiyor.
 
-## Liverpool, PSG'ye Fark Attı
+## PSG — Liverpool
 
-Anfield'da Liverpool PSG'yi 2-0 mağlup etti.
+PSG, Parc des Princes'te Doue ve Kvaratskhelia'nın golleriyle Liverpool'u 2-0 mağlup etti. Rövanş Anfield'da oynanacak. Liverpool'un tarihi geri dönüş geleneği olsa da iki gollük açığı kapatması kolay olmayacak.
 
-## İkinci Maçlar Belirleyici Olacak
+## Yarı Final Yolu
 
-Her iki eşleşmede de 2-0'lık farklar rövanş maçlarını heyecanlı kılacak.`,
+Galip takımlar yarı finalde Bayern Münih veya Real Madrid ile eşleşecek. Her iki maç 14 Nisan saat 21:00 CET'te başlayacak.`,
   },
   'ru-liga-chempionov-atletiko-barsa-liverpul-pszh': {
-    title: 'Лига чемпионов: Атлетико обыграл Барсу, Ливерпуль — ПСЖ',
+    title: 'Лига чемпионов: Атлетико и ПСЖ ведут 2:0 после первых матчей',
     date: '2026-04-14',
     category: 'Спорт',
     locale: 'ru',
-    content: `Состоялись первые матчи четвертьфинала Лиги чемпионов УЕФА. Атлетико Мадрид одержал победу над Барселоной со счётом 2:0, а Ливерпуль с таким же счётом обыграл ПСЖ. Ответные матчи состоятся 14 апреля.
+    content: `В четвертьфиналах Лиги чемпионов УЕФА Атлетико Мадрид и ПСЖ одержали победы в первых матчах со счётом 2:0 и имеют преимущество перед ответными встречами.
 
 ## Атлетико — Барселона 2:0
 
-Атлетико провёл дисциплинированный матч на своём поле. Голы забили Хулиан Альварес и Александер Сёрлот, обеспечив мадридской команде серьёзное преимущество перед ответной встречей на «Камп Ноу».
+Атлетико Мадрид на своём поле обыграл Барселону благодаря голам Альвареса и Сорлота. Команда Диего Симеоне продемонстрировала оборонительную стойкость. В ответном матче Барселоне предстоит отыграть два мяча.
 
-## Ливерпуль — ПСЖ 2:0
+## ПСЖ — Ливерпуль 2:0
 
-На «Энфилде» Ливерпуль уверенно справился с парижанами. Дезире Дуэ и Хвича Кварацхелия отличились голами, дав ПСЖ комфортное преимущество перед ответным матчем.
+В Париже ПСЖ уверенно обыграл Ливерпуль. Голы Дуэ и Кварацхелия обеспечили французскому клубу комфортное преимущество. Ответный матч состоится на «Энфилде», где Ливерпуль попытается совершить камбэк.
 
 ## Ответные матчи
 
-Оба результата 2:0 дают победителям серьёзное преимущество. В истории Лиги чемпионов команды, уступавшие 0:2 после первого матча, проходили дальше менее чем в 15% случаев.`,
+Оба ответных матча запланированы на 14 апреля в 21:00 по центральноевропейскому времени. Победители выйдут на Баварию или Реал Мадрид в полуфинале.`,
   },
 
   // --- Stanford AI Index 2026 ---
@@ -281,9 +281,9 @@ On the SWE-bench benchmark, AI systems jumped from 60% to near-perfect scores wi
 
 Çin'in yoğun yatırımları ABD'nin liderlik pozisyonunu tehdit eder hale geldi. Aradaki fark yüzde 2,7'ye kadar daraldı; bu da küresel yapay zeka yarışının her zamankinden daha kızgın olduğunu gösteriyor.
 
-## Kurumsal Benimseme Yüzde 53'e Ulaştı
+## Küresel Benimseme Yüzde 53'e Ulaştı
 
-Şirketlerin yüzde 53'ü yapay zeka teknolojilerini iş süreçlerine entegre etmiş durumda. Bu oran, üretken yapay zekanın tarihte en hızlı benimsenen teknoloji olduğunu ortaya koyuyor. SWE-bench kodlama testlerinde yapay zeka sistemleri bir yıl içinde yüzde 60'tan neredeyse mükemmel seviyelere ulaştı.`,
+Dünya nüfusunun yüzde 53'ü üretken yapay zekayı benimsedi. Bu oran, üretken yapay zekanın tarihte en hızlı benimsenen teknoloji olduğunu ortaya koyuyor. SWE-bench kodlama testlerinde yapay zeka sistemleri bir yıl içinde yüzde 60'tan neredeyse mükemmel seviyelere ulaştı.`,
   },
   'ru-stenfordskiy-ai-indeks-2026': {
     title: 'Стэнфордский AI Индекс 2026: Anthropic стал лидером',
@@ -459,7 +459,7 @@ AI-nin yaratdığı iqtisadi dəyərin 74%-i şirkətlərin cəmi 20%-nə məxsu
 
 ## Liderlər Nə Fərqli Edir?
 
-Lider firmalar iş axınlarını AI ətrafında iki dəfə daha çox yenidən dizayn edir. Onlar sadəcə mövcud proseslərə AI əlavə etmir, əksinə bütün iş modelini AI-yə uyğun qururlar. Həmçinin AI liderləri avtonom qərar vermə proseslərini 3 dəfə sürətlə artırır.
+Lider firmalar iş axınlarını AI ətrafında iki dəfə daha çox yenidən dizayn edir. Onlar sadəcə mövcud proseslərə AI əlavə etmir, əksinə bütün iş modelini AI-yə uyğun qururlar. Həmçinin AI liderləri avtonom qərar vermə proseslərini 3 dəfə daha sürətlə artırır.
 
 ## Geniş Yayılma
 
