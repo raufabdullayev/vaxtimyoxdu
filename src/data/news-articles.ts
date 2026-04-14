@@ -29,10 +29,10 @@ Paris Saint-Germain Parc des Princes-də Liverpoolu 2-0 məğlub edib. Desire Do
 
 Bu axşamkı qaliblər yarımfinalda Bayern Münhen və ya Real Madrid ilə qarşılaşacaq. Turnirin bu mərhələsində Avropa futbolunun ən güclü komandaları arasında amansız mübarizə gözlənilir.
 
-## Video İcmallar
+## Oyun Xülasələri
 
-- [Liverpool — PSG (İlk oyun icmalı)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
-- [Barselona — Atletiko Madrid (İlk oyun icmalı)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
+- [Liverpool — PSG (İlk oyun xülasəsi)](https://www.youtube.com/watch?v=JpTvYoLCAwE)
+- [Barselona — Atletiko Madrid (İlk oyun xülasəsi)](https://www.youtube.com/watch?v=p2e16DaPYzM)`,
   },
   'en-champions-league-qf-atletico-barca-liverpool-psg': {
     title: 'Champions League QF: Atletico, PSG Defend 2-0 Leads',
