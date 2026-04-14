@@ -9,6 +9,582 @@ export interface NewsArticle {
 export const newsArticles: Record<string, NewsArticle> = {
   // ========== 2026-04-14 ==========
 
+  // --- Israel-Lebanon Direct Talks ---
+  'israil-livan-birbasa-danisiqlar': {
+    title: 'İsrail-Livan: 30 İldən Sonra İlk Birbaşa Danışıqlar',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ Dövlət Katibi Marco Rubio İsrail və Livan səfirlərini 14 apreldə Vaşinqtonda bir araya gətirib. Bu, 30 ildən artıq müddətdən sonra iki ölkə arasında ilk birbaşa diplomatik danışıqlardır.
+
+## Danışıqların Gündəmi
+
+Görüşdə atəşkəs, Hizbullahın tərksilahlanması və potensial sülh müqaviləsi məsələləri müzakirə olunub. Lakin İsrail nümayəndə heyəti danışıqlara "atəşkəsə razılaşmamaq" təlimatı ilə gəlib — İsrail tərəfi əvvəlcə Hizbullahın tam dağıdılmasını tələb edir.
+
+## Hizbullahın Reaksiyası
+
+Hizbullah danışıqlara kəskin etiraz edib və Livan hökumətini müzakirələrdən çıxmağa çağırıb. Təşkilat bu görüşü Livanın suverenliyinə müdaxilə kimi qiymətləndirib. Buna baxmayaraq, ABŞ-ın vasitəçiliyi ilə danışıqların davam etdirilməsi planlaşdırılır.
+
+## Regionda Gərginlik
+
+Ekspertlər bu danışıqları bölgədəki gərginliyin azaldılması istiqamətində mühüm addım hesab edirlər. Lakin İsrailin sərt mövqeyi və Hizbullahın etirazı sülh prosesinin çətin olacağına işarə edir. Diplomatik həll yollarının tapılması üçün bütün tərəflərin güzəştlərə hazır olması vacibdir.`,
+  },
+  'en-israel-lebanon-direct-talks-first-in-30-years': {
+    title: 'Israel and Lebanon Hold First Direct Talks in 30 Years',
+    date: '2026-04-14',
+    category: 'World',
+    locale: 'en',
+    content: `Secretary of State Marco Rubio hosted Israeli and Lebanese ambassadors at the State Department on April 14 for what marks the first direct diplomatic engagement between the two nations in over three decades.
+
+## Historic Meeting at the State Department
+
+The talks represent a significant diplomatic milestone, bringing Israeli and Lebanese officials to the same table for the first time since the 1990s. The agenda centers on three critical issues: a comprehensive ceasefire agreement, the disarmament of Hezbollah, and the framework for a potential peace deal between the neighboring countries.
+
+## Israel's Hard Line on Hezbollah
+
+Israeli officials arrived in Washington with firm instructions — not to agree to any ceasefire that leaves Hezbollah's military infrastructure intact. Israel's position is clear: the Iran-backed militia must be fully dismantled before any lasting agreement can be reached.
+
+## Hezbollah Pushes Back
+
+Hezbollah urged the Lebanese government to withdraw from the talks entirely, calling the diplomatic effort "futile." The Lebanese delegation, however, chose to attend despite the pressure, signaling Beirut's willingness to explore diplomatic solutions.`,
+  },
+  'tr-israil-lubnan-dogrudan-gorusmeler': {
+    title: 'İsrail ve Lübnan 30 Yıldan Sonra İlk Kez Görüştü',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `ABD Dışişleri Bakanı Marco Rubio'nun arabuluculuğunda İsrail ve Lübnan yetkilileri 30 yılı aşkın bir sürenin ardından ilk kez doğrudan görüşmelere başladı. Diplomatik kaynaklar, müzakerelerin odak noktasının Hizbullah'ın silahsızlandırılması ve Lübnan'ın güneyindeki güvenlik düzenlemeleri olduğunu bildirdi.
+
+## Hizbullah Silahsızlanması Masada
+
+Görüşmelerde İsrail tarafı, kalıcı barış için Hizbullah'ın askeri kapasitesinin ortadan kaldırılmasını ön koşul olarak öne sürdü. Lübnan heyeti ise egemenlik haklarının korunması ve İsrail'in hava sahası ihlallerinin sona erdirilmesi konularını gündeme getirdi.
+
+## Washington'dan Temkinli İyimserlik
+
+Rubio, görüşmelerin ardından yaptığı açıklamada tarafların "yapıcı bir diyalog ortamı" oluşturduğunu belirtti. Uzmanlar, 30 yılı aşkın süredir gerçekleşmeyen doğrudan temasın başlamasının bile önemli bir diplomatik gelişme olduğuna dikkat çekiyor.`,
+  },
+  'ru-izrail-livan-pryamye-peregovory': {
+    title: 'Израиль и Ливан начали прямые переговоры впервые за 30 лет',
+    date: '2026-04-14',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Израиль и Ливан начали первые прямые переговоры более чем за 30 лет при посредничестве госсекретаря США Марко Рубио. Встреча состоялась на фоне продолжающегося давления на Хезболлу с требованием разоружения.
+
+## Историческая встреча
+
+Переговоры стали первым прямым дипломатическим контактом такого уровня за более чем три десятилетия. Госсекретарь США Марко Рубио выступил в роли посредника.
+
+## Вопрос разоружения Хезболлы
+
+Ключевым пунктом повестки стал вопрос разоружения Хезболлы. Израильская сторона настаивает на полном выполнении резолюций Совета Безопасности ООН.
+
+## Перспективы урегулирования
+
+Эксперты отмечают, что сам факт начала прямых переговоров является значительным прорывом.`,
+  },
+
+  // --- Haiti Stampede Tragedy ---
+  'haiti-izdiham-faciesi': {
+    title: 'Haitidə İzdiham Faciəsi: Ən Azı 25 Nəfər Həlak Olub',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'az',
+    content: `12 apreldə Haitinin UNESCO Dünya İrsi siyahısında olan Citadelle Laferriere qalasında dəhşətli izdiham baş verib. Hadisə nəticəsində ən azı 25-30 nəfər həlak olub, onlarla insan yaralanıb.
+
+## Faciənin Təfərrüatları
+
+İllik bayram zamanı tələbələrlə dolu izdiham giriş qapısında basırıq nəticəsində baş verib. Yağış vəziyyəti daha da pisləşdirib — insanlar sürüşkən səthlərdə tarazlıqlarını itiriblər. Ölüm səbəbləri arasında asfiksiya və tapdalanma göstərilir.
+
+## Karib Tarixinin Ən Ağır Hadisələrindən Biri
+
+Mütəxəssislər bu faciəni Karib regionu tarixinin ən ölümcül izdiham hadisələrindən biri kimi qiymətləndiriblər. Qala dar keçidlərə və məhdud çıxış nöqtələrinə malikdir, bu da kütləvi tədbirlər zamanı ciddi risk yaradır.
+
+## Araşdırma və Reaksiyalar
+
+Haiti hökuməti hadisə ilə bağlı təhqiqat başladıb. Beynəlxalq təşkilatlar humanitar yardım təklif edib. UNESCO idarəçiliyindən abidədə kütləvi tədbirlərin təhlükəsizlik standartlarının yenidən nəzərdən keçirilməsini tələb edib.`,
+  },
+  'en-haiti-stampede-citadelle-kills-dozens': {
+    title: 'Deadly Stampede at Haiti Citadelle Kills at Least 25',
+    date: '2026-04-14',
+    category: 'World',
+    locale: 'en',
+    content: `A devastating stampede at the Citadelle Laferriere on April 12 killed at least 25 to 30 people and left dozens hospitalized, making it one of the deadliest crowd disasters in Caribbean history.
+
+## Crush at a UNESCO World Heritage Site
+
+The tragedy unfolded at the entrance to the Citadelle Laferriere, the iconic mountaintop fortress in northern Haiti and a UNESCO World Heritage site. Large crowds had gathered for an annual celebration, with students among the attendees.
+
+## Rain Worsened the Catastrophe
+
+Conditions deteriorated rapidly when rain began to fall. The wet surfaces made it impossible for people caught in the crush to maintain footing. Most victims died from asphyxiation.
+
+## A National Tragedy
+
+The Citadelle, built in the early 19th century after Haiti's independence, is the nation's most celebrated monument. The disaster has prompted calls for a thorough review of crowd management protocols.`,
+  },
+  'tr-haiti-izdiham-faciasi': {
+    title: 'Haiti\'de İzdiham Faciası: 30\'dan Fazla Kişi Öldü',
+    date: '2026-04-14',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Haiti'nin UNESCO Dünya Mirası listesindeki tarihi Citadelle kalesinde meydana gelen izdihamda 30'dan fazla kişi hayatını kaybetti. Kurbanların büyük çoğunluğunun okul gezisine katılan öğrenciler olduğu bildirildi.
+
+## Ani Yağmur Paniğe Yol Açtı
+
+Kalabalık ziyaretçi grubunun kalenin dar geçitlerinde bulunduğu sırada aniden bastıran şiddetli yağmur paniğe neden oldu.
+
+## Kurtarma Çalışmaları Devam Ediyor
+
+Haiti yetkilileri olay yerine acil ekipler sevk etti. Ölü sayısının artabileceği belirtiliyor.`,
+  },
+  'ru-gaiti-davka-30-pogibshikh': {
+    title: 'Давка на Гаити унесла жизни более 30 человек',
+    date: '2026-04-14',
+    category: 'Мир',
+    locale: 'ru',
+    content: `На Гаити произошла трагедия — в результате давки погибли более 30 человек. Инцидент произошёл вблизи Цитадели, объекта Всемирного наследия ЮНЕСКО, во время массового мероприятия с участием студентов.
+
+## Обстоятельства трагедии
+
+Давка началась, когда внезапный ливень обрушился на территорию крепости. Паника охватила толпу, люди пытались укрыться от дождя в узких проходах. Мокрая поверхность не позволяла удержаться на ногах, большинство погибших скончались от асфиксии в результате сдавливания.
+
+## Реакция властей
+
+Власти Гаити объявили национальный траур по погибшим и начали расследование обстоятельств трагедии. Международные организации выразили соболезнования и предложили гуманитарную помощь. ЮНЕСКО призвала пересмотреть стандарты безопасности при проведении массовых мероприятий на территории объектов культурного наследия.`,
+  },
+
+  // --- Champions League Quarter-Finals ---
+  'cempionlar-liqasi-atletiko-barsa-liverpool-psg': {
+    title: 'ÇL: Atletiko və PSG Cavab Oyunlarına Üstünlüklə Gəlir',
+    date: '2026-04-14',
+    category: 'İdman',
+    locale: 'az',
+    content: `Çempionlar Liqasının dörddəbir final mərhələsində bu axşam iki həlledici cavab oyunu keçiriləcək. Hər iki matç 14 aprel saat 21:00 CET-də başlayacaq.
+
+## Atletiko Madrid — Barselona
+
+Atletiko Madrid ilk oyunu evdə 2-0 hesabı ilə qazanıb. Qolları Julian Alvarez və Alexander Sorloth vurub. Barselona Camp Nou-da tarixi geri dönüş etməyə çalışacaq, lakin iki qol fərqi ciddi maneədir.
+
+## Liverpool — PSG
+
+Paris Saint-Germain Parc des Princes-də Liverpoolu 2-0 məğlub edib. Desire Doue və Xviça Kvaratskheliya hərəsi bir qol vurub. Liverpool Anfield-də eynilə möhtəşəm geri dönüşlər etmişdi, lakin PSG-nin güclü hücum xətti ciddi təhlükə yaradır.
+
+## Yarımfinal Perspektivi
+
+Bu axşamkı qaliblər yarımfinalda Bayern Münhen və ya Real Madrid ilə qarşılaşacaq. Turnirin bu mərhələsində Avropa futbolunun ən güclü komandaları arasında amansız mübarizə gözlənilir.`,
+  },
+  'en-champions-league-qf-atletico-barca-liverpool-psg': {
+    title: 'Champions League QF: Atletico, PSG Defend 2-0 Leads',
+    date: '2026-04-14',
+    category: 'Sports',
+    locale: 'en',
+    content: `The Champions League quarterfinals reach a decisive point on April 14, with Atletico Madrid hosting Barcelona and Liverpool welcoming PSG — both trailing sides needing historic comebacks to advance.
+
+## Atletico Madrid vs Barcelona (21:00 CET)
+
+Atletico hold a commanding 2-0 advantage. Goals from Julian Alvarez and Alexander Sorloth in the first leg gave Simeone's side a significant cushion.
+
+## Liverpool vs PSG (21:00 CET)
+
+At Anfield, Liverpool must overturn a 2-0 deficit. Desire Doue and Khvicha Kvaratskhelia struck in Paris.
+
+## The Comeback Challenge
+
+In Champions League history, teams trailing 2-0 after the first leg advance less than 15% of the time. Yet both clubs have the pedigree to make it happen.`,
+  },
+  'tr-sampiyonlar-ligi-ceyrek-final': {
+    title: 'Devler Ligi\'nde Atletico-Barça ve Liverpool-PSG',
+    date: '2026-04-14',
+    category: 'Spor',
+    locale: 'tr',
+    content: `Şampiyonlar Ligi çeyrek final ilk maçlarında iki karşılaşma da 2-0'lık skorlarla sona erdi. Atletico Madrid kendi sahasında Barcelona'yı 2-0 yenerken, Liverpool da PSG karşısında aynı skorla galip ayrıldı.
+
+## Atletico Madrid, Barcelona'yı Durdurdu
+
+Wanda Metropolitano'da oynanan maçta Atletico Madrid disiplinli savunmasıyla Barcelona'ya geçit vermedi.
+
+## Liverpool, PSG'ye Fark Attı
+
+Anfield'da Liverpool PSG'yi 2-0 mağlup etti.
+
+## İkinci Maçlar Belirleyici Olacak
+
+Her iki eşleşmede de 2-0'lık farklar rövanş maçlarını heyecanlı kılacak.`,
+  },
+  'ru-liga-chempionov-atletiko-barsa-liverpul-pszh': {
+    title: 'Лига чемпионов: Атлетико обыграл Барсу, Ливерпуль — ПСЖ',
+    date: '2026-04-14',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Состоялись первые матчи четвертьфинала Лиги чемпионов УЕФА. Атлетико Мадрид одержал победу над Барселоной со счётом 2:0, а Ливерпуль с таким же счётом обыграл ПСЖ. Ответные матчи состоятся 14 апреля.
+
+## Атлетико — Барселона 2:0
+
+Атлетико провёл дисциплинированный матч на своём поле. Голы забили Хулиан Альварес и Александер Сёрлот, обеспечив мадридской команде серьёзное преимущество перед ответной встречей на «Камп Ноу».
+
+## Ливерпуль — ПСЖ 2:0
+
+На «Энфилде» Ливерпуль уверенно справился с парижанами. Дезире Дуэ и Хвича Кварацхелия отличились голами, дав ПСЖ комфортное преимущество перед ответным матчем.
+
+## Ответные матчи
+
+Оба результата 2:0 дают победителям серьёзное преимущество. В истории Лиги чемпионов команды, уступавшие 0:2 после первого матча, проходили дальше менее чем в 15% случаев.`,
+  },
+
+  // --- Stanford AI Index 2026 ---
+  'stanford-ai-indeks-2026-hesabat': {
+    title: 'Stanford AI İndeksi: Anthropic Reytinqdə Liderdir',
+    date: '2026-04-14',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Stanford Universitetinin 400+ səhifəlik illik AI İndeks hesabatı dərc olunub. Hesabat süni intellekt sahəsində əsas tendensiyaları və liderləri müəyyən edir.
+
+## Reytinq və Liderlər
+
+Anthropic AI reytinqində Elo 1503 balı ilə birinci yerdədir. Onu xAI (1495), Google (1494) və OpenAI (1481) izləyir. Bu, süni intellekt yarışında rəqabətin nə qədər kəskin olduğunu göstərir.
+
+## Çin ABŞ-a Yaxınlaşır
+
+Hesabata görə, Çin ABŞ ilə texnoloji fərqi 2,7%-ə endirib. Bu, Çinin süni intellekt sahəsinə böyük investisiyalarının nəticəsidir və qlobal texnoloji güc balansına təsir göstərir.
+
+## Kütləvi Mənimsəmə Rekordları
+
+Generativ AI cəmi 3 il ərzində dünya əhalisinin 53%-i tərəfindən mənimsənilib — bu, fərdi kompüter və internetdən daha sürətli yayılma tempidir. SWE-bench kodlaşdırma performansı isə 1 il ərzində 60%-dən demək olar ki, 100%-ə yaxın artıb, bu da proqramlaşdırma sahəsində inqilabi dəyişiklikdir.`,
+  },
+  'en-stanford-ai-index-2026-anthropic-leads': {
+    title: 'Stanford AI Index: Anthropic Tops Global Rankings',
+    date: '2026-04-14',
+    category: 'Technology',
+    locale: 'en',
+    content: `The Stanford Institute for Human-Centered AI has released its 2026 AI Index report, revealing that Anthropic now leads global AI rankings with an Elo score of 1,503, followed by xAI at 1,495 and Google at 1,494.
+
+## US-China Gap Is Shrinking
+
+The difference has shrunk to just 2.7%, suggesting China's massive investments are paying off.
+
+## Fastest Technology Adoption in History
+
+Generative AI has reached 53% adoption in just three years, outpacing the PC and internet.
+
+## Coding Capabilities Surge
+
+On the SWE-bench benchmark, AI systems jumped from 60% to near-perfect scores within a single year.`,
+  },
+  'tr-stanford-yz-indeksi-2026': {
+    title: 'Stanford YZ İndeksi: Anthropic Lider, Çin Farkı Azaldı',
+    date: '2026-04-14',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Stanford Üniversitesi'nin Yapay Zeka İndeksi'nin 2026 raporu açıklandı. Anthropic, 1.503 Elo puanıyla yapay zeka performans testlerinde lider konumda. Onu xAI (1.495) ve Google (1.494) takip ediyor.
+
+## Çin ile ABD Arasındaki Fark Yüzde 2,7'ye Düştü
+
+Çin'in yoğun yatırımları ABD'nin liderlik pozisyonunu tehdit eder hale geldi. Aradaki fark yüzde 2,7'ye kadar daraldı; bu da küresel yapay zeka yarışının her zamankinden daha kızgın olduğunu gösteriyor.
+
+## Kurumsal Benimseme Yüzde 53'e Ulaştı
+
+Şirketlerin yüzde 53'ü yapay zeka teknolojilerini iş süreçlerine entegre etmiş durumda. Bu oran, üretken yapay zekanın tarihte en hızlı benimsenen teknoloji olduğunu ortaya koyuyor. SWE-bench kodlama testlerinde yapay zeka sistemleri bir yıl içinde yüzde 60'tan neredeyse mükemmel seviyelere ulaştı.`,
+  },
+  'ru-stenfordskiy-ai-indeks-2026': {
+    title: 'Стэнфордский AI Индекс 2026: Anthropic стал лидером',
+    date: '2026-04-14',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `Стэнфордский университет опубликовал ежегодный отчёт AI Index 2026 объёмом более 400 страниц. Компания Anthropic вышла в лидеры с рейтингом Elo 1503 балла. За ней следуют xAI (1495) и Google (1494).
+
+## Anthropic — новый лидер
+
+Anthropic заняла лидирующую позицию среди разработчиков систем искусственного интеллекта, опередив таких гигантов как Google и OpenAI в ключевых тестах производительности.
+
+## Разрыв с Китаем минимален
+
+Разрыв между США и Китаем сократился до 2,7%. Китай значительно увеличил инвестиции в исследования и разработки в области ИИ, что создаёт серьёзную конкуренцию американским компаниям.
+
+## Глобальное внедрение ИИ
+
+Уровень внедрения генеративного ИИ достиг 53% за три года — это быстрее, чем распространение персональных компьютеров и интернета. На тесте SWE-bench результаты выросли с 60% до почти идеальных за один год.`,
+  },
+
+  // --- iPhone Fold Delay ---
+  'iphone-fold-gecikme-istehsal': {
+    title: 'iPhone Fold İstehsalı Avqusta Təxirə Salınıb',
+    date: '2026-04-14',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Apple-ın ilk qatlanan telefonu olan iPhone Fold-un kütləvi istehsalı iyundan avqusta keçirilib. EVT (mühəndislik verifikasiya testi) mərhələsində üzə çıxan texniki problemlər gecikməyə səbəb olub.
+
+## Yeni Tarixlər
+
+Kütləvi istehsal avqusta təxirə salınsa da, payız 2026 — sentyabr ayında iPhone 18 Pro ilə birlikdə təqdim etmə hədəfi dəyişməyib. Lakin başlanğıcda məhdud inventar gözlənilir, bu da ilk günlərdə cihazı almağı çətinləşdirə bilər.
+
+## Rəqabət Mühiti
+
+Apple qatlanan telefon bazarına Samsung, Huawei və digər Çin istehsalçılarından xeyli gec daxil olur. Samsung Galaxy Z Fold seriyası artıq beşinci nəsildədir. Buna baxmayaraq, Apple-ın ekosistem üstünlüyü və brend loyallığı ciddi rəqabət avantajı yaradır.
+
+## Gözləntilər
+
+Analitiklər iPhone Fold-un qatlanan telefon bazarını kökündən dəyişdirə biləcəyini proqnozlaşdırır. Lakin məhdud istehsal həcmi ilkin satışlarda darboğaz yarada bilər və istehlakçılar gözləmə siyahıları ilə üzləşə bilər.`,
+  },
+  'en-iphone-fold-delayed-to-august-2026': {
+    title: 'Apple iPhone Fold Delayed, Mass Output Pushed to Aug',
+    date: '2026-04-14',
+    category: 'Technology',
+    locale: 'en',
+    content: `Apple's first foldable iPhone has hit a production snag, with mass manufacturing pushed from June to August 2026 due to engineering validation test challenges.
+
+## EVT Challenges Cause the Delay
+
+The delay stems from issues encountered during the Engineering Validation Test phase. Foldable devices present unique manufacturing challenges.
+
+## Fall 2026 Launch Still on Track
+
+Despite the production delay, Apple's planned fall 2026 launch remains intact alongside the iPhone 18 Pro lineup.
+
+## Supply Constraints Expected
+
+The compressed timeline could result in limited initial inventory. Early demand is expected to far outstrip supply.`,
+  },
+  'tr-iphone-fold-gecikti': {
+    title: 'iPhone Fold Gecikti: Üretim Ağustosa Ertelendi',
+    date: '2026-04-14',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Apple'ın katlanabilir telefonu iPhone Fold'un üretim takviminde değişikliğe gidildi. Mühendislik doğrulama testi (EVT) aşamasında karşılaşılan teknik sorunlar nedeniyle seri üretim hazirandan ağustos ayına ertelendi.
+
+## Sonbahar 2026 Hedefi Korunuyor
+
+Gecikmeye rağmen sonbahar 2026 lansman hedefi korunuyor. iPhone Fold, iPhone 18 Pro serisiyle birlikte tanıtılacak. Ancak sıkışan takvim nedeniyle başlangıçta sınırlı stok bekleniyor ve talebin arzı aşması muhtemel.
+
+## Katlanabilir Telefon Pazarında Rekabet Kızışıyor
+
+Apple pazara Samsung ve Huawei'nin ardından giriş yapıyor. Samsung Galaxy Z Fold serisi beşinci nesline ulaşmış durumda. Buna rağmen Apple'ın ekosistem avantajı ve marka bağlılığı ciddi rekabet üstünlüğü sağlayabilir.`,
+  },
+  'ru-iphone-fold-zaderzhivaetsya': {
+    title: 'Выпуск iPhone Fold отложен: производство с июня на август',
+    date: '2026-04-14',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `Apple перенесла начало массового производства своего первого складного iPhone с июня на август 2026 года. Задержка вызвана техническими проблемами на этапе инженерной валидации (EVT), однако осенний запуск по-прежнему в силе.
+
+## Причины задержки
+
+Перенос связан с техническими сложностями на этапе инженерных испытаний. Складные устройства требуют более сложных компонентов и механизмов, что создаёт уникальные производственные вызовы для поставщиков Apple.
+
+## Осенний запуск сохраняется
+
+Apple по-прежнему планирует представить iPhone Fold осенью 2026 года вместе с линейкой iPhone 18 Pro. Однако сжатые сроки могут привести к ограниченным поставкам на начальном этапе, и спрос, вероятно, значительно превысит предложение.`,
+  },
+
+  // --- US Drug Overdose Deaths Decline ---
+  'abs-narkotik-olumleri-azalma': {
+    title: 'ABŞ-da Narkotik Ölümləri Rekord Səviyyədə Azalıb',
+    date: '2026-04-14',
+    category: 'Sağlamlıq',
+    locale: 'az',
+    content: `ABŞ-da 12 aylıq dövrdə narkotik overdozundan ölüm sayı təxminən 71.542-yə düşüb (2025 oktyabr məlumatı). Bu, 2023 avqust zirvəsi olan təxminən 113.000 ölümlə müqayisədə dramatik azalmadır.
+
+## Tarixi Azalma Dövrü
+
+Mütəxəssislər bunu ABŞ tarixində ən uzun ardıcıl azalma dövrü adlandırır. Xüsusilə gənclər arasında ölüm halları kəskin şəkildə düşüb — Meyn ştatında 25 yaş altı qrupda 12 ay ərzində sıfır overdoz ölümü qeydə alınıb.
+
+## Azalmanın Səbəbləri
+
+Azalmanın əsas səbəbləri arasında daha az güclü fentanil təchizatı və yaxşılaşmış müalicə proqramları göstərilir. Nalokson kimi antidot preparatlarının daha geniş yayılması da həyatların xilas edilməsində mühüm rol oynayıb.
+
+## Yeni Təhlükələr
+
+Buna baxmayaraq, yeni sintetik dərmanlar — medetomidin və ksilazin — ciddi narahatlıq doğurur. Bu maddələr fentanildən daha güclüdür və onlara qarşı standart antidotlar effektiv deyil. Mütəxəssislər yeni dalğanın qarşısını almaq üçün diqqətli olmağa çağırır.`,
+  },
+  'en-us-drug-overdose-deaths-historic-decline': {
+    title: 'US Drug Overdose Deaths Drop to Lowest Since 2020',
+    date: '2026-04-14',
+    category: 'Health',
+    locale: 'en',
+    content: `Drug overdose deaths in the United States have fallen to approximately 71,542 over 12 months ending October 2025, a dramatic drop from the peak of roughly 113,000 in August 2023.
+
+## A Historic Turnaround
+
+The decline represents a roughly 37% reduction, the longest consecutive decline ever recorded.
+
+## Youth Deaths Plummet
+
+Maine reported zero deaths among under-25s over a full 12-month period.
+
+## New Threats on the Horizon
+
+New synthetic substances including medetomidine and xylazine are more powerful than fentanyl and respond poorly to naloxone reversal.`,
+  },
+  'tr-abd-uyusturucu-olumleri-dusus': {
+    title: 'ABD\'de Uyuşturucu Ölümleri Tarihi Düşüş Gösterdi',
+    date: '2026-04-14',
+    category: 'Sağlık',
+    locale: 'tr',
+    content: `ABD'de uyuşturucu kaynaklı ölümler tarihi bir düşüş kaydetti. Ekim 2025 itibarıyla yıllık ölüm sayısı 71.542'ye geriledi — bu, Ağustos 2023'teki yaklaşık 113.000 kişilik zirveyle karşılaştırıldığında yüzde 37'lik dramatik bir azalmadır.
+
+## Fentanil ile Mücadele Etkisini Gösterdi
+
+Düşüşün arkasında fentanil karşıtı operasyonlar ve nalokson dağıtım programları var. Maine eyaletinde 25 yaş altı grubunda 12 ay boyunca sıfır aşırı doz ölümü kaydedildi, bu da gençler arasındaki başarının çarpıcı bir göstergesi olarak dikkat çekiyor.
+
+## Yeni Sentetik Maddeler Endişe Yaratıyor
+
+Piyasada ortaya çıkan medetomidin ve ksilazin gibi yeni sentetik uyuşturucu maddeler ciddi tehdit oluşturuyor. Bu maddeler fentanilden daha güçlü ve nalokson gibi standart panzehirlere yanıt vermiyor.`,
+  },
+  'ru-smertnost-ot-narkotikov-ssha-snizilas': {
+    title: 'Смертность от наркотиков в США упала до рекордного минимума',
+    date: '2026-04-14',
+    category: 'Здоровье',
+    locale: 'ru',
+    content: `Число смертей от передозировки наркотиками в США снизилось до 71 542 случаев за 12 месяцев (по данным на октябрь 2025 года). Это рекордное падение после пика в примерно 113 000 смертей в августе 2023 года, что составляет снижение более чем на 37%.
+
+## Значительное снижение
+
+Падение стало самым продолжительным периодом последовательного снижения в истории страны. В штате Мэн за 12-месячный период среди молодёжи до 25 лет не было зафиксировано ни одного случая смерти от передозировки. Расширение доступа к налоксону и программ лечения зависимости сыграли ключевую роль.
+
+## Угроза новых синтетиков
+
+Специалисты обеспокоены появлением новых синтетических наркотиков — медетомидина и ксилазина, — которые значительно мощнее фентанила и плохо поддаются действию стандартных антидотов.`,
+  },
+
+  // --- PwC AI Survey ---
+  'pwc-ai-arasdirmasi-iqtisadi-deger': {
+    title: 'PwC: AI Dəyərinin 74%-i Şirkətlərin 20%-nə Düşür',
+    date: '2026-04-14',
+    category: 'Biznes',
+    locale: 'az',
+    content: `PwC dünya miqyasında 1.217 yüksək rəhbərin iştirakı ilə 25 sektoru əhatə edən geniş AI araşdırmasının nəticələrini açıqlayıb. Nəticələr süni intellektin iqtisadi faydalarının qeyri-bərabər paylandığını göstərir.
+
+## Əsas Tapıntılar
+
+AI-nin yaratdığı iqtisadi dəyərin 74%-i şirkətlərin cəmi 20%-nə məxsusdur. Bu, süni intellektdən effektiv istifadənin hələ də az sayda qabaqcıl şirkətin inhisarında olduğunu göstərir.
+
+## Liderlər Nə Fərqli Edir?
+
+Lider firmalar iş axınlarını AI ətrafında iki dəfə daha çox yenidən dizayn edir. Onlar sadəcə mövcud proseslərə AI əlavə etmir, əksinə bütün iş modelini AI-yə uyğun qururlar. Həmçinin AI liderləri avtonom qərar vermə proseslərini 3 dəfə sürətlə artırır.
+
+## Geniş Yayılma
+
+Araşdırmaya görə, təşkilatların 88%-i artıq AI istifadə edir. Universitetlərin 5-dən 4-ü tədris prosesində süni intellektdən faydalanır. Lakin istifadə ilə real iqtisadi dəyər arasında böyük uçurum mövcuddur — bunu aradan qaldırmaq üçün strateji yanaşma tələb olunur.`,
+  },
+  'en-pwc-20-percent-companies-capture-74-ai-value': {
+    title: 'PwC: 20% of Firms Capture 74% of All AI Value',
+    date: '2026-04-14',
+    category: 'Business',
+    locale: 'en',
+    content: `A new PwC survey of 1,217 executives across 25 sectors reveals just 20% of companies are capturing 74% of the total economic value generated by AI.
+
+## The AI Divide Is Widening
+
+While 88% of organizations now report using AI, the distribution of returns is heavily skewed toward a small group of leaders.
+
+## What Sets AI Leaders Apart
+
+Top-performing companies are twice as likely to have redesigned their core workflows around AI rather than simply layering AI tools onto existing operations.
+
+## Autonomous Decision-Making Accelerates
+
+AI leaders are increasing the scope of autonomous AI decision-making at three times the rate of their peers.`,
+  },
+  'tr-pwc-sirketlerin-yz-degeri': {
+    title: 'PwC: Şirketlerin %20\'si YZ Değerinin %74\'ünü Alıyor',
+    date: '2026-04-14',
+    category: 'İş Dünyası',
+    locale: 'tr',
+    content: `PwC'nin 25 sektörden 1.217 üst düzey yöneticiyle gerçekleştirdiği kapsamlı araştırma, yapay zeka değerinin şirketler arasında son derece eşitsiz dağıldığını ortaya koydu.
+
+## Değerin Dörtte Üçü Yüzde 20'lik Dilimde
+
+Yapay zekadan elde edilen toplam ekonomik değerin yüzde 74'ü şirketlerin yalnızca yüzde 20'si tarafından yakalanıyor. Lider şirketler, mevcut süreçlere yapay zeka eklemek yerine iş akışlarını yapay zeka etrafında yeniden tasarlamada iki kat daha başarılı.
+
+## Kullanım Oranı Yüzde 88'e Çıktı
+
+Şirketlerin yüzde 88'i yapay zekayı kullanıyor. Ancak kullanım ile değer yaratma arasında doğrudan bağlantı bulunmuyor. Yapay zeka liderleri otonom karar alma kapsamını rakiplerine göre üç kat daha hızlı genişletiyor.`,
+  },
+  'ru-pwc-20-kompaniy-74-vygody-ot-ii': {
+    title: 'PwC: 20% компаний получают 74% выгоды от ИИ',
+    date: '2026-04-14',
+    category: 'Бизнес',
+    locale: 'ru',
+    content: `Согласно масштабному исследованию PwC, охватившему 1 217 руководителей из 25 отраслей, лишь 20% компаний извлекают 74% совокупной экономической выгоды от внедрения ИИ. Разрыв между лидерами и остальными продолжает расти.
+
+## Неравномерное распределение выгод
+
+Пятая часть компаний аккумулирует почти три четверти всех преимуществ от технологии. Лидеры в два раза чаще перестраивают основные рабочие процессы вокруг ИИ, а не просто добавляют инструменты к существующим операциям.
+
+## Массовое внедрение
+
+88% компаний уже используют ИИ. Однако разрыв между внедрением и извлечением реальной пользы остаётся значительным. Лидеры расширяют масштаб автономного принятия решений с помощью ИИ втрое быстрее своих конкурентов.`,
+  },
+
+  // --- Fertilizer Price Surge ---
+  'gubre-qiymetleri-sicrayisi-dunya-banki': {
+    title: 'Gübrə Qiymətləri 1 Ayda 26% Artıb — Dünya Bankı',
+    date: '2026-04-14',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Dünya Bankının son hesabatına görə, qlobal əmtəə qiymətləri 6 ilin minimumuna düşsə də, gübrə qiymətləri kəskin artıb. Bu, dördüncü il ardıcıl ümumi əmtəə qiymətlərinin düşməsinə baxmayaraq, kənd təsərrüfatı sektorunda ciddi narahatlıq yaradır.
+
+## Gübrə və Karbamid Qiymətləri
+
+Gübrə qiymətləri fevral-mart 2026 arasında 26,2% artıb. Karbamid qiymətləri isə daha kəskin — aylıq təxminən 46% bahalaşıb. Müharibə pozuntuları təchizat zəncirini ciddi şəkildə pozub və bu artımın əsas səbəbi hesab olunur.
+
+## Ərzaq Qiymətlərinə Təsir
+
+Qlobal ərzaq qiymətləri martda 2,7% artıb. Buğda və qarğıdalıda iki rəqəmli artım müşahidə olunub. Gübrə qiymətlərinin artması birbaşa ərzaq istehsalının maya dəyərini artırır və istehlakçı qiymətlərinə təsir göstərir.
+
+## Perspektiv
+
+Dünya Bankı analitikləri gübrə qiymətlərindəki artımın davam edə biləcəyini xəbərdar edir. Bu, xüsusilə inkişaf etməkdə olan ölkələrdə ərzaq təhlükəsizliyinə ciddi risk yaradır. Kənd təsərrüfatı asılılığı yüksək olan ölkələr alternativ gübrə mənbələri axtarışına başlayıb.`,
+  },
+  'en-fertilizer-prices-spike-26-percent-food-costs-rise': {
+    title: 'Fertilizer Prices Surge 26% as Food Costs Climb',
+    date: '2026-04-14',
+    category: 'Economy',
+    locale: 'en',
+    content: `Global commodity prices have reached a six-year low, but fertilizer costs are bucking the trend with a sharp 26.2% spike in a single month, according to the World Bank.
+
+## Fertilizer Prices Defy the Trend
+
+Between February and March 2026, fertilizer prices surged 26.2%, driven by urea which jumped approximately 46% month-on-month.
+
+## Food Prices Follow Upward
+
+Global food prices rose 2.7% in March, with wheat and maize recording double-digit increases.
+
+## Impact on Developing Economies
+
+The fertilizer shock disproportionately affects developing countries where agriculture represents a larger share of GDP.`,
+  },
+  'tr-gubre-fiyatlari-sicrama': {
+    title: 'Gübre Fiyatları %26 Sıçradı, Emtia Düşüşe Rağmen',
+    date: '2026-04-14',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Dünya Bankası verilerine göre küresel emtia fiyatları 6 yılın en düşük seviyelerine gerilerken, gübre fiyatları bu trende meydan okuyarak yüzde 26,2'lik sert bir sıçrama kaydetti. Karbamid fiyatları ise aylık bazda yaklaşık yüzde 46 artış gösterdi.
+
+## Gübre Fiyatlarındaki Sıçramanın Nedenleri
+
+Artışın arkasında tedarik zincirindeki aksaklıklar, ihracat kısıtlamaları ve artan enerji maliyetleri yer alıyor. Özellikle gelişmekte olan ülkelerde tarımsal üretim maliyetlerini doğrudan etkileyen bu durum, gıda güvenliği endişelerini artırıyor.
+
+## Buğday Fiyatları da Yükselişe Geçti
+
+Gübre maliyetlerindeki artış küresel gıda fiyatlarında da yukarı yönlü baskı oluşturdu. Mart ayında gıda fiyatları yüzde 2,7 artarken, buğday ve mısırda çift haneli artışlar kaydedildi.`,
+  },
+  'ru-tseny-na-udobreniya-vzleteli-na-26': {
+    title: 'Цены на удобрения взлетели на 26% на фоне падения сырья',
+    date: '2026-04-14',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `По данным Всемирного банка, мировые цены на удобрения выросли на 26,2% за один месяц, в то время как цены на сырьевые товары опустились до шестилетнего минимума. Цены на карбамид подскочили примерно на 46% в месячном выражении.
+
+## Удобрения дорожают
+
+Скачок обусловлен ограничениями на экспорт, ростом стоимости энергоносителей и логистическими сбоями. Особенно сильно пострадали развивающиеся страны, где сельское хозяйство составляет значительную долю ВВП.
+
+## Влияние на продовольственные рынки
+
+Рост стоимости удобрений начал сказываться на мировых ценах на продовольствие. В марте цены на продукты питания выросли на 2,7%, при этом пшеница и кукуруза показали двузначный рост.`,
+  },
+
   // --- US Navy Blockade of Iran / Hormuz Crisis ---
   'abs-hormuz-blokadasi-iran': {
     title: 'ABŞ Donanması İran Limanlarını Blokadaya Aldı',
