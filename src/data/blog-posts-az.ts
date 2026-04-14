@@ -2499,8 +2499,8 @@ Hash generatoru ilə müxtəlif hash alqoritmlərinin necə işlədiyini öyrən
 Güclü parollar yaratmaq üçün Vaxtım Yoxdu-dakı pulsuz parol generatorundan istifadə edin. Kriptoqrafik olaraq təhlükəsiz, tamamilə təsadüfi parollar yaradır -- brauzerinizdə, serverə göndərilmədən. Hash generatoru ilə parol hash-ləmənin necə işlədiyini öyrənin.`,
   },
   'how-to-compress-images-without-quality-loss': {
-    title: 'Şəkilləri Keyfiyyətsiz Sıxışdırmaq',
-    metaTitle: 'Şəkilləri Keyfiyyətsiz Sıxışdırmaq',
+    title: 'Şəkilləri Keyfiyyət İtirmədən Sıxışdırmaq',
+    metaTitle: 'Şəkilləri Keyfiyyət İtirmədən Sıxışdırmaq',
     description: 'Şəkil fayllarının ölçüsünü 80%-ə qədər azaltmağın praktiki üsulları. Formatlar, alətlər və optimallaşdırma məsləhətləri daxildir.',
     date: '2026-04-12',
     relatedTools: ['image-compress', 'image-convert'],
