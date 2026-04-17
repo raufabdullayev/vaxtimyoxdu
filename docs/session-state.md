@@ -1,9 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-14 (Session 28 — News Refresh: 8 new topics, 32 articles)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit 8215c81 deployed)
-**Son commit:** 8215c81 (content(news): add 8 new topics for Apr 14 — Session 28)
-**Əvvəlki commit:** 3030bdf (fix(seo): AZ blog title fix)
+**Son yenilənmə:** 2026-04-17 (Session 29 — News Refresh: 22 verified topics for Apr 16-17, 88 articles, re-sort)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit 80367c2 deployed)
+**Son commit:** 80367c2 (content(news): add Apr 16-17 verified topics, 88 articles, re-sort newest-first — Session 29)
+**Əvvəlki commit:** 8215c81 (content(news): add 8 new topics for Apr 14 — Session 28)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -24,12 +24,12 @@
 | **Deploy** | ✅ Vercel aktiv |
 | **GitLab + GitHub** | ✅ Synced (d4c3a48) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | 8215c81 |
-| **Testlər** | **3726** PASS (vitest) |
+| **Son commit** | 80367c2 |
+| **Testlər** | **4078** PASS (vitest) |
 | **E2E** | **30 fayl** (18 yeni Sprint 3-də) |
-| **Statik səhifələr** | **~1240** |
+| **Statik səhifələr** | **1672** (S29: 1240→1672) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **164** (41/locale — S28: +32 yeni: 8215c81) |
+| **Xəbərlər** | **252** (63/locale — S29: +88 yeni: 80367c2) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
@@ -58,6 +58,67 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 29 (2026-04-17) — News Refresh: 22 verified topics for Apr 16-17, 4-stage QA, re-sort
+
+**Tapshiriq:** CEO: dünənki (04-16) və bu günki (04-17) vacib xəbərləri əlavə et + bütün xəbərləri vacibdən köhnəyə yenidən sırala. Yalnış xəbər və orfoqrafik səhv olmasın.
+
+**Komanda:** ~13 agent (1 researcher + 1 supplemental researcher + 4 paralel writer + 3 paralel QA + 1 fix agent + 1 lead-dev integration + 1 deploy + 1 verification).
+
+**Faza 1 — Research (Plan agent + WebSearch):**
+- 17 əsas mövzu Phase 1-də (9 × 04-16 + 8 × 04-17)
+- 5 supplemental Phase 1b-də (Coachella W2, El Al Boeing, NBA Play-In, Europa League QF, UN Security Council)
+- 6 mövzu DROP edildi (tarix yanlış: Snap layoffs 04-15, Filspari 04-13, Gemini Mac 04-15, Indonesia EQ 04-01, Slovakia 1 mənbə, Trump bank EO "in process")
+- Hər mövzunun ≥2 müstəqil mənbəsi: Reuters/AP/BBC/Bloomberg/AJ/CNN/CBS/NPR/AWS/UEFA/APA/Hürriyet/Azernews
+- Brief: docs/agent-reports/news-research-2026-04-17.md (270 sətir)
+
+**Faza 2 — 4 paralel writer:**
+- AZ writer: 22 məqalə (144 diakritik title-larda, ASCII fallback yox)
+- EN writer: 22 məqalə (44-57 char title)
+- TR writer: 22 məqalə (45-60 char title)
+- RU writer: 22 məqalə (37-56 char title, perfect Cyrillic discipline)
+- Cəmi 88 məqalə, hər biri 1004-1357 char content, 2-3 ## başlıq
+
+**Faza 4 — 3 paralel QA:**
+- QA-A (Diakritik/Cyrillic): 6 minor issue (4 AZ + 2 TR), 0 blocking
+  - **Kritik AZ semantic bug:** "həmcinsi həm-CEO" → "CEO" (writer "həmçinin" ilə qarışdırıb, "homosexual" mənası verirdi!)
+- QA-B (Title/Length/Slug): 88/88 PASS — sıfır issue
+- QA-C (Source-fact reconciliation): 4 BLOCKING + 22 ekstrapolyasiya
+  - **Blocking 1:** AZ Europa League "İstanbul Olimpiya Stadionu" yanlış (real: Beşiktaş Tüpraş)
+  - **Blocking 2:** AZ İsrail-Livan "milyonlarla köçkün" uydurma rəqəm
+  - **Blocking 3:** RU CL "71-й финал" + "букмекер фаворити" uydurma
+  - **Müsbət:** Anthropic Opus 4.7 məqaləsi 4 dildə TƏMİZ — heç bir Mythos 5 tipli uydurma yox
+
+**Faza 4.5 — Fix agent:** 26 atomik düzəliş tətbiq etdi (4 blocking + 22 minor). Validation post-fix: title/content uzunluqlar saxlanıldı, sınmış cümlə yox, yeni typo yox.
+
+**Faza 3 — Integration (lead-dev):**
+- 88 təmizlənmiş məqalə news-articles.ts-ə daxil edildi
+- 04-17 bloku ən üstə (sətir 10)
+- 04-16 bloku 04-17-dən sonra (sətir 792)
+- 04-14 bloku saxlanıldı (sətir 1730)
+- 04-12 bloku 04-10-dan əvvələ köçürüldü (sətir 3010)
+- 04-10 bloku ən aşağıya köçürüldü (sətir 4168)
+- Fayl: 3,212 → 4,932 sətir (+1,720)
+- Slug uniqueness: PASS (sıfır collision)
+
+**Faza 5 — Build + Test:**
+- npx tsc --noEmit: clean
+- vitest: 4,078 test PASS (211 fayl)
+- Next.js build: 1,672 statik səhifə (1,240 → 1,672, +432 yeni)
+
+**Faza 7 — Deploy:**
+- Commit: 80367c2 (HEREDOC, detallı message + Co-Authored-By)
+- GitLab origin push: SUCCESS
+- GitHub mirror push: SUCCESS
+- Vercel auto-deploy: ~0 sec
+- Production HTTP/2 200
+- 4 sample new URLs (AZ/EN/TR/RU): hamısı 200
+
+**Nəticə:** 252 məqalə (63/dil), 1,672 statik səhifə, 4,078 test PASS, production CANLI.
+
+**Plan faylı:** `~/.claude/plans/salam-po-vaxtimyoxdu-sayt-na-curried-sunrise.md`
+**Brief:** `docs/agent-reports/news-research-2026-04-17.md`
+**Writer outputs:** `docs/agent-reports/news-writer-output-{az,en,tr,ru}-2026-04-17.md`
 
 ### Session 26 (2026-04-12) — News Refresh: Audit + Remove False/Outdated + Add 15 Verified Topics
 **Tapshiriq:** CEO: son xəbər batch-ində yanlış xəbərlər var. Tam audit, təmizlənmə, yeni real xəbərlər əlavə et.

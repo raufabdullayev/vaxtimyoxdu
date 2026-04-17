@@ -7,6 +7,400 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-18 ==========
+
+  // --- Trump nuclear dust / Iran ---
+  'tramp-nuve-tozu-iddiasi-iran-redd-cavabi-22-aprel': {
+    title: 'Tramp "nüvə tozu" iddiası — İran qəti rədd etdi',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ Prezidenti Donald Tramp 16-17 aprel tarixlərində səsləndirdiyi iddia ilə dünyanı sarsıtdı: o, İranın nüvə silahı proqramından imtina etməyə və zənginləşdirilmiş uran ehtiyatlarını ABŞ-a təhvil verməyə razılıq verdiyini bildirdi. Tehran isə bu iddianı dərhal və qəti şəkildə təkzib etdi. Mübahisə 22 aprel atəşkəs son tarixinin gözlənildiyi gərgin bir məqamda baş qaldırdı.
+
+## Trampın iddiası və "nüvə tozu" ifadəsi
+
+Tramp jurnalistlərə bəyan etdi: "Onlar B-2 bombardmançıları ilə həyata keçirdiyimiz hücumun nəticəsində dərinlərə basdırılan nüvə tozunu bizə geri qaytarmağa razılıq verdilər." Bu ifadə İranın təxminən 182 kiloqram həcmindəki 60% zənginləşdirilmiş uran ehtiyatına və daha aşağı zənginləşdirmə dərəcəsinə malik materiala işarə edir. ABŞ-ın danışıqlardakı mövqeyi İran uran zənginləşdirməsinin 20 il müddətinə dayandırılmasını nəzərdə tutur. İran isə yalnız 5 illik dayandırma təklifi irəli sürmüş, ABŞ bu cavabı rədd etmişdi.
+
+## İranın rəsmi cavabı
+
+İran Xarici İşlər Nazirliyinin sözçüsü Trampın iddiasını təkzib edərək bildirdi ki, mesajlar yalnız Pakistan vasitəsilə mübadilə edilir. Sözçü vurğuladı: İran "öz ehtiyaclarına əsasən uran zənginləşdirməni davam etdirə bilməlidir." Bu bəyanat hər hansı razılıq əldə edilməsi iddiasını birmənalı şəkildə şübhə altına aldı. Pakistan, Misir və Türkiyə vasitəçi rolunu davam etdirir. Pakistan Baş Naziri Şahbaz Şərif danışıqları irəli aparmaq üçün son günlərdə Səudiyyə Ərəbistanı, Qətər və Türkiyəyə səfər etdi.
+
+## 22 aprel deadline və Avropa təzyiqi
+
+Cari atəşkəs müddəti 22 aprel 2026-cı il tarixində başa çatır. ABŞ Dövlət Katibi Marko Rubio 18 aprel tarixində Avropa ölkələrindən sanksiyaların yenidən tətbiqi məsələsində tez qərar verməyi tələb etdi. O, İranın mövcud razılaşmanı pozduğunu xəbərdar etdi. Növbəti bir neçə gün İran-ABŞ böhranının istiqamətini müəyyən edəcək həlledici dövr olacaq.`,
+  },
+  'en-trump-nuclear-dust-iran-pushback-2026': {
+    title: `Trump: Iran to Hand Over 'Nuclear Dust'; Tehran Pushes Back`,
+    date: '2026-04-18',
+    category: 'World',
+    locale: 'en',
+    content: `President Donald Trump on April 16-17 publicly claimed Iran had agreed to abandon its nuclear weapons program and surrender its enriched uranium stockpile, which he described as "nuclear dust." Iran's Foreign Ministry quickly contradicted the assertion, saying only that messages were being exchanged through Pakistan and that Tehran reserves the right to continue enrichment.
+
+## A Sharper Trump Claim
+
+Speaking publicly on April 16-17, Trump said: "They've agreed to give us back the nuclear dust that's way underground because of the attack we made with the B-2 bombers." The reference is to Iran's stockpile of approximately 182 kg of 60%-enriched uranium plus lower-grade material, according to reporting in the Washington Post.
+
+Tehran's response was firm. The Foreign Ministry spokesperson said messages are being exchanged through Pakistan, but Iran "based on its needs, must be able to continue enrichment." That language stops well short of any handover commitment.
+
+## Gap in Negotiating Positions
+
+The two sides remain far apart on duration. The US negotiating position calls for a 20-year suspension of Iranian uranium enrichment. Iran has counter-offered a 5-year suspension, which Washington rejected. Pakistan, Egypt and Türkiye continue to mediate, with Pakistani Prime Minister Shehbaz Sharif touring Saudi Arabia, Qatar and Türkiye in recent days to push the talks forward.
+
+## The April 22 Deadline
+
+The current ceasefire deadline is April 22, leaving only days to bridge the gap. Secretary of State Marco Rubio on April 18 urged European countries to quickly decide on whether to reimpose sanctions, warning that Iran is violating the existing framework. With Trump talking up a deal and Tehran walking it back, the next 96 hours will test whether Pakistan's mediation can produce a written agreement or whether the ceasefire architecture begins to fray.`,
+  },
+  'tr-trump-iran-nukleer-toz-iddiasi-tahran-reddetti': {
+    title: 'Trump: İran "nükleer toz"u verecek; Tahran reddetti',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `ABD Başkanı Donald Trump, 16-17 Nisan tarihlerinde verdiği açıklamalarda İran'ın nükleer silah arayışından vazgeçmeyi ve zenginleştirilmiş uranyum stoğunu — kendi tabiriyle "nükleer toz"u — teslim etmeyi kabul ettiğini öne sürdü. İran Dışişleri Bakanlığı bu iddiayı kısmen reddederek, görüşmelerin yalnızca Pakistan üzerinden mesaj alışverişi düzeyinde sürdüğünü açıkladı.
+
+## Trump'ın İddiası ve Tahran'ın Yanıtı
+
+Trump'ın doğrudan ifadesi şu oldu: "B-2 bombardıman uçaklarımızla yaptığımız saldırı nedeniyle yer altında kalan nükleer tozu bize geri vermeyi kabul ettiler." "Nükleer toz" ifadesi, İran'ın yaklaşık 182 kilogramlık yüzde 60 oranında zenginleştirilmiş uranyum stoğuna ve daha düşük seviyeli malzemelerine atıfta bulunuyor. İran Dışişleri Bakanlığı sözcüsü ise mesajların Pakistan aracılığıyla aktarıldığını, ancak İran'ın "ihtiyaçları doğrultusunda zenginleştirmeye devam edebilmesi gerektiğini" söyledi.
+
+## Müzakere Pozisyonları
+
+ABD'nin masadaki teklifi, İran'ın uranyum zenginleştirme faaliyetlerinin 20 yıl süreyle askıya alınması yönünde. İran ise 5 yıllık askıya alma karşı önerisini sundu; Washington bu teklifi reddetti. Pakistan, Mısır ve Türkiye arabuluculuk rolü üstlenmiş durumda; Pakistan Başbakanı Şehbaz Şerif, görüşmeleri ilerletmek için Suudi Arabistan, Katar ve Türkiye'yi kapsayan bir tur gerçekleştirdi.
+
+## 22 Nisan Son Tarihi Yaklaşıyor
+
+Mevcut ateşkes ve müzakere sürecinin son tarihi 22 Nisan 2026 olarak belirlendi. Dışişleri Bakanı Marco Rubio, 18 Nisan'da Avrupa ülkelerini İran'a yaptırımların yeniden uygulanması konusunda hızlı karar vermeye çağırdı ve İran'ın mevcut anlaşmayı ihlal ettiği uyarısında bulundu. Önümüzdeki günlerde Pakistan'ın aktif diplomasisi ve son tarih baskısı, müzakerelerin yönünü belirleyecek.`,
+  },
+  'ru-tramp-yadernaya-pyl-iran-otvergaet': {
+    title: 'Трамп: Иран отдаст «ядерную пыль», Тегеран опровергает',
+    date: '2026-04-18',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Президент США Дональд Трамп 16-17 апреля заявил, что Иран согласился отказаться от ядерной программы и передать обогащённый уран, который он назвал «ядерной пылью». Министерство иностранных дел Ирана опровергло это утверждение, отметив, что обмен сообщениями ведётся через Пакистан, а Тегеран сохраняет за собой право продолжать обогащение «исходя из своих потребностей». Дедлайн действующего перемирия — 22 апреля.
+
+## Заявление Трампа и реакция Тегерана
+
+Трамп заявил буквально: «Они согласились вернуть нам ядерную пыль, которая глубоко под землёй из-за удара, нанесённого нашими бомбардировщиками B-2». По данным Washington Post, под этим определением имеется в виду иранский запас обогащённого до 60% урана объёмом примерно 182 кг плюс материал более низкого обогащения. Иранский официальный представитель опроверг согласие на капитуляцию, подчеркнув: Тегеран «должен иметь возможность продолжать обогащение исходя из своих потребностей».
+
+## Позиции сторон и роль посредников
+
+Переговорная позиция США предусматривает 20-летнюю приостановку обогащения урана Ираном. Иран в ответ предложил пятилетний мораторий, который Вашингтон отклонил. В качестве посредников выступают Пакистан, Египет и Турция. Премьер-министр Пакистана Шахбаз Шариф провёл турне по Саудовской Аравии, Катару и Турции для продвижения переговоров.
+
+## Дедлайн 22 апреля
+
+Государственный секретарь США Марко Рубио призвал европейские страны быстро решить вопрос восстановления санкций, заявив, что Иран нарушает действующее соглашение. До истечения срока перемирия — 22 апреля 2026 года — остаются считанные дни. От исхода контактов через Исламабад зависит, удержится ли регион от новой эскалации.`,
+  },
+
+  // --- Russia Ukraine attack ---
+  'rusiya-hucumlari-ukraynada-18-olu-cerniqov-stansiyasi': {
+    title: 'Rusiya hücumları Ukraynada 18 nəfər öldürdü — Çerniqov söndü',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Rusiya cümə axşamı, 16 aprel sabahı qədər keçən 24 saat ərzində Ukraynaya 659 dron və 44 raket atəşi ilə kütləvi hücum həyata keçirdi. Hücumlar nəticəsində ən azı 18 nəfər həlak oldu, 118 nəfər yaralandı. Həlak olanlar arasında 12 yaşlı uşaq da var. 17 aprel gecəsi ayrıca bir hücum nəticəsində Çerniqovun birləşik istilik və elektrik stansiyası dayandırıldı və şəhər isti su olmadan qaldı.
+
+## Hücumun miqyası
+
+Rusiya 24 saatlıq pəncərədə Ukraynaya 659 dron və 44 raket buraxdı. Bu, son aylarda qeydə alınmış ən kütləvi hava hücumlarından biri idi. Hücumların hədəfləri arasında Kiyev, Xarkov, Odessa, Dnipro və Zaporojye şəhərləri yer aldı. Müxtəlif şəhərlərdən gələn dağıntı və zərər hesabatları çoxsaylı mülki obyektlərin vurulduğunu göstərdi.
+
+## Şəhərlər üzrə tələfat
+
+Kiyevdə 4 nəfər həlak oldu, o cümlədən 12 yaşlı uşaq, 50-dən çox nəfər yaralandı. Dnipro şəhərində 3 nəfər həyatını itirdi, 34 nəfər yaralı düşdü. Zaporojyedə ən azı 1 nəfər həlak oldu.
+
+## Çerniqov stansiyasının söndürülməsi
+
+17 aprel gecəsi Rusiya tərəfindən həyata keçirilən ayrıca hücum Çerniqovun birləşik istilik və elektrik stansiyasının dayandırılmasına səbəb oldu. Şəhər sakinləri isti su olmadan qaldı. Bu, son həftələrdə Rusiyanın Ukrayna enerji infrastrukturuna qarşı yönəltdiyi sistematik kampaniyanın daha bir epizodu oldu. Ukrayna hərbi qüvvələrinin məlumatına görə, Rusiyanın 17 aprel tarixinə qədər ümumi döyüş itkiləri təxminən 1 316 070 nəfərə çatıb.`,
+  },
+  'en-russia-ukraine-drone-barrage-chernihiv-2026-04-17': {
+    title: `Russia Drone Barrage Kills 18 in Ukraine; Chernihiv Dark`,
+    date: '2026-04-18',
+    category: 'World',
+    locale: 'en',
+    content: `Russia launched 659 drones and 44 missiles at Ukrainian cities in a 24-hour wave that ended Thursday morning, April 16, killing at least 18 people and wounding 118, according to Ukrainian officials. A separate overnight strike on April 17 forced the shutdown of the Chernihiv combined heat and power plant, leaving the northern city without hot water.
+
+## Cities Across Ukraine Hit
+
+Strikes targeted Kyiv, Kharkiv, Odesa, Dnipro and Zaporizhzhia. In Kyiv, 4 people were killed — including a 12-year-old child — and more than 50 injured. Dnipro reported 3 dead and 34 wounded. At least 1 person was killed in Zaporizhzhia. The barrage was one of the largest single-window aerial assaults of the war to date.
+
+## Chernihiv Plant Offline
+
+The Chernihiv attack, which occurred overnight April 17, took the city's combined heat and power facility out of service. Hot water supply was cut, and the municipality faces a difficult repair window. The strike continues a Russian pattern of targeting Ukrainian energy infrastructure.
+
+## Counter-Strikes and Cumulative Losses
+
+Ukrainian Special Operations Forces reported striking a Russian "Rubikon" drone-tech logistics base in occupied Manhush, in the Donetsk region, in the same overnight window. Cumulative Russian combat losses, per the Ukrainian Armed Forces tally, reached approximately 1,316,070 as of April 17. The figures, which Russia disputes, underscore the war's grinding intensity nearly four years after the full-scale invasion began.`,
+  },
+  'tr-rusya-ukrayna-drone-saldirisi-18-olu-cernihiv-santral': {
+    title: 'Rusya saldırısı 18 ölü; Çernihiv ısı santrali kapandı',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Rusya, perşembe sabahı 16 Nisan'a kadarki 24 saatlik dilimde Ukrayna'ya 659 drone ve 44 füze fırlattı. Saldırılarda 12 yaşındaki bir çocuk dahil en az 18 kişi hayatını kaybetti, 118 kişi yaralandı. 17 Nisan gecesinden 18 Nisan'a uzanan ayrı bir dalga ise Çernihiv'in birleşik ısı ve elektrik santralini durmak zorunda bıraktı; şehir sıcak suyunu kaybetti.
+
+## Hedef Alınan Şehirler ve Kayıplar
+
+Saldırıda Kiev, Harkov, Odesa, Dnipro ve Zaporijya hedef alındı. Kiev'de 12 yaşındaki bir çocuk dahil 4 kişi hayatını kaybetti, 50'den fazla kişi yaralandı. Dnipro'da 3 kişi öldü, 34 kişi yaralandı. Zaporijya'da en az 1 kişi can verdi. Saldırı, Ukrayna'ya yönelik son haftaların en ölümcül drone-füze barajlarından biri olarak kayıtlara geçti.
+
+## Çernihiv Santral Hasarı
+
+17 Nisan gecesi Rus saldırısının ardından Çernihiv'in birleşik ısı ve elektrik santrali devre dışı kaldı. Şehir merkezindeki haneler sıcak su tedarikinden mahrum kaldı. Bu ayrı dalga, Rusya'nın enerji altyapısını sistematik şekilde hedef alma stratejisinin sürdüğünü gösteriyor.
+
+## Cephede Sayısal Tablo
+
+Ukrayna Silahlı Kuvvetleri'nin yayımladığı kümülatif tabloya göre Rusya'nın muharebe kayıpları 17 Nisan itibarıyla yaklaşık 1.316.070'e ulaştı. Aynı gece Ukrayna Özel Operasyon Kuvvetleri, işgal altındaki Donetsk bölgesi Manhuş'taki bir Rus "Rubikon" drone-teknoloji lojistik üssünü vurduğunu açıkladı. Saldırı dalgaları, savaşın tırmanan yoğunluğunu ortaya koyuyor.`,
+  },
+  'ru-rossiya-udarila-po-ukraine-18-pogibshih-chernigov': {
+    title: 'Удар России по Украине: 18 погибших, Чернигов без тепла',
+    date: '2026-04-18',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Россия за сутки до утра четверга 16 апреля выпустила по Украине 659 беспилотников и 44 ракеты. По данным украинских властей, погибли как минимум 18 человек, включая 12-летнего ребёнка, ранения получили 118 человек. В ночь на 17 апреля отдельный удар вынудил остановить Черниговскую теплоэлектроцентраль, оставив город без горячей воды.
+
+## Масштаб ночной атаки
+
+Согласно сводкам CNN и Euronews, под удар попали Киев, Харьков, Одесса, Днепр и Запорожье. В Киеве погибли четыре человека, в том числе 12-летний ребёнок, ранены более 50 жителей. В Днепре погибли трое, ранения получили 34 человека. В Запорожье подтверждена как минимум одна жертва. Это одна из самых смертоносных воздушных атак с начала года.
+
+## Чернигов: вода и тепло
+
+В ночь на 17 апреля российский удар по Чернигову вывел из строя комбинированную теплоэлектроцентраль города. По данным «Киев Индепендент», город временно остался без горячей воды.
+
+## Контрудар и потери
+
+Украинские силы спецопераций в ту же ночь нанесли удар по логистической базе российских беспилотных технологий «Рубикон» в оккупированном Мангуше Донецкой области. Совокупные боевые потери российской армии, по данным украинского Генштаба на 17 апреля, достигли примерно 1 316 070 человек.`,
+  },
+
+  // --- Antalya Forum Day 1 ---
+  'antalya-forum-day-1-eliyev-5-bilateral-erdogan': {
+    title: 'Antalya Forum 1-ci Gün: Əliyevin 5 görüşü, Ərdoğan nitqi',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'az',
+    content: `5-ci Antalya Diplomatiya Forumunun ilk günü 17 aprel tarixində yüksək templə keçdi. Türkiyə Prezidenti Rəcəb Tayyib Ərdoğan açılış nitqində Qəzzə, Avropa İttifaqı və Hörmüz boğazı mövzularına toxundu. Azərbaycan Prezidenti İlham Əliyev isə forum çərçivəsində beş yüksək səviyyəli ikitərəfli görüş keçirdi. Bu görüşlər regional diplomatiyanın yeni təması formalaşdırdı.
+
+## Ərdoğan nitqinin əsas məqamları
+
+Ərdoğan açılış nitqində Avropa İttifaqı üzvlüyü mövzusunda mövqeyini yenidən bəyan etdi: "Tarix, coğrafiya və geosiyasət bizə xatırladır ki, Türkiyə Avropanın bir hissəsidir." Qəzzə mövzusunda Türkiyə prezidenti faciəvi rəqəmlər səsləndirdi: "73 000 fələstinli həyatını itirdi, 172 000-dən çox nəfər yaralandı, ölənlərin 21 000-dən çoxu uşaqlardır." Hörmüz boğazı haqqında isə Ərdoğan vurğuladı: "Boğazın bir qolu İrana, digəri Omana məxsusdursa, Körfəz dövlətlərinin açıq dənizə çıxış hüququ məhdudlaşdırılmamalıdır."
+
+## Əliyevin beş ikitərəfli görüşü
+
+Prezident Əliyev 17 aprel günü forum çərçivəsində beş ardıcıl görüş keçirdi. İlk olaraq Suriyanın keçid dövrü prezidenti Əhməd əş-Şəra ilə görüş baş tutdu — müzakirələrdə Türkiyə vasitəsilə Suriyaya Azərbaycan qazı ixracı mövzusu önə çıxdı, əş-Şəra Azərbaycana səfər dəvətini qəbul etdi. Sonra Moldova Prezidenti Maya Sandu ilə görüşdə enerji sektoru əməkdaşlığı diqqət mərkəzində oldu. Şimali Kipr Prezidenti Tufan Ərhürman ilə də görüş keçirildi. Pakistan Baş Naziri Şahbaz Şərif ilə kənarda ayrıca müzakirə oldu, daha sonra Ərdoğan və Şərif ilə üçtərəfli "səmimi söhbət" baş tutdu.
+
+## Forumun miqyası
+
+5-ci Antalya Diplomatiya Forumu 17-19 aprel tarixlərində "Sabahı Tərtib Etmək, Qeyri-Müəyyənlikləri İdarə Etmək" şüarı altında davam edir. Tədbirə 150-dən çox ölkədən təmsilçilər qatılır: 22 prezident və baş nazir, 14 vitse-prezident və baş nazir müavini, 39 daxili işlər naziri, 79 beynəlxalq təşkilat təmsilçisi və 500-dən çox yüksək səviyyəli nümayəndə. Rusiya Xarici İşlər Naziri Sergey Lavrov 17-18 aprel tarixlərində foruma qatılır. Türkiyə-Pakistan-Səudiyyə Ərəbistanı-Misir formatında dördtərəfli xarici işlər nazirləri görüşü forumun haşiyəsində İran müharibəsi və Hörmüz boğazı mövzularına həsr olundu.`,
+  },
+  'en-antalya-forum-day-1-aliyev-bilaterals-erdogan-2026': {
+    title: `Antalya Forum Day 1: Aliyev Holds 5 Bilaterals`,
+    date: '2026-04-18',
+    category: 'World',
+    locale: 'en',
+    content: `The 5th Antalya Diplomacy Forum opened on April 17 with a packed first day. Turkish President Recep Tayyip Erdoğan delivered the keynote address, while Azerbaijani President Ilham Aliyev held five high-profile bilateral meetings on the sidelines, signaling Baku's heightened diplomatic visibility on the regional stage.
+
+## Aliyev's Bilateral Agenda
+
+Aliyev met Syria's transitional president, Ahmed al-Sharaa, with talks centered on prospective Azerbaijani gas exports to Syria via Türkiye; al-Sharaa accepted an invitation to visit Azerbaijan. Aliyev also held meetings with Moldovan President Maia Sandu, focused on energy-sector cooperation; with Northern Cyprus President Tufan Erhürman; and with Pakistani Prime Minister Shehbaz Sharif. A three-way "cordial conversation" between Aliyev, Erdoğan and Sharif rounded out the day.
+
+## Erdoğan's Keynote
+
+Erdoğan's opening speech ranged across three flashpoints. On the European Union, he said that "history, geography, and geopolitics remind us that Türkiye is part of Europe," reaffirming Ankara's continued EU membership pursuit. On Gaza, he cited figures of 73,000 Palestinians killed, more than 172,000 wounded, and over 21,000 of the dead being children. On the Strait of Hormuz, he argued that "if one arm of the strait belongs to Iran, the other belongs to Oman," and that Gulf states' right to access the open sea must not be obstructed.
+
+## A Crowded Forum
+
+The forum, themed "Mapping Tomorrow, Managing Uncertainties," runs April 17-19 and hosts representatives from more than 150 countries, including 22 presidents and prime ministers, 14 vice presidents and deputy prime ministers, 39 interior ministers and over 500 high-level delegates. Russian Foreign Minister Sergey Lavrov is attending April 17-18, and a four-way ministerial meeting between Türkiye, Pakistan, Saudi Arabia and Egypt is scheduled on the sidelines, focused on the Iran war and the Strait of Hormuz.`,
+  },
+  'tr-antalya-forumu-gun-1-erdogan-aliyev-besli-gorusme': {
+    title: 'Antalya Forumu Gün 1: Erdoğan AB-Hürmüz; Aliyev 5 görüşme',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `5. Antalya Diplomasi Forumu'nun ilk gününde Cumhurbaşkanı Recep Tayyip Erdoğan açılış konuşmasında Gazze, Avrupa Birliği üyeliği ve Hürmüz Boğazı krizine değindi. Azerbaycan Cumhurbaşkanı İlham Aliyev ise gün boyunca beş üst düzey ikili görüşme gerçekleştirdi. Forum, "Yarını Haritalamak, Belirsizlikleri Yönetmek" temasıyla 17-19 Nisan tarihleri arasında devam ediyor.
+
+## Erdoğan'ın Açılış Mesajları
+
+Cumhurbaşkanı Erdoğan, AB üyelik süreciyle ilgili "Tarih, coğrafya ve jeopolitika bize Türkiye'nin Avrupa'nın bir parçası olduğunu hatırlatıyor" ifadesini kullandı. Gazze konusunda paylaştığı rakamlara göre 73.000 Filistinli hayatını kaybetti, 172.000'den fazla kişi yaralandı; ölenlerin 21.000'den fazlasını çocuklar oluşturuyor. Hürmüz Boğazı için ise "Boğazın bir kolu İran'a aitse, diğeri Umman'a aittir. Körfez ülkelerinin açık denize erişim hakkı engellenmemelidir" dedi.
+
+## Aliyev'in Beş Görüşmesi
+
+Aliyev, Suriye Geçiş Dönemi Cumhurbaşkanı Ahmed eş-Şara, Moldova Cumhurbaşkanı Maia Sandu, Kuzey Kıbrıs Cumhurbaşkanı Tufan Erhürman ve Pakistan Başbakanı Şehbaz Şerif ile ikili görüşmeler yaptı. Ayrıca Erdoğan ve Şerif ile üçlü bir "samimi görüşme" gerçekleştirdi. Eş-Şara ile yapılan görüşmede Türkiye üzerinden Azerbaycan doğal gazının Suriye'ye ihracatı masaya yatırıldı; eş-Şara, Azerbaycan'a ziyaret davetini kabul etti. Sandu ile yapılan görüşmede enerji sektörü işbirliği ön plandaydı.
+
+## Geniş Diplomatik Trafik
+
+Foruma 150'den fazla ülkeden temsilciler katıldı: 22 cumhurbaşkanı/başbakan, 14 cumhurbaşkanı yardımcısı/başbakan yardımcısı, 39 içişleri bakanı, 79 uluslararası kuruluş temsilcisi ve 500'den fazla üst düzey delege. Rusya Dışişleri Bakanı Sergey Lavrov da 17-18 Nisan'da Antalya'da. Ayrıca Türkiye-Pakistan-Suudi Arabistan-Mısır dörtlü dışişleri bakanları toplantısı, İran savaşı ve Hürmüz Boğazı gündemiyle forum kulislerinde planlandı.`,
+  },
+  'ru-antalya-forum-den-1-erdogan-aliev-pyat-vstrech': {
+    title: 'Антальский форум: Эрдоган и пять встреч Алиева',
+    date: '2026-04-18',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Пятый Антальский дипломатический форум открылся 17 апреля 2026 года под девизом «Картируя завтрашний день, управляя неопределённостями». Президент Турции Эрдоган выступил с программной речью о Газе, евроинтеграции и Ормузском проливе. Президент Азербайджана Алиев провёл пять знаковых двусторонних встреч за один день.
+
+## Ключевые тезисы Эрдогана
+
+В открывающей речи Эрдоган заявил: «История, география и геополитика напоминают нам, что Турция — часть Европы». По Газе турецкий лидер привёл цифры: «73 000 палестинцев погибли, 172 000 ранены, 21 000 погибших — дети». По Ормузскому проливу Эрдоган подчеркнул: «Если одна сторона пролива принадлежит Ирану, другая принадлежит Оману. Право государств Залива на выход в открытое море не должно быть нарушено».
+
+## Пять встреч Алиева за день
+
+Алиев провёл насыщенный день переговоров: с переходным президентом Сирии Ахмедом аш-Шараа обсуждался экспорт азербайджанского газа в Сирию через Турцию, при этом аш-Шараа принял приглашение посетить Азербайджан. С президентом Молдовы Майей Санду фокусом стало энергетическое сотрудничество. Также Алиев встретился с президентом Северного Кипра Туфаном Эрхюрманом и премьером Пакистана Шахбазом Шарифом. Состоялась трёхсторонняя «сердечная беседа» Алиев-Эрдоган-Шариф.
+
+## Масштаб форума и параллельные встречи
+
+В форуме участвуют представители более чем 150 стран: 22 президента и премьер-министра, 14 вице-президентов, 39 министров внутренних дел, 79 представителей международных организаций и более 500 делегатов высокого уровня. На полях форума запланирована четырёхсторонняя встреча министров иностранных дел Турции, Пакистана, Саудовской Аравии и Египта по теме войны в Иране и Ормузского пролива. Министр иностранных дел России Сергей Лавров присутствует 17-18 апреля.`,
+  },
+
+  // --- China Q1 GDP ---
+  'cin-q1-2026-gdp-bes-faiz-artdi-proqnozdan-yuksek': {
+    title: 'Çin Q1 GDP 5% artdı — proqnozları üstələdi',
+    date: '2026-04-18',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Çinin Milli Statistika Bürosu 16 aprel tarixində açıqladığı məlumata görə, ölkə iqtisadiyyatı 2026-cı ilin birinci rübündə illik müqayisədə 5.0% artım qeydə aldı. Bu nəticə Reuters sorğusunda gözlənilən 4.8% proqnozunu üstələdi və 2025-ci ilin son rübü ilə müqayisədə artımın 0.5 faiz bəndi sürətləndiyini göstərdi. Ortadoğu müharibəsi və qlobal enerji şokuna baxmayaraq Çin iqtisadiyyatı möhkəmliyini saxlayır.
+
+## Rəsmi rəqəmlər
+
+Q1 2026 Ümumi Daxili Məhsul göstəricisi 33.42 trilyon yuana çatdı. İllik artım 5.0% səviyyəsində formalaşdı. Bu rəqəm beynəlxalq analitiklərin gözləntilərindən yüksək gəldi. Sənaye əlavə dəyəri illik 6.1% artaraq inkişafın əsas dayağı oldu. Daha yüksək texnologiyalı sahələr daha sürətli böyüdü.
+
+## Sənaye və yüksək texnologiya liderlik edir
+
+Avadanlıq istehsalında əlavə dəyər 8.9% artım nümayiş etdirdi. Yüksək texnologiyalı istehsal sektorunda artım 12.5%-ə çatdı və ümumi sənaye performansını möhkəmləndirdi. Bu rəqəmlər Çinin daha yüksək dəyərli istehsal sahələrinə yönəlmiş strateji keçidinin uğurla davam etdiyini göstərir. Xarici ticarət də iqtisadiyyatı dəstəkləyən faktor olaraq önə çıxdı.
+
+## Qlobal kontekst
+
+Məlumatların açıqlanması Ortadoğu müharibəsinin enerji bazarlarına təzyiq etdiyi və qlobal təchizat zəncirlərinin gərginləşdiyi bir dövrə təsadüf etdi. Çin iqtisadiyyatının bu şəraitdə 5% həddində böyüməsi ölkənin xarici şoklara qarşı dirənc qabiliyyətinin yüksək olduğunu göstərir. Milli Statistika Bürosu rəqəmləri 16 aprel cümə axşamı günü dərc etdi.`,
+  },
+  'en-china-q1-2026-gdp-grows-5-percent': {
+    title: `China Q1 GDP Grows 5.0%, Topping Forecasts`,
+    date: '2026-04-18',
+    category: 'Economy',
+    locale: 'en',
+    content: `China's economy expanded 5.0% year-on-year in the first quarter of 2026, beating consensus forecasts and accelerating from the prior quarter despite a war in the Middle East and a global energy shock. The data, released April 16 by the National Bureau of Statistics, signal unexpected resilience in the world's second-largest economy.
+
+## Beating the Consensus
+
+GDP totaled 33.42 trillion yuan in Q1 2026, growing 5.0% from a year earlier and beating the Reuters poll forecast of 4.8%. The reading also marked an acceleration of 0.5 percentage points from the fourth quarter of 2025. Industrial value added rose 6.1% on an annual basis, with high-tech manufacturing up 12.5% and equipment manufacturing up 8.9% — both well ahead of the headline figure.
+
+## Industrial Engine
+
+The print confirms that Beijing's industrial policy push, particularly in advanced manufacturing, continues to deliver. Equipment and high-tech segments are growing roughly twice as fast as the overall economy, suggesting the rebalancing toward higher-value output is gathering pace even as services and property remain mixed.
+
+## Macro Backdrop
+
+The result lands amid heightened global uncertainty. The Middle East war that began on Feb. 28 has rattled energy markets and disrupted global supply chains. China's ability to post a 5% reading against that backdrop will reassure officials in Beijing and could shift the tone of the IMF/World Bank Spring Meetings in Washington this week, where global growth has been a central concern. The National Bureau of Statistics did not extrapolate a full-year forecast.`,
+  },
+  'tr-cin-q1-2026-gsyh-5-yuzde-buyume-beklentileri-asti': {
+    title: 'Çin Q1 2026 GSYH yüzde 5 büyüdü, beklentileri aştı',
+    date: '2026-04-18',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Çin Ulusal İstatistik Bürosu, 16 Nisan 2026'da açıkladığı verilerde 2026 yılının ilk çeyreğinde Gayri Safi Yurt İçi Hasıla'nın (GSYH) yıllık bazda yüzde 5,0 büyüdüğünü duyurdu. Bu rakam, Reuters anketinin yüzde 4,8'lik tahminini aşarken, 2025 dördüncü çeyreğine kıyasla 0,5 puanlık bir hızlanmaya işaret ediyor.
+
+## Resmi Veriler ve Hızlanma
+
+Toplam GSYH büyüklüğü ilk çeyrekte 33,42 trilyon yuana ulaştı. 2025'in son çeyreğinden 0,5 puanlık ivme, Çin ekonomisinin Orta Doğu'daki savaş ve küresel enerji şokuna karşın güçlü bir başlangıç yaptığını gösteriyor. Veriler perşembe günü Ulusal İstatistik Bürosu tarafından kamuoyuyla paylaşıldı.
+
+## Sanayi ve Yüksek Teknoloji Öne Çıktı
+
+Sanayi katma değeri yıllık bazda yüzde 6,1 arttı. Ekipman imalatı katma değeri yüzde 8,9, yüksek teknoloji imalatı ise yüzde 12,5 büyüdü. Bu rakamlar, Çin'in büyüme motorunun geleneksel emek-yoğun sektörlerden gelişmiş üretim ve teknoloji segmentlerine doğru kaydığını ortaya koyuyor.
+
+## Küresel Bağlam
+
+Sonuç, Orta Doğu savaşının küresel ekonomi üzerindeki baskısı ve enerji fiyatlarındaki dalgalanmaya rağmen Çin'in dirençli bir performans sergilediğine işaret ediyor. Reuters tahmininin üzerinde gerçekleşen büyüme verisi, küresel piyasalarda Çin'in dış ticaret canlılığı ve sanayi üretimi üzerine olumlu bir okuma yapılmasına yol açtı.`,
+  },
+  'ru-kitay-q1-2026-vvp-vyros-5-protsentov': {
+    title: 'ВВП Китая в Q1 2026 вырос на 5%, превысив прогноз',
+    date: '2026-04-18',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Национальное бюро статистики Китая сообщило 16 апреля, что ВВП страны в первом квартале 2026 года вырос на 5,0% в годовом выражении и достиг 33,42 триллиона юаней. Показатель превзошёл консенсус-прогноз Reuters в 4,8% и ускорился на 0,5 процентного пункта по сравнению с Q4 2025 года. Рост поддержали промышленность и высокотехнологичный сектор.
+
+## Промышленность и высокие технологии лидируют
+
+Добавленная стоимость в промышленности выросла на 6,1% в годовом выражении. Производство оборудования прибавило 8,9%, а высокотехнологичная промышленность — впечатляющие 12,5%. Это свидетельствует о том, что китайская экономика смогла нарастить выпуск даже на фоне глобального энергетического шока, вызванного войной на Ближнем Востоке.
+
+## Превышение прогнозов аналитиков
+
+Опрос Reuters накануне публикации указывал на ожидаемый рост в 4,8%. Фактический результат в 5,0% стал положительным сюрпризом для рынков. Ускорение по сравнению с предыдущим кварталом подтверждает, что Пекин нашёл способ стимулировать внутренний спрос и поддержать внешнюю торговлю в условиях геополитической нестабильности.
+
+## Сильное начало года
+
+Данные NBS характеризуют первый квартал как «уверенное начало года». Аналитики отмечают, что Китай оказался относительно устойчивым к шокам цен на нефть и сбоям в глобальных цепочках поставок. Тем не менее экономисты воздерживаются от пересмотра годовых прогнозов до публикации данных за второй квартал.`,
+  },
+
+  // --- G7 finance ministers ---
+  'g7-maliyye-nazirleri-vasinqton-iran-nadir-torpaq': {
+    title: 'G7 maliyyə nazirləri Vaşinqtonda — İran və nadir torpaqlar',
+    date: '2026-04-18',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `G7-nin maliyyə nazirləri və mərkəzi bank rəhbərləri 15-17 aprel tarixlərində Vaşinqtonda toplaşaraq Ortadoğu müharibəsinin qlobal iqtisadiyyata vurduğu zərbənin azaldılmasının "təcili" olduğunu bəyan etdilər. Birgə bəyanatda "davamlı sülhə doğru irəliləməyin" zəruriliyi vurğulandı. Görüş Beynəlxalq Valyuta Fondu və Dünya Bankının Yaz Toplantıları çərçivəsində baş tutdu.
+
+## Üç əsas prioritet
+
+G7 maliyyə nazirləri toplantıda üç başlıq üzərində fikir birliyinə gəldi. Birinci prioritet — Ortadoğu müharibəsinə qarşı koordinasiyalı iqtisadi cavab. İkinci başlıq — Ukraynaya davam edən maliyyə dəstəyi. Üçüncüsü isə Çinə alternativ olaraq nadir torpaq elementləri və kritik mineralların təchizat zəncirinin inkişaf etdirilməsi. Birgə bəyanatın dili "davamlı sülhə doğru irəliləməyin təcili zərurətini yenidən təsdiq etdi" ifadəsini ehtiva edir.
+
+## Lekürün xəbərdarlığı
+
+Fransa Maliyyə Naziri Roland Lekür G7 ölkələrinin "müharibənin enerji və təchizat şoklarının yaratdığı iqtisadi və inflyasiya risklərini azaltmaq üçün hərəkətə keçməyə hazır" olmalı olduğunu bəyan etdi. Toplantıda eyni zamanda 2 trilyon dollarlıq özəl kredit sənayesinin yaratdığı sistem riskləri də müzakirə olundu. Maliyyə sabitliyi son aylarda mərkəzi bankların əsas narahatlığına çevrildi.
+
+## IMF-Dünya Bankı çərçivəsi
+
+IMF və Dünya Bankının Yaz Toplantıları 13-18 aprel tarixlərində Vaşinqtonda davam etdi. G7 maliyyə nazirləri toplantısı bu çərçivənin haşiyəsində baş tutdu. Müzakirələr həm acil böhran cavablarını, həm də uzunmüddətli struktur çağırışları əhatə etdi. Nadir torpaq mövzusu Çindən asılılığın azaldılması istiqamətində Qərbin yeni strategiyasını ortaya qoydu.`,
+  },
+  'en-g7-finance-ministers-washington-iran-rare-earths-2026': {
+    title: `G7 Finance Chiefs Push 'Lasting Peace' on Iran War`,
+    date: '2026-04-18',
+    category: 'Economy',
+    locale: 'en',
+    content: `Finance ministers and central bank governors from the Group of Seven met in Washington on April 15-17, agreeing it was "urgent" to limit the cost of the Middle East war and calling for a "lasting peace." The talks, held on the margins of the IMF/World Bank Spring Meetings, also focused on continued support for Ukraine and on building rare-earth supply alternatives to China.
+
+## Three Priorities
+
+The joint statement reaffirmed "the pressing need to move toward a lasting peace" in the Middle East. Three priorities dominated the agenda: response to the Iran war, sustained support for Ukraine, and the development of rare-earth and critical-mineral supply chains independent of China. Ministers also discussed risk-monitoring of the $2 trillion private credit industry, an increasing concern for global financial stability watchers.
+
+## Lescure Warning
+
+French Finance Minister Roland Lescure said the G7 must be "ready to act to mitigate the economic and inflation risks caused by the war's energy and supply shocks." His remarks framed the meeting's economic core: oil-price volatility, jet fuel costs and broader supply disruptions are now treated as systemic risks requiring coordinated policy.
+
+## Spring Meetings Setting
+
+The G7 huddle ran alongside the broader IMF/World Bank Spring Meetings, scheduled April 13-18 in Washington. Canada's Finance Minister Champagne represented Ottawa at the G7, G20 and IMF/World Bank tracks. With the April 22 ceasefire deadline approaching in the Middle East and rare-earth dependencies under fresh scrutiny, finance officials departed Washington with a coordinated message but no fixed timetable for action.`,
+  },
+  'tr-g7-maliye-bakanlari-orta-dogu-baris-nadir-toprak': {
+    title: 'G7 maliye bakanları: Orta Doğu\'da kalıcı barış şart',
+    date: '2026-04-18',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `G7 maliye bakanları ve merkez bankası başkanları, 15-17 Nisan 2026 tarihlerinde Washington D.C.'de IMF/Dünya Bankası Bahar Toplantıları paralelinde bir araya geldi. Ortak bildiride Orta Doğu savaşının küresel ekonomiye verdiği zararı sınırlamanın "acil" olduğu vurgulandı ve "kalıcı barış" çağrısı yapıldı.
+
+## Üç Öncelikli Başlık
+
+Toplantının gündemine üç öncelikli mesele damga vurdu: birincisi Orta Doğu'daki savaşa müdahale, ikincisi Ukrayna'ya verilen desteğin sürdürülmesi, üçüncüsü ise Çin'e bağımlılığı azaltacak nadir toprak ve kritik mineral tedarik zincirinin geliştirilmesi. Ortak bildirinin dilinde bakanların "kalıcı barışa doğru ilerlemenin acil ihtiyacını yeniden teyit ettiği" ifade edildi.
+
+## Fransa'dan Net Mesaj
+
+Fransa Maliye Bakanı Roland Lescure, G7'nin "savaşın enerji ve tedarik şoklarının yarattığı ekonomik ve enflasyon risklerini azaltmak için harekete geçmeye hazır" olması gerektiğini söyledi. Toplantıda ayrıca 2 trilyon dolarlık özel kredi sektörünün izlenmesi ve sistemik risklerin değerlendirilmesi de gündeme alındı.
+
+## IMF/Dünya Bankası Çerçevesi
+
+G7 toplantıları, 13-18 Nisan 2026 tarihlerinde Washington'da düzenlenen IMF/Dünya Bankası Bahar Toplantıları'nın paralelinde gerçekleşti. Maliye bakanlarının ortak duruşu, küresel ekonomik istikrarı korumak için savaş kaynaklı şokların hızla kontrol altına alınması gerektiği yönündeki kaygıyı yansıtıyor.`,
+  },
+  'ru-g7-ministry-finansov-vashington-iran-redkozemy': {
+    title: 'G7: «прочный мир» на Ближнем Востоке и редкие земли',
+    date: '2026-04-18',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Министры финансов и главы центральных банков стран G7 провели встречу 15-17 апреля в Вашингтоне на полях весенних совещаний IMF и Всемирного банка. Участники подтвердили «настоятельную необходимость движения к прочному миру» на Ближнем Востоке, поддержку Украины и развитие альтернативных Китаю поставок редкоземельных металлов и критически важных минералов.
+
+## Три приоритета встречи
+
+В совместном заявлении министров G7 обозначены три ключевых направления. Первое — реакция на войну на Ближнем Востоке и снижение её экономических издержек. Второе — продолжение поддержки Украины. Третье — построение альтернативных Китаю цепочек поставок редкоземельных металлов и критических минералов. Это первая встреча G7, где тема редкоземельных элементов выведена в политический приоритет.
+
+## Французский министр об инфляции и рисках
+
+Министр финансов Франции Роланд Лескюр заявил, что G7 должна быть «готова действовать для смягчения экономических и инфляционных рисков, вызванных энергетическими и ценовыми шоками войны». Это прямой намёк на устойчиво высокие цены на нефть и керосин, удерживающие глобальную инфляцию выше целевых уровней центральных банков.
+
+## Контекст IMF и теневые риски
+
+Параллельно весенние совещания IMF и Всемирного банка проходили 13-18 апреля в Вашингтоне. На повестке также оказались риски частной кредитной индустрии объёмом $2 триллиона. Министры договорились о совместном мониторинге, чтобы избежать системных потрясений.`,
+  },
+
   // ========== 2026-04-17 ==========
 
   // --- Antalya Diplomacy Forum opens (04-17) ---
