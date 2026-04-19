@@ -1,9 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-17 (Session 29 — News Refresh: 22 verified topics for Apr 16-17, 88 articles, re-sort)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit 80367c2 deployed)
-**Son commit:** 80367c2 (content(news): add Apr 16-17 verified topics, 88 articles, re-sort newest-first — Session 29)
-**Əvvəlki commit:** 8215c81 (content(news): add 8 new topics for Apr 14 — Session 28)
+**Son yenilənmə:** 2026-04-19 (Session 31 — Batch 1: 5 HIGH topics, 20 articles for 04-17/04-18 events)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit 52b2963 deployed)
+**Son commit:** 52b2963 (content(news): add 5 HIGH topics for Apr 19 batch 1, 20 articles — Session 31)
+**Əvvəlki commit:** ffca734 (content(news): add Apr 18 verified topics, 20 articles — Session 30)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -24,12 +24,12 @@
 | **Deploy** | ✅ Vercel aktiv |
 | **GitLab + GitHub** | ✅ Synced (d4c3a48) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | 80367c2 |
-| **Testlər** | **4078** PASS (vitest) |
+| **Son commit** | 52b2963 |
+| **Testlər** | **4238** PASS (vitest, S31: +80) |
 | **E2E** | **30 fayl** (18 yeni Sprint 3-də) |
-| **Statik səhifələr** | **1672** (S29: 1240→1672) |
+| **Statik səhifələr** | **~1836** (S31: 1752→1836, +84) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **252** (63/locale — S29: +88 yeni: 80367c2) |
+| **Xəbərlər** | **292** (73/locale — S31: +20 yeni: 52b2963) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
@@ -58,6 +58,128 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 31 (2026-04-19) — News Refresh Batch 1: 5 HIGH topics for Apr 19 (04-17/04-18 events, 4-stage QA)
+
+**Tapshiriq:** CEO: yeni xəbərlər webdə araşdır və saytına əlavə et. Halisunasiya olmasın, hərf səhvləri test edilsin, yenidən-köhnəyə sıra saxlanılsın.
+
+**Komanda:** ~11 agent (1 researcher + 4 paralel writer + 3 paralel QA + 1 fix + 1 lead-dev integration + 1 deploy).
+
+**Faza 1 — Research (WebSearch + WebFetch):**
+- 5 HIGH mövzu verified, hər biri ≥2 müstəqil reputable mənbə (Reuters, AP, BBC, ESPN, NBA.com, OpenAI official, Al Jazeera, NPR, CNN, NBC, Bloomberg, VentureBeat, Henry Aldridge & Son)
+- 12+ mövzu considered and dropped (Iran ceasefire extension — folded; Coachella W2 — artıq covered; Live Nation verdict — 04-15 stale; F1 Saudi cancelled; Pope Leo vs Trump — kept as alternate)
+- De-dup gate: Session 30-un 5 04-18 mövzusu (Trump nuclear dust, Russia-Ukraine 18 dead, G7 Washington, China Q1 GDP, Antalya Forum Day 1) açıqca ignore olundu — overlap yox
+
+**Faza 2 — 4 paralel writer (AZ/EN/TR/RU):**
+- AZ: 5 article, content 1807-2262 char, titles 56-62 char
+- EN: 5 article, content 1539-2050 char, titles 53-63 char
+- TR: 5 article, content 1387-1492 char, titles 49-54 char
+- RU: 5 article, content 1424-1497 char, titles 43-55 char
+- Cəmi 20 məqalə, 4 dildə
+
+**Faza 3 — 3 paralel QA:**
+- QA-A (Diakritik/Cyrillic purity): **0 blocking, 0 minor** — 4 dildə təmiz
+- QA-B (Title/Length/Slug/Date): **10 BLOCKING** — bütün TR+RU məqalələri `2026-04-19` istifadə edib, halbuki event tarixləri `2026-04-18` (T1,2,3,5) və `2026-04-17` (T4) olmalıdır (Session 30 blocking issue təkrarı)
+- QA-C (Source-fact reconciliation): **2 BLOCKING** (EN Topic 2 Kyiv "air-raid sirens and missile strikes" invented scene; EN Topic 5 Titanic "private collector...western England" unverified buyer location), **7 MINOR** (soft editorial adjectives)
+
+**Faza 4 — Fix agent:** 13 atomik düzəliş (10 date fix TR+RU + 2 EN scene/buyer removal + 1 misleading TR header comment delete). Cross-locale date consistency VERIFIED post-fix.
+
+**Faza 5 — Lead-dev integration:**
+- `src/data/news-articles.ts`: 5,326 → 5,693 sətir (+367)
+- 272 → 292 məqalə (+20)
+- 16 yeni 04-18 entry → 04-18 block TOP-da (Session 30-un 5 mövzusundan əvvəl)
+- 4 yeni 04-17 entry (GPT-Rosalind) → 04-17 block TOP-da
+- Slug uniqueness PASS (0 collision), tsc clean
+
+**Faza 6 — Build + Test:**
+- 1 test failure detected: `EN articles should have English category names` — GPT-Rosalind `'Tech'` → `'Technology'` (writer prompt bug: valid whitelist `Technology`, not `Tech`)
+- Fix atomik, retest PASS
+- vitest: 4,238 PASS (4,158 → 4,238, +80)
+- npx tsc: clean
+- next build: 1,836 statik səhifə (1,752 → 1,836, +84)
+
+**Faza 7 — Deploy:**
+- Commit 52b2963, GitLab push SUCCESS
+- GitHub mirror initial reject (lock ref race) → retry SUCCESS, both remotes at 52b2963
+- Vercel auto-deploy, production HTTP/2 200:
+  - Homepage × 4 locale
+  - /info × 4 locale
+  - Yeni məqalə URL × 4 locale (Iran Hormuz topic)
+
+**Mövzular (priority sırası):**
+1. Iran Hörmüz boğazını yenidən bağladı, gəmilərə atəş açıldı (04-18, follow-up to S30 nuclear dust)
+2. Kiyevdə kütləvi atışma: 6 ölü, SBU terror adlandırdı (04-18)
+3. NBA Pley-off 1-ci tur Oyun 1: dörd ev sahibi qələbə (04-18)
+4. OpenAI GPT-Rosalind — bioloji elmlər üçün AI (04-17)
+5. Titanik xilas jileti £670,000 / $906,000 (04-18, auction rekord)
+
+**Plan faylı:** `~/.claude/plans/buzzing-shimmying-beacon.md`
+**Brief:** `docs/agent-reports/news-research-2026-04-19-batch1.md`
+**Writer outputs:** `docs/agent-reports/news-writer-output-{az,en,tr,ru}-2026-04-19-batch1.md`
+**QA reports:** `docs/agent-reports/qa-{a,b,c}-*-2026-04-19-batch1.md`
+
+**Lesson (Session 31 retrospective):**
+- **TR/RU date bug:** Writer prompts "Date: `'2026-04-19'` (unless researcher explicitly flags 04-18 fill-in)" phrasing was ambiguous — TR/RU writers interpreted as "publication date 04-19 by default". AZ/EN writers correctly inferred event dates from brief. Gələcək writer prompt-larında: "USE THE EVENT DATE FROM THE BRIEF — NOT PUBLICATION DATE" explicit edilməli.
+- **EN category whitelist:** `validEnCategories` test file-ında `'Technology'` gözlənilir, `'Tech'` deyil. Writer prompt bug: `'Tech'` seçim kimi təqdim edilmişdi. Gələcəkdə writer prompt-larını test file-ın gerçək whitelist-i ilə yoxlamaq.
+- **QA-C scene-invention detection işlədi:** Sprint 4 P0 halisunasiya bug-ı bu dəfə productionə keçə bilmədi — QA-C 2 editorial invention (Kyiv sirens + Titanic buyer location) tutdu.
+
+**Müddət:** ~1 saat 20 dəqiqə
+
+### Session 30 (2026-04-18) — News Refresh Batch 2: 5 HIGH topics for Apr 18 (4-stage QA)
+
+**Tapshiriq:** CEO: yeni vacib xəbərlər varsa əlavə et + web ətraflı axtar + hərf/məntiq/yalnış xəbər test + deploy.
+
+**Komanda:** ~12 agent (1 researcher + 4 paralel writer + 3 paralel QA + 1 fix + 1 lead-dev integration + 1 deploy)
+
+**Faza 1 — Research (web search):**
+- 9 verified mövzu tapıldı, 12 mövzu DROP edildi (tarix yanlış: F1 SA postponed, SpaceX Starship may, Tesla earnings 22 Apr, UK CPI 22 Apr, Sudan ambiguous, Snap 04-15 və s.)
+- NBA Play-In nəticələri verifikasiya oluna bilmədi (search snippet-lərdə index olmamışdı) → preview saxlanıldı, sabaha update
+- CEO seçimi: 5 HIGH mövzu (UCL drop edildi → Antalya Forum Day 1 substitute)
+
+**Faza 2 — 4 paralel writer:**
+- AZ/EN/TR/RU, hər biri 5 məqalə = 20 cəmi
+- 4 writer eyni qərar: UCL drop (preview artıq mövcud idi) → Antalya Forum Day 1 substitute
+
+**Faza 4a — Diakritik QA:** 2 minor AZ (nazirləri typo, Day 1 style) — 0 blocking
+**Faza 4b — Length/Slug QA:** 1 BLOCKING — date alignment (EN 2 məqalə 04-18, AZ-da yoxdur — vitest cross-locale test fail edəcəkdi)
+**Faza 4c — Source-fact QA:** 0 BLOCKING uydurma (Mythos 5 sinifi yox), 7 soft fabrication (Topic 4 editorial fluff)
+
+**Fix agent:** 22 atomik düzəliş (CRITICAL: bütün 20 məqalənin tarixini '2026-04-18'-ə hızırlama — CEO təsdiqlədi; 2 AZ minor; 7 soft fabrication cleanup)
+
+**Faza 3 — Integration:**
+- src/data/news-articles.ts: 4,932 → 5,326 sətir (+394)
+- 252 → 272 məqalə (+20)
+- Yeni `// ========== 2026-04-18 ==========` banner ən üstdə
+- Topic priority sırası: Trump-İran → Rusiya-Ukrayna → Antalya → Çin GDP → G7
+- Slug uniqueness PASS (0 collision), tsc clean
+- npm run test:run: 4,158 PASS (4,078 → 4,158, +80)
+
+**Faza 5 — Build:** 1,672 → 1,752 statik səhifə (+80)
+
+**Faza 7 — Deploy:**
+- Commit ffca734, GitLab + GitHub synced
+- Vercel auto-deploy ~30 sec
+- Production HTTP/2 200, 4 sample URL × 4 dil hamısı 200
+- /info listing 5 yeni 04-18 məqalə ən üstdə (düzgün date DESC sıra)
+
+**Mövzular:**
+1. Tramp "nüvə tozu" iddiası vs İran rəddi (22 aprel deadline)
+2. Çin Q1 2026 GDP +5.0% YoY (33.42T yuan, NBS rəsmi)
+3. G7 maliyyə nazirləri Washington (lasting peace + nadir torpaq)
+4. Rusiya Ukraynaya hücum 18 ölü, Çerniqov stansiyası söndü
+5. Antalya Forum Day 1 (Erdoğan keynote + Əliyev 5 bilateral)
+
+**Yan müşahidələr (bloklamır):**
+- GitHub mirror initial push reject → avtomatik həll oldu
+- Sentry SDK migration warning (pre-existing)
+- /info cache header `no-store` — gələcək cleanup üçün backlog (TTFB optimization)
+
+**Müddət:** ~1 saat 40 dəqiqə
+**Plan faylı:** `~/.claude/plans/salam-po-vaxtimyoxdu-sayt-na-curried-sunrise.md`
+**Brief:** `docs/agent-reports/news-research-2026-04-18-batch2.md`
+**Writer outputs:** `docs/agent-reports/news-writer-output-{az,en,tr,ru}-2026-04-18-batch2.md`
+
+**Lesson:** 4 writer-in eyni anda eyni qərar verməsi (UCL drop → Antalya substitute) yaxşı koordinasiya. Date alignment test (cross-locale) gələcəkdə writer prompt-larında **explicitly** vurğulanmalıdır ki, eyni hadisə eyni tarixlə yazılsın.
 
 ### Session 29 (2026-04-17) — News Refresh: 22 verified topics for Apr 16-17, 4-stage QA, re-sort
 
