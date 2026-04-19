@@ -9,6 +9,300 @@ export interface NewsArticle {
 export const newsArticles: Record<string, NewsArticle> = {
   // ========== 2026-04-18 ==========
 
+  // --- Iran closes Strait of Hormuz again, fires on ships ---
+  'iran-hormuz-bogazi-yeniden-baglandi-tanker-ates-18-aprel': {
+    title: 'İran Hörmüz boğazını yenidən bağladı — tankerə atəş açıldı',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'az',
+    content: `İran İnqilab Mühafizləri Korpusu (İRQC) 18 aprel 2026-cı il şənbə gecəsi Hörmüz boğazını yenidən bağladığını elan etdi. Bu qərar cəmi bir gün əvvəl — 17 aprel cümə günü boğazın açıldığının bəyan edilməsindən sonra gəldi. Açıqlamadan bir neçə saat sonra İRQC gəmiləri bir tankerə atəş açdı, naməlum mərmi isə konteyner gəmisinə dəyərək konteynerlərə ziyan vurdu. Hindistan iki Hindistan bayraqlı ticarət gəmisinin atəşə tutulmasına etiraz olaraq İranın səfirini Xarici İşlər Nazirliyinə çağırdı.
+
+## İRQC-nin qəti xəbərdarlığı
+
+İRQC bəyanatında bildirildi ki, boğaz "ABŞ-ın blokadası aradan qaldırılana qədər bağlıdır." Korpus xəbərdarlıq etdi: "heç bir gəmi Fars körfəzi və Oman dənizindəki lövbər mövqeyindən hərəkət etməməlidir, Hörmüz boğazına yaxınlaşma düşmənlə əməkdaşlıq sayılacaq" və hədəf alınacaq. İRQC ABŞ hərəkətlərini "dəniz quldurluğu və oğurluğu aktları" kimi xarakterizə etdi və boğazın "sıx nəzarət altında" qalacağını elan etdi. Britaniya Dəniz Ticarəti Əməliyyatları xidməti boğaz yaxınlığındakı tanker hücumunu təsdiqlədi. Tankerdə yaralanan olmadığı bildirildi.
+
+## Hindistanın etirazı və Trampın xəbərdarlığı
+
+Hindistan Xarici İşlər Nazirliyi İranın səfirini çağırdı. Xarici İşlər Katibi Vikram Misri "Hindistanın dərin narahatlığını çatdırdı" və İrandan "Hindistana yönəlmiş gəmilərin Hörmüz boğazından keçməsinə imkan verən prosesin ən qısa müddətdə yenidən bərpasını" xahiş etdi. Boğazın qısamüddətli açılması dövründə ən azı səkkiz tanker oradan keçmiş, bir çoxu sonradan geri dönmüşdü. ABŞ Prezidenti Donald Tramp jurnalistlərə bəyan etdi: "Bilmirəm. Bəlkə də uzatmayacağam, amma blokada davam edəcək. Amma bəlkə də uzatmayacağam, beləliklə blokadanız olacaq və təəssüf ki yenidən bombalar atmağa başlayacağıq."
+
+## 22 aprel son tarixinə sayılan günlər
+
+Cari atəşkəs müddəti 22 aprel 2026-cı ildə başa çatır, vasitəçilər isə müddətin daha iki həftə uzadılması üzərində işləyirlər. Qlobal xam neft və təbii qazın təxminən 20%-i adətən Hörmüz boğazından keçir. İranın cümə günü elan etdiyi boğazın açılması qərarı 24 saat ərzində dağıldı — indi gəmilər atəşə tutulur, diplomatik gərginlik isə növbəti həftəyə uzanır. Tramp sövdələşmə ehtimalı ilə bağlı da bir cümlə səsləndirdi: "Düşünürəm ki, bu baş verəcək."`,
+  },
+  'en-iran-hormuz-closed-again-ships-fired-upon-2026': {
+    title: `Iran Shuts Hormuz Again; Gunboats Open Fire on Tanker`,
+    date: '2026-04-18',
+    category: 'World',
+    locale: 'en',
+    content: `Iran's Islamic Revolutionary Guard Corps on Saturday night, April 18, 2026, reversed its one-day-old reopening of the Strait of Hormuz, declaring the waterway closed again until the United States lifts its naval blockade of Iranian ports. Hours after the announcement, IRGC gunboats opened fire on a tanker near the strait, and an unknown projectile struck a container vessel, damaging containers. No injuries were reported. India's Ministry of External Affairs summoned Iran's ambassador to protest a "shooting incident" involving two India-flagged merchant ships. The reversal lands days before the April 22 ceasefire deadline in the 2026 Iran war.
+
+## A Closure Reimposed
+
+The IRGC said the strait "is closed until the U.S. blockade is lifted" and warned that "no vessel should make any movement from its anchorage in the Persian Gulf and the Sea of Oman, and approaching the Strait of Hormuz will be considered as cooperation with the enemy" and would be targeted. The Revolutionary Guard characterized US actions as "acts of piracy and maritime theft" and said the strait would remain "tightly controlled" until Washington restored full navigation freedom for Iranian vessels.
+
+At least eight tankers had crossed the strait during its brief reopening; many subsequently turned back. UK Maritime Trade Operations reported the tanker attack near the strait.
+
+## India Summons Iran's Ambassador
+
+Foreign Secretary Vikram Misri "conveyed India's deep concern" and urged Iran to "resume at the earliest the process of facilitating India-bound ships across the Strait." Approximately 20% of global crude oil and natural gas typically flows through the Strait of Hormuz.
+
+## Trump on Blockade and Bombs
+
+Speaking to reporters, President Donald Trump said: "I don't know. Maybe I won't extend it, but the blockade is going to remain. But maybe I won't extend it, so you'll have a blockade and unfortunately we'll have to start dropping bombs again." With the April 22 ceasefire deadline approaching, mediators are working to extend it another two weeks.`,
+  },
+  'tr-iran-hurmuz-bogazini-yeniden-kapatti-gemilere-ates': {
+    title: 'İran Hürmüz Boğazı\'nı kapattı, gemilere ateş açıldı',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `İran Devrim Muhafızları (İRG), 18 Nisan 2026 Cumartesi gecesi, bir gün önce açtığı Hürmüz Boğazı'nı yeniden kapattığını duyurdu. Açıklamanın ardından İRG hücumbotları bir tankere ateş açtı; ayrı bir konteyner gemisine de kimliği belirsiz bir mermi isabet etti. Hindistan Dışişleri Bakanlığı, bayrağı kendi ülkesine ait iki ticari gemiyi hedef alan ateş açma olayını protesto etmek için Tahran'ın büyükelçisini çağırdı. 22 Nisan ateşkes son tarihi yaklaşıyor.
+
+## İRG Uyarısı ve Gemi Saldırıları
+
+İRG açıklamasında boğazın "ABD ablukası kaldırılana kadar kapalı" olduğu belirtildi ve "Hürmüz Boğazı'na yaklaşmanın düşmanla işbirliği sayılacağı" uyarısı yapıldı. İRG, ABD eylemlerini "korsanlık ve deniz hırsızlığı" olarak nitelendirdi. İngiltere Deniz Ticareti Operasyonları tanker saldırısını doğruladı. Yaralı bildirilmedi; küresel ham petrol ve doğal gazın yaklaşık yüzde 20'si bu boğazdan geçiyor.
+
+## Hindistan'ın Protestosu ve Trump Mesajı
+
+Hindistan Dışişleri Sekreteri Vikram Misri, "Hindistan'ın derin endişesini ilettiğini" ve İran'ı "gemi geçişini kolaylaştırma sürecini en kısa sürede yeniden başlatmaya" çağırdığını açıkladı. Kısa süreli açılma sırasında en az sekiz tanker boğazı geçmiş; pek çoğu geri dönmüştü. ABD Başkanı Donald Trump gazetecilere şunu söyledi: "Bilmiyorum. Belki uzatmayacağım, ancak abluka devam edecek. Belki uzatmam, yani ablukamız olacak ve maalesef yine bomba atmaya başlamak zorunda kalacağız."`,
+  },
+  'ru-iran-zakryl-ormuz-snova-ogon-po-tankeru': {
+    title: 'Иран снова закрыл Ормузский пролив, огонь по танкеру',
+    date: '2026-04-18',
+    category: 'Мир',
+    locale: 'ru',
+    content: `КСИР («Корпус стражей исламской революции») вечером 18 апреля 2026 года объявил о повторном закрытии Ормузского пролива, отменив решение о возобновлении судоходства, принятое днём ранее. Спустя часы катера КСИР открыли огонь по танкеру у пролива, а неустановленный снаряд повредил контейнеры на другом судне. Жертв на танкере нет. Индия вызвала посла Ирана для протеста: под обстрел попали два торговых судна под её флагом. Дедлайн перемирия — 22 апреля.
+
+## Заявление КСИР
+
+В заявлении КСИР пролив объявлен «закрытым до снятия блокады США». Военные предупредили: приближение к Ормузскому проливу «будет расцениваться как сотрудничество с врагом». Действия Вашингтона КСИР назвал «актами пиратства и морского воровства». По данным британского морского ведомства, катера обстреляли танкер; отдельный снаряд повредил контейнеровоз.
+
+## Индия и посредники
+
+МИД Индии вызвал посла Ирана. Секретарь по иностранным делам Викрам Мисри «передал глубокую обеспокоенность» и призвал Тегеран «как можно скорее возобновить проход судов, направляющихся в Индию». По меньшей мере восемь танкеров прошли пролив за короткое окно открытия, многие затем повернули обратно.
+
+## Трамп и 22 апреля
+
+Через пролив обычно проходит около 20% мировой нефти и газа. Дональд Трамп заявил: «Я не знаю. Возможно, я не буду продлевать его, но блокада останется… и, к сожалению, нам снова придётся сбрасывать бомбы». Посредники пытаются продлить перемирие ещё на две недели.`,
+  },
+  // --- Kyiv mass shooting, 6 killed ---
+  'kiyev-kutlevi-atesli-hucum-6-olu-sbu-terror-18-aprel': {
+    title: 'Kiyevdə kütləvi atışma: 6 ölü, SBU hadisəni terror adlandırdı',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Rusiyada doğulmuş 58 yaşlı bir şəxs 18 aprel 2026-cı il şənbə günü Kiyev mərkəzində avtomatik silahla altı nəfəri öldürdü və ən azı 14 nəfəri yaraladı. Hadisə Holosiivski rayonunda yerləşən yaşayış binası və ticarət mərkəzinin yaxınlığında başladı, silahlı şəxs sonradan bir supermarketdə girovlarla birlikdə özünü barrikadaladı. Xüsusi taktiki polis bölmələri təxminən 40 dəqiqəlik danışıqlardan sonra obyektə daxil olub onu məhv etdi. Ukrayna Təhlükəsizlik Xidməti (SBU) qətlləri terror aktı kimi təsnif etdi.
+
+## Hücumun gedişatı
+
+Silahlı şəxs əvvəlcə yaşayış binası və ticarət mərkəzinin yaxınlığındakı küçədə adamlara atəş açdı. Sonra o, bir supermarketə daxil olaraq girovlar götürdü və özünü orada barrikadaladı. Qadın polis danışıqçısı səsucaldan vasitəsilə təxminən 40 dəqiqə onu inandırmağa çalışdı, lakin cavab ala bilmədi. Daxili İşlər Naziri İhor Klımenko bəyan etdi: "Biz onu inandırmağa çalışdıq, içəridə yaralı bir şəxsin olduğunu bilərək… amma o, cavab vermədi." Bundan sonra xüsusi taktiki polis obyektə hücum etdi və silahlı şəxsi məhv etdi. Dörd girov xilas edildi.
+
+## Zelenskinin bəyanatı və SBU-nun qiymətləndirməsi
+
+Prezident Volodımır Zelenski Telegram hesabında yazdı: "Hücumçu zərərsizləşdirilib. O, girovlar götürmüşdü və faciəli şəkildə onlardan birini öldürdü. Həmçinin küçədə dörd nəfəri qətlə yetirdi. Bir qadın da ağır yaralardan xəstəxanada vəfat etdi." Zelenski "sürətli araşdırma" gözlədiyini də bildirdi. Kiyev şəhər bələdiyyə başçısı Vitali Kliçko hadisəni təsdiqlədi. Baş Prokuror Ruslan Kravçenko silahlı şəxsin Rusiya mənşəli olduğunu təsdiqlədi. SBU hadisəni terror aktı olaraq qiymətləndirdi.
+
+## Müharibə dövrü Kiyev üçün görünməmiş hadisə
+
+Silahlı şəxsin avtomatik silahı qanuni qeydiyyatda idi, silah icazəsi isə 2025-ci ilin dekabrında yenilənmişdi. Onun əvvəlki cinayət keçmişi olduğu bildirildi. Ən azı 10 nəfər xəstəxanaya yerləşdirildi, o cümlədən bir uşaq. Hadisənin motivi hələ müəyyənləşdirilməyib. Bu, Rusiyanın 2022-ci ildə başlatdığı geniş miqyaslı işğaldan bəri müharibə dövrü Kiyevdə baş vermiş görünməmiş bir hadisə kimi xarakterizə olundu.`,
+  },
+  'en-kyiv-mass-shooting-six-killed-sbu-terrorism-2026': {
+    title: `Kyiv Police Kill Gunman Who Murdered 6, Took Hostages`,
+    date: '2026-04-18',
+    category: 'World',
+    locale: 'en',
+    content: `A 58-year-old Russian-born man armed with an automatic weapon killed six people and wounded at least 14 in a mass shooting in central Kyiv on Saturday, April 18, 2026. After firing on people on the street outside an apartment block and shopping center in the Holosiivskyi district, he barricaded himself inside a supermarket with hostages. A female police negotiator tried for roughly 40 minutes to talk him out before special tactical units stormed the store and shot him dead. Ukraine's Security Service (SBU) classified the killings as an act of terrorism. The incident was described as unprecedented in wartime Kyiv since Russia's full-scale invasion began in 2022.
+
+## The Attack and the Standoff
+
+The attacker, who had a prior criminal record and a valid weapons permit renewed in December 2025, used a legally registered automatic firearm. Four hostages were rescued. Interior Minister Ihor Klymenko said: "We tried to persuade him, knowing that there was likely a wounded person inside…but he did not respond." At least 10 of the wounded were hospitalized, including one child.
+
+## Zelenskyy Confirms the Toll
+
+In a statement posted to Telegram, President Volodymyr Zelenskyy said: "The assailant has been neutralized. He had taken hostages and, tragically, killed one of them. He also murdered four people on the street. Another woman died in the hospital due to severe injuries." Zelenskyy pledged a swift investigation. Kyiv Mayor Vitali Klitschko confirmed the incident, while Prosecutor General Ruslan Kravchenko confirmed the attacker's Russia origin.
+
+## No Motive Established
+
+The SBU classified the killings as terrorism, but investigators said no motive has been established. Beyond the body count, the event stands out as unheard of in wartime Kyiv since 2022.`,
+  },
+  'tr-kiev-silahli-saldiri-6-olu-sbu-terorizm-sinifladi': {
+    title: 'Kiev\'de silahlı saldırı: 6 ölü, SBU terör sayıyor',
+    date: '2026-04-18',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Kiev'in Holosiivskyi ilçesinde, 18 Nisan 2026 Cumartesi günü Rusya doğumlu 58 yaşındaki silahlı bir saldırgan açtığı ateşle 6 kişiyi öldürdü, en az 14 kişiyi yaraladı. Bir apartman ve alışveriş merkezi önünde ateş açan saldırgan, ardından süpermarkete girerek rehinelerle barikat kurdu. Kadın bir polis müzakereci yaklaşık 40 dakika onu ikna etmeye çalıştı; özel taktik timleri mağazaya girerek saldırganı etkisiz hale getirdi. Ukrayna Güvenlik Servisi (SBU) olayı terör eylemi olarak sınıflandırdı.
+
+## Olayın Seyri ve Rehine Operasyonu
+
+Saldırgan, otomatik ve yasal olarak kayıtlı bir ateşli silah kullandı; ruhsatı Aralık 2025'te yenilenmişti. Sabıka kaydı da vardı. Süpermarkete giren saldırgan, rehinelerden birini öldürdü. İçişleri Bakanı İhor Klymenko şunu söyledi: "Onu ikna etmeye çalıştık, içeride yaralı bir kişi olabileceğini bilerek… ancak yanıt vermedi." Operasyonda dört rehine kurtarıldı. Başsavcı Ruslan Kravçenko saldırganın Rusya kökenli olduğunu teyit etti.
+
+## Zelenski'nin Açıklaması ve Emsalsiz Olay
+
+Cumhurbaşkanı Volodimir Zelenski, Telegram üzerinden şunları söyledi: "Saldırgan etkisiz hale getirildi. Rehine almıştı ve ne yazık ki bunlardan birini öldürdü. Sokakta ayrıca dört kişiyi katletti. Ağır yaralanan bir kadın daha hastanede hayatını kaybetti." Zelenski "hızlı bir soruşturma" sözü verdi. Yaralılardan en az 10'u hastaneye kaldırıldı; aralarında bir çocuk da var. Olay, Rusya'nın 2022 işgalinden bu yana Kiev'de emsalsiz sayılıyor. Güdüsü tespit edilmedi.`,
+  },
+  'ru-kiev-massovaya-strelba-shest-pogibshih-sbu-terakt': {
+    title: 'Стрельба в Киеве: 6 погибших, СБУ назвала теракт',
+    date: '2026-04-18',
+    category: 'Мир',
+    locale: 'ru',
+    content: `58-летний уроженец России с автоматическим оружием 18 апреля 2026 года убил шесть человек и ранил не менее 14 в массовой стрельбе в центре Киева. После расстрела людей на улице у жилого дома и торгового центра в Голосеевском районе он забаррикадировался в супермаркете с заложниками. Женщина-переговорщик около 40 минут пыталась уговорить его сдаться, после чего спецназ штурмом взял магазин и застрелил нападавшего. СБУ квалифицировала произошедшее как террористический акт.
+
+## Ход атаки и штурм
+
+Стрелок расстрелял людей у жилого дома и торгового центра в Голосеевском районе, затем укрылся в супермаркете. Не менее 10 раненых госпитализированы, среди них один ребёнок. Оружие легально зарегистрировано; лицензия продлена в декабре 2025 года. Четверо заложников освобождены. Глава МВД Игорь Клименко сообщил: «Мы пытались уговорить его, зная, что внутри, вероятно, находится раненый… но он не отвечал».
+
+## Заявление Зеленского
+
+Президент Владимир Зеленский написал: «Нападавший нейтрализован. Он взял заложников и, к сожалению, убил одного из них. Также он убил четырёх человек на улице. Ещё одна женщина скончалась в больнице от тяжёлых ранений». Генпрокурор Руслан Кравченко подтвердил, что стрелок родился в России.
+
+## Квалификация СБУ
+
+СБУ классифицировала убийства как террористический акт. Мотив к утру 19 апреля не установлен. Для Киева событие стало беспрецедентным — с начала полномасштабного российского вторжения в 2022 году столица не знала массовой стрельбы с таким числом жертв.`,
+  },
+  // --- NBA Playoffs Round 1 Game 1 sweep by home teams ---
+  'nba-pley-off-ilk-raund-dord-evsahibi-qelebe-18-aprel': {
+    title: 'NBA pley-off 1-ci tur açılışı: dörd ev sahibi Oyun 1-i qazandı',
+    date: '2026-04-18',
+    category: 'İdman',
+    locale: 'az',
+    content: `2026 NBA pley-offlarının ilk turu 18 aprel şənbə günü dörd Oyun 1 görüşü ilə başladı və bütün dörd ev sahibi komanda qələbə qazandı. Klivlend Kavaliers Toronto Raptorsu 126-113 hesabı ilə məğlub etdi, Denver Naqqets Minnesota Timbervulvzu 116-105 hesabı ilə geridə qoydu, Nyu-York Niks Atlanta Houksu 113-102 hesabı ilə üstələdi, Los-Anceles Leykers isə Hyuston Rokits komandasını 107-98 hesabı ilə yola saldı. Hər sözləşmə yeddi oyunluq birinci tur seriyası formatında davam edəcək.
+
+## Kavaliers və Naqqets qələbələri
+
+Klivlend oyununda Donovan Miçell 32 xal topladı. Ceyms Harden 22 xal və 10 ötürmə ilə "double-double" qeydə aldı, ehtiyat oyunçu Maks Strus isə 24 xal əlavə etdi. Komanda sahədən 54%, üçlüklərdən isə 50% dəqiqlik göstərdi. Denverdə Nikola Yokiç 25 xal, 13 ribaund və 11 ötürmə ilə "triple-double" etdi. Camal Marri isə 30 xal topladı, onun cəza zərbələrindəki statistikası isə diqqətçəkən idi: 16-dan 16 uğurlu atış. Hər iki görüş evsahiblərinin qələbəsi ilə yekunlaşdı.
+
+## Niks və Leykers da açılışı qazandı
+
+Nyu-York oyununda Calen Brunson 28 xal, 5 ribaund və 7 ötürmə qeydə aldı. Karl-Antoni Taunz isə 25 xal, 8 ribaund, 4 ötürmə və 3 blok göstərişi ilə oyuna möhkəm töhfə verdi. Los-Ancelesin Hyustona qarşı görüşündə ev sahibləri 107-98 hesabı ilə qələbə qazandı. Bütün dörd Oyun 1 görüşü 18 aprel 2026-cı il tarixində keçirildi.
+
+## Ev sahibinin üstünlüyü öndə
+
+Pley-offun açılış gününün ən diqqətçəkən nəticəsi evsahiblərinin tam hakimiyyəti oldu — dörd oyunun dördündə də ev sahibi qalib gəldi. NBA.com "Klivlendin mövsümdəki hesab ssenarisini tərsinə çevirdiyini" qeyd etdi. Hər seriya yeddi oyundan ibarət birinci tur formatında davam edəcək. Oyun 2 tarixləri seriyadan-seriyaya dəyişir. Pley-in Turniri bu yaxınlarda başa çatmışdı, indi isə rəsmi pley-offun pərdəsi qalxdı.`,
+  },
+  'en-nba-playoffs-game-1-home-teams-all-win-2026': {
+    title: `NBA Playoffs Game 1: Cavaliers, Nuggets, Knicks, Lakers All Win`,
+    date: '2026-04-18',
+    category: 'Sports',
+    locale: 'en',
+    content: `The 2026 NBA Playoffs first round opened on Saturday, April 18, with four Game 1 matchups and all four home teams winning. The Cleveland Cavaliers beat the Toronto Raptors 126-113, the Denver Nuggets edged the Minnesota Timberwolves 116-105 behind a Nikola Jokić triple-double, the New York Knicks downed the Atlanta Hawks 113-102, and the Los Angeles Lakers beat the Houston Rockets 107-98. Each series is a best-of-seven.
+
+## Cleveland and Denver Take Openers
+
+Donovan Mitchell scored 32 points to lead Cleveland past Toronto, while James Harden posted a 22-point, 10-assist double-double and Max Strus added 24 off the bench. The Cavaliers shot 54% from the field and 50% from three. In Denver, Jokić produced a triple-double with 25 points, 13 rebounds and 11 assists, while Jamal Murray scored 30 points on a perfect 16-of-16 from the free-throw line.
+
+## New York and Los Angeles Follow
+
+Jalen Brunson drove New York past Atlanta with 28 points, five rebounds and seven assists, as Karl-Anthony Towns added 25 points, eight rebounds, four assists and three blocks. In the late-window game in Los Angeles, the Lakers closed out the slate with a 107-98 win over Houston, completing a clean sweep for hosts on the opening Saturday.
+
+## What It Means
+
+Home-court advantage held in every series opener on April 18. Game 2 dates vary by series, and the results settle only one game of a best-of-seven — not a series trend. The Play-In Tournament concluded earlier in the week; Saturday's slate marked the true start of the playoff bracket.`,
+  },
+  'tr-nba-playoffs-1-tur-oyun-1-ev-sahipleri-dort-dortluk': {
+    title: 'NBA Playoffs: Oyun 1\'lerde ev sahipleri dört dörtlük',
+    date: '2026-04-18',
+    category: 'Spor',
+    locale: 'tr',
+    content: `2026 NBA Playoffs'un ilk turu, 18 Nisan 2026 Cumartesi günü oynanan dört Oyun 1 karşılaşmasıyla başladı ve dört ev sahibi takım da sahadan galibiyetle ayrıldı. Cleveland Cavaliers, Toronto Raptors'ı 126-113 yenerken; Denver Nuggets, Minnesota Timberwolves'u 116-105 mağlup etti. New York Knicks, Atlanta Hawks karşısında 113-102 üstünlük kurdu; Los Angeles Lakers ise Houston Rockets'ı 107-98 devirdi. Her seri en iyi yedi usulüne göre oynanıyor.
+
+## Doğu Konferansı: Cavaliers ve Knicks Üstün
+
+Cleveland'de Donovan Mitchell 32 sayı kaydederken, James Harden 22 sayı ve 10 asistle "double-double" yaptı; Max Strus yedekten 24 sayı ekledi. Cavaliers yüzde 54 saha içi isabet, yüzde 50 üçlük yüzdesiyle oynadı. NBA.com bu sonucu "Cleveland sezon serisi senaryosunu çeviriyor" şeklinde yorumladı. New York'ta ise Jalen Brunson 28 sayı, 5 ribaund ve 7 asistle maça damga vurdu; Karl-Anthony Towns 25 sayı, 8 ribaund, 4 asist ve 3 blokla katkı verdi.
+
+## Batı Konferansı: Jokić'ten Triple-Double
+
+Denver'da Nikola Jokić 25 sayı, 13 ribaund ve 11 asistle triple-double yaparken; Jamal Murray 30 sayı üretti ve 16/16 serbest atış isabeti kaydetti. Nuggets, ev sahibi olarak oynadığı maçı kontrollü bir oyunla kazandı. Los Angeles'ta ise Lakers, Houston Rockets'ı 107-98 ile geçerek seriye 1-0 önde başladı. Maç ESPN ve NBA.com tarafından doğrulandı. Dört seride de Oyun 2 tarihleri eşleşmeye göre değişiyor.`,
+  },
+  'ru-nba-pley-off-2026-igra-1-vse-hozyaeva-vyigrali': {
+    title: 'NBA плей-офф: в игре 1 победили все хозяева',
+    date: '2026-04-18',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Первый раунд плей-офф NBA 2026 года стартовал в субботу, 18 апреля, и все четыре домашние команды выиграли свои первые матчи. «Кливленд Кавальерс» обыграли «Торонто Рэпторс» 126:113, «Денвер Наггетс» одолел «Миннесота Тимбервулвз» 116:105, «Нью-Йорк Никс» победил «Атланту Хоукс» 113:102, а «Лос-Анджелес Лейкерс» переиграл «Хьюстон Рокетс» 107:98. Каждая серия проходит до четырёх побед.
+
+## Кливленд и Денвер уверенно начали
+
+Донован Митчелл набрал 32 очка в победной игре «Кавальерс»; Джеймс Харден оформил дабл-дабл — 22 очка и 10 передач, Макс Струс добавил 24 очка со скамейки. Кливленд реализовал 54% бросков с игры и 50% трёхочковых. В матче в Денвере Никола Йокич собрал трипл-дабл: 25 очков, 13 подборов и 11 передач. Джамал Мюррей добавил 30 очков, реализовав все 16 штрафных бросков. «Наггетс» одержали победу на своей площадке.
+
+## Никс и Лейкерс также начали с побед
+
+В Нью-Йорке Джейлен Брансон принёс своей команде 28 очков, 5 подборов и 7 передач, а Карл-Энтони Таунс добавил 25 очков, 8 подборов, 4 передачи и 3 блок-шота в победе над «Атлантой». В позднем матче в Лос-Анджелесе «Лейкерс» обыграли «Рокетс» со счётом 107:98 по данным ESPN и NBA.com.
+
+## Контекст первого раунда
+
+Все четыре матча серии «Игра 1» прошли 18 апреля 2026 года, и во всех победу одержали хозяева. Каждая серия первого раунда играется до четырёх побед. NBA.com охарактеризовал кливлендский успех фразой «Кливленд переворачивает сценарий регулярного сезона». Даты вторых матчей варьируются по сериям.`,
+  },
+  // --- Titanic life jacket auction record GBP 670K ---
+  'titanik-xilas-jileti-670-min-funt-rekord-herrac-18-aprel': {
+    title: 'Titanik xilas jileti £670 000-ə satıldı — hərrac rekordu',
+    date: '2026-04-18',
+    category: 'Mədəniyyət',
+    locale: 'az',
+    content: `Titanik gəmisində sağ qalmış bir sərnişinə aid xilas jileti 18 aprel 2026-cı il şənbə günü İngiltərənin qərbindəki Devizes şəhərində yerləşən Henry Aldridge & Son hərrac evində 670 000 funt sterlinqə (906 000 ABŞ dolları) satıldı. Jiletin sahibi Laura Mabel Francatelli idi — 1-ci yaşayış sinfi sərnişini, o, gəminin batması zamanı 1 nömrəli xilasetmə qayığında xilas olmuşdu. Bu, Titanikdə sağ qalmış bir sərnişinə aid xilas jiletinin ilk dəfə hərraca çıxarılması hadisəsi idi. Alıcının kimliyi açıqlanmadı — o, telefon vasitəsilə iştirak edən bir şəxsdir.
+
+## Jiletin təfərrüatları və sahibi
+
+Bej rəngli canvas jiletin içərisində 12 mantar doldurulmuş cib, çiyin dayaqları və yan bağlamaları var idi. Üzərində Francatellinin və eyni xilasetmə qayığından digər sağ qalanların imzaları yer alırdı. Laura Mabel Francatelli dəbli dizayner Lüsi Daff Gordonun katibi və yoldaşı olaraq səyahət edirdi. Lüsinin əri Kozmo Daff Gordon da gəmidə idi. Hər üçü sağ qaldı. Onlar birlikdə 1 nömrəli xilasetmə qayığında xilas oldular.
+
+## Hərrac və rekord qiymət
+
+Satış qiyməti jiletin satışdan əvvəlki 250 000-350 000 funt sterlinq proqnozunu təxminən iki dəfə üstələdi. Hərrac evinin sahibi Andrew Aldridge bəyanatında qeyd etdi: "Bu rekord qiymətlər Titanik hekayəsinə davam edən marağı əks etdirir." Jilet naməlum bir telefon iştirakçısına satıldı. Henry Aldridge & Son hərrac evi Titanik əsərlərinin satışı üzrə dünyada tanınmış mənbələrdən biridir və Devizes, İngiltərənin qərbində yerləşir.
+
+## Tarixi konteksti və marağın davamlılığı
+
+Titanik faciəsi 1912-ci il 14-15 aprel tarixlərində baş vermişdi. İndi 114 il sonra belə, gəmiyə aid əşyalar hərrac aləmində yüksək qiymətlər formalaşdırmaqda davam edir. Francatellinin xilas jiletinin satışı xüsusi əhəmiyyət daşıyır — bu, faciədən həyatını qurtarmış real bir insana aid olan birinci belə əşyadır. Hərrac nəticəsi Titanik kolleksiyaçılıq bazarında rekord kimi qeydə alındı və əsərin mədəni dəyərinin indi də azalmadığını göstərdi.`,
+  },
+  'en-titanic-life-jacket-francatelli-auction-record-2026': {
+    title: `Titanic Survivor's Life Jacket Sells for $906,000 at Auction`,
+    date: '2026-04-18',
+    category: 'Culture',
+    locale: 'en',
+    content: `The only life jacket ever worn by a Titanic survivor to come to auction sold for £670,000 ($906,000) on Saturday, April 18, 2026, at Henry Aldridge & Son auctioneers in Devizes, western England. The cork-filled canvas jacket belonged to Laura Mabel Francatelli, a first-class passenger who escaped on lifeboat No. 1 with her employer, fashion designer Lucy Duff Gordon, and Lucy's husband Cosmo Duff Gordon. All three survived the sinking. The item sold to an unidentified telephone bidder for nearly twice its pre-sale estimate of £250,000 to £350,000.
+
+## A First for Titanic Auctions
+
+This is the first life jacket from a Titanic survivor ever to come up for auction. The jacket is a beige vest with 12 cork-filled pockets of canvas, shoulder rests and side straps; it is signed by Francatelli and other survivors from the same lifeboat. Francatelli traveled as secretary and companion to Lucy Duff Gordon, and the signatures link the object directly to the small group who made it into lifeboat No. 1 and back to safety.
+
+## Aldridge: Enduring Titanic Interest
+
+Auctioneer Andrew Aldridge said the result underlined the durability of the Titanic story as a collecting category: "These record-breaking prices illustrate the continuing interest in the Titanic story." Henry Aldridge & Son, based in Devizes, has long been a focal point for Titanic-related memorabilia sales, and the Francatelli jacket now joins its record book.
+
+## A Quiet, Decisive Room
+
+The buyer bid by telephone and has not been identified. No public comment has been released about where the life jacket will be displayed or held. For now, an unidentified telephone bidder has taken ownership of one of the most personal surviving artifacts of the 1912 disaster.`,
+  },
+  'tr-titanik-can-yelegi-906-bin-dolara-satildi-rekor': {
+    title: 'Titanik can yeleği 906 bin dolara satıldı, rekor kırdı',
+    date: '2026-04-18',
+    category: 'Kültür',
+    locale: 'tr',
+    content: `Bir Titanik kazazedesinin giydiği ve müzayedeye çıkan ilk can yeleği, 18 Nisan 2026 Cumartesi günü İngiltere'nin batısındaki Devizes kasabasında bulunan Henry Aldridge & Son müzayede evinde 670.000 sterline (906.000 dolar) satıldı. Mantar dolgulu kanvas yelek, birinci sınıf yolcu Laura Mabel Francatelli'ye aitti. Francatelli, moda tasarımcısı Lucy Duff Gordon ve eşi Cosmo ile birlikte 1 numaralı can filikasıyla kurtulmuştu; üçü de hayatta kaldı. Parça, satış öncesi 250.000-350.000 sterlinlik tahminin neredeyse iki katına alıcı buldu.
+
+## Yeleğin Hikâyesi ve Sahibi
+
+Francatelli, Lucy Duff Gordon'un sekreteri ve refakatçisi olarak gemide bulunuyordu. Bej renkli yelek, mantar dolgulu 12 kanvas cebe, omuz desteklerine ve yan kayışlara sahip. Parça üzerinde Francatelli'nin ve aynı filikadan kurtulan diğer yolcuların imzaları yer alıyor. Kayıtlara göre bu yelek, bir Titanik kazazedesine ait müzayedeye çıkarılan ilk can yeleği olma özelliği taşıyor.
+
+## Rekor Fiyat ve Alıcı
+
+Yeleği satın alan kişi, kimliği belirsiz telefon alıcısı olarak kaldı. Açık artırmacı Andrew Aldridge şunları söyledi: "Bu rekor fiyatlar, Titanik hikâyesine olan sürekli ilgiyi ortaya koyuyor." Müzayede evi Henry Aldridge & Son, Titanik hatıralarında uzmanlaşmış bir isim olarak biliniyor. Satışın gerçekleştiği tarih, Titanik'in 14-15 Nisan 1912'deki batışının yıl dönümüne yakın bir zamana denk geldi.`,
+  },
+  'ru-titanik-spasatelnyy-zhilet-prodan-za-906-tysyach': {
+    title: 'Жилет с «Титаника» ушёл с молотка за 906 тысяч долларов',
+    date: '2026-04-18',
+    category: 'Культура',
+    locale: 'ru',
+    content: `Единственный когда-либо поступавший на торги спасательный жилет пассажира, пережившего крушение «Титаника», был продан за 670 000 фунтов стерлингов (906 000 долларов) в субботу, 18 апреля 2026 года, в аукционном доме Henry Aldridge & Son в городе Девизес на западе Англии. Пробковый холщовый жилет принадлежал Лоре Мэйбл Франкателли — пассажирке первого класса, спасшейся на шлюпке №1. Жилет приобрёл неизвестный участник по телефону — стоимость продажи почти вдвое превысила предварительную оценку в 250 000–350 000 фунтов.
+
+## Детали лота
+
+Жилет описан как бежевый, с двенадцатью пробковыми карманами из холста, плечевыми упорами и боковыми ремнями. На нём сохранились подписи Франкателли и других выживших пассажиров из шлюпки №1. По данным организаторов, это первый спасательный жилет пассажира, пережившего крушение «Титаника», который когда-либо выставлялся на публичные торги.
+
+## Лора Мэйбл Франкателли
+
+Франкателли путешествовала первым классом как секретарь и компаньонка модельера Люси Дафф Гордон. На борту также находился муж модельера — Космо Дафф Гордон. Все трое сели в шлюпку №1 и выжили в ночь крушения 14-15 апреля 1912 года.
+
+## Слова аукциониста
+
+Аукционист Эндрю Олдридж прокомментировал продажу: «Эти рекордные цены иллюстрируют непрекращающийся интерес к истории "Титаника"». Покупателем, по данным организаторов, стал неизвестный участник, сделавший ставку по телефону; его личность не раскрывается.`,
+  },
   // --- Trump nuclear dust / Iran ---
   'tramp-nuve-tozu-iddiasi-iran-redd-cavabi-22-aprel': {
     title: 'Tramp "nüvə tozu" iddiası — İran qəti rədd etdi',
@@ -403,6 +697,79 @@ G7 toplantıları, 13-18 Nisan 2026 tarihlerinde Washington'da düzenlenen IMF/D
 
   // ========== 2026-04-17 ==========
 
+  // --- OpenAI launches GPT-Rosalind for life sciences ---
+  'openai-gpt-rosalind-hayat-elmleri-ai-17-aprel': {
+    title: 'OpenAI GPT-Rosalind modelini təqdim etdi — bioloji elmlər üçün',
+    date: '2026-04-17',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `OpenAI 17 aprel 2026-cı il cümə günü GPT-Rosalind adlı yeni süni intellekt modelini təqdim etdi. Bu, şirkətin dərman kəşfiyyatı, genomika və biologiya araşdırmaları üçün hazırladığı ilk ixtisaslaşmış həyat elmləri əsaslandırma modelidir. Model Britaniyalı alim Rosalind Franklinin adını daşıyır. ABŞ-da seçilmiş korporativ müştərilər ona araşdırma ön baxışı formatında giriş əldə edə bilərlər. İlk tərəfdaşlar siyahısına Amgen, Moderna, Allen İnstitutu, Thermo Fisher Scientific və Novo Nordisk daxildir.
+
+## Model haqqında və tərəfdaşlar
+
+Rosalind Franklin DNT strukturunun kəşfində rentgen difraksiyası işi ilə həlledici rol oynamış alim idi. GPT-Rosalind molekullar, zülallar, genlər, metabolik yollar və xəstəliklə əlaqəli biologiya üzrə əsaslandırma aparmaq üçün dizayn edilib. Model elmi alətlərdən və verilənlər bazalarından istifadə edərək çoxaddımlı iş axınlarını — ədəbiyyat icmalı, ardıcıllıqdan funksiyaya şərh, eksperimental planlaşdırma və məlumat təhlili — həyata keçirə bilir. Novo Nordisk ilə əməkdaşlıq ayrıca olaraq 14 aprel 2026-cı ildə elan edilmişdi.
+
+## Altman və Bancel bəyanatları
+
+OpenAI baş icraçı direktoru Sem Altman bəyan etdi: "Süni intellekt sənayeləri yenidən formalaşdırır, həyat elmlərində isə insanlara daha yaxşı, daha uzun həyat yaşamağa kömək edə bilər." Modernanın baş icraçı direktoru Stefan Banseldən də rəsmi şərh gəldi: "GPT-Rosalind elmi komandaların kompleks bioloji sübutlar, məlumatlar və iş axınları üzrə əsaslandırma aparmaq üçün inkişaf etmiş süni intellektdən istifadə etməsinə kömək edən mühüm addımdır." OpenAI qeyd etdi ki, ABŞ-da dərman hazırlanması adətən hədəfin kəşfindən tənzimləyici təsdiqə qədər təxminən 10-15 il davam edir.
+
+## Təhlükəsizlik yoxlamaları və giriş məhdudiyyətləri
+
+GPT-Rosalind-ə giriş ciddi bir yoxlama prosesinin arxasındadır. Bunun səbəbi modelin iki tərəfli istifadə potensialı — biomühəndislik məqsədilə sui-istifadə riskləridir. OpenAI-ın bu addımı şirkəti Google və DeepMind-in uzun müddətdir öndə olduğu biologiya süni intellekti sahəsinə rəsmi şəkildə daxil edir. Model hazırda yalnız ABŞ-da seçilmiş korporativ müştərilər üçün araşdırma ön baxışı kimi mövcuddur. OpenAI bunu bazar və ya benchmark qələbəsi kimi təqdim etmir — diqqət konkret araşdırma iş axınlarına yönəlib.`,
+  },
+  'en-openai-gpt-rosalind-life-sciences-launch-2026': {
+    title: `OpenAI Launches GPT-Rosalind for Drug Discovery and Biology`,
+    date: '2026-04-17',
+    category: 'Technology',
+    locale: 'en',
+    content: `OpenAI on Friday, April 17, 2026, announced GPT-Rosalind, a specialized reasoning model built for life sciences research, drug discovery, and genomics. Named after British scientist Rosalind Franklin, who was instrumental in discovering DNA's structure, it is OpenAI's first model dedicated to biology. Qualified enterprise customers in the United States can access it as a research preview. Early partners include Amgen, Moderna, the Allen Institute, Thermo Fisher Scientific, and Novo Nordisk, whose partnership was separately announced on April 14.
+
+## A Model Tuned for Biology
+
+GPT-Rosalind is designed to reason across molecules, proteins, genes, pathways, and disease-relevant biology, and to use scientific tools and databases for multi-step workflows including literature review, sequence-to-function interpretation, experimental planning, and data analysis. OpenAI said the model is intended to help compress a drug development timeline that in the United States typically runs 10 to 15 years from target discovery to regulatory approval. Access is gated behind a vetting process due to dual-use biosecurity concerns.
+
+## Altman and Bancel Frame the Launch
+
+OpenAI CEO Sam Altman said: "AI is reshaping industries, and in life sciences, it can help people live better, longer lives." Moderna CEO Stéphane Bancel described the tool as a step forward for research teams: "GPT-Rosalind represents an important step in helping scientific teams use advanced AI to reason across complex biological evidence, data, and workflows." Bloomberg framed the launch as OpenAI entering a space where Google's Alphabet unit has led with AlphaFold and related tools.
+
+## A Limited, Vetted Rollout
+
+The release is a research preview rather than a general-availability product, reflecting the careful posture OpenAI has adopted around biology models. Enterprise users must clear the company's vetting process, and further expansion will depend on how the preview plays out across the initial partner cohort.`,
+  },
+  'tr-openai-gpt-rosalind-yasam-bilimleri-ilac-kesfi': {
+    title: 'OpenAI GPT-Rosalind\'i duyurdu: ilaç keşfi için özel AI',
+    date: '2026-04-17',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `OpenAI, 17 Nisan 2026 Cuma günü yaşam bilimleri, ilaç keşfi ve genomik için geliştirdiği özel muhakeme modeli GPT-Rosalind'i tanıttı. Model, DNA yapısının keşfinde X-ışını kırınımı çalışmalarıyla rol oynayan İngiliz bilim insanı Rosalind Franklin'in anısına adlandırıldı ve OpenAI'ın biyolojiye adanmış ilk modeli oldu. ABD'deki nitelikli kurumsal müşteriler için araştırma önizlemesi olarak açıldı; ilk ortaklar arasında Amgen, Moderna, Allen Enstitüsü, Thermo Fisher Scientific ve Novo Nordisk var.
+
+## Modelin Yetenekleri ve Amaçları
+
+GPT-Rosalind; moleküller, proteinler, genler, biyolojik yolaklar ve hastalıkla ilgili biyoloji üzerinde çok adımlı muhakeme yapabiliyor. Bilimsel araçlar ve veri tabanlarıyla çalışarak literatür taraması, dizi-işlev yorumu, deney planlaması ve veri analizi iş akışlarını destekliyor. OpenAI, ABD'de bir ilacın hedef keşfinden düzenleyici onaya kadar geçen sürenin tipik olarak 10 ila 15 yıl sürdüğünü belirtiyor. Novo Nordisk ortaklığı 14 Nisan'da ayrı duyurulmuştu.
+
+## Altman ve Bancel'den Açıklamalar
+
+OpenAI CEO'su Sam Altman şunları söyledi: "Yapay zekâ endüstrileri yeniden şekillendiriyor ve yaşam bilimlerinde insanların daha iyi, daha uzun hayatlar sürmesine yardımcı olabilir." Moderna CEO'su Stéphane Bancel ise "GPT-Rosalind, bilimsel ekiplerin karmaşık biyolojik veriler üzerinde ileri yapay zekâyı kullanarak muhakeme etmesine yardım eden önemli bir adımı temsil ediyor" dedi. Erişim, çift kullanımlı endişelerle sıkı incelemeye tabi.`,
+  },
+  'ru-openai-gpt-rosalind-biologiya-preparaty': {
+    title: 'OpenAI представила GPT-Rosalind для биологии и лекарств',
+    date: '2026-04-17',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `OpenAI 17 апреля 2026 года представила GPT-Rosalind — специализированную рассуждающую модель для биологии, разработки лекарств и геномики. Модель названа в честь британского учёного Розалинд Франклин, известной рентгеноструктурными исследованиями ДНК, и стала первой у OpenAI, посвящённой биологии. Доступ открыт в формате исследовательского превью для корпоративных клиентов в США. Ранние партнёры: Amgen, Moderna, Allen Institute, Thermo Fisher Scientific и Novo Nordisk. Модель призвана ускорить разработку препаратов, цикл которой в США обычно занимает от 10 до 15 лет.
+
+## Возможности и партнёры
+
+GPT-Rosalind рассуждает о молекулах, белках, генах и биологии заболеваний. Модель использует научные инструменты и базы данных для многошаговых процессов: обзора литературы, интерпретации связи «последовательность—функция», планирования экспериментов. Сотрудничество с Novo Nordisk объявлено 14 апреля 2026 года.
+
+## Альтман и Бансел
+
+Глава OpenAI Сэм Альтман заявил: «ИИ преобразует отрасли, и в сфере наук о жизни он может помочь людям жить лучше и дольше». Гендиректор Moderna Стефан Бансел добавил: «GPT-Rosalind — это важный шаг к тому, чтобы научные команды использовали продвинутый ИИ для работы со сложными биологическими данными и рабочими процессами».
+
+## Биобезопасность
+
+Доступ строго ограничен и предоставляется после проверки — OpenAI ссылается на риски двойного применения в биоинженерии. Выход OpenAI обостряет конкуренцию с Alphabet, где в этой нише работает DeepMind.`,
+  },
   // --- Antalya Diplomacy Forum opens (04-17) ---
   'antalya-diplomatiya-forumu-acildi-150-olke': {
     title: 'Antalya Diplomatiya Forumu 150-dən çox ölkə ilə açıldı',
