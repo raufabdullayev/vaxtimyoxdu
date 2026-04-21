@@ -3,26 +3,40 @@
 > **Məqsəd:** 4 brand variant üçün Google/Bing/Yandex ranking-ini izləmək.
 > **Başlanğıc:** Session 32 (2026-04-21) — commit 53042c0 deploy + GSC Change of Address + Request Indexing (4 URL)
 
-## Monitor edilməli sorğular (Target Keywords)
+## Monitor edilməli sorğular (4 Target Keywords × 3 Engine)
 
-| # | Query | Yazılış | Status @ 2026-04-21 | Target |
-|---|-------|---------|----------------------|--------|
-| 1 | `vaxtim yoxdu` | ASCII, r yox | ✅ Google 1-ci sırada | Qoru |
-| 2 | `vaxtım yoxdu` | AZ ı, r yox | ❌ Hələ yox | Top 3 |
-| 3 | `vaxtim yoxdur` | ASCII + r | ❌ Hələ yox | Top 5 |
-| 4 | `vaxtım yoxdur` | AZ ı + r | ❌ Hələ yox | Top 5 |
-| 5 | `vaxtımız yoxdur` | 1st plural | ❌ Hələ yox | Top 10 |
-| 6 | `vaxtımım yoxdur` | 1st singular | ❌ Hələ yox | Top 10 |
+**CEO tapşırığı:** Bu 4 variantı Google, Bing, Yandex-də həftəlik yoxla.
+
+| # | Query | Yazılış | Google @ 2026-04-21 | Bing | Yandex | Target |
+|---|-------|---------|---------------------|------|--------|--------|
+| 1 | `vaxtim yoxdu` | ASCII, r yox | ✅ 1-ci sırada | ❌ | ❌ | Qoru |
+| 2 | `vaxtım yoxdu` | AZ ı, r yox | ❌ Hələ yox | ❌ | ❌ | Top 3 |
+| 3 | `vaxtim yoxdur` | ASCII + r | ❌ Hələ yox | ❌ | ❌ | Top 5 |
+| 4 | `vaxtım yoxdur` | AZ ı + r | ❌ Hələ yox | ❌ | ❌ | Top 5 |
+
+**Əlavə (bonus):** `vaxtımız yoxdur`, `vaxtımım yoxdur` — kod JSON-LD alternateName-də var, amma əsas tracking 4 variantdadır.
 
 ## Yoxlama Cədvəli (Weekly)
 
-### Search Engines
+### Search Engines — hər 4 variant × 3 engine (12 axtarış)
 
-- [ ] **Google** — https://www.google.com/search?q=vaxtim+yoxdur
-- [ ] **Google AZ** — https://www.google.az/search?q=vaxtım+yoxdur
-- [ ] **Bing** — https://www.bing.com/search?q=vaxtım+yoxdur
-- [ ] **Yandex** — https://yandex.com/search/?text=vaxtım+yoxdur
-- [ ] **DuckDuckGo** — https://duckduckgo.com/?q=vaxtım+yoxdur
+**Google (4 axtarış):**
+- [ ] https://www.google.com/search?q=vaxt%C4%B1m+yoxdu (`vaxtım yoxdu`)
+- [ ] https://www.google.com/search?q=vaxtim+yoxdu
+- [ ] https://www.google.com/search?q=vaxt%C4%B1m+yoxdur (`vaxtım yoxdur`)
+- [ ] https://www.google.com/search?q=vaxtim+yoxdur
+
+**Bing (4 axtarış):**
+- [ ] https://www.bing.com/search?q=vaxt%C4%B1m+yoxdu
+- [ ] https://www.bing.com/search?q=vaxtim+yoxdu
+- [ ] https://www.bing.com/search?q=vaxt%C4%B1m+yoxdur
+- [ ] https://www.bing.com/search?q=vaxtim+yoxdur
+
+**Yandex (4 axtarış):**
+- [ ] https://yandex.com/search/?text=vaxt%C4%B1m+yoxdu
+- [ ] https://yandex.com/search/?text=vaxtim+yoxdu
+- [ ] https://yandex.com/search/?text=vaxt%C4%B1m+yoxdur
+- [ ] https://yandex.com/search/?text=vaxtim+yoxdur
 
 ### CLI Quick Check (Bash)
 
