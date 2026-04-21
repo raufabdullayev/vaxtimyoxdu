@@ -1,9 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-19 (Session 31 — Batch 1: 5 HIGH topics, 20 articles for 04-17/04-18 events)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit 52b2963 deployed)
-**Son commit:** 52b2963 (content(news): add 5 HIGH topics for Apr 19 batch 1, 20 articles — Session 31)
-**Əvvəlki commit:** ffca734 (content(news): add Apr 18 verified topics, 20 articles — Session 30)
+**Son yenilənmə:** 2026-04-21 (Session 32 — 8 HIGH topics, 36 articles for 04-19/04-20/04-21 events, 4-stage QA)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — gözlənir: deploy Session 32 commit)
+**Son commit:** (gözlənir — Session 32 commit)
+**Əvvəlki commit:** 52b2963 (content(news): add 5 HIGH topics for Apr 19 batch 1, 20 articles — Session 31)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -24,12 +24,12 @@
 | **Deploy** | ✅ Vercel aktiv |
 | **GitLab + GitHub** | ✅ Synced (d4c3a48) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | 52b2963 |
-| **Testlər** | **4238** PASS (vitest, S31: +80) |
+| **Son commit** | S32 pending commit |
+| **Testlər** | **4382** PASS (vitest, S32: +144) |
 | **E2E** | **30 fayl** (18 yeni Sprint 3-də) |
-| **Statik səhifələr** | **~1836** (S31: 1752→1836, +84) |
+| **Statik səhifələr** | **~1980** (S32: 1836→1980, +144) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **292** (73/locale — S31: +20 yeni: 52b2963) |
+| **Xəbərlər** | **328** (82/locale — S32: +36 yeni) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
@@ -58,6 +58,83 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 32 (2026-04-21) — News Refresh: 8 HIGH topics for Apr 19-21 (36 articles, 4-stage QA, 3-day gap fill)
+
+**Tapshiriq:** CEO: webdə yeni aktual xəbərləri axtar, saytda olmayanları əlavə et, hərf/məntiq/fakt test, buglar fix, proda deploy.
+
+**Komanda:** ~11 agent (1 researcher + 4 paralel writer + 3 paralel QA + 1 fix + 1 lead-dev integration + 1 deploy).
+
+**Plan fayli:** `~/.claude/plans/streamed-discovering-backus.md`
+
+**Faza 1 — Research (WebSearch + WebFetch):**
+- 8 HIGH mövzu verified, hər biri ≥2 müstəqil reputable mənbə
+- Coverage: 04-19 (3 topic: Bulgaria, Coachella, IMF WEO), 04-20 (4 topic: Japan quake, Amazon-Anthropic, Gaza RDNA, NBA G2), 04-21 (1 topic: Iran/Vance escalation)
+- De-dup gate: S30 (04-18 5 mövzu) və S31 (04-17 GPT-Rosalind + 04-18 5 mövzu) açıqca ignore edildi
+- 12+ mövzu dropped (Pope Leo Day 8, Breakthrough Prize 04-18 out-of-window, NHL Game 1, FDA animal testing, MIT Tech Review, F1/MotoGP)
+- Brief: `docs/agent-reports/news-research-2026-04-21-batch1.md`
+
+**Faza 2 — 4 paralel writer:**
+- AZ: 9 article, content 1278-2167 char (avg 1851)
+- EN: 9 article, avg 2050 char (range 1900-2350)
+- TR: 9 article, content 1536-1895 char (avg 1646)
+- RU: 9 article, content 1278-1870 char (avg 1532)
+- Topic #7 NBA 2 ayrı məqaləyə bölündü (Sunday Game 1 04-19 + Monday Game 2 04-20)
+- **Cəmi: 36 məqalə (9 × 4 locale)**
+
+**Faza 3 — 3 paralel QA:**
+- **QA-A Diakritik/Cyrillic:** 0 BLOCKING, 2 TR MINOR (word-choice typos "prevalan", "duyurdusunu") — AZ həmcinsi bug TƏKRAR OLMADI ✅
+- **QA-B Length/Slug/Date/Category:** 0 test-level BLOCKING; 2 AZ heuristic BLOCKING (Amazon 100 char, NBA G2 91 char titles); 3 MINOR titles 76-90 char; cross-locale date alignment PERFECT ✅; 0 slug conflicts with mövcud 292 article ✅
+- **QA-C Source-fact reconciliation:** 0 BLOCKING (no Session 31-style invented scenes!); 10 MINOR soft extrapolations (EN: 5 [Zhelyazkov invented first name, Mitsotakis name, Tōhoku 18K deaths, Trainium-vs-Nvidia, Radev "clashed repeatedly"]; AZ: 2 [Tatum "close to triple-double", Coachella "most important cultural moment"]; TR: 2 [Tatum "double-double" framing, Coachella 1999 founding year]; RU: 1 [unsourced analyst extrapolation])
+
+**Faza 4 — Fix agent:** 17 atomik fix tətbiq etdi:
+- 5 AZ (2 title trim ≤75 char + 3 QA-C extrapolation removal)
+- 7 EN (3 title trim + 5 QA-C removals + editorial)
+- 4 TR (2 title trim + 2 QA-A typo + editorial)
+- 1 RU (QA-C extrapolation removal)
+- Post-fix self-verification: 23/23 specific checks PASS
+
+**Faza 5 — Lead-dev integration:**
+- 36 məqalə `src/data/news-articles.ts`-ə daxil edildi
+- Fayl: 5693 → 6365 sətir (+672)
+- Cəmi məqalə: 292 → 328 (82/locale balance)
+- 3 yeni date banner (04-21 line 10, 04-20 line 88, 04-19 line 386) — mövcud 04-18 banner line 682-ə shift
+- Slug uniqueness PASS (328 unique)
+- `npx tsc --noEmit`: CLEAN (0 diagnostics)
+
+**Faza 6 — Build + Test:**
+- İlk test run: **1 FAIL** — TR Amazon topic category "İş" (2 char, test tələb edir ≥3)
+- Atomik fix: `category: 'İş'` → `category: 'Teknoloji'` (line 206 of news-articles.ts)
+- **Retest: 4382 PASS** (vitest, +144 test: 36 article × 4 per-article tests)
+- `npm run build`: SUCCESS, **1980 statik səhifə** (+144 from 1836 baseline)
+- TypeScript clean
+
+**Mövzular (priority sırası, deploy sonrası canlı):**
+1. **04-21:** İran atəşkəs sərhəddə — Vance İslamabada gedir, USS Spruance Touska gəmisini ələ keçirdi (S30-31 Hormuz follow-up)
+2. **04-20:** Yaponiya 7.7 zəlzələ + tsunami xəbərdarlığı + rare megaquake advisory (JMA 1% → 0.1% baseline)
+3. **04-20:** Amazon Anthropic-ə $25 mlrd-a qədər yeni investisiya + $100 mlrd AWS sövdələşməsi (5 GW compute)
+4. **04-20:** Qəzza bərpasına $71.4 mlrd + 10 il + 77 il inkişaf geriliyi (UN/EU/World Bank joint RDNA)
+5. **04-20:** NBA Play-off R1 Game 2 şok: T-Wolves 19-point comeback, Hawks Knicks 39-0 streak-i pozdu
+6. **04-19:** Bolqarıstan Radev sürüşən qələbə + parliament majority (44.7%, ən azı 130 seat)
+7. **04-19:** IMF WEO "Global Economy in the Shadow of War" — 3.1% 2026, 3.2% 2027
+8. **04-19:** NBA Play-off R1 Game 1 Sunday slate: Celtics 123-91 76ers, Thunder 119-84 Suns
+9. **04-19:** Coachella 2026 W2 bağlandı — Karol G ilk Latin headliner, 4 surprise guest
+
+**Lesson (Session 32 retrospective):**
+- **TR category "İş" bug:** Plan-da `category: 'İş'` seçim kimi təqdim edilmişdi, lakin 2 char test minimum ≥3 char ilə uyğun gəlmir. Gələcək writer promptlarında kateqoriya ≥3 char olmalıdır. `'Teknoloji'` və ya `'Ekonomi'` TR-də Business cross-tag üçün düzgün seçimdir.
+- **EVENT DATE rule effective:** Session 31 TR/RU date bug (10 BLOCKING idi) bu dəfə TƏKRAR OLMADI — writer promptda "USE THE EVENT DATE FROM THE BRIEF — NOT PUBLICATION DATE" explicit idi. Cross-locale date alignment PERFECT.
+- **EN category whitelist effective:** S31 `'Tech'` bug təkrar olmadı — 4 EN məqalədə doğru whitelist istifadə edildi (`Technology`, `Business`, `Economy`, `Sports`, `Culture`, `World`).
+- **QA-C effective:** 0 invented scene (S31-də 2 BLOCKING vardı) — writer promptda Session 31 lessons explicit cite edildi.
+- **AZ diakritik CLEAN:** 0 həmcinsi bug, 0 ASCII fallback.
+
+**Müddət:** ~1 saat 30 dəqiqə (planlanmış 85-120 dəq aralığında)
+
+**Dosyalar:**
+- Brief: `docs/agent-reports/news-research-2026-04-21-batch1.md`
+- Writer outputs: `docs/agent-reports/news-writer-output-{az,en,tr,ru}-2026-04-21-batch1.md`
+- QA raportlar: `docs/agent-reports/qa-{a,b,c}-*-2026-04-21-batch1.md`
+- Fix raport: `docs/agent-reports/fix-s32-2026-04-21-batch1.md`
+- Integration raport: `docs/agent-reports/integration-s32-2026-04-21.md`
 
 ### Session 31 (2026-04-19) — News Refresh Batch 1: 5 HIGH topics for Apr 19 (04-17/04-18 events, 4-stage QA)
 

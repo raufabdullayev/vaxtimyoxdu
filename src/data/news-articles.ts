@@ -7,6 +7,678 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-21 ==========
+
+  // --- Topic 3: Iran ceasefire / Vance Islamabad ---
+  'iran-atesikesi-tehlukede-vance-islamabada-gedir-21-aprel': {
+    title: 'İran atəşkəsi təhlükədə: Vitse-Prezident Vans İslamabada yola düşür',
+    date: '2026-04-21',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ–İran atəşkəsi 19-21 aprel 2026-cı il tarixlərində ən kövrək 72 saatını yaşadı. ABŞ Hərbi Dəniz Qüvvələri 19 aprel bazar günü Oman körfəzində İran bayrağı altında üzən "Tuska" yük gəmisinə atəş açaraq ona sahib çıxdı. Tehran gəminin dərhal azad edilməsini tələb etdi. Prezident Donald Tramp, 22 aprel çərşənbə axşamı (Vaşinqton vaxtı ilə) başa çatacaq atəşkəsin uzadılmasının "çox az ehtimal" olunduğunu bildirdi. Vitse-Prezident Ceyd Di Vans, Stiv Vitkof və Cared Kuşner 21 aprel çərşənbə axşamı ikinci raund danışıqlar üçün İslamabada yola düşür.
+
+## "Tuska" hadisəsi və Tehranın cavabı
+
+ABŞ donanmasına məxsus idarə olunan raket daşıyan "USS Spruance" gəmisi "Tuska"nı Oman körfəzində müşahidə etdi, atəş açaraq onun mühərrik hissəsinə zərbə endirdi və gəmini himayəyə aldı. İranın Xarici İşlər Nazirliyi gəminin dərhal azad edilməsini tələb etdi. Nazirlik sözçüsü İsmayıl Bəqai 20 aprel bazar ertəsi bəyan etdi ki, Vaşinqton "icrasının əvvəlindən atəşkəsi pozub" — o, 13 apreldən etibarən Hörmüz boğazında ABŞ-ın dəniz blokadasını və "Tuska"nın tutulmasını pozuntu kimi qeyd etdi. İran həmçinin 19 apreldə ikinci raund danışıqlarda iştirak etməməsinin səbəbi olaraq Vaşinqtonun "həddindən artıq tələblərini, qeyri-real gözləntilərini, dəyişkən mövqeyini və davamlı dəniz blokadasını" göstərdi.
+
+## Danışıqlar və neft bazarı reaksiyası
+
+Aprel ayının əvvəlindəki əvvəlki İslamabad raundu 21 saatlıq danışıqlardan sonra sövdələşməsiz başa çatmışdı. İran məclis komitəsi rəhbəri Məhəmməd Rəzai-Kuçi 19 apreldə "düşmən" ölkə gəmilərinin boğazdan keçməsini qadağan edən və digərlərindən rüsum tələb edən qanun layihəsinin planlaşdırıldığını bildirdi — layihə hələ qəbul edilməyib. Yunanıstanın Baş naziri İranın boğaz rüsum təklifini "qəbuledilməz" adlandırdı. Neft bazarı sərt reaksiya verdi: Brent markalı xam neftin qiyməti 20 aprel tarixində 5%-dən çox artaraq barrelə təxminən 95 dolları keçdi, WTI isə təxminən 6,8% artaraq 89,61 dollar civarına qalxdı. Atəşkəsin son tarixi — 22 aprel Vaşinqton vaxtı ilə çərşənbə axşamı axşamı — hazırda mərkəzi anker nöqtədir.`,
+  },
+  'en-iran-ceasefire-brink-vance-islamabad-april-21': {
+    title: `Iran Ceasefire on the Brink: Vance Flies to Islamabad, Hormuz Tense`,
+    date: '2026-04-21',
+    category: 'World',
+    locale: 'en',
+    content: `The US-Iran ceasefire entered its most precarious stretch on Tuesday as Vice President JD Vance departed Washington for Islamabad talks, a day after a US Navy destroyer fired on and seized an Iran-flagged cargo ship in the Gulf of Oman.
+
+## Touska seizure escalates crisis
+
+The USS Spruance, a guided-missile destroyer, intercepted the Iranian cargo vessel Touska on Sunday and took custody of it after firing on the ship, NPR and CNN reported. Tehran's Foreign Ministry demanded the immediate release of the Touska and accused Washington of breaching the ceasefire.
+
+Iranian Foreign Ministry spokesman Esmaeil Baghaei said on Monday that the United States had "violated the ceasefire from the beginning of its implementation," citing both the Touska seizure and the US naval blockade of the Strait of Hormuz in place since April 13, according to Al Jazeera.
+
+## Vance, Witkoff, Kushner head to Islamabad
+
+Vance is flying to Islamabad with Steve Witkoff and Jared Kushner for a second round of talks scheduled for Wednesday, April 22, CNBC and NBC News reported. President Donald Trump said on Monday that an extension of the ceasefire, which he considers set to expire Wednesday evening Washington time, is "highly unlikely" without a deal.
+
+A previous round of Islamabad negotiations earlier in April ended without agreement after 21 hours of talks. Iran has signaled it may not send a delegation this week, citing Washington's "excessive demands, unrealistic expectations, constant shifts in stance, repeated contradictions, and the ongoing naval blockade," per France 24.
+
+## Markets jolt as Hormuz stays closed
+
+The Strait of Hormuz remained closed to traffic as of Tuesday. Brent crude futures rose more than 5 percent to around $95 a barrel, while US West Texas Intermediate climbed about 6.8 percent to roughly $89.61, according to CNBC and NBC News.
+
+Iranian parliament committee head Mohammad Rezaei-Kouchi said a bill is being drafted that would ban vessels from "hostile" countries from the Strait and impose tolls on all others, RFE/RL reported. The proposal has not been enacted. The Greek prime minister called the proposed Iranian toll "unacceptable."`,
+  },
+  'tr-iran-ateskes-vance-islamabad-21-nisan': {
+    title: `İran ateşkesi uçurumda: Vance İslamabad'a uçuyor`,
+    date: '2026-04-21',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `ABD-İran ateşkesi, 21 Nisan 2026 Salı itibarıyla en kritik 72 saatine girdi. ABD Donanması'na ait güdümlü füze muhribi USS Spruance, İran bayraklı yük gemisi Touska'yı Umman Körfezi'nde ABD ablukasına meydan okuduğu gerekçesiyle ateş açarak durdurdu ve gemiye el koydu. Tahran, geminin derhal serbest bırakılmasını talep etti. Başkan Donald Trump, 22 Nisan Çarşamba akşamı (Washington saati) sona erecek ateşkesin uzatılmasının "son derece düşük ihtimal" olduğunu söyledi. Başkan Yardımcısı JD Vance, Steve Witkoff ve Jared Kushner, Salı günü ikinci tur müzakereler için İslamabad'a hareket edecek.
+
+## Touska Olayı ve Tahran'ın Tepkisi
+
+USS Spruance, İran bayraklı Touska gemisinin makine dairesine ateş açtıktan sonra gemiyi arayıp gözetim altına aldı. Gemi batırılmadı. İran Dışişleri Bakanlığı, derhal serbest bırakılmasını istedi. Bakanlık sözcüsü İsmail Bagayi Pazartesi yaptığı açıklamada Washington'un "ateşkesi uygulamaya koyduğu andan itibaren ihlal ettiğini" belirtti; 13 Nisan'dan bu yana Hürmüz Boğazı'ndaki ABD deniz ablukasını ve Touska'ya el konulmasını delil gösterdi. İran, heyet göndermeme sebebi olarak "aşırı talepler, gerçekçi olmayan beklentiler, tutumdaki sürekli değişiklikler ve devam eden deniz ablukasını" gösterdi.
+
+## Petrol Piyasaları ve Hürmüz'ü Kapatma Önerisi
+
+Brent ham petrol vadeli işlemleri yüzde 5'ten fazla artarak varil başına yaklaşık 95 dolara yükseldi; ABD WTI ise yüzde 6,8 artışla yaklaşık 89,61 dolar seviyesine çıktı. İran parlamento komisyonu başkanı Mohammad Rezaei-Kouchi, 19 Nisan'da parlamentonun "düşman" ülkelerin gemilerinin boğazdan geçişini yasaklayacak ve diğerlerine geçiş ücreti koyacak bir yasa tasarısı hazırladığını söyledi. Tasarı henüz kabul edilmedi. Yunanistan Başbakanı, önerilen İran Hürmüz geçiş ücretini "kabul edilemez" olarak nitelendirdi. Bir önceki İslamabad turu, 21 saatlik müzakerenin ardından anlaşmasız kapanmıştı.`,
+  },
+  'ru-iran-vens-islamabad-ormuz-21-aprel': {
+    title: 'Иран: Вэнс летит в Исламабад, перемирие на грани срыва',
+    date: '2026-04-21',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Режим прекращения огня между США и Ираном вошёл в самую критическую фазу 19–21 апреля 2026 года после того, как американский эсминец USS Spruance открыл огонь и захватил иранское грузовое судно «Туска» в Оманском заливе. По данным NPR и CNN, выстрелы были произведены по машинному отделению корабля, после чего ВМС США взяли его под свой контроль. МИД Ирана потребовал немедленного освобождения судна.
+
+## Трамп и дедлайн 22 апреля
+
+Президент Дональд Трамп заявил, что продление перемирия «крайне маловероятно» без соглашения. По словам Трампа, срок действия договорённости истекает в среду вечером по вашингтонскому времени — 22 апреля. Вице-президент Джей Ди Вэнс, а также Стив Уиткофф и Джаред Кушнер вылетают из Вашингтона во вторник, 21 апреля, в Исламабад, где 22 апреля должен состояться второй раунд переговоров. Предыдущий раунд в начале месяца завершился без сделки после 21 часа переговоров.
+
+## Позиция Тегерана
+
+Представитель МИД Ирана Эсмаил Багаи заявил в понедельник, что Вашингтон «с самого начала нарушал перемирие», сославшись на морскую блокаду Ормузского пролива с 13 апреля и захват «Туски» как на нарушения. По данным France 24 и MSN, Тегеран связывает своё возможное отсутствие на втором раунде переговоров с «чрезмерными требованиями Вашингтона, нереалистичными ожиданиями, постоянными сменами позиции, неоднократными противоречиями и продолжающейся морской блокадой». Глава парламентской комиссии Мохаммад Резаи-Кучи сообщил, что в парламенте планируется законопроект о запрете прохода «враждебных» государств через пролив и обязательных сборах для остальных. Премьер-министр Греции назвал предложение о сборе «неприемлемым».
+
+## Рынки
+
+Цены на нефть отреагировали ростом. Фьючерсы Brent прибавили более 5%, достигнув около $95 за баррель 20 апреля, а американская WTI подорожала примерно на 6,8% до $89,61 за баррель, сообщают CNBC и NBC News.`,
+  },
+
+  // ========== 2026-04-20 ==========
+
+  // --- Topic 2: Japan 7.7 quake + megaquake advisory ---
+  'yaponiya-ivate-7-7-ballik-zelzele-tsunami-megazelzele-xeberdarligi-20-aprel': {
+    title: 'Yaponiyada 7,7 ballıq zəlzələ: tsunami və nadir "megazəlzələ" xəbərdarlığı',
+    date: '2026-04-20',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Şimali Yaponiyanın İvate prefekturasının Sakit okean sahilləri yaxınlığında 20 aprel 2026-cı il bazar ertəsi yerli vaxtla saat 16:53-də (07:53 GMT) 7,7 ballıq güclü zəlzələ qeydə alındı. Zəlzələ yüzlərlə kilometr cənubda yerləşən Tokiodakı binaları da silkələdi. Rəsmilər ilkin olaraq 3 metrə qədər dalğalar üçün tsunami xəbərdarlığı elan etdilər, müşahidə olunan dalğaların hündürlüyü təxminən 80 santimetrə çatdıqdan sonra xəbərdarlıq məsləhətçi statusa endirildi, sonradan isə ümumiyyətlə ləğv edildi.
+
+## Magnituda və təsirlər
+
+Zəlzələnin ölçüsü Yaponiya Meteoroloji Agentliyi (JMA) tərəfindən 7,7 olaraq qeydə alındı; ABŞ Geoloji Xidməti (USGS) ilkin göstərici kimi 7,4 verdi, lakin mənbələrdə JMA-nın 7,7 rəqəmi üstünlük təşkil etdi. Nə ölüm, nə də ciddi dağıntı qeydə alınıb. Zəlzələ İvate prefekturasının açıq dənizində baş verdi və şimal Yaponiyanın Sakit okean sahilləri boyunca hiss edildi.
+
+## Rəsmi "megazəlzələ" məsləhətçi xəbərdarlığı
+
+Zəlzələdən sonra Yaponiya Meteoroloji Agentliyi nadir rəsmi məsləhətçi xəbərdarlıq yaydı. Sənədə əsasən, Yaponiya Xəndəyi boyunca növbəti həftə ərzində 8 bal və daha yüksək "megazəlzələ" baş vermə ehtimalı təxminən 1%-ə qalxdı — normal fon göstəricisi olan 0,1%-lə müqayisədə on dəfə çox. Bu, JMA-nın standart yeddi günlük yüksəldilmiş ehtimal ölçüsüdür — megazəlzələnin yaxın olduğunu bildirmir, yalnız qiymətləndirilmiş riskin müəyyən müddət ərzində yüksəldiyini bildirir. Məsləhətçi xəbərdarlıq şimal Yaponiya sakinlərinə ünvanlanıb. Yaponiya Xəndəyi Nankai çuxurundan fərqli geoloji strukturdur və bu xəbərdarlıq yalnız şimala aiddir.`,
+  },
+  'en-japan-7-7-quake-megaquake-advisory-april-20': {
+    title: `Japan Lifts Tsunami Alert After 7.7 Quake, Issues Rare Megaquake Advisory`,
+    date: '2026-04-20',
+    category: 'World',
+    locale: 'en',
+    content: `A magnitude 7.7 earthquake struck off the Pacific coast of Iwate Prefecture in northeastern Japan on Monday, triggering a tsunami warning that was later downgraded and prompting the Japan Meteorological Agency to issue a rare advisory on the heightened probability of a "megaquake" along the Japan Trench.
+
+## Shaking felt as far as Tokyo
+
+The quake hit at 4:53 pm local time (07:53 GMT), with JMA placing its magnitude at 7.7. The US Geological Survey initially listed the event at 7.4. The tremor was felt across much of northern Honshu and shook buildings in Tokyo, hundreds of kilometers to the south, Al Jazeera reported.
+
+Authorities initially warned of tsunami waves up to 3 meters (10 feet) along the Iwate coastline. Observed waves peaked at roughly 80 centimeters (2 feet 7 inches), and the warning was downgraded to an advisory before being lifted entirely, according to CNN and CNBC. No deaths or significant damage were reported.
+
+## Megaquake probability raised
+
+Several hours after the quake, the JMA issued a rare special advisory for residents of northeastern Japan. The agency said the probability of a magnitude-8-or-greater event along the Japan Trench in the following week had risen to around 1 percent, up from a normal baseline of about 0.1 percent. Scientific American and the Japan Times reported the figures.
+
+The JMA's 7-day elevated-probability metric is a standardized estimate and does not mean a megaquake is imminent. Scientists note that the 1 percent figure is roughly 10 times the ordinary baseline, a statistically meaningful jump that warrants public preparedness.
+
+## Tohoku echoes
+
+Monday's quake occurred along the same Japan Trench subduction zone that produced the magnitude 9.0 Tohoku earthquake and tsunami on March 11, 2011, a disaster that caused widespread destruction across northeastern Japan. The JMA stressed that this week's advisory is a probabilistic precaution, not a forecast of an imminent event, and urged coastal communities to review evacuation plans.`,
+  },
+  'tr-japonya-iwate-7-7-deprem-megadeprem-uyarisi-20-nisan': {
+    title: `Japonya: İwate açıklarında 7,7'lik deprem, megadeprem uyarısı`,
+    date: '2026-04-20',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Japonya'nın kuzeydoğusundaki İwate Eyaleti açıklarında, 20 Nisan 2026 Pazartesi günü yerel saatle 16.53'te (07.53 GMT) 7,7 büyüklüğünde güçlü bir deprem meydana geldi. Japonya Meteoroloji Kurumu (JMA) tarafından açıklanan sarsıntı, yüzlerce kilometre güneydeki Tokyo'da bile binaların sallanmasına neden oldu. Yetkililer başlangıçta 3 metreye varan dalgalar için tsunami uyarısı yayımladı; gözlemlenen dalgalar yaklaşık 80 santimetreye kadar ulaşınca uyarı önce tavsiyeye düşürüldü, ardından kaldırıldı. Yayın sırasında can kaybı veya önemli hasar bildirilmedi.
+
+## Büyüklük ve Tsunami Dalgaları
+
+JMA yaygın rakam olarak 7,7 büyüklüğünü kaydetti; ABD Jeolojik Araştırma Kurumu (USGS) ilk verilerinde 7,4 değerini gösterdi. Başlangıçta 3 metreye kadar dalgalar beklenirken, sahile ulaşan en yüksek dalgalar yaklaşık 80 santimetre (2 fit 7 inç) olarak ölçüldü. Sarsıntının hissedildiği bölge oldukça geniş; başkent Tokyo'da da binaların salındığı bildirildi. Yetkililer, sahil bölgelerinde uyarı kaldırılana kadar tedbir çağrısında bulundu.
+
+## Nadir Görülen Megadeprem Özel Tavsiyesi
+
+JMA, depremin ardından nadiren yayımladığı özel bir tavsiye açıkladı. Açıklamaya göre, önümüzdeki hafta boyunca Japon Çukuru boyunca 8 veya daha büyük bir "megadeprem" olasılığı yüzde 0,1 olan normal taban çizgisinin yaklaşık 10 katına, yaklaşık yüzde 1'e yükseldi. Bu, standartlaştırılmış 7 günlük yüksek olasılık ölçütü olarak değerlendiriliyor ve yakın bir megadeprem anlamına gelmiyor. Nankai Çukuru ise ayrı bir güney çukuru; iki yapı birbirine karıştırılmamalı. 2011 Tōhoku depremi ve tsunamisi (11 Mart 2011, 9,0 büyüklük) tarihsel bir arka plan olarak hatırlatılıyor.`,
+  },
+  'ru-iaponiia-zemletriasenie-ivate-megakvake-20-aprel': {
+    title: 'Землетрясение 7,7 у Японии: угроза цунами и редкое предупреждение',
+    date: '2026-04-20',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Землетрясение магнитудой 7,7 произошло у тихоокеанского побережья префектуры Иватэ на северо-востоке Японии в понедельник, 20 апреля 2026 года, в 16:53 по местному времени (07:53 GMT). По данным Японского метеорологического агентства (JMA), подземные толчки ощущались даже в Токио, в сотнях километров к югу. Изначально объявленное предупреждение о цунами с волнами до 3 метров было понижено до уровня рекомендации после того, как наблюдаемые волны достигли около 80 см.
+
+## Ход событий
+
+По информации Al Jazeera, CNBC и NBC News, о погибших и серьёзных разрушениях не сообщалось. Предупреждение о цунами впоследствии было снято. Геологическая служба США первоначально указывала магнитуду 7,4, однако основным показателем стало значение JMA 7,7, совпадающее с данными CNN, Japan Times и других источников.
+
+## Редкое мегаземлетрясение-предупреждение
+
+После толчков JMA выпустило редкое специальное предупреждение для жителей северо-востока Японии. По данным CNN и Scientific American, вероятность мегаземлетрясения магнитудой 8 и выше вдоль Японского желоба в течение следующей недели выросла примерно до 1% — это примерно в десять раз выше стандартного базового уровня около 0,1%. Мегаземлетрясение в данном контексте означает событие магнитудой 8 и выше, и речь идёт именно о Японском желобе, а не о южной впадине Нанкай.
+
+## Фон и контекст
+
+Япония регулярно сталкивается с сильными землетрясениями. Катастрофа Тохоку магнитудой 9,0 в марте 2011 года, повлёкшая разрушительное цунами, остаётся болезненной частью национальной памяти. Однако, как подчёркивают специалисты, нынешнее повышение вероятности не означает, что мегаземлетрясение неизбежно — это лишь временно увеличенная оценка риска.`,
+  },
+
+  // --- Topic 4: Amazon $25B additional Anthropic investment ---
+  'amazon-anthropic-25-milyard-dollar-investisiya-100-milyard-aws-20-aprel': {
+    title: 'Amazon Anthropic-ə 25 mlrd dollar yatırır, AWS ilə 100 mlrd dollar saziş',
+    date: '2026-04-20',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Amazon 20 aprel 2026-cı il bazar ertəsi Anthropic süni intellekt şirkətinə əlavə olaraq 25 milyard dollara qədər investisiya yatıracağını elan etdi. Bu, şirkətin son illərdə Anthropic-ə qoyduğu təxminən 8 milyard dolların üzərinə əlavə olunur. Sövdələşmə dərhal 5 milyard dollar tranşdan və "kommersiya mərhələlərinə" bağlı əlavə 20 milyard dollara qədər investisiyadan ibarətdir. Qarşılığında Anthropic gələcək 10 il ərzində AWS xidmətlərinə 100 milyard dollardan çox xərcləyəcəyini öhdəsinə götürdü.
+
+## Sövdələşmənin strukturu və hədəfləri
+
+Anthropic bu raundda 380 milyard dollar dəyərində qiymətləndirildi. 5 milyard dollarlıq dərhal tranş indi həyata keçiriləcək, 20 milyard dollara qədər əlavə investisiya isə kommersiya mərhələlərinin əldə olunmasına bağlıdır. Sövdələşmə AWS-in "Trainium" (süni intellekt üçün xüsusi təlim çipləri) və "Graviton" (ümumi təyinatlı ARM prosessorları) daxil olan öz silisiumuna çıxışı genişləndirir. Ümumi hesablama tutumu isə 5 qiqavatadək yeni potensial təmin edir — bu, "Claude" model ailəsinin təlim və işləməsi üçün nəzərdə tutulub.
+
+## Strateji kontekst
+
+Bu, iki ay əvvəl — 2026-cı ilin fevralında — Amazonun OpenAI-a 50 milyard dollaradək investisiya razılaşdırmasının ardınca gələn ikinci böyük AI investisiya açıqlamasıdır. Amazon beləliklə həm OpenAI, həm də Anthropic-i — dünyanın aparıcı süni intellekt laboratoriyalarının ikisini — eyni vaxtda maliyyələşdirir və öz AWS silisium strategiyasını ön plana çıxarır. Anthropic isə müstəqil şirkət olaraq fəaliyyətini davam etdirir; sövdələşmə satın almaya çevrilmir. Kompüter gücünün miqyası bir "data-center compute" tutumu kimi ifadə olunur və bu məbləğ adi məişət elektrik istehlakı ilə əlaqəli deyil.`,
+  },
+  'en-amazon-anthropic-25b-investment-april-20': {
+    title: `Amazon to Invest Up to $25B More in Anthropic, Secures $100B AWS Deal`,
+    date: '2026-04-20',
+    category: 'Business',
+    locale: 'en',
+    content: `Amazon announced on Monday that it will invest up to an additional $25 billion in Anthropic as part of a sweeping expanded artificial intelligence infrastructure agreement that also locks in more than $100 billion in AWS spending by the Claude model maker over the next decade.
+
+## Structure of the deal
+
+The fresh investment comes on top of roughly $8 billion Amazon has already committed to Anthropic over recent years. It is structured as an immediate $5 billion tranche at Anthropic's latest $380 billion valuation, with up to $20 billion more contingent on "commercial milestones," according to Engadget and GeekWire. CNBC confirmed the headline numbers.
+
+In return, Anthropic has committed to spend more than $100 billion on AWS services over the next 10 years, a commitment the companies say will secure up to 5 gigawatts of new compute capacity to train and run the Claude family of models.
+
+## Trainium, Graviton and custom silicon
+
+The agreement deepens Anthropic's use of Amazon's proprietary chips. Anthropic will run workloads on AWS Trainium, Amazon's custom AI training silicon, and Graviton, the cloud provider's ARM-based general-purpose processors.
+
+Anthropic remains an independent company; Amazon is not acquiring the startup, which is headquartered in San Francisco.
+
+## Dual-track AI strategy
+
+The deal mirrors Amazon's February agreement to invest up to $50 billion in OpenAI, CNBC and GeekWire noted. Taken together, the two pacts signal an AWS strategy of simultaneously backing both leading frontier-AI labs while pushing its own silicon into high-end training workloads. For Anthropic, the deal cements AWS as its primary compute partner at a scale that few rivals can match.`,
+  },
+  'tr-amazon-anthropic-25-milyar-dolar-aws-20-nisan': {
+    title: `Amazon, Anthropic'e 25 milyar dolara kadar yeni yatırım yapacak`,
+    date: '2026-04-20',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Amazon, 20 Nisan 2026 Pazartesi günü yaptığı açıklamada Anthropic'e 25 milyar dolara kadar yeni yatırım yapacağını duyurdu. Bu miktar, şirketin son yıllarda yapay zekâ girişimine daha önce aktardığı yaklaşık 8 milyar dolarlık yatırımın üzerine ekleniyor. Anlaşma kapsamında, Anthropic önümüzdeki 10 yıl içinde Amazon Web Services (AWS) hizmetlerine 100 milyar dolardan fazla harcama taahhüdünde bulundu. Yapay zekâ altyapısına yönelik bu geniş kapsamlı anlaşma, Claude model ailesini eğitmek ve çalıştırmak için 5 gigawatt'a kadar yeni hesaplama kapasitesi güvence altına alıyor.
+
+## Yatırımın Yapısı ve Değerleme
+
+Amazon'un taahhüdü derhal ödenmeyecek; 5 milyar dolar peşin aktarılacak ve 20 milyar dolara kadar kısım "ticari kilometre taşlarına" bağlı olarak ödenecek. Anthropic, bu yatırım turunda 380 milyar dolarlık değerleme üzerinden pay verdi. Anlaşma, Amazon'un Anthropic'i satın alması anlamına gelmiyor; şirket bağımsızlığını koruyor. Yatırım, Amazon'un Şubat 2026'da OpenAI ile imzaladığı 50 milyar dolara kadar yatırım anlaşmasına benzer bir yapıya sahip.
+
+## AWS Donanımı ve Hesaplama Kapasitesi
+
+Anthropic, AWS'in yapay zekâ eğitimi için özel olarak tasarladığı Trainium yongalarını ve genel amaçlı Graviton işlemcilerini kullanacak. Trainium, YZ eğitimi için geliştirilmiş özel silikon; Graviton ise ARM tabanlı genel amaçlı CPU. Sözleşme, veri merkezi hesaplama kapasitesi olarak 5 gigawatt'a kadar yeni güç sağlayacak. Strateji, AWS'in önde gelen iki yapay zekâ laboratuvarını (Anthropic ve OpenAI) aynı anda destekleyip kendi yonga ekosistemini ilerletme yaklaşımını pekiştiriyor.`,
+  },
+  'ru-amazon-anthropic-25-mlrd-aws-100-mlrd-20-aprel': {
+    title: 'Amazon вложит до $25 млрд в Anthropic, AWS получит $100 млрд',
+    date: '2026-04-20',
+    category: 'Бизнес',
+    locale: 'ru',
+    content: `Компания Amazon в понедельник, 20 апреля 2026 года, объявила о готовности инвестировать ещё до $25 миллиардов в Anthropic — помимо уже вложенных около $8 миллиардов в последние годы. Соглашение, о котором сообщили CNBC, Anthropic и Engadget, расширяет партнёрство в сфере ИИ-инфраструктуры: Anthropic обязуется в течение 10 лет потратить более $100 миллиардов на сервисы AWS.
+
+## Структура сделки
+
+Инвестиции оформлены как немедленный транш в $5 миллиардов при текущей оценке Anthropic в $380 миллиардов, а ещё до $20 миллиардов будут привязаны к «коммерческим вехам». Таким образом, не весь объём в $25 миллиардов выплачивается сразу: часть средств поступит при достижении согласованных целевых показателей.
+
+## Железо AWS и вычислительная мощность
+
+По данным Anthropic и CNBC, Anthropic будет использовать собственные чипы AWS: Trainium для обучения ИИ-моделей и Graviton — как процессоры общего назначения на архитектуре ARM. Сделка также обеспечивает до 5 гигаватт новых вычислительных мощностей для обучения и работы моделей семейства Claude. Anthropic остаётся независимой компанией — речь не идёт о поглощении.
+
+## Стратегия AWS
+
+Соглашение зеркалит февральскую договорённость Amazon с OpenAI о возможной инвестиции до $50 миллиардов. Таким образом, AWS одновременно поддерживает обе ведущие лаборатории ИИ и продвигает собственный кремний.`,
+  },
+
+  // --- Topic 6: Gaza RDNA $71.4B reconstruction ---
+  'qezza-bmt-ab-dunya-banki-71-4-milyard-dollar-berpa-77-il-20-aprel': {
+    title: 'BMT, AB və Dünya Bankı: Qəzzanın bərpası üçün 71,4 milyard dollar lazımdır',
+    date: '2026-04-20',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Birləşmiş Millətlər Təşkilatı, Avropa İttifaqı və Dünya Bankı 20 aprel 2026-cı il bazar ertəsi birgə Qəzza Sürətli Ziyan və Ehtiyac Qiymətləndirməsini (RDNA) yaydılar. Sənədə əsasən, müharibənin doğurduğu itkilərin aradan qaldırılması üçün gələcək on il ərzində təxminən 71,4 milyard dollar tələb olunacaq. İlk 18 ay ərzində isə əsas xidmətlərin bərpası və infrastrukturun ilkin qurulması üçün 26,3 milyard dollar lazımdır. BMT-nin çərçivəsinə görə, enklavda insan inkişafı 2023-cü ilin oktyabrında başlayan müharibədən bəri 77 il geri qayıtmışdır.
+
+## Rəqəmlər və zərərin miqyası
+
+Fiziki ziyan təxminən 35,2 milyard dollar olaraq hesablanıb, əlavə iqtisadi və sosial itkilər isə 22,7 milyard dollar civarındadır. 371 888-dən çox mənzil dağıdılıb və ya ziyan çəkib. Qəzzadakı xəstəxanaların yarıdan çoxu hazırda fəaliyyətsizdir, demək olar ki, bütün məktəblər dağıdılıb. Əhalinin 60%-dən çoxu evini itirib, təxminən 1,9 milyon insan məcburi köçkün vəziyyətindədir. "77 il geri qayıtma" ifadəsi BMT tərəfindən bir çərçivə kimi istifadə olunub, neytral fakt kimi deyil.
+
+## Bərpanın ön şərtləri
+
+RDNA sənədi bərpa prosesinin işə başlaması üçün bir neçə ön şərt sadalayır: davamlı atəşkəs, humanitar yardıma tam çıxış, əsas xidmətlərin bərpası, insanların və materialların hərəkət azadlığı, effektiv idarəetmə, maliyyə şəffaflığı, qalıqların təmizlənməsi, torpaq və mülkiyyət haqlarının müəyyənləşdirilməsi. Hesabat yalnız ehtiyacların qiymətləndirilməsidir — konkret donor öhdəlikləri və ya maliyyə paketi elan edilmir. Sənəd üç institusiyanın birgə qiymətləndirməsidir və yalnız birinə aid edilə bilməz.`,
+  },
+  'en-gaza-rdna-71b-reconstruction-april-20': {
+    title: `UN, EU, World Bank: Gaza Needs $71.4B; Development Set Back 77 Years`,
+    date: '2026-04-20',
+    category: 'World',
+    locale: 'en',
+    content: `Gaza will need approximately $71.4 billion over the next decade to recover from the war, with $26.3 billion required in just the first 18 months to restore essential services and rebuild basic infrastructure, according to a joint assessment released Monday by the United Nations, the European Union and the World Bank.
+
+## The numbers behind the rebuild
+
+The final Gaza Rapid Damage and Needs Assessment, or RDNA, estimates physical damage at $35.2 billion and further economic and social losses at $22.7 billion, UN News reported. More than 371,888 housing units have been destroyed or damaged across the enclave. More than 50 percent of Gaza's hospitals are non-functional, and nearly all schools have been destroyed.
+
+About 1.9 million Gazans — more than 60 percent of the population — have lost their homes and are displaced, the assessment says. The report was produced jointly under the auspices of the three institutions, not by any one of them alone.
+
+## 'Human development set back 77 years'
+
+UN News framed the report's most striking finding in human terms: human development in the enclave has been set back by 77 years since the war that began after the Hamas-led October 2023 attacks on southern Israel. The figure reflects losses across health, education, employment and infrastructure.
+
+The RDNA sets out a series of preconditions for recovery: a sustained ceasefire, unrestricted humanitarian access, restored essential services, freedom of movement for people and materials, effective governance, financial transparency, debris clearance, and resolution of land and property rights. Without those, the assessment warns, reconstruction cannot begin at scale.
+
+## A needs assessment, not a pledge
+
+The $71.4 billion figure is a needs assessment rather than a pledged funding package. Bloomberg and CP24 reported that donor governments have yet to commit amounts anywhere near the total, even as the truce between Israel and Hamas has largely held. The report comes amid ongoing diplomatic efforts to stabilize the ceasefire and restore basic services to Gaza's remaining residents.`,
+  },
+  'tr-gazze-yeniden-yapilanma-71-milyar-rdna-20-nisan': {
+    title: `BM, AB ve Dünya Bankası: Gazze'nin yeniden inşası 71,4 milyar dolar`,
+    date: '2026-04-20',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Birleşmiş Milletler, Avrupa Birliği ve Dünya Bankası'nın 20 Nisan 2026 Pazartesi günü ortaklaşa yayımladıkları Gazze Hızlı Hasar ve İhtiyaç Değerlendirmesi (RDNA), bölgenin savaştan toparlanması için önümüzdeki on yıl içinde yaklaşık 71,4 milyar dolara ihtiyaç duyduğunu ortaya koydu. Raporda, temel hizmetlerin yeniden sağlanması ve altyapının onarılması için yalnızca ilk 18 ayda 26,3 milyar dolarlık fon gerektiği belirtildi. Ekim 2023'te Hamas'ın güney İsrail'e düzenlediği saldırıların ardından başlayan savaş nedeniyle, BM'ye göre Gazze'deki insani kalkınma 77 yıl geri gitti.
+
+## Hasar Tahminleri ve Kayıp Altyapı
+
+Değerlendirmeye göre fiziksel hasar 35,2 milyar dolar, sosyal ve ekonomik kayıplar ise 22,7 milyar dolar olarak hesaplandı. 371 binden fazla konut birimi yıkıldı veya ağır hasar gördü. Hastanelerin yüzde 50'sinden fazlası işlevsiz durumda ve neredeyse tüm okullar yıkıldı. Nüfusun yüzde 60'ından fazlası evini kaybetti; yaklaşık 1,9 milyon Gazzeli yerinden oldu. "77 yıllık geri gidiş" ifadesi, BM Haberleri tarafından aktarılan bir çerçeveleme olarak kullanıldı.
+
+## Ön Koşullar ve Ortak Değerlendirme
+
+Rapor, toparlanmanın gerçekleşebilmesi için belirli ön koşulların sağlanması gerektiğini vurguladı: sürdürülebilir bir ateşkes, kesintisiz insani erişim, temel hizmetlerin yeniden işletilmesi, insan ve malzeme hareketinin serbestliği, etkin yönetişim, mali şeffaflık, enkaz kaldırma ve arazi ile mülkiyet haklarının çözümü. RDNA, bir ihtiyaç değerlendirmesidir; bağışçı taahhüdü veya finansman paketi değildir. Rapor yalnızca BM'ye değil, BM, AB ve Dünya Bankası'nın üç ortaklı ortak değerlendirmesine dayanıyor. Hamas-İsrail ateşkesinin büyük ölçüde devam ettiği bildiriliyor.`,
+  },
+  'ru-gaza-71-4-mlrd-vosstanovlenie-rdna-20-aprel': {
+    title: 'ООН, ЕС и Всемирный банк: на восстановление Газы нужно $71,4 млрд',
+    date: '2026-04-20',
+    category: 'Мир',
+    locale: 'ru',
+    content: `В совместной оценке быстрого ущерба и потребностей (Rapid Damage and Needs Assessment, RDNA), опубликованной 20 апреля 2026 года Организацией Объединённых Наций, Европейским союзом и Всемирным банком, заявлено: на восстановление сектора Газа в течение следующих десяти лет потребуется около $71,4 миллиарда. Только в первые 18 месяцев для возобновления основных услуг и базовой инфраструктуры необходимо $26,3 миллиарда.
+
+## Масштаб ущерба
+
+По оценке, физический ущерб составил $35,2 миллиарда, а экономические и социальные потери — ещё $22,7 миллиарда. Повреждены или разрушены более 371 888 жилых помещений. Более половины больниц Газы неработоспособны, почти все школы разрушены. Жильё потеряли свыше 60% жителей анклава, около 1,9 миллиона человек остались перемещёнными лицами.
+
+## «Откат развития на 77 лет»
+
+Авторы RDNA, по сообщениям UN News и Common Dreams, указывают, что уровень человеческого развития в Газе откатился примерно на 77 лет со времён войны, начавшейся после нападений, организованных ХАМАС в октябре 2023 года на юге Израиля. Это оценочная рамка, предложенная ООН, а не нейтральный технический показатель.
+
+## Предпосылки восстановления
+
+Документ перечисляет условия для эффективного восстановления: устойчивое прекращение огня, беспрепятственный гуманитарный доступ, возобновление базовых услуг, свобода передвижения людей и материалов, дееспособное управление, финансовая прозрачность, расчистка завалов и урегулирование прав на землю и имущество. По данным Bloomberg и CP24, оценка не является пакетом обещанного финансирования — это именно расчёт потребностей.`,
+  },
+
+  // --- Topic 7 part 2: NBA Monday Game 2 comebacks ---
+  'nba-pley-off-timbervulvz-houks-sok-geri-donusler-20-aprel': {
+    title: 'NBA pley-off: Timbervulvz və Houks şok geri dönüşlə seriyaları 1-1 etdi',
+    date: '2026-04-20',
+    category: 'İdman',
+    locale: 'az',
+    content: `2026 NBA pley-offlarının ilk turunda Oyun 2 matçları 20 aprel bazar ertəsi dramatik geri dönüş qələbələri ilə yadda qaldı. Minnesota Timbervulvz 19 xallıq geri qalmağı dəf edərək Denver Naqqets-i 119-114 hesabı ilə məğlub etdi və seriyanı 1-1 bərabərləşdirdi. Atlanta Houks isə Medison Skver Qardendə Nyu-York Niks-i 107-106 hesabı ilə şok etdi — Si Ceyy MakKollamın 32 xallıq performansı oyunu həll etdi.
+
+## Timbervulvzun möhtəşəm geri dönüşü
+
+Minnesota matçında Antoni Edvards 30 xal, Culius Rendl isə 24 xal topladı. Timbervulvz birinci hissədə 19 xal arxada idi, lakin görüşün sonunda Rendlin iki uğurlu cəza atışı ilə üstünlüyü üç xala çıxardılar. ESPN boxscore göstəricilərinə əsasən, 19 xallıq geri qalma Minnesotanın dəf etdiyi dərin defisit idi. Nikola Yokiç və Naqqets-in hücumu Timbervulvzun ikinci yarıdakı təzyiqinə cavab tapa bilmədi və ev sahiblərini oyunda saxlaya bilmədi. Seriya indi Denver 1, Minnesota 1 kimi davam edir.
+
+## Houks MSG-də tarixi seriyaya son qoydu
+
+Atlanta oyununda Si Ceyy MakKollam 32 xal topladı və matçın 34 saniyə qalmış həlledici topunu hədəfə çatdırdı. Houks dördüncü hissədə 12 xallıq geri qalmanı dəf etdi — Nyu-Yorkun üstünlüyünə baxmayaraq. Niks oyundakı məğlubiyyətlə birlikdə adi mövsümdəki "dördüncü hissəyə 12+ xal üstünlüklə başlayanda" göstəricisini itirdi: əvvəllər 39-0 olan seriya qırıldı. Bu, Houks üçün Medison Skver Qardendə tarixi nəticə sayıldı və seriyanı 1-1 bərabərləşdirdi. Oyun 3 matçları bir neçə gündən sonra başlayacaq.`,
+  },
+  'en-nba-playoffs-game-2-upsets-april-20': {
+    title: `NBA Playoffs: Hawks, Timberwolves Stun in Dramatic Game 2 Comebacks`,
+    date: '2026-04-20',
+    category: 'Sports',
+    locale: 'en',
+    content: `Two of the NBA Playoffs' biggest Monday-night matchups ended in stunning upsets, as the Minnesota Timberwolves and Atlanta Hawks both erased double-digit deficits to even their first-round series at 1-1.
+
+## Timberwolves 119, Nuggets 114
+
+Anthony Edwards poured in 30 points and Julius Randle added 24 as Minnesota overcame a 19-point deficit on the road to beat the Denver Nuggets 119-114, ESPN and basketnews.com reported. Randle sealed the win by hitting both free throws to extend the Timberwolves' lead to three in the closing seconds.
+
+The comeback evened the series at 1-1 and robbed Denver of the chance to head to Minneapolis with a 2-0 lead. It was a signature moment for Edwards, who has carried the Timberwolves offensively through the opening round, and for a Minnesota defense that stiffened down the stretch to blunt Nikola Jokic and Denver's scoring attack.
+
+## Hawks 107, Knicks 106
+
+At Madison Square Garden, CJ McCollum scored 32 points — including the go-ahead bucket with 34 seconds left — as the Atlanta Hawks shocked the New York Knicks 107-106, Yahoo Sports and NBA.com reported. Atlanta erased a 12-point fourth-quarter deficit to pull even in the series.
+
+The loss ended one of the most remarkable regular-season statistical streaks in the league: New York had entered the game 39-0 in the regular season when leading by 12 or more points entering the fourth quarter, per knicks.com and Yahoo Sports. The collapse hands the Hawks home-court advantage heading back to Atlanta and inserts McCollum into the list of Garden villains of playoffs past.
+
+## A turning Monday
+
+Together, the two Game 2 results reshaped the early narrative of the 2026 playoffs. Where Sunday had been defined by routs, Monday proved that no first-round series is safe from a sudden swing. Both upsets set up pivotal Game 3s on the road.`,
+  },
+  'tr-nba-playoffs-pazartesi-oyun-2-timberwolves-hawks-20-nisan': {
+    title: `NBA Oyun 2'lerinde sürpriz: Timberwolves ve Hawks geri döndü`,
+    date: '2026-04-20',
+    category: 'Spor',
+    locale: 'tr',
+    content: `2026 NBA Playoffs'un Oyun 2 maçları, 20 Nisan 2026 Pazartesi günü iki büyük geri dönüşe sahne oldu. Minnesota Timberwolves, Anthony Edwards ve Julius Randle öncülüğünde Denver Nuggets karşısında 19 sayılık bir farkı kapatıp 119-114 kazandı ve seriyi 1-1'e getirdi. Atlanta Hawks ise Madison Square Garden'da CJ McCollum'ın 32 sayısıyla New York Knicks'i 107-106 devirdi. Knicks'in dördüncü çeyreğe 12 sayı veya daha fazla farkla önde giren takım olarak sezon boyu sahip olduğu 39-0'lık galibiyet serisi bu maçta sona erdi.
+
+## Timberwolves'un Tarihi Geri Dönüşü
+
+Minnesota, ilk yarıda 19 sayı geri düştü; Anthony Edwards 30 sayıyla turnuvadaki formunu sürdürürken Julius Randle 24 sayı üretti. Maçın son saniyelerinde kazandığı iki serbest atışla farkı üçe çıkaran Randle, galibiyeti güvene aldı. Takım, seriyi 1-1 berabere getirerek Denver'daki Nikola Jokic'li dengeyi bozdu. ESPN kutu skoruna göre fark doğrudan 19 sayı olarak kayıtlara geçti.
+
+## Hawks Şampiyonluk Yıkıntısı ve McCollum Kahramanlığı
+
+Atlanta, dördüncü çeyreğe 12 sayı geride girdi ve sert bir performansla fark kapattı. CJ McCollum, 32 sayı kaydetti ve son 34 saniye kala kazandıran sayıyı attı. Knicks, 2025-26 düzenli sezonunda dördüncü çeyreğe 12 sayı veya daha fazla önde giren maçların tamamını (39-0) kazanmıştı; Hawks'ın 107-106'lık galibiyeti bu seriye son verdi. Madison Square Garden, playoff sürprizini beraberlikle taşıdı. Oyun 2 öncesi yapılan hazırlıklar ve McCollum'ın sezonun sonuna doğru bulduğu form, galibiyetin ana faktörleri olarak değerlendirildi.`,
+  },
+  'ru-nba-play-off-igra-2-volvz-kholks-sensatsii-20-aprel': {
+    title: 'NBA: «Тимбервулвз» и «Хоукс» устроили сенсации в играх 2',
+    date: '2026-04-20',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Вторые матчи серий первого раунда NBA 20 апреля 2026 года подарили болельщикам два крупных камбэка. «Миннесота Тимбервулвз» отыгралась у «Денвер Наггетс» и победила 119:114, а «Атланта Хоукс» сенсационно обыграла «Нью-Йорк Никс» в Мэдисон-Сквер-Гарден со счётом 107:106. Обе серии теперь — по 1:1.
+
+## Миннесота — Денвер 119:114
+
+По данным ESPN и basketnews.com, «Тимбервулвз» отыгрались с дефицита в 19 очков в первой половине. Энтони Эдвардс набрал 30 очков, Джулиус Рэндл добавил 24 и за секунды до сирены реализовал два штрафных, доведя преимущество до трёх очков. Материал Yahoo Sports дополнительно отмечает, что Руди Гобер доставил проблемы Николе Йокичу в обороне.
+
+## Атланта — Нью-Йорк 107:106
+
+Си Джей Макколлум набрал 32 очка у «Атланты», включая решающий бросок за 34 секунды до конца матча. «Хоукс» отыгрались с дефицита в 12 очков в четвёртой четверти. По данным Yahoo Sports, NBA.com и официального сайта «Никс», до этой игры «Нью-Йорк» в регулярном сезоне имел 39 побед при 0 поражениях, когда начинал четвёртую четверть с преимуществом 12 и больше очков. Эта победная серия прервалась.
+
+## Серии выравнялись
+
+Оба матча стали болезненными поражениями для фаворитов. Итог дня: серии «Миннесота — Денвер» и «Нью-Йорк — Атланта» после двух игр имеют равный счёт 1:1, и интрига в первом раунде сохраняется.`,
+  },
+
+  // ========== 2026-04-19 ==========
+
+  // --- Topic 1: Bulgaria Radev landslide election ---
+  'bolqaristan-radev-parlament-sechkilerinde-qelebe-19-aprel': {
+    title: 'Bolqarıstan: Radev parlament seçkilərində böyük qələbə qazandı',
+    date: '2026-04-19',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Bolqarıstanın keçmiş prezidenti Rumen Radevin rəhbərlik etdiyi "Proqressiv Bolqarıstan" koalisiyası 19 aprel 2026-cı il bazar günü keçirilən növbədənkənar parlament seçkilərində qəti qələbə qazandı. Səslərin 98,3%-i sayılanda koalisiyanın göstəricisi 44,7% təşkil etdi, bu isə 240 üzvlü parlamentdə ən azı 130 deputat yeri demək idi — tam mütləq çoxluq. Bu, beş il ərzində Bolqarıstanda keçirilən səkkizinci ümumi seçki idi və ölkədəki uzunmüddətli siyasi böhranın yeni mərhələsini təşkil etdi.
+
+## Seçki nəticələri və rəqiblər
+
+Radevin "Proqressiv Bolqarıstan" koalisiyası Boyko Borisovun uzun illər hakim olan GERB partiyasını 13,4% ilə geridə buraxdı, Avropa yönlü "Dəyişikliyə Davam Edirik – Demokratik Bolqarıstan" (PP-DB) koalisiyası isə 13,2% topladı. Radev prezidentlik səlahiyyətlərindən doqquz il sonra — 2026-cı ilin yanvarında istefa vermiş, "Proqressiv Bolqarıstan"ı qurub baş nazir səlahiyyətinə iddialı olmuşdu. Qələbə bəyanatında o, nəticəni "ümidin qələbəsi" adlandırdı.
+
+## Böhranın kökləri və Radevin mövqeyi
+
+Seçki 2025-ci ilin dekabr ayında Jelyazkov hökumətinin kütləvi antikorrupsion etirazları fonunda istefa verməsindən sonra təyin edilmişdi. Radev "oliqarxik idarəetmə modelinə" son qoyacağına söz verdi və dekabr ayındakı küçə etirazlarını dəstəklədi. Avroşübhəçi baxışları ilə tanınan Radev prezidentlik dövründə Ukraynaya hərbi yardım göndərilməsinə qarşı çıxmış, Rusiya ilə əlaqələrin bərpası çağırışları etmişdi. Hökumətin formalaşdırılması prosesi hələ qarşıdadır — koalisiyanın tək başına çoxluğu var, lakin parlament rəsmi addımları bu yaxınlarda atacaq.`,
+  },
+  'en-bulgaria-radev-landslide-april-19': {
+    title: `Bulgaria's Radev Wins Landslide, Secures Parliamentary Majority`,
+    date: '2026-04-19',
+    category: 'World',
+    locale: 'en',
+    content: `Former Bulgarian president Rumen Radev's Progressive Bulgaria coalition won a decisive victory in Sunday's snap parliamentary election, taking roughly 44.7 percent of the vote and securing an outright majority in the 240-seat National Assembly.
+
+## Eighth election in five years
+
+With 98.3 percent of ballots counted, Al Jazeera and Balkan Insight reported that Progressive Bulgaria had captured at least 130 seats, giving Radev's newly formed movement the ability to govern without a coalition partner. It was Bulgaria's eighth snap general election since 2021, a period of persistent instability that has cycled through a succession of short-lived governments.
+
+The vote was triggered by the resignation of Prime Minister Zhelyazkov's administration on December 11, 2025, following mass anti-corruption protests that filled the streets of Sofia late last year. Radev, who had served as president for nine years, stepped down from the post in January 2026 to found Progressive Bulgaria and contest the parliamentary race.
+
+## Rivals routed
+
+The center-right GERB party led by former prime minister Boyko Borissov, long the dominant force in Bulgarian politics, was reduced to 13.4 percent. The pro-European We Continue the Change–Democratic Bulgaria coalition finished with 13.2 percent, according to Al Jazeera.
+
+Radev hailed the result as a "victory of hope" and pledged to dismantle what he described as Bulgaria's "oligarchic governance model," citing the December street protests as a mandate for change. CNN and Euronews carried the remark.
+
+## A eurosceptic turn in Sofia
+
+A left-leaning eurosceptic, Radev has been openly critical of sending military aid to Ukraine and has called for renewing ties with Russia. During his presidency he was critical of EU policies toward Russia. His party's outright majority means no coalition is currently required, although the parliamentary process for forming a new government still lies ahead. Some tallies put the seat total closer to 135, but final counts were still being confirmed at the time of reporting.`,
+  },
+  'tr-bulgaristan-radev-secim-19-nisan': {
+    title: `Bulgaristan seçimi: Radev ezici zaferle çoğunluk aldı`,
+    date: '2026-04-19',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Eski Bulgaristan Cumhurbaşkanı Rumen Radev'in kurduğu Progressive Bulgaria koalisyonu, 19 Nisan 2026 Pazar günü yapılan erken parlamento seçiminde yaklaşık yüzde 44,7 oy aldı ve 240 sandalyeli parlamentoda en az 130 sandalye kazanarak tek başına çoğunluğu güvence altına aldı. Bu sonuç, Bulgaristan'ın son beş yılda yapılan sekizinci genel seçimi oldu. Seçim, Aralık 2025'teki yolsuzluk karşıtı kitlesel protestoların ardından Jelyazkov hükümetinin istifa etmesi üzerine erkene alınmıştı. Dokuz yıl cumhurbaşkanlığı yapan Radev, başbakan adaylığı için Ocak 2026'da görevinden çekilmişti.
+
+## Oy Dağılımı ve Rakiplerin Durumu
+
+Oyların yüzde 98,3'ü sayıldığında Progressive Bulgaria yüzde 44,7 ile açık ara önde tamamladı. Eski Başbakan Boyko Borissov'un bir zamanlar ülkenin en güçlü siyasi gücü olan GERB partisi yüzde 13,4'te kalırken; Avrupa Birliği yanlısı We Continue the Change-Democratic Bulgaria (PP-DB) koalisyonu yüzde 13,2 oy aldı. Bazı raporlar kazanılan sandalye sayısının 135'e ulaşabileceğini belirtse de kesin rakamlar hâlâ teyit bekliyor. Koalisyon ortağı arayışına gerek duyulmuyor; parti tek başına çoğunluğa sahip.
+
+## Radev'in Açıklaması ve Siyasi Çizgisi
+
+Radev, sonuçları "umudun zaferi" olarak değerlendirdi. Kendisi, sol eğilimli ve Avrupa Birliği'ne eleştirel duruşuyla biliniyor; cumhurbaşkanlığı döneminde Ukrayna'ya askeri yardım gönderilmesine karşı çıkmış ve Rusya ile ilişkilerin yeniden kurulması çağrısında bulunmuştu. Radev, Aralık 2025'teki sokak protestolarını desteklediğini ve Bulgaristan'daki "oligarşik yönetim modeline" son vereceğini vaat etti. Hükümet kurma süreci hâlâ önümüzdeki parlamento müzakerelerine bağlı.`,
+  },
+  'ru-bolgariia-radev-pobeda-vybory-19-aprel': {
+    title: 'Болгария: Радев выиграл выборы и получил большинство',
+    date: '2026-04-19',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Бывший президент Болгарии Румен Радев одержал уверенную победу на внеочередных парламентских выборах 19 апреля 2026 года. Его коалиция «Прогрессивная Болгария» получила около 44,7% голосов при подсчёте 98,3% бюллетеней и обеспечила себе не менее 130 мест в 240-местном Народном собрании. По данным Al Jazeera и Balkan Insight, это абсолютное парламентское большинство — редкий результат для Болгарии последних лет.
+
+## Восьмые выборы за пять лет
+
+Нынешние выборы стали для Болгарии восьмыми внеочередными всеобщими выборами с 2021 года. Голосование было назначено после отставки правительства Желязкова 11 декабря 2025 года на фоне массовых антикоррупционных протестов. Партия ГЕРБ бывшего премьер-министра Бойко Борисова получила 13,4%, а проевропейская коалиция «Продолжаем перемены — Демократическая Болгария» — 13,2%.
+
+## Путь Радева
+
+Радев ушёл в отставку с поста президента в январе 2026 года после девяти лет в должности, чтобы сформировать «Прогрессивную Болгарию» и участвовать в выборах как кандидат в премьер-министры. Он позиционируется как левый евроскептик, выступавший против военной помощи Украине и призывавший к восстановлению отношений с Россией. Он обещал покончить с «олигархической моделью управления» и поддерживал декабрьские уличные протесты.
+
+## Реакция и дальнейшие шаги
+
+Свою победу Радев назвал «победой надежды». По сведениям Al Jazeera и CNN, точное количество мест всё ещё уточняется, а процедура формирования правительства ещё предстоит. На данный момент коалиция не требуется — партия получила большинство самостоятельно.`,
+  },
+
+  // --- Topic 5: IMF WEO — Global Economy in the Shadow of War ---
+  'beynelxalq-valyuta-fondu-qlobal-iqtisadiyyat-muharibe-kolgesinde-3-1-faiz-19-aprel': {
+    title: 'Beynəlxalq Valyuta Fondu: qlobal iqtisadiyyat 2026-da 3,1%-ə yavaşlayır',
+    date: '2026-04-19',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Beynəlxalq Valyuta Fondu 2026-cı il aprel Dünya İqtisadi Proqnozunu "Qlobal İqtisadiyyat Müharibə Kölgəsində" adı altında təqdim etdi. Hesabat 14 apreldə dərc edildi, Vaşinqtonda keçirilən IMF–Dünya Bankı Yaz Görüşləri isə 19 apreldə — həftəsonu — yekunlaşdı. Fondun proqnozuna görə qlobal iqtisadi artım 2026-cı ildə 3,1%-ə yavaşlayacaq, 2027-ci ildə isə cüzi qalxaraq 3,2%-ə çatacaq. Qlobal baş inflyasiya 2026-cı ildə mötədil yüksəliş göstərəcək, 2027-ci ildə isə yenidən enməyə başlayacaq.
+
+## Əsas rəqəmlər və qiymətləndirmə
+
+Fond qeyd edib ki, iqtisadi yavaşlama və yenidən canlanan inflyasiya təzyiqi "inkişaf etməkdə olan iqtisadiyyatlar" kateqoriyasında xüsusilə güclü hiss ediləcək. Maliyyə nazirləri Yaz Görüşlərini bazar günü yekunlaşdırarkən hesabatın əsas mesajı qlobal iqtisadiyyatın davamlı coğrafi-siyasi stress altında qaldığı idi. Fondun "Şərh çərçivəsi" risklərin dominantlığına yönəlib və müsbət ssenarilərin yox, neqativ ssenarilərin üstün olduğunu vurğulayır.
+
+## Risk mənzərəsi və əsas təhlükələr
+
+Hesabat dörd əsas risk faktoru sadalayır: Orta Şərqdə münaqişənin daha da genişlənməsi və ya uzanması, qlobal coğrafi-siyasi parçalanmanın dərinləşməsi, süni intellekt əsaslı məhsuldarlıq fərziyyələrinin yenidən qiymətləndirilməsi, və yeniləşən ticarət gərginliyi. IMF vurğulayır ki, inkişaf etməkdə olan iqtisadiyyatlar və yüksələn bazarlar həm maliyyələşmə sıxışması, həm də inflyasiya dalğası baxımından daha ağır yükün altına düşəcəklər. Hesabat IMF Fəsil 1 və icra xülasəsində müvafiq bölmələrdə təfərrüatlı dərc olunub.`,
+  },
+  'en-imf-weo-april-global-growth-3-1-percent': {
+    title: `IMF: Global Growth to Slow to 3.1% in 2026 as War Shadows World Economy`,
+    date: '2026-04-19',
+    category: 'Economy',
+    locale: 'en',
+    content: `As finance ministers wrapped the IMF and World Bank Spring Meetings in Washington on Sunday, the International Monetary Fund's latest World Economic Outlook projected that global growth will slow to 3.1 percent in 2026 before edging up only slightly to 3.2 percent in 2027.
+
+## A report titled for the times
+
+Published on April 14 under the title "Global Economy in the Shadow of War," the WEO frames the year's outlook around the drag from ongoing conflicts, geopolitical fragmentation and renewed trade tensions. Global headline inflation is projected to rise modestly in 2026 before resuming its decline in 2027, the IMF said.
+
+The Fund said the slowdown and renewed inflationary pressures will be "particularly pronounced in emerging market and developing economies," which face tighter external financing conditions alongside food- and energy-price volatility.
+
+## Downside risks dominate
+
+The IMF's Chapter 1 risk assessment is blunt: downside risks dominate. The Fund flags four main threats to the baseline — a longer or broader Middle East conflict, further geopolitical fragmentation, a potential reassessment of the artificial-intelligence-driven productivity assumptions now embedded in many forecasts, and renewed trade tensions among major economies.
+
+The WEO did not quantify a specific Middle East conflict scenario, but staff noted that a sustained disruption to Gulf oil flows would sharply raise the energy-price component of its inflation projections.
+
+## Spring Meetings takeaways
+
+The Spring Meetings, which ran through the weekend ending April 19, were dominated by discussions on sovereign-debt restructuring, the fallout from elevated US tariffs, and how to finance climate and humanitarian needs amid fiscal pressure in advanced economies. The WEO's "shadow of war" framing echoed in press briefings throughout the week, underscoring how security shocks have become central to the global macroeconomic narrative.`,
+  },
+  'tr-imf-dunya-ekonomik-gorunum-savasin-golgesinde-19-nisan': {
+    title: `IMF: Küresel büyüme 2026'da yüzde 3,1'e yavaşlayacak`,
+    date: '2026-04-19',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Uluslararası Para Fonu (IMF), "Savaşın Gölgesindeki Küresel Ekonomi" başlığını taşıyan Nisan 2026 Dünya Ekonomik Görünümü (WEO) raporunda küresel büyümenin 2026'da yüzde 3,1'e yavaşlayacağını, 2027'de ise yalnızca yüzde 3,2'ye yükseleceğini öngördü. Washington'da düzenlenen IMF/Dünya Bankası İlkbahar Toplantıları, 19 Nisan 2026 Pazar günü sona erdi. Maliye bakanlarının toplantıyı tamamladığı günlerde yayımlanan raporda, aşağı yönlü risklerin baskın olduğu vurgulandı ve Orta Doğu çatışmasının genişlemesi ile jeopolitik bölünme gibi unsurlar başlıca tehditler olarak sıralandı.
+
+## Büyüme ve Enflasyon Tahminleri
+
+Rapor, Nisan 14'te yayımlandı ve İlkbahar Toplantıları boyunca tartışıldı. IMF, küresel manşet enflasyonunun 2026'da ılımlı bir artış göstereceğini, ardından 2027'de düşüşün yeniden başlayacağını bekliyor. Büyüme yavaşlaması ile yenilenen enflasyonist baskıların "yükselen piyasalar ve gelişmekte olan ekonomilerde" orantısız biçimde hissedileceği belirtildi. Bu ülke grubu, IMF'nin standart sınıflandırmasına göre dünyanın gelişmiş ekonomileri dışındaki geniş kategoriyi kapsıyor.
+
+## Risk Unsurları ve "Savaşın Gölgesi" Çerçevesi
+
+IMF, dört ana aşağı yönlü risk faktörünü öne çıkardı: Orta Doğu çatışmasının genişlemesi veya uzaması, jeopolitik bölünme, yapay zekâ kaynaklı verimlilik varsayımlarının yeniden değerlendirilmesi ve yenilenen ticaret gerilimleri. "Savaşın Gölgesi" başlığı, kuruluşun yıllık bahar raporunun ana çerçevesini oluşturuyor. IMF, büyüme rakamını önceki bir temel rakamla karşılaştırmak yerine yeni bir yavaşlama öngörüsü olarak sunuyor. Spring Meetings 2026, raporun sunumunu ve tartışmasını pekiştiren ana çerçeveyi oluşturdu.`,
+  },
+  'ru-mvf-prognoz-rosta-3-1-procenta-19-aprel': {
+    title: 'МВФ: мировой рост замедлится до 3,1% — экономика в тени войны',
+    date: '2026-04-19',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Международный валютный фонд в апрельском докладе «Перспективы развития мировой экономики» под названием «Глобальная экономика в тени войны» прогнозирует замедление мирового роста до 3,1% в 2026 году и лишь 3,2% в 2027 году. Доклад был опубликован 14 апреля 2026 года; министры финансов завершили весенние сессии МВФ и Всемирного банка в Вашингтоне в выходные, 19 апреля.
+
+## Инфляция и развивающиеся экономики
+
+По оценке фонда, глобальная общая инфляция в 2026 году умеренно вырастет, прежде чем возобновить снижение в 2027 году. МВФ подчёркивает, что замедление и возобновление инфляционного давления особенно ощутимо скажутся на развивающихся экономиках и странах с формирующимся рынком. Издание Investing отмечает, что это может усложнить задачи центральных банков в этих странах.
+
+## Риски преобладают
+
+В докладе фонд указывает, что риски смещены в сторону ухудшения. Ключевые угрозы: расширение или продолжение ближневосточного конфликта, геополитическая фрагментация, возможный пересмотр оптимистичных предпосылок о вкладе ИИ в производительность и возобновление торговой напряжённости. Фонд напрямую называет нынешний отчёт написанным «в тени войны».
+
+## Контекст весенних сессий
+
+Весенние сессии МВФ и Всемирного банка 2026 года проходили вокруг публикации доклада и завершились к 19 апреля. В рамках сессий обсуждались вопросы глобальной финансовой стабильности и долговой нагрузки развивающихся стран. Конкретные оценки по отдельным странам содержатся в статистическом приложении к WEO.`,
+  },
+
+  // --- Topic 7 part 1: NBA Sunday Game 1 slate ---
+  'nba-pley-off-seltiks-san-der-oyun-1-qelebeler-19-aprel': {
+    title: 'NBA pley-off: Seltiks və Tander Oyun 1-də əzici qələbələr qazandı',
+    date: '2026-04-19',
+    category: 'İdman',
+    locale: 'az',
+    content: `2026 NBA pley-offlarının ilk turu 19 aprel bazar günü bir sıra əzici açılış nəticələri ilə davam etdi. Boston Seltiks Filadelfiya 76ers komandasını 123-91 hesabı ilə darmadağın etdi, müdafiə edən çempion Oklahoma-Siti Tander isə Feniks Sanz-ı 119-84 hesabı ilə yola saldı. Seyson Teytum keçən mövsümdəki Axilles qopuğundan sonrakı ilk pley-off oyununda möhtəşəm performans göstərdi, Şey Gilgeus-Aleksander isə Tander üçün hücumu öndə apardı.
+
+## Seltiks və Tander açılışı
+
+Boston oyununda Seyson Teytum 25 xal, 11 ribaund və 7 ötürmə qeydə aldı — bu, onun keçən mövsümdə sağ Axilles vətərini qopartdıqdan sonrakı ilk pley-off görüşü idi. Ceylen Braun 26 xal topladı. Filadelfiyadan Tayriz Maksey 21 xal və 8 ötürmə ilə qarşı tərəfin lideri oldu, Joel Embid isə oyunda iştirak etmədi. Seltiks görüş boyu heç bir anda arxada olmadı və maksimum üstünlüyü 35 xal oldu. Oklahoma-Siti görüşündə Şey Gilgeus-Aleksander 25 xal, Jalen Uilyams 22 xal, Çet Holmgren isə 16 xal topladı — müdafiə edən çempion titulun qorunmasına əzici açılış ilə start verdi.
+
+## Bazar günü slaytı geniş miqyaslı
+
+NBA.com həmçinin qeyd etdi ki, Orlando Macik və San-Antonio Sparz da həmin bazar günü 1-0 vəziyyəti ilə seriyaya başladılar. Bütün dörd oyun 19 aprel bazar günü keçirildi. Birinci turda hər seriya yeddi oyunluq formatdadır. Oyun 2 matçları isə bazar ertəsindən başlayaraq pley-offun ikinci günündə keçirildi və ayrıca nəticələr verdi.`,
+  },
+  'en-nba-playoffs-game-1-sunday-slate-april-19': {
+    title: `NBA Playoffs: Celtics, Thunder Blow Out Game 1 Openers on Sunday`,
+    date: '2026-04-19',
+    category: 'Sports',
+    locale: 'en',
+    content: `The 2026 NBA Playoffs rolled on with a pair of lopsided Game 1 openers on Sunday, as the Boston Celtics and reigning champion Oklahoma City Thunder each dismantled their first-round opponents at home.
+
+## Celtics 123, 76ers 91
+
+Boston never trailed and at one point led by 35, cruising to a 123-91 win over the Philadelphia 76ers. Jayson Tatum led the way with 25 points, 11 rebounds and 7 assists in his first playoff game since rupturing his right Achilles tendon last season, according to ESPN and NBA.com. Jaylen Brown added 26 points.
+
+Tyrese Maxey led Philadelphia with 21 points and 8 assists. Joel Embiid did not play. The series opener renewed one of the NBA's storied Eastern Conference rivalries, and Boston's wire-to-wire control set the tone for the best-of-seven.
+
+## Thunder 119, Suns 84
+
+Oklahoma City opened the defense of its title with a 119-84 rout of the Phoenix Suns. Shai Gilgeous-Alexander led the Thunder with 25 points, Jalen Williams added 22 and Chet Holmgren chipped in 16, NBA.com reported. The defending champions took control early and never let Phoenix back into the game.
+
+## More series begin
+
+NBA.com noted that the Orlando Magic and San Antonio Spurs also moved to 1-0 on Sunday's slate, joining Boston and Oklahoma City in early series leads. The busy first-round schedule continued into Monday with Game 2s across several series, where upsets and comebacks would reshape the early playoff narrative.`,
+  },
+  'tr-nba-playoffs-pazar-oyun-1-celtics-thunder-19-nisan': {
+    title: `NBA Playoffs: Celtics ve Thunder Oyun 1'lerde farklı kazandı`,
+    date: '2026-04-19',
+    category: 'Spor',
+    locale: 'tr',
+    content: `2026 NBA Playoffs ilk turu, 19 Nisan 2026 Pazar günü oynanan Oyun 1 maçlarıyla devam etti. Boston Celtics, Philadelphia 76ers'ı 123-91 mağlup ederken; mevcut şampiyon Oklahoma City Thunder, Phoenix Suns'ı 119-84'lük farkla yendi. Celtics yıldızı Jayson Tatum, geçen sezonki sağ Aşil tendonu kopması sonrası ilk playoff maçına 25 sayı, 11 ribaund ve 7 asistle başladı. Thunder tarafında ise Shai Gilgeous-Alexander 25 sayı attı ve şampiyon ekip, başarılı bir unvan savunması açılışı yaptı.
+
+## Celtics 76ers'ı Ezdi: Tatum Geri Döndü
+
+Celtics, karşılaşma boyunca hiç geri düşmedi ve oyun içinde 35 sayılık farka kadar ulaştı. Jayson Tatum, geçen sezon yaşadığı sağ Aşil tendonu yırtığından sonra ilk playoff maçında 25 sayı, 11 ribaund ve 7 asistlik çift çift performansı sergiledi. Jaylen Brown 26 sayı kaydetti. Philadelphia tarafında Tyrese Maxey 21 sayı ve 8 asist üretti; yıldız pivot Joel Embiid ise karşılaşmada oynamadı. NBA.com'a göre aynı Pazar dilimde Magic ve Spurs da serilerine 1-0 önde başladı.
+
+## Thunder'dan Unvan Savunması Açılışı
+
+Oklahoma City, savunan şampiyon olarak sahaya çıktığı Phoenix Suns karşısında 119-84 kazandı. Shai Gilgeous-Alexander 25 sayı, Jalen Williams 22 sayı ve Chet Holmgren 16 sayıyla katkı verdi. Skorun erken açılması, Thunder'ın savunma baskısı ve turnuva deneyiminin toplamının yansıması olarak değerlendirildi. Her iki seri de yedi maçlık en iyi dördü bulan formatta sürüyor. Bu maçlar, Cumartesi günü yapılan Oyun 1'lerin (Cavaliers, Nuggets, Knicks, Lakers galibiyetleri) devamı niteliğinde.`,
+  },
+  'ru-nba-play-off-igra-1-seltiks-tander-19-aprel': {
+    title: 'NBA: «Селтикс» и «Тандер» громко открыли плей-офф в воскресенье',
+    date: '2026-04-19',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Первый раунд плей-офф NBA 2026 года продолжился в воскресенье, 19 апреля, серией уверенных побед фаворитов. «Бостон Селтикс» разгромил «Филадельфию 76ers» со счётом 123:91, а действующий чемпион «Оклахома-Сити Тандер» не оставил шансов «Финикс Санз» — 119:84. По данным ESPN, NBA.com и Anchorage Daily News, это были матчи воскресного расписания, и оба матча прошли с явным преимуществом хозяев.
+
+## Бостон — Филадельфия 123:91
+
+Лидер «Селтикс» Джейсон Тейтум провёл первый матч плей-офф после разрыва правого ахиллова сухожилия в прошлом сезоне и набрал 25 очков, 11 подборов и 7 передач. Джейлен Браун добавил 26 очков, тогда как Тайриз Макси записал 21 очко и 8 передач у «Филадельфии». Джоэл Эмбиид в матче не участвовал. «Бостон» ни разу не уступал по ходу игры и в один момент вёл с разницей в 35 очков.
+
+## Оклахома — Финикс 119:84
+
+Чемпионы стартовали с защитой титула уверенно. Шэй Гилджес-Александер набрал 25 очков, Джейлен Уильямс — 22, Чет Холмгрен добавил 16. «Тандер» разгромил «Финикс» с первых минут и легко контролировал встречу до финальной сирены.
+
+## Другие первые игры
+
+По сообщению NBA.com, в тот же воскресный день 1:0 в своих сериях повели «Орландо Мэджик» и «Сан-Антонио Сперс». Таким образом, день задал высокий темп для всего первого раунда плей-офф.`,
+  },
+
+  // --- Topic 8: Coachella 2026 Karol G historic close ---
+  'coachella-karol-g-ilk-latina-hedlayneri-tropicoqueta-turu-19-aprel': {
+    title: 'Coachella 2026: Karol G ilk Latina hedlayneri olaraq festivalı bağladı',
+    date: '2026-04-19',
+    category: 'Mədəniyyət',
+    locale: 'az',
+    content: `Kolumbiyalı məşhur musiqiçi Karol G 19 aprel 2026-cı il bazar gecəsi 2026 Koaçella Vadisi Musiqi və İncəsənət Festivalının ikinci həftəsonunu bağladı və beləliklə İndio, Kaliforniyada keçirilən festivalın hedlayneri olan ilk Latina icraçıya çevrildi. Onun bazar gecəsi çıxışı yerli vaxtla saat 22:10-da başladı. Karol G səhnəyə sürpriz qonaqlar olaraq J Balvin, Peso Pluma, Becky G və Ryan Castro-nu dəvət etdi və çıxış zamanı dördüncü studio albomu "Tropicoqueta"nı dəstəkləyən qlobal turu elan etdi.
+
+## Festivalın yekunu və hedlaynerlər
+
+2026 Coachella 10-19 aprel tarixlərində İndio, Kaliforniyanın Empire Polo Club-ında iki həftəsonu formatında keçirildi. Hər iki həftəsonun hedlaynerləri Sabrina Karpenter, Cüstin Biber və Karol G oldular. Karol G həm birinci, həm də ikinci həftəsonu festivalı bağlayaraq birinci Latina hedlayner titulunu iki dəfə təsdiqlədi. Billboard bütün üç hedlayner üçün "Coachella chart bump"-un qeydə alındığını bildirdi — üçü də festivalın ardından Billboard 200-də sıçrayış yaşadı.
+
+## Sürpriz qonaqlar və turun elanı
+
+Karol G ikinci həftəsonu çıxışında səhnəyə J Balvin, Peso Pluma, Becky G və Ryan Castro-nu dəvət etdi. Bu dörd sürpriz qonaq Rolling Stone və Complex tərəfindən təsdiqlənib. Çıxış əsnasında Karol G 2026-cı il ərzində başlayacaq qlobal turu elan etdi — tur onun dördüncü studio albomu "Tropicoqueta"ya dəstək olaraq təşkil olunub.`,
+  },
+  'en-coachella-karol-g-historic-close-april-19': {
+    title: `Karol G Closes Coachella 2026 as First Latina Headliner`,
+    date: '2026-04-19',
+    category: 'Culture',
+    locale: 'en',
+    content: `Colombian superstar Karol G closed out the 2026 Coachella Valley Music and Arts Festival on Sunday night, becoming the first Latina artist ever to headline the Indio, California festival and announcing a world tour in support of her fourth studio album, "Tropicoqueta."
+
+## A historic headlining slot
+
+Karol G took the Coachella main stage at 10:10 pm PT on Sunday, April 19, Timeout LA reported, capping the second and final weekend of the festival at the Empire Polo Club. Her ascent to a Coachella headline slot makes her the first Latina artist to hold the honor, a milestone the festival has moved toward over the past several editions but only formalized this year.
+
+Across the two weekends of the 2026 edition, which ran April 10-19, Sabrina Carpenter, Justin Bieber and Karol G split the three headline slots. Billboard subsequently reported a Coachella chart bump for all three on its Billboard 200 chart.
+
+## Surprise guests turn the set into a Latin showcase
+
+During her Weekend 2 closer, Karol G brought out J Balvin, Peso Pluma, Becky G and Ryan Castro as surprise guests, turning the set into a wide-ranging showcase of contemporary Latin pop and reggaeton, Rolling Stone and Complex reported. Each guest joined for a cameo before Karol G returned to her own catalog.
+
+## A tour announcement caps the night
+
+Midway through the set, Karol G used the Coachella stage to announce a global tour in support of "Tropicoqueta," her fourth studio album, per Rolling Stone. Dates for the tour were teased during the show, with formal routing expected to follow.
+
+For Coachella, which has increasingly leaned into pop and global-music programming, the Karol G close punctuates a festival cycle that drew praise for the diversity of its headline bookings and underscored the mainstreaming of Latin music at the largest Western festivals.`,
+  },
+  'tr-coachella-2026-karol-g-ilk-latina-headliner-19-nisan': {
+    title: `Coachella 2026: Karol G, festivali ilk Latina headliner olarak kapattı`,
+    date: '2026-04-19',
+    category: 'Kültür',
+    locale: 'tr',
+    content: `Kolombiyalı süperstar Karol G, 19 Nisan 2026 Pazar gecesi düzenlenen kapanış sahnesiyle 2026 Coachella Valley Müzik ve Sanat Festivali'ni tamamladı ve bu anlamda Indio, California festivalinde baş sahneyi üstlenen ilk Latina sanatçı oldu. Coachella'nın ikinci hafta sonu kapanış gecesinde, 22.10'da başlayan setinde Karol G; J Balvin, Peso Pluma, Becky G ve Ryan Castro'yu sürpriz konuklar olarak sahneye çıkardı. Karol G, aynı sette dördüncü stüdyo albümü "Tropicoqueta"yı destekleyecek küresel bir turneyi de duyurdu.
+
+## Festival Takvimi ve Headliner Kadrosu
+
+2026 Coachella, 10-19 Nisan tarihleri arasında Empire Polo Club'da (Indio, California) iki hafta sonu boyunca gerçekleşti. Her iki hafta sonunda festivalin baş sahnesinde üç headliner yer aldı: Sabrina Carpenter, Justin Bieber ve Karol G. Karol G, ilk hafta yaşadığı tarihi başarıyı ikinci hafta da tekrarlayarak Coachella'nın baş sahnesine çıkan ilk Latina sanatçı kimliğini pekiştirdi.
+
+## Sürpriz Konuklar ve Tropicoqueta Turnesi
+
+Karol G'nin 22.10'da (PT) başlayan kapanış setinde dört sürpriz konuk yer aldı: J Balvin, Peso Pluma, Becky G ve Ryan Castro. Karol G, dördüncü stüdyo albümü "Tropicoqueta"yı destekleyecek bir küresel turne duyurusunu festival sahnesinden yaptı. Billboard, üç Coachella headliner'ı (Carpenter, Bieber ve Karol G) için "Coachella çıkışı" olarak adlandırılan Billboard 200 listesinde yukarı doğru bir hareket bildirdi. Karol G'nin gerçek adı Carolina Giraldo Navarro olup Medellín, Kolombiya doğumlu bir sanatçıdır.`,
+  },
+  'ru-coachella-karol-g-pervaia-latina-hedlayner-19-aprel': {
+    title: 'Coachella 2026: Karol G стала первой латиной-хедлайнером',
+    date: '2026-04-19',
+    category: 'Культура',
+    locale: 'ru',
+    content: `Колумбийская суперзвезда Karol G закрыла фестиваль Coachella 2026 в воскресенье вечером, 19 апреля 2026 года, став первой латиноамериканской артисткой, когда-либо возглавлявшей лайнап фестиваля в Индио, Калифорния. Её выход в хедлайнерском слоте второго уикенда начался в 22:10 по тихоокеанскому времени. Во время сета Karol G пригласила на сцену J Balvin, Peso Pluma, Becky G и Ryan Castro.
+
+## Исторический момент
+
+По данным Timeout LA, Art Threat и Rolling Stone, Karol G впервые возглавила Coachella ещё в первый уикенд и повторила это достижение во втором. Фестиваль 2026 года проходил с 10 по 19 апреля на территории Empire Polo Club в калифорнийском Индио. Его хедлайнерами двух уикендов были Sabrina Carpenter, Justin Bieber и Karol G.
+
+## Сюрпризы и анонс тура
+
+Rolling Stone и Complex сообщают, что во время выступления Karol G объявила о мировом туре в поддержку своего четвёртого студийного альбома «Tropicoqueta». Сцена, на которой одновременно оказались сама Karol G, Джей Балвин, Peso Pluma, Becky G и Ryan Castro, стала одной из самых обсуждаемых за весь фестивальный уикенд.
+
+## Эффект Coachella в чартах
+
+Издание Billboard зафиксировало традиционный «эффект Coachella» в чарте Billboard 200: продажи и стримы Sabrina Carpenter, Justin Bieber и Karol G выросли после выступлений на фестивале. Для Karol G хедлайнерство стало не только артистической вехой, но и подтверждением статуса одной из самых заметных фигур глобальной латинской поп-сцены.`,
+  },
+
   // ========== 2026-04-18 ==========
 
   // --- Iran closes Strait of Hormuz again, fires on ships ---
