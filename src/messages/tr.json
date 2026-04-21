@@ -33,7 +33,7 @@
     "statAvailability": "Erişilebilirlik",
     "marketTitle": "Piyasa Fiyatları",
     "marketViewAll": "Tümünü gör",
-    "heroTagline": "Vaxtim yoxdu — ama her şey hazır",
+    "heroTagline": "Vaktınız yok mu? Biz varız — her şey hazır",
     "trustStrip": "105+ ücretsiz araç | 4 dil | Kayıt gerekmez | 100% tarayıcı tabanlı",
     "toolOfTheDay": "Günün Aracı",
     "tryNow": "Şimdi dene",
@@ -582,6 +582,7 @@
     "sectionsTitle": "Bölümler",
     "legalTitle": "Yasal",
     "copyright": "Tüm hakları saklıdır.",
+    "brandTagline": "Zamanınız yok mu? Biz varız — ücretsiz çevrimiçi araçlar ve kısa haberler.",
     "newsletter": {
       "title": "Yeniliklerden haberdar olun",
       "placeholder": "E-posta adresinizi girin",
@@ -1300,5 +1301,20 @@
       "generators": "Üretecler",
       "other": "Diğer"
     }
+  },
+  "hero": {
+    "headlineAccent": "111 araç.",
+    "headlineRest": "Tek sitede. Kayıt yok.",
+    "subhead": "PDF, AI, image, code — zaman tasarrufu sağlayan ücretsiz araçlar.",
+    "ctaPrimary": "Araçlara göz atın",
+    "ctaSecondary": "Haberler",
+    "trustLabel": "Sitenin temel avantajları",
+    "trustNoSignup": "Kayıt gerektirmez",
+    "trustLanguages": "4 dilde",
+    "trustFree": "100% ücretsiz",
+    "statsLabel": "Site istatistikleri",
+    "statTools": "Online araç",
+    "statLanguages": "Dil desteği",
+    "statCost": "Hiçbir maliyet"
   }
 }

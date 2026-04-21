@@ -39,10 +39,19 @@ export const viewport = {
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || ''
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID || ''
 
+const BRAND_ALTERNATE_NAMES = [
+  'Vaxtım Yoxdu',
+  'Vaxtım Yoxdur',
+  'Vaxtim Yoxdur',
+  'Vaxtımız Yoxdur',
+  'Vaxtımım Yoxdur',
+]
+
 const jsonLdWebsite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Vaxtim Yoxdu',
+  alternateName: BRAND_ALTERNATE_NAMES,
   url: 'https://vaxtimyoxdu.com',
   description: 'Vaxtınız yoxdursa, biz varıq. Qısa xəbər xülasələri və pulsuz AI onlayn alətlər.',
   inLanguage: ['az', 'en', 'tr', 'ru'],
@@ -52,10 +61,13 @@ const jsonLdOrganization = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Vaxtim Yoxdu',
+  alternateName: BRAND_ALTERNATE_NAMES,
   url: 'https://vaxtimyoxdu.com',
   logo: 'https://vaxtimyoxdu.com/logo.png',
-  description: 'Qısa xəbərlər və pulsuz onlayn alətlər - Azərbaycan',
-  sameAs: [],
+  description: 'Vaxtınız yoxdursa, biz varıq. Qısa xəbərlər və pulsuz onlayn alətlər - Azərbaycan',
+  sameAs: [
+    'https://www.instagram.com/vaxtimyoxdu_',
+  ],
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'hello@vaxtimyoxdu.com',

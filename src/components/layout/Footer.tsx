@@ -177,6 +177,8 @@ export default async function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
           &copy; <CurrentYear /> {common('siteName')}. {t('copyright')}
+          <span className="sr-only"> Vaxtım Yoxdu, Vaxtım Yoxdur, Vaxtımız Yoxdur, Vaxtim Yoxdur.</span>
+          <p className="mt-2 text-xs italic">{t('brandTagline')}</p>
         </div>
       </div>
     </footer>

@@ -17,7 +17,7 @@ export function generateBaseMetadata(): Metadata {
   return {
     title: `${SITE_NAME} - Qısa Xəbərlər və Pulsuz Onlayn Alətlər`,
     description: 'Vaxtınız yoxdursa, biz varıq. Gündəlik xəbər xülasələri, pulsuz AI alətləri, PDF birləşdirici, şəkil sıxma, QR kod yaradıcı və daha çox.',
-    keywords: 'vaxtim yoxdu, xəbərlər, online tools, ai tools, pdf merger, image compressor, qr code generator, azərbaycan',
+    keywords: 'vaxtim yoxdu, vaxtım yoxdu, vaxtım yoxdur, vaxtim yoxdur, vaxtımız yoxdur, vaxtımım yoxdur, xəbərlər, pulsuz onlayn alətlər, AI alətləri, PDF birləşdirici, şəkil sıxma, QR kod generatoru, azərbaycan, azerbaijani tools',
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
     verification: {
       google: [

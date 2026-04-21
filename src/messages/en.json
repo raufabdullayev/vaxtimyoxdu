@@ -33,7 +33,7 @@
     "statAvailability": "Availability",
     "marketTitle": "Market Prices",
     "marketViewAll": "View all",
-    "heroTagline": "No time — but everything is ready",
+    "heroTagline": "No time? We're here — everything is ready",
     "trustStrip": "105+ free tools | 4 languages | No registration needed | 100% browser-based",
     "toolOfTheDay": "Tool of the Day",
     "tryNow": "Try now",
@@ -582,6 +582,7 @@
     "sectionsTitle": "Sections",
     "legalTitle": "Legal",
     "copyright": "All rights reserved.",
+    "brandTagline": "No time to waste? We're here — free online tools and quick news.",
     "newsletter": {
       "title": "Stay up to date",
       "placeholder": "Enter your email address",
@@ -1300,5 +1301,20 @@
       "generators": "Generators",
       "other": "Other"
     }
+  },
+  "hero": {
+    "headlineAccent": "111 tools.",
+    "headlineRest": "One site. No signup.",
+    "subhead": "PDF, AI, image, code — free tools that save your time.",
+    "ctaPrimary": "Browse tools",
+    "ctaSecondary": "News",
+    "trustLabel": "Key site benefits",
+    "trustNoSignup": "No signup required",
+    "trustLanguages": "4 languages",
+    "trustFree": "100% free",
+    "statsLabel": "Site statistics",
+    "statTools": "Online tools",
+    "statLanguages": "Languages",
+    "statCost": "No cost"
   }
 }

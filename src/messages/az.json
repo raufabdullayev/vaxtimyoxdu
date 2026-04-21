@@ -33,7 +33,7 @@
     "statAvailability": "Əlçatanlıq",
     "marketTitle": "Bazar Qiymətləri",
     "marketViewAll": "Hamısına bax",
-    "heroTagline": "Vaxtım yoxdu — amma hər şey hazırdır",
+    "heroTagline": "Vaxtınız yoxdur? Biz varıq — hər şey hazırdır",
     "trustStrip": "105+ pulsuz alət | 4 dil | Qeydiyyat lazım deyil | 100% brauzer əsaslı",
     "toolOfTheDay": "Günün Aləti",
     "tryNow": "İndi sına",
@@ -582,6 +582,7 @@
     "sectionsTitle": "Bölmələr",
     "legalTitle": "Hüquqi",
     "copyright": "Bütün hüquqlar qorunur.",
+    "brandTagline": "Vaxtınız yoxdursa, biz varıq — pulsuz onlayn alətlər və qısa xəbərlər.",
     "newsletter": {
       "title": "Yeniliklərdən xəbərdar olun",
       "placeholder": "Email ünvanınızı daxil edin",
@@ -1300,5 +1301,20 @@
       "generators": "Generatorlar",
       "other": "Digər"
     }
+  },
+  "hero": {
+    "headlineAccent": "111 alət.",
+    "headlineRest": "Bir saytda. Qeydiyyat yox.",
+    "subhead": "PDF, AI, image, code — vaxt qənaət edən pulsuz alətlər.",
+    "ctaPrimary": "Alətləri görün",
+    "ctaSecondary": "Xəbərlər",
+    "trustLabel": "Saytın əsas üstünlükləri",
+    "trustNoSignup": "Qeydiyyat tələb olunmur",
+    "trustLanguages": "4 dildə",
+    "trustFree": "100% pulsuz",
+    "statsLabel": "Sayt statistikası",
+    "statTools": "Onlayn alət",
+    "statLanguages": "Dil dəstəyi",
+    "statCost": "Heç bir xərc"
   }
 }
