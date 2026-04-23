@@ -1,8 +1,12 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-23 (Session 33 — 10 HIGH topics + 40 articles for Apr 22, TAM DEPLOY ✅)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 33 commit-i deploy olunub)
-**Son commit:** 3ac9b7b (content(news): add Apr 22 topics — 40 articles × 4 locales)
+**Son yenilənmə:** 2026-04-23 (Session 33 — Batch 1 + Batch 2: 18 topics, 72 articles for Apr 22-23, TAM DEPLOY ✅)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 33 Batch 2 commit-i deploy olunub)
+**Son commit:** e07147f (content(news): add Apr 23 topics — 32 articles × 4 locales, Batch 2)
+**Session 33 commit chain:**
+- 3ac9b7b — content(news): add Apr 22 topics (40 articles, Batch 1)
+- e108e9d — docs: Session 33 state update
+- e07147f — content(news): add Apr 23 topics (32 articles, Batch 2)
 **Əvvəlki session commit:** e33a3c1 (docs: Session 32 brand SEO monitoring docs)
 
 ## 🔗 Bağlantılı Fayllar
@@ -22,14 +26,14 @@
 |----------|--------|
 | **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 |
 | **Deploy** | ✅ Vercel aktiv |
-| **GitLab + GitHub** | ✅ Synced (3ac9b7b) |
+| **GitLab + GitHub** | ✅ Synced (e07147f) |
 | **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | 3ac9b7b (S33 Apr 22 news — 40 articles) |
-| **Testlər** | **4542** PASS (vitest, S33: +160) |
+| **Son commit** | e07147f (S33 Batch 2 Apr 23 — 32 articles) |
+| **Testlər** | **4670** PASS (vitest, S33 total: +288) |
 | **E2E** | **30 fayl** (18 yeni Sprint 3-də) |
-| **Statik səhifələr** | **~2140** (S33: 1980→2140, +160) |
+| **Statik səhifələr** | **~2268** (S33 total: 1980→2268, +288) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **368** (92/locale — S33: +40 yeni) |
+| **Xəbərlər** | **400** (100/locale — S33 total: +72 yeni: 40 Batch1 + 32 Batch2) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
@@ -59,7 +63,62 @@
 
 ## Son 3 Sessiya
 
-### Session 33 (2026-04-23) — News Refresh: 10 HIGH topics for Apr 22 (40 articles, 4-stage QA)
+### Session 33 Batch 2 (2026-04-23) — News Refresh Today-only: 8 HIGH topics for Apr 23 (32 articles)
+
+**Tapshiriq:** CEO: "04-23 üçün xəbər yoxdur" (batch 1-də yalnız 04-22 idi). 04-23 event date HIGH xəbərləri tap.
+
+**Komanda:** 10 agent (1 researcher + 4 writer + 3 QA + 1 fix + PO integration).
+
+**Research:** 8 HIGH 04-23 topic tapıldı, 13 dropped. 04-23 açıqca görünən hadisələr: Papa Leo XIV Afrika turu bitişi, Dnipro dron (3 ölü, 2 uşaq), SBU Gorky NPS zərbəsi, EU 20-ci sanksiya + 90B€ loan, Amex/Honeywell/AAL Q1 earnings, Dallas Stars NHL G3 2OT.
+
+**4 writer:** 32 məqalə. **Discipline yaxşılaşıb:** AZ 6 title BLOCKING (Batch 1) → 0 BLOCKING (Batch 2). TR writer cosmetic sorun → fix.
+
+**3 QA:**
+- QA-A: 0 BLOCKING, 5 MINOR
+- QA-B: 0 BLOCKING, 5 MINOR (AZ 60-75 range heuristic)
+- QA-C: **4-5 BLOCKING (uydurmalar tutuldu!)** + 31 MINOR
+  - EN T2 Dnipro: fabricated city-official quote → silindi
+  - TR T2 Dnipro: fabricated Ukrainian-official comparison → silindi
+  - TR T4 EU sanctions: fabricated Brussels source → əvəz edildi
+  - RU T2 Dnipro: fabricated ГСЧС rescue scene → silindi
+  - RU T8 NHL: invented Game 4 home-ice claim → silindi (NHL 2-2-1-1-1 format)
+
+**Fix:** 35 atomik fix (5 BLOCKING + 30 MINOR), self-verification PASS.
+
+**Integration:** 2 manual Edit (PO), 368 → 400 məqalə, 0 duplicate. tsc clean.
+
+**Test + Build:**
+- vitest 4542 → **4670 PASS** (+128 = 32×4)
+- build 2140 → **2268 statik səhifə** (+128)
+
+**Deploy:** Commit e07147f, GitLab+GitHub synced, Vercel ~2 dəq build, production HTTP 200 × 4 locale doğrulandı, sitemap-da 48 URL 04-23 üçün, /info listing-də ilk 5 kart 04-23.
+
+**Mövzular (04-23, priority sırası):**
+1. Papa Leo XIV Malabo son messə — 11 gün, 4 ölkə, 18,000 km Afrika turu
+2. Rusiya Dnepr yaşayış binasına dron — 3 ölü, 10+ yaralı (2 uşaq 9+14 yaş)
+3. Ukrayna SBU Gorky NPS + Samara neft-kimya → Transneft infrastruktur
+4. EU 20-ci sanksiya + 90 mlrd€ Ukrayna krediti (Hungary/Slovakia Drujba kompromisi)
+5. Amex Q1 rekord: $18.9B gəlir + $3B xalis mənfəət, NFL/NBA deals
+6. Honeywell Q1 EPS beat / revenue miss, HONA spin Q3 2026 təsdiq
+7. American Airlines Q1 rekord gəlir $13.9B amma $267M zərər (İran yanacaq şoku)
+8. NHL Dallas Stars 4-3 Wild (2OT) G3, Johnston game-winner 12:10 deflection
+
+**Lessons (S33 Batch 2):**
+- **Writer discipline improvement:** Batch 1 S32 dərsləri (AZ title ≤75, EN `Technology` not `Tech`, TR ≥3 char) — Batch 2-də **0 BLOCKING** bu kateqoriyada.
+- **QA-C effectiveness:** 5 müxtəlif fabrication tutuldu (fabricated officials quote, fake agency attribution, invented scene, contradicting NHL rule). Source-fact gate hallüsinasiyanı tam filtrlədi.
+- **Integration efficient:** PO birbaşa Edit strategiyası (Batch 1 dərsi) — 0 stall, ~5 dəq-də 2 Edit tətbiq olundu.
+
+**Müddət:** ~2 saat (plan daxilində).
+
+**Dosyalar:**
+- Brief: `docs/agent-reports/news-research-2026-04-23-batch2.md`
+- Writer outputs: `docs/agent-reports/news-writer-output-{az,en,tr,ru}-2026-04-23-batch2.md`
+- QA raportlar: `docs/agent-reports/qa-{a,b,c}-*-2026-04-23-batch2.md`
+- Fix raport: `docs/agent-reports/fix-s33-2026-04-23-batch2.md`
+
+---
+
+### Session 33 Batch 1 (2026-04-23) — News Refresh: 10 HIGH topics for Apr 22 (40 articles, 4-stage QA)
 
 **Tapshiriq:** CEO: bu günün (04-23) və dünənin (04-22) vacib xəbərlərini webdə axtar, sayta əlavə et, yenidən köhnəyə sırala, hərf/cümlə/məntiq test.
 
