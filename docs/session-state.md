@@ -50,6 +50,12 @@
 - 🔜 **Sprint 6** — CSP R&D + Telegram bot + advanced schema
 
 **Qalan işlər:**
+- **🚨 SEO Audit task-ları (2026-04-21 yeni!) — 17 task, ~1.5 həftə:**
+  - **P0 Kritik (2):** Cache-Control fix (HTML `no-store`) + News article `<img>` yox
+  - **P1 Yüksək (5):** Tool metaTitle lokalize, striking distance, NewsArticle image array, HowTo step.name, Twitter @site
+  - **P2 Orta (6):** Sil meta keywords, Organization.sameAs, News↔Tool links, multi-sitemap, homepage H1, breadcrumb item
+  - **P3 Aşağı (4):** article:author, OG cache, Yandex WM, favicon
+  - **Detallı hesabat:** `docs/agent-reports/seo-audit-2026-04-21.md`
 - Yeni alətlər (111 → 135) — Sprint 5
 - Performance/Accessibility audit — Sprint 5
 - JSON-LD schema.org (Sprint 2 scope-dan qalıb?) — yoxlamaq
@@ -62,6 +68,49 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 34 (2026-04-21) — SEO Audit (senior SEO specialist agent, plan mode)
+
+**Tapshiriq:** CEO: "vaxtimyoxdu saytını SEO baxımından yoxla, məsləhətlərini ver".
+
+**Komanda:** 1 agent (seo-specialist, plan mode, 20+ il təcrübə persona).
+
+**Metod:**
+- Real sayt WebFetch: 6 URL (AZ/EN/TR/RU homepage, tool page, news article, blog)
+- Codebase analizi: next.config.js, layout.tsx, sitemap.ts, metadata.ts, json-ld.ts, url.ts, middleware.ts, src/config/tools/*
+- Google Search Console data (həftəlik clicks/impressions/CTR)
+- Schema.org validation (JSON-LD 5+ schema type yoxlandı)
+
+**Tapıntılar:**
+- **Ümumi bal:** 67/100 (orta-yüksək)
+- **17 problem** 4 priorit dərəcəsində: 2 P0 + 5 P1 + 6 P2 + 4 P3
+- **GSC həftəlik trend:** clicks −27%, impressions −36% (narahatlıq doğurur)
+
+**Ən kritik tapıntılar:**
+1. **P0-1 Cache-Control:** 876 SSG səhifə `x-vercel-cache: MISS` — Vercel edge CDN istifadə olunmur (next-intl cookie səbəb). TTFB +200-400ms, crawl budget tükənir. Muhtemel aprel trafik düşməsinin əsas səbəbi.
+2. **P0-2 News images:** `/info/*` səhifələrdə hero `<img>` yox. Google News Top Stories daxil olma bloklanır.
+
+**Ən yüksək ROI:**
+- **P1-2** (tool metaTitle lokalize, 1 gün): 95 tool TR/RU/AZ saytında generic İngilis suffix göstərir. Fix: `titleSuffixByLocale` obyekti. Təsir: TR/RU CTR +15-25%.
+- **P1-3** (striking distance, 4 saat): GSC-də pos 8-15 keyword-lər 0 click alır (`google rəng seçici` 222 impression × 0 click). Title re-write lazım.
+
+**Output:** Tam hesabat `docs/agent-reports/seo-audit-2026-04-21.md` (2500+ söz, hər problem üçün kod nümunəsi, iş yükü tahmini, gözlənilən təsir).
+
+**Müddət:** ~8 dəq agent execution + 15 dəq dokumentasiya update.
+
+**Deploy:** Yalnız docs update (code change yox). Bu task-lar Sprint 5 (ehtimalla) və ya yeni sprint-ə planlanacaq.
+
+**Dosyalar:**
+- Audit raport: `docs/agent-reports/seo-audit-2026-04-21.md`
+- Todo dashboard: `docs/todo-dashboard.html` (17 yeni task əlavə olundu)
+- Bu fayl (session-state.md): Qalan işlər seksiyasına SEO task-ları əlavə olundu
+
+**Lessons:**
+- **Plan mode agent + senior persona çox effektiv** — 8 dəqiqədə tam audit, 5+ schema validation, GSC data istifadəsi
+- **Codebase + real sayt birləşməsi** mühümdür — yalnız code oxumaq `no-store` cache problemini görməzdi
+- **Trafik düşməsi ilə P0-1 arasında korrelasiya var** — düzəlişdən 2-3 həftə sonra impressions bərpası gözlənilir
+
+---
 
 ### Session 33 Batch 2 (2026-04-23) — News Refresh Today-only: 8 HIGH topics for Apr 23 (32 articles)
 

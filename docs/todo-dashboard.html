@@ -48,7 +48,7 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </head>
 <body>
 <h1>vaxtimyoxdu.com</h1>
-<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 23 Aprel 2026 (Session 33 Batch 1+2 — News Refresh 04-22/04-23: 18 topics, 72 articles)</p>
+<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 21 Aprel 2026 (SEO Audit — 17 yeni task: 2 P0, 5 P1, 6 P2, 4 P3)</p>
 
 <div class="links">
 <strong>Bagli fayllar:</strong>
@@ -84,12 +84,19 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="section">
-<h2>CRITICAL (0)</h2>
-<div class="task done"><span class="badge done">-</span><div class="task-text" style="color:#64748b">Helelik CRITICAL problem yoxdur</div></div>
+<h2>CRITICAL (2) — SEO Audit 2026-04-21</h2>
+<div class="task critical">
+<span class="badge critical">P0</span>
+<div class="task-text"><strong>Cache-Control fix — HTML sehifeler `no-store` donur</strong><small>Butun 876 SSG sehife `x-vercel-cache: MISS` — Vercel edge CDN istifade olunmur. TTFB +200-400ms. Sebeb: next-intl middleware `NEXT_LOCALE` cookie-ni her istekde set edir. Fix: next.config.js-de `Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400` + `Vercel-CDN-Cache-Control: max-age=86400`. Is yuku: 3-6 saat. Tesir: TTFB -50%, crawl budget 3-5x. Detal: <code>docs/agent-reports/seo-audit-2026-04-21.md</code> P0-1</small></div>
+</div>
+<div class="task critical">
+<span class="badge critical">P0</span>
+<div class="task-text"><strong>News article-larda &lt;img&gt; tag-i yoxdur — Google News eligibility bloklanir</strong><small>`/info/*` sehifelerde hero image yoxdur (yalniz OG image JSON-LD-de). Google News Top Stories artikl body-de optimised image teleb edir. Merhele 1 (2 saat): API OG image-i hero kimi goster. Merhele 2 (1-2 gun): `heroImage` sahesi + editorial image-ler. Tesir: Google News daxil olma + SERP CTR +30-50%. Detal: audit P0-2</small></div>
+</div>
 </div>
 
 <div class="section">
-<h2>HIGH (2)</h2>
+<h2>HIGH (7)</h2>
 <div class="task high">
 <span class="badge high">HIGH</span>
 <div class="task-text">SEO brand variants monitoring (4 query × 3 engine)<small><strong>Axtar:</strong> vaxtım yoxdu, vaxtim yoxdu, vaxtım yoxdur, vaxtim yoxdur — <strong>hər biri 3 engine-də:</strong> Google, Bing, Yandex. Həftəlik yoxla. Plan: <code>docs/seo-brand-monitoring.md</code>. Checkpoint: Gün 2 (04-22), Gün 7 (04-28), Gün 14 (05-05). Session 32 deploy: 53042c0.</small></div>
@@ -98,10 +105,30 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <span class="badge high">HIGH</span>
 <div class="task-text">Nonce-based CSP migration<small>Sprint 6 R&amp;D — SSG ile uygunsuz. DIQQET: hash + unsafe-inline qoyma! W3C ignore edir, white screen yaradir (P0 incident dersi)</small></div>
 </div>
+<div class="task high">
+<span class="badge high">P1</span>
+<div class="task-text"><strong>Tool metaTitle lokalize et — 95 tool-da generic Ingilis suffix</strong><small>111 tool-dan 95-i TR/RU/AZ saytinda `Free, No Upload Required` gosterir. Fix: `titleSuffixByLocale` + `browserNoteByLocale` obyekti `src/app/[locale]/tools/[slug]/page.tsx`-de. Is yuku: 1 gun. Tesir: TR/RU CTR +15-25%. Detal: audit P1-2</small></div>
+</div>
+<div class="task high">
+<span class="badge high">P1</span>
+<div class="task-text"><strong>Striking distance keyword-ler — pos 8-15, 0 click</strong><small>GSC data: `google reng secici` pos 8.5 × 222 impression × 0 click; `pdf birlesdir` pos 9.3 × 38 × 0. Top 10 keyword ucun meta title re-write (brand adi + USP). Is yuku: 4 saat. Tesir: +20-40 click/ay. Detal: audit P1-3</small></div>
+</div>
+<div class="task high">
+<span class="badge high">P1</span>
+<div class="task-text"><strong>NewsArticle JSON-LD image array (3 aspect ratio)</strong><small>Hazirda tek URL. Google News tek ratiosdan 3 (16:9, 4:3, 1:1) image teleb edir. `json-ld.ts:309` update + `/api/og`-ye `aspect` param. Is yuku: 4 saat. Tesir: Google News gorunme +3x. Detal: audit P1-4</small></div>
+</div>
+<div class="task high">
+<span class="badge high">P1</span>
+<div class="task-text"><strong>HowTo schema step.name generic ("Step 1")</strong><small>`json-ld.ts:90` — rich content HowTo step-lerinin name-i generic. SERP-de "Step 1" meaningless. Fix: ilk cumle slice(60). Is yuku: 2 saat. Tesir: HowTo rich result eligibility. Detal: audit P1-1</small></div>
+</div>
+<div class="task high">
+<span class="badge high">P1</span>
+<div class="task-text"><strong>Twitter @site / @creator + OG subtitle encoding</strong><small>Homepage-de twitter:site yoxdur. OG image subtitle 80 char-dan kesilmelidir. Fix: `metadata.ts` twitter obyekti + `og.ts` slice(80). Is yuku: 1 saat. Tesir: Twitter Cards valid, social trafik +5-10%. Detal: audit P1-5</small></div>
+</div>
 </div>
 
 <div class="section">
-<h2>MEDIUM (5) — Sprint 5 scope</h2>
+<h2>MEDIUM (11) — Sprint 5 scope</h2>
 <div class="task medium">
 <span class="badge medium">MEDIUM</span>
 <div class="task-text">Yeni aletler 111 &rarr; 135<small>AI +6, PDF +6, Image +6 (Sprint 5)</small></div>
@@ -122,10 +149,34 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <span class="badge medium">MEDIUM</span>
 <div class="task-text">AdSense tesdiqi<small>Google tesdiqini gozleyir</small></div>
 </div>
+<div class="task medium">
+<span class="badge medium">P2</span>
+<div class="task-text"><strong>`meta name=keywords` sil (kohnelib, rezqib intel verir)</strong><small>Google 2009-dan ignore edir amma competitor-lar strategiyanizi goruir. HTML size -10% (876 sehife × 200 byte). `metadata.ts` 4 yerde sil. Is yuku: 30 deq. Detal: audit P2-1</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">P2</span>
+<div class="task-text"><strong>`Organization.sameAs` boshdur — Knowledge Graph siqnali yoxdur</strong><small>`src/app/layout.tsx:58` — Instagram + kohne hesablar link. foundingDate + founder elave et. Is yuku: 1 saat. Tesir: Knowledge Panel eligibility, E-E-A-T +5-10 bal. Detal: audit P2-2</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">P2</span>
+<div class="task-text"><strong>News ↔ Tool internal link yoxdur</strong><small>`news-articles.ts`-e `relatedTools?: string[]` elave, PDF xeberi → PDF Merge tool. `NewsRelatedTools` component artiq var. Is yuku: 4 saat. Tesir: Internal equity, tool trafik +15-20%. Detal: audit P2-3</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">P2</span>
+<div class="task-text"><strong>Multi-sitemap index + `news:news` schema</strong><small>876 URL monolith. Google News sitemap-da `xmlns:news` teleb edir. 5 sitemap-a bol: static/tools/news/blog/info-old. Is yuku: 1 gun. Tesir: Google News daxil olma, crawl efficiency. Detal: audit P2-4</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">P2</span>
+<div class="task-text"><strong>Homepage H1 brand-only ("Vaxtım Yoxdu")</strong><small>Non-brand keyword ranking zeif. H1 = "Pulsuz Onlayn Aletler ve Qisa Xeberler". Brand visual logo kimi qalsin. Is yuku: 2 saat. Detal: audit P2-6</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">P2</span>
+<div class="task-text"><strong>BreadcrumbList son item-de `item` URL yoxdur</strong><small>Validation warning. Son ListItem-e current page URL elave. Is yuku: 30 deq. Detal: audit P2-5</small></div>
+</div>
 </div>
 
 <div class="section">
-<h2>LOW (4)</h2>
+<h2>LOW (8)</h2>
 <div class="task low">
 <span class="badge low">LOW</span>
 <div class="task-text">Telegram bot funksionalliq genisletme<small>Sprint 6</small></div>
@@ -141,6 +192,22 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <div class="task low">
 <span class="badge low">LOW</span>
 <div class="task-text">Tool detail SEO advanced schema<small>Sprint 6</small></div>
+</div>
+<div class="task low">
+<span class="badge low">P3</span>
+<div class="task-text">News `article:author` OG metadata<small>`generateArticleMetadata`-de `authors: [{name: "Vaxtim Yoxdu Redaksiyasi", url}]`. 1 saat. Detal: audit P3-1</small></div>
+</div>
+<div class="task low">
+<span class="badge low">P3</span>
+<div class="task-text">`/api/og` aggressive cache<small>`s-maxage=2592000, immutable` guvenli (content-based URL). 30 deq. Detal: audit P3-2</small></div>
+</div>
+<div class="task low">
+<span class="badge low">P3</span>
+<div class="task-text">Yandex Webmaster verification<small>RU trafik choxdur. Manuel qeydiyyat + meta tag. 1 saat. Detal: audit P3-3</small></div>
+</div>
+<div class="task low">
+<span class="badge low">P3</span>
+<div class="task-text">Favicon 15KB → 5-7KB<small>Multi-res ico (16+32). 30 deq. Detal: audit P3-4</small></div>
 </div>
 </div>
 
@@ -165,6 +232,9 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="done-section">
+<h2>Session 34 (2026-04-21) — SEO Audit (senior SEO specialist agent)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Tam SEO audit — 17 problem taplldl (2 P0 + 5 P1 + 6 P2 + 4 P3)<small>Umumi bal 67/100. GSC trafik -27% — 2-3 hefte sonra P0 fix-den sonra berpa gozlenilir. Hesabat: <code>docs/agent-reports/seo-audit-2026-04-21.md</code>. 1.5 hefte cumulative is yuku P0+P1+P2 ucun.</small></div></div>
+
 <h2>Session 33 Batch 2 (2026-04-23) — News Refresh 04-23 (e07147f)</h2>
 <div class="task done"><span class="badge done">DONE</span><div class="task-text">8 HIGH mövzu 04-23 üçün × 4 dil = 32 məqalə<small>Papa Leo XIV Malabo, Dnipro dron, SBU Gorky NPS, EU 20-ci sanksiya + €90B loan, Amex/Honeywell/AAL Q1, NHL Dallas 2OT. 4-5 BLOCKING fabrication QA-C tutuldu, fix. 4670 test PASS, 2268 sehife.</small></div></div>
 
@@ -195,6 +265,7 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <div class="footer">
 Status: AKTIV | Son commit: dc4d7bb (docs: S33 Batch 2 state update) | Vercel deploy: AKTIV<br>
 Production: <a href="https://vaxtimyoxdu.com" style="color:#38bdf8">vaxtimyoxdu.com</a> HTTP 200<br>
+<strong>SEO Audit 2026-04-21:</strong> 67/100 bal, 17 task (2 P0, 5 P1, 6 P2, 4 P3) — <code>docs/agent-reports/seo-audit-2026-04-21.md</code><br>
 Detali: docs/session-state.md
 </div>
 </body>
