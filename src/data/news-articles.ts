@@ -7,6 +7,794 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-22 ==========
+
+  // --- Topic 1: Iran seizes 2 ships in Strait of Hormuz ---
+  'iran-hormuzda-iki-gemi-ele-kecirdi-truce-uzadildi': {
+    title: 'İran Hörmüzdə iki gəmini ələ keçirdi, atəşkəs uzadıldı',
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'az',
+    content: `İranın İnqilab Keşikçiləri Korpusu (İKK) 22 aprel 2026-cı il tarixində Hörmüz boğazında üç gəmiyə atəş açıb və onlardan ikisini ələ keçirib. Hadisə ABŞ Prezidenti Donald Trampın İran ilə atəşkəsi qeyri-müəyyən müddətə uzatdığını elan etməsindən bir neçə saat sonra baş verib.
+
+## Gəmilərə hücum
+
+Al Jazeera və PBS NewsHour-un məlumatına görə, Vanguard Tech şirkətinin idarə etdiyi Liberiya bayrağı altında üzən konteyner gəmisi RPG və avtomatik silah atəşi nəticəsində "körpüsündə ağır zədələr" alıb. Xoşbəxtlikdən, ekipaj arasında itki yoxdur və heyət təhlükəsizdir. Hücumlar Trampın atəşkəsin qeyri-müəyyən uzadılması elanından bir neçə saat sonra reallaşıb, lakin ABŞ lideri İran limanlarının dəniz blokadasının davam edəcəyini vurğulamışdı.
+
+İranın xarici işlər nazirliyinin sözçüsü Esmail Bağayi və İranın Misirdəki missiyası bildirib ki, ABŞ blokadanı ləğv etməyincə, heç bir İran nümayəndə heyəti Pakistanda keçiriləcək danışıqlarda iştirak etməyəcək. Tehran bu qərarını "qəti" adlandırıb.
+
+## Diplomatik donma və bazar reaksiyası
+
+İranın mövqeyi Al Jazeera-nın sitatına əsasən belədir: "Hörmüz boğazından keçən hər hansı gəmi, qab və ya neft tankerləri İKK-nın icazəsi və koordinasiyası ilə hərəkət etməlidir." Bu hadisələr Pakistanın paytaxtı İslamabadda planlaşdırılan danışıqların faktiki olaraq dayandırılmasına səbəb olub, vitse-prezident J.D. Vensin səfəri də ləğv edilib.
+
+Neft bazarlarında sərt reaksiya müşahidə olunub: Brent markalı xam neft təxminən 100 dollar səviyyəsinə qayıdıb, gün ərzində təxminən 3 faiz artım qeydə alınıb. Bu, siyasi atəşkəsin davam etməsinə baxmayaraq, dənizdə eskalasiyanın yeni mərhələyə keçdiyini göstərir.`,
+  },
+  'en-iran-seizes-2-ships-hormuz-trump-extends-ceasefire': {
+    title: `Iran Seizes Two Ships in Hormuz as Ceasefire Extended`,
+    date: '2026-04-22',
+    category: 'World',
+    locale: 'en',
+    content: `Iran's Islamic Revolutionary Guard Corps fired on three vessels and seized two in the Strait of Hormuz on Wednesday, just hours after U.S. President Donald Trump announced an indefinite extension of the U.S.-Iran ceasefire while vowing to maintain the naval blockade on Iranian ports. The incident marked a sharp escalation at sea even as political tensions eased on paper.
+
+## Attack at Sea
+
+A Liberian-flagged container ship operated by Vanguard Tech sustained what Al Jazeera described as "heavy damage to the bridge" after being struck by rocket-propelled grenades and gunfire. The crew was reported safe with no casualties. The two vessels seized by the IRGC were taken into IRGC custody, according to accounts from CNBC, PBS NewsHour and The Washington Post.
+
+Tehran's position, as outlined by Iranian officials, was that "any passage of ships, vessels or oil tankers through the Strait of Hormuz should be with the permission and coordination of the IRGC."
+
+## Talks Collapse in Islamabad
+
+Iran's foreign ministry spokesperson Esmail Baghaei and the Iranian mission in Egypt confirmed that no Iranian delegation would attend the planned negotiations in Pakistan until the U.S. lifts its blockade. Tehran described its decision as "definitive." A trip by U.S. Vice President JD Vance connected to the Islamabad track was cancelled as the diplomatic channel froze.
+
+## Oil Market Reaction
+
+Brent crude spiked back to near $100 per barrel on the news, with multiple outlets reporting a daily rise of roughly three percent. Traders described the day as a reminder that the Strait of Hormuz, through which a significant share of global seaborne oil transits, remains the pivotal chokepoint even when Washington and Tehran signal a pause in direct hostilities.
+
+The events marked a direct follow-up to the previous day's ceasefire announcement and underscored the gap between political commitments and conditions on the water.`,
+  },
+  'tr-iran-hormuz-bogazinda-iki-gemiyi-ele-gecirdi-ateskes-uzatildi': {
+    title: `İran Hormuz'da iki gemiyi ele geçirdi, ateşkes uzatıldı`,
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `22 Nisan 2026 Çarşamba günü İran Devrim Muhafızları (IRGC) Hormuz Boğazı'nda üç gemiye ateş açtı ve iki gemiyi ele geçirdi. Olay, ABD Başkanı Donald Trump'ın ateşkesi süresiz olarak uzattığını ve İran limanlarına uygulanan deniz ablukasının süreceğini açıklamasından sadece birkaç saat sonra yaşandı. Bu gelişme, bir önceki gün tarafların siyasi düzeyde sağladığı yumuşama ile sahadaki askeri tırmanma arasındaki keskin kopukluğu ortaya koydu.
+
+## Saldırının ayrıntıları
+
+Al Jazeera'nın aktardığına göre Vanguard Tech tarafından işletilen Liberya bayraklı bir konteyner gemisi, RPG ve makineli tüfek ateşi sonucu köprü üstünde ağır hasar gördü. Can kaybı yaşanmadı ve mürettebat güvende. PBS NewsHour'un aktardığına göre IRGC, toplamda üç gemiye ateş açtı ve ikisini alıkoydu. İran Dışişleri Bakanlığı sözcüsü Esmail Baghaei ile İran'ın Mısır'daki misyonu, ABD ablukayı kaldırmadığı sürece Pakistan'da yapılacak müzakerelere heyet gönderilmeyeceğini duyurdu. Tahran kararını "kesin" olarak nitelendirdi ve ABD Başkan Yardımcısı JD Vance'in İslamabad ziyareti iptal edildi.
+
+## Piyasalara etkisi ve İran'ın tutumu
+
+Saldırıların ardından Brent ham petrolün varil fiyatı yaklaşık 100 dolar civarına yükseldi ve gün içinde yüzde üç civarında arttı. Piyasalarda ani oynaklık yaşandı; ancak Wall Street, Trump'ın ateşkes kararı ve güçlü şirket bilançoları sayesinde gün sonunda yeni rekorlar kırdı. İran'ın resmi tutumuna göre "Hormuz Boğazı'ndan herhangi bir gemi, tanker veya petrol gemisinin geçişi IRGC'nin izni ve koordinasyonu ile olmalıdır". Bu açıklama, siyasi ateşkes uzatılmasına rağmen deniz trafiğindeki gerilimin çözümden uzak kaldığını gösteriyor ve bölgesel enerji güvenliği üzerindeki riskleri kalıcı hale getiriyor.`,
+  },
+  'ru-iran-zakhvatil-dva-sudna-v-ormuzskom-prolive-peremirie-prodleno': {
+    title: 'Иран захватил два судна в Ормузском проливе',
+    date: '2026-04-22',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Корпус стражей исламской революции (IRGC) в среду, 22 апреля 2026 года, обстрелял три судна в Ормузском проливе и захватил два из них. Инцидент произошёл через несколько часов после того, как президент США Дональд Трамп объявил о бессрочном продлении перемирия с Ираном, но подтвердил сохранение морской блокады иранских портов.
+
+## Нападение на суда
+
+По данным Al Jazeera, контейнеровоз под либерийским флагом, управляемый компанией Vanguard Tech, получил тяжёлые повреждения капитанского мостика в результате обстрела из ручных гранатомётов и стрелкового оружия. Жертв среди экипажа нет, все члены команды в безопасности. PBS NewsHour и CNBC подтвердили, что под огонь попали три судна, а два из них были захвачены иранской стороной. Инциденты подчёркивают сохранение высокого уровня рисков в одном из ключевых транспортных коридоров мировой торговли нефтью.
+
+## Дипломатический тупик
+
+Представитель МИД Ирана Эсмаил Багаи и иранская миссия в Египте заявили, что иранская делегация не примет участия в переговорах в Пакистане до тех пор, пока США не снимут блокаду. Тегеран назвал это решение окончательным. Поездка вице-президента США Джей Ди Вэнса в Исламабад была отменена.
+
+## Реакция рынков
+
+Цены на нефть марки Brent поднялись до уровня около 100 долларов за баррель на фоне эскалации. Иран заявил, что любое прохождение судов, танкеров и нефтеналивных судов через Ормузский пролив должно происходить только с разрешения и координации IRGC. Ситуация на море контрастирует с политическим объявлением о продлении перемирия и указывает на затяжной характер кризиса в регионе.`,
+  },
+
+  // --- Topic 2: US stocks record highs ---
+  'bazarlar-rekord-atesh-kesilme-uzadildi-22-aprel': {
+    title: 'ABŞ birjaları rekord vurdu — atəşkəs uzadıldı, Nasdaq tarixi zirvədə',
+    date: '2026-04-22',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `ABŞ fond bazarları 22 aprel 2026-cı ildə yeni rekordlar qeydə alıb. Prezident Donald Trampın İran ilə atəşkəsi qeyri-müəyyən müddətə uzatması və güclü korporativ hesabatlar investorların nikbinliyini artırıb.
+
+## Əsas indekslər və qiymət hərəkəti
+
+Yahoo Finance və Bloomberg məlumatlarına əsasən, S&P 500 indeksi təxminən 1 faiz artıb və yeni tarixi rekord səviyyəsində bağlanıb. Nasdaq Composite isə təxminən 1,6 faiz yüksələrək bütün dövrlər üzrə ən yüksək qiymətini təyin edib. Dow Jones Sənaye İndeksi 340,65 bənd yüksəlməklə 0,69 faiz artım qeydə alıb.
+
+Rallinin başlıca hərəkətverici qüvvəsi — Trampın İran atəşkəsini qeyri-müəyyən uzatması olub. Eyni zamanda, texnologiya və sənaye sektorunun nəhəngləri güclü maliyyə nəticələri açıqlayıb: Tesla və IBM gözləntiləri ötüb, Boeing isə zərərini azaldıb.
+
+## Əks ssenari: Hörmüz riski
+
+Bazar rallisinə baxmayaraq, Hörmüz boğazındakı hadisələr narahatlıq mənbəyi olaraq qalır. Həmin gün İran üç gəmiyə atəş açıb və ikisini ələ keçirib, nəticədə Brent markalı xam neft təxminən 100 dollar səviyyəsinə qayıdıb. Analitiklər qeyd edirlər ki, neft qiymətlərindəki bu sıçrayış inflyasiya təzyiqlərini yenidən artırıb investor əhvalını korlaya bilər.
+
+Hazırda bazarlar siyasi atəşkəs və güclü korporativ gəlirlərə fokuslanıb, lakin dənizdəki eskalasiya və enerji qiymətləri növbəti günlərdə əsas diqqət mərkəzində qalacaq. Texnoloji şirkətlərin hesabatları fonunda Nasdaq-ın davamlı yüksəlişi süni intellekt və bulud xərclərinin vacibliyini bir daha təsdiqləyib.`,
+  },
+  'en-us-stocks-hit-record-highs-iran-ceasefire-tesla-ibm': {
+    title: `US Stocks Hit Record Highs on Ceasefire and Tech Beats`,
+    date: '2026-04-22',
+    category: 'Economy',
+    locale: 'en',
+    content: `U.S. equities surged to fresh all-time highs on Wednesday, powered by President Donald Trump's indefinite extension of the U.S.-Iran ceasefire and a wave of strong corporate earnings. The rally pushed the S&P 500 and Nasdaq Composite into record territory and extended a broad risk-on move across technology, industrials and financials.
+
+## Indexes Close at Records
+
+The S&P 500 gained about one percent to close at a fresh record, while the Nasdaq Composite rose roughly 1.6 percent to a new all-time high. The Dow Jones Industrial Average added 0.69 percent, or 340.65 points, as reported by Yahoo Finance, 24/7 Wall St., Bloomberg and Zacks.
+
+Traders cited two drivers: the political relief from the ceasefire extension and a sweep of upbeat quarterly reports from some of the most watched names in the market.
+
+## Earnings Drive Breadth
+
+Tesla delivered a first-quarter beat on both revenue and earnings per share, with gross margin rebounding sharply. IBM also topped consensus on the top and bottom lines, while Boeing narrowed its quarterly loss and lifted its delivery pace. The trio helped lift sentiment across megacap tech and the industrial complex, reinforcing the narrative that earnings momentum remains intact despite macroeconomic uncertainty.
+
+## Oil and Geopolitics in the Background
+
+Markets largely looked past escalation in the Strait of Hormuz, where Iran's IRGC fired on three vessels and seized two, pushing Brent crude back to near $100 per barrel. Investors appeared to treat the sea incidents as contained, focusing instead on the ceasefire framework and the earnings cycle.
+
+The session was a textbook example of markets separating headline risk from earnings reality, with breadth and volume both supporting the new highs rather than a narrow, defensive rally.`,
+  },
+  'tr-sp-500-nasdaq-rekor-kirdi-iran-ateskes-uzatildi': {
+    title: `S&P 500 ve Nasdaq rekor kırdı, ateşkes piyasaları uçurdu`,
+    date: '2026-04-22',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `ABD borsaları 22 Nisan 2026 Çarşamba günü yeni tarihi zirveleri gördü. S&P 500 endeksi yaklaşık yüzde 1 yükselerek rekor kapanış gerçekleştirdi. Teknoloji ağırlıklı Nasdaq Composite yüzde 1,6 civarında artarak tüm zamanların en yüksek kapanış seviyesine ulaştı. Dow Jones Sanayi Endeksi ise yüzde 0,69 değer kazanarak 340,65 puan tırmandı. Bu yükseliş, jeopolitik gerilimlerin gölgesinde bile Wall Street'in bilanço odaklı kalabildiğini gösterdi.
+
+## Rallinin arkasındaki nedenler
+
+Yükselişin temel itici gücü, Başkan Donald Trump'ın ABD-İran ateşkesini süresiz olarak uzattığını duyurması oldu. Aynı gün açıklanan güçlü şirket bilançoları da alım iştahını destekledi. Tesla, 22,38 milyar dolarlık gelirle beklentileri aştı ve hisse başına kârda 0,41 dolar açıkladı. IBM ise 15,92 milyar dolarlık gelirle konsensüsü geçti ve yazılım bölümünde yüzde 11 büyüme kaydetti. Boeing, zararını 7 milyon dolara daralttı ve 143 uçak teslimatı ile 2019'dan bu yana en iyi ilk çeyreğini kaydetti.
+
+## Hormuz risklerine rağmen iyimserlik
+
+Yatırımcılar, Hormuz Boğazı'ndaki gerilim tırmanmasına ve İran'ın iki gemiyi alıkoyduğu habere rağmen ateşkes haberlerine ve teknoloji şirketlerinin bilançolarına odaklandı. Brent petrolün yaklaşık 100 dolar civarına yükselmesi, piyasalarda enflasyon ve maliyet riski açısından aksi bir senaryo olarak gündemde kalmaya devam ediyor. Analistler, bilanço sezonunun geri kalanında büyük teknoloji şirketlerinin açıklamalarının piyasa yönünü belirleyeceğini öngörüyor. Tesla'nın capex rehberliğini 25 milyar dolara çıkarması bazı yatırımcılar için uyarı işareti olarak görüldü; hisse bilanço sonrası kazancının büyük kısmını geri verdi. Yine de günün genel havası, teknoloji kaynaklı büyüme iyimserliği yönündeydi.`,
+  },
+  'ru-rynok-ssha-novye-rekordy-peremirie-s-iranom-prodleno': {
+    title: 'Рынки США обновили рекорды на фоне перемирия',
+    date: '2026-04-22',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Американские фондовые индексы в среду, 22 апреля 2026 года, установили новые исторические максимумы на фоне бессрочного продления перемирия между США и Ираном и сильной корпоративной отчётности ведущих технологических компаний.
+
+## Результаты торгов
+
+Индекс S&P 500 вырос примерно на один процент и закрылся на новом рекордном уровне. Nasdaq Composite поднялся около 1,6 процента, также установив исторический максимум. Промышленный индекс Dow Jones прибавил 0,69 процента, что составляет около 340 пунктов.
+
+## Катализаторы роста
+
+Ралли было поддержано двумя основными факторами. Во-первых, объявление Трампа о бессрочном продлении перемирия с Тегераном сняло часть геополитических рисков с повестки инвесторов. Во-вторых, отчётность крупных компаний превзошла ожидания аналитиков. Tesla превысила прогнозы по выручке и прибыли, IBM также отчиталась лучше ожиданий, а Boeing сократил убытки.
+
+## Сырьевой контраст
+
+Несмотря на оптимизм на фондовом рынке, цены на нефть марки Brent поднялись до уровня около 100 долларов за баррель после захвата Ираном судов в Ормузском проливе. Эта динамика создаёт противоречивую картину для инвесторов: корпоративный сектор демонстрирует силу, но риски морской эскалации в Персидском заливе остаются высокими и могут оказать давление на мировую экономику в ближайшие недели. Участники рынка внимательно следят за развитием ситуации вокруг Ормузского пролива, через который проходит значительная часть мировых поставок нефти. Аналитики отмечают, что устойчивость фондовых индексов на фоне геополитической напряжённости во многом объясняется силой корпоративных отчётов технологического сектора, который продолжает оставаться локомотивом американского рынка.`,
+  },
+
+  // --- Topic 3: Google Cloud Next 2026 — TPU 8 split + Gemini Enterprise ---
+  'google-cloud-next-2026-yeni-tpu-gemini-enterprise': {
+    title: 'Google Cloud Next 2026: 8-ci nəsil TPU və Gemini Enterprise',
+    date: '2026-04-22',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Google Cloud Next 2026 konfransında şirkət süni intellekt infrastrukturu sahəsində ən iddialı addımlarından birini atıb. 22 aprel 2026-cı ildə TechCrunch və Google rəsmi bloqunun bildirdiyinə görə, 8-ci nəsil TPU (Tensor Processing Unit) arxitekturası ilk dəfə olaraq təlim və inferens prosesləri üçün ayrı-ayrı məhsullara bölünüb.
+
+## TPU 8t və TPU 8i ilk dəfə ayrıldı
+
+Yeni mərhələnin mərkəzində iki ayrı çip dayanır: TPU 8t təlim prosesləri üçün nəzərdə tutulub, tək bir superpodda 9,600 TPU-nu və 2 PB ümumi yüksək bant genişlikli yaddaşı bir araya gətirə bilir. Bu, əvvəlki nəslə nisbətən 3 dəfəyə qədər daha yüksək emal gücü və 2 dəfəyə qədər daha yaxşı performans-vat nisbəti təklif edir.
+
+TPU 8i isə inferens (modelin işlədilməsi) mərhələsi üçün dizayn edilib və yeni Boardfly topologiyası vasitəsilə 1,152 TPU-nu birləşdirir. Çipdəki SRAM yaddaşı 3 dəfə artırılıb və bir dollara düşən performans əvvəlki nəslə nisbətən 80 faiz yaxşılaşdırılıb.
+
+## Ironwood GA statusu və Gemini Enterprise
+
+7-ci nəsil Ironwood TPU-ları artıq ümumi istifadəyə buraxılıb. Hər çip 4,6 petaFLOPS güc və 192 GB HBM3e yaddaş təqdim edir, 9,216 çipli superpod isə 42,5 exaFLOPS-a çatır.
+
+Google həmçinin "agent dövrü üçün uçdan-uca sistem" kimi təqdim etdiyi Gemini Enterprise platformasını açıqlayıb. Bloomberg-in məlumatına görə, yeni AI agent qurma alətləri OpenAI və Anthropic-ə birbaşa rəqabət təşkil edir. Strateji baxımdan Google Nvidia-nı tamamlayıcı olaraq saxlayır və 2026-cı ildə Vera Rubin çiplərini də müştərilərinə təklif edəcəyini bildirib.`,
+  },
+  'en-google-cloud-next-2026-tpu-8-gemini-enterprise': {
+    title: `Google Unveils 8th-Gen TPUs and Gemini Enterprise`,
+    date: '2026-04-22',
+    category: 'Technology',
+    locale: 'en',
+    content: `Google used its Cloud Next 2026 keynote on Wednesday to unveil its most aggressive artificial intelligence infrastructure push yet, splitting its next-generation Tensor Processing Unit line into separate chips for training and inference, announcing general availability of the seventh-generation Ironwood TPU, and introducing Gemini Enterprise as an end-to-end agentic platform.
+
+## Ironwood Goes GA
+
+The Ironwood TPU, the seventh generation of Google's custom silicon, is now generally available. Each chip delivers 4.6 petaFLOPS of compute and 192 GB of HBM3e memory, and a 9,216-chip superpod reaches 42.5 exaFLOPS, according to details confirmed by TechCrunch, Google's official blog and TheNextWeb.
+
+## Training and Inference Split
+
+For the first time, Google split its eighth-generation TPU architecture into two purpose-built chips. The TPU 8t, aimed at training, scales up to 9,600 TPUs with two petabytes of shared high-bandwidth memory in a single superpod, delivering up to three times the processing power of Ironwood and up to two times better performance per watt. The TPU 8i, aimed at inference, introduces a new Boardfly topology that connects 1,152 TPUs, triples on-chip SRAM and delivers 80 percent better performance per dollar versus the prior generation.
+
+TechCrunch cross-verified the top-line claims, citing "up to 3x faster AI model training, 80% better performance per dollar, and the ability to get 1M+ TPUs to work together."
+
+## Gemini Enterprise and Agent Tools
+
+Google announced Gemini Enterprise as an "end-to-end system for the agentic era," along with new agent-builder tools that Bloomberg framed as a direct challenge to OpenAI and Anthropic. Strategically, Google positioned TPUs as complementary to Nvidia silicon, confirming it will also offer Nvidia's Vera Rubin platform later in 2026.
+
+The dual-track strategy signals that inference economics, not just training horsepower, has become the central battleground of the AI infrastructure race.`,
+  },
+  'tr-google-cloud-next-2026-yeni-tpu-cipleri-gemini-enterprise': {
+    title: `Google Cloud Next 2026: Yeni TPU çipleri tanıtıldı`,
+    date: '2026-04-22',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Google, 22 Nisan 2026'da düzenlenen Cloud Next 2026 konferansında yapay zeka altyapısında yeni bir dönem açtı. Şirket, 7. nesil Ironwood TPU'nun genel kullanıma (GA) sunulduğunu ve 8. nesil TPU mimarisinin ilk kez eğitim (training) ve çıkarım (inference) olarak ikiye bölündüğünü duyurdu. TechCrunch'a göre yeni nesil TPU'lar, AI model eğitiminde 3 kata kadar hız artışı, dolar başına yüzde 80 daha iyi performans ve 1 milyonun üzerinde TPU'nun tek bir sistem olarak çalışabilme yeteneği sağlıyor.
+
+## TPU 8t ve TPU 8i: Yeni bölünme
+
+Eğitim için tasarlanan TPU 8t, tek bir süperpod içinde 9.600 TPU ve 2 PB ortak yüksek bantlı belleğe ulaşabiliyor. Ironwood'a göre 3 kata kadar daha fazla işlem gücü ve 2 kata kadar daha iyi enerji verimliliği vadediliyor. Çıkarım için optimize edilen TPU 8i ise yeni Boardfly topolojisiyle 1.152 TPU'yu birbirine bağlıyor, çip başına 3 kat daha fazla SRAM sunuyor ve önceki nesle göre dolar başına yüzde 80 daha iyi performans sağlıyor. Ironwood superpod ise 9.216 çiple 42,5 exaFLOPS güce sahip ve çip başına 192 GB HBM3e bellek, 4,6 petaFLOPS işlem kapasitesi sunuyor.
+
+## Gemini Enterprise ve Nvidia denklemi
+
+Şirket ayrıca "ajan çağının uçtan uca sistemi" olarak tanımladığı Gemini Enterprise platformunu ve OpenAI ile Anthropic'e meydan okuyan yeni yapay zeka ajan araçlarını tanıttı. Bloomberg, yeni ajan oluşturucu araçların kurumsal yapay zeka pazarında Google'ın pozisyonunu güçlendirmeyi hedeflediğini aktardı. Google, TPU'ları Nvidia'ya rakip değil tamamlayıcı olarak konumlandırdığını ve 2026 içinde Nvidia Vera Rubin altyapısını da müşterilerine sunacağını açıkladı. TPU serisinin ikiye bölünmesi, çıkarım maliyetinin asıl rekabet alanı olduğunu gösteren sektörde bir ilk; modellerin çalıştırılmasının artık eğitimden daha kritik bir maliyet kalemi haline geldiğine işaret ediyor.`,
+  },
+  'ru-google-cloud-next-2026-novye-tpu-gemini-enterprise': {
+    title: 'Google Cloud Next 2026: новые TPU и Gemini Enterprise',
+    date: '2026-04-22',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `На конференции Google Cloud Next 2026, прошедшей 22 апреля, компания представила восьмое поколение тензорных процессоров (TPU), впервые в истории разделив архитектуру на две отдельные линейки — для обучения и для вывода моделей. Одновременно был анонсирован запуск системы Gemini Enterprise.
+
+## Разделение архитектуры TPU
+
+Восьмое поколение TPU состоит из двух специализированных чипов. Первый — TPU 8t для обучения моделей — масштабируется до 9600 процессоров в одном суперподе с двумя петабайтами общей высокоскоростной памяти. По данным TechCrunch, новая архитектура обеспечивает до трёх раз более высокую производительность обучения моделей по сравнению с предыдущим поколением и вдвое лучшую энергоэффективность.
+
+Второй чип — TPU 8i для вывода — использует новую топологию Boardfly, связывающую 1152 процессора. Объём памяти SRAM увеличен втрое, а соотношение производительности к стоимости улучшено на 80 процентов.
+
+## Ironwood теперь общедоступен
+
+Предыдущее поколение процессоров под названием Ironwood стало общедоступным. Каждый чип обеспечивает 4,6 петафлопс, а суперпод из 9216 чипов — 42,5 эксафлопс. Объём памяти HBM3e на чип составляет 192 гигабайта.
+
+## Gemini Enterprise и конкуренция с Nvidia
+
+Google представила Gemini Enterprise как сквозную систему для эпохи агентного искусственного интеллекта. Компания также анонсировала новые инструменты для создания AI-агентов, которые, по оценке Bloomberg, бросают вызов OpenAI и Anthropic. При этом Google продолжит предлагать ускорители Nvidia Vera Rubin позднее в 2026 году, позиционируя собственные TPU как дополнение.`,
+  },
+
+  // --- Topic 4: Tesla Q1 2026 earnings beat + $25B capex ---
+  'tesla-q1-2026-gelirler-kapex-25-milyard-dollar': {
+    title: 'Tesla Q1 2026: gəlirlər gözləntiləri ötdü, kapex 25 milyard',
+    date: '2026-04-22',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Tesla 22 aprel 2026-cı ildə 2026-cı ilin birinci rübü üzrə maliyyə nəticələrini açıqlayıb. CNBC və Electrek-in məlumatlarına əsasən, şirkət gəlirlər və mənfəət baxımından analitik gözləntilərini ötüb, lakin kapital xərclərinin gözlənilməz artımı investor əhvalını zəiflədib.
+
+## Maliyyə göstəriciləri və gözləntilər
+
+Rüblük gəlir 22,38 milyard dollar təşkil edib və konsensus proqnozu olan 22,3 milyard dolları ötüb. Bu göstərici il üzrə 16 faiz artımla 19,3 milyard dollardan yüksəlib. Non-GAAP əsasında bir səhmə düşən mənfəət 0,41 dollar olub, analitiklər isə 0,37 dollar gözləyirdi.
+
+Ümumi mənfəət marjası 21,1 faizə çatıb, bu isə 2025-ci ilin birinci rübü ilə müqayisədə 478 bazis bəndi yüksəkdir. Avtomobil gəliri 16,2 milyard dollar (il üzrə +16 faiz), enerji bölməsinin gəliri isə 2,41 milyard dollar olub (il üzrə -12 faiz). Çatdırılmalar 358,023 ədəd olub və konsensusdan təxminən 7,600 ədəd aşağıda qalıb.
+
+## Kapex şoku və AI strategiyası
+
+Baş Maliyyə Direktoru Vaibhav Tanejanın açıqlamasına görə, Tesla 2026-cı ildə kapital xərclərinin 25 milyard dolları keçəcəyini bildirib. Bu göstərici əvvəlki 20 milyard dollarlıq təlimatdan 5 milyard dollar yüksəkdir. Elan nəticəsində səhmlər bazar saatlarından sonra ilkin 4 faizlik yüksəlişdən sonra qazanclarını geri verib.
+
+Analitiklər artan xərclərin Optimus robotu, tam avtopilot (FSD) və süni intellekt infrastrukturuna yatırılacağını proqnozlaşdırır. Google Cloud Next-dəki yeni TPU elanı ilə birlikdə bu xəbər "süni intellekt emal gücü yarışının" yeni mərhələsini göstərir.`,
+  },
+  'en-tesla-q1-2026-earnings-beat-capex-25-billion': {
+    title: `Tesla Q1 Beats Estimates, Raises Capex to $25 Billion`,
+    date: '2026-04-22',
+    category: 'Business',
+    locale: 'en',
+    content: `Tesla beat Wall Street expectations in the first quarter of 2026, reporting stronger revenue, a sharply higher gross margin and a modest earnings-per-share surprise, while raising its full-year capital expenditure guidance by $5 billion. The mixed reaction in after-hours trading reflected enthusiasm about margins and caution about the spending outlook.
+
+## Revenue and Margins Rebound
+
+Revenue came in at $22.38 billion, marginally above the $22.3 billion consensus and up 16 percent year over year from $19.3 billion. Non-GAAP earnings per share reached $0.41, ahead of the $0.37 consensus. Gross margin rose to 21.1 percent, up 478 basis points from 16.3 percent in the first quarter of 2025 and up from 20.1 percent in the fourth quarter of 2025, according to Electrek, CNBC and Drive Tesla Canada.
+
+Automotive revenue rose 16 percent year over year to $16.2 billion, while energy revenue fell 12 percent to $2.41 billion from $2.73 billion. Deliveries totaled 358,023 vehicles, missing consensus by roughly 7,600.
+
+## Capex Guidance Jumps
+
+Chief Financial Officer Vaibhav Taneja told investors that 2026 capital expenditure will top $25 billion, up from the prior $20 billion guidance. The $5 billion increase is widely read as a signal of accelerated spending on artificial intelligence infrastructure, Optimus humanoid robotics and full self-driving development.
+
+## Market Reaction
+
+Tesla shares initially climbed about four percent in after-hours trading on the earnings beat before giving back gains as investors digested the higher capex outlook. The print reinforced a broader theme across Wednesday's earnings: strong current-quarter operating performance paired with rising long-term investment bills as megacap technology companies race to build AI capacity.`,
+  },
+  'tr-tesla-q1-2026-kar-beklentiyi-asti-sermaye-harcamasi-25-milyar': {
+    title: `Tesla Q1 2026'da beklentiyi aştı, yatırım 25 milyar`,
+    date: '2026-04-22',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Tesla, 22 Nisan 2026'da açıkladığı 2026 yılının ilk çeyrek bilançosunda piyasa beklentilerini aştı. Şirketin geliri yıllık yüzde 16 artarak 19,3 milyar dolardan 22,38 milyar dolara yükseldi ve konsensüs tahmini olan 22,3 milyar doları geride bıraktı. Hisse başına GAAP dışı kâr 0,41 dolar olurken, analist beklentisi 0,37 dolardı. Sonuçlar, Elon Musk'ın liderliğindeki şirketin marj baskılarından yavaş yavaş kurtulduğu yönünde sinyal verdi.
+
+## Marjlar toparlandı, teslimatlar geride kaldı
+
+Brüt marj yüzde 21,1'e çıktı ve yıllık bazda 478 baz puan iyileşme gösterdi. Bu rakam, 2025 ilk çeyreğindeki yüzde 16,3 ve 2025 son çeyreğindeki yüzde 20,1 seviyelerinin üzerinde. Otomotiv geliri yıllık yüzde 16 artarak 16,2 milyar dolara ulaştı. Enerji segmentinin geliri ise yıllık yüzde 12 gerileyerek 2,73 milyar dolardan 2,41 milyar dolara indi. Teslimatlar 358.023 adet seviyesinde gerçekleşti ve konsensüsü yaklaşık 7.600 araç farkla kaçırdı. Teslimat zayıflığına rağmen marj iyileşmesi, fiyat indirimlerinin sona erdiği ve üretim verimliliğinin arttığı yorumlarına yol açtı.
+
+## Capex sürprizi hisseyi baskıladı
+
+Mali İşler Direktörü Vaibhav Taneja, 2026 sermaye harcamalarının önceki 20 milyar dolarlık öngörünün üzerinde, 25 milyar doların üzerinde olacağını açıkladı. Bu miktar önceki rehberliğin 5 milyar dolar üzerinde. Hisse, bilanço sonrası işlemlerde önce yüzde 4 primlendi ancak capex açıklamasının ardından kazancını büyük ölçüde geri verdi. Artış büyük olasılıkla yapay zeka, robotik, Optimus ve FSD (Full Self-Driving) yatırımlarına işaret ediyor. Google Cloud Next 2026'daki yeni TPU duyurularıyla birlikte değerlendirildiğinde, 2026'nın teknoloji sektöründe yoğun bir yapay zeka altyapı yatırımı yılı olacağı tahmin ediliyor.`,
+  },
+  'ru-tesla-q1-2026-pribyl-vyshe-prognoza-kapzatraty-25-mlrd': {
+    title: 'Tesla Q1 2026: прибыль выше прогноза, капзатраты 25 млрд',
+    date: '2026-04-22',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Tesla 22 апреля 2026 года отчиталась за первый квартал, превысив прогнозы аналитиков по выручке и прибыли на акцию. Однако акции компании растеряли часть роста после повышения прогноза по капитальным затратам на текущий год.
+
+## Финансовые результаты
+
+Выручка Tesla составила 22,38 миллиарда долларов при консенсус-прогнозе 22,3 миллиарда, что означает рост на 16 процентов в годовом выражении с уровня 19,3 миллиарда долларов. Скорректированная прибыль на акцию достигла 0,41 доллара против ожидаемых 0,37 доллара. Валовая маржа выросла до 21,1 процента против 16,3 процента годом ранее и 20,1 процента в четвёртом квартале 2025 года.
+
+## Сегментная разбивка
+
+Выручка автомобильного сегмента составила 16,2 миллиарда долларов с ростом 16 процентов в годовом выражении. Энергетический сегмент, напротив, сократился на 12 процентов до 2,41 миллиарда долларов. Поставки автомобилей составили 358 023 единицы, что оказалось примерно на 7600 машин ниже ожиданий.
+
+## Рост капитальных затрат
+
+Финансовый директор Вайбхав Танеджа сообщил, что капитальные затраты Tesla в 2026 году превысят 25 миллиардов долларов, что на 5 миллиардов выше предыдущего прогноза в 20 миллиардов. Акции первоначально выросли в послеторговой сессии на 4 процента, но затем частично растеряли рост после этого заявления. Аналитики связывают повышенные инвестиции с расходами на инфраструктуру искусственного интеллекта, робототехнику и проект Optimus. Улучшение маржи на 478 базисных пунктов в годовом выражении отражает положительные сдвиги в операционной эффективности компании, несмотря на снижение объёма поставок по сравнению с ожиданиями. Для участников рынка повышенные капитальные затраты стали сигналом о том, что Tesla готова к масштабным инвестициям в следующее поколение технологий, хотя это временно окажет давление на свободный денежный поток.`,
+  },
+
+  // --- Topic 5: Lebanese journalist Amal Khalil killed by Israeli strike ---
+  'livan-jurnalisti-amal-khalil-israil-zerbesi-neticesinde-oldu': {
+    title: 'Livanlı jurnalist Amal Xəlil İsrail zərbəsi nəticəsində həlak oldu',
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Cənubi Livanda İsrail hərbi zərbəsi nəticəsində "Əl-Axbar" qəzetinin jurnalisti Amal Xəlil həlak olub. Hadisə 22 aprel 2026-cı ildə baş verib və beynəlxalq mətbuat azadlığı təşkilatlarının ciddi reaksiyasına səbəb olub.
+
+## Hadisənin təfərrüatları
+
+CNN və Vaşinqton Post-un məlumatlarına görə, Xəlil və onunla işləyən sərbəst foto-müxbir Zeynəb Fəraj cənubi Livanın Təyri (ət-Tiri) kəndində İsrail tərəfindən həyata keçirilən əvvəlki dron zərbəsini işıqlandırmağa gedirdilər. Həmin ilk zərbədə iki mülki şəxs həlak olmuşdu. Jurnalistlər hadisə yerində sığınacaq kimi istifadə etdikləri bir evdə idi ki, həmin ev də növbəti zərbə nəticəsində hədəf alınıb.
+
+Xilasetmə əməliyyatı davam edən atəş səbəbindən saatlarla gecikib. Xəlilin cənazəsi evin dağıntıları altından çıxarılıb. Fəraj isə kritik vəziyyətdə xəstəxanaya yerləşdirilib. Al Jazeera-nın məlumatına görə, həmin gün İsrailin ümumi hücumlarında ən azı 4-5 nəfər həlak olub.
+
+## Beynəlxalq reaksiya və mətbuat azadlığı
+
+Xəlil martdan bəri Livanda İsrail zərbələri nəticəsində həlak olan dördüncü media işçisidir. Livanın Baş naziri İsraili "müharibə cinayətləri" işlətməkdə ittiham edib. Times of Israel qəzeti təsdiqləyib ki, qurbanın cənazəsi Hizbullaha yaxın gündəlik qəzetin əməkdaşı kimi identifikasiya edilib.
+
+Hadisə İsrail-Hizbullah qarşıdurmasının yeni mərhələsini və jurnalistlərin münaqişə zonalarındakı artan risklərini ortaya qoyur. Times of Israel-ə görə, Xəlilin cənazəsi vurulan evin dağıntılarından çıxarılıb, beynəlxalq təşkilatlar isə hadisə ilə bağlı müstəqil araşdırma aparılmasını tələb edirlər.`,
+  },
+  'en-lebanese-journalist-amal-khalil-killed-israeli-airstrike': {
+    title: `Lebanese Journalist Amal Khalil Killed in Israeli Strike`,
+    date: '2026-04-22',
+    category: 'World',
+    locale: 'en',
+    content: `Lebanese journalist Amal Khalil of the Al Akhbar newspaper was killed Wednesday in an Israeli airstrike in southern Lebanon, becoming the fourth media worker slain by Israel in the country since March. Lebanon's prime minister accused Israel of war crimes as the death toll from the day's strikes climbed.
+
+## Strike in Tayri
+
+Khalil was killed at the site of Tayri, also referenced as at-Tiri, in southern Lebanon. Freelance photographer Zeinab Faraj was critically injured in the same incident. At least four to five people were killed in the broader day's strikes, according to CNN, Al Jazeera, The Washington Post and The Times of Israel.
+
+Khalil and Faraj had gone to the area to cover an earlier Israeli drone strike on a car that killed two civilians. The journalists took shelter inside a house, which was then hit. Rescue operations were delayed for hours because of continued Israeli strikes in the vicinity, according to multiple accounts.
+
+## Press-Freedom Toll
+
+Khalil is the fourth media worker killed by Israel in Lebanon since March, a grim marker for press-freedom advocates who have warned repeatedly that journalists covering the Israel-Hezbollah conflict face escalating risk. The body of Khalil, who wrote for the pro-Hezbollah Al Akhbar daily, was pulled from the rubble of the struck home, according to The Times of Israel.
+
+## Political Response
+
+Lebanon's prime minister publicly accused Israel of committing war crimes in response to the day's strikes. The accusation adds to the diplomatic pressure on Israel amid the broader Middle East escalation and comes as the separate U.S.-Iran ceasefire track remains fragile after incidents in the Strait of Hormuz.
+
+The killing underscores the persistent danger to local reporters who remain in southern Lebanon to document a conflict that has killed civilians and pressed press-freedom norms.`,
+  },
+  'tr-lubnanli-gazeteci-amal-khalil-israil-hava-saldirisinda-hayatini-kaybetti': {
+    title: `Lübnanlı gazeteci Amal Khalil İsrail saldırısında öldü`,
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Lübnan'ın Al Akhbar gazetesi muhabiri Amal Khalil, 22 Nisan 2026'da güney Lübnan'ın Tayri (at-Tiri) köyünde İsrail hava saldırısında hayatını kaybetti. Serbest foto muhabiri Zeinab Faraj ise ağır yaralandı. Günün saldırılarında en az dört ile beş kişi yaşamını yitirdi. Olay, CNN, Al Jazeera, Washington Post ve Times of Israel tarafından bağımsız kaynaklarla doğrulandı.
+
+## Saldırının detayları
+
+Khalil ve Faraj, İsrail insansız hava aracının aynı gün bir araca düzenlediği ve iki sivilin öldüğü önceki saldırıyı haberleştirmek için bölgeye gitmişti. İki gazeteci, güvenli olduğunu düşündükleri bir evde sığınma bulmuşken ev de vurularak yıkıldı. Devam eden saldırılar nedeniyle kurtarma operasyonu saatlerce gecikti; Khalil'in cesedi enkazdan ancak saatler sonra çıkarılabildi.
+
+## Basın özgürlüğü tırmanan gerilimde
+
+Khalil, Mart ayından bu yana İsrail saldırılarında hayatını kaybeden dördüncü basın mensubu oldu. Lübnan Başbakanı, İsrail'i savaş suçu işlemekle suçladı ve uluslararası toplumu harekete geçmeye çağırdı. Olay, İsrail ile Hizbullah arasındaki çatışmanın hızlandığı bir dönemde gerçekleşti ve gazetecilerin çatışma bölgesinde haber takibinin ne kadar tehlikeli hale geldiğini bir kez daha gözler önüne serdi. Times of Israel'e göre Hizbullah'a yakın Al Akhbar gazetesinin muhabiri olan Khalil'in cesedi vurulan evin enkazından çıkarıldı. Basın özgürlüğü kuruluşları, hesap verebilirlik talebini yineledi ve İsrail'in sivil altyapı ile medya çalışanlarını hedef almaktan kaçınması gerektiğini savundu.`,
+  },
+  'ru-livanskaya-zhurnalistka-amal-khalil-pogibla-pri-udare-izrailya': {
+    title: 'Журналистка Амаль Халиль погибла при ударе Израиля',
+    date: '2026-04-22',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Ливанская журналистка Амаль Халиль, работавшая в газете Al Akhbar, погибла 22 апреля 2026 года в результате израильского авиаудара на юге Ливана. Фриланс-фотограф Зейнаб Фарадж получила тяжёлые ранения. Премьер-министр Ливана обвинил Израиль в военных преступлениях.
+
+## Обстоятельства гибели
+
+По данным CNN и Al Jazeera, удар был нанесён в районе Тайри на юге Ливана. Халиль и Фарадж прибыли туда, чтобы освещать последствия более раннего израильского удара беспилотника по автомобилю, в результате которого погибли двое мирных жителей. Журналисты укрылись в жилом доме, который затем также был атакован. Спасательные работы задерживались в течение нескольких часов из-за продолжающихся ударов.
+
+## Реакция ливанских властей
+
+По данным CNN, премьер-министр Ливана обвинил Израиль в военных преступлениях в связи с гибелью журналистки. В тот же день в результате израильских ударов на юге Ливана погибли как минимум четыре-пять человек. Амаль Халиль стала четвёртой сотрудницей СМИ, убитой Израилем в Ливане с марта 2026 года.
+
+## Угроза свободе прессы
+
+Гибель Халиль вызвала обеспокоенность правозащитных и журналистских организаций по поводу безопасности работников СМИ в зоне конфликта между Израилем и Хезболлой. Инцидент усиливает международное давление на Израиль и поднимает вопросы о соблюдении норм международного гуманитарного права в отношении журналистов, освещающих боевые действия. Наблюдатели отмечают, что продолжаются удары по югу Ливана, жертвами которых становятся мирные жители и работники прессы. Правительство Ливана призывает международное сообщество оказать давление на Израиль в целях обеспечения безопасности журналистов и привлечения виновных к ответственности за гибель работников прессы.`,
+  },
+
+  // --- Topic 6: Pahalgam attack 1-year anniversary ---
+  'pahalgam-hucumu-bir-il-modi-qurbanlara-ehtiram': {
+    title: 'Pəhəlgam terrorunun birinci ildönümü: Modi qurbanlara ehtiram ifadə etdi',
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Hindistan 22 aprel 2026-cı ildə Kəşmirin Pəhəlgam bölgəsində törədilən terror hücumunun birinci ildönümünü qeyd edib. Baş nazir Narendra Modi qurbanları anaraq bəyanat yayıb, ölkə ordusu isə "Əməliyyat Sindoor"un davam etdiyini bəyan edib.
+
+## Modi-nin bəyanatı
+
+2025-ci ilin 22 aprelində Pəhəlgamda baş vermiş hücumda əksəriyyəti turist olan 26 mülki şəxs həlak olmuşdu. İldönümü münasibəti ilə Modi aşağıdakı bəyanatı vermişdir: "Keçən il bu gün Pəhəlgamda dəhşətli terror hücumunda itirilən günahsız həyatları xatırlayırıq. Onlar heç vaxt unudulmayacaq. Millət olaraq kədər və qərarlılıqda birləşmişik. Hindistan heç bir şəkildə terrora baş əyməyəcək."
+
+Business Standard və Deccan Herald məlumatlarına görə, Baş nazir "terror qarşısında sıfır tolerantlıq" prinsipini bir daha təsdiqləyib. Avropa İttifaqı da Hindistan xalqına dayağını ifadə edib.
+
+## Əməliyyat Sindoor davam edir
+
+Hindistan Ordusu X platformasında dərc olunmuş müraciətdə belə bir mesaj yayıb: "Hindistana qarşı törədilən əməllərə cavab təmin edilmişdir. Ədalət həmişə təmin olunacaq."
+
+Kəşmir Observer-in hesabatına əsasən, ordu 7 may 2025-ci ildə başladılan və Pakistanla 88 saatlıq qarşıdurmaya səbəb olan "Əməliyyat Sindoor"un hələ də davam etdiyini vurğulayıb. Kəşmirdə təhlükəsizlik tədbirləri sərtləşdirilib və hücum törədənlərdən hesab soruşulması istiqamətində əməliyyatlar davam edir.
+
+Hücumda əsas şübhəlilər arasında Pakistanla əlaqəli The Resistance Front və Ləşkər-e-Teyba qrupları göstərilir. Anma mərasimləri bütün Hindistanda keçirilib və regional gərginlik əsas gündəm maddəsi olaraq qalır.`,
+  },
+  'en-pahalgam-attack-one-year-modi-tribute-operation-sindoor': {
+    title: `Modi Marks Pahalgam Attack Anniversary; Army Vows Response`,
+    date: '2026-04-22',
+    category: 'World',
+    locale: 'en',
+    content: `Indian Prime Minister Narendra Modi paid tribute on Wednesday to the victims of the 22 April 2025 Pahalgam terror attack, marking one year since the assault that killed 26 civilians, most of them tourists, in the Kashmir region. The Indian Army reaffirmed that Operation Sindoor, launched in response, "continues."
+
+## Modi's Message
+
+In his public statement, Modi said: "Remembering the innocent lives lost in the gruesome Pahalgam terror attack on this day last year. They will never be forgotten. As a nation, we stand united in grief and determination. India will never bow to terrorism in any form." The quote was carried by Business Standard, Deccan Herald and Outlook India.
+
+## Army Reaffirms Posture
+
+The Indian Army issued a post on X that read: "For acts against India, the response is assured. Justice will be served. Always." Officials reiterated that Operation Sindoor, launched on 7 May 2025 and resulting in an 88-hour conflict with Pakistan, remains active, according to Kashmir Observer.
+
+Security was tightened across Kashmir for the anniversary, and the European Union expressed solidarity with India on the occasion.
+
+## Regional Context
+
+The anniversary falls amid continued sensitivity in India-Pakistan relations and ongoing counterterrorism operations targeting groups India has linked to the Pahalgam attack, including The Resistance Front and Lashkar-e-Taiba. The combination of the prime ministerial tribute and the army's statement underscored New Delhi's message that the response posture remains open-ended rather than a one-off retaliation.
+
+For a public that remembers Pahalgam as a turning point in the country's security debate, the day served as both commemoration and warning that the operation launched in its aftermath is not closed.`,
+  },
+  'tr-pahalgam-saldirisi-birinci-yildonumu-modi-anma-operasyon-sindoor': {
+    title: `Pahalgam saldırısının yıldönümü: Modi'den anma mesajı`,
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Hindistan, 22 Nisan 2025'te Keşmir'in Pahalgam beldesinde 26 sivilin, çoğunluğu turistin hayatını kaybettiği terör saldırısının birinci yıldönümünü 22 Nisan 2026'da andı. Başbakan Narendra Modi, saldırıda hayatını kaybedenleri sosyal medya üzerinden andı ve ülkenin teröre karşı kararlılığını bir kez daha vurguladı. Anma günü, hem kamu kurumları hem de sivil toplum tarafından geniş çapta paylaşıldı.
+
+## Modi'den "terörizme boyun eğmeyeceğiz" mesajı
+
+Başbakan Modi açıklamasında şu ifadelere yer verdi: "Geçen yıl bugün Pahalgam'daki vahşi terör saldırısında kaybettiğimiz masum canları anıyoruz. Asla unutulmayacaklar. Bir millet olarak keder ve kararlılıkta birleşiyoruz. Hindistan hiçbir terör biçimine boyun eğmeyecek." Hindistan Ordusu ise resmi X hesabından yaptığı paylaşımda "Hindistan'a yönelik eylemlere karşı yanıt kesindir. Adalet yerini bulacaktır. Her zaman." mesajını paylaştı.
+
+## Operasyon Sindoor devam ediyor
+
+Ordu ayrıca 7 Mayıs 2025'te başlatılan ve Pakistan ile 88 saatlik çatışmaya yol açan Operasyon Sindoor'un "devam ettiğini" yineledi. Keşmir genelinde güvenlik önlemleri sıkılaştırıldı. Avrupa Birliği, anma mesajında Hindistan'a dayanışma bildirdi ve terörle mücadelede uluslararası işbirliğinin sürdürülmesi gerektiğini vurguladı. Saldırının sorumluluğunu üstlenen TRF (The Resistance Front) ve Leşker-i Tayyibe bağlantıları, Hindistan-Pakistan ilişkilerindeki gerginliğin arka planını oluşturmaya devam ediyor. Güney Asya, hassas güvenlik dengesini koruyor ve sınır bölgelerinde düşük yoğunluklu gerilim aralıklarla patlak vermeyi sürdürüyor.`,
+  },
+  'ru-pakhalgam-god-spustya-modi-pochtil-pamyat-zhertv-teraktov': {
+    title: 'Пахалгам год спустя: Моди почтил память жертв терактов',
+    date: '2026-04-22',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Индия 22 апреля 2026 года отметила первую годовщину террористической атаки в Пахалгаме, в результате которой 22 апреля 2025 года погибли 26 мирных жителей, преимущественно туристов. Премьер-министр Нарендра Моди почтил память жертв, а индийская армия заявила о продолжении операции Синдур.
+
+## Заявление Моди
+
+В своём обращении Нарендра Моди заявил, что вспоминает невинные жизни, потерянные в страшной террористической атаке в Пахалгаме год назад. По его словам, жертвы никогда не будут забыты, а Индия как нация объединена в горе и решимости. Премьер подчеркнул, что Индия никогда не склонится перед терроризмом в любой его форме.
+
+## Позиция армии
+
+Индийская армия опубликовала сообщение в социальной сети X, заявив, что за действия против Индии ответ гарантирован, а справедливость будет восстановлена. Военное командование подтвердило, что операция Синдур, начатая 7 мая 2025 года после 88-часового конфликта с Пакистаном, продолжается. Это заявление прозвучало на фоне сохраняющейся напряжённости в отношениях между двумя ядерными державами.
+
+## Меры безопасности и международная реакция
+
+В Кашмире были усилены меры безопасности в связи с годовщиной. Европейский союз выразил солидарность с Индией в связи с памятной датой. Первоначальная атака была приписана группировке The Resistance Front, связанной с пакистанской группировкой Lashkar-e-Taiba. Годовщина подчёркивает сохраняющуюся уязвимость региона перед трансграничным терроризмом и сложность индийско-пакистанских отношений. Правительство Индии продолжает курс на нулевую терпимость к терроризму, подтверждая готовность к решительным ответным мерам в случае новых провокаций. Для Кашмира памятная дата стала символом трагедии и одновременно напоминанием о необходимости долгосрочных усилий по обеспечению безопасности туристов и местного населения в условиях сложной геополитической обстановки в Южной Азии.`,
+  },
+
+  // --- Topic 7: NBA playoffs April 22 — Wembanyama concussion, Thunder 2-0, Pistons revival ---
+  'nba-pley-of-22-aprel-thunder-pistons-blazers-wembanyama-zerbe': {
+    title: 'NBA pley-off 22 aprel: Vembanyama zərbə aldı, Thunder 2-0',
+    date: '2026-04-22',
+    category: 'İdman',
+    locale: 'az',
+    content: `NBA pley-offunun birinci raundunda 22 aprel 2026-cı ildə üç 2-ci oyun oynanılıb. Gecənin əsas xəbəri Viktor Vembanyamanın sarsıntı diaqnozu alması olub, Oklahoma Siti Thunder isə seriyada irəli çıxıb.
+
+## Thunder Suns-u məğlub etdi, SGA 37 xal topladı
+
+Oklahoma Siti Thunder Phoenix Suns-u 120-107 hesabı ilə məğlub edərək seriyada 2-0 önə keçib. ESPN-in məlumatına əsasən, Şai Gilgeous-Aleksandr 37 xal və 9 asist qazanıb, Çet Holmgren və Cein Uilyams isə hər biri 19 xalla kömək ediblər. Uilyams 3-cü çərəkdə sol bud əzələsi zədəsi ilə oyundan çıxıb. Suns tərəfindən Dillon Bruks 30, Devin Buker 22, Cein Qrin 21 xal toplayıb.
+
+## Pistons Magic qarşısında tarix yazdı
+
+Detroit Pistons Orlando Magic-i 98-83 hesabı ilə məğlub edib və seriyanı 1-1 bərabərləşdirib. Pistons 3-cü çərəkdə rəqibinə 22 xal fərq yaradıb, ikinci yarının açılışında isə 30-3 reydi ilə oyunu faktiki həll edib. Detroit 11 blok və 9 top qapma qeydə alıb, 1-ci çərəkdə 7 blok isə franşiza pley-off rekorduna çevrilib. Bu, klubun 2008-ci ildən bəri evdə ilk pley-off qələbəsidir.
+
+## Vembanyama sarsıntı keçirdi, Blazers qalib
+
+Portland Trail Blazers San-Antonio Spurs-u 106-103 hesabı ilə üstələyib və seriyanı 1-1 etib. UPI və CBS Sports məlumatlarına görə, Viktor Vembanyama 2-ci çərəkdə 8:57 dəqiqədə Jrue Holiday tərəfindən qaralanaraq yerə sərt düşüb və sarsıntı diaqnozu alıb. NBA protokoluna əsasən, onun oyuna qayıtması üçün minimum 48 saat keçməlidir. Portland son 8:18 dəqiqədə 14 xallıq fərqi silib, Skut Henderson isə 31 xal (5 3-lük) toplayaraq qələbəni təmin edib.`,
+  },
+  'en-nba-playoffs-april-22-thunder-pistons-blazers-wembanyama-concussion': {
+    title: `NBA Playoffs April 22: Wembanyama Concussion, SGA Drops 37`,
+    date: '2026-04-22',
+    category: 'Sports',
+    locale: 'en',
+    content: `Three first-round NBA playoff games on Wednesday produced a concussion scare for a generational star, a 37-point night for the reigning Most Valuable Player and a history-making defensive quarter from a franchise returning to the postseason stage after nearly two decades.
+
+## Wembanyama Concussed as Blazers Steal Game 2
+
+Portland erased a 14-point deficit in the final 8:18 to beat the San Antonio Spurs 106-103 and even the series at 1-1. Rookie Scoot Henderson led the Blazers with 31 points on five made three-pointers. Spurs center Victor Wembanyama was diagnosed with a concussion after a hard fall at the 8:57 mark of the second quarter on a foul by Jrue Holiday. NBA protocol requires a minimum 48 hours before a concussed player can return, casting uncertainty over San Antonio's Game 3 availability.
+
+## Thunder Roll Behind SGA
+
+Oklahoma City beat Phoenix 120-107 to take a commanding 2-0 series lead. Shai Gilgeous-Alexander posted 37 points and nine assists, while Chet Holmgren and Jalen Williams each added 19 points. Williams left in the third quarter with a left hamstring injury. Phoenix was led by Dillon Brooks with 30, Devin Booker with 22 and Jalen Green with 21, per ESPN and NBC Sports.
+
+## Pistons Erupt at Home
+
+Detroit crushed Orlando 98-83 to square the series at 1-1, securing its first home playoff win since 2008. The Pistons outscored the Magic by 22 points in the third quarter, opened the second half on a 30-3 run and finished with 11 blocks and nine steals. Their seven blocks in the first quarter set a franchise postseason record, according to NBA.com and CBS Sports.
+
+The night's storyline centered on Wembanyama's health, but the Thunder's dominance and the Pistons' revival were reminders that the first round is delivering both marquee names and long-awaited revivals.`,
+  },
+  'tr-nba-play-off-22-nisan-thunder-pistons-blazers-wembanyama-sarsinti': {
+    title: `NBA play-off: Wembanyama sarsıntı geçirdi, OKC 2-0 önde`,
+    date: '2026-04-22',
+    category: 'Spor',
+    locale: 'tr',
+    content: `NBA play-off ilk turunun 22 Nisan 2026 Çarşamba gecesi oynanan karşılaşmalarında üç önemli sonuç alındı. Günün en dikkat çekici gelişmesi ise San Antonio Spurs'un yıldızı Victor Wembanyama'nın sahayı sarsıntı (konküzyon) tanısıyla terk etmesi oldu. Wembanyama'nın durumu, Spurs-Blazers serisinin favori dengesini bir anda değiştirebilir.
+
+## Wembanyama sarsıntı geçirdi, Portland geri döndü
+
+Portland Trail Blazers, kendi evinde Spurs'u 106-103 yendi. Scoot Henderson 31 sayı üretti ve beş üçlük buldu. Wembanyama, ikinci çeyreğin 8:57'sinde Jrue Holiday'ın sert faulünün ardından yere düştü ve sarsıntı tanısı kondu. NBA protokolü gereği en az 48 saat sahalardan uzak kalacak ve dönüş için aşamalı tıbbi değerlendirme geçmesi gerekiyor. Portland, son 8 dakika 18 saniyede 14 sayılık farkı kapattı. Seri 1-1 berabere.
+
+## Thunder ve Pistons farkı açtı
+
+Oklahoma City Thunder, Phoenix Suns'ı 120-107 mağlup ederek seride 2-0 öne geçti. Shai Gilgeous-Alexander 37 sayı ve 9 asist kaydetti. Chet Holmgren ile Jalen Williams 19'ar sayı üretti; Williams üçüncü çeyrekte sol hamstring sakatlığı nedeniyle oyundan ayrıldı. Suns'ta Dillon Brooks 30, Devin Booker 22, Jalen Green 21 sayı attı. Thunder'ın seride rahat skoru, batı konferansında ciddi favori olduğunu teyit etti.
+
+Detroit Pistons ise Orlando Magic'i evinde 98-83 yendi. Detroit, ikinci yarıya 30-3'lük seriyle başladı ve üçüncü çeyreği 22 sayı farkla önde kapattı. Takım, ilk çeyrekte yedi blokla franchise play-off rekorunu kırdı; maçta toplam 11 blok ve 9 top çalma yaptı. 2008'den bu yana evindeki ilk play-off galibiyetini aldı ve uzun bir yeniden yapılanma dönemini geride bıraktığını ilan etti. Seri 1-1.`,
+  },
+  'ru-nba-pley-off-22-aprelya-thunder-pistons-blazers-sotryasenie-vembanyama': {
+    title: 'Плей-офф NBA 22 апреля: сотрясение у Вембаньямы',
+    date: '2026-04-22',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `В плей-офф NBA 22 апреля 2026 года состоялись три вторых матча первого раунда. Главным событием стало сотрясение мозга у Виктора Вембаньямы в матче против Portland Trail Blazers, а также доминирование Oklahoma City Thunder над Phoenix Suns.
+
+## Травма Вембаньямы
+
+В матче между San Antonio Spurs и Portland Trail Blazers французский центровой Виктор Вембаньяма получил сотрясение мозга после жёсткого падения на 8-й минуте второй четверти в результате фола со стороны Джру Холидея. Согласно протоколу NBA, минимальный срок восстановления составляет 48 часов. Portland выиграл встречу со счётом 106:103, отыграв отставание в 14 очков за последние 8 минут и 18 секунд. Скут Хендерсон набрал 31 очко, реализовав пять трёхочковых. Серия сравнялась 1:1.
+
+## Разгром от Thunder
+
+Oklahoma City Thunder разгромил Phoenix Suns со счётом 120:107, поведя в серии 2:0. Шей Гилджес-Александер отметился 37 очками и 9 передачами. Чет Холмгрен и Джейлен Уильямс набрали по 19 очков каждый, однако Уильямс покинул площадку в третьей четверти из-за травмы левой задней поверхности бедра. У проигравших отличились Диллон Брукс с 30 очками, Девин Букер с 22 и Джейлен Грин с 21 очком.
+
+## Возвращение Detroit
+
+Detroit Pistons победили Orlando Magic со счётом 98:83, выровняв серию 1:1. Детройт выиграл третью четверть с разницей в 22 очка и устроил рывок 30:3 в начале второй половины. Команда записала в актив 11 блок-шотов и 9 перехватов, причём 7 блоков пришлось на первую четверть — это рекорд франшизы в плей-офф. Для Pistons это первая домашняя победа в плей-офф с 2008 года.`,
+  },
+
+  // --- Topic 8: Boeing Q1 2026 — 143 jet deliveries, narrowed loss ---
+  'boeing-q1-2026-zerer-azaldi-143-teyyare-teslim-edildi': {
+    title: 'Boeing Q1 2026: zərər azaldı, 143 təyyarə təslim edildi',
+    date: '2026-04-22',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Boeing 22 aprel 2026-cı ildə 2026-cı ilin birinci rübünün maliyyə nəticələrini açıqlayıb. Şirkət gəlirlərini artırıb, zərərini xeyli azaldıb və 2019-cu ildən bəri ən yaxşı birinci rüb təslim rəqəmlərini qeydə alıb.
+
+## Gəlir və mənfəət göstəriciləri
+
+CNBC və Boeing-in investor münasibətləri bülleteninə görə, şirkətin rüblük gəliri 22,22 milyard dollar təşkil edib — bu il üzrə 14 faiz artımdır və analitik gözləntilərini ötüb. Xalis zərər cəmi 7 milyon dollara (səhm üzrə -0,11 dollar) endirilib, bir il əvvəlki eyni rübdə bu rəqəm 31 milyon dollar (səhm üzrə -0,16 dollar) idi. Tənzimlənmiş əsasda səhm üzrə zərər -0,20 dollar olub, analitiklər isə -0,83 dollar gözləyirdi.
+
+Kommersiya Təyyarələri bölməsi 143 təyyarə təslim edib — il üzrə 10 faiz artım və 2019-cu ildən bəri ən yaxşı birinci rüb göstəricisi. Həmin seqmentin gəliri 9,2 milyard dollar (+13 faiz) olub. Müdafiə, Kosmos və Təhlükəsizlik bölməsi 7,6 milyard dollar (+21 faiz), Xidmətlər bölməsi isə 5,37 milyard dollar (+6 faiz) gəlir qazanıb.
+
+## CEO bəyanatı və istehsal planları
+
+Baş icraçı direktor Kelli Ortberg rüblük hesabat üzrə bildirib: "Yaxşı bir başlanğıc etdik." Şirkət 737 Max təyyarələrinin istehsalını bu yay ərzində ayda 42-dən 47 ədədə qədər artırmaq planındadır. 737-7 və 737-10 modellərinin sertifikatlaşdırılması 2026-cı il ərzində gözlənilir, ilk çatdırılmalar isə 2027-ci ilə təxirə salınıb.
+
+Sərbəst pul axını göstəricisi -1,5 milyard dollar olub, bir il əvvəlki -2,3 milyard dollardan daha yaxşıdır. Lakin yanacaq yanğısı davam etdiyi üçün maliyyə sağlamlığı hələ tam bərpa olunmayıb.`,
+  },
+  'en-boeing-q1-2026-earnings-143-jet-deliveries-narrowed-loss': {
+    title: `Boeing Narrows Q1 Loss on 143 Jet Deliveries`,
+    date: '2026-04-22',
+    category: 'Business',
+    locale: 'en',
+    content: `Boeing reported first-quarter revenue of $22.22 billion, beat consensus on the bottom line and narrowed its quarterly loss sharply as commercial airplane deliveries hit their highest first-quarter total since 2019. Still, the company continued to burn cash and remained cautious on certification timelines for two key 737 MAX variants.
+
+## Top and Bottom Line
+
+Revenue rose 14 percent year over year to $22.22 billion, topping expectations. Net loss narrowed to $7 million, or $0.11 per share, from a loss of $31 million, or $0.16 per share, a year earlier. Adjusted loss per share came in at $0.20, far better than the $0.83 loss Wall Street had expected, according to CNBC, TS2 and Invezz.
+
+## Deliveries Lead the Recovery
+
+Boeing's commercial airplane unit delivered 143 jets in the first quarter, up 10 percent year over year and the strongest first-quarter figure since 2019. Segment revenue rose 13 percent to $9.2 billion. Defense, Space and Security revenue climbed 21 percent to $7.6 billion, while Services grew 6 percent to $5.37 billion.
+
+Free cash flow outflow improved to $1.5 billion from $2.3 billion a year earlier, a meaningful narrowing even as the company remains cash-negative.
+
+## CEO Commentary and Guidance
+
+Chief Executive Officer Kelly Ortberg told investors: "We're off to a good start." Boeing plans to raise 737 MAX production to 47 aircraft a month from 42 a month this summer. Certification of the 737-7 and 737-10 variants is targeted for "sometime in 2026," with first deliveries now pushed to 2027.
+
+The print marks continued progress in Boeing's turnaround story while underscoring how much work remains on certification, cash flow and ramp discipline before the company can claim a full recovery.`,
+  },
+  'tr-boeing-q1-2026-zarar-azaldi-143-ucak-teslimati': {
+    title: `Boeing Q1 2026: Zarar daraldı, 143 uçak teslim edildi`,
+    date: '2026-04-22',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Boeing, 22 Nisan 2026'da açıkladığı 2026 yılının ilk çeyrek sonuçlarında güçlü bir toparlanma sinyali verdi. Şirket, geliri yıllık yüzde 14 artışla 22,22 milyar dolara yükseltti ve analist beklentilerini aştı. Net zarar 7 milyon dolara (hisse başına -0,11 dolar) geriledi; geçen yıl aynı dönemde bu rakam 31 milyon dolar (hisse başına -0,16 dolar) düzeyindeydi. Sonuçlar, havacılık devinin son yıllarda yaşadığı 737 MAX krizi ve üretim sorunlarının ardından kademeli olarak sağlıklı bir zemine döndüğü yorumlarına yol açtı.
+
+## Teslimatlar 2019'dan bu yana en iyi seviyede
+
+Ticari uçak bölümü 143 adet teslimatla yıllık yüzde 10 büyüme yakaladı. Bu, 2019'dan bu yana kaydedilen en güçlü ilk çeyrek teslimat rakamı oldu. Segment geliri yıllık yüzde 13 artışla 9,2 milyar dolara ulaştı. Savunma, Uzay ve Güvenlik bölümü geliri yüzde 21 artışla 7,6 milyar dolara, Hizmetler bölümü ise yüzde 6 büyümeyle 5,37 milyar dolara çıktı. Düzeltilmiş hisse başına zarar -0,20 dolar ile -0,83 dolarlık beklentiden çok daha iyi gerçekleşti ve yatırımcıların olumlu tepkisini kazandı.
+
+## Nakit akışı ve üretim planları
+
+Serbest nakit akışı çıkışı -1,5 milyar dolara gerileyerek geçen yılki -2,3 milyar doların altında kaldı, ancak hâlâ negatif bölgede. CEO Kelly Ortberg açıklamasında, "İyi bir başlangıç yaptık" ifadesini kullandı ve 2026 yılı için 3 milyar dolar serbest nakit akışı hedefine giden yolun açık olduğunu söyledi. Yönetim, 737 Max üretim hızını yaz aylarından itibaren ayda 42'den 47'ye çıkarmayı planlıyor. 737-7 ve 737-10 sertifikasyonları 2026 içinde hedefleniyor; ilk teslimatlar ise 2027'ye ötelendi. Bu gecikme, hava yolu müşterilerinin filo planlamasında bazı zorluklar yaşamasına neden olabilir.`,
+  },
+  'ru-boeing-q1-2026-ubytki-sokratilis-143-samoleta-postavleno': {
+    title: 'Boeing Q1 2026: 143 самолёта, убытки сократились',
+    date: '2026-04-22',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Boeing 22 апреля 2026 года опубликовал отчёт за первый квартал, превысив ожидания аналитиков по выручке и сократив убытки. Компания поставила 143 самолёта — лучший результат первого квартала с 2019 года.
+
+## Финансовые показатели
+
+Выручка Boeing составила 22,22 миллиарда долларов, что на 14 процентов больше показателя годом ранее. Чистый убыток сократился до 7 миллионов долларов или 0,11 доллара на акцию против 31 миллиона долларов или 0,16 доллара годом ранее. Скорректированный убыток составил 0,20 доллара на акцию при ожидавшихся 0,83 доллара убытка.
+
+## Сегменты бизнеса
+
+Сегмент коммерческих самолётов поставил 143 машины — это рост на 10 процентов в годовом выражении и лучший показатель первого квартала с 2019 года, когда индустрия столкнулась с приостановкой эксплуатации 737 MAX. Выручка сегмента выросла на 13 процентов до 9,2 миллиарда долларов. Сегмент обороны, космоса и безопасности отчитался о выручке 7,6 миллиарда долларов с ростом 21 процент, а сервисное подразделение — 5,37 миллиарда долларов с ростом 6 процентов.
+
+## Планы и прогнозы
+
+Свободный денежный поток остался отрицательным на уровне 1,5 миллиарда долларов, однако отток средств сократился по сравнению с 2,3 миллиарда долларов годом ранее. Генеральный директор Келли Ортберг заявил, что компания начала год хорошо, и планирует нарастить производство 737 Max с 42 до 47 самолётов в месяц к лету. Сертификация моделей 737-7 и 737-10 ожидается в течение 2026 года, а первые поставки перенесены на 2027 год. Для Boeing это символический рубеж: впервые за несколько лет компания приближается к финансовой устойчивости после череды кризисов, связанных с приостановкой эксплуатации самолётов и замедлением производства. Рост поставок коммерческих лайнеров в сочетании с сильными результатами оборонного и сервисного сегментов указывает на постепенное восстановление одного из крупнейших производителей авиатехники в мире.`,
+  },
+
+  // --- Topic 9: IBM Q1 2026 — revenue beat, software +11%, stock drops ---
+  'ibm-q1-2026-gelirleri-15-92-mlrd-dollar-proqnozlari-oteli': {
+    title: 'IBM Q1 2026: gəlir 15,92 milyard dollar, proqnozlar ötüldü',
+    date: '2026-04-22',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `IBM 22 aprel 2026-cı ildə 2026-cı ilin birinci rübü üzrə maliyyə nəticələrini açıqlayıb. Şirkət gəlir və mənfəət baxımından analitik gözləntilərini ötsə də, səhmlər ticarət saatlarından sonra düşüb.
+
+## Maliyyə göstəriciləri
+
+CNBC və StockTitan məlumatlarına əsasən, IBM-in rüblük gəliri 15,92 milyard dollar təşkil edib və konsensus proqnozu olan 15,62 milyard dolları aşıb. İl üzrə gəlir 9 faiz (sabit valyuta ilə 6 faiz) artıb, bir il əvvəl bu göstərici 14,54 milyard dollar idi. Bir səhmə düşən mənfəət 1,91 dollar olub, analitiklər isə 1,81 dollar gözləyirdilər (+5,52 faiz artıq).
+
+Seqmentlər üzrə nəticələr belədir: Software bölməsi 11 faiz (sabit valyuta ilə 8 faiz), Konsaltinq 4 faiz (sabit valyuta ilə 1 faiz), İnfrastruktur isə 15 faiz (sabit valyuta ilə 12 faiz) artıb. Non-GAAP əsasında ümumi mənfəət marjası 57,7 faiz təşkil edib — 110 bazis bəndi artımla. Vergiyə qədər mənfəət marjası 13,4 faiz olub (+140 bazis bəndi).
+
+## Dividend artımı və 2026 proqnozu
+
+Şirkət dividendini səhm üzrə 1,69 dollara qaldırıb. 2026 tam il proqnozuna əsasən, IBM sabit valyuta ilə 5 faizdən çox gəlir artımı və təxminən 1 milyard dollar illik nağd axın artımı gözləyir.
+
+Proqnozlara müsbət reaksiyaya baxmayaraq, Benzinga-nın məlumatına görə, IBM səhmləri hesabat sonrası düşüb. Bu, Tesla-nın kapital xərcləri elanı ilə birlikdə həmin günkü mövsümün bir qədər qarışıq reaksiyaları altında qaldığını göstərir. Bazar iştirakçıları Software bölməsindəki 11 faizlik artımı IBM-in bulud və AI strategiyasının güclənməsinin əlaməti kimi qiymətləndirir.`,
+  },
+  'en-ibm-q1-2026-revenue-15-92b-beat-stock-drops': {
+    title: `IBM Q1 Tops Estimates on Software Growth, Stock Slips`,
+    date: '2026-04-22',
+    category: 'Business',
+    locale: 'en',
+    content: `IBM beat Wall Street expectations on both revenue and earnings per share in the first quarter of 2026, powered by double-digit software growth, a stronger margin profile and a raised dividend. Yet shares slipped after the report, reflecting a cautious market reaction even as the numbers cleared the bar.
+
+## Revenue and Earnings Beat
+
+Revenue rose 9 percent year over year to $15.92 billion, or 6 percent on a constant currency basis, topping the $15.62 billion consensus. Earnings per share came in at $1.91, ahead of the $1.81 consensus, a 5.52 percent surprise, according to CNBC, Benzinga, StockTitan and the Motley Fool transcript.
+
+Non-GAAP gross margin expanded 110 basis points to 57.7 percent, and pre-tax income margin rose 140 basis points to 13.4 percent, signaling a higher-quality mix alongside the top-line growth.
+
+## Segment Breakdown
+
+Software revenue grew 11 percent, or 8 percent at constant currency, making it the fastest-growing segment. Consulting rose 4 percent, or 1 percent at constant currency, while Infrastructure climbed 15 percent, or 12 percent at constant currency. The software momentum reinforced IBM's ongoing shift toward higher-margin recurring revenue streams.
+
+## Dividend and Outlook
+
+IBM raised its dividend to $1.69 per share. For full-year 2026, the company reiterated an outlook of greater than 5 percent constant currency revenue growth and roughly $1 billion in year-over-year cash flow growth.
+
+Despite the beat and the dividend increase, shares fell in the session following the release, Benzinga reported. The reaction added IBM to a short list of companies that delivered beats on Wednesday only to see muted or negative market responses, a reminder that in a market hitting fresh records, expectations have risen faster than results in some corners of enterprise technology.`,
+  },
+  'tr-ibm-q1-2026-15-92-milyar-dolar-gelir-yazilim-artti': {
+    title: `IBM Q1 2026: 15,92 milyar dolar gelir, yazılım +11%`,
+    date: '2026-04-22',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `IBM, 22 Nisan 2026'da açıkladığı 2026 yılının ilk çeyrek sonuçlarında piyasa beklentilerinin üzerine çıktı. Şirketin geliri yıllık yüzde 9 artarak 14,54 milyar dolardan 15,92 milyar dolara yükseldi. Konsensüs tahmini 15,62 milyar dolar, sabit kurda büyüme ise yüzde 6 olarak gerçekleşti. Hisse başına kâr 1,91 dolara çıkarak 1,81 dolarlık beklentiyi yüzde 5,52 oranında aştı. Sonuçlar, IBM'in yazılım ve kurumsal bulut odaklı dönüşüm stratejisinin meyvelerini vermeye devam ettiğini gösterdi.
+
+## Yazılım ve altyapı güçlü seyrediyor
+
+Yazılım bölümü yıllık yüzde 11 (sabit kurda yüzde 8) büyüdü ve şirketin büyüme motorunu oluşturdu. Danışmanlık geliri yüzde 4 (sabit kurda yüzde 1) artarken, Altyapı bölümü yüzde 15 (sabit kurda yüzde 12) yükseldi. GAAP dışı brüt marj yıllık 110 baz puan iyileşerek yüzde 57,7'ye, vergi öncesi gelir marjı 140 baz puan artarak yüzde 13,4'e çıktı. Şirket, hissedarlara olan taahhüdünü güçlendirerek çeyreklik temettüyü 1,69 dolara yükseltti.
+
+## Bilanço üstün, ancak hisse geriledi
+
+IBM yönetimi, 2026 tam yıl beklentisinde sabit kurda yüzde 5'in üzerinde büyüme ve yaklaşık 1 milyar dolar yıllık nakit akışı artışı öngördü. Beklentileri aşmasına rağmen IBM hisseleri bilanço sonrası işlemlerde geriledi; bu, yatırımcıların mevcut beklentileri zaten fiyatlara yansıttığını düşündürüyor. Tesla ve Boeing'in aynı gün açıkladığı güçlü sonuçlarla birlikte IBM, 22 Nisan bilanço gününün kazananlarından biri olarak öne çıktı; ancak yatırımcı tepkisi karışık kaldı ve teknoloji sektöründeki temkinli havayı yansıttı.`,
+  },
+  'ru-ibm-q1-2026-vyruchka-15-92-mlrd-dollarov-prevysila-prognozy': {
+    title: 'IBM Q1 2026: выручка 15,92 млрд превысила прогнозы',
+    date: '2026-04-22',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `IBM 22 апреля 2026 года отчиталась за первый квартал, превысив ожидания аналитиков по выручке и прибыли. Программное обеспечение показало двузначный рост, однако акции компании снизились после публикации отчёта.
+
+## Основные показатели
+
+Выручка IBM составила 15,92 миллиарда долларов при консенсус-прогнозе 15,62 миллиарда, что означает рост 9 процентов в годовом выражении с 14,54 миллиарда годом ранее. В постоянной валюте рост составил 6 процентов. Прибыль на акцию достигла 1,91 доллара против ожидаемых 1,81 доллара, превысив прогноз на 5,52 процента.
+
+## Сегментная разбивка
+
+Сегмент программного обеспечения вырос на 11 процентов в годовом выражении и на 8 процентов в постоянной валюте. Консалтинговый сегмент прибавил 4 процента и 1 процент соответственно. Инфраструктурный сегмент показал самый сильный рост — 15 процентов в годовом выражении и 12 процентов в постоянной валюте. Валовая маржа по не-GAAP достигла 57,7 процента с ростом 110 базисных пунктов, а маржа по прибыли до налогов составила 13,4 процента с ростом 140 базисных пунктов.
+
+## Прогноз и дивиденды
+
+IBM повысила квартальный дивиденд до 1,69 доллара на акцию. Прогноз на 2026 финансовый год предусматривает рост выручки более чем на 5 процентов в постоянной валюте и увеличение денежного потока примерно на 1 миллиард долларов в годовом выражении. Несмотря на превышение ожиданий по всем основным метрикам, акции IBM снизились после отчёта, что указывает на высокие ожидания инвесторов в отношении темпов роста в эпоху искусственного интеллекта.`,
+  },
+
+  // --- Topic 10: Russia drone strike on Odesa port, Zaporizhia railway worker killed ---
+  'rusiya-odessa-limanina-hucum-zaporijiyada-bir-dener-oldu': {
+    title: 'Rusiya Odessa limanına dron zərbəsi, Zaporijyada dəmiryolçu öldü',
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Rusiya 22 aprel 2026-cı ildə Ukraynanın Odessa limanına gecə ərzində dron zərbələri həyata keçirib. Hücumlar liman infrastrukturuna ciddi ziyan vurub, Zaporijya bölgəsində isə bir dəmiryol işçisi həlak olub.
+
+## Odessa limanı ziyan gördü
+
+Al Jazeera və Kiyev Independent-ə istinadən, gecə ərzində Odessaya endirilən dron zərbələri nəticəsində liman körpülərində, anbarlarda, dəmiryolu infrastrukturunda və liman operatoru obyektlərində zədələr qeydə alınıb. Bu hadisə Qara dəniz taxıl dəhlizinin davamlı həssaslığını yenidən gündəmə gətirib.
+
+Rusiya tərəfi bir gecədə 215 dron buraxıb. Son 24 saat ərzində 231 döyüş toqquşması, 78 hava zərbəsi və 287 idarə olunan hava bombasının atılması qeydə alınıb. Zaporijya bölgəsində dron zərbəsi nəticəsində qatar maşinisti həlak olub, bu hadisə mülki infrastruktura qarşı hücumların davam etdiyini təsdiqləyir.
+
+## Ukrayna cavab əməliyyatları və Zelenskinin mövqeyi
+
+GlobalSecurity.org məlumatına görə, həmin gün ərzində Ukrayna dronları Rusiyanın Sızran şəhərini və ətraf bölgəsini hədəfə alıb. Kiyev ordusu müdafiə və cavab əməliyyatlarının davam etdiyini bildirib.
+
+Siyasi sahədə Prezident Volodimir Zelenski ABŞ Prezidenti Donald Trampın Donbas məsələsi ilə bağlı irəli sürdüyü "Donnyland" təklifini rədd edib. Kiyev Independent-in yazdığına görə, Zelenski "Putinland" olmadığını vurğulayıb və Ukrayna ərazilərinin heç bir şəkildə güzəşt olmayacağını qeyd edib.
+
+Ukrayna Müdafiə Nazirliyinin məlumatlarına əsasən, 24 fevral 2022-ci ildən bəri Rusiyanın ümumi hərbi itkiləri təxminən 1,321,450 nəfərə çatıb, son sutka ərzində isə bu rəqəm 1,140 əlavə olub.`,
+  },
+  'en-russia-drone-strike-odesa-port-zaporizhia-railway-worker-killed': {
+    title: `Russian Drones Hit Odesa Port, Kill Rail Worker`,
+    date: '2026-04-22',
+    category: 'World',
+    locale: 'en',
+    content: `Russian drone strikes overnight and through Wednesday targeted Odesa's port infrastructure, killed a railway worker in the Zaporizhia region and fed into a fresh 24-hour tally of hundreds of combat engagements along the front. Kyiv also struck back, sending drones against the Russian city of Syzran and surrounding areas.
+
+## Odesa Port Hit
+
+Overnight drone attacks on the Odesa port damaged berths, warehouses, railway infrastructure and facilities belonging to port operators, according to Al Jazeera, GlobalSecurity.org, Kyiv Independent and Kyiv Post. Russia launched 215 drones overnight, according to Ukrainian air defense figures.
+
+The strike on Odesa underscored the continued vulnerability of the Black Sea grain export corridor, a lifeline for global food markets that has repeatedly been targeted throughout the war.
+
+## Zaporizhia Fatality
+
+A train driver was killed in the Zaporizhia region, Ukrainian authorities reported, the latest civilian casualty tied to Russian long-range strikes on rail and energy infrastructure. Over the preceding 24 hours, Ukrainian forces reported 231 combat engagements, 78 airstrikes and 287 guided aerial bombs dropped by Russia, according to the Ukraine Ministry of Defence figures cited by Kyiv Post.
+
+Ukrainian drones meanwhile targeted the Russian city of Syzran and surrounding region overnight on 22 April.
+
+## Political Friction
+
+On the diplomatic front, Ukrainian President Volodymyr Zelensky pushed back on a Donbas-related proposal from U.S. President Donald Trump, with Kyiv Independent capturing the Ukrainian line as "Not Putinland."
+
+Cumulative Russian military losses since 24 February 2022 rose to approximately 1,321,450 personnel, according to the Ukraine Ministry of Defence, with an additional 1,140 losses in the past day. The figures, while not independently verified, form the daily baseline Kyiv uses to frame the conflict's attritional cost.`,
+  },
+  'tr-rusya-odessa-limanina-drone-saldirisi-zaporijya-demiryolu-iscisi-hayatini-kaybetti': {
+    title: `Rusya Odessa limanını vurdu, demiryolu işçisi öldü`,
+    date: '2026-04-22',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Rusya, 22 Nisan 2026 gecesi Ukrayna'ya yönelik geniş çaplı insansız hava aracı saldırılarını sürdürdü. Odessa limanı ana hedeflerden biri oldu; saldırılarda iskeleler, depolar, demiryolu altyapısı ve liman operatörü tesisleri hasar gördü. Zaporijya bölgesinde ise bir demiryolu işçisi (tren sürücüsü) hayatını kaybetti. Saldırılar, Ukrayna'nın enerji ve ulaşım altyapısını zayıflatmayı hedefleyen Rus stratejisinin bir parçası olarak değerlendirildi.
+
+## Saldırıların ölçeği
+
+Rus ordusu gece boyunca toplam 215 insansız hava aracı fırlattı. Son 24 saatte 231 muharebe teması yaşandı, 78 hava saldırısı düzenlendi ve 287 güdümlü hava bombası kullanıldı. Ukrayna Savunma Bakanlığı'na göre 24 Şubat 2022'den bu yana Rus ordusundaki toplam personel kaybı yaklaşık 1.321.450 kişiye ulaştı; son 24 saatte bu rakam 1.140 daha arttı. Ukrayna tarafı da misilleme olarak aynı gece Rusya'nın Sızran şehrini ve çevresini İHA'larla vurdu. Her iki taraf da yoğun hava araçlı saldırıları sürdürüyor.
+
+## Karadeniz tahıl koridoru ve "Donnyland" krizi
+
+Odessa limanına yönelik saldırı, Karadeniz tahıl rotasının kırılganlığını yeniden gündeme getirdi ve gıda güvenliği konusunda uluslararası kaygıları canlandırdı. Ukrayna Cumhurbaşkanı Volodimir Zelenski, Başkan Donald Trump'ın Donbas bölgesine ilişkin "Donnyland" önerisine sert karşılık verdi ve bölgenin "Putinland" olmayacağını vurguladı. Bu çıkış, Washington ile Kiev arasındaki diplomatik sürtüşmenin tırmandığını gösterdi. Diplomatik gerilim sürerken sahadaki çatışma da hız kesmiyor ve sivil altyapı saldırılarının insani maliyeti büyümeye devam ediyor.`,
+  },
+  'ru-ukraina-rossiyskie-udary-po-portu-odessy-zheleznodorozhnik-pogib': {
+    title: 'Удары по порту Одессы: погиб железнодорожник',
+    date: '2026-04-22',
+    category: 'Мир',
+    locale: 'ru',
+    content: `В ночь на 22 апреля 2026 года российские беспилотники атаковали порт Одессы на Чёрном море, нанеся повреждения причалам, складам и железнодорожной инфраструктуре. В Запорожской области в результате ударов погиб работник железной дороги.
+
+## Удар по Одессе
+
+По данным Al Jazeera, ночные атаки беспилотников повредили причалы, склады, железнодорожную инфраструктуру и объекты оператора порта. Удары по морскому порту в очередной раз подчёркивают уязвимость черноморского зернового коридора, который остаётся критически важным для мирового продовольственного рынка. Всего за ночь Россия запустила 215 беспилотников по украинской территории.
+
+## Потери и боевые действия
+
+В Запорожской области погиб машинист поезда. За последние 24 часа произошло 231 боевое столкновение, нанесено 78 авиаударов и сброшено 287 управляемых авиабомб. Украинские беспилотники в свою очередь атаковали российский город Сызрань и прилегающие территории в ночь на 22 апреля. По данным Минобороны Украины, совокупные потери российской армии с 24 февраля 2022 года составили около 1 321 450 военнослужащих, включая 1140 человек за минувшие сутки.
+
+## Политическое измерение
+
+Президент Украины Владимир Зеленский, по информации Kyiv Independent, отверг предложение Трампа о так называемом плане по Донбассу, подчеркнув, что речь идёт не о территории под контролем Путина. Разногласия между Киевом и Вашингтоном по вопросу мирного урегулирования продолжаются на фоне продолжающихся российских ударов по украинским объектам инфраструктуры и морским портам.`,
+  },
+
   // ========== 2026-04-21 ==========
 
   // --- Topic 3: Iran ceasefire / Vance Islamabad ---
