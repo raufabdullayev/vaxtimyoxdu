@@ -324,6 +324,7 @@ describe('news article categories', () => {
       'Travel',
       'Business',
       'World',
+      'Politics',
     ]
     for (const cat of enCategories) {
       expect(validEnCategories).toContain(cat)

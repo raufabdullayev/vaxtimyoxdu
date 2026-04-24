@@ -7,6 +7,674 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-24 ==========
+
+  // --- Topic 1: DOJ drops criminal probe of Fed Chair Powell ---
+  'doj-powell-cinayet-arashdirmasini-dayandirdi-warsh-yolu-achildi': {
+    title: 'ABŞ Ədliyyə Nazirliyi Powell araşdırmasını dayandırdı, Warsh yolu açıldı',
+    date: '2026-04-24',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `ABŞ Kolumbiya Dairəsi üzrə federal prokuror Jeanine Pirro 24 aprel 2026-cı ildə X platformasında elan edib ki, onun ofisi Federal Ehtiyat Sisteminin (Fed) baş binasının milyardlıq təmir xərcləri və Fed sədri Jerome Powell ilə bağlı cinayət araşdırmasına son qoyur.
+
+## Araşdırmanın yekunu və yeni müstəntiq
+
+CNBC, CNN Business və NBC News-un məlumatına görə, indən belə Fed-in daxili Baş Müfəttişi (Inspector General) baş qərargahın çoxmilyardlıq təmir işlərini tədqiq edəcək. Pirro yalnız bir neçə gün əvvəl — 22 apreldə — araşdırmanın davam edəcəyini açıqlamışdı. İki gün sonra mövqeyin bu qədər kəskin dəyişməsi Vaşinqtonda diqqət mərkəzindədir.
+
+Orijinal DOJ araşdırması 2026-cı ilin yanvar ayında, Tramp açıq şəkildə Powell-i faiz dərəcələrini aşağı salmağa çağırandan sonra başlanmışdı. PBS NewsHour-un xatırlatdığına görə, D.C. Federal Məhkəməsinin Baş Hakimi James Boasberg əvvəllər Pirro ofisindən gələn məhkəmə çağırış sənədlərini Powell-ə təzyiq göstərmək üçün "pretekst" adlandıraraq ləğv etmişdi.
+
+## Warsh-un təsdiqi üçün açılan yol
+
+Washington Times və Bloomberg qeyd edir ki, bu addım Tramp-ın Powell yerinə Fed sədri namizədi Kevin Warsh-un Senatdakı təsdiq prosesi qarşısındakı əsas maneəni aradan qaldırır. Senator Thom Tillis (R-NC) Warsh-un irəliləməsini Powell araşdırmasının həlli şərti ilə bloklamışdı.
+
+Həmçinin analitiklər bildirir ki, bu, Tramp administrasiyasının məhkəmədə uğursuzluqdan sonra taktikasını dəyişərək siyasi cəhətdən gərgin olan araşdırmanı başa vurmasıdır. Məqsəd — Powell-in səlahiyyət müddəti bitməzdən əvvəl Warsh-u təsdiqə çatdırmaqdır. Bu, növbəti Fed sədrinin Warsh olacağına dair indiyədək ən aydın siqnal kimi qiymətləndirilir.`,
+  },
+  'en-doj-drops-powell-probe-clears-way-for-warsh-fed-chair': {
+    title: `DOJ Drops Powell Probe, Clears Path for Warsh at Fed`,
+    date: '2026-04-24',
+    category: 'Politics',
+    locale: 'en',
+    content: `The U.S. Department of Justice dropped its criminal probe of Federal Reserve Chair Jerome Powell on Friday, removing a major hurdle to the Senate confirmation of Kevin Warsh as Trump's nominee to lead the central bank. The reversal came just two days after U.S. Attorney Jeanine Pirro had publicly insisted the investigation would continue.
+
+## A Sudden About-Face
+
+According to reporting from CNBC, CNN Business, NBC News and PBS NewsHour, Pirro announced on X that her office was ending its criminal probe into Federal Reserve building-renovation cost overruns and into Powell personally. The Fed's own Inspector General will now investigate the multi-billion-dollar headquarters renovation. The DOJ investigation had been launched in January 2026 after Trump publicly pressured Powell to cut interest rates.
+
+Chief Judge James Boasberg of the U.S. District Court for the District of Columbia had previously quashed subpoenas from Pirro's office, describing them as a "pretext" designed to pressure Powell. Bloomberg and the Washington Times both reported the closure on Friday.
+
+## Clearing the Runway for Warsh
+
+The move removes the biggest remaining obstacle to Warsh's Senate confirmation. Sen. Thom Tillis of North Carolina had been blocking the nomination pending resolution of the Powell probe, per CNBC. With the investigation shut down, Senate Republicans are expected to move quickly to confirm Warsh before Powell's term expires.
+
+## The Political Subtext
+
+The pivot reads as a tacit acknowledgment that the administration's courtroom strategy against Powell had run aground. Having lost the subpoena fight before Judge Boasberg, the White House appears to have calculated that dropping the probe and accelerating Warsh's confirmation is the faster route to reshaping Fed leadership.
+
+For markets, the resolution is the clearest signal yet that Warsh will be the next Fed chair, a pivot with major implications for the 2026 rate path.`,
+  },
+  'tr-adalet-bakanligi-powell-sorusturmasi-durdurdu-warsh-yolu-acildi': {
+    title: `ABD Powell soruşturmasını kapattı, Warsh'a yol açıldı`,
+    date: '2026-04-24',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `ABD Adalet Bakanlığı, Federal Rezerv Başkanı Jerome Powell hakkında yürütülen cezai soruşturmayı 24 Nisan Cuma günü resmen kapattı. Kararı, Columbia Bölgesi ABD Başsavcısı Jeanine Pirro X platformu üzerinden duyurdu. Soruşturma, Federal Rezerv'in milyarlarca dolarlık genel merkez yenileme projesindeki maliyet aşımına ve Powell'ın kişisel rolüne odaklanmıştı. Pirro, dosyanın bundan sonra Fed'in kendi İç Denetim Ofisi tarafından yürütüleceğini bildirdi. Karar, yalnızca iki gün önce 22 Nisan Çarşamba günü yapılan "soruşturma sürecek" açıklamasının tam tersi bir dönüş anlamı taşıyor.
+
+## Warsh için Senato engeli kalktı
+
+Soruşturmanın kapatılması, Trump'ın Fed Başkanlığı için aday gösterdiği Kevin Warsh'ın Senato onayı sürecinde en büyük engeli ortadan kaldırdı. Kuzey Carolina Cumhuriyetçi Senatör Thom Tillis, Powell soruşturması çözüme kavuşmadan Warsh'ın adaylığına onay vermeyeceğini belirtmişti. Bu adımla birlikte Warsh'ın Powell'ın görev süresi bitmeden Fed Başkanı olarak kesinleşmesi gündemin ön sıralarına taşındı.
+
+## Soruşturmanın geri plandaki hikâyesi
+
+Adalet Bakanlığı soruşturması, Ocak 2026'da Trump'ın Powell'a kamuoyu önünde faiz indirme baskısı yapmasının ardından başlatılmıştı. Washington DC Bölge Mahkemesi Başhâkimi James Boasberg, Pirro'nun ofisi tarafından çıkarılan mahkeme celplerini daha önce "Powell'a baskı kurma bahanesi" olarak nitelendirmiş ve iptal etmişti. Mahkemedeki bu başarısızlığın ardından yürütmenin aniden geri adım atması, gözlemciler tarafından "siyasi başarısızlığın kabulü" olarak okundu.
+
+## Para politikasına etkisi
+
+Karar, aynı zamanda Fed'in bağımsızlığı tartışmalarının merkezinde duran bir dönüm noktası olarak değerlendiriliyor. Warsh'ın Powell'ın yerini alacağına yönelik algı güçlenirken piyasalarda faiz indirim beklentileri de yeniden şekilleniyor. Cuma günkü ani dönüş, Trump yönetiminin Powell dosyasını kapatıp Fed liderliği değişikliğine hızla geçiş yapma stratejisinin en net sinyali olarak öne çıkıyor.`,
+  },
+  'ru-minyust-ssha-zakryl-delo-protiv-pauella-put-dlya-uorsha-otkryt': {
+    title: 'Минюст США закрыл дело против Пауэлла — путь Уоршу открыт',
+    date: '2026-04-24',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Прокурор США по округу Колумбия Джанин Пирро объявила в пятницу 24 апреля о закрытии уголовного расследования в отношении председателя Федеральной резервной системы Джерома Пауэлла и стоимости ремонта штаб-квартиры ФРС. Решение было озвучено в социальной сети X и мгновенно снимает с повестки дня один из главных политических препятствий для утверждения Кевина Уорша новым главой американского центрального банка.
+
+## Разворот за два дня
+
+Ещё в среду 22 апреля Пирро заявляла, что расследование продолжится. Всего через два дня позиция прокуратуры кардинально изменилась. Теперь проверкой многомиллиардного ремонта штаб-квартиры ФРС будет заниматься не прокуратура, а инспектор по внутренним делам Федерального резерва. Исходное расследование Министерства юстиции было запущено в январе 2026 года после публичного давления президента Дональда Трампа на Пауэлла с требованием снизить ставки. Главный судья окружного суда округа Колумбия Джеймс Басберг ранее уже отменял повестки из офиса Пирро, назвав их предлогом для давления на председателя ФРС.
+
+## Разблокирование утверждения Уорша
+
+Закрытие дела снимает главное сенатское препятствие для Кевина Уорша, которого Трамп выдвинул кандидатом на замену Пауэлла. Сенатор Том Тиллис от Северной Каролины ранее блокировал продвижение кандидатуры, настаивая на завершении расследования в отношении действующего главы ФРС. Теперь этого препятствия больше нет, и процесс подтверждения может пойти ускоренными темпами до истечения полномочий Пауэлла.
+
+## Политический сигнал
+
+Для администрации Трампа это самый ясный сигнал о намерении сделать Уорша следующим председателем ФРС. Судебные неудачи, включая отмену повесток судом, подтолкнули прокуратуру к отказу от политически заряжённого расследования. Ряд аналитиков расценивает ход как прагматичный шаг, позволяющий перенести внимание на подготовку Уорша к слушаниям в Сенате и дальнейшую денежно-кредитную повестку.`,
+  },
+
+  // --- Topic 2: Intel Q1 2026 stock soars 25%+, Terafab deal with Musk ---
+  'intel-q1-2026-gelirler-13-58-mlrd-sehm-25-faiz-artdi-terafab': {
+    title: 'Intel Q1 2026: gəlir 13,58 mlrd dollar, səhm 25% artdı, Terafab təsdiqləndi',
+    date: '2026-04-24',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `Intel 23 aprel 2026-cı il ABŞ birja bağlanışından sonra açıqladığı birinci rüb hesabatında gözləntiləri aşan göstəricilər nümayiş etdirib. 24 aprel ticarət günündə səhm 25 faizdən çox sıçrayış qeydə alıb və Nasdaq Composite indeksini yeni rekord səviyyəsinə qaldırıb.
+
+## Altıncı ardıcıl üstəl və proqnoz
+
+CNBC və Intel İR materiallarına görə, Q1 gəliri 13,58 milyard dollar təşkil edib — analitiklərin 12,42 milyard dollarlıq gözləntisindən yüksəkdir və illik bazda 7 faiz artım deməkdir. Düzəlmiş səhm üzrə mənfəət (EPS) 0,29 dollar olub, gözlənti isə cəmi 0,01 dollar idi. Bu, Intel-in ardıcıl altıncı rüblük üstələməsidir.
+
+Yahoo Finance və RTTNews-un xəbər verdiyinə görə, Data Center gəliri illik bazda 22 faiz artaraq 5,1 milyard dollara çatıb, süni intellekt əsaslı biznes indi şirkətin ümumi gəlirinin 60 faizini təşkil edir və 40 faiz yüksəlib. Client Computing gəliri 7,7 milyard dollar olub — gözlənti 7,1 milyard dollar idi. Q2 2026 proqnozu: gəlir 13,8-14,8 milyard dollar, düzəlmiş EPS 0,20 dollar — hər iki göstərici Wall Street konsensusundan yuxarıdır.
+
+## Terafab müqaviləsi və Nasdaq rekordu
+
+The Motley Fool və TheStreet-in məlumatına görə, Intel səhmləri 04-23 gecə sessiyasında 20 faiz yüksəlib, 24 aprel premarketində isə 25-27 faiz artıb. Nasdaq Composite gün ərzində 1,5 faiz artaraq yeni rekord dərəcəsini qeydə alıb, yarımkeçirici sektoru isə 18-ci ardıcıl gün yüksəlişə hazırlaşıb.
+
+Həmçinin Intel Elon Musk-un Texas ştatı Ostində qurduğu Terafab çip kompleksinə qoşulduğunu təsdiqləyib. Terafab çərçivəsində Intel SpaceX, xAI və Tesla üçün "ultra-yüksək məhsuldarlıqlı çipləri sənaye miqyasında dizayn, istehsal və qablaşdıracaq". Tesla Intel-in 14A prosesindən istifadə etməyi planlaşdırır. Google isə Intel CPU-larının bir neçə nəslini AI data mərkəzi iş yükləri üçün sifariş edəcəyini açıqlayıb. Bu razılaşma CEO Lip-Bu Tan-ın transformasiya strategiyasının zirvə nöqtəsi hesab olunur.`,
+  },
+  'en-intel-q1-2026-stock-soars-25-nasdaq-record-musk-terafab': {
+    title: `Intel Q1 Stock Soars 25%, Nasdaq Record, Musk Terafab`,
+    date: '2026-04-24',
+    category: 'Technology',
+    locale: 'en',
+    content: `Intel shares rocketed roughly 25 percent in Friday premarket trading after the chipmaker posted its sixth straight quarterly beat and confirmed a partnership with Elon Musk's Terafab chip complex in Austin, Texas. The rally drove the Nasdaq Composite to a fresh intraday record, up about 1.5 percent, as semiconductor momentum extended into an 18th consecutive session.
+
+## A Blowout Print
+
+According to Intel's investor relations release and coverage from CNBC, Yahoo Finance and RTTNews, first-quarter revenue landed at 13.58 billion dollars against a 12.42 billion dollar consensus, up 7 percent year over year. Adjusted earnings per share of 0.29 dollars crushed the 0.01 dollar consensus. Data Center revenue rose 22 percent year over year to 5.1 billion dollars, and Client Computing revenue came in at 7.7 billion dollars versus a 7.1 billion dollar expectation.
+
+AI-driven businesses now account for 60 percent of revenue, up 40 percent year over year, the company said. Second-quarter guidance of 13.8 to 14.8 billion dollars in revenue and 0.20 dollars in adjusted EPS sat well above Street estimates of 13.07 billion dollars and 0.09 dollars respectively.
+
+## The Terafab Deal With Musk
+
+Intel confirmed it will join Musk's Terafab chip complex in Austin, where it will "design, fabricate, and package ultra-high-performance chips at scale" for SpaceX, xAI and Tesla, per Yahoo Finance and The Motley Fool. Tesla plans to use Intel's 14A process. Google separately committed to multiple generations of Intel CPUs for its AI data center workloads.
+
+## A Comeback Narrative
+
+The results extend the turnaround overseen by CEO Lip-Bu Tan and push Intel stock up around 100 percent year to date, according to 24/7 Wall St. The Terafab tie-up puts Intel back into contention as an advanced foundry, a role dominated in recent years by TSMC.
+
+Texas Instruments, reporting earlier, hit a 25-year high as the broader chip tape rallied alongside Intel.`,
+  },
+  'tr-intel-q1-2026-hisse-25-yukseldi-nasdaq-rekor-terafab-musk': {
+    title: `Intel hissesi yüzde 25 uçtu, Nasdaq yeni rekor kırdı`,
+    date: '2026-04-24',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `Intel, 2026 yılının ilk çeyreğine ilişkin beklenti üstü finansal sonuçlarını 23 Nisan kapanışının ardından açıkladı ve hisseleri 24 Nisan Cuma işlem öncesinde yüzde 25 ile 27 arasında yükseldi. Çeyreklik gelir 13,58 milyar dolara ulaşarak analist beklentisi olan 12,42 milyar doları geride bıraktı; yıllık bazda büyüme yüzde 7 olarak gerçekleşti. Düzeltilmiş hisse başına kazanç 0,29 dolar ile 0,01 dolarlık konsensüsün yaklaşık 29 katına çıktı. Sonuçlar, şirketin üst üste altıncı çeyreklik beklenti aşımını temsil ediyor. Nasdaq Composite endeksi, Intel hisselerindeki ralli sayesinde seans içi yeni rekor seviyesine ulaştı ve yüzde 1,5 değer kazandı.
+
+## Yapay zekâ iş kolu artık gelirin yüzde 60'ı
+
+Veri Merkezi geliri yıllık bazda yüzde 22 artışla 5,1 milyar dolara yükseldi. Yapay zekâ odaklı iş kolları artık Intel gelirinin yüzde 60'ını oluşturuyor ve yıllık yüzde 40 büyüyor. PC çip biriminde gelir 7,7 milyar dolar olarak gerçekleşti; beklenti 7,1 milyar dolardı. Şirketin ikinci çeyrek için gelir kılavuzu 13,8 ile 14,8 milyar dolar bandında, düzeltilmiş hisse başına kazanç kılavuzu ise 0,20 dolar olarak açıklandı. Her iki rakam da Wall Street tahminlerinin oldukça üzerinde.
+
+## Musk'ın Terafab ortaklığı doğrulandı
+
+Intel, Elon Musk'ın Austin Teksas'ta kurduğu Terafab çip kompleksine resmen katılıyor. Şirket, SpaceX, xAI ve Tesla için "ultra-yüksek performanslı çipleri ölçekli olarak tasarlayacak, üretecek ve paketleyecek". Tesla, Intel'in 14A üretim sürecini kullanmayı planlıyor. Google ise yapay zekâ veri merkezi yükleri için Intel CPU'larının birden fazla neslini kullanma taahhüdünü verdi.
+
+## Lip-Bu Tan'ın geri dönüş hikâyesi
+
+CEO Lip-Bu Tan'ın liderliğindeki dönüşüm süreci, yapay zekâ-CPU döngüsünün zirvesinde somut bir başarıya ulaşıyor. Terafab ortaklığı, Intel'i TSMC ile doğrudan yarışan "gelişmiş foundry" oyuncusu konumuna yeniden taşıyor. Yarı iletken sektörü için 18 günlük ralli trendi, piyasanın yapay zekâ altyapı hikâyesine olan güvenini gösteriyor.`,
+  },
+  'ru-intel-q1-2026-aktsii-vzleteli-na-25-nasdaq-rekord-terafab-musk': {
+    title: 'Intel Q1 2026: акции выросли на 25%, Nasdaq — новый рекорд',
+    date: '2026-04-24',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `Акции американского производителя чипов Intel взлетели на 25–27% на премаркете 24 апреля после публикации отчёта за первый квартал 2026 года и сильного прогноза на второй квартал. Nasdaq Composite обновил исторический внутридневной максимум, прибавив около 1,5% на фоне общего ралли полупроводникового сектора. Это шестой подряд квартал, когда компания превосходит ожидания аналитиков Уолл-стрит.
+
+## Сильные финансовые результаты
+
+Выручка Intel в первом квартале составила 13,58 миллиарда долларов против консенсус-прогноза 12,42 миллиарда — рост 7% в годовом выражении. Скорректированная прибыль на акцию достигла 29 центов при ожиданиях всего 1 цента. Выручка дата-центрового направления выросла на 22% и составила 5,1 миллиарда долларов. Доля бизнесов, связанных с искусственным интеллектом, достигла 60% всей выручки, прибавив 40% за год. Клиентское направление — продажи процессоров для персональных компьютеров — принесло 7,7 миллиарда долларов против ожидаемых 7,1 миллиарда. Прогноз на второй квартал предполагает выручку в коридоре 13,8–14,8 миллиарда и EPS около 20 центов, что существенно выше прежних оценок рынка.
+
+## Сделка Terafab с Маском
+
+Отдельным драйвером роста стало подтверждение участия Intel в проекте Terafab — новом чиповом комплексе Илона Маска в Остине, штат Техас. Компании совместно будут проектировать, производить и упаковывать ультра-высокопроизводительные чипы для SpaceX, xAI и Tesla. Tesla планирует использовать техпроцесс Intel 14A. Отдельно Google подтвердил закупку нескольких поколений процессоров Intel для рабочих нагрузок искусственного интеллекта в своих дата-центрах.
+
+## История разворота
+
+Для главного исполнительного директора Intel Лип-Бу Тана результаты стали подтверждением стратегии разворота. Компания возвращается в высшую лигу мировых контрактных производителей чипов и напрямую бросает вызов TSMC на рынке передовых технологических процессов. Сочетание сильного отчёта, удачного прогноза и громкой сделки с Маском превращает Intel в символ нового витка гонки в сфере чипов для искусственного интеллекта.`,
+  },
+
+  // --- Topic 3: Iran FM Araghchi in Pakistan for 2nd round of US talks ---
+  'iran-xin-nazirlige-araghchi-islamabada-getdi-ikinci-raund-danishiqlar': {
+    title: 'İran XİN rəhbəri Araghchi İslamabada gəldi, ABŞ ilə ikinci raund başlayır',
+    date: '2026-04-24',
+    category: 'Dünya',
+    locale: 'az',
+    content: `İranın xarici işlər naziri Abbas Araghchi 24 aprel 2026-cı il cümə axşamı gec saatlarda kiçik nümayəndə heyəti ilə Pakistan paytaxtı İslamabada gedib. Bu, Tehranın 22 apreldəki — "ABŞ blokadasını qaldırmayana qədər heyət göndərməyəcəyik" — mövqeyinin geri çəkilməsi deməkdir.
+
+## ABŞ tərəfdən Witkoff və Kushner
+
+Al Jazeera və CNN-in məlumatına görə, Tramp İranla bu həftəsonu danışıqlara qatılmaq üçün Orta Şərq üzrə xüsusi elçisi Steve Witkoff və Jared Kushner-i İslamabada göndərir. Vitse-prezident JD Vance hazırlıq vəziyyətindədir, lakin hələ yola düşməyib. İranın Məclis sədri Məhəmməd-Bagir Ghalibaf danışıqlarda iştirak etmir.
+
+Bloomberg və The National-ın xəbər verdiyinə görə, Araghchi-nin marşrutu İslamabaddan Oman paytaxtı Muskatına, oradan isə Moskvaya uzanır. Bu, İran müharibəsinin 56-cı günüdür. ABŞ İran limanlarına dəniz blokadasını davam etdirir; Tramp 23 apreldə Hərbi Dəniz Qüvvələrinə Hürmüz boğazında mina qoyan istənilən gəmini "vurub batırmağı" əmr edib və minatəmizləyənlərin fəaliyyətini "üçqat gücləndirib".
+
+## Pakistan vasitəçilik edir, irəliləyişdən söz gedir
+
+Haaretz və The National qeyd edirlər ki, vasitəçi Pakistan güclü təhlükəsizlik tədbirləri görüb — bu həftə ən azı 9 ABŞ hərbi təyyarəsi İslamabada rabitə avadanlığı, nəqliyyat və texniki heyətlə gəlib. Pakistanlı rəsmilər artıq "irəliləyiş ehtimalının yüksək olduğunu" bildirirlər.
+
+Həmçinin bildirilir ki, məqsəd tam sülh sazişindən əvvəl atəşkəsi uzadan bir "anlaşma memorandumu"nun imzalanmasıdır. Bir həftə əvvəl İslamabad danışıqlarının uğursuz yekunundan sonra bu, diplomatik təqvimin ən mühüm hadisəsidir. 04-24 tarixinin əsas qırılma xəbəri məhz Araghchi-nin Pakistana qayıtmasıdır.`,
+  },
+  'en-iran-fm-araghchi-pakistan-visit-us-envoys-witkoff-kushner-talks': {
+    title: `Iran FM Araghchi Flies to Pakistan for US Talks Round 2`,
+    date: '2026-04-24',
+    category: 'World',
+    locale: 'en',
+    content: `Iranian Foreign Minister Abbas Araghchi landed in Islamabad on Friday night for a second round of talks with U.S. envoys Steve Witkoff and Jared Kushner, in a reversal of Tehran's earlier refusal to send a delegation while Washington's naval blockade remained in force. The visit marks day 56 of the 2026 Iran war.
+
+## A Reversal From Tehran
+
+According to Al Jazeera, CNN, Bloomberg and The National, Araghchi traveled with a small delegation. That reverses Iran's 22 April position, when Tehran had said no delegation would attend talks until the United States lifted its blockade of Iranian ports. Araghchi's itinerary continues from Islamabad to Muscat and then Moscow.
+
+Haaretz reported that Araghchi is expected to discuss Tehran's proposal for direct U.S. talks during the Pakistan stop. Pakistani officials cited by The National said there is now a "high likelihood of a breakthrough."
+
+## The U.S. Team
+
+President Trump is sending Witkoff, his Middle East envoy, and Kushner to represent Washington, per CNN. Vice President JD Vance is on standby but not yet traveling. Iran's Parliament Speaker Mohammad-Bagher Ghalibaf is not participating in this round.
+
+At least nine U.S. aircraft arrived in Islamabad this week carrying communications equipment, vehicles and technical personnel, according to Al Jazeera's liveblog. Pakistan, acting as mediator, has deployed heavy security.
+
+## The Hormuz Backdrop
+
+The talks unfold against a hardened U.S. military posture. Trump on 23 April ordered the Navy to "shoot and kill any boat" laying mines in the Strait of Hormuz and directed minesweepers to clear the strait at a "tripled up level," per Al Jazeera. The immediate objective of this weekend's talks is a memorandum of understanding extending the ceasefire ahead of a full peace deal.
+
+After a week of deadlock following the collapse of the 21 April Islamabad round, Friday's meeting is the most substantive diplomatic movement in the war to date.`,
+  },
+  'tr-iran-disisleri-bakani-araghchi-islamabad-ikinci-tur-abd-gorusmeleri': {
+    title: `İran Dışişleri Bakanı İslamabad'da: İkinci tur başlıyor`,
+    date: '2026-04-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `İran Dışişleri Bakanı Abbas Araghchi, 24 Nisan Cuma akşamı küçük bir heyetle birlikte Pakistan'ın başkenti İslamabad'a hareket etti. Ziyaret, Tahran'ın 22 Nisan'da açıkladığı "ABD deniz ablukasını kaldırana kadar hiçbir heyet görüşmelere katılmayacaktır" tutumunun tam tersine dönüş anlamına geliyor. İran'ın ikinci tur müzakerelere katılması, 2026 İran savaşının 56'ncı gününde beklenmedik bir diplomatik açılım olarak öne çıktı. Araghchi'nin güzergâhı İslamabad, ardından Maskat (Umman) ve Moskova olarak belirlendi.
+
+## Witkoff ve Kushner Trump adına masada
+
+Trump, Ortadoğu Özel Temsilcisi Steve Witkoff ile Jared Kushner'ı hafta sonu boyunca Araghchi ile görüşmeler yürütmek üzere Pakistan'a gönderiyor. Başkan Yardımcısı JD Vance hazır bekleme durumunda olsa da henüz yola çıkmış değil. İran tarafında Meclis Başkanı Mohammad-Bagher Ghalibaf müzakerelere katılmıyor; masaya yalnızca dışişleri bakanlığı heyeti oturuyor.
+
+## Hormuz'da askeri baskı artıyor
+
+ABD, İran limanlarına yönelik deniz ablukasını sürdürüyor. Trump, 23 Nisan'da Donanma'ya Hormuz Boğazı'nda mayın döşeyen "her teknenin vurulması ve imha edilmesi" emrini verdi ve boğazın temizlenmesi için mayın tarama gemilerinin sayısının üç katına çıkarılmasını istedi. Askeri baskının artırılması, müzakere masasında ABD'nin elini güçlendirme stratejisinin parçası olarak değerlendiriliyor.
+
+## Pakistan arabuluculuğu ve ateşkes muhtırası
+
+Ev sahibi Pakistan, güvenlik önlemlerini en üst seviyeye çıkardı. Hafta boyunca İslamabad'a iletişim, araç ve teknik personel taşıyan en az 9 ABD uçağı iniş yaptı. Pakistanlı yetkililer "anlaşma için yüksek olasılık" olduğunu belirtiyor. Bu turun hedefi, tam kapsamlı barış anlaşmasından önce ateşkesi uzatan bir mutabakat muhtırasının imzalanması. Araghchi'nin geri dönüşü, 21 Nisan'da çıkmaza giren ilk tur İslamabad müzakerelerinin ardından bir haftalık krizin ilk somut diplomatik açılım noktası olarak okunuyor.`,
+  },
+  'ru-glava-mid-irana-arakhchi-priletel-v-pakistan-vtoroy-raund-peregovorov': {
+    title: 'Глава МИД Ирана в Пакистане: второй раунд переговоров',
+    date: '2026-04-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Министр иностранных дел Ирана Аббас Аракчи вылетел в Исламабад вечером 24 апреля с небольшой делегацией для участия во втором раунде переговоров с США. Решение стало разворотом на 180 градусов по сравнению с позицией Тегерана 22 апреля, когда иранская сторона заявляла, что никакая делегация не отправится на переговоры до снятия американской военно-морской блокады.
+
+## Посланники Трампа Уиткофф и Кушнер
+
+Со стороны США в переговорах примут участие спецпосланник Дональда Трампа по Ближнему Востоку Стив Уиткофф и Джаред Кушнер. Вице-президент Джей Ди Вэнс находится в режиме готовности, но пока не вылетает. Спикер иранского парламента Мохаммад-Багер Галибаф в переговорах не участвует. Маршрут поездки Аракчи предполагает последовательные остановки в Исламабаде, Маскате в Омане и Москве.
+
+## Фон военной эскалации
+
+Переговоры проходят на 56-й день иранской войны 2026 года. США сохраняют военно-морскую блокаду иранских портов. 23 апреля Трамп приказал ВМС открывать огонь на поражение по любым судам, минирующим Ормузский пролив, и направил в район тройной состав минных тральщиков для очистки пути. Пакистан, выступающий посредником, разместил усиленную охрану — только за последнюю неделю в Исламабаде приземлились как минимум девять американских самолётов с оборудованием связи, транспортом и техническим персоналом.
+
+## Цель — меморандум о взаимопонимании
+
+Пакистанские официальные лица говорят о высокой вероятности прорыва. Задачей второго раунда называют подписание меморандума о взаимопонимании, который продлит режим прекращения огня до заключения полноценного мирного соглашения. Возвращение Аракчи к диалогу после провала переговоров 21 апреля в Исламабаде рассматривается как ключевой дипломатический сигнал с начала текущей фазы кризиса.`,
+  },
+
+  // --- Topic 4: Japan core inflation accelerates to 1.8% in March ---
+  'yaponiya-inflyasiya-mart-1-8-faiz-iran-muharibesi-enerji-qiymetleri': {
+    title: 'Yaponiyada mart inflyasiyası 1,8%-ə qalxdı — İran müharibəsi təsiri',
+    date: '2026-04-24',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Yaponiya 24 aprel 2026-cı il Tokio səhərində mart ayı üçün rəsmi istehlak qiymətləri indeksini (CPI) açıqlayıb. Təzə ərzaq məhsulları çıxarılmaqla hesablanan milli əsas CPI 1,8 faiz artıb — bu, analitiklərin gözləntilərinə uyğun və beş ayda ilk sürətlənmədir.
+
+## Beş ay sonra ilk artım
+
+CNBC və SwingFish-in məlumatına görə, fevralda əsas inflyasiya 1,6 faiz səviyyəsində idi, mart ayında isə 1,8 faizə yüksəlib. Ümumi manşet inflyasiya 1,5 faiz təşkil edib — fevraldakı 1,3 faizlə müqayisədə. Buna baxmayaraq, indikator artıq ikinci ay ardıcıl Yaponiya Bankının (BOJ) 2 faizlik hədəfindən aşağıdır.
+
+Həmçinin "core-core" CPI (həm təzə ərzaq, həm də enerji çıxarılmaqla) 2,4 faizə qədər endirilib. WTAQ/Reuters-in məlumatına görə, analitiklər xəbərdarlıq edir ki, xam neftin yüksək qalması və enerji subsidiyalarının genişlənməməsi şəraitində əsas inflyasiya 2026-cı fiskal ilin sonuna 3 faizə yaxınlaşa bilər.
+
+## BOJ iclası və İran müharibəsinin təsiri
+
+Invezz və investingLive-ın xəbər verdiyinə görə, Yaponiya Bankının 27-28 aprel iclasında faiz dərəcəsinin 0,75 faiz səviyyəsində saxlanılması gözlənilir. Citi analitikləri iyen ucuzlaşması və inflyasiya riskləri nəzərə alınmaqla "hawkish hold" (sərt saxlama) dilinin istifadə ediləcəyini proqnozlaşdırırlar.
+
+24 aprel Brent markalı neft qiyməti bareli 106 dollardan yuxarı olub — bu, Yaponiyanın enerji idxal xərclərinə əlavə təzyiq yaradır. Beləliklə, İran müharibəsi artıq Yaponiya ailələrinin CPI hesabatına çatıb: beş ay sonra ilk yenidən sürətlənmə BOJ-un siyasi yol xəritəsini çətinləşdirir və "İran müharibəsinin iqtisadiyyata vergisi" anlayışı başqa bir ölkədə özünü büruzə verir.`,
+  },
+  'en-japan-core-inflation-18-percent-march-iran-war-energy': {
+    title: `Japan Core Inflation Hits 1.8% as Iran War Lifts Energy`,
+    date: '2026-04-24',
+    category: 'Economy',
+    locale: 'en',
+    content: `Japan's national core consumer price index rose 1.8 percent year over year in March, matching consensus and accelerating from 1.6 percent in February, in the first pickup in five months. The re-acceleration, released Friday morning in Tokyo, pins much of the pressure on energy costs driven by the Iran war and complicates the Bank of Japan's rate path days before its policy meeting.
+
+## The Numbers
+
+According to CNBC, SwingFish and investingLive, national core CPI excluding fresh food rose 1.8 percent in March. Headline CPI came in at 1.5 percent year over year, up from 1.3 percent in February but still below the Bank of Japan's 2 percent target for a second straight month. "Core-core" CPI, which excludes both food and energy, dipped to 2.4 percent.
+
+The March print is the first in which core inflation has accelerated rather than softened since October 2025, ending a five-month disinflationary run.
+
+## The Iran Channel
+
+Brent crude traded above 106 dollars a barrel on Friday, per Invezz, feeding directly into Japan's imported energy bill. CNBC's coverage placed the Iran war at the center of the inflation story, noting that energy worries are stoking the first core-CPI re-acceleration in months.
+
+Analysts cited by CNBC and WTAQ/Reuters warned that core inflation could approach 3 percent by the end of fiscal 2026 if crude stays elevated and there is no expansion of energy subsidies.
+
+## Hawkish Hold Expected
+
+The Bank of Japan meets 27 to 28 April. Citi analysts expect a hold at 0.75 percent accompanied by hawkish language, given yen depreciation and inflation risks. Reuters reported that core inflation remains below the BOJ target while energy risks grow.
+
+The print lands as a clear channel through which the Iran war is now reaching Japanese households. It reinforces a broader narrative in which the Middle East conflict is becoming a tax on energy-importing economies.`,
+  },
+  'tr-japonya-cekirdek-enflasyon-mart-1-8-iran-savasi-enerji': {
+    title: `Japonya çekirdek enflasyonu martta yüzde 1,8'e çıktı`,
+    date: '2026-04-24',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Japonya Ulusal Çekirdek Tüketici Fiyat Endeksi (taze gıda hariç), mart ayında yıllık bazda yüzde 1,8 artış göstererek beş aydır süregelen yavaşlamayı sona erdirdi. Veri, 24 Nisan Cuma sabahı Tokyo saatiyle açıklandı. Şubat ayında yüzde 1,6 olan çekirdek CPI oranı, analist konsensüsü ile uyumlu biçimde ivmelendi. Genel tüketici fiyat endeksi ise yüzde 1,3'ten yüzde 1,5'e yükseldi. Ancak her iki rakam da Japonya Merkez Bankası'nın yüzde 2'lik resmi hedefinin altında kalmaya üst üste ikinci ay olarak devam etti.
+
+## İran savaşının Japon hanelerine yansıması
+
+Enflasyon ivmelenmesinin ardındaki temel itici güç, İran savaşının tetiklediği enerji fiyat şoku olarak öne çıkıyor. Brent ham petrol fiyatı 24 Nisan'da varil başına 106 doların üzerinde seyretti ve Japonya'nın enerji ithalat maliyetlerine ek baskı oluşturdu. Analistler, ham petrolün mevcut seviyede kalması ve enerji sübvansiyonlarının genişletilmemesi durumunda 2026 mali yılı sonunda çekirdek enflasyonun yüzde 3'e yaklaşabileceği uyarısında bulunuyor.
+
+## Çekirdek çekirdek oranı geriledi
+
+"Çekirdek çekirdek" olarak bilinen ve hem gıda hem de enerjiyi dışlayan gösterge ise yüzde 2,4'e geriledi. Bu, fiyat artışının büyük ölçüde dışsal enerji şokundan kaynaklandığını ve talep-odaklı enflasyon baskısının henüz kalıcılaşmadığını gösteriyor.
+
+## BOJ haftasında "şahin duruş" beklentisi
+
+Japonya Merkez Bankası 27-28 Nisan tarihlerinde para politikası toplantısını düzenleyecek. Citi analistleri, bankanın faiz oranını yüzde 0,75 seviyesinde sabit tutmasını, ancak yen değer kaybı ve enflasyon riskleri karşısında "şahin sabit tutma" dilini benimsemesini bekliyor. Veri seti, İran savaşının küresel ekonomilere yansıyan vergisinin Japon hanelerine de ulaştığını ve BOJ'un faiz patikasını karmaşıklaştırdığını gösteriyor.`,
+  },
+  'ru-yaponiya-bazovaya-inflyatsiya-mart-1-8-voyna-v-irane-energiya': {
+    title: 'Япония: базовая инфляция в марте ускорилась до 1,8%',
+    date: '2026-04-24',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Базовая потребительская инфляция в Японии в марте 2026 года ускорилась до 1,8% в годовом выражении против 1,6% в феврале. Данные, опубликованные утром 24 апреля по токийскому времени, совпали с консенсус-прогнозом аналитиков и показали первое ускорение за последние пять месяцев. Главным драйвером стала энергетика на фоне иранской войны и сохраняющихся цен на нефть выше ста долларов за баррель.
+
+## Первое ускорение за пять месяцев
+
+Показатель базовой инфляции без учёта свежих продуктов вырос до 1,8%. Общий индекс потребительских цен прибавил 1,5% против 1,3% в феврале, но по-прежнему второй месяц подряд остаётся ниже целевого ориентира Банка Японии в 2%. Так называемая суперкоровая инфляция без продуктов и энергоносителей, напротив, немного снизилась до 2,4%. Аналитики предупреждают, что при сохранении высоких цен на сырую нефть и отсутствии расширения энергетических субсидий базовая инфляция может приблизиться к 3% к концу 2026 финансового года.
+
+## Заседание Банка Японии 27–28 апреля
+
+На предстоящем заседании 27–28 апреля Банк Японии, по прогнозам аналитиков Citi, оставит ставку на уровне 0,75%. При этом ожидается так называемая ястребиная пауза, то есть жёсткая риторика в сопровождающем заявлении на фоне ослабления иены и рисков инфляции. Решение придётся принимать в условиях, когда внешние шоки от иранского кризиса впервые за несколько месяцев заметно проявились в внутренней ценовой динамике.
+
+## Энергоносители как канал передачи шока
+
+Цена нефти марки Brent 24 апреля держалась выше 106 долларов за баррель, усиливая давление на стоимость энергетического импорта Японии. Поскольку страна практически полностью зависит от внешних поставок энергоносителей, ценовой удар моментально ретранслируется на потребителей. Японская экономика оказывается в числе первых, где иранская война превращается в реальную налоговую нагрузку на домохозяйства через индекс потребительских цен.`,
+  },
+
+  // --- Topic 5: Israel-Lebanon ceasefire extended 3 weeks ---
+  'israil-livan-atesh-kesilmesi-3-hefte-uzadildi-hezbollah-qarshi-chixdi': {
+    title: 'İsrail-Livan atəşkəsi 3 həftə uzadıldı, Hizbullah "mənasızdır" dedi',
+    date: '2026-04-24',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ prezidenti Donald Tramp 23 aprel 2026-cı ildə axşam saatlarında elan edib ki, bazar günü 26 apreldə bitməsi nəzərdə tutulan 10 günlük İsrail-Livan atəşkəsi üç həftə uzadılır. 24 aprel bu uzadılmanın ilk tam gününə düşür və diplomatik gərginliklər davam edir.
+
+## Oval Kabinetdə qərar
+
+Washington Post və NPR-ın məlumatına görə, qərar Oval Kabinetdə Tramp, vitse-prezident JD Vance, Dövlət katibi Marco Rubio, İsraildəki ABŞ səfiri Mike Huckabee, Livandakı ABŞ səfiri Michel Issa və İsrail-Livan elçilərinin iştirak etdiyi görüşdən sonra verilib. Münaqişə boyunca Livan hökumətinin hesabatına görə, 2.400-dən çox insan həlak olub və 1,2 milyon nəfər yerindən didərgin düşüb.
+
+OPB və CFR-in xəbər verdiyinə görə, ABŞ-ın iki motivi var: birincisi, birbaşa İsrail-Livan sülh danışıqlarını irəli aparmaq, ikincisi isə Livan cəbhəsinin İranla atəşkəs razılaşmasını pozmasının qarşısını almaq. Tramp eyni zamanda İsrail baş naziri Benyamin Netanyahu və Livan prezidenti Joseph Aoun-u "yaxın günlərdə" Ağ Evdə qəbul etməyi planlaşdırdığını bildirib.
+
+## Hizbullahın reaksiyası və döyüşün davam etməsi
+
+Al Jazeera və Axios-un məlumatına görə, elanın üzərindən saatlar keçməmiş İsrail cənubi Livanda Hizbullaha aid mövqeləri vurub — bu, Hizbullahın İsrailə açdığı atəşə cavab kimi təqdim edilib. Hizbullah rəsmi bəyanatında atəşkəsin "İsrailin davam edən düşmən hərəkətləri fonunda heç bir mənası olmadığını" bildirib.
+
+Həmçinin Tramp Topic 3-də göstərildiyi kimi eyni həftəsonu Pakistanda İranla ikinci raund danışıqları təşkil edir. Beləliklə, Orta Şərq eyni anda iki paralel diplomatik trekdə hərəkət edir. Analitiklər "kağız atəşkəs" termini ilə bu anı təsvir edirlər: Tramp manşeti qazandı, lakin atəş saatlar ərzində yenidən açıldı.`,
+  },
+  'en-israel-lebanon-ceasefire-extended-3-weeks-hezbollah-defiant': {
+    title: `Israel-Lebanon Truce Extended 3 Weeks, Hezbollah Defiant`,
+    date: '2026-04-24',
+    category: 'World',
+    locale: 'en',
+    content: `The Israel-Lebanon ceasefire has been extended for three more weeks, President Trump announced after an Oval Office meeting with U.S., Israeli and Lebanese envoys. Within hours, Israel struck Hezbollah positions in southern Lebanon after Hezbollah fired into Israel, and the group dismissed the extension as "meaningless."
+
+## The Oval Office Deal
+
+According to the Washington Post, NPR and Axios, the ten-day ceasefire that had been due to expire Sunday 26 April was extended by 21 days. The announcement followed a meeting at the White House that included Vice President JD Vance, Secretary of State Marco Rubio, U.S. Ambassador to Israel Mike Huckabee, U.S. Ambassador to Lebanon Michel Issa, and Israeli and Lebanese envoys.
+
+Trump said he looked forward to hosting Israeli Prime Minister Netanyahu and Lebanese President Joseph Aoun at the White House "in the near future," per Axios.
+
+## Hezbollah's Response
+
+Hezbollah stated the ceasefire "has no meaning in light of continued Israeli hostile actions," according to the Washington Post. Israeli strikes on Hezbollah sites in southern Lebanon came within hours of the extension announcement. The Council on Foreign Relations characterized the moment as one in which paper diplomacy and active fighting are running in parallel.
+
+The war has killed more than 2,400 people in Lebanon, according to the Lebanese government, and displaced roughly 1.2 million, per NPR.
+
+## Two-Track Diplomacy
+
+The extension is part of a broader U.S. strategy running in parallel with the Iran track. Washington wants to prevent the Lebanon front from undermining the Iran ceasefire framework being negotiated this weekend in Islamabad, per Al Jazeera.
+
+For now, Trump has the headline, but the fighting has not stopped. The three-week extension buys time for a more durable arrangement, though Hezbollah's reaction suggests any such deal remains distant.`,
+  },
+  'tr-israil-lubnan-ateskes-3-hafta-uzatildi-hizbullah-reddetti': {
+    title: `İsrail-Lübnan ateşkesi 3 hafta uzadı, Hizbullah reddetti`,
+    date: '2026-04-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Trump, 10 günlük İsrail-Lübnan ateşkesinin üç hafta daha uzatıldığını açıkladı. 26 Nisan Pazar günü sona erecek olan mevcut ateşkes, Beyaz Saray'daki Oval Ofis toplantısının ardından duyuruldu. Açıklama ABD saatiyle 23 Nisan akşamı yapıldı ve 24 Nisan Cuma sabahı Asya-Avrupa haber döngüsüne ulaşarak uygulamanın ilk tam gününü açtı. Toplantıya Trump, Başkan Yardımcısı JD Vance, Dışişleri Bakanı Marco Rubio, ABD'nin İsrail Büyükelçisi Mike Huckabee, Lübnan Büyükelçisi Michel Issa ile İsrailli ve Lübnanlı temsilciler katıldı.
+
+## Saatler içinde ateşkes yara aldı
+
+Açıklamanın üzerinden saatler geçmeden İsrail, güney Lübnan'daki Hizbullah mevzilerine saldırılar düzenledi. Hizbullah'ın İsrail topraklarına ateş açmasının ardından gelen misillemeler, kâğıt üstünde sağlanan ateşkesin sahada anlam taşımadığını ortaya koydu. Hizbullah, "İsrail'in süregelen düşmanca eylemleri ışığında ateşkesin hiçbir anlamı yoktur" açıklamasını yaptı.
+
+## 2.400 ölü, 1,2 milyon yerinden edilmiş
+
+Çatışmalar kapsamında Lübnan'da şimdiye kadar 2.400'den fazla kişinin hayatını kaybettiği Lübnan hükümeti tarafından açıklandı. 1,2 milyon kişi yerinden edildi. Ateşkesin uzatılması ABD açısından iki amaca hizmet ediyor: İsrail-Lübnan arasındaki doğrudan barış görüşmelerini ilerletmek ve Lübnan cephesinin İran ateşkes anlaşmasını sabote etmesini önlemek.
+
+## Netanyahu ve Aoun için Beyaz Saray daveti
+
+Trump, "yakın zamanda" İsrail Başbakanı Benjamin Netanyahu ile Lübnan Cumhurbaşkanı Joseph Aoun'u Beyaz Saray'da ağırlamak istediğini açıkladı. Daveti takiben Washington'un Lübnan hattını İran kriziyle paralel ikinci bir diplomatik kulvar olarak yürüttüğü yorumları güç kazandı. Ancak sahadaki durum, üst düzey açıklamaların uygulamaya geçmesi konusunda ciddi soru işaretleri barındırıyor.`,
+  },
+  'ru-peremirie-izrail-livan-prodleno-na-3-nedeli-khezbolla-protiv': {
+    title: 'Трамп продлил перемирие Израиль–Ливан на три недели',
+    date: '2026-04-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Режим прекращения огня между Израилем и Ливаном, срок которого истекал в воскресенье 26 апреля, продлён ещё на три недели. Об этом объявил президент США Дональд Трамп по итогам встречи в Овальном кабинете с участием израильских и ливанских посланников. Однако уже через несколько часов после объявления боевые действия возобновились, а движение Хезболла назвало перемирие лишённым смысла.
+
+## Встреча в Овальном кабинете
+
+На переговорах в Белом доме присутствовали Трамп, вице-президент Джей Ди Вэнс, государственный секретарь Марко Рубио, посол США в Израиле Майк Хакаби и посол США в Ливане Мишель Исса. С израильской и ливанской стороны также были представлены специальные посланники. Администрация США объяснила продление двумя целями: продвижение прямых мирных переговоров между Израилем и Ливаном и недопущение того, чтобы ливанский фронт подорвал параллельную сделку с Ираном. Трамп также сообщил, что надеется в скором времени принять в Белом доме израильского премьера Биньямина Нетаньяху и президента Ливана Жозефа Ауна.
+
+## Бумажное перемирие
+
+Однако уже спустя несколько часов Израиль нанёс удары по позициям Хезболлы на юге Ливана после обстрела со стороны группировки. Официальное заявление Хезболлы подчёркивает, что перемирие не имеет смысла в условиях продолжающихся израильских враждебных действий. Таким образом, политическое объявление и реальная ситуация на фронте быстро разошлись в противоположных направлениях.
+
+## Тяжёлые итоги конфликта
+
+По данным ливанского правительства, с начала нынешнего этапа конфликта в стране погибли более 2400 человек, а около 1,2 миллиона жителей были вынуждены покинуть свои дома. Продление перемирия сочетается с параллельным иранским треком — визитом главы МИД Ирана Аббаса Аракчи в Пакистан. Ближний Восток оказался на двухтрековом дипломатическом уик-энде, где любая ошибка в одном из направлений способна обрушить хрупкую архитектуру сдерживания в другом.`,
+  },
+
+  // --- Topic 6: WFP/UN/EU global food crisis report — 318 million in acute hunger ---
+  'dunya-aclarin-sayi-318-milyon-qazze-sudan-aclig-bm-hesabati': {
+    title: 'BM hesabatı: dünyada 318 milyon nəfər acdır, Qəzza və Sudanda aclıq faktdır',
+    date: '2026-04-24',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Dünya Qida Proqramı (WFP), BMT və Avropa İttifaqı 24 aprel 2026-cı ildə 2026 Qlobal Qida Təhlükəsizliyi Görünüşü hesabatını dərc edib. Sənəddə bildirilir ki, dünyada 318 milyon insan böhran səviyyəsində və ya daha ağır aclıq vəziyyətindədir — bu, pandemiyadan əvvəlki göstəricidən iki dəfə çoxdur.
+
+## Ən ağır mərhələlərdə 41 milyon insan
+
+WFP və UN News-un məlumatına görə, 41 milyon nəfər Fövqəladə (IPC Mərhələ 4+) səviyyəsindədir, ən yüksək Mərhələ 5 (Katastrofa/Aclıq) təsnifatında isə 1,4 milyon insan var. Qəzzada əhalinin 32 faizinə bərabər olan 640.700 nəfər və Sudanda təxminən 207.000 nəfər məhz bu ən ağır kateqoriyaya aiddir.
+
+Al Jazeera və Avropa Komissiyasının (ECHO) qeyd etdiyinə görə, bu əsrin ilk dəfəsi olaraq iki eyni vaxtda aclıq rəsmən təsdiqlənib: Qəzza zolağı və Sudanın bir hissəsi. Həmçinin 35,5 milyon uşaq 2025-ci ildə kəskin qidalanma pozuntusundan əziyyət çəkib, o cümlədən təxminən 10 milyonu ağır formada.
+
+## 10 ölkədə aclığın 2/3-si
+
+Avropa Birliyinin Birgə Araşdırma Mərkəzinin bildirdiyinə görə, münaqişə mənbəli 10 ölkə qlobal kəskin aclığın üçdə ikisini təşkil edir: Əfqanıstan, Banqladeş, Konqo Demokratik Respublikası, Myanma, Nigeriya, Pakistan, Cənubi Sudan, Sudan, Suriya və Yəmən. Hesabatın vurğuladığı əsas səbəb — münaqişələr qlobal aclığın 69 faizini yaradır.
+
+Humanitar maliyyələşmə isə azalmaqda davam edir. WFP 2026-cı ildə 110 milyon nəfərə yardım etməyi hədəfləyir, lakin bu, 13 milyard dollar büdcə tələb edir — proqnozlara görə agentlik yalnız bu məbləğin yarısını toplaya biləcək. Beləliklə, İran müharibəsi, Sudan, Qəzza və maliyyə çöküşü son on illərin ən ağır humanitar böhranını yaradır.`,
+  },
+  'en-wfp-un-global-hunger-report-318-million-gaza-sudan-famine': {
+    title: `WFP: 318 Million in Acute Hunger, Gaza and Sudan in Famine`,
+    date: '2026-04-24',
+    category: 'World',
+    locale: 'en',
+    content: `The World Food Programme, the United Nations and the European Union released their 2026 Global Outlook on Friday, reporting that 318 million people now face crisis-level hunger or worse, double pre-pandemic levels. The report confirmed two simultaneous famines, in the Gaza Strip and in parts of Sudan, the first time this century that two Phase 5 famines have been recognized at the same time.
+
+## The Hunger Map
+
+According to the WFP, UN News and the European Commission's ECHO release, 41 million people are at Emergency levels corresponding to IPC Phase 4 or worse, and 1.4 million are at the most severe Phase 5 "Catastrophe/Famine" level. That Phase 5 group includes roughly 640,700 people in Gaza, about 32 percent of the territory's population, and approximately 207,000 people in Sudan.
+
+The EU Joint Research Centre noted that 14 million people are in the most severe tier of food insecurity globally in 2025, continuing a multi-year deterioration.
+
+## Ten Countries Carry Two-Thirds
+
+Per UN News, two-thirds of global acute hunger is concentrated in ten conflict-hit countries: Afghanistan, Bangladesh, the Democratic Republic of Congo, Myanmar, Nigeria, Pakistan, South Sudan, Sudan, Syria and Yemen. Conflict drives 69 percent of hunger, per the WFP.
+
+The report documented that 35.5 million children were acutely malnourished in 2025, including nearly 10 million with severe acute malnutrition, per Al Jazeera's coverage of the release.
+
+## A Funding Crisis on Top
+
+The WFP said it aims to assist 110 million people in 2026 at a projected cost of 13 billion dollars, but may receive only about half of that amount. Humanitarian funding has been declining even as caseloads rise.
+
+The convergence of conflict, climate shocks and a collapsing donor base is producing the worst humanitarian crisis in a decade, the organizations warned.`,
+  },
+  'tr-bm-wfp-kuresel-aclik-raporu-318-milyon-gazze-sudan-kitlik': {
+    title: `BM raporu: 318 milyon kişi açlıkla, Gazze ve Sudan'da kıtlık`,
+    date: '2026-04-24',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Dünya Gıda Programı (WFP), BM ve Avrupa Birliği'nin ortaklaşa hazırladığı 2026 Küresel Görünüm Raporu 24 Nisan Cuma günü yayımlandı. Rapora göre dünyada 318 milyon kişi kriz düzeyinde veya daha kötü seviyede açlıkla karşı karşıya bulunuyor; bu rakam pandemi öncesi seviyelerin iki katı anlamı taşıyor. Son yıllarda yaşanan çatışma, iklim değişikliği ve insani finansman daralması üçlüsünün birleşik etkisi, bu yüzyılın ilk kez iki eş zamanlı kıtlığa tanıklık etmesine yol açtı.
+
+## Gazze ve Sudan'da resmen kıtlık onayı
+
+41 milyon kişinin "Acil Durum" (IPC Faz 4 ve üstü) seviyesinde, 1,4 milyon kişinin ise en ağır seviye olan IPC Faz 5 "Felaket/Kıtlık" kategorisinde yer aldığı bildirildi. Kıtlık durumunun resmen doğrulandığı iki bölge; Gazze Şeridi ile Sudan'ın belirli bölümleri oldu. Gazze'de nüfusun yüzde 32'si yani 640.700 kişi kıtlık koşullarında yaşıyor. Sudan'da ise yaklaşık 207 bin kişi IPC Faz 5 kapsamında değerlendirildi.
+
+## Çatışmalı 10 ülke açlığın üçte ikisini oluşturuyor
+
+Raporun bulgularına göre dünyadaki akut açlığın üçte ikisi yalnızca 10 çatışma bölgesinde yoğunlaşmış durumda. Bu ülkeler: Afganistan, Bangladeş, Demokratik Kongo Cumhuriyeti, Myanmar, Nijerya, Pakistan, Güney Sudan, Sudan, Suriye ve Yemen olarak sıralandı. Çatışmaların küresel açlığın yüzde 69'unun temel sürücüsü olduğu vurgulandı.
+
+## Çocuklar ve finansman çöküşü
+
+2025 yılında 35,5 milyon çocuğun akut yetersiz beslenmeden muzdarip olduğu, bunların yaklaşık 10 milyonunun ise ciddi akut yetersiz beslenme durumunda bulunduğu belgelendi. WFP, 2026 yılında 110 milyon kişiye ulaşmayı hedefliyor ve bunun için 13 milyar dolarlık bütçe gerektiğini açıkladı. Ancak mevcut insani finansman düşüşü nedeniyle kurumun yalnızca bu tutarın yarısını alabileceği öngörülüyor. İran savaşı, Sudan çatışması, Gazze yıkımı ve finansman çöküşünün birleşimi, son on yılın en ağır insani krizini şekillendiriyor.`,
+  },
+  'ru-wfp-oon-otchet-318-millionov-golodayut-gaza-sudan-famine': {
+    title: 'ВПП ООН: 318 млн людей голодают, голод в Газе и Судане',
+    date: '2026-04-24',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Всемирная продовольственная программа ООН совместно с Европейской комиссией 24 апреля представила глобальный обзор продовольственной ситуации на 2026 год. Отчёт фиксирует, что 318 миллионов человек в мире сталкиваются с острым голодом на уровне кризиса или выше. Это примерно вдвое превышает показатели, существовавшие до пандемии коронавируса.
+
+## Два одновременных голода впервые за век
+
+41 миллион человек находятся в чрезвычайных условиях четвёртой фазы по шкале IPC, а 1,4 миллиона — в самой тяжёлой пятой фазе, классифицируемой как катастрофа или голод. Из этого числа 640 700 человек приходится на сектор Газа, что составляет 32% её населения, и около 207 тысяч — на Судан. Впервые с начала нынешнего столетия зафиксированы два одновременных подтверждённых голода — в Газе и в частях Судана.
+
+## Десять стран дают две трети
+
+Две трети всего мирового голода сосредоточены всего в десяти странах, затронутых конфликтами. В список входят Афганистан, Бангладеш, Демократическая Республика Конго, Мьянма, Нигерия, Пакистан, Южный Судан, Судан, Сирия и Йемен. В 2025 году 35,5 миллиона детей страдали острым недоеданием, из них почти 10 миллионов — тяжёлой формой. Основной причиной голода остаётся вооружённый конфликт, на долю которого приходится 69% случаев острой нехватки продовольствия.
+
+## Недостаток финансирования
+
+Всемирная продовольственная программа намерена в 2026 году охватить помощью 110 миллионов человек при необходимом бюджете около 13 миллиардов долларов. Однако реальное финансирование рискует составить лишь половину этой суммы. Иранский кризис, войны в Судане и Газе и сокращение гуманитарной помощи сходятся в одной точке, формируя худший за десятилетие фон для мировой продовольственной безопасности. Авторы доклада призывают международное сообщество увеличить взносы и выделить отдельные программы для наиболее пострадавших регионов.`,
+  },
+
+  // --- Topic 7: OpenAI launches GPT-5.5 ---
+  'openai-gpt-5-5-buraxildi-agentic-kodlashdirma-ennun-gueli-model': {
+    title: 'OpenAI GPT-5.5-i təqdim etdi: Terminal-Bench-də 82,7% agent modeli',
+    date: '2026-04-24',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `OpenAI 23 aprel 2026-cı ildə Amerika Şərq vaxtı ilə gec saatlarda (Asiya və Avropa üçün 24 aprel UTC) GPT-5.5 modelini rəsmi şəkildə təqdim edib. Şirkət modeli indiyə qədər yaratdığı "ən güclü agent kodlaşdırma modeli" kimi mövqeləndirir.
+
+## Benchmark göstəriciləri rekordu
+
+CNBC və OpenAI-ın rəsmi blogunun məlumatına görə, GPT-5.5 aşağıdakı benchmark nəticələrini qeydə alıb: Terminal-Bench 2.0-da 82,7 faiz, SWE-bench-də 88,7 faiz, MMLU-da 92,4 faiz, Expert-SWE-də 73,1 faiz, GDPval-da 84,9 faiz və OSWorld-Verified-də 78,7 faiz. Həmçinin əvvəlki GPT-5.4 modeli ilə müqayisədə hallüsinasiyalar 60 faiz azalıb.
+
+TechCrunch və MacRumors-un qeyd etdiyinə görə, model ChatGPT Plus, Pro, Business və Enterprise istifadəçilərinə, eyni zamanda Codex kodlaşdırma köməkçisinə yayılıb. GPT-5.5 Pro versiyası isə yalnız Pro, Business və Enterprise abunəçilərinə təqdim olunub. API yayılması "qısa müddət ərzində" başlayacaq.
+
+## Agent model və AI yarışı
+
+The Tech Portal və TechStartups-un xəbər verdiyinə görə, GPT-5.5 "agent model" kimi dizayn edilib — kompüterdən istifadə, araşdırma, kodlaşdırma, sənəd və elektron cədvəl yaratmaq kimi çoxsaylı alətlər arasında avtonom şəkildə keçid edərək mürəkkəb tapşırıqları müstəqil yerinə yetirə bilir.
+
+Bu buraxılış Anthropic-in Opus 4.7 və Google-un Gemini Enterprise relizlərinə birbaşa rəqabət cavabıdır. Həmçinin eyni həftə ərzində Topic 2-də bəhs olunan Intel-Musk Terafab razılaşması ilə birlikdə "AI infrastrukturdan modelə qədər tam yığım" döyüşü yeni mərhələyə daxil olur. Agent kodlaşdırma 2026-cı ilin əsas rəqabət meydanına çevrilib və OpenAI bu meydanda liderliyi yenidən iddia edir.`,
+  },
+  'en-openai-gpt-5-5-launched-agentic-coding-terminal-bench': {
+    title: `OpenAI Launches GPT-5.5 as Strongest Agentic Coding Model`,
+    date: '2026-04-24',
+    category: 'Technology',
+    locale: 'en',
+    content: `OpenAI released GPT-5.5 late Thursday, positioning the new model as its "strongest agentic coding model" to date and posting benchmark scores that extend its lead over rivals including Anthropic's Opus 4.7 and Google's Gemini Enterprise. Coverage ran across 23 and 24 April as the rollout reached ChatGPT users and the Codex coding assistant.
+
+## The Benchmark Headline
+
+According to OpenAI's official release and reporting from CNBC, TechCrunch, MacRumors and TechStartups, GPT-5.5 scored 82.7 percent on Terminal-Bench 2.0 and 88.7 percent on SWE-bench, both standard tests of software-engineering capability. The model also posted 92.4 percent on MMLU, 73.1 percent on Expert-SWE, 84.9 percent on GDPval and 78.7 percent on OSWorld-Verified.
+
+OpenAI reported a 60 percent reduction in hallucinations compared with the prior GPT-5.4.
+
+## Built for Agentic Work
+
+The Tech Portal and TechStartups described GPT-5.5 as designed from the ground up as an "agentic model" that can work through complex tasks autonomously by switching between multiple tools, including computer use, research, coding and document or spreadsheet creation.
+
+Rollout started immediately for ChatGPT Plus, Pro, Business and Enterprise users, plus the Codex coding assistant. GPT-5.5 Pro is limited to Pro, Business and Enterprise tiers. OpenAI said API availability will follow "shortly."
+
+## The Agentic Coding Race
+
+The release lands as the AI industry reshapes around autonomous coding agents. It follows Anthropic's Opus 4.7 and Google's Gemini Enterprise launches earlier in the month, placing three major players in direct benchmark competition. Paired with the Intel/Terafab news out of Austin on the same day, the broader picture is a full-stack convergence from foundry to model that is redefining the AI infrastructure landscape.
+
+For enterprise developers, the near-term question is whether the benchmark gains translate into sustained productivity in real codebases.`,
+  },
+  'tr-openai-gpt-5-5-agentic-kodlama-terminal-bench-82-7': {
+    title: `OpenAI GPT-5.5'i tanıttı: Agentic kodlamada yeni lider`,
+    date: '2026-04-24',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `OpenAI, yeni nesil yapay zekâ modeli GPT-5.5'i 23 Nisan ABD saatiyle akşam saatlerinde (24 Nisan UTC) kullanıma sundu. Şirketin "bugüne kadarki en güçlü agentic kodlama modeli" olarak konumlandırdığı GPT-5.5, kullanıcı adına karmaşık görevleri otonom olarak tamamlayabilen ajan sınıfı bir model olarak tanıtıldı. Kritik sıralama testlerinde, kodlama performansını ölçen Terminal-Bench 2.0'da yüzde 82,7, SWE-bench'te yüzde 88,7 başarı elde etti. Genel bilgi sınavlarından MMLU'da yüzde 92,4, Expert-SWE'de yüzde 73,1, GDPval'de yüzde 84,9, OSWorld-Verified'da ise yüzde 78,7 sonuç aldı.
+
+## Halüsinasyon oranında yüzde 60 düşüş
+
+OpenAI'nin paylaştığı verilere göre GPT-5.5, bir önceki nesil GPT-5.4 ile karşılaştırıldığında halüsinasyon (yanlış bilgi üretme) oranında yüzde 60 düşüş sağlıyor. Bu gelişme, özellikle kodlama, araştırma ve belge üretimi gibi üretkenlik kullanım alanlarında doğrulama ihtiyacını belirgin şekilde azaltıyor.
+
+## Agentic yapı: Araçlar arası otonom geçiş
+
+Model, "agentic" olarak tasarlanmış ve karmaşık görevleri tamamlamak için bilgisayar kullanımı, araştırma, kodlama ile belge/elektronik tablo oluşturma gibi birden fazla araç arasında otonom geçiş yapabiliyor. Bu yapı, GPT-5.5'i rakiplerine kıyasla multi-step görev tamamlama alanında öne çıkarıyor.
+
+## Dağıtım ve Codex entegrasyonu
+
+GPT-5.5 ilk etapta ChatGPT Plus, Pro, Business ve Enterprise kullanıcılarına ve Codex kodlama asistanına sunuluyor. GPT-5.5 Pro ise yalnızca Pro, Business ve Enterprise abonelerine özel olarak kullanılabilir durumda. API erişiminin "çok kısa süre içinde" açılacağı OpenAI tarafından duyuruldu. Lansman, Anthropic'in Opus 4.7 ile Google'ın Gemini Enterprise modellerine doğrudan bir rekabet yanıtı olarak değerlendiriliyor. Intel'in foundry hamlesi, Google TPU yatırımları ve OpenAI'nin ajan modelleri, 2026 yılının yapay zekâ altyapı-model tam yığın hikâyesinde birleşen üç paralel yarış olarak öne çıkıyor.`,
+  },
+  'ru-openai-predstavil-gpt-5-5-agentnaya-model-kodirovaniya': {
+    title: 'OpenAI представил GPT-5.5 — агентную модель кодирования',
+    date: '2026-04-24',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `Компания OpenAI в ночь с 23 на 24 апреля представила новую модель искусственного интеллекта GPT-5.5. Позиционируется она как самая сильная агентная модель компании для задач программирования. Новинка сразу стала главной технологической новостью 24 апреля в Европе и Азии, где релиз пришёлся уже на дневные часы.
+
+## Рекордные показатели на бенчмарках
+
+GPT-5.5 показала 82,7% на обновлённом тесте Terminal-Bench 2.0, 88,7% на SWE-bench, 92,4% на MMLU, 73,1% на Expert-SWE, 84,9% на GDPval и 78,7% на OSWorld-Verified. Количество так называемых галлюцинаций снижено примерно на 60% по сравнению с предыдущей версией GPT-5.4. Эти цифры позиционируют модель в верхнем сегменте текущего рынка фронтир-моделей и являются прямым ответом на недавние анонсы Anthropic и Google.
+
+## Доступ и интеграции
+
+Модель уже раскатана на пользователей ChatGPT с подписками Plus, Pro, Business и Enterprise, а также интегрирована в помощник по кодированию Codex. Расширенная версия GPT-5.5 Pro доступна только уровням Pro, Business и Enterprise. По заявлению OpenAI, доступ через программный интерфейс API будет открыт в ближайшее время. Ключевое позиционирование — агентная модель, которая способна автономно решать сложные задачи, переключаясь между несколькими инструментами: управление компьютером, поиск информации, программирование, работа с документами и таблицами.
+
+## Новая волна AI-гонки
+
+Выход GPT-5.5 усиливает глобальную конкуренцию в сегменте агентного искусственного интеллекта. В одной картине сходятся сразу несколько трендов: сделка Intel с проектом Terafab Илона Маска по производству чипов, развитие процессоров Google TPU и появление мощных агентных моделей OpenAI. Все вместе они образуют полный стек инфраструктуры искусственного интеллекта — от кремния до конечной модели. Для корпоративных пользователей это означает дальнейшее ускорение внедрения агентов, способных самостоятельно выполнять длинные цепочки задач без постоянного участия человека.`,
+  },
+
+  // --- Topic 8: NHL Stanley Cup Playoffs Friday 04-24 — Game 3 roundup ---
+  'nhl-pley-of-24-aprel-lightning-canadiens-knights-mammoth-oilers-ducks': {
+    title: 'NHL pley-off 24 aprel: Lightning, Knights və Oilers 3-cü oyunlara çıxır',
+    date: '2026-04-24',
+    category: 'İdman',
+    locale: 'az',
+    content: `NHL Stanley Kuboku pley-offunun birinci raundunda 24 aprel 2026-cı il cümə axşamı üç 3-cü oyun keçirilir. Üç qarşılaşma bir-birinə yaxın vaxtlarda başlayır və Baku saatı ilə səhərin erkən saatlarında (25 aprel, şənbə) başa çatacaq.
+
+## Üç Game 3 cədvəli
+
+NHL.com və CBS Sports-un məlumatına görə, ilk oyunda Tampa Bay Lightning Monreal Canadiens ilə qarşılaşır — matç Amerika Şərq vaxtı ilə saat 19:00-da başlayır və TNT, truTV, HBO Max, SN, CBC, TVAS kanalları vasitəsilə yayımlanır. Seriyada hesab 1-1 bərabərdir.
+
+İkinci oyunda Vegas Golden Knights Utah Mammoth komandası ilə qarşılaşır — matç saat 21:30-da Delta Center-də başlayır və TBS, HBO Max, SN360, TVAS2, SCRIPPS, Utah16 kanallarında yayımlanır. Bu, Utah Mammoth franşizasının tarixində ilk evdə keçirilən pley-off oyunudur.
+
+## Oilers-Ducks və axşamın sonu
+
+ESPN və Covers-in xəbər verdiyinə görə, üçüncü oyunda Edmonton Oilers Anaheim Ducks-la qarşılaşır — matç saat 22:00-da başlayır və TNT, truTV, HBO Max, SN, CBC, TVAS, KCOP-13, Victory+ kanallarında yayımlanır. Seriyada hesab 1-1-dir; 2-ci oyunu Ducks 6-4 hesabı ilə uddu.
+
+Həmçinin qeyd etmək lazımdır ki, 23 aprel cədvəlində Bruins-Sabres 3-cü oyunu keçirildi və Sabres 3-1 qalib gəldi. Cümə gecəsinin əsas diqqət mərkəzi Utah Mammoth-un franşiza tarixinin ilk ev pley-off oyunu və seriyalarda hesabı 1-1 olan iki kritik matç olacaq. Oyunlar Amerika Şərq vaxtı ilə gecə yarısından saat 1:30-a qədər bitəcək — bu isə Bakıda 25 aprel şənbə sabahı saat 6:00-9:30 deməkdir, ona görə də yekun nəticələr həmin gün səhər Bakı auditoriyasına çatacaq.`,
+  },
+  'en-nhl-stanley-cup-playoffs-april-24-game-3-roundup': {
+    title: `NHL Playoffs: 3 Game 3s Friday, Mammoth's First Home Game`,
+    date: '2026-04-24',
+    category: 'Sports',
+    locale: 'en',
+    content: `The NHL Stanley Cup Playoffs deliver a full Friday slate of three Game 3s, headlined by the Utah Mammoth hosting their first playoff home game in franchise history at Delta Center. The Tampa Bay Lightning and Edmonton Oilers both travel for games with their series tied 1-1, setting up a night of pivotal matchups across the league.
+
+## Tampa Bay at Montreal, Game 3
+
+Tampa Bay faces Montreal at 7:00 p.m. Eastern Time with the series tied 1-1, per NHL.com and CBS Sports. The game airs on TNT, truTV, HBO Max, SN, CBC, TVAS and The Spot. The Lightning's "Nuts and Bolts" preview on NHL.com noted that the visitors are looking to retake series control after splitting the opening pair at home.
+
+## Vegas at Utah, Game 3
+
+Vegas Golden Knights visit the Utah Mammoth at 9:30 p.m. Eastern Time in what will be the first playoff home game in Utah Mammoth franchise history, per NHL.com and Covers. The broadcast spans TBS, HBO Max, SN360, TVAS2, SCRIPPS and Utah16. The moment carries outsized meaning for the relocated franchise, whose Delta Center crowd will play host to postseason hockey for the first time.
+
+## Edmonton at Anaheim, Game 3
+
+Edmonton Oilers travel to Anaheim at 10:00 p.m. Eastern Time with the series tied 1-1, per NHL.com and ESPN. Game 2 finished 6-4 in favor of the Ducks, evening the series. The matchup airs on TNT, truTV, HBO Max, SN, CBC, TVAS, KCOP-13 and Victory+.
+
+## Scheduling Note for Baku Readers
+
+All three games finish between roughly 10:00 p.m. Eastern Time and 1:30 a.m. Eastern Time, which translates to roughly 6:00 a.m. to 9:30 a.m. Baku time on Saturday 25 April. Final scores will become available in Baku on Saturday morning, making this Friday slate an overnight scoreboard event for Azerbaijani readers.`,
+  },
+  'tr-nhl-play-off-24-nisan-game-3-lightning-mammoth-oilers': {
+    title: `NHL 3. maçlar: Lightning, Mammoth tarihi ev galası`,
+    date: '2026-04-24',
+    category: 'Spor',
+    locale: 'tr',
+    content: `NHL Stanley Cup Play-off'larının ilk tur üçüncü maçları, 24 Nisan Cuma akşamı ABD saatiyle başlayacak üç farklı karşılaşmaya sahne oluyor. Bakü saati ile maçlar Cumartesi sabahı 6 ile 9.30 arasında tamamlanacak. Gecenin merkezinde Utah Mammoth franchise tarihinin ilk ev sahipliğindeki play-off maçı yer alıyor. Üç maçın ikisinde seri 1-1 beraberlikle sürerken, genel olarak post-season gergin bir başlangıç yaşıyor.
+
+## Lightning - Canadiens serisi 1-1
+
+Tampa Bay Lightning, üçüncü maç için Montreal Canadiens'i deplasmanda karşılıyor. Karşılaşma ABD Doğu saatiyle 19.00'da başlayacak. TNT, truTV, HBO Max, SN, CBC, TVAS ve The Spot kanallarından yayınlanacak maç öncesinde seri 1-1 eşitlikle sürüyor. Üçüncü maç, serinin yönünü belirleyecek bir dönüm noktası olarak görülüyor. Lightning tarafında tecrübenin, Canadiens tarafında ise ev sahibi avantajının maça damga vurması bekleniyor.
+
+## Utah Mammoth'un tarihi ev galası
+
+Vegas Golden Knights - Utah Mammoth karşılaşması 21.30 ET'de Delta Center'da oynanacak. Bu maç, Utah Mammoth franchise tarihinin ilk ev sahipliğindeki play-off karşılaşması olma özelliğini taşıyor. Yayın TBS, HBO Max, SN360, TVAS2, SCRIPPS ve Utah16 kanalları üzerinden gerçekleşecek. Utah'ın ilk play-off sezonunda tarihi bir gecenin sahnesi olacak bu maç, franchise taraftarları için unutulmaz bir köşe taşı niteliğinde.
+
+## Oilers - Ducks seri 1-1
+
+Edmonton Oilers, Anaheim Ducks karşısında 22.00 ET'de deplasmana çıkıyor. İkinci maçı 6-4 kazanan Anaheim'ın ardından seri 1-1 eşitlenmiş durumda. Yayın TNT, truTV, HBO Max, SN, CBC, TVAS, KCOP-13 ve Victory+ kanalları üzerinden yapılacak. Maçlar Bakü saati ile sabahın erken saatlerinde sonuçlanacağından, sonuçlar Cumartesi günü Bakülü okurlara ulaşacak. 23 Nisan Perşembe gecesi oynanan Bruins-Sabres üçüncü maçını Sabres 3-1 kazanmış, seride 2-1 öne geçmişti.`,
+  },
+  'ru-nhl-pley-off-24-aprelya-3-matchi-lightning-knights-oilers': {
+    title: 'Плей-офф NHL 24 апреля: три третьих матча первого раунда',
+    date: '2026-04-24',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `В пятницу 24 апреля Кубок Стэнли предлагает зрителям три третьих матча первого раунда плей-офф NHL. Серии между Tampa Bay Lightning и Montreal Canadiens, Vegas Golden Knights и Utah Mammoth, а также между Edmonton Oilers и Anaheim Ducks пока идут со счётом 1-1, и игры вечера могут определить дальнейший ход противостояний.
+
+## Lightning едут в Монреаль
+
+Tampa Bay Lightning отправляется на выездной матч против Montreal Canadiens. Игра начнётся в 19:00 по восточноамериканскому времени. Трансляцию обеспечивают телеканалы TNT, truTV, HBO Max, SN, CBC, TVAS и The Spot. Серия между этими двумя командами подошла к ключевой точке: после двух матчей счёт равный, и любая из команд может захватить инициативу перед возвращением в Тампу.
+
+## Исторический вечер в Солт-Лейк-Сити
+
+Домашний матч молодой франшизы Utah Mammoth против Vegas Golden Knights начнётся в 21:30 по восточноамериканскому времени на арене Delta Center. Это первая в истории клуба домашняя игра в плей-офф NHL. Игра станет историческим событием для хоккейного рынка Юты и одним из символов расширения лиги. Матч покажут телеканалы TBS, HBO Max, SN360, TVAS2, SCRIPPS и региональный Utah16.
+
+## Oilers против Ducks
+
+Заключительной игрой вечера станет встреча Edmonton Oilers с Anaheim Ducks в 22:00 по восточноамериканскому времени. Трансляция идёт на TNT, truTV, HBO Max, SN, CBC, TVAS, KCOP-13 и Victory+. После второго матча серии, в котором Anaheim Ducks победили со счётом 6:4, обе команды подходят к игре с равным счётом. Для зрителей в Баку игры закончатся между шестью и половиной десятого утра субботы 25 апреля, поэтому к утренним часам выходных будет доступна полная картина результатов. В предыдущий игровой день 23 апреля уже завершились несколько поединков первого раунда, а пятничная программа добавляет к ним три новых драматичных противостояния.`,
+  },
+
   // ========== 2026-04-23 ==========
 
   // --- Topic 1: Pope Leo XIV ends Africa tour with Malabo Mass ---
