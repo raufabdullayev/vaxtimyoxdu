@@ -7,6 +7,760 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-25 ==========
+
+  // --- Topic 1: Trump cancels Pakistan trip / Iran talks ---
+  'tramp-iran-danishiqlarini-legv-etdi-vitkof-kushner-pakistana-getmedi': {
+    title: 'Tramp İran danışıqlarını ləğv etdi: Vitkof və Kuşner Pakistana getmədi',
+    date: '2026-04-25',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `ABŞ prezidenti Donald Tramp 25 aprel 2026-cı il şənbə günü Fox News-a verdiyi açıqlamada bildirib ki, ABŞ nümayəndə heyətinin İranla danışıqlar üçün Pakistana planlaşdırılan səfərini ləğv edib. Qərar İran xarici işlər naziri Abbas Aragçinin İslamabadı tərk etməsindən təxminən bir saat sonra elan olunub.
+
+## 24 saatlıq diplomatik çöküş
+
+Axios və CNN-in məlumatına görə, Aragçi şənbə günü Pakistan baş naziri Şahbaz Şərif ilə İslamabadda görüş keçirib və Tehranın tələblər siyahısını təqdim edərək geri dönüb. Lakin İran Vitkof və Kuşner ilə birbaşa görüşmək öhdəliyini götürməyib. İran Xarici İşlər Nazirliyinin sözçüsü İsmail Bağai X platformasında bunu təsdiqləyib: "İran və ABŞ arasında heç bir görüş planlaşdırılmır."
+
+Washington Post və NPR-ın xəbər verdiyinə görə, Tramp Fox News-a açıqlamasında deyib: "Mən bir az əvvəl öz adamlarıma dedim, onlar getməyə hazırlaşırdılar və mən dedim ki, 'Yox, siz oraya getmək üçün 18 saatlıq uçuş etməyəcəksiniz'." Tramp həmçinin əlavə edib: "Bütün kartlar bizdədir. Onlar istədikləri zaman bizə zəng edə bilərlər."
+
+## Hürmüz blokadası və açmaz
+
+Bloomberg və Euronews-un qeyd etdiyinə görə, danışıqları bloklayan əsas məsələ İranın əvvəlcədən şərt kimi qoyduğu ABŞ dəniz blokadasının götürülməsidir. Vaşinqton bu tələbi rədd edib və mövcud status-kvonu — blokada və atəşkəs şəraitini — saxlamağı seçib.
+
+Həmçinin Tramp İran rəhbərliyində "böyük daxili qarşıdurma və qarışıqlıq" olduğunu iddia edib. Bu, İran müharibəsinin 57-ci günüdür və cümə günü Vitkof-Kuşner səfərinin Ağ Ev tərəfindən təsdiqlənməsindən sonra yaranmış optimist əhval-ruhiyyənin tam əksinə dramatik dönüşdür. Diplomatik trekin saatlar ərzində dağılması Vaşinqtonun sıxışdırılmaq əvəzinə gözləməyə üstünlük verdiyini göstərir.`,
+  },
+  'en-trump-cancels-pakistan-iran-talks-witkoff-kushner-araghchi-leaves': {
+    title: `Trump Cancels Pakistan Iran Talks After Araghchi Exit`,
+    date: '2026-04-25',
+    category: 'Politics',
+    locale: 'en',
+    content: `President Donald Trump on Saturday canceled the planned travel of U.S. envoys Steve Witkoff and Jared Kushner to Pakistan for a new round of Iran talks, just hours after Iranian Foreign Minister Abbas Araghchi departed Islamabad without committing to meet the American team. The reversal collapses what had looked Friday like a path toward a fresh diplomatic breakthrough on day 57 of the 2026 Iran war.
+
+## A 24-Hour Diplomatic Collapse
+
+According to Axios, CNN, NPR, the Washington Post and Bloomberg, Araghchi met Pakistani Prime Minister Shehbaz Sharif in Islamabad on Saturday and delivered Tehran's list of demands before leaving the country. Iran's Foreign Ministry spokesperson Esmaeil Baghaei stated on X that "no meeting is planned to take place between Iran and the US," ruling out direct contact during the Pakistan stop.
+
+About an hour after Araghchi's departure, Trump told Fox News he had pulled the U.S. delegation back. "I've told my people a little while ago, they were getting ready to leave, and I said, 'Nope, you're not making an 18 hour flight to go there,'" the president said.
+
+## "We Have All the Cards"
+
+Trump added that "we have all the cards. They can call us anytime they want, but you're not going to be making any more 18-hour flights to sit around talking about nothing." He also cited "tremendous infighting and confusion within their leadership" as a reason to call off the trip.
+
+The core impasse remains the U.S. naval blockade of Iranian ports. Tehran has set the lifting of the blockade as a precondition for talks, while Washington has ruled this out, leaving negotiators with no immediate way to bridge the gap.
+
+## A Reversal From Friday
+
+The cancellation marks a sharp reversal from Friday's optimism, when the White House had confirmed that Witkoff and Kushner were preparing to travel and Pakistani officials spoke of a possible breakthrough. According to Euronews and Al Jazeera, Araghchi met with Pakistani officials but ruled out direct contact with U.S. negotiators during the visit.`,
+  },
+  'tr-trump-iran-gorusmelerini-iptal-etti-witkoff-kushner-pakistan': {
+    title: `Trump İran görüşmelerini iptal etti: "18 saatlik uçuş yok"`,
+    date: '2026-04-25',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `ABD Başkanı Donald Trump, 25 Nisan Cumartesi günü Steve Witkoff ve Jared Kushner liderliğindeki ABD heyetinin İran ile görüşmek üzere Pakistan'a yapacağı seyahati son anda iptal etti. Karar, İran Dışişleri Bakanı Abbas Araghchi'nin İslamabad'da Pakistan Başbakanı Şahbaz Şerif ile görüştükten sonra Pakistan'dan ayrılmasından yaklaşık bir saat sonra geldi. Bir önceki Cuma günü heyetin yola çıkacağı Beyaz Saray tarafından doğrulanmıştı; ancak bu açıklama 24 saat içinde geri alındı. Gelişme, 2026 İran savaşının 57'nci gününde diplomatik bir çöküşe işaret ediyor.
+
+## Trump'tan "elimizde tüm kartlar var" mesajı
+
+Trump, Fox News'a verdiği demeçte heyeti durdurma kararını şöyle açıkladı: "Az önce ekibime söyledim, yola çıkmaya hazırlanıyorlardı, ben de 'Hayır, oraya gitmek için 18 saatlik bir uçuşa çıkmıyorsunuz' dedim." Başkan ayrıca "Elimizde tüm kartlar var. İstedikleri zaman bizi arayabilirler, ama hiçbir şey hakkında konuşmak için artık 18 saatlik uçuşlar yapmayacaksınız" sözlerini sarf etti. Trump, İran liderliği içinde "muazzam bir iç çekişme ve kafa karışıklığı" olduğunu da öne sürdü.
+
+## Tahran "ABD ile görüşme planlanmıyor" dedi
+
+İran Dışişleri Bakanlığı Sözcüsü İsmail Bagai, X platformu üzerinden yaptığı açıklamada "İran ile ABD arasında gerçekleşmesi planlanan herhangi bir görüşme yoktur" ifadesini kullandı. Araghchi, Tahran'ın taleplerini Pakistan'a iletti, ancak Witkoff ve Kushner ile bir araya gelme taahhüdünde bulunmadı. İran'ın ön şartı olarak öne sürdüğü "ABD'nin İran limanlarına uyguladığı deniz ablukasının kaldırılması" talebi Washington tarafından reddedilmiş ve müzakerelerin tıkandığı asıl nokta haline gelmişti.
+
+## 24 saatte diplomatik çöküş
+
+Cuma günkü iyimserlik, Cumartesi sabahı yerini sert bir geri çekilmeye bıraktı. Trump'ın "istedikleri zaman bizi arayabilirler" çerçevesi, Washington'un mevcut abluka ve ateşkes statükosundan rahatsız olmadığını ortaya koyuyor. Bu gelişme, Pakistan üzerinden yürütülmeye çalışılan İran arabuluculuğunun şimdilik askıya alındığını gösteriyor.`,
+  },
+  'ru-tramp-otmenil-poezdku-vitkoffa-i-kushnera-v-pakistan-arakhchi-uekhal': {
+    title: 'Трамп отменил поездку Уиткоффа и Кушнера в Исламабад',
+    date: '2026-04-25',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Президент США Дональд Трамп в субботу 25 апреля отменил поездку американской делегации в Пакистан для переговоров с Ираном. Решение было озвучено в эфире Fox News примерно через час после того, как глава МИД Ирана Аббас Арагчи покинул Исламабад. Это означает резкий разворот по сравнению с пятничным оптимизмом, когда Белый дом ещё подтверждал визит спецпосланника Стива Уиткоффа и Джареда Кушнера. Идёт 57-й день иранской войны 2026 года.
+
+## Тегеран не подтвердил встречу
+
+Арагчи провёл встречу с премьер-министром Пакистана Шехбазом Шарифом в Исламабаде утром в субботу, передал список требований Тегерана, а затем покинул страну, не подтвердив встречу с Уиткоффом и Кушнером. Представитель МИД Ирана Эсмаил Багаи написал в социальной сети X: «Никакой встречи между Ираном и США не запланировано». Иран в качестве предварительного условия требует снятия американской военно-морской блокады своих портов. Вашингтон исключает такой шаг, и именно это противоречие заблокировало переговоры.
+
+## «У нас все карты на руках»
+
+Трамп объяснил отмену поездки в характерном стиле. «Я только что сказал своим людям, они уже собирались вылетать, и я сказал: нет, вы не полетите 18 часов туда», — заявил он Fox News. Президент добавил: «У нас все карты на руках. Они могут позвонить нам в любое время, но никто не будет совершать восемнадцатичасовые перелёты, чтобы сидеть и говорить ни о чём». Также Трамп упомянул «огромную внутреннюю борьбу и неразбериху» в иранском руководстве как причину, почему контакт пока бессмыслен.
+
+## Двадцать четыре часа дипломатического обвала
+
+Сценарий, который ещё в пятницу казался путём к прорыву, в субботу утром рассыпался. Формула «они могут позвонить» сигнализирует, что США устраивает текущий статус-кво — блокада плюс перемирие — и что давление переносится на иранскую сторону. Ситуация остаётся хрупкой: продолжение блокады и параллельные удары на ливанском фронте создают высокий риск повторной эскалации в любой момент.`,
+  },
+
+  // --- Topic 2: Mali nationwide attacks / Bamako-Kidal ---
+  'mali-bamako-aeroport-saldirisi-jnim-tuareq-fla-kidal-elinde': {
+    title: 'Malidə əlaqələndirilmiş hücum: JNIM və FLA Bamako və Kidalı vurdu',
+    date: '2026-04-25',
+    category: 'Dünya',
+    locale: 'az',
+    content: `25 aprel 2026-cı il şənbə səhəri Mali ölkə miqyasında əlaqələndirilmiş silahlı hücumlara məruz qalıb. Yerli vaxtla səhər 6-dan əvvəl paytaxt Bamakonun yaxınlığındakı Kati hərbi bazasında iki güclü partlayış və davamlı atəş səsi eşidilib. Bu, hərbi cuntanın 2020-ci ildə hakimiyyəti ələ aldığı vaxtdan bəri ölkəyə qarşı ən mürəkkəb hücum hesab olunur.
+
+## Kati bazası, müdafiə nazirinin evi və aeroport
+
+Al Jazeera və France 24-ün məlumatına görə, partlayışlar cunta lideri general Assimi Goyitanın iqamətgahının yerləşdiyi Kati hərbi bazası ətrafında baş verib. Goyitanın hazırkı yeri məlum deyil. Müdafiə naziri general Sadio Kamaranın Katidəki evi vurularaq əhəmiyyətli dərəcədə dağılıb; onun nümayəndə heyəti nazirin "hadisə zamanı evdə olmadığını və təhlükəsizdə olduğunu" bildirib.
+
+NPR və CBS News-un xəbər verdiyinə görə, Bamakodan 15 km məsafədəki Modibo Keita Beynəlxalq Aeroportunun yaxınlığında uzun müddət atəş səsi və partlayışlar qeydə alınıb. Aeroport bağlanıb, gediş və gəliş reysləri ləğv edilib. Eyni zamanda Sevare, Mopti, Gao və Kidalda da paralel hücumlar bildirilib. ABŞ səfirliyi vətəndaşlarına olduqları yerdə qalmağı tövsiyə edib.
+
+## Kidal əldən çıxdı, JNIM və Tuareq FLA əlaqələndirir
+
+Reuters-in dörd təhlükəsizlik mənbəsinə istinadən verdiyi xəbərə görə, Əl-Qaidə ilə əlaqəli Camaat Nusrat əl-İslam vəl-Müsliminin (JNIM) hücumları həyata keçirdiyi və Tuareq əsaslı Azavad Azadlıq Cəbhəsi (FLA) ilə əlaqələndirdiyi məlum olub. FLA sözçüsü Məhəmməd Elmaouloud Ramadane AFP-yə bildirib: "Bizim FLA qoşunlarımız Kidalı, Kidalın əksər hissəsini nəzarətdə saxlayır."
+
+Mali ordusu açıqlamasında "vəziyyətin nəzarət altında olduğunu" və "bir neçə terrorçunun zərərsizləşdirildiyini" bildirib. Rusiyanın dəstəklədiyi Africa Corps muzdluları paytaxtda Mali qüvvələri ilə birlikdə döyüşür. Al Jazeera analitiklərinə görə, "hücumların miqyası və əlaqələndirilməsi misilsizdir" — bu, illər ərzində Mali cuntası üçün ən ağır geriləmə kimi qiymətləndirilir.`,
+  },
+  'en-mali-coordinated-attacks-bamako-kidal-jnim-tuareg-fla-junta': {
+    title: `Mali Hit by Coordinated Attacks; Kidal Falls to Rebels`,
+    date: '2026-04-25',
+    category: 'World',
+    locale: 'en',
+    content: `Mali's military junta faced a coordinated nationwide assault on Saturday as armed groups struck the capital Bamako, hit the defense minister's home and reportedly seized the northern stronghold of Kidal. Two loud explosions and sustained gunfire were heard shortly before 6 a.m. local time near the Kati military base, where junta leader General Assimi Goita has his residence.
+
+## Bamako and Kati Under Fire
+
+According to Al Jazeera, NPR, France 24 and CBS News, Defence Minister General Sadio Camara's house in Kati was hit and largely destroyed. His entourage said he was "not present at the time and is safe." Goita's whereabouts were not immediately known.
+
+Sustained gunfire and explosions near Modibo Keita International Airport, about 15 kilometers from Bamako, forced the cancellation of all incoming and outgoing flights, and the airport was shut. The U.S. embassy in Mali advised its citizens to shelter in place.
+
+## Kidal and Coordination
+
+Simultaneous coordinated attacks were reported in Sevare in central Mali, Mopti, Gao and Kidal in the north. Four security sources told Reuters that al-Qaeda affiliate Jama'at Nusrat al-Islam wal-Muslimin (JNIM) had carried out attacks and appeared to coordinate with the Tuareg-led Azawad Liberation Front (FLA).
+
+FLA spokesman Mohamed Elmaouloud Ramadane told AFP that "our FLA troops control Kidal, most of Kidal. The governor of Kidal has taken refuge with his men in the former camp of MINUSMA." Mali's army had retaken Kidal with the help of Wagner mercenaries in 2023.
+
+## Government Response
+
+The Mali army said in a statement that "the situation is under control" and that "several terrorists have been neutralised." Russian-backed Africa Corps personnel were reportedly fighting alongside Malian forces in Bamako, according to The Africa Report.
+
+An Al Jazeera analyst said "the scale and coordination of the attacks appear to be unprecedented," with observers describing the assault as the most complex since the junta took power. The events mark a major reversal for Goita's government in the Sahel insurgency.`,
+  },
+  'tr-mali-koordineli-saldirilar-bamako-kidal-jnim-tuareg-fla': {
+    title: `Mali'de koordineli saldırılar: Bamako vuruldu, Kidal düştü`,
+    date: '2026-04-25',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Mali, 25 Nisan Cumartesi günü ülke çapında koordineli silahlı saldırılarla sarsıldı. Yerel saatle 06.00 sularında, başkent Bamako yakınlarındaki Kati askeri üssü çevresinde iki büyük patlama ve uzun süreli silah sesleri duyuldu. Kati üssü, cunta lideri General Assimi Goita'nın resmi konutunun bulunduğu noktadır. Saldırılar Bamako, Sevare, Mopti, Gao ve kuzeydeki Kidal şehrini eş zamanlı olarak etkiledi. Birleşmiş Milletler güvenlik notu olayları "eş zamanlı karmaşık saldırılar" olarak tanımladı.
+
+## Savunma Bakanı'nın evi vuruldu, Kidal düştü
+
+Savunma Bakanı General Sadio Camara'nın Kati'deki evi büyük ölçüde tahrip oldu. Bakan'ın çevresi yaptığı açıklamada Camara'nın "olay sırasında evde olmadığını ve güvende bulunduğunu" duyurdu. Modibo Keita Uluslararası Havalimanı yakınında uzun süren çatışmalar nedeniyle gelen ve giden tüm uçuşlar iptal edildi, havalimanı kapatıldı. ABD Büyükelçiliği vatandaşlarına bulundukları yerde kalmaları çağrısında bulundu. AFP'ye konuşan FLA sözcüsü Mohamed Elmaouloud Ramadane, "FLA birliklerimiz Kidal'ın büyük bölümünü kontrol ediyor. Kidal valisi adamlarıyla birlikte eski MINUSMA kampına sığındı" dedi.
+
+## JNIM ve FLA koordinasyonu
+
+Reuters'a konuşan dört güvenlik kaynağı, El Kaide bağlantılı Cemaat Nusret-ül İslam vel-Müslimin (JNIM) ile Tuareg liderliğindeki Azavad Kurtuluş Cephesi'nin (FLA) saldırıları koordineli yürüttüğünü belirtti. Kidal, 2023'te Mali ordusu tarafından Wagner paralı askerleri desteğiyle geri alınmıştı. Mali ordusu, "durumun kontrol altında olduğunu" ve "çok sayıda teröristin etkisiz hale getirildiğini" açıkladı. Rusya destekli Afrika Kolordusu paralı askerlerinin Mali kuvvetleri yanında Bamako'da çatışmalara katıldığı bildiriliyor. Al Cezire analistleri saldırıların "ölçeği ve koordinasyonunun emsalsiz" olduğunu vurgularken, gözlemciler bunu "yıllar içindeki en büyük koordineli saldırı" olarak nitelendirdi. Sahel bölgesindeki isyanın olası bir dönüm noktası olarak değerlendiriliyor.`,
+  },
+  'ru-mali-skoordinirovannye-atakii-bamako-kidal-jnim-tuaregi-fla': {
+    title: 'Мали под ударом: JNIM и туареги атакуют Бамако и Кидаль',
+    date: '2026-04-25',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Мали 25 апреля подверглась самой масштабной за многие годы скоординированной атаке вооружённых группировок. Утром перед шестью часами по местному времени мощные взрывы и продолжительная стрельба раздались возле главной военной базы в Кати, где находится резиденция лидера хунты генерала Ассими Гойты. Одновременно были атакованы военные позиции в столице Бамако, Севаре, Мопти, Гао и в Кидале. Дом министра обороны генерала Садио Камары в Кати был серьёзно повреждён, однако его окружение сообщило, что сам министр в момент удара отсутствовал и не пострадал.
+
+## Аэропорт Бамако закрыт
+
+Возле международного аэропорта имени Модибо Кейты, расположенного в 15 километрах от Бамако, продолжались стрельба и взрывы. Все прилёты и вылеты были отменены, аэропорт закрыли. Посольство США в Мали призвало граждан оставаться в укрытиях. Армия Мали в официальном заявлении сообщила, что «ситуация под контролем» и «несколько террористов нейтрализованы». По сведениям ряда источников, на стороне правительственных сил в Бамако сражались наёмники российского «Африканского корпуса».
+
+## Аль-каидовский JNIM и туарегский ФЛА действуют согласованно
+
+Четыре источника в сфере безопасности сообщили агентству Reuters, что атаки совершила связанная с «Аль-Каидой» группировка «Джамаат Нусрат аль-Ислам ва-ль-Муслимин» (JNIM), действуя в координации с возглавляемым туарегами «Фронтом освобождения Азавада» (ФЛА). Представитель ФЛА Мохамед Эль-Маулуд Рамадан заявил агентству AFP: «Наши войска контролируют большую часть Кидаля. Губернатор Кидаля укрылся со своими людьми в бывшем лагере МИНУСМА». Город ранее был отбит у повстанцев армией Мали при поддержке наёмников «Вагнера» в 2023 году.
+
+## Возможный поворот в Сахельском кризисе
+
+Аналитики Al Jazeera назвали масштаб и согласованность нападений беспрецедентными — это самая сложная атака с момента прихода хунты к власти. Прямой удар по дому министра обороны и потеря Кидаля знаменуют серьёзный откат для правительства Гойты. В международных СМИ уже обсуждается версия о возможной попытке военного переворота, хотя официального подтверждения нет.`,
+  },
+
+  // --- Topic 3: Russia 666-missile barrage on Ukraine ---
+  'rusiya-ukrayna-666-raket-dron-hucumu-dnipro-7-olu': {
+    title: 'Rusiya Ukraynaya 666 raket və dronla zərbə: Dnipro vuruldu, 7 ölü',
+    date: '2026-04-25',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Rusiya 24 aprelin gecəsindən 25 aprel 2026-cı ilin səhərinə qədər Ukraynaya son aylarda ən böyük havadan zərbəni endirib. Ümumilikdə 666 hava silahı — 619 dron və 47 raket — istifadə edilib. Ən ağır zərbə Dnipro şəhərinə dəyib; ölkə miqyasında ən azı 7 nəfər həlak olub və 57 nəfərdən çoxu yaralanıb.
+
+## Hücumun miqyası və hava müdafiəsi
+
+Kyiv Independent və Kyiv Post-un məlumatına görə, Rusiya 619 dron — bunların təxminən 400-ü "Şahid" tipli kamikadze dronları — və 47 raket (35 qanadlı və 12 ballistik) buraxıb. Ukraynanın hava müdafiəsi 580 dronu və 30 raketi — yəni 666 hədəfdən 610-nu — sıradan çıxarmağı bacarıb. Bu, 91,6 faiz tutma əmsalı deməkdir.
+
+PBS NewsHour və Ukraynska Pravda-nın xəbər verdiyinə görə, 13 raket və 36 dron Dnipro, Xarkov, Çernihiv, Sumı, Odessa və Kiyev vilayətlərində 23 ərazidə birbaşa zərbə kimi qeydə alınıb. Dnipro şəhərində 4 mərtəbəli bina vurulub, sənaye infrastruktur obyekti dağıdılıb. Yaralananlar arasında 9 yaşında uşaq və iki polis əməkdaşı var.
+
+## Çernihiv, Odessa və Zelenskinin reaksiyası
+
+RFE/RL və New Voice of Ukraine-in qeyd etdiyinə görə, Çernihiv vilayətinin Nijın şəhərində raket və dron hücumu nəticəsində 30 və 60 yaşlı iki kişi həlak olub. Odessa vilayətində 2 nəfər yaralanıb; yaşayış binaları, avtomobillər, port infrastrukturu və Panama bayrağı altında üzən mülki gəmi zərər görüb.
+
+Həmçinin Ukrayna prezidenti Volodimir Zelenski Rusiyaya qarşı sərtləşdirilmiş sanksiyalara və əlavə hava müdafiəsinə yenidən çağırış edib. Eyni gün ərzində Zelenski Azərbaycana — Qəbələyə — uçub. 666 silahdan ibarət bu kütləvi hücum onu xatırladır ki, Tramp-İran cəbhəsindəki diplomatik dramaya baxmayaraq, Rusiya-Ukrayna müharibəsi dayanmayıb. 91 faizlik tutma göstəricisi isə Ukrayna hava müdafiəsinin keyfiyyət dinamikasını ortaya qoyur.`,
+  },
+  'en-russia-ukraine-666-drones-missiles-attack-dnipro-killed': {
+    title: `Russia Fires 666 Drones, Missiles at Ukraine; 7 Killed`,
+    date: '2026-04-25',
+    category: 'World',
+    locale: 'en',
+    content: `Russia launched one of its largest aerial bombardments of the entire war against Ukraine overnight into Saturday, firing 666 missiles and drones at cities across the country. At least seven people were killed and 57 wounded, with the central city of Dnipro hardest hit, according to Ukrainian officials.
+
+## A 666-Weapon Barrage
+
+According to the Kyiv Independent, Kyiv Post, the Washington Post and PBS NewsHour, Russia fired 619 drones, including roughly 400 Shahed-type "kamikaze" drones, alongside 47 missiles, broken down into 35 cruise and 12 ballistic missiles. Ukrainian air defenses intercepted 580 drones and 30 missiles, a 91.6 percent interception rate.
+
+Despite the high interception rate, 13 missiles and 36 drones were recorded as direct hits across 23 areas in Dnipro, Kharkiv, Chernihiv, Sumy, Odesa and Kyiv oblasts. Ukrainian officials confirmed at least seven dead nationwide and 57 wounded.
+
+## Dnipro Hardest Hit
+
+In Dnipro, a four-story building was struck and an industrial infrastructure facility was destroyed, with more than 20 wounded, including a nine-year-old and two police officers, according to the Kyiv Independent. In Chernihiv Oblast, a Russian missile and drone attack on the city of Nizhyn killed two men aged 30 and 60.
+
+In Odesa Oblast, two people were wounded and residential buildings, cars, port infrastructure and a Panama-flagged civilian vessel were damaged, per RFE/RL and the New Voice of Ukraine.
+
+## Zelenskyy Renews Sanctions Call
+
+President Volodymyr Zelenskyy renewed his call for tougher sanctions against Russia and additional air defense systems for Ukraine. Later that day Zelenskyy traveled to Azerbaijan, where he met President Ilham Aliyev in Gabala.
+
+The 666-weapon barrage, with its 91 percent interception rate, is one of the most significant single-day air-defense data points of the war. While much of the world's attention this weekend was on the Iran diplomatic track, the bombardment underscored that the Russia-Ukraine war has not paused.`,
+  },
+  'tr-rusya-ukrayna-666-fuze-iha-saldirisi-dnipro-7-olu': {
+    title: `Rusya'dan Ukrayna'ya 666 silahlı dev saldırı, 7 ölü`,
+    date: '2026-04-25',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Rusya, 24-25 Nisan gecesi Ukrayna'ya karşı son ayların en büyük hava saldırılarından birini gerçekleştirdi. Ukrayna Hava Kuvvetleri'nin verilerine göre Rusya toplam 666 hava silahı kullandı: 619 insansız hava aracı (yaklaşık 400'ü Şahed tipi "kamikaze" İHA) ile 35 seyir ve 12 balistik olmak üzere 47 füze fırlatıldı. Ukrayna hava savunması 580 İHA ve 30 füzeyi düşürmeyi başardı; engelleme oranı yüzde 91,6 olarak kaydedildi. Ülke genelinde en az 7 kişi hayatını kaybetti, 57'den fazla kişi yaralandı.
+
+## Dnipro en ağır darbeyi aldı
+
+Dnipro şehri saldırının merkezi oldu. 4 katlı bir bina füze isabeti aldı ve bir "endüstriyel altyapı tesisi" tahrip oldu. Şehirde 9 yaşında bir çocuk ile iki polis memuru dahil 20'den fazla kişi yaralandı. Çernihiv vilayetinde Nijin şehrine yapılan füze ve İHA saldırılarında 30 ile 60 yaşlarında iki erkek hayatını kaybetti. Odesa vilayetinde de hasar tespit edildi: konutlar, otomobiller, liman altyapısı ve Panama bayraklı bir sivil gemi zarar gördü, iki kişi yaralandı.
+
+## 23 bölgede doğrudan isabet
+
+Toplamda 13 füze ve 36 İHA, Dnipro, Harkiv, Çernihiv, Sumı, Odesa ve Kiev vilayetlerinde 23 farklı bölgede doğrudan isabet olarak kayda geçti. Saldırının ölçeği, savaş süresince Rusya'nın gerçekleştirdiği en büyük tek günlük hava bombardımanlarından biri olarak öne çıkıyor. Yüzde 91 düzeyindeki engelleme oranı ise Ukrayna hava savunmasının halen yüksek etkinlik düzeyinde olduğunu gösteren önemli bir veri olarak değerlendiriliyor.
+
+## Zelenski yaptırım çağrısını yineledi
+
+Cumhurbaşkanı Volodimir Zelenski saldırının ardından Rusya'ya karşı daha sert yaptırımlar ve daha fazla hava savunma sistemi temin edilmesi yönündeki çağrılarını yeniledi. Aynı gün Zelenski savaş döneminin ilk Azerbaycan ziyaretini gerçekleştirmek üzere Bakü'ye uçtu. Uluslararası kamuoyunun ağırlıklı olarak Trump liderliğindeki İran müzakerelerine odaklandığı bir dönemde Rusya'nın bu büyük çaplı saldırısı, Rusya-Ukrayna savaşının duraklamadığını net biçimde hatırlattı.`,
+  },
+  'ru-rossiya-massirovannaya-ataka-666-raket-i-dronov-dnepr-7-pogibshikh': {
+    title: 'Россия выпустила 666 ракет и дронов по Украине: 7 жертв',
+    date: '2026-04-25',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Россия в ночь на 25 апреля нанесла один из крупнейших за многие месяцы массированных ударов по Украине. По данным украинских ВВС, по территории страны было выпущено 619 беспилотников, в том числе около 400 дронов типа «Шахед», и 47 ракет — 35 крылатых и 12 баллистических. В сумме это 666 средств воздушного нападения. Главный удар пришёлся на Днепр, всего пострадали 23 района в Днепропетровской, Харьковской, Черниговской, Сумской, Одесской и Киевской областях. По всей стране подтверждена гибель не менее семи человек, ранения получили свыше пятидесяти семи.
+
+## ПВО перехватила 91% целей
+
+Украинская противовоздушная оборона уничтожила 580 беспилотников и 30 ракет — всего 610 из 666 целей, что соответствует уровню перехвата около 91,6%. Несмотря на это, 13 ракет и 36 дронов прорвались и нанесли прямые удары. В Днепре была поражена четырёхэтажная жилая застройка, а также объект промышленной инфраструктуры. Ранения получили более двадцати человек, в том числе девятилетний ребёнок и двое полицейских.
+
+## Чернигов и Одесса под ударом
+
+В Черниговской области ракетно-дроновый удар по городу Нежин унёс жизни двух мужчин в возрасте 30 и 60 лет. В Одесской области были ранены два человека, повреждены жилые дома, автомобили, портовая инфраструктура. Среди объектов оказалось гражданское судно под флагом Панамы. Удары были скоординированы и пришлись на ряд регионов одновременно, что свидетельствует о повторном переходе России к стратегии массированных воздушных кампаний.
+
+## Зеленский требует усиления санкций
+
+Президент Украины Владимир Зеленский в субботу повторил призыв к более жёстким санкциям против Москвы и срочному увеличению поставок систем противовоздушной обороны. Позднее в тот же день он вылетел в Азербайджан на встречу с президентом Ильхамом Алиевым. Удары пришлись на момент, когда международное внимание сосредоточено на иранском треке, и стали напоминанием, что российско-украинская война не приостановилась ни на день.`,
+  },
+
+  // --- Topic 4: Zelenskyy-Aliyev Gabala meeting (first wartime visit) ---
+  'zelenski-aliyev-gebele-gorush-6-saziw-mudafie-energetika': {
+    title: 'Zelenski Qəbələdə Əliyevlə görüşdü: 6 saziş, müdafiə və enerji daxildir',
+    date: '2026-04-25',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Ukrayna prezidenti Volodimir Zelenski 25 aprel 2026-cı ildə Azərbaycana — Rusiyanın 2022-ci il fevralda başlatdığı tammiqyaslı müharibədən sonra Cənubi Qafqaza ilk dəfə — rəsmi səfər edib. Prezident İlham Əliyev qonağı Qəbələ iqamətgahında qəbul edib və iki ölkə altı ikitərəfli sazişə imza atıb.
+
+## Qəbələdə görüş və altı saziş
+
+Trend.az və Azernews-un məlumatına görə, görüş əvvəlcə təkbətək, sonra geniş tərkibdə nümayəndə heyətləri ilə davam edib. İmzalanan altı saziş aşağıdakı sahələri əhatə edir: müdafiə-sənaye kompleksi və hərbi-texniki əməkdaşlıq; Azərbaycanda da daxil olmaqla hərbi məhsulların birgə istehsalı; enerji; təhsil; humanitar məsələlər (sərhəd ərazilərindən təxliyə edilmiş uşaqlar daxil); və üçtərəfli sülh treki.
+
+Kyiv Post və Interfax-Ukraine-in xəbər verdiyinə görə, Əliyev görüşdə bildirib: "Ukrayna və Azərbaycan ərazi bütövlüyünü dəstəkləyib və dəstəkləməyə davam edəcək." Bu, hər iki ölkənin uzunmüddətli mövqeyinin yenidən təsdiqi kimi şərh olunur.
+
+## Sülh vasitəçiliyi və enerji dəstəyi
+
+Euronews və Yahoo News/AFP-nin qeyd etdiyinə görə, Zelenski açıqlamasında deyib: "Biz Azərbaycan prezidentinə üçtərəfli danışıqlara hazır olduğumuzu bildirdik." Ukrayna lideri əlavə edib ki, əgər Moskva razılaşsa, Rusiya ilə növbəti raund sülh danışıqlarını Azərbaycanda keçirməyə hazırdır.
+
+Həmçinin Zelenski Əliyevə 2022-ci ildən bəri verilmiş "11 enerji dəstəyi paketinə" görə təşəkkür edib və ukraynalı hərbi mütəxəssislərin Azərbaycana dron əleyhinə təcrübəni paylaşmaq üçün ezam olunduğunu açıqlayıb. Bu səfər iki dövlət üçün strateji əhəmiyyət daşıyır: Bakı Pakistan trekinin uğursuzluğu fonunda özünü potensial sülh vasitəçisi kimi mövqeləndirir, post-Qarabağ Azərbaycan müdafiə-sənaye bazasını möhkəmləndirir, post-istila Ukrayna isə dron müharibəsi təcrübəsini ixrac edir.`,
+  },
+  'en-zelenskyy-aliyev-gabala-azerbaijan-6-agreements-defense-energy': {
+    title: `Zelenskyy Signs 6 Deals With Aliyev in Gabala Visit`,
+    date: '2026-04-25',
+    category: 'Politics',
+    locale: 'en',
+    content: `Ukrainian President Volodymyr Zelenskyy made his first official visit to Azerbaijan since Russia's full-scale invasion in February 2022, signing six bilateral agreements with President Ilham Aliyev at the Gabala residence on Saturday. The visit also marked Zelenskyy's first trip to the South Caucasus during the war.
+
+## Gabala Talks
+
+According to the Kyiv Independent, Kyiv Post, Interfax-Ukraine, Azernews and Trend.Az, Aliyev hosted Zelenskyy at the Gabala residence for a one-on-one meeting followed by expanded delegation talks. The six agreements signed cover defense-industrial complex and military-technical cooperation, joint production of military products including in Azerbaijan, energy, education, humanitarian assistance such as for children evacuated from border areas, and a trilateral peace track.
+
+Aliyev said that "Ukraine and Azerbaijan have supported and will continue to support the territorial integrity" of the two countries, per Trend.Az and Azernews.
+
+## Peace Track and Drone Expertise
+
+Zelenskyy told reporters: "We have informed the President of Azerbaijan that we are ready for trilateral talks." He added that Ukraine is ready to host a next round of peace negotiations with Russia in Azerbaijan if Moscow agrees, according to Euronews.
+
+Zelenskyy thanked Aliyev for "11 energy support packages" provided since 2022 and said Ukrainian military experts have been deployed to Azerbaijan to share anti-drone expertise, per the Kyiv Independent and Interfax-Ukraine.
+
+## Strategic Significance
+
+The visit positions Baku as a potential venue for a Putin-Zelenskyy meeting at the very moment when the Iran diplomatic track in Pakistan collapsed. The defense co-production agreement is also strategically significant, with Ukraine exporting drone-warfare know-how built up over more than three years of war and Azerbaijan, fresh from the 2024 Karabakh chapter, expanding its military-industrial base.
+
+The visit comes the same day Russia launched one of its largest aerial bombardments of the war against Ukraine, killing at least seven people, with Dnipro hardest hit.`,
+  },
+  'tr-zelensky-aliyev-gebele-azerbaycan-6-anlasma-savunma': {
+    title: `Zelenski Gebele'de: Aliyev ile 6 ikili anlaşma imzaladı`,
+    date: '2026-04-25',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Ukrayna Cumhurbaşkanı Volodimir Zelenski, 25 Nisan Cumartesi günü Azerbaycan'a savaş döneminin ilk resmi ziyaretini gerçekleştirdi. Bu, Şubat 2022'de Rusya'nın geniş çaplı işgalinin başlamasından bu yana Zelenski'nin Güney Kafkasya'ya yaptığı ilk üst düzey ziyaret oldu. Cumhurbaşkanı İlham Aliyev, konuk lideri Gebele rezidansında ağırladı; baş başa görüşmenin ardından heyetler arası genişletilmiş toplantı düzenlendi. İki ülke arasında savunma sanayisinden enerjiye uzanan altı ikili anlaşma imzalandı.
+
+## Altı anlaşma: savunmadan enerjiye
+
+İmzalanan anlaşmalar; savunma-sanayi kompleksi ve askeri-teknik işbirliği, Azerbaycan'da askeri ürünlerin ortak üretimi, enerji, eğitim, sınır bölgelerinden tahliye edilen çocuklara yönelik insani işbirliği ile üçlü barış kanalını kapsıyor. Aliyev görüşmede "Ukrayna ve Azerbaycan iki ülkenin toprak bütünlüğünü desteklemiş ve desteklemeye devam edecektir" açıklamasını yaptı. Zelenski ise Ukraynalı askeri uzmanların İHA karşıtı bilgi ve tecrübelerini paylaşmak üzere Azerbaycan'a görevlendirildiğini bildirdi.
+
+## Bakü olası bir Putin-Zelenski zirvesine ev sahibi olabilir
+
+Zelenski açıklamasında "Azerbaycan Cumhurbaşkanı'na üçlü görüşmelere hazır olduğumuzu ilettik" sözlerini sarf etti ve Ukrayna'nın Rusya ile bir sonraki barış müzakeresi turuna Moskova'nın onay vermesi durumunda Azerbaycan'ın ev sahibi olabileceğini açıkladı. Pakistan üzerinden yürütülen İran müzakerelerinin aynı gün çökmesinin ardından Bakü, kendisini farklı bir cephede arabulucu olarak konumlandırmış oldu.
+
+## 11 enerji destek paketi ve teşekkür
+
+Zelenski, görüşmede 2022'den bu yana Azerbaycan'ın Ukrayna'ya gönderdiği "11 enerji destek paketi" için Aliyev'e teşekkür etti. Karabağ döneminin ardından askeri-sanayi tabanını güçlendirmek isteyen Bakü ile İHA savaşı tecrübesini ihraç etmek isteyen Kiev arasındaki bu yakınlaşma, iki ülkenin uzun vadeli stratejik ortaklığına yeni bir boyut ekliyor. Ziyaret, savaş dönemi Ukrayna diplomasisinin Güney Kafkasya'daki en önemli adımı olarak değerlendiriliyor.`,
+  },
+  'ru-zelenskiy-aliev-gabala-azerbaydzhan-6-soglasheniy-oborona': {
+    title: 'Зеленский в Азербайджане: подписано 6 соглашений с Алиевым',
+    date: '2026-04-25',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Президент Украины Владимир Зеленский 25 апреля совершил первый официальный визит в Азербайджан и шире — в Южный Кавказ — с момента начала полномасштабного российского вторжения в феврале 2022 года. Президент Ильхам Алиев принял украинского лидера в резиденции в Габале. Сначала состоялась встреча тет-а-тет, затем — переговоры в расширенном составе делегаций. По итогам визита было подписано шесть двусторонних соглашений, охватывающих оборонную, энергетическую, образовательную и гуманитарную сферы.
+
+## Шесть соглашений и совместное производство
+
+Подписанные документы охватывают сотрудничество в военно-техническом и оборонно-промышленном комплексе, в том числе совместное производство военной продукции, включая часть на территории Азербайджана. Отдельные соглашения посвящены энергетике, образованию, гуманитарным программам — в частности эвакуации детей из приграничных территорий, — а также трёхстороннему мирному треку. Алиев заявил, что Украина и Азербайджан поддерживали и будут поддерживать территориальную целостность обеих стран. Зеленский поблагодарил азербайджанскую сторону за одиннадцать пакетов энергетической помощи с 2022 года и сообщил, что украинские военные специалисты делятся в Азербайджане опытом противодействия беспилотникам.
+
+## Готовность к переговорам в Баку
+
+Главное политическое заявление прозвучало по итогам встречи. «Мы проинформировали президента Азербайджана о том, что готовы к трёхсторонним переговорам», — сказал Зеленский. Украина выразила готовность принять следующий раунд консультаций с Россией именно в Азербайджане, если Москва согласится на такой формат. Тем самым Баку открыто позиционирует себя как площадка для возможной встречи Путина и Зеленского.
+
+## Стратегический поворот для региона
+
+Визит проходит на фоне массированного российского удара по Днепру и одновременного срыва иранского трека в Пакистане. Совместное оборонное производство показывает, что Украина превращает опыт дроновой войны в экспорт, а Азербайджан после 2024 года строит собственную военно-промышленную базу. Габала стала точкой пересечения ключевых сюжетов повестки.`,
+  },
+
+  // --- Topic 5: Palestinian local elections (Gaza + West Bank) ---
+  'qezze-deir-el-belah-20-il-sonra-yerli-sechki-felestin': {
+    title: 'Qəzzədə 20 ildən sonra ilk yerli seçki: Deyr əl-Bələhdə səsvermə',
+    date: '2026-04-25',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Fələstinlilər 25 aprel 2026-cı il şənbə günü 20 ildən artıq müddətdən sonra Qəzza zolağında ilk yerli bələdiyyə seçkilərində səs verib. Səsvermə Deyr əl-Bələh şəhərində keçirilib. Eyni gün Qərb sahilində də 2023-cü il oktyabrın 7-də başlamış İsrail-Hamas müharibəsindən bəri ilk yerli seçkilər təşkil olunub.
+
+## Deyr əl-Bələhdə səsvermə günü
+
+Al Jazeera və CNN-in məlumatına görə, səsvermə məntəqələri yerli vaxtla səhər saat 7-də (04:00 GMT) açılıb. Deyr əl-Bələhdə məntəqələr saat 17:00-da bağlanıb — bu qərar elektrik enerjisi olmaması səbəbindən səslərin sayılmasının gündüz işığında aparılmasını təmin etmək üçün verilib. Qəzza zolağı daxilində seçməli yaşa çatmış 70.000 nəfər səs verib.
+
+Bu, Qəzza daxilində 2006-cı il qanunverici seçkilərindən — 2007-ci ildə Hamasın hakimiyyəti ələ almasından əvvəlki sonuncu seçkidən — bəri ilk seçki tədbiridir. Deyr əl-Bələh seçilib, çünki əhalisi əsasən yerində qalıb və şəhər İsrail hərbi əməliyyatları nəticəsində dağıdılmamış az saylı ərazilərdən biridir.
+
+## Dörd siyahı və Qərb sahili səsverməsi
+
+Washington Post və PBS NewsHour-un xəbər verdiyinə görə, Deyr əl-Bələhdə dörd nominal müstəqil namizəd siyahısı seçicilərə təqdim olunub: "Sülh və Quruculuq", "Deyr əl-Bələh Bizi Birləşdirir", "Deyr əl-Bələhin Gələcəyi" və "Deyr əl-Bələhin Dirçəlişi". Hər siyahıda 15 namizəd, o cümlədən ən azı 4 qadın yer alıb. Siyahıların əksəriyyəti prezident Mahmud Abbasın Fəth hərəkatı tərəfindən dəstəklənir; Hamas rəsmi şəkildə iştirak etmir.
+
+Eyni zamanda Qərb sahilində təxminən 1,5 milyon fələstinli yerli seçkilərdə səs vermək üçün qeydiyyatdan keçib. Mərkəzi Seçki Komissiyası Qəzzaya birbaşa səsvermə bülletenləri, qutular və mürəkkəb göndərə bilmədi — logistika İsrailin nəzarət rejimi ətrafında qurulub. Rəsmilər tədbiri "pilot" adlandırır və 90 faizi dağılmış zolaqda mülki idarəçiliyin yenidən qurulması cəhdi kimi qiymətləndirilir.`,
+  },
+  'en-gaza-deir-al-balah-first-election-20-years-west-bank-palestinian': {
+    title: `Gaza Votes in First Local Election in Over 20 Years`,
+    date: '2026-04-25',
+    category: 'Politics',
+    locale: 'en',
+    content: `Palestinians in the central Gaza city of Deir al-Balah voted on Saturday in the first municipal election held inside the Gaza Strip in more than 20 years, while in the West Bank around 1.5 million voters cast ballots in the first local elections there since the war began on October 7, 2023.
+
+## Deir al-Balah Pilot
+
+According to Al Jazeera, CNN, the Washington Post, PBS NewsHour and the Times of Israel, polling stations in Deir al-Balah opened at 7 a.m. local time and closed at 5 p.m. to allow daylight counting due to a lack of electricity. Roughly 70,000 voters were eligible to cast ballots in the first electoral exercise inside the Gaza Strip in 20 years. The last Palestinian vote was the 2006 legislative election, before Hamas's 2007 takeover of Gaza.
+
+Officials described the vote as a "pilot." The Central Elections Commission was unable to send ballot papers, ballot boxes or ink directly into Gaza and had to work around Israeli controls, according to Al Jazeera.
+
+## Four Lists, Four Women Each
+
+Four nominally independent candidate lists competed in Deir al-Balah, named Peace and Construction, Deir al-Balah Brings Us Together, Future of Deir al-Balah and Renaissance of Deir al-Balah. Each list fielded 15 candidates, including at least four women, per the Times of Israel and the Jerusalem Post.
+
+Most lists were backed by President Mahmoud Abbas's Fatah movement. Hamas did not officially participate. Deir al-Balah was selected because most of its population stayed in place during the war, and the city is one of the few areas not destroyed by Israeli military operations.
+
+## West Bank Concurrent Vote
+
+In the West Bank, around 1.5 million Palestinians registered to vote in concurrent local elections, the first held in the territory since the start of the Israel-Hamas war on October 7, 2023, per RTÉ and PBS NewsHour.
+
+The vote is symbolically charged, taking place 20 years after the last Palestinian election. It marks a tentative effort by the Palestinian Authority to rebuild civic governance in a Gaza Strip that has been largely destroyed.`,
+  },
+  'tr-gazze-deir-el-balah-20-yil-sonra-secimler-bati-seria-filistin': {
+    title: `Gazze'de 20 yıl sonra ilk yerel seçim: Deir el-Balah'ta`,
+    date: '2026-04-25',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Filistin, 25 Nisan Cumartesi günü tarihi nitelikte bir seçim gününe sahne oldu. Gazze Şeridi'nde Deir el-Balah kentinde 20 yıldan uzun sürenin ardından ilk yerel seçim yapıldı; eş zamanlı olarak Batı Şeria'da da 7 Ekim 2023 İsrail-Hamas savaşının başlamasından bu yana ilk yerel seçim düzenlendi. Sandıklar yerel saatle 07.00'de açıldı. Deir el-Balah'ta sandıklar, elektrik kesintileri nedeniyle gün ışığında oy sayımına imkan tanımak amacıyla saat 17.00'de kapatıldı. Şehirde toplam 70.000 seçmen oy kullanma hakkına sahipti.
+
+## Hamas'ın 2007 darbesinden bu yana ilk Gazze seçimi
+
+Gazze'deki son seçim, 2006 yasama seçimi olmuştu; Hamas'ın 2007'de Şerit'in kontrolünü ele geçirmesiyle Filistin'de yerel seçim süreci durmuştu. Deir el-Balah, büyük bölümü İsrail askeri operasyonlarından kayda değer hasar görmemiş bir bölge olduğu ve nüfusu büyük ölçüde yerinde kaldığı için pilot bölge olarak seçildi. Yetkililer süreci "pilot uygulama" olarak nitelendirdi. Merkezi Seçim Komisyonu, oy pusulalarını, sandıkları ve mürekkebi doğrudan Gazze'ye gönderemediği için lojistik sürecin İsrail kontrol noktaları çevresinden işletilmesi gerekti.
+
+## 4 liste, en az 4 kadın aday
+
+Deir el-Balah'ta dört bağımsız liste yarıştı: "Barış ve İnşa", "Deir el-Balah Bizi Birleştirir", "Deir el-Balah'ın Geleceği" ve "Deir el-Balah'ın Yeniden Doğuşu". Her liste 15 adaydan oluştu ve her birinde en az 4 kadın aday yer aldı. Listelerin büyük çoğunluğu Cumhurbaşkanı Mahmud Abbas'ın liderliğindeki Fetih hareketi tarafından desteklendi. Hamas seçimlere resmi olarak katılmadı.
+
+## Batı Şeria'da 1,5 milyon seçmen
+
+Aynı gün Batı Şeria'da yaklaşık 1,5 milyon Filistinli yerel seçimler için seçmen olarak kayıtlandı. Bu, 7 Ekim 2023 sonrasının ilk Filistin yerel seçimi oldu. Yıkımın yüzde 90'ları aşan bir bölgede sivil yönetimi yeniden inşa etme girişimi olarak tanımlanan oylama, savaş sonrası Gazze yönetiminin nasıl şekilleneceği tartışmasının da bir göstergesi olarak değerlendiriliyor.`,
+  },
+  'ru-sektor-gaza-deyr-el-balah-pervyye-vybory-za-20-let-zapadnyy-bereg': {
+    title: 'Газа: первые за 20 лет местные выборы в Дейр-эль-Балахе',
+    date: '2026-04-25',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Утром 25 апреля в семь часов по местному времени в палестинском городе Дейр-эль-Балах в секторе Газа открылись избирательные участки. Это первое голосование внутри сектора за двадцать лет — последний раз палестинцы Газы голосовали в 2006 году на парламентских выборах, по итогам которых ХАМАС пришёл к власти и в 2007 году установил контроль над сектором. Из-за ограниченного доступа к электричеству участки в Дейр-эль-Балахе закрылись уже в пять часов вечера, чтобы успеть подсчитать голоса при дневном свете.
+
+## Семьдесят тысяч избирателей и четыре списка
+
+Право голоса получили около семидесяти тысяч жителей Дейр-эль-Балаха. На местных выборах конкурировали четыре номинально независимых списка: «Мир и созидание», «Дейр-эль-Балах объединяет нас», «Будущее Дейр-эль-Балаха» и «Возрождение Дейр-эль-Балаха». В каждом списке по пятнадцать кандидатов, в том числе минимум четыре женщины. Большинство списков негласно поддерживается движением ФАТХ президента Махмуда Аббаса, тогда как ХАМАС официально не участвует. Дейр-эль-Балах был выбран не случайно — это один из немногих городов сектора, где население сохранилось на месте.
+
+## Параллельное голосование на Западном берегу
+
+Одновременно с Газой на Западном берегу прошли местные выборы — около полутора миллионов зарегистрированных избирателей. Это первое палестинское голосование с начала войны Израиля и ХАМАС, начавшейся 7 октября 2023 года. Центральная избирательная комиссия не смогла напрямую отправить бюллетени, урны и чернила в Газу — логистика была организована в обход израильских пограничных режимов.
+
+## Пилотный, но символический вотум
+
+Официальные лица называют голосование пилотным проектом. Через двадцать лет после выборов, давших ХАМАС победу и спровоцировавших кризис, новая попытка восстановить гражданское управление становится символическим тестом для Палестинской автономии. Одновременно западнобережное голосование показывает первую за послеоктябрьский период картину политических настроений. Итоги будут подведены в ближайшие дни.`,
+  },
+
+  // --- Topic 6: Italy Liberation Day 81st anniversary / Mattarella ---
+  'italiya-azadliq-gunu-25-aprel-mattarella-mukavimet-fasizm': {
+    title: 'İtaliyada Azadlıq Günü: Mattarella "İndi və həmişə Müqavimət" dedi',
+    date: '2026-04-25',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `İtaliya 25 aprel 2026-cı ildə 1945-ci ildə faşizmdən və nasist işğalından azad olunmasının 81-ci ildönümünü qeyd edib. Prezident Sergio Mattarella Romada Vətən Səcdəgahında (Altare della Patria) Naməlum Əsgər abidəsinin önündə dəfnə çələngi qoyaraq Azadlıq mübarizəsi qurbanlarının xatirəsini ehtiramla yad edib.
+
+## Romada mərasim, San Severino Markedə nitq
+
+ANSA və Il Sole 24 ORE-nin məlumatına görə, mərasimdə dövlətin ən yüksək vəzifəli şəxsləri, hərbi rəhbərlik və yerli idarəetmə təmsilçiləri iştirak edib. Mattarella daha sonra Vətəndaş Xidmət üçün Qızıl Medala layiq görülmüş San Severino Marke şəhərinə gedərək əsas çıxışını orada edib.
+
+Mattarellanın mərkəzi mesajı belə olub: "İndi və həmişə Müqavimət" (Ora e sempre Resistenza). Prezident sülhün hər bir insan və hər bir xalq üçün hüquq olduğunu vurğulayıb. Habelə "İkinci Dünya Müharibəsindən sonra qurulmuş sülh yollarını zəiflətməyə yönəlmiş tarixə zidd cəhdlər" barədə xəbərdarlıq edib — bu, davam edən İran müharibəsinə dolayı, lakin aydın istinad kimi qiymətləndirilib.
+
+## Mərasim zamanı gərginliklər
+
+Brussels Signal və Unione Sarda-nın xəbər verdiyinə görə, qeyd günü zamanı bir neçə gərgin epizod qeydə alınıb: Romada ANPI partizan birliyinə mənsub olan bir cütlüyə üç hava-tapança güllə atılıb; bəzi tədbirlərdə Fələstinə dəstək nümayişçiləri etiraz edib; İtaliya Senatının sədrinin bayramdan əvvəl "faşist əsgərlərinin xatirəsini yad etmək" çağırışı kəskin müzakirələrə yol açıb.
+
+Həmçinin 25-26 aprel tarixlərində 09:00-22:00 saatları arasında bayram trafikini yüngülləşdirmək məqsədilə ölkə üzrə yük maşınlarına qadağa tətbiq edilib. Müharibə fonunda Mattarellanın "İndi və həmişə Müqavimət" çağırışı yeni mənalar qazanıb və Senat sədrinin mübahisəli bəyanatları ilə birlikdə 81 il sonra İkinci Dünya Müharibəsi yaddaşının İtaliya siyasətini bölməyə davam etdiyini göstərib.`,
+  },
+  'en-italy-liberation-day-april-25-mattarella-resistance-fascism': {
+    title: `Italy Marks 81st Liberation Day; Mattarella: Resistance`,
+    date: '2026-04-25',
+    category: 'Politics',
+    locale: 'en',
+    content: `Italy marked the 81st anniversary of its liberation from Fascism and Nazi occupation on Saturday, with President Sergio Mattarella laying a wreath at the Altare della Patria in Rome and warning against "anti-historical efforts to weaken paths toward peace established after World War II." The Liberation Day commemorations unfolded against the backdrop of the ongoing Iran war.
+
+## Wreath at the Altar of the Fatherland
+
+According to ANSA, Il Sole 24 ORE and Unione Sarda, Mattarella laid a laurel wreath at the Monument of the Unknown Soldier at the Altare della Patria in Rome, paying homage to those who fell during the Liberation. The country's highest officials, military leaders and local authorities attended the ceremony.
+
+Mattarella then traveled to San Severino Marche, a city awarded the Gold Medal for Civil Merit, to deliver the main address.
+
+## "Now and Always Resistance"
+
+The president's headline message was "Ora e sempre Resistenza" — "Now and always Resistance" — framing peace as a right for every person and every people, according to ANSA and LaPresse. He warned of "anti-historical efforts to weaken paths toward peace established after WWII," remarks read as a pointed reference amid the ongoing Iran war.
+
+In an earlier statement reported by ANSA English on April 23, Mattarella had described Liberation Day as a moment of "collective reflection" and "national unity."
+
+## Tensions on the Day
+
+Several tensions surfaced during the ceremonies. Three air-pistol shots were fired at a couple from the ANPI partisan association in Rome, while pro-Palestine protesters disrupted some events, per ANSA. The Italian Senate President's pre-holiday call to "honour fascist soldiers" sparked controversy, according to Brussels Signal.
+
+A nationwide truck ban from 9 a.m. to 10 p.m. on April 25 and 26 was put in place to ease holiday traffic. Eighty-one years after Italy's 1945 liberation, the day shows how WWII memory still divides Italian politics, even as a new Middle East war unfolds.`,
+  },
+  'tr-italya-kurtulus-bayrami-25-nisan-mattarella-direnis-fasizm': {
+    title: `İtalya 81. Kurtuluş Bayramı: Mattarella'dan "Direniş" mesajı`,
+    date: '2026-04-25',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `İtalya, 25 Nisan Cumartesi günü Faşizm ve Nazi işgalinden kurtuluşunun 81'inci yıl dönümünü kutladı. Cumhurbaşkanı Sergio Mattarella, Roma'daki Vatan Sunağı'nda (Altare della Patria) Bilinmeyen Asker Anıtı'na defne çelengi bıraktı ve Kurtuluş'ta hayatını kaybedenleri andı. Törene en üst düzey devlet yetkilileri, ordu komutanları ve yerel idarecileri katıldı. Mattarella, daha sonra Sivil Liyakat Altın Madalyası ile ödüllendirilen San Severino Marche kentine geçerek günün ana konuşmasını burada yaptı.
+
+## "Şimdi ve daima Direniş"
+
+Mattarella konuşmasında günün manşet sözünü dile getirdi: "Ora e sempre Resistenza" — "Şimdi ve daima Direniş." Cumhurbaşkanı, "barışın her insan ve her halk için bir hak" olduğunu vurguladı ve "İkinci Dünya Savaşı sonrasında inşa edilen barış yollarını zayıflatmaya yönelik tarih dışı çabalara" karşı uyarıda bulundu. Açıklama, sürmekte olan İran savaşına dolaylı bir gönderme olarak yorumlandı. Mattarella'nın söylemi, kutlamanın yalnızca tarihi bir anma değil, güncel dünya çatışmaları üzerine bir politik mesaj da içerdiğini gösterdi.
+
+## Törenler sırasında gerginlik
+
+Kutlamalar tartışmasız geçmedi. Roma'da bir ANPI (İtalyan Partizanlar Ulusal Birliği) çiftine karşı üç havalı tabanca atışı düzenlendi. Bazı şehirlerde Filistin yanlısı protestocular törenleri kesintiye uğrattı. İtalya Senato Başkanı'nın bayram öncesi yaptığı "faşist askerleri de onurlandırma" çağrısı kamuoyunda büyük tepki çekti ve günün siyasi gerginliğini artırdı. Bu tartışma, 81 yıl sonra İkinci Dünya Savaşı hafızasının İtalyan siyasetini hâlâ böldüğünü ortaya koydu.
+
+## Tatil günü ve trafik düzenlemesi
+
+Hükümet, 25-26 Nisan tarihlerinde 09.00-22.00 saatleri arasında ülke çapında kamyon trafiği yasağı uyguladı. Önlem, bayram trafiğinin rahatlatılması amacıyla alındı. Mattarella'nın Vatan Sunağı'ndaki tören sonrası Marche'ye geçişi, bayramın ulusal birlik ve tarihi hafıza üzerine bir kolektif düşünce zamanı olduğu mesajını öne çıkardı. Yeni bir Orta Doğu savaşının dünyanın gözleri önünde sürdüğü bir dönemde "ora e sempre Resistenza" sözü taze bir önem kazandı.`,
+  },
+  'ru-italiya-den-osvobozhdeniya-25-aprelya-mattarella-soprotivlenie': {
+    title: 'Италия: 81-я годовщина Дня Освобождения, речь Маттареллы',
+    date: '2026-04-25',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Италия 25 апреля отметила восемьдесят первую годовщину Дня Освобождения от фашизма и нацистской оккупации. Главным символическим актом дня стала церемония у Алтаря Отечества в Риме: президент Серджо Маттарелла возложил лавровый венок к Памятнику Неизвестному Солдату и почтил память павших в борьбе за освобождение страны. На церемонии присутствовали высшие должностные лица государства, военное руководство и представители местных властей.
+
+## «Ora e sempre Resistenza»
+
+После Рима президент отправился в город Сан-Северино-Марке, удостоенный Золотой медали за гражданские заслуги, где произнёс главную речь в честь годовщины. Ключевая фраза прозвучала по-итальянски: «Ora e sempre Resistenza» — «Сегодня и всегда Сопротивление». Маттарелла подчеркнул: мир должен оставаться правом каждого человека и каждого народа. Президент также предупредил об «антиисторических усилиях ослабить пути к миру, выстроенные после Второй мировой войны». Этот пассаж многие итальянские СМИ восприняли как прямой намёк на продолжающуюся войну на Ближнем Востоке.
+
+## Напряжённость на торжествах
+
+День прошёл не без эксцессов. В Риме у церемонии Национальной ассоциации итальянских партизан (АНПИ) были произведены три выстрела из пневматического оружия в сторону партизанской пары. Ряд мероприятий по стране были нарушены пропалестинскими демонстрациями, а накануне праздника спикер Сената вызвал резкую полемику предложением «почтить память фашистских солдат». Эти эпизоды показали, что память о Второй мировой войне продолжает разделять итальянскую политику и спустя восемьдесят один год.
+
+## Праздник на фоне новой войны
+
+В стране на 25 и 26 апреля действовал общенациональный запрет на движение грузовиков с девяти утра до десяти вечера для разгрузки трафика. Однако главным фоном Дня Освобождения стала новая война на Ближнем Востоке: пакистанский трек срывается в субботу утром, Россия проводит массированный удар по Украине. На таком фоне формула Маттареллы «Сегодня и всегда Сопротивление» приобретает особенно острое звучание, превращая национальный праздник в напоминание о сегодняшних войнах.`,
+  },
+
+  // --- Topic 7: Anzac Day 111th anniversary ---
+  'anzak-gunu-2026-canaqqala-gallipoli-111-il-merasim': {
+    title: 'Anzak Günü 2026: Çanaqqalada Qallipoli desantının 111-ci ildönümü',
+    date: '2026-04-25',
+    category: 'Mədəniyyət',
+    locale: 'az',
+    content: `Avstraliya, Yeni Zelandiya və Türkiyə 25 aprel 2026-cı ildə 1915-ci il Qallipoli desantının 111-ci ildönümünü qeyd edib. Səhər mərasimi yerli vaxtla saat 5:30-da Türkiyənin Çanaqqala bölgəsindəki Anzak Yad Sahəsində — Avstraliya və Yeni Zelandiya Ordu Korpusu (ANZAC) əsgərlərinin 25 aprel 1915-ci ildə desant açdığı sahildə — başlayıb.
+
+## Çanaqqalada səhər mərasimi
+
+SBS News və 1News NZ-nin məlumatına görə, mərasimdə Avstraliya, Yeni Zelandiya və Türkiyə rəsmiləri ilə yanaşı çoxsaylı ziyarətçilər iştirak edib. Tədbirə himnlər, dualar və çələng qoyma daxil olub. Avstraliya Müdafiə Qüvvələri Komandanı Admiral David Conston Qallipoli mərasimində iştirak edib.
+
+Mərasim 1934-cü ildə Mustafa Kamal Atatürk tərəfindən deyilmiş "Conni və Mehmet arasında fərq yoxdur" sözlərinin türk hərbi məmurları tərəfindən səsləndirilməsi ilə yekunlaşıb. Bu sitat hər iki tərəfin qurbanlarının xatirəsini birləşdirən simvolik ifadə kimi 90 il ərzində səslənməyə davam edir.
+
+## Qlobal mərasimlər və müasir gərginliklər
+
+Sunday Guardian və Avstraliya Müdafiə Departamentinin xəbər verdiyinə görə, mərasimlər həmçinin Kanberradakı Avstraliya Müharibə Memorialında, Yeni Zelandiyanın Auckland şəhərində, dünya üzrə Avstraliya və Yeni Zelandiya səfirliyi və hərbi bazalarında, eləcə də ABŞ-Filippin Balikatan 2026 təlimləri çərçivəsində keçirilib.
+
+Habelə bu il qeyd günü xüsusi siyasi əhəmiyyət daşıyır: 111-ci ildönümü davam edən İran müharibəsi və Rusiyanın Ukraynaya günlərlə əvvəl 666 silahla endirdiyi kütləvi zərbə fonunda təşkil olunub. Bu, "unutmayacağıq" çağırışına yeni siqnal verir. Üç xalq — Avstraliya, Yeni Zelandiya və Türkiyə — birgə desantın baş verdiyi məhz həmin sahildə yenidən bir araya gəlib və Qallipoli yaddaşı yenə də milli identifikasiyanın əsas elementi kimi qalır.`,
+  },
+  'en-anzac-day-2026-gallipoli-111-years-dawn-service': {
+    title: `Anzac Day 2026: 111 Years On, Dawn Services at Gallipoli`,
+    date: '2026-04-25',
+    category: 'Culture',
+    locale: 'en',
+    content: `Australians, New Zealanders and Turks gathered at dawn on Saturday at the Anzac Commemorative Site in Gallipoli, Türkiye, to mark the 111th anniversary of the 1915 landings, in a year overshadowed by fresh wars across the Middle East and Eastern Europe. The commemorations spanned services in Turkey, Australia, New Zealand and at military bases worldwide.
+
+## Dawn at Gallipoli
+
+According to SBS News, 1News NZ, Sunday Guardian and the Australian Defence Department, the dawn service began at 5:30 a.m. local time at the Anzac Commemorative Site, on the beach where the Australian and New Zealand Army Corps landed on April 25, 1915.
+
+Officials and visitors from Australia, New Zealand and Turkey attended the ceremony, which included hymns, prayers and wreath-laying. The service closed with a reading of Atatürk's 1934 tribute, in which the founder of modern Turkey said "there is no difference between the Johnnies and the Mehmets," delivered by Turkish military officials.
+
+Australian Chief of Defence Force Admiral David Johnston attended the Gallipoli ceremony, per the Australian Defence Department.
+
+## Services Worldwide
+
+Commemorations were also held at the Australian War Memorial in Canberra, in Auckland, New Zealand, and at Australian and New Zealand embassies and military bases around the world. A service was also held at the U.S.-Philippine Balikatan 2026 exercise, per Sunday Guardian.
+
+The Auckland dawn service was attended by hundreds of New Zealanders, according to Xinhua.
+
+## "Lest We Forget" in 2026
+
+This year's commemoration carried unusual weight given the global context. Coverage emphasized that the ceremonies fell during the active 2026 Iran war and a major Russia-Ukraine bombardment that took place the same night.
+
+The Gallipoli landings remain a defining moment in Australian and New Zealand national identity. For Türkiye, the site at Çanakkale represents a chapter when wartime adversaries became, in Atatürk's words, sons of the same soil.`,
+  },
+  'tr-anzak-gunu-2026-canakkale-gelibolu-111-yil-anma': {
+    title: `Anzak Günü 2026: Gelibolu sahillerinde 111. yıl töreni`,
+    date: '2026-04-25',
+    category: 'Kültür',
+    locale: 'tr',
+    content: `Avustralya ve Yeni Zelanda Ordu Birlikleri'nin (ANZAC) 25 Nisan 1915'te Gelibolu'ya çıkarma yapmasının 111'inci yıl dönümü, 25 Nisan Cumartesi günü Türkiye, Avustralya ve Yeni Zelanda'da düzenlenen şafak ayinleriyle anıldı. Ana tören Çanakkale Gelibolu'daki Anzak Anma Alanı'nda yerel saatle 05.30'da, ANZAC askerlerinin 111 yıl önce çıkarma yaptığı sahilde başladı. Avustralya, Yeni Zelanda ve Türkiye'den yetkililer ile dünyanın dört bir yanından gelen ziyaretçiler törene katıldı.
+
+## Atatürk'ün 1934 mesajı yine okundu
+
+Şafak ayini ilahiler, dualar ve çelenk koyma törenleri ile devam etti. Tören kapanışında Türk askeri yetkililer Mustafa Kemal Atatürk'ün 1934 yılında yazdığı meşhur "Bizim için Mehmetçik ile Johnny arasında hiçbir fark yoktur" sözlerini içeren anma metnini okudu. Atatürk'ün anma sözleri, ANZAC kuşağının yıllardır en güçlü uzlaşma sembollerinden biri olmaya devam ediyor. Avustralya Savunma Kuvvetleri Komutanı Oramiral David Johnston AC RAN da Gelibolu töreninde hazır bulundu.
+
+## Üç ülkede eş zamanlı törenler
+
+Anma törenleri sadece Gelibolu ile sınırlı kalmadı. Avustralya'nın başkenti Canberra'daki Avustralya Savaş Anıtı'nda, Yeni Zelanda'nın Auckland kentinde, dünyanın dört bir yanındaki Avustralya ve Yeni Zelanda büyükelçiliklerinde ve askeri üslerinde de törenler düzenlendi. Filipinler'de devam eden ABD-Filipin ortak askeri tatbikatı Balikatan 2026 kapsamında da Anzak Günü anıldı. 1915 Gelibolu çıkarması, hem Avustralya hem de Yeni Zelanda ulusal kimliğinin şekillenmesinde belirleyici bir an olarak kabul ediliyor.
+
+## Yeni savaşların gölgesinde anma
+
+2026 Anzak Günü, sürmekte olan İran savaşı ve aynı gece Rusya'nın Ukrayna'ya gerçekleştirdiği 666 silahlı büyük saldırının gölgesinde yapıldı. Bu özel zamanlama, "Asla unutmayalım" söylemine ek bir ağırlık kazandırdı. 111 yıl sonra üç ülke yetkilileri Anzak Koyu'nda bir araya gelerek Birinci Dünya Savaşı'nın sembol olmuş bu sahilinde geçmişi ve bugünkü çatışma dolu dünyayı birlikte değerlendirdi.`,
+  },
+  'ru-den-anzak-2026-gallipoli-chanakkale-111-godovshchina': {
+    title: 'День Анзака 2026: 111-я годовщина высадки в Галлиполи',
+    date: '2026-04-25',
+    category: 'Культура',
+    locale: 'ru',
+    content: `Австралия, Новая Зеландия и Турция 25 апреля провели церемонии в честь Дня Анзака — общего памятного дня, посвящённого солдатам Австралийско-новозеландского армейского корпуса. Дата отмечает сто одиннадцатую годовщину высадки войск союзников на полуостров Галлиполи во время Первой мировой войны 25 апреля 1915 года. Главная церемония, как и каждый год, прошла на рассвете, в пять часов тридцать минут по местному времени, на Мемориальной площадке Анзак на турецком побережье в районе Чанаккале — там, где войска АНЗАК впервые высадились на берег.
+
+## Рассветная церемония в Галлиполи
+
+В церемонии в Галлиполи приняли участие официальные лица и гости из Австралии, Новой Зеландии и Турции. Ритуал включал гимны, молитвы, минуту молчания и возложение венков. В заключительной части представители турецких вооружённых сил зачитали знаменитое обращение Мустафы Кемаля Ататюрка 1934 года к семьям погибших австралийских и новозеландских солдат — текст, в котором турецкий лидер написал, что «нет никакой разницы между нашими Джонни и Мехметами». Австралийскую делегацию возглавил начальник штаба обороны Австралии адмирал Дэвид Джонстон.
+
+## Церемонии по всему миру
+
+Параллельно поминальные службы прошли в Австралийском военном мемориале в Канберре, в Окленде в Новой Зеландии, на австралийских и новозеландских военных базах и в посольствах по всему миру. Отдельная церемония состоялась в рамках совместных американо-филиппинских учений «Баликатан 2026». Для Австралии и Новой Зеландии Галлиполийская операция остаётся определяющим моментом национальной идентичности — несмотря на то, что для войск союзников это сражение завершилось тяжёлым поражением.
+
+## Память на фоне новых войн
+
+В этом году церемонии прошли на фоне иранской войны и крупнейшего за последние месяцы российского удара по Украине. Совпадение придало девизу «Lest we forget» — «Чтобы мы не забыли» — особое звучание. На самом полуострове Галлиполи, в нескольких сотнях километров от современных театров боевых действий, традиционная память о войне столетней давности встретилась с реальностью новой эпохи вооружённых конфликтов.`,
+  },
+
+  // --- Topic 8: Manchester City 2-1 Southampton FA Cup semifinal ---
+  'manchester-city-southampton-fa-kuboku-yarimfinal-2-1-gonzalez-finala': {
+    title: 'Manchester City FA Kubokunda finala çıxdı: Qonsales Sauthemptonu yıxdı',
+    date: '2026-04-25',
+    category: 'İdman',
+    locale: 'az',
+    content: `İngiltərənin Manchester City futbol klubu 25 aprel 2026-cı ildə Uembli stadionunda keçirilən FA Kuboku yarımfinalında Sauthemptonu 2-1 hesabı ilə məğlub edərək ardıcıl üçüncü dəfə Kubokun final mərhələsinə vəsiqə qazanıb. Qələbə qolu 87-ci dəqiqədə 30 metr məsafədən vurulan möhtəşəm zərbə ilə Niko Qonsales tərəfindən qeydə alınıb.
+
+## Qol zinciri: Azaz, Doku, Qonsales
+
+NBC Sports və Outlook India-nın məlumatına görə, oyun uzun müddət darıxdırıcı keçib və əsas hadisələr son 15 dəqiqədə baş verib. 79-cu dəqiqədə Sauthemptonun heyətində Finn Azaz qol vuraraq qonaqları öndə çıxarıb. Pep Quardiolanın komandası dörd dəqiqə sonra — 83-cü dəqiqədə — cavab tapıb: Jeremi Doku-nun zərbəsi rəqib futbolçudan rikoşet alaraq qapıçı Daniel Peretsi keçib və hesabı bərabərləşdirib.
+
+ESPN UK və VAVEL USA-nın xəbər verdiyinə görə, qələbəni təmin edən qol 87-ci dəqiqədə gəlib. Niko Qonsales 30 metrlik məsafədən sərt və dəqiq zərbə vuraraq topu qapıya yollayıb və Manchester City-ni finala daşıyıb. Pep Quardiola oyundan əvvəl: "Biz başqa bir finala çıxmağa fokuslanmışıq" — demişdi.
+
+## Treble ehtimalı və final rəqibi
+
+Sports Illustrated və Athlon Sports-un qeyd etdiyinə görə, City artıq ardıcıl üçüncü dəfə FA Kuboku finalına yüksəlir. Final 16 may tarixinə təyin edilib və komandanın rəqibi digər yarımfinalda Lids Yunaytedlə Çelsi arasındakı qarşılaşmanın qalibi olacaq.
+
+Habelə Manchester City eyni anda üç cəbhədə güclü tempi qoruyur: Premyer Liqada Arsenal ilə 70 xal və +37 qol fərqi ilə paylaşan birinciliyi davam etdirir; FA Kubokunda finala çıxıb; UEFA Çempionlar Liqasının yarımfinal mərhələsi 28-29 aprel tarixlərinə təyin edilib. Beləliklə, Pep Quardiolanın yeni "treble" arzusu hələ də canlıdır və Niko Qonsalesin son saniyələrdə vurduğu uzaqdan zərbə həmin arzunu bir addım daha irəli aparıb.`,
+  },
+  'en-manchester-city-southampton-fa-cup-semifinal-2-1-gonzalez-final': {
+    title: `Man City Beat Southampton 2-1, Reach Third FA Cup Final`,
+    date: '2026-04-25',
+    category: 'Sports',
+    locale: 'en',
+    content: `Manchester City reached the FA Cup final for a third consecutive season on Saturday after a late 2-1 win over Southampton at Wembley Stadium, with Nico Gonzalez striking from 30 yards out in the 87th minute to seal the comeback. The result keeps Pep Guardiola's treble bid alive heading into the closing weeks of the 2025-26 campaign.
+
+## Late Drama at Wembley
+
+According to NBC Sports, Outlook India, ESPN UK and Sports Illustrated, Southampton took a shock lead in the 79th minute through Finn Azaz. Jeremy Doku equalised four minutes later in the 83rd minute, with the Belgian winger's deflected shot beating Daniel Peretz in the Southampton goal.
+
+Three minutes after the equaliser, in the 87th minute, Nico Gonzalez fired in from 30 yards out to put Manchester City in front, and the visitors saw out the closing minutes to reach the final.
+
+## Third Straight Final
+
+The win sends Manchester City to the FA Cup final for the third consecutive season. Their opponent will be the winner of the other semi-final between Leeds United and Chelsea, per NBC Sports.
+
+Pep Guardiola, ahead of the match, told the Manchester City club site: "We're focused on reaching another final."
+
+## Treble Pursuit Continues
+
+The result keeps City's treble pursuit alive. According to Athlon Sports and Sports Illustrated, the club is tied with Arsenal at 70 points and a goal difference of plus 37 in the Premier League title race. The FA Cup final is scheduled for May 16, while City face a Champions League semi-final on April 28 and 29.
+
+The semi-final win was the club's biggest European football headline of the day. The clutch late goal from Gonzalez extended a season in which City have repeatedly leaned on stoppage-time and late drama to keep their multiple trophy targets in play, with the next test coming in the Champions League semi-final.`,
+  },
+  'tr-manchester-city-southampton-fa-kupasi-yari-final-2-1-gonzalez': {
+    title: `Man City Southampton'ı 2-1 yendi, FA Kupası finalinde`,
+    date: '2026-04-25',
+    category: 'Spor',
+    locale: 'tr',
+    content: `Manchester City, 25 Nisan Cumartesi günü Wembley Stadyumu'nda oynanan FA Kupası yarı final maçında Southampton'ı 2-1 yenerek üst üste üçüncü kez kupa finaline yükseldi. Karşılaşma, Pep Guardiola'nın takımı için son dakikalarda dramatik bir geri dönüşle sonuçlandı. Southampton 79'uncu dakikada Finn Azaz'ın golüyle öne geçti. Jeremy Doku 83'üncü dakikada Daniel Peretz'in önünden seken şutla durumu eşitledi. Nico Gonzalez ise 87'nci dakikada 30 metre uzaklıktan attığı muhteşem golle galibiyeti getirdi.
+
+## Nico Gonzalez'in 30 metrelik golü
+
+Maçın belirleyici anı, Gonzalez'in ceza sahasının dışından kaleciyi mağlup eden uzun mesafeli vuruşu oldu. 87'nci dakikada gelen bu gol, Pep Guardiola'nın "üçleme avı"nı canlı tutmasına olanak sağladı. Gonzalez'in göllü performansı, City'nin Wembley'deki son dakika klasiğine yeni bir bölüm ekledi. Maçtan önce Guardiola düzenlediği basın toplantısında "Bir başka finale çıkmaya odaklanmış durumdayız" demişti. Sonuç bu ifadenin yerine ulaşmasını sağladı.
+
+## Üçüncü üst üste FA Kupası finali
+
+Manchester City, üst üste üçüncü kez FA Kupası finaline yükselen takım oldu. Final 16 Mayıs'ta oynanacak. Finalde rakip, Leeds United ile Chelsea arasındaki diğer yarı final karşılaşmasının galibi olacak. City, 2025-26 sezonunda hâlâ Premier Lig şampiyonluk yarışında Arsenal ile birlikte 70 puanla zirvede yer alıyor. Şampiyonlar Ligi yarı finalleri ise 28-29 Nisan tarihlerinde oynanacak.
+
+## Üçleme baskısı sürüyor
+
+Bu galibiyet, Manchester City'nin sezonu üç kupayla tamamlama hedefini koruyor. Ancak takımın 87'nci dakikaya kadar geride olması, Southampton'ın hafife alınmaması gerektiğini gösterdi. Cuma günü Premier Lig'de Newcastle'ı 1-0 yenen Arsenal, lig yarışında City ile başa baş yürümeye devam ediyor. Manchester City'nin ön plandaki bu galibiyeti, 25 Nisan'ın en büyük Avrupa futbolu manşeti oldu ve Pep Guardiola'nın Wembley'deki kararlılığını bir kez daha gösterdi.`,
+  },
+  'ru-manchester-siti-sautempton-fa-kubok-polufinal-2-1-gonsales': {
+    title: 'Ман Сити в финале Кубка Англии: 2:1 над Саутгемптоном',
+    date: '2026-04-25',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Английский футбольный клуб «Манчестер Сити» 25 апреля вышел в финал Кубка Англии третий сезон подряд. На стадионе «Уэмбли» команда Хосепа Гвардиолы обыграла «Саутгемптон» со счётом 2:1 в полуфинальном матче. Развязка получилась поздней и драматичной: победный гол был забит лишь на восемьдесят седьмой минуте дальним ударом примерно с тридцати ярдов. Финал Кубка Англии состоится шестнадцатого мая, соперник «горожан» определится во втором полуфинале между «Лидс Юнайтед» и «Челси».
+
+## Поздний разворот в трёх голах
+
+Долгое время поединок развивался по неожиданному для фаворита сценарию. На семьдесят девятой минуте «Саутгемптон» вышел вперёд: Финн Азаз поразил ворота «Манчестер Сити» и принёс гостям преимущество 1:0. Однако всего через четыре минуты, на восемьдесят третьей, Жереми Доку сравнял счёт ударом, который рикошетом прошёл мимо вратаря Дэниела Перетца. На восемьдесят седьмой минуте Нико Гонсалес забил победный мяч с дистанции около тридцати ярдов и вывел свою команду в финал. Окончательный счёт 2:1 в пользу «Манчестер Сити».
+
+## Курс на требл сохранён
+
+Победа держит «Манчестер Сити» на курсе сразу к нескольким трофеям. Команда продолжает борьбу за чемпионский титул в Премьер-лиге наравне с «Арсеналом» — оба клуба идут с семьюдесятью очками и одинаковой разницей мячей. Помимо финала Кубка Англии шестнадцатого мая, «Сити» предстоит провести полуфинал Лиги чемпионов УЕФА двадцать восьмого и двадцать девятого апреля. Таким образом, перед клубом сохраняется теоретическая возможность повторного выигрыша требла.
+
+## Третий финал подряд
+
+Хосеп Гвардиола перед матчем подчёркивал: «Мы сосредоточены на выходе в очередной финал». Третий подряд финал Кубка Англии — серьёзная статистика для эпохи английского футбола, в которой кубковые турниры часто становятся жертвой клубных приоритетов. Поздний победный удар Гонсалеса показал, что у «Сити» в концовке плотных матчей по-прежнему хватает индивидуальных решений, способных перевернуть игру за три минуты до финального свистка.`,
+  },
+
+  // --- Topic 9: NHL Stanley Cup playoffs Game 4 slate ---
+  'nhl-pley-of-25-aprel-hurricanes-stars-flyers-1ci-raund': {
+    title: 'NHL pley-off 25 aprel: Hurricanes, Stars və Flyers seriyaları bağlayır',
+    date: '2026-04-25',
+    category: 'İdman',
+    locale: 'az',
+    content: `NHL Stanley Kuboku pley-offunun birinci raundunda 25 aprel 2026-cı il şənbə günü ardıcıl üç 4-cü oyun keçirilir. Karolina Hurricanes, Dallas Stars və Filadelfiya Flayers seriyalarda öndədir və hər üç komanda nəticələrlə birinci mərhələni başa vurmaq imkanı qazanıb. Oyunlar Bakı vaxtı ilə 26 aprel bazar səhərində bitəcək.
+
+## Üç 4-cü oyun cədvəli
+
+NHL.com və CBS Sports-un məlumatına görə, ilk oyunda Karolina Hurricanes Ottava Senatorlarının evində qarşılaşır. Matç Amerika Şərq vaxtı ilə saat 15:00-da başlayır. Hurricanes seriyada 3-0 öndədir və qələbə qazansa, seriyanı tam üstünlüklə ("sweep") başa vurmuş olacaq.
+
+İkinci oyunda Dallas Stars Minnesota Vayldın evində matç keçirir — saat 17:30-da başlayır. Stars seriyada 2-1 önə keçib və 4-cü oyunda qələbə qazansa, üstünlüyünü 3-1 səviyyəsinə çıxarmış olacaq.
+
+## Oilers-Penguins uğursuzluğundan sonra Flayers
+
+ESPN və Bleacher Report-un xəbər verdiyinə görə, üçüncü oyunda Filadelfiya Flayers Pittsburq Penguins ilə qarşılaşır — matç saat 20:00-da Filadelfiyada başlayır. Flayers da seriyada 3-0 hesabı ilə öndədir və ev sahibləri qələmə alındığı təqdirdə seriya tam üstünlüklə bağlanmış olacaq. İki potensial "sweep" eyni axşam — bu il pley-offun ən diqqətə layiq xəbəri ola bilər.
+
+Bu üç oyun 2026 Stanley Kuboku pley-offunun birinci raundunun bir hissəsidir. Matçlar Amerika Şərq vaxtı ilə təxminən saat 18:00-dan gecə yarısına qədər bitəcək — bu Bakıda 26 aprel bazar səhəri saat 1:00-7:00 deməkdir. Buna görə də yekun nəticələr Bakı bazar səhəri auditoriyaya çatacaq. Cümə günkü oyunlardan fərqli olaraq, bu axşamın əsas süjeti Karolina və Filadelfiya tərəfindən eyni vaxtda iki "sweep" yarımının mümkünlüyüdür.`,
+  },
+  'en-nhl-stanley-cup-playoffs-april-25-hurricanes-stars-flyers': {
+    title: `NHL Playoffs Saturday: 3 Game 4s, Two Sweeps in Sight`,
+    date: '2026-04-25',
+    category: 'Sports',
+    locale: 'en',
+    content: `The 2026 Stanley Cup Playoffs delivered a three-game first-round Saturday slate with potential sweeps in two series, headlined by the Carolina Hurricanes and Philadelphia Flyers chasing series-clinching wins. The Dallas Stars also took the ice in Minnesota for a Game 4 with the series tilted in their favor.
+
+## Hurricanes-Senators Game 4
+
+The Carolina Hurricanes traveled to face the Ottawa Senators at 3 p.m. Eastern Time, leading the series 3-0 and hunting for a sweep, according to NHL.com, Bleacher Report and CBS Sports. A Carolina win would close out the series and send the Hurricanes through to the second round.
+
+The 3-0 series lead means Ottawa came into the night needing wins in four straight games to advance, an exit-margin scenario teams have rarely escaped in the modern playoff era.
+
+## Stars-Wild Game 4
+
+The Dallas Stars visited the Minnesota Wild at 5:30 p.m. Eastern Time, leading the series 2-1, per NHL.com and ESPN. With the series still competitive, Game 4 carried clear stakes for both teams: a Stars win would put Dallas one game from advancing, while a Wild victory would send the series back to Texas tied 2-2.
+
+## Penguins-Flyers Game 4
+
+The Pittsburgh Penguins traveled to face the Philadelphia Flyers at 8 p.m. Eastern Time, with Philadelphia leading 3-0 and looking for the sweep, according to NHL.com and Athlon Sports. Two potential first-round sweeps in one night, by Carolina over Ottawa and by Philadelphia over Pittsburgh, would mark a notable headline night for the league.
+
+## Schedule Note for Baku Readers
+
+All three games were scheduled to finish between roughly 6 p.m. and 12 a.m. Eastern Time, which translates to approximately 1 a.m. to 7 a.m. Baku time on Sunday April 26, per NHL.com. Final scores will be in by Sunday morning Baku time, making this a Saturday-night NHL scoreboard event for Azerbaijani readers.`,
+  },
+  'tr-nhl-play-off-25-nisan-hurricanes-stars-flyers-1-tur': {
+    title: `NHL play-off: Hurricanes, Stars, Flyers ilk tur 4. maçları`,
+    date: '2026-04-25',
+    category: 'Spor',
+    locale: 'tr',
+    content: `NHL Stanley Cup Play-off'larının ilk tur dördüncü maçları, 25 Nisan Cumartesi günü ABD saatiyle akşam saatlerinde başlayacak üç ayrı karşılaşmaya sahne oluyor. Bakü saatiyle maçlar Pazar sabahı erken saatlerde tamamlanacak. Üç ayrı seride iki potansiyel "süpürme" senaryosu söz konusu: Carolina Hurricanes ve Philadelphia Flyers, geride 3-0 önde oldukları serileri aynı gece bitirme şansına sahip. Dallas Stars ise Minnesota Wild'a karşı 2-1 önde olduğu seriyi 3-1'e taşımak için sahaya çıkıyor.
+
+## Hurricanes Senators karşısında süpürme peşinde
+
+Carolina Hurricanes, ABD Doğu saatiyle 15.00'te Ottawa'da Senators'a konuk olacak. Hurricanes seride 3-0 önde ve dördüncü maçı kazanması durumunda seriyi 4-0 ile sonlandırarak ikinci tura yükselecek. Senators evindeki son şansını kullanarak seriyi uzatmaya çalışıyor. Bakü saatiyle bu karşılaşmanın sonucu pazar günü erken saatlerde netleşecek.
+
+## Stars Wild karşısında 2-1 önde
+
+Dallas Stars, ABD Doğu saatiyle 17.30'da Minnesota Wild'a konuk olacak. Stars seride 2-1 önde ve avantajı 3-1'e taşımak istiyor. Wild, ev sahibi avantajını kullanarak seriyi 2-2'ye eşitlemeye çalışıyor. Bu, serideki dördüncü maç ve Cumartesi gecesi NHL programındaki üç dördüncü maçtan biri olarak dikkat çekiyor.
+
+## Penguins Flyers serisi de süpürmeye yakın
+
+Pittsburgh Penguins, ABD Doğu saatiyle 20.00'de Philadelphia Flyers'a konuk olacak. Flyers seride 3-0 önde ve dördüncü maçı kazanırsa Penguins'i süpürerek ikinci tura yükselecek. Aynı gecede iki süpürmenin (CAR-OTT ve PHI-PIT) gerçekleşme olasılığı, ilk turun en dikkat çekici manşetlerinden biri olarak öne çıkıyor. Maçların Bakü saatiyle Pazar sabah saatlerinde tamamlanacağı ve sonuçların hafta sonu okurlarına ulaşacağı bekleniyor.`,
+  },
+  'ru-nhl-pley-off-25-aprelya-hurricanes-stars-flyers-1-raund': {
+    title: 'Плей-офф НХЛ 25 апреля: Харрикейнз, Флайерз идут к свипу',
+    date: '2026-04-25',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Субботний игровой день первого раунда плей-офф Кубка Стэнли НХЛ 25 апреля включает три четвёртых матча в трёх параллельных сериях. Главные сюжеты вечера — две возможные вылазки в свип. «Каролина Харрикейнз» ведёт в серии с «Оттавой Сенаторз» со счётом 3:0, а «Филадельфия Флайерз» удерживает такое же преимущество над «Питтсбург Пингвинз». Третий поединок — между «Даллас Старз» и «Миннесота Уайлд», где Даллас впереди по сумме матчей 2:1 и может укрепить лидерство перед возвращением домой.
+
+## Каролина в Оттаве
+
+Игру между «Оттава Сенаторз» и «Каролина Харрикейнз» дают в три часа дня по восточноамериканскому времени. После трёх побед на старте серии «Каролина» имеет реальный шанс закончить противостояние одним ударом и впервые в этой постсезонке оформить свип. «Оттаве», напротив, приходится играть на удержание сезона: четвёртое поражение подряд означает мгновенное прощание с плей-офф.
+
+## Даллас и Миннесота равны до субботы
+
+Поединок «Миннесота Уайлд» и «Даллас Старз» начинается в пять часов тридцать минут вечера по восточноамериканскому времени. Это четвёртый матч серии, в которой счёт 2:1 в пользу Далласа. Победа техасцев даст им матчбол перед обратной дорогой домой, а удачное выступление «Уайлд» вернёт серию к счёту 2:2. Это одна из трёх параллельных встреч субботнего вечера в первом раунде плей-офф НХЛ.
+
+## Флайерз против Пингвинз
+
+Последнюю встречу вечера — «Филадельфия Флайерз» против «Питтсбург Пингвинз» — начинают в восемь часов вечера по восточноамериканскому времени. «Флайерз» уверенно лидируют в серии 3:0 и тоже могут оформить свип. Для зрителей в Баку матчи завершатся между часом ночи и семью часами утра воскресенья двадцать шестого апреля. Утром в Баку уже будут известны итоги: возможные два свипа за один вечер стали бы одной из самых заметных историй текущего раунда плей-офф.`,
+  },
+
   // ========== 2026-04-24 ==========
 
   // --- Topic 1: DOJ drops criminal probe of Fed Chair Powell ---
