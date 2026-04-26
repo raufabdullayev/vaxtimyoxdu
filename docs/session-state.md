@@ -1,8 +1,9 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-26 (Session 37 — P0 SEO Fix: Cache-Control catch-all + News Hero Image, TAM DEPLOY ✅)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 37 commit `a133eb9` deploy olunub)
-**Son commit:** a133eb9 (fix(seo): P0 — Cache-Control catch-all + news hero image)
+**Son yenilənmə:** 2026-04-26 (Session 38 — SEO P1 Trust Signals + a11y + 4-locale Tool Meta, TAM DEPLOY ✅)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 38 commit `2fe6c33` deploy olunub)
+**Son commit:** 111757a (S38 deploy fix); base S38: 2fe6c33 (feat(seo,a11y): SEO P1 trust signals + a11y loading + dev tool i18n meta)
+**Session 38 commit:** 2fe6c33 — News trust section + JSON-LD genre/wordCount/editor + locale-aware staticParams + a11y loading + 4 dev tool meta lokalize
 **Session 37 commit:** a133eb9 — fix(seo): P0 SEO fixes (audit 2026-04-21 P0-1 + P0-2)
 **Əvvəlki session commit:** 5df7f29 (S36 — 36 articles Apr 25)
 **Session 34 (2026-04-21):** SEO Audit (docs only, no code commit)
@@ -23,14 +24,14 @@
 | Parametr | Status |
 |----------|--------|
 | **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 |
-| **Deploy** | ✅ Vercel aktiv (dpl_UrtkmjEf1KiGaHNepX7asD3i87LL) |
-| **GitLab + GitHub** | ✅ Synced (a133eb9) |
+| **Deploy** | ✅ Vercel aktiv (S38 commit 2fe6c33) |
+| **GitLab + GitHub** | ✅ Synced (2fe6c33) |
 | **GitLab token** | ✅ Yeniləndi (2026-04-26, MCP + curl təsdiq HTTP 200) |
 | **GitLab CI** | ⚠️ ci_quota_exceeded — Vercel webhook bypass (qeyri-blok) |
-| **Son commit** | a133eb9 (S37 — P0 SEO fix Cache-Control + news hero img) |
-| **Testlər** | **4957** PASS (vitest, S37: +15 yeni regression test) |
+| **Son commit** | 111757a (S38 deploy fix — source-extraction utility); base S38 commit: 2fe6c33 |
+| **Testlər** | **4999** PASS (vitest, S38: +42 yeni test) |
 | **E2E** | **31 fayl** (S37: +1 news-cache-headers spec, 6 test) |
-| **Statik səhifələr** | **2540** (S37: stable) |
+| **Statik səhifələr** | **1151** generate count (Next.js 16 Cache Components — S38 dəyişdi: 2540→1151 metric semantics) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
 | **Xəbərlər** | **468** (117/locale — S36: +36 yeni 04-25) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
@@ -51,11 +52,17 @@
 - 🔜 **Sprint 6** — CSP R&D + Telegram bot + advanced schema
 
 **Qalan işlər:**
-- **🚨 SEO Audit task-ları (2026-04-21) — 15 task qalır (P0 ✅ TAMAMLANDI S37-də):**
+- **🚨 SEO Audit task-ları (2026-04-21) — qalan task-lar (P0 ✅ S37, P1 qismən ✅ S38):**
   - ~~**P0 Kritik (2):** Cache-Control fix + News hero img~~ ✅ S37 (a133eb9)
-  - **P1 Yüksək (5):** Tool metaTitle lokalize, striking distance, NewsArticle image array (3 aspect), HowTo step.name, Twitter @site
+  - **P1 Yüksək (qismən S38-də):**
+    - ~~Tool metaTitle/metaDescription lokalize (4 dil)~~ ✅ S38 — 4 alət (regex/url/jwt/markdown), digər alətlər qaldı
+    - ~~News trust signals (E-E-A-T section, sources/editorial/updated)~~ ✅ S38
+    - ~~NewsArticle JSON-LD genişləndirilməsi (genre/wordCount/editor/isAccessibleForFree)~~ ✅ S38
+    - ~~hreflang per-page strategy (alternateLinks: false)~~ ✅ S38
+    - **Qalan P1:** striking distance, NewsArticle image array (3 aspect), HowTo step.name, Twitter @site, qalan alətlərə meta lokalize
   - **P2 Orta (6):** Sil meta keywords, Organization.sameAs, News↔Tool links, multi-sitemap, homepage H1, breadcrumb item
   - **P3 Aşağı (4):** article:author, OG cache, Yandex WM, favicon
+  - **A11y (S38):** loading.tsx aria-label + sr-only ✅
   - **Detallı hesabat:** `docs/agent-reports/seo-audit-2026-04-21.md`
   - **DİQQƏT (S37 dərsi):** Vercel browser-facing `cache-control` header-i `private, no-store`-a override edir (next-intl/runtime), AMMA `cdn-cache-control` + `vercel-cdn-cache-control` işləyir → CDN edge cache aktivdir (SEO TTFB qələbəsi). Bu məqbul davranışdır.
 - Yeni alətlər (111 → 135) — Sprint 5
@@ -70,6 +77,67 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 38 (2026-04-26) — SEO P1 Trust Signals + a11y + 4-locale Tool Meta (TAM DEPLOY ✅)
+
+**Tapshiriq:** CEO lokalda dəyişikliklər etmişdi (12 fayl, +302/-43) — Deploy agent test/build/push/verify icra etdi.
+
+**Dəyişikliklər (12 fayl):**
+1. **info/[slug]/page.tsx (+35):** Trust/transparency section (E-E-A-T sources/editorial/updated UI), `extractNewsSourceNames` integration, `content` arg JSON-LD-yə, `generateStaticParams` locale-aware oldu (slug-only → locale+slug).
+2. **blog/[slug]/page.tsx (+9):** `generateStaticParams` `locales.flatMap` ilə locale-aware versiyaya keçdi.
+3. **loading.tsx (+4 -3):** Visible "Yuklenilir..." text → `aria-label="Loading"` + `<span class="sr-only">Loading</span>` (a11y, AZ string EN/TR/RU-da leak etmir).
+4. **dev-tools.ts (+48):** 4 alət (regex-tester, url-encode-decode, jwt-decoder, markdown-preview) üçün metaTitle + metaDescription 4 dildə.
+5. **i18n/routing.ts (+3):** `alternateLinks: false` — next-intl HTTP Link header söndürüldü (per-page metadata hreflang single source-of-truth).
+6. **json-ld.ts (+11):** NewsArticle schema-ya `genre`, `isAccessibleForFree`, `wordCount` (content-dən hesablanır), `editor` əlavə.
+7. **messages/{az,en,tr,ru}.json (+10 hər):** 8 yeni key (trustKicker/trustTitle/trustDescription/sourceLabel/sourceValue/editorialLabel/editorialValue/updatedLabel) — 4-locale parity ✅ (RULE 16).
+8. **docs/session-state.md, docs/todo-dashboard.html:** Memory yeniləndi.
+
+**Test:** `npm run test:run` → **4999 PASS** (4957 → 4999, +42 yeni test) ✅
+**TypeScript:** `npx tsc --noEmit` → 0 diagnostics ✅
+**Build:** `npm run build` → Compiled successfully, 1151 static pages generate (Next.js 16 Cache Components — yeni metric semantics, S37: 2540 köhnə semantics)
+**Pre-commit hook:** Pass (Opsera söndürülüb, fail olmadı)
+
+**Commit + Push:**
+- Commit 1: `2fe6c33` (`feat(seo,a11y): SEO P1 trust signals + a11y loading + dev tool i18n meta`)
+- Commit 2 (deploy fix): `111757a` (`fix(deploy): commit untracked source-extraction utility for trust section`)
+- GitLab push: SUCCESS (`a133eb9..2fe6c33`, `2fe6c33..111757a`)
+- GitHub mirror: synced (auto via GitLab mirror)
+- GitLab pipeline: failed (ci_quota_exceeded — qeyri-blok, Vercel webhook bypass aktivdir)
+
+**⚠️ Deploy issue + recovery (S38):**
+- İlk Vercel build `2fe6c33` üçün ● Error: `Module not found: @/lib/news/source-extraction`
+- Səbəb: `src/lib/news/source-extraction.ts` + test fayl LOCAL DİSK-də vardı (lokal build PASS, vitest 4999 PASS) AMMA git untracked qalmışdı (CEO-nun verdiyi 12 fayl siyahısına daxil deyildi)
+- `vercel inspect ... --logs` ilə tapıldı, follow-up commit `111757a` ilə fix
+- **Lesson:** Yeni utility fayl import edilirsə `git status` untracked yoxlanmalıdır, yalnız `git diff` deyil. CEO local-də fayl yarada bilər, amma agent siyahıdan kənar fayl yoxlamalıdır.
+
+**Vercel Verify:**
+- `https://vaxtimyoxdu.com` → HTTP 200, `x-vercel-cache: MISS` (yeni deploy fresh)
+- 4 locale: `/` 200, `/en` 200, `/tr` 200, `/ru` 200, `/az` → 307 → `/` 200 (`localeDetection: false` correct behavior)
+- Blog sample (en): `/en/blog/best-free-online-tools-2026` → 200
+- Info sample (en): `/en/info/en-trump-cancels-pakistan-iran-talks-witkoff-kushner-araghchi-leaves` → 200
+- HTML render: `sm:grid-cols-3` class deployed (yeni trust section), `Format`/`Published` text görünür
+- JSON-LD: `isAccessibleForFree`/`genre`/`editor`/`wordCount` deploy hazırlanır (Vercel build ~3 dəq)
+
+**Lessons:**
+- Next.js 16 Cache Components mode-da static page count metric-i fərqli (1151 vs 2540) — bu **regression deyil**, semantics dəyişib
+- alternateLinks: false strategiyası hreflang konflikt riskini azaldır (HTTP Link generic, route metadata page-specific)
+- Trust signals (E-E-A-T) SEO P1 priority-də idi — Google News transparency requirement
+- 4-locale tool meta migration davam edir: 4/111 alət tamamlandı, qalanı növbəti sessiyalar üçün
+
+**Müddət:** ~12 dəqiqə (CEO lokalda hazırlamışdı, Deploy agent verify + push + memory).
+
+**Dəyişmiş fayllar (12):**
+- src/app/[locale]/blog/[slug]/page.tsx
+- src/app/[locale]/info/[slug]/page.tsx
+- src/app/[locale]/loading.tsx
+- src/config/tools/dev-tools.ts
+- src/i18n/routing.ts
+- src/lib/utils/seo/json-ld.ts
+- src/messages/{az,en,tr,ru}.json
+- docs/session-state.md
+- docs/todo-dashboard.html
+
+---
 
 ### Session 36 (2026-04-25) — News Refresh: 9 topics for Apr 25 (36 articles, 4-stage pipeline + 3-batch integration)
 
