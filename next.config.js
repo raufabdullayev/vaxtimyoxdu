@@ -195,6 +195,30 @@ const nextConfig = {
           },
         ],
       },
+      {
+        // SEO P0 fix (2026-04-26): Catch-all Cache-Control for HTML SSG pages.
+        // Without this, Vercel serves HTML pages with `private, no-cache, no-store`
+        // which causes x-vercel-cache: MISS on every request, +200-400ms TTFB,
+        // and crawl budget exhaustion. Negative lookahead skips _next/, /api/,
+        // /_vercel/, and any path with a file extension (favicon.ico, robots.txt,
+        // sitemap.xml, manifest.json) — those have their own asset-specific rules
+        // above. Catch-all MUST stay last because Next.js uses first-match wins.
+        source: '/((?!_next|api|_vercel|.*\\..*).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=3600, stale-while-revalidate=86400',
+          },
+          {
+            key: 'CDN-Cache-Control',
+            value: 'max-age=3600, stale-while-revalidate=86400',
+          },
+          {
+            key: 'Vercel-CDN-Cache-Control',
+            value: 'max-age=86400',
+          },
+        ],
+      },
     ]
   },
 }

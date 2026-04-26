@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { generateArticleMetadata, generateNewsArticleJsonLd, getLocalizedUrl } from '@/lib/utils/seo'
+import { getOgImageUrl } from '@/lib/utils/seo/og'
 import type { Locale } from '@/i18n/config'
 import LazyAdBanner from '@/components/layout/LazyAdBanner'
 import Breadcrumb from '@/components/layout/Breadcrumb'
@@ -104,6 +105,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </span>
       </div>
       <h1 className="text-3xl font-bold mt-2 mb-8">{article.title}</h1>
+      <img
+        src={getOgImageUrl({
+          title: article.title,
+          subtitle: article.content.slice(0, 80).replace(/[#*_`\[\]]/g, '').trim(),
+          type: 'news',
+        })}
+        alt={article.title}
+        width={1200}
+        height={630}
+        className="w-full rounded-lg mb-6 aspect-[1200/630] object-cover"
+        loading="eager"
+        fetchPriority="high"
+      />
       <MarkdownRenderer content={article.content} />
       <ShareButtonsWrapper
         path={`/info/${slug}`}
