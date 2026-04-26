@@ -12,4 +12,7 @@ export const routing = defineRouting({
   // from /blog to /en/blog, which breaks URL consistency and can confuse
   // search engines. Users switch language explicitly via the LanguageSelector.
   localeDetection: false,
+  // Route metadata emits page-specific hreflang. next-intl's generic HTTP Link
+  // header cannot know which dynamic news/blog slugs exist per locale.
+  alternateLinks: false,
 })

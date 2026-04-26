@@ -648,7 +648,15 @@
     "breadcrumbHome": "Главная",
     "breadcrumbNews": "Новости",
     "noArticles": "Новостей на этом языке пока нет.",
-    "readingTime": "{minutes} мин чтения"
+    "readingTime": "{minutes} мин чтения",
+    "trustKicker": "Контекст новости",
+    "trustTitle": "Как подготовлено это резюме",
+    "trustDescription": "Страница написана как короткое объяснение для обычного читателя: даты, названные источники и переданные утверждения оставлены видимыми для проверки.",
+    "sourceLabel": "Источники",
+    "sourceValue": "Источники, названные в тексте статьи",
+    "editorialLabel": "Формат",
+    "editorialValue": "Краткое объяснительное резюме",
+    "updatedLabel": "Опубликовано"
   },
   "blog": {
     "metaTitle": "Блог - Vaxtim Yoxdu",

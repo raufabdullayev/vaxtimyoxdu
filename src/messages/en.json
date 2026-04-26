@@ -648,7 +648,15 @@
     "breadcrumbHome": "Home",
     "breadcrumbNews": "News",
     "noArticles": "No news articles available in this language yet.",
-    "readingTime": "{minutes} min read"
+    "readingTime": "{minutes} min read",
+    "trustKicker": "News context",
+    "trustTitle": "How this summary was prepared",
+    "trustDescription": "This page is written as a short citizen-friendly summary, with dates, named sources and reported claims kept visible for quick checking.",
+    "sourceLabel": "Sources",
+    "sourceValue": "Named in the article body",
+    "editorialLabel": "Format",
+    "editorialValue": "Brief explainer summary",
+    "updatedLabel": "Published"
   },
   "blog": {
     "metaTitle": "Blog - Vaxtim Yoxdu",

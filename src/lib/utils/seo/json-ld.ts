@@ -269,6 +269,7 @@ export function generateNewsArticleJsonLd({
   date,
   category,
   locale = 'az',
+  content,
 }: {
   title: string
   description: string
@@ -276,8 +277,10 @@ export function generateNewsArticleJsonLd({
   date: string
   category: string
   locale?: string
+  content?: string
 }) {
   const url = getLocalizedUrl(`/info/${slug}`, locale as Locale)
+  const wordCount = content?.trim() ? content.trim().split(/\s+/).length : undefined
   return {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
@@ -287,7 +290,15 @@ export function generateNewsArticleJsonLd({
     datePublished: date,
     dateModified: date,
     articleSection: category,
+    genre: 'News summary',
+    isAccessibleForFree: true,
+    ...(wordCount ? { wordCount } : {}),
     author: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    editor: {
       '@type': 'Organization',
       name: SITE_NAME,
       url: SITE_URL,

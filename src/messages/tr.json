@@ -648,7 +648,15 @@
     "breadcrumbHome": "Ana Sayfa",
     "breadcrumbNews": "Haberler",
     "noArticles": "Bu dilde henüz haber bulunmamaktadır.",
-    "readingTime": "{minutes} dk okuma"
+    "readingTime": "{minutes} dk okuma",
+    "trustKicker": "Haber bağlamı",
+    "trustTitle": "Bu özet nasıl hazırlandı",
+    "trustDescription": "Bu sayfa normal okuyucu için kısa açıklama formatındadır; tarihler, adı geçen kaynaklar ve aktarılan iddialar kontrol için görünür tutulur.",
+    "sourceLabel": "Kaynaklar",
+    "sourceValue": "Makale metninde adı geçen kaynaklar",
+    "editorialLabel": "Format",
+    "editorialValue": "Kısa açıklamalı özet",
+    "updatedLabel": "Yayınlandı"
   },
   "blog": {
     "metaTitle": "Blog - Vaxtim Yoxdu",

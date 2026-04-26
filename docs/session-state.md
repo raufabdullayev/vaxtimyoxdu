@@ -1,13 +1,11 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-23 (Session 33 — Batch 1 + Batch 2: 18 topics, 72 articles for Apr 22-23, TAM DEPLOY ✅)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 33 Batch 2 commit-i deploy olunub)
-**Son commit:** e07147f (content(news): add Apr 23 topics — 32 articles × 4 locales, Batch 2)
-**Session 33 commit chain:**
-- 3ac9b7b — content(news): add Apr 22 topics (40 articles, Batch 1)
-- e108e9d — docs: Session 33 state update
-- e07147f — content(news): add Apr 23 topics (32 articles, Batch 2)
-**Əvvəlki session commit:** e33a3c1 (docs: Session 32 brand SEO monitoring docs)
+**Son yenilənmə:** 2026-04-26 (Session 37 — P0 SEO Fix: Cache-Control catch-all + News Hero Image, TAM DEPLOY ✅)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 37 commit `a133eb9` deploy olunub)
+**Son commit:** a133eb9 (fix(seo): P0 — Cache-Control catch-all + news hero image)
+**Session 37 commit:** a133eb9 — fix(seo): P0 SEO fixes (audit 2026-04-21 P0-1 + P0-2)
+**Əvvəlki session commit:** 5df7f29 (S36 — 36 articles Apr 25)
+**Session 34 (2026-04-21):** SEO Audit (docs only, no code commit)
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -25,20 +23,23 @@
 | Parametr | Status |
 |----------|--------|
 | **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 |
-| **Deploy** | ✅ Vercel aktiv |
-| **GitLab + GitHub** | ✅ Synced (e07147f) |
-| **GitLab token** | ✅ Yenilənib (7 aprel) |
-| **Son commit** | e07147f (S33 Batch 2 Apr 23 — 32 articles) |
-| **Testlər** | **4670** PASS (vitest, S33 total: +288) |
-| **E2E** | **30 fayl** (18 yeni Sprint 3-də) |
-| **Statik səhifələr** | **~2268** (S33 total: 1980→2268, +288) |
+| **Deploy** | ✅ Vercel aktiv (dpl_UrtkmjEf1KiGaHNepX7asD3i87LL) |
+| **GitLab + GitHub** | ✅ Synced (a133eb9) |
+| **GitLab token** | ✅ Yeniləndi (2026-04-26, MCP + curl təsdiq HTTP 200) |
+| **GitLab CI** | ⚠️ ci_quota_exceeded — Vercel webhook bypass (qeyri-blok) |
+| **Son commit** | a133eb9 (S37 — P0 SEO fix Cache-Control + news hero img) |
+| **Testlər** | **4957** PASS (vitest, S37: +15 yeni regression test) |
+| **E2E** | **31 fayl** (S37: +1 news-cache-headers spec, 6 test) |
+| **Statik səhifələr** | **2540** (S37: stable) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **400** (100/locale — S33 total: +72 yeni: 40 Batch1 + 32 Batch2) |
+| **Xəbərlər** | **468** (117/locale — S36: +36 yeni 04-25) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
-| **P0 buglar** | **0** ✅ (3 P0 Sprint 2-də fix: e72170e) |
+| **P0 buglar** | **0** ✅ (S37: SEO Audit P0-1+P0-2 fix; S2: 3 P0 e72170e) |
 | **CRITICAL** | 0 ✅ |
+| **CDN cache** | ✅ HIT on 2nd req (S37: cdn-cache-control: max-age=3600 SWR=86400) |
+| **News hero img** | ✅ Bütün /info/[slug] səhifələrdə (S37: /api/og?type=news) |
 
 **6-Sprint Plan Progress:**
 - ✅ Sprint 0 — Gate infra + docs (a5832bf)
@@ -50,12 +51,13 @@
 - 🔜 **Sprint 6** — CSP R&D + Telegram bot + advanced schema
 
 **Qalan işlər:**
-- **🚨 SEO Audit task-ları (2026-04-21 yeni!) — 17 task, ~1.5 həftə:**
-  - **P0 Kritik (2):** Cache-Control fix (HTML `no-store`) + News article `<img>` yox
-  - **P1 Yüksək (5):** Tool metaTitle lokalize, striking distance, NewsArticle image array, HowTo step.name, Twitter @site
+- **🚨 SEO Audit task-ları (2026-04-21) — 15 task qalır (P0 ✅ TAMAMLANDI S37-də):**
+  - ~~**P0 Kritik (2):** Cache-Control fix + News hero img~~ ✅ S37 (a133eb9)
+  - **P1 Yüksək (5):** Tool metaTitle lokalize, striking distance, NewsArticle image array (3 aspect), HowTo step.name, Twitter @site
   - **P2 Orta (6):** Sil meta keywords, Organization.sameAs, News↔Tool links, multi-sitemap, homepage H1, breadcrumb item
   - **P3 Aşağı (4):** article:author, OG cache, Yandex WM, favicon
   - **Detallı hesabat:** `docs/agent-reports/seo-audit-2026-04-21.md`
+  - **DİQQƏT (S37 dərsi):** Vercel browser-facing `cache-control` header-i `private, no-store`-a override edir (next-intl/runtime), AMMA `cdn-cache-control` + `vercel-cdn-cache-control` işləyir → CDN edge cache aktivdir (SEO TTFB qələbəsi). Bu məqbul davranışdır.
 - Yeni alətlər (111 → 135) — Sprint 5
 - Performance/Accessibility audit — Sprint 5
 - JSON-LD schema.org (Sprint 2 scope-dan qalıb?) — yoxlamaq
@@ -68,6 +70,122 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 36 (2026-04-25) — News Refresh: 9 topics for Apr 25 (36 articles, 4-stage pipeline + 3-batch integration)
+
+**Tapshiriq:** CEO `/plan` komandası: web research → əlavə → cümlə/məntiq səhvləri → prod deploy.
+
+**Komanda:** 11 agent (1 researcher + 4 paralel writer + 3 paralel QA + 1 fix + 3 batch integrator + 1 build/test + 1 deploy). Plan faylı: `~/.claude/plans/partitioned-chasing-thimble.md`
+
+**Faza 1 — Research:** 9 HIGH verified topics (≥2 mənbə hər birinə). 11 dropped. **Calendar fix:** Researcher öz təşəbbüsü ilə Apr 25 = Şənbə düzəlişi etdi (PO Cümə demişdi) — autonomous self-correction.
+
+**Mövzular (04-25):**
+1. Trump-Iran Pakistan diplomatic collapse
+2. Mali nationwide attacks
+3. Russia 666-missile barrage
+4. Zelenskyy-Aliyev Gabala meeting
+5. Palestinian local elections
+6. Italy Liberation Day 81st anniversary
+7. Anzac Day 111th anniversary
+8. Manchester City 2-1 Southampton FA Cup
+9. NHL Game 4 playoff slate
+
+**Faza 2 — 4 paralel writer:** 36 məqalə (9 × 4 dil).
+
+**Faza 3 — 3 paralel QA:**
+- **QA-A Diakritik/Cyrillic:** 0 BLOCKING, 4 MINOR ("həmcinsi" P0 regression check: **TƏMİZ** — writer "həmçinin"/"habelə"/"eyni zamanda" istifadə etdi)
+- **QA-B Length/Slug/Date/Category:** 0 BLOCKING, 0 MINOR
+- **QA-C Source-Fact:** **4 BLOCKING fabrications (Topic 9 NHL: TR 3, RU 1)**, 11 MINOR
+
+**Faza 4 — Fix agent:** 4 BLOCKING + 4 MINOR atomic edits, self-verification PASS.
+
+**Faza 5 — Integration:** İlk single 36-entry Edit STALLED 600s (S35 risk realized) → split into **3 sequential batches of 12** each (Batch 1: T1-3, Batch 2: T4-6, Batch 3: T7-9). 432 → **468** məqalə. tsc 0 diag. 0 duplicate slugs.
+
+**Faza 6 — Build + Test:**
+- vitest: 4798 → **4942 PASS** (+144 = 36×4 test per-article)
+- build: 2396 → **2540 statik səhifə** (+144)
+
+**Faza 7 — Deploy + Verify:**
+- Commit: **5df7f29** (content(news): add Apr 25 topics — 36 articles × 4 locales)
+- GitLab push: SUCCESS, GitHub mirror: SUCCESS
+- Vercel auto-deploy: SUCCESS
+- 4/4 locale × Topic 1 URL → HTTP 200 ✅
+
+**Lessons:**
+- **Single Edit watchdog risk realized:** S33B2/S35-də qorxulan 600s timeout S36-da reallaşdı. Split-into-batches mitigation çalışdı (3×12 sequential batch).
+- **Sport mövzularında fabrication risk:** Topic 9 (NHL) bütün 4 BLOCKING-i içerirdi. Sport-da writer "qualitative analysis" əlavə etmək cazibəsi yüksəkdir → gələcək sessiyalarda explicit "no analytical color" qaydası.
+- **Research date discipline:** Researcher öz təşəbbüsü ilə Apr 25 = Şənbə düzəlişi etdi (PO Cümə demişdi) — autonomous self-correction.
+
+**Müddət:** ~2 saat (3-batch split + watchdog stall recovery).
+
+**Dosyalar:**
+- Plan: `~/.claude/plans/partitioned-chasing-thimble.md`
+
+---
+
+### Session 35 (2026-04-24) — News Refresh: 8 topics for Apr 24 (32 articles, 4-stage pipeline)
+
+**Tapshiriq:** CEO: bugün (04-24) vacib dünya xəbərlərini 4 dildə əlavə et, test, deploy, data fayllarını yenilə, məlumat ver.
+
+**Komanda:** 10 agent (1 researcher + 4 paralel writer + 3 paralel QA + 1 fix + 1 integrator + 1 build/test + 1 deploy). Plan faylı: `~/.claude/plans/1-vaxtim-yoxdu-sayt-zippy-papert.md`
+
+**Faza 1 — Research:** 8 HIGH verified topics (≥2 mənbə hər birinə). 11 dropped (NFL Draft hələ yoxdu, NBA G3 deadline-dan sonra, Pope return 04-23, və s.). Brief: `docs/agent-reports/news-research-2026-04-24.md`
+
+**Mövzular (04-24):**
+1. DOJ Powell araşdırmasını dayandırdı → Warsh Fed Chair yolu açıldı (6 mənbə)
+2. Intel Q1 +25% stok, Nasdaq rekord, Terafab-Musk sövdələşməsi (7 mənbə)
+3. İran FM Araghchi Pakistan, Witkoff + Kushner 2-ci raunda (6 mənbə)
+4. Yaponiya mart CPI 1.8% (5 ayın ən yüksək artımı) (5 mənbə)
+5. Lebanon-İsrail atəşkəs 3 həftə uzadıldı, Hezbollah inadlı (6 mənbə)
+6. WFP/UN/EU qlobal aclıq raportu — 318M aclıq, Gaza/Sudan famines (5 mənbə)
+7. OpenAI GPT-5.5 launch — "strongest agentic coding model" (6 mənbə)
+8. NHL Playoffs cümə G3 preview (schedule only, Baku deadline caveat) (2 mənbə)
+
+**Faza 2 — 4 paralel writer:** 32 məqalə. AZ 66-75 char title, EN/TR/RU 51-60 char. Content 1564-2061 char. Bütün fact trace edilir.
+
+**Faza 3 — 3 paralel QA:**
+- **QA-A Diakritik/Cyrillic:** 0 BLOCKING, 7 MINOR (AZ 3 typo + TR 3 spelling)
+- **QA-B Length/Slug/Date/Category:** 0 BLOCKING, 1 MINOR (slug convention note)
+- **QA-C Source-Fact:** **0 BLOCKING** (0 fabrication!), 9 MINOR (soft framing)
+- "həmcinsi" P0 regression check: **TƏMİZ** (yalnız writer self-note-da)
+
+**Faza 4 — Fix agent:** 10 atomik edit (AZ: 3 typo × 4 edit, TR: 3 × 6 edit). Self-verification PASS.
+
+**Faza 5 — Integration:** 10.2 dəq (613s, Session 33 Batch 2 timeout-una yaxın) 1 single Edit ilə 32 entry əlavə olundu. 400 → 432 məqalə. tsc 0 diag. 0 duplicate.
+
+**Faza 6 — Build + Test:**
+- tsc: 0 error
+- vitest: 4670 → **4798 PASS** (+128 = 32×4 test per-article)
+- build: 2268 → **2396 statik səhifə** (+128)
+- Kiçik fix: `'Politics'` validEnCategories test enum-una əlavə edildi (T1 DOJ üçün)
+
+**Faza 7 — Deploy + Verify:**
+- Commit: **aeb821a** (12 files, +2290 insertions)
+- GitLab push: OK, GitHub mirror: OK
+- ⚠️ GitLab MCP token 401 — manual Vercel deploy verify
+- Vercel deploy ~3 dəq, lastmod 2026-04-24T17:58:15Z
+- 4 locale × Topic 1 (DOJ Powell) URL → HTTP 200 ✅
+- Sitemap: 32/32 new slugs present
+- /info listing-də 04-24 ən üstdə (EN + AZ)
+
+**Lessons:**
+- **Writer discipline improvement davam edir:** S33 Batch 2 dərsləri tətbiq olundu → 0 fabrication (S33 Batch 2-də 5 idi)
+- **Integration timeout riski:** 613s — growing file (7800+ line) müddəti artırır, gələcəkdə worktree parallel split düşünülməli
+- **GitLab token expiry:** 7 aprel 2026 yenilənmişdi, bu gün 401 — yenidən yenilənməli (task əlavə edildi)
+- **Research verification rigor:** 11/19 topic DROPPED (future events, duplicates, single-source) → QAYDA 16 4-dil + strict verification = effektiv
+
+**Müddət:** ~1 saat 10 dəq (plan daxilində 1.5-2 saat).
+
+**Dosyalar:**
+- Plan: `~/.claude/plans/1-vaxtim-yoxdu-sayt-zippy-papert.md`
+- Research: `docs/agent-reports/news-research-2026-04-24.md`
+- Writers: `docs/agent-reports/news-writer-output-{az,en,tr,ru}-2026-04-24.md`
+- QA: `docs/agent-reports/qa-{a,b,c}-*-2026-04-24.md`
+- Fix: `docs/agent-reports/fix-s34-2026-04-24.md`
+- Build/Test: `docs/agent-reports/build-test-s34-2026-04-24.md`
+- Deploy: `docs/agent-reports/deploy-s34-2026-04-24.md`
+
+---
 
 ### Session 34 (2026-04-21) — SEO Audit (senior SEO specialist agent, plan mode)
 

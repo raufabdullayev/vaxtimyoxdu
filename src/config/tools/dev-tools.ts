@@ -57,6 +57,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['regex tester', 'regular expression', 'regex debugger', 'regex matcher'],
+    metaTitle: {
+      az: 'Regex Test Aləti — Real Vaxtda, Pulsuz',
+      en: 'Regex Tester — Live Match, Groups, Free',
+      tr: 'Regex Test Aracı — Canlı Eşleşme, Ücretsiz',
+      ru: 'Тестер Regex — Совпадения и Группы, Бесплатно',
+    },
+    metaDescription: {
+      az: 'Regex ifadələrini real vaxtda test et, uyğunluqları və qrupları gör. Brauzerdə işləyir, məlumat serverə getmir.',
+      en: 'Test regular expressions live, highlight matches and inspect groups. Runs in your browser, so test data is never uploaded.',
+      tr: 'Regex ifadelerini canlı test et, eşleşmeleri ve grupları gör. Tarayıcıda çalışır; verin sunucuya gitmez.',
+      ru: 'Проверяй regex в реальном времени, смотри совпадения и группы. Работает в браузере, данные не загружаются.',
+    },
   },
   {
     slug: 'hash-generator',
@@ -91,6 +103,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['url encode', 'url decode', 'percent encoding', 'urlencode'],
+    metaTitle: {
+      az: 'URL Kodlama və Dekodlama — Pulsuz',
+      en: 'URL Encode & Decode — Free Percent Encoder',
+      tr: 'URL Kodlama ve Çözme — Ücretsiz',
+      ru: 'URL Кодировать и Декодировать — Бесплатно',
+    },
+    metaDescription: {
+      az: 'URL və query parametrlərini percent-encoding ilə kodla və dekod et. UTF-8 dəstəyi, copy-paste, tam brauzerdə.',
+      en: 'Encode or decode URLs and query parameters with percent-encoding. UTF-8 support, copy-paste friendly, fully browser-based.',
+      tr: 'URL ve query parametrelerini percent-encoding ile kodla veya çöz. UTF-8 destekli, copy-paste dostu, tarayıcıda.',
+      ru: 'Кодируй и декодируй URL и query-параметры через percent-encoding. UTF-8, удобно копировать, всё в браузере.',
+    },
   },
   {
     slug: 'jwt-decoder',
@@ -102,6 +126,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['jwt decoder', 'jwt parser', 'json web token', 'token decoder'],
+    metaTitle: {
+      az: 'JWT Decoder — Tokeni Brauzerdə Aç',
+      en: 'JWT Decoder — Inspect Tokens in Browser',
+      tr: 'JWT Decoder — Tokeni Tarayıcıda İncele',
+      ru: 'JWT Декодер — Проверка Токена в Браузере',
+    },
+    metaDescription: {
+      az: 'JWT header və payload hissələrini dekod et, expiry statusunu yoxla. Token brauzerdə açılır, serverə göndərilmir.',
+      en: 'Decode JWT header and payload, inspect expiry status and claims. Token parsing stays in your browser; nothing is sent.',
+      tr: 'JWT header ve payload bölümlerini çöz, expiry ve claim alanlarını incele. Token tarayıcıda kalır, gönderilmez.',
+      ru: 'Декодируй header и payload JWT, проверь срок и claims. Токен разбирается в браузере и никуда не отправляется.',
+    },
   },
   {
     slug: 'markdown-preview',
@@ -113,6 +149,18 @@ export const devTools: Tool[] = [
     isAI: false,
     isClientSide: true,
     keywords: ['markdown preview', 'markdown editor', 'md preview', 'markdown to html'],
+    metaTitle: {
+      az: 'Markdown Preview — Canlı Önizləmə, Pulsuz',
+      en: 'Markdown Preview — Live Editor, Free',
+      tr: 'Markdown Preview — Canlı Önizleme, Ücretsiz',
+      ru: 'Markdown Preview — Живой Редактор, Бесплатно',
+    },
+    metaDescription: {
+      az: 'Markdown yaz və canlı önizləməni gör: başlıqlar, siyahılar, kod blokları və linklər. Hər şey brauzerdə işləyir.',
+      en: 'Write Markdown and preview headings, lists, code blocks and links live. Private browser-based editor with instant output.',
+      tr: 'Markdown yaz ve başlıkları, listeleri, kod bloklarını canlı gör. Özel ve hızlı, tamamen tarayıcıda çalışır.',
+      ru: 'Пиши Markdown и сразу смотри заголовки, списки, код и ссылки. Быстрый приватный редактор в браузере.',
+    },
   },
   {
     slug: 'timestamp-converter',

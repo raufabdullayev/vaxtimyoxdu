@@ -13,9 +13,13 @@ import MarkdownRenderer from '@/components/common/MarkdownRenderer'
 import RelatedArticles from '@/components/layout/RelatedArticles'
 import NewsRelatedTools from '@/components/layout/NewsRelatedTools'
 import { newsArticles } from '@/data/news-articles'
+import { extractNewsSourceNames } from '@/lib/news/source-extraction'
 
 export function generateStaticParams() {
-  return Object.keys(newsArticles).map((slug) => ({ slug }))
+  return Object.entries(newsArticles).map(([slug, article]) => ({
+    locale: article.locale || 'az',
+    slug,
+  }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
@@ -66,6 +70,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   }
 
   const description = article.content.slice(0, 150).replace(/[#\n*-]/g, '').trim()
+  const sourceNames = extractNewsSourceNames(article.content)
+  const sourceSummary = sourceNames.length
+    ? sourceNames.slice(0, 6).join(', ')
+    : infoT('sourceValue')
 
   const jsonLd = generateNewsArticleJsonLd({
     title: article.title,
@@ -74,6 +82,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     date: article.date,
     category: article.category,
     locale,
+    content: article.content,
   })
 
   return (
@@ -118,6 +127,30 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         loading="eager"
         fetchPriority="high"
       />
+      <section
+        aria-label={infoT('trustTitle')}
+        className="my-6 rounded-lg border bg-muted/30 p-4 text-sm"
+      >
+        <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+          {infoT('trustKicker')}
+        </p>
+        <h2 className="mt-1 text-base font-semibold">{infoT('trustTitle')}</h2>
+        <p className="mt-2 text-muted-foreground">{infoT('trustDescription')}</p>
+        <dl className="mt-4 grid gap-3 sm:grid-cols-3">
+          <div>
+            <dt className="font-medium">{infoT('sourceLabel')}</dt>
+            <dd className="mt-1 text-muted-foreground">{sourceSummary}</dd>
+          </div>
+          <div>
+            <dt className="font-medium">{infoT('editorialLabel')}</dt>
+            <dd className="mt-1 text-muted-foreground">{infoT('editorialValue')}</dd>
+          </div>
+          <div>
+            <dt className="font-medium">{infoT('updatedLabel')}</dt>
+            <dd className="mt-1 text-muted-foreground">{article.date}</dd>
+          </div>
+        </dl>
+      </section>
       <MarkdownRenderer content={article.content} />
       <ShareButtonsWrapper
         path={`/info/${slug}`}

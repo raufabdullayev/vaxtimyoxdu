@@ -48,7 +48,7 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </head>
 <body>
 <h1>vaxtimyoxdu.com</h1>
-<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 21 Aprel 2026 (SEO Audit — 17 yeni task: 2 P0, 5 P1, 6 P2, 4 P3)</p>
+<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 26 Aprel 2026 (Session 37 — P0 SEO Fix DEPLOY ✅: Cache-Control + News Hero Image)</p>
 
 <div class="links">
 <strong>Bagli fayllar:</strong>
@@ -61,9 +61,9 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <div class="stats">
 <div class="stat"><div class="num">111</div><div class="label">Aletler</div></div>
 <div class="stat"><div class="num">4</div><div class="label">Dil</div></div>
-<div class="stat"><div class="num">2268</div><div class="label">Sehifeler</div></div>
-<div class="stat"><div class="num">4670</div><div class="label">Testler</div></div>
-<div class="stat"><div class="num">400</div><div class="label">Xeberler</div></div>
+<div class="stat"><div class="num">2540</div><div class="label">Sehifeler</div></div>
+<div class="stat"><div class="num">4957</div><div class="label">Testler</div></div>
+<div class="stat"><div class="num">468</div><div class="label">Xeberler</div></div>
 <div class="stat"><div class="num">~49</div><div class="label">Blog</div></div>
 </div>
 
@@ -84,14 +84,14 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="section">
-<h2>CRITICAL (2) — SEO Audit 2026-04-21</h2>
-<div class="task critical">
-<span class="badge critical">P0</span>
-<div class="task-text"><strong>Cache-Control fix — HTML sehifeler `no-store` donur</strong><small>Butun 876 SSG sehife `x-vercel-cache: MISS` — Vercel edge CDN istifade olunmur. TTFB +200-400ms. Sebeb: next-intl middleware `NEXT_LOCALE` cookie-ni her istekde set edir. Fix: next.config.js-de `Cache-Control: public, s-maxage=3600, stale-while-revalidate=86400` + `Vercel-CDN-Cache-Control: max-age=86400`. Is yuku: 3-6 saat. Tesir: TTFB -50%, crawl budget 3-5x. Detal: <code>docs/agent-reports/seo-audit-2026-04-21.md</code> P0-1</small></div>
+<h2>CRITICAL (0) ✅ — SEO Audit P0 TAMAMLANDI S37 (a133eb9, 2026-04-26)</h2>
+<div class="task done">
+<span class="badge done">DONE S37</span>
+<div class="task-text"><strong>P0-1 Cache-Control fix — Tamamlandi</strong><small>next.config.js catch-all rule: `cdn-cache-control: max-age=3600, SWR=86400` + `vercel-cdn-cache-control: max-age=86400`. Production curl tasdiq: `x-vercel-cache: MISS → HIT` 2-ci istekde. <strong>Diqqet:</strong> browser cache-control hele de `private, no-store` (Vercel runtime override), AMMA CDN edge cache aktivdir — Googlebot/SEO bunu gorur. 4 dilde (az/en/tr/ru) tasdiq.</small></div>
 </div>
-<div class="task critical">
-<span class="badge critical">P0</span>
-<div class="task-text"><strong>News article-larda &lt;img&gt; tag-i yoxdur — Google News eligibility bloklanir</strong><small>`/info/*` sehifelerde hero image yoxdur (yalniz OG image JSON-LD-de). Google News Top Stories artikl body-de optimised image teleb edir. Merhele 1 (2 saat): API OG image-i hero kimi goster. Merhele 2 (1-2 gun): `heroImage` sahesi + editorial image-ler. Tesir: Google News daxil olma + SERP CTR +30-50%. Detal: audit P0-2</small></div>
+<div class="task done">
+<span class="badge done">DONE S37</span>
+<div class="task-text"><strong>P0-2 News hero `&lt;img&gt;` — Tamamlandi (Merhele 1)</strong><small>info/[slug]/page.tsx-de hero img tag elave edildi: `getOgImageUrl({type:'news'})`. aspect-[1200/630], loading=eager, fetchPriority=high. Real news article-da img count=1 tasdiq. Google News Top Stories block silindi. Merhele 2 (heroImage field + editorial workflow) gelecek sprintde.</small></div>
 </div>
 </div>
 
@@ -232,6 +232,15 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="done-section">
+<h2>Session 37 (2026-04-26) — P0 SEO Fix: Cache-Control + News Hero Image (a133eb9)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">2 P0 SEO Audit fix-i tamamlandi: Cache-Control catch-all + news hero img<small>SEO Audit 2026-04-21 P0-1+P0-2. 5 agent dispatched (3 paralel: cache+hero+tests, 2 sequential: build+deploy). Dəyişikliklər: next.config.js +24 sətir, info/[slug]/page.tsx +14 sətir, 2 yeni test fayl (15 vitest + 6 Playwright). 4957/4957 PASS (S36-da 4942), 2540 sehife build OK. Vercel deploy SUCCESS (dpl_UrtkmjEf), 4 dil × production curl test PASS. CDN cache HIT 2-ci istekde tasdiq. <strong>Lesson:</strong> Vercel browser cache-control override edir (`private,no-store`) AMMA `cdn-cache-control` isleyir — SEO/Googlebot ucun bu kifayetdir. GitLab CI quota exceeded (qeyri-blok, Vercel webhook bypass). Müddət: ~1.5 saat.</small></div></div>
+
+<h2>Session 36 (2026-04-25) — News Refresh 04-25 (5df7f29)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">9 HIGH mövzu 04-25 üçün × 4 dil = 36 məqalə<small>Trump-Iran Pakistan collapse, Mali nationwide attacks, Russia 666-missile barrage, Zelenskyy-Aliyev Gabala meeting, Palestinian local elections, Italy Liberation Day 81st, Anzac Day 111th, Manchester City 2-1 Southampton FA Cup, NHL G4 slate. QA-C **4 BLOCKING fabrications** (Topic 9 NHL: TR 3, RU 1) → fix PASS. Single Edit STALLED 600s (S35 risk realized) → 3 sequential batches of 12. 4942 test PASS (+144), 2540 sehife (+144). Calendar fix: researcher caught Apr 25 = Şənbə (PO Cümə demişdi). Müddət: ~2s.</small></div></div>
+
+<h2>Session 35 (2026-04-24) — News Refresh 04-24 (aeb821a)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">8 HIGH mövzu 04-24 üçün × 4 dil = 32 məqalə<small>DOJ Powell→Warsh, Intel Q1+25%/Terafab, İran FM Pakistan, Yaponiya CPI 1.8%, Lebanon-İsrail atəşkəs uzadıldı, WFP 318M qlobal aclıq, OpenAI GPT-5.5, NHL G3 preview. **0 BLOCKING** (QA-C 0 fabrication, S33 Batch 2-də 5 idi). 4798 test PASS (+128), 2396 sehife (+128). Müddət: ~1s 10dq.</small></div></div>
+
 <h2>Session 34 (2026-04-21) — SEO Audit (senior SEO specialist agent)</h2>
 <div class="task done"><span class="badge done">DONE</span><div class="task-text">Tam SEO audit — 17 problem taplldl (2 P0 + 5 P1 + 6 P2 + 4 P3)<small>Umumi bal 67/100. GSC trafik -27% — 2-3 hefte sonra P0 fix-den sonra berpa gozlenilir. Hesabat: <code>docs/agent-reports/seo-audit-2026-04-21.md</code>. 1.5 hefte cumulative is yuku P0+P1+P2 ucun.</small></div></div>
 
@@ -263,9 +272,9 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="footer">
-Status: AKTIV | Son commit: dc4d7bb (docs: S33 Batch 2 state update) | Vercel deploy: AKTIV<br>
-Production: <a href="https://vaxtimyoxdu.com" style="color:#38bdf8">vaxtimyoxdu.com</a> HTTP 200<br>
-<strong>SEO Audit 2026-04-21:</strong> 67/100 bal, 17 task (2 P0, 5 P1, 6 P2, 4 P3) — <code>docs/agent-reports/seo-audit-2026-04-21.md</code><br>
+Status: AKTIV | Son commit: a133eb9 (S37 Apr 26 — P0 SEO fix: Cache-Control + news hero img) | Vercel deploy: AKTIV<br>
+Production: <a href="https://vaxtimyoxdu.com" style="color:#38bdf8">vaxtimyoxdu.com</a> HTTP 200 | CDN cache: ✅ HIT<br>
+<strong>SEO Audit 2026-04-21:</strong> 67/100 → P0 ✅ DONE S37, qalan 15 task (5 P1, 6 P2, 4 P3) — <code>docs/agent-reports/seo-audit-2026-04-21.md</code><br>
 Detali: docs/session-state.md
 </div>
 </body>

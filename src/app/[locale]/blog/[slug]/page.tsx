@@ -10,13 +10,18 @@ import ShareButtonsWrapper from '@/components/common/ShareButtonsWrapper'
 import SocialShareBar from '@/components/common/SocialShareBar'
 import ScrollDepthTracker from '@/components/analytics/ScrollDepthTracker'
 import MarkdownRenderer from '@/components/common/MarkdownRenderer'
-import { blogPosts, blogPostsByLocale, getBlogPostBySlug, getBlogPostsByLocale } from '@/data/blog-posts'
+import { blogPostsByLocale, getBlogPostBySlug, getBlogPostsByLocale } from '@/data/blog-posts'
 import { tools } from '@/config/tools'
 import { locales, defaultLocale } from '@/i18n/config'
 import type { Locale } from '@/i18n/config'
 
 export function generateStaticParams() {
-  return Object.keys(blogPosts).map((slug) => ({ slug }))
+  return locales.flatMap((locale) =>
+    Object.keys(blogPostsByLocale[locale] || {}).map((slug) => ({
+      locale,
+      slug,
+    })),
+  )
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {

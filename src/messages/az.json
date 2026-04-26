@@ -648,7 +648,15 @@
     "breadcrumbHome": "Ana səhifə",
     "breadcrumbNews": "Xəbərlər",
     "noArticles": "Hazırda bu dildə xəbər yoxdur.",
-    "readingTime": "{minutes} dəq oxunuş"
+    "readingTime": "{minutes} dəq oxunuş",
+    "trustKicker": "Xəbər konteksti",
+    "trustTitle": "Bu xülasə necə hazırlanıb",
+    "trustDescription": "Bu səhifə normal oxucu üçün qısa izah formatındadır; tarixlər, adı çəkilən mənbələr və iddialar yoxlama üçün görünən saxlanılır.",
+    "sourceLabel": "Mənbələr",
+    "sourceValue": "Məqalə mətnində adı çəkilən mənbələr",
+    "editorialLabel": "Format",
+    "editorialValue": "Qısa izahlı xülasə",
+    "updatedLabel": "Yayımlandı"
   },
   "blog": {
     "metaTitle": "Blog - Vaxtım Yoxdu",
