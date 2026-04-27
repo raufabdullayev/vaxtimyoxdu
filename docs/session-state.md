@@ -1,12 +1,11 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-26 (Session 38 — SEO P1 Trust Signals + a11y + 4-locale Tool Meta, TAM DEPLOY ✅)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 38 commit `2fe6c33` deploy olunub)
-**Son commit:** 111757a (S38 deploy fix); base S38: 2fe6c33 (feat(seo,a11y): SEO P1 trust signals + a11y loading + dev tool i18n meta)
-**Session 38 commit:** 2fe6c33 — News trust section + JSON-LD genre/wordCount/editor + locale-aware staticParams + a11y loading + 4 dev tool meta lokalize
+**Son yenilənmə:** 2026-04-27 (Session 39 — News Refresh: 8 topics, 32 articles for Apr 27, TAM DEPLOY ✅)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 39 commit `d624938` deploy olunub)
+**Son commit:** d624938 — content(news): add Apr 27 topics — 32 articles × 4 locales (S39)
+**Session 38 commit:** 2fe6c33 (+ deploy fix 111757a) — SEO P1 trust signals
 **Session 37 commit:** a133eb9 — fix(seo): P0 SEO fixes (audit 2026-04-21 P0-1 + P0-2)
-**Əvvəlki session commit:** 5df7f29 (S36 — 36 articles Apr 25)
-**Session 34 (2026-04-21):** SEO Audit (docs only, no code commit)
+**Session 36 commit:** 5df7f29 — 36 articles Apr 25
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -23,17 +22,17 @@
 
 | Parametr | Status |
 |----------|--------|
-| **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 |
-| **Deploy** | ✅ Vercel aktiv (S38 commit 2fe6c33) |
-| **GitLab + GitHub** | ✅ Synced (2fe6c33) |
+| **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 (4/4 locale × Topic 1 verified) |
+| **Deploy** | ✅ Vercel aktiv (S39 commit d624938) |
+| **GitLab + GitHub** | ✅ Synced (d624938) |
 | **GitLab token** | ✅ Yeniləndi (2026-04-26, MCP + curl təsdiq HTTP 200) |
 | **GitLab CI** | ⚠️ ci_quota_exceeded — Vercel webhook bypass (qeyri-blok) |
-| **Son commit** | 111757a (S38 deploy fix — source-extraction utility); base S38 commit: 2fe6c33 |
-| **Testlər** | **4999** PASS (vitest, S38: +42 yeni test) |
+| **Son commit** | **d624938** (S39 — Apr 27 news, 32 articles × 4 locales) |
+| **Testlər** | **5127** PASS (vitest, S39: +128 yeni test, 213 fayl) |
 | **E2E** | **31 fayl** (S37: +1 news-cache-headers spec, 6 test) |
-| **Statik səhifələr** | **1151** generate count (Next.js 16 Cache Components — S38 dəyişdi: 2540→1151 metric semantics) |
+| **Statik səhifələr** | **1183** generate count (S39: +32 = 1151→1183) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **468** (117/locale — S36: +36 yeni 04-25) |
+| **Xəbərlər** | **500** (125/locale — S39: +32 yeni 04-27, 8 topic) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
@@ -77,6 +76,79 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 39 (2026-04-27) — News Refresh: 8 topics for Apr 27 (32 articles, 8-phase pipeline) ✅
+
+**Tapshiriq:** CEO `/plan` komandası — 6 addım: vaxtımyoxdu öyrən → bugünki xəbərləri web-də araşdır → əlavə et → hərf/məntiq səhvləri test → deploy → yaddaş yenilə → məlumat ver.
+
+**Plan faylı:** `~/.claude/plans/salam-dostum-1-vaxt-m-goofy-sloth.md`
+
+**Komanda:** 11 agent (1 researcher + 4 paralel writer + 3 paralel QA + 1 fix + 1 batch integrator + 1 build/test + 1 deploy + 1 verify)
+
+**Faza 1 — Research:** 8 HIGH verified topics, 8 dropped. **Calendar fix:** Researcher öz təşəbbüsü ilə Apr 27 = Bazar ertəsi (CEO Bazar demişdi) düzəltdi — autonomous self-correction (S36-da olan kimi).
+
+**Mövzular (04-27, AZ-domestic priority):**
+1. **P0** Aliyev Gernika Sülh Mükafatı (video address, Spaniya/Pforzheim Town Councils)
+2. **P1** Araghchi-Putin Moskva görüşü + Hormuz-first təklifi (Iran ABŞ-dan Rusiyaya pivot)
+3. **P2** Mali Müdafiə Naziri Sadio Camara öldürüldü (S36 follow-up: Şənbə yaralarından Bazar günü öldü, ailə qurbanları)
+4. **P1** Çernobil 40 illik ildönümü + 16 öldü cross-strikes (Zelenskiy + Sandu, Yaroslavl NPZ)
+5. **P2** Ağ Ev Müxbirlər Yeməyi atışması (Cole Tomas Allen, 31, "alleged manifesto", Bazar ertəsi məhkəmə)
+6. **P2** Kral Charles III ABŞ rəsmi səfəri (4 gün, Elizabeth II 2007-dən sonra ilk)
+7. **P1** İsrail Cənubi Livana zərbələr — 14 öldü, 37 yaralı (Sağlamlıq Nazirliyi)
+8. **P1** NPT 11-ci Gözden Geçirme Konferansı UN-də açıldı (Pazartesi 10:00 ET, Vietnam'dan Do Hung Viet)
+
+**Faza 2 — 4 paralel writer:** 32 məqalə (8 × 4 dil), bütün AZ "həmcinsi" guard PASS, sport DROPPED.
+
+**Faza 3 — 3 paralel QA:**
+- **QA-A Diakritik/Cyrillic:** 0 BLOCKING, 1 MINOR (TR İDF/IDF), "həmcinsi" P0 grep: TƏMİZ
+- **QA-B Length/Slug/Date/Category:** 0 BLOCKING, 0 MINOR (32/32 PASS, slug uniqueness vs 468 + intra-batch: 0 collision)
+- **QA-C Source-Fact:** **2 BLOCKING + 22 MINOR** — Topic 9 (NHL S36 dərsi) artıq DROPPED idi, bu BLOCKING-lar single-phrase fix:
+  - TR Topic 3 (Mali): "Bamako" → "Kati" (JNIM coğrafi səhv)
+  - RU Topic 2 (Araghchi): "в субботу" → "в воскресенье" (gün atribusiyası)
+
+**Faza 4 — Fix agent:** 2/2 BLOCKING resolved, 18/22 MINOR applied, 4 skip (acceptable soft framing). Self-verification PASS.
+
+**Faza 5 — Integration (3-batch sequential):** 12+12+8 entries. Single Edit timeout (S36 risk) qarşısı alındı. Per-batch tsc 0 diag. 468→500 entries (+32). Slug 0 collision.
+
+**Faza 6 — Build + Test:**
+- tsc: 0 diagnostics
+- vitest: 4999 → **5127 PASS** (+128, dəqiq upper bound, 213 fayl, 18.7s)
+- build: 1151 → **1183 statik səhifə** (+32, dəqiq upper bound, 33.7s)
+- Bundle metrics dəyişməyib (content-only delta)
+
+**Faza 7 — Deploy + Verify:**
+- Pre-deploy untracked check: 2 src/ orphan files (hero-demo/page.tsx, HomeHero.tsx) — committed code-da reference yox, ORPHAN təsdiq, EXCLUDED bu commit-dən
+- Commit: **`d624938`** (content(news): add Apr 27 topics — 32 articles × 4 locales (S39))
+- GitLab push: SUCCESS (origin)
+- GitHub mirror: SUCCESS
+- Vercel auto-deploy: SUCCESS (~4 dəq)
+- 4/4 locale × Topic 1 HTTP 200 ✅ (Aliyev Gernika)
+- Sitemap: **48 entries 04-27** (loc + alternate hreflang URL-lər)
+- TR Mali "Kati" spot-check: PASS (BLOCKING fix #1 deployed)
+
+**Faza 8 — Memory:** session-state.md, MEMORY.md, todo-dashboard.html (S39 yeniləmə + 500/5127/1183).
+
+**Müddət:** ~1 saat 20 dəq (plan daxilində 1.5-2 saat).
+
+**Lessons:**
+- **3-batch default işlədi:** S36 lesson tətbiq olundu, single Edit cəhdi etmədik, 0 timeout
+- **AZ-domestic Topic 1 prioriteti:** Aliyev Gernika P0 düzgün identifikasiya edildi (Spaniya peace prize)
+- **S36 follow-up dramaturgia:** Mali Camara "safe" (S36) → "killed" (S39) — researcher follow-up disciplini effektiv
+- **Sport DROPPED preemptive:** S36 NHL 4 BLOCKING dərsi sayəsində Sunday sport bütünlüklə drop, fabrication risk 0
+- **Orphan files pre-deploy:** hero-demo/HomeHero src/ untracked aşkar edildi, EXCLUDED — S38 incident profilaktikası
+- **Source-fact discipline:** 32/32 quote attribution verified, 0 fabricated agency, 0 invented scene
+
+**Dosyalar:**
+- Plan: `~/.claude/plans/salam-dostum-1-vaxt-m-goofy-sloth.md`
+- Research: `docs/agent-reports/news-research-2026-04-27.md`
+- Writers: `docs/agent-reports/news-writer-output-{az,en,tr,ru}-2026-04-27.md`
+- QA: `docs/agent-reports/qa-{a,b,c}-*-2026-04-27.md`
+- Fix: `docs/agent-reports/fix-s39-2026-04-27.md`
+- Integration: `docs/agent-reports/integration-s39-2026-04-27.md`
+- Build/Test: `docs/agent-reports/build-test-s39-2026-04-27.md`
+- Deploy: `docs/agent-reports/deploy-s39-2026-04-27.md`
+
+---
 
 ### Session 38 (2026-04-26) — SEO P1 Trust Signals + a11y + 4-locale Tool Meta (TAM DEPLOY ✅)
 
