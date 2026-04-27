@@ -95,60 +95,83 @@ async function fetchGoldPrice(): Promise<MarketPrice | null> {
   }
 }
 
+interface YahooChartResponse {
+  chart?: {
+    result?: Array<{
+      meta?: {
+        regularMarketPrice?: number
+        chartPreviousClose?: number
+        previousClose?: number
+      }
+    }>
+    error?: unknown
+  }
+}
+
+async function fetchOilFromYahoo(): Promise<MarketPrice | null> {
+  try {
+    const res = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/BZ=F',
+      {
+        signal: AbortSignal.timeout(5000),
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VaxtimYoxdu/1.0)' },
+      }
+    )
+    if (!res.ok) throw new Error(`Yahoo Oil API error: ${res.status}`)
+    const data: YahooChartResponse = await res.json()
+    const meta = data?.chart?.result?.[0]?.meta
+    if (!meta?.regularMarketPrice) return null
+    const price = meta.regularMarketPrice
+    const prev = meta.chartPreviousClose ?? meta.previousClose ?? price
+    const change24h = prev > 0 ? ((price - prev) / prev) * 100 : 0
+    return {
+      symbol: 'OIL',
+      name: 'Oil (Brent)',
+      price,
+      change24h,
+      icon: 'OIL',
+      category: 'commodity',
+    }
+  } catch {
+    return null
+  }
+}
+
+async function fetchSP500FromYahoo(): Promise<MarketPrice | null> {
+  try {
+    const res = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC',
+      {
+        signal: AbortSignal.timeout(5000),
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VaxtimYoxdu/1.0)' },
+      }
+    )
+    if (!res.ok) throw new Error(`Yahoo SP500 API error: ${res.status}`)
+    const data: YahooChartResponse = await res.json()
+    const meta = data?.chart?.result?.[0]?.meta
+    if (!meta?.regularMarketPrice) return null
+    const price = meta.regularMarketPrice
+    const prev = meta.chartPreviousClose ?? meta.previousClose ?? price
+    const change24h = prev > 0 ? ((price - prev) / prev) * 100 : 0
+    return {
+      symbol: 'SPX',
+      name: 'S&P 500',
+      price,
+      change24h,
+      icon: 'SPX',
+      category: 'index',
+    }
+  } catch {
+    return null
+  }
+}
+
 async function fetchOilAndSP500(): Promise<MarketPrice[]> {
-  const prices: MarketPrice[] = []
-
-  // Fetch oil (Brent) approximation via CoinGecko if available, otherwise fallback
-  try {
-    // Use a free alternative: petro-token or direct commodity data
-    // For now, use a well-known free finance API
-    const res = await fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=oilcoin&vs_currencies=usd&include_24hr_change=true',
-      { signal: AbortSignal.timeout(5000) }
-    )
-
-    if (res.ok) {
-      const data: CoinGeckoResponse = await res.json()
-      if (data.oilcoin) {
-        prices.push({
-          symbol: 'OIL',
-          name: 'Oil (Brent)',
-          price: data.oilcoin.usd,
-          change24h: data.oilcoin.usd_24h_change ?? 0,
-          icon: 'OIL',
-          category: 'commodity',
-        })
-      }
-    }
-  } catch {
-    // Oil data not available
-  }
-
-  // Fetch S&P 500 via free API
-  try {
-    const res = await fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=sp500&vs_currencies=usd&include_24hr_change=true',
-      { signal: AbortSignal.timeout(5000) }
-    )
-
-    if (res.ok) {
-      const data: CoinGeckoResponse = await res.json()
-      if (data.sp500) {
-        prices.push({
-          symbol: 'SPX',
-          name: 'S&P 500',
-          price: data.sp500.usd,
-          change24h: data.sp500.usd_24h_change ?? 0,
-          icon: 'SPX',
-          category: 'index',
-        })
-      }
-    }
-  } catch {
-    // S&P 500 data not available
-  }
-
-  return prices
+  const [oil, sp500] = await Promise.all([
+    fetchOilFromYahoo(),
+    fetchSP500FromYahoo(),
+  ])
+  return [oil, sp500].filter((p): p is MarketPrice => p !== null)
 }
 
 async function fetchAllPrices(): Promise<MarketPricesResponse> {
