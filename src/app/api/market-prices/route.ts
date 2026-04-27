@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { Redis } from '@upstash/redis'
 
 export interface MarketPrice {
   symbol: string
@@ -21,9 +22,23 @@ interface CoinGeckoResponse {
   }
 }
 
-let cachedData: MarketPricesResponse | null = null
-let cacheTimestamp = 0
-const CACHE_TTL = 5 * 60 * 1000 // 5 minutes
+// ---------------------------------------------------------------------------
+// 3-tier cache: CDN edge (s-maxage=5) -> L1 in-memory -> L2 Redis -> upstream
+// ---------------------------------------------------------------------------
+
+const redis =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? Redis.fromEnv()
+    : null
+
+const CACHE_KEY = 'market-prices:v1'
+const LOCK_KEY = 'market-prices:lock:v1'
+const CACHE_TTL_SEC = 6
+const LOCK_TTL_SEC = 8
+
+// L1: in-memory per-instance cache (no Redis call when hit)
+let memCache: MarketPricesResponse | null = null
+let memCacheExpiresAt = 0
 
 async function fetchCryptoPrices(): Promise<MarketPrice[]> {
   try {
@@ -235,54 +250,130 @@ const EMPTY_RESPONSE: MarketPricesResponse = {
   updatedAt: new Date().toISOString(),
 }
 
-export async function GET() {
+/**
+ * 2-tier cache lookup with thundering-herd protection.
+ *
+ * 1. L1 (in-memory per-instance) — zero network cost, expires after 6s.
+ * 2. L2 (Upstash Redis) — shared across all Vercel function instances. Same 6s TTL.
+ * 3. Upstream (CoinGecko + Yahoo) — only one instance fetches at a time
+ *    via SET NX EX 8 lock. Other instances wait briefly and re-read Redis.
+ *
+ * Designed to stay within Upstash free tier (10K cmd/day):
+ * - CDN absorbs ~95% of user requests (Cache-Control: s-maxage=5, SWR=10).
+ * - L1 absorbs cross-region instance reuse.
+ * - Redis is hit only when L1 expires (every 6s per warm instance).
+ */
+async function getCachedOrFetch(): Promise<MarketPricesResponse> {
   const now = Date.now()
 
-  // Return cached data if still fresh
-  if (cachedData && now - cacheTimestamp < CACHE_TTL) {
-    return NextResponse.json(cachedData, {
-      headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60',
-        'X-Cache': 'HIT',
-      },
-    })
+  // L1 check
+  if (memCache && now < memCacheExpiresAt) {
+    return memCache
   }
 
-  // Wrap the entire fetch in a try/catch so this route NEVER throws.
-  // A thrown error during SSR would cascade and break hydration for
-  // every component on the page.
-  let data: MarketPricesResponse
-  try {
-    data = await fetchAllPrices()
-  } catch {
-    // If fetchAllPrices throws, prefer stale cache over an error response
-    if (cachedData) {
-      return NextResponse.json(cachedData, {
-        headers: {
-          'Cache-Control': 'public, s-maxage=60',
-          'X-Cache': 'STALE',
-        },
-      })
+  // L2 check (Redis)
+  if (redis) {
+    try {
+      const cached = await redis.get<MarketPricesResponse>(CACHE_KEY)
+      if (cached) {
+        memCache = cached
+        memCacheExpiresAt = Date.now() + CACHE_TTL_SEC * 1000
+        return cached
+      }
+    } catch {
+      // Redis read failed -- proceed to upstream
     }
+  }
 
-    // Absolute last resort: return a valid (empty) response rather than
-    // an error status that would cause the client hook to throw
+  // L3 fetch path: try acquire lock first to prevent thundering herd
+  let gotLock = false
+  if (redis) {
+    try {
+      const lockResult = await redis.set(LOCK_KEY, '1', {
+        nx: true,
+        ex: LOCK_TTL_SEC,
+      })
+      gotLock = lockResult === 'OK'
+    } catch {
+      gotLock = false
+    }
+  }
+
+  if (!gotLock && redis) {
+    // Another instance has the lock -- wait briefly, then try Redis again
+    await new Promise((r) => setTimeout(r, 300))
+    try {
+      const retry = await redis.get<MarketPricesResponse>(CACHE_KEY)
+      if (retry) {
+        memCache = retry
+        memCacheExpiresAt = Date.now() + CACHE_TTL_SEC * 1000
+        return retry
+      }
+    } catch {
+      // proceed to upstream as last resort
+    }
+  }
+
+  try {
+    const data = await fetchAllPrices()
+    if (redis) {
+      try {
+        await redis.set(CACHE_KEY, data, { ex: CACHE_TTL_SEC })
+      } catch {
+        // Redis write failed -- still return data (in-memory only)
+      }
+      if (gotLock) {
+        try {
+          await redis.del(LOCK_KEY)
+        } catch {
+          // ignore -- lock will expire naturally
+        }
+      }
+    }
+    memCache = data
+    memCacheExpiresAt = Date.now() + CACHE_TTL_SEC * 1000
+    return data
+  } catch (e) {
+    // Release lock on error so the next request can retry immediately
+    if (redis && gotLock) {
+      try {
+        await redis.del(LOCK_KEY)
+      } catch {
+        // ignore
+      }
+    }
+    // Return stale memCache if available (better than throwing)
+    if (memCache) return memCache
+    throw e
+  }
+}
+
+export async function GET() {
+  // Wrap the entire cache+fetch flow in a try/catch so this route NEVER throws.
+  // A thrown error during SSR would cascade and break hydration for every
+  // component on the page.
+  let data: MarketPricesResponse
+  let cacheStatus: 'HIT' | 'MISS'
+
+  // Capture L1 state BEFORE the call so we can report HIT/MISS correctly.
+  const wasL1Hit = memCache !== null && Date.now() < memCacheExpiresAt
+
+  try {
+    data = await getCachedOrFetch()
+    cacheStatus = wasL1Hit ? 'HIT' : 'MISS'
+  } catch {
     return NextResponse.json(EMPTY_RESPONSE, {
       headers: {
-        'Cache-Control': 'public, s-maxage=30',
+        'Cache-Control': 'public, s-maxage=5, stale-while-revalidate=10',
         'X-Cache': 'EMPTY',
       },
     })
   }
 
-  // Update cache
-  cachedData = data
-  cacheTimestamp = now
-
   return NextResponse.json(data, {
     headers: {
-      'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=60',
-      'X-Cache': 'MISS',
+      'Cache-Control': 'public, s-maxage=5, stale-while-revalidate=10',
+      'X-Cache': cacheStatus,
     },
   })
 }

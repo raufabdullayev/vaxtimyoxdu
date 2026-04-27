@@ -12,7 +12,7 @@ export interface UseMarketPricesResult {
   previousPrices: Map<string, number>
 }
 
-const REFRESH_INTERVAL = 5 * 60 * 1000 // 5 minutes
+const REFRESH_INTERVAL = 5 * 1000 // 5 seconds
 
 export function useMarketPrices(): UseMarketPricesResult {
   const [prices, setPrices] = useState<MarketPrice[]>([])
@@ -48,14 +48,47 @@ export function useMarketPrices(): UseMarketPricesResult {
     }
   }, [])
 
+  // Polling effect with page-visibility pause: stops polling when the tab is
+  // hidden so background tabs do not burn CDN/Redis quota for nothing.
   useEffect(() => {
     fetchPrices()
 
-    intervalRef.current = setInterval(fetchPrices, REFRESH_INTERVAL)
+    function startPolling() {
+      if (intervalRef.current) return
+      intervalRef.current = setInterval(fetchPrices, REFRESH_INTERVAL)
+    }
 
-    return () => {
+    function stopPolling() {
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+    }
+
+    function handleVisibility() {
+      if (typeof document === 'undefined') return
+      if (document.hidden) {
+        stopPolling()
+      } else {
+        // Refetch immediately when tab becomes visible -- user has been gone
+        // long enough that the data is likely stale.
+        fetchPrices()
+        startPolling()
+      }
+    }
+
+    if (typeof document !== 'undefined' && !document.hidden) {
+      startPolling()
+    }
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', handleVisibility)
+    }
+
+    return () => {
+      stopPolling()
+      if (typeof document !== 'undefined') {
+        document.removeEventListener('visibilitychange', handleVisibility)
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

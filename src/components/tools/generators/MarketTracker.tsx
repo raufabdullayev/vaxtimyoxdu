@@ -280,20 +280,21 @@ export default function MarketTracker() {
   const { prices, updatedAt, isLoading, error, refetch, previousPrices } = useMarketPrices()
   const [autoRefresh, setAutoRefresh] = useState(true)
   const countdownRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const [countdown, setCountdown] = useState(300)
+  const [countdown, setCountdown] = useState(5)
 
-  // Countdown timer
+  // Countdown timer (resets when the data updates so the UI stays in sync
+  // with the underlying 5-second polling cadence in useMarketPrices)
   useEffect(() => {
     if (!autoRefresh) {
       if (countdownRef.current) clearInterval(countdownRef.current)
       return
     }
 
-    setCountdown(300)
+    setCountdown(5)
     countdownRef.current = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
-          return 300
+          return 5
         }
         return prev - 1
       })
@@ -304,11 +305,7 @@ export default function MarketTracker() {
     }
   }, [autoRefresh, updatedAt])
 
-  const formatCountdown = (s: number) => {
-    const m = Math.floor(s / 60)
-    const sec = s % 60
-    return `${m}:${sec.toString().padStart(2, '0')}`
-  }
+  const formatCountdown = (s: number) => `${s}s`
 
   return (
     <div className="space-y-6">
@@ -318,7 +315,7 @@ export default function MarketTracker() {
           <button
             onClick={() => {
               refetch()
-              setCountdown(300)
+              setCountdown(5)
             }}
             disabled={isLoading}
             className="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg border hover:bg-accent transition-colors disabled:opacity-50"
