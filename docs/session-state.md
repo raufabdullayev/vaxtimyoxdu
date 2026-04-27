@@ -2,7 +2,7 @@
 
 **Son yenilənmə:** 2026-04-27 (Session 39 — News Refresh: 8 topics, 32 articles for Apr 27, TAM DEPLOY ✅)
 **Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 39 commit `d624938` deploy olunub)
-**Son commit:** d624938 — content(news): add Apr 27 topics — 32 articles × 4 locales (S39)
+**Son commit:** **922101c** (docs reports) → **484da0a** (fix(market-prices): Oil + SP500 Yahoo Finance) → bd585b0 (docs S39) → d624938 (S39 news)
 **Session 38 commit:** 2fe6c33 (+ deploy fix 111757a) — SEO P1 trust signals
 **Session 37 commit:** a133eb9 — fix(seo): P0 SEO fixes (audit 2026-04-21 P0-1 + P0-2)
 **Session 36 commit:** 5df7f29 — 36 articles Apr 25
@@ -27,7 +27,7 @@
 | **GitLab + GitHub** | ✅ Synced (d624938) |
 | **GitLab token** | ✅ Yeniləndi (2026-04-26, MCP + curl təsdiq HTTP 200) |
 | **GitLab CI** | ⚠️ ci_quota_exceeded — Vercel webhook bypass (qeyri-blok) |
-| **Son commit** | **d624938** (S39 — Apr 27 news, 32 articles × 4 locales) |
+| **Son commit** | **922101c** (docs) → **484da0a** (market-prices Yahoo Finance fix) → bd585b0 (docs) → d624938 (S39 news) |
 | **Testlər** | **5127** PASS (vitest, S39: +128 yeni test, 213 fayl) |
 | **E2E** | **31 fayl** (S37: +1 news-cache-headers spec, 6 test) |
 | **Statik səhifələr** | **1183** generate count (S39: +32 = 1151→1183) |
@@ -76,6 +76,97 @@
 ---
 
 ## Son 3 Sessiya
+
+### Session 39c (2026-04-27) — Market Prices 5s Auto-Refresh + Redis L2 Cache ✅
+
+**Tapshiriq:** CEO: "5 saniyədən bir yenilənməsi üçün qoya bilərik?" + "Pullu versiyaya keçmək tələb edilməsin"
+
+**Arxitektura:** 3-tier cache (free-tier friendly):
+- **L1 in-memory** (per function instance) TTL=6s
+- **L2 Upstash Redis** TTL=6s + SETNX lock (thundering herd prevention)
+- **CDN edge cache** s-maxage=5 (S37 caveat — Vercel strips, app cache compensates)
+- **Client polling** 5s + page visibility pause (`document.visibilitychange`)
+
+**Quota analysis (Upstash 10K cmd/gün free):**
+- Worst case: 17,280 client req/gün × 0.3 × 0.5 = ~2,600 GETs + ~1,500 writes = **~4-7K/gün** ✅
+- Multiple regions = pro-rata, if exceeded fall back to Pro tier $1-2/ay
+
+**Files changed (5):**
+- `src/app/api/market-prices/route.ts` (Redis L2 + lock + 6s TTL)
+- `src/hooks/useMarketPrices.ts` (5s interval + visibility pause)
+- `src/components/tools/generators/MarketTracker.tsx` (countdown 300→5)
+- `src/app/api/__tests__/market-prices.test.ts` (Upstash env stub for tests)
+- (no i18n changes — `marketTracker.*` namespace had no time-related strings)
+
+**Test:** vitest 5127 PASS (regression clean)
+**Build:** 1183 səhifə (regression clean)
+
+**Commit:** `ebc77f6`, GitLab+GitHub synced, Vercel deploy SUCCESS
+
+**Production verify (2026-04-27 11:25 UTC):**
+- `x-cache: HIT` (app-level L1/L2 active)
+- `x-vercel-cache: MISS` (CDN strips s-maxage on dynamic API — S37 davranışı)
+- TTL transition: T0 updatedAt=11:25:45 → T+8s updatedAt=11:25:54 ✅ (6s expiry işləyir)
+- 5/5 instrument live: BTC $77,810, ETH $2,320, GOLD $4,692, OIL $100.53, SPX $7,165
+
+**Müddət:** ~50 dəq (implementation 30 + tests 10 + deploy 5 + verify 5).
+
+**Lessons:**
+- **2-tier cache (in-memory + Redis) free-tier scaling**: in-memory L1 absorbs majority, L2 only on miss → minimal Redis ops
+- **SETNX lock** thundering herd qarşısı alır — 100 user paralel gəlsə 1-i upstream-ə gedir
+- **Visibility pause kritik**: tab gizli olanda polling dayanır, free tier üçün 50% qənaət
+- **Vercel s-maxage strip**: dynamic API route-larda s-maxage browser-facing header-də görünmür, AMMA app-level cache (x-cache: HIT) iş görür — S37 dərsi təkrarlanır
+- **Lock TTL > Cache TTL** (8s vs 6s): lock-holder crash olsa, lock auto-expire edir cache TTL-dən sonra
+
+**Dosyalar:**
+- `docs/agent-reports/market-prices-5s-refresh-2026-04-27.md` (full report)
+- Production: https://vaxtimyoxdu.com/api/market-prices
+
+---
+
+### Session 39b (2026-04-27) — Market Prices Fix: Oil + SP500 Yahoo Finance ✅
+
+**Tapshiriq:** S39 deploy-dan sonra CEO: "qızıl btc və s. qiymətlərini də yenilə z o"
+
+**Investigation:** Live API (`/api/market-prices`) yoxlandı. BTC/ETH/Gold doğru. Lakin:
+- **OIL: $0.00000459** (yanlış: `oilcoin` CoinGecko-da crypto token, real Brent oil deyil)
+- **SPX: missing** (`sp500` ID-i CoinGecko-da yoxdur, `p.price > 0` filter-dən düşür)
+
+**Fix:** `src/app/api/market-prices/route.ts` — `fetchOilAndSP500` Yahoo Finance public API ilə əvəz:
+- Brent oil: `https://query1.finance.yahoo.com/v8/finance/chart/BZ=F`
+- SP500: `https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC`
+- User-Agent header (Yahoo defolt fetch UA-nı blok edir)
+- Hər fetcher müstəqil try/catch (graceful degradation)
+- 24h change `regularMarketPrice` vs `chartPreviousClose`-dən hesablanır
+
+**Test:** vitest 5127/5127 PASS (route test mock-larda dəyişiklik tələb etmir, generic ödənir)
+
+**Commit:** `484da0a` (fix), `922101c` (docs reports)
+
+**Deploy verify (2026-04-27 11:04 UTC):**
+| Symbol | Price | 24h Change | Status |
+|--------|-------|-----------|--------|
+| BTC | $77,854 | -0.23% | ✅ |
+| ETH | $2,321 | -0.54% | ✅ |
+| GOLD | $4,692 | -0.01% | ✅ |
+| **OIL** | **$100.55** | **+1.43%** | **✅ FIXED** |
+| **SPX** | **$7,165.08** | **+0.80%** | **✅ FIXED** |
+
+OIL ~$100/barrel İran müharibəsi + Hormuz blokadası context-inə uyğundur. SPX ~$7165 modern S&P 500 səviyyəsi.
+
+**Müddət:** ~30 dəq (investigation 5 dəq + fix 10 dəq + deploy 5 dəq + verify 5 dəq + reports/memory 5 dəq).
+
+**Lessons:**
+- **CoinGecko free API məhduddur** — yalnız crypto tokens. Commodity/index üçün Yahoo Finance unofficial istifadə et.
+- **`p.price > 0` filter masking bug**: yanlış API ID istifadə olunduqda crypto token qiyməti əvəzinə filter sıfır kimi oxuyur, debug çətinləşir
+- **Yahoo Finance User-Agent guard**: default `node-fetch` UA Yahoo-da bloklanır (401), explicit Mozilla UA tələb olunur
+- **Graceful degradation**: `null` qaytaran fetcher → `filter` ilə UI-da yox, error etmir
+
+**Dosyalar:**
+- `docs/agent-reports/market-prices-fix-2026-04-27.md` (full report)
+- Production API: https://vaxtimyoxdu.com/api/market-prices
+
+---
 
 ### Session 39 (2026-04-27) — News Refresh: 8 topics for Apr 27 (32 articles, 8-phase pipeline) ✅
 
