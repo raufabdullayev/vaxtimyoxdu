@@ -7,6 +7,626 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-04-27 ==========
+
+  // --- Topic 1: Aliyev Gernika Award ---
+  'aliyev-gernika-sulh-mukafati-aldi-ermenistan-azerbaycan-sulh': {
+    title: 'Əliyev Gernika Sülh Mükafatını aldı: Ermənistanla sülh treki tanındı',
+    date: '2026-04-27',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Azərbaycan prezidenti İlham Əliyev 26 aprel 2026-cı il bazar günü "Gernika Sülh və Barışıq Mükafatı"na layiq görülüb. Mükafat hər il 26 aprel — 1937-ci ildə Bask şəhəri Gernikanın bombalanmasının xatirə günündə təqdim olunur. Prezident Əliyev mərasim iştirakçılarına video müraciəti ilə xitab edib; o, şəxsən Gernikada iştirak etməyib.
+
+## Mükafat və institutlar
+
+APA, Caliber.Az və AzerNews-un məlumatına görə, mükafat birgə şəkildə Gernika-Lumo Bələdiyyə Şurası, Pforzheim Bələdiyyə Şurası, Gernika Sülh Muzeyi, Casa de Cultura və Gernika Gogoratuz Sülh Tədqiqatları Mərkəzi tərəfindən təqdim edilib. Mərasim Gernika qurbanlarının xatirəsinə həsr olunub və Pikassonun məşhur tablosunda əbədiləşdirilmiş 1937-ci il faşist bombardmanına işarə edir.
+
+Əliyev video müraciətində bildirib: "Sülh və barışıq üçün 'Gernika Sülh və Barışıq Mükafatı'nı almaq böyük şərəfdir." Prezident bu mükafatın Azərbaycan və Ermənistan arasında sülhə nail olmaq və dialoqu təşviq etmək yönündə göstərilən səylərin tanınması olduğunu vurğulayıb.
+
+## Üç onillik münaqişənin sonu
+
+Trend.Az və Axar.az-ın xəbər verdiyinə görə, Əliyev çıxışında 2025-ci il avqust ayında imzalanmış Vaşinqton Birgə Bəyannaməsinə istinad edib — həmin sənəd Ermənistan-Azərbaycan arasındakı üç onillik münaqişəyə son qoyub. Prezident bildirib: "Azərbaycan xalqı sülh və barışığın dəyərini çox yaxşı bilir."
+
+Habelə Gernika şəhəri 1937-ci ildə Nazi Almaniyası və italyan faşistlərinin hava bombardmanına məruz qalmış simvolik məkandır və indi beynəlxalq sülh mükafatına ev sahibliyi edir. Bu seçim Bakının haqq-hesab rekordu üzrə Qərb tənqidlərinə qarşı bir balans nöqtəsi kimi qiymətləndirilir və Azərbaycan liderinin Avropa miqyasında sülh fiquru kimi tanınmasına işıq salır. Bask vətəndaş cəmiyyətinin müraciəti Karabağ-sonrası normallaşma trekinə diplomatik dəstək kimi şərh olunur.`,
+  },
+  'en-aliyev-gernika-peace-award-armenia-azerbaijan-reconciliation': {
+    title: 'Aliyev Receives Gernika Award for Peace and Reconciliation',
+    date: '2026-04-27',
+    category: 'Politics',
+    locale: 'en',
+    content: `President Ilham Aliyev was named the recipient of the Gernika Award for Peace and Reconciliation on Sunday, April 26, 2026, marking Gernika Victims' Remembrance Day. The Azerbaijani head of state addressed the ceremony participants by video message, citing efforts to end the three-decade conflict with Armenia.
+
+## A Joint Award From Two European Cities
+
+The award was presented jointly by the Town Councils of Gernika-Lumo and Pforzheim, the Gernika Peace Museum, the Casa de Cultura, and the Gernika Gogoratuz Peace Research Center, according to APA, Caliber.Az and AzerNews. The annual prize is conferred each April 26, the date in 1937 when the Basque town of Gernika was bombed by Nazi German and Italian fascist forces, an attack later immortalized by Pablo Picasso's painting.
+
+Aliyev did not travel to the Basque Country in person; sources confirmed he addressed participants via a recorded video message.
+
+## Armenia-Azerbaijan Peace Track Cited
+
+In his remarks, Aliyev framed the prize as recognition of the bilateral peace process with Armenia, referencing the August 2025 Washington Joint Declaration that ended the three-decade Karabakh conflict. "It is a great honor to receive the 'Gernika Award for Peace and Reconciliation,'" Aliyev said, according to APA.
+
+He added that "the Azerbaijani people understand the value of peace and reconciliation very well," tying the recognition to Baku's stated commitment to dialogue with Yerevan.
+
+## Symbolism of the Date
+
+The choice of April 26 carries deliberate weight. Gernika has hosted the international peace prize for years, using the anniversary of the 1937 bombing to honor figures associated with reconciliation efforts. For Aliyev, the prize lands as a rare European civil-society recognition during a period in which Western capitals have often profiled Baku through the lens of the Karabakh chapter rather than the post-2025 normalization track with Armenia.`,
+  },
+  'tr-aliyev-gernika-baris-odulu-ermenistan-azerbaycan-uzlasma': {
+    title: `Aliyev'e İspanya'dan "Gernika Barış ve Uzlaşma Ödülü"`,
+    date: '2026-04-27',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Azerbaycan Cumhurbaşkanı İlham Aliyev, 26 Nisan Pazar günü "Gernika Barış ve Uzlaşma Ödülü"nün sahibi olarak açıklandı. Tören, İspanya'nın Bask bölgesindeki Gernika-Lumo kentinde, 1937'de Nazi Almanyası ve faşist İtalya hava kuvvetlerinin gerçekleştirdiği bombardımanın yıl dönümünde düzenlendi. Ödül; Gernika-Lumo ve Pforzheim Belediye Meclisleri, Gernika Barış Müzesi, Casa de Cultura ile Gernika Gogoratuz Barış Araştırma Merkezi tarafından ortaklaşa veriliyor. Aliyev törene bizzat katılmadı; mesajını video kayıt yoluyla katılımcılara iletti.
+
+## "Bu büyük bir onurdur"
+
+Aliyev video mesajında "'Gernika Barış ve Uzlaşma Ödülü'nü almak büyük bir onurdur" sözlerini sarf etti. Cumhurbaşkanı, ödülü Azerbaycan ile Ermenistan arasında "barışın sağlanması ve diyaloğun teşvik edilmesi yönündeki çabaların" tanınması olarak çerçeveledi. Aliyev konuşmasında ayrıca "Azerbaycan halkı barışın ve uzlaşmanın değerini çok iyi anlıyor" ifadesini kullandı. Cumhurbaşkanı, Ağustos 2025'te Washington'da imzalanan ve otuz yıllık çatışmayı sona erdiren Ortak Bildirgeye atıfta bulundu.
+
+## Pikasso'nun tablosuyla ölümsüzleşen şehir
+
+Gernika, 26 Nisan 1937'deki bombardımanla dünya tarihine girmiş ve Pablo Pikasso'nun aynı adlı tablosuyla yirminci yüzyılın savaş karşıtı en bilinen sembollerinden biri haline gelmiştir. Bask kentine bugün uluslararası bir barış ödülü ev sahipliği yapıyor. Ödülün Aliyev'e verilmesi, Bakü'nün Karabağ sonrası dönemde uluslararası kamuoyu önünde elde ettiği nadir bir Avrupa tanınma anı olarak değerlendiriliyor.
+
+## Karabağ sonrası diplomasinin sembolik anı
+
+Tören, Bask sivil toplum inisiyatiflerinin ortak tanınması olarak gerçekleşti. Yerel sivil toplum örgütleri ile belediyelerin ortak inisiyatifi olarak verilen ödül, Bakü'nün diplomasi ekseninde uluslararası kabul gördüğüne işaret ediyor. Cumhurbaşkanı'nın video mesajıyla katılım kararı, Pazar günkü etkinliğin protokol değil mesaj odaklı bir nitelik kazanmasını sağladı.`,
+  },
+  'ru-aliyev-poluchil-premiyu-gernika-armeniya-azerbaydzhan-mir': {
+    title: 'Алиев удостоен премии «Герника за мир и примирение»',
+    date: '2026-04-27',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Президент Азербайджана Ильхам Алиев в воскресенье 26 апреля 2026 года был удостоен премии «Герника за мир и примирение». Награда была объявлена в баскском городе Герника-Лумо в День памяти жертв Герники — годовщину бомбардировки города нацистской и итальянско-фашистской авиацией 26 апреля 1937 года, увековеченной картиной Пабло Пикассо. Алиев обратился к участникам церемонии видеообращением и не присутствовал в Гернике лично.
+
+## Совместная инициатива испанских и немецких городов
+
+Премия вручается совместно городскими советами Герники-Лумо и немецкого Пфорцхайма, Музеем мира в Гернике, Домом культуры и Исследовательским центром мира «Герника Гогоратуз». «Получить премию "Герника за мир и примирение" — большая честь», — заявил Алиев в своём обращении. Президент подчеркнул, что азербайджанский народ хорошо понимает ценность мира и примирения.
+
+## Признание усилий по мирному треку с Арменией
+
+Алиев представил награду как признание усилий по достижению мира между Азербайджаном и Арменией и поощрению диалога. Президент сослался на Совместную декларацию, подписанную в Вашингтоне в августе 2025 года, которая, по его словам, завершила длившийся три десятилетия конфликт. Премия стала редким европейским отличием для азербайджанского лидера на фоне продолжающейся нормализации отношений между Баку и Ереваном. Символичным является и сам день вручения: 26 апреля город Герника отмечает память жертв одной из самых трагических бомбардировок XX века и одновременно проводит международные мероприятия в честь мира.`,
+  },
+
+  // --- Topic 2: Araghchi-Putin Moscow ---
+  'iran-arakci-putin-moskva-gorush-hormuz-tekliflari': {
+    title: 'İran XİN başçısı Aragçi Moskvada Putinlə görüşdü: Hörmüz təklifi',
+    date: '2026-04-27',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `İran xarici işlər naziri Abbas Aragçi 27 aprel 2026-cı il bazar ertəsi günü Moskvaya səfər edərək Rusiya prezidenti Vladimir Putin və xarici işlər naziri Sergey Lavrovla görüşlər keçirib. Səfər Aragçinin 26 aprel bazar günü İslamabada ikinci dəfə təşrif buyurmasından sonra baş tutub. Bu, Tramp tərəfindən ABŞ nümayəndə heyətinin Pakistana səfərinin ləğvindən sonra Tehranın diplomatik trekini ABŞ-dan Rusiya və vasitəçilər istiqamətinə yönəldikdiyini göstərir.
+
+## Aragçi-Putin görüşünün gündəliyi
+
+Press TV və Daily Pakistan-ın məlumatına görə, İranın Moskvadakı səfiri görüşün məqsədini "regional və beynəlxalq səviyyədə qarşılıqlı əlaqələrin əlaqələndirilməsi və birgə proqramların inkişafı" kimi açıqlayıb. Gündəliyə Hörmüz boğazının statusu, ABŞ blokadası və atəşkəs yolu daxildir. ABŞ Mərkəzi Komandanlığının məlumatına əsasən, iki həftəlik blokada bazar ertəsi səhərinə qədər 38 gəminin İran limanlarına giriş və çıxışına mane olub.
+
+Axios və Bloomberg-in xəbər verdiyinə görə, Aragçi Pakistanlı vasitəçilər vasitəsilə yeni bir təklif ötürüb: əvvəlcə Hörmüz boğazı yenidən açılsın, ABŞ blokadası götürülənə qədər nüvə danışıqları təxirə salınsın, əvəzində İran mövcud atəşkəsi uzunmüddətli həll üçün uzatsın.
+
+## Vaşinqtonun şərtləri və Trampın mövqeyi
+
+CNN və Al Jazeera-nın qeyd etdiyinə görə, əsas mübahisə nöqtəsi qalmaqdadır: ABŞ İranın azı 10 il müddətinə uran zənginləşdirməni dayandırmasını və zənginləşdirilmiş uranı ölkədən çıxarmasını tələb edir, İran isə limanlar blokadada olduqca nüvə dosyesinin irəliləyə bilməyəcəyini bildirir.
+
+Tramp Fox News-un "Bazar Brifinqi" verilişinə açıqlamasında deyib: "Əgər danışmaq istəsələr, bizə gələ bilərlər və ya zəng edə bilərlər. Bilirsiniz, telefon var. Bizdə təhlükəsiz xətlər var." Ağ Evin sözçüsü isə İranın təklifinə münasibətdə bildirib ki, ABŞ "yalnız Amerika xalqını birinci yerə qoyan müqavilə imzalayacaq." Pakistan-Rusiya-Oman çevrəsi birbaşa ABŞ ilə əlaqəni əvəz edir.`,
+  },
+  'en-iran-araghchi-putin-moscow-meeting-hormuz-proposal': {
+    title: 'Araghchi Meets Putin in Moscow as Iran Floats Hormuz Plan',
+    date: '2026-04-27',
+    category: 'Politics',
+    locale: 'en',
+    content: `Iranian Foreign Minister Abbas Araghchi flew to Moscow on Monday, April 27, 2026, for talks with President Vladimir Putin and Foreign Minister Sergey Lavrov, after a second visit to Islamabad on Sunday. The trip pivots Tehran's diplomacy toward Russia and mediator-led channels following the collapse of a US envoy track on Saturday.
+
+## Hormuz-First Proposal via Mediators
+
+According to Axios, Bloomberg and Al Jazeera, Iran has delivered a new proposal through Pakistani mediators: reopen the Strait of Hormuz first, postpone nuclear talks until the United States lifts its naval blockade, and extend the existing ceasefire to allow longer-term settlement work. The US wants Iran to suspend uranium enrichment for at least 10 years and remove enriched uranium from the country.
+
+Tehran's ambassador to Moscow said the Araghchi-Putin agenda would focus on "coordinating interactions and advancing joint programs at the regional and international levels," covering Hormuz, the US blockade and the path to a ceasefire.
+
+## Trump Says Tehran Can Call
+
+President Donald Trump told Fox News' "The Sunday Briefing" on April 26 that Washington remained available but would not chase a deal. "If they want to talk, they can come to us, or they can call us. You know, there is a telephone. We have nice, secure lines," Trump said.
+
+A White House spokesperson responded to Iran's mediator proposal by saying the United States "will only make a deal that puts the American people first." No commitment to engage was signaled.
+
+## Blockade Pressure Mounts
+
+The US Central Command said the two-week-old blockade had prevented 38 ships from entering or leaving Iranian ports as of early Monday. Brent crude traded at $108.11, up 2.64 percent on the day. Araghchi met Pakistani Prime Minister Shehbaz Sharif and Chief of Army Staff Field Marshal Asim Munir in Islamabad before traveling to Russia, completing a regional shuttle that has run Islamabad to Oman and back, then to Moscow.`,
+  },
+  'tr-iran-arakci-putin-moskova-gorusmesi-hormuz-onerisi': {
+    title: `İran Dışişleri Bakanı Arakçi Moskova'da Putin ile görüştü`,
+    date: '2026-04-27',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `İran Dışişleri Bakanı Abbas Arakçi, 27 Nisan Pazartesi günü Rusya Devlet Başkanı Vladimir Putin ile görüşmek üzere Moskova'ya geldi. Arakçi, Pazar günü İslamabad'a ikinci kez yaptığı ziyaretin ardından Rusya'ya geçti. Görüşmenin gündeminde Hormuz Boğazı'nın durumu, ABD deniz ablukası, ateşkes süreci ve İran nükleer dosyası yer alıyor. Tahran'ın Moskova Büyükelçisi'ne göre temasların hedefi "bölgesel ve uluslararası düzeyde etkileşimin koordinasyonu ve ortak programların ileri taşınması" olarak tanımlandı. Arakçi, Dışişleri Bakanı Sergey Lavrov ile de bir araya gelecek.
+
+## Pakistan arabuluculuğunda Hormuz teklifi
+
+Axios'un haberine göre İran, Pakistanlı arabulucular aracılığıyla ABD'ye yeni bir teklif iletti. Önerinin özünde Hormuz Boğazı'nın yeniden açılması yer alıyor; karşılığında nükleer müzakerelerin ABD ablukası kalkana kadar ertelenmesi öngörülüyor. Washington'un temel beklentisi ise İran'ın uranyum zenginleştirmeyi en az on yıl askıya alması ve zenginleştirilmiş uranyumun ülkeden çıkarılması yönünde sürüyor.
+
+## Trump: "Bizi arayabilirler"
+
+ABD Başkanı Donald Trump, Pazar günü Fox News'un "The Sunday Briefing" programında "Eğer konuşmak isterlerse bize gelebilirler veya bizi arayabilirler. Bilirsiniz, telefon var. Güzel ve güvenli hatlarımız var" dedi. Beyaz Saray sözcüsü, İran'ın teklifine ilişkin yorumunda ABD'nin "yalnızca Amerikan halkını öncelikli kılan bir anlaşma yapacağını" söyledi; müzakere konusunda taahhütte bulunmadı. ABD Merkez Komutanlığı, iki haftalık abluka süresince İran limanlarına 38 gemilik giriş çıkışın engellendiğini duyurdu.
+
+## Bölgesel mekik diplomasisi
+
+Arakçi'nin gezisi İslamabad-Umman-İslamabad-Moskova hattında ilerledi. Bakan, İslamabad'da Başbakan Şahbaz Şerif ve Genelkurmay Başkanı Mareşal Asim Münir ile görüştü. ABD heyetinin Pakistan'a yapacağı ziyaretin Cumartesi iptal edilmesinin ardından İran, doğrudan Washington kanalı yerine Pakistan-Rusya-Umman üçgeninde bir arabuluculuk hattı işletmeye yönelmiş görünüyor.`,
+  },
+  'ru-iran-arakhchi-vstrecha-s-putinym-v-moskve-predlozheniye-po-hormuzu': {
+    title: 'Арагчи встретился с Путиным в Москве: предложение по Ормузу',
+    date: '2026-04-27',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Министр иностранных дел Ирана Аббас Арагчи в понедельник 27 апреля 2026 года прибыл в Москву для переговоров с президентом России Владимиром Путиным и главой МИД Сергеем Лавровым. Визит состоялся после второй за выходные остановки иранского министра в Исламабаде, где он встретился с премьер-министром Пакистана Шехбазом Шарифом и начальником штаба сухопутных войск фельдмаршалом Асимом Муниром. Идёт 58–59-й день иранской войны и четырнадцатый день американской блокады иранских портов.
+
+## Иранское предложение через посредников
+
+По данным Axios, Иран через пакистанских посредников передал новое предложение Соединённым Штатам: первым шагом снять блокаду и вновь открыть Ормузский пролив, отложив переговоры по ядерной программе. В обмен Тегеран продлит действующее перемирие. Bloomberg также сообщил о деталях этой инициативы. По словам посла Ирана в Москве, повестка встречи Арагчи и Путина включает координацию совместных программ на региональном и международном уровнях, включая статус Ормузского пролива и блокаду.
+
+## Вашингтон не берёт обязательств
+
+Президент США Дональд Трамп в эфире программы «Воскресный брифинг» на канале Fox News в воскресенье заявил: «Если они хотят говорить, могут прийти к нам или позвонить. Знаете, существует телефон. У нас есть надёжные защищённые линии». Представитель Белого дома сообщил, что США «заключат только ту сделку, которая ставит американский народ на первое место». Иран настаивает: ядерное досье не сдвинется с места, пока порты страны находятся под морской блокадой. Центральное командование США сообщило, что блокада, длящаяся уже две недели, не позволила тридцати восьми судам войти в иранские порты или покинуть их. Разворот Тегерана от Вашингтона к Москве и шаттл-дипломатия с Пакистаном и Оманом заменили прямой контакт с США.`,
+  },
+
+  // --- Topic 3: Mali Camara killed ---
+  'mali-mudafie-naziri-sadio-kamara-olduruldu-kati-saldirisi': {
+    title: 'Mali müdafiə naziri Sadio Kamara Kati intihar hücumunda öldürüldü',
+    date: '2026-04-27',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Mali cuntası 26 aprel 2026-cı il bazar günü müdafiə naziri general Sadio Kamaranın 25 aprel şənbə günü Kati qarnizon şəhərindəki evinə həyata keçirilən özünüpartlatma maşın bombası hücumu zamanı aldığı yaralardan xəstəxanada vəfat etdiyini təsdiqləyib. 47 yaşlı Kamara 2021-ci ildən bəri müdafiə naziri vəzifəsində idi və hakim hərbi cuntanın mərkəzi fiqurlarından biri sayılırdı.
+
+## Kati hücumu və ailə itkiləri
+
+Al Jazeera, Bloomberg və Washington Post-un məlumatına görə, ölüm xəbəri cunta sözçüsü İssa Ousman Kulibali tərəfindən təsdiqlənib. Şənbə günkü ilkin məlumatlarda Kamaranın "evdə olmadığı" və "təhlükəsiz olduğu" bildirilirdi; bu açıqlamalar bazar günü etibarsız sayıldı.
+
+Kamara ilə birlikdə onun ikinci həyat yoldaşı və iki nəvəsi də həlak olub. Hücum Camaat Nusrat əl-İslam vəl-Müsliminin (JNIM) intihar bombaçısı tərəfindən partlayıcı yüklü maşının nazirin iqamətgahına vurulması ilə həyata keçirilib. PBS NewsHour və The Africa Report-un qeyd etdiyinə görə, Kamara Mali daxilində cunta lideri general Assimi Goyitanın potensial varisi və Bakonun Fransadan Rusiyaya təhlükəsizlik istiqamətinin əsas memarı kimi tanınırdı.
+
+## Əlaqələndirilmiş hücumun yeni miqyası
+
+CGTN və Arab News-un xəbər verdiyinə görə, hücum 2020-21-ci illər çevrilişlərindən bəri Mali cuntasına qarşı həyata keçirilmiş ən geniş əlaqələndirilmiş əməliyyatın bir hissəsi olub. Bu, JNIM ilə Tuareq əsaslı Azavad Azadlıq Cəbhəsinin (FLA) ilk birgə əməliyyatıdır.
+
+Habelə FLA şimaldakı Kidal şəhərini ələ keçirib, JNIM isə Kati, Sevare, Mopti və Gao şəhərlərinə hücumlar həyata keçirib. Bamakodakı Modibo Keita Beynəlxalq Aeroportu bağlanıb. Cunta lideri Assimi Goyitanın ictimai məkanda olub-olmaması bazar günü təsdiqlənməyib. Cunta vəziyyətin "tam nəzarət altında olduğunu" bildirsə də, Kidalın itirilməsi bu açıqlamanı şübhə altına alır.`,
+  },
+  'en-mali-defence-minister-sadio-camara-killed-kati-suicide-attack': {
+    title: 'Mali Defence Minister Sadio Camara Confirmed Killed',
+    date: '2026-04-27',
+    category: 'World',
+    locale: 'en',
+    content: `Mali's military junta confirmed on Sunday, April 26, 2026, that Defence Minister General Sadio Camara died of wounds sustained in a suicide car-bomb attack on his Kati residence the previous day. The 47-year-old, defence minister since 2021, was a central figure in the ruling junta and had been viewed as a potential successor to leader General Assimi Goita.
+
+## Death Confirmed After Saturday Statement
+
+Junta spokesperson Issa Ousmane Coulibaly announced Camara's death, superseding Saturday statements that had described him as "not present" and "safe" at the time of the attack. According to Al Jazeera, Bloomberg, the Washington Post and PBS NewsHour, a JNIM suicide bomber drove an explosives-laden car into the minister's residence in the garrison town of Kati. Camara died in hospital from his wounds.
+
+His second wife and two grandchildren were also killed in the explosion.
+
+## A First-of-Its-Kind Coordinated Assault
+
+The Saturday attack was part of the largest coordinated assault on Mali's junta since the 2020-21 coups, according to The Africa Report and CGTN. It marked the first joint operation between the al-Qaeda-linked Jama'at Nusrat al-Islam wal-Muslimin (JNIM) and the Tuareg-led Azawad Liberation Front (FLA).
+
+The FLA seized the northern city of Kidal, while JNIM struck Kati, Sevare, Mopti and Gao. Modibo Keita International Airport in Bamako was shut. Russian-backed Africa Corps mercenaries reportedly engaged alongside Malian forces in Bamako.
+
+## A Turning Point for the Sahel
+
+Camara was widely regarded inside Mali as the chief architect of Bamako's pivot from France to Russia for security cooperation, per Bloomberg and The Africa Report. His confirmed death fundamentally reshapes the junta's leadership map. Goita's whereabouts were not publicly confirmed Sunday. The junta said the situation was "fully under control," though rebel control of Kidal continues to dispute that claim.`,
+  },
+  'tr-mali-savunma-bakani-sadio-kamara-olduruldu-kati-saldirisi': {
+    title: `Mali Savunma Bakanı Kamara Kati saldırısında öldürüldü`,
+    date: '2026-04-27',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Mali cuntası, 26 Nisan Pazar günü Savunma Bakanı General Sadio Kamara'nın hayatını kaybettiğini resmi olarak doğruladı. 47 yaşındaki bakan, 25 Nisan Cumartesi günü Kati garnizon kasabasındaki konutuna düzenlenen intihar bombalı araç saldırısında ağır yaralanmış ve hastanede yaralarının ardından hayatını kaybetmiştir. Ölüm, cunta sözcüsü Issa Ousmane Coulibaly tarafından duyuruldu. Cumartesi günkü ilk açıklamalarda bakanın "yerinde olmadığı ve güvende bulunduğu" söylenmişti; bu açıklamalar Pazar günü geri alındı.
+
+## 2021'den beri savunma bakanı
+
+Kamara, 2021'den itibaren Mali Savunma Bakanlığı görevinde bulundu ve cunta yönetiminin merkezi figürlerinden biriydi. Bakan, Bakü'nün Fransa'dan Rusya'ya güvenlik ekseninde dönüşünün baş mimarı olarak görülüyordu. The Africa Report ve Bloomberg haberlerine göre Kamara, cunta lideri General Assimi Goita'nın olası halefi olarak görülüyordu. Saldırıda bakan ile birlikte ikinci eşi ve iki torunu da hayatını kaybetti.
+
+## JNIM-Tuareg koordinasyonunun ilki
+
+Cumartesi günkü saldırı, El Kaide bağlantılı Cemaat Nusret-ül İslam vel-Müslimin (JNIM) ile Tuareg liderliğindeki Azavad Kurtuluş Cephesi'nin (FLA) ilk ortak operasyonu olarak kaydedildi. JNIM intihar bombacısı patlayıcı yüklü bir aracı Kamara'nın evine doğru sürdü. Aynı saatlerde FLA güçleri ülkenin kuzeyindeki Kidal şehrini ele geçirirken, JNIM Kati, Sevare, Mopti ve Gao'ya saldırdı. Modibo Keita Uluslararası Havalimanı kapatıldı.
+
+## Sahel için kritik eşik
+
+Kamara'nın ölümü, Mali cuntası açısından son yılların en ağır kaybı oldu. Cunta yetkilileri Pazar günü "durumun tamamen kontrol altında olduğunu" açıkladı; ancak Kidal'in FLA kontrolünde olduğu raporları bu açıklamayla çelişiyor. Cunta lideri Goita'nın bulunduğu yer Pazar günü kamuoyuna açıklanmadı.`,
+  },
+  'ru-ministr-oborony-mali-sadio-kamara-ubit-kati-vzryv': {
+    title: 'Министр обороны Мали Садио Камара погиб в результате теракта',
+    date: '2026-04-27',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Военная хунта Мали в воскресенье 26 апреля 2026 года подтвердила гибель министра обороны генерала Садио Камары, скончавшегося от ранений, полученных в субботу 25 апреля при подрыве начинённого взрывчаткой автомобиля у его дома в гарнизонном городе Кати. Сорокасемилетний Камара был ключевой фигурой правящей хунты и министром обороны страны с 2021 года. Гибель генерала подтвердил представитель хунты Исса Усман Кулибали, опровергнув ранее звучавшие в субботу сообщения о том, что министр находится «в безопасности».
+
+## Семейные потери и обстоятельства атаки
+
+Вместе с генералом Камарой в результате теракта погибли его вторая жена и двое внуков. Подрыв был совершён террористом-смертником, направившим автомобиль с взрывчаткой в резиденцию министра. Атака стала частью самой масштабной с момента переворотов 2020–2021 годов скоординированной операции против хунты Мали. Это первая совместная операция связанной с «Аль-Каидой» группировки JNIM и возглавляемого туарегами «Фронта освобождения Азавада» (ФЛА). Боевики ФЛА захватили северный город Кидаль, а JNIM нанесла удары по Кати, Севаре, Мопти и Гао. Международный аэропорт имени Модибо Кейты в Бамако был закрыт.
+
+## Удар по Сахельскому курсу
+
+По данным изданий «Африка Репорт» и Bloomberg, Камара рассматривался внутри страны как возможный преемник лидера хунты генерала Ассими Гойты и считался главным архитектором разворота Бамако от Франции к России в сфере безопасности. Местонахождение самого Гойты в воскресенье публично не раскрывалось. Хунта заявила, что ситуация «полностью под контролем», однако потеря Кидаля противоречит этой формулировке. Гибель Камары меняет карту военно-политического руководства страны и наносит серьёзный удар по сложившейся в Бамако модели сотрудничества с российским «Африканским корпусом».`,
+  },
+
+  // --- Topic 4: Chernobyl 40th anniversary ---
+  'chernobil-40-illik-ildonumu-zelenski-rusiya-nuvereyi-terror': {
+    title: `Çernobılın 40 illiyi: Zelenski Rusiyanı "nüvə terrorunda" ittiham etdi`,
+    date: '2026-04-27',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Ukrayna 26 aprel 2026-cı il bazar günü 1986-cı il Çernobıl Atom Elektrik Stansiyasındakı partlayışın 40-cı ildönümünü qeyd edib. Bu hadisə tarixin ən ağır mülki nüvə fəlakəti sayılır. Eyni gün ərzində Ukrayna, işğal altındakı ərazi və Rusiya boyu zərbələrdə ən azı 16 nəfər həlak olub.
+
+## Stansiyada xatirə mərasimi
+
+Euronews və PBS NewsHour-un məlumatına görə, prezident Volodimir Zelenski stansiyada keçirilən xatirə mərasimində Moldova prezidenti Maia Sandu ilə birlikdə iştirak edib. Ukraynanın Poltava bölgəsindən olan likvidatorlar onilliklər ərzində ilk dəfə hadisə yerinə qayıdıblar.
+
+Zelenski çıxışında bildirib: "Rusiya bir daha dünyanı insan əli ilə törədilmiş fəlakət astanasına gətirir." O, Rusiyanı "nüvə terrorunda" ittiham edib və davam edən dron uçuşları ilə 2025-ci ilin fevral ayında Yeni Təhlükəsiz Konfaynment qurğusuna endirilən zərbəni misal göstərib. BAEA baş direktoru Rafael Qrossi konfaynment örtüyünün təcili təmirinə ehtiyac olduğunu bildirib; layihənin dəyəri 500 milyon avro qiymətləndirilir, lakin tərəfdaşlar yalnız 100-130 milyon avro öhdəlik götürüb.
+
+## 24 saatda 16 ölü, Yaroslavl zərbəsi
+
+France 24 və Yahoo News-un xəbər verdiyinə görə, ildönümü ətrafındakı 24 saat ərzində Dnipro şəhərində Rusiya dron və raket zərbələrində ən azı 9 nəfər həlak olub; bir mənzil binası zərbə alıb və xilasedicilər çalışdığı vaxt ikinci dəfə vurulub. Sevastopolda Ukrayna dronu nəticəsində 1 nəfər, Luqansk bölgəsində bir kənddə 3 nəfər, Belqorodda isə 1 qadın həlak olub.
+
+Habelə Ukrayna qüvvələri Rusiyanın Yaroslavl şəhərində ildə 15 milyon ton tutumlu və Rusiya ordusu üçün yanacaq istehsal edən neft emalı zavoduna zərbə endirib. Gecə ərzində Rusiya 144 dron buraxıb; Ukrayna 124-nü vurub. Xatirə günü Ukrayna eyni zamanda Rusiyanın daxilinə zərbələr endirib.`,
+  },
+  'en-chernobyl-40-anniversary-zelenskyy-russia-nuclear-terrorism-strikes': {
+    title: 'Ukraine Marks Chernobyl at 40 as Strikes Kill 16 Across War',
+    date: '2026-04-27',
+    category: 'World',
+    locale: 'en',
+    content: `Ukraine marked the 40th anniversary of the Chernobyl nuclear disaster on Sunday, April 26, 2026, as strikes across Ukraine, occupied territory and Russia killed at least 16 people in the surrounding 24 hours. President Volodymyr Zelenskyy attended the commemoration ceremony at the plant alongside Moldova's President Maia Sandu and accused Moscow of "nuclear terrorism."
+
+## Commemoration at the Plant
+
+According to PBS NewsHour, Euronews and France 24, liquidators from Ukraine's Poltava region returned to the Chernobyl site for the first time in decades. April 26 marked four decades since the 1986 explosion at Reactor No. 4, history's worst civilian nuclear disaster.
+
+Zelenskyy said "Russia is once again bringing the world to the brink of a man-made disaster," accusing Moscow of "nuclear terrorism" through repeated drone overflights of the exclusion zone and the February 2025 strike on the New Safe Confinement structure.
+
+## Strikes on Both Sides of the Front
+
+In Dnipro, at least nine people were killed in Russian drone and missile strikes; an apartment block was hit and struck again while rescuers worked, per PBS NewsHour. In Sevastopol, Crimea, one person was killed in a Ukrainian drone strike, and three more died in a Ukrainian strike on a Luhansk region village. A woman was killed in Russia's Belgorod region.
+
+Russian forces launched 144 drones overnight, of which Ukraine downed 124, according to Empr.media. Ukrainian forces struck the Yaroslavl oil refinery in Russia, a facility with 15 million tons per year of capacity that produces fuel for the Russian military.
+
+## Repair Costs and the New Safe Confinement
+
+International Atomic Energy Agency Director-General Rafael Grossi said urgent repairs are needed to the New Safe Confinement shell that contains Reactor No. 4. The cost is estimated at 500 million euros, of which only 100 to 130 million has been committed by partners. Sunday's commemoration paired memory of 1986 with the realities of a war that has weaponized the exclusion zone itself.`,
+  },
+  'tr-cernobil-40-yili-zelenski-rusya-nukleer-terorizm-saldirilar': {
+    title: `Çernobil 40. yılı: Zelenski'den "nükleer terör" suçlaması`,
+    date: '2026-04-27',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Ukrayna, 26 Nisan Pazar günü Çernobil Nükleer Santrali faciasının 40. yıl dönümünü andı. 1986'da yaşanan ve sivil tarihin en büyük nükleer felaketi olarak kayıtlara geçen patlamanın yıl dönümünde santral sahasında düzenlenen anma törenine Cumhurbaşkanı Volodimir Zelenski katıldı. Törene Moldova Cumhurbaşkanı Maia Sandu da katıldı. Ukrayna'nın Poltava bölgesinden likvidatörler, on yıllar sonra ilk kez santral sahasına döndü. Anma töreni, Rusya-Ukrayna savaşının gölgesinde yapıldı.
+
+## Zelenski: "Rusya dünyayı uçurumun kenarına getiriyor"
+
+Zelenski törende yaptığı konuşmada Rusya'yı "nükleer terörizm" gerçekleştirmekle suçladı. Cumhurbaşkanı "Rusya bir kez daha dünyayı insan eliyle yapılan bir felaketin eşiğine getiriyor" dedi. Zelenski, Rusya'nın Çernobil bölgesi üzerinde sürekli olarak insansız hava aracı uçurmasına ve Şubat 2025'te Yeni Güvenli Muhafaza yapısına yapılan saldırıya atıfta bulundu. UAEA Genel Direktörü Rafael Grossi, muhafaza yapısında acil onarım gerektiğini ve maliyetin 500 milyon avro olduğunu belirtti.
+
+## 24 saatte en az 16 ölü
+
+Yıl dönümü etrafındaki 24 saat içinde Ukrayna, Rusya ve işgal altındaki bölgelerdeki saldırılarda en az 16 kişi hayatını kaybetti. Dnipro'da Rus İHA ve füze saldırılarında 9 kişi öldü; bir apartman bloğu vuruldu ve kurtarma ekipleri çalışırken bina yeniden hedef alındı. Lugansk bölgesinde Ukrayna İHA saldırısında 3 kişi, Sivastopol'da bir kişi, Belgorod'da ise bir kadın hayatını kaybetti. Rusya gece boyunca 144 İHA fırlattı; Ukrayna 124 tanesini düşürdü.
+
+## Yaroslavl rafinerisi vuruldu
+
+Ukrayna kuvvetleri aynı süre zarfında Rusya'nın derinliklerinde de hedeflere saldırdı. Yaroslavl bölgesindeki yıllık 15 milyon ton kapasiteli petrol rafinerisi vuruldu; tesis, Rus ordusuna yakıt üretiyordu. Bu sembolik tarih, geçmişin felaketi ile bugünün çatışmasının nükleer güvenlik etrafında nasıl iç içe geçtiğini gösterdi.`,
+  },
+  'ru-chernobyl-40-let-zelenskiy-rossiya-yadernyy-terror-udary': {
+    title: 'Чернобыль 40 лет: 16 погибших и обвинения в терроре',
+    date: '2026-04-27',
+    category: 'Мир',
+    locale: 'ru',
+    content: `В воскресенье 26 апреля 2026 года исполнилось сорок лет со дня взрыва на Чернобыльской атомной электростанции — крупнейшей гражданской ядерной катастрофы в истории. Президент Украины Владимир Зеленский принял участие в памятной церемонии на станции вместе с президентом Молдовы Майей Санду. Ликвидаторы из Полтавской области впервые за десятилетия вернулись к саркофагу. Годовщина пришлась на сутки, в которые удары по Украине, оккупированным территориям и территории России унесли жизни не менее шестнадцати человек.
+
+## «Россия снова ставит мир на грань»
+
+«Россия снова ставит мир на грань техногенной катастрофы», — заявил Зеленский. Президент обвинил Москву в «ядерном терроризме», сославшись на повторные пролёты беспилотников над зоной отчуждения и удар по новому защитному саркофагу в феврале 2025 года. Гендиректор МАГАТЭ Рафаэль Гросси сообщил, что новый защитный конфаймент нуждается в срочном ремонте: его стоимость оценивается в 500 миллионов евро, обязательства партнёров пока составляют лишь 100–130 миллионов.
+
+## Удары по Днепру и нефтепереработке
+
+В Днепре российский удар беспилотников и ракет унёс жизни не менее девяти человек: жилой дом был поражён, а затем удар повторился в момент работы спасателей. В Севастополе погиб один человек в результате удара украинского беспилотника. В Луганской области погибли трое сельских жителей, в Белгородской области — одна женщина. Российские силы запустили за ночь 144 беспилотника, украинская ПВО сбила 124. Украинские силы нанесли удар по нефтеперерабатывающему заводу в Ярославле мощностью 15 миллионов тонн в год, который производит топливо для российской армии. Так годовщина 1986 года совпала с эскалацией войны.`,
+  },
+
+  // --- Topic 5: WHCD shooting ---
+  'vasinqton-corxan-jurnalist-yemeyinde-atishma-tramp-tehlukesizlik': {
+    title: 'Ağ Ev jurnalistlər yeməyində atışma: Tramp təxliyə edildi, məhkəmə bu gün',
+    date: '2026-04-27',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `ABŞ-da Vaşinqton Hilton mehmanxanasında 25 aprel 2026-cı il şənbə günü saat 20:34-də (Şərq vaxtı) Ağ Ev Jurnalistlər Assosiasiyasının illik yeməyi zamanı təhlükəsizlik yoxlama nöqtəsinin yaxınlığında atışma baş verib. Təxminən 2.500 nəfərin iştirak etdiyi tədbirdə prezident Donald Tramp, birinci xanım Melania Tramp, vitse-prezident Ceyde Veys və bir sıra kabinet üzvləri var idi. Şübhəli şəxsin məhkəmə baxışı 27 aprel 2026-cı il bazar ertəsi gününə təyin edilib.
+
+## Şübhəli Cole Allen və silahlar
+
+CNN, CBS News və NBC News-un məlumatına görə, şübhəli şəxs Kaliforniya ştatının Torrans şəhərindən olan 31 yaşlı Cole Tomas Allen kimi müəyyənləşdirilib. O, ictimai qeydlərə görə müəllim və video oyun tərtibatçısıdır. Allen bir ovçu tüfəngi, bir tapança və bıçaqlarla təhlükəsizlik nöqtəsinə hücum edib və hüquq mühafizə orqanları tərəfindən saxlanılmazdan əvvəl ən azı bir atış edib.
+
+Bir polis əməkdaşı güllə keçirməz jiletə güllə dəyməsi nəticəsində yaralanıb və bərpa olunması gözlənilir. Tələfat olmayıb; şübhəli isə diz xəsarəti alıb. Tramp, Melania, Veys və digər yüksək rütbəli rəsmilər baş masadan təxliyə edilib. ABŞ Gizli Xidmətinin açıqlaması: "Prezident və birinci xanım, eləcə də bütün qorunan şəxslər təhlükəsizdir."
+
+## İddia edilən manifest və beynəlxalq reaksiya
+
+Washington Post və NPR-ın xəbər verdiyinə görə, fəaliyyət göstərən baş prokuror Todd Blanş silahları təsdiqləyib. CBS News, Allen tərəfindən ailə üzvlərinə göndərildiyi iddia edilən manifesti — "Mehriban Federal Sui-qəsdçi" başlıqlı sənədi — nəzərdən keçirib. İddia edilən sənəddə Tramp administrasiyasının rəsmiləri "ən yüksək rütbədən ən aşağıya doğru" hədəf kimi sıralanıb. Ədliyyə Departamenti Trampın əsas hədəf olduğuna işarə edib.
+
+Habelə beynəlxalq rəhbərlər hadisəni pisləyib: Azərbaycan prezidenti Əliyev və Türkiyə prezidenti Ərdoğan bəyanatlar verib. Ərdoğan bazar axşamı Trampla telefon danışığı keçirib və hadisəni "demokratiyaya və mətbuat azadlığına qarşı çirkin hərəkət" adlandırıb. Bu, 2024-cü il iyul ayındakı Batler mitinqindən sonra ABŞ prezident mühitinə qarşı ən böyük birbaşa hücumdur.`,
+  },
+  'en-white-house-correspondents-dinner-shooting-trump-evacuated-allen': {
+    title: 'WHCD Shooting Suspect Cole Allen to Appear in Court Monday',
+    date: '2026-04-27',
+    category: 'Politics',
+    locale: 'en',
+    content: `Cole Tomas Allen, 31, of Torrance, California, is scheduled to appear in court on Monday, April 27, 2026, after Saturday night's shooting at the White House Correspondents' Association annual dinner at the Washington Hilton. President Donald Trump, First Lady Melania Trump, Vice President JD Vance and other officials were evacuated unharmed.
+
+## Shooting at 8:34 p.m. EDT
+
+Gunfire broke out at 8:34 p.m. EDT on Saturday, April 25, near the main security screening area of the dinner, which was attended by approximately 2,500 people including multiple Cabinet officers, according to CNN, the Washington Post and NPR. The US Secret Service said "the president and first lady are safe along [with] all protectees."
+
+Allen charged a security checkpoint armed with a shotgun, a handgun and knives, and fired at least one shot before being tackled by law enforcement. One officer was struck in a bullet-resistant vest and is expected to recover. The suspect sustained a knee injury. There were no fatalities.
+
+## Alleged Manifesto Cited
+
+CBS News reported on a document it described as an alleged manifesto sent by Allen to family members, titled "Friendly Federal Assassin," that named Trump-administration officials as targets "prioritized from highest-ranking to lowest." The Justice Department indicated Trump was likely the intended target. Acting Attorney General Todd Blanche identified the weapons recovered.
+
+## International Condemnation
+
+Azerbaijani President Ilham Aliyev and Turkish President Recep Tayyip Erdogan condemned the attack, with Erdogan placing a Sunday-evening telephone call to Trump. In a separate statement, Erdogan described the shooting as "a heinous act against democracy and press freedom." Allen, a teacher and video-game developer per public records, faces formal charges at his Monday court appearance.`,
+  },
+  'tr-beyaz-saray-muhabirleri-yemegi-silahli-saldiri-trump': {
+    title: `Beyaz Saray muhabirler yemeğine saldırı: Allen yargı önünde`,
+    date: '2026-04-27',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Beyaz Saray Muhabirler Birliği'nin yıllık yemeğinde 25 Nisan Cumartesi günü silahlı bir saldırı düzenlendi. Yerel saatle 20.34'te Washington Hilton otelinde, ana güvenlik kontrol noktası yakınında silah sesleri duyuldu. Yaklaşık 2.500 davetlinin yer aldığı törende; Başkan Donald Trump, First Lady Melania Trump, Başkan Yardımcısı JD Vance ve birden fazla Kabine üyesi bulunuyordu. ABD Gizli Servisi yaptığı açıklamada "Başkan ve First Lady, koruma altındaki diğer kişilerle birlikte güvendedir" ifadesini kullandı. Zanlı Pazartesi 27 Nisan'da hâkim önüne çıkacak.
+
+## Zanlı: 31 yaşındaki Cole Allen
+
+Saldırgan olarak Kaliforniya Torrance kentinden 31 yaşındaki Cole Tomas Allen tutuklandı. Kamuya açık kayıtlarda Allen'ın bir öğretmen ve video oyunu geliştiricisi olduğu belirtiliyor. Yetkililere göre Allen güvenlik kontrolüne pompalı tüfek, tabanca ve bıçaklarla saldırdı; kolluk kuvvetleri tarafından etkisiz hale getirilmeden önce en az bir el ateş açtı. Vekil Başsavcı Todd Blanche silah envanterini doğruladı. Bir polis memuru kurşun geçirmez yelekten isabet aldı; ölü yok, zanlı dizinden yaralandı.
+
+## CBS'in incelediği iddia edilen manifesto
+
+CBS News, Allen'ın aile üyelerine gönderdiği iddia edilen "Friendly Federal Assassin" başlıklı manifestoyu inceledi. Habere göre belge, Trump yönetiminin yetkililerini "en üst rütbeden en alta doğru önceliklendirilmiş" hedefler olarak adlandırıyor. Adalet Bakanlığı, asıl hedefin Trump olduğuna işaret etti.
+
+## Bakü ve Ankara'dan kınama
+
+Saldırı sonrası uluslararası kınama mesajları arasında Cumhurbaşkanı İlham Aliyev ve Cumhurbaşkanı Recep Tayyip Erdoğan'ın açıklamaları öne çıktı. Erdoğan ayrıca Pazar akşamı Trump'ı telefonla aradı. Türkiye Cumhurbaşkanı saldırıyı "demokrasiye ve basın özgürlüğüne karşı iğrenç bir eylem" olarak nitelendirdi. Olay, Temmuz 2024'teki Butler kampanya mitingi saldırısından bu yana görevdeki bir ABD başkanının ortamına yönelik en büyük doğrudan saldırı olarak kayda geçti.`,
+  },
+  'ru-strelba-na-ujine-korrespondentov-belogo-doma-tramp-evakuirovan': {
+    title: 'Стрельба на ужине корреспондентов: Трампа эвакуировали',
+    date: '2026-04-27',
+    category: 'Политика',
+    locale: 'ru',
+    content: `В субботу 25 апреля 2026 года в 20:34 по восточному времени в отеле «Вашингтон Хилтон» прозвучали выстрелы у главного пункта досмотра ежегодного ужина Ассоциации корреспондентов Белого дома. На мероприятии присутствовали около двух с половиной тысяч человек, в том числе президент Дональд Трамп, первая леди Мелания Трамп, вице-президент Джей Ди Вэнс и ряд членов кабинета. Слушание по делу подозреваемого назначено на понедельник 27 апреля.
+
+## Подозреваемый и обстоятельства
+
+Подозреваемым является 31-летний Коул Томас Аллен из города Торренс, штат Калифорния, по публичным данным — школьный учитель и разработчик видеоигр. Аллен направился к пункту досмотра, имея при себе ружьё, пистолет и ножи, и произвёл по меньшей мере один выстрел, прежде чем был обезврежен сотрудниками правоохранительных органов. Один офицер получил удар в бронежилет и должен поправиться. Жертв нет, подозреваемый получил травму колена. Оружие назвал исполняющий обязанности генерального прокурора Тодд Бланш. Секретная служба сообщила: «Президент и первая леди в безопасности вместе со всеми охраняемыми лицами».
+
+## «Предполагаемый манифест» и международная реакция
+
+Телеканал CBS News изучил «предполагаемый манифест», который, по сообщениям, Аллен направил членам семьи под названием «Дружественный федеральный убийца». В тексте перечислены чиновники администрации Трампа в качестве целей в порядке от высокопоставленных к низшим. Министерство юстиции указало, что Трамп, по всей видимости, был основной целью. Президент Азербайджана Ильхам Алиев и президент Турции Реджеп Тайип Эрдоган осудили нападение. Эрдоган в воскресенье вечером позвонил Трампу. В отдельном заявлении он назвал произошедшее «отвратительным актом против демократии и свободы прессы».`,
+  },
+
+  // --- Topic 6: King Charles III state visit ---
+  'kral-charles-abs-resmi-sefer-tramp-vasinqton-2026': {
+    title: 'Kral III Çarlz ABŞ-a rəsmi səfərə başladı: Elizabetdən bəri ilk',
+    date: '2026-04-27',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Birləşmiş Krallığın kralı III Çarlz və kraliça Kamilla 27 aprel 2026-cı il bazar ertəsi günü Birləşmiş Ştatlara dörd günlük rəsmi dövlət səfərinə başlayıb. Səfər 27-30 aprel tarixlərini əhatə edir və Vaşinqton, Nyu-York və Virciniyada keçirilir. Bu, kraliça II Elizabetin 2007-ci ildə Corc Buş tərəfindən qəbul edildiyi səfərdən bəri Britaniya monarxının ABŞ-a ilk dövlət səfəridir.
+
+## Cədvəl və 250-ci ildönümü
+
+Ağ Evin və US News-un məlumatına görə, bazar ertəsi günü günortadan sonra prezident Tramp və birinci xanım Cənub Portikosunda Onların Əlahəzrətlərini qarşılayacaq, daha sonra Yaşıl Otaqda çay süfrəsi təşkil ediləcək. 28 aprel çərşənbə axşamı səhər Cənub Çəmənliyində tam hərbi izzətlərlə Dövlət Gəliş Mərasimi keçiriləcək; həmin günün axşamı Ağ Evdə dövlət ziyafəti veriləcək.
+
+Kralın ABŞ Konqresinin birgə iclasında çıxış etməsi gözlənilir — bu, kraliça II Elizabetin 1991-ci ildəki müraciətindən bəri Britaniya monarxı tərəfindən ilk belə çıxış olacaq. Səfər ABŞ-ın yarıminci ildönümü ilə üst-üstə düşür — 1776-cı il Müstəqillik Bəyannaməsinin qəbulundan 250 il keçir.
+
+## Atışmadan sonra səfərin təsdiqi
+
+Hello Magazine və NPR-ın xəbər verdiyinə görə, səfər 25 aprel şənbə axşamı Vaşinqton Hilton mehmanxanasındakı Ağ Ev jurnalistlər yeməyində baş vermiş atışmadan sonra "təftiş altında" idi. Kral III Çarlz Tramp və birinci xanım Melaniya ilə özəl şəkildə əlaqə saxlayaraq onların təhlükəsiz olmalarından duyduğu rahatlığı bildirib. Bukingem Sarayı daha sonra səfərin davam edəcəyini təsdiqləyib.
+
+Habelə diplomatik kontekstdə səfər ABŞ-Britaniya media tərəfindən Ukrayna siyasəti, gömrük rüsumları və davam edən İran müharibəsi səbəbindən gərginləşmiş transatlantik münasibətləri "bərpa etmək üçün incə missiya" kimi xarakterizə olunur. İran müharibəsi 58-ci günə daxil olub, Hörmüz blokadası 14 günlük yubileyini qeyd edir, ABŞ daxili siyasi mühit isə həssasdır. Yüksək təntənəli kral mərasimi gərgin siyasi həftənin tam ortasında baş verir.`,
+  },
+  'en-king-charles-iii-us-state-visit-trump-washington-2026': {
+    title: 'King Charles III Starts First UK State Visit Since 2007',
+    date: '2026-04-27',
+    category: 'Politics',
+    locale: 'en',
+    content: `King Charles III and Queen Camilla begin a four-day state visit to the United States on Monday, April 27, 2026, the first by a British monarch since Queen Elizabeth II's 2007 trip hosted by President George W. Bush. The visit runs through April 30 and spans Washington, New York and Virginia.
+
+## Trump and First Lady to Welcome Their Majesties
+
+According to a White House announcement, President Donald Trump and First Lady Melania Trump will greet Their Majesties at the South Portico on Monday afternoon, followed by tea in the Green Room. The State Arrival Ceremony with full military honors is scheduled for the South Lawn on Tuesday, April 28, with a State Banquet at the White House the same evening.
+
+The King is expected to address a joint meeting of the US Congress, which would be the first such address by a British monarch since Queen Elizabeth II's appearance in 1991, per Wikipedia and TIME.
+
+## Visit Confirmed After Saturday Shooting
+
+The visit had been "under review" Sunday following the Saturday White House Correspondents' Dinner shooting. Buckingham Palace then confirmed the trip would proceed after King Charles privately contacted President Trump and First Lady Melania to express relief at their safety, according to Hello Magazine. The Palace said the planned schedule remained intact.
+
+## A 250-Year Backdrop
+
+The state visit lands during the United States Semiquincentennial, the 250th-anniversary leadup to the 1776 Declaration of Independence. US and UK media described the trip as a "delicate mission to restore" transatlantic relations, with US News and the Washington Times citing strain over Ukraine policy, tariffs and the Iran war. The high-pageantry royal moment arrives in a tense political week, as the Iran war entered Day 58 and the WHCD shooting investigation continued.`,
+  },
+  'tr-kral-charles-abd-resmi-ziyaret-trump-washington-2026': {
+    title: `Kral Charles ABD'de: 2007'den sonra ilk hükümdar ziyareti`,
+    date: '2026-04-27',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Birleşik Krallık Kralı III. Charles ile Kraliçe Camilla, 27 Nisan Pazartesi günü Amerika Birleşik Devletleri'ne dört günlük resmi ziyaret kapsamında geldi. Ziyaret 27-30 Nisan tarihleri arasında Washington, New York ve Virginia'yı kapsıyor. Bu, 2007'de II. Elizabeth'in Başkan George W. Bush'un ev sahipliğinde yaptığı ziyaretten bu yana bir Britanya hükümdarının ABD'ye gerçekleştirdiği ilk resmi ziyaret oldu. Pazartesi öğleden sonra Başkan Donald Trump ve First Lady Melania Trump, hükümdar çiftini Beyaz Saray'ın Güney Portico'sunda karşıladı; ardından Yeşil Salon'da çay töreni düzenlendi.
+
+## 250. yıl arka planı
+
+Ziyaret, ABD'nin 1776 Bağımsızlık Bildirgesi'nin 250. yılının arifesinde gerçekleşiyor. Salı 28 Nisan sabahı tam askeri törenle Güney Çimen'de Devlet Karşılama Töreni düzenlenecek; akşamı ise Beyaz Saray'da Devlet Yemeği verilecek. Kral'ın, ABD Kongresi'nin ortak oturumunda da konuşma yapması bekleniyor; bu, II. Elizabeth'in 1991'deki konuşmasından bu yana bir Britanya hükümdarının yapacağı ilk Kongre konuşması olacak.
+
+## Cumartesi saldırısının ardından onay
+
+Ziyaretin durumu, Cumartesi gecesi Beyaz Saray Muhabirler Yemeği'ndeki silahlı saldırının ardından Pazar günü "yeniden değerlendiriliyor" şeklinde aktarılmıştı. Kral Charles özel olarak Trump ve Melania ile temasa geçerek güvenlikleri için duyduğu rahatlamayı iletti. Ardından Buckingham Sarayı, ziyaretin programlandığı şekilde gerçekleşeceğini doğruladı.
+
+## Ukrayna, tarifeler ve İran gerilimi
+
+Ziyaret, Ukrayna politikası, ticaret tarifeleri ve devam eden İran savaşı gibi konularda ABD ile Birleşik Krallık arasında gerilim yaşanan bir dönemde gerçekleşiyor. ABD ve Birleşik Krallık medyası bu ziyareti "transatlantik ilişkilerin onarılması için narin bir misyon" olarak nitelendirdi. Kral'ın Kongre konuşmasının içeriği ise iki ülke ilişkisinin yeniden çerçevelenmesi yönündeki en önemli soruyu gündeme getiriyor.`,
+  },
+  'ru-korol-charles-tretiy-gosvizit-v-ssha-tramp-vashington-2026': {
+    title: 'Король Чарльз III начал государственный визит в США',
+    date: '2026-04-27',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Король Великобритании Чарльз III и королева Камилла в понедельник 27 апреля 2026 года начали четырёхдневный государственный визит в Соединённые Штаты. Программа продлится до 30 апреля и охватит Вашингтон, Нью-Йорк и штат Виргиния. Это первый государственный визит британского монарха в США со времён посещения королевой Елизаветой II в 2007 году по приглашению президента Джорджа Буша-младшего. Визит совпадает с подготовкой к 250-летию Декларации независимости США 1776 года.
+
+## Программа и торжественные церемонии
+
+Согласно расписанию Белого дома, во второй половине дня в понедельник 27 апреля Дональд Трамп и первая леди Мелания Трамп встретят их величеств у Южного портика и проведут чаепитие в Зелёной гостиной. Во вторник 28 апреля состоится официальная церемония государственного приёма с полными воинскими почестями на Южной лужайке, а вечером — государственный банкет в Белом доме. Ожидается, что король Чарльз обратится к совместному заседанию Конгресса США — впервые с обращения Елизаветы II в 1991 году.
+
+## Дипломатический фон
+
+В воскресенье поездка находилась «на пересмотре» после субботней стрельбы у отеля «Вашингтон Хилтон»: король Чарльз лично связался с Трампом и первой леди, выразив облегчение в связи с их безопасностью. После этого Букингемский дворец подтвердил, что визит состоится. Американские и британские СМИ описывают поездку как «деликатную миссию по восстановлению» трансатлантических отношений, осложнённых разногласиями вокруг украинской политики, тарифов и иранской войны. Визит проходит на фоне продолжающейся блокады Ормузского пролива и эскалации на ливанском направлении, и сочетает церемониальный масштаб с попыткой политической перезагрузки.`,
+  },
+
+  // --- Topic 7: Israel-Lebanon strikes ---
+  'israil-livan-cenubu-aprel-26-vurusler-14-olen-aties-kes': {
+    title: 'İsrailin Cənubi Livana zərbələri 14 nəfəri öldürdü: atəşkəs kövrəkdir',
+    date: '2026-04-27',
+    category: 'Dünya',
+    locale: 'az',
+    content: `İsrail Müdafiə Qüvvələrinin 26 aprel 2026-cı il bazar günü Cənubi Livana endirdiyi zərbələr nəticəsində Livan Səhiyyə Nazirliyinin məlumatına görə 14 nəfər həlak olub və 37 nəfər yaralanıb. Ölənlər arasında iki uşaq və iki qadın var. Eyni gün İsrail Müdafiə Qüvvələrinin bir əsgəri sərhəddə qarşılıqlı atışmada həlak olub. Zərbələr 16 aprel tarixində imzalanmış və 23 aprel tarixində uzadılmış atəşkəs şəraitində baş verib.
+
+## "Bufer zonadan kənar" şəhərlərə xəbərdarlıq
+
+Rappler və Times of Earth-ün məlumatına görə, İsrail "bufer zonadan kənar" yeddi cənubi livan şəhəri üçün təxliyə xəbərdarlıqları yayıb və sakinlərə şimal və qərb istiqamətində hərəkət etmələrini söyləyib.
+
+İDF sözçüsü Hizbullahın "atəşkəsi pozduğunu" və İsrailin "ona qarşı tədbir görəcəyini" bildirib. Baş nazir Benyamin Netanyahu açıqlamasında deyib: "Bizi məcbur edən şey İsrailin təhlükəsizliyi, əsgərlərimizin təhlükəsizliyi, icmalarımızın təhlükəsizliyidir." Hizbullah cavab açıqlamasında "İsrail atəşkəs pozuntularını davam etdirdiyi müddətcə" hücumların dayandırılmayacağını və "səmərəsizliyi sübut olunmuş" diplomatiyaya etibar etməyəcəyini açıqlayıb.
+
+## Atəşkəsdən bəri ümumi tələfat
+
+Al Jazeera və CFR-in qeyd etdiyinə görə, ABŞ-ın vasitəçiliyi ilə imzalanan ilkin 10 günlük atəşkəs 16 aprel 2026-cı ildə imzalanıb; 23 aprel tarixində Tramp üç həftəlik uzatma elan edib. Aktiv münaqişə 2 mart 2026-cı il tarixində başlayıb. Livan Səhiyyə Nazirliyinin məlumatına görə, 2 martdan etibarən İsrail zərbələrində 2.500-dən çox nəfər, o cümlədən 277 qadın, 177 uşaq və 100 tibb işçisi həlak olub.
+
+Habelə BMT insan hüquqları ekspertləri zərbə nümunəsini "atəşkəsdən sonrakı misilsiz" hadisə kimi qınayıblar. Bazar günü 14 nəfərin həlak olması atəşkəsin "texniki cəhətdən aktiv" qaldığını, lakin döyüşlərin dayanmadığını göstərir. 10 günlük atəşkəs ərzində bu bir gündə zərbələrin ən ağır toplusu sayılır və müqavilənin parçalanması ehtimalını gücləndirir.`,
+  },
+  'en-israel-strikes-southern-lebanon-april-26-14-killed-ceasefire': {
+    title: 'Israeli Strikes Kill 14 in Lebanon Despite Ceasefire',
+    date: '2026-04-27',
+    category: 'World',
+    locale: 'en',
+    content: `Israeli airstrikes on southern Lebanon killed 14 people and wounded 37 on Sunday, April 26, 2026, according to the Lebanese Health Ministry, in one of the heaviest single-day tolls during the current ceasefire. The toll includes two children and two women. One Israeli soldier was killed in a cross-border exchange, per the Israel Defense Forces.
+
+## Evacuation Warnings Beyond the Buffer Zone
+
+Israel issued evacuation warnings for seven southern Lebanese towns "beyond the buffer zone," instructing residents to head north and west, according to Rappler and Times of Earth. The IDF spokesperson said Hezbollah was "violating the ceasefire" and that Israel would "act against it."
+
+Prime Minister Benjamin Netanyahu said: "What obliges us is the security of Israel, the security of our soldiers, the security of our communities," per Times of Israel. Hezbollah said it would not stop attacks "as long as Israel continued its ceasefire violations" and would not rely on diplomacy "proven ineffective."
+
+## A Fraying Ceasefire
+
+The original 10-day US-brokered ceasefire was signed on April 16, 2026. President Donald Trump announced a three-week extension on April 23. The active conflict began on March 2, 2026.
+
+Total killings in Israeli strikes since March 2 stand at more than 2,500, including 277 women, 177 children and 100 medics, according to the Lebanese Health Ministry. United Nations human rights experts have condemned the strike pattern as "unprecedented" for a post-ceasefire period.
+
+## Context Within the Wider War
+
+Sunday's strikes came as the Iran war entered Day 58 and Tehran's foreign minister traveled to Moscow to discuss the Strait of Hormuz blockade with President Vladimir Putin. The Lebanon front, technically under ceasefire since mid-April, remains the second-largest active theater.`,
+  },
+  'tr-israil-guney-lubnan-saldirilari-26-nisan-14-olu-ateskes': {
+    title: `İsrail Güney Lübnan'da 14 kişiyi öldürdü, ateşkes zorlanıyor`,
+    date: '2026-04-27',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Lübnan Sağlık Bakanlığı, 26 Nisan Pazar günü İsrail'in Güney Lübnan'a düzenlediği hava saldırılarında 14 kişinin hayatını kaybettiğini ve 37 kişinin yaralandığını açıkladı. Hayatını kaybedenler arasında iki çocuk ile iki kadın bulunuyor. Aynı gün gerçekleştirilen sınır ötesi karşılıklı çatışmada İsrail Savunma Kuvvetleri (IDF) bir askerini kaybetti. İsrail, "tampon bölgenin ötesindeki" yedi Güney Lübnan kasabası için tahliye uyarıları yayımladı. Saldırı dalgası, 16 Nisan'da imzalanan ABD aracılığıyla sağlanan ateşkesin 23 Nisan'da üç hafta uzatıldığı bir dönemde geldi.
+
+## Netanyahu ve IDF: "Hizbullah ihlal ediyor"
+
+IDF sözcüsü, Hizbullah'ın "ateşkesi ihlal ettiğini" ve İsrail'in "buna karşı önlem alacağını" söyledi. Başbakan Benjamin Netanyahu açıklamasında "Bizi bağlayan; İsrail'in güvenliği, askerlerimizin güvenliği ve toplumlarımızın güvenliğidir" dedi. Hizbullah ise "İsrail ateşkes ihlallerine devam ettiği sürece" saldırılarını durdurmayacağını ve "etkisiz olduğu kanıtlanmış" diplomasi süreçlerine güvenmeyeceğini açıkladı.
+
+## 2 Mart'tan beri 2.500'ü aşkın ölü
+
+Lübnan Sağlık Bakanlığı verilerine göre 2 Mart 2026'da başlayan aktif çatışmadan bu yana İsrail saldırılarında hayatını kaybedenlerin sayısı 2.500'ü aştı; bu rakamın içinde 277 kadın, 177 çocuk ve 100 sağlık personeli yer alıyor. BM insan hakları uzmanları, ateşkes sonrası saldırı paterninin "emsalsiz" olduğunu açıkladı.
+
+## Ateşkesin ölçeği zorlanıyor
+
+Pazar günkü kayıplar, 16 Nisan ateşkes anlaşmasının üzerinden geçen kısa süre içinde tek günde verilen en yüksek kayıplardan biri oldu. Lübnan tarafının ölü ve yaralı bilançosunun tek günde 50'yi aşması, anlaşmanın ne ölçüde yürürlükte olduğu sorusunu gündemde tutuyor. Söz konusu eskalasyon, Lübnan-İsrail cephesinin bölgesel İran savaşıyla bağlantılı olarak görülmesini sürdürüyor.`,
+  },
+  'ru-izrail-udary-yug-livana-26-aprelya-14-pogibshikh-peremiriye': {
+    title: 'Удары Израиля по югу Ливана: 14 погибших, режим перемирия',
+    date: '2026-04-27',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Министерство здравоохранения Ливана сообщило, что в результате израильских ударов по югу страны в воскресенье 26 апреля 2026 года погибли четырнадцать человек, ещё тридцать семь получили ранения. Среди погибших — двое детей и две женщины. По данным Армии обороны Израиля, в ходе перестрелки на границе погиб один израильский военнослужащий. Удары пришлись на десятый день режима прекращения огня, подписанного при посредничестве США 16 апреля и продлённого 23 апреля на три недели по объявлению Дональда Трампа.
+
+## Эвакуационные предупреждения и взаимные обвинения
+
+Израиль направил предупреждения об эвакуации жителям семи населённых пунктов на юге Ливана «за пределами буферной зоны», призвав их двигаться на север и запад. Представитель Армии обороны Израиля заявил, что «Хезболла нарушает режим прекращения огня» и Израиль «будет действовать против неё». Премьер-министр Биньямин Нетаньяху подчеркнул: «Нас обязывает безопасность Израиля, безопасность наших солдат, безопасность наших общин». «Хезболла» в свою очередь заявила, что не прекратит ответные удары, «пока Израиль продолжает нарушения», и не намерена опираться на дипломатию, «доказавшую свою неэффективность».
+
+## Общая статистика и оценка ООН
+
+С момента начала активного конфликта 2 марта 2026 года, по данным Министерства здравоохранения Ливана, в результате израильских ударов погибли более двух с половиной тысяч человек, в том числе 277 женщин, 177 детей и 100 медицинских работников. Эксперты ООН по правам человека назвали характер ударов после прекращения огня «беспрецедентным». Воскресные удары в один день унесли жизни четырнадцати человек, что ставит под вопрос практическую устойчивость перемирия, юридически по-прежнему действующего, но не остановившего боевые действия.`,
+  },
+
+  // --- Topic 8: NPT 11th Review Conference ---
+  'nyt-bm-nyu-york-nuvereyi-silahsizlasdirma-konfransi-iran-acilir': {
+    title: 'NYT 11-ci Yenidən Baxış Konfransı BM-də açılır: Vyetnam sədrlik edir',
+    date: '2026-04-27',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Nüvə Silahlarının Yayılmasının Qarşısının Alınması haqqında Müqavilənin (NYT) 11-ci Yenidən Baxış Konfransı 27 aprel 2026-cı il bazar ertəsi günü Şərq vaxtı ilə saat 10:00-da Nyu-Yorkdakı BMT qərargahında açılır. Konfrans 22 may 2026-cı ilə qədər davam edəcək. Konfrans Hindistan, İsrail, Pakistan və müqavilədən çıxmış Şimali Koreya istisna olmaqla 191 üzv dövləti — bütün BMT üzvlərini — bir araya gətirir.
+
+## Vyetnam sədrliyi və 191 dövlət
+
+BMT və BMT Tərksilah İşləri Ofisinin məlumatına görə, prezident-namizəd Vyetnamın BMT-də Daimi Nümayəndəsi Səfir Do Hung Viet-dir. Azərbaycan müqavilənin nüvə silahına malik olmayan üzv dövləti kimi iştirak edir. Konfrans hər beş ildə bir keçirilir; 2022-ci ildə Nyu-Yorkda baş tutmuş əvvəlki Yenidən Baxış Konfransı Rusiyanın Zaporojye Atom Elektrik Stansiyası ilə bağlı bəyannamə dilinə etiraz etməsi səbəbindən yekun sənəd qəbul olunmadan başa çatmışdı.
+
+Aparıcı mövzular qabaqcadan dərc edilmiş sənədlərə əsasən bunlardır: VI Maddə üzrə nüvə tərksilah öhdəlikləri, IV Maddə üzrə nüvə enerjisinin sülh məqsədli istifadəsi, BAEA təminat tədbirləri də daxil olmaqla yayılmanın qarşısının alınması və Yaxın Şərqdə kütləvi qırğın silahlarından azad zona.
+
+## Yeni START-ın bitməsi və İran müharibəsi fonu
+
+Chatham House və Avropa Liderlər Şəbəkəsinin qeyd etdiyinə görə, konfrans son beş ildə nüvə diplomatiyasının ən mühüm sammitidir. Fon olduqca ağırdır: ABŞ ilə Rusiya arasındakı Yeni START müqaviləsi 2026-cı ildə xələfsiz başa çatıb, İran nüvə proqramı uğrunda birinci İran müharibəsi 58-59-cu günə daxil olub və konfrans ABŞ donanmasının İran limanlarına aktiv blokadası fonunda toplaşır.
+
+Habelə UK Avam Palatasının Kitabxanası və MP-İDSA brifinqinə görə, konfrans 1995-ci ildən bəri ən ağır böhran nəticəsində müqavilə rejiminin yaşaya biləcəyini həll edəcək. Substantiv yekunlar 22 may 2026-cı il tarixinə qədər gözlənilmir; bazar ertəsi yalnız açılış sessiyasıdır. NYT 191 üzvlü qlobal nüvə nizamının saxlanmasında ən geniş çətirdir və konfransın bu il yığıncağı İran müharibəsinin gedişatı ilə birbaşa kəsişir.`,
+  },
+  'en-npt-review-conference-opens-un-new-york-iran-nuclear': {
+    title: 'NPT Review Conference Opens at UN as Iran War Rages',
+    date: '2026-04-27',
+    category: 'Politics',
+    locale: 'en',
+    content: `The 11th Review Conference of the Treaty on the Non-Proliferation of Nuclear Weapons opens Monday, April 27, 2026, at 10:00 a.m. ET at United Nations Headquarters in New York. The month-long summit runs through May 22 and convenes against the backdrop of an active war over Iran's nuclear program.
+
+## Vietnam's Do Hung Viet to Preside
+
+Ambassador Do Hung Viet, Permanent Representative of Vietnam to the United Nations, is the president-designate of the conference, according to UN advance documents and the UN Office for Disarmament Affairs. The treaty has 191 states parties, encompassing every UN member state except India, Israel and Pakistan, with North Korea having withdrawn. Azerbaijan participates as a non-nuclear-weapon state party.
+
+The 2022 conference ended without a final document due to Russian objections over Zaporizhzhia Nuclear Power Plant language.
+
+## A Crisis-Era Backdrop
+
+The summit opens during the most fraught nuclear-diplomacy period in decades. The New START arms-control treaty between the United States and Russia expired earlier in 2026 with no successor in place. The first Iran war, on Day 58 to 59, erupted out of disputes over Tehran's nuclear program. The conference convenes during an active US naval blockade of Iranian ports that has prevented 38 ships from movement.
+
+## Themes and What Is at Stake
+
+Major themes per advance documents include nuclear-disarmament obligations under Article VI, peaceful uses of nuclear energy under Article IV, non-proliferation including IAEA safeguards, and a Middle East zone free of weapons of mass destruction. The Chatham House and European Leadership Network briefings frame the meeting as the most consequential nuclear summit in five years. Substantive results are not expected until the conference closes on May 22.`,
+  },
+  'tr-npt-gozden-gecirme-konferansi-bm-new-york-acildi-iran-nukleer': {
+    title: `NPT Gözden Geçirme Konferansı BM'de açılıyor: İran gölgesi`,
+    date: '2026-04-27',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Nükleer Silahların Yayılmasının Önlenmesi Antlaşması'nın (NPT) 11. Gözden Geçirme Konferansı, 27 Nisan Pazartesi günü ABD Doğu saatiyle 10.00'da New York'taki BM Genel Merkezi'nde açılıyor. Konferans, 22 Mayıs 2026'ya kadar sürecek. Beş yılda bir düzenlenen toplantı, devlet taraflarının antlaşma yükümlülüklerinin uygulanmasını gözden geçirdiği temel forum konumunda. Vietnam'ın BM Daimi Temsilcisi Büyükelçi Do Hung Viet, konferansın başkan-adayı olarak duyuruldu. NPT'nin 191 devlet tarafı bulunuyor; antlaşma dışındaki ülkeler Hindistan, İsrail, Pakistan ve çekilen Kuzey Kore'dir.
+
+## Aktif İran savaşının gölgesinde
+
+Konferans, devam eden İran savaşının 58-59'uncu gününde ve ABD'nin İran limanlarına uyguladığı iki haftalık deniz ablukası sürerken açılıyor. İran savaşının nükleer programı çevresindeki anlaşmazlıklardan doğmuş olması, bu yıl konferansın ele alacağı en hassas dosyalardan birini oluşturuyor. Ayrıca ABD ile Rusya arasındaki Yeni START antlaşmasının 2026'nın başında halefsiz biçimde sona ermesi, silah kontrol mimarisinin geleceğine dair belirsizliği artırıyor.
+
+## Üç temel başlık ve Orta Doğu
+
+Hazırlık belgelerine göre konferansın ana başlıkları: VI. madde kapsamında nükleer silahsızlanma yükümlülükleri, IV. madde altında nükleer enerjinin barışçıl kullanımı, UAEA güvenceleri dahil yayılmanın önlenmesi ve Orta Doğu'da kitle imha silahlarından arındırılmış bölge önerisi. Bu son madde, İsrail ve İran arasındaki gerilim arka planında özel bir önem taşıyor. 2022'deki son konferans, Rusya'nın Zaporijya santraline ilişkin metin itirazları nedeniyle nihai belge çıkarılmadan kapanmıştı.
+
+## 191 devlet, beş haftalık takvim
+
+Konferans 22 Mayıs'a kadar tematik müzakerelerle sürecek. Sonuç belgesi taslakları 22 Mayıs'a kadar müzakere sürecine girecek. Azerbaycan, antlaşmaya taraf nükleer silaha sahip olmayan devletlerden biri olarak konferansta yer alıyor.`,
+  },
+  'ru-konferentsiya-dnyao-otkrylas-oon-nyu-york-iran-yadernaya': {
+    title: 'Обзорная конференция ДНЯО открылась в ООН в Нью-Йорке',
+    date: '2026-04-27',
+    category: 'Политика',
+    locale: 'ru',
+    content: `В понедельник 27 апреля 2026 года в 10:00 по восточному времени в штаб-квартире ООН в Нью-Йорке открылась XI Обзорная конференция Договора о нераспространении ядерного оружия (ДНЯО). Заседания продлятся до 22 мая. Председателем-назначенцем конференции является Постоянный представитель Вьетнама при ООН посол До Хунг Вьет. Договор объединяет 191 государство-участник: за его рамками остаются Индия, Израиль, Пакистан, а также Северная Корея, вышедшая из соглашения. Азербайджан является государством-участником, не обладающим ядерным оружием.
+
+## Контекст и темы повестки
+
+Конференция собирается на фоне иранской войны, идущей уже 58–59 дней, и активной американской военно-морской блокады иранских портов. Договор о СНВ-III между США и Россией истёк ранее в 2026 году, и преемственного соглашения нет. Это первая Обзорная конференция после провала встречи 2022 года, на которой не был принят итоговый документ из-за возражений России по формулировкам, касающимся Запорожской АЭС. По официальным документам предстоит обсудить обязательства по ядерному разоружению по статье VI, мирное использование ядерной энергии по статье IV, нераспространение, гарантии МАГАТЭ и зону, свободную от оружия массового уничтожения, на Ближнем Востоке.
+
+## Стратегическое значение
+
+Обзорная конференция проходит каждые пять лет. Аналитики называют нынешнее заседание самым серьёзным дипломатическим испытанием режима ДНЯО с 1995 года: ему предстоит ответить, способна ли система контроля над нераспространением выдержать одновременный кризис вокруг иранской ядерной программы, истечение договора СНВ-III и отсутствие новой архитектуры ограничений. Содержательные итоги станут известны 22 мая, после закрытия конференции.`,
+  },
+
   // ========== 2026-04-25 ==========
 
   // --- Topic 1: Trump cancels Pakistan trip / Iran talks ---
