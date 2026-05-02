@@ -7,6 +7,654 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-05-02 ==========
+
+  // --- Topic 1: Sinaloa Governor Steps Down After US Cartel Indictment ---
+  'sinaloa-qubernator-rocha-abs-ittiham-istefa': {
+    title: 'Sinaloa qubernatoru Roça ABŞ-ın ittihamından sonra istefa verdi',
+    date: '2026-05-02',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Meksikanın Sinaloa ştatının qubernatoru Rubén Roça Moya 1 may 2026-cı il cümə günü axşam saatlarında yaydığı video müraciətdə vəzifəsindən müvəqqəti olaraq istefa verdiyini elan edib. Qərar ABŞ Ədliyyə Departamentinin onu Sinaloa Kartelinin "Çapitos" qrupuna kömək etməkdə ittiham etməsindən sonra qəbul edilib.
+
+## ABŞ ittihamının məzmunu
+
+CNN və Bloomberg-in məlumatına görə, ABŞ Ədliyyə Departamenti 29 aprel tarixində açıqladığı beş bənddən ibarət ittihamnamədə Roça ilə birgə doqquz fəaliyyətdə olan və ya keçmiş Meksika rəsmisini Sinaloa Kartelinə yardım etməkdə günahlandırıb. İttihamnaməyə əsasən, Roça seçkilərdən əvvəl "Çapitos" qrupu ilə görüş keçirib və onlara onun administrasiyasında dostluq mövqeyində olan rəsmilərin təyin ediləcəyinə zəmanət verib.
+
+Sənəddə həmçinin qeyd olunur ki, kartel üzvləri seçki qutularını oğurlayıb və onun rəqiblərini hədələyib. Roça 2021-ci ildən Sinaloa qubernatoru vəzifəsində çalışırdı. CBS News-un məlumatına görə, ittiham Nyu-Yorkun federal prokurorları tərəfindən hazırlanıb.
+
+## Roçanın cavabı
+
+US News-un Nyu-York Tayms qəzetinə istinadla verdiyi xəbərə əsasən, Roça ittihamları rədd edib və istefa müraciətini "Meksika hakimiyyət orqanlarının fəaliyyətini asanlaşdırmaq" məqsədi daşıdığını bildirib. Qubernator video müraciətində öz adını təmizləyəcəyinə inandığını və lazımi orqanlarla əməkdaşlıq edəcəyini söyləyib.
+
+İstefa Meksika ilə ABŞ arasında siyasi və hüquqi gərginliyin yeni mərhələsini açıb. Meksika hökuməti hələlik rəsmi mövqe açıqlamasa da, məsələnin iki ölkə arasında diplomatik müzakirələrə səbəb olacağı gözlənilir. Roça istefasının müvəqqəti xarakter daşıdığını vurğulayıb.`,
+  },
+  'en-sinaloa-governor-rocha-cartel-indictment': {
+    title: 'Sinaloa Governor Ruben Rocha Steps Down After US Cartel Indictment',
+    date: '2026-05-02',
+    category: 'World',
+    locale: 'en',
+    content: `Sinaloa Governor Ruben Rocha Moya announced on Friday evening, May 1, 2026, that he would temporarily step down from office, days after the US Justice Department unsealed an indictment accusing him of helping the Sinaloa Cartel's Chapitos faction. The leave of absence took formal effect on Saturday.
+
+## Five-Count US Indictment
+
+According to CBS News and Bloomberg, the US Justice Department on April 29 unsealed a five-count indictment charging Rocha and nine other current and former Mexican officials with assisting the Chapitos faction, the wing of the Sinaloa Cartel led by sons of imprisoned drug lord Joaquin "El Chapo" Guzman. The charges were brought by federal prosecutors in New York.
+
+The indictment alleges that Rocha met with Chapitos representatives prior to his 2021 election and assured them that friendly officials would be installed in his administration. Cartel members allegedly stole ballot boxes and intimidated political opponents to ensure his victory, according to the US filing reported by CNN.
+
+## Rocha Rejects Charges
+
+Rocha rejected the charges in a video message released Friday evening. He framed his request to step aside as a procedural step intended to "facilitate the actions of Mexican authorities," in remarks reported by US News, citing The New York Times. The governor, in office since 2021, said he would cooperate fully with any review.
+
+## Cross-Border Implications
+
+The case is expected to test the boundaries of US-Mexico judicial cooperation, with US prosecutors in New York building a federal action that names a sitting Mexican state governor among ten current and former officials. Mexican federal authorities have not commented in detail on the indictment as of publication. The Sinaloa state government has continued day-to-day functions during the leave of absence period.`,
+  },
+  'tr-sinaloa-valisi-rocha-cekildi-abd-iddianame': {
+    title: `Sinaloa Valisi Rocha, ABD iddianamesi sonrası görevden çekildi`,
+    date: '2026-05-02',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Meksika'nın Sinaloa eyaleti Valisi Rubén Rocha Moya, 1 Mayıs Cuma akşamı yayımladığı video mesajında görevden geçici olarak çekildiğini duyurdu. Karar, ABD Adalet Bakanlığı'nın 29 Nisan'da açıkladığı iddianamenin ardından geldi; söz konusu beş suçlamalı iddianame, Rocha ve dokuz mevcut/eski Meksikalı yetkilinin Sinaloa Karteli'nin "Chapitos" hizbine yardım ettiği iddialarını içeriyor. Rocha 2021'den bu yana eyalet valisi olarak görev yapıyordu.
+
+## İddianamede ne var?
+
+ABD federal savcılığının iddianamesine göre Rocha, seçimden önce Chapitos liderleriyle görüştü ve yönetimine dost yetkililerin atanacağı güvencesini verdi. İddianame ayrıca kartel üyelerinin oy sandıklarını çaldığı ve muhalifleri sindirdiği iddialarını içeriyor. CBS News ve Bloomberg'in haberlerine göre, suçlamalar hem mevcut hem de eski Meksikalı yetkilileri kapsayan en geniş çaplı ABD-Meksika kartel davalarından biri olarak değerlendiriliyor.
+
+## "Yetkililerin işini kolaylaştırmak için"
+
+Rocha suçlamaları reddetti ve görevden çekilme kararını Meksikalı yetkililerin inceleme süreciyle bağlantılandırdı. "Meksikalı yetkililerin eylemlerini kolaylaştırmak için" — Rubén Rocha Moya, 1 Mayıs Cuma akşamı yayımlanan video mesajı, US News/NYT (https://www.usnews.com/news/world/articles/2026-05-02/mexican-governor-ruben-rocha-steps-down-nyt-reports). Rocha, suçlamaların yanıltıcı olduğunu ve hukuki süreçle doğrunun ortaya çıkacağını söyledi.
+
+## Sınır ötesi siyasi etki
+
+Karar, ABD-Meksika ilişkilerinde göç ve uyuşturucu mücadelesi dosyalarının iç içe geçtiği hassas bir dönemde geldi. New York federal savcılığının soruşturmayı eyalet valisi düzeyine taşıması, Mexico City'deki yönetim için diplomatik bir denge sınavı oluşturuyor. Sinaloa eyaleti, Chapitos hizbinin tarihsel kalesi olarak biliniyor ve Culiacán başta olmak üzere bölgede kartel-devlet ilişkilerinin haritası yeniden çiziliyor.`,
+  },
+  'ru-gubernator-sinaloa-rocha-otstavka-obvineniya': {
+    title: 'Губернатор Синалоа Роча ушёл в отставку после обвинений США',
+    date: '2026-05-02',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Губернатор мексиканского штата Синалоа Рубен Роча Мойя в видеообращении вечером в пятницу, 1 мая 2026 года, объявил о временном уходе с занимаемого поста. Решение было официально оформлено в субботу, 2 мая. Поводом стало обвинительное заключение Министерства юстиции США, рассекреченное 29 апреля. Информация подтверждена изданиями «Си-Эн-Эн», «Блумберг», «Ю-Эс Ньюс» со ссылкой на «Нью-Йорк Таймс» и «Си-Би-Эс Ньюс».
+
+## Обвинение из пяти пунктов
+
+Согласно рассекреченному обвинительному заключению из пяти пунктов, Роча и девять других действующих и бывших мексиканских чиновников обвиняются в содействии группировке «Чапитос» — фракции картеля Синалоа. По версии американских прокуроров, Роча предположительно встречался с представителями «Чапитос» до своего избрания и заверил их, что в его администрации будут назначены лояльные группировке чиновники. Утверждается также, что члены картеля похищали урны с бюллетенями и запугивали политических оппонентов.
+
+Роча, занимающий пост губернатора Синалоа с 2021 года, отверг обвинения. Свою просьбу об отпуске он представил как способ облегчить работу мексиканских властей по проверке этих обвинений.
+
+## Контекст и геополитическое значение
+
+«Моя просьба об отстранении направлена на то, чтобы облегчить действия мексиканских властей», — заявил Рубен Роча Мойя в видеообращении, распространённом вечером в пятницу 1 мая.
+
+Дело имеет важное значение для отношений между Мексикой и США и ставит вопрос о пределах судебного сотрудничества двух стран в рамках расследований, связанных с картелями. Расследование продолжают вести федеральные прокуроры в Нью-Йорке. Мексиканские федеральные власти на момент публикации не давали развёрнутых комментариев по существу обвинительного заключения.`,
+  },
+
+  // --- Topic 2: Spirit Airlines Ceases All Operations After Failed Federal Bailout ---
+  'spirit-airlines-faaliyyet-dayandi-iflas': {
+    title: 'Spirit Airlines fəaliyyətini tam dayandırdı, federal yardım iflasa uğradı',
+    date: '2026-05-02',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `Amerika aşağı büdcəli aviaşirkəti Spirit Airlines 2 may 2026-cı il şənbə günü Şərq vaxtı ilə saat 02:30-da bütün uçuşlarını rəsmən dayandırıb. Bu, ABŞ-da son 25 il ərzində iflas edən ilk böyük aviaşirkətdir və ölkənin aviasiya sənayesi üçün tarixi hadisədir.
+
+## Federal yardım razılaşması iflasa uğradı
+
+NPR və CNN-in xəbərinə görə, şirkət son bir il ərzində ikinci dəfə müflis vəziyyətə düşmüşdü. 500 milyon dollarlıq dövlət yardım paketi şirkətin kreditorları, o cümlədən Citadel və Ares Management də daxil olmaqla istiqraz sahibləri tərəfindən təklif olunan şərtlərin rədd edilməsi nəticəsində alınmadı. Şirkət rəhbərliyi son anlarda da maliyyə həlli tapmaq üçün danışıqlar aparsa da, nəticəsiz qaldı.
+
+AeroTime-ın xəbər verdiyi kimi, İran müharibəsinin neft bazarlarına təsiri ilə əlaqədar olaraq aviayanacaq qiymətlərinin sürətlə artması Spirit Airlines-ın xərclərini ilkin proqnozlardan kənara çıxarıb və şirkətin maliyyə vəziyyətini ağırlaşdırıb.
+
+## Sərnişinlər üçün xilas tədbirləri
+
+WAFB-nin AP agentliyinə istinadən verdiyi məlumata görə, ABŞ Nəqliyyat naziri Sean Daffi United, Delta, JetBlue, Southwest və Frontier kimi əsas Amerika aviaşirkətləri ilə razılaşma əldə edildiyini təsdiqləyib. Razılaşma çərçivəsində bu şirkətlər təxliyə tarifləri tətbiq edəcək və bilet qiymətlərində kəskin artımın qarşısını alacaq.
+
+Tarixi məlumatlara görə, Spirit Airlines bir marşrutdan çıxdıqda həmin marşrutda biletlərin qiyməti təxminən 23 faiz artır. Şirkətin bağlanması, xüsusilə Floridada yerləşən qərargahda və ABŞ-ın daxili aviasiya bazarında geniş təsirə malik olacaq. Bu qərar son aylarda enerji böhranının iqtisadiyyata vurduğu zərbənin ən bariz nümunəsi sayılır və aşağı büdcəli aviasiya modelinin yüksək yanacaq qiymətləri dövründə dayanıqlığı barədə suallar yaradır.`,
+  },
+  'en-spirit-airlines-ceases-operations-may-2': {
+    title: 'Spirit Airlines Ceases All Operations After Failed Federal Bailout',
+    date: '2026-05-02',
+    category: 'Business',
+    locale: 'en',
+    content: `Spirit Airlines officially ceased all operations at 2:30 a.m. ET on Saturday, May 2, 2026, becoming the first major US airline to go out of business in 25 years. The shutdown followed the collapse of a $500 million federal bailout package after key creditors rejected the proposed terms.
+
+## Bailout Talks Collapse
+
+According to NPR and CNN, Spirit was in its second bankruptcy in less than a year when the federal rescue talks broke down. Citadel and Ares Management, among the carrier's principal bondholders, rejected the bailout terms, leaving the Florida-based budget airline without runway to continue operations. AeroTime reported that a spike in jet fuel prices driven by the Iran conflict had pushed costs well beyond Spirit's financial projections, accelerating the cash crunch.
+
+The collapse is the first failure of a major US passenger airline in 25 years.
+
+## Rescue Fares for Stranded Passengers
+
+Transportation Secretary Sean Duffy confirmed an agreement with United Airlines, Delta Air Lines, JetBlue Airways, Southwest Airlines and Frontier Airlines to provide rescue fares and prevent price spikes on routes formerly served by Spirit, WAFB reported, citing the Associated Press wire. The Department of Transportation said the rescue framework was designed to limit immediate disruption for passengers holding Spirit tickets.
+
+## Long-Term Fare Impact Expected
+
+Historical industry data show that fares typically rise approximately 23 percent on routes when Spirit exits, raising concerns about consumer costs in markets where the carrier had been the dominant low-cost option. Analysts cited by AeroTime warned that the loss of Spirit's seat capacity would tighten the US domestic market into the summer travel season, with secondary effects on Frontier and other ultra-low-cost competitors that had long matched Spirit's pricing on overlapping routes.`,
+  },
+  'tr-spirit-airlines-operasyon-durdurdu-iflas': {
+    title: `Spirit Airlines tüm operasyonlarını durdurdu, 25 yılda bir ilk`,
+    date: '2026-05-02',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `ABD'nin düşük maliyetli havayolu şirketi Spirit Airlines, 2 Mayıs 2026 Cumartesi günü ABD Doğu Saati ile 02.30'da tüm operasyonlarını resmi olarak durdurdu. Şirket, 25 yılda iflas eden ilk büyük ABD havayolu olarak tarihe geçti. Spirit, son bir yıl içinde ikinci kez iflas başvurusunda bulunmuştu; 500 milyon dolarlık devlet kurtarma paketi, alacaklıların (tahvil sahipleri arasında Citadel ve Ares Management bulunuyordu) şartları reddetmesi üzerine çöktü.
+
+## İran çatışması ve yakıt fiyatları
+
+İran çatışmasının tetiklediği jet yakıtı fiyatlarındaki keskin artış, şirketin maliyetlerini öngörüleri aşan bir noktaya taşıdı. NPR ve CNN'in haberlerine göre, yakıt maliyetlerindeki sıçrama Spirit'in zaten kırılgan olan finansal yapısının çökmesinde belirleyici rol oynadı. Şirketin Florida merkezli kapanma kararı, ulusal düzeyde uçuş iptallerine ve yolcular üzerindeki etkilere yol açtı.
+
+## Yolculara kurtarma tarifeleri
+
+Ulaştırma Bakanı Sean Duffy, başlıca ABD havayolları olan United, Delta, JetBlue, Southwest ve Frontier ile bir anlaşmaya varıldığını doğruladı. Anlaşma kapsamında bu şirketler, Spirit'in iptal ettiği güzergahlardaki yolculara "kurtarma tarifeleri" sunacak ve fiyat fırlamalarının önüne geçilecek. Tarihsel veriler, Spirit'in çıktığı güzergahlarda biletlerin tipik olarak yaklaşık yüzde 23 oranında arttığını gösteriyor.
+
+## Sektör için kritik gösterge
+
+Spirit'in çöküşü, küresel enerji krizinin ABD havacılık sektörü üzerindeki yansımalarının somut bir göstergesi olarak değerlendiriliyor. ABD'nin orta ve küçük havalimanlarındaki bağlantı seçenekleri kısa vadede daralabilir. Tarihsel veriler, Spirit'in çekildiği güzergahlarda biletlerin ortalama yaklaşık yüzde 23 oranında zamlandığını gösteriyor.`,
+  },
+  'ru-spirit-erlines-prekratila-operatsii': {
+    title: 'Авиакомпания «Спирит Эрлайнс» прекратила все операции в США',
+    date: '2026-05-02',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Американская бюджетная авиакомпания «Спирит Эрлайнс» официально прекратила все полёты в 02:30 по восточному времени США в субботу, 2 мая 2026 года. Перевозчик стал первой крупной американской авиакомпанией, прекратившей деятельность за последние 25 лет. На момент закрытия компания находилась во второй процедуре банкротства менее чем за год. Информация подтверждена изданиями «Эн-Пи-Ар», «Си-Эн-Эн», «Аэротайм» и «Дабл-Ю-Эй-Эф-Би» со ссылкой на материалы агентства «Ассошиэйтед Пресс».
+
+## Срыв пакета федеральной помощи
+
+Государственный пакет помощи в размере 500 миллионов долларов был сорван после того, как кредиторы, в число которых входили облигационеры компаний «Цитадель» и «Арес Менеджмент», отвергли предложенные условия. В качестве одного из ключевых факторов, повлиявших на финансовое положение компании, называется резкий рост цен на авиационное топливо, вызванный конфликтом с Ираном. Стоимость операционной деятельности превысила прогнозные показатели, что окончательно подорвало платёжеспособность перевозчика.
+
+Министр транспорта США Шон Даффи подтвердил, что с крупнейшими американскими перевозчиками — «Юнайтед», «Дельта», «Джетблю», «Саутвест» и «Фронтир» — достигнута договорённость о предоставлении пассажирам спасательных тарифов и предотвращении резкого роста цен на билеты.
+
+## Последствия для пассажиров и рынка
+
+Историческая статистика показывает, что после ухода «Спирит» с маршрутов цены на билеты, как правило, возрастают примерно на 23 процента. Закрытие компании, штаб-квартира которой расположена во Флориде, окажет влияние на общенациональный рынок авиаперевозок и оставит без работы тысячи сотрудников.
+
+Кейс «Спирит Эрлайнс» подчёркивает уязвимость бюджетных бизнес-моделей в условиях глобального энергетического кризиса. Исторические данные показывают, что после ухода «Спирит» с маршрутов цены на билеты, как правило, возрастают примерно на 23 процента, что увеличивает нагрузку на пассажиров на затронутых направлениях.`,
+  },
+
+  // ========== 2026-05-01 ==========
+
+  // --- Topic 3: Milli Məclis Suspends EU Parliament Cooperation (AZ-DOMESTIC P0) ---
+  'milli-meclis-avropa-parlamenti-emekdasligi-dayandi': {
+    title: 'Milli Məclis Avropa Parlamenti ilə əməkdaşlığı dayandırdı',
+    date: '2026-05-01',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Azərbaycan Respublikasının Milli Məclisi 1 may 2026-cı il cümə günü Avropa Parlamenti ilə bütün sahələrdə əməkdaşlığı dayandırmaq barədə qətnamə qəbul edib. Qərar Avropa Parlamentinin bir gün öncə "Ermənistanda Demokratik Davamlılığa Dəstək" adlı qətnaməsini qəbul etməsinə cavab olaraq verilib. Həmin sənəddə Dağlıq Qarabağdan olan ermənilərin hüquqlarına dəstək yenidən təsbit edilmişdi.
+
+## Qətnamənin əhatə dairəsi
+
+AzerNews və Report.az-ın xəbərinə görə, Milli Məclis həmçinin Aİ-Azərbaycan Parlament Əməkdaşlıq Komitəsindəki iştirakını dayandırıb və Euronest Parlament Assambleyasındakı üzvlüyün dayandırılması üçün prosedura başlayıb. Qərarın icrasını izləmək və növbəti addımları qiymətləndirmək məqsədilə xüsusi parlament komissiyası yaradılıb.
+
+Georgia Today və MassisPost-un məlumatına əsasən, parlament qərarından sonra Azərbaycan XİN Avropa İttifaqının Bakıdakı səfirini də nazirliyə dəvət edib və etiraz notası təqdim edib. Bu addım Bakı ilə Brüssel arasında son aylarda gərginləşən münasibətlərin yeni mərhələsini əks etdirir.
+
+## Sahibə Qafarovanın mövqeyi
+
+Milli Məclisin sədri Sahibə Qafarova qətnamə müzakirəsində bildirib ki, əlaqələr əvvəllər də bir dəfə dayandırılmış və sonra bərpa edilmişdi, lakin "son 10 il göstərib ki, Avropa Parlamenti Azərbaycana qarşı qərəzli hərəkətlərindən əl çəkmək niyyətində deyil". Sədr vurğulayıb ki, bu dəfəki qərar emosional addım deyil, ardıcıl mövqeyin nəticəsidir.
+
+Strasburq və Brüsseldəki rəsmi şəxslərin reaksiyası gözlənilir. Eyni zamanda Bakı bildirib ki, Avropa İttifaqının üzv dövlətləri ilə ikitərəfli əməkdaşlıq formatları davam edəcək və qərar yalnız Avropa Parlamenti institutu ilə əlaqələrə şamil olunur.`,
+  },
+  'en-azerbaijan-parliament-suspends-eu-cooperation': {
+    title: 'Azerbaijan Parliament Suspends All Cooperation With European Parliament',
+    date: '2026-05-01',
+    category: 'Politics',
+    locale: 'en',
+    content: `The Milli Majlis, the Parliament of Azerbaijan, adopted a resolution on Friday, May 1, 2026, suspending cooperation with the European Parliament across all areas. The decision was the legislature's response to a European Parliament resolution on Armenia adopted one day earlier, which Azerbaijani officials condemned as biased.
+
+## Scope of the Suspension
+
+According to AzerNews and Report.az, the Milli Majlis halted its participation in the EU-Azerbaijan Parliamentary Cooperation Committee and initiated a procedure to suspend membership in the Euronest Parliamentary Assembly, the parliamentary forum bringing together EU lawmakers and counterparts from the Eastern Partnership countries. A special parliamentary commission was also established in Baku to assess further actions concerning the European Parliament.
+
+The trigger was the European Parliament's adoption on April 30 of a resolution titled "Support for Democratic Resilience in Armenia," which reaffirmed European backing for the rights of Armenians from Nagorno-Karabakh. Azerbaijani lawmakers framed the text as an interference in regional affairs at a sensitive stage of the post-2025 normalization track with Yerevan.
+
+## Speaker Cites Decade of Strained Ties
+
+Speaker Sahiba Gafarova told deputies that ties had been suspended once before and later restored, but that the situation had not changed. "The past 10 years have shown that the European Parliament has no intention of abandoning its biased actions against Azerbaijan," Gafarova said, in remarks reported by Georgia Today and AzerNews.
+
+## Wider Diplomatic Fallout
+
+Baku also summoned the EU ambassador, MassisPost reported, signaling that the suspension was part of a broader recalibration of relations with Brussels. Azerbaijani officials emphasized that ties with individual EU member states and with the European Commission remained on a separate footing, distinguishing them from the parliamentary track now placed on hold.`,
+  },
+  'tr-azerbaycan-meclisi-avrupa-parlamentosu-askiya': {
+    title: `Azerbaycan Meclisi, Avrupa Parlamentosu ile işbirliğini askıya aldı`,
+    date: '2026-05-01',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Azerbaycan Milli Meclisi, 1 Mayıs 2026 Cuma günü Avrupa Parlamentosu ile her alandaki işbirliğini askıya alan bir karar kabul etti. Karar, Avrupa Parlamentosu'nun bir gün önce kabul ettiği "Ermenistan'da Demokratik Direnç İçin Destek" başlıklı kararın ardından alındı; söz konusu metin, Dağlık Karabağ'dan Ermenilerin haklarına verilen desteği yeniden teyit ediyordu. Milli Meclis ayrıca AB-Azerbaycan Parlamenter İşbirliği Komitesi'ndeki katılımını durdurdu ve Euronest Parlamenter Asamblesi üyeliğinden çekilme prosedürünü başlattı.
+
+## Özel komisyon kuruldu
+
+Avrupa Parlamentosu'na yönelik atılacak adımları değerlendirmek üzere Milli Meclis bünyesinde özel bir parlamenter komisyon oluşturuldu. AzerNews ve Report.az'ın haberlerine göre, kararın kapsamı yalnızca işbirliği kanallarının askıya alınmasıyla sınırlı değil; Bakü, Strasbourg ve Brüksel ile ilişkilerin kurumsal mimarisini yeniden değerlendirmeyi planlıyor. Karar, AB Büyükelçisi'nin Azerbaycan Dışişleri Bakanlığı'na çağrılmasının ardından gelen ikinci somut diplomatik adım niteliğinde.
+
+## Meclis Başkanı Kafarova: "Önyargılı tutum sürüyor"
+
+Milli Meclis Başkanı Sahibe Kafarova açıklamasında, ilişkilerin bir kez daha askıya alındığını ve daha önce yeniden tesis edildiğini hatırlattı. "Geçen 10 yıl, Avrupa Parlamentosu'nun Azerbaycan'a karşı önyargılı eylemlerinden vazgeçme niyetinde olmadığını göstermiştir" — Sahibe Kafarova, Milli Meclis Başkanı (Georgia Today ve AzerNews aktarımı).
+
+## Bölgesel etki
+
+Karar, Bakü'nün Avrupa kurumlarıyla ilişkilerinde son yılların en sert adımı olarak değerlendiriliyor. Azerbaycan-Ermenistan normalleşme süreci ve Karabağ sonrası diplomatik dengeler bağlamında alınan bu adım, 2025 Washington Ortak Bildirgesi sonrası dönemde AB'nin bölgedeki etkinliğini sınırlama etkisi yaratabilir. Türkiye için de yakından izlenen gelişme, kardeş ülkenin AB ile ilişkilerinde yeni bir sayfanın açıldığına işaret ediyor.`,
+  },
+  'ru-medzhlis-priostanovil-sotrudnichestvo-eu': {
+    title: 'Милли Меджлис приостановил сотрудничество с Европарламентом',
+    date: '2026-05-01',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Милли Меджлис Азербайджана 1 мая 2026 года принял резолюцию о приостановлении сотрудничества с Европейским парламентом по всем направлениям. Решение было принято в Баку в ответ на резолюцию Европарламента «Поддержка демократической устойчивости в Армении», принятую днём ранее в Страсбурге, в которой подтверждалась поддержка прав армян из Нагорного Карабаха.
+
+## Полный пересмотр институциональных связей
+
+Согласно резолюции, азербайджанские депутаты также приостанавливают участие в Парламентском комитете сотрудничества Азербайджан — Европейский союз и инициируют процедуру приостановления членства в Парламентской ассамблее «Евронест». Для оценки дальнейших действий в отношении Европарламента в Милли Меджлисе создана специальная парламентская комиссия. Информация подтверждена изданиями «АзерНьюс», «Репорт», «Джорджия Тудей» и «МассисПост».
+
+Это уже второй случай приостановления связей между двумя институтами. Председатель Милли Меджлиса Сахиба Гафарова отметила, что ранее отношения уже приостанавливались, однако впоследствии были восстановлены. По её словам, «последние десять лет показали, что Европейский парламент не намерен отказываться от своих предвзятых действий в отношении Азербайджана».
+
+## Контекст и реакция
+
+Решение Милли Меджлиса принято на фоне продолжающейся нормализации отношений между Баку и Ереваном после Совместной декларации, подписанной в Вашингтоне в августе 2025 года. Азербайджанская сторона характеризует резолюцию Европарламента как вмешательство во внутренние дела суверенного государства и попытку пересмотра итогов мирного процесса.
+
+В Баку также был вызван посол Европейского союза для разъяснений. Решение парламента имеет ключевое значение для будущей архитектуры отношений Азербайджана с европейскими институтами и затрагивает повестку регионального сотрудничества на Южном Кавказе.`,
+  },
+
+  // --- Topic 4: Israeli Strikes Kill 12 in Southern Lebanon Despite Ceasefire ---
+  'cenubi-livanda-israil-zerbeleri-12-olum-ateskes': {
+    title: 'Cənubi Livanda İsrail zərbələri 12 nəfərin ölümünə səbəb oldu',
+    date: '2026-05-01',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Livan Səhiyyə Nazirliyi 1 may 2026-cı il cümə günü ölkənin cənubunda İsrail tərəfindən həyata keçirilən hava zərbələri nəticəsində 12 nəfərin həlak olduğunu açıqlayıb. Hücumlar atəşkəs sazişinə baxmayaraq baş verib və regiondakı gərginliyin yenidən kəskinləşdiyini göstərib.
+
+## Hücumların təfərrüatları
+
+Al Jazeera və RTÉ-nin verdiyi məlumata görə, Habbuş şəhərinə endirilən zərbələr nəticəsində 8 nəfər, o cümlədən bir uşaq və iki qadın həlak olub, 21 nəfər yaralanıb. Zrariyyə qəsəbəsində isə 4 nəfər, o cümlədən iki qadın həyatını itirib, daha 4 nəfər yaralanıb. İsrail Ordusu rəsmi açıqlamasında bildirib ki, qüvvələr "İran tərəfindən dəstəklənən qrupun atəşkəs sazişini pozması"ndan sonra Hizbullaha qarşı "qətiyyətlə" hərəkət edib.
+
+Hücumdan sonra Hizbullah özünün İsrail əsgərlərinə qarşı misilləmə əməliyyatları həyata keçirdiyini elan edib. Bu, son həftələrdə tərəflər arasında ən kəskin hərbi qarşıdurmalardan biridir.
+
+## Ümumi tələfat və atəşkəs
+
+Livan Səhiyyə Nazirliyinin Fövqəladə Hallar Mərkəzinin məlumatına əsasən, 2 mart tarixindən başlayan hərbi əməliyyatlar dövründə ümumi itki sayı 2 618 ölü və 8 094 yaralı təşkil edib. Demokratiya İndi nəşrinin xəbərinə görə, ABŞ vasitəçiliyi ilə 17 aprel tarixində elan edilən atəşkəs 17 mayadək uzadılsa da, gündəlik pozuntular davam edir.
+
+Beynəlxalq müşahidəçilər atəşkəsin dağılma riskinin artdığını və humanitar vəziyyətin pisləşdiyini bildirir. BMT-nin müvafiq agentlikləri də cənubi Livandakı mülki tələfatla bağlı yenidən narahatlığını ifadə edib və tərəfləri təmkinə çağırıb.`,
+  },
+  'en-israel-strikes-lebanon-may-1-12-killed': {
+    title: 'Israeli Strikes Kill 12 in Southern Lebanon Despite Ceasefire',
+    date: '2026-05-01',
+    category: 'World',
+    locale: 'en',
+    content: `At least 12 people were killed and 25 wounded in Israeli strikes across southern Lebanon on Friday, May 1, 2026, Lebanon's Health Ministry said, as a US-brokered ceasefire continued to fray. The strikes hit the towns of Habboush and Zrariyeh, with women and children among the dead.
+
+## Toll Across Two Towns
+
+According to Al Jazeera and RTÉ, strikes in Habboush killed eight people, including a child and two women, and wounded 21. In Zrariyeh, four people, including two women, were killed and four others wounded. The Israel Defense Forces said it had acted "forcefully" against Hezbollah after what it described as the Iran-backed group's "violations of the ceasefire agreement," in a statement reported by Al Jazeera.
+
+Hezbollah subsequently claimed retaliatory operations against Israeli troops along the border, suggesting that exchanges would continue despite the formal truce in place.
+
+## Cumulative Toll Since March
+
+Lebanon's Ministry of Public Health Emergency Operations Center said the cumulative toll since hostilities began on March 2 had reached 2,618 killed and 8,094 wounded. The ceasefire announced on April 17 has been extended through May 17, but Lebanese authorities and international monitors have logged near-daily violations.
+
+## Ceasefire Architecture Under Pressure
+
+Democracy Now reported that civilian infrastructure damage continued to compound across southern Lebanon, even as international monitors continued to log violations of the truce. Lebanese officials have repeatedly called for stronger international guarantees, while Israeli officials maintain that strikes target Hezbollah operatives and weapons depots. The strikes mark another deadly day amid the daily violations Lebanese authorities and international monitors have logged since the ceasefire entered force last month.`,
+  },
+  'tr-israil-guney-lubnan-12-olu-1-mayis-ihlal': {
+    title: `İsrail saldırılarında Güney Lübnan'da 12 kişi hayatını kaybetti`,
+    date: '2026-05-01',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Lübnan Sağlık Bakanlığı, 1 Mayıs 2026 Cuma günü Güney Lübnan'a düzenlenen İsrail hava saldırılarında 12 kişinin hayatını kaybettiğini açıkladı. Habbuş kasabasındaki saldırılarda 1 çocuk ve 2 kadın dahil 8 kişi yaşamını yitirdi, 21 kişi yaralandı. Zrariye'deki saldırılarda ise 2'si kadın olmak üzere 4 kişi öldü, 4 kişi yaralandı. Saldırılar, ABD aracılığıyla 17 Nisan'da ilan edilen ve 17 Mayıs'a kadar uzatılan ateşkese rağmen gerçekleşti.
+
+## İsrail "Hizbullah ihlallerine" atıfta bulundu
+
+İsrail ordusundan yapılan açıklamada, ateşkesi ihlal ettiği iddia edilen Hizbullah'a karşı "kararlı bir şekilde" hareket edileceği belirtildi. "İsrail ordusu, ateşkes anlaşmasının ihlalleri üzerine İran destekli grup Hizbullah'a karşı kararlı şekilde hareket edecektir" — IDF açıklaması, Al Jazeera (https://www.aljazeera.com/news/2026/5/1/at-least-12-killed-in-latest-israeli-attacks-on-lebanon). Hizbullah da ardından İsrail kuvvetlerine yönelik misilleme operasyonları düzenlediğini açıkladı.
+
+## Toplam kayıplar artıyor
+
+Lübnan Halk Sağlığı Bakanlığı Acil Durum Operasyon Merkezi verilerine göre, 2 Mart'ta başlayan çatışmalardan bu yana toplam can kaybı 2.618'e, yaralı sayısı 8.094'e ulaştı. Günlük ihlaller, ABD'nin arabuluculuk ettiği ateşkesin sahada uygulanmasını sürekli olarak gölgeliyor.
+
+## Bölgesel boyut
+
+Bölgedeki gerilim, İran kaynaklı çatışma ortamının doğrudan bir uzantısı olarak okunuyor. Habbuş ve Zrariye'deki sivil kayıplar, uluslararası kamuoyunun ateşkesin etkinliğine yönelik soru işaretlerini artırırken, Lübnan hükümeti BM Güvenlik Konseyi'ne durumu taşıma seçeneklerini değerlendiriyor. Mayıs ayı boyunca uzatılan ateşkesin yenilenip yenilenmeyeceği belirsizliğini koruyor.`,
+  },
+  'ru-izrailskie-udary-yuzhnyy-livan-pogibli-12-maya': {
+    title: 'Удары Израиля по югу Ливана: погибли 12 человек, ранены 25',
+    date: '2026-05-01',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Министерство здравоохранения Ливана сообщило о гибели 12 человек в результате израильских ударов по югу страны в пятницу, 1 мая 2026 года. Удары были нанесены по населённым пунктам Хаббуш и Зрарие, несмотря на действующий с 17 апреля режим прекращения огня, продлённый до 17 мая. Информацию подтвердили издания «Аль-Джазира», «Эр-Ти-И» и «Демокраси Нау».
+
+## Жертвы среди мирного населения
+
+В результате удара по Хаббушу погибли восемь человек, среди которых ребёнок и две женщины, ещё 21 человек получил ранения. В Зрарие погибли четверо, в том числе две женщины, четверо ранены. По данным ливанского министерства здравоохранения, общее число погибших с момента начала боевых действий 2 марта достигло 2618 человек, ещё 8094 получили ранения.
+
+Армия обороны Израиля заявила, что действовала «решительно» против «Хезболлы» в ответ на якобы имевшие место нарушения соглашения о прекращении огня со стороны иранской группировки. Впоследствии «Хезболла» заявила об ответных операциях против израильских военнослужащих.
+
+## Хрупкость соглашения о прекращении огня
+
+Соглашение о прекращении огня, заключённое при посредничестве США 17 апреля, было продлено до 17 мая. Однако ежедневные нарушения сохраняются, что ставит под сомнение устойчивость достигнутых договорённостей. Удары 1 мая стали ещё одним инцидентом в череде ежедневных нарушений режима, фиксируемых ливанскими властями и международными наблюдателями.
+
+Гуманитарная ситуация на юге Ливана продолжает ухудшаться. Международные организации призывают стороны к строгому соблюдению режима прекращения огня и обеспечению безопасности гражданского населения.`,
+  },
+
+  // --- Topic 5: Trump Raises EU Auto Tariffs to 25%, Threatens Germany Troop Cuts ---
+  'tramp-ai-avtomobil-tarif-25-faiz-almaniya-qosun': {
+    title: 'Tramp Aİ avtomobillərinə tarifi 25 faizə qaldırdı, Almaniya təhdidi',
+    date: '2026-05-01',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `ABŞ prezidenti Donald Tramp 1 may 2026-cı il cümə günü Truth Social platformasında yaydığı bəyanatla Avropa İttifaqından idxal olunan avtomobil və yük maşınlarına tətbiq olunan gömrük tariflərini Section 232 çərçivəsində 25 faizə qaldırmaq qərarını elan edib. Qərar Aİ ilə ABŞ arasında ticarət münasibətlərində yeni gərginlik mərhələsini açıb.
+
+## Tramp Aİ-ni "razılaşmanı pozmaqda" ittiham edib
+
+CNBC və Bloomberg-in məlumatına görə, Tramp paylaşımında Avropa İttifaqını razılaşdırılmış ticarət sazişinin şərtlərinə "tam əməl etməməkdə" ittiham edib və "Avropa İttifaqı tam razılaşdırılmış Ticarət Sazişlərinə əməl etmir" sözlərini yazıb. Yeni tariflər ilk növbədə Mercedes, BMW və Volkswagen kimi alman avtomobil istehsalçılarına təsir göstərəcək.
+
+Al Jazeera və France 24-ün xəbərinə əsasən, qərar Avropa avtomobil sənayesi üçün ciddi maliyyə təsirləri yarada bilər. Avropa İttifaqı rəsmi reaksiyasını hələlik açıqlamayıb.
+
+## Almaniyada qoşun azaldılması təhdidi
+
+Eyni gün Tramp Almaniyadan ABŞ qoşunlarının çıxarılması ilə bağlı təhdidini də səsləndirib. Ağ Evdəki bəyanatında prezident Almaniya kansleri Fridrix Merslə davam edən mübahisənin kontekstində İspaniya və İtaliyadakı ABŞ kontingentinin də azaldıla biləcəyini bildirib.
+
+NATO çərçivəsində bu açıqlamalar müttəfiqlər arasında narahatlıq doğurub. Avropalı diplomatlar bildiriblər ki, qoşun məsələsi ticarət danışıqlarına bağlanmamalıdır. Tramp eyni gün Almaniya, İspaniya və İtaliyadakı ABŞ kontingentinin azaldılması seçimini gündəmə gətirməklə müttəfiqlər üzərindəki təzyiqi artırıb. Belə ki, eyni gün ərzində ticarət və müdafiə dosyalarının paralel şəkildə qaldırılması transatlantik koordinasiyada ciddi sual işarələri yaradır.`,
+  },
+  'en-trump-eu-auto-tariffs-25-germany-troops': {
+    title: 'Trump Hikes EU Auto Tariffs to 25%, Threatens Germany Troop Cuts',
+    date: '2026-05-01',
+    category: 'Business',
+    locale: 'en',
+    content: `President Donald Trump announced on Friday, May 1, 2026, that the United States would raise tariffs on European Union cars and trucks to 25 percent under Section 232, accusing Brussels of failing to honor an existing trade agreement. The same day, Trump threatened to withdraw US troops from Germany amid an escalating dispute with Chancellor Friedrich Merz.
+
+## Section 232 Tariff Hike
+
+Trump made the tariff announcement via a Truth Social post, writing that the European Union "is not complying with their fully agreed to Trade Deal," according to CNBC. The new 25 percent rate primarily affects German automakers Mercedes-Benz, BMW and Volkswagen, the three brands most exposed to the US market through both finished-vehicle exports and US-assembled models that rely on European components.
+
+Bloomberg and Al Jazeera reported that the move marked a sharp escalation of transatlantic trade frictions that had eased only briefly under the deal Trump struck with Brussels in 2025. European officials signaled they would consult with member states before responding.
+
+## Troop Withdrawal Threat
+
+In a separate statement the same day, Trump threatened to remove US troops from Germany, citing his deteriorating relationship with Chancellor Merz. France 24 reported that Trump also referenced potential troop reductions in Spain and Italy, framing the moves as a pressure tactic on European allies he accuses of underspending on defense.
+
+## Market and Diplomatic Impact
+
+EU diplomats privately expressed concern that the troop and tariff threats, delivered the same day, signaled a broader breakdown in coordination on trade and security. Brussels has not yet announced retaliatory measures, but officials indicated that the European Commission was preparing options should the 25 percent rate take effect. The dual-track pressure reflects a broader shift in how Washington links commercial disputes to alliance commitments under the second Trump term.`,
+  },
+  'tr-trump-ab-otomobil-gumruk-25-yuzde-almanya-asker': {
+    title: `Trump, AB otomobillerine yüzde 25 gümrük vergisi getirdi`,
+    date: '2026-05-01',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `ABD Başkanı Donald Trump, 1 Mayıs 2026 Cuma günü Truth Social üzerinden yaptığı paylaşımda Avrupa Birliği'nden ithal edilen otomobil ve kamyonlara uygulanan gümrük vergisini Bölüm 232 kapsamında yüzde 25'e çıkaracağını duyurdu. Karar; başta Mercedes, BMW ve Volkswagen olmak üzere Alman otomotiv devlerini doğrudan etkileyecek. Aynı gün Trump, Almanya Şansölyesi Friedrich Merz ile süregelen anlaşmazlık nedeniyle Almanya'daki ABD askerlerini geri çekme tehdidinde bulundu; İspanya ve İtalya'daki birliklerin azaltılması da gündeme geldi.
+
+## "Anlaşmaya uymuyorlar"
+
+Trump, kararın gerekçesi olarak AB'nin daha önce mutabık kalınan ticaret anlaşmasına uymadığını öne sürdü. "Avrupa Birliği üzerinde tam mutabakata varılan ticaret anlaşmasına uymuyor" — Donald Trump, Truth Social paylaşımı, 1 Mayıs 2026 (CNBC https://www.cnbc.com/2026/05/01/trump-eu-auto-tariffs.html). Açıklama, AB'nin Brüksel'deki Komisyon yetkilileri arasında derhal değerlendirme toplantısı düzenlenmesine yol açtı.
+
+## Otomotiv sektörüne büyük darbe
+
+Yeni tarife oranı, Avrupa otomotiv sektörü için ciddi bir maliyet artışı anlamına geliyor. Mercedes-Benz, BMW ve Volkswagen başta olmak üzere üreticiler, ABD pazarındaki fiyat rekabetini koruyabilmek için üretim hatlarını yeniden değerlendirmek durumunda kalabilir. AB ekonomi komiserliği, karşı tedbirler için danışma sürecini başlattı.
+
+## NATO müttefiklerine asker baskısı
+
+Trump'ın aynı gün Almanya'daki ABD birliklerini geri çekme tehdidi, NATO ittifakı içindeki gerilimi yeniden gündeme taşıdı. İspanya ve İtalya'daki birliklerin de azaltılması seçeneğinin masaya konması, transatlantik güvenlik mimarisinin sorgulanmasına neden oldu. Avrupa başkentleri, ticaret ve savunma dosyalarının iç içe geçtiği bu yeni dönemde Washington ile diyalog kanallarını yeniden tanımlamak zorunda kalacak.`,
+  },
+  'ru-tramp-povysil-poshliny-avto-iz-es-25-protsentov': {
+    title: 'Трамп повысил пошлины на автомобили из ЕС до 25 процентов',
+    date: '2026-05-01',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `Президент США Дональд Трамп 1 мая 2026 года объявил о повышении пошлин на автомобили и грузовики, ввозимые из Европейского союза, до 25 процентов. Соответствующее заявление было опубликовано в социальной сети «Трус Сошл». Меры вводятся в рамках раздела 232 Закона о расширении торговли. Информация подтверждена изданиями «Си-Эн-Би-Си», «Аль-Джазира», «Блумберг» и «Франс 24».
+
+## Удар по немецкому автопрому
+
+Новые пошлины в первую очередь затронут немецких автопроизводителей — «Мерседес», «БМВ» и «Фольксваген», которые занимают значительную долю американского рынка импортных автомобилей. Президент Трамп обвинил Европейский союз в том, что тот «не выполняет полностью согласованное торговое соглашение». По данным аналитиков, рост пошлин окажет давление на цены на новые автомобили в США и может привести к сокращению поставок европейских моделей.
+
+В тот же день Трамп пригрозил вывести американских военнослужащих из Германии на фоне обостряющегося спора с канцлером Фридрихом Мерцем. Также упоминалась возможность сокращения военного присутствия США в Испании и Италии.
+
+## Реакция и последствия
+
+Решение Вашингтона усиливает напряжённость в трансатлантических торговых отношениях. Европейские производители уже несли потери из-за предыдущих раундов тарифной войны, а новый шаг администрации США может спровоцировать ответные меры со стороны Брюсселя.
+
+Эксперты отмечают, что повышение пошлин затронет глобальные цепочки поставок и может ускорить решения европейских автоконцернов о расширении производственных мощностей непосредственно на территории США. Объявление было сделано на фоне продолжающегося пересмотра администрацией Трампа торговой политики в отношении ключевых партнёров.`,
+  },
+
+  // --- Topic 6: Mali Capital Bamako Under Blockade as JNIM Calls for Uprising ---
+  'bamako-muhasirede-jnim-mali-ehalisi-usyan-cagirisi': {
+    title: 'Bamako mühasirədə: JNIM Mali əhalisini üsyana çağırıb',
+    date: '2026-05-01',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Mali Respublikasının paytaxtı Bamako 1 may 2026-cı il cümə günü "Cəmaət Nüsrət əl-İslam vəl-Müslimin" (JNIM) adlı, Əl-Qaidə ilə əlaqəli silahlı qrupun blokadası altına düşüb. Qrup eyni gün fransız dilində bəyanat yayaraq Mali əhalisini hərbi rəhbərliyə qarşı üsyana və şəriət qanunlarına keçidə çağırıb.
+
+## Paytaxta gedən yollar bağlanıb
+
+The Star (AFP məlumatına istinadən) və Long War Journal-ın xəbər verdiyinə görə, JNIM təxminən 3-4 milyon əhalisi olan Bamakoya gedən altı əsas magistraldan ən azı üçündə nəzarət-keçid məntəqələri qurub. Bu, paytaxtın yanacaq və ərzaq təchizatına ciddi təsir göstərib.
+
+Eyni gün JNIM və Azavad Azadlıq Cəbhəsi (FLA) Mali və rusiyalı əsgərlərin cənuba çəkilməsindən sonra Kidal regionunun Tessalit şəhəri yaxınlığındakı hərbi bazaya nəzarəti ələ keçirib. 25 apreldən başlayan geniş əməliyyat çərçivəsində Müdafiə naziri Sadio Camara həlak olub, kəşfiyyat rəisi Modibo Kone yaralanıb.
+
+## Hökumətin reaksiyası
+
+US News və Reuters agentliyinin məlumatına əsasən, 2 may şənbə günü Mali hakimiyyəti əlaqələndirilmiş hücumlarda iştirakda şübhəli bilinən hərbçilərə qarşı istintaqa başlanıldığını elan edib. Hərbi lider Assimi Qoyta televiziyada müraciətində vəziyyətin "nəzarət altında" olduğunu və hücumların arxasında dayanan qrupları "zərərsizləşdirəcəyini" söz verib.
+
+Drop Site News-un xəbərinə görə, hadisə Qərbi Afrikada bir neçə ay ərzindəki ən geniş təhlükəsizlik böhranı kimi qiymətləndirilir. Rusiyanın "Africa Corps" qüvvələrinin geri çəkilməsi regiondakı geosiyasi balansı dəyişdirə bilər. Beynəlxalq təşkilatlar Bamakodakı humanitar vəziyyətin pisləşməsindən narahatlıq ifadə edib.`,
+  },
+  'en-mali-bamako-blockade-jnim-uprising-may-1': {
+    title: 'Mali Capital Bamako Under Blockade as JNIM Calls for Uprising',
+    date: '2026-05-01',
+    category: 'World',
+    locale: 'en',
+    content: `Al-Qaeda-linked insurgents tightened their grip on Mali's capital Bamako on Friday, May 1, 2026, blocking key road arteries and issuing a call for nationwide uprising, as a separate northern offensive saw a strategic military base fall. On Saturday, Mali's authorities announced an investigation into soldiers suspected of involvement in the coordinated attacks.
+
+## Bamako Encircled
+
+Jama'at Nusrat al-Islam wal-Muslimin, known as JNIM, established checkpoints on multiple major routes leading into Bamako, blocking at least three of six main arteries serving the capital of roughly 3 to 4 million people, according to AFP via The Star and FDD's Long War Journal. The group issued a French-language statement calling on Malians to rise up against the military-led government and transition to Sharia law.
+
+The blockade follows a wider offensive launched on April 25 that killed Defense Minister Sadio Camara and injured intelligence chief Modibo Kone, severely weakening the junta's security leadership.
+
+## Tessalit Base Falls
+
+In the country's far north, JNIM and the Azawad Liberation Front, known as the FLA, took control of the military base outside Tessalit in the Kidal Region after Malian and Russian Africa Corps troops withdrew southward, Drop Site News reported. The fall of Tessalit handed insurgents a key staging point near the Algerian border.
+
+## Goita Vows to Restore Order
+
+Military leader Assimi Goita said in a televised address that the situation was "under control" and vowed to "neutralise" the insurgent groups behind the attacks, according to US News, citing Reuters. On May 2, Mali's authorities announced an investigation into soldiers suspected of involvement in the coordinated attacks, suggesting concern over insider collaboration. The events represent a major escalation of the security crisis in West Africa's Sahel region, with FDD's Long War Journal characterizing the situation as a test of whether "fortress Bamako" can hold.`,
+  },
+  'tr-mali-bamako-abluka-jnim-ayaklanma-cagri-1-mayis': {
+    title: `Mali'nin başkenti Bamako abluka altında, JNIM ayaklanma çağrısı yaptı`,
+    date: '2026-05-01',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `El Kaide bağlantılı Cemaat Nusrat el-İslam vel-Müslimin (JNIM), 1 Mayıs 2026 Cuma günü Fransızca yayımladığı bildiride Mali halkını askeri yönetime karşı ayaklanmaya ve şeriat düzenine geçişe çağırdı. Örgüt, yaklaşık 3-4 milyon nüfuslu başkent Bamako'ya giden ana yollarda kontrol noktaları kurarak 6 ana güzergahtan en az 3'ünü kapattı. JNIM ve Azavad Kurtuluş Cephesi (FLA) aynı gün, Malili ve Rus birliklerinin güneye çekilmesinin ardından Tessalit (Kidal Bölgesi) yakınlarındaki askeri üssü ele geçirdi.
+
+## Saldırı dalgası 25 Nisan'dan beri sürüyor
+
+Daha geniş çaplı saldırı dalgası 25 Nisan'da başladı; Savunma Bakanı Sadio Camara hayatını kaybetti, istihbarat şefi Modibo Koné yaralandı. Bamako çevresindeki güvenlik durumu kötüleştikçe yakıt, gıda ve temel ihtiyaç tedarik zincirinde aksamalar yaşanıyor. The Star (AFP) ve FDD's Long War Journal'ın haberlerine göre, başkentin "kale" niteliğindeki savunma çemberi ilk kez bu denli ciddi bir baskıyla karşı karşıya.
+
+## Mali yönetimi: "Durum kontrol altında"
+
+Mali askeri lideri Assimi Goita, televizyonda yayımlanan açıklamasında durumun kontrol altında olduğunu söyledi ve saldırıların arkasındaki isyancı grupları "etkisiz hale getirme" sözü verdi. Ulusal yönetim 2 Mayıs Cumartesi günü, koordineli saldırılara karışmış olmaktan şüphelenilen askerler hakkında soruşturma başlatıldığını duyurdu (US News/Reuters https://www.usnews.com/news/world/articles/2026-05-02/mali-investigates-soldiers-over-role-in-coordinated-insurgent-attacks).
+
+## Bölgesel güvenlik sonuçları
+
+Bamako'daki gelişmeler, Sahel bölgesinde Rusya'nın Afrika Korps güçlerinin etkinliği konusunda yeni soru işaretleri doğuruyor. Tessalit'teki üs çekilmesi, Mali ordusunun isyancı baskısına karşı güney hattını yoğunlaştırma tercihinin bir göstergesi olarak yorumlanıyor. Bölgedeki güvenlik durumu uluslararası gözlemcilerin dikkatini çekiyor.`,
+  },
+  'ru-bamako-v-blokade-jnim-prizyv-k-vosstaniyu': {
+    title: 'Столица Мали Бамако в блокаде: исламисты призвали к восстанию',
+    date: '2026-05-01',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Связанная с «Аль-Каидой» группировка «Джамаат Нусрат аль-Ислам валь-Муслимин» 1 мая 2026 года распространила франкоязычное заявление с призывом к жителям Мали восстать против военного руководства страны и перейти к шариатскому правлению. Параллельно боевики установили контрольные пункты на основных автомагистралях, ведущих в столицу страны Бамако с населением около трёх-четырёх миллионов человек, заблокировав не менее трёх из шести главных маршрутов.
+
+## Падение базы в Тессалите и гибель министра обороны
+
+В тот же день группировка совместно с Фронтом освобождения Азавада взяли под контроль военную базу за пределами города Тессалит в области Кидаль после того, как малийские и российские военнослужащие отступили на юг. Сведения подтверждены изданиями «Стар» со ссылкой на агентство «Франс Пресс», «Ю-Эс Ньюс» со ссылкой на агентство «Рейтер», а также «Дроп Сайт Ньюс» и «Лонг Уор Джорнэл».
+
+Более широкое наступление, начавшееся 25 апреля, привело к гибели министра обороны Мали Садио Камары и ранению руководителя разведки Модибо Коне. 2 мая малийские власти объявили о начале расследования в отношении военнослужащих, подозреваемых в причастности к скоординированным нападениям.
+
+## Реакция военного руководства
+
+Лидер военного руководства Ассими Гойта в телевизионном обращении заявил, что ситуация «находится под контролем», и пообещал «нейтрализовать» группировки боевиков, стоящие за нападениями.
+
+События в Мали имеют значительные последствия для безопасности в Западной Африке и для российского военного присутствия в регионе. Блокада Бамако ставит под угрозу снабжение крупнейшего города страны товарами первой необходимости и топливом, а также создаёт риски гуманитарного кризиса в случае затяжного противостояния.`,
+  },
+
+  // --- Topic 7: Record 76-Day US DHS Government Shutdown Ends ---
+  'abs-dhs-baglanma-76-gun-tramp-imzaladi-rekord': {
+    title: 'ABŞ-da DHS bağlanması 76 gündən sonra başa çatdı, Tramp imzaladı',
+    date: '2026-05-01',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Amerika Birləşmiş Ştatlarında Daxili Təhlükəsizlik Departamentinin (DHS) qismən bağlanması 1 may 2026-cı il cümə günü, 76 gün davam etdikdən sonra başa çatıb. ABŞ Nümayəndələr Palatası Senatın təqdim etdiyi maliyyələşdirmə qanun layihəsini qəbul edib və prezident Donald Tramp həmin sənədi imzalayıb. Bu, ABŞ tarixində ən uzun müddətli qismən hökumət bağlanmasıdır.
+
+## Qanun layihəsinin əhatə dairəsi
+
+ANI News və The Week-in məlumatına görə, qanun DHS-ə daxil olan əksər agentlikləri sentyabr ayına qədər maliyyələşdirir. Buraya Sahil Mühafizəsi, Gizli Xidmət, FEMA və TSA daxildir. Eyni zamanda ICE və Gömrük və Sərhəd Mühafizəsi (CBP) əvvəlki 2025-ci il "One Big Beautiful Bill Act" qanunu çərçivəsində bağlanma müddətində maliyyələşmə alırdı və yeni sənəddən kənarda qaldı.
+
+NewsNation-un xəbər verdiyi kimi, Nümayəndələr Palatasının sədri Mayk Conson əvvəlcə Senat versiyasına etiraz etmişdi, çünki sənəd ICE və CBP üçün əlavə vəsait nəzərdə tutmurdu. Lakin sədr son anda qanun layihəsinin qəbul edilməsinə razılıq verib.
+
+## Növbəti mərhələ
+
+DHS-in rəsmi saytında nazir Mullinin "DHS bağlanmasının başa çatması haqqında məktubu" dərc edilib. Sənəddə həmkarlara minnətdarlıq bildirilib və agentliyin tam fəaliyyətinə qaytarılması üçün addımlar açıqlanıb.
+
+Mayın ortasında planlaşdırılan tətildən sonra Respublikaçılar partiyası Trampın 1 iyun tarixinə təyin etdiyi son tarixə qədər ICE və CBP üçün 70 milyard dollarlıq əlavə maliyyələşdirmə qanun layihəsini qəbul etmək niyyətindədir. Bağlanma dövründə on minlərlə federal işçi maaşsız qalmış və ya işə davam etmək məcburiyyətində olmuşdu. Növbəti maliyyələşdirmə müzakirəsi Konqresdə immiqrasiya siyasəti ətrafında mübahisələri yenidən gündəmə gətirə bilər.`,
+  },
+  'en-us-dhs-shutdown-ends-76-days-may-1': {
+    title: 'Record 76-Day US Homeland Security Shutdown Ends as Trump Signs Bill',
+    date: '2026-05-01',
+    category: 'Politics',
+    locale: 'en',
+    content: `President Donald Trump on Friday, May 1, 2026, signed legislation funding most of the Department of Homeland Security, ending the longest partial government shutdown in US history after 76 days. The House had earlier in the day passed the Senate-approved bill, breaking a months-long impasse over immigration enforcement funding.
+
+## What the Bill Funds
+
+According to ANI News and The Week, the legislation funds the Coast Guard, Secret Service, Federal Emergency Management Agency and Transportation Security Administration through September. Immigration and Customs Enforcement, known as ICE, and Customs and Border Protection retained funding from the 2025 GOP-passed One Big Beautiful Bill Act throughout the shutdown, allowing both agencies to continue operations even as other DHS components were furloughed.
+
+DHS Secretary Mullin issued an official "Message on the End of the DHS Shutdown" to department employees, the agency confirmed on its website on May 1.
+
+## Speaker Johnson Yields
+
+NewsNation reported that House Speaker Mike Johnson had pushed back for weeks against the Senate version of the bill, which excluded additional ICE and CBP funding sought by House Republicans. Johnson ultimately agreed to bring the Senate text to the floor.
+
+## Next Fight Already Looming
+
+The 76-day shutdown surpassed the previous 35-day record set during the first Trump administration. Republican leaders signaled that after the mid-May congressional recess they would seek to meet a June 1 deadline set by President Trump for a separate $70 billion supplementary bill funding ICE and CBP. The next funding round is expected to focus on the $70 billion ICE-CBP supplementary bill.`,
+  },
+  'tr-abd-dhs-kapanmasi-76-gun-trump-imzaladi-rekor': {
+    title: `ABD'de 76 günlük DHS kapanması sona erdi, Trump yasayı imzaladı`,
+    date: '2026-05-01',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `ABD Temsilciler Meclisi, 1 Mayıs 2026 Cuma günü İç Güvenlik Bakanlığı'nın (DHS) büyük bölümünü finanse eden Senato yasa tasarısını onayladı. Başkan Donald Trump'ın yasayı imzalamasıyla, ABD tarihindeki en uzun kısmi hükümet kapanması olan 76 günlük DHS kapanması resmi olarak sona erdi. Yasayla; Sahil Güvenlik, Gizli Servis, Federal Acil Durum Yönetim Ajansı (FEMA) ve Ulaştırma Güvenlik İdaresi (TSA) Eylül ayına kadar finanse edildi.
+
+## ICE ve CBP'nin durumu
+
+ABD Göç ve Gümrük Muhafaza İdaresi (ICE) ile Gümrük ve Sınır Koruma (CBP), kapanma süresince 2025 tarihli "Tek Büyük Güzel Yasa Tasarısı" kapsamındaki finansmanı korudu ve operasyonlarına aksaksız devam etti. Temsilciler Meclisi Başkanı Mike Johnson, Senato versiyonuna (ICE/CBP'yi dışarıda bırakan) başlangıçta itiraz etmiş ancak sonunda yasanın geçmesine rıza göstermişti.
+
+## DHS Bakanı Mullin'den mesaj
+
+DHS Bakanı Mullin, kapanmanın sona ermesiyle birlikte personele yönelik "DHS Kapanmasının Sonu Mesajı" başlıklı resmi bir açıklama yayımladı (DHS.gov, 1 Mayıs 2026, https://www.dhs.gov/employee-resources/news/2026/05/01/message-secretary-mullin-end-dhs-shutdown). Açıklamada, ödenmeyen maaşların geriye dönük olarak ödeneceği ve normal operasyonlara dönüşün hızlandırılacağı belirtildi.
+
+## Haziran takvimi
+
+Mayıs ayı ortasındaki kongre tatilinin ardından Cumhuriyetçiler, Trump'ın 1 Haziran tarihli son tarihini karşılamak için 70 milyar dolarlık ICE-CBP ek bütçe yasasını gündemine alacak. Rekor uzunluktaki kapanma, federal ajansların finansman müzakerelerinde yaşanan derin yapısal sorunların somut bir göstergesi oldu. Mayıs ayı ortasındaki kongre tatilinin ardından bir sonraki bütçe müzakereleri başlayacak.`,
+  },
+  'ru-zavershen-76-dney-shatdaun-dhs-tramp': {
+    title: 'Завершён 76-дневный шатдаун Министерства внутренней безопасности',
+    date: '2026-05-01',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Палата представителей Конгресса США 1 мая 2026 года приняла одобренный Сенатом законопроект о финансировании большинства подразделений Министерства внутренней безопасности. Президент Дональд Трамп подписал документ в тот же день, тем самым положив конец самому продолжительному в истории страны частичному прекращению работы правительства, длившемуся 76 дней. Информация подтверждена официальным сайтом министерства, агентством «Эй-Эн-Ай Ньюс», изданиями «Зэ Уик» и «НьюсНейшн».
+
+## Какие ведомства получили финансирование
+
+Финансирование до сентября 2026 года получили Береговая охрана, Секретная служба, Федеральное агентство по чрезвычайным ситуациям и Управление транспортной безопасности. Иммиграционная и таможенная служба, а также Таможенно-пограничная служба сохраняли финансирование на протяжении всего периода шатдауна благодаря средствам, выделенным Республиканской партией в рамках принятого в 2025 году закона, известного как «Большой прекрасный закон».
+
+Спикер Палаты представителей Майк Джонсон ранее возражал против сенатской версии законопроекта, в которую не были включены иммиграционная и таможенно-пограничная службы, однако в итоге согласился вынести его на голосование. Министр внутренней безопасности Маллин выпустил официальное сообщение о завершении шатдауна, которое было опубликовано на сайте министерства.
+
+## Дальнейшие планы Республиканской партии
+
+После майских каникул Конгресса республиканцы намерены уложиться в установленный президентом Трампом дедлайн 1 июня для принятия дополнительного законопроекта объёмом 70 миллиардов долларов на финансирование иммиграционной и таможенно-пограничной служб.
+
+76-дневный шатдаун стал рекордным по продолжительности в истории США и затронул работу тысяч государственных служащих. Завершение кризиса позволяет вернуть к нормальной деятельности ключевые ведомства, отвечающие за внутреннюю безопасность страны и экстренное реагирование.`,
+  },
+
+  // --- Topic 8: May Day Rallies Worldwide; Hundreds Detained in Istanbul ---
+  '1-may-emek-gunu-istanbul-575-nefer-saxlanma-aksiya': {
+    title: '1 May Beynəlxalq Əmək Günü: İstanbulda 575 nəfər saxlanıldı',
+    date: '2026-05-01',
+    category: 'Dünya',
+    locale: 'az',
+    content: `1 may 2026-cı il cümə günü dünyanın bir çox şəhərində Beynəlxalq Əmək Günü münasibətilə kütləvi yürüş və mitinqlər keçirilib. Yüz minlərlə nümayişçi Avropa, Amerika və Asiya ölkələrində sülh, daha yüksək əmək haqqı və İran müharibəsi ilə əlaqədar artan enerji xərclərinə qarşı tələblərlə küçələrə çıxıb.
+
+## İstanbulda kütləvi saxlanmalar
+
+Euronews və Washington Post-un xəbərinə görə, İstanbul Valiliyinin məlumatında qadağan olunmuş əraziyə, xüsusilə də polis tərəfindən gecədən bağlanmış Taksim meydanına yürüş etməyə çalışan 575 nümayişçinin saxlanıldığı bildirilib. Türkiyə Çağdaş Hüquqşünaslar Dərnəyinin (CHD) məlumatına əsasən, ümumilikdə saxlanılan 576 nəfər şənbə günü səhərə qədər sərbəst buraxılıb.
+
+Polis Beşiktaş və mərkəzi rayonlarda göz yaşardıcı qazdan istifadə edib. İl boyu artan inflyasiya və əmək haqqı tələbləri ilə əlaqədar həmkarlar ittifaqlarının çağırışları aksiyaların əsas mövzusu olub.
+
+## Avropa və ABŞ-da aksiyalar
+
+France 24 və Al Jazeera-nin verdiyi məlumata görə, 41 Avropa ölkəsində 93 həmkarlar ittifaqını təmsil edən Avropa Həmkarlar İttifaqları Konfederasiyası (ETUC) artan xərclərə dair bəyanat yayıb. Bəyanatda qeyd olunub: "Çalışan insanlar Donald Trampın Yaxın Şərqdəki müharibəsinin qiymətini ödəməkdən imtina edir."
+
+ABŞ-da "İşçilər Milyarderlərdən Üstündür" şüarı altında müəllim tətilləri keçirilib. Aksiyalar Tramp administrasiyasının immiqrasiya və vergi siyasətinə qarşı yönəlib və Sietl, Los-Anceles, Çikaqo kimi şəhərlərdə geniş iştirakla müşayiət olunub.
+
+Yunanıstanda nümayişçilər Kuba və Fələstinlə həmrəyliklərini ifadə edib. Paris, Roma və Afinada da minlərlə insan həmçinin yürüşlərdə iştirak edib. Beynəlxalq Əmək Günü bu il qlobal iqtisadi qeyri-müəyyənlik fonunda xüsusi diqqət çəkmiş və müxtəlif ölkələrdə müxtəlif tələblərlə qeyd olunub.`,
+  },
+  'en-may-day-2026-rallies-istanbul-detentions': {
+    title: 'May Day Rallies Sweep World; 575 Detained in Istanbul Crackdown',
+    date: '2026-05-01',
+    category: 'World',
+    locale: 'en',
+    content: `Hundreds of thousands of workers marched across Europe, the Americas and Asia on Friday, May 1, 2026, marking International Workers' Day with calls for peace and higher wages. In Istanbul, the city's Governor's Office said 575 demonstrators were detained for attempting to march in restricted areas, including the symbolically charged Taksim Square.
+
+## Istanbul Detentions
+
+Euronews and the Washington Post reported that Turkish police fired tear gas and detained protesters in Beşiktaş and along routes leading to Taksim Square, which authorities had sealed off overnight. The Istanbul Governor's Office said 575 people were taken into custody, while the lawyers' association CHD reported that all 576 detainees, including one additional case, were released by Saturday morning.
+
+Taksim has been a focal point of May Day disputes in Turkey for years; authorities cite security concerns for the closures, while organizers argue the square holds historic significance for the Turkish labor movement.
+
+## Themes of Peace, Wages and War Costs
+
+Across Europe, the central themes of the rallies were peace, higher wages and rising energy costs tied to the Iran war, Al Jazeera and France 24 reported. The European Trade Union Confederation, which represents 93 trade unions in 41 European countries, issued a statement on rising costs. "Working people refuse to pay the price for Donald Trump's war in the Middle East," the confederation said, in remarks reported by France 24.
+
+## US Walkouts and Global Solidarity
+
+In the United States, nationwide teacher walkouts under the "Workers Over Billionaires" theme protested Trump administration immigration and tax policies, with rallies reported in Seattle, Los Angeles and Chicago. In Greece, demonstrators expressed solidarity with Cuba and Palestine. Major rallies were also held in Paris, Athens and Rome, with the central themes of peace, higher wages and rising energy costs echoed across the European protests.`,
+  },
+  'tr-1-mayis-isci-bayrami-istanbul-575-gozalti': {
+    title: `1 Mayıs İşçi Bayramı: Dünya genelinde mitingler, İstanbul'da 575 gözaltı`,
+    date: '2026-05-01',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Uluslararası İşçi Bayramı kapsamında 1 Mayıs 2026 Cuma günü Avrupa, Amerika ve Asya'da yüz binlerce kişi sokaklara çıktı. Mitinglerin merkezindeki temalar; barış, ücret artışı ve İran savaşına bağlanan enerji maliyetlerindeki yükseliş oldu. Avrupa Sendikalar Konfederasyonu (ETUC), 41 Avrupa ülkesindeki 93 sendikayı temsilen artan yaşam maliyetine ilişkin bir bildiri yayımladı.
+
+## İstanbul: 575 kişi gözaltına alındı
+
+İstanbul Valiliği'nin açıklamasına göre, kentte yasaklı bölgelere — özellikle gece boyunca polis tarafından kapatılan Taksim Meydanı'na — yürümeye çalışan 575 gösterici gözaltına alındı. Çağdaş Hukukçular Derneği (CHD) verilerine göre, 576 gözaltına alınanların tamamı Cumartesi sabahına kadar serbest bırakıldı. Olaylar Beşiktaş ve Taksim çevresinde yoğunlaştı; Euronews ve Washington Post'un haberlerine göre, polis biber gazı kullandı (https://www.euronews.com/2026/05/01/turkish-police-fire-tear-gas-and-arrest-almost-400-people-at-may-day-rallies).
+
+## ABD'de "Milyarderlere Karşı İşçiler"
+
+ABD genelinde öğretmenler, "Milyarderlere Karşı İşçiler" temasıyla iş bırakma eylemleri düzenleyerek Trump yönetiminin göç ve vergi politikalarını protesto etti. Seattle, Los Angeles ve Chicago başta olmak üzere büyük şehirlerde sokaklara çıkan öğretmenler, kamu eğitiminin finansmanına ilişkin endişelerini dile getirdi. Yunanistan'daki gösterilerde ise katılımcılar Küba ve Filistin ile dayanışmalarını ifade etti.
+
+## ETUC: "Bedeli işçiler ödüyor"
+
+Avrupa Sendikalar Konfederasyonu, savaşın ekonomik bedelinin işçilerin sırtına yüklendiği eleştirisini yineledi. "Çalışan insanlar, Donald Trump'ın Orta Doğu'daki savaşının bedelini ödemeyi reddediyor" — Avrupa Sendikalar Konfederasyonu açıklaması, France 24 (https://www.france24.com/en/culture/20260501-workers-across-the-world-march-for-peace-and-better-pay-in-may-day-rallies). Paris, Atina ve Roma'da düzenlenen yürüyüşlerde de barış, ücret eşitsizliği ve enerji krizi en sık tekrarlanan talepler oldu.`,
+  },
+  'ru-pervomay-mitingi-stambul-600-zaderzhanyh': {
+    title: 'Первомай 2026: массовые митинги, в Стамбуле задержаны 575 человек',
+    date: '2026-05-01',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Сотни тысяч людей в Европе, Северной и Южной Америке, а также в Азии приняли участие в митингах и шествиях 1 мая 2026 года, посвящённых Международному дню трудящихся. Центральными темами выступлений стали призывы к миру, повышению заработной платы и контролю над ростом цен на энергоносители, связанным с войной в Иране. Информация подтверждена изданиями «Аль-Джазира», «Франс 24», «Евроньюс» и «Вашингтон Пост».
+
+## Задержания в Стамбуле
+
+В Стамбуле, по данным канцелярии губернатора города, было задержано 575 демонстрантов за попытку пройти по запрещённым для шествий маршрутам, в первую очередь в направлении площади Таксим, перекрытой полицией ещё накануне ночью. По информации Ассоциации юристов «ЧХД», к утру субботы все 576 задержанных были отпущены на свободу. Полиция применяла слезоточивый газ для разгона участников шествий в районе Бешикташ.
+
+В Соединённых Штатах в этот день прошли общенациональные забастовки учителей под лозунгом «Рабочие против миллиардеров», направленные против иммиграционной и налоговой политики администрации Трампа. Шествия состоялись в Сиэтле, Лос-Анджелесе, Чикаго и других городах.
+
+## Европейская повестка
+
+В Греции демонстранты выразили солидарность с Кубой и Палестиной. Европейская конфедерация профсоюзов, представляющая 93 профсоюза в 41 европейской стране, выпустила заявление по поводу роста стоимости жизни.
+
+«Трудящиеся отказываются платить за войну Дональда Трампа на Ближнем Востоке», — говорится в заявлении Европейской конфедерации профсоюзов, распространённом изданием «Франс 24».
+
+Митинги также прошли в Париже, Афинах и Риме. Общая повестка профсоюзов сосредоточилась на требованиях индексации зарплат в соответствии с инфляцией и обеспечения безопасных условий труда в условиях растущих цен на энергоносители.`,
+  },
+
   // ========== 2026-04-27 ==========
 
   // --- Topic 1: Aliyev Gernika Award ---
