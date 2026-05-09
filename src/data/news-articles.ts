@@ -7,6 +7,716 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-05-10 ==========
+
+  // --- Topic 5: India-Pakistan ceasefire 1-year anniversary ---
+  'hindistan-pakistan-1-il-modi-terror-ekosistem': {
+    title: 'Hindistan və Pakistan 4 günlük müharibənin 1 illiyini qeyd edir',
+    date: '2026-05-10',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Atəşkəsin bir illiyi
+
+10 may 2026-cı il Hindistan və Pakistan arasında 2025-ci ildə baş vermiş 4 günlük sərhəd müharibəsinə son qoyan ABŞ vasitəçiliyi ilə əldə olunmuş atəşkəsin bir illiyidir. Bir il əvvəlki bu razılaşma keçmiş Britaniya hökmranlığının ərazi mirası üzərində iki nüvə dövləti arasında ən kəskin gərginliklərdən birini dayandırmışdı. Atəşkəs bu günə qədər formal olaraq qüvvədədir, lakin diplomatik münasibətlər donduruluq vəziyyətdə qalır.
+
+## "Operation Sindoor" və müharibənin başlanğıcı
+
+2025-ci ildəki münaqişə Hindistanın 7 may 2025-ci ildə "Operation Sindoor" adı altında Pakistan və Pakistan idarəsində olan Kəşmirdəki ehtimal edilən terror obyektlərinə endirdiyi zərbələrlə başlamışdı. Bu zərbələr 22 aprel 2025-ci ildə Pəhalqamda baş verən və 26 mülki şəxsin həyatını itirməsi ilə nəticələnən hücumdan sonra atılmış addım idi.
+
+## Modidən sərt mesaj
+
+Hindistanın Baş Naziri Narendra Modi 7 may 2026-cı ildə X (Twitter) platformasındakı paylaşımında qətiyyətli mövqeyini ifadə edib. "Bu gün, bir il sonra, terrorizmi məğlub etmək və onu mümkün edən ekosistemi məhv etmək qətiyyətimizdə əvvəlki kimi möhkəmik" — deyə Hindistan lideri yazıb. O, həmçinin silahlı qüvvələrə dərin minnətdarlığını ifadə edib: "Bir il əvvəl silahlı qüvvələrimiz Operation Sindoor zamanı misilsiz cəsarət, dəqiqlik və qətiyyət nümayiş etdirdi. Bütün millət əsgərlərimizin igidliyinə baş əyir."
+
+## Pakistan tərəfindən xəbərdarlıq
+
+Pakistan ordusu 7 may 2026-cı ildə yaydığı bəyanatda hər hansı yeni hücuma sərt cavab veriləcəyi barədə xəbərdarlıq edib. Müşahidəçilərin qeyd etdiyinə görə atəşkəs hələ də qüvvədə qalsa da, kommersiya uçuşları yalnız qismən bərpa olunub və iki ölkə arasında diplomatik əlaqələr donmuş vəziyyətdədir.`,
+  },
+  'en-india-pakistan-anniversary-modi-terror-may-10': {
+    title: 'Modi Vows to Destroy Terror as India-Pakistan Truce Marks One Year',
+    date: '2026-05-10',
+    category: 'World',
+    locale: 'en',
+    content: `## Anniversary of the Ceasefire
+
+May 10, 2026, marks the one-year anniversary of the US-mediated ceasefire that ended a four-day cross-border war between India and Pakistan in May 2025, the Washington Post reported. The truce halted the most intense military exchange between the two nuclear-armed neighbors in years.
+
+## Operation Sindoor in Context
+
+The 2025 conflict was triggered by India's "Operation Sindoor," a series of strikes launched on May 7, 2025, against alleged terror sites in Pakistan and Pakistan-administered Kashmir, Manila Times and Business Today reported. The operation followed the April 22, 2025, attack in Pahalgam, Indian-administered Kashmir, in which 26 civilians were killed.
+
+Washington's mediation ultimately produced the May 10, 2025, ceasefire that has now held for a full year.
+
+## Modi's Anniversary Message
+
+Indian Prime Minister Narendra Modi marked the anniversary with a strongly worded post on X on May 7, 2026. "Today, a year later, we remain as steadfast as ever in our resolve to defeat terrorism and destroy its enabling ecosystem," Modi wrote, in remarks reported by Business Today.
+
+In the same message, the prime minister praised India's military performance. "A year ago, our armed forces displayed unparalleled courage, precision and resolve during Operation Sindoor," Modi said. "The entire nation salutes our forces for their valour."
+
+## Pakistan's Response
+
+Pakistan's military issued a statement on May 7, 2026, warning that it would respond strongly to any new attack as it marked the anniversary, the Washington Post and AP reported.
+
+## Truce Holds, Ties Frozen
+
+The ceasefire continues to hold one year on, but commercial flights between the two countries have resumed only partially, and diplomatic ties remain frozen, the Washington Post noted.`,
+  },
+  'tr-hindistan-pakistan-bir-yil-modi-acikla': {
+    title: 'Modi: terör ekosistemini yok etme kararlılığımız bir yıl sonra da aynı',
+    date: '2026-05-10',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Bir yıl önceki ateşkesin yıldönümü
+
+10 Mayıs 2026, Hindistan ve Pakistan arasında Mayıs 2025'te yaşanan dört günlük sınır savaşını sona erdiren ABD aracılı ateşkesin birinci yıldönümüne denk geldi. Washington Post'un aktardığına göre 2025 çatışması, Hindistan'ın 7 Mayıs 2025'te Pakistan ve Pakistan yönetimindeki Keşmir'deki sözde terör hedeflerine yönelik başlattığı "Sindoor Operasyonu" ile tetiklenmişti. Operasyonun zemini, 22 Nisan 2025'te 26 sivilin hayatını kaybettiği Pahalgam saldırısıydı.
+
+## Modi'nin mesajı
+
+Hindistan Başbakanı Narendra Modi, 7 Mayıs 2026'da X (Twitter) platformunda paylaştığı mesajda, "Bugün, bir yıl sonra, terörü yenme ve onu mümkün kılan ekosistemi yok etme kararlılığımızda her zamanki kadar sebatkârız" ifadesini kullandı. Modi ayrıca, "Bir yıl önce silahlı kuvvetlerimiz Sindoor Operasyonu sırasında benzersiz bir cesaret, hassasiyet ve kararlılık sergiledi… Tüm millet, kahramanlıkları için kuvvetlerimizi selamlıyor" sözlerini paylaştı. Business Today ve Manila Times'a göre Hindistan kabinesindeki birçok bakan da bu paylaşımları sosyal medyada destekledi.
+
+## Pakistan'ın açıklaması ve mevcut durum
+
+Pakistan ordusu, 7 Mayıs 2026'da yaptığı açıklamada, yıldönümü kapsamında olası yeni bir saldırıya güçlü şekilde karşılık vereceği uyarısında bulundu. Washington Post / AP bu açıklamayı doğruladı. Washington Post'un yorumuna göre ateşkes hâlâ ayakta tutuluyor; ancak ticari uçuşlar yalnızca kısmen başlatılabildi ve diplomatik ilişkiler donmuş halde kalmaya devam ediyor. 2025 saldırılarının ana sahnesi olan Pahalgam, Keşmir, Yeni Delhi ve İslamabad–Ravalpindi haberlerin coğrafi merkezini oluşturdu.`,
+  },
+  'ru-indiya-pakistan-godovshchina-modi-sindoor': {
+    title: 'Индия и Пакистан: год перемирия, Моди обещает «уничтожить»',
+    date: '2026-05-10',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Годовщина перемирия
+
+10 мая 2026 года исполняется ровно год с момента вступления в силу при посредничестве США соглашения о прекращении огня, которое завершило четырёхдневную трансграничную войну между Индией и Пакистаном в мае 2025 года. Об этом напоминает Washington Post.
+
+Перемирие до сих пор соблюдается, однако коммерческие авиарейсы между странами восстановлены лишь частично, а дипломатические связи остаются замороженными.
+
+## Истоки конфликта
+
+Война 2025 года была спровоцирована индийской операцией «Синдур», которая стартовала 7 мая 2025 года ударами по предполагаемым объектам террористов в Пакистане и в управляемой Пакистаном части Кашмира. Об этом сообщают Business Today и Manila Times.
+
+Сама операция стала ответом на нападение в Пахалгаме 22 апреля 2025 года, в котором погибли 26 мирных жителей.
+
+## Заявление Моди
+
+7 мая 2026 года премьер-министр Индии Нарендра Моди опубликовал в социальной сети X пост, посвящённый годовщине операции «Синдур».
+
+«Сегодня, год спустя, мы по-прежнему непоколебимы в нашей решимости победить терроризм и уничтожить его опорную экосистему», — написал Моди.
+
+В другой публикации он добавил: «Год назад наши вооружённые силы продемонстрировали несравненное мужество, точность и решимость в ходе операции «Синдур». Вся нация отдаёт честь нашим воинам за их доблесть».
+
+## Реакция Пакистана
+
+7 мая 2026 года военные Пакистана выпустили заявление, в котором, отмечая годовщину, предупредили, что страна «решительно ответит на любое новое нападение». Об этом сообщает Washington Post со ссылкой на Associated Press.
+
+Несмотря на тревожную риторику обеих столиц, режим прекращения огня пока продолжает действовать.`,
+  },
+
+  // ========== 2026-05-09 ==========
+
+  // --- Topic 1: Aliyev visits Shukurbeyli, Heydar Aliyev 103rd anniversary (AZ-DOMESTIC P0) ---
+  'aliyev-cabrayil-sukurbayli-koc-103-yas': {
+    title: 'Prezident Əliyev Cəbrayılın Şükürbəyli kəndində ev açarlarını təqdim etdi',
+    date: '2026-05-09',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `## Şükürbəylidə yenidən qurulan kəndə qayıdış
+
+9 may 2026-cı ildə Prezident İlham Əliyev və birinci xanım Mehriban Əliyeva Cəbrayıl rayonunun Şükürbəyli kəndinə köç edən sakinlərlə görüşüb. Prezident köçən ailələrə ev açarlarını şəxsən təqdim edib. Erməni işğalı dövründə tamamilə dağıdılmış kənddə bütöv qalmış heç bir bina olmayıb. Hazırda Şükürbəylidə 635 yeni ev tikilib və 900-dən çox keçmiş sakin geri qayıtmaq üçün müraciət edib — bu rəqəm mövcud mənzil tutumunu artıqlaması ilə üstələyir.
+
+## Prezidentin mesajı
+
+Sakinlərlə söhbətdə dövlət başçısı bölgənin perspektivlərinə vurğu edib. "Cəbrayıl ölkəmizə əhəmiyyətli töhfə verəcək" — deyə Prezident Əliyev bildirib. O, həmçinin sosial siyasətin geniş əhatəsinə diqqət çəkib: "Mənzil və təhsillə yanaşı, məşğulluq məsələləri də həll olunur."
+
+## İqtisadi inkişaf layihələri
+
+Görüş zamanı Cəbrayılda inşa edilən üç günəş elektrik stansiyası müzakirə olunub — onların ümumi gücü 340 meqavatdır. Ermənistan sərhədinə qədər uzanan dördzolaqlı magistralın (Zəngəzur dəhlizi) tikintisi barədə də məlumat verilib. Eyni zamanda 200 hektar sahəni əhatə edən Araz Vadisi İqtisadi Zonası Sənaye Parkında artıq 20 sakin istehsal fəaliyyətinə başlayıb.
+
+## Heydər Əliyevin 103 illiyi
+
+Eyni gün daha əvvəl Prezident və birinci xanım Bakıda Fəxri xiyabanda Ulu Öndər Heydər Əliyevin məzarını ziyarət edib, məzar üzərinə əklil qoyulub və Azərbaycanın dövlət himni səslənib. 10 may 2026-cı il tarixi Heydər Əliyevin anadan olmasının 103-cü ildönümünə təsadüf edir. Şükürbəyliyə Böyük Qayıdış həm də bu rəmzi tarixi dövrlə uyğunlaşır.`,
+  },
+  'en-aliyev-shukurbeyli-jabrayil-visit-may-9': {
+    title: 'Aliyev Visits Jabrayil, Hands House Keys to Returning Residents',
+    date: '2026-05-09',
+    category: 'Politics',
+    locale: 'en',
+    content: `## Presidential Visit to Shukurbeyli
+
+President Ilham Aliyev and First Lady Mehriban Aliyeva traveled to Azerbaijan's Jabrayil district on May 9, 2026, where they met with families relocating to the rebuilt village of Shukurbeyli. The president personally presented house keys to returning residents, marking another milestone in the country's reconstruction of territories liberated from Armenian occupation.
+
+According to APA, Shukurbeyli now has 635 newly built houses, while more than 900 former residents have applied to return. The figure exceeds current housing capacity, reflecting strong demand for return among displaced families. The village had been completely destroyed during the years of occupation, with no buildings left intact, Trend.Az and APA reported.
+
+## Tribute to Heydar Aliyev
+
+Earlier the same day, the president and first lady visited the tomb of National Leader Heydar Aliyev at the Alley of Honors in Baku. They laid a wreath, and the Azerbaijani national anthem was performed at the ceremony. May 10, 2026, marks the 103rd anniversary of Heydar Aliyev's birth, giving the visit added symbolic weight.
+
+"Jabrayil will make a significant contribution to our country," President Aliyev told residents in Shukurbeyli, according to Trend.Az. He added that "alongside housing and education, employment issues are also being addressed."
+
+## Reconstruction and Development
+
+During the visit, the president discussed major infrastructure projects underway in the district. Three solar power plants are under construction in Jabrayil with a combined capacity of 340 megawatts. A four-lane highway is being extended toward the Armenian border as part of the Zangezur Corridor project.
+
+The president also highlighted the 200-hectare Araz Valley Economic Zone Industrial Park, where 20 residents have launched production activity. The combination of housing, transport links, energy infrastructure and industrial parks underscores the government's integrated approach to reviving the liberated territories within the framework of the Great Return program.`,
+  },
+  'tr-aliyev-sukurbeyli-cebrail-ziyaret-103-yas': {
+    title: 'Aliyev Cebrail\'deki Şükürbeyli\'de sakinlere ev anahtarlarını verdi',
+    date: '2026-05-09',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `## Cumhurbaşkanı Cebrail'de
+
+9 Mayıs 2026'da Cumhurbaşkanı İlham Aliyev ve First Lady Mehriban Aliyeva, Cebrail rayonuna giderek Şükürbeyli köyüne yerleşen aileler ile bir araya geldi. Cumhurbaşkanı, geri dönen ailelere ev anahtarlarını şahsen takdim etti. APA.az'a göre Şükürbeyli köyünde 635 yeni ev inşa edilmiş durumda; 900'den fazla eski sakin geri dönmek için başvuruda bulundu, ancak bu rakam mevcut konut kapasitesinin üzerinde olduğu bildirildi. Aliyev'in ziyareti, Karabağ bölgesindeki yeniden iskân sürecinin gözle görülür adımlarından biri olarak öne çıktı.
+
+## Yeniden inşa süreci
+
+Şükürbeyli köyü, Ermeni işgali döneminde tamamen yıkılmıştı; APA.az ve Trend.Az'ın bildirdiğine göre köyde sağlam tek bir yapı dahi kalmamıştı. Cumhurbaşkanı sakinlerle görüşmesinde, "Cebrail ülkemize önemli bir katkı sağlayacaktır" dedi. Aliyev ayrıca yeniden yerleşim sürecinin sosyal yönüne dikkat çekerek, "Konut ve eğitimle birlikte istihdam meseleleri de ele alınmaktadır" ifadesini kullandı. Şükürbeyli köyü, Cebrail rayonunda yeniden hayata döndürülen yerleşim birimleri arasında yer alıyor.
+
+## Enerji, ulaşım ve sanayi projeleri
+
+Cebrail rayonunda toplam 340 megavat kapasiteli üç güneş enerjisi santrali inşaatı sürüyor. Ermenistan sınırına uzanan dört şeritli karayolu (Zengezur Koridoru) ve 200 hektarlık Araz Vadisi Ekonomik Bölgesi Sanayi Parkı projeleri de Cumhurbaşkanı'nın gündemine alındığı projeler arasında yer aldı; sanayi parkında şu ana kadar 20 mukim üretim faaliyetine başladı.
+
+## Haydar Aliyev'in 103. yıldönümü
+
+Aynı gün daha erken saatlerde Cumhurbaşkanı ve First Lady, Bakü'deki Fahri Hıyaban'da Ulusal Lider Haydar Aliyev'in mezarını ziyaret edip çelenk koydu; APA.az ve Caliber.Az'ın bildirdiğine göre tören sırasında Azerbaycan milli marşı çalındı. 10 Mayıs 2026, Haydar Aliyev'in doğumunun 103. yıldönümüne denk geliyor.`,
+  },
+  'ru-aliyev-shukurbeyli-jabrayil-103-godovshchina': {
+    title: 'Алиев в Джебраиле: ключи жителям Шукурбейли, 635 новых домов',
+    date: '2026-05-09',
+    category: 'Политика',
+    locale: 'ru',
+    content: `## Возвращение в Шукурбейли
+
+9 мая 2026 года президент Ильхам Алиев и первая леди Мехрибан Алиева посетили Джебраильский район и встретились с жителями, которые возвращаются в село Шукурбейли. Президент лично вручил ключи от новых домов семьям, переезжающим в восстановленное село.
+
+По данным APA.az, в Шукурбейли построено 635 новых домов. Заявления на возвращение подали более 900 бывших жителей села — это превышает текущую жилую вместимость села.
+
+Село было полностью разрушено в годы армянской оккупации: ни одно здание не сохранилось. Сегодня Шукурбейли становится одним из символов программы «Большое возвращение» в Карабах.
+
+## Слова президента
+
+Выступая перед жителями, Ильхам Алиев подчеркнул экономическую перспективу района.
+
+«Джебраил внесёт значительный вклад в развитие нашей страны», — заявил президент.
+
+Он также отметил, что параллельно с жильём и образованием решаются и вопросы занятости: «Наряду с жильём и образованием решаются и вопросы трудоустройства».
+
+## Энергетика, дороги и промзона
+
+В ходе визита обсуждались три солнечные электростанции, строящиеся в Джебраиле. Их совокупная мощность составит 340 мегаватт. Также речь шла о четырёхполосной автомагистрали, ведущей до армянской границы — части Зангезурского коридора.
+
+В 200-гектарной промышленной зоне «Долина Араза» уже 20 резидентов запустили производственную деятельность.
+
+## 103-я годовщина Гейдара Алиева
+
+Ранее в тот же день Ильхам Алиев и Мехрибан Алиева посетили могилу общенационального лидера Гейдара Алиева на Аллее почётного захоронения в Баку, возложили венок и почтили память. 10 мая 2026 года отмечается 103-я годовщина со дня рождения Гейдара Алиева.`,
+  },
+
+  // --- Topic 2: Putin Victory Day parade (scaled-back, North Korean troops) ---
+  'putin-qalaba-gunu-paradi-atashkas-81-il': {
+    title: 'Putin 81-ci Qələbə Günü paradına sədrlik etdi, atəşkəs başladı',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Qızıl Meydanda kiçildilmiş parad
+
+Rusiya 9 may 2026-cı ildə Moskvanın Qızıl Meydanında Qələbə Günü paradı keçirib. Tədbir Nasist Almaniyası üzərində qələbənin 81-ci ildönümünə həsr olunmuşdu. Təxminən iki onillikdən sonra ilk dəfə paradda yalnız piyada qoşunlar iştirak edib — tank, raket və ağır silah nümayiş etdirilməyib. Bununla belə ənənəvi olan döyüş təyyarələrinin paradüstü uçuşu baş tutub.
+
+## Xarici qonaqlar və Şimali Koreya iştirakı
+
+Tədbirə Belarus Prezidenti Aleksandr Lukaşenko, Malayziya kralı Sultan İbrahim İskandar, Qazaxıstan və Özbəkistan prezidentləri qatılıb. Tarixdə ilk dəfə Şimali Koreya əsgərləri Qızıl Meydanda paradda addımlayıb.
+
+## Putinin nitqi
+
+Çıxışında Vladimir Putin müharibə fonunda milli birliyə vurğu edib. "Qələbə həmişə bizim olub və olacaq. Uğurun açarı bizim mənəvi gücümüz, cəsarət və şücaətimiz, birliyimiz və hər çətinliyə tab gətirib hər təhlükəni dəf etmək bacarığımızdır" — deyə rusiyalı lider bəyan edib. O, həmçinin Ukrayna ilə müharibəyə toxunub: "Qaliblər nəslinin böyük rəşadəti bu gün xüsusi hərbi əməliyyatın məqsədlərini həyata keçirən əsgərlərə ilham verir. Onlar bütün NATO bloku tərəfindən silahlandırılmış və dəstəklənən təcavüzkar qüvvə ilə üzləşir."
+
+## Üçgünlük atəşkəs ilə eyni günə düşdü
+
+Parad 9-11 may tarixləri arasında qüvvədə olan Rusiya-Ukrayna atəşkəsinin ilk günü ilə üst-üstə düşdü. ABŞ Prezidenti Donald Trampın vasitəçilik etdiyi razılaşma kinetik hərbi fəaliyyətin dayandırılmasını və hər bir tərəfin 1000 nəfər əsir mübadiləsini nəzərdə tutur.`,
+  },
+  'en-putin-victory-day-parade-ceasefire-may-9': {
+    title: 'Putin Leads Scaled-Back Victory Day Parade as Ceasefire Begins',
+    date: '2026-05-09',
+    category: 'World',
+    locale: 'en',
+    content: `## Red Square Parade
+
+Russia held a scaled-back Victory Day parade on Red Square on May 9, 2026, marking the 81st anniversary of the defeat of Nazi Germany, NPR and the Kremlin reported. President Vladimir Putin presided over the ceremony, which took place against the backdrop of a fragile new ceasefire with Ukraine.
+
+For the first time in nearly two decades, the parade featured infantry only, with no tanks, missiles or other heavy weaponry on display, according to CNN and Al Jazeera. The traditional flyover of combat jets nevertheless took place.
+
+## Foreign Guests on the Tribune
+
+Belarusian President Alexander Lukashenko, Malaysia's King Sultan Ibrahim Iskandar, and the presidents of Kazakhstan and Uzbekistan attended the parade, CNN reported. For the first time, North Korean troops marched on Red Square alongside Russian units.
+
+## Putin's Speech
+
+In his address, Putin invoked the legacy of the Soviet Union's victory in World War II and tied it to Russia's current military operations in Ukraine. "Victory has always been and will be ours," Putin said. "The key to success is our moral strength, courage and valor, our unity and ability to endure anything and overcome any challenge."
+
+The Russian leader also drew a direct line between past and present. "The great feat of the generation of victors inspires the soldiers carrying out the goals of the special military operation today," he said. "They are confronting an aggressive force armed and supported by the entire NATO bloc."
+
+## Three-Day Truce
+
+The parade coincided with the start of a three-day ceasefire between Russia and Ukraine, covering May 9 through 11, NPR and Al Jazeera reported. The truce, brokered by US President Donald Trump, includes a suspension of kinetic activity along the front line and an exchange of 1,000 prisoners by each side, framing this year's Victory Day in an unusually charged diplomatic context.`,
+  },
+  'tr-putin-zafer-gecidi-81-yildonumu-ateskes': {
+    title: 'Putin küçültülmüş 81. Zafer geçidini ateşkesle aynı günde yönetti',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Kızıl Meydan'da küçültülmüş geçit
+
+Rusya, 9 Mayıs 2026'da Moskova'da Kızıl Meydan'da Nazi Almanyası'nın yenilgisinin 81. yıldönümü vesilesiyle Zafer Bayramı geçit törenini düzenledi. NPR ve Kremlin'in bildirdiğine göre tören küçültülmüş bir formatta yapıldı. CNN ve Al Jazeera'ya göre yaklaşık yirmi yıldır ilk defa geçit töreninde tanklar, füzeler veya diğer ağır silahlar yer almadı; tören yalnızca piyade birliklerinin geçişi şeklinde düzenlendi. Geleneksel savaş uçağı geçişi ise gerçekleştirildi.
+
+## Yabancı misafirler ve ilkler
+
+Törene Belarus Cumhurbaşkanı Aleksandr Lukaşenko, Malezya Kralı Sultan İbrahim İskandar, Kazakistan ve Özbekistan cumhurbaşkanları katıldı. CNN'in haberine göre ilk kez Kuzey Koreli askerler de Kızıl Meydan'da yürüyüş kıtası olarak yer aldı. Rusya Devlet Başkanı Vladimir Putin konuşmasında, "Zafer her zaman bizim oldu ve bizim olacak. Başarımızın anahtarı manevi gücümüz, cesaretimiz ve yiğitliğimiz, birliğimiz ve her şeye dayanma, her zorluğu aşma yeteneğimizdir" dedi.
+
+## Ateşkes ile aynı güne denk geldi
+
+Geçit töreni, ABD Başkanı Donald Trump'ın aracılık ettiği Rusya-Ukrayna üç günlük ateşkesinin (9-11 Mayıs) yürürlüğe girdiği günle çakıştı. NPR ve Al Jazeera'ya göre ateşkes kapsamında tüm kinetik faaliyetler askıya alındı ve her iki taraftan biner esirin değişimi öngörüldü. Putin konuşmasında ayrıca, "Galip kuşağın büyük kahramanlığı, bugün özel askeri operasyonun hedeflerini yerine getiren askerlere ilham veriyor. Onlar, bütün NATO bloku tarafından silahlandırılan ve desteklenen saldırgan bir güçle karşı karşıya" ifadelerini kullandı.`,
+  },
+  'ru-putin-parad-pobedy-81-peremirie-ukraina': {
+    title: 'Путин принял парад Победы на фоне перемирия с Украиной',
+    date: '2026-05-09',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Парад на Красной площади
+
+9 мая 2026 года Россия провела парад Победы на Красной площади в Москве, отметив 81-ю годовщину разгрома нацистской Германии. По данным NPR и Кремля, мероприятие прошло в сокращённом формате.
+
+Впервые почти за два десятилетия по площади прошла только пехота — без танков, ракетных комплексов и другой тяжёлой техники. Тем не менее, как сообщают CNN и Al Jazeera, традиционный пролёт боевых самолётов состоялся.
+
+## Иностранные гости
+
+В параде приняли участие лидеры ряда государств. Среди них — президент Беларуси Александр Лукашенко, король Малайзии султан Ибрагим Искандар, президенты Казахстана и Узбекистана. Впервые в истории парада в строю прошли северокорейские военнослужащие, сообщает CNN.
+
+## Речь Путина
+
+В выступлении на Красной площади президент Владимир Путин подчеркнул преемственность поколений.
+
+«Победа всегда была и будет за нами. Залог успеха — наша моральная сила, мужество и доблесть, наше единство и способность вынести всё и преодолеть любой вызов», — заявил Путин на Красной площади.
+
+Он также увязал современную «специальную военную операцию» с памятью о Второй мировой войне:
+
+«Великий подвиг поколения победителей вдохновляет солдат, которые сегодня выполняют задачи специальной военной операции. Они противостоят агрессивной силе, вооружённой и поддерживаемой всем блоком НАТО».
+
+## Перемирие
+
+Парад совпал с началом трёхдневного перемирия между Россией и Украиной (9–11 мая), о котором ранее объявил президент США Дональд Трамп. Соглашение предусматривает приостановку огневых действий и обмен по тысяче пленных с каждой стороны.`,
+  },
+
+  // --- Topic 3: Trump-brokered Russia-Ukraine 3-day ceasefire ---
+  'tramp-rusiya-ukrayna-3-gun-atashkas': {
+    title: 'Tramp Rusiya-Ukrayna arasında üçgünlük atəşkəs elan etdi',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Üçgünlük atəşkəsin elanı
+
+8 may 2026-cı ildə ABŞ Prezidenti Donald Tramp Rusiya və Ukrayna liderlərinin 9, 10 və 11 may tarixlərini əhatə edən üçgünlük atəşkəs üzrə razılığa gəldiyini açıqlayıb. Tramp Truth Social platformasındakı yazısında bu addımı belə təqdim edib: "Rusiya və Ukrayna arasındakı münaqişədə ÜÇ GÜNLÜK ATƏŞKƏSİN (9, 10 və 11 may) tətbiq edildiyini elan etməkdən məmnunam."
+
+## Tərəflərin təsdiqi
+
+Atəşkəs Ukrayna Prezidenti Volodimir Zelenski və Rusiya Prezidenti Vladimir Putinin xarici siyasət üzrə müşaviri Yuri Uşakov tərəfindən təsdiq olunub. Razılaşma bütün kinetik hərbi fəaliyyətin dayandırılmasını və hər tərəfin 1000 nəfər əsir mübadiləsini nəzərdə tutur. Bu, ötən aylar ərzində Ağ Evin vasitəçiliyi ilə əldə edilmiş ən konkret diplomatik nəticələrdən biridir.
+
+## Müharibənin sonu üçün ümid
+
+Tramp atəşkəsi "çox uzun, qanlı və ağır gedən müharibənin sonunun başlanğıcı" ola biləcəyi şəklində xarakterizə edib. ABŞ administrasiyası bu üçgünlük dayanmanın daha uzunmüddətli sülh prosesi üçün zəmin yaratmasını ümid edir. Lakin razılaşmanın necə möhkəm olacağı barədə müşahidəçilər ehtiyatlı yanaşır.
+
+## Atəşkəsin başlanğıcı və qarşılıqlı ittihamlar
+
+Atəşkəs 9 may tarixində Rusiyanın Qələbə Günü ilə eyni vaxta düşməklə qüvvəyə minib. Lakin elə ilk günündən hər iki tərəf bir-birini razılaşmanın pozulmasında ittiham edib. Cəbhə xətti boyunca lokal toqquşma xəbərləri qeydə alınıb. Bununla belə beynəlxalq diplomatlar atəşkəsin tam çökməməsini və mübadilə mexanizminin işə düşməsini gözləyir.`,
+  },
+  'en-trump-russia-ukraine-ceasefire-may-9': {
+    title: 'Trump Announces Three-Day Russia-Ukraine Truce With Prisoner Swap',
+    date: '2026-05-09',
+    category: 'World',
+    locale: 'en',
+    content: `## A Three-Day Pause
+
+US President Donald Trump announced on May 8, 2026, that the leaders of Russia and Ukraine had agreed to a three-day ceasefire covering May 9, 10 and 11, NPR and Al Jazeera reported. The pause took effect on May 9, the same day Russia held its Victory Day parade in Moscow.
+
+"I am pleased to announce the introduction of a THREE-DAY TRUCE (May 9, 10 and 11) in the conflict between Russia and Ukraine," Trump wrote on Truth Social, in remarks reported by Al Jazeera. The US president described the agreement as potentially "the beginning of the end of a very long, deadly, and hard fought War," NPR reported.
+
+## Confirmation From Kyiv and Moscow
+
+The ceasefire was confirmed by Ukrainian President Volodymyr Zelenskyy and by Yuri Ushakov, foreign affairs adviser to Russian President Vladimir Putin, according to NPR. The dual confirmation marked a rare moment of public alignment between the two sides on a concrete diplomatic step.
+
+## Terms of the Agreement
+
+According to NPR and Al Jazeera, the agreement includes a suspension of all kinetic activity along the front line for the three-day period, paired with a major prisoner exchange. Each side agreed to hand over 1,000 prisoners under the deal, making it one of the larger swaps recorded since the start of the war.
+
+## Truce Under Strain
+
+The ceasefire began on May 9, coinciding with Russia's Victory Day commemorations on Red Square. Both sides traded accusations of violations during the truce, Al Jazeera reported, leaving open questions about whether the pause will translate into a more sustained de-escalation or fade once the three-day window closes on May 11.`,
+  },
+  'tr-trump-rusya-ukrayna-uc-gunluk-ateskes': {
+    title: 'Trump Rusya-Ukrayna arasında üç günlük ateşkesin başladığını duyurdu',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Üç günlük ateşkes ilanı
+
+ABD Başkanı Donald Trump, 8 Mayıs 2026'da Rusya ve Ukrayna liderlerinin 9, 10 ve 11 Mayıs günlerini kapsayan üç günlük bir ateşkes üzerinde anlaştığını açıkladı. NPR ve Al Jazeera'nın haberine göre Trump, Truth Social platformunda yaptığı paylaşımda, "Rusya ile Ukrayna arasındaki çatışmada üç günlük ateşkesin (9, 10 ve 11 Mayıs) başlatıldığını duyurmaktan memnuniyet duyuyorum" ifadesini kullandı. NPR'nin aktardığına göre açıklama, Washington D.C.'den 8 Mayıs günü yapıldı.
+
+## Esir takası ve kinetik faaliyetlerin durdurulması
+
+NPR'nin aktardığına göre ateşkes, Ukrayna Devlet Başkanı Volodımır Zelenskiy ve Rus Devlet Başkanı Vladimir Putin'in dış politika danışmanı Yuri Uşakov tarafından da teyit edildi. Al Jazeera ve NPR'a göre anlaşma kapsamında tüm kinetik faaliyetlerin askıya alınması ve her iki tarafın 1.000'er esir takası yapması öngörüldü. Trump, ateşkesi "çok uzun, ölümcül ve çetin bir savaşın sonunun başlangıcı" olarak nitelendirdi. Ateşkes anlaşmasının kapsamı, NPR'a göre Rusya ve Ukrayna cephe hattındaki tüm kinetik askeri faaliyetleri kapsamaktaydı.
+
+## Yürürlüğe girişi ve sürecin kırılganlığı
+
+Ateşkes 9 Mayıs'ta yürürlüğe girdi ve Rusya'nın Zafer Bayramı kutlamalarıyla aynı güne denk geldi. Al Jazeera'nın bildirdiğine göre üç günlük süre boyunca her iki taraf birbirini ihlallerle suçlayan açıklamalar yaptı. Açıklama Washington D.C.'den yapılmış olsa da ateşkes, Rusya-Ukrayna cephe hattı boyunca uygulandı. CNN'in haberine göre üç günlük ateşkes, Moskova'da Kızıl Meydan'da düzenlenen küçültülmüş Zafer Bayramı geçit töreniyle aynı tarihe denk geldi.`,
+  },
+  'ru-tramp-tryokhdnevnoe-peremirie-rossiya-ukraina': {
+    title: 'Трамп объявил трёхдневное перемирие России и Украины',
+    date: '2026-05-09',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Объявление в Truth Social
+
+8 мая 2026 года президент США Дональд Трамп объявил, что лидеры России и Украины согласовали трёхдневное перемирие на 9, 10 и 11 мая 2026 года. Об этом сообщили NPR и Al Jazeera.
+
+В сообщении в Truth Social Трамп написал: «С удовольствием объявляю о введении ТРЁХДНЕВНОГО ПЕРЕМИРИЯ (9, 10 и 11 мая) в конфликте между Россией и Украиной».
+
+Американский президент назвал договорённость потенциальным «началом конца очень долгой, смертоносной и тяжёлой войны».
+
+## Подтверждение сторон
+
+Перемирие было подтверждено президентом Украины Владимиром Зеленским и помощником президента России по внешней политике Юрием Ушаковым. Об этом сообщает NPR.
+
+Соглашение включает приостановку всех огневых действий и обмен по тысяче пленных с каждой стороны.
+
+## Вступление в силу
+
+Перемирие вступило в силу 9 мая — в день, когда Россия отмечает 81-ю годовщину Победы. По данным Al Jazeera, обе стороны уже в первые сутки обвинили друг друга в нарушениях режима тишины.
+
+## Совпадение с парадом Победы
+
+Перемирие началось 9 мая 2026 года и совпало с парадом Победы на Красной площади в Москве. Об этом сообщили NPR, Al Jazeera и CNN. Парад был проведён в сокращённом формате: впервые почти за два десятилетия по площади прошла только пехота, без танков, ракетных комплексов и другой тяжёлой техники.
+
+## Содержание соглашения
+
+Согласно сообщениям NPR и Al Jazeera, перемирие охватило 9, 10 и 11 мая 2026 года. Соглашение предусматривает приостановку всех кинетических действий вдоль линии фронта между Россией и Украиной. Параллельно стороны договорились об обмене пленными по тысяче человек с каждой стороны. Объявление было сделано Дональдом Трампом 8 мая 2026 года в социальной сети Truth Social.`,
+  },
+
+  // --- Topic 4: Israeli strikes Lebanon, 17 killed Saksakiyeh ---
+  'israil-livan-zarbalari-17-olum-saksakiye': {
+    title: 'İsrail zərbələri Livanda 17 nəfərin ölümünə səbəb oldu, atəşkəs zəifləyir',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Beyrut yaxınlığında və cənubda zərbələr
+
+9 may 2026-cı ildə Beyrutun cənubunda nəqliyyat vasitələrinə endirilən üç İsrail dron zərbəsi nəticəsində 4 nəfər həlak olub. Eyni gün cənubi Livanda hava zərbələrində ən azı 13 nəfər, o cümlədən bir kişi və onun 12 yaşlı qızı həyatını itirib. Beləliklə bir gün ərzində ümumi tələfat ən azı 17 nəfərə çatıb. Hadisələr 17 aprel İsrail-Hizbullah atəşkəsinin getdikcə zəifləməsinin daha bir əlamətidir.
+
+## Saksakiyə kəndindəki faciə
+
+Cənubi Livanın Saksakiyə kəndinə endirilən bir zərbə xüsusilə ağır nəticələrlə yadda qalıb. Livan Səhiyyə Nazirliyinin məlumatına görə bu kənddə həyatını itirənlərin sayı ən azı 7 nəfərdir, onların arasında bir uşaq da var. Eyni hadisədə 15 nəfər yaralanıb. Zərbə yaşayış məntəqəsinin yaxınlığında baş verdiyi üçün mülki tələfat artıb.
+
+## İsrail Müdafiə Qüvvələrinin əməliyyatları
+
+İsrail Müdafiə Qüvvələri (İDF) bildirib ki, son 24 saat ərzində Hizbullaha aid 85-dən çox obyektə zərbə endirilib. Eyni zamanda Hizbullahın partlayıcı dronları nəticəsində üç İsrail əsgəri yaralanıb, onlardan biri ağır vəziyyətdədir. Yaralılar Qaliley Tibb Mərkəzinə çatdırılıb. İsrail hərbi qüvvələri "Hizbullahın atəşkəs razılaşmasını pozması" səbəbindən cənubi Livanda mülki əhaliyə təxliyə xəbərdarlıqları verdiyini bildirib.
+
+## Atəşkəsin parçalanması
+
+Aprelin 17-də əldə edilmiş atəşkəs hər iki tərəfdə artan toqquşmalar fonunda real nəticəsini itirməkdədir. Saksakiyə zərbəsi günün ümumi tələfatının demək olar ki, yarısını təşkil edib və 9 may tarixində Livan ərazisində qeydə alınmış ən ağır tək hadisə olub.`,
+  },
+  'en-israel-lebanon-strikes-saksakiyeh-may-9': {
+    title: 'Israeli Strikes Kill 17 Across Lebanon as Ceasefire Frays',
+    date: '2026-05-09',
+    category: 'World',
+    locale: 'en',
+    content: `## Drone Strikes Near Beirut
+
+Three Israeli drone strikes hit vehicles south of Beirut on May 9, 2026, killing four people, the Washington Times reported, citing AP. The strikes near Saadiyat, located on the Sidon-Beirut coastal highway about 70 kilometers north of the Israeli border, marked one of the deepest Israeli operations into Lebanese territory since the April 17 ceasefire.
+
+Separate airstrikes on towns and villages in southern Lebanon killed at least 13 people the same day, including a man and his 12-year-old daughter, the Washington Times reported. Combined casualty figures across the strikes brought the day's toll to 17.
+
+## Saksakiyeh Strike
+
+A single strike on the village of Saksakiyeh killed at least seven people, including a child, and wounded 15 others, according to Lebanon's Health Ministry, the Washington Times reported. The Saksakiyeh attack accounted for nearly half of the day's total fatalities.
+
+## Israeli Operations and Casualties
+
+The Israel Defense Forces said it struck more than 85 Hezbollah sites in 24 hours on May 9, the Times of Israel reported in its live coverage. Three Israeli soldiers were wounded by Hezbollah explosive drones during the same period, with one of them seriously hurt and admitted to Galilee Medical Center in northern Israel.
+
+The Israeli military said "Hezbollah's violation of the ceasefire agreement" prompted civilian evacuation warnings issued earlier across parts of southern Lebanon, the Times of Israel reported.
+
+## Ceasefire Under Pressure
+
+The strikes mark a continued unraveling of the April 17 Israel-Hezbollah ceasefire, the Washington Times and CBC reported.`,
+  },
+  'tr-israil-lubnan-saldiri-17-olu-9-mayis': {
+    title: 'İsrail saldırılarında Lübnan\'da 17 kişi öldü, ateşkes çözülüyor',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Beyrut yakınında ve güney Lübnan'da saldırılar
+
+9 Mayıs 2026'da Beyrut'un güneyinde araçlara yapılan üç İsrail insansız hava aracı saldırısında 4 kişi hayatını kaybetti. Washington Times ve AP'ye göre güney Lübnan'a yapılan hava saldırılarında ise bir adam ile 12 yaşındaki kızı dahil olmak üzere en az 13 kişi öldü. Bu kayıplarla 9 Mayıs günü Lübnan topraklarında hayatını kaybedenlerin toplam sayısı 17 oldu.
+
+## Saksakiyeh köyündeki saldırı
+
+Saksakiyeh köyüne yapılan bir saldırıda Lübnan Sağlık Bakanlığı'nın açıklamasına göre bir çocuk dahil en az 7 kişi hayatını kaybetti, 15 kişi yaralandı. Tek bir saldırıda kaydedilen bu kayıplar, 9 Mayıs gününün Lübnan topraklarındaki en ağır tek hadise toplamına karşılık geldi.
+
+## İsrail Ordusu'nun açıklamaları
+
+Times of Israel'in haberine göre İsrail Ordusu (IDF) 9 Mayıs'taki 24 saat içinde Hizbullah'a ait 85'ten fazla noktayı vurduğunu açıkladı. Aynı gün Hizbullah'ın patlayıcı yüklü insansız hava araçlarıyla yaptığı saldırılarda üç İsrail askeri yaralandı; bunlardan birinin durumunun ağır olduğu bildirildi ve askerler Galile Tıp Merkezi'ne kaldırıldı. İsrail Ordusu, güney Lübnan'da sivillere yönelik tahliye uyarılarının "Hizbullah'ın ateşkes anlaşmasını ihlal etmesi" üzerine yayımlandığını duyurdu.
+
+## 17 Nisan ateşkesinin çözülmesi
+
+Washington Times ve CBC'nin değerlendirmesine göre bu saldırılar, 17 Nisan'daki İsrail-Hizbullah ateşkesinin giderek çözüldüğünün göstergesi olarak değerlendirildi. Olayların yaşandığı bölgeler arasında Beyrut'un yaklaşık 70 kilometre kuzeyindeki Saadiyat, güney Lübnan'daki Saksakiyeh köyü ve Sayda-Beyrut sahil otoyolu yer aldı. İsrail tarafında ise kuzey İsrail'de Batı Galile bölgesinde Hizbullah'ın patlayıcı insansız hava araçlarıyla yapılan saldırı kaydedildi. Tüm 9 Mayıs günü Lübnan topraklarında hayatını kaybedenlerin toplam sayısı 17 olarak kaydedildi.`,
+  },
+  'ru-izrail-livan-saksakie-17-pogibshikh': {
+    title: 'Удары Израиля по Ливану унесли жизни 17 человек за сутки',
+    date: '2026-05-09',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Удары к югу от Бейрута
+
+9 мая 2026 года три удара израильских беспилотников по автомобилям к югу от Бейрута унесли жизни четырёх человек. Об этом сообщает Washington Times со ссылкой на Associated Press.
+
+Удары пришлись на район Саадият, расположенный примерно в 70 километрах к северу от израильской границы, на прибрежной автомагистрали Сидон — Бейрут.
+
+## Атаки на юге Ливана
+
+Авиаудары по югу Ливана в тот же день унесли жизни ещё как минимум 13 человек, включая мужчину и его 12-летнюю дочь.
+
+Один из ударов пришёлся на село Саксакие. По данным Министерства здравоохранения Ливана, там погибли не менее семи человек, в том числе ребёнок, а 15 получили ранения.
+
+Всего за сутки на территории Ливана погибли 17 человек.
+
+## Заявление ЦАХАЛ
+
+Армия обороны Израиля сообщила, что за 24 часа 9 мая нанесла удары более чем по 85 объектам «Хезболлы».
+
+В тот же день три израильских военнослужащих получили ранения в результате атаки взрывных беспилотников «Хезболлы». Один из них в тяжёлом состоянии был доставлен в медицинский центр «Галилея», сообщает Times of Israel.
+
+Израильская армия заявила, что эвакуационные предупреждения для жителей южного Ливана были вызваны «нарушением «Хезболлой» соглашения о прекращении огня».
+
+## Распад перемирия
+
+Удары стали продолжением распада соглашения о прекращении огня от 17 апреля между Израилем и «Хезболлой», отмечают Washington Times и CBC.
+
+География событий 9 мая включила Саадият (примерно 70 километров к северу от израильской границы), прибрежную автомагистраль Сидон — Бейрут, село Саксакие на юге Ливана, а также район Западной Галилеи на севере Израиля, куда были направлены взрывные беспилотники «Хезболлы».`,
+  },
+
+  // --- Topic 6: Mali JNIM offensive, Bamako blockade ---
+  'mali-bamako-blokada-jnim-mopti-30-olum': {
+    title: 'Malidə JNIM Bamakoya blokada qoyub, Mopti bölgəsində 30 nəfər öldürülüb',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Bamakoya yanacaq blokadası
+
+Əl-Qaidə ilə əlaqəli "Camaət Nüsrət əl-İslam vəl-Müslimin" (JNIM) qruplaşması 28 aprel 2026-cı il tarixindən bəri Mali paytaxtı Bamakoya blokada tətbiq edib. Təxminən 4 milyon əhalisi olan paytaxta gedən əsas nəqliyyat marşrutları silahlı qruplaşmanın nəzarəti altına keçib. Yanacaq və ərzaq tədarükü ciddi şəkildə dayandırılıb, bu isə şəhərdə qiymətlərin kəskin artmasına səbəb olub.
+
+## Yollarda hücum və yandırılan trakların
+
+6 may 2026-cı ildə JNIM döyüşçüləri Buquni-Bamako marşrutunda bir neçə yük maşınını yandırıblar. Eyni zamanda Bamakonu Sikasso ilə birləşdirən magistralın da blokada altına alındığı bildirilir. Bu marşrutların kəsilməsi paytaxtın iqtisadi həyat damarlarına ciddi zərbə vurub.
+
+## Mopti bölgəsində kütləvi qətl
+
+Al Jazeera qaynaqlarının 7 may tarixli məlumatına görə, Mali mərkəzi Mopti bölgəsindəki Korikori və Qomossoqu kəndlərinə endirilən JNIM hücumları nəticəsində ən azı 30 nəfər öldürülüb. Hücumlar mülki əhaliyə qarşı yönəldilib və regionda artan terror təhlükəsinin daha bir əlamətidir.
+
+## Mali rəhbərliyi və apreldəki itkilər
+
+25 aprel 2026-cı ildə Kati və Bamakoda baş vermiş hücumlarda Mali Müdafiə Naziri Sadio Camara həyatını itirmiş, kəşfiyyat rəhbəri Modibo Kone yaralanmışdı. Bu itki ölkənin təhlükəsizlik strukturunu zəiflətmişdi. 8 may 2026-cı ildə Mali Xarici İşlər Naziri yaydığı bəyanatda hökumətin "qanunsuz silahlı terrorçu qruplaşmalarla hər hansı dialoqu" istisna etdiyini bəyan edib. Beləliklə danışıqlar yolu hələlik bağlıdır və regionda təhlükəsizlik böhranı dərinləşir.`,
+  },
+  'en-mali-bamako-jnim-blockade-mopti-attacks': {
+    title: 'Al-Qaida-Linked Fighters Tighten Bamako Blockade, Kill 30 in Mopti',
+    date: '2026-05-09',
+    category: 'World',
+    locale: 'en',
+    content: `## Bamako Under Blockade
+
+Jama'at Nusrat al-Islam wal-Muslimin, an al-Qaida affiliate known as JNIM, has imposed a blockade on Bamako, the capital of Mali, since April 28, 2026, Al Jazeera reported. The Malian capital is home to roughly 4 million people, making the disruption of supply routes a major humanitarian and economic concern.
+
+JNIM fighters have targeted highways linking Bamako to other cities. On May 6, the group's fighters burned several trucks on the Bougouni-Bamako route, while the road connecting Bamako with Sikasso also fell under JNIM control, according to compiled reporting.
+
+## Attacks in Mopti Region
+
+At least 30 people were killed in JNIM attacks on the villages of Korikori and Gomossogou in Mali's central Mopti region, Al Jazeera reported on May 7. Democracy Now also reported on the village attacks as part of a wider pattern of violence in central Mali, where JNIM has targeted civilians, security forces and transport infrastructure.
+
+## Government Officials Targeted
+
+Defence Minister Sadio Camara was killed in earlier attacks on Kati and Bamako on April 25, 2026, while intelligence chief Modibo Kone was wounded in the same wave of operations. The April 25 attacks shook Mali's security establishment and set the stage for the subsequent blockade.
+
+## No Dialogue, Bamako Says
+
+On May 8, 2026, Mali's foreign minister stated that Bamako rules out "any dialogue with lawless armed terrorist groups," according to local outlet Pravda Mali. The remarks signaled that Mali's military government intends to confront JNIM through force rather than political accommodation.
+
+With major highways disrupted, fuel and food deliveries to the capital strained and senior officials targeted, Mali enters May 2026 facing one of the most severe security crises in its recent history.`,
+  },
+  'tr-mali-jnim-bamako-mopti-30-olu-saldiri': {
+    title: 'Mali\'de JNIM saldırıları: Mopti bölgesinde 30\'dan fazla kişi öldürüldü',
+    date: '2026-05-09',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Bamako'ya yakıt ablukası
+
+El Kaide bağlantılı Cemaat Nusret el-İslam ve'l-Müslimin (JNIM), 28 Nisan 2026'dan bu yana yaklaşık 4 milyon nüfuslu Bamako'ya yönelik bir abluka uyguluyor. Al Jazeera ve Wikipedia derlemesine göre 6 Mayıs'ta JNIM militanları Bougouni–Bamako güzergâhında birden fazla kamyonu yaktı; aynı dönemde Bamako'yu Sikasso'ya bağlayan yol da JNIM kontrolüne geçti. Bu durum başkente ulaşan yakıt ve gıda kaynaklarını ciddi biçimde sınırlandırdı. Al Jazeera, JNIM militanlarının ayrıca bir Mali cezaevine baskın düzenlediğini bildirdi.
+
+## Mopti bölgesinde köy saldırıları
+
+Al Jazeera'nın 7 Mayıs tarihli haberine göre Mali'nin Mopti bölgesindeki Korikori ve Gomossogou köylerine düzenlenen JNIM saldırılarında en az 30 kişi hayatını kaybetti. Democracy Now ve diğer kaynaklar bu saldırıların orta Mali'deki güvenlik krizinin son boyutu olduğunu aktardı. JNIM, son aylarda Sahel bölgesinde özellikle Mali'nin merkezi ve güney koridorlarında etkinliğini hızla artırdı. Korikori ve Gomossogou köylerinde yapılan saldırılar, sivil hedeflere yönelik gerçekleştirilen son dönem en ölümcül saldırılardan biri oldu.
+
+## Hükümetin tutumu ve daha önceki kayıplar
+
+Wikipedia ve Al Jazeera'nın derlemesine göre 25 Nisan 2026'da Kati ve Bamako'ya düzenlenen önceki saldırılarda Mali Savunma Bakanı Sadio Camara hayatını kaybetti; istihbarat şefi Modibo Koné yaralandı. 8 Mayıs 2026'da Mali Dışişleri Bakanı Pravda Mali aracılığıyla yaptığı açıklamada Bamako'nun "kanunsuz silahlı terörist gruplarla herhangi bir diyaloğu" reddettiğini bildirdi.
+
+## Krizin coğrafi merkezleri
+
+Bamako başkenti, Mopti bölgesinde Korikori ve Gomossogou köyleri ile Bougouni–Bamako ve Sikasso–Bamako otoyolları, krizin coğrafi odak noktalarını oluşturdu. JNIM'in saldırı hattı, Mali'nin merkezinden başkente uzanan kara yollarını etkiliyor.`,
+  },
+  'ru-mali-bamako-jnim-blokada-mopti': {
+    title: 'JNIM атакует дороги к Бамако: более 30 погибших в Мопти',
+    date: '2026-05-09',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Блокада Бамако
+
+С 28 апреля 2026 года группировка «Джамаат Нусрат аль-Ислам валь-Муслимин» (JNIM), связанная с «Аль-Каидой», установила блокаду столицы Мали Бамако с населением около четырёх миллионов человек. Об этом сообщает Al Jazeera со ссылкой на сводки об атаках.
+
+6 мая боевики JNIM подожгли несколько грузовиков на трассе Бугуни — Бамако. Дорога, соединяющая Бамако с Сикассо, также перешла под контроль группировки. Это поставило столицу в положение постепенного перекрытия топливных и продовольственных поставок.
+
+## Атаки в регионе Мопти
+
+7 мая 2026 года не менее 30 человек были убиты в результате нападений JNIM на сёла Корикори и Гомоссогоу в центральном регионе Мали Мопти. Об этом сообщили Al Jazeera и Democracy Now.
+
+Атаки на сельские населённые пункты вписываются в более широкую кампанию давления, которую группировка ведёт против городских центров и транспортных артерий страны.
+
+## Удар по руководству
+
+Ранее, 25 апреля 2026 года, в результате нападений на Кати и Бамако был убит министр обороны Мали Садио Камара. Глава разведки Модибо Коне получил ранения. Об этом сообщает Wikipedia на основе сводных данных Al Jazeera и других источников.
+
+## Позиция Бамако
+
+8 мая 2026 года министр иностранных дел Мали заявил, что Бамако исключает «любой диалог с беззаконными вооружёнными террористическими группировками». Цитата приведена изданием Pravda Mali.
+
+Этим заявлением правительство дало понять, что не планирует переговоров с JNIM, несмотря на ухудшение положения столицы и нарастание давления на основные транспортные коридоры страны.`,
+  },
+
+  // --- Topic 7: Manchester City 3-0 Brentford, Arsenal lead 2 points ---
+  'man-city-brentford-3-0-arsenal-2-xal-fark': {
+    title: 'Manchester City Brentforda 3-0 qalib gəldi, Arsenaldan 2 xal geridə',
+    date: '2026-05-09',
+    category: 'İdman',
+    locale: 'az',
+    content: `## Matçın yekun hesabı
+
+9 may 2026-cı ildə (şənbə) İngiltərə Premyer Liqasının 36-cı turunda Manchester City Brentforda qarşı oyununu Etihad stadionunda keçirib. Qarşılaşma 3-0 hesabı ilə ev sahiblərinin qələbəsi ilə başa çatıb. Matç İngiltərənin Manchester şəhərində oynanılıb. Mənbələr: ESPN, Sky Sports, Al Jazeera.
+
+## Qol vuranlar və dəqiqələr
+
+ESPN və Sky Sports məlumatlarına görə Manchester City heyətində qollar bu oyunçulara aiddir: Jérémy Doku 60-cı dəqiqədə birinci qolu vurub. Erling Haaland 75-ci dəqiqədə hesabı 2-0 edib. Üçüncü qol isə Omar Marmoush'un adına yazılıb. Hər üç qol matçın ikinci yarısında qeydə alınıb.
+
+## Premyer Liqa cədvəli
+
+Al Jazeera və ESPN-in matçdan sonrakı cədvəl məlumatlarına əsasən: Arsenal 76 xalla liderdir, Manchester City isə 74 xalla ikinci pillədədir. İki komanda arasındakı fərq cəmi 2 xaldır. Cədvəldə üçüncü və ondan sonrakı yerlərdəki klublar artıq titul mübarizəsindən kənardadır.
+
+## Mövsümün finiş hissəsi
+
+Al Jazeera-ya görə matç oynanan tarix etibarilə Premyer Liqa mövsümünün başa çatmasına üç tur qalmışdı. Hər iki komanda qalan üç turda öz təqviminə uyğun qarşılaşmalar keçirəcək. Manchester City'nin Brentforda qarşı qələbəsi 36-cı turun şənbə günkü oyunu kimi qeydə alınıb.
+
+## Görüşün əsas faktları
+
+Tarix: 9 may 2026 (şənbə). Tur: Premyer Liqa 36-cı tur. Stadion: Etihad, Manchester. Yekun hesab: Manchester City 3 — Brentford 0. Qol vuranlar: Doku (60'), Haaland (75'), Marmoush. Cədvəldəki vəziyyət: Arsenal 76 xal, Manchester City 74 xal. Mövsümün sonuna qədər qalan tur sayı: 3.`,
+  },
+  'en-man-city-brentford-3-0-arsenal-lead-may-9': {
+    title: 'Man City Beat Brentford 3-0 to Cut Arsenal Lead to Two Points',
+    date: '2026-05-09',
+    category: 'Sports',
+    locale: 'en',
+    content: `## Final Score
+
+Manchester City defeated Brentford 3-0 on May 9, 2026, in the Premier League's Matchday 36 fixture played at the Etihad Stadium in Manchester, ESPN and Sky Sports reported. The result shifted the dynamics at the top of the league with three rounds of fixtures still to play.
+
+## Goal Scorers
+
+Jeremy Doku opened the scoring in the 60th minute, ESPN reported. Erling Haaland added the second goal in the 75th minute, before Omar Marmoush completed the scoring later in the match, according to ESPN and Sky Sports. The 3-0 final score was confirmed by both outlets in their post-match coverage.
+
+## Standings After Matchday 36
+
+After the match, Arsenal sat top of the Premier League table on 76 points, with Manchester City on 74 points, Al Jazeera and ESPN reported. Manchester City's win cut Arsenal's lead at the top to two points heading into the final stretch of the season.
+
+## Three Rounds Remaining
+
+Three Premier League rounds remained at the time of the result, Al Jazeera reported. The schedule means both clubs still have direct say over their own fate, with each upcoming fixture carrying immediate implications for the title race.
+
+## Fixture Summary
+
+Date: May 9, 2026.
+Competition: Premier League, Matchday 36.
+Venue: Etihad Stadium, Manchester.
+Result: Manchester City 3, Brentford 0.
+Goal scorers: Jeremy Doku (60'), Erling Haaland (75'), Omar Marmoush.
+Standings after the match: Arsenal 76 points, Manchester City 74 points.
+Rounds remaining: three.
+
+## What Comes Next
+
+With three Premier League rounds left, the table heading into the final stretch shows Arsenal and Manchester City separated by a margin that can swing on a single result. Each remaining fixture for both clubs will now be measured directly against the other's outcome on the same matchday, framing the closing weekends of the 2025-26 Premier League season around a two-point gap at the top.`,
+  },
+  'tr-manchester-city-brentford-3-0-arsenal-2-puan': {
+    title: 'Manchester City Brentford\'u 3-0 yendi, Arsenal farkı 2 puana indi',
+    date: '2026-05-09',
+    category: 'Spor',
+    locale: 'tr',
+    content: `## Maç sonucu
+
+Manchester City, 9 Mayıs 2026'da Etihad Stadyumu'nda oynanan Premier Lig 36. hafta karşılaşmasında Brentford'u 3-0 mağlup etti. Karşılaşma, İngiltere'nin Manchester şehrinde, Manchester City'nin ev sahipliği yaptığı Etihad Stadyumu'nda gerçekleştirildi. ESPN ve Sky Sports'un maç raporlarına göre City adına gollerin sahibi 60. dakikada Jérémy Doku, 75. dakikada Erling Haaland ve Omar Marmoush oldu. Maç sonu sonucu Manchester City 3, Brentford 0 olarak kaydedildi.
+
+## Gol dakikaları ve gol kaydedenler
+
+Karşılaşmanın ilk yarısı 0-0 sona erdi. ESPN ve Sky Sports'un dakika dakika maç raporlarında, ikinci yarının 60. dakikasında Jérémy Doku'nun ev sahibinin ilk golünü kaydettiği aktarıldı. 75. dakikada Erling Haaland skoru 2-0'a taşıdı. Maçın üçüncü golünü ise Omar Marmoush atarak skoru 3-0'a getirdi. Maç bu skorla sonuçlandı. ESPN ve Sky Sports'un maç raporlarına göre üç gol de ikinci yarıda kaydedildi.
+
+## Puan tablosu
+
+Al Jazeera ve ESPN'in maç sonrası verilerine göre puan tablosunda Arsenal 76 puanla liderliğini korurken Manchester City 74 puana yükseldi. Bu sonuçla City, lig liderliği yarışında Arsenal ile arasındaki farkı iki puana indirdi. Al Jazeera'nın aktardığına göre maçın oynandığı tarih itibarıyla Premier Lig sezonunun bitimine üç hafta kalmıştı. Karşılaşma Premier Lig'in 36. haftası kapsamında değerlendirildi.
+
+## Sezonun kalan kısmı
+
+Maç sonu itibarıyla puan tablosunun zirvesinde Arsenal 76 puanla birinci, Manchester City ise 74 puanla ikinci sırada yer aldı. Üç haftalık takvim, ligin tamamlanmasına dek oynanacak karşılaşma sayısını belirledi. Etihad Stadyumu'nda oynanan bu karşılaşma, Premier Lig'in 36. haftası kapsamında, sezonun son üç haftasının başlangıç noktası olarak takvimde yer aldı.`,
+  },
+  'ru-manchester-siti-brentford-3-0-arsenal-2-ochka': {
+    title: 'Манчестер Сити обыграл Брентфорд 3-0, отрыв Арсенала — 2',
+    date: '2026-05-09',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `## Финальный счёт
+
+9 мая 2026 года на стадионе «Этихад» в Манчестере состоялся матч 36-го тура Английской Премьер-лиги между «Манчестер Сити» и «Брентфордом». Игра завершилась со счётом 3:0 в пользу хозяев.
+
+Об этом сообщают ESPN, Sky Sports и Al Jazeera.
+
+## Авторы голов
+
+Первый мяч в матче забил Жереми Доку на 60-й минуте. На 75-й минуте счёт удвоил Эрлинг Холанд. Третий гол на счету Омара Мармуша. Об этом сообщают ESPN и Sky Sports.
+
+## Турнирная таблица
+
+После матча в зачёте Английской Премьер-лиги «Арсенал» имеет 76 очков, а «Манчестер Сити» — 74 очка. Об этом сообщают Al Jazeera и ESPN.
+
+Таким образом, отрыв «Арсенала» от «Манчестер Сити» сократился до двух очков.
+
+## Оставшиеся матчи
+
+По данным Al Jazeera, на момент окончания матча в Премьер-лиге оставалось три тура. Это означает, что борьба за чемпионский титул сезона 2025/26 будет продолжаться до последних игровых дней.
+
+Ближайшие туры станут решающими как для «Арсенала», который сохраняет лидерство, так и для «Манчестер Сити», вернувшегося в зону прямого преследования. Оба клуба должны провести по три встречи, и любая потеря очков может изменить расстановку сил в верхней части таблицы.
+
+## График
+
+Матч 36-го тура «Манчестер Сити» — «Брентфорд» состоялся 9 мая 2026 года на стадионе «Этихад» в Манчестере (Англия). Это был один из субботних матчей 36-го тура Английской Премьер-лиги сезона 2025/26.
+
+## Хронология голов
+
+Первый гол матча был зафиксирован на 60-й минуте — его автор Жереми Доку. На 75-й минуте Эрлинг Холанд установил счёт 2:0. Третий мяч в составе хозяев забил Омар Мармуш.
+
+## Резюме
+
+Финальный счёт встречи: «Манчестер Сити» 3, «Брентфорд» 0. По итогам тура «Арсенал» сохраняет лидерство в Английской Премьер-лиге с 76 очками, «Манчестер Сити» — на втором месте с 74 очками. До конца сезона остаётся три тура.`,
+  },
+
   // ========== 2026-05-02 ==========
 
   // --- Topic 1: Sinaloa Governor Steps Down After US Cartel Indictment ---
