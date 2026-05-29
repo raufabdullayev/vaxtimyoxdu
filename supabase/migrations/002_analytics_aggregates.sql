@@ -24,6 +24,7 @@ CREATE OR REPLACE FUNCTION public.analytics_aggregates(
 RETURNS jsonb
 LANGUAGE sql
 STABLE
+SET search_path = ''  -- security: pin search_path (all refs are public.* or pg_catalog built-ins)
 AS $$
   SELECT jsonb_build_object(
     -- popular_tools: tool_use events grouped by event_data->>'tool', top p_limit
