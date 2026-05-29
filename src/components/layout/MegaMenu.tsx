@@ -62,6 +62,10 @@ export default function MegaMenu() {
     closeTimer.current = setTimeout(() => setOpen(false), 150)
   }, [])
 
+  useEffect(() => () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+  }, [])
+
   useEffect(() => {
     if (!open) return
     function handleClickOutside(e: MouseEvent) {

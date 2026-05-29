@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   MessageCircle,
@@ -62,7 +62,7 @@ export default function ShareButtons({
   const t = useTranslations('share')
   const [copied, setCopied] = useState(false)
 
-  const platforms: SharePlatform[] = [
+  const platforms: SharePlatform[] = useMemo(() => [
     {
       name: 'WhatsApp',
       icon: <MessageCircle className="h-4 w-4" />,
@@ -121,7 +121,7 @@ export default function ShareButtons({
       },
       utmMedium: 'linkedin',
     },
-  ]
+  ], [t])
 
   const handleCopyLink = useCallback(async () => {
     const trackedUrl = buildShareUrl(url, 'copy_link', 'tool_share')

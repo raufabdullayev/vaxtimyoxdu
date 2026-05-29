@@ -113,30 +113,33 @@ export default function SvgToPng() {
       const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' })
       const url = URL.createObjectURL(blob)
 
-      const img = new Image()
-      await new Promise<void>((resolve, reject) => {
-        img.onload = () => resolve()
-        img.onerror = () => reject(new Error('Failed to load SVG'))
-        img.src = url
-      })
+      try {
+        const img = new Image()
+        await new Promise<void>((resolve, reject) => {
+          img.onload = () => resolve()
+          img.onerror = () => reject(new Error('Failed to load SVG'))
+          img.src = url
+        })
 
-      const canvas = document.createElement('canvas')
-      canvas.width = width
-      canvas.height = height
-      const ctx = canvas.getContext('2d')!
+        const canvas = document.createElement('canvas')
+        canvas.width = width
+        canvas.height = height
+        const ctx = canvas.getContext('2d')!
 
-      if (!transparent) {
-        ctx.fillStyle = bgColor
-        ctx.fillRect(0, 0, width, height)
+        if (!transparent) {
+          ctx.fillStyle = bgColor
+          ctx.fillRect(0, 0, width, height)
+        }
+
+        ctx.imageSmoothingEnabled = true
+        ctx.imageSmoothingQuality = 'high'
+        ctx.drawImage(img, 0, 0, width, height)
+
+        const dataUrl = canvas.toDataURL('image/png')
+        setPngDataUrl(dataUrl)
+      } finally {
+        URL.revokeObjectURL(url)
       }
-
-      ctx.imageSmoothingEnabled = true
-      ctx.imageSmoothingQuality = 'high'
-      ctx.drawImage(img, 0, 0, width, height)
-
-      const dataUrl = canvas.toDataURL('image/png')
-      setPngDataUrl(dataUrl)
-      URL.revokeObjectURL(url)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to convert SVG')
     } finally {

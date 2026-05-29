@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 
 export default function VideoToGif() {
   const [videoSrc, setVideoSrc] = useState<string>('')
@@ -16,6 +16,8 @@ export default function VideoToGif() {
   const [error, setError] = useState('')
   const videoRef = useRef<HTMLVideoElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const videoUrlRef = useRef<string | null>(null)
+  const gifUrlRef = useRef<string | null>(null)
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -31,7 +33,12 @@ export default function VideoToGif() {
     setError('')
     setGifUrl('')
     setFileName(file.name)
+    // Revoke previous object URL to prevent memory leak
+    if (videoUrlRef.current) {
+      URL.revokeObjectURL(videoUrlRef.current)
+    }
     const url = URL.createObjectURL(file)
+    videoUrlRef.current = url
     setVideoSrc(url)
   }
 
@@ -43,6 +50,18 @@ export default function VideoToGif() {
       setDuration(Math.min(3, Math.floor(dur)))
     }
   }
+
+  // Cleanup object URLs on unmount
+  useEffect(() => {
+    return () => {
+      if (videoUrlRef.current) {
+        URL.revokeObjectURL(videoUrlRef.current)
+      }
+      if (gifUrlRef.current) {
+        URL.revokeObjectURL(gifUrlRef.current)
+      }
+    }
+  }, [])
 
   const captureFrames = useCallback(async (): Promise<Blob[]> => {
     const video = videoRef.current
@@ -142,7 +161,12 @@ export default function VideoToGif() {
       mediaRecorder.stop()
       const webmBlob = await recordingDone
 
+      // Revoke previous output URL to prevent memory leak
+      if (gifUrlRef.current) {
+        URL.revokeObjectURL(gifUrlRef.current)
+      }
       const url = URL.createObjectURL(webmBlob)
+      gifUrlRef.current = url
       setGifUrl(url)
     } catch (err) {
       setError('Failed to process video. Try a shorter duration or smaller size.')

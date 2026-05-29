@@ -1,16 +1,14 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 const MAX_TWEET = 280
 const URL_LENGTH = 23
 
-function countTweetLength(text: string): number {
+function countTweetLength(text: string, urls: string[]): number {
   // Twitter counts URLs as 23 characters
-  const urlRegex = /https?:\/\/\S+/g
   let length = text.length
-  const urls = text.match(urlRegex) || []
   for (const url of urls) {
     length = length - url.length + URL_LENGTH
   }
@@ -21,14 +19,19 @@ export default function TwitterCharCounter() {
   const t = useTranslations('toolUI.textTools')
   const [text, setText] = useState('')
 
-  const tweetLength = countTweetLength(text)
+  const { tweetLength, hashtags, mentions, urls } = useMemo(() => {
+    const urls = (text.match(/https?:\/\/\S+/g) || [])
+    return {
+      tweetLength: countTweetLength(text, urls),
+      hashtags: (text.match(/#\w+/g) || []),
+      mentions: (text.match(/@\w+/g) || []),
+      urls,
+    }
+  }, [text])
+
   const remaining = MAX_TWEET - tweetLength
   const isOver = remaining < 0
   const percent = Math.min((tweetLength / MAX_TWEET) * 100, 100)
-
-  const hashtags = (text.match(/#\w+/g) || [])
-  const mentions = (text.match(/@\w+/g) || [])
-  const urls = (text.match(/https?:\/\/\S+/g) || [])
 
   const progressColor = isOver
     ? 'text-destructive'

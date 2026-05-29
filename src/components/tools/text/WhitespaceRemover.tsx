@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function WhitespaceRemover() {
@@ -34,7 +34,7 @@ export default function WhitespaceRemover() {
     return result
   }
 
-  const output = processText(input)
+  const output = useMemo(() => processText(input), [input, options])
   const saved = input.length - output.length
 
   const copy = async () => {

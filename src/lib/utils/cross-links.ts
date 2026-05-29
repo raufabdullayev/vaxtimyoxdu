@@ -115,14 +115,11 @@ export function getBlogPostsForTool(toolSlug: string, count = 3): { slug: string
  */
 export function getBlogPostsForCategory(category: ToolCategory, count = 3): { slug: string; title: string; date: string }[] {
   const categorySlugs = tools.filter((t) => t.category === category).map((t) => t.slug)
-  const seen = new Set<string>()
   const results: { slug: string; title: string; date: string }[] = []
 
   for (const [slug, post] of Object.entries(blogPosts)) {
-    if (seen.has(slug)) continue
     const hasMatch = post.relatedTools.some((rt) => categorySlugs.includes(rt))
     if (hasMatch) {
-      seen.add(slug)
       results.push({ slug, title: post.title, date: post.date })
     }
     if (results.length >= count) break

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function DuplicateLineRemover() {
@@ -11,7 +11,7 @@ export default function DuplicateLineRemover() {
   const [sortOutput, setSortOutput] = useState(false)
   const [copied, setCopied] = useState(false)
 
-  const process = (): { output: string; totalLines: number; uniqueLines: number; duplicatesRemoved: number } => {
+  const result = useMemo((): { output: string; totalLines: number; uniqueLines: number; duplicatesRemoved: number } => {
     if (!input.trim()) return { output: '', totalLines: 0, uniqueLines: 0, duplicatesRemoved: 0 }
 
     const lines = input.split('\n')
@@ -28,16 +28,14 @@ export default function DuplicateLineRemover() {
       }
     }
 
-    const result = sortOutput ? [...unique].sort((a, b) => a.localeCompare(b)) : unique
+    const sorted = sortOutput ? [...unique].sort((a, b) => a.localeCompare(b)) : unique
     return {
-      output: result.join('\n'),
+      output: sorted.join('\n'),
       totalLines,
       uniqueLines: unique.length,
       duplicatesRemoved: totalLines - unique.length,
     }
-  }
-
-  const result = process()
+  }, [input, caseSensitive, trimWhitespace, sortOutput])
 
   const copy = async () => {
     await navigator.clipboard.writeText(result.output)

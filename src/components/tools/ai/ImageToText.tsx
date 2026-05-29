@@ -89,10 +89,11 @@ export default function ImageToText() {
     setProgress(0)
     setProgressStatus(t('loadingEngine'))
 
+    let worker: Tesseract.Worker | null = null
     try {
       const Tesseract = await import('tesseract.js')
 
-      const worker = await Tesseract.createWorker(lang, undefined, {
+      worker = await Tesseract.createWorker(lang, undefined, {
         logger: (m) => {
           if (m.status === 'recognizing text') {
             setProgress(Math.round(m.progress * 100))
@@ -107,10 +108,14 @@ export default function ImageToText() {
 
       const { data } = await worker.recognize(file)
       setExtractedText(data.text)
-      await worker.terminate()
     } catch {
       setError(t('extractionFailed'))
     } finally {
+      if (worker) {
+        try {
+          await worker.terminate()
+        } catch {}
+      }
       setProcessing(false)
       setProgress(0)
       setProgressStatus('')

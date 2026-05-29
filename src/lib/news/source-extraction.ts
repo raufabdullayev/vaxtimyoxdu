@@ -30,10 +30,14 @@ function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+const SOURCE_PATTERNS = SOURCE_NAMES.map((name) => ({
+  name,
+  pattern: new RegExp(`(^|[^\\p{L}\\p{N}])${escapeRegExp(name)}([^\\p{L}\\p{N}]|$)`, 'iu'),
+}))
+
 export function extractNewsSourceNames(content: string): string[] {
-  const matches = SOURCE_NAMES
-    .map((name) => {
-      const pattern = new RegExp(`(^|[^\\p{L}\\p{N}])${escapeRegExp(name)}([^\\p{L}\\p{N}]|$)`, 'iu')
+  const matches = SOURCE_PATTERNS
+    .map(({ name, pattern }) => {
       const index = content.search(pattern)
       return index >= 0 ? { name, index } : null
     })

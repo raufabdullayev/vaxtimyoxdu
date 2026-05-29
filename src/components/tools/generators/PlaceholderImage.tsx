@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 
 export default function PlaceholderImage() {
   const [width, setWidth] = useState(800)
@@ -13,11 +13,7 @@ export default function PlaceholderImage() {
 
   const displayText = text || `${width} x ${height}`
 
-  useEffect(() => {
-    drawCanvas()
-  })
-
-  const drawCanvas = () => {
+  const drawCanvas = useCallback(() => {
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -61,7 +57,11 @@ export default function PlaceholderImage() {
     lines.forEach((line, i) => {
       ctx.fillText(line, width / 2, startY + i * lineHeight)
     })
-  }
+  }, [width, height, bgColor, textColor, displayText])
+
+  useEffect(() => {
+    drawCanvas()
+  }, [drawCanvas])
 
   const download = () => {
     const canvas = canvasRef.current

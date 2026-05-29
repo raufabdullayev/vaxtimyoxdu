@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 function countSyllables(word: string): number {
@@ -21,7 +21,8 @@ function countSyllables(word: string): number {
 function analyze(text: string) {
   const words = text.split(/\s+/).filter((w) => w.length > 0)
   const sentences = text.split(/[.!?]+/).filter((s) => s.trim().length > 0)
-  const syllables = words.reduce((sum, w) => sum + countSyllables(w), 0)
+  const syllableCounts = words.map((w) => countSyllables(w))
+  const syllables = syllableCounts.reduce((sum, c) => sum + c, 0)
   const wordCount = words.length
   const sentenceCount = Math.max(sentences.length, 1)
 
@@ -36,7 +37,7 @@ function analyze(text: string) {
   const avgWordsPerSentence = wordCount / sentenceCount
   const avgSyllablesPerWord = syllables / wordCount
 
-  const complexWords = words.filter((w) => countSyllables(w) >= 3).length
+  const complexWords = syllableCounts.filter((c) => c >= 3).length
   const gunningFog = wordCount > 0
     ? 0.4 * ((wordCount / sentenceCount) + 100 * (complexWords / wordCount))
     : 0
@@ -68,8 +69,13 @@ export default function ReadabilityChecker() {
   const t = useTranslations('toolUI.common')
   const [text, setText] = useState('')
 
-  const stats = text.trim() ? analyze(text) : null
-  const level = stats ? getReadabilityLevel(stats.fleschKincaid) : null
+  const { stats, level } = useMemo(() => {
+    const computedStats = text.trim() ? analyze(text) : null
+    return {
+      stats: computedStats,
+      level: computedStats ? getReadabilityLevel(computedStats.fleschKincaid) : null,
+    }
+  }, [text])
 
   return (
     <div className="space-y-4">

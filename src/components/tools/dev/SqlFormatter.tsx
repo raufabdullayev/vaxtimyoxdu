@@ -26,8 +26,9 @@ const INDENT_KEYWORDS = new Set([
   'AND', 'OR', 'ON', 'SET', 'WHEN', 'ELSE',
 ])
 
+const KEYWORD_SET = new Set(SQL_KEYWORDS)
+
 function formatSql(sql: string): string {
-  const keywordSet = new Set(SQL_KEYWORDS)
   // Tokenize: split by whitespace, keeping strings and parentheses
   const tokens: string[] = []
   let current = ''
@@ -108,7 +109,7 @@ function formatSql(sql: string): string {
       continue
     }
 
-    if (keywordSet.has(upper) && NEWLINE_KEYWORDS.has(upper) && parenDepth === 0) {
+    if (KEYWORD_SET.has(upper) && NEWLINE_KEYWORDS.has(upper) && parenDepth === 0) {
       if (currentLine.trim()) {
         lines.push(tab.repeat(indentLevel) + currentLine.trim())
         currentLine = ''
@@ -124,7 +125,7 @@ function formatSql(sql: string): string {
           indentLevel = 0
         }
       }
-    } else if (keywordSet.has(upper)) {
+    } else if (KEYWORD_SET.has(upper)) {
       currentLine += (currentLine ? ' ' : '') + upper
     } else {
       currentLine += (currentLine ? ' ' : '') + token
