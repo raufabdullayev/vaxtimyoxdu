@@ -62,6 +62,19 @@ export type AnalyticsEventInsert = {
   locale?: string | null
 }
 
+/**
+ * Shape returned by the analytics_aggregates() Postgres function
+ * (supabase/migrations/002_analytics_aggregates.sql). Mirrors the
+ * aggregated arrays in the GET /api/analytics/stats response exactly.
+ */
+export type AnalyticsAggregates = {
+  popular_tools: { tool: string; count: number }[]
+  visitors_by_locale: { locale: string; count: number }[]
+  top_pages: { page_path: string; count: number }[]
+  share_clicks: { platform: string; count: number }[]
+  tool_completions: { tool: string; completions: number; uses: number; rate: number }[]
+}
+
 // ---------------------------------------------------------------------------
 // Supabase generated-style Database type (subset)
 // ---------------------------------------------------------------------------
@@ -89,6 +102,11 @@ export type Database = {
       }
     }
     Views: {}
-    Functions: {}
+    Functions: {
+      analytics_aggregates: {
+        Args: { p_since: string; p_limit: number }
+        Returns: AnalyticsAggregates
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { timingSafeEqual } from 'crypto'
 import { getSupabaseServer, isSupabaseConfigured } from '@/lib/supabase/client'
+import type { AnalyticsAggregates } from '@/lib/supabase/types'
 import { createRateLimiter } from '@/lib/rate-limiter'
 
 /**
@@ -14,13 +15,23 @@ import { createRateLimiter } from '@/lib/rate-limiter'
  *
  * Rate limited to 10 requests/minute per API key to prevent resource exhaustion.
  *
+ * The 5 group-by aggregations (popular_tools, visitors_by_locale, top_pages,
+ * share_clicks, tool_completions) are computed in Postgres via the
+ * analytics_aggregates() function (supabase/migrations/002) so we transfer
+ * tens of rows instead of up to 10,000 per metric. If that function is not
+ * present yet, the route transparently falls back to fetching rows and
+ * aggregating in JS (identical output).
+ *
  * Response shape:
  * {
  *   page_views: { last_24h, last_7d, last_30d },
  *   tool_uses: { last_24h, last_7d, last_30d },
  *   popular_tools: [{ tool, count }],
  *   visitors_by_locale: [{ locale, count }],
- *   top_pages: [{ page_path, count }]
+ *   top_pages: [{ page_path, count }],
+ *   share_clicks: [{ platform, count }],
+ *   tool_completions: [{ tool, completions, uses, rate }],
+ *   errors_404: [{ page_path, created_at }]
  * }
  */
 
@@ -72,6 +83,30 @@ async function countEvents(
   return count ?? 0
 }
 
+/**
+ * Run the Postgres-side aggregation (migration 002). Returns null — so the
+ * caller falls back to in-JS aggregation — when the client cannot make the
+ * call (e.g. test mock without `.rpc`) or the function is not yet installed.
+ */
+async function getAggregates(
+  supabase: NonNullable<ReturnType<typeof getSupabaseServer>>,
+  since: string,
+  limit: number
+): Promise<AnalyticsAggregates | null> {
+  if (typeof supabase.rpc !== 'function') return null
+
+  try {
+    const { data, error } = await supabase.rpc('analytics_aggregates', {
+      p_since: since,
+      p_limit: limit,
+    })
+    if (error || !data) return null
+    return data as AnalyticsAggregates
+  } catch {
+    return null
+  }
+}
+
 export async function GET(req: NextRequest) {
   // ── Auth check ──
   if (!isAuthorized(req)) {
@@ -117,7 +152,8 @@ export async function GET(req: NextRequest) {
   const sinceDate = new Date(Date.now() - rangeHours * 60 * 60 * 1000).toISOString()
 
   try {
-    // ── Gather stats in parallel ──
+    // ── Counts (efficient head-count queries), recent 404s, and the
+    //    group-by aggregations (Postgres function when available) in parallel ──
     const [
       pageViews24h,
       pageViews7d,
@@ -125,12 +161,8 @@ export async function GET(req: NextRequest) {
       toolUses24h,
       toolUses7d,
       toolUses30d,
-      popularToolsResult,
-      localeResult,
-      topPagesResult,
-      shareClicksResult,
-      toolCompletesResult,
       errorsResult,
+      aggregates,
     ] = await Promise.all([
       // Page views
       countEvents(supabase, 'page_view', 24),
@@ -142,46 +174,6 @@ export async function GET(req: NextRequest) {
       countEvents(supabase, 'tool_use', 24 * 7),
       countEvents(supabase, 'tool_use', 24 * 30),
 
-      // Popular tools (within selected range)
-      supabase
-        .from('analytics_events')
-        .select('event_data')
-        .eq('event_type', 'tool_use')
-        .gte('created_at', sinceDate)
-        .limit(10000),
-
-      // Visitors by locale (within selected range)
-      supabase
-        .from('analytics_events')
-        .select('locale')
-        .eq('event_type', 'page_view')
-        .gte('created_at', sinceDate)
-        .limit(10000),
-
-      // Top pages (within selected range)
-      supabase
-        .from('analytics_events')
-        .select('page_path')
-        .eq('event_type', 'page_view')
-        .gte('created_at', sinceDate)
-        .limit(10000),
-
-      // Share clicks (within selected range)
-      supabase
-        .from('analytics_events')
-        .select('event_data')
-        .eq('event_type', 'share_click')
-        .gte('created_at', sinceDate)
-        .limit(10000),
-
-      // Tool completions (within selected range)
-      supabase
-        .from('analytics_events')
-        .select('event_data')
-        .eq('event_type', 'tool_complete')
-        .gte('created_at', sinceDate)
-        .limit(10000),
-
       // 404 errors (within selected range)
       supabase
         .from('analytics_events')
@@ -190,82 +182,140 @@ export async function GET(req: NextRequest) {
         .gte('created_at', sinceDate)
         .order('created_at', { ascending: false })
         .limit(50),
+
+      // 5 group-by aggregations in one Postgres call (null -> JS fallback below)
+      getAggregates(supabase, sinceDate, 20),
     ])
 
-    // ── Aggregate popular tools ──
-    const toolCounts = new Map<string, number>()
-    if (popularToolsResult.data) {
-      for (const row of popularToolsResult.data) {
-        const tool = (row.event_data as Record<string, unknown> | null)?.tool
-        if (typeof tool === 'string') {
-          toolCounts.set(tool, (toolCounts.get(tool) ?? 0) + 1)
+    let popular_tools: { tool: string; count: number }[]
+    let visitors_by_locale: { locale: string; count: number }[]
+    let top_pages: { page_path: string; count: number }[]
+    let share_clicks: { platform: string; count: number }[]
+    let tool_completions: { tool: string; completions: number; uses: number; rate: number }[]
+
+    if (aggregates) {
+      // ── Fast path: Postgres returned the aggregated arrays ──
+      popular_tools = aggregates.popular_tools ?? []
+      visitors_by_locale = aggregates.visitors_by_locale ?? []
+      top_pages = aggregates.top_pages ?? []
+      share_clicks = aggregates.share_clicks ?? []
+      tool_completions = aggregates.tool_completions ?? []
+    } else {
+      // ── Fallback: fetch rows and aggregate in JS (pre-migration-002) ──
+      const [
+        popularToolsResult,
+        localeResult,
+        topPagesResult,
+        shareClicksResult,
+        toolCompletesResult,
+      ] = await Promise.all([
+        supabase
+          .from('analytics_events')
+          .select('event_data')
+          .eq('event_type', 'tool_use')
+          .gte('created_at', sinceDate)
+          .limit(10000),
+        supabase
+          .from('analytics_events')
+          .select('locale')
+          .eq('event_type', 'page_view')
+          .gte('created_at', sinceDate)
+          .limit(10000),
+        supabase
+          .from('analytics_events')
+          .select('page_path')
+          .eq('event_type', 'page_view')
+          .gte('created_at', sinceDate)
+          .limit(10000),
+        supabase
+          .from('analytics_events')
+          .select('event_data')
+          .eq('event_type', 'share_click')
+          .gte('created_at', sinceDate)
+          .limit(10000),
+        supabase
+          .from('analytics_events')
+          .select('event_data')
+          .eq('event_type', 'tool_complete')
+          .gte('created_at', sinceDate)
+          .limit(10000),
+      ])
+
+      // ── Aggregate popular tools ──
+      const toolCounts = new Map<string, number>()
+      if (popularToolsResult.data) {
+        for (const row of popularToolsResult.data) {
+          const tool = (row.event_data as Record<string, unknown> | null)?.tool
+          if (typeof tool === 'string') {
+            toolCounts.set(tool, (toolCounts.get(tool) ?? 0) + 1)
+          }
         }
       }
-    }
-    const popular_tools = Array.from(toolCounts.entries())
-      .map(([tool, count]) => ({ tool, count }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 20)
+      popular_tools = Array.from(toolCounts.entries())
+        .map(([tool, count]) => ({ tool, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 20)
 
-    // ── Aggregate locale distribution ──
-    const localeCounts = new Map<string, number>()
-    if (localeResult.data) {
-      for (const row of localeResult.data) {
-        const locale = (row.locale as string) ?? 'unknown'
-        localeCounts.set(locale, (localeCounts.get(locale) ?? 0) + 1)
-      }
-    }
-    const visitors_by_locale = Array.from(localeCounts.entries())
-      .map(([locale, count]) => ({ locale, count }))
-      .sort((a, b) => b.count - a.count)
-
-    // ── Aggregate top pages ──
-    const pageCounts = new Map<string, number>()
-    if (topPagesResult.data) {
-      for (const row of topPagesResult.data) {
-        const path = (row.page_path as string) ?? 'unknown'
-        pageCounts.set(path, (pageCounts.get(path) ?? 0) + 1)
-      }
-    }
-    const top_pages = Array.from(pageCounts.entries())
-      .map(([page_path, count]) => ({ page_path, count }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 20)
-
-    // ── Aggregate share clicks by platform ──
-    const sharePlatformCounts = new Map<string, number>()
-    if (shareClicksResult.data) {
-      for (const row of shareClicksResult.data) {
-        const platform = (row.event_data as Record<string, unknown> | null)?.platform
-        if (typeof platform === 'string') {
-          sharePlatformCounts.set(platform, (sharePlatformCounts.get(platform) ?? 0) + 1)
+      // ── Aggregate locale distribution ──
+      const localeCounts = new Map<string, number>()
+      if (localeResult.data) {
+        for (const row of localeResult.data) {
+          const locale = (row.locale as string) ?? 'unknown'
+          localeCounts.set(locale, (localeCounts.get(locale) ?? 0) + 1)
         }
       }
-    }
-    const share_clicks = Array.from(sharePlatformCounts.entries())
-      .map(([platform, count]) => ({ platform, count }))
-      .sort((a, b) => b.count - a.count)
+      visitors_by_locale = Array.from(localeCounts.entries())
+        .map(([locale, count]) => ({ locale, count }))
+        .sort((a, b) => b.count - a.count)
 
-    // ── Aggregate tool completion rates ──
-    // Note: tool_complete events use 'toolSlug' key, tool_use events use 'tool' key
-    const toolCompleteCounts = new Map<string, number>()
-    if (toolCompletesResult.data) {
-      for (const row of toolCompletesResult.data) {
-        const data = row.event_data as Record<string, unknown> | null
-        const tool = data?.toolSlug ?? data?.tool
-        if (typeof tool === 'string') {
-          toolCompleteCounts.set(tool, (toolCompleteCounts.get(tool) ?? 0) + 1)
+      // ── Aggregate top pages ──
+      const pageCounts = new Map<string, number>()
+      if (topPagesResult.data) {
+        for (const row of topPagesResult.data) {
+          const path = (row.page_path as string) ?? 'unknown'
+          pageCounts.set(path, (pageCounts.get(path) ?? 0) + 1)
         }
       }
+      top_pages = Array.from(pageCounts.entries())
+        .map(([page_path, count]) => ({ page_path, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 20)
+
+      // ── Aggregate share clicks by platform ──
+      const sharePlatformCounts = new Map<string, number>()
+      if (shareClicksResult.data) {
+        for (const row of shareClicksResult.data) {
+          const platform = (row.event_data as Record<string, unknown> | null)?.platform
+          if (typeof platform === 'string') {
+            sharePlatformCounts.set(platform, (sharePlatformCounts.get(platform) ?? 0) + 1)
+          }
+        }
+      }
+      share_clicks = Array.from(sharePlatformCounts.entries())
+        .map(([platform, count]) => ({ platform, count }))
+        .sort((a, b) => b.count - a.count)
+
+      // ── Aggregate tool completion rates ──
+      // Note: tool_complete events use 'toolSlug' key, tool_use events use 'tool' key
+      const toolCompleteCounts = new Map<string, number>()
+      if (toolCompletesResult.data) {
+        for (const row of toolCompletesResult.data) {
+          const data = row.event_data as Record<string, unknown> | null
+          const tool = data?.toolSlug ?? data?.tool
+          if (typeof tool === 'string') {
+            toolCompleteCounts.set(tool, (toolCompleteCounts.get(tool) ?? 0) + 1)
+          }
+        }
+      }
+      tool_completions = Array.from(toolCompleteCounts.entries())
+        .map(([tool, completions]) => {
+          const uses = toolCounts.get(tool) ?? 0
+          const rate = uses > 0 ? Math.round((completions / uses) * 100) : 0
+          return { tool, completions, uses, rate }
+        })
+        .sort((a, b) => b.completions - a.completions)
+        .slice(0, 20)
     }
-    const tool_completions = Array.from(toolCompleteCounts.entries())
-      .map(([tool, completions]) => {
-        const uses = toolCounts.get(tool) ?? 0
-        const rate = uses > 0 ? Math.round((completions / uses) * 100) : 0
-        return { tool, completions, uses, rate }
-      })
-      .sort((a, b) => b.completions - a.completions)
-      .slice(0, 20)
 
     // ── 404 errors ──
     const errors_404 = (errorsResult.data ?? []).map((row) => ({
