@@ -7,6 +7,1014 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-05-28 ==========
+
+  // --- Topic 1: Aliyev visits liberated Garabagh on Independence Day; Putin congratulates ---
+  'aliyev-qarabag-mustaqillik-gunu': {
+    title: 'Əliyev Müstəqillik Günündə Qarabağa səfər etdi, Putin təbrik göndərdi',
+    date: '2026-05-28',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `## Müstəqillik Günündə işgüzar səfər
+
+Prezident İlham Əliyev mayın 28-də — Azərbaycanın Müstəqillik Günündə azad edilmiş Qarabağ bölgəsinə işgüzar səfər etdi. Bu il Müstəqillik Günü Qurban bayramı ilə üst-üstə düşdü, bu da bayrama xüsusi əhəmiyyət verdi.
+
+Dövlət başçısı səfər çərçivəsində bir sıra açılış mərasimlərində iştirak etdi. Xocalıda "Qarabağ Tekstil Evi" MMC-nin açılışında olan Prezident, eyni zamanda hərbi qulluqçular üçün nəzərdə tutulmuş fərdi evlərə baxış keçirdi.
+
+## Xankəndidə yeni müəssisələr
+
+Xankəndidə İlham Əliyev GP Safety MMC-nin iş əlcəkləri istehsalı müəssisəsinin açılışında iştirak etdi. Bundan əlavə, əsaslı təmir-bərpa işlərindən sonra şəhərdəki Mədəniyyət Mərkəzini yenidən istifadəyə verdi. Bu obyektlər azad edilmiş ərazilərdə bərpa və yenidənqurma işlərinin davam etdiyini göstərir.
+
+## Şuşada təhlükəsizlik mesajı
+
+Şuşanın Böyük Qaladərəsi kəndində sakinlərlə görüşən Prezident regional təhlükəsizlikdən danışdı. O bildirdi ki, müharibələr Azərbaycanın ətrafını bürüyüb, lakin "Dəmir Yumruq", milli birlik və güclü ordu sayəsində "heç kim bizi buradan didərgin sala bilməz".
+
+Dövlət başçısı sakinlərə müraciətində vurğuladı: "Hər keçən gün gücümüz artır və imkanlarımız genişlənir".
+
+## Putindən təbrik məktubu
+
+Rusiya Prezidenti Vladimir Putin Müstəqillik Günü münasibətilə İlham Əliyevə təbrik məktubu göndərdi. Məktub mayın 28-i, saat 09:00 tarixi ilə qeyd olunub.
+
+Putin mesajında qeyd etdi: "Biz Bakı ilə dostluq və müttəfiqlik münasibətlərimizə yüksək qiymət veririk". Bu mesaj iki ölkə arasındakı strateji tərəfdaşlığın davam etdiyini bir daha təsdiqlədi. Dövlət başçısının azad edilmiş ərazilərdə bayramı qeyd etməsi ölkə üçün ən mühüm hadisələrdən biri oldu.`,
+  },
+  'en-aliyev-garabagh-independence-day': {
+    title: 'Aliyev Marks Independence Day With Working Visit to Garabagh',
+    date: '2026-05-28',
+    category: 'Politics',
+    locale: 'en',
+    content: `## A working visit on a national holiday
+
+President Ilham Aliyev marked Azerbaijan's Independence Day on May 28, 2026, with a working visit to the liberated Garabagh region. The holiday this year coincided with Eid al-Adha, adding to the symbolism of a head of state spending the day in territories restored to Azerbaijani control.
+
+The president's itinerary spanned several towns. In Khojaly, he attended the inauguration of the "Garabagh Textile House" LLC and inspected private houses designated for servicemen. In Khankendi, Aliyev opened a GP Safety LLC enterprise producing work gloves and unveiled a Cultural Center that had undergone a major overhaul.
+
+## Security on the agenda in Shusha
+
+In the village of Boyuk Galaderesi in Shusha, Aliyev addressed regional security, noting that wars surround Azerbaijan's periphery. He credited the "Iron Fist," national unity and the army with safeguarding the country, declaring that "no one can displace us from here."
+
+Speaking to residents, the president struck a confident tone about the country's trajectory. "Our strength grows and our opportunities expand with each passing day," he said in Shusha.
+
+## A message from Moscow
+
+The same day, Russian President Vladimir Putin sent a congratulatory letter to Aliyev marking Independence Day, with the message timestamped 09:00 on May 28.
+
+"We highly value our friendly and allied relationship with Baku," Putin wrote in the message. The exchange underscored the continued diplomatic ties between the two neighbors on a date central to Azerbaijan's national calendar.`,
+  },
+  'tr-aliyev-karabag-bagimsizlik-gunu': {
+    title: 'Aliyev Bağımsızlık Günü\'nde Karabağ\'ı ziyaret etti, Putin\'den tebrik',
+    date: '2026-05-28',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `## Devlet başkanı kurtarılan bölgede
+
+Azerbaycan Cumhurbaşkanı İlham Aliyev, 28 Mayıs 2026 Bağımsızlık Günü'nde kurtarılan Karabağ bölgesine çalışma ziyareti gerçekleştirdi. Bu yılki bayram, Kurban Bayramı ile aynı güne denk geldi.
+
+Aliyev, Hocalı'da "Garabağ Tekstil Evi" şirketinin açılışına katıldı ve askerler için ayrılan özel evleri inceledi. Hankendi'de ise GP Safety şirketinin iş eldiveni üretim tesisini hizmete açtı ve esaslı şekilde yenilenen bir Kültür Merkezini ziyaret etti.
+
+## Şuşa'da güvenlik mesajı
+
+Şuşa'nın Böyük Galaderesi köyünde halka hitap eden cumhurbaşkanı, bölgesel güvenliğe değindi. Azerbaycan'ın çevresini savaşların sardığını belirten Aliyev, "Demir Yumruk", milli birlik ve ordu sayesinde "kimsenin bizi buradan çıkaramayacağını" vurguladı.
+
+Aliyev konuşmasında şunları söyledi: "Her geçen gün gücümüz artıyor ve imkanlarımız genişliyor." Bu sözler, kurtarılan topraklarda yürütülen yeniden inşa çalışmalarının kapsamına işaret etti.
+
+## Putin'den tebrik mesajı
+
+Rusya Devlet Başkanı Vladimir Putin, Bağımsızlık Günü vesilesiyle Aliyev'e tebrik mektubu gönderdi. Kremlin tarafından 28 Mayıs 2026 tarihiyle yayımlanan mesajda Putin, iki ülke arasındaki ilişkilere değindi.
+
+Putin mesajında, "Bakü ile dostane ve müttefik ilişkimize büyük değer veriyoruz" ifadesini kullandı. Kremlin tarafından 28 Mayıs 2026 saat 09.00 olarak kaydedilen mektup, Azerbaycan ile Rusya arasındaki ikili ilişkilerin seyri açısından dikkat çekti.
+
+## Kurtarılan topraklarda yeniden inşa
+
+Cumhurbaşkanının ziyareti, kurtarılan bölgelerde sürdürülen geniş çaplı yeniden inşa ve kalkınma çalışmalarına ışık tuttu. Hocalı'daki tekstil tesisi ve Hankendi'deki üretim işletmesi gibi açılışlar, bölgeye ekonomik canlılık kazandırma hedefini yansıttı.
+
+Bağımsızlık Günü'nün Kurban Bayramı ile aynı güne denk gelmesi, ziyarete ayrı bir anlam kattı. Devlet başkanının bayram gününü kurtarılan topraklarda geçirmesi, Azerbaycan kamuoyu için en yüksek öncelikli haberlerden biri oldu.`,
+  },
+  'ru-aliyev-karabakh-den-nezavisimosti': {
+    title: 'Алиев посетил Карабах в День независимости, Путин поздравил',
+    date: '2026-05-28',
+    category: 'Политика',
+    locale: 'ru',
+    content: `## Рабочий визит в освобождённый регион
+
+28 мая 2026 года, в День независимости Азербайджана, президент Ильхам Алиев совершил рабочий визит в освобождённый Карабахский регион. В этом году праздник совпал с Курбан-байрамом, что придало поездке главы государства особое значение.
+
+Программа визита была насыщенной. Президент принял участие в открытии текстильного предприятия «Гарабаг Текстил Хаус» в Ходжалы и осмотрел частные дома, выделенные военнослужащим в этом городе. Затем он открыл предприятие по производству рабочих перчаток компании «Джи Пи Сейфти» в Ханкенди, а также открыл там Культурный центр после капитального ремонта. Каждый из этих объектов стал частью масштабной программы восстановления освобождённых территорий.
+
+## «Никто не сможет нас отсюда вытеснить»
+
+В селе Боюк Галадереси в Шуше Ильхам Алиев говорил о региональной безопасности. Он отметил, что войны окружают периферию Азербайджана. По словам президента, благодаря «железному кулаку», национальному единству и армии «никто не сможет нас отсюда вытеснить».
+
+Обращаясь к жителям Шуши, глава государства заявил: «Наша сила растёт, и наши возможности расширяются с каждым днём». Эти слова прозвучали на фоне восстановительных работ, развернувшихся по всему освобождённому региону.
+
+## Поздравление из Москвы
+
+Президент России Владимир Путин направил Ильхаму Алиеву поздравительное письмо по случаю Дня независимости. Сообщение датировано 28 мая 2026 года.
+
+«Мы высоко ценим наши дружественные и союзнические отношения с Баку», — говорится в поздравительном послании Владимира Путина.
+
+Визит главы государства в освобождённые территории в День независимости стал центральным внутриполитическим событием для Азербайджана и важнейшей новостью дня для местной аудитории.`,
+  },
+
+  // --- Topic 2: US-Iran 60-day ceasefire framework (Trump approval pending) ---
+  'abs-iran-60-gunluk-ateskes-cercive': {
+    title: 'ABŞ və İran 60 günlük atəşkəs çərçivəsində razılaşdı',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## İlkin razılaşma əldə olundu
+
+Mayın 28-də ABŞ və İran danışıqçıları atəşkəsi 60 gün uzadacaq və Hörmüz boğazını yenidən açılma yoluna salacaq çərçivə üzrə ilkin razılaşmaya gəldilər. Bununla belə, Prezident Donald Tramp hələ yekun təsdiqini verməmişdi və sənədin taleyi onun qərarından asılı qaldı.
+
+Təklif olunan anlaşma memorandumuna əsasən, Hörmüz boğazından gəmiçilik "məhdudiyyətsiz" olacaq — heç bir rüsum və ya təzyiq tətbiq edilməyəcək. İran 30 gün ərzində boğazdan bütün minaları təmizləməli, eyni zamanda ölkənin nüvə proqramı üzrə danışıqlara başlanmalıdır. Bu şərtlər regionda gərginliyin azaldılmasına yönəlib.
+
+## Gərginlik davam edir
+
+Çərçivəyə baxmayaraq, cümə axşamı erkən saatlarda ABŞ və İran qüvvələri atəş mübadiləsi etdi. İran İnqilab Keşikçiləri Korpusunun donanması Hörmüz boğazı yaxınlığında dörd gəmiyə xəbərdarlıq atəşi açdığını bildirdi. Bu hadisə razılaşmanın hələ də kövrək olduğunu və yerdə vəziyyətin gərgin qaldığını göstərdi.
+
+## "Çox yaxınıq, amma hələ deyil"
+
+Mayın 29-da ABŞ vitse-prezidenti JD Vens iki tərəfin "çox yaxın" olduğunu, lakin "hələ orada olmadıqlarını" bildirdi. Onun sözlərinə görə, İranın yüksək zənginləşdirilmiş uran ehtiyatı və zənginləşdirmə məsələləri hələ də həll edilməyib. Bu açıqlama danışıqların yekun mərhələdə bir sıra mühüm maneələrlə üzləşdiyini ortaya qoydu.
+
+## Regional əhəmiyyət
+
+İran Azərbaycanın cənub qonşusu olduğundan, Hörmüz boğazı və mümkün atəşkəs regional təhlükəsizliyə birbaşa təsir göstərir. Boğaz qlobal enerji daşımalarında strateji əhəmiyyət kəsb etdiyi üçün, danışıqların nəticəsi neft qiymətlərinə və qlobal təchizat zəncirlərinə də ciddi təsir edə bilər.`,
+  },
+  'en-us-iran-60-day-ceasefire-framework': {
+    title: 'US and Iran Reach Tentative 60-Day Ceasefire Framework',
+    date: '2026-05-28',
+    category: 'World',
+    locale: 'en',
+    content: `## A tentative framework
+
+US and Iranian negotiators reached a tentative agreement on May 28 on a framework that would extend the ceasefire by 60 days and set the Strait of Hormuz on a path toward reopening. President Donald Trump had not yet given his final approval to the deal, leaving the agreement short of completion even as both sides described progress.
+
+Under the proposed memorandum of understanding, shipping through the Strait of Hormuz would be "unrestricted," with no tolls and no harassment. Iran would remove all mines from the strait within 30 days, and talks would begin on the country's nuclear program.
+
+## Fire exchanged despite talks
+
+The diplomatic progress did not halt confrontation on the water. US and Iranian forces exchanged fire early Thursday, and Iran's Islamic Revolutionary Guard Corps navy said it fired warning shots at four vessels near the Strait of Hormuz.
+
+The episode highlighted how fragile the situation remained even as negotiators edged toward an accord, with the same waterway at the center of both the talks and the skirmish.
+
+## "Very close" but not yet
+
+On May 29, Vice President JD Vance said the two sides were "very close" but "not there yet." He pointed to unresolved issues surrounding Iran's highly enriched uranium stockpile and its enrichment activities as the remaining obstacles to a final deal.
+
+For Azerbaijan, the talks carry weight: Iran is its southern neighbor, and any resolution affecting the Strait of Hormuz bears directly on regional security and the global energy and oil prices relevant to audiences across the region.`,
+  },
+  'tr-abd-iran-60-gunluk-ateskes': {
+    title: 'ABD ve İran 60 günlük ateşkes çerçevesinde anlaştı, Trump onayı bekleniyor',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Geçici çerçeve anlaşması
+
+ABD ve İranlı müzakereciler, 28 Mayıs'ta ateşkesi 60 gün uzatacak ve Hürmüz Boğazı'nı yeniden açılma yoluna sokacak bir çerçeve üzerinde geçici anlaşmaya vardı. Ancak Başkan Donald Trump henüz nihai onayını vermedi.
+
+Önerilen mutabakat zaptına göre, Hürmüz Boğazı üzerinden geçen gemicilik "kısıtlamasız" olacak; ne geçiş ücreti ne de taciz uygulanacak. İran'ın 30 gün içinde boğazdaki tüm mayınları temizlemesi ve nükleer programıyla ilgili görüşmelerin başlaması öngörülüyor.
+
+## Çerçeveye rağmen çatışma
+
+Çerçeveye rağmen ABD ve İran güçleri perşembe sabahı erken saatlerde ateş teati etti. İran Devrim Muhafızları deniz kuvvetleri, Hürmüz Boğazı yakınında dört gemiye uyarı atışı yaptığını açıkladı.
+
+Bu olay, anlaşmanın henüz kırılgan olduğunu ve sahadaki gerilimin sürdüğünü gösterdi. Boğaz, küresel enerji sevkiyatı açısından stratejik öneme sahip.
+
+## Vance: Çok yakınız ama henüz değil
+
+ABD Başkan Yardımcısı JD Vance, 29 Mayıs'ta iki tarafın anlaşmaya "çok yakın" olduğunu ancak "henüz orada olmadıklarını" söyledi. Vance'in açıklamasına göre İran'ın yüksek oranda zenginleştirilmiş uranyum stoku ve zenginleştirme konusunda çözülmemiş meseleler bulunuyor.
+
+İran'ın yüksek oranda zenginleştirilmiş uranyum stoku, görüşmelerin en hassas başlıklarından birini oluşturuyor. Tarafların bu konuda uzlaşması, çerçevenin kalıcılığı açısından belirleyici görünüyor.
+
+## Bölgesel ve enerji boyutu
+
+İran, Azerbaycan'ın güney komşusu konumunda. Hürmüz Boğazı ve olası bir ateşkes, bölgesel güvenliği ve küresel petrol fiyatlarını doğrudan etkileyen unsurlar arasında yer alıyor.
+
+Mayınların 30 gün içinde temizlenmesi ve boğazdan geçişin kısıtlamasız hale gelmesi, dünya enerji sevkiyatı için kritik öneme sahip. Trump'ın nihai onayı, anlaşmanın yürürlüğe girmesi için beklenen son aşama olarak öne çıkıyor.`,
+  },
+  'ru-ssha-iran-60-dnevnoe-peremirie': {
+    title: 'США и Иран согласовали рамки 60-дневного перемирия в зоне',
+    date: '2026-05-28',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Рамочное соглашение достигнуто
+
+28 мая переговорщики США и Ирана достигли предварительной договорённости о рамочном соглашении. Документ продлил бы перемирие на 60 дней и наметил путь к открытию Ормузского пролива. На момент достижения договорённости президент Дональд Трамп ещё не дал окончательного одобрения, и судьба сделки оставалась открытой.
+
+Согласно предлагаемому меморандуму о взаимопонимании, судоходство через Ормузский пролив должно стать «неограниченным» — без пошлин и без преследований судов. В течение 30 дней Иран должен удалить из пролива все мины. После этого должны начаться переговоры по иранской ядерной программе.
+
+## Стычки несмотря на договорённости
+
+Несмотря на достигнутые рамки, силы США и Ирана рано в четверг обменялись огнём. Военно-морские силы Корпуса стражей исламской революции заявили, что произвели предупредительные выстрелы по четырём судам вблизи Ормузского пролива. Этот инцидент подчеркнул хрупкость наметившегося сближения сторон.
+
+## «Очень близко, но ещё не там»
+
+29 мая вице-президент Джей Ди Вэнс сообщил, что стороны «очень близки», но «ещё не там». По его словам, нерешёнными остаются вопросы по запасам высокообогащённого урана Ирана и по обогащению.
+
+«Очень близко», но «ещё не там», — сказал вице-президент Джей Ди Вэнс о сделке между США и Ираном.
+
+Иран — южный сосед Азербайджана, и развитие событий вокруг Ормузского пролива напрямую влияет на региональную безопасность. Потенциальное перемирие отражается и на мировых ценах на нефть, что важно для всех аудиторий новостного сайта.`,
+  },
+
+  // --- Topic 3: Blue Origin New Glenn rocket explodes during engine test ---
+  'blue-origin-new-glenn-partlayis': {
+    title: 'Blue Origin-in "New Glenn" raketi mühərrik testi zamanı partladı',
+    date: '2026-05-28',
+    category: 'Texnologiya',
+    locale: 'az',
+    content: `## Sınaq zamanı baş verən partlayış
+
+Blue Origin şirkətinin "New Glenn" raketi mayın 28-də Florida ştatındakı Cape Canaveral Kosmik Qüvvələr Stansiyasında mühərrik sınağı zamanı partladı. Hadisə yerli vaxtla təxminən axşam saat 21:00-da, raketin yeddi metan yanacaqlı BE-4 birinci pillə mühərrikinin sınaq atəşi zamanı baş verdi.
+
+188 futluq (təxminən 57 metr) birinci pillə alışdı, 86 futluq yuxarı pillə isə əyilərək yıxıldı. Metan yanacağı ilə maye oksigen alovlanaraq raketi tamamilə məhv etdi. Sınaq adətən faktiki buraxılışdan əvvəl mühərriklərin işini yoxlamaq üçün keçirilir.
+
+## İtki yoxdur, lakin platforma zədələndi
+
+Partlayış nəticəsində heç kim xəsarət almadı. Lakin Blue Origin-in cəmi bir "New Glenn" buraxılış platforması var və o da hadisə zamanı zədələndi. Bu vəziyyət şirkətin gələcək uçuş qrafikinə ciddi əngəl yaradır, çünki platformanın bərpası vaxt tələb edə bilər.
+
+## İyun buraxılışı təhlükə altında
+
+Şirkət iyun ayında Amazon-un "Leo" internet peyklərinin yeni qrupunu orbitə çıxarmağa hazırlaşırdı. Partlayış bu planları sual altında qoydu. "New Glenn" raketi əvvəllər üç dəfə uçmuşdu; aprel ayındakı uçuşda isə yuxarı pillədə nasazlıq baş vermişdi.
+
+## Bezosun açıqlaması
+
+Blue Origin-in əsasını qoyan Cef Bezos partlayış barədə bildirdi: "Əsl səbəbi bilmək üçün hələ tezdir, lakin biz artıq onu tapmaq üzərində işləyirik".
+
+SpaceX ilə rəqabət aparan aparıcı kommersiya kosmik şirkəti üçün bu, ciddi geriləmədir. Hadisə kommersiya kosmik sənayesinin nə qədər mürəkkəb və riskli olduğunu bir daha nümayiş etdirdi və bu sahə qlobal miqyasda diqqətlə izlənilir.`,
+  },
+  'en-blue-origin-new-glenn-explosion': {
+    title: "Blue Origin's New Glenn Rocket Explodes During Engine Test",
+    date: '2026-05-28',
+    category: 'Technology',
+    locale: 'en',
+    content: `## Explosion at Cape Canaveral
+
+Blue Origin's New Glenn rocket was destroyed in an explosion around 9:00 p.m. EDT on May 28 during a test firing at Cape Canaveral Space Force Station in Florida. The company had been conducting a test firing of the rocket's seven methane-fueled BE-4 first-stage engines when the test went wrong.
+
+The 188-foot first stage caught fire. The 86-foot upper stage then tilted and fell, and the vehicle exploded as its methane fuel and liquid oxygen ignited. The rocket was destroyed in the blast.
+
+## No injuries, but a damaged pad
+
+No one was injured in the incident. The setback nonetheless carries operational consequences: Blue Origin has only one New Glenn launch pad, and it was damaged in the explosion, raising questions about how quickly the company can return to flight.
+
+The company had been gearing up for a June launch to deploy a batch of Amazon "Leo" internet satellites. New Glenn had flown three times previously, and an April flight had suffered an upper-stage malfunction, making this latest failure the second setback in recent months.
+
+## Bezos responds
+
+Blue Origin founder Jeff Bezos addressed the failure publicly, signaling that an investigation was already under way.
+
+"It's too early to know the root cause but we're already working to find it," Bezos said. The explosion marks a significant blow for one of the leading commercial space companies competing with SpaceX, leaving its near-term launch plans and its planned satellite deployment in question.`,
+  },
+  'tr-blue-origin-new-glenn-patlama': {
+    title: 'Blue Origin\'in New Glenn roketi motor testi sırasında patladı',
+    date: '2026-05-28',
+    category: 'Teknoloji',
+    locale: 'tr',
+    content: `## Cape Canaveral'da patlama
+
+Blue Origin'in New Glenn roketi, 28 Mayıs'ta Cape Canaveral Uzay Kuvvetleri Üssü'nde motor testi sırasında patladı. Olay, yerel saatle akşam 9 sularında, roketin yedi metan yakıtlı BE-4 ilk kademe motorunun ateşlenmesi denemesinde meydana geldi.
+
+188 fitlik ilk kademe alev aldı; 86 fitlik üst kademe yana eğilerek düştü ve metan yakıtı ile sıvı oksijenin tutuşmasıyla araç patladı. Roket tamamen tahrip oldu.
+
+## Yaralanan olmadı, kalkış rampası hasar gördü
+
+Patlamada kimse yaralanmadı. Ancak Blue Origin'in yalnızca bir New Glenn kalkış rampası bulunuyor ve bu rampa hasar gördü. Bu durum, şirketin yaklaşan görevlerini ciddi şekilde etkileyebilir.
+
+Blue Origin, Amazon'un "Leo" internet uydularından bir partiyi yörüngeye taşımak için haziran ayında bir kalkışa hazırlanıyordu. New Glenn daha önce üç kez uçmuş, nisan ayındaki bir uçuşta üst kademe arızası yaşanmıştı.
+
+## Bezos: Kök nedeni bulmak için çalışıyoruz
+
+Şirketin kurucusu Jeff Bezos, patlamanın ardından açıklama yaptı. Bezos, "Kök nedeni bilmek için henüz çok erken ancak onu bulmak için şimdiden çalışıyoruz" ifadesini kullandı.
+
+Bezos'un açıklaması, patlamanın nedeninin henüz belirsiz olduğunu ancak soruşturmaya hemen başlandığını gösterdi. Tek kalkış rampasının hasar görmesi, haziran ayındaki uydu görevinin gecikebileceğine işaret etti.
+
+## Uzay rekabetinde geri adım
+
+Bu olay, lider bir ticari uzay şirketi için önemli bir geri adım olarak değerlendirildi. New Glenn, ticari uzay pazarında SpaceX ile rekabet eden başlıca roketlerden biri konumunda.
+
+Roketin daha önce üç kez uçtuğu ve nisan ayındaki uçuşta üst kademe arızası yaşandığı hatırlatıldı. Amazon'un "Leo" uydu projesi, küresel internet erişimini genişletmeyi hedefliyor; bu nedenle New Glenn'in kalkış programındaki aksamalar yakından izleniyor.`,
+  },
+  'ru-blue-origin-new-glenn-vzryv': {
+    title: 'Ракета «Нью-Гленн» взорвалась при испытании двигателей',
+    date: '2026-05-28',
+    category: 'Технологии',
+    locale: 'ru',
+    content: `## Взрыв при огневом испытании
+
+Около 21:00 по восточному времени 28 мая ракета «Нью-Гленн» компании «Блю Ориджин» взорвалась во время огневого испытания. На станции Космических сил в Кейп-Канаверале запускали семь метановых двигателей первой ступени типа БЕ-4.
+
+Первая ступень высотой 188 футов загорелась. Верхняя ступень высотой 86 футов накренилась и упала, после чего аппарат взорвался — воспламенились метановое топливо и жидкий кислород. Ракета была полностью уничтожена.
+
+## Пострадавших нет, площадка повреждена
+
+В результате инцидента никто не пострадал. У компании есть только одна стартовая площадка для ракеты «Нью-Гленн», и она была повреждена. Это серьёзно осложняет дальнейшие планы.
+
+Компания готовилась к июньскому запуску для вывода на орбиту партии интернет-спутников «Лео» компании «Амазон». Авария фактически срывает эти планы, поскольку повреждённую площадку предстоит восстанавливать. Ракета «Нью-Гленн» совершала три полёта ранее; во время апрельского полёта произошёл сбой верхней ступени, так что это уже не первая техническая проблема программы.
+
+## Реакция Безоса
+
+Основатель компании Джефф Безос прокомментировал произошедшее в социальных сетях.
+
+«Слишком рано говорить о первопричине, но мы уже работаем над тем, чтобы её найти», — заявил Джефф Безос.
+
+Авария стала чувствительной неудачей для одной из ведущих коммерческих космических компаний, которая конкурирует со «СпейсИкс». История вызвала широкий международный интерес, поскольку гонка частных компаний в космосе остаётся в центре внимания во всём мире. Расследование причин взрыва и сроки восстановления стартовой инфраструктуры теперь определят дальнейший график программы.`,
+  },
+
+  // --- Topic 4: UN blacklists Israeli and Russian forces; Israel cuts ties with Guterres ---
+  'bmt-israil-rusiya-qara-siyahi': {
+    title: 'BMT İsrail və Rusiyanı qara siyahıya saldı, İsrail Quterreşlə əlaqəni kəsdi',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Qara siyahıya ilk dəfə əlavə
+
+Baş katib Antonio Quterreşin hazırladığı illik BMT hesabatı ilk dəfə olaraq İsrail və Rusiya qüvvələrini münaqişə ilə bağlı cinsi zorakılıqda ittiham olunan tərəflərin qara siyahısına əlavə etdi. Hesabatda ümumilikdə 77 dövlət və qeyri-dövlət qurumu sadalanır. Bu, sənədin əhatə dairəsinin nə qədər geniş olduğunu göstərir.
+
+Sənəddə 2025-ci ildə İsrailin həbs müəssisələrində fələstinlilərə qarşı "cinsi zorakılıq nümunələri" qeydə alınıb. Hesabatda Qəzza və Qərb Sahilindən olan 14 kişi, yeddi qadın, doqquz oğlan və bir qızla bağlı bir neçə hadisə təsdiqlənib.
+
+## İsrailin sərt reaksiyası
+
+İsrail elan etdi ki, Antonio Quterreş Baş katib vəzifəsində qaldığı müddətcə onun ofisi ilə əlaqəni kəsəcək. Bu addım BMT ilə İsrail arasında ciddi diplomatik qırılma deməkdir və beynəlxalq münasibətlərdə nadir hadisədir.
+
+İsrailin BMT-dəki səfiri Denni Danon sosial media bəyanatında bildirdi: "Biz bu BMT Baş katibi ilə işimizi bitirdik". Bu açıqlama İsrailin hesabata münasibətdə tutduğu sərt mövqeyi əks etdirdi.
+
+## Regional əhəmiyyət
+
+Bu diplomatik qırılma Yaxın Şərq üçün böyük nəticələrə malikdir. BMT-nin ittihamları Qəzza və Qərb Sahilindəki həbs müəssisələrinə aiddir, İsrail isə hesabatı qətiyyətlə rədd edir.
+
+Hadisə beynəlxalq təşkilatla bir üzv dövlət arasında nadir gərginlik nümunəsidir. Quterreşlə əlaqənin kəsilməsi diplomatik kanalların işinə təsir göstərə bilər və regional vəziyyəti daha da mürəkkəbləşdirir. Hesabat eyni zamanda Rusiya qüvvələrini də qara siyahıya saldığı üçün geniş beynəlxalq əks-səda doğurub.`,
+  },
+  'en-un-blacklist-israel-russia-sexual-violence': {
+    title: 'UN Adds Israel and Russia to Sexual Violence Blacklist',
+    date: '2026-05-28',
+    category: 'World',
+    locale: 'en',
+    content: `## A first-time listing
+
+An annual United Nations report by Secretary-General Antonio Guterres added Israeli and Russian forces, for the first time, to the blacklist of parties accused of conflict-related sexual violence. In all, the report lists 77 government and non-government entities.
+
+The document detailed "patterns of sexual violence" against Palestinians held in Israeli detention facilities in 2025. It verified multiple incidents involving 14 men, seven women, nine boys and one girl from Gaza and the West Bank, drawn from the cases reviewed by the United Nations.
+
+## Israel severs ties with the secretary-general
+
+In response, Israel announced it would cut ties with the secretary-general's office for as long as Guterres serves in the role. The move marked a sharp escalation in an already strained relationship between Israel and the world body, and went well beyond a routine diplomatic protest.
+
+Israeli Ambassador Danny Danon made the country's position clear in a social media statement on May 28, addressing the listing directly.
+
+## "Done with this UN Secretary-General"
+
+"We are done with this UN Secretary-General," Danon wrote in his statement.
+
+The rupture adds to mounting friction between Israel and the United Nations over the war in Gaza. With allegations centered on detention facilities tied to Gaza and the West Bank, and Russian forces named alongside Israel for the first time, the dispute carries broad implications for Middle East diplomacy and is being closely watched across the region.`,
+  },
+  'tr-bm-israil-rusya-kara-liste': {
+    title: 'BM İsrail ve Rusya\'yı kara listeye aldı; İsrail Guterres\'le bağı kesti',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## İlk kez kara listede
+
+Birleşmiş Milletler Genel Sekreteri António Guterres'in yıllık raporu, çatışmayla bağlantılı cinsel şiddet suçlamasıyla İsrail ve Rusya güçlerini ilk kez kara listeye aldı. Rapor, hükümet ve hükümet dışı toplam 77 kuruluşu listeliyor.
+
+Rapor, 2025 yılında İsrail gözaltı tesislerinde Filistinlilere yönelik "cinsel şiddet kalıplarını" belgeledi. Belgede Gazze ve Batı Şeria'dan 14 erkek, yedi kadın, dokuz erkek çocuk ve bir kız çocuğunu kapsayan çok sayıda olayın doğrulandığı belirtildi.
+
+## İsrail'den sert tepki
+
+İsrail, rapora tepki olarak Genel Sekreterlik makamıyla bağını kesti. Karara göre, Guterres görevde kaldığı sürece İsrail bu makamla ilişkilerini sürdürmeyecek.
+
+İsrail'in BM Büyükelçisi Danny Danon, sosyal medya üzerinden yaptığı açıklamada sert bir ifade kullandı: "Bu BM Genel Sekreteri ile işimiz bitti." Bu açıklama, kurum ile İsrail arasındaki kopuşun derinliğini ortaya koydu.
+
+## Diplomatik kriz büyüyor
+
+Suçlamalar, Gazze ve Batı Şeria'daki gözaltı tesislerini ilgilendiriyor. Rapor New York'taki Birleşmiş Milletler merkezi tarafından hazırlandı.
+
+BM ile İsrail arasındaki bu önemli diplomatik kopuş, Orta Doğu açısından geniş kapsamlı sonuçlar doğurabilecek bir gelişme olarak değerlendiriliyor. Anlaşmazlık, bölgedeki gerilimi tırmandıran yeni bir boyut ekledi.
+
+## Rusya güçleri de listede
+
+Raporda Rusya güçleri de ilk kez kara listeye eklendi. Toplam 77 kuruluşu kapsayan liste, çatışmayla bağlantılı cinsel şiddet suçlamalarına ilişkin BM'nin yıllık değerlendirmesinin bir parçası olarak hazırlandı.
+
+İsrail ve Rusya güçlerinin aynı anda listeye girmesi, raporun kapsamının genişlediğini ortaya koydu. Belgenin doğruladığı olaylar, 2025 yılı boyunca gözaltı tesislerinde yaşandığı belirtilen vakaları kapsıyor. Raporun resmi olarak cuma günü yayımlanması bekleniyordu.`,
+  },
+  'ru-oon-chyornyy-spisok-izrail-rossiya': {
+    title: 'ООН внесла Израиль и Россию в чёрный список по насилию',
+    date: '2026-05-28',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Впервые в чёрном списке
+
+Ежегодный доклад генерального секретаря ООН Антониу Гутерриша впервые внёс израильские и российские силы в чёрный список сторон, обвиняемых в сексуальном насилии в условиях конфликта. Всего в докладе перечислены 77 государственных и негосударственных структур.
+
+В документе задокументированы «модели сексуального насилия» в отношении палестинцев в израильских местах содержания под стражей в 2025 году. Были подтверждены инциденты с участием 14 мужчин, семи женщин, девяти мальчиков и одной девочки из Газы и Западного берега. Именно эти данные стали основанием для включения израильских сил в перечень впервые за всю историю доклада.
+
+## Израиль разрывает связи
+
+В ответ Израиль объявил, что разорвёт связи с канцелярией генерального секретаря на всё время, пока Гутерриш занимает свой пост. Это стало резкой реакцией на публикацию доклада.
+
+«Мы покончили с этим генеральным секретарём ООН», — заявил посол Израиля Дэнни Данон в социальных сетях 28 мая 2026 года.
+
+## Дипломатический разрыв
+
+Сам доклад был представлен в штаб-квартире ООН в Нью-Йорке, а изложенные в нём обвинения касаются мест содержания под стражей в Газе и на Западном берегу.
+
+Этот шаг стал значительным дипломатическим разрывом между Организацией Объединённых Наций и Израилем. Конфликт между всемирной организацией и одной из сторон ближневосточного противостояния имеет серьёзные последствия для всего региона. Появление в одном перечне сразу израильских и российских сил придаёт докладу дополнительный политический вес. Тема остаётся актуальной для аудитории во всех языковых версиях новостного сайта.`,
+  },
+
+  // --- Topic 5: Sweden donates 16 Gripen jets to Ukraine, sells up to 22 more ---
+  'isvec-ukrayna-gripen-tayyare': {
+    title: 'İsveç Ukraynaya 16 Gripen təyyarəsi bağışlayır və 22-yədək satacaq',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Pulsuz ötürmə və satış
+
+İsveç elan etdi ki, Ukraynaya 16 ədəd JAS 39 Gripen C/D qırıcı təyyarəsini pulsuz ötürəcək. Bundan əlavə, ölkə Ukraynaya 22-yədək daha müasir Gripen E təyyarəsini satmağı planlaşdırır. Bu, İsveçin Ukraynaya hərbi dəstəyində mühüm mərhələdir.
+
+Razılaşma İsveç Baş naziri Ulf Kristerson və Ukrayna Prezidenti Volodimir Zelenski tərəfindən Uppsala Hava Bazasında keçirilən birgə brifinqdə açıqlandı. İki lider razılaşmanın təfərrüatlarını birlikdə təqdim etdilər.
+
+## Müasir silahlanma daxildir
+
+Bağışlanan təyyarələrlə birlikdə qabaqcıl döyüş sursatı da veriləcək. Bunların arasında IRIS-T, AMRAAM və uzaq mənzilli METEOR hava-hava raketləri ola bilər. Bu silahlar Ukrayna hava qüvvələrinin döyüş imkanlarını əhəmiyyətli dərəcədə artıra bilər.
+
+16 bağışlanan təyyarənin 2027-ci ilin əvvəlində çatdırılması nəzərdə tutulur. Çatdırılma müddəti təyyarələrin Ukrayna pilotları tərəfindən mənimsənilməsinə də vaxt verir.
+
+## Maliyyə təfərrüatları
+
+Kiyev daha müasir Gripen təyyarələri üçün Avropa İttifaqının Ukraynaya Dəstək Krediti çərçivəsindən 2,5 milyard avro (təxminən 2,9 milyard dollar) ayırmağı planlaşdırır.
+
+Bu addım Rusiya-Ukrayna müharibəsində mühüm hadisədir. Ukrayna hava qüvvələrinin müasirləşdirilməsi münaqişənin gedişatına təsir edə bilər və qabaqcıl Qərb texnikasının Kiyevə ötürülməsi prosesinin davamlı olduğunu göstərir. İsveç bu razılaşma ilə Ukraynaya uzunmüddətli müdafiə dəstəyi göstərdiyini təsdiqləyir. Pulsuz ötürmə və satışın birləşdirilməsi həm təcili ehtiyacların ödənilməsinə, həm də uzunmüddətli imkanların qurulmasına xidmət edir.`,
+  },
+  'en-sweden-gripen-jets-ukraine': {
+    title: 'Sweden to Donate 16 Gripen Jets and Sell Up to 22 More',
+    date: '2026-05-28',
+    category: 'World',
+    locale: 'en',
+    content: `## A major fighter jet package
+
+Sweden announced on May 28 that it will transfer 16 JAS 39 Gripen C/D fighter jets to Ukraine free of charge and plans to sell up to 22 additional Gripen E aircraft. The package represents one of the more substantial air power commitments to Kyiv in recent months, combining an outright donation with a larger commercial sale.
+
+The agreement was unveiled at a joint briefing by Swedish Prime Minister Ulf Kristersson and President Volodymyr Zelensky at Uppsala Air Base. The setting underscored the bilateral nature of the deal between Stockholm and Kyiv.
+
+## Weapons and timeline
+
+The donation includes advanced ammunition, potentially the IRIS-T, AMRAAM and long-range METEOR air-to-air missiles. The 16 donated aircraft are to be delivered in early 2027, putting older C/D models in Ukrainian hands first.
+
+For the more modern jets, Kyiv plans to allocate 2.5 billion euros ($2.9 billion) from the European Union's Ukraine Support Loan toward the purchase of the newer Gripen E aircraft.
+
+## Significance for the war
+
+The deal strengthens Ukraine's air force at a critical stage of its war with Russia, layering older C/D models for sooner delivery alongside newer E-variant jets acquired through sale. The structure aims to deliver capability quickly while building toward a more modern fleet.
+
+The mix of an immediate donation and a longer-term commercial purchase signals a sustained Swedish commitment to Ukraine's defense, a development followed closely across Europe and beyond.`,
+  },
+  'tr-isvec-ukrayna-gripen-jet': {
+    title: 'İsveç Ukrayna\'ya 16 Gripen savaş uçağı bağışlıyor, 22\'ye kadar daha satacak',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Bağış ve satış paketi
+
+İsveç, Ukrayna'ya 16 adet JAS 39 Gripen C/D savaş uçağını ücretsiz olarak devredeceğini ve ek olarak 22'ye kadar Gripen E uçağı satmayı planladığını açıkladı. Anlaşma, Uppsala Hava Üssü'nde düzenlenen ortak basın toplantısında duyuruldu.
+
+Toplantıya İsveç Başbakanı Ulf Kristersson ve Ukrayna Devlet Başkanı Volodimir Zelenski katıldı. Paket, Ukrayna'nın hava savunma kapasitesini güçlendirmeyi hedefliyor.
+
+## Liderlerden ortak duyuru
+
+Anlaşma, Başbakan Kristersson ile Devlet Başkanı Zelenski'nin Uppsala Hava Üssü'nde bir araya geldiği toplantıda kamuoyuna açıklandı. İki liderin ortak açıklaması, İsveç'in Ukrayna'ya verdiği askeri desteğin yeni bir aşamaya geçtiğini ortaya koydu.
+
+Toplantının bir hava üssünde düzenlenmesi, paketin merkezindeki savaş uçaklarına sembolik bir vurgu kattı. Açıklama, geniş yankı uyandırdı.
+
+## Gelişmiş mühimmat dahil
+
+Bağış, gelişmiş mühimmatı da kapsıyor. Bunlar arasında IRIS-T, AMRAAM ve uzun menzilli METEOR havadan havaya füzeleri yer alabilir. Bağışlanan 16 uçağın 2027 yılının başında teslim edilmesi öngörülüyor.
+
+Bu uçaklar, Ukrayna'nın mevcut filosunu modern Batı sistemleriyle takviye etme çabasının bir parçası olarak değerlendiriliyor.
+
+## 2,5 milyar avroluk finansman
+
+Kiev, daha modern Gripen uçakları için Avrupa Birliği'nin Ukrayna Destek Kredisi'nden 2,5 milyar avro ayırmayı planlıyor. Bu tutar yaklaşık 2,9 milyar dolara denk geliyor.
+
+Anlaşma, Rusya-Ukrayna savaşında önemli bir gelişme olarak öne çıktı. Özellikle uçakların 2027 başında teslim edilecek olması, Ukrayna'nın orta vadeli hava gücü planlamasına işaret ediyor.`,
+  },
+  'ru-shvecia-gripen-ukraine': {
+    title: 'Швеция передаёт Украине 16 истребителей «Грипен» бесплатно',
+    date: '2026-05-28',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Безвозмездная передача и продажа
+
+Швеция объявила, что безвозмездно передаст Украине 16 истребителей «Грипен» более ранних модификаций. Кроме того, страна планирует продать ещё до 22 самолётов «Грипен» новейшей модификации. Речь идёт о машинах семейства ЯС 39, которые составляют основу шведских ВВС.
+
+Соглашение было представлено на совместном брифинге премьер-министра Швеции Ульфа Кристерссона и президента Украины Владимира Зеленского на авиабазе Уппсала. Стороны подчеркнули стратегический характер договорённости.
+
+## Вооружение и сроки поставки
+
+В состав передачи входят современные боеприпасы. Потенциально это ракеты ближнего действия, ракеты средней дальности класса «воздух-воздух», а также ракеты большой дальности того же класса. Шестнадцать передаваемых самолётов должны быть поставлены Украине в начале 2027 года.
+
+Поставка более старых машин раньше по срокам позволит украинским ВВС быстрее нарастить возможности, тогда как новейшие истребители поступят позднее.
+
+## Финансирование из фонда ЕС
+
+Киев планирует выделить 2,5 миллиарда евро (2,9 миллиарда долларов) из Кредита поддержки Украины Европейского союза. Эти средства пойдут на закупку более современных самолётов «Грипен».
+
+Соглашение стало крупным событием в ходе российско-украинской войны. Оно особенно значимо для русскоязычной аудитории и широко отслеживается во всех языковых версиях новостного сайта, поскольку напрямую влияет на баланс сил в воздухе. Передача целого парка боевых самолётов одной европейской страной — редкий по масштабу шаг военной поддержки.`,
+  },
+
+  // --- Topic 7: Iranians return online after one of the world's longest internet shutdowns ---
+  'iran-internet-baglanma-qayidis': {
+    title: 'İranlılar dünyanın ən uzun internet bağlanmasından sonra onlayna qayıdır',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Bağlanma ləğv edildi
+
+İran Prezidenti Məsud Pezeşkian mayın 25-də internet bağlanmasına son qoyulması barədə göstəriş verdi. Bundan sonra İran mayın 26-da internet xidmətini qismən bərpa etdi. Bu addım uzun müddətdən sonra ölkə vətəndaşları üçün rabitə imkanlarını yenidən açdı.
+
+Bağlanma 2026-cı il yanvarın 8-də etirazlar zamanı tətbiq olunmuşdu və ABŞ-İsrailin İrana hücumlarından sonra uzadılmışdı. Bu, dünyanın ən uzun və ən sərt milli internet bağlanmalarından biri idi — təxminən 90 milyon insan üçün 2026-cı ilin böyük hissəsini əhatə etdi.
+
+## Bərpa hələ tam deyil
+
+İnternet monitorinqi aparan NetBlocks bildirdi ki, qoşulma kəsilməzdən əvvəlki səviyyənin təxminən 86 faizinə çatıb. Lakin xidmət ləng işləyir, YouTube və Instagram kimi tətbiqlər isə hələ də ciddi məhdudiyyət altında qalır. Bu o deməkdir ki, tam bərpa hələ baş verməyib.
+
+## İqtisadi zərər
+
+Hesablamalara görə, bağlanma birbaşa itkilər baxımından gündə 30-40 milyon dollara başa gəlirdi. Bu rəqəm uzunmüddətli kəsintinin İran iqtisadiyyatına vurduğu ağır zərbəni göstərir. Kəsinti həm biznes, həm də gündəlik həyat üçün ciddi çətinliklər yaratmışdı.
+
+İran Azərbaycanın birbaşa qonşusu olduğundan, qismən bərpa regiondakı vəziyyətə dair mühüm siqnaldır. İnternetin yenidən açılması daha geniş atəşkəs danışıqları ilə bağlı gərginliyin azalması ilə əlaqələndirilir və regional sabitlik baxımından müsbət addım kimi qiymətləndirilir. Bununla belə, tətbiqlərə qoyulan davamlı məhdudiyyətlər göstərir ki, vəziyyət hələ tam normallaşmayıb və xidmətin tam bərpası üçün əlavə vaxt lazım ola bilər.`,
+  },
+  'en-iran-internet-restored-after-shutdown': {
+    title: 'Iranians Return Online After One of the Longest Shutdowns',
+    date: '2026-05-28',
+    category: 'World',
+    locale: 'en',
+    content: `## A blackout lifted
+
+Iranians returned online after enduring one of the world's longest and strictest national internet shutdowns. President Masoud Pezeshkian ordered the end of the blackout on May 25, and Iran partially restored internet access on May 26 in the days that followed.
+
+The cutoff had been imposed on January 8, 2026, during protests and was extended after the US-Israel attacks on Iran. It stretched across most of 2026 for roughly 90 million people, ranking among the world's longest and strictest national shutdowns.
+
+## Connectivity returns, slowly
+
+The internet monitor NetBlocks reported connectivity at roughly 86% of pre-cutoff capacity. Even so, service remained slow, and apps such as YouTube and Instagram stayed heavily restricted despite the broader restoration.
+
+The partial nature of the rollback meant many Iranians regained access without a full return to normal online life, with heavy limits still in place on widely used platforms.
+
+## A costly outage
+
+The economic damage was substantial. The cutoff was estimated to cost between $30 million and $40 million daily in direct losses, compounding the strain on businesses and individuals over the long months it remained in force. Spread across most of 2026, those daily losses mounted into a heavy toll on the economy.
+
+For Azerbaijan, the partial reopening of its southern neighbor's internet signals a degree of de-escalation tied to the broader regional ceasefire talks now under way between Washington and Tehran.`,
+  },
+  'tr-iran-internet-kesintisi-sona-erdi': {
+    title: 'İranlılar uzun süren internet kesintisinin ardından yeniden çevrimiçi oldu',
+    date: '2026-05-28',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Kesinti sona erdirildi
+
+İran Cumhurbaşkanı Mesud Pezeşkiyan, 25 Mayıs'ta internet kesintisinin sona erdirilmesi talimatını verdi. İran, 26 Mayıs'ta interneti kısmen yeniden devreye soktu.
+
+Kesinti, 8 Ocak 2026'da protestolar sırasında uygulamaya konmuş ve ABD ile İsrail'in İran'a yönelik saldırılarının ardından uzatılmıştı. Bu kesinti, dünyanın en uzun ve en katı ulusal internet kapatmalarından biri olarak kayıtlara geçti.
+
+## NetBlocks: Kapasite yüzde 86
+
+İnternet izleme kuruluşu NetBlocks, bağlantının kesinti öncesi kapasitenin yaklaşık yüzde 86'sına ulaştığını bildirdi. Ancak hizmetin yavaş olduğu ve YouTube ile Instagram gibi uygulamaların ağır kısıtlamalar altında kaldığı belirtildi.
+
+Kapatma, yaklaşık 90 milyon kişiyi etkiledi ve 2026 yılının büyük bölümünü kapsadı. Bu durum, ülkedeki dijital iletişimi uzun süre felç etti.
+
+## Aylar süren kapatma
+
+Kesinti başlangıçta 8 Ocak 2026'da protestolar sırasında uygulanmış, ardından ABD ile İsrail'in saldırıları sonrasında uzatılmıştı. Bu uzun süreç, İran'daki internet erişimini neredeyse tüm yıl boyunca sınırladı.
+
+Kapatmanın katılığı, onu dünyanın en sıkı ulusal internet kesintilerinden biri haline getirdi. Erişimin yeniden açılmasına rağmen ağır kısıtlamaların sürmesi, normalleşmenin kademeli olacağını gösterdi.
+
+## Günlük 30-40 milyon dolar zarar
+
+Kesintinin günde tahmini 30 ila 40 milyon dolar doğrudan kayba yol açtığı hesaplandı. Bu rakam, kapatmanın ekonomik maliyetinin büyüklüğünü ortaya koydu.
+
+İran, Azerbaycan'ın doğrudan komşusu konumunda. İnternetin kısmen yeniden açılması, daha geniş ateşkes görüşmeleriyle bağlantılı bir gerilim azalmasının işareti olarak değerlendirildi.`,
+  },
+  'ru-iran-vozvrat-v-internet': {
+    title: 'Иранцы вернулись в сеть после долгого отключения интернета',
+    date: '2026-05-28',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Приказ о возобновлении доступа
+
+Президент Ирана Масуд Пезешкиан 25 мая распорядился прекратить отключение интернета. Уже 26 мая страна частично восстановила доступ к сети. Для миллионов жителей это стало первым за долгое время возвращением к привычной онлайн-жизни.
+
+Блокировка была введена 8 января 2026 года во время протестов и продлена после ударов США и Израиля по Ирану. Это было одно из самых длительных и строгих общенациональных отключений в мире. Оно охватило большую часть 2026 года и затронуло примерно 90 миллионов человек. На протяжении месяцев жители страны были фактически отрезаны от глобального интернета.
+
+## Связь восстановлена частично
+
+Мониторинговая служба «НетБлокс» сообщила, что подключение составляет примерно 86 процентов от мощности, которая была до отключения. Однако сервис работает медленно. Такие приложения, как видеохостинг «Ютуб» и социальная сеть «Инстаграм», по-прежнему остаются под жёсткими ограничениями.
+
+## Экономические потери
+
+По оценкам, отключение обходилось примерно в 30-40 миллионов долларов прямых потерь ежедневно. Длительная блокировка наносила этот ежедневный урон бизнесу и онлайн-сервисам внутри страны на протяжении большей части 2026 года.
+
+Иран — непосредственный сосед Азербайджана. Частичное восстановление доступа сигнализирует о деэскалации, связанной с более широкими переговорами о перемирии в регионе, и потому представляет интерес для всех аудиторий новостного сайта. Возвращение страны в глобальную сеть может постепенно оживить и трансграничные деловые связи.`,
+  },
+
+  // --- Topic 8: US stock indexes close at record highs on Iran ceasefire optimism ---
+  'abs-birja-indeksleri-rekord': {
+    title: 'ABŞ birja indeksləri İran atəşkəs nikbinliyi fonunda rekord həddə bağlandı',
+    date: '2026-05-28',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `## Üç indeks də rekord vurdu
+
+Mayın 28-də ABŞ-ın üç əsas birja indeksi yeni rekord həddə bağlandı. S&P 500 indeksi 0,58 faiz artaraq 7563,63 bənddə günü başa vurdu, Nasdaq Composite indeksi də rekord göstərici qeydə aldı. Bu, bazarda güclü nikbinlik əhval-ruhiyyəsinin hökm sürdüyünü göstərdi.
+
+Bu yüksəliş Vaşinqton və Tehranın atəşkəsi uzatmaq və Fars körfəzi enerji ixracını tədricən bərpa etmək üçün 60 günlük memorandum üzrə razılaşması barədə xəbərlərlə dəstəkləndi. İnvestorlar regional gərginliyin azalması ehtimalını müsbət qarşıladılar.
+
+## Süni intellekt səhmləri lider oldu
+
+Süni intellekt proqram təminatı və infrastruktur səhmləri kəskin artdı və bazardakı yüksəlişin lokomotivi oldu. Microsoft, Oracle və Palantir səhmləri 3 ilə 4 faiz arasında bahalaşdı. Bu artım texnologiya sektoruna olan investor marağının davam etdiyini təsdiqlədi.
+
+## Qlobal əhəmiyyət
+
+Qlobal bazarlar və süni intellekt ticarəti dünya üzrə geniş şəkildə izlənilir. İndekslərin rekord həddə yüksəlməsi İran atəşkəsi ilə bağlı nikbinliklə birbaşa əlaqəlidir və bu xəbər pəncərəsindəki digər əsas hadisələrlə bağlanır.
+
+Enerji bazarlarındakı gərginliyin azalması investorların əhval-ruhiyyəsini yaxşılaşdırdı. Hörmüz boğazından ixracın bərpası ehtimalı neft qiymətlərinə və qlobal təchizat zəncirlərinə müsbət təsir göstərə bilər ki, bu da bazar nikbinliyini daha da gücləndirir. Beləliklə, geosiyasi hadisələrlə maliyyə bazarları arasındakı sıx əlaqə bir daha üzə çıxdı. Hər üç indeksin eyni gündə rekord həddə bağlanması və süni intellekt səhmlərinin öncül mövqedə dayanması bu yüksəlişin əsas hərəkətverici qüvvələrini ortaya qoydu.`,
+  },
+  'en-us-stocks-record-highs-iran-optimism': {
+    title: 'US Stock Indexes Close at Record Highs on Iran Optimism',
+    date: '2026-05-28',
+    category: 'Business',
+    locale: 'en',
+    content: `## Fresh records across the board
+
+All three of the major US stock indexes closed at fresh record highs on May 28. The S&P 500 gained 0.58% to close at 7,563.63, and the Nasdaq Composite also finished the session at a record level.
+
+The advance capped a session driven largely by optimism over diplomacy in the Middle East rather than fresh economic data, with all three benchmarks setting new closing peaks on the same trading day.
+
+## Iran ceasefire fuels the rally
+
+The rally was supported by reports that Washington and Tehran had agreed to a 60-day memorandum to extend their ceasefire and gradually restore Persian Gulf energy exports.
+
+The prospect of calmer conditions in a key energy corridor eased concerns about supply disruptions, lifting sentiment across equity markets. The diplomatic news connected the day's market move directly to the broader Iran ceasefire story.
+
+## AI stocks lead gains
+
+Artificial intelligence software and infrastructure stocks rose sharply during the session. Microsoft, Oracle and Palantir each gained between 3% and 4%, reflecting continued investor appetite for the AI trade and helping to drive the broad indexes higher. The strength in those large technology names added momentum to a market already buoyed by the diplomatic headlines.
+
+The combination of geopolitical relief and strength in technology names propelled the indexes to new highs, a milestone tracked by investors worldwide and tied directly to the Iran ceasefire developments dominating the broader news.`,
+  },
+  'tr-abd-borsa-rekor-seviye': {
+    title: 'ABD borsa endeksleri İran iyimserliğiyle rekor seviyede kapandı',
+    date: '2026-05-28',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `## Üç endeks de rekor kırdı
+
+28 Mayıs'ta ABD'nin üç büyük borsa endeksi de taze rekor seviyelerde kapandı. S&P 500 endeksi yüzde 0,58 değer kazanarak 7.563,63 puandan kapanış yaptı; Nasdaq Composite endeksi de rekor seviyeden günü tamamladı.
+
+Bu kapanış, piyasalardaki yükseliş eğiliminin gücünü ortaya koydu. Üç endeksin aynı anda rekor kırması, yatırımcı güveninin arttığına işaret etti.
+
+## İran ateşkesi iyimserliği
+
+Yükselişi destekleyen başlıca etken, Washington ile Tahran'ın ateşkesi uzatmaya yönelik 60 günlük bir mutabakat zaptında anlaştığı yönündeki haberler oldu. Bu çerçeve, aynı zamanda Basra Körfezi enerji ihracatının kademeli olarak yeniden başlamasını öngörüyor.
+
+Enerji sevkiyatına ilişkin beklentiler, küresel piyasalardaki risk iştahını artıran bir unsur olarak öne çıktı.
+
+## Yapay zeka hisseleri yükseldi
+
+Yapay zeka yazılımı ve altyapı hisseleri keskin biçimde değer kazandı. Microsoft, Oracle ve Palantir hisseleri yüzde 3 ile yüzde 4 arasında yükseliş kaydetti.
+
+Bu hareket, yapay zeka temasının piyasalardaki yükselişin başlıca itici güçlerinden biri olmayı sürdürdüğünü gösterdi. Büyük teknoloji şirketlerindeki kazanımlar, endekslerin rekor seviyelere taşınmasına katkıda bulundu.
+
+## Jeopolitik ve piyasa bağlantısı
+
+Küresel piyasalar ve yapay zeka temasındaki hareketler yakından izleniyor. İran ateşkesine bağlı rekor seviyeler, bu dönemin diğer önemli haber başlıklarıyla doğrudan bağlantı kurdu.
+
+Basra Körfezi enerji ihracatının kademeli olarak yeniden başlaması beklentisi, yatırımcı iyimserliğini besledi. Piyasaların yönü, Washington ile Tahran arasındaki müzakerelerin seyrine ve daha geniş jeopolitik gelişmelere duyarlı kalmaya devam ediyor.`,
+  },
+  'ru-fondovye-indeksy-ssha-rekord': {
+    title: 'Фондовые индексы США закрылись на рекордных максимумах',
+    date: '2026-05-28',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `## Все три индекса на рекордах
+
+28 мая все три основных фондовых индекса США закрылись на новых рекордных максимумах. Базовый индекс широкого рынка вырос на 0,58 процента и завершил торги на отметке 7563,63 пункта. Высокотехнологичный индекс Насдак Композит также закрылся на рекордном уровне.
+
+Одновременный обновлённый максимум по всем ключевым индикаторам отражает высокий оптимизм инвесторов на американском рынке.
+
+## Оптимизм вокруг перемирия
+
+Ралли поддержали сообщения о том, что Вашингтон и Тегеран договорились о 60-дневном меморандуме. Документ предусматривает продление перемирия и постепенное восстановление энергетического экспорта из Персидского залива.
+
+Перспектива снижения напряжённости в одном из ключевых нефтяных регионов мира улучшила настроения участников торгов и поддержала аппетит к риску. Инвесторы восприняли договорённость как сигнал к возможной стабилизации поставок энергоносителей.
+
+## Рост технологического сектора
+
+Резко выросли акции компаний, связанных с программным обеспечением и инфраструктурой для искусственного интеллекта. Бумаги корпораций «Майкрософт», «Оракл» и «Палантир» прибавили от 3 до 4 процентов.
+
+Мировые рынки и сделки в сфере искусственного интеллекта широко отслеживаются по всему миру. Рекордные максимумы, связанные с перемирием по Ирану, тесно перекликаются с другими главными новостями этого периода и интересны международной аудитории сайта. Сочетание геополитической разрядки и интереса к технологиям остаётся ключевым драйвером для американских площадок.`,
+  },
+
+  // ========== 2026-05-27 ==========
+
+  // --- Topic 6: Record-breaking May heatwave in UK and Western Europe ---
+  'britaniya-avropa-rekord-may-istiliyi': {
+    title: 'Britaniya və Qərbi Avropanı rekord may istiliyi bürüdü',
+    date: '2026-05-27',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Britaniyada qoşa rekord
+
+Böyük Britaniyanın bütün zamanların ən isti may günü rekordu cəmi iki gün ərzində iki dəfə qırıldı. Mayın 25-də London yaxınlığındakı Kew Gardens məntəqəsində hava 34,8 dərəcəyə qədər qızdı, mayın 26-da isə eyni məntəqədə 35,1 dərəcə qeydə alındı. Bu, ölkə üçün görünməmiş may istiliyidir.
+
+Britaniya mayın 26-da "tropik gecə" də yaşadı — minimum temperatur 20 dərəcədən aşağı düşmədi. Kenley Hava Sahəsində 21,3 dərəcə qeydə alındı ki, bu da may ayı üçün rekord-yüksək minimum temperaturdur. Uels də Bute Parkda 32,9 dərəcə ilə öz rekordunu yenilədi.
+
+## Fransada da rekordlar
+
+Fransanın hava xidməti Météo-France bildirdi ki, ölkə öz tarixinin ən isti may gününü yaşayıb — temperatur 35 dərəcəyə çatıb. İstilik dalğası zamanı Fransanın müşahidə şəbəkəsində 1350-dən çox istilik rekordu qırıldı. Bu rəqəm istiliyin nə qədər geniş ərazini əhatə etdiyini göstərir.
+
+## Avropa miqyasında təsir
+
+Avropanın bəzi hissələrində temperatur normadan 10-15 dərəcə yüksək oldu. Bu, mövsüm üçün qeyri-adi dərəcədə yüksək göstəricidir. May ayı icmal hesabatlarına görə, amatör idman tədbirlərində istiliklə bağlı ölüm halları qeydə alındı.
+
+Rekord göstəricilərlə müşayiət olunan bu iqlim hadisəsi qlobal miqyasda diqqət çəkir. Hadisə Qərbi Avropada istiliyin getdikcə artan ekstremal xarakterini ortaya qoyur və hava şəraitinin dəyişməsinin gündəlik həyata təsirini bir daha xatırladır. Belə rekordlar gələcəkdə də ekstremal hava hadisələrinin gözlənildiyinə işarə edir və əhalini öncədən hazırlıqlı olmağa sövq edir.`,
+  },
+  'en-record-may-heatwave-uk-western-europe': {
+    title: 'Record-Breaking May Heatwave Grips UK and Western Europe',
+    date: '2026-05-27',
+    category: 'World',
+    locale: 'en',
+    content: `## Records broken twice in two days
+
+A record-breaking heatwave gripped the United Kingdom and much of Western Europe, with the UK's hottest-ever May day record broken twice in quick succession. Temperatures reached 34.8 degrees Celsius at Kew Gardens in London on May 25, then climbed to 35.1 C at the same site on May 26.
+
+The extreme heat pushed measurements far beyond seasonal norms across the region, with the records falling on consecutive days at the same London site.
+
+## A "tropical night"
+
+The UK recorded a "tropical night" on May 26, meaning the minimum temperature did not fall below 20 C. Kenley Airfield registered 21.3 C, a record-high minimum May temperature for the country. Wales also set a record during the heatwave, reaching 32.9 C in Bute Park.
+
+The unusually warm overnight conditions compounded the daytime heat, offering little relief from the high temperatures even after dark.
+
+## France and the wider toll
+
+Across the Channel, France's weather service, Meteo-France, reported its hottest May day on record, with temperatures reaching 35 C. More than 1,350 heat records were broken across the French network during the heatwave, a measure of how widespread the extreme conditions were.
+
+Parts of Europe ran 10 to 15 C above normal during the peak of the heatwave. Deaths were reported at amateur sporting events, underscoring the human cost of an extreme weather event whose record-setting figures resonate well beyond the United Kingdom, France and the other affected countries.`,
+  },
+  'tr-ingiltere-avrupa-mayis-sicagi': {
+    title: 'İngiltere ve Batı Avrupa\'yı rekor kıran Mayıs sıcağı kuşattı',
+    date: '2026-05-27',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## İngiltere'de rekor iki kez kırıldı
+
+İngiltere'nin tüm zamanların en sıcak Mayıs günü rekoru iki gün üst üste kırıldı. 25 Mayıs'ta Londra'daki Kew Gardens'da 34,8 santigrat derece ölçüldü; ertesi gün 26 Mayıs'ta yine Kew Gardens'da sıcaklık 35,1 santigrat dereceye ulaştı.
+
+Bu değerler, ülkenin Mayıs ayı için kaydettiği önceki en yüksek sıcaklıkları geride bıraktı. Sıcak hava dalgası, geniş bir coğrafyayı etkisi altına aldı.
+
+## "Tropikal gece" kaydedildi
+
+İngiltere, 26 Mayıs'ta bir "tropikal gece" yaşadı; bu, gece sıcaklığının 20 santigrat derecenin altına düşmemesi anlamına geliyor. Kenley Hava Sahası'nda ölçülen 21,3 santigrat derece, Mayıs ayı için rekor yüksek minimum sıcaklık oldu.
+
+Galler de Bute Park'ta 32,9 santigrat derece ile kendi rekorunu kırdı. Bu değerler, bölgedeki olağandışı sıcaklık koşullarını teyit etti.
+
+## Fransa'da 1.350 rekor kırıldı
+
+Fransa'nın meteoroloji servisi Météo-France, tüm zamanların en sıcak Mayıs gününü kaydettiğini bildirdi; sıcaklıklar 35 santigrat dereceye ulaştı. Sıcak hava dalgası sırasında Fransız ölçüm ağında 1.350'den fazla sıcaklık rekoru kırıldı.
+
+Météo-France'ın verileri, sıcak hava dalgasının Fransa genelinde geniş bir alana yayıldığını gösterdi. Bir günde 1.350'den fazla rekorun kırılması, olayın olağandışı şiddetine işaret etti.
+
+## Batı Avrupa'da anomali
+
+Avrupa'nın bazı bölgelerinde sıcaklıklar normalin 10 ila 15 santigrat derece üzerine çıktı. Bu sapma, Mayıs ayı için alışılmadık derecede yüksek bir seviyeyi temsil etti.
+
+Aşırı sıcaklar, kamu sağlığı açısından da endişe yarattı; amatör spor etkinliklerinde ölümler bildirildi. İngiltere, Galler ve Fransa'da peş peşe kırılan rekorlar, kıtanın geniş bir bölümünü etkileyen ve iklim açısından dikkat çeken bir tablo ortaya koydu.`,
+  },
+  'ru-rekordnaya-zhara-britania-evropa': {
+    title: 'Рекордная майская жара охватила Британию и Западную Европу',
+    date: '2026-05-27',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Рекорд побит дважды
+
+Рекорд самого жаркого майского дня в истории Великобритании был побит дважды всего за два дня. Сначала 25 мая в саду Кью в Лондоне зафиксировали 34,8 градуса. Затем 26 мая там же столбик термометра поднялся до 35,1 градуса, обновив достижение предыдущего дня.
+
+26 мая в стране отметили так называемую «тропическую ночь», когда минимальная температура не опустилась ниже 20 градусов. На аэродроме Кенли было зафиксировано 21,3 градуса — рекордно высокий ночной минимум для мая. В Уэльсе также установили рекорд: 32,9 градуса в парке Бьют.
+
+## Рекорды во Франции
+
+Метеорологическая служба Франции «Метео-Франс» сообщила о самом жарком майском дне за всю историю наблюдений. Температура в стране достигала 35 градусов. За время аномальной жары по французской сети наблюдений было побито более 1350 температурных рекордов. Столь массовое обновление показателей сразу по всей сети наблюдений охватило конец весны.
+
+## Аномалия и жертвы
+
+В отдельных частях Европы температура была на 10-15 градусов выше нормы. Такое отклонение от климатической нормы для конца весны охватило значительную часть Западной Европы.
+
+По сводкам новостей за 27 мая, на любительских спортивных мероприятиях сообщалось о случаях гибели людей на фоне экстремальной жары.
+
+Эта крупная климатическая и погодная история с рекордными показателями оказалась широко актуальной и востребованной во всех четырёх языковых версиях новостного сайта. Серия температурных рекордов сразу в нескольких странах подчёркивает масштаб аномалии конца весны.`,
+  },
+
+  // --- Topic 9: WHO-declared Ebola emergency in DR Congo's Ituri Province worsens ---
+  'konqo-ituri-ebola-fovqelade': {
+    title: 'Konqo DR-nın İturi vilayətində Ebola fövqəladə vəziyyəti pisləşir',
+    date: '2026-05-27',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Beynəlxalq fövqəladə vəziyyət
+
+Konqo Demokratik Respublikasının İturi vilayətində Bundibugyo ebolavirusunun törətdiyi Ebola epidemiyası yayılmaqda davam edir. Ümumdünya Səhiyyə Təşkilatı 2026-cı il mayın 16-da bunu Beynəlxalq Əhəmiyyətli İctimai Səhiyyə Fövqəladə Vəziyyəti elan etdi. Bu status epidemiyanın beynəlxalq miqyasda təhlükə yaratdığını göstərir.
+
+Mayın 27-nə olan məlumata görə, 1205 şübhəli və təsdiqlənmiş hal, ən azı 264 ölüm qeydə alınıb. Epidemiyanın mərkəzi şərqi Konqodakı Monqbvalu şəhəridir.
+
+## Vaksin və müalicə yoxdur
+
+Bundibugyo virusuna qarşı təsdiqlənmiş heç bir vaksin və ya xüsusi dərman yoxdur. Mövcud Ebola müalicə üsulları virusun Zaire növünü hədəf alır, lakin bu epidemiyada fərqli növ aşkar edilib. Bu vəziyyət xəstəliklə mübarizəni xeyli mürəkkəbləşdirir.
+
+## Silahlı münaqişə əngəl yaradır
+
+İturidə davam edən silahlı münaqişə monitorinq qruplarının fəaliyyətini, Sürətli Reaksiya Qrupunun yerləşdirilməsini və laboratoriya nümunələrinin təhlükəsiz daşınmasını məhdudlaşdırır. Bu maneələr epidemiyaya nəzarəti və xəstələrin müalicəsini xeyli çətinləşdirir.
+
+ÜST tərəfindən elan edilən bu qlobal səhiyyə fövqəladə vəziyyəti beynəlxalq monitorinq nəticələrinə malikdir və dünya üzrə geniş maraq doğurur. Vaksinin olmaması və münaqişə şəraiti epidemiya ilə mübarizəni dünya səhiyyəsi üçün ciddi sınağa çevirir. Beynəlxalq təşkilatlar vəziyyəti diqqətlə izləyir. Halların sayının artması və ölümlərin çoxalması göstərir ki, epidemiya hələ nəzarət altına alınmayıb və qarşıdakı dövrdə əlavə tədbirlər tələb oluna bilər.`,
+  },
+  'en-dr-congo-ituri-ebola-emergency': {
+    title: 'Ebola Emergency in DR Congo Ituri Province Worsens Further',
+    date: '2026-05-27',
+    category: 'World',
+    locale: 'en',
+    content: `## A spreading outbreak
+
+An Ebola outbreak caused by the Bundibugyo ebolavirus is spreading in Ituri Province in the Democratic Republic of the Congo. The World Health Organization declared the situation a Public Health Emergency of International Concern on May 16, 2026, its highest level of alarm.
+
+The epicenter of the outbreak is the town of Mongbwalu in eastern DR Congo, where response efforts have been concentrated.
+
+## Rising case figures
+
+As of May 27, 2026, 1,205 suspected and confirmed cases and at least 264 deaths had been reported. The figures underscored the scale of an emergency that has alarmed health authorities and scientists alike.
+
+The toll continued to climb as response teams worked to contain the spread of a rare Ebola virus species across the province, where the outbreak has caused growing alarm among scientists.
+
+## No specific treatment, conflict hampers response
+
+There is no approved vaccine or medicine specifically for the Bundibugyo virus, as existing Ebola treatments target the Zaire species. That gap complicates efforts to protect health workers and patients and to bring the outbreak under control, leaving responders without the tools developed for more common forms of the disease.
+
+Ongoing armed conflict in Ituri restricts surveillance teams, the deployment of Rapid Response Teams and the secure transport of laboratory samples. The combination of a hard-to-treat virus and persistent insecurity makes this WHO-declared emergency a focus of international monitoring.`,
+  },
+  'tr-kongo-ituri-ebola-acil-durum': {
+    title: 'Kongo Demokratik Cumhuriyeti\'nde Ituri\'deki Ebola acil durumu kötüleşiyor',
+    date: '2026-05-27',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Bundibugyo virüsü yayılıyor
+
+Kongo Demokratik Cumhuriyeti'nin Ituri eyaletinde, Bundibugyo ebolavirüsünün yol açtığı bir Ebola salgını yayılıyor. Dünya Sağlık Örgütü, 16 Mayıs 2026'da salgını Uluslararası Boyutta Halk Sağlığı Acil Durumu ilan etti.
+
+Salgının merkez üssü, Ituri eyaletindeki Mongbwalu bölgesi. Hastalık, ülkenin doğusundaki bu bölgede hızla yayılma eğilimi gösteriyor.
+
+## 1.205 vaka, en az 264 ölüm
+
+27 Mayıs 2026 itibarıyla 1.205 şüpheli ve doğrulanmış vaka ile en az 264 ölüm bildirildi. Bu rakamlar, salgının ciddiyetinin arttığını ortaya koydu.
+
+Bundibugyo virüsüne karşı özel olarak onaylanmış bir aşı veya ilaç bulunmuyor. Mevcut Ebola tedavileri, virüsün Zaire türünü hedef alacak şekilde geliştirilmiş durumda. Bu durum, müdahaleyi zorlaştıran kritik bir engel oluşturuyor.
+
+## Tedavi için boşluk
+
+Bundibugyo virüsüne karşı özel olarak onaylanmış aşı ya da ilacın bulunmaması, sağlık ekiplerinin elini zayıflatıyor. Mevcut Ebola tedavilerinin virüsün Zaire türüne göre geliştirilmiş olması, bu salgında doğrudan kullanımlarını sınırlıyor.
+
+Bu boşluk, vaka sayısının ve ölümlerin artmasıyla birlikte daha da kritik hale geliyor. Salgının erken evrede kontrol altına alınması, müdahale kapasitesine bağlı görünüyor.
+
+## Silahlı çatışma müdahaleyi zorlaştırıyor
+
+Ituri'deki süregelen silahlı çatışma, gözetim ekiplerinin çalışmasını, Hızlı Müdahale Ekibi'nin konuşlandırılmasını ve laboratuvar örneklerinin güvenli taşınmasını kısıtlıyor.
+
+DSÖ'nün ilan ettiği bu küresel sağlık acil durumu, uluslararası izleme açısından önemli sonuçlar doğuruyor. Güvenlik koşulları, salgınla mücadele çabalarını daha da karmaşık hale getiriyor.`,
+  },
+  'ru-ebola-dr-kongo-ituri': {
+    title: 'Вспышка Эболы в провинции Итури в Конго усугубляется',
+    date: '2026-05-27',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Распространение редкого вируса
+
+В провинции Итури на востоке Демократической Республики Конго распространяется вспышка Эболы, вызванная вирусом Бундибугио. Всемирная организация здравоохранения объявила её чрезвычайной ситуацией в области общественного здравоохранения, имеющей международное значение, ещё 16 мая 2026 года.
+
+Эпицентром вспышки стал город Монгбвалу. Речь идёт о редком виде вируса, что вызывает у специалистов особую тревогу.
+
+## Растущее число жертв
+
+По состоянию на 27 мая 2026 года было зарегистрировано 1205 предполагаемых и подтверждённых случаев заболевания. Сообщалось не менее чем о 264 смертях. Число пострадавших продолжает расти, и ситуация в провинции ухудшается с каждой неделей.
+
+## Нет одобренной вакцины
+
+Против вируса Бундибугио не существует одобренной вакцины или специального лекарства. Существующие средства лечения Эболы нацелены на заирский вид вируса, а не на тот, что вызвал нынешнюю вспышку. Это существенно затрудняет борьбу с эпидемией.
+
+## Конфликт мешает врачам
+
+Продолжающийся вооружённый конфликт в провинции Итури ограничивает работу групп эпиднадзора. Он затрудняет развёртывание групп быстрого реагирования и безопасную перевозку лабораторных образцов.
+
+Объявленная Всемирной организацией здравоохранения чрезвычайная ситуация имеет международные последствия и находится под пристальным наблюдением, что вызывает широкий интерес у аудитории новостного сайта. Сочетание редкого вируса, отсутствия вакцины и боевых действий делает эту вспышку одной из самых опасных в регионе.`,
+  },
+
+  // --- Topic 10: Israel intensifies strikes on southern Lebanon; expands ground operations ---
+  'israil-cenubi-livan-zerbeler': {
+    title: 'İsrail Cənubi Livana zərbələri gücləndirir, quru əməliyyatı genişlənir',
+    date: '2026-05-27',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Ən ağır bombardman günlərindən biri
+
+İsrail mayın 26-da Livana 120-dən çox hava zərbəsi endirdi — bu, son həftələrdə ən ağır bombardman günlərindən biri oldu. Zərbələr Livanın həm cənub, həm də şərq hissələrini hədəf aldı və geniş ərazini əhatə etdi.
+
+Livanın Səhiyyə Nazirliyi mayın 26-dakı hücumlar nəticəsində ən azı 31 nəfərin öldüyünü, 40 nəfərin yaralandığını bildirdi. Burc əş-Şəmaliyə endirilən bir zərbədə qadın və uşaqlar daxil olmaqla ən azı 10 nəfər həlak oldu. Bu, mülki əhali arasında ağır itkilərin olduğunu göstərir.
+
+## Sur şəhərinə köçürülmə əmri
+
+İsrail cənubdakı Sur şəhəri üçün köçürülmə əmri verdi və sakinləri ərazini tərk etməyə çağırdı. Mənbələrə görə, İsrailin quru əməliyyatları təhlükəsizlik zonasından kənara genişlənib. Bu, münaqişənin yeni mərhələyə keçdiyinə işarədir.
+
+## Atəşkəs təhlükə altında
+
+Livanın səhiyyə nazirliyinin məlumatına görə, mart ayının 2-də başlanan hücumdan bəri ümumi itkilər 3213 ölü və 9737 yaralı təşkil edir. Bu rəqəmlər münaqişənin nə qədər ağır nəticələr verdiyini ortaya qoyur. Son zərbələr aprel ayının 16-da əldə olunmuş kövrək atəşkəsi sarsıdır və onun davamlılığını sual altına qoyur.
+
+## Regional gərginlik artır
+
+Bu münaqişə İran və İsrailin bu xəbər pəncərəsində üstünlük təşkil edən hadisələrinə qonşu olan Yaxın Şərqdə gərginliyin artdığını göstərir. Region üçün təhlükəsizlik vəziyyəti getdikcə mürəkkəbləşir və beynəlxalq diqqəti cəlb edir.
+
+Köçürülmə əmrləri və quru əməliyyatlarının genişlənməsi mülki əhali üçün yeni risklər yaradır. Bölgədəki hadisələr ümumi Yaxın Şərq mənzərəsinin nə qədər gərgin və qarışıq olduğunu bir daha təsdiqləyir.`,
+  },
+  'en-israel-intensifies-strikes-southern-lebanon': {
+    title: 'Israel Intensifies Strikes on Southern Lebanon, Expands Ground Push',
+    date: '2026-05-27',
+    category: 'World',
+    locale: 'en',
+    content: `## One of the heaviest days of bombing
+
+Israel struck Lebanon with more than 120 air strikes on May 26 in one of the heaviest days of bombing in weeks. The attacks hit both southern and eastern Lebanon, marking a sharp escalation in a conflict that has stretched on for months.
+
+Lebanon's Ministry of Public Health reported at least 31 people killed and 40 injured from the May 26 attacks, with the toll climbing as the bombardment intensified across the south and east of the country.
+
+## A deadly strike in Burj al-Shamali
+
+At least 10 people, including women and children, were killed in a single strike on Burj al-Shamali. The casualties from that one attack added to the mounting human toll of an intensifying campaign across the south of the country.
+
+Israel issued a displacement order for the southern city of Tyre, signaling further military action there, and sources said that Israeli ground operations had expanded past the security zone.
+
+## A fraying ceasefire
+
+Lebanon's health ministry reported a cumulative toll of 3,213 dead and 9,737 wounded since the offensive began on March 2. The figures point to the scale of the campaign over nearly three months of fighting, and to the heavy civilian cost of the latest attacks.
+
+The renewed bombardment frayed a tenuous April 16 ceasefire that had been meant to halt the violence. The latest escalation deepens a major Middle East conflict that sits alongside the Iran and Israel storylines dominating the current news cycle across the wider region.`,
+  },
+  'tr-israil-guney-lubnan-saldiri': {
+    title: 'İsrail Güney Lübnan\'a saldırıları yoğunlaştırıyor, kara harekatı genişledi',
+    date: '2026-05-27',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## 120'den fazla hava saldırısı
+
+İsrail, 26 Mayıs'ta Lübnan'a 120'den fazla hava saldırısı düzenledi; bu, haftalardır görülen en yoğun bombardıman günlerinden biri oldu. Saldırılar, Lübnan'ın güney ve doğu bölgelerini hedef aldı.
+
+Bu yoğun bombardıman, bölgedeki gerilimin yeniden tırmandığını gösterdi. Saldırıların geniş bir coğrafyaya yayılması, çatışmanın boyutunu ortaya koydu.
+
+## En az 31 kişi hayatını kaybetti
+
+Lübnan Halk Sağlığı Bakanlığı, 26 Mayıs saldırılarında en az 31 kişinin öldüğünü ve 40 kişinin yaralandığını bildirdi. Burc el-Şemali'ye düzenlenen tek bir saldırıda, aralarında kadın ve çocukların da bulunduğu en az 10 kişi hayatını kaybetti.
+
+İsrail, güneydeki Tyre kenti için bir tahliye emri yayımladı. Kaynaklara göre İsrail'in kara operasyonları güvenlik bölgesinin ötesine genişledi.
+
+## Tyre için tahliye emri
+
+İsrail'in güneydeki Tyre kenti için tahliye emri yayımlaması, sivil nüfus üzerindeki baskıyı artırdı. Kaynaklara göre kara operasyonlarının güvenlik bölgesinin ötesine taşması, çatışmanın kapsamının genişlediğine işaret etti.
+
+Bu adımlar, bölgedeki insani durumun ağırlaştığına dair endişeleri büyüttü. Yoğun bombardımanla eş zamanlı genişleyen kara harekatı, gerilimin tırmandığını gösterdi.
+
+## Toplam bilanço ağırlaşıyor
+
+Lübnan Sağlık Bakanlığı, 2 Mart'ta başlayan saldırılardan bu yana toplam 3.213 ölü ve 9.737 yaralı bildirdi. Bu kümülatif bilanço, çatışmanın yıkıcı boyutunu gözler önüne serdi.
+
+Saldırılar, 16 Nisan'da varılan kırılgan ateşkesi daha da zayıflattı. İran ve İsrail eksenindeki gelişmelere komşu olan bu tırmanma, Orta Doğu'daki gerilimin yeni bir cephesi olarak öne çıktı.`,
+  },
+  'ru-izrail-udary-yug-livana': {
+    title: 'Израиль усиливает удары по югу Ливана и расширяет операции',
+    date: '2026-05-27',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Один из самых тяжёлых дней бомбардировок
+
+26 мая Израиль нанёс по Ливану более 120 авиаударов. Это был один из самых тяжёлых дней бомбардировок за последние недели. Удары пришлись по южному и восточному Ливану и затронули населённые районы. Интенсивность атак резко выросла по сравнению с предыдущими днями.
+
+## Жертвы среди мирного населения
+
+Министерство общественного здравоохранения Ливана сообщило, что в результате атак 26 мая погиб как минимум 31 человек, ещё 40 получили ранения. При одном из ударов по населённому пункту Бурдж-эш-Шамали погибли не менее 10 человек, включая женщин и детей. Эти потери среди мирного населения, в том числе среди женщин и детей, указывают на тяжёлые последствия удара для жилых районов.
+
+## Приказ об эвакуации и наземные операции
+
+Израиль издал распоряжение об эвакуации для южного города Тир (Сур). По данным источников, наземные операции израильской армии расширились за пределы зоны безопасности. Это указывает на новый этап эскалации конфликта.
+
+## Совокупные потери
+
+Министерство здравоохранения Ливана сообщило о совокупном числе жертв с начала наступления 2 марта. Всего речь идёт о 3213 погибших и 9737 раненых. Эти данные подрывают хрупкое перемирие, которое было достигнуто 16 апреля. Продолжающиеся удары и рост потерь усиливают давление на это и без того непрочное соглашение о прекращении огня.
+
+Крупный нарастающий конфликт на Ближнем Востоке примыкает к сюжетам вокруг Ирана и Израиля, доминирующим в этом новостном цикле, и потому остаётся в центре внимания международной аудитории. Расширение наземных операций за пределы зоны безопасности усиливает опасения новой полномасштабной эскалации.`,
+  },
+
   // ========== 2026-05-10 ==========
 
   // --- Topic 5: India-Pakistan ceasefire 1-year anniversary ---
