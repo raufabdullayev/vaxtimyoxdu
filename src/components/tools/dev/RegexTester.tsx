@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function RegexTester() {
@@ -8,11 +8,9 @@ export default function RegexTester() {
   const [pattern, setPattern] = useState('')
   const [flags, setFlags] = useState('g')
   const [testString, setTestString] = useState('')
-  const [error, setError] = useState('')
 
-  const results = useMemo(() => {
-    if (!pattern || !testString) return null
-    setError('')
+  const { results, error } = useMemo(() => {
+    if (!pattern || !testString) return { results: null, error: '' }
     try {
       const regex = new RegExp(pattern, flags)
       const matches: { match: string; index: number; groups?: Record<string, string> }[] = []
@@ -30,10 +28,12 @@ export default function RegexTester() {
         }
       }
 
-      return { matches, isMatch: matches.length > 0 }
+      return { results: { matches, isMatch: matches.length > 0 }, error: '' }
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Invalid regular expression')
-      return null
+      return {
+        results: null,
+        error: e instanceof Error ? e.message : 'Invalid regular expression',
+      }
     }
   }, [pattern, flags, testString])
 

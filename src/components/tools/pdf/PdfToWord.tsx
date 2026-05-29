@@ -8,6 +8,7 @@ export default function PdfToWord() {
   const t = useTranslations('toolUI.pdfTools')
   const [file, setFile] = useState<File | null>(null)
   const [converting, setConverting] = useState(false)
+  const [progress, setProgress] = useState(0)
   const [error, setError] = useState('')
   const [done, setDone] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -48,6 +49,7 @@ export default function PdfToWord() {
     if (!file) return
 
     setConverting(true)
+    setProgress(0)
     setError('')
     setDone(false)
 
@@ -55,7 +57,9 @@ export default function PdfToWord() {
       const { Document, Packer, Paragraph, TextRun, PageBreak } = await import('docx')
 
       const bytes = new Uint8Array(await file.arrayBuffer())
-      const pageTexts = extractTextFromPdfBytes(bytes)
+      const pageTexts = await extractTextFromPdfBytes(bytes, (fraction) =>
+        setProgress(Math.round(fraction * 100))
+      )
 
       // Build docx paragraphs from extracted text
       const children: InstanceType<typeof Paragraph>[] = []
@@ -105,6 +109,7 @@ export default function PdfToWord() {
       setError(t('convertError'))
     } finally {
       setConverting(false)
+      setProgress(0)
     }
   }
 
@@ -130,6 +135,7 @@ export default function PdfToWord() {
     setError('')
     setDone(false)
     setConverting(false)
+    setProgress(0)
     docxBlobRef.current = null
     if (fileInputRef.current) fileInputRef.current.value = ''
   }
@@ -207,6 +213,18 @@ export default function PdfToWord() {
         )}
       </div>
 
+      {converting && (
+        <div>
+          <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
+            <div
+              className="h-full bg-primary transition-all"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <p className="text-xs text-muted-foreground mt-1 text-right">{progress}%</p>
+        </div>
+      )}
+
       {done && (
         <div className="p-4 rounded-lg bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-400 text-sm">
           {t('convertSuccess')}
@@ -216,11 +234,24 @@ export default function PdfToWord() {
   )
 }
 
+/** Yield control back to the event loop so the UI thread stays responsive. */
+function yieldToEventLoop(): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, 0))
+}
+
 /**
  * Extract text from raw PDF bytes by scanning for text-showing operators
  * (Tj, TJ) in content streams. Returns an array of strings, one per page.
+ *
+ * Runs asynchronously, yielding to the event loop between chunks of work so
+ * the main thread is not blocked while large PDFs (up to 50MB) are scanned.
+ * The extracted output is identical to a synchronous pass — yielding only
+ * affects scheduling, not the computed result.
  */
-function extractTextFromPdfBytes(bytes: Uint8Array): string[] {
+async function extractTextFromPdfBytes(
+  bytes: Uint8Array,
+  onProgress?: (fraction: number) => void
+): Promise<string[]> {
   const raw = new TextDecoder('latin1').decode(bytes)
   const pages: string[] = []
 
@@ -230,19 +261,28 @@ function extractTextFromPdfBytes(bytes: Uint8Array): string[] {
 
   // Collect streams containing text operators
   const streams: string[] = []
+  let scanned = 0
   while ((streamMatch = streamPattern.exec(raw)) !== null) {
     const content = streamMatch[1]
     if (/Tj|TJ/.test(content)) {
       streams.push(content)
     }
+    // Periodically yield during the stream scan so the UI stays responsive.
+    if (++scanned % 50 === 0) {
+      await yieldToEventLoop()
+    }
   }
+
+  // Stream scanning accounts for the first slice of progress.
+  onProgress?.(0.2)
 
   // Count pages via /Type /Page (excluding /Pages)
   const pagePattern = /\/Type\s*\/Page(?!s)\b/g
   const pageMatches = raw.match(pagePattern)
   const pageCount = pageMatches ? pageMatches.length : Math.max(streams.length, 1)
 
-  for (let i = 0; i < Math.max(pageCount, streams.length); i++) {
+  const totalPages = Math.max(pageCount, streams.length)
+  for (let i = 0; i < totalPages; i++) {
     const stream = streams[i] || ''
     let pageText = ''
 
@@ -266,6 +306,11 @@ function extractTextFromPdfBytes(bytes: Uint8Array): string[] {
     }
 
     pages.push(pageText.replace(/\s{3,}/g, '\n').trim())
+
+    // Report determinate progress and yield between pages.
+    // totalPages is always >= 1 inside this loop, so division is safe.
+    onProgress?.(0.2 + (0.8 * (i + 1)) / totalPages)
+    await yieldToEventLoop()
   }
 
   // If no text found at all but pages exist, return empty per page

@@ -40,10 +40,18 @@ const LOCK_TTL_SEC = 8
 let memCache: MarketPricesResponse | null = null
 let memCacheExpiresAt = 0
 
-async function fetchCryptoPrices(): Promise<MarketPrice[]> {
+// Single CoinGecko call covering BTC, ETH and gold (tether-gold). Splitting one
+// request into crypto[] + gold halves CoinGecko hits versus two separate calls,
+// which matters under the 5s refresh cadence and the tight free-tier limit.
+// On any failure both crypto and gold degrade together (empty / null), matching
+// the previous per-fetch try/catch graceful-degradation behavior.
+async function fetchCryptoAndGold(): Promise<{
+  crypto: MarketPrice[]
+  gold: MarketPrice | null
+}> {
   try {
     const res = await fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true',
+      'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether-gold&vs_currencies=usd&include_24hr_change=true',
       { signal: AbortSignal.timeout(4000) }
     )
 
@@ -51,10 +59,10 @@ async function fetchCryptoPrices(): Promise<MarketPrice[]> {
 
     const data: CoinGeckoResponse = await res.json()
 
-    const prices: MarketPrice[] = []
+    const crypto: MarketPrice[] = []
 
     if (data.bitcoin) {
-      prices.push({
+      crypto.push({
         symbol: 'BTC',
         name: 'Bitcoin',
         price: data.bitcoin.usd,
@@ -65,7 +73,7 @@ async function fetchCryptoPrices(): Promise<MarketPrice[]> {
     }
 
     if (data.ethereum) {
-      prices.push({
+      crypto.push({
         symbol: 'ETH',
         name: 'Ethereum',
         price: data.ethereum.usd,
@@ -75,38 +83,20 @@ async function fetchCryptoPrices(): Promise<MarketPrice[]> {
       })
     }
 
-    return prices
+    const gold: MarketPrice | null = data['tether-gold']
+      ? {
+          symbol: 'GOLD',
+          name: 'Gold',
+          price: data['tether-gold'].usd,
+          change24h: data['tether-gold'].usd_24h_change ?? 0,
+          icon: 'GOLD',
+          category: 'commodity',
+        }
+      : null
+
+    return { crypto, gold }
   } catch {
-    return []
-  }
-}
-
-async function fetchGoldPrice(): Promise<MarketPrice | null> {
-  try {
-    // Using a free metals API (no key required)
-    const res = await fetch(
-      'https://api.coingecko.com/api/v3/simple/price?ids=tether-gold&vs_currencies=usd&include_24hr_change=true',
-      { signal: AbortSignal.timeout(4000) }
-    )
-
-    if (!res.ok) throw new Error(`Gold API error: ${res.status}`)
-
-    const data: CoinGeckoResponse = await res.json()
-
-    if (data['tether-gold']) {
-      return {
-        symbol: 'GOLD',
-        name: 'Gold',
-        price: data['tether-gold'].usd,
-        change24h: data['tether-gold'].usd_24h_change ?? 0,
-        icon: 'GOLD',
-        category: 'commodity',
-      }
-    }
-
-    return null
-  } catch {
-    return null
+    return { crypto: [], gold: null }
   }
 }
 
@@ -191,11 +181,12 @@ async function fetchOilAndSP500(): Promise<MarketPrice[]> {
 
 async function fetchAllPrices(): Promise<MarketPricesResponse> {
   // Fetch all data sources in parallel
-  const [cryptoPrices, goldPrice, oilAndSP] = await Promise.all([
-    fetchCryptoPrices(),
-    fetchGoldPrice(),
+  const [cryptoAndGold, oilAndSP] = await Promise.all([
+    fetchCryptoAndGold(),
     fetchOilAndSP500(),
   ])
+
+  const { crypto: cryptoPrices, gold: goldPrice } = cryptoAndGold
 
   const prices: MarketPrice[] = [
     ...cryptoPrices,
@@ -245,10 +236,13 @@ async function fetchAllPrices(): Promise<MarketPricesResponse> {
   }
 }
 
-const EMPTY_RESPONSE: MarketPricesResponse = {
+// Build the empty payload at request time so updatedAt reflects when the error
+// occurred, not the serverless cold-start time (which can be hours stale on a
+// warm instance).
+const emptyResponse = (): MarketPricesResponse => ({
   prices: [],
   updatedAt: new Date().toISOString(),
-}
+})
 
 /**
  * 2-tier cache lookup with thundering-herd protection.
@@ -362,7 +356,7 @@ export async function GET() {
     data = await getCachedOrFetch()
     cacheStatus = wasL1Hit ? 'HIT' : 'MISS'
   } catch {
-    return NextResponse.json(EMPTY_RESPONSE, {
+    return NextResponse.json(emptyResponse(), {
       headers: {
         'Cache-Control': 'public, s-maxage=5, stale-while-revalidate=10',
         'X-Cache': 'EMPTY',

@@ -26,6 +26,14 @@ const INK_COLORS = [
   { name: 'Purple', color: '#4a148c' },
 ]
 
+// Deterministic pseudo-random offset in [-0.5, 0.5) derived from an integer seed.
+// Replaces Math.random() so that the per-line "natural" jitter stays stable for a
+// given line index — typing no longer re-randomizes already-rendered lines.
+function seededOffset(seed: number): number {
+  const x = Math.sin(seed * 12.9898) * 43758.5453
+  return (x - Math.floor(x)) - 0.5
+}
+
 export default function TextToHandwriting() {
   const t = useTranslations('toolUI.common')
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -37,68 +45,77 @@ export default function TextToHandwriting() {
   const [lineSpacing, setLineSpacing] = useState(40)
 
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
+    const draw = () => {
+      const canvas = canvasRef.current
+      if (!canvas) return
+      const ctx = canvas.getContext('2d')
+      if (!ctx) return
 
-    const paper = PAPER_COLORS[paperColor]
-    const ink = INK_COLORS[inkColor]
-    const fontObj = FONTS[font]
+      const paper = PAPER_COLORS[paperColor]
+      const ink = INK_COLORS[inkColor]
+      const fontObj = FONTS[font]
 
-    canvas.width = 800
-    canvas.height = 600
+      canvas.width = 800
+      canvas.height = 600
 
-    // Draw paper
-    ctx.fillStyle = paper.bg
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
+      // Draw paper
+      ctx.fillStyle = paper.bg
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    // Draw lines
-    ctx.strokeStyle = paper.line
-    ctx.lineWidth = 1
-    for (let y = 60; y < canvas.height; y += lineSpacing) {
+      // Draw lines
+      ctx.strokeStyle = paper.line
+      ctx.lineWidth = 1
+      for (let y = 60; y < canvas.height; y += lineSpacing) {
+        ctx.beginPath()
+        ctx.moveTo(40, y)
+        ctx.lineTo(canvas.width - 40, y)
+        ctx.stroke()
+      }
+
+      // Draw left margin
+      ctx.strokeStyle = '#ff9999'
+      ctx.lineWidth = 2
       ctx.beginPath()
-      ctx.moveTo(40, y)
-      ctx.lineTo(canvas.width - 40, y)
+      ctx.moveTo(70, 0)
+      ctx.lineTo(70, canvas.height)
       ctx.stroke()
-    }
 
-    // Draw left margin
-    ctx.strokeStyle = '#ff9999'
-    ctx.lineWidth = 2
-    ctx.beginPath()
-    ctx.moveTo(70, 0)
-    ctx.lineTo(70, canvas.height)
-    ctx.stroke()
+      // Draw text
+      ctx.fillStyle = ink.color
+      ctx.font = `${fontSize}px ${fontObj.family}`
+      ctx.textBaseline = 'bottom'
 
-    // Draw text
-    ctx.fillStyle = ink.color
-    ctx.font = `${fontSize}px ${fontObj.family}`
-    ctx.textBaseline = 'bottom'
+      const maxWidth = canvas.width - 120
+      const words = text.split(' ')
+      let line = ''
+      let y = 60
+      let lineIndex = 0
 
-    const maxWidth = canvas.width - 120
-    const words = text.split(' ')
-    let line = ''
-    let y = 60
-
-    for (const word of words) {
-      const testLine = line + (line ? ' ' : '') + word
-      const metrics = ctx.measureText(testLine)
-      if (metrics.width > maxWidth && line) {
-        // Add slight random offset for natural look
-        const xOffset = 80 + (Math.random() - 0.5) * 2
-        const yOffset = y + (Math.random() - 0.5) * 1
-        ctx.fillText(line, xOffset, yOffset)
-        line = word
-        y += lineSpacing
-        if (y > canvas.height - 20) break
-      } else {
-        line = testLine
+      for (const word of words) {
+        const testLine = line + (line ? ' ' : '') + word
+        const metrics = ctx.measureText(testLine)
+        if (metrics.width > maxWidth && line) {
+          // Add slight deterministic offset for natural look (stable per line)
+          const xOffset = 80 + seededOffset(lineIndex * 2) * 2
+          const yOffset = y + seededOffset(lineIndex * 2 + 1) * 1
+          ctx.fillText(line, xOffset, yOffset)
+          line = word
+          y += lineSpacing
+          lineIndex += 1
+          if (y > canvas.height - 20) break
+        } else {
+          line = testLine
+        }
+      }
+      if (line && y <= canvas.height - 20) {
+        ctx.fillText(line, 80 + seededOffset(lineIndex * 2) * 2, y)
       }
     }
-    if (line && y <= canvas.height - 20) {
-      ctx.fillText(line, 80 + (Math.random() - 0.5) * 2, y)
-    }
+
+    // Debounce the redraw so typing does not re-run the full canvas layout
+    // (clear + ruled lines + measureText word-wrap) synchronously on every keystroke.
+    const timer = setTimeout(draw, 150)
+    return () => clearTimeout(timer)
   }, [text, font, fontSize, paperColor, inkColor, lineSpacing])
 
   const download = () => {

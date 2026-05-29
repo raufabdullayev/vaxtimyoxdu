@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 
 export default function ImageCompress() {
@@ -15,6 +15,8 @@ export default function ImageCompress() {
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const originalUrlRef = useRef<string | null>(null)
+  const compressedUrlRef = useRef<string | null>(null)
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -33,10 +35,21 @@ export default function ImageCompress() {
     setError('')
     setOriginalFile(file)
     setOriginalSize(file.size)
+
+    // Revoke a previously compressed URL before clearing it to prevent leaks
+    if (compressedUrlRef.current) {
+      URL.revokeObjectURL(compressedUrlRef.current)
+      compressedUrlRef.current = null
+    }
     setCompressedUrl(null)
     setCompressedSize(0)
 
+    // Revoke the previous original object URL before creating a new one
+    if (originalUrlRef.current) {
+      URL.revokeObjectURL(originalUrlRef.current)
+    }
     const url = URL.createObjectURL(file)
+    originalUrlRef.current = url
     setOriginalUrl(url)
   }
 
@@ -51,7 +64,8 @@ export default function ImageCompress() {
         img.onload = () => resolve()
         img.onerror = () => reject(new Error('Failed to load image'))
       })
-      img.src = URL.createObjectURL(originalFile)
+      // Reuse the existing preview object URL instead of allocating a new one
+      img.src = originalUrl ?? URL.createObjectURL(originalFile)
       await loadPromise
 
       let width = img.naturalWidth
@@ -78,7 +92,12 @@ export default function ImageCompress() {
       })
 
       setCompressedSize(blob.size)
+      // Revoke the previous compressed URL before replacing it
+      if (compressedUrlRef.current) {
+        URL.revokeObjectURL(compressedUrlRef.current)
+      }
       const url = URL.createObjectURL(blob)
+      compressedUrlRef.current = url
       setCompressedUrl(url)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Compression failed')
@@ -86,6 +105,18 @@ export default function ImageCompress() {
       setProcessing(false)
     }
   }
+
+  // Cleanup object URLs on unmount to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (originalUrlRef.current) {
+        URL.revokeObjectURL(originalUrlRef.current)
+      }
+      if (compressedUrlRef.current) {
+        URL.revokeObjectURL(compressedUrlRef.current)
+      }
+    }
+  }, [])
 
   const download = () => {
     if (!compressedUrl || !originalFile) return

@@ -1,6 +1,6 @@
 'use client'
 
-import { type ReactNode, useState } from 'react'
+import { type ReactNode, Fragment, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
 import { Menu, X } from 'lucide-react'
@@ -27,34 +27,20 @@ export default function HeaderClient({ children }: { children?: ReactNode }) {
       {children}
 
       <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
-        <Link
-          href="/info"
-          className={`text-sm font-medium transition-colors ${
-            isActive('/info') ? 'text-primary font-semibold' : 'hover:text-primary'
-          }`}
-          {...(isActive('/info') ? { 'aria-current': 'page' as const } : {})}
-        >
-          {t('nav.news')}
-        </Link>
-        <MegaMenu />
-        <Link
-          href="/blog"
-          className={`text-sm font-medium transition-colors ${
-            isActive('/blog') ? 'text-primary font-semibold' : 'hover:text-primary'
-          }`}
-          {...(isActive('/blog') ? { 'aria-current': 'page' as const } : {})}
-        >
-          {t('nav.blog')}
-        </Link>
-        <Link
-          href="/about"
-          className={`text-sm font-medium transition-colors ${
-            isActive('/about') ? 'text-primary font-semibold' : 'hover:text-primary'
-          }`}
-          {...(isActive('/about') ? { 'aria-current': 'page' as const } : {})}
-        >
-          {t('nav.about')}
-        </Link>
+        {navLinks.map(({ href, label }) => (
+          <Fragment key={href}>
+            <Link
+              href={href}
+              className={`text-sm font-medium transition-colors ${
+                isActive(href) ? 'text-primary font-semibold' : 'hover:text-primary'
+              }`}
+              {...(isActive(href) ? { 'aria-current': 'page' as const } : {})}
+            >
+              {t(label)}
+            </Link>
+            {href === '/info' && <MegaMenu />}
+          </Fragment>
+        ))}
       </nav>
 
       <div className="flex items-center gap-2">

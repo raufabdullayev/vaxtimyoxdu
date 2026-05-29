@@ -95,17 +95,21 @@ export default function PomodoroTimer() {
     }
   }, [isRunning, mode, playSound])
 
-  // Update document title
+  // Update document title (set only — no per-tick teardown/reset thrash)
   useEffect(() => {
     if (isRunning) {
       document.title = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} - ${MODE_LABELS[mode]}`
     } else {
       document.title = 'Pomodoro Timer | Vaxtim Yoxdu'
     }
+  }, [minutes, seconds, isRunning, mode])
+
+  // Reset document title on unmount only
+  useEffect(() => {
     return () => {
       document.title = 'Pomodoro Timer | Vaxtim Yoxdu'
     }
-  }, [minutes, seconds, isRunning, mode])
+  }, [])
 
   const toggleTimer = () => {
     setIsRunning((prev) => !prev)

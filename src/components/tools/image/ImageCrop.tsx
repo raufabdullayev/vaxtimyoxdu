@@ -23,6 +23,8 @@ export default function ImageCrop() {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const imgRef = useRef<HTMLImageElement>(null)
+  const imageUrlRef = useRef<string | null>(null)
+  const croppedUrlRef = useRef<string | null>(null)
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0]
@@ -38,20 +40,43 @@ export default function ImageCrop() {
     }
 
     setError('')
+    // Revoke the previous cropped result URL before discarding it
+    if (croppedUrlRef.current) {
+      URL.revokeObjectURL(croppedUrlRef.current)
+      croppedUrlRef.current = null
+    }
     setCroppedUrl(null)
     setFile(selected)
 
-    const url = URL.createObjectURL(selected)
-    setImageUrl(url)
-
-    const img = new Image()
-    img.onload = () => {
-      setNaturalWidth(img.naturalWidth)
-      setNaturalHeight(img.naturalHeight)
-      setCrop({ x: 0, y: 0, width: 0, height: 0 })
+    // Revoke the previous source URL before replacing it
+    if (imageUrlRef.current) {
+      URL.revokeObjectURL(imageUrlRef.current)
     }
-    img.src = url
+    const url = URL.createObjectURL(selected)
+    imageUrlRef.current = url
+    setImageUrl(url)
   }
+
+  const handleImageLoad = () => {
+    if (!imgRef.current) return
+    setNaturalWidth(imgRef.current.naturalWidth)
+    setNaturalHeight(imgRef.current.naturalHeight)
+    setCrop({ x: 0, y: 0, width: 0, height: 0 })
+  }
+
+  // Revoke any outstanding object URLs on unmount
+  useEffect(() => {
+    return () => {
+      if (imageUrlRef.current) {
+        URL.revokeObjectURL(imageUrlRef.current)
+        imageUrlRef.current = null
+      }
+      if (croppedUrlRef.current) {
+        URL.revokeObjectURL(croppedUrlRef.current)
+        croppedUrlRef.current = null
+      }
+    }
+  }, [])
 
   const getRelativePos = useCallback(
     (clientX: number, clientY: number) => {
@@ -71,6 +96,10 @@ export default function ImageCrop() {
       setDragStart(pos)
       setCrop({ x: pos.x, y: pos.y, width: 0, height: 0 })
       setDragging(true)
+      if (croppedUrlRef.current) {
+        URL.revokeObjectURL(croppedUrlRef.current)
+        croppedUrlRef.current = null
+      }
       setCroppedUrl(null)
     },
     [getRelativePos]
@@ -112,6 +141,10 @@ export default function ImageCrop() {
       setDragStart(pos)
       setCrop({ x: pos.x, y: pos.y, width: 0, height: 0 })
       setDragging(true)
+      if (croppedUrlRef.current) {
+        URL.revokeObjectURL(croppedUrlRef.current)
+        croppedUrlRef.current = null
+      }
       setCroppedUrl(null)
     },
     [getRelativePos]
@@ -180,7 +213,12 @@ export default function ImageCrop() {
         )
       })
 
+      // Revoke the previous cropped result URL before replacing it
+      if (croppedUrlRef.current) {
+        URL.revokeObjectURL(croppedUrlRef.current)
+      }
       const url = URL.createObjectURL(blob)
+      croppedUrlRef.current = url
       setCroppedUrl(url)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Crop failed')
@@ -248,6 +286,7 @@ export default function ImageCrop() {
               alt="Source"
               className="max-w-full max-h-[500px] block"
               draggable={false}
+              onLoad={handleImageLoad}
             />
             {/* Overlay */}
             {crop.width > 0 && crop.height > 0 && (

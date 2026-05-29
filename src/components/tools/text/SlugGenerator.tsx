@@ -21,14 +21,26 @@ const ACCENT_MAP: Record<string, string> = {
   'ss': 'ß', 'ae': 'æ', 'oe': 'œ',
 }
 
+// Pre-compile the accent-stripping replacements ONCE at module load instead of
+// allocating ~80 fresh RegExp objects on every removeAccents() call (which runs
+// ~5x per keystroke via the variants memo). The (RegExp, replacement) pairs are
+// built in the exact same iteration order and with the same `char === replacement`
+// skip rule as the original loop, so the produced output is byte-identical.
+// Global regexes reset lastIndex to 0 after String.prototype.replace completes,
+// so reusing these instances across calls is safe.
+const ACCENT_REPLACEMENTS: Array<[RegExp, string]> = []
+for (const [replacement, chars] of Object.entries(ACCENT_MAP)) {
+  for (const char of chars) {
+    if (char === replacement) continue
+    ACCENT_REPLACEMENTS.push([new RegExp(char, 'g'), replacement])
+    ACCENT_REPLACEMENTS.push([new RegExp(char.toUpperCase(), 'g'), replacement.toUpperCase()])
+  }
+}
+
 function removeAccents(text: string): string {
   let result = text
-  for (const [replacement, chars] of Object.entries(ACCENT_MAP)) {
-    for (const char of chars) {
-      if (char === replacement) continue
-      result = result.replace(new RegExp(char, 'g'), replacement)
-      result = result.replace(new RegExp(char.toUpperCase(), 'g'), replacement.toUpperCase())
-    }
+  for (const [regex, replacement] of ACCENT_REPLACEMENTS) {
+    result = result.replace(regex, replacement)
   }
   return result
 }

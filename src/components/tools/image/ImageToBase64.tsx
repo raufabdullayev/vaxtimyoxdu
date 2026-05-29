@@ -1,16 +1,19 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useMemo } from 'react'
 
 export default function ImageToBase64() {
-  const [imageSrc, setImageSrc] = useState<string>('')
-  const [base64Output, setBase64Output] = useState('')
   const [dataUri, setDataUri] = useState('')
   const [fileInfo, setFileInfo] = useState<{ name: string; size: string; type: string } | null>(null)
   const [outputFormat, setOutputFormat] = useState<'datauri' | 'base64' | 'css' | 'html'>('datauri')
   const [error, setError] = useState('')
   const [copied, setCopied] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  // Single source of truth: derive the image src and base64 payload from dataUri
+  // instead of storing ~3 copies of a multi-megabyte data URI.
+  const imageSrc = dataUri
+  const base64Output = dataUri ? dataUri.split(',')[1] || '' : ''
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -37,8 +40,6 @@ export default function ImageToBase64() {
     reader.onload = (event) => {
       const result = event.target?.result as string
       setDataUri(result)
-      setBase64Output(result.split(',')[1] || '')
-      setImageSrc(result)
     }
     reader.onerror = () => {
       setError('Failed to read file.')
@@ -46,7 +47,7 @@ export default function ImageToBase64() {
     reader.readAsDataURL(file)
   }
 
-  const getOutput = (): string => {
+  const output = useMemo<string>(() => {
     if (!base64Output) return ''
     switch (outputFormat) {
       case 'datauri':
@@ -60,9 +61,7 @@ export default function ImageToBase64() {
       default:
         return dataUri
     }
-  }
-
-  const output = getOutput()
+  }, [dataUri, base64Output, outputFormat])
 
   const copy = async () => {
     if (!output) return
@@ -72,8 +71,6 @@ export default function ImageToBase64() {
   }
 
   const clear = () => {
-    setImageSrc('')
-    setBase64Output('')
     setDataUri('')
     setFileInfo(null)
     setError('')

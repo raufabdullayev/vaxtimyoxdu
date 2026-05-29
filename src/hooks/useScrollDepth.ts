@@ -19,6 +19,11 @@ export function useScrollDepth(
   const firedRef = useRef<Set<number>>(new Set())
 
   useEffect(() => {
+    // Reset the dedup set whenever the slug changes so that already-fired
+    // depths for a previous slug do not suppress events for the new slug
+    // (e.g. param-only navigation under /blog/[slug]).
+    firedRef.current = new Set()
+
     const container = containerRef.current
     if (!container) return
 

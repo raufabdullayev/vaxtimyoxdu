@@ -15,21 +15,33 @@ export default function ServiceWorkerRegistrar() {
       'serviceWorker' in navigator &&
       process.env.NODE_ENV === 'production'
     ) {
-      // Register after the page has fully loaded to avoid
-      // competing for bandwidth with initial page resources.
-      window.addEventListener('load', () => {
+      // Tracked across the async registration so cleanup can clear it.
+      let updateIntervalId: ReturnType<typeof setInterval> | null = null
+
+      const onLoad = () => {
         navigator.serviceWorker
           .register('/sw.js')
           .then((registration) => {
             // Check for SW updates periodically (every hour)
-            setInterval(() => {
+            updateIntervalId = setInterval(() => {
               registration.update()
             }, 60 * 60 * 1000)
           })
           .catch((error) => {
             console.error('Service Worker registration failed:', error)
           })
-      })
+      }
+
+      // Register after the page has fully loaded to avoid
+      // competing for bandwidth with initial page resources.
+      window.addEventListener('load', onLoad)
+
+      return () => {
+        window.removeEventListener('load', onLoad)
+        if (updateIntervalId !== null) {
+          clearInterval(updateIntervalId)
+        }
+      }
     }
   }, [])
 

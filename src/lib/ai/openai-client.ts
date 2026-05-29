@@ -20,7 +20,7 @@ const MAX_PROVIDER_TIMEOUT_MS = 3000
  *  Increased from 500ms to 800ms to skip providers if we can't give them a fair chance. */
 const MIN_PROVIDER_TIMEOUT_MS = 800
 
-function getProviders(): AIProvider[] {
+function buildProviders(): AIProvider[] {
   const providers: AIProvider[] = []
 
   // Primary: Groq (free tier)
@@ -54,6 +54,17 @@ function getProviders(): AIProvider[] {
   }
 
   return providers
+}
+
+// Provider config is static per deployment (env vars don't change at runtime),
+// so build it lazily once and reuse across callAI() invocations.
+let _providers: AIProvider[] | null = null
+
+function getProviders(): AIProvider[] {
+  if (!_providers) {
+    _providers = buildProviders()
+  }
+  return _providers
 }
 
 async function callProvider(

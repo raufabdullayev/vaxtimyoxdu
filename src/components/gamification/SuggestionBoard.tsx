@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import { ToolCategory } from '@/types/tool'
 
@@ -75,48 +75,42 @@ export default function SuggestionBoard() {
     [suggestions]
   )
 
-  const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
-      e.preventDefault()
-      const trimmedName = name.trim()
-      const trimmedDesc = description.trim()
-      if (!trimmedName || !trimmedDesc) return
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    const trimmedName = name.trim()
+    const trimmedDesc = description.trim()
+    if (!trimmedName || !trimmedDesc) return
 
-      const newSuggestion: Suggestion = {
-        id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
-        name: trimmedName,
-        description: trimmedDesc,
-        category,
-        votes: 0,
-        createdAt: Date.now(),
-      }
+    const newSuggestion: Suggestion = {
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      name: trimmedName,
+      description: trimmedDesc,
+      category,
+      votes: 0,
+      createdAt: Date.now(),
+    }
 
-      const updated = [...suggestions, newSuggestion]
-      setSuggestions(updated)
-      saveSuggestions(updated)
-      setName('')
-      setDescription('')
-      setCategory('ai')
-      setSubmitSuccess(true)
-      setTimeout(() => setSubmitSuccess(false), 3000)
-    },
-    [name, description, category, suggestions]
-  )
+    const updated = [...suggestions, newSuggestion]
+    setSuggestions(updated)
+    saveSuggestions(updated)
+    setName('')
+    setDescription('')
+    setCategory('ai')
+    setSubmitSuccess(true)
+    setTimeout(() => setSubmitSuccess(false), 3000)
+  }
 
-  const handleVote = useCallback(
-    (id: string) => {
-      if (votedIds.includes(id)) return
-      const updated = suggestions.map((s) =>
-        s.id === id ? { ...s, votes: s.votes + 1 } : s
-      )
-      const newVotedIds = [...votedIds, id]
-      setSuggestions(updated)
-      setVotedIds(newVotedIds)
-      saveSuggestions(updated)
-      saveVotes(newVotedIds)
-    },
-    [suggestions, votedIds]
-  )
+  const handleVote = (id: string) => {
+    if (votedIds.includes(id)) return
+    const updated = suggestions.map((s) =>
+      s.id === id ? { ...s, votes: s.votes + 1 } : s
+    )
+    const newVotedIds = [...votedIds, id]
+    setSuggestions(updated)
+    setVotedIds(newVotedIds)
+    saveSuggestions(updated)
+    saveVotes(newVotedIds)
+  }
 
   return (
     <div className="space-y-10">

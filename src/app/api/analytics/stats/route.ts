@@ -273,26 +273,33 @@ export async function GET(req: NextRequest) {
       created_at: row.created_at as string,
     }))
 
-    return NextResponse.json({
-      generated_at: new Date().toISOString(),
-      range: rangeParam || '30d',
-      page_views: {
-        last_24h: pageViews24h,
-        last_7d: pageViews7d,
-        last_30d: pageViews30d,
+    return NextResponse.json(
+      {
+        generated_at: new Date().toISOString(),
+        range: rangeParam || '30d',
+        page_views: {
+          last_24h: pageViews24h,
+          last_7d: pageViews7d,
+          last_30d: pageViews30d,
+        },
+        tool_uses: {
+          last_24h: toolUses24h,
+          last_7d: toolUses7d,
+          last_30d: toolUses30d,
+        },
+        popular_tools,
+        visitors_by_locale,
+        top_pages,
+        share_clicks,
+        tool_completions,
+        errors_404,
       },
-      tool_uses: {
-        last_24h: toolUses24h,
-        last_7d: toolUses7d,
-        last_30d: toolUses30d,
-      },
-      popular_tools,
-      visitors_by_locale,
-      top_pages,
-      share_clicks,
-      tool_completions,
-      errors_404,
-    })
+      {
+        // Endpoint is API-key protected, so keep caching private (no shared/edge cache).
+        // A short window collapses rapid dashboard polls without serving stale data for long.
+        headers: { 'Cache-Control': 'private, max-age=30' },
+      }
+    )
   } catch (error) {
     console.error('[Analytics Stats] Unexpected error:', error)
     return NextResponse.json(

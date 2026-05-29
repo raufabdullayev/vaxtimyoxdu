@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default function ImageResize() {
   const [file, setFile] = useState<File | null>(null)
@@ -17,6 +17,8 @@ export default function ImageResize() {
   const [error, setError] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
   const aspectRatioRef = useRef(1)
+  const originalUrlRef = useRef<string | null>(null)
+  const resizedUrlRef = useRef<string | null>(null)
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0]
@@ -32,10 +34,20 @@ export default function ImageResize() {
     }
 
     setError('')
+    // Revoke the previous resized URL (being discarded) to prevent memory leak
+    if (resizedUrlRef.current) {
+      URL.revokeObjectURL(resizedUrlRef.current)
+      resizedUrlRef.current = null
+    }
     setResizedUrl(null)
     setFile(selected)
 
+    // Revoke the previous original URL before replacing it
+    if (originalUrlRef.current) {
+      URL.revokeObjectURL(originalUrlRef.current)
+    }
     const url = URL.createObjectURL(selected)
+    originalUrlRef.current = url
     setOriginalUrl(url)
 
     const img = new Image()
@@ -103,7 +115,12 @@ export default function ImageResize() {
         )
       })
 
+      // Revoke the previous resized URL before replacing it
+      if (resizedUrlRef.current) {
+        URL.revokeObjectURL(resizedUrlRef.current)
+      }
       const url = URL.createObjectURL(blob)
+      resizedUrlRef.current = url
       setResizedUrl(url)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Resize failed')
@@ -126,6 +143,18 @@ export default function ImageResize() {
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
     return `${(bytes / (1024 * 1024)).toFixed(2)} MB`
   }
+
+  // Cleanup object URLs on unmount to prevent memory leaks
+  useEffect(() => {
+    return () => {
+      if (originalUrlRef.current) {
+        URL.revokeObjectURL(originalUrlRef.current)
+      }
+      if (resizedUrlRef.current) {
+        URL.revokeObjectURL(resizedUrlRef.current)
+      }
+    }
+  }, [])
 
   return (
     <div className="space-y-4">

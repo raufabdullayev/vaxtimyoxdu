@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useMemo } from 'react'
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import {
   MessageCircle,
@@ -61,6 +61,15 @@ export default function ShareButtons({
 }: ShareButtonsProps) {
   const t = useTranslations('share')
   const [copied, setCopied] = useState(false)
+  const copiedTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    return () => {
+      if (copiedTimeoutRef.current !== null) {
+        clearTimeout(copiedTimeoutRef.current)
+      }
+    }
+  }, [])
 
   const platforms: SharePlatform[] = useMemo(() => [
     {
@@ -126,10 +135,13 @@ export default function ShareButtons({
   const handleCopyLink = useCallback(async () => {
     const trackedUrl = buildShareUrl(url, 'copy_link', 'tool_share')
     trackShareClick('copy_link', url, slug)
+    if (copiedTimeoutRef.current !== null) {
+      clearTimeout(copiedTimeoutRef.current)
+    }
     try {
       await navigator.clipboard.writeText(trackedUrl)
       setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      copiedTimeoutRef.current = setTimeout(() => setCopied(false), 2000)
     } catch {
       // Fallback for older browsers
       const textarea = document.createElement('textarea')
@@ -141,7 +153,7 @@ export default function ShareButtons({
       document.execCommand('copy')
       document.body.removeChild(textarea)
       setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      copiedTimeoutRef.current = setTimeout(() => setCopied(false), 2000)
     }
   }, [url, slug])
 

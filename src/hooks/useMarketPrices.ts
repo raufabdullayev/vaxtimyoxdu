@@ -9,6 +9,16 @@ export interface UseMarketPricesResult {
   isLoading: boolean
   error: string | null
   refetch: () => void
+  /**
+   * Previous prices keyed by symbol, for price-change (flash) comparisons.
+   *
+   * IMPORTANT: this is a STABLE mutable Map ref. Its object identity does NOT
+   * change between renders even though its contents are replaced on every poll
+   * (~every 5s). Read it imperatively at render time via `previousPrices.get(symbol)`.
+   * Do NOT put `previousPrices` (the Map) into a useMemo/useEffect/React.memo
+   * dependency array -- the reference never changes, so a dependency on it will
+   * never re-fire when the contents update.
+   */
   previousPrices: Map<string, number>
 }
 
@@ -19,6 +29,10 @@ export function useMarketPrices(): UseMarketPricesResult {
   const [updatedAt, setUpdatedAt] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  // Stable mutable Map: contents are replaced inside the setPrices updater each
+  // poll, but the object identity is intentionally kept constant across renders.
+  // Exposed as `previousPrices` -- see UseMarketPricesResult for the consumer
+  // contract (read via .get(symbol); never use as a hook dependency).
   const previousPricesRef = useRef<Map<string, number>>(new Map())
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 

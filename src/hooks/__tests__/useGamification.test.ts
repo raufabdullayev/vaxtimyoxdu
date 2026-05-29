@@ -169,25 +169,25 @@ describe('useGamification', () => {
     expect(explorer?.progress).toBe(1) // Only 1 unique tool
   })
 
-  it('getBadges returns current badges', () => {
+  it('exposes current badges', () => {
     const { result } = renderHook(() => useGamification())
 
     act(() => {
       result.current.trackToolUse('tool-1', 'dev')
     })
 
-    const badges = result.current.getBadges()
+    const badges = result.current.badges
     expect(badges.length).toBe(6) // All badge types
   })
 
-  it('getStreak returns current streak data', () => {
+  it('exposes current streak data', () => {
     const { result } = renderHook(() => useGamification())
 
     act(() => {
       result.current.trackToolUse('tool-1', 'dev')
     })
 
-    const streak = result.current.getStreak()
+    const streak = result.current.streak
     expect(streak.currentStreak).toBe(1)
   })
 

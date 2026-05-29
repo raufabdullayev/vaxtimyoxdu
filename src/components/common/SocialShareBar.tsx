@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import {
   MessageCircle,
@@ -17,6 +17,8 @@ interface SocialShareBarProps {
   title: string
   description?: string
 }
+
+const PRODUCTION_ORIGIN = 'https://vaxtimyoxdu.com'
 
 function buildShareUrl(
   baseUrl: string,
@@ -36,17 +38,23 @@ export default function SocialShareBar({
   const locale = useLocale()
   const [copied, setCopied] = useState(false)
 
-  const base =
-    typeof window !== 'undefined'
-      ? window.location.origin
-      : 'https://vaxtimyoxdu.com'
+  const [base, setBase] = useState(PRODUCTION_ORIGIN)
+
+  useEffect(() => {
+    if (window.location.origin !== PRODUCTION_ORIGIN) {
+      setBase(window.location.origin)
+    }
+  }, [])
+
   const localePath = locale === 'az' ? '' : `/${locale}`
   const fullUrl = `${base}${localePath}${path}`
 
-  const getShareMessage = (trackedUrl: string) =>
-    t('shareMessage', { title, url: trackedUrl })
+  const getShareMessage = useCallback(
+    (trackedUrl: string) => t('shareMessage', { title, url: trackedUrl }),
+    [t, title]
+  )
 
-  const platforms = [
+  const platforms = useMemo(() => [
     {
       name: 'Twitter',
       icon: <Twitter className="h-4 w-4" />,
@@ -92,7 +100,7 @@ export default function SocialShareBar({
         return `https://t.me/share/url?url=${encodeURIComponent(trackedUrl)}&text=${encodeURIComponent(getShareMessage(trackedUrl))}`
       },
     },
-  ]
+  ], [fullUrl, getShareMessage])
 
   const handleCopy = useCallback(async () => {
     const trackedUrl = buildShareUrl(fullUrl, 'copy_link', 'article_share')

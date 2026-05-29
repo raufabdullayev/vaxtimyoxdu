@@ -17,11 +17,19 @@ import { useEffect, useRef } from 'react'
  */
 export function useSessionEngagement() {
   const startTime = useRef<number>(Date.now())
+  // Idempotency guard: a normal tab close fires BOTH visibilitychange:hidden
+  // and beforeunload (and mobile bfcache can fire hide/show repeatedly), so we
+  // ensure the beacon is sent at most once per page lifetime.
+  const firedRef = useRef(false)
 
   useEffect(() => {
     startTime.current = Date.now()
+    firedRef.current = false
 
     const handleUnload = () => {
+      if (firedRef.current) return
+      firedRef.current = true
+
       const durationMs = Date.now() - startTime.current
       const bounced = durationMs < 30_000
 
@@ -61,9 +69,21 @@ export function useSessionEngagement() {
     }
     document.addEventListener('visibilitychange', handleVisibilityChange)
 
+    // On bfcache restore (back/forward), the page is resumed without a remount,
+    // so reset the guard (and the start time) to allow a fresh engagement
+    // beacon for the restored view.
+    const handlePageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) {
+        firedRef.current = false
+        startTime.current = Date.now()
+      }
+    }
+    window.addEventListener('pageshow', handlePageShow)
+
     return () => {
       window.removeEventListener('beforeunload', handleUnload)
       document.removeEventListener('visibilitychange', handleVisibilityChange)
+      window.removeEventListener('pageshow', handlePageShow)
     }
   }, [])
 }

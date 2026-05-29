@@ -9,6 +9,31 @@ interface MatchInfo {
   match: string
 }
 
+interface BuildPatternOptions {
+  useRegex: boolean
+  caseSensitive: boolean
+  wholeWord: boolean
+  global: boolean
+}
+
+// Pure helper: constructs the RegExp used for matching/replacing.
+// Centralizes the regex-vs-literal escaping, whole-word wrapping and flag selection.
+function buildPattern(findValue: string, options: BuildPatternOptions): RegExp {
+  const { useRegex, caseSensitive, wholeWord, global } = options
+  let flags = caseSensitive ? '' : 'i'
+  if (global) flags = `g${flags}`
+
+  if (useRegex) {
+    return new RegExp(findValue, flags)
+  }
+
+  let escaped = findValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  if (wholeWord) {
+    escaped = `\\b${escaped}\\b`
+  }
+  return new RegExp(escaped, flags)
+}
+
 export default function FindAndReplace() {
   const tc = useTranslations('toolUI.common')
   const t = useTranslations('toolUI.textTools')
@@ -18,27 +43,21 @@ export default function FindAndReplace() {
   const [caseSensitive, setCaseSensitive] = useState(false)
   const [useRegex, setUseRegex] = useState(false)
   const [wholeWord, setWholeWord] = useState(false)
-  const [regexError, setRegexError] = useState('')
   const [copied, setCopied] = useState(false)
 
-  const matches = useMemo((): MatchInfo[] => {
-    if (!text || !findValue) return []
+  const { matches, regexError } = useMemo((): {
+    matches: MatchInfo[]
+    regexError: string
+  } => {
+    if (!text || !findValue) return { matches: [], regexError: '' }
 
     try {
-      setRegexError('')
-      let pattern: RegExp
-
-      if (useRegex) {
-        const flags = caseSensitive ? 'g' : 'gi'
-        pattern = new RegExp(findValue, flags)
-      } else {
-        let escaped = findValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-        if (wholeWord) {
-          escaped = `\\b${escaped}\\b`
-        }
-        const flags = caseSensitive ? 'g' : 'gi'
-        pattern = new RegExp(escaped, flags)
-      }
+      const pattern = buildPattern(findValue, {
+        useRegex,
+        caseSensitive,
+        wholeWord,
+        global: true,
+      })
 
       const result: MatchInfo[] = []
       let match: RegExpExecArray | null
@@ -60,32 +79,28 @@ export default function FindAndReplace() {
         iterations++
       }
 
-      return result
+      return { matches: result, regexError: '' }
     } catch (e) {
       if (useRegex) {
-        setRegexError(e instanceof Error ? e.message : t('invalidRegex'))
+        return {
+          matches: [],
+          regexError: e instanceof Error ? e.message : t('invalidRegex'),
+        }
       }
-      return []
+      return { matches: [], regexError: '' }
     }
-  }, [text, findValue, caseSensitive, useRegex, wholeWord])
+  }, [text, findValue, caseSensitive, useRegex, wholeWord, t])
 
   const replaceAll = useCallback(() => {
     if (!text || !findValue || matches.length === 0) return
 
     try {
-      let pattern: RegExp
-
-      if (useRegex) {
-        const flags = caseSensitive ? 'g' : 'gi'
-        pattern = new RegExp(findValue, flags)
-      } else {
-        let escaped = findValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-        if (wholeWord) {
-          escaped = `\\b${escaped}\\b`
-        }
-        const flags = caseSensitive ? 'g' : 'gi'
-        pattern = new RegExp(escaped, flags)
-      }
+      const pattern = buildPattern(findValue, {
+        useRegex,
+        caseSensitive,
+        wholeWord,
+        global: true,
+      })
 
       const newText = text.replace(pattern, replaceValue)
       setText(newText)
@@ -98,19 +113,12 @@ export default function FindAndReplace() {
     if (!text || !findValue || matches.length === 0) return
 
     try {
-      let pattern: RegExp
-
-      if (useRegex) {
-        const flags = caseSensitive ? '' : 'i'
-        pattern = new RegExp(findValue, flags)
-      } else {
-        let escaped = findValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-        if (wholeWord) {
-          escaped = `\\b${escaped}\\b`
-        }
-        const flags = caseSensitive ? '' : 'i'
-        pattern = new RegExp(escaped, flags)
-      }
+      const pattern = buildPattern(findValue, {
+        useRegex,
+        caseSensitive,
+        wholeWord,
+        global: false,
+      })
 
       const newText = text.replace(pattern, replaceValue)
       setText(newText)
@@ -166,7 +174,6 @@ The QUICK brown fox jumps over the lazy dog.`
     setText('')
     setFindValue('')
     setReplaceValue('')
-    setRegexError('')
   }
 
   return (
@@ -214,7 +221,6 @@ The QUICK brown fox jumps over the lazy dog.`
             checked={useRegex}
             onChange={(e) => {
               setUseRegex(e.target.checked)
-              setRegexError('')
             }}
             className="rounded"
           />

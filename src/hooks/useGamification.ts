@@ -199,13 +199,5 @@ export function useGamification() {
     setStreak(streakData)
   }, [])
 
-  const getBadges = useCallback((): Badge[] => {
-    return badges
-  }, [badges])
-
-  const getStreak = useCallback((): StreakData => {
-    return streak
-  }, [streak])
-
-  return { badges, streak, trackToolUse, getBadges, getStreak }
+  return { badges, streak, trackToolUse }
 }

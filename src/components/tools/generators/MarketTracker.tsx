@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useEffect, useRef, memo } from 'react'
 import { useMarketPrices } from '@/hooks/useMarketPrices'
 
 // ---------- helpers ----------
@@ -103,7 +103,7 @@ interface PriceCardProps {
   previousPrice: number | undefined
 }
 
-function PriceCard({ symbol, name, price, change24h, previousPrice }: PriceCardProps) {
+const PriceCard = memo(function PriceCard({ symbol, name, price, change24h, previousPrice }: PriceCardProps) {
   const isPositive = change24h >= 0
   const [flash, setFlash] = useState<'up' | 'down' | null>(null)
 
@@ -164,7 +164,7 @@ function PriceCard({ symbol, name, price, change24h, previousPrice }: PriceCardP
       <MiniBar change={change24h} />
     </div>
   )
-}
+})
 
 // ---------- converter ----------
 
@@ -274,16 +274,24 @@ function PriceConverter({ prices }: ConverterProps) {
   )
 }
 
-// ---------- main component ----------
+// ---------- countdown badge ----------
 
-export default function MarketTracker() {
-  const { prices, updatedAt, isLoading, error, refetch, previousPrices } = useMarketPrices()
-  const [autoRefresh, setAutoRefresh] = useState(true)
+interface CountdownBadgeProps {
+  autoRefresh: boolean
+  updatedAt: string | null
+  // Incremented by the parent on manual refresh so the countdown resets
+  // immediately (preserving the original setCountdown(5) on the refresh button).
+  resetSignal: number
+}
+
+// Owns its own per-second countdown state so the 1s tick re-renders only this
+// badge instead of the whole MarketTracker subtree (price grid, converter,
+// summary). Resets to 5 whenever the data updates (updatedAt) or a manual
+// refresh is requested (resetSignal), matching the 5-second polling cadence.
+function CountdownBadge({ autoRefresh, updatedAt, resetSignal }: CountdownBadgeProps) {
   const countdownRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [countdown, setCountdown] = useState(5)
 
-  // Countdown timer (resets when the data updates so the UI stays in sync
-  // with the underlying 5-second polling cadence in useMarketPrices)
   useEffect(() => {
     if (!autoRefresh) {
       if (countdownRef.current) clearInterval(countdownRef.current)
@@ -303,9 +311,19 @@ export default function MarketTracker() {
     return () => {
       if (countdownRef.current) clearInterval(countdownRef.current)
     }
-  }, [autoRefresh, updatedAt])
+  }, [autoRefresh, updatedAt, resetSignal])
 
-  const formatCountdown = (s: number) => `${s}s`
+  if (!autoRefresh) return null
+
+  return <span className="font-mono">Next: {countdown}s</span>
+}
+
+// ---------- main component ----------
+
+export default function MarketTracker() {
+  const { prices, updatedAt, isLoading, error, refetch, previousPrices } = useMarketPrices()
+  const [autoRefresh, setAutoRefresh] = useState(true)
+  const [refreshSignal, setRefreshSignal] = useState(0)
 
   return (
     <div className="space-y-6">
@@ -315,7 +333,7 @@ export default function MarketTracker() {
           <button
             onClick={() => {
               refetch()
-              setCountdown(5)
+              setRefreshSignal((n) => n + 1)
             }}
             disabled={isLoading}
             className="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg border hover:bg-accent transition-colors disabled:opacity-50"
@@ -349,9 +367,7 @@ export default function MarketTracker() {
         </div>
 
         <div className="flex items-center gap-3 text-xs text-muted-foreground">
-          {autoRefresh && (
-            <span className="font-mono">Next: {formatCountdown(countdown)}</span>
-          )}
+          <CountdownBadge autoRefresh={autoRefresh} updatedAt={updatedAt} resetSignal={refreshSignal} />
           {updatedAt && <span>Updated {timeAgo(updatedAt)}</span>}
         </div>
       </div>

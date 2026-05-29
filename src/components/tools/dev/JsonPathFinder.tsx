@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, memo } from 'react'
 
 interface TreeNode {
   key: string
@@ -8,6 +8,23 @@ interface TreeNode {
   value: unknown
   type: string
   children?: TreeNode[]
+}
+
+const typeColor: Record<string, string> = {
+  string: 'text-green-600 dark:text-green-400',
+  number: 'text-blue-600 dark:text-blue-400',
+  boolean: 'text-orange-600 dark:text-orange-400',
+  null: 'text-red-600 dark:text-red-400',
+  object: 'text-purple-600 dark:text-purple-400',
+  array: 'text-purple-600 dark:text-purple-400',
+}
+
+function formatValue(val: unknown, type: string): string {
+  if (type === 'string') return `"${String(val).slice(0, 50)}${String(val).length > 50 ? '...' : ''}"`
+  if (type === 'null') return 'null'
+  if (type === 'object') return `{${Object.keys(val as object).length}}`
+  if (type === 'array') return `[${(val as unknown[]).length}]`
+  return String(val)
 }
 
 function getType(value: unknown): string {
@@ -60,7 +77,7 @@ function queryPath(data: unknown, pathStr: string): { value: unknown; found: boo
   }
 }
 
-function TreeNodeComponent({
+const TreeNodeComponent = memo(function TreeNodeComponent({
   node,
   onSelect,
   selectedPath,
@@ -74,23 +91,6 @@ function TreeNodeComponent({
   const [expanded, setExpanded] = useState(depth < 2)
   const hasChildren = node.children && node.children.length > 0
   const isSelected = selectedPath === node.path
-
-  const typeColor: Record<string, string> = {
-    string: 'text-green-600 dark:text-green-400',
-    number: 'text-blue-600 dark:text-blue-400',
-    boolean: 'text-orange-600 dark:text-orange-400',
-    null: 'text-red-600 dark:text-red-400',
-    object: 'text-purple-600 dark:text-purple-400',
-    array: 'text-purple-600 dark:text-purple-400',
-  }
-
-  const formatValue = (val: unknown, type: string): string => {
-    if (type === 'string') return `"${String(val).slice(0, 50)}${String(val).length > 50 ? '...' : ''}"`
-    if (type === 'null') return 'null'
-    if (type === 'object') return `{${Object.keys(val as object).length}}`
-    if (type === 'array') return `[${(val as unknown[]).length}]`
-    return String(val)
-  }
 
   return (
     <div style={{ marginLeft: depth > 0 ? 16 : 0 }}>
@@ -135,26 +135,26 @@ function TreeNodeComponent({
       )}
     </div>
   )
-}
+})
 
 export default function JsonPathFinder() {
   const [input, setInput] = useState('')
   const [pathInput, setPathInput] = useState('')
   const [selectedPath, setSelectedPath] = useState('')
   const [copied, setCopied] = useState('')
-  const [error, setError] = useState('')
 
-  const parsed = useMemo(() => {
-    if (!input.trim()) return null
+  const parseResult = useMemo<{ data: unknown; error: string }>(() => {
+    if (!input.trim()) return { data: null, error: '' }
     try {
       const data = JSON.parse(input)
-      setError('')
-      return data
+      return { data, error: '' }
     } catch (e) {
-      setError(`Invalid JSON: ${(e as Error).message}`)
-      return null
+      return { data: null, error: `Invalid JSON: ${(e as Error).message}` }
     }
   }, [input])
+
+  const parsed = parseResult.data
+  const error = parseResult.error
 
   const tree = useMemo(() => {
     if (parsed === null || parsed === undefined) return null

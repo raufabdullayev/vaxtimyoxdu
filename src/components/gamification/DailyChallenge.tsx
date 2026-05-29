@@ -45,7 +45,13 @@ function getYesterdayKey(): string {
 }
 
 function getTodayChallenge(): ChallengeConfig {
-  const dayIndex = Math.floor(Date.now() / 86400000) % challenges.length
+  // Use the visitor's LOCAL day-of-week (0 = Sunday … 6 = Saturday) so the
+  // selected challenge matches the same local date that drives the streak
+  // logic (getTodayKey/getYesterdayKey). Math.floor(Date.now()/86400000)
+  // counts UTC days and could roll over at a different instant in
+  // negative-UTC timezones, desyncing selection from the streak around
+  // midnight.
+  const dayIndex = new Date().getDay() % challenges.length
   return challenges[dayIndex]
 }
 

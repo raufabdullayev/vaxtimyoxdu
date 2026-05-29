@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 const formats = [
   { value: 'image/jpeg', label: 'JPEG', ext: 'jpg' },
@@ -16,6 +16,8 @@ export default function ImageConvert() {
   const [processing, setProcessing] = useState(false)
   const [error, setError] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const previewUrlRef = useRef<string | null>(null)
+  const convertedUrlRef = useRef<string | null>(null)
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selected = e.target.files?.[0]
@@ -32,12 +34,23 @@ export default function ImageConvert() {
 
     setError('')
     setFile(selected)
+    // Revoke previous converted URL when a new file is selected
+    if (convertedUrlRef.current) {
+      URL.revokeObjectURL(convertedUrlRef.current)
+      convertedUrlRef.current = null
+    }
     setConvertedUrl(null)
-    setPreviewUrl(URL.createObjectURL(selected))
+    // Revoke previous preview URL before creating a new one
+    if (previewUrlRef.current) {
+      URL.revokeObjectURL(previewUrlRef.current)
+    }
+    const url = URL.createObjectURL(selected)
+    previewUrlRef.current = url
+    setPreviewUrl(url)
   }
 
   const convert = async () => {
-    if (!file) return
+    if (!file || !previewUrl) return
     setProcessing(true)
     setError('')
 
@@ -47,7 +60,8 @@ export default function ImageConvert() {
         img.onload = () => resolve()
         img.onerror = () => reject(new Error('Failed to load image'))
       })
-      img.src = URL.createObjectURL(file)
+      // Reuse the existing preview object URL instead of creating a new one
+      img.src = previewUrl
       await loadPromise
 
       const canvas = document.createElement('canvas')
@@ -64,13 +78,31 @@ export default function ImageConvert() {
         )
       })
 
-      setConvertedUrl(URL.createObjectURL(blob))
+      // Revoke previous converted URL before replacing it
+      if (convertedUrlRef.current) {
+        URL.revokeObjectURL(convertedUrlRef.current)
+      }
+      const convertedObjectUrl = URL.createObjectURL(blob)
+      convertedUrlRef.current = convertedObjectUrl
+      setConvertedUrl(convertedObjectUrl)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Conversion failed')
     } finally {
       setProcessing(false)
     }
   }
+
+  // Cleanup object URLs on unmount
+  useEffect(() => {
+    return () => {
+      if (previewUrlRef.current) {
+        URL.revokeObjectURL(previewUrlRef.current)
+      }
+      if (convertedUrlRef.current) {
+        URL.revokeObjectURL(convertedUrlRef.current)
+      }
+    }
+  }, [])
 
   const download = () => {
     if (!convertedUrl || !file) return

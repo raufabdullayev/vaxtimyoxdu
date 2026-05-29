@@ -1,8 +1,32 @@
 import { Tool } from '@/types/tool'
 import { Locale } from '@/i18n/config'
-import { getToolFaqs, getToolRichContent } from '@/lib/utils/tool-content-loader'
+import { getToolRichContent, type ToolRichContent } from '@/lib/utils/tool-content-loader'
 import { SITE_URL, SITE_NAME, getLocalizedUrl } from './url'
 import { getOgImageUrl } from './og'
+
+/**
+ * Per-(slug, locale) memo around getToolRichContent.
+ *
+ * A single tool page calls both generateToolHowToJsonLd and generateToolFaqJsonLd
+ * back-to-back, each of which previously resolved getToolRichContent independently
+ * (the FAQ path via getToolFaqs). The underlying content is statically-imported,
+ * immutable JSON, so caching the resolved object by `${slug}:${locale}` is safe and
+ * returns the identical value getToolRichContent would (including null). The result
+ * objects are only read, never mutated, so sharing a reference is behavior-preserving.
+ * Cache is bounded (rich-content tools x locales) and references static data only.
+ */
+const richContentCache = new Map<string, ToolRichContent | null>()
+
+function getMemoizedToolRichContent(slug: string, locale: string): ToolRichContent | null {
+  const key = `${slug}:${locale}`
+  const cached = richContentCache.get(key)
+  if (cached !== undefined) {
+    return cached
+  }
+  const resolved = getToolRichContent(slug, locale)
+  richContentCache.set(key, resolved)
+  return resolved
+}
 
 /**
  * Map tool category to a schema.org applicationCategory value.
@@ -72,7 +96,7 @@ export function generateToolHowToJsonLd(
   const url = getLocalizedUrl(`/tools/${tool.slug}`, locale as Locale)
 
   // Try to use rich content steps from content files (top 20 tools)
-  const richContent = getToolRichContent(tool.slug, locale)
+  const richContent = getMemoizedToolRichContent(tool.slug, locale)
   if (richContent && richContent.howToUse.length > 0) {
     return {
       '@context': 'https://schema.org',
@@ -159,8 +183,11 @@ export function generateToolFaqJsonLd(
 ) {
   const locale = options?.locale || 'en'
 
-  // Try to use rich FAQs from content files first (top 20 tools)
-  const richFaqs = getToolFaqs(tool.slug, locale)
+  // Try to use rich FAQs from content files first (top 20 tools).
+  // Reuse the memoized rich-content resolution (getToolFaqs returned content.faqs,
+  // or null when no rich content exists) to avoid re-loading the same object.
+  const richContent = getMemoizedToolRichContent(tool.slug, locale)
+  const richFaqs = richContent ? richContent.faqs : null
   const faqs = richFaqs || generateToolFaqs(tool, options)
 
   return {
