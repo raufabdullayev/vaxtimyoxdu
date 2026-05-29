@@ -48,7 +48,7 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </head>
 <body>
 <h1>vaxtimyoxdu.com</h1>
-<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 26 Aprel 2026 (Session 37 — P0 SEO Fix DEPLOY ✅: Cache-Control + News Hero Image)</p>
+<p class="subtitle">Qalan Isler Dashboard | Son yenilenme: 30 May 2026 (Optimizasiya sprinti — 47 perf fix + analytics Postgres RPC, 939418d DEPLOY ✅ | evvel S42 News May 27-29)</p>
 
 <div class="links">
 <strong>Bagli fayllar:</strong>
@@ -61,9 +61,9 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <div class="stats">
 <div class="stat"><div class="num">111</div><div class="label">Aletler</div></div>
 <div class="stat"><div class="num">4</div><div class="label">Dil</div></div>
-<div class="stat"><div class="num">1183</div><div class="label">Sehifeler</div></div>
-<div class="stat"><div class="num">5127</div><div class="label">Testler</div></div>
-<div class="stat"><div class="num">500</div><div class="label">Xeberler</div></div>
+<div class="stat"><div class="num">1279</div><div class="label">Sehifeler</div></div>
+<div class="stat"><div class="num">5528</div><div class="label">Testler</div></div>
+<div class="stat"><div class="num">600</div><div class="label">Xeberler</div></div>
 <div class="stat"><div class="num">~49</div><div class="label">Blog</div></div>
 </div>
 
@@ -124,6 +124,34 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 <div class="task high">
 <span class="badge high">P1</span>
 <div class="task-text"><strong>Twitter @site / @creator + OG subtitle encoding</strong><small>Homepage-de twitter:site yoxdur. OG image subtitle 80 char-dan kesilmelidir. Fix: `metadata.ts` twitter obyekti + `og.ts` slice(80). Is yuku: 1 saat. Tesir: Twitter Cards valid, social trafik +5-10%. Detal: audit P1-5</small></div>
+</div>
+</div>
+
+<div class="section">
+<h2>OPTIMIZASIYA — Deferred (9) — code-review 2026-05-29, product/infra qerari teleb edir</h2>
+<div class="task medium">
+<span class="badge medium">DEFER</span>
+<div class="task-text"><strong>CronParser day-skip optimallasdirma</strong><small>getNextExecutions() her keystroke-da 525600-iterasiya sinxron scan (UI bloklayir). Day-skip fix DST zonalarinda illik cron-da divergensiya verir (differential harness subut etdi, ona gore geri qaytarildi). Product qerari: kicik cap-edge output deyisikliyini qebul etmek?</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">DEFER</span>
+<div class="task-text"><strong>MarkdownToHtml + MarkdownPreview — DOMPurify dynamic import</strong><small>DOMPurify eager bundle-lanir. Lazy import() bundle azaldir AMMA sinxron JSX/useMemo kontraktini pozur (placeholder render = observable deyisim). Async render-e refactor lazimdir.</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">DEFER</span>
+<div class="task-text"><strong>SlugGenerator NFD normalizasiya + stop-words</strong><small>NFD-e kecid 179 simvolda movcud output-dan ferqlenir. Stop-words variant reversible deyil. Behavior deyisikliyidir — product qerari.</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">DEFER</span>
+<div class="task-text"><strong>ai/rate-limiter sequential&rarr;parallel</strong><small>checkBurst+checkDaily 2 serial Upstash round-trip. AMMA sequential qesden semantik zemanetdir (burst red &rarr; daily charge OLUNMUR). DEYISME — skip dogrudur.</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">DEFER</span>
+<div class="task-text"><strong>PdfToWord Web Worker</strong><small>PDF parse main thread-i bloklayir. Web Worker lazimdir AMMA repo-da worker pattern yox + Cancel button ucun common.cancel i18n key (4 dil) yox. Setup teleb edir.</small></div>
+</div>
+<div class="task medium">
+<span class="badge medium">DEFER</span>
+<div class="task-text"><strong>useMarketPrices / BadgeCard / i18n-navigation</strong><small>Memoize/dead-code fix-leri cross-file scope (shared consumer MarketTracker) ve ya test pozulmasi sebebiyle skip edildi. Diqqetli elle baxis teleb edir.</small></div>
 </div>
 </div>
 
@@ -232,6 +260,18 @@ h1{text-align:center;font-size:1.8rem;margin-bottom:8px;background:linear-gradie
 </div>
 
 <div class="done-section">
+<h2>Optimizasiya Sprinti (2026-05-29/30) — 47 perf fix + analytics Postgres RPC (939418d)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">Multi-agent code-review workflow: 11 sahe, 61 tapinti &rarr; 55 confirmed &rarr; behavior-preserving auto-apply<small><strong>Batch 1 (ef4d341):</strong> 14 low-risk (memory leak, memoize, dead code). <strong>Batch 2 (a97cbfc):</strong> 32 fix / 35 unit — image-tool memory-leak klasteri, YAML shared parser (src/lib/dev/yaml-parser.ts), setState-during-render fix, timer cleanup. <strong>Analytics RPC (436ceb6+939418d):</strong> analytics/stats 5×10k-row JS aggregation &rarr; tek Postgres RPC analytics_aggregates(); route RPC + guarded fallback (expand/contract pattern); Supabase MCP ile migration 002 tetbiq + 4557 row verify + search_path harden (advisor clean). <strong>9 konservativ skip</strong> &rarr; Qalan Isler-e elave (CronParser DST, DOMPurify dynamic-import, SlugGenerator NFD, rate-limiter, PdfToWord). 5528 test PASS (deyismeyib), build OK, tsc 0. 3 optimize/* branch merge+silindi.</small></div></div>
+
+<h2>Session 42 (2026-05-29) — News Refresh: 10 topics May 27-29, 40 articles (073defc)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">8-fazali pipeline: 11 background agent, **0 BLOCKING rekord (S40 35 → S41 3 → S42 0)**<small>1 researcher + 4 paralel writer (AZ/EN/TR/RU) + 3 paralel QA + 1 fix + 1 batch integrator + 1 build/test + 1 deploy. <strong>QA-C 0 BLOCKING / 6 MINOR</strong> (invented attribution-lar silindi: RU heatwave ×2, RU Iran "миллиарды", AZ stocks analyst; per-locale clean EN/TR 10/10, AZ 9/10, RU 6/10). <strong>Mövzular newest-first:</strong> May 28 (Müstəqillik Günü) P0 AZ Aliyev Qarabağ səfəri (Xocalı/Xankəndi/Şuşa) + Putin təbriki, ABŞ-İran 60-gün atəşkəs (Trump pending), Blue Origin New Glenn partlayış, BMT İsrail+Rusiya qara siyahı, İsveç 16 Gripen, İran internet bərpası, ABŞ birja rekord; May 27 Britaniya rekord istilik (35.1°C), Konqo Ituri Ebola (1205/264), İsrail Cənubi Livan zərbələr. 560→600 entries, vitest 5368→5528 (+160 = 40×4 it.each), build info articles +40 EXACT, non-info 0 drift. 8/8 HTTP 200 (4 homepage + Topic 1 Aliyev × 4 locale), sitemap regenerated. Plan: <code>~/.claude/plans/dazzling-finding-duckling.md</code>. <strong>Skill 3-cü uğurlu tətbiqi:</strong> 16-günlük gap (May 11-26) qəsdən saxlanıldı (CEO "son 3 gün").</small></div></div>
+
+<h2>Session 41 (2026-05-10) — News Refresh: 7 topics May 9-10, 28 articles (0e00f76)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">7-fazali pipeline: 11 background agent, ~50 dəq, **S40-dan 91% BLOCKING azalma rekord**<small>1 researcher + 4 paralel writer (AZ/EN/TR/RU) + 3 paralel QA + 1 fix + 1 batch integrator + 1 build/test + 1 deploy. <strong>QA-C 35→3 BLOCKING (91% reduction)</strong> — pipeline maturation proven. 3 BLOCKING fix: AZ Topic 7 sport color (S36 violation) DELETE, TR Topic 4 PBS Hizbullah missile fabrication DELETE, RU Topic 3 Trump ceasefire forward-speculation "Контекст" DELETE. Borderline upgraded: TR Topic 1 "Şehitler Hıyabanı" → "Fəxri Xiyaban" location fix. <strong>Mövzular newest-first:</strong> May 10 T5 India-Pakistan 1-il yıldönümü; May 9 P0 AZ Aliyev Şükürbəyli + Heydər Əliyev 103, Putin parade scaled-back, Trump 3-day ceasefire, Lebanon 17 ölü Saksakiyə, Mali Bamako blokada, Man City 3-0 Brentford (sport policy compliant). 532→560 entries, vitest 5256→5368 (+112 = 28×4 it.each), build info articles +28 EXACT. 9/9 HTTP 200 (5 homepage + Topic 1 Aliyev × 4 locale), sitemap 4 May 10 + 40 May 9. Plan: <code>~/.claude/plans/compiled-sauteeing-lark.md</code>. <strong>Skill 2-ci uğurlu tətbiqi:</strong> S40-də skill yarandı, S41-də ilk istifadə adaptive 7 topic vs 8 ilə işlədi.</small></div></div>
+
+<h2>Session 40 (2026-05-02) — News Refresh: 8 topics May 1-2, 32 articles (c2c0a03)</h2>
+<div class="task done"><span class="badge done">DONE</span><div class="task-text">7-fazali pipeline: 11 background agent, ~49 dəq (rekord)<small>1 researcher + 4 paralel writer (AZ/EN/TR/RU) + 3 paralel QA (Diakritik/Length/Source-Fact) + 1 fix + 1 batch integrator + 1 build/test + 1 deploy. <strong>🚨 QA-C 35 BLOCKING fabrication tutdu</strong> (S29 Mythos 5 pattern təkrarı): writer-lər brief-də olmayan editoryal əlavələr — Trump/Sheinbaum uydurma quote-lar, "European auto stocks lower" market data, "rubber bullets/plastik güllələr" tactics, math error "two weeks" vs 76-35=41 days, "US/French envoys pressed" diplomatic activity. Hamısı fix edildi, 0 fabrication production-a çatdı. <strong>S38 təkrarı:</strong> Apr 19 hero-demo orphan files 3-cü dəfə tutuldu, specific path `git add` ilə avoid (CEO action item: hero feature ya silinməli, ya proper handle). 500→532 entries, vitest 5127→5256 (+129), build 1183→1215 (+32). <strong>Mövzular newest-first:</strong> May 2 Sinaloa+Spirit, May 1 P0 AZ Milli Məclis-EU + Lebanon/Trump tariffs/Mali/DHS shutdown/Workers Day İstanbul. 8/8 sample HTTP 200, sitemap 48 May entries.</small></div></div>
+
 <h2>Session 37 (2026-04-26) — P0 SEO Fix: Cache-Control + News Hero Image (a133eb9)</h2>
 <div class="task done"><span class="badge done">DONE</span><div class="task-text">2 P0 SEO Audit fix-i tamamlandi: Cache-Control catch-all + news hero img<small>SEO Audit 2026-04-21 P0-1+P0-2. 5 agent dispatched (3 paralel: cache+hero+tests, 2 sequential: build+deploy). Dəyişikliklər: next.config.js +24 sətir, info/[slug]/page.tsx +14 sətir, 2 yeni test fayl (15 vitest + 6 Playwright). 4957/4957 PASS (S36-da 4942), 2540 sehife build OK. Vercel deploy SUCCESS (dpl_UrtkmjEf), 4 dil × production curl test PASS. CDN cache HIT 2-ci istekde tasdiq. <strong>Lesson:</strong> Vercel browser cache-control override edir (`private,no-store`) AMMA `cdn-cache-control` isleyir — SEO/Googlebot ucun bu kifayetdir. GitLab CI quota exceeded (qeyri-blok, Vercel webhook bypass). Müddət: ~1.5 saat.</small></div></div>
 

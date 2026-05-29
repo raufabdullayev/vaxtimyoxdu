@@ -1,11 +1,12 @@
 # Session State — Cari Status
 
-**Son yenilənmə:** 2026-04-27 (Session 39 — News Refresh: 8 topics, 32 articles for Apr 27, TAM DEPLOY ✅)
-**Sayt:** ✅ CANLI (vaxtimyoxdu.com — Session 39 commit `d624938` deploy olunub)
-**Son commit:** **922101c** (docs reports) → **484da0a** (fix(market-prices): Oil + SP500 Yahoo Finance) → bd585b0 (docs S39) → d624938 (S39 news)
+**Son yenilənmə:** 2026-05-30 (Optimizasiya sprinti — 47 perf fix + analytics Postgres RPC, TAM DEPLOY ✅; əvvəl S42 News May 27-29)
+**Sayt:** ✅ CANLI (vaxtimyoxdu.com — commit `939418d` deploy olunub)
+**Son commit:** **939418d** (analytics search_path harden) → 436ceb6 (analytics RPC) → a97cbfc (opt batch 2: 32 fix) → ef4d341 (opt batch 1: 14 fix) → 073defc (S42 news May 27-29)
+**Session 41 commit:** 0e00f76 — 28 articles May 9-10 (7 topics)
+**Session 40 commit:** c2c0a03 — 32 articles May 1-2 (8 topics)
+**Session 39 commit:** d624938 — 32 articles Apr 27 (8 topics)
 **Session 38 commit:** 2fe6c33 (+ deploy fix 111757a) — SEO P1 trust signals
-**Session 37 commit:** a133eb9 — fix(seo): P0 SEO fixes (audit 2026-04-21 P0-1 + P0-2)
-**Session 36 commit:** 5df7f29 — 36 articles Apr 25
 
 ## 🔗 Bağlantılı Fayllar
 - 🏠 **Global CLAUDE.md:** `~/CLAUDE.md`
@@ -22,17 +23,17 @@
 
 | Parametr | Status |
 |----------|--------|
-| **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 (4/4 locale × Topic 1 verified) |
-| **Deploy** | ✅ Vercel aktiv (S39 commit d624938) |
-| **GitLab + GitHub** | ✅ Synced (d624938) |
+| **Sayt** | ✅ vaxtimyoxdu.com HTTP 200 (8/8 sample post-S42: 4 homepage + Topic 1 Aliyev × 4 locale) |
+| **Deploy** | ✅ Vercel aktiv (S42 commit 073defc) |
+| **GitLab + GitHub** | ✅ Synced (073defc) |
 | **GitLab token** | ✅ Yeniləndi (2026-04-26, MCP + curl təsdiq HTTP 200) |
 | **GitLab CI** | ⚠️ ci_quota_exceeded — Vercel webhook bypass (qeyri-blok) |
-| **Son commit** | **922101c** (docs) → **484da0a** (market-prices Yahoo Finance fix) → bd585b0 (docs) → d624938 (S39 news) |
-| **Testlər** | **5127** PASS (vitest, S39: +128 yeni test, 213 fayl) |
+| **Son commit** | **073defc** (S42 news May 27-29) → 0e00f76 (S41 news May 9-10) → c2c0a03 (S40 news May 1-2) |
+| **Testlər** | **5528** PASS (vitest, S42: +160 = 40×4 it.each, 213 fayl) |
 | **E2E** | **31 fayl** (S37: +1 news-cache-headers spec, 6 test) |
-| **Statik səhifələr** | **1183** generate count (S39: +32 = 1151→1183) |
+| **Statik səhifələr** | **1279** generate count (S42: info article delta +40 EXACT, 560→600; non-info 0 drift) |
 | **Blog** | **~49** (29 + 20 yeni Sprint 4) |
-| **Xəbərlər** | **500** (125/locale — S39: +32 yeni 04-27, 8 topic) |
+| **Xəbərlər** | **600** (150/locale — S42: +40 yeni May 27-29, 10 topic) |
 | **Coverage threshold** | **60/58/55/62** (əvvəl 35/35/30/35) |
 | **Hooks coverage** | **97%** (əvvəl 44%) |
 | **Aletler** | 111 (hədəf: 135) |
@@ -72,10 +73,148 @@
 - GSC həftəlik monitoring — ongoing
 - Sosial media hesabları (CEO manual)
 - AdSense təsdiqi (gözlənilir)
+- **🔧 Optimizasiya — deferred (avtomatlaşdırıla bilməyən, product/infra qərarı tələb edir) — code-review 2026-05-29:**
+  - **CronParser** day-skip optimallaşdırma — DST zonalarında illik cron divergensiyası (differential harness sübut etdi). Product qərarı: kiçik cap-edge output dəyişikliyini qəbul etmək?
+  - **MarkdownToHtml + MarkdownPreview** DOMPurify dynamic import — sinxron JSX kontraktını pozur; async render-ə refactor lazımdır (bundle qazancı)
+  - **SlugGenerator** NFD normalizasiya — 179 simvolda mövcud output-dan fərqli (davranış dəyişikliyi); stop-words reversibility
+  - **ai/rate-limiter** sequential→parallel — sequential məntiq qəsdən semantik zəmanətdir (burst rədd → daily charge olunmur); DƏYİŞMƏ
+  - **PdfToWord** Web Worker — Next.js worker setup + `common.cancel` i18n key (4 dil) yoxdur
+  - **useMarketPrices / BadgeCard / i18n navigation** — cross-file scope / test pozulması (skip)
+  - ✅ **analytics/stats aggregation HƏLL OLUNDU** (Postgres RPC `analytics_aggregates`, 436ceb6 + Supabase migration 002)
+  - **Mənbə:** code-review workflow nəticələri (`docs/agent-reports/`)
 
 ---
 
 ## Son 3 Sessiya
+
+### Optimizasiya Sprinti (2026-05-29/30) — 47 perf fix (3 batch) + analytics Postgres RPC ✅
+
+**CEO tələbi:** "bir workflow başlat və bütün kodları review elətdir, optimizasiya lazım olan yerlərə düzəliş edilsin" → multi-agent review workflow.
+
+**Workflow:** 11-sahə review (61 tapıntı, 55 confirmed) → adversarial verify (risk təsnif) → behavior-preserving auto-apply.
+- **Batch 1 (`ef4d341`):** 14 low-risk fix — memory leak (VideoToGif/SvgToPng/ImageToText/MegaMenu), memoize, dead code
+- **Batch 2 (`a97cbfc`):** 32 deferred fix (35 unit, 1 agent/unit) — image-tool memory-leak klasteri, **YAML shared parser** (`src/lib/dev/yaml-parser.ts`), setState-during-render fix (RegexTester/JsonPathFinder), və s. + 9 konservativ skip
+- **Analytics RPC (`436ceb6` + `939418d`):** `analytics/stats` 5×10k-sətir JS aggregation → tək Postgres RPC; route RPC + guarded fallback (expand/contract, deploy-safe). Supabase migration 002 **MCP ilə tətbiq** + 4,557 sətir verify + search_path harden (advisor clean).
+
+**Stats:** 600 entries, **5528 test PASS** (dəyişməyib — behavior-preserving), build OK, tsc 0. 3 `optimize/*` branch main-ə merge + silindi.
+
+**Lessons:**
+- **Behavior-preserving = paramount:** agent-lər 9 fix-i konkret sübutla skip etdi (CronParser DST divergensiyası differential harness ilə; SlugGenerator NFD 179-simvol fərqi). "Həll edə bilmədik" yox — "avtomatlaşdırıla bilməz" qərarı.
+- **Expand/contract DB migration:** analytics route həm köhnə (JS) həm yeni (RPC) sxemi dəstəklədi → DB migration kod deploy-undan decoupled, downtime yoxdur.
+- **Workflow `args` string-ləşir:** JSON array verilsə də skriptə string çatdı → `JSON.parse` guard lazımdır.
+- **MCP `apply_migration` > Dashboard:** tətbiq + real-data verify + advisor harden eyni sessiyada.
+
+---
+
+### Session 42 (2026-05-29) — News Refresh: 10 topics for May 27-29 (40 articles, 8-phase pipeline) ✅
+
+### Session 42 (2026-05-29) — News Refresh: 10 topics for May 27-29 (40 articles, 8-phase pipeline) ✅
+
+**CEO tələbi:** `/plan /vaxtimyoxdu-news-refresh vaxtim yoxdu saytı üçün son 3 günün vacib xəbərlərini yenidən köhnəyə doğru əlavə elə` — May 27 (Çərşənbə) – May 29 (Cümə) window. CEO təsdiqi: May 27-29 only (May 11-26 gap qəsdən saxlanıldı), full pipeline + deploy.
+
+**Komanda:** 11 background agent — 1 researcher + 4 paralel writer (AZ/EN/TR/RU) + 3 paralel QA (Diakritik/Length/Source-Fact) + 1 fix + 1 batch integrator + 1 build/test + 1 deploy
+
+**Plan:** `~/.claude/plans/dazzling-finding-duckling.md` (Plan mode approved 2026-05-29)
+
+**Mövzular (newest-first, date+AZ-domestic hibrid sıralanma):**
+- May 28 (Müstəqillik Günü — ən sıx xəbər günü): **T1 P0 AZ-DOMESTIC: Aliyev Müstəqillik Günündə azad Qarabağa səfər (Xocalı/Xankəndi/Şuşa) + Putin təbriki**, T2 ABŞ-İran 60-günlük atəşkəs çərçivəsi (Trump təsdiqi gözlənilir), T3 Blue Origin New Glenn mühərrik testində partladı, T4 BMT İsrail+Rusiyanı sexual-violence qara siyahısına saldı (İsrail Quterreşlə əlaqəni kəsdi), T5 İsveç Ukraynaya 16 Gripen bağışlayır, T7 İranlılar uzun internet bağlanmasından sonra onlayna qayıdır, T8 ABŞ birjaları rekord bağlanış
+- May 27 (Çərşənbə): T6 Britaniya/Avropa rekord may istiliyi (Kew Gardens 35.1°C), T9 Konqo DR Ituri Ebola PHEIC (1,205 hal/264 ölü), T10 İsrail Cənubi Livana zərbələri gücləndirir
+
+**Fazalar:**
+- F1 Research: 10 HIGH verified, 9 dropped (Champions League final May 30 out-of-window+sport, Trump tariffs May 7, OpenAI/Anthropic earlier-May, US single-region stories). 33 mənbə, ~3.3/topic. Calendar verified macOS `date` (May 27=Wed, 28=Thu, 29=Fri).
+- F2 4 paralel writer: 40 article. AZ "həmcinsi" 0, RU Cyrillic-only 100% (şirkət adları translit: Нью-Гленн, Блю Ориджин), TR "ABD" 8x correct, EN AP Style.
+- F3 3 paralel QA: **QA-A 0 BLOCK / 1 minor (AZ "CD Vens"→"JD Vans" factual); QA-B 0 BLOCK / 2 minor (boundary length, no-action); QA-C 0 BLOCK / 6 minor.** Per-locale clean: EN 10/10, TR 10/10, AZ 9/10, RU 6/10.
+- F4 Fix: **0 BLOCKING** → 5 MINOR fix + 1 skip. Invented attribution-lar silindi (RU heatwave "метеорологи назвали беспрецедентным" ×2, RU Iran "ущерб исчисляется миллиардами", AZ stocks "Analitiklər xatırladır"), RU Lebanon ekstrapolyasiya yumşaldıldı, AZ "JD Vans" factual fix. FIX-5 (RU raket adları) skip (cyrillic-only tension, acceptable omission).
+- F5 Integration: **3-batch sequential** (B1=05-28 marker+T1-4=16, B2=T5/7/8=12, B3=05-27 marker+T6/9/10=12), 560→**600** entries, hər batch tsc 0 diag, slug uniqueness 0 dup (within-batch + vs 560 existing). Integrator 2 öz transcription typo-sunu tutdu+düzəltdi (Latin/Cyrillic adjacency scan).
+- F6 Build/Test: vitest 5368→**5528 PASS** (+160 = 40×4 it.each), build info articles **EXACT +40** (560→600), non-info 0 drift (S41-dən təmiz), tsc 0 diag, locale balance 150/each.
+- F7 Deploy: pre-deploy guard təmiz (0 src/ orphan), specific path `git add src/data/news-articles.ts`, commit **073defc**, GitLab+GitHub synced, Vercel Ready, **8/8 HTTP 200** (4 homepage + Topic 1 Aliyev × 4 locale), sitemap regenerated (lastmod 2026-05-29).
+
+**Lessons (S42):**
+- **0 BLOCKING rekord (S40 35 → S41 3 → S42 0):** QA pipeline maturation davam edir. Writer prompt-da "quotes/numbers ONLY from brief" + writer self-verify upstream fabrication-ı dayandırdı. QA-C iş profili "disaster catch"-dən "soft edge catch"-ə keçdi (invented attribution, false fact deyil).
+- **Invented attribution = ən yumşaq fabrication forması:** "experts called it unprecedented" tipli atribusiya brief faktı olmasa belə qeyri-mövcud mənbəyə istinad yaradır. QA-C bunları MINOR kimi tutdu, fix-də silindi.
+- **No-May-29-entry by design:** Window May 27-29 idi amma konkret hadisələr May 27-28-də cəmləndi (May 28 Müstəqillik Günü ən sıx). May 29 US-Iran update Topic 2-yə (May 28 framework) fold edildi. Newest entry date = 2026-05-28.
+- **16-günlük gap (May 11-26) qəsdən saxlanıldı:** CEO "son 3 gün" istədi, gap fill rədd edildi (AskUserQuestion ilə təsdiqləndi).
+
+---
+
+### Session 41 (2026-05-10) — News Refresh: 7 topics for May 9-10 (28 articles, 7-phase pipeline) ✅
+
+**CEO tələbi:** `/plan /vaxtimyoxdu-news-refresh sayta yeni xəbərləri əlavə et. Dünən və bu günki` — May 9 (Saturday) + May 10 (Sunday) coverage.
+
+**Komanda:** 11 background agent — 1 researcher + 4 paralel writer (AZ/EN/TR/RU) + 3 paralel QA (Diakritik/Length/Source-Fact) + 1 fix + 1 batch integrator + 1 build/test + 1 deploy
+
+**Plan:** `~/.claude/plans/compiled-sauteeing-lark.md` (Plan mode approved 2026-05-10)
+
+**Mövzular (newest-first sıralanma):**
+- May 10 (Bazar): T5 India-Pakistan ceasefire 1-il yıldönümü, Modi "destroy terror ecosystem" (Mother's Day kontekstdə)
+- May 9 (Şənbə): **T1 P0 AZ-DOMESTIC: Aliyev Cəbrayıl Şükürbəyli kəndinə səfər + Heydər Əliyevin 103 yaşı**, T2 Putin Qələbə Günü 81-ci ildönümü scaled-back parade (Şimali Koreya əsgərləri), T3 Trump-mediated Rusiya-Ukrayna 3-günlük ateskes (1000 əsir mübadiləsi), T4 İsrail Cənubi Livana zərbə (17 ölü, Saksakiyə 7), T6 Mali JNIM hücum + Bamako blokada (Mopti 30+ ölü), T7 Manchester City 3-0 Brentford (sport policy compliant — Arsenal 2-xal fərq)
+
+**Fazalar (~50 dəq cəmi):**
+- F1 Research (~5m): 7 HIGH verified, 11 dropped (future events El Clásico/Eurovision, single source UAP, "expected to" Iran-US MOU, out-of-window May 4-5)
+- F2 4 paralel writer (~9m): 28 article, AZ "həmcinsi" 0 occurrence, RU Cyrillic-only 100%, TR "ABD" 5x correct, EN AP Style
+- F3 3 paralel QA (~5m): QA-A 0 BLOCK / 4 minor sport transliteration; QA-B 0 BLOCK / 0 minor; **QA-C 3 BLOCK fabrication / 14 minor (S40-da 35 idi → 91% azalma rekord!)**
+- F4 Fix (~8m): 4/4 BLOCKING resolved (3 DELETE preferred, 1 REPLACE) + 4 selected MINOR — AZ Topic 7 sport color delete + Doku/Haaland transliteration, TR Topic 4 PBS Hizbullah missile silindi, RU Topic 3 "Контекст" forward-speculation tam silindi, TR Topic 1 "Şehitler Hıyabanı" → "Fahri Hıyaban" (factual location fix)
+- F5 Integration (~10m): **3-batch sequential** (B1=12 May 10+T1+T2 / B2=8 T3+T4 / B3=8 T6+T7), 532→**560** entries, hər batch tsc 0 diag, slug uniqueness PASS (final 0 duplicate)
+- F6 Build/Test (~6m): vitest 5256→**5368 PASS** (+112 = 28×4 `it.each` parameterized blocks), build info articles **EXACT +28** (532→560), tsc 0 diag, locale balance perfect 140/each
+- F7 Deploy (~5m): pre-deploy guard təmiz (S38 hero-demo S40-da branch-ə köçürüldü, 0 src/ orphan), specific path `git add src/data/news-articles.ts`, commit **0e00f76**, GitLab+GitHub synced (GitHub race-condition retry), Vercel Ready 3min, **9/9 HTTP 200** (5 homepage + Topic 1 Aliyev × 4 locale), sitemap 4 May 10 + 40 May 9 entries
+
+**🚨 Vacib QA-C tapıntıları (3 BLOCKING — S40-dan 91% azalma):**
+- **AZ Topic 7 (sport policy violation):** "tam üstünlüyünü təmin edib", "sayca üstün hücumları ilə yadda qaldı", "mübarizədən boş əllə qayıtdı" — S36 schedule+score policy pozuntusu, DELETE
+- **TR Topic 4 (PBS fabrication):** "PBS NewsHour'un haberine göre Hizbullah'ın füzeleri İsrail tarafında açık alanlara isabet etti" — brief'in curated key facts-də yoxdur, DELETE
+- **RU Topic 3 (Trump ceasefire forward-speculation):** "первая значимая попытка деэскалации с момента возвращения Трампа", specific "12 мая" resumption, "одним из крупнейших с начала полномасштабной фазы конфликта", "политически неоднозначную окраску" — DELETE entire "Контекст" section, REPLACE brief-only
+- **Borderline upgraded BLOCKING:** TR Topic 1 "Şehitler Hıyabanı" (Martyrs' Lane) vs brief'in "Alley of Honors" / "Fəxri Xiyaban" — iki fərqli Bakı location, REPLACE
+
+**Lessons (S41):**
+- **QA pipeline maturation proven:** S40 35 BLOCKING → S41 3 BLOCKING (91% azalma). Writer-lər brief-yə daha sıx yaxınlaşdılar (geographic specifics: Şükürbəyli, Saksakiyə, Korikori, Gomossogou, Bamako). Fix strategy "DELETE preferred" 3/4-də tətbiq edildi.
+- **Sport bahasında inclusion mümkün:** Topic 7 Manchester City brief'də schedule+score-only formatda təqdim edildi. AZ writer color əlavə etdi (BLOCKING), digər 3 dil compliant. S36 NHL dərsi tək AZ-da pozuldu, fix-də qarşısı alındı.
+- **Vitest test multiplier dəqiqləşdi:** delta `+N×4` deyil, `+N×4` per `it.each` block × 4 block = `+N×16`? Yox: 28 entry × 4 it.each block = 112 (parameterized testlərdə hər entry 4 dəfə test olunur, ümumi 112 yeni iteration).
+- **Build static page drift:** Total page +24 (1239), info article +28 (560 EXACT) — non-info pages -4 drift (S40-dan qalan, news pipeline ilə əlaqəsi yox, qeyd üçün).
+- **GitHub mirror race-condition:** auto-mirror sync paralel olur, push retry ilə həll olunur (devops agent transparent handle etdi).
+- **Pipeline rekorderi:** ~50 dəq (S40 49 dəq baseline-na yaxın), CEO-dan deploy notification mərhələsinə qədər tam end-to-end PO/Agent Teams orchestration.
+
+---
+
+### Session 40 (2026-05-02) — News Refresh: 8 topics for May 1-2 (32 articles, 7-phase pipeline) ✅
+
+**CEO tələbi:** /plan ilə 6 addım: bu gün+dünənki xəbərləri web-də araşdır → ən vaciblərini seç → sayta yenidən köhnəyə əlavə → sintaksis/leksik/düzgünlük test → buglar həll → proda deploy.
+
+**Komanda:** 11 background agent — 1 researcher + 4 paralel writer (AZ/EN/TR/RU) + 3 paralel QA (Diakritik/Length/Source-Fact) + 1 fix + 1 batch integrator + 1 build/test + 1 deploy
+
+**Plan:** `~/.claude/plans/steady-booping-manatee.md` (Plan mode approved 2026-05-02)
+
+**Mövzular (newest-first sıralanma):**
+- May 2 (Şənbə): T1 Sinaloa qubernatoru istefa, T2 Spirit Airlines iflas
+- May 1 (Cümə): **T3 P0 AZ-DOMESTIC: Milli Məclis EU Parlamenti əməkdaşlığı dayandırdı**, T4 İsrail Cənubi Livana zərbə (12 öldü), T5 Trump EU avto tarif 25% + Almaniyada qoşun, T6 Mali Bamako JNIM blokada, T7 ABŞ DHS 76 günlük şatdaun bitdi, T8 1 May Workers' Day İstanbul (575 saxlanma)
+
+**Fazalar (~47 dəq cəmi):**
+- F1 Research (5m): 8 HIGH verified, 12 dropped (calendar mismatch / single source / "in process")
+- F2 4 paralel writer (6m): 32 article, AZ "həmcinsi" 0 occurrence, RU Cyrillic-only
+- F3 3 paralel QA (5m): QA-A 0 BLOCK / 15 minor; QA-B 0 BLOCK / 2 advisory; **QA-C 35 BLOCK fabrication / 14 minor**
+- F4 Fix (9m): 35/35 BLOCKING resolved + 6 selected MINOR (TR Merz Şansölye, AZ Camara, AZ ateskes slug, AZ şənbə günü, RU accusative grammar, AZ cümə günü), self-verification PASS
+- F5 Integration (12m): **3-batch sequential** (T1-3 / T4-6 / T7-8), 500→**532** entries, hər batch tsc 0 diag, slug uniqueness PASS
+- F6 Build/Test (5m): vitest 5127→**5256 PASS** (+129, 1 bonus dynamic test), build 1183→**1215 səhifə** (+32 EXACT), tsc 0 diag
+- F7 Deploy (~5m): **🚨 S38 incident təkrarı** — pre-deploy guard 2 untracked src/ orphan file (hero-demo, HomeHero, Apr 19) tapdı → Option A specific path `git add src/data/news-articles.ts` (orphan fillər EXCLUDED, S38 davranışı təkrarı), commit **c2c0a03**, GitLab+GitHub synced, Vercel SUCCESS, **8/8 sample HTTP 200** (Sinaloa 4 dil + Milli Məclis 4 dil), sitemap **48** May entries (May 1+2 hər ikisi)
+
+**🚨 Vacib QA-C tapıntıları (35 BLOCKING fabrication):**
+- AZ Topic 5: "cümə axşamı" tarix konflikti
+- AZ Topic 7: Trump quote uydurma + Democrat counter
+- EN Topic 7: Math error "two weeks" vs 76-35=41 days
+- AZ+RU Topic 8: "Plastik güllələr" / "резиновые пули" brief-də yox idi (yalnız tear gas)
+- EN Topic 3: Market reaction "European auto stocks lower" uydurma
+- EN Topic 5: "President Sheinbaum" adı brief-də yox idi
+- TR Topic 7: Bipartisan mechanism uydurma
+- RU Topic 6: "Эксперты ожидают" uydurma
+- AZ Topic 6: Worker count "minlərlə işçi" + passenger count "yüz minlərlə" uydurma
+
+**Lessons:**
+- **S29 Mythos 5 pattern təkrarlandı:** writer-lər brief-də olmayan editoryal əlavələr (market reactions, fabricated quotes, fabricated diplomatic activity, crowd-control tactics) yaradırlar. **QA-C source-fact reconciliation = MANDATORY guard**, 35 fabrication-ı qarşısı alındı.
+- **S38 orphan files RESOLVED (S40 post-deploy):** Apr 19 hero-demo work `feature/hero-redesign-wip` branch-ə köçürüldü (commit c47e627, GitLab+GitHub synced). Main təmizdir. Sprint 5+ TODO: 13 i18n key + integration + tests. Resume: `git checkout feature/hero-redesign-wip`.
+- **3-batch DEFAULT işləyir:** S36 single-Edit timeout dərsi tətbiq edildi, 0 timeout, hər batch tsc 0 diag.
+- **Sport DROP preemptive uğurludur:** brief 0 sport topic (writer-də sport color riski yox idi), S36 NHL 4 BLOCKING dərsi.
+- **AZ-domestic priority:** Topic 1 (Milli Məclis-EU) Cümə tarixli olduğu halda May 1 topic-larda **prioritetli** yerləşdirildi (date-only sort yerinə hibrid date+priority).
+- **Pipeline müddəti rekorder:** 47 dəq (S39 1h20m, S36 2h, S35 1h10m benchmark-ları aşdı).
+
+---
 
 ### Session 39c (2026-04-27) — Market Prices 5s Auto-Refresh + Redis L2 Cache ✅
 
