@@ -7,6 +7,812 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-07-10 ==========
+
+  // --- Topic 7: FIFA World Cup 2026 quarterfinals ---
+  'dunya-cempionati-2026-cerek-final': {
+    title: 'Dünya Çempionatı: Fransa və İspaniya yarımfinala yüksəldi',
+    date: '2026-07-10',
+    category: 'İdman',
+    locale: 'az',
+    content: `FIFA 2026-cı il Dünya Çempionatının çərək final mərhələsində keçirilən iki oyunda Fransa və İspaniya yığmaları qələbə qazandı. Hər iki komanda bu nəticələrlə yarımfinala vəsiqə əldə etdi. Oyunlar 9 və 10 iyul tarixlərində baş tutdu.
+
+Turnir Amerika Birləşmiş Ştatları, Kanada və Meksika tərəfindən birgə keçirilir. Adıçəkilən çərək final oyunları ABŞ-dakı stadionlarda təşkil olundu.
+
+## Fransa 2-0 Mərakeş
+
+9 iyul tarixində keçirilən çərək final oyununda Fransa yığması Mərakeş yığmasını 2-0 hesabı ilə məğlub etdi. Görüşdə qollardan birini Kilian Mbappe vurdu. Oyunun birinci hissəsində Mbappenin cərimə zərbəsi rəqib qapıçısı tərəfindən dəf edilmişdi. İkinci qolun müəllifi isə Usman Dembele oldu.
+
+## İspaniya 2-1 Belçika
+
+10 iyul tarixində keçirilən çərək final oyununda İspaniya yığması Belçika yığmasını 2-1 hesabı ilə üstələdi. Görüşdə hesabı Fabian Ruis açdı. Belçika yığması adından Şarl De Ketelare hesabı bərabərləşdirdi. Qələbəni təmin edən qolu isə Mikel Merino 88-ci dəqiqədə vurdu.
+
+## Yarımfinal mərhələsi
+
+Bu qələbələrdən sonra həm Fransa, həm də İspaniya yarımfinala yüksəldi. Turnirin proqramına əsasən, iki komanda yarımfinal mərhələsində bir-biri ilə qarşılaşacaq.
+
+Beləliklə, çərək finalın bu iki oyununun yekununda Fransa Mərakeşi, İspaniya isə Belçikanı geridə qoydu. Hər iki komandanın yarımfinaldakı rəqibi bir-biri olacaq.
+
+İki oyunun yekununda Fransanın qollarını Kilian Mbappe və Usman Dembele, İspaniyanın qollarını isə Fabian Ruis və Mikel Merino vurdu. Belçikanın yeganə qolunun müəllifi Şarl De Ketelare oldu.`,
+  },
+  'en-world-cup-2026-quarterfinals': {
+    title: 'World Cup 2026: France Beats Morocco, Spain Edges Belgium',
+    date: '2026-07-10',
+    category: 'Sports',
+    locale: 'en',
+    content: `France and Spain advanced to the 2026 World Cup semifinals after quarterfinal wins on July 9 and July 10. France beat Morocco 2-0 and Spain beat Belgium 2-1, and the two teams will now meet each other in the semifinals.
+
+## France 2, Morocco 0
+
+In the quarterfinal played July 9, France beat Morocco 2-0. Kylian Mbappe scored after having a first-half penalty saved, and Ousmane Dembele added the second goal. The 2-0 result sent France through to the semifinals.
+
+## Spain 2, Belgium 1
+
+In the quarterfinal played July 10, Spain beat Belgium 2-1. Fabian Ruiz opened the scoring and Charles De Ketelaere equalized for Belgium at 1-1. Mikel Merino scored the winner in the 88th minute, and the 2-1 result sent Spain into the semifinals alongside France.
+
+## Goals recap
+
+France's goals in the 2-0 win over Morocco came from Mbappe and Dembele, with Mbappe having also seen a first-half penalty saved. In the Spain-Belgium match, Fabian Ruiz gave Spain the lead, De Ketelaere leveled at 1-1, and Merino restored Spain's advantage in the 88th minute for the 2-1 final score. France advanced by a two-goal margin and Spain by a one-goal margin, and both reached the last four.
+
+## Semifinal and remaining fixtures
+
+France reached the semifinals with its 2-0 win over Morocco on July 9, and Spain followed with its 2-1 win over Belgium on July 10. With both results confirmed, France and Spain will face each other in the semifinals. Two further quarterfinals were scheduled for July 11: Norway versus England, and Argentina versus Switzerland.`,
+  },
+  'tr-dunya-kupasi-ceyrek-final-2026': {
+    title: 'Dünya Kupası Çeyrek Finalleri: Fransa ve İspanya Yarı Finalde',
+    date: '2026-07-10',
+    category: 'Spor',
+    locale: 'tr',
+    content: `2026 FIFA Dünya Kupası'nın çeyrek final maçlarında Fransa ve İspanya, yarı finale yükseldi. Turnuva, Amerika Birleşik Devletleri, Kanada ve Meksika'nın ortak ev sahipliğinde düzenleniyor; söz konusu çeyrek final karşılaşmaları ABD'deki sahalarda oynandı. İki çeyrek final maçı, 9 ve 10 Temmuz tarihlerinde gerçekleştirildi.
+
+## Fransa 2-0 Fas
+
+9 Temmuz'da oynanan çeyrek final maçında Fransa, Fas'ı 2-0 mağlup etti. Karşılaşmada goller Kylian Mbappé ve Ousmane Dembélé'den geldi. Mbappé, ilk yarıda kullandığı bir penaltıda kaleciye takıldı. Maçın golcüleri Mbappé ve Dembélé oldu. Bu sonuçla Fransa, yarı final biletini aldı.
+
+## İspanya 2-1 Belçika
+
+10 Temmuz'da oynanan diğer çeyrek final maçında İspanya, Belçika'yı 2-1 yendi. Skoru Fabián Ruiz açtı; Charles De Ketelaere, Belçika adına beraberliği sağladı. Mikel Merino ise 88. dakikada attığı golle maçın kazananını belirledi ve İspanya'yı yarı finale taşıdı. Karşılaşmanın son skoru İspanya lehine 2-1 oldu.
+
+## Yarı final eşleşmesi
+
+Hem Fransa hem de İspanya yarı finale yükseldi ve bu iki takım yarı finalde birbiriyle karşılaşacak. Turnuvada 11 Temmuz'da oynanması planlanan çeyrek final maçları ise Norveç-İngiltere ve Arjantin-İsviçre olarak belirlendi. Bu iki karşılaşma, yarı finalin diğer eşleşmesini belirleyecek. Fransa ile İspanya'nın eşleşmesi, yarı final fikstürünün ilk maçı olarak kesinleşti. 9 Temmuz'da Fransa-Fas ve 10 Temmuz'da İspanya-Belçika maçlarının ardından, 11 Temmuz'da Norveç-İngiltere ve Arjantin-İsviçre karşılaşmaları oynanacak. Turnuva, üç ülkenin ortak ev sahipliğinde sürüyor.`,
+  },
+  'ru-world-cup-2026-quarterfinals': {
+    title: 'ЧМ-2026: Франция обыграла Марокко, Испания — Бельгию',
+    date: '2026-07-10',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `Четвертьфинальные матчи чемпионата мира по футболу 2026 года прошли 9 и 10 июля. По их итогам определились два участника полуфинала. Турнир принимают США, Канада и Мексика, а матчи проходят на аренах в Соединённых Штатах.
+
+## Франция — Марокко 2:0
+
+Четвертьфинал, состоявшийся 9 июля, завершился победой сборной Франции над командой Марокко со счётом 2:0. Первый гол в матче забил Килиан Мбаппе — при этом в первом тайме его удар с пенальти был отражён. Второй мяч в ворота соперника провёл Усман Дембеле. С результатом 2:0 сборная Франции вышла в следующую стадию турнира.
+
+## Испания — Бельгия 2:1
+
+На следующий день, 10 июля, сборная Испании обыграла команду Бельгии со счётом 2:1. Счёт в матче открыл Фабиан Руис. Шарль Де Кетеларе сравнял результат за сборную Бельгии. Победный мяч забил Микель Мерино — это произошло на 88-й минуте встречи. Итоговый счёт 2:1 вывел Испанию в полуфинал.
+
+## Полуфинал и расписание
+
+Сборные Франции и Испании вышли в полуфинал, где встретятся друг с другом. На 11 июля запланированы ещё два четвертьфинальных матча: Норвегия — Англия, а также Аргентина — Швейцария. Их результаты станут известны после проведения игр.
+
+## Дальнейшие матчи
+
+Оба четвертьфинала — 9 и 10 июля — прошли на аренах в Соединённых Штатах. Сборные Франции и Испании стали первыми командами, обеспечившими себе места в полуфинале чемпионата мира 2026 года. Матчи 11 июля — Норвегия против Англии и Аргентина против Швейцарии — на момент подготовки материала ещё не были сыграны. По их итогам определятся остальные полуфиналисты турнира, после чего станут известны пары полуфинальной стадии.`,
+  },
+
+  // ========== 2026-07-09 ==========
+
+  // --- Topic 2: FM Bayramov on Azerbaijan-Armenia peace treaty ---
+  'bayramov-sulh-sazisi-konstitusiya': {
+    title: 'Bayramov: Sülh sazişi konstitusiya dəyişikliyindən sonra imzalana bilər',
+    date: '2026-07-09',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Azərbaycanın xarici işlər naziri Ceyhun Bayramov bəyan edib ki, Azərbaycan-Ermənistan sülh sazişi Ermənistanda konstitusiya dəyişiklikləri qüvvəyə mindikdən dərhal sonra imzalana bilər. Nazir bu açıqlamanı 9 iyul tarixində səsləndirib.
+
+## Bakının mövqeyi
+
+Ceyhun Bayramov bildirib ki, Azərbaycan sülh sazişinin yekunlaşdırılması ilə bağlı bütün öhdəliklərini yerinə yetirib. Onun sözlərinə görə, qalan yeganə maneə Ermənistanın konstitusiyasıdır — Bakı bu sənəddə ərazi iddialarının yer aldığını hesab edir.
+
+"Azərbaycan sülh sazişinin yekunlaşdırılması ilə bağlı bütün öhdəliklərini yerinə yetirib," deyə nazir vurğulayıb.
+
+Bayramov əlavə edib: "Cari Konstitusiyada yer alan ərazi iddiaları aradan qaldırıldıqdan sonra sülhə nail olmaq üçün heç bir maneə qalmayacaq."
+
+Nazirin bu bəyanatı sülh sazişinin rəsmi imzalanmasının məhz Ermənistandakı konstitusiya prosesinə bağlı olduğunu göstərir.
+
+## Prosesin fonu
+
+Sülh danışıqları prosesi son illərdə mühüm mərhələlərdən keçib. 2025-ci ilin avqustunda hər iki ölkənin liderləri ABŞ Prezidenti Donald Tramp ilə birlikdə Vaşinqtonda Birgə Bəyannamə imzalamışdılar.
+
+Həmin vaxt iki ölkənin xarici işlər nazirləri sülh sazişinin layihəsini paraflamışdılar. Beləliklə, sənədin mətni üzərində əsas iş artıq görülmüşdü.
+
+## Növbəti addım
+
+Bayramovun 9 iyul tarixli açıqlaması sənədin rəsmi imzalanmasına aparan yol barədə Azərbaycanın mövqeyini əks etdirir. Nazirin sözlərinə görə, Bakı öz üzərinə düşən işləri tamamlayıb və prosesin növbəti mərhələsi Ermənistanın gündəliyindədir.`,
+  },
+  'en-bayramov-armenia-peace-treaty-sign': {
+    title: 'Bayramov: Peace Treaty Ready Once Armenia Amends Constitution',
+    date: '2026-07-09',
+    category: 'Politics',
+    locale: 'en',
+    content: `Azerbaijani Foreign Minister Jeyhun Bayramov said on July 9 that a peace treaty with Armenia could be signed immediately after constitutional amendments in Armenia take effect, describing the Armenian constitution as the remaining obstacle to a deal.
+
+## One condition left
+
+Bayramov said Azerbaijan has completed all of its own obligations regarding the finalization of the peace agreement. The remaining obstacle, he said, is Armenia's constitution, which Baku regards as containing territorial claims against Azerbaijan.
+
+"Once the territorial claims contained in the current Constitution are removed, there will be no obstacles to achieving peace," Bayramov said.
+
+He added: "Azerbaijan has completed all of its obligations regarding the finalization of the peace agreement."
+
+## Path to signing
+
+The statement set out the sequence Baku envisions for formal signing: the treaty could be concluded the day after Armenia's constitutional changes come into force. Bayramov framed the constitutional question as the single unresolved item standing between the two countries and a signed agreement, placing the next move on the Armenian side.
+
+## Background
+
+Both countries' leaders signed a Joint Declaration with U.S. President Donald Trump in Washington in August 2025, and the two foreign ministers initialed the draft peace agreement at that time. The July 2026 development is Bayramov's statement on the path toward formal signing of that initialed text. His remarks underscored Baku's position that the groundwork for peace is complete on its side and that the constitutional amendments are the final step before the treaty can be signed.`,
+  },
+  'tr-bayramov-baris-anlasmasi-anayasa': {
+    title: 'Bayramov: Barış Anlaşması Anayasa Değişikliğinin Ertesi Günü İmzalanabilir',
+    date: '2026-07-09',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Azerbaycan Dışişleri Bakanı Ceyhun Bayramov, 9 Temmuz'da yaptığı açıklamada, Azerbaycan-Ermenistan barış anlaşmasının Ermenistan'daki anayasa değişikliklerinin yürürlüğe girmesinin hemen ardından imzalanabileceğini belirtti. Bakan'ın açıklaması, anlaşmanın resmi olarak imzalanmasına giden yola ilişkin güncel bir gelişme oldu ve sürecin hangi aşamada bulunduğunu ortaya koydu.
+
+## Bakü yükümlülüklerini tamamladı
+
+Bayramov, Azerbaycan'ın barış anlaşmasının sonuçlandırılmasına ilişkin kendi yükümlülüklerinin tamamını yerine getirdiğini söyledi. Bakan bu konuda, "Azerbaycan, barış anlaşmasının sonuçlandırılmasına ilişkin tüm yükümlülüklerini tamamlamıştır." dedi. Bakan'a göre, Azerbaycan tarafında atılması gereken adımlar tamamlanmış durumda.
+
+## Anayasa engeli
+
+Bakan'a göre, geriye kalan tek engel, Bakü'nün toprak talepleri içerdiğini değerlendirdiği Ermenistan anayasasıdır. Bayramov bu noktada, "Mevcut Anayasa'da yer alan toprak talepleri kaldırıldığında, barışın sağlanmasının önünde hiçbir engel kalmayacaktır." ifadesini kullandı. Bu çerçevede, anayasa değişikliklerinin yürürlüğe girmesi, imza sürecinin belirleyici koşulu olarak öne çıktı.
+
+## Washington süreci
+
+İki ülkenin liderleri, Ağustos 2025'te Washington'da ABD Başkanı Trump ile bir Ortak Bildirge imzalamıştı. İki ülkenin dışişleri bakanları da barış anlaşması taslağını o dönemde parafe etmişti. Temmuz 2026'daki gelişme ise Bayramov'un anlaşmanın resmi olarak imzalanmasına giden sürece ilişkin açıklamasıdır. Böylece sürecin önündeki tek adımın Ermenistan tarafındaki anayasa değişikliği olduğu bir kez daha ortaya kondu. Azerbaycan ile Ermenistan arasındaki barış süreci, bölgenin geleceğini yakından ilgilendiren gündem maddesi olmayı sürdürdü.`,
+  },
+  'ru-bayramov-armenia-peace-treaty': {
+    title: 'Байрамов: мирный договор можно подписать после реформы в Армении',
+    date: '2026-07-09',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Министр иностранных дел Азербайджана Джейхун Байрамов заявил, что мирный договор с Арменией может быть подписан сразу после вступления в силу конституционных изменений в Армении. Соответствующее заявление министр сделал 9 июля 2026 года.
+
+## Позиция Баку
+
+По словам Джейхуна Байрамова, Азербайджан уже выполнил все свои обязательства, связанные с завершением работы над мирным соглашением. «Азербайджан выполнил все свои обязательства по завершению мирного соглашения», — заявил глава внешнеполитического ведомства. Он подчеркнул, что с азербайджанской стороны препятствий для подписания документа не осталось.
+
+## Вопрос конституции
+
+Главным оставшимся препятствием в Баку называют конституцию Армении, которая, по мнению азербайджанской стороны, содержит территориальные претензии. «Как только территориальные претензии, содержащиеся в нынешней конституции, будут устранены, никаких препятствий для достижения мира не останется», — заявил Джейхун Байрамов. Именно с этим вопросом в Баку связывают сроки формального подписания договора.
+
+## Путь к подписанию
+
+Ранее лидеры двух стран подписали совместную декларацию с президентом США Дональдом Трампом в Вашингтоне в августе 2025 года. Тогда же главы внешнеполитических ведомств Азербайджана и Армении парафировали проект мирного соглашения. Июльское заявление Джейхуна Байрамова касается дальнейшего пути к официальному подписанию уже согласованного документа. Мирный трек с Арменией остаётся одним из наиболее значимых направлений во внешней политике Азербайджана, а слова министра обозначили конкретные условия для перехода к завершающему этапу процесса урегулирования.`,
+  },
+
+  // --- Topic 4: State funeral of Iran's Supreme Leader Ayatollah Ali Khamenei ---
+  'iran-xamenei-defn-merasimi-meshed': {
+    title: 'İran ali dini lider Əli Xameneini Məşhəddə dəfn etdi',
+    date: '2026-07-09',
+    category: 'Dünya',
+    locale: 'az',
+    content: `İran çoxgünlük dövlət mərasimi çərçivəsində ölkənin ali dini lideri Ayətullah Əli Xameneini son mənzilə yola saldı. Anım tədbirləri 4 iyul tarixində paytaxt Tehranda başladı və mərasim bir neçə gün ərzində ölkənin müxtəlif şəhərlərini əhatə etdi.
+
+## Mərasimin gedişatı
+
+Anım tədbirlərinin başlanğıcı 4 iyul tarixinə təsadüf etdi. Əsas dəfn yürüşü isə 6 iyul tarixində Tehranda keçirildi. Bu yürüş mərasimin ən kütləvi mərhələlərindən biri oldu.
+
+Növbəti gün, 7 iyul tarixində Qum şəhərindəki Cəmkəran məscidində dua mərasimi təşkil olundu. Beləliklə, anım tədbirləri Tehrandan sonra Quma keçdi.
+
+## Məşhəddə dəfn
+
+Ayətullah Əli Xamenei 9 iyul tarixində Məşhəd şəhərindəki İmam Rza türbəsində dəfn edildi. Beləliklə, bir neçə gün davam edən mərasim başa çatdı. Mənbələrin məlumatına görə, tədbirə 100-dən çox ölkənin nümayəndələrinin qatılması gözlənilirdi.
+
+## Xameneinin ölümü
+
+Mənbələrin məlumatına əsasən, 86 yaşlı Əli Xamenei fevralın 28-də ABŞ və İsrailin birgə hava zərbəsi nəticəsində həlak olmuşdu. Həmin gün ABŞ ilə İsrailin İrana qarşı müharibəsinin ilk günü kimi qeyd olunur.
+
+## Mərasimin əhəmiyyəti
+
+Dəfn mərasimi qonşu İran üçün mühüm siyasi və dini hadisə kimi diqqət çəkdi. Tehran, Qum və Məşhəd şəhərləri mərasimin əsas mərkəzlərinə çevrildi və prosesin müxtəlif mərhələlərinə ev sahibliyi etdi.
+
+Beləliklə, 4 iyulda Tehranda başlayan anım tədbirləri 9 iyulda Məşhəddəki dəfnlə tamamlandı. Mərasimin bir neçə gün davam etməsi və çoxsaylı ölkə nümayəndələrinin iştirakının gözlənilməsi onun geniş beynəlxalq əks-sədasını göstərdi.`,
+  },
+  'en-khamenei-funeral-mashhad-burial': {
+    title: 'Iran Buries Supreme Leader Khamenei in Mashhad After Funeral',
+    date: '2026-07-09',
+    category: 'World',
+    locale: 'en',
+    content: `Iran buried Supreme Leader Ayatollah Ali Khamenei at the Imam Reza shrine in Mashhad on July 9, closing a multi-day state funeral that had begun in Tehran on July 4.
+
+## Days of mourning
+
+The commemoration opened in Tehran on July 4. The main procession through the capital took place on July 6, followed by prayers at the Jamkaran Mosque in Qom on July 7. Khamenei was then laid to rest at the Imam Reza shrine in Mashhad on July 9. Representatives from more than 100 countries were reported as expected to attend the ceremonies, which unfolded across several Iranian cities over the course of the mourning period.
+
+## How Khamenei died
+
+Khamenei, 86, had been killed in a joint U.S.-Israeli airstrike on February 28, the first day of the U.S.-Israel war on Iran, according to source accounts. His death removed Iran's supreme leader and set in motion the extended state funeral that concluded in July. The strike had come at the very start of that conflict, on its opening day, according to those accounts, and the funeral followed months later.
+
+## A multi-city farewell
+
+The funeral drew attention across the region, with mourning stretching from Tehran and Qom to Mashhad. The scale of the commemoration, spanning several cities and days, underscored Khamenei's standing at the head of Iran's political and religious system. The burial at the Imam Reza shrine in Mashhad marked the final stage of the days-long farewell, which had opened in Tehran five days earlier and moved through Qom before reaching Mashhad.`,
+  },
+  'tr-hamaney-cenazesi-meshed': {
+    title: 'İran Dini Lideri Hamaney\'in Cenazesi Meşhed\'de Toprağa Verildi',
+    date: '2026-07-09',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `İran, dini lider Ayetullah Ali Hamaney için günlerce süren bir devlet cenaze töreni düzenledi. Anma törenleri 4 Temmuz'da Tahran'da başladı. Kaynaklara göre 100'den fazla ülkeden temsilcinin törenlere katılması bekleniyordu. Çok güne yayılan tören, İran genelinde geniş bir katılımla gerçekleştirildi.
+
+## Çok günlü tören
+
+Kaynak anlatımlarına göre 86 yaşındaki Hamaney, ABD-İsrail'in İran'a yönelik savaşının ilk günü olan 28 Şubat'ta ortak bir ABD-İsrail hava saldırısında hayatını kaybetmişti. Anma süreci birkaç güne yayıldı ve İran'ın farklı kentlerinde gerçekleştirildi. Törenler, 4 Temmuz'da başkent Tahran'da başlayan anmalarla açıldı.
+
+## Tahran'dan Meşhed'e
+
+Ana Tahran korteji 6 Temmuz'da gerçekleşti. 7 Temmuz'da Kum kentindeki Cemkeran Camii'nde namaz kılındı. Hamaney, 9 Temmuz'da Meşhed'deki İmam Rıza türbesinde toprağa verildi. Böylece 4 Temmuz'da başlayan ve günlerce süren anma süreci, 9 Temmuz'daki defin töreniyle tamamlandı.
+
+## Bölgesel yankı
+
+Tören, İran'ın komşusu olan ülkeler açısından yakından izlenen bir gelişme oldu. Tahran, Kum ve Meşhed kentleri sürecin merkezinde yer aldı; Irak'ın Necef kenti de anmalarda anıldı. Kaynaklara göre 100'den fazla ülkeden temsilcinin katılması beklenen tören, geniş bir uluslararası ilgiyle takip edildi. Anma sürecinin farklı kentlere yayılması, törenin ölçeğini ortaya koydu. Tahran'da başlayan anmalar, Kum'daki namaz ve Meşhed'deki defin töreniyle birlikte İran'ın birden fazla önemli kentini kapsadı. İmam Rıza türbesinin bulunduğu Meşhed, sürecin tamamlandığı son durak oldu.`,
+  },
+  'ru-khamenei-funeral-mashhad': {
+    title: 'Иран простился с аятоллой Хаменеи: погребение в Мешхеде',
+    date: '2026-07-09',
+    category: 'Мир',
+    locale: 'ru',
+    content: `В Иране прошли многодневные государственные похороны верховного лидера аятоллы Али Хаменеи. Траурные церемонии начались в столице страны Тегеране 4 июля 2026 года и продолжались несколько дней.
+
+## Ход церемоний
+
+Основная траурная процессия в Тегеране состоялась 6 июля. На следующий день, 7 июля, в мечети Джамкаран в городе Кум прошла заупокойная молитва. Завершающим этапом стало погребение: аятолла Али Хаменеи был похоронен в святыне имама Резы в Мешхеде 9 июля. Траурные мероприятия затронули также иракский город Наджаф.
+
+## Обстоятельства гибели
+
+По данным источников, Али Хаменеи погиб в возрасте 86 лет в результате совместного удара США и Израиля 28 февраля. Этот удар был нанесён в первый день войны США и Израиля против Ирана. Государственные похороны, состоявшиеся спустя несколько месяцев, завершили траурный цикл в память о верховном лидере.
+
+## Международное участие
+
+Сообщалось, что ожидалось участие в церемониях представителей более чем 100 стран. Прощание с Али Хаменеи прошло сразу в нескольких городах Ирана — Тегеране, Куме и Мешхеде. По своему масштабу событие стало значимым как с религиозной, так и с геополитической точки зрения для всего региона, включая соседние государства. Многодневный характер траурных церемоний и их проведение в ключевых религиозных центрах страны — Тегеране, Куме и Мешхеде — подчеркнули статус аятоллы Али Хаменеи как верховного лидера Ирана. Для соседних с Ираном стран, включая государства региона, уход фигуры такого масштаба имеет значительный политический и религиозный вес, а сами траурные церемонии привлекли внимание далеко за пределами Ирана.`,
+  },
+
+  // ========== 2026-07-08 ==========
+
+  // --- Topic 3: NATO summit in Ankara ---
+  'nato-ankara-sammiti-ukrayna-yardimi': {
+    title: 'NATO Ankara sammiti: Ukraynaya 70 milyard avro yardım öhdəliyi',
+    date: '2026-07-08',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Şimali Atlantika Alyansının (NATO) 32 üzv ölkəsi 7-8 iyul tarixlərində Türkiyənin paytaxtı Ankarada sammit keçirdi. İki gün davam edən toplantıya Türkiyə və ölkənin Prezidenti Rəcəb Tayyib Ərdoğan ev sahibliyi etdi. Sammitin gündəliyində Ukraynaya dəstək məsələsi mərkəzi yer tutdu.
+
+## Ukraynaya 70 milyard avro yardım
+
+Alyans sammiti Ukrayna üçün 70 milyard avro, yəni təxminən 80 milyard dollar həcmində yardım öhdəliyi ilə yekunlaşdırdı. Bu öhdəlik toplantının əsas nəticələrindən biri oldu.
+
+ABŞ Prezidenti Donald Tramp sammit çərçivəsində bəyan etdi ki, Vaşinqton Ukraynaya "Patriot" hava hücumundan müdafiə perexvatçılarının istehsalı üzrə lisenziya verəcək. Trampın sözlərinə görə, bu addım Rusiyanın raket hücumlarının qarşısını almağa yönəlib. Beləliklə, Ukrayna öz ehtiyacları üçün perexvatçılar istehsal etmək imkanı qazana bilər.
+
+## Tramp və Zelenski görüşdü
+
+Ukrayna Prezidenti Volodimir Zelenski Ankara sammitində alyansa üzv olmayan iki dövlət başçısından biri kimi iştirak etdi. O, toplantı çərçivəsində Donald Tramp ilə ikitərəfli görüş keçirdi.
+
+ABŞ prezidenti müharibənin sona çatması istiqamətində əldə olunan irəliləyişi yüksək qiymətləndirdi. Zelenski ilə münasibətləri barədə Tramp belə dedi: "Biz həqiqətən yaxşı münasibət qurmuşuq. Buna inanmaq çətindir."
+
+## Türkiyənin ev sahibliyi
+
+Sammitə Türkiyənin ev sahibliyi etməsi toplantıya xüsusi diqqət yönəltdi. Alyansın 32 üzvünün Ankarada bir araya gəlməsi Ukrayna münaqişəsi ilə bağlı qərarların qəbulu üçün mühüm platforma oldu.`,
+  },
+  'en-nato-ankara-summit-ukraine-pledge': {
+    title: 'NATO Summit in Ankara Pledges 70 Billion Euros for Ukraine',
+    date: '2026-07-08',
+    category: 'World',
+    locale: 'en',
+    content: `NATO's 32 members closed a summit in Ankara, Turkey, on July 8 with a pledge of 70 billion euros, about 80 billion dollars, in assistance for Ukraine, as U.S. President Donald Trump praised progress toward ending the war.
+
+## Summit in Ankara
+
+The alliance met in Ankara on July 7-8, with Turkey and President Recep Tayyip Erdogan hosting. The gathering brought together all 32 members and concluded with the 70 billion euro pledge for Ukraine, one of the largest single commitments of the war. Holding the meeting in Ankara placed Turkey at the center of alliance diplomacy on the conflict.
+
+## Patriot production and Trump-Zelensky talks
+
+Trump said the United States would give Ukraine a license to manufacture Patriot air-defense interceptors to counter Russian missile attacks. Ukrainian President Volodymyr Zelensky attended as one of two non-alliance heads of state and held a bilateral meeting with Trump, who praised progress toward ending the war.
+
+"We've actually developed a good relationship. It's hard to believe," Trump said of his meeting with Zelensky.
+
+The Patriot license pointed to Ukraine producing its own interceptors rather than relying solely on deliveries from allies.
+
+## Two headline outcomes
+
+The combination of the funding pledge and the Patriot manufacturing license marked the summit's most concrete outcomes, alongside the Trump-Zelensky bilateral that drew wide attention. With the alliance's full membership assembled in Ankara, the two-day meeting closed with commitments centered on sustaining Ukraine's defenses and, in Trump's telling, on moving toward an end to the war.`,
+  },
+  'tr-nato-ankara-zirvesi-ukrayna': {
+    title: 'NATO Ankara Zirvesi: Ukrayna\'ya 70 Milyar Euro ve Patriot Lisansı',
+    date: '2026-07-08',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `NATO'nun 32 üyesi, 7-8 Temmuz 2026 tarihlerinde Türkiye'nin ev sahipliğinde Ankara'da bir araya geldi. Zirveye Cumhurbaşkanı Erdoğan ev sahipliği yaptı. Türkiye'nin ev sahipliğinde düzenlenen toplantının gündeminde Ukrayna'ya destek ve savunma sanayii iş birliği yer aldı.
+
+## 70 milyar euroluk destek
+
+İttifak, zirveyi Ukrayna'ya yaklaşık 70 milyar euro (yaklaşık 80 milyar dolar) tutarında yardım taahhüdüyle kapattı. Bu paket, Ukrayna'nın savunma ihtiyaçlarının karşılanmasına yönelik önemli bir adım olarak öne çıktı. Zirvenin sonuç bildirisinde açıklanan taahhüt, ittifakın Ukrayna'ya desteğini yansıttı.
+
+## Patriot üretim lisansı
+
+Başkan Trump, Rusya'nın füze saldırılarına karşı koymak amacıyla ABD'nin Ukrayna'ya Patriot hava savunma önleyicilerini üretme lisansı vereceğini açıkladı. Bu, Ukrayna'nın hava savunma kapasitesine ilişkin bir gelişme oldu. Patriot hava savunma önleyicilerinin üretimine yönelik lisans, Rusya'nın füze saldırılarına karşı koymayı amaçlıyor.
+
+## Trump-Zelenskiy görüşmesi
+
+Ukrayna Devlet Başkanı Zelenskiy, ittifak üyesi olmayan iki devlet başkanından biri olarak zirveye katıldı ve 8 Temmuz'da Trump ile ikili bir görüşme gerçekleştirdi. Trump, savaşın sona erdirilmesine yönelik ilerlemeyi övdü. Trump, Zelenskiy ile görüşmesine ilişkin, "Aslında iyi bir ilişki geliştirdik. İnanması zor." dedi. Ankara'daki zirve, hem ittifak üyeleri arasındaki koordinasyon hem de Ukrayna'ya yönelik destek açısından öne çıkan bir buluşma oldu. Zelenskiy'nin zirveye katılımı ve Trump ile gerçekleştirdiği ikili görüşme, toplantının öne çıkan başlıkları arasında yer aldı.`,
+  },
+  'ru-nato-summit-ankara-ukraine': {
+    title: 'Саммит НАТО в Анкаре: €70 млрд Украине и лицензия на «Патриот»',
+    date: '2026-07-08',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Саммит НАТО прошёл 7–8 июля 2026 года в Анкаре. Принимающей стороной выступила Турция во главе с президентом Реджепом Тайипом Эрдоганом. В работе саммита участвовали все 32 государства — члена альянса.
+
+## Помощь Украине
+
+По итогам саммита альянс объявил о выделении Украине помощи в размере 70 миллиардов евро — это около 80 миллиардов долларов. Президент США Дональд Трамп сообщил, что Соединённые Штаты предоставят Украине лицензию на производство зенитных ракет-перехватчиков «Патриот». Эти комплексы предназначены для защиты от российских ракетных ударов.
+
+## Встреча Трампа и Зеленского
+
+Президент Украины Владимир Зеленский стал одним из двух глав государств, не входящих в альянс, которые присутствовали на саммите. В Анкаре он провёл двустороннюю встречу с Дональдом Трампом. Американский лидер по итогам переговоров отметил прогресс на пути к завершению войны.
+
+## Оценка отношений
+
+Комментируя встречу с Владимиром Зеленским, Дональд Трамп сказал: «У нас действительно сложились хорошие отношения. В это трудно поверить». Саммит в Анкаре стал площадкой для обсуждения дальнейшей поддержки Киева со стороны Североатлантического альянса, а место его проведения подчеркнуло роль Турции как хозяина встречи.
+
+## Итоги саммита
+
+Проведение саммита в Анкаре и участие президента Украины подчеркнули значение встречи как для урегулирования войны, так и для роли Турции в региональной дипломатии. Объявленные решения о финансовой помощи Украине в размере 70 миллиардов евро и о лицензии на производство систем противовоздушной обороны «Патриот» стали центральными итогами двухдневных переговоров альянса.`,
+  },
+
+  // ========== 2026-07-07 ==========
+
+  // --- Topic 6: Venezuela earthquakes death toll ---
+  'venesuela-zelzele-qurbanlar-sayi': {
+    title: 'Venesuelada zəlzələ qurbanlarının sayı 3 535 nəfərə çatdı',
+    date: '2026-07-07',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Venesuelada 24 iyun tarixində baş vermiş güclü zəlzələlərin qurbanlarının sayı artmaqda davam edir. 7 iyul tarixinə olan rəsmi məlumata görə, həlak olanların sayı 3 535 nəfərə çatıb. Təbii fəlakət ölkənin bir neçə bölgəsini əhatə edib.
+
+## Zəlzələlərin miqyası
+
+24 iyun tarixində Venesuelanın şimal-qərb və mərkəzi hissələrində iki güclü zəlzələ baş verdi. Yeraltı təkanların maqnitudası müvafiq olaraq 7,2 və 7,5 təşkil etdi.
+
+Bu güclü təkanlar geniş ərazidə dağıntılara səbəb oldu. İki zəlzələnin qısa müddət ərzində baş verməsi vəziyyəti daha da ağırlaşdırdı.
+
+## İtkilər və dağıntılar
+
+7 iyul tarixinə olan rəsmi statistikaya əsasən, təbii fəlakət nəticəsində 3 535 nəfər həlak olub. Bu, əvvəlki günlərlə müqayisədə artan bir rəqəmdir.
+
+Məlumata görə, zəlzələlər nəticəsində 16 740 nəfər müxtəlif xəsarətlər alıb. Bundan başqa, 17 854 nəfər evsiz qalıb və müvəqqəti sığınacaqlara ehtiyac yaranıb.
+
+## Ən çox zərər çəkən bölgələr
+
+La-Quayra ştatı ən çox zərər çəkən bölgələrdən biri oldu. Burada binalar ağır dağıntılara məruz qaldı və dağılmalar geniş miqyas aldı.
+
+Zəlzələ eyni zamanda ölkənin paytaxtı Karakasa da təsir göstərdi. Beləliklə, fəlakət həm şimal-qərb, həm mərkəzi bölgələri, həm də paytaxtı əhatə etdi.
+
+## Qurbanların sayının artması
+
+Zəlzələlərin 24 iyunda baş verməsindən 7 iyula qədər həlak olanların sayı davamlı olaraq artdı və 3 535 nəfərə çatdı. Rəqəmlərin günlər ərzində yüksəlməsi axtarış və xilasetmə işlərinin davam etdiyini əks etdirdi.
+
+Yaralanan 16 740 nəfər və evsiz qalan 17 854 nəfərlə birlikdə bu göstəricilər təbii fəlakətin geniş miqyasını ortaya qoydu. Rəsmi statistika fəlakətin nəticələrinin bölgə üçün ağır olduğunu göstərdi.`,
+  },
+  'en-venezuela-earthquake-death-toll': {
+    title: 'Venezuela Earthquake Death Toll Rises Above 3,500 People',
+    date: '2026-07-07',
+    category: 'World',
+    locale: 'en',
+    content: `The death toll from two powerful earthquakes that struck Venezuela on June 24 rose to 3,535 as of July 7, with 16,740 people injured and 17,854 left without housing.
+
+## Two quakes strike
+
+The earthquakes, with magnitudes of 7.2 and 7.5, hit northwestern and central Venezuela on June 24. The scale of the shaking caused widespread destruction, and the casualty count climbed sharply in the days that followed as rescue teams reached affected areas. The two large quakes left extensive damage across the affected regions. The magnitude 7.2 and 7.5 tremors struck on the same day, June 24, compounding the destruction across the northwestern and central parts of the country.
+
+## Hardest-hit areas
+
+The state of La Guaira was among the hardest hit, with severe building collapse reported across the region. Caracas, the capital, was also affected. The combination of collapsed structures and displaced residents left tens of thousands of people in need of shelter as the response got under way. Rescue teams concentrated on La Guaira, where the building collapse was most severe, while damage also reached the capital, Caracas.
+
+## Rising toll
+
+As of July 7, officials put the death toll at 3,535, with 16,740 injured and 17,854 left without housing. The figures rose in the days after the June 24 quakes as search efforts continued and the full extent of the damage in La Guaira and Caracas became clearer. The number of people left without housing pointed to a large displacement crisis on top of the mounting death toll.`,
+  },
+  'tr-venezuela-depremleri-can-kaybi': {
+    title: 'Venezuela\'daki Depremlerde Can Kaybı 3 Bin 500\'ü Aştı, 16 Bini Aşkın Yaralı',
+    date: '2026-07-07',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Venezuela'da 24 Haziran 2026'da meydana gelen iki büyük depremin ardından açıklanan can kaybı, 7 Temmuz itibarıyla 3 bin 500'ün üzerine çıktı. Ülkenin kuzeybatısını ve orta kesimlerini vuran depremler, geniş çaplı yıkıma yol açtı. Yükselen bilanço, felaketin ölçeğinin giderek belirginleştiğini ortaya koydu.
+
+## Depremlerin büyüklüğü
+
+24 Haziran'da Venezuela'yı vuran iki büyük deprem, 7,2 ve 7,5 büyüklüğünde ölçüldü. Sarsıntılar ülkenin kuzeybatı ve orta bölgelerinde etkili oldu ve çok sayıda binada hasara neden oldu. Depremlerin ardından bölgede yoğun bir müdahale süreci başladı. İki büyük sarsıntı, geniş bir coğrafyada etkisini gösterdi.
+
+## Artan bilanço
+
+7 Temmuz itibarıyla resmi ölü sayısı 3 bin 535 olarak açıklandı. Ayrıca 16 bin 740 kişinin yaralandığı, 17 bin 854 kişinin ise evsiz kaldığı bildirildi. Bu rakamlar, felaketin ölçeğini gözler önüne serdi ve barınma ihtiyacının büyüklüğünü ortaya koydu. Evsiz kalan on binlerce kişi, felaketin en görünür sonuçları arasında yer aldı.
+
+## En çok etkilenen bölgeler
+
+La Guaira eyaleti, ağır bina çökmelerinin yaşandığı en fazla etkilenen bölgeler arasında yer aldı. Başkent Karakas da depremlerden etkilenen kentler arasındaydı. Bölgede arama kurtarma ve barınma ihtiyaçlarının karşılanması öncelikli gündem oldu. Yükselen bilanço, felaketin etkilerinin sürdüğünü gösterdi. La Guaira'daki bina çökmeleri, hasarın en ağır yaşandığı noktalar oldu. 7 Temmuz itibarıyla açıklanan 3 bin 535 ölü, 16 bin 740 yaralı ve 17 bin 854 evsiz sayısı, felaketin insani boyutunu ortaya koydu. La Guaira ile birlikte başkent Karakas da sarsıntıların etkisini hissetti.`,
+  },
+  'ru-venezuela-earthquakes-toll': {
+    title: 'Землетрясения в Венесуэле: число погибших превысило 3500',
+    date: '2026-07-07',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Число погибших в результате двух землетрясений в Венесуэле превысило 3500 человек. Обновлённые официальные данные о жертвах и разрушениях были опубликованы 7 июля 2026 года. Они отражают возросший по сравнению с первыми оценками масштаб произошедшей катастрофы.
+
+## Разрушительные толчки
+
+Два мощных землетрясения магнитудой 7,2 и 7,5 произошли на северо-западе и в центральной части Венесуэлы 24 июня 2026 года. Подземные толчки такой силы стали причиной массовых разрушений жилых и других зданий, а также большого числа жертв среди населения пострадавших районов.
+
+## Масштаб потерь
+
+По состоянию на 7 июля официальное число погибших составило 3535 человек. Ранения различной степени тяжести получили 16 740 человек. Ещё 17 854 человека остались без жилья в результате разрушения домов. Эти показатели заметно выросли по сравнению с предыдущими данными о последствиях стихийного бедствия.
+
+## Пострадавшие регионы
+
+Одним из наиболее пострадавших регионов стал штат Ла-Гуайра, где были зафиксированы серьёзные обрушения зданий. Землетрясения затронули также столицу страны — Каракас. Основной удар стихии пришёлся на северо-западную и центральную части Венесуэлы, где и были сосредоточены разрушения. Землетрясения в Венесуэле стали одним из крупнейших стихийных бедствий в мире за последнее время. Значительное число погибших, раненых и оставшихся без жилья людей отражает тяжесть последствий для пострадавших регионов страны, а обновление данных о жертвах продолжилось по мере поступления информации из районов бедствия.`,
+  },
+
+  // ========== 2026-07-06 ==========
+
+  // --- Topic 5: Hamas says it will dissolve its Gaza government ---
+  'hamas-qezza-hokumeti-legv': {
+    title: 'HƏMAS Qəzzadakı hökumətini ləğv edəcəyini elan etdi',
+    date: '2026-07-06',
+    category: 'Dünya',
+    locale: 'az',
+    content: `HƏMAS hərəkatı 6 iyul tarixində Qəzzadakı hökumətini ləğv edəcəyini elan etdi. Təşkilat atəşkəs sazişi çərçivəsində zolağın idarəçiliyini fələstinli texnokratlardan ibarət komitəyə təhvil verməyə hazır olduğunu bildirdi. Bu açıqlama Qəzzanın gələcək idarəçiliyi ilə bağlı mühüm addım kimi qiymətləndirildi.
+
+## Hakimiyyətin təhvili
+
+HƏMAS-ın açıqlamasına görə, təşkilat Qəzza zolağının idarəçiliyini Fələstin texnokratik komitəsinə ötürməyə hazırdır. Bu addım atəşkəs sazişinin şərtləri çərçivəsində atılır.
+
+Bununla belə, təşkilatın yaydığı bəyanatda tərksilah məsələsinə heç bir toxunuş olmadı. Bu məqam açıqlamada diqqət çəkən əsas cəhətlərdən biri oldu.
+
+## Atəşkəs və hərbi nəzarət
+
+Qəzza üzrə atəşkəs sazişi 11 oktyabr tarixində imzalanmışdı. Saziş qüvvəyə mindiyi vaxt İsrail zolağın təxminən yarısına nəzarət edirdi.
+
+2026-cı ilin iyul ayına qədər isə İsrail ordusunun nəzarət etdiyi ərazi genişləndi. Məlumata görə, bu dövrdə İsrailin nəzarəti altında olan ərazi zolağın təxminən 70 faizini təşkil edirdi.
+
+## İnsan itkiləri
+
+Fələstin Səhiyyə Nazirliyinin məlumatına görə, atəşkəs imzalandığı vaxtdan bəri İsrail hücumları nəticəsində Qəzzada ən azı 1 059 nəfər həlak olub. Nazirlik həmçinin 3 429 nəfərin yaralandığını bildirib.
+
+Bu itki məlumatları atəşkəs rejiminin başladığı vaxtdan sonrakı dövrü əhatə edir. İsrailin nəzarət etdiyi ərazinin təxminən yarıdan 70 faizə qədər genişlənməsi ilə yanaşı açıqlanan bu rəqəmlər atəşkəsdən sonrakı vəziyyətin mürəkkəb xarakterini bir daha ortaya qoyur.`,
+  },
+  'en-hamas-dissolve-gaza-government': {
+    title: 'Hamas Says It Will Dissolve Its Government in Gaza Strip',
+    date: '2026-07-06',
+    category: 'World',
+    locale: 'en',
+    content: `Hamas announced on July 6 that it will dissolve its Gaza government and is ready to transfer governance to a Palestinian technocratic committee under the ceasefire agreement, though its statement made no mention of disarmament.
+
+## The announcement
+
+Hamas said it would hand over administration of Gaza to a technocratic committee as provided for in the ceasefire deal. The statement addressed governance but did not reference the group laying down its weapons, leaving the question of disarmament unresolved. The move signaled a step toward the eventual transfer of power set out under the ceasefire. Under the arrangement described by Hamas, a Palestinian technocratic committee would take over the day-to-day running of Gaza from the group.
+
+## Shifting control on the ground
+
+The ceasefire, under a deal signed October 11, began with Israel controlling roughly half of Gaza. By July 2026, Israel's military controlled nearly 70 percent of the territory. The change marked a significant expansion of the area under Israeli control in the months since the truce took effect, even as the parties discussed a handover of governance.
+
+## Casualties since the truce
+
+The Palestinian Ministry of Health reported at least 1,059 people killed and 3,429 injured in Gaza by Israeli attacks since the ceasefire was signed. The figures pointed to continued violence in the period after the deal. Hamas's announcement, coming nine months into the ceasefire, framed the group's exit from day-to-day governance without settling the outstanding question of its weapons.`,
+  },
+  'tr-hamas-gazze-hukumeti-fesih': {
+    title: 'Hamas Gazze Hükümetini Feshedeceğini Açıkladı, İsrail Kontrolü Arttı',
+    date: '2026-07-06',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Filistinli Hamas hareketi, 6 Temmuz'da Gazze'deki hükümetini feshedeceğini ve ateşkes anlaşması çerçevesinde yönetimi bir Filistinli teknokrat komiteye devretmeye hazır olduğunu açıkladı. Hareketin açıklamasında silahsızlanmaya ilişkin herhangi bir ifadeye yer verilmedi. Açıklama, ateşkes anlaşması kapsamında öngörülen yönetim devrine ilişkin önemli bir adım oldu.
+
+## Yönetimin devri
+
+Hamas'ın açıklamasına göre, Gazze'nin yönetimi ateşkes anlaşması kapsamında teknokratlardan oluşan bir Filistinli komiteye bırakılacak. Bu adım, bölgedeki idari yapının yeniden düzenlenmesine yönelik bir gelişme olarak öne çıktı. Açıklamada silah bırakma konusuna değinilmemesi ise dikkat çekti. Hareket, yönetimi teknokrat komiteye devretmeye hazır olduğunu bildirdi.
+
+## İsrail'in kontrolü
+
+11 Ekim'de imzalanan ateşkes, başlangıçta İsrail'in Gazze'nin yaklaşık yarısını kontrol etmesiyle yürürlüğe girmişti. Temmuz 2026 itibarıyla İsrail ordusunun bölgenin neredeyse yüzde 70'ini kontrol ettiği bildirildi. Bu oran, ateşkesin başladığı andan bu yana kayda değer bir değişimi ortaya koydu. Ateşkesin imzalanmasının üzerinden dokuz ay geçti.
+
+## Kayıp bilançosu
+
+Filistin Sağlık Bakanlığı, ateşkesin imzalanmasından bu yana Gazze'de İsrail saldırılarında en az bin 59 kişinin hayatını kaybettiğini ve 3 bin 429 kişinin yaralandığını bildirdi. Bu rakamlar, ateşkes döneminde bölgede yaşananların boyutunu gösterdi. Bakanlığın açıkladığı veriler, ateşkes sürecinin ardından bölgedeki durumun ağırlığını ortaya koydu.`,
+  },
+  'ru-hamas-dissolves-gaza-government': {
+    title: 'ХАМАС распустит правительство Газы: Израиль контролирует почти 70%',
+    date: '2026-07-06',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Движение ХАМАС объявило 6 июля 2026 года, что распустит своё правительство в секторе Газа. Движение заявило о готовности передать управление палестинскому комитету технократов в рамках соглашения о прекращении огня. При этом в заявлении не упоминался вопрос разоружения.
+
+## Условия перемирия
+
+Соглашение о прекращении огня было подписано 11 октября. На момент подписания Израиль контролировал примерно половину сектора Газа. К июлю 2026 года, спустя девять месяцев после начала перемирия, под контролем израильских военных находилось уже почти 70% территории сектора.
+
+## Передача власти
+
+ХАМАС заявил о готовности передать управление сектором палестинскому технократическому комитету. Однако в заявлении движения не говорилось о сдаче оружия. Вопрос разоружения остаётся одним из ключевых нерешённых пунктов на пути к дальнейшему урегулированию в регионе.
+
+## Жертвы после перемирия
+
+По данным палестинского министерства здравоохранения, с момента подписания соглашения о прекращении огня в результате израильских атак в Газе погибли не менее 1059 человек. Ещё 3429 человек получили ранения. Эти цифры отражают ситуацию в секторе спустя девять месяцев после того, как перемирие вступило в силу. Ситуация в секторе Газа остаётся одной из наиболее острых тем международной повестки. Заявление ХАМАС о роспуске правительства и готовности передать управление комитету технократов обозначило возможный шаг в политическом урегулировании, тогда как вопросы разоружения и уровня контроля над территорией пока остаются нерешёнными.`,
+  },
+
+  // --- Topic 8: Deadly heatwave and wildfires in Europe ---
+  'avropa-istilik-dalgasi-mese-yanginlari': {
+    title: 'Avropada istilik dalğası və meşə yanğınları: minlərlə insan təxliyə',
+    date: '2026-07-06',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Cənubi və qərbi Avropanı bürüyən güclü istilər və meşə yanğınları bölgədə ciddi fəsadlara səbəb oldu. Yüksək təzyiqli "istilik günbəzi" Fransa, cənubi İngiltərə və İberiya yarımadasında temperaturu 40 dərəcə Selsiyə (104 Farenheyt) yaxınlaşdırdı. İstilik dalğası eyni vaxtda bir neçə ölkəni əhatə etdi.
+
+## Fransada minlərlə insan təxliyə edildi
+
+Fransanın cənub-qərbindəki Pireney-Oryental bölgəsində baş verən meşə yanğını səbəbindən təxminən 10 000 nəfər təxliyə edildi. Rəsmi məlumata görə, yanğın təxminən 46 kvadratkilometr ərazini əhatə etdi.
+
+Bu təxliyə istilik dalğası ilə əlaqədar bölgədə görülən ən genişmiqyaslı tədbirlərdən biri oldu. Yanğının qarşısının alınması üçün əraziyə qüvvələr cəlb olundu.
+
+## İspaniyada yanğınlar davam etdi
+
+İspaniyanın şimal-şərqindəki Jirona bölgəsində yanğın 3 iyul, cümə günündən bəri davam edirdi. Bu müddət ərzində alov geniş əraziyə yayıldı.
+
+Yanğın nəticəsində təxminən 2 200 hektar ərazi məhv oldu. Beləliklə, İspaniya da istilik və yanğınlardan ciddi zərər çəkən ölkələr sırasında yer aldı.
+
+## Avropanın reaksiyası
+
+Avropa İttifaqı yanğınlarla mübarizə üçün rekord sayda yanğınsöndürən qüvvə səfərbər etdi. Bundan əlavə, mübarizəyə 22 yanğınsöndürən təyyarə cəlb olundu.
+
+Bu tədbirlər yanğınların qarşısını almaq və vəziyyəti nəzarətdə saxlamaq məqsədi daşıyırdı. İstilik dalğası və yanğınlar Fransa və İspaniya ilə yanaşı Yunanıstan və Portuqaliyaya da təsir göstərdi.
+
+Fransada təxliyə edilən təxminən 10 000 nəfər və İspaniyada məhv olan təxminən 2 200 hektar ərazi istilik dalğasının bölgəyə vurduğu ziyanın miqyasını göstərdi.`,
+  },
+  'en-europe-heatwave-wildfires-evacuate': {
+    title: 'Heatwave and Wildfires Sweep Europe; 10,000 Evacuated in France',
+    date: '2026-07-06',
+    category: 'World',
+    locale: 'en',
+    content: `A deadly heatwave drove wildfires across southern and western Europe in early July, with about 10,000 people evacuated from a fire in southwest France as temperatures approached 40 degrees Celsius.
+
+## A heat dome over the continent
+
+A high-pressure heat dome pushed temperatures toward 40 degrees Celsius, or 104 degrees Fahrenheit, across France, southern England and the Iberian Peninsula. The extreme heat set the stage for fast-moving fires in several countries as dry conditions spread. The heat stretched over a broad area from the Iberian Peninsula to southern England.
+
+## Fires in France and Spain
+
+About 10,000 people were evacuated because of a wildfire in the Pyrenees-Orientales region of southwest France, where the fire burned roughly 46 square kilometers. In the Girona region of northeastern Spain, nearly 2,200 hectares were destroyed by a fire that had been burning since Friday, July 3. The two fires were among the most damaging of the outbreak across the region. The Pyrenees-Orientales fire in southwest France and the Girona fire in northeastern Spain accounted for the largest evacuations and burned areas reported during the outbreak.
+
+## A large-scale response
+
+The European Union deployed a record number of firefighters, along with 22 firefighting aircraft, to battle the blazes. The response stretched across multiple countries as crews worked to contain fires fueled by the heat and dry conditions. The scale of the deployment, described as a record, reflected the number of fronts on which crews were working during the heatwave.`,
+  },
+  'tr-avrupa-sicak-hava-yanginlar': {
+    title: 'Avrupa\'da Sıcak Hava Dalgası ve Yangınlar: Fransa\'da 10 Bin Tahliye',
+    date: '2026-07-06',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Güney ve batı Avrupa, 3-6 Temmuz 2026 tarihlerinde ölümcül bir sıcak hava dalgası ve orman yangınlarıyla karşı karşıya kaldı. Yüksek basınçlı bir sıcak hava kütlesi, geniş bir coğrafyada sıcaklıkları yukarı çekti ve yangın riskini artırdı. Sıcak hava dalgası, kıtanın güney ve batı kesimlerini birlikte etkiledi.
+
+## Rekor sıcaklıklar
+
+Yüksek basınç kaynaklı sıcak hava kütlesi; Fransa, güney İngiltere ve İber Yarımadası genelinde sıcaklıkları 40 santigrat dereceye (104 Fahrenheit) doğru itti. Bu koşullar, bölgede yangınların yayılması için elverişli bir ortam oluşturdu. Yüksek basınçlı hava kütlesi, geniş bir alanda etkisini gösterdi.
+
+## Fransa'da tahliye
+
+Fransa'nın güneybatısındaki Pyrénées-Orientales bölgesinde çıkan orman yangını nedeniyle yaklaşık 10 bin kişi tahliye edildi. Yangın, yaklaşık 46 kilometrekarelik bir alanı kül etti. Bölgede müdahale çalışmaları yoğun biçimde sürdürüldü. Tahliye edilen yaklaşık 10 bin kişi, yangının büyüklüğünü ortaya koydu.
+
+## İspanya'daki yangınlar
+
+İspanya'nın kuzeydoğusundaki Girona bölgesinde 3 Temmuz Cuma gününden bu yana süren bir yangında yaklaşık 2 bin 200 hektarlık alan tahrip oldu. Avrupa Birliği, yangınlarla mücadele için rekor sayıda itfaiyeci ile birlikte 22 yangın söndürme uçağı görevlendirdi. Yangınlar Yunanistan ve Portekiz'i de etkiledi. AB'nin görevlendirdiği ekipler, çok sayıda cephede mücadele yürüttü. Girona'da 3 Temmuz'dan bu yana süren yangında tahrip olan yaklaşık 2 bin 200 hektarlık alan, yangınların kapsamını gösterdi. Fransa, İspanya, Yunanistan ve Portekiz, sıcak hava dalgası ve yangınlardan etkilenen ülkeler arasında yer aldı.`,
+  },
+  'ru-europe-heatwave-wildfires': {
+    title: 'Аномальная жара и пожары в Европе: во Франции эвакуация',
+    date: '2026-07-06',
+    category: 'Мир',
+    locale: 'ru',
+    content: `Юг и запад Европы охватили сильная жара и лесные пожары. Аномальная погода держалась с 3 по 6 июля 2026 года и затронула сразу несколько стран, включая популярные среди туристов направления.
+
+## Рекордная жара
+
+Область высокого давления сформировала «тепловой купол», из-за которого температура во Франции, на юге Англии и на Пиренейском полуострове приближалась к 40 градусам (104 градуса по Фаренгейту). Такие погодные условия способствовали быстрому возникновению и распространению лесных пожаров.
+
+## Пожары во Франции
+
+Около 10 000 человек были эвакуированы из-за лесного пожара в департаменте Восточные Пиренеи на юго-западе Франции. Огонь охватил площадь около 46 квадратных километров. Этот пожар стал одним из наиболее масштабных за время нынешней волны жары.
+
+## Пожары в Испании и меры реагирования
+
+В регионе Жирона на северо-востоке Испании огонь, который распространялся с пятницы 3 июля, уничтожил почти 2200 гектаров. Пожары затронули также Грецию и Португалию. Для борьбы со стихией Европейский союз задействовал рекордное число пожарных, а также 22 пожарных самолёта.
+
+## Масштаб бедствия
+
+Волна жары и связанные с ней пожары затронули юг и запад Европы, включая Францию, Испанию, Грецию и Португалию, а также юг Англии. Высокие температуры и сухая погода создали условия для быстрого распространения огня и потребовали масштабной эвакуации населения. Пострадали в том числе популярные среди туристов регионы, что придало событиям дополнительное значение в разгар летнего сезона отпусков и поездок по странам Южной и Западной Европы.`,
+  },
+
+  // ========== 2026-07-01 ==========
+
+  // --- Topic 1: Aliyev hosts EU Commission President von der Leyen in Baku ---
+  'aliyev-von-der-leyen-baku-gorus': {
+    title: 'İlham Əliyev Bakıda fon der Lyayeni qəbul etdi, Aİ tərəfdaşlığı',
+    date: '2026-07-01',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `Azərbaycan Prezidenti İlham Əliyev 1 iyul tarixində Bakıda Avropa Komissiyasının Prezidenti Ursula fon der Lyayeni qəbul etdi. Görüş iki mərhələdə keçirildi: tərəflər əvvəlcə təkbətək, ardınca isə nümayəndə heyətlərinin iştirakı ilə genişlənmiş formatda danışıqlar apardılar. Bu görüş Azərbaycanın Avropa İttifaqı ilə münasibətlərində mühüm mərhələ kimi diqqət çəkdi.
+
+## Strateji tərəfdaşlıq vurğulandı
+
+Ursula fon der Lyayen görüş çərçivəsində Azərbaycanı Avropa İttifaqının "strateji tərəfdaşı" kimi səciyyələndirdi. Avropa Komissiyasının rəhbəri həmçinin Prezident İlham Əliyevin regional sülh gündəliyinin "təşəbbüskarı" kimi oynadığı rolu yüksək qiymətləndirdi.
+
+Avropa Komissiyasının açıqlamasında İlham Əliyevin regional sülh gündəliyindəki "liderliyi" xüsusi vurğulandı. Bu qiymətləndirmələr Bakı ilə Brüssel arasında siyasi dialoqun səviyyəsini əks etdirdi.
+
+## Yeni saziş istiqamətində razılıq
+
+Danışıqlarda hər iki tərəf Azərbaycan ilə Avropa İttifaqı arasında yeni hərtərəfli saziş istiqamətində müzakirələrin bərpası barədə razılığa gəldi. Bu, iki tərəf arasında əməkdaşlığın gələcək inkişafı üçün mühüm addım kimi qeyd olundu.
+
+## Regional sülh və ticarət
+
+Görüşdə tərəflər Azərbaycan və Ermənistan arasında münasibətlərin normallaşmasını alqışladılar. Onlar iki ölkə arasında ikitərəfli ticarətin başlanmasını da müsbət qiymətləndirdilər.
+
+Bundan əlavə, tərəflər üçüncü ölkələrdən Ermənistana ixrac olunan malların Azərbaycan ərazisindən tranzitini dəstəklədiklərini bildirdilər. Bu addımlar regionda iqtisadi əlaqələrin genişlənməsi baxımından əhəmiyyət daşıyır.`,
+  },
+  'en-aliyev-von-der-leyen-baku-eu': {
+    title: 'Aliyev Hosts von der Leyen in Baku; EU Calls Azerbaijan Partner',
+    date: '2026-07-01',
+    category: 'Politics',
+    locale: 'en',
+    content: `Azerbaijani President Ilham Aliyev hosted European Commission President Ursula von der Leyen in Baku on July 1, with the EU chief describing Azerbaijan as a strategic partner and praising the president's role on the regional peace agenda.
+
+## Meetings in Baku
+
+Aliyev first held a one-on-one meeting with von der Leyen, after which the two leaders led an expanded session joined by their delegations. Von der Leyen characterized Azerbaijan as a "strategic partner of the European Union" and highlighted Aliyev's "leadership" on the regional peace agenda, describing the president as an initiator of that agenda. The talks brought together the Azerbaijani head of state and the European Union's most senior official for a wide-ranging exchange on relations between Baku and Brussels.
+
+## Peace agenda and trade
+
+The two sides welcomed the normalization of relations between Azerbaijan and Armenia, the launch of bilateral trade, and the transit through Azerbaijani territory of goods exported to Armenia from third countries. Each of those points touched on the practical steps that have followed the shift toward normalization in the South Caucasus. The discussions placed the Baku-Brussels relationship within the context of wider regional stability, where the normalization track with Armenia has become the central issue.
+
+## Toward a new agreement
+
+Both sides agreed on the resumption of discussions toward a new comprehensive Azerbaijan-EU agreement. The meeting spanned trade, transit and the normalization process with Armenia, signaling renewed momentum in ties between Baku and Brussels. By reopening talks on a comprehensive agreement, the two sides set out to broaden a relationship that von der Leyen framed in terms of strategic partnership during her visit to the Azerbaijani capital.`,
+  },
+  'tr-aliyev-von-der-leyen-baku': {
+    title: 'Aliyev, Bakü\'de von der Leyen\'i Ağırladı: AB\'den Stratejik Ortak Vurgusu',
+    date: '2026-07-01',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `Azerbaycan Cumhurbaşkanı İlham Aliyev, 1 Temmuz'da Bakü'de Avrupa Komisyonu Başkanı Ursula von der Leyen'i ağırladı. İki lider görüşmeye önce baş başa formatta başladı, ardından heyetlerin katılımıyla genişletilmiş bir toplantı gerçekleştirdi. Bakü'deki temaslarda Azerbaycan-Avrupa Birliği ilişkilerinin geleceği ve bölgesel gündem ele alındı.
+
+## Stratejik ortaklık vurgusu
+
+Von der Leyen, görüşmede Azerbaycan'ı Avrupa Birliği'nin "stratejik ortağı" olarak nitelendirdi. Avrupa Komisyonu'nun resmi açıklamasına göre, Komisyon Başkanı ayrıca Cumhurbaşkanı Aliyev'in bölgesel barış gündemindeki "liderliğini" öne çıkardı ve onu barış gündeminin "başlatıcısı" olarak tanımladı. Bu ifadeler, iki taraf arasındaki üst düzey diyaloğun havasını yansıttı.
+
+## Ermenistan normalleşmesi
+
+İki taraf, Azerbaycan ile Ermenistan arasındaki ilişkilerin normalleşmesini memnuniyetle karşıladı. Görüşmede ikili ticaretin başlaması ve üçüncü ülkelerden Ermenistan'a ihraç edilen malların Azerbaycan toprakları üzerinden transit geçişi de olumlu gelişmeler arasında sayıldı. Bu adımlar, bölgedeki ekonomik bağlantısallık açısından öne çıktı.
+
+## Yeni kapsamlı anlaşma
+
+Taraflar, yeni ve kapsamlı bir Azerbaycan-AB anlaşmasına yönelik müzakerelerin yeniden başlatılması konusunda mutabık kaldı. Bakü'de düzenlenen üst düzey görüşme, Azerbaycan ile Avrupa Birliği arasındaki ilişkilerin yeni bir aşamaya taşınması yönündeki iradeyi ortaya koydu. Cumhurbaşkanı Aliyev ile Avrupa Komisyonu Başkanı arasındaki temaslar, iki taraf açısından da öncelikli gündem maddesi oldu.`,
+  },
+  'ru-aliyev-von-der-leyen-baku': {
+    title: 'Алиев принял фон дер Ляйен в Баку: ЕС назвал страну партнёром',
+    date: '2026-07-01',
+    category: 'Политика',
+    locale: 'ru',
+    content: `Президент Азербайджана Ильхам Алиев провёл в Баку переговоры с председателем Европейской комиссии Урсулой фон дер Ляйен. Встреча состоялась 1 июля 2026 года: сначала лидеры общались в формате один на один, а затем переговоры продолжились в расширенном составе с участием делегаций.
+
+## Стратегическое партнёрство
+
+Урсула фон дер Ляйен назвала Азербайджан «стратегическим партнёром Европейского союза». Она высоко оценила роль Ильхама Алиева как «инициатора мирной повестки» в регионе и особо отметила его лидерство в продвижении мира. Эти оценки прозвучали в официальном заявлении Европейской комиссии по итогам визита в Баку.
+
+## Нормализация отношений с Арменией
+
+Стороны приветствовали нормализацию отношений между Азербайджаном и Арменией. Отдельно были отмечены запуск двусторонней торговли, а также транзит через территорию Азербайджана товаров, которые экспортируются в Армению из третьих стран. Эти направления рассматриваются в Баку и Брюсселе как основа для дальнейшего сближения между сторонами и укрепления региональной стабильности.
+
+## Новое всеобъемлющее соглашение
+
+Азербайджан и Европейский союз договорились возобновить обсуждения в направлении нового всеобъемлющего соглашения. Возобновление переговоров открывает путь к более широкому политическому и экономическому взаимодействию между сторонами. Встреча президента Ильхама Алиева и Урсулы фон дер Ляйен на высшем уровне подтвердила взаимный интерес к укреплению долгосрочных связей между Баку и Брюсселем. Для Азербайджана переговоры с председателем Европейской комиссии стали одним из центральных событий внешнеполитической повестки начала июля, а прозвучавшие в Баку оценки обозначили высокий уровень отношений между сторонами.`,
+  },
+
+  // --- Topic 9: US-EU trade deal takes effect ---
+  'abs-ai-ticaret-sazisi-usmca': {
+    title: 'ABŞ-Aİ ticarət sazişi qüvvəyə mindi, USMCA yenilənmədi',
+    date: '2026-07-01',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `2026-cı il iyulun 1-də ABŞ ilə Avropa İttifaqı arasında ticarət sazişi qüvvəyə mindi. Sazişə əsasən, əksər Aİ mallarına 15 faizlik hərtərəfli tarif tavanı tətbiq olunur. Bu razılaşma tərəflər arasında ticarət münasibətlərində yeni mərhələ kimi qiymətləndirildi.
+
+## Aİ-ABŞ ticarət sazişi
+
+İyulun 1-də qüvvəyə minən saziş əksər Avropa İttifaqı mallarına 15 faizlik tarif həddi müəyyən etdi. Bu tavan həmin mallara tətbiq olunan yekun tarifi əhatə edir və hərtərəfli xarakter daşıyır.
+
+15 faizlik tavan sazişin əsas parametrlərindən biridir. O, əksər Aİ mallarının ABŞ bazarına daxil olması üçün tətbiq olunan tarif səviyyəsini müəyyənləşdirir.
+
+## USMCA yenilənmədi
+
+Tramp administrasiyası USMCA sazişini birgə baxış zamanı yeniləməkdən imtina etdi. Bununla belə, saziş qüvvədə qalır və onun çərçivəsindəki 0 faizlik güzəşt dəyişməz olaraq saxlanılır.
+
+Bununla yanaşı, saziş artıq illik baxış rejiminə keçir. Administrasiya gələcəkdə təkmilləşdirilmiş razılaşma əldə etməyi hədəflədiyini bildirib. Beləliklə, USMCA-nın ləğv edilməsi baş vermədi, lakin onun baxış qaydası dəyişdi.
+
+## Qarşıdakı tarixlər
+
+Bir sıra tarif mərhələləri də gündəmdə saxlanılır. Maddə 122 üzrə 10 faizlik qlobal tarifin müddətinin iyulun 24-də başa çatması nəzərdə tutulub.
+
+Maddə 301 üzrə araşdırmanın tamamlanması üçün son tarix isə iyulun 20-i kimi müəyyən edilib. Bu tarixlər hələ qüvvəyə minməyib və yalnız planlaşdırılan mərhələlər kimi qeyd olunub.
+
+İyulun 1-də qüvvəyə minən Aİ-ABŞ ticarət sazişi və USMCA ilə bağlı qərar eyni dövrə təsadüf etdi. Bu addımlar 2026-cı ilin iyul ayında qlobal ticarət gündəliyində diqqət mərkəzində oldu.`,
+  },
+  'en-us-eu-trade-deal-usmca-review': {
+    title: 'US-EU Trade Deal Takes Effect; US Declines to Renew USMCA',
+    date: '2026-07-01',
+    category: 'Business',
+    locale: 'en',
+    content: `The EU-US trade deal took effect on July 1 with a 15 percent all-inclusive tariff ceiling on most European goods, as the Trump administration declined to renew the USMCA agreement at its joint review.
+
+## New tariff ceiling
+
+Under the deal that took effect July 1, most goods from the European Union face a 15 percent all-inclusive tariff ceiling. The agreement set a defined upper limit on tariffs for the bulk of EU exports to the United States, giving both sides a fixed reference point for trade in most categories of goods.
+
+## USMCA moves to annual reviews
+
+The Trump administration declined to renew USMCA at its joint review. The agreement remains in force, with its zero percent preference unchanged, but moves to annual reviews as the administration seeks an improved deal. The shift means the North American pact will now be revisited each year rather than renewed on its previous schedule. Instead of a full renewal, the agreement will come up for review annually while the administration presses for the changes it is seeking.
+
+## Tariff milestones ahead
+
+Further tariff steps were scheduled but not yet in effect as of the reporting date. A Section 122 10 percent global tariff was set to expire July 24, and a Section 301 investigation faced a completion deadline of July 20. Both dates fell later in the month, leaving their outcomes open at the time of reporting. The July 20 completion deadline and the July 24 expiration marked the next scheduled points in the tariff timeline that followed the July 1 changes.`,
+  },
+  'tr-abd-ab-ticaret-anlasmasi-usmca': {
+    title: 'ABD-AB Ticaret Anlaşması Yürürlükte: Yüzde 15 Gümrük Tavanı Geldi',
+    date: '2026-07-01',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `1 Temmuz 2026'da Avrupa Birliği ile Amerika Birleşik Devletleri arasındaki ticaret anlaşması yürürlüğe girdi. Anlaşma, AB menşeli malların büyük bölümü için yüzde 15'lik her şey dâhil bir gümrük tarifesi tavanı öngörüyor. Yürürlüğe giren düzenleme, iki tarafın ticari ilişkilerinde yeni bir dönemin başlangıcı oldu.
+
+## Yüzde 15 tavanı
+
+1 Temmuz'da yürürlüğe giren ABD-AB ticaret anlaşması, AB'den ithal edilen malların çoğu için yüzde 15'lik bir üst sınır getirdi. Bu düzenleme, iki ekonomi arasındaki ticari ilişkilerde yeni bir çerçeve oluşturdu. Her şey dâhil olarak belirlenen tavan, AB menşeli malların büyük bölümünü kapsıyor.
+
+## USMCA yenilenmedi
+
+Trump yönetimi, ortak gözden geçirme sürecinde Kuzey Amerika Serbest Ticaret Anlaşması USMCA'yı yenilemedi. Anlaşma yürürlükte kalmaya devam ediyor ve yüzde 0'lık tercihli tarife değişmedi; ancak süreç yıllık gözden geçirmelere taşındı. Yönetim, geliştirilmiş bir anlaşma arayışında. Böylece USMCA, yürürlükte kalmakla birlikte yıllık gözden geçirme esasına bağlandı.
+
+## Yaklaşan tarife eşikleri
+
+Araştırma tarihi itibarıyla henüz yürürlüğe girmeyen ve yalnızca planlanan olarak bildirilen bazı tarife eşikleri de gündemde. Bölüm 122 kapsamındaki yüzde 10'luk küresel tarifenin 24 Temmuz'da sona ermesi öngörülüyor. Bölüm 301 soruşturmasının tamamlanma son tarihi ise 20 Temmuz olarak belirlendi. Bu eşikler, önümüzdeki dönemin ticaret gündemini oluşturuyor. 1 Temmuz'da yürürlüğe giren ABD-AB anlaşması, yıllık gözden geçirmeye bağlanan USMCA ve planlanan tarife eşikleri, ABD'nin ticaret politikasındaki gelişmelerin farklı başlıklarını ortaya koydu.`,
+  },
+  'ru-us-eu-trade-deal': {
+    title: 'Торговая сделка США и ЕС вступила в силу: пошлина 15%',
+    date: '2026-07-01',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `1 июля 2026 года вступило в силу торговое соглашение между Соединёнными Штатами и Европейским союзом. Документ устанавливает предельную ставку пошлины для большинства товаров, ввозимых из Европейского союза в США.
+
+## Новые правила торговли
+
+Согласно соглашению, для большинства европейских товаров вводится всеобъемлющий потолок пошлины в размере 15%. Эта договорённость определяет новые условия торговли между двумя крупнейшими экономиками мира и вступила в силу с началом июля.
+
+## Соглашение США, Мексики и Канады
+
+Администрация президента США Дональда Трампа отказалась продлевать торговое соглашение между США, Мексикой и Канадой в ходе его совместного пересмотра. При этом соглашение остаётся в силе: нулевой преференциальный режим не изменился, однако документ переходит к ежегодным пересмотрам. Администрация добивается заключения улучшенной сделки.
+
+## Предстоящие сроки
+
+На момент рассмотрения были запланированы дальнейшие тарифные этапы. Действие 10-процентной глобальной пошлины по разделу 122 должно истечь 24 июля. Срок завершения расследования по разделу 301 назначен на 20 июля. Эти даты определяют ближайшую повестку в торговой политике Вашингтона.
+
+## Новые рамки торговли
+
+Торговое соглашение между США и Европейским союзом, а также решения по соглашению с Мексикой и Канадой отражают изменения в подходе Вашингтона к международной торговле. Установление 15-процентного потолка пошлин для большинства европейских товаров и переход соглашения с североамериканскими партнёрами к ежегодным пересмотрам определяют новые рамки торговых отношений США с ключевыми партнёрами.`,
+  },
+
   // ========== 2026-05-28 ==========
 
   // --- Topic 1: Aliyev visits liberated Garabagh on Independence Day; Putin congratulates ---
@@ -10444,318 +11250,6 @@ Araştırmacılar bu teknolojinin mobil cihazlarda ve IoT sensörlerinde bulut b
 Исследователи считают, что технология может обеспечить работу ИИ на мобильных устройствах и IoT-датчиках без подключения к облаку. Microsoft также объявила об историческом вложении 10 миллиардов долларов в ИИ-инфраструктуру Японии.`,
   },
 
-  // --- 3. Hungary Election: Orban vs Tisza Party ---
-  'macaristan-seckileri-orban-tisza-partiyasi': {
-    title: 'Macarıstan Seçkiləri: Orbanın 16 İlinə Tisza Meydan Oxuyur',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'az',
-    content: `Macarıstanda 12 aprel 2026-cı il tarixində keçirilən parlament seçkiləri ölkənin gələcəyini müəyyən edə biləcək həlledici seçkiyə çevrilib. Viktor Orbanın 2010-cu ildən bəri hakimiyyətdə olan Fidesz partiyası ilk dəfə ciddi müxalifət təzyiqi ilə üzləşir.
-
-## Tisza Partiyası və Peter Maqyar
-
-Mərkəz-sağ Tisza Partiyası keçmiş Fidesz daxili insayder Peter Maqyar tərəfindən 2024-cü ildə yaradılıb. Partiya durğun iqtisadiyyat, yaşayış xərclərinin artması və korrupsiyadan narazı macarların dəstəyini qazanıb. Sorğular Tisza Partiyasının 58%-ə qədər dəstəklə parlamentdə üçdə iki çoxluq qazana biləcəyini göstərir.
-
-## Seçkinin Əhəmiyyəti
-
-Freedom House Macarıstanı Avropa İttifaqında "qismən azad" kimi dərəcələndirən yeganə üzv dövlət hesab edir. Seçki nəticəsi yalnız Macarıstanın deyil, bütün AB-nin siyasi mənzərəsini dəyişdirə bilər.
-
-## Narahatedici Siqnallar
-
-Ən dəqiq sorğu institutları Orban üçün narahatedici nəticələr göstərir. Bununla belə, bəzi sorğular hələ də Fidesz-in qabaqda olduğunu iddia edir ki, bu da nəticəni qeyri-müəyyən edir.`,
-  },
-  'en-hungary-election-orban-tisza-party-challenge': {
-    title: 'Hungary Votes: Orban Faces Strongest Challenge Yet',
-    date: '2026-04-12',
-    category: 'World',
-    locale: 'en',
-    content: `Hungary heads to the polls on April 12, 2026, in what could be the most consequential election in the country's recent history. Prime Minister Viktor Orban's Fidesz party, which has held power since 2010, faces its strongest opposition challenge yet from the centre-right Tisza Party.
-
-## The Tisza Party and Peter Magyar
-
-Founded in 2024 by former Fidesz insider Peter Magyar, the Tisza Party has struck a chord with Hungarians frustrated by a stagnating economy, a cost-of-living crisis, and persistent corruption. A Median survey shows Tisza support at 58%, with the pollster predicting a potential two-thirds parliamentary majority for the opposition.
-
-## What Is at Stake
-
-Hungary is the only EU member state ranked as "partly free" by Freedom House. The election outcome could reshape not just Hungary's domestic politics but the broader political landscape of the European Union. Orban has been a polarizing figure in European politics, often clashing with Brussels on issues from migration to rule of law.
-
-## Mixed Polling Signals
-
-While most polls show Tisza with a significant lead, some surveys by the 21st Century Institute place Fidesz ahead by five percentage points, creating uncertainty about the final outcome. Voter turnout will be a critical factor in determining the result.`,
-  },
-  'tr-macaristan-secimi-orban-tisza-partisi-meydan-okuyor': {
-    title: 'Macaristan Seçimleri: Orbana Tisza Meydan Okuyor',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `Macaristan 12 Nisan 2026'da ülkenin yakın tarihinin en kritik seçimlerinden biri için sandık başına gidiyor. Başbakan Viktor Orban'ın 2010'dan beri iktidarda olan Fidesz partisi, merkez-sağ Tisza Partisi'nden gelen en güçlü muhalefet meydan okumasıyla karşı karşıya.
-
-## Tisza Partisi ve Peter Magyar
-
-Eski bir Fidesz içeriden biri olan Peter Magyar tarafından 2024'te kurulan Tisza Partisi, durgun ekonomi, yaşam maliyetleri krizi ve yolsuzluktan bıkmış Macarların desteğini kazandı. Medián araştırmasına göre Tisza'nın desteği %58'e ulaşarak parlamentoda üçte iki çoğunluk kazanması öngörülüyor.
-
-## Seçimin Önemi
-
-Freedom House, Macaristan'ı AB'de "kısmen özgür" olarak derecelendiren tek üye devlet olarak tanımlıyor. Seçim sonucu yalnızca Macaristan'ın iç siyasetini değil, Avrupa Birliği'nin genel siyasi manzarasını da yeniden şekillendirebilir.
-
-## Karışık Anket Sinyalleri
-
-Çoğu anket Tisza'yı önde gösterse de, 21. Yüzyıl Enstitüsü'nün araştırması Fidesz'i beş puan farkla önde gösteriyor. Bu durum sonucu belirsiz kılıyor ve seçmen katılımı belirleyici faktör olacak.`,
-  },
-  'ru-vybory-v-vengrii-orban-partiya-tisza': {
-    title: 'Выборы в Венгрии: Орбан перед серьёзнейшим вызовом',
-    date: '2026-04-12',
-    category: 'Мир',
-    locale: 'ru',
-    content: `12 апреля 2026 года Венгрия голосует на парламентских выборах, которые могут стать самыми значимыми в новейшей истории страны. Партия «Фидес» премьер-министра Виктора Орбана, находящаяся у власти с 2010 года, столкнулась с сильнейшим оппозиционным вызовом со стороны правоцентристской партии «Тиса».
-
-## Партия «Тиса» и Петер Мадьяр
-
-Основанная в 2024 году бывшим инсайдером «Фидес» Петером Мадьяром, партия «Тиса» нашла отклик у венгров, недовольных стагнирующей экономикой, кризисом стоимости жизни и коррупцией. Опрос Medián показывает поддержку «Тисы» на уровне 58%, прогнозируя потенциальное конституционное большинство в парламенте.
-
-## Что стоит на кону
-
-Венгрия — единственное государство-член ЕС, классифицированное Freedom House как «частично свободное». Итоги выборов могут изменить не только внутреннюю политику Венгрии, но и политический ландшафт всего Европейского Союза.
-
-## Противоречивые опросы
-
-Большинство опросов показывают значительное преимущество «Тисы», однако некоторые исследования ставят «Фидес» впереди на пять процентных пунктов. Явка избирателей станет решающим фактором.`,
-  },
-
-  // --- 4. Iran-US Nuclear Talks Stall ---
-  'iran-abs-nukleer-danisiqlar-cikmaza-girdi': {
-    title: 'İran-ABŞ Nüvə Danışıqları Çıxmaza Girdi',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'az',
-    content: `ABŞ Vitse-prezidenti Cey Di Vans Vaşinqton və Tehranın yüksək səviyyəli nüvə danışıqlarının ikinci gününə daxil olduğunu açıqlayıb. "Pis xəbər odur ki, biz hələ razılığa gələ bilməmişik" — deyə Vans amerikalı jurnalistlərə bildirib.
-
-## Danışıqların Gedişatı
-
-Vans İranın ABŞ-ın şərtlərini qəbul etmədiyini bildirdi. Danışıqlar İslamabadda Pakistan vasitəçiliyi ilə davam edir. İranın nüvə proqramı ilə bağlı gərginlik son aylarda kəskin artıb və beynəlxalq ictimaiyyət diplomatik həllin mümkünlüyünü ciddi şəkildə müzakirə edir.
-
-## İranın Cavabı
-
-Danışıqların başlamasından bir neçə saat sonra İran ABŞ-ı şərtlərin pozulmasında ittiham etdi və tam çıxmaqla hədələdi. Tehran ittihamların dəqiq təfərrüatlarını açıqlamasa da, bu bəyanatlar dünya bazarlarını sarsıtdı.
-
-## Regional Kontekst
-
-Səudiyyə Ərəbistanı və Qatar Pakistana 5 milyard dollarlıq maliyyə yardımı təmin edəcək. Bu, İslamabadın iyun ayınadək xarici ödənişləri yerinə yetirməsinə imkan verəcək. Regional diplomatiya son dərəcə həssas bir mərhələdədir.`,
-  },
-  'en-iran-us-nuclear-talks-stall-second-day': {
-    title: 'Iran-US Nuclear Talks Stall on Second Day',
-    date: '2026-04-12',
-    category: 'World',
-    locale: 'en',
-    content: `US Vice President JD Vance announced that Washington and Tehran have not reached an agreement as high-stakes nuclear talks stretched into a second day. "The bad news is that we have not reached an agreement. They have chosen not to accept our terms," Vance told US journalists at a press briefing.
-
-## Negotiation Dynamics
-
-The talks are taking place in Islamabad with Pakistan serving as an intermediary. Tensions over Iran's nuclear program have escalated sharply in recent months, with the international community closely watching whether a diplomatic resolution is achievable. The stakes are enormous for regional stability and global energy markets.
-
-## Iran's Response
-
-Hours after the initial announcement, Iran accused the United States of violating the terms of a preliminary ceasefire and threatened a complete withdrawal from negotiations. Tehran did not specify the exact nature of the alleged violations, but the accusations sent shockwaves through global markets.
-
-## Regional Context
-
-Saudi Arabia and Qatar have pledged $5 billion in financial assistance to Pakistan, enabling Islamabad to manage external payments by June. The diplomatic landscape in the region remains extremely fragile, with any breakdown in talks having potential consequences far beyond bilateral relations.`,
-  },
-  'tr-iran-abd-nukleer-muzakereler-cikmaza-girdi': {
-    title: 'İran-ABD Nükleer Müzakereleri Çıkmaza Girdi',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `ABD Başkan Yardımcısı JD Vance, Washington ve Tahran arasındaki yüksek riskli nükleer müzakerelerin ikinci güne taşındığını açıkladı. "Kötü haber şu ki henüz bir anlaşmaya varamadık. Şartlarımızı kabul etmemeyi seçtiler" dedi Vance.
-
-## Müzakere Süreci
-
-Görüşmeler Pakistan'ın aracılığıyla İslamabad'da gerçekleşiyor. İran'ın nükleer programıyla ilgili gerilim son aylarda keskin biçimde tırmanmış olup, uluslararası toplum diplomatik bir çözümün mümkün olup olmadığını yakından takip ediyor.
-
-## İran'ın Tepkisi
-
-İlk açıklamadan birkaç saat sonra İran, ABD'yi ön ateşkes koşullarını ihlal etmekle suçladı ve müzakerelerden tamamen çekilmekle tehdit etti. Tahran iddiaların ayrıntılarını belirtmedi ancak açıklamalar küresel piyasalarda dalgalanmaya neden oldu.
-
-## Bölgesel Bağlam
-
-Suudi Arabistan ve Katar, Pakistan'a 5 milyar dolarlık mali yardım sağlayacak. Bu, İslamabad'ın Haziran ayına kadar dış ödemelerini yönetmesine olanak tanıyacak. Bölgedeki diplomatik denge son derece hassas bir noktada.`,
-  },
-  'ru-peregovory-iran-ssha-zashli-v-tupik': {
-    title: 'Переговоры Иран-США по ядерной программе зашли в тупик',
-    date: '2026-04-12',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Вице-президент США Джей Ди Вэнс объявил, что Вашингтон и Тегеран не достигли соглашения на фоне продолжения переговоров по ядерной программе второй день подряд. «Плохая новость в том, что мы пока не достигли соглашения. Они решили не принимать наши условия», — заявил Вэнс журналистам.
-
-## Ход переговоров
-
-Переговоры проходят в Исламабаде при посредничестве Пакистана. Напряжённость вокруг ядерной программы Ирана резко возросла в последние месяцы. Международное сообщество внимательно следит за возможностью дипломатического решения.
-
-## Реакция Ирана
-
-Через несколько часов после первоначального заявления Иран обвинил США в нарушении условий предварительного перемирия и пригрозил полным выходом из переговоров. Тегеран не уточнил суть предполагаемых нарушений, но обвинения вызвали потрясения на мировых рынках.
-
-## Региональный контекст
-
-Саудовская Аравия и Катар выделят Пакистану финансовую помощь в размере 5 миллиардов долларов. Дипломатический ландшафт региона остаётся крайне хрупким.`,
-  },
-
-  // --- 5. US Consumer Sentiment Plummets to Record Low ---
-  'abs-istehlakci-etibari-rekord-asagi-dusdu': {
-    title: 'ABŞ İstehlakçı Etibarı Rekord Aşağı Düşdü',
-    date: '2026-04-12',
-    category: 'İqtisadiyyat',
-    locale: 'az',
-    content: `Miçiqan Universitetinin İstehlakçı Sorğularına görə, ABŞ-da istehlakçı əhval-ruhiyyəsi aprel ayında 11% düşərək rekord aşağı səviyyəyə çatıb. Göstərici keçən ilin eyni dövrü ilə müqayisədə 9% aşağıdır. Biznes əhval-ruhiyyəsi isə 20% azalıb.
-
-## Enerji və Ərzaq Qiymətləri
-
-İstehlakçı etibarının düşməsinin əsas səbəblərindən biri enerji və ərzaq qiymətlərinin davam edən artımıdır. Orta Şərq münaqişəsinin enerji bazarlarına təsiri ev təsərrüfatlarının büdcəsini sıxır. İstehlakçılar gələcək haqqında getdikcə daha pessimist olurlar.
-
-## ÜDM Artımının Yavaşlaması
-
-Real ümumi daxili məhsul 2025-ci ilin dördüncü rübündə cəmi 0.5% illik tempə düşüb. Beynəlxalq ticarət kəsiri fevralda 57.3 milyard dollara yüksəlib. Şəxsi gəlir isə 18.2 milyard dollar azalıb.
-
-## Analitiklərin Fikirləri
-
-Federal Ehtiyat Sisteminin vitse-sədri Cefferson əmək bazarı və iqtisadi perspektivlər haqqında aprelin əvvəlində çıxış edib. Ekspertlər istehlakçı xərclərinin yavaşlamasının iqtisadi artımı daha da yavaşlada biləcəyini xəbərdar edir.`,
-  },
-  'en-us-consumer-sentiment-record-low-april': {
-    title: 'US Consumer Sentiment Falls to Record Low in April',
-    date: '2026-04-12',
-    category: 'Economy',
-    locale: 'en',
-    content: `US consumer sentiment has plunged 11% to a record low in April 2026, according to the University of Michigan Surveys of Consumers. The index is also down 9% compared with a year ago. Business sentiment fell even more sharply, dropping 20% this month and running 6% lower than April 2025.
-
-## Energy and Food Prices
-
-A primary driver of the sentiment collapse is the ongoing rise in energy and food prices. The Middle East conflict's impact on energy markets continues to squeeze household budgets. Consumers are becoming increasingly pessimistic about their financial outlook, with spending patterns shifting toward essentials.
-
-## Slowing GDP Growth
-
-Real gross domestic product grew at just 0.5% annual rate in Q4 2025. The US monthly international trade deficit widened to $57.3 billion in February, up from $54.7 billion in January. Personal income decreased by $18.2 billion in February, while personal consumption expenditures rose by $103.2 billion, suggesting consumers are dipping into savings.
-
-## Expert Analysis
-
-Federal Reserve Vice Chair Jefferson addressed the labor market and economic outlook in an early April speech. Analysts warn that weakening consumer spending could further decelerate economic growth, potentially pushing the economy toward a technical recession if trends continue.`,
-  },
-  'tr-abd-tuketici-guveni-rekor-dususe-gecti': {
-    title: 'ABD Tüketici Güveni Rekor Düşüşe Geçti: Nisan\'da %11 Azalma',
-    date: '2026-04-12',
-    category: 'Ekonomi',
-    locale: 'tr',
-    content: `Michigan Üniversitesi Tüketici Araştırmalarına göre ABD'de tüketici güveni Nisan 2026'da %11 düşerek rekor düşük seviyeye ulaştı. Endeks bir yıl öncesine kıyasla da %9 gerilemiş durumda. İş dünyası güveni ise %20 düşüşle daha da sert bir gerileme yaşadı.
-
-## Enerji ve Gıda Fiyatları
-
-Güven endeksindeki çöküşün temel nedeni enerji ve gıda fiyatlarının süregelen artışı. Orta Doğu çatışmasının enerji piyasalarına etkisi hane bütçelerini daraltmaya devam ediyor. Tüketiciler finansal görünümleri hakkında giderek daha karamsar hale geliyor.
-
-## Yavaşlayan GSYİH Büyümesi
-
-Reel GSYİH 2025'in dördüncü çeyreğinde yalnızca yıllık %0,5 oranında büyüdü. ABD aylık uluslararası ticaret açığı Şubat'ta 57,3 milyar dolara yükseldi. Kişisel gelir 18,2 milyar dolar azaldı.
-
-## Uzman Görüşleri
-
-Federal Rezerv Başkan Yardımcısı Jefferson, Nisan başında iş gücü piyasası ve ekonomik görünüm hakkında konuşma yaptı. Analistler zayıflayan tüketici harcamalarının ekonomik büyümeyi daha da yavaşlatabileceği konusunda uyarıyor.`,
-  },
-  'ru-potrebitelskoe-doverie-ssha-rekordnyj-minimum': {
-    title: 'Потребительское доверие в США упало до минимума',
-    date: '2026-04-12',
-    category: 'Экономика',
-    locale: 'ru',
-    content: `Потребительские настроения в США упали на 11% до рекордного минимума в апреле 2026 года, согласно данным Мичиганского университета. Показатель также снизился на 9% по сравнению с прошлым годом. Деловые настроения упали ещё сильнее — на 20% за месяц.
-
-## Цены на энергоносители и продовольствие
-
-Основным фактором обвала доверия является продолжающийся рост цен на энергоносители и продовольствие. Влияние ближневосточного конфликта на энергетические рынки продолжает давить на бюджеты домохозяйств. Потребители становятся всё более пессимистичными в отношении своего финансового будущего.
-
-## Замедление роста ВВП
-
-Реальный ВВП вырос всего на 0,5% в годовом исчислении в четвёртом квартале 2025 года. Дефицит внешней торговли США увеличился до 57,3 миллиарда долларов в феврале. Личный доход сократился на 18,2 миллиарда долларов.
-
-## Мнения экспертов
-
-Вице-председатель Федеральной резервной системы Джефферсон выступил с обзором рынка труда и экономических перспектив. Аналитики предупреждают о возможности технической рецессии при сохранении негативных тенденций.`,
-  },
-
-  // --- 6. World Bank Warns: Europe and Central Asia Growth to Slow ---
-  'dunya-banki-avropa-merkezi-asiya-artim-yavaslayacaq': {
-    title: 'Dünya Bankı: Avropa-Mərkəzi Asiya Artımı 2.1%-ə Düşəcək',
-    date: '2026-04-12',
-    category: 'İqtisadiyyat',
-    locale: 'az',
-    content: `Dünya Bankı Avropa və Mərkəzi Asiyanın inkişaf etməkdə olan ölkələrində iqtisadi artımın 2026-cı ildə əhəmiyyətli dərəcədə yavaşlayacağını proqnozlaşdırıb. Regional artım 2.1%-ə düşəcək ki, bu da Orta Şərq münaqişəsi, geosiyasi gərginliklər və ticarətin fraqmentasiyası ilə əlaqədardır.
-
-## Əsas Risk Faktorları
-
-Hesabatda üç əsas risk qeyd edilib: Orta Şərq münaqişəsinin enerji qiymətlərinə təsiri, regional geosiyasi gərginliklər və qlobal ticarətin parçalanması. Bu faktorlar birlikdə regionun ixrac imkanlarını məhdudlaşdırır və xarici investisiyanı azaldır.
-
-## Hindistan İstisna Olaraq Qalır
-
-Hindistan 2026-27 maliyyə ilində 6.6% artım proqnozu ilə dünyanın ən sürətlə böyüyən əsas iqtisadiyyatlarından biri olaraq qalır. Bununla belə, yüksək enerji qiymətləri və təchizat zəncirindəki pozuntular burada da iqtisadi fəaliyyəti sıxışdırır.
-
-## Regionda Vəziyyət
-
-Deloitte-un ABŞ iqtisadi proqnozu 2026-cı ilin birinci rübü üçün ehtiyatlı nikbinlik ifadə edir, lakin qlobal risklərin artdığını qeyd edir. Özəl kapital sektoru da yenidən qurulma dövrünü yaşayır.`,
-  },
-  'en-world-bank-warns-europe-central-asia-growth-slows': {
-    title: 'World Bank: Europe, Central Asia Growth to Slow to 2.1%',
-    date: '2026-04-12',
-    category: 'Economy',
-    locale: 'en',
-    content: `The World Bank has warned that economic growth in developing countries of Europe and Central Asia is likely to slow substantially in 2026. Regional growth is expected to weaken to 2.1%, driven by the impact of the Middle East conflict, geopolitical tensions, and trade fragmentation.
-
-## Key Risk Factors
-
-The report identifies three primary risks: the Middle East conflict's effect on energy prices, regional geopolitical tensions, and the fragmentation of global trade networks. Together, these factors are constraining export opportunities and reducing foreign direct investment flows into the region.
-
-## India Remains an Exception
-
-India is projected to grow at 6.6% in fiscal year 2026-27, maintaining its position as one of the world's fastest-growing major economies. However, higher energy prices caused by the Middle East conflict and supply chain disruptions are weighing on economic activity there as well.
-
-## Broader Economic Context
-
-The Deloitte US economic forecast for Q1 2026 expresses cautious optimism but highlights growing global risks. The private equity sector is also undergoing a period of restructuring, with CEPR noting that buyouts are fundamentally reshaping economic landscapes across the region.`,
-  },
-  'tr-dunya-bankasi-avrupa-merkez-asya-buyume-yavaslayacak': {
-    title: 'Dünya Bankası: Avrupa ve Orta Asya\'da Büyüme %2,1\'e Düşecek',
-    date: '2026-04-12',
-    category: 'Ekonomi',
-    locale: 'tr',
-    content: `Dünya Bankası, Avrupa ve Orta Asya'nın gelişmekte olan ülkelerinde ekonomik büyümenin 2026'da önemli ölçüde yavaşlayacağını öngördü. Bölgesel büyümenin Orta Doğu çatışması, jeopolitik gerilimler ve ticaretin parçalanması nedeniyle %2,1'e düşmesi bekleniyor.
-
-## Temel Risk Faktörleri
-
-Rapor üç ana riski tanımlıyor: Orta Doğu çatışmasının enerji fiyatlarına etkisi, bölgesel jeopolitik gerilimler ve küresel ticaret ağlarının parçalanması. Bu faktörler birlikte ihracat fırsatlarını kısıtlıyor ve doğrudan yabancı yatırım akışlarını azaltıyor.
-
-## Hindistan İstisna Olmaya Devam Ediyor
-
-Hindistan'ın 2026-27 mali yılında %6,6 büyümesi öngörülüyor. Ancak Orta Doğu çatışmasının neden olduğu yüksek enerji fiyatları ve tedarik zinciri aksaklıkları burada da ekonomik faaliyeti sıkıştırıyor.
-
-## Genel Ekonomik Bağlam
-
-Deloitte'un ABD ekonomik tahmini 2026'nın ilk çeyreği için temkinli iyimserlik ifade ediyor. Özel sermaye sektörü de yeniden yapılanma döneminden geçiyor.`,
-  },
-  'ru-vsemirnyj-bank-rost-evropy-centralnoj-azii-zamedlitsya': {
-    title: 'Всемирный банк: рост Европы и ЦА замедлится до 2,1%',
-    date: '2026-04-12',
-    category: 'Экономика',
-    locale: 'ru',
-    content: `Всемирный банк предупредил, что экономический рост в развивающихся странах Европы и Центральной Азии существенно замедлится в 2026 году. Региональный рост ожидается на уровне 2,1%, что обусловлено влиянием ближневосточного конфликта, геополитической напряжённостью и фрагментацией торговли.
-
-## Ключевые факторы риска
-
-В докладе выделены три основных риска: влияние ближневосточного конфликта на цены на энергоносители, региональная геополитическая напряжённость и фрагментация глобальных торговых сетей. Эти факторы ограничивают экспортные возможности и снижают приток прямых иностранных инвестиций.
-
-## Индия остаётся исключением
-
-Прогнозируемый рост Индии составляет 6,6% в 2026-27 финансовом году. Однако высокие цены на энергоносители и сбои в цепочках поставок оказывают давление и на индийскую экономику.
-
-## Общий экономический контекст
-
-Экономический прогноз Deloitte для США на первый квартал 2026 года выражает осторожный оптимизм, но подчёркивает нарастающие глобальные риски. Сектор частного капитала также переживает период реструктуризации.`,
-  },
-
   // --- 7. Vitamin D Linked to Long-Term Brain Health ---
   'vitamin-d-beyin-sagligi-16-illik-arasdirma': {
     title: 'Vitamin D Beyin Sağlamlığına Təsir Edir: 16 İl Araşdırma',
@@ -10912,311 +11406,7 @@ Pan Amerikan Sağlık Örgütü de bu girişime katılarak Amerika kıtasında b
 Панамериканская организация здравоохранения присоединилась к инициативе, призвав к укреплению научных исследований в Северной и Южной Америке.`,
   },
 
-  // --- 9. FIFA World Cup 2026: Referees Appointed, 2 Months to Kickoff ---
-  'fifa-dunya-kuboku-2026-hakimler-teyin-edildi': {
-    title: 'FIFA Dünya Kuboku 2026: Hakimlər Təyin Edildi',
-    date: '2026-04-12',
-    category: 'İdman',
-    locale: 'az',
-    content: `FIFA 2026 Dünya Kuboku üçün 52 hakim, 88 köməkçi hakim və 30 video köməkçi hakim təyin edib. Turnir 11 iyun - 19 iyul 2026-cı il tarixlərində ABŞ, Meksika və Kanadada keçiriləcək. Bu, tarixdə üç ölkənin birgə ev sahibliyi etdiyi ilk Dünya Kuboku olacaq.
-
-## Turnir Formatı
-
-2026 Dünya Kuboku tarixdə ilk dəfə 48 komanda ilə keçiriləcək — bu, əvvəlki 32 komanda formatından böyük genişlənmədir. 16 şəhər ev sahibliyi edəcək: 11 ABŞ-da, 3 Meksikada və 2 Kanadada. Qruplar 5 dekabr 2025-ci ildə Yekun Püşkə ilə müəyyən edilib.
-
-## Bilet Satışları
-
-FIFA-nın rəsmi yenidən satış platforması 2 apreldə açılıb. Boston-dan Foxboro-ya ekpress qatar biletləri 8 apreldə satışa çıxıb və tükənmə ehtimalı yüksəkdir.
-
-## Komandaların Hazırlığı
-
-İngiltərə yığması 10 iyun tarixində Kosta-Rika ilə yoldaşlıq oyunu keçirəcəyini elan edib. Komandalar Dünya Kubokuna son hazırlıqlarını intensivləşdirir.`,
-  },
-  'en-fifa-world-cup-2026-referees-appointed-two-months': {
-    title: 'FIFA World Cup 2026: Referees Appointed, 2 Months Out',
-    date: '2026-04-12',
-    category: 'Sports',
-    locale: 'en',
-    content: `FIFA has appointed 52 referees, 88 assistant referees, and 30 video assistant referees for the 2026 World Cup. The tournament runs from June 11 to July 19, 2026, hosted across the United States, Mexico, and Canada. This will be the first World Cup co-hosted by three nations and the first to feature 48 teams.
-
-## Tournament Format
-
-The expanded 48-team format represents a significant increase from the previous 32-team structure. Sixteen host cities will stage matches: eleven in the United States, three in Mexico, and two in Canada. The group draw took place on December 5, 2025, with the final qualifying matches concluded on March 31, 2026.
-
-## Ticket Sales
-
-FIFA's official resale marketplace opened on April 2 and remains active through match days. Express train tickets from South Station to Foxborough for Boston-area matches went on sale April 8, with high demand expected to exhaust available inventory quickly.
-
-## Team Preparations
-
-England announced a pre-tournament friendly against Costa Rica on June 10 at Inter&Co Stadium in Orlando. Teams across the world are intensifying their final preparations with two months remaining before the opening ceremony.`,
-  },
-  'tr-fifa-dunya-kupasi-2026-hakemler-atandi-baslama-2-ay-sonra': {
-    title: 'FIFA Dünya Kupası 2026: Hakemler Atandı, Başlama 2 Ay Sonra',
-    date: '2026-04-12',
-    category: 'Spor',
-    locale: 'tr',
-    content: `FIFA, 2026 Dünya Kupası için 52 hakem, 88 yardımcı hakem ve 30 video yardımcı hakem atadı. Turnuva 11 Haziran - 19 Temmuz 2026 tarihleri arasında ABD, Meksika ve Kanada'da düzenlenecek. Bu, üç ülkenin birlikte ev sahipliği yaptığı ve 48 takımın katıldığı ilk Dünya Kupası olacak.
-
-## Turnuva Formatı
-
-Genişletilmiş 48 takımlı format, önceki 32 takımlı yapıdan önemli bir artışı temsil ediyor. 16 ev sahibi şehir maçlara ev sahipliği yapacak: 11'i ABD'de, 3'ü Meksika'da ve 2'si Kanada'da. Grup kuraları 5 Aralık 2025'te çekildi.
-
-## Bilet Satışları
-
-FIFA'nın resmi yeniden satış platformu 2 Nisan'da açıldı. Boston bölgesindeki maçlar için South Station'dan Foxborough'ya ekspres tren biletleri 8 Nisan'da satışa çıktı.
-
-## Takım Hazırlıkları
-
-İngiltere, 10 Haziran'da Orlando'da Kosta Rika ile hazırlık maçı oynayacağını duyurdu. Dünya genelindeki takımlar açılış törenine iki ay kala son hazırlıklarını yoğunlaştırıyor.`,
-  },
-  'ru-chempionat-mira-fifa-2026-sudyi-naznacheny': {
-    title: 'ЧМ по футболу 2026: судьи назначены, до старта 2 месяца',
-    date: '2026-04-12',
-    category: 'Спорт',
-    locale: 'ru',
-    content: `ФИФА назначила 52 арбитра, 88 помощников арбитров и 30 видеоарбитров для чемпионата мира 2026 года. Турнир пройдёт с 11 июня по 19 июля 2026 года в США, Мексике и Канаде. Это будет первый чемпионат мира, проводимый тремя странами, и первый с участием 48 команд.
-
-## Формат турнира
-
-Расширенный формат с 48 командами — значительное увеличение по сравнению с предыдущим форматом на 32 команды. Матчи пройдут в 16 городах: 11 в США, 3 в Мексике и 2 в Канаде. Жеребьёвка групп состоялась 5 декабря 2025 года.
-
-## Продажа билетов
-
-Официальная платформа перепродажи ФИФА открылась 2 апреля. Билеты на экспресс-поезда из Бостона до Фоксборо поступили в продажу 8 апреля и пользуются высоким спросом.
-
-## Подготовка команд
-
-Англия объявила о товарищеском матче с Коста-Рикой 10 июня в Орландо. Команды по всему миру интенсифицируют предтурнирную подготовку — до церемонии открытия остаётся два месяца.`,
-  },
-
-  // --- 10. Super Mario Galaxy Movie Dominates Box Office ---
-  'super-mario-galaxy-filmi-kassa-rekordlari': {
-    title: 'Super Mario Galaxy Filmi Dünya Kassalarında Rekordlar Qırır',
-    date: '2026-04-12',
-    category: 'Mədəniyyət',
-    locale: 'az',
-    content: `1 apreldə premyerası olan "Super Mario Galaxy" filmi dünya kassalarında inanılmaz uğur qazanıb və 2026-cı ilin ən böyük kassa hitlərindən biri olmağa namizəd hesab olunur. Film ilk həftə sonunda bütün gözləntiləri aşıb.
-
-## Filmin Uğurunun Səbəbləri
-
-Nintendo və Illumination studiyasının əməkdaşlığının ikinci meyvəsi olan film, ilk "Super Mario Bros. Movie"nin (2023) böyük uğurundan sonra gəlir. Kosmik mövzu, nostalgik oyun elementləri və ailə dostu məzmun filmi geniş tamaşaçı kütləsinə cazibədar edir.
-
-## Rəqəmsal Əyləncə Tendensiyaları
-
-Hollywood artıq əvvəlki kimi mərkəzləşmiş iyerarxiyadan məlumat əsaslı, mədəni cəhətdən çoxşaxəli bir ekosistemə keçir. Oyun əsaslı filmlər bu dəyişikliyin ən uğurlu nümunələrindən biridir. Video oyun franchise-ları kino dünyasında dominant qüvvəyə çevrilir.
-
-## Coachella və Digər Xəbərlər
-
-Əyləncə dünyasının digər xəbərlərindən, Coachella festivalı həyəcan yaradır. Sabrina Carpenter, Coachella headliner-i kimi ənənəvi ərəb bayramlarını kiçimsəməsinə görə üzr istəyib. Usher və Chris Brown birgə tur elan edib.`,
-  },
-  'en-super-mario-galaxy-movie-box-office-records': {
-    title: 'Super Mario Galaxy Movie Dominates Box Office',
-    date: '2026-04-12',
-    category: 'Culture',
-    locale: 'en',
-    content: `"The Super Mario Galaxy Movie," which premiered on April 1, has become one of the biggest box office hits of 2026, surpassing all expectations in its opening weeks. The film continues the successful collaboration between Nintendo and Illumination that began with the original "Super Mario Bros. Movie" in 2023.
-
-## Why the Film Succeeded
-
-The cosmic setting, nostalgic game elements, and family-friendly storytelling have made the film appealing to an extraordinarily wide audience. Parents who grew up playing Nintendo games are bringing their children, creating a multigenerational viewing experience that few franchises can replicate.
-
-## Digital Entertainment Trends
-
-The film's success reflects broader shifts in the entertainment industry. Video game-based movies have become a dominant force in cinema, with Hollywood moving from a centralized hierarchy toward a data-driven, culturally plural ecosystem. Game adaptations are no longer seen as risky ventures but as reliable franchise builders.
-
-## Other Entertainment News
-
-In other entertainment developments, the Coachella festival is generating significant buzz this April. Headliner Sabrina Carpenter apologized for dismissing traditional Arabic celebrations. Usher and Chris Brown announced a joint tour, while the Michael Jackson biopic starring Jaafar Jackson is set for April 24.`,
-  },
-  'tr-super-mario-galaxy-filmi-gise-rekorlari-kiriyor': {
-    title: 'Super Mario Galaxy Filmi Dünya Gişelerinde Rekorlar Kırıyor',
-    date: '2026-04-12',
-    category: 'Kültür',
-    locale: 'tr',
-    content: `1 Nisan'da gösterime giren "Super Mario Galaxy" filmi dünya gişelerinde inanılmaz bir başarı yakaladı ve 2026'nın en büyük gişe hitlerinden biri olmaya aday. Film, tüm beklentileri aşarak ilk haftasından itibaren rekorlar kırdı.
-
-## Filmin Başarı Sırları
-
-Nintendo ve Illumination'ın 2023'teki orijinal "Super Mario Bros. Movie"den sonraki ikinci iş birliği olan film, kozmik teması, nostaljik oyun öğeleri ve aile dostu içeriğiyle geniş bir izleyici kitlesine hitap ediyor.
-
-## Dijital Eğlence Trendleri
-
-Filmin başarısı eğlence sektöründeki daha geniş değişimleri yansıtıyor. Video oyun uyarlamaları sinemada baskın bir güç haline geldi. Hollywood, merkezileşmiş bir hiyerarşiden veri odaklı ve kültürel çoğulculuğa dayanan bir ekosisteme doğru evriliyor.
-
-## Diğer Eğlence Haberleri
-
-Coachella festivali bu Nisan ayında büyük heyecan yaratıyor. Headliner Sabrina Carpenter, geleneksel Arap kutlamalarını küçümsemesi nedeniyle özür diledi. Usher ve Chris Brown ortak tur duyurdu. Jaafar Jackson'ın başrolünde olduğu Michael Jackson biyografisi 24 Nisan'da vizyona girecek.`,
-  },
-  'ru-film-super-mario-galaxy-rekordy-kassovyh-sborov': {
-    title: 'Super Mario Galaxy бьёт рекорды мировых кассовых сборов',
-    date: '2026-04-12',
-    category: 'Культура',
-    locale: 'ru',
-    content: `Фильм «Super Mario Galaxy», вышедший в прокат 1 апреля, стал одним из крупнейших кассовых хитов 2026 года, превзойдя все ожидания в первые недели проката. Картина продолжает успешное сотрудничество Nintendo и Illumination, начавшееся с оригинального «Super Mario Bros. Movie» в 2023 году.
-
-## Причины успеха
-
-Космическая тематика, ностальгические игровые элементы и семейная направленность сделали фильм привлекательным для необычайно широкой аудитории. Родители, выросшие на играх Nintendo, приводят своих детей, создавая межпоколенческий зрительский опыт.
-
-## Тренды цифровых развлечений
-
-Успех фильма отражает масштабные изменения в индустрии развлечений. Экранизации видеоигр стали доминирующей силой в кинематографе. Голливуд переходит от централизованной иерархии к управляемой данными, культурно плюралистической экосистеме.
-
-## Другие новости развлечений
-
-Фестиваль Coachella привлекает внимание в этом апреле. Хедлайнер Сабрина Карпентер извинилась за пренебрежение традиционными арабскими праздниками. Ашер и Крис Браун объявили совместный тур. Биографический фильм о Майкле Джексоне с Джаафаром Джексоном в главной роли выходит 24 апреля.`,
-  },
-
   // ========== 2026-04-12 (Session 26 refresh) ==========
-
-  // --- Trump Orders Hormuz Strait Blockade ---
-  'tramp-hormuz-bogazi-blokadasi': {
-    title: 'Tramp Hörmüz boğazını blokada etmək əmri verdi',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'az',
-    content: `ABŞ Prezidenti Donald Tramp İrana qarşı sərt addım ataraq ABŞ donanmasına Hörmüz boğazını dərhal blokada etmək əmri verib. Qərar vitse-prezident JD Vansın İslamabadda İran nümayəndələri ilə 21 saatlıq danışıqlarının nəticəsiz başa çatmasından sonra verilib.
-
-## Danışıqlar nəticəsiz qaldı
-
-Tramp İranı nüvə silahından imtina etməkdən boyun qaçırmaqda ittiham edib. Prezidentin əmrinə əsasən, ABŞ donanması İrana ödəniş edən gəmiləri beynəlxalq sularda saxlayacaq. Boğaz artıq fevralın 28-dən ABŞ və İsrailin birgə hava zərbələrindən sonra böyük ölçüdə bağlı vəziyyətdədir.
-
-## Neft bazarında gərginlik
-
-Hazırda Körfəzdə 230-dan çox yüklənmiş neft tankeri gözləyir. Neft qiymətləri artıq barrel üçün 100 dollara yaxınlaşıb, analitiklər Brent markalı neftin 125 dollara çata biləcəyini proqnozlaşdırır. Blokada nəticəsində gündəlik 11 milyon barrel istehsal offlayn vəziyyətdədir ki, bu da qlobal enerji bazarında ciddi böhrana yol aça bilər.`,
-  },
-  'en-trump-hormuz-strait-blockade': {
-    title: 'Trump Orders US Navy Blockade of Strait of Hormuz',
-    date: '2026-04-12',
-    category: 'World',
-    locale: 'en',
-    content: `The United States has dramatically escalated its confrontation with Iran after President Donald Trump ordered the US Navy to immediately blockade the Strait of Hormuz. The decision came after Vice President JD Vance led 21 hours of negotiations with Iranian officials in Islamabad that ended without agreement.
-
-## Talks Collapse, Tensions Surge
-
-Trump accused Iran of refusing to abandon its nuclear ambitions and said the failed talks left him no choice but to act decisively. The Strait of Hormuz, one of the world's most critical oil transit chokepoints, has been largely blocked since February 28 following joint US-Israeli air strikes on Iranian targets. The new blockade order directs the Navy to intercept vessels that have paid Iranian tolls in international waters, further tightening the stranglehold on maritime traffic.
-
-## Oil Markets in Turmoil
-
-The consequences for global energy markets are severe. Approximately 230 loaded oil tankers are now waiting inside the Persian Gulf, unable to transit the strait. An estimated 11 million barrels per day of oil supply has been taken offline, sending crude prices surging toward $100 per barrel. Analysts expect Brent crude to climb to approximately $125 as the standoff continues.
-
-## Global Implications
-
-The blockade threatens to disrupt energy supplies to major economies across Asia and Europe that depend on Gulf oil exports. Shipping insurers have begun reassessing risk premiums for the region, and several nations have called for emergency diplomatic consultations. The situation marks one of the most significant military confrontations in the Persian Gulf since the 1980s tanker wars.`,
-  },
-  'tr-trump-hurmuz-bogazi-ablukasi': {
-    title: 'Trump Hürmüz Boğazı\'nı Ablukaya Alma Emri Verdi',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `ABD Başkanı Donald Trump, İran ile sürdürülen nükleer müzakerelerin çıkmaza girmesinin ardından ABD Donanması'na Hürmüz Boğazı'nı derhal abluka altına alma emri verdi. Başkan Yardımcısı JD Vance'ın İslamabad'da 21 saat boyunca süren diplomatik temasları sonuçsuz kaldı.
-
-## Müzakereler Neden Başarısız Oldu
-
-Trump, İran'ın nükleer programındaki hırslarından vazgeçmediğini belirterek müzakerelerin başarısızlıkla sonuçlandığını açıkladı. Vance'ın İslamabad'daki yoğun diplomatik maratonu herhangi bir anlaşmayla sonuçlanmadı ve Washington bu gelişmenin ardından askeri seçeneklere yöneldi.
-
-## Boğaz'da Kritik Tablo
-
-Hürmüz Boğazı, 28 Şubat'tan bu yana ABD-İsrail ortak hava operasyonlarının ardından büyük ölçüde kapalı durumda. Şu anda 230'dan fazla yüklü petrol tankeri Körfez sularında bekleme pozisyonunda. ABD Donanması, İran'a geçiş ücreti ödeyen gemileri uluslararası sularda yakalama yetkisi aldı.
-
-## Enerji Piyasalarına Etkisi
-
-Abluka kararıyla birlikte küresel enerji piyasalarında ciddi dalgalanmalar yaşanıyor. Petrol fiyatları varil başına 100 dolar seviyesine ulaşırken, analistler Brent petrolün 125 dolara çıkabileceğini öngörüyor. Günlük yaklaşık 11 milyon varillik üretimin devre dışı kalması, küresel enerji arzında büyük bir daralmaya işaret ediyor.`,
-  },
-  'ru-tramp-blokada-ormuzskogo-proliva': {
-    title: 'Трамп объявил блокаду Ормузского пролива',
-    date: '2026-04-12',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Президент США Дональд Трамп приказал Военно-морским силам США немедленно начать блокаду Ормузского пролива после провала переговоров с Ираном. Решение было принято после того, как вице-президент Джей Ди Вэнс провёл 21 час переговоров с иранской стороной в Исламабаде, которые завершились безрезультатно.
-
-## Причины блокады
-
-Трамп обвинил Иран в отказе от ядерных амбиций и отдал приказ перехватывать суда, платившие Ирану за проход через пролив. Фактически пролив в значительной степени заблокирован с 28 февраля, когда были нанесены авиаудары по инфраструктуре в регионе. Теперь блокада получила официальный статус.
-
-## Влияние на нефтяной рынок
-
-Последствия для мировой энергетики колоссальны. В Персидском заливе скопились около 230 загруженных нефтяных танкеров, ожидающих возможности пройти через пролив. Из мирового оборота выведено порядка 11 миллионов баррелей нефти в сутки. Цена нефти приблизилась к отметке 100 долларов за баррель, а аналитики прогнозируют рост стоимости Brent до 125 долларов.
-
-## Международная реакция
-
-Блокада Ормузского пролива затрагивает интересы крупнейших нефтедобывающих стран Персидского залива и их торговых партнёров по всему миру. Эскалация напряжённости создаёт серьёзные риски для глобальной экономики и ставит под угрозу энергетическую безопасность многих государств.`,
-  },
-
-  // --- Russia-Ukraine Easter Ceasefire Collapses ---
-  'rusiya-ukrayna-pasxa-ateskesi-dagildi': {
-    title: 'Rusiya-Ukrayna Pasxa atəşkəsi dağıldı',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'az',
-    content: `Rusiya Prezidenti Vladimir Putinin elan etdiyi 32 saatlıq Pasxa atəşkəsi qüvvəyə minməsindən cəmi bir neçə saat sonra pozulub. Atəşkəs aprelin 11-i saat 16:00-dan bazar günü sonuna qədər davam etməli idi.
-
-## Hər iki tərəf qarşılıqlı ittihamlar irəli sürür
-
-Ukrayna Prezidenti Volodimir Zelenski əvvəlcə ölkəsinin atəşkəsə əməl edəcəyini təsdiqləmişdi. Lakin aprelin 12-si saat 7-yə qədər Ukrayna tərəfi 2299 pozuntu qeydə alıb: 28 hücum, 479 atəş açma halı, 747 dron və 1045 FPV dron hücumu. Rusiya tərəfi isə öz növbəsində 1971 pozuntu baş verdiyini iddia edib.
-
-## Tarix təkrarlanır
-
-Bu, ilk dəfə deyil ki, Pasxa münasibətilə elan edilən atəşkəs uğursuzluqla nəticələnir. Keçən il də oxşar atəşkəs elan edilmiş, lakin eyni aqibətlə üzləşmişdi. Hər iki tərəfin pozuntuları sənədləşdirməsi müharibənin diplomatik yollarla həllinin nə qədər çətin olduğunu bir daha göstərir.`,
-  },
-  'en-russia-ukraine-easter-ceasefire-collapses': {
-    title: 'Russia-Ukraine Easter Ceasefire Collapses Overnight',
-    date: '2026-04-12',
-    category: 'World',
-    locale: 'en',
-    content: `A ceasefire declared by Russian President Vladimir Putin for the Orthodox Easter weekend has collapsed within hours, with both sides accusing each other of thousands of violations. The pattern mirrors last year's failed Easter truce, raising questions about whether such unilateral declarations serve any purpose beyond propaganda.
-
-## The Short-Lived Truce
-
-Putin announced a 32-hour ceasefire to begin at 4 p.m. on Saturday, April 11, extending through the end of Easter Sunday. Ukrainian President Volodymyr Zelensky confirmed that Ukraine would honor the cessation of hostilities. However, the calm was shattered almost immediately.
-
-## Thousands of Violations Reported
-
-By 7 a.m. on April 12, Ukraine's military reported a staggering 2,299 violations of the ceasefire by Russian forces. The breakdown includes 28 ground assaults, 479 shellings, 747 attack drones, and 1,045 first-person view drones deployed against Ukrainian positions. Russia's defense ministry countered with claims of 1,971 violations by Ukrainian forces during the same period.
-
-## A Familiar Pattern
-
-The collapse follows the same trajectory as last year's Easter ceasefire, which also disintegrated within hours of its declaration. Military analysts note that these brief truces have consistently failed to hold, as neither side appears willing to halt operations that could yield tactical advantages. International observers have called the repeated failures deeply discouraging for any prospects of broader peace negotiations.`,
-  },
-  'tr-rusya-ukrayna-paskalya-ateskesi-coktu': {
-    title: 'Rusya-Ukrayna Paskalya Ateşkesi Saatler İçinde Çöktü',
-    date: '2026-04-12',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `Rusya Devlet Başkanı Vladimir Putin'in Ortodoks Paskalya'sı dolayısıyla ilan ettiği 32 saatlik ateşkes, başlamasının ardından saatler içinde fiilen çöktü. Her iki taraf da karşılıklı olarak binlerce ihlal bildirdi.
-
-## Ateşkes Süreci
-
-Putin, 11 Nisan saat 16:00'dan Pazar günü sonuna kadar geçerli olacak 32 saatlik tek taraflı ateşkes ilan etmişti. Ukrayna Devlet Başkanı Volodimir Zelenski de Ukrayna'nın ateşkese uyacağını teyit etmişti. Ancak silahlar kısa sürede yeniden konuşmaya başladı.
-
-## Binlerce İhlal Kaydedildi
-
-Ukrayna tarafı 12 Nisan sabah 07:00'ye kadar toplam 2.299 ihlal bildirdi. Bu ihlallerin dağılımı son derece çarpıcı: 28 saldırı, 479 bombardıman, 747 insansız hava aracı saldırısı ve 1.045 FPV dron kullanımı. Rusya tarafı ise aynı dönemde 1.971 ihlal iddia etti.
-
-## Tarih Tekerrür Ediyor
-
-Bu gelişme, geçen yıl ilan edilen Paskalya ateşkesinin de benzer şekilde çökmesini akıllara getiriyor. Uluslararası gözlemciler, kısa süreli ateşkes girişimlerinin çatışmanın dinamiklerini değiştirmekte yetersiz kaldığını ve taraflar arasındaki güven bunalımının derinleştiğini vurguluyorlar.`,
-  },
-  'ru-paskhalnoe-peremirie-rossiya-ukraina': {
-    title: 'Пасхальное перемирие Россия-Украина рухнуло',
-    date: '2026-04-12',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Объявленное Владимиром Путиным 32-часовое пасхальное перемирие между Россией и Украиной фактически рухнуло спустя считанные часы после его начала. Перемирие должно было действовать с 16:00 субботы 11 апреля до конца воскресенья, однако обе стороны обвиняют друг друга в массовых нарушениях.
-
-## Масштаб нарушений
-
-К 7:00 утра 12 апреля Украина зафиксировала 2299 нарушений перемирия со стороны России. Среди них — 28 штурмовых действий, 479 артиллерийских обстрелов, 747 ударов боевыми дронами и 1045 атак FPV-дронами. Россия, в свою очередь, заявила о 1971 нарушении со стороны Украины.
-
-## Контекст и предыстория
-
-Президент Зеленский подтвердил готовность Украины соблюдать перемирие, однако события развернулись по сценарию, повторяющему прошлогоднее пасхальное перемирие, которое также было нарушено практически сразу после объявления. Данная ситуация ставит под сомнение возможность достижения даже кратковременного прекращения огня.
-
-## Перспективы мирного процесса
-
-Провал очередной попытки перемирия подрывает доверие между сторонами и затрудняет работу международных посредников. Наблюдатели отмечают, что подобные жесты доброй воли всё чаще воспринимаются как инструменты информационной войны, а не реальные шаги к деэскалации конфликта.`,
-  },
 
   // --- EBRD €5 Billion Investment Package ---
   'ebrd-5-milyard-azerbaycan-daxil': {
@@ -11290,158 +11480,6 @@ Türkiye'nin pakete dahil edilmesi, ülkenin bölgesel çatışmalardan kaynakla
 ## Стратегия ЕБРР
 
 Банк подчёркивает, что выделенные средства направлены на укрепление экономической устойчивости и поддержку частного сектора в регионе. ЕБРР планирует сосредоточиться на инфраструктурных проектах, энергетической безопасности и развитии малого и среднего бизнеса в странах, испытывающих давление из-за геополитической нестабильности.`,
-  },
-
-  // --- Masters 2026: McIlroy vs Young Final Round ---
-  'masters-2026-final-mcilroy-drami': {
-    title: 'Masters 2026: Makilroy karyera Grand Slam yaxınında',
-    date: '2026-04-12',
-    category: 'İdman',
-    locale: 'az',
-    content: `Augusta National-da keçirilən Masters 2026 turnirinin son raundu həyəcanverici mübarizəyə səhnə qurub. Rori Makilroy və Kameron Yanq -11 ilə bərabər lider mövqedə son günə çıxırlar.
-
-## Üçüncü raundda dramatik dəyişiklik
-
-Üçüncü raunda 6 vuruş fərqlə lider girən Makilroy gözlənilməz şəkildə +1 vurub. Kameron Yanq isə parlaq oyun nümayiş etdirərək 7-under 65 ilə raundu başa çatdırıb və fərqi sıfıra endirib. Bu raund Masters tarixinin ən aşağı skorlu raundu kimi qeydə alınıb.
-
-## Yarışa digər iddiaçılar da qoşulur
-
-Sam Börns -10 ilə liderlərin ardınca gəlir. Şeyn Lauri -9, Ceyson Dey və Castin Rouz isə -8 ilə izləyirlər. Dünya birincisi Skotti Şefler 65-lik raund ilə yarışa yaxınlaşıb. Makilroy üçün bu turnir xüsusi əhəmiyyət daşıyır — karyera Grand Slam tamamlamaq üçün ona yalnız Masters titulu çatmır.`,
-  },
-  'en-masters-2026-final-round-mcilroy-young': {
-    title: 'Masters Final Round: McIlroy, Young Tied at -11',
-    date: '2026-04-12',
-    category: 'Sports',
-    locale: 'en',
-    content: `Augusta National is set for a dramatic final round at the 2026 Masters on April 12, with Rory McIlroy and Cameron Young sharing the lead at 11 under par. What appeared to be McIlroy's tournament to lose after the second round has turned into a wide-open contest following a stunning Saturday collapse.
-
-## McIlroy's Lead Evaporates
-
-McIlroy entered the third round holding a commanding six-shot lead, seemingly cruising toward the one major championship that has eluded him throughout his career. Instead, he posted a 1-over-par round that left the Augusta galleries stunned. His struggles opened the door for the rest of the field, transforming what looked like a coronation into a genuine competition.
-
-## Young's Sensational Surge
-
-Cameron Young seized the opportunity with a blistering 7-under-par 65 in the third round, vaulting into a tie for the lead. Young's Saturday performance contributed to what officials confirmed was the lowest-scoring third round in Masters history, as multiple players took advantage of favorable conditions to post low numbers.
-
-## Packed Leaderboard
-
-The final round promises intense competition with a stacked leaderboard. Sam Burns sits just one shot back at 10 under, while Shane Lowry lurks at 9 under. Jason Day and Justin Rose are tied at 8 under, and defending champion Scottie Scheffler has been climbing steadily up the standings. For McIlroy, the stakes could not be higher — the Masters remains the only major he needs to complete the career Grand Slam, a feat that would cement his place among golf's all-time greats.`,
-  },
-  'tr-masters-2026-final-mcilroy-dramasi': {
-    title: 'Masters 2026: McIlroy Kariyer Grand Slam Peşinde',
-    date: '2026-04-12',
-    category: 'Spor',
-    locale: 'tr',
-    content: `Augusta National'da oynanan Masters 2026 turnuvasında son tur öncesinde heyecan doruk noktasına ulaştı. Kuzey İrlandalı Rory McIlroy ve Amerikalı Cameron Young, -11 skorla zirvede eş lider olarak son tura çıkacaklar.
-
-## McIlroy'un İnanılmaz Geri Dönüşü
-
-Turnuvanın en dikkat çekici hikayesi kuşkusuz McIlroy'a ait. İkinci tur sonunda 6 vuruşluk farkla geride olan McIlroy, üçüncü turda +1 vurmasına rağmen rakiplerinin sendelemesiyle liderliğe ortak oldu. Bu durum, turnuvanın ne kadar öngörülemez olduğunu bir kez daha gözler önüne serdi.
-
-## Young'ın Olağanüstü Üçüncü Turu
-
-Cameron Young ise üçüncü turda 7 birdie ile 65 vuruşluk (7-under) muhteşem bir performans sergileyerek zirveye tırmandı. Üçüncü tur, Masters tarihinin en düşük skorlu turlarından biri olarak kayıtlara geçti.
-
-## Takipçiler Yakın Mesafede
-
-Lider ikilinin hemen ardında Sam Burns (-10), Shane Lowry (-9), Jason Day (-8) ve Justin Rose (-8) yer alıyor. McIlroy için bu turnuva çok özel bir anlam taşıyor: Kariyer Grand Slam'i tamamlamak için yalnızca Masters zaferine ihtiyaç duyuyor. Son tur, golf tarihine geçebilecek bir finali vaat ediyor.`,
-  },
-  'ru-masters-2026-final-makilroj': {
-    title: 'Masters 2026: Макилрой теряет 6 ударов лидерства',
-    date: '2026-04-12',
-    category: 'Спорт',
-    locale: 'ru',
-    content: `Финальный раунд турнира Masters 2026 в Огасте обещает стать одним из самых драматичных в истории. Рори Макилрой, который вёл турнир с преимуществом в шесть ударов, растерял всё лидерство в третьем раунде, сыграв его на один удар выше пара.
-
-## Лидерборд перед финалом
-
-Перед заключительным воскресным раундом Макилрой делит первую строчку с Кэмероном Янгом — оба имеют результат -11. Янг совершил впечатляющий рывок, сыграв третий раунд на уровне 65 (7 ударов ниже пара), что стало одним из самых низких результатов в истории турнира. Третий раунд в целом стал рекордно низким по средним показателям в истории Masters.
-
-## Преследователи
-
-За лидерами плотно идут несколько сильных игроков: Бёрнс на позиции -10, Лоури на -9, а Джейсон Дэй и Джастин Роуз делят пятую строчку с результатом -8. Такая плотность результатов гарантирует напряжённую борьбу в финальном раунде.
-
-## Историческая ставка Макилроя
-
-Для Рори Макилроя этот турнир имеет особое значение. Masters — единственный мэйджор, который ему не покорился. Победа в Огасте принесла бы ему карьерный Большой шлем, сделав одним из немногих гольфистов, выигравших все четыре главных турнира. После драматичной потери преимущества давление на североирландца в финальном раунде будет колоссальным.`,
-  },
-
-  // --- AI Sector: Layoffs, IPOs, and Intel Buyback ---
-  'texnologiya-ai-ixtisarlari-intel-geri-alimi': {
-    title: 'AI sektoru: ixtisarlar, IPO-lar və Intel geri alımı',
-    date: '2026-04-12',
-    category: 'Texnologiya',
-    locale: 'az',
-    content: `Texnologiya sektorunda süni intellektlə bağlı hadisələr sürətlə inkişaf edir. Bir tərəfdən şirkətlər milyardlarla dollar investisiya cəlb edərkən, digər tərəfdən on minlərlə işçi ixtisara düşür.
-
-## Böyük sövdələşmələr və IPO planları
-
-Anthropic şirkəti 350 milyard dollar qiymətləndirmə ilə tender təklifini uğurla tamamlayıb. Amazon süni intellektin artıq çoxmilyardlıq gəlir mənbəyinə çevrildiyini təsdiqləyib. OpenAI isə pərakəndə investorlara yönəlik IPO planını açıqlayıb.
-
-## İşçi ixtisarları davam edir
-
-2026-cı ildə texnologiya sektorunda 78 557 işçi ixtisara düşüb. Diqqətçəkən məqam odur ki, bu ixtisarların 48 faizi birbaşa AI avtomatlaşdırması ilə əlaqədardır.
-
-## Intel strateji geri alım edir
-
-Intel İrlandiyadakı Fab 34 fabrikindəki 49 faiz payını Apollo şirkətindən 14,2 milyard dollara geri alıb. Xəbərdən sonra Intel səhmləri 9 faiz bahalaşıb. Bu arada TSMC rekord böyümə göstəriciləri açıqlayıb. Apple isə CarPlay-ə ChatGPT səsli dəstək funksiyasını inteqrasiya edib.`,
-  },
-  'en-tech-ai-valuations-mass-layoffs': {
-    title: 'AI Valuations Soar as Tech Layoffs Pass 78,000',
-    date: '2026-04-12',
-    category: 'Technology',
-    locale: 'en',
-    content: `The technology sector is experiencing a striking paradox in 2026: artificial intelligence companies are reaching record valuations even as the broader industry sheds tens of thousands of jobs, with nearly half of all layoffs directly linked to AI-driven restructuring.
-
-## Valuations Hit New Heights
-
-Anthropic has completed a tender offer valuing the AI safety company at $350 billion, reflecting extraordinary investor confidence in the sector. Amazon has confirmed that AI has become a multi-billion-dollar revenue engine for the company, driving growth across its cloud and consumer businesses. Meanwhile, OpenAI has hinted at plans for a retail-friendly initial public offering that would allow everyday investors to own a stake in the AI pioneer.
-
-## The Human Cost
-
-The boom in AI investment stands in sharp contrast to the wave of layoffs sweeping the technology industry. A total of 78,557 tech workers have been laid off in 2026 year-to-date, with a striking 48 percent of those cuts directly linked to AI-related restructuring. Companies are increasingly replacing traditional roles with automated systems, leaving experienced workers searching for new positions in a rapidly shifting job market.
-
-## Chip Wars and Strategic Moves
-
-The semiconductor landscape is also shifting dramatically. Intel is buying back a 49 percent stake in its Fab 34 facility from Apollo Global Management for $14.2 billion, a move that sent its shares up 9 percent. TSMC continues to report blockbuster growth driven by insatiable demand for AI chips. In the consumer space, Apple has introduced ChatGPT-powered voice interaction through its CarPlay platform, bringing conversational AI directly into vehicles.`,
-  },
-  'tr-teknoloji-ai-isten-cikarmalar-intel': {
-    title: 'Yapay Zeka İşten Çıkarmaları Hız Kesmiyor',
-    date: '2026-04-12',
-    category: 'Teknoloji',
-    locale: 'tr',
-    content: `2026 yılında teknoloji sektöründeki işten çıkarmalar endişe verici boyutlara ulaştı. Yılın ilk aylarında 78.557 teknoloji çalışanı işini kaybetti ve bu çıkarmaların yüzde 48'inin yapay zeka otomasyonundan kaynaklandığı belirlendi.
-
-## Yapay Zeka Devlerinin Değerleme Yarışı
-
-Yapay zeka alanındaki yatırım çılgınlığı devam ediyor. Anthropic, 350 milyar dolar değerlemeyle son halka açık arz öncesi satışını tamamladı. Amazon, yapay zekanın şirket için çok milyar dolarlık bir gelir kaynağına dönüştüğünü doğruladı. OpenAI ise perakende yatırımcılara yönelik halka arz planlarını duyurarak sektördeki rekabeti yeni bir boyuta taşıdı.
-
-## Intel Stratejik Geri Alım Hamlesi
-
-Çip devi Intel, İrlanda'daki Fab 34 tesisindeki yüzde 49'luk hissesini yatırım şirketi Apollo'dan 14,2 milyar dolara geri alma kararı aldı. Haber sonrası Intel hisseleri yüzde 9 değer kazandı. Bu hamle, Intel'in üretim kapasitesini yeniden tam kontrol altına alma stratejisinin önemli bir parçası olarak değerlendiriliyor.
-
-## Sektörün Genel Tablosu
-
-TSMC rekor büyüme rakamlarını açıklarken, Apple da CarPlay platformuna ChatGPT sesli asistan desteği entegre etti. Yapay zeka teknolojileri bir yandan yeni iş modelleri yaratırken, diğer yandan geleneksel pozisyonlardaki istihdamı hızla dönüştürmeye devam ediyor.`,
-  },
-  'ru-tekhnologii-uvolneniya-intel': {
-    title: 'Увольнения в IT и покупка Intel за $14,2 млрд',
-    date: '2026-04-12',
-    category: 'Технологии',
-    locale: 'ru',
-    content: `Технологическая отрасль переживает масштабные перемены: волна увольнений, связанных с искусственным интеллектом, продолжает нарастать, а крупнейшие компании перестраивают стратегии в условиях AI-революции. С начала 2026 года уже уволены 78 557 работников технологического сектора, причём 48 процентов сокращений напрямую связаны с внедрением ИИ.
-
-## Сделка Intel
-
-Ключевым событием недели стала сделка Intel по выкупу 49-процентной доли фабрики Fab 34 в Ирландии у инвестиционной компании Apollo за 14,2 миллиарда долларов. Акции Intel на этой новости выросли на 9 процентов. Сделка укрепляет позиции Intel в полупроводниковом производстве на фоне рекордного роста выручки конкурента TSMC.
-
-## Гонка AI-компаний
-
-Anthropic завершила тендер на привлечение инвестиций при оценке компании в 350 миллиардов долларов. Amazon подтвердила, что искусственный интеллект стал многомиллиардным источником дохода для корпорации. OpenAI объявила о планах провести IPO с доступом для розничных инвесторов, что может стать одним из крупнейших публичных размещений в технологическом секторе.
-
-## Тренды и потребительские продукты
-
-Apple интегрировала голосовой ChatGPT в систему CarPlay, что знаменует новый этап сотрудничества между технологическими гигантами в области потребительского ИИ. Эксперты отмечают, что рынок труда в технологиях продолжит трансформироваться, и компании будут всё активнее заменять рутинные позиции решениями на базе искусственного интеллекта.`,
   },
 
   // ========== 2026-04-10 ==========
@@ -11524,162 +11562,6 @@ Mürettebat, Ay'ın arka tarafından geçerken tarihi bir "Dünya batışı" (Ea
 Одним из самых запоминающихся моментов миссии стал снимок «Захода Земли» (Earthset) — фотография, на которой Земля скрывается за лунным горизонтом. Этот кадр уже сравнивают со знаменитым снимком «Восход Земли» миссии Apollo 8. Руководство NASA назвало миссию важнейшей вехой программы Artemis и ключевым шагом к будущим пилотируемым посадкам на Луну.`,
   },
 
-  // --- Vance Heads to Islamabad for Iran Ceasefire Talks ---
-  'vans-islamabada-yollanir-iran-danisiqlar': {
-    title: 'Vans İran Danışıqları Üçün İslamabada Yollanır',
-    date: '2026-04-10',
-    category: 'Dünya',
-    locale: 'az',
-    content: `ABŞ vitse-prezidenti C.D. Vans yüksək səviyyəli ABŞ-İran danışıqları üçün Pakistanın paytaxtı İslamabada səfər edib. Yaxın Şərq münaqişəsinin 41-ci günündə keçirilən bu görüşlər regional sabitlik üçün həlledici əhəmiyyət daşıyır.
-
-## Danışıqların Təfərrüatları
-
-İranın xarici işlər nazirinin müavini Məcid Təxt-Rəvançi Tehranın 10 maddəlik planının danışıqların əsasını təşkil edəcəyini bildirib. Prezident Tramp İranın Hörmüz boğazını yenidən açması şərti ilə İrana qarşı bombardman hücumlarını 2 həftə müddətinə dayandırmağa razılaşıb. Bu, hər iki tərəf üçün vacib güzəşt hesab olunur.
-
-## İslamabadda Təhlükəsizlik Tədbirləri
-
-Pakistan hökuməti danışıqlar öncəsi İslamabadı ciddi şəkildə bağlayıb. Şəhərin müxtəlif nöqtələrində yoxlama məntəqələri qurulub, hərbi və polis qüvvələri gücləndirilmiş rejimə keçib. Diplomatik ərazilər ətrafında geniş təhlükəsizlik perimetri yaradılıb.
-
-## İsrail-Hizbullah Münaqişəsi
-
-Bu danışıqlar fonunda İsrail Livanda Hizbullaha qarşı yeni zərbələr endirib. Münaqişənin başlanğıcından bu yana 1400-dən çox Hizbullah döyüşçüsü məhv edilib. Regional gərginliyin artması danışıqların vacibliyini daha da artırır. Ekspertlər bildirir ki, Hörmüz boğazının bağlı qalması qlobal neft bazarlarında ciddi böhrana səbəb ola bilər və bu, danışıqların uğurla nəticələnməsini daha da zəruri edir.`,
-  },
-  'en-vance-islamabad-iran-ceasefire-talks': {
-    title: 'Vance Heads to Islamabad for Iran Ceasefire Talks',
-    date: '2026-04-10',
-    category: 'World',
-    locale: 'en',
-    content: `Vice President JD Vance has traveled to Islamabad, Pakistan for high-stakes negotiations between the United States and Iran. The talks come on Day 41 of the Middle East conflict and represent a critical juncture for regional stability and global energy markets.
-
-## Negotiation Framework
-
-Iran's Deputy Foreign Minister Majid Takht-Ravanchi has indicated that Tehran's 10-point plan will serve as the basis for negotiations. President Trump has agreed to suspend bombing attacks against Iran for two weeks, contingent on Iran reopening the Strait of Hormuz. This mutual concession is seen as a fragile but potentially significant step toward de-escalation.
-
-## Islamabad on Lockdown
-
-The Pakistani government has implemented sweeping security measures ahead of the talks. Islamabad has been locked down with checkpoints established at key intersections across the city. Military and police forces are operating on heightened alert, and a wide security perimeter has been established around diplomatic zones.
-
-## Israel-Hezbollah Escalation
-
-Against the backdrop of these negotiations, Israel has launched fresh strikes against Hezbollah positions in Lebanon. More than 1,400 Hezbollah operatives have been killed since the start of the conflict. The parallel escalation adds urgency to the diplomatic efforts in Islamabad. Analysts warn that the continued closure of the Strait of Hormuz could trigger a severe global energy crisis, with oil prices already nearing record levels and threatening to push the world economy into recession.`,
-  },
-  'tr-vance-islamabad-iran-ateskes-gorusmeleri': {
-    title: 'Vance İran Ateşkes Görüşmeleri İçin İslamabada Gitti',
-    date: '2026-04-10',
-    category: 'Dünya',
-    locale: 'tr',
-    content: `ABD Başkan Yardımcısı JD Vance, yüksek riskli ABD-İran müzakereleri için Pakistan'ın başkenti İslamabad'a gitti. Ortadoğu çatışmasının 41. gününde gerçekleşen bu görüşmeler, bölgesel istikrar ve küresel enerji piyasaları açısından kritik bir dönüm noktasını temsil ediyor.
-
-## Müzakere Çerçevesi
-
-İran Dışişleri Bakan Yardımcısı Mecid Taht-Revanşi, Tahran'ın 10 maddelik planının müzakerelerin temelini oluşturacağını belirtti. Başkan Trump, İran'ın Hürmüz Boğazı'nı yeniden açması koşuluyla İran'a yönelik bombardıman saldırılarını 2 hafta süreyle askıya almayı kabul etti. Bu karşılıklı taviz, kırılgan ancak önemli bir gerilim azaltma adımı olarak değerlendiriliyor.
-
-## İslamabad'da Güvenlik Önlemleri
-
-Pakistan hükümeti görüşmeler öncesinde İslamabad'ı sıkı bir şekilde kapattı. Şehrin çeşitli noktalarında kontrol noktaları kuruldu, askeri ve polis kuvvetleri yüksek alarm durumuna geçti. Diplomatik bölgelerin çevresinde geniş bir güvenlik çemberi oluşturuldu.
-
-## İsrail-Hizbullah Çatışması
-
-Bu müzakerelerin arka planında İsrail, Lübnan'daki Hizbullah mevzilerine yeni saldırılar düzenledi. Çatışmanın başlangıcından bu yana 1.400'den fazla Hizbullah militanı öldürüldü. Paralel tırmanma, İslamabad'daki diplomatik çabalara aciliyet katıyor. Analistler, Hürmüz Boğazı'nın kapalı kalmasının küresel bir enerji krizini tetikleyebileceği ve dünya ekonomisini resesyona sürükleyebileceği konusunda uyarıyor.`,
-  },
-  'ru-vans-islamabad-peregovory-iran': {
-    title: 'Вэнс в Исламабаде на переговорах по Ирану',
-    date: '2026-04-10',
-    category: 'Мир',
-    locale: 'ru',
-    content: `Вице-президент США Джей Ди Вэнс прибыл в Исламабад для проведения напряжённых переговоров между Соединёнными Штатами и Ираном. Переговоры проходят на 41-й день ближневосточного конфликта и представляют собой критически важный момент для региональной стабильности и мировых энергетических рынков.
-
-## Рамки переговоров
-
-Заместитель министра иностранных дел Ирана Маджид Тахт-Раванчи заявил, что 10-пунктный план Тегерана станет основой для переговоров. Президент Трамп согласился приостановить бомбардировки Ирана на две недели при условии, что Иран откроет Ормузский пролив. Эта взаимная уступка рассматривается как хрупкий, но потенциально значимый шаг к деэскалации.
-
-## Исламабад на замке
-
-Правительство Пакистана ввело масштабные меры безопасности накануне переговоров. Город был заблокирован контрольно-пропускными пунктами на ключевых перекрёстках. Военные и полицейские силы переведены в режим повышенной готовности, а вокруг дипломатических зон создан широкий периметр безопасности.
-
-## Эскалация конфликта между Израилем и Хезболлой
-
-На фоне переговоров Израиль нанёс новые удары по позициям Хезболлы в Ливане. С начала конфликта было уничтожено более 1400 боевиков Хезболлы. Параллельная эскалация усиливает срочность дипломатических усилий в Исламабаде. Аналитики предупреждают, что продолжающееся закрытие Ормузского пролива может спровоцировать тяжёлый глобальный энергетический кризис, при том что цены на нефть уже приближаются к рекордным уровням.`,
-  },
-
-  // --- US CPI Jumps to 3.3% Year-over-Year as Oil Prices Surge ---
-  'abs-istehlak-qiymetleri-3-3-faiz-neft': {
-    title: 'ABŞ İstehlak Qiymətləri 3,3%-ə Yüksəldi, Neft Sıçrayır',
-    date: '2026-04-10',
-    category: 'İqtisadiyyat',
-    locale: 'az',
-    content: `ABŞ İstehlak Qiymətləri İndeksi (CPI) aylıq 0,9% və illik 3,3% artım göstərib. Benzin qiymətlərinin 21,2% bahalaşması aylıq CPI artımının təqribən dörddə üçünü təşkil edib. Hörmüz boğazı ilə bağlı risklər fonunda xam neft qiyməti barrelə 98 dollara yaxınlaşıb.
-
-## Enerji Sektoru və İnflyasiya
-
-Neft qiymətlərindəki kəskin artım birbaşa olaraq istehlakçı xərclərinə təsir göstərir. Hörmüz boğazının bağlı qalma ehtimalı qlobal neft tədarükündə ciddi narahatlıq yaradır. Bu vəziyyət mərkəzi bankların inflyasiya ilə mübarizə strategiyasını çətinləşdirir. Enerji xərclərinin artması digər sektorlara da yayılaraq ərzaq və nəqliyyat qiymətlərini yüksəldir.
-
-## Texnologiya Sektoru
-
-Proqram təminatı səhmləri süni intellekt pozulması narahatlıqları fonunda təxminən 5% düşüb. Lakin yarımkeçirici və süni intellekt infrastruktur səhmləri artım liderləri olub. Bu, bazarın texnologiya sektoru daxilində kəskin differensiasiya etdiyini göstərir. İnvestorlar ənənəvi proqram təminatı şirkətlərindən çıxaraq aparıcı süni intellekt infrastruktur şirkətlərinə yönəliblər.
-
-## Birja Göstəriciləri
-
-S&P 500 indeksi cümə axşamı günü 0,6% artımla bağlanıb. Bazarlar inflyasiya məlumatlarına nisbətən sakit reaksiya verib, lakin analitiklər Hörmüz boğazı böhranının davam etməsi halında daha ciddi dalğalanmaların qaçılmaz olacağını xəbərdar edir. Federal Ehtiyat Sisteminin faiz dərəcəsi qərarları da diqqət mərkəzindədir.`,
-  },
-  'en-us-cpi-3-3-percent-oil-surge': {
-    title: 'US CPI Jumps to 3.3% Year-over-Year as Oil Prices Surge',
-    date: '2026-04-10',
-    category: 'Economy',
-    locale: 'en',
-    content: `The US Consumer Price Index rose 0.9% month-over-month and 3.3% year-over-year, driven overwhelmingly by soaring energy costs. Gasoline prices surged 21.2%, accounting for nearly three-quarters of the monthly CPI increase. Crude oil is trading near $98 per barrel as risks to the Strait of Hormuz continue to rattle global energy markets.
-
-## Energy Sector and Inflation Pressure
-
-The sharp rise in oil prices is feeding directly into consumer costs across the economy. The potential closure of the Strait of Hormuz — through which roughly 20% of the world's oil passes daily — has created severe anxiety in global supply chains. This situation complicates the Federal Reserve's strategy for combating inflation. Rising energy costs are spilling over into food and transportation prices, putting additional strain on household budgets.
-
-## Technology Sector Divergence
-
-Software stocks fell approximately 5% amid growing concerns about AI disruption to traditional business models. However, semiconductor and AI infrastructure stocks led the market's upside, reflecting investors' conviction that the AI buildout will continue regardless of broader economic headwinds. The divergence signals a significant rotation within the technology sector itself.
-
-## Market Performance
-
-The S&P 500 ended Thursday up 0.6%, showing relative resilience despite the hot inflation print. Markets appear to be pricing in the expectation that energy-driven inflation may prove transitory if diplomatic efforts in Islamabad succeed. However, analysts warn that a prolonged Strait of Hormuz crisis could push oil well above $100 per barrel, potentially triggering a broader economic downturn.`,
-  },
-  'tr-abd-tufe-3-3-petrol-fiyatlari-yukselis': {
-    title: 'ABD TÜFE Yıllık %3,3\'e Yükseldi — Petrol Fiyatları Fırlıyor',
-    date: '2026-04-10',
-    category: 'Ekonomi',
-    locale: 'tr',
-    content: `ABD Tüketici Fiyat Endeksi (TÜFE) aylık %0,9 ve yıllık %3,3 artış gösterdi. Benzin fiyatlarındaki %21,2'lik sıçrama, aylık TÜFE artışının yaklaşık dörtte üçünü oluşturdu. Hürmüz Boğazı riskleri nedeniyle ham petrol fiyatı varil başına 98 dolara yaklaştı.
-
-## Enerji Sektörü ve Enflasyon Baskısı
-
-Petrol fiyatlarındaki keskin yükseliş doğrudan tüketici harcamalarına yansıyor. Dünya petrolünün yaklaşık %20'sinin günlük geçtiği Hürmüz Boğazı'nın kapanma ihtimali, küresel tedarik zincirlerinde ciddi endişe yaratıyor. Bu durum merkez bankalarının enflasyonla mücadele stratejisini zorlaştırıyor. Enerji maliyetlerindeki artış gıda ve ulaşım fiyatlarına da sıçrayarak hane halkı bütçeleri üzerinde ek baskı oluşturuyor.
-
-## Teknoloji Sektöründe Ayrışma
-
-Yazılım hisseleri, yapay zeka kaynaklı yıkım endişeleri arasında yaklaşık %5 düştü. Ancak yarı iletken ve yapay zeka altyapı hisseleri piyasanın yükseliş liderleriydi. Bu ayrışma, yatırımcıların geleneksel yazılım şirketlerinden çıkarak yapay zeka altyapı şirketlerine yöneldiğini gösteriyor.
-
-## Piyasa Performansı
-
-S&P 500 endeksi perşembe gününü %0,6 artışla kapattı. Piyasalar sıcak enflasyon verisine rağmen görece dirençli bir görünüm sergiledi. Analistler, İslamabad'daki diplomatik çabaların başarılı olması halinde enerji kaynaklı enflasyonun geçici kalabileceğini belirtirken, Hürmüz Boğazı krizinin uzaması durumunda petrolün varil başına 100 doları aşabileceği ve daha geniş bir ekonomik gerilemeyi tetikleyebileceği konusunda uyarıyor.`,
-  },
-  'ru-inflyaciya-ssha-3-3-neft-rost': {
-    title: 'Инфляция в США достигла 3,3% на фоне роста цен на нефть',
-    date: '2026-04-10',
-    category: 'Экономика',
-    locale: 'ru',
-    content: `Индекс потребительских цен (ИПЦ) в США вырос на 0,9% за месяц и на 3,3% в годовом исчислении. Цены на бензин подскочили на 21,2%, составив почти три четверти месячного роста ИПЦ. Стоимость сырой нефти приближается к 98 долларам за баррель из-за рисков, связанных с Ормузским проливом.
-
-## Энергетический сектор и инфляционное давление
-
-Резкий рост цен на нефть напрямую влияет на потребительские расходы по всей экономике. Потенциальное закрытие Ормузского пролива, через который ежедневно проходит около 20% мировой нефти, создаёт серьёзную тревогу в глобальных цепочках поставок. Эта ситуация осложняет стратегию Федеральной резервной системы по борьбе с инфляцией. Рост стоимости энергоносителей перекидывается на цены продуктов питания и транспорта, создавая дополнительное давление на семейные бюджеты.
-
-## Расхождение в технологическом секторе
-
-Акции софтверных компаний упали примерно на 5% на фоне опасений по поводу разрушительного влияния искусственного интеллекта на традиционные бизнес-модели. Однако акции полупроводниковых компаний и компаний инфраструктуры ИИ возглавили рост рынка. Это расхождение свидетельствует о значительной ротации внутри самого технологического сектора.
-
-## Показатели рынка
-
-Индекс S&P 500 завершил четверг ростом на 0,6%, продемонстрировав относительную устойчивость несмотря на высокие данные по инфляции. Аналитики предупреждают, что затяжной кризис в Ормузском проливе может поднять стоимость нефти выше 100 долларов за баррель, что потенциально спровоцирует более широкий экономический спад.`,
-  },
-
   // --- Anthropic Surpasses OpenAI in Revenue at $30B ARR; Both Eye IPOs ---
   'anthropic-openai-gelirleri-ipo-planlar': {
     title: 'Anthropic OpenAI-ni Keçdi: $30B Gəlir, IPO Yolda',
@@ -11756,88 +11638,6 @@ SpaceX de Haziran ayında yatırımcı roadshow planlamaktadır, bu da 2026'yı 
 ## Другие крупные IPO
 
 SpaceX также планирует инвесторский роудшоу в июне, что может сделать 2026 год самым активным годом для технологических IPO. Одновременный выход на биржу двух лидеров ИИ-индустрии создаст для инвесторов как огромные возможности, так и непростой выбор между двумя видениями будущего искусственного интеллекта.`,
-  },
-
-  // --- DOJ Launches Antitrust Investigation Into NFL Over Streaming TV Deals ---
-  'abd-edalat-nazirliyi-nfl-antitrest-arasdirma': {
-    title: 'ABŞ Ədliyyə NFL-ə Antitrest Araşdırması Başlatdı',
-    date: '2026-04-10',
-    category: 'Biznes',
-    locale: 'az',
-    content: `ABŞ Ədliyyə Nazirliyi (DOJ) Milli Futbol Liqasına (NFL) qarşı antitrest araşdırması başladıb. Araşdırma NFL-in striming televiziya müqavilələri vasitəsilə istehlakçılara həddən artıq abunə haqları tətbiq edib-etmədiyini yoxlayacaq. Bu, peşəkar idmanın yayımlanma modelini kökündən dəyişdirə biləcək tarixi bir addımdır.
-
-## Problem: 10 platforma yayılmış oyunlar
-
-NFL oyunları hazırda Prime Video, Netflix, Peacock, Paramount+ və digər platformalar daxil olmaqla 10 müxtəlif striming xidmətinə yayılıb. Bu o deməkdir ki, bütün NFL oyunlarını izləmək istəyən azarkeşlər çoxsaylı abunəliklər üçün ayda yüzlərlə dollar ödəməli olurlar.
-
-## Qanuni əsas: 1961-ci il istisnası streaminqə şamil olunmur
-
-NFL 1961-ci il İdman Yayım Aktı çərçivəsində antitrest istisnasından yararlanır, lakin bu istisna yalnız ənənəvi televiziya yayımını əhatə edir, striming xidmətlərini yox. Senator Mayk Li araşdırmaya dəstəyini ifadə edib. NFL isə cavab olaraq oyunların 87%-nin hələ də pulsuz televiziyada yayımlandığını bildirib.
-
-## Geniş təsir
-
-Araşdırmanın nəticəsi yalnız NFL-i deyil, bütün peşəkar idman liqalarının striming strategiyalarını təsir edə bilər. İstehlakçılar üçün bu, daha əlçatan qiymətlər və daha sadə yayım modelləri demək ola bilər.`,
-  },
-  'en-doj-antitrust-investigation-nfl-streaming': {
-    title: 'DOJ Launches Antitrust Probe Into NFL Streaming',
-    date: '2026-04-10',
-    category: 'Business',
-    locale: 'en',
-    content: `The United States Department of Justice has opened a formal antitrust investigation into the National Football League, examining whether the league is forcing excessive subscription fees on consumers through its streaming television deals. The probe could fundamentally reshape how professional sports are distributed and priced in the streaming era.
-
-## The problem: games spread across 10 platforms
-
-NFL games are currently distributed across approximately 10 different streaming platforms, including Prime Video, Netflix, Peacock, Paramount+, and several others. For fans who want to watch all NFL games, the cumulative cost of multiple subscriptions runs into hundreds of dollars per month -- a dramatic increase from the era when most games aired on free broadcast television.
-
-## Legal basis: 1961 exemption does not cover streaming
-
-The NFL has long benefited from an antitrust exemption under the Sports Broadcast Act of 1961, which allows the league to negotiate television contracts collectively rather than team by team. However, that exemption was written specifically for broadcast television and does not extend to streaming platforms. Senator Mike Lee has expressed support for the investigation, arguing that the league is exploiting a legal grey area.
-
-## NFL's response
-
-The NFL has pushed back, stating that 87% of its games remain available on free broadcast television. The league maintains that its streaming deals expand access rather than restrict it.
-
-## Broader implications
-
-The outcome of this investigation could set precedent well beyond football. Every major professional sports league has aggressively pursued streaming deals in recent years, and a ruling against the NFL would likely force all of them to reconsider their distribution strategies, potentially leading to more affordable and simplified viewing options for consumers.`,
-  },
-  'tr-abd-adalet-bakanligi-nfl-antitrost-sorusturma': {
-    title: 'ABD Adalet Bakanlığı NFL\'e Antitröst Soruşturma Açtı',
-    date: '2026-04-10',
-    category: 'İş Dünyası',
-    locale: 'tr',
-    content: `ABD Adalet Bakanlığı (DOJ), Ulusal Futbol Ligi'ne (NFL) karşı antitröst soruşturması başlattı. Soruşturma, NFL'in yayın anlaşmaları yoluyla tüketicilere aşırı abonelik ücretleri dayatıp dayatmadığını inceleyecek. Bu karar, profesyonel sporun yayın modelini kökten değiştirebilecek tarihi bir adım olarak değerlendiriliyor.
-
-## Sorun: 10 platforma dağılmış maçlar
-
-NFL maçları şu anda Prime Video, Netflix, Peacock, Paramount+ ve diğer platformalar dahil olmak üzere 10 farklı yayın hizmetine dağılmış durumda. Bu durum, tüm NFL maçlarını izlemek isteyen taraftarların çok sayıda abonelik için ayda yüzlerce dolar ödemesini gerektiriyor. Bu, maçların çoğunun ücretsiz televizyonda yayınlandığı döneme kıyasla dramatik bir artış.
-
-## Hukuki zemin: 1961 muafiyeti yayıncılığı kapsamıyor
-
-NFL, 1961 tarihli Spor Yayın Yasası kapsamındaki antitröst muafiyetinden yararlanmaktadır. Ancak bu muafiyet yalnız geleneksel televizyon yayıncılığını kapsar, dijital yayın hizmetlerini kapsamaz. Senatör Mike Lee soruşturmaya desteğini açıklamıştır. NFL ise maçların yüzde 87'sinin hâlâ ücretsiz televizyonda yayınlandığını belirterek yanıt vermiştir.
-
-## Geniş etkiler
-
-Soruşturmanın sonucu yalnız NFL'i değil, tüm profesyonel spor liglerinin yayın stratejilerini etkileyebilir. Tüketiciler açısından bu, daha erişilebilir fiyatlar ve daha basit yayın modelleri anlamına gelebilir. Son yıllarda tüm büyük spor ligleri agresif yayın anlaşmaları peşinde koşmuş olup NFL aleyhine bir karar verilmesi halinde diğer liglerin de stratejilerini gözden geçirmesi kaçınılmaz olacaktır.`,
-  },
-  'ru-minyust-ssha-antimonopolnoe-rassledovanie-nfl': {
-    title: 'Минюст США начал антимонопольное дело против NFL',
-    date: '2026-04-10',
-    category: 'Бизнес',
-    locale: 'ru',
-    content: `Министерство юстиции США открыло официальное антимонопольное расследование в отношении Национальной футбольной лиги (NFL). Расследование направлено на проверку того, навязывает ли лига потребителям чрезмерные абонентские платежи через свои стриминговые телевизионные контракты. Это историческое решение способно кардинально изменить модель распространения профессионального спорта.
-
-## Проблема: матчи разбросаны по 10 платформам
-
-Матчи NFL в настоящее время транслируются на примерно 10 различных стриминговых платформах, включая Prime Video, Netflix, Peacock, Paramount+ и другие сервисы. Для болельщиков, желающих смотреть все игры NFL, совокупная стоимость подписок составляет сотни долларов в месяц -- это резкое увеличение по сравнению с эпохой, когда большинство матчей транслировались на бесплатном телевидении.
-
-## Правовая основа: исключение 1961 года не распространяется на стриминг
-
-NFL долгое время пользовалась антимонопольным исключением в рамках Закона о спортивном вещании 1961 года. Однако это исключение было написано специально для эфирного телевидения и не распространяется на стриминговые платформы. Сенатор Майк Ли выразил поддержку расследованию. NFL в ответ заявила, что 87% матчей по-прежнему доступны на бесплатном эфирном телевидении.
-
-## Широкие последствия
-
-Результат расследования может создать прецедент далеко за пределами футбола. Все крупные профессиональные спортивные лиги в последние годы активно заключали стриминговые контракты, и решение против NFL вероятно заставит все лиги пересмотреть свои стратегии дистрибуции, что потенциально приведёт к более доступным ценам для потребителей.`,
   },
 
   // --- Massive Cyberattack on China's National Supercomputer -- 10 Petabytes Stolen ---
@@ -11918,194 +11718,6 @@ Hackerlar, ele geçirilmiş bir VPN bağlantısı üzerinden sisteme altı ay bo
 Объём в 10 петабайт поражает воображение -- это эквивалент примерно 10 миллионов часов HD-видео или миллиардов документов. Утечка военных исследовательских данных может нанести серьёзный удар по оборонным программам Китая и заново разжечь международные дискуссии о кибербезопасности и уязвимости критической государственной инфраструктуры. Этот инцидент в очередной раз доказывает, что даже самые защищённые государственные системы остаются уязвимыми перед изощрёнными и настойчивыми атаками.`,
   },
 
-  // --- Topic 7: The Masters 2026 -- Round 2 Underway at Augusta National ---
-  'masters-2026-ikinci-tur-augusta': {
-    title: 'Masters 2026: McIlroy və Burns Liderliyə Şərik',
-    date: '2026-04-10',
-    category: 'İdman',
-    locale: 'az',
-    content: `Qolfun ən nüfuzlu turniri olan Masters 2026-nın ikinci turu bu gün Augusta National Golf Klubunda davam edir. Birinci turun nəticələrinə görə Sam Burns, müdafiəçi çempion Rory McIlroy, Kurt Kitayama və Jason Day 5 vuruş aşağı ilə birgə liderlik edirlər.
-
-## İkinci Turun Əsas Hadisələri
-
-2023-cü il ABŞ Açıq çempionu Wyndham Clark ikinci turda möhtəşəm oyun nümayiş etdirərək 4 vuruş aşağı (68) nəticə göstərib. Clark 2-ci, 3-cü və 4-cü deliklərə ardıcıl birdie ilə başlayıb, 15-ci və 16-cı deliklərdə də uğurlu vuruşlar edib. Brooks Koepka da yaxşı oyun göstərərək 2-ci və 3-cü deliklərdə birdie edib.
-
-## LIV Golf Oyunçuları Çətinlik Çəkir
-
-LIV Golf-dan gələn oyunçular Augusta-da ciddi problemlərlə üzləşiblər. Jon Rahm turnirinə par üstü 6 vuruşla davam edir, Bryson DeChambeau isə arxa doqquzluqda üçqat bogeydən sonra 4 vuruş üstə çıxıb. Justin Rose 1 vuruş aşağı ilə LIV qrupunun ən yaxşı nəticəsini göstərir. Hər iki ulduz oyunçunun həftəsonu mərhələsinə keçməsi təhlükə altındadır.
-
-## McIlroy-un Tarixi Missiyası
-
-Keçən il Augusta-da pleyyof qələbəsi ilə karyera Grand Slam-ını tamamlayan McIlroy bu il müdafiəçi çempion kimi yarışır. Birinci turda ortalardan etibarən svinqini taparaq liderboarda yüksəlib. Grand Slam-ı tamamladıqdan sonrakı rahatlıq onun oyununa müsbət təsir göstərir.
-
-## Kəsmə Xətti və Meydança Şərtləri
-
-Proqnozlaşdırılan kəsmə xətti par üstü 3 vuruşdadır ki, bu da keçən ilki 2 vuruşdan yüksəkdir. Augusta-nın quru şərtləri oyunçuların işini çətinləşdirir - ikinci turda cəmi 14 oyunçu par altında oynayır, 28 oyunçu isə par üstündədir. Qolf topunun vuruş məsafəsi mövzusu da müzakirə predmeti olaraq qalmaqdadır - Augusta National sədri bu məsələdə "uğursuzluğun seçim olmadığını" bildirib.`,
-  },
-  'en-masters-2026-round-2-augusta': {
-    title: 'Masters 2026: McIlroy and Burns Share the Lead',
-    date: '2026-04-10',
-    category: 'Sports',
-    locale: 'en',
-    content: `The second round of the 2026 Masters Tournament is underway at Augusta National Golf Club, with defending champion Rory McIlroy and Sam Burns entering Friday tied atop the leaderboard at 5-under par alongside Kurt Kitayama and Jason Day.
-
-## Key Round 2 Developments
-
-Wyndham Clark, the 2023 U.S. Open champion, has delivered an impressive Round 2 performance, posting a 4-under 68 to move into contention. Clark opened with three consecutive birdies from holes 2 through 4, then added two more at the 15th and 16th to offset a single mid-round bogey. Brooks Koepka has also made a charge, birdieing the 2nd and 3rd holes to move into red numbers during his round, eventually reaching 1-under for the tournament.
-
-## LIV Golf Stars Struggling
-
-It has been a difficult week for LIV Golf's biggest names at Augusta. Jon Rahm sits at a dreadful 6-over par, while Bryson DeChambeau is at 4-over after a devastating triple-bogey on the back nine during his second round. Justin Rose stands as the best-placed LIV player at 1-under, but the rest of the contingent faces an uphill battle just to make the weekend. Both Rahm and DeChambeau, who entered as pre-tournament favorites, are in serious danger of missing the cut.
-
-## McIlroy's Title Defense
-
-Rory McIlroy returns to Augusta as a man unburdened. After completing the career Grand Slam with his dramatic playoff victory last year -- becoming just the sixth player in history and the first since Tiger Woods to achieve the feat -- McIlroy is playing with a freedom that should terrify the rest of the field. He found his rhythm in the middle of Thursday's round and surged to the top of the leaderboard.
-
-## Cut Line and Course Conditions
-
-The projected cut line sits at 3-over par, already higher than last year's 2-over mark and expected to rise as the dry conditions at Augusta continue to firm up the course. Only 14 players are currently under par on their second rounds, while 28 are over. The golf ball distance rollback debate continues to hover over proceedings, with the Augusta National chairman stating that "failure is not an option" on the issue.`,
-  },
-  'tr-masters-2026-ikinci-tur-augusta': {
-    title: 'Masters 2026: McIlroy ve Burns Zirvede Eşit',
-    date: '2026-04-10',
-    category: 'Spor',
-    locale: 'tr',
-    content: `Golfun en prestijli turnuvası olan Masters 2026'nın ikinci turu bugün Augusta National Golf Kulübü'nde devam ediyor. Birinci turun ardından Sam Burns, şampiyon Rory McIlroy, Kurt Kitayama ve Jason Day 5 vuruş altında skorla birlikte liderliği paylaşıyor.
-
-## İkinci Turun Öne Çıkan Gelişmeleri
-
-2023 ABD Açık şampiyonu Wyndham Clark, ikinci turda muhteşem bir performans sergileyerek 4 vuruş altında (68) skor kartı imzaladı. Clark 2, 3 ve 4 numaralı çukurlarda art arda birdie yaparak tura başladı, 15 ve 16 numaralı çukurlarda da başarılı vuruşlar ekledi. Brooks Koepka da 2 ve 3 numaralı çukurlarda birdie yaparak turnuvada eksi bölgeye geçti ve sonunda 1 vuruş altına ulaştı.
-
-## LIV Golf Oyuncuları Zorlanıyor
-
-LIV Golf'ün yıldız isimleri Augusta'da ciddi sorunlar yaşıyor. Jon Rahm par üstü 6 vuruşla turnuvaya devam ederken, Bryson DeChambeau arka dokuzda aldığı üçlü bogeyden sonra 4 vuruş üstüne çıktı. Justin Rose, 1 vuruş altıyla LIV grubunun en iyi performansını gösteriyor. Turnuva öncesi favoriler arasında gösterilen hem Rahm hem de DeChambeau'nun hafta sonuna kalması tehlike altında.
-
-## McIlroy'un Şampiyonluk Savunması
-
-Geçen yıl Augusta'daki playoff zaferiyle kariyerindeki Grand Slam'ı tamamlayan McIlroy -- bunu başaran tarihte altıncı ve Tiger Woods'tan bu yana ilk golfçü olarak -- bu yıl şampiyon olarak geri dönüyor. Perşembe günkü turunda ortalardan itibaren svingini bulan McIlroy, puan tablosunun tepesine yükseldi. Grand Slam baskısından kurtulan McIlroy özgürce oynuyor.
-
-## Kesim Çizgisi ve Saha Koşulları
-
-Tahmini kesim çizgisi par üstü 3 vuruşta yer alıyor; bu geçen yılki 2 vuruştan daha yüksek. Augusta'nın kuru koşulları sahayı sertleştiriyor ve oyuncuların işini zorlaştırıyor -- ikinci turda sadece 14 oyuncu par altında oynarken, 28 oyuncu par üstünde. Golf topu mesafe tartışması da gündemden düşmüyor; Augusta National başkanı bu konuda "başarısızlığın bir seçenek olmadığını" vurguladı.`,
-  },
-  'ru-masters-2026-vtoroy-tur-augusta': {
-    title: 'Мастерс 2026: Макилрой и Бёрнс делят лидерство',
-    date: '2026-04-10',
-    category: 'Спорт',
-    locale: 'ru',
-    content: `Второй раунд самого престижного турнира в мире гольфа Мастерс 2026 продолжается на поле Огаста Нэшнл Гольф Клаб. По итогам первого раунда Сэм Бёрнс, действующий чемпион Рори Макилрой, Курт Китаяма и Джейсон Дэй разделили лидерство с результатом 5 ударов ниже пар.
-
-## Основные события второго раунда
-
-Чемпион Открытого чемпионата США 2023 года Уиндем Кларк продемонстрировал великолепную игру во втором раунде, показав результат 4 удара ниже пар (68). Кларк начал раунд с трёх последовательных бёрди на лунках со 2-й по 4-ю, а затем добавил ещё два успешных удара на 15-й и 16-й лунках. Брукс Коепка также совершил рывок, сделав бёрди на 2-й и 3-й лунках и выйдя на результат 1 удар ниже пар.
-
-## Игроки из ЛИВ Гольф испытывают трудности
-
-Крупнейшие звёзды ЛИВ Гольф переживают тяжёлую неделю в Огасте. Хон Рам находится на катастрофическом уровне 6 ударов выше пар, а Брайсон Дешамбо после разрушительного тройного боги на задней девятке оказался на отметке 4 удара выше пар. Джастин Роуз с результатом 1 удар ниже пар показывает лучший результат среди игроков ЛИВ. И Рам, и Дешамбо, которые считались фаворитами турнира, рискуют не пройти в уикенд.
-
-## Защита титула Макилроя
-
-Рори Макилрой вернулся в Огасту свободным человеком. Завершив карьерный Большой шлем драматичной победой в плейофф в прошлом году -- став лишь шестым игроком в истории и первым после Тайгера Вудса -- Макилрой играет с раскованностью, которая пугает соперников. Он нашёл свой ритм в середине первого раунда и взлетел на вершину таблицы лидеров.
-
-## Линия среза и состояние поля
-
-Прогнозируемая линия среза составляет 3 удара выше пар, что уже выше прошлогоднего показателя в 2 удара. Сухие условия в Огасте продолжают уплотнять поле -- лишь 14 игроков находятся ниже пар во втором раунде, тогда как 28 играют выше пар. Дебаты о регулировании дальности полёта мяча остаются актуальной темой: председатель Огаста Нэшнл заявил, что «провал не является вариантом» в этом вопросе.`,
-  },
-
-  // --- Topic 8: CDC Delays Report Showing COVID Vaccine Effectiveness ---
-  'cdc-covid-peyvend-hesabatini-gecikdirir': {
-    title: 'CDC COVID Peyvənd Effektivlik Hesabatını Gecikdirir',
-    date: '2026-04-10',
-    category: 'Sağlamlıq',
-    locale: 'az',
-    content: `Xəstəliklərə Nəzarət və Qarşısının Alınması Mərkəzlərinin (CDC) səlahiyyətli direktoru Cey Bhattaçarya COVID-19 peyvəndinin 2025-2026 qış mövsümündə təcili yardım vizitlərini 50%, xəstəxanaya yerləşdirmələri isə 55% azaltdığını göstərən hesabatın dərcini gecikdirib.
-
-## Gecikdirilən Hesabatın Təfərrüatları
-
-Hesabat CDC-nin əsas elmi jurnalı olan MMWR-də (Xəstəlik və Ölüm Həftəlik Hesabatı) 19 mart tarixində dərc edilməli idi. Tədqiqat göstərib ki, sentyabr-dekabr ayları arasında peyvənd olunan sağlam yaşlıların təcili yardım və təcili tibbi yardım şöbələrinə müraciət ehtimalı 50%, COVID ilə əlaqəli xəstəxanaya yerləşdirmə ehtimalı isə peyvənd olunmayanlara nisbətən 55% az olub.
-
-## Metodologiya İddiaları
-
-Bhattaçarya gecikməni tədqiqatda istifadə olunan "test-neqativ dizayn" metodologiyasına dair narahatlıqlarla əsaslandırıb. Lakin bu eyni metodologiya onilliklər ərzində CDC tərəfindən respirator viruslara qarşı peyvənd effektivliyini qiymətləndirmək üçün istifadə olunub. Daha maraqlısı odur ki, eyni metodologiya ilə hazırlanmış qrip peyvəndinin effektivliyi haqqında hesabat sadəcə bir həftə əvvəl MMWR-də dərc edilmişdi.
-
-## Siyasi Müdaxilə Narahatlıqları
-
-Hazırkı və keçmiş məmurlar hesabatın gecikdirilməsinin peyvəndləri açıq şəkildə tənqid edən Səhiyyə Naziri Robert F. Kennedy Jr.-ın baxışları ilə uyğunlaşdığını bildiriblər. Tənqidçilər hesab edirlər ki, peyvəndin faydaları haqqında məlumatlar Kennedy-nin anti-peyvənd mövqeyi ilə ziddiyyət təşkil etdiyi üçün gizlədilir. Bu hadisə ictimai sağlamlıq elminə siyasi müdaxilə ilə bağlı ciddi narahatlıqlar doğurur.
-
-## Niyə Bu Vacibdir
-
-CDC-nin elmi nəşrlərinin siyasi motivlərlə gecikdirilməsi ictimai sağlamlıq qərarlarına inamı sarsıda bilər. Peyvənd effektivliyi haqqında vaxtında və şəffaf məlumat paylaşımı vətəndaşların sağlamlıq qərarları vermələri üçün kritik əhəmiyyət daşıyır.`,
-  },
-  'en-cdc-delays-covid-vaccine-effectiveness-report': {
-    title: 'CDC Delays COVID Vaccine Effectiveness Report',
-    date: '2026-04-10',
-    category: 'Health',
-    locale: 'en',
-    content: `Acting CDC Director Jay Bhattacharya has delayed publication of a report showing the 2025-2026 COVID-19 vaccine reduced emergency department visits by 50% and hospitalizations by 55% among healthy adults during the past winter season. The suppression of the findings has sparked accusations of political interference in public health science.
-
-## What the Report Found
-
-The study, which had cleared the CDC's scientific review process and was scheduled for publication on March 19 in the Morbidity and Mortality Weekly Report (MMWR), found significant vaccine effectiveness. Between September and December, healthy adults who received the updated COVID vaccine were half as likely to visit emergency departments and urgent care facilities, and 55% less likely to be hospitalized for COVID-related illness, compared with unvaccinated individuals.
-
-## The Methodology Dispute
-
-Bhattacharya cited concerns about the observational method used to calculate vaccine effectiveness -- specifically the "test-negative design" approach. This methodology examines people who are already sick enough to seek care, tests them, and then compares vaccination rates between those who test positive and those who do not. However, the same methodology has been a cornerstone of CDC vaccine evaluation for decades. A flu vaccine effectiveness report using the identical methodology was published in the MMWR just one week before the COVID report was pulled.
-
-## Political Interference Concerns
-
-Current and former CDC officials have raised alarms that the delay aligns with the views of Health Secretary Robert F. Kennedy Jr., a longtime vocal critic of vaccines. Critics argue that information about the vaccine's benefits is being suppressed precisely because it contradicts the administration's skeptical stance on COVID-19 vaccination. The move represents what many health experts consider an unprecedented level of political intervention in the agency's scientific publishing process.
-
-## Why It Matters
-
-The delayed publication raises fundamental questions about the independence of public health agencies from political influence. Timely and transparent sharing of vaccine effectiveness data is critical for healthcare providers making recommendations and for individuals making informed decisions about their health during ongoing respiratory virus seasons.`,
-  },
-  'tr-cdc-covid-asi-etkinlik-raporunu-geciktiriyor': {
-    title: 'CDC COVID Aşı Etkinlik Raporunu Geciktirdi',
-    date: '2026-04-10',
-    category: 'Sağlık',
-    locale: 'tr',
-    content: `CDC Vekil Direktörü Jay Bhattacharya, 2025-2026 COVID-19 aşısının acil servis ziyaretlerini yüzde 50 ve hastaneye yatışları yüzde 55 azalttığını gösteren bir raporun yayınlanmasını geciktirdi. Bulguların bastırılması, halk sağlığı bilimine siyasi müdahale suçlamalarına yol açtı.
-
-## Raporun Bulguları
-
-CDC'nin bilimsel inceleme sürecini geçen ve 19 Mart'ta Hastalık ve Ölüm Haftalık Raporu'nda (MMWR) yayınlanması planlanan çalışma, önemli düzeyde aşı etkinliği tespit etti. Eylül-Aralık ayları arasında güncellenen COVID aşısını yaptıran sağlıklı yetişkinlerin acil servise başvurma olasılığı yüzde 50, COVID kaynaklı hastaneye yatış olasılığı ise aşı olmayanlara kıyasla yüzde 55 daha düşük çıktı.
-
-## Metodoloji Tartışması
-
-Bhattacharya, gecikmeyi çalışmada kullanılan "test-negatif tasarım" metodolojisine ilişkin endişelere dayandırdı. Bu yaklaşım, bakım almaya yetecek kadar hasta olan kişileri inceler, test eder ve ardından pozitif çıkanlarla çıkmayanlar arasındaki aşılanma oranlarını karşılaştırır. Ancak aynı metodoloji, CDC tarafından on yıllardır solunum yolu virüslerine karşı aşı etkinliğini değerlendirmek için kullanılmaktadır. Aynı metodolojiyle hazırlanan grip aşısı etkinlik raporu, COVID raporunun geri çekilmesinden sadece bir hafta önce MMWR'de yayınlanmıştı.
-
-## Siyasi Müdahale Endişeleri
-
-Mevcut ve eski CDC yetkilileri, gecikmenin aşıları uzun süredir açıkça eleştiren Sağlık Bakanı Robert F. Kennedy Jr.'ın görüşleriyle örtüştüğü konusunda alarm veriyor. Eleştirmenler, aşının faydaları hakkındaki bilgilerin yönetimin COVID-19 aşılamasına şüpheci yaklaşımıyla çeliştiği için bastırıldığını savunuyor. Bu adım, pek çok sağlık uzmanının ajansın bilimsel yayın sürecine benzeri görülmemiş düzeyde siyasi müdahale olarak değerlendirdiği bir gelişme.
-
-## Neden Önemli
-
-Geciktirilen yayın, halk sağlığı kurumlarının siyasi etkiden bağımsızlığı konusunda temel sorular gündeme getiriyor. Aşı etkinliği verilerinin zamanında ve şeffaf paylaşımı, sağlık hizmeti sağlayıcıları ve bireyler için kritik öneme sahiptir.`,
-  },
-  'ru-cdc-zaderzhivayet-otchyot-ob-effektivnosti-vakciny-covid': {
-    title: 'CDC задерживает отчёт об эффективности COVID-вакцины',
-    date: '2026-04-10',
-    category: 'Здоровье',
-    locale: 'ru',
-    content: `Исполняющий обязанности директора Центров по контролю и профилактике заболеваний (CDC) Джей Бхаттачарья задержал публикацию отчёта, показывающего, что вакцина против COVID-19 сезона 2025-2026 сократила посещения отделений неотложной помощи на 50%, а госпитализации -- на 55% среди здоровых взрослых. Замалчивание результатов исследования вызвало обвинения в политическом вмешательстве в науку общественного здравоохранения.
-
-## Что показало исследование
-
-Исследование, прошедшее научную экспертизу CDC и запланированное к публикации 19 марта в Еженедельном отчёте о заболеваемости и смертности (MMWR), выявило значительную эффективность вакцины. В период с сентября по декабрь здоровые взрослые, получившие обновлённую вакцину против COVID, вдвое реже обращались в отделения неотложной помощи и на 55% реже госпитализировались по сравнению с невакцинированными.
-
-## Спор о методологии
-
-Бхаттачарья объяснил задержку опасениями относительно методологии «тест-негативного дизайна», использованной в исследовании. Этот подход изучает людей, достаточно больных для обращения за медицинской помощью, тестирует их и сравнивает уровни вакцинации между теми, кто дал положительный результат, и теми, кто нет. Однако эта же методология десятилетиями используется CDC для оценки эффективности вакцин против респираторных вирусов. Отчёт об эффективности вакцины против гриппа, подготовленный по идентичной методологии, был опубликован в MMWR всего за неделю до отзыва отчёта о COVID.
-
-## Опасения политического вмешательства
-
-Действующие и бывшие сотрудники CDC забили тревогу, указывая, что задержка согласуется с позицией министра здравоохранения Роберта Ф. Кеннеди-младшего, давнего критика вакцин. Критики утверждают, что информация о пользе вакцины замалчивается именно потому, что она противоречит скептической позиции администрации в отношении вакцинации против COVID-19.
-
-## Почему это важно
-
-Задержка публикации ставит фундаментальные вопросы о независимости учреждений общественного здравоохранения от политического влияния. Своевременный и прозрачный обмен данными об эффективности вакцин имеет критическое значение для врачей и граждан, принимающих обоснованные решения о своём здоровье.`,
-  },
-
   // --- Topic 9: Trump Strengthens Tariffs on Steel, Aluminum, and Copper Imports ---
   'tramp-polad-aluminium-mis-tarifleri-guclendirir': {
     title: 'Tramp Polad, Aluminium və Misə 50% Tarif Tətbiq Etdi',
@@ -12184,7 +11796,6 @@ Gümrük ve Sınır Koruma (CBP), CAPE adlı yeni iade sistemi üzerinde çalı�
 Таможенно-пограничная служба (CBP) создаёт систему возврата средств под названием CAPE, запуск которой запланирован на 20 апреля. Первый этап охватит 63% из более чем 53 миллионов нерассмотренных импортных записей, по которым были уплачены пошлины IEEPA. Более 26 600 импортёров зарегистрировались для получения возврата, общий объём которого оценивается примерно в 120 миллиардов долларов. Спустя год после «Дня освобождения» экономические последствия очевидны: за десять месяцев производственный сектор потерял 89 000 рабочих мест, хотя были заключены торговые сделки с восемью партнёрами, включая Великобританию, Японию, Южную Корею и ЕС.`,
   },
 }
-
 
 export const newsSlugs = Object.keys(newsArticles)
 
