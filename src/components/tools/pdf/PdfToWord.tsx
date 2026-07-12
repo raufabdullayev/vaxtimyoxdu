@@ -234,21 +234,53 @@ export default function PdfToWord() {
   )
 }
 
-/** Yield control back to the event loop so the UI thread stays responsive. */
-function yieldToEventLoop(): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, 0))
-}
+/** Yield to the event loop every this-many pages. Frequent enough to keep the
+ *  UI responsive, sparse enough to avoid a scheduler round-trip per page. */
+const YIELD_INTERVAL = 16
+
+/**
+ * Yield control back to the event loop without the ~4 ms clamp that nested
+ * `setTimeout(resolve, 0)` calls incur after ~5 levels of nesting — which, on a
+ * 1000-page PDF, added seconds of pure scheduler overhead. Prefers the
+ * unclamped `scheduler.yield()` (Chromium 129+), falls back to a single shared
+ * `MessageChannel` macrotask, and finally to `setTimeout` in environments
+ * without either (e.g. some test runners).
+ */
+const yieldToEventLoop: () => Promise<void> = (() => {
+  const scheduler = (globalThis as { scheduler?: { yield?: () => Promise<void> } }).scheduler
+  if (scheduler && typeof scheduler.yield === 'function') {
+    return () => scheduler.yield!()
+  }
+  if (typeof MessageChannel === 'function') {
+    const channel = new MessageChannel()
+    let waiters: Array<() => void> = []
+    channel.port1.onmessage = () => {
+      const pending = waiters
+      waiters = []
+      pending.forEach((resolve) => resolve())
+    }
+    return () =>
+      new Promise<void>((resolve) => {
+        waiters.push(resolve)
+        channel.port2.postMessage(null)
+      })
+  }
+  return () => new Promise<void>((resolve) => setTimeout(resolve, 0))
+})()
 
 /**
  * Extract text from raw PDF bytes by scanning for text-showing operators
  * (Tj, TJ) in content streams. Returns an array of strings, one per page.
  *
- * Runs asynchronously, yielding to the event loop between chunks of work so
- * the main thread is not blocked while large PDFs (up to 50MB) are scanned.
- * The extracted output is identical to a synchronous pass — yielding only
- * affects scheduling, not the computed result.
+ * Runs asynchronously, yielding to the event loop between chunks of work (every
+ * YIELD_INTERVAL pages, and every 50 scanned streams) so the main thread is not
+ * blocked while large PDFs (up to 50MB) are processed. The extracted output is
+ * identical to a synchronous pass — yielding only affects scheduling, not the
+ * computed result.
+ *
+ * Exported for unit testing; the component consumes it via the default export.
  */
-async function extractTextFromPdfBytes(
+export async function extractTextFromPdfBytes(
   bytes: Uint8Array,
   onProgress?: (fraction: number) => void
 ): Promise<string[]> {
@@ -307,10 +339,12 @@ async function extractTextFromPdfBytes(
 
     pages.push(pageText.replace(/\s{3,}/g, '\n').trim())
 
-    // Report determinate progress and yield between pages.
-    // totalPages is always >= 1 inside this loop, so division is safe.
+    // Report determinate progress every page; yield only every YIELD_INTERVAL
+    // pages (totalPages is always >= 1 inside this loop, so division is safe).
     onProgress?.(0.2 + (0.8 * (i + 1)) / totalPages)
-    await yieldToEventLoop()
+    if ((i + 1) % YIELD_INTERVAL === 0) {
+      await yieldToEventLoop()
+    }
   }
 
   // If no text found at all but pages exist, return empty per page

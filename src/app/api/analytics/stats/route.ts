@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { timingSafeEqual } from 'crypto'
+import { timingSafeEqual, createHash } from 'crypto'
 import { getSupabaseServer, isSupabaseConfigured } from '@/lib/supabase/client'
 import type { AnalyticsAggregates } from '@/lib/supabase/types'
 import { createRateLimiter } from '@/lib/rate-limiter'
@@ -61,15 +61,14 @@ function isAuthorized(req: NextRequest): boolean {
   const headerKey = req.headers.get('x-api-key')
   if (!headerKey) return false
 
-  try {
-    return timingSafeEqual(
-      Buffer.from(headerKey),
-      Buffer.from(apiKey)
-    )
-  } catch {
-    // timingSafeEqual throws if lengths don't match; return false for security
-    return false
-  }
+  // Hash both sides to a fixed 32-byte digest before the constant-time compare.
+  // Comparing the raw keys would leak the secret's LENGTH: timingSafeEqual
+  // throws on unequal input lengths, so a wrong-length guess fast-fails while a
+  // right-length one runs the full compare — an observable timing difference.
+  // Equal-length digests make timingSafeEqual safe and never-throwing.
+  const headerHash = createHash('sha256').update(headerKey).digest()
+  const apiHash = createHash('sha256').update(apiKey).digest()
+  return timingSafeEqual(headerHash, apiHash)
 }
 
 /**

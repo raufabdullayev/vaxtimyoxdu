@@ -119,6 +119,14 @@ AS $$
   );
 $$;
 
+-- Least privilege: Postgres grants EXECUTE to PUBLIC by default on new
+-- functions, which lets the anon/authenticated roles call this RPC via
+-- PostgREST (POST /rest/v1/rpc/analytics_aggregates), bypassing the route's
+-- x-api-key gate. Today that only returns empty rows (SECURITY INVOKER + RLS),
+-- but revoke it as defense-in-depth so the exposure can't widen if an anon
+-- SELECT policy is ever added. Then grant to the service role only.
+REVOKE ALL ON FUNCTION public.analytics_aggregates(timestamptz, int) FROM PUBLIC;
+
 -- The API route authenticates with the service role key; grant it execute.
 GRANT EXECUTE ON FUNCTION public.analytics_aggregates(timestamptz, int) TO service_role;
 

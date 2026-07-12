@@ -119,4 +119,64 @@ describe('useSessionEngagement', () => {
 
     global.fetch = originalFetch
   })
+
+  // ── Regression coverage for the once-only guard + bfcache reset ──
+
+  const getHandler = (
+    spy: ReturnType<typeof vi.spyOn>,
+    type: string
+  ): EventListener =>
+    (spy.mock.calls.find((call: unknown[]) => call[0] === type)![1] as EventListener)
+
+  it('sends the beacon at most once across visibilitychange:hidden and beforeunload', () => {
+    renderHook(() => useSessionEngagement())
+
+    const beforeUnload = getHandler(addEventListenerSpy, 'beforeunload')
+    const visibility = getHandler(docAddEventListenerSpy, 'visibilitychange')
+
+    // A normal tab close fires BOTH events — the guard must collapse them to one.
+    Object.defineProperty(document, 'visibilityState', { value: 'hidden', configurable: true })
+    visibility(new Event('visibilitychange'))
+    beforeUnload(new Event('beforeunload'))
+
+    expect(mockSendBeacon).toHaveBeenCalledTimes(1)
+  })
+
+  it('re-arms the beacon after a bfcache restore (pageshow persisted)', () => {
+    renderHook(() => useSessionEngagement())
+
+    const visibility = getHandler(docAddEventListenerSpy, 'visibilitychange')
+    const pageshow = getHandler(addEventListenerSpy, 'pageshow')
+
+    Object.defineProperty(document, 'visibilityState', { value: 'hidden', configurable: true })
+    visibility(new Event('visibilitychange'))
+    expect(mockSendBeacon).toHaveBeenCalledTimes(1)
+
+    // bfcache restore resets the guard...
+    const persisted = new Event('pageshow') as PageTransitionEvent
+    Object.defineProperty(persisted, 'persisted', { value: true })
+    pageshow(persisted)
+
+    // ...so hiding again emits a fresh beacon.
+    visibility(new Event('visibilitychange'))
+    expect(mockSendBeacon).toHaveBeenCalledTimes(2)
+  })
+
+  it('does NOT re-arm on a normal (non-persisted) pageshow', () => {
+    renderHook(() => useSessionEngagement())
+
+    const visibility = getHandler(docAddEventListenerSpy, 'visibilitychange')
+    const pageshow = getHandler(addEventListenerSpy, 'pageshow')
+
+    Object.defineProperty(document, 'visibilityState', { value: 'hidden', configurable: true })
+    visibility(new Event('visibilitychange'))
+    expect(mockSendBeacon).toHaveBeenCalledTimes(1)
+
+    const normal = new Event('pageshow') as PageTransitionEvent
+    Object.defineProperty(normal, 'persisted', { value: false })
+    pageshow(normal)
+
+    visibility(new Event('visibilitychange'))
+    expect(mockSendBeacon).toHaveBeenCalledTimes(1)
+  })
 })

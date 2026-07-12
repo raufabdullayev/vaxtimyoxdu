@@ -185,4 +185,37 @@ describe('useScrollDepth', () => {
 
     document.body.removeChild(container)
   })
+
+  it('resets the dedup set when the slug changes so the same depth fires again', () => {
+    const container = document.createElement('div')
+    document.body.appendChild(container)
+    const ref = { current: container }
+
+    const { rerender } = renderHook(({ slug }) => useScrollDepth(slug, ref), {
+      initialProps: { slug: 'slug-a' },
+    })
+
+    const fire = (threshold: string) => {
+      const sentinel = container.querySelector(`[data-scroll-depth="${threshold}"]`) as HTMLElement
+      observerCallback(
+        [{ isIntersecting: true, target: sentinel } as unknown as IntersectionObserverEntry],
+        {} as IntersectionObserver
+      )
+    }
+
+    // Fire 50% for slug-a
+    fire('0.5')
+    expect(global.fetch).toHaveBeenCalledTimes(1)
+
+    // Param-only navigation to slug-b: the effect re-runs and resets firedRef,
+    // so the SAME depth (0.5) must fire again for the new slug.
+    rerender({ slug: 'slug-b' })
+    fire('0.5')
+
+    expect(global.fetch).toHaveBeenCalledTimes(2)
+    const body = JSON.parse((global.fetch as ReturnType<typeof vi.fn>).mock.calls[1][1].body)
+    expect(body.event_data.slug).toBe('slug-b')
+
+    document.body.removeChild(container)
+  })
 })
