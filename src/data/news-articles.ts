@@ -7,6 +7,546 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+  // ========== 2026-07-12 ==========
+
+  // --- Topic 1 (P0): Iran attacks five Gulf states after US strikes / Hormuz closed ---
+  'iran-korfez-olkelerine-hucum-hormuz': {
+    title: 'İran ABŞ zərbələrindən sonra beş Körfəz ölkəsinə hücum etdi',
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'az',
+    content: `ABŞ-ın Mərkəzi Komandanlığı (CENTCOM) 12 iyul bazar günü səhər İranın cənubuna üçüncü zərbə dalğasını həyata keçirdi. Zərbələr İranın Hörmüz boğazında Kipr bayraqlı "GFS Galaxy" konteyner gəmisini alovlandıran hücumuna cavab olaraq endirildi.
+
+## Hörmüz boğazı bağlandı
+
+İran İnqilab Keşikçiləri Korpusu (İKKK) Hörmüz boğazının bağlandığını elan etdi. Cavab tədbiri olaraq İran beş Körfəz ölkəsini — Qatar, Birləşmiş Ərəb Əmirlikləri, Bəhreyn, Küveyt və Omanı hədəf alaraq ballistik raketlər və dronlar buraxdı. Kritik neft və qaz nəqli marşrutu olan Hörmüz boğazı atəşkəsə nail olmaq cəhdlərində əsas mübahisə mövzusuna çevrilib.
+
+## Doha üzərində partlayışlar
+
+Qatarın hava hücumundan müdafiə sistemləri İran ballistik raketlərini ələ keçirərkən Dohanın üzərində bir neçə güclü partlayış səsi eşidildi. Qatarın Daxili İşlər Nazirliyinin məlumatına görə, düşən qəlpələr nəticəsində biri uşaq olmaqla üç nəfər yaralandı.
+
+Qatar Müdafiə Nazirliyi bəyanatında bildirdi: "Qatarın Silahlı Qüvvələri Qatar Dövlətini hədəf alan bir sıra ballistik raket hücumlarını ələ keçirməyə davam edir."
+
+## Bəhreyn və Küveytdə həyəcan siqnalları
+
+ABŞ Hərbi Dəniz Qüvvələrinin 5-ci Donanmasının yerləşdiyi Bəhreyndə raket həyəcanı üçüncü dəfə səsləndi. İran partlayıcı dronlarla Küveytdə "Patriot" hava müdafiə batareyasını, sursat anbarını və radar məntəqəsini, Bəhreyndə isə ABŞ-a məxsus rabitə və radar obyektini hədəf aldı.
+
+Hazırkı müharibə mərhələsi 2026-cı il fevralın 28-nə gedib çıxır. Azərbaycan İranla sərhəd olduğundan, APA.Az kimi Azərbaycan mediası münaqişənin Cənubi Qafqaza yayılma riskini yaxından izləyir.`,
+  },
+  'en-iran-attacks-five-gulf-states-us-strikes': {
+    title: 'Iran Strikes Five Gulf States After US Bombs Southern Iran',
+    date: '2026-07-12',
+    category: 'World',
+    locale: 'en',
+    content: `Iran launched missile and drone attacks against five Gulf states early Sunday, hours after US forces struck southern Iran for a third time and Iran declared the Strait of Hormuz closed to shipping.
+
+## Escalation Over the Strait of Hormuz
+
+US Central Command conducted a third round of strikes on southern Iran early Sunday, July 12, in response to an Iranian strike that set the Cyprus-flagged container ship GFS Galaxy ablaze in the Strait of Hormuz. Iran's Islamic Revolutionary Guard Corps declared the strait — a critical oil and gas transit route between Iran and Oman — closed and launched retaliatory attacks across the region.
+
+## Missiles and Drones Across the Gulf
+
+Iran fired ballistic missiles and drones at five Gulf states: Qatar, the United Arab Emirates, Bahrain, Kuwait and Oman. Multiple loud explosions were reported over Doha as Qatari air defenses intercepted Iranian ballistic missiles. Three people, including a child, were wounded by falling shrapnel, according to Qatar's Interior Ministry.
+
+"Qatar's Armed Forces continue intercepting a number of ballistic missile attacks targeting the State of Qatar," the Qatar Ministry of Defence said in a statement.
+
+Missile alerts sounded for a third time in Bahrain, home to the US Navy's 5th Fleet. Iran used explosive drones to target a Patriot air-defense battery, an ammunition depot and a radar site in Kuwait, along with a US communications and radar site in Bahrain.
+
+## A Widening War
+
+The current phase of the war traces back to Feb. 28, 2026. The Strait of Hormuz has become the central sticking point in efforts to reach a lasting ceasefire, with the waterway carrying a large share of the world's seaborne oil and gas. Azerbaijan, which shares a border with Iran, is among the countries closely tracking the risk of the conflict spilling into the South Caucasus.`,
+  },
+  'tr-iran-korfez-ulkelerine-saldiri': {
+    title: "İran, ABD saldırılarının ardından Körfez ülkelerini vurdu",
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `ABD Merkez Kuvvetleri Komutanlığı (CENTCOM), pazar sabahı erken saatlerde güney İran'a üçüncü saldırı dalgasını düzenledi. Saldırılar, İran'ın Hürmüz Boğazı'nda Kıbrıs bayraklı GFS Galaxy konteyner gemisini ateşe veren saldırısına yanıt olarak gerçekleşti.
+
+## Hürmüz Boğazı kapatıldı
+
+İran Devrim Muhafızları (IRGC), küresel petrol ve gaz sevkiyatının kritik geçiş noktası olan Hürmüz Boğazı'nı kapalı ilan etti. Muhafızlar misilleme olarak Katar, Birleşik Arap Emirlikleri, Bahreyn ve Kuveyt'e balistik füze ve insansız hava aracı ateşledi. Umman'a yönelik saldırılarla birlikte hedef alınan Körfez ülkelerinin sayısı beşe ulaştı. İran'ın Ürdün'e yönelik saldırılar düzenlediği ise iddia edildi.
+
+## Doha ve Bahreyn'de savunma
+
+Doha üzerinde çok sayıda güçlü patlama duyuldu; Katar hava savunması İran balistik füzelerini önledi. Katar İçişleri Bakanlığı'na göre, biri çocuk olmak üzere üç kişi düşen şarapnel parçalarından yaralandı.
+
+ABD Deniz Kuvvetleri 5. Filosu'na ev sahipliği yapan Bahreyn'de füze alarmları üçüncü kez çaldı. İran, Kuveyt'te bir Patriot hava savunma bataryasını, bir mühimmat deposunu ve bir radar tesisini; Bahreyn'de ise bir ABD iletişim ve radar tesisini insansız patlayıcı hava araçlarıyla hedef aldı.
+
+## Arka plan
+
+Katar Savunma Bakanlığı yaptığı açıklamada, "Katar Silahlı Kuvvetleri, Katar Devleti'ni hedef alan çok sayıda balistik füze saldırısını önlemeye devam ediyor" dedi. Mevcut savaş aşaması 28 Şubat 2026 tarihine dayanıyor. Kritik bir petrol ve gaz geçiş güzergâhı olan Hürmüz Boğazı, kalıcı ateşkes çabalarında merkezi sorun haline geldi.`,
+  },
+  'ru-iran-gulf-strikes-hormuz': {
+    title: 'Иран атаковал пять стран Залива после ударов США по Ормузскому проливу',
+    date: '2026-07-12',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Третий раунд ударов США
+
+Центральное командование США рано утром в воскресенье, 12 июля 2026 года, нанесло третий раунд ударов по югу Ирана. Поводом послужила иранская атака, в результате которой в Ормузском проливе загорелся контейнеровоз под кипрским флагом.
+
+В ответ Корпус стражей исламской революции (КСИР) объявил Ормузский пролив закрытым. Этот маршрут является одной из ключевых артерий для транзита нефти и газа и остаётся центральным узлом в попытках достичь устойчивого прекращения огня. Нынешняя фаза войны берёт начало 28 февраля 2026 года.
+
+## Удары по странам Залива
+
+В качестве возмездия Иран выпустил баллистические ракеты и беспилотники по пяти странам Персидского залива: Катару, ОАЭ, Бахрейну, Кувейту и Оману. По предположительным данным, отдельные атаки достигли также Иордании, которая не относится к странам Залива.
+
+Над Дохой прогремело несколько громких взрывов, когда системы ПВО Катара перехватывали иранские баллистические ракеты. По данным МВД Катара, три человека, включая ребёнка, получили ранения от осколков.
+
+В Бахрейне, где расположена база Пятого флота ВМС США, сигнал ракетной тревоги прозвучал в третий раз. В Кувейте иранские ударные дроны были нацелены на батарею ПВО «Пэтриот», склад боеприпасов и радиолокационную станцию, а в Бахрейне — на американский узел связи и радар.
+
+## Заявление Катара
+
+«Вооружённые силы Катара продолжают перехватывать ряд атак баллистическими ракетами, нацеленных на Государство Катар», — говорилось в заявлении Министерства обороны Катара от 12 июля 2026 года.
+
+Для аудитории Азербайджана эта тема имеет особое значение: страна граничит с Ираном, и азербайджанские СМИ внимательно отслеживают риск распространения конфликта на Южный Кавказ.`,
+  },
+
+  // --- Topic 2: Former Emir of Qatar Sheikh Hamad bin Khalifa Al Thani dies at 74 ---
+  'qatar-emiri-hamad-al-thani-vefat': {
+    title: 'Qatarın sabiq əmiri Şeyx Həmad bin Xəlifə 74 yaşında vəfat etdi',
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Qatarın sabiq əmiri, "Ata Əmir" kimi tanınan Şeyx Həmad bin Xəlifə Al Sani 12 iyul bazar günü 74 yaşında vəfat etdi. Ölüm xəbərini Əmiri Divanı (Qatar Kral Sarayı) rəsmi şəkildə elan etdi. Şeyx Həmad Qatarın müasir dövlət kimi formalaşmasının simvolik siması sayılırdı.
+
+## On səkkiz illik hakimiyyət
+
+Şeyx Həmad bin Xəlifə Al Sani 1995-ci ildən Qatara rəhbərlik etdi. 2013-cü ildə hakimiyyəti sağlığında oğlu, hazırkı əmir Şeyx Tamim bin Həmad Al Saniyə təhvil verdi. Onun 18 illik hakimiyyəti dövründə ölkədə mühüm iqtisadi, sosial və mədəni inkişaf baş verdi. Bu dövrün əlamətdar hadisələrindən biri 1996-cı ildə "Əl-Cəzirə" telekanalının fəaliyyətə başlaması oldu. Hakimiyyətin dinc yolla varisə ötürülməsi regionda diqqətlə izlənən nadir nümunələrdən biri sayıldı.
+
+## Dörd günlük matəm
+
+Qatar bazar ertəsindən başlayaraq dörd günlük ümumxalq matəmi elan etdi. Bu müddət ərzində dövlət qurumlarının işi dayandırıldı və bayraqlar endirildi.
+
+Əmiri Divanı bəyanatında bildirdi: "Allahın hökmü və qədərinə imanla dolu ürəklərlə Əmiri Divanı millətin bu böyük itkisinə hüzn duyur."
+
+## Regional əhəmiyyət
+
+Sabiq əmirin vəfatı İran-Körfəz hərbi gərginliyi ilə eyni həftə sonuna təsadüf etdi. Qatar Yaxın Şərq və Avropa boyunca əsas enerji və diplomatiya tərəfdaşlarından biridir. Şeyx Həmadın hakimiyyəti dövrü Qatarın müasir dövlət kimi formalaşmasında və beynəlxalq arenada tanınmasında mühüm mərhələ sayılır. Bu səbəbdən onun vəfatı həm ölkə daxilində, həm də qlobal siyasi müstəvidə geniş əks-səda doğurub.`,
+  },
+  'en-former-qatar-emir-hamad-dies-at-74': {
+    title: 'Former Qatari Emir Sheikh Hamad bin Khalifa Al Thani Dies at 74',
+    date: '2026-07-12',
+    category: 'World',
+    locale: 'en',
+    content: `Sheikh Hamad bin Khalifa Al Thani, the former emir of Qatar who ruled for 18 years and launched Al Jazeera, has died at age 74, the country's royal court announced.
+
+## The 'Father Emir'
+
+Sheikh Hamad, widely known as the "Father Emir," died Sunday, July 12, 2026, at age 74, according to an announcement from the Amiri Diwan, Qatar's royal court. Confirmation of his death came directly from the Diwan in a formal statement.
+
+"With hearts steadfast in faith in God's decree and destiny, the Amiri Diwan mourns the great loss to the nation," the royal court said.
+
+## From 1995 to 2013
+
+Sheikh Hamad ruled Qatar for 18 years, from 1995 until 2013, when he handed power to his son, current Emir Sheikh Tamim bin Hamad Al Thani. His tenure oversaw major economic, social and cultural development across the small but wealthy Gulf state.
+
+Among the defining moments of his rule was the 1996 launch of Al Jazeera, the Doha-based news network that grew into one of the most influential media organizations in the Arab world and beyond.
+
+## Four Days of Mourning
+
+Qatar declared a four-day period of public mourning beginning Monday. Government work was suspended and flags were ordered flown at half-mast across the country.
+
+The former emir's death came the same weekend as a sharp military escalation between Iran and several Gulf states, compounding a turbulent period for the region. Qatar, based in Doha, remains a central energy exporter and a key diplomatic partner across the Middle East and Europe.`,
+  },
+  'tr-katar-eski-emiri-vefat': {
+    title: "Katar'ın eski Emiri Şeyh Hamad bin Halife Al Sani hayatını kaybetti",
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Katar'ın eski Emiri Şeyh Hamad bin Halife Al Sani, pazar günü 74 yaşında hayatını kaybetti. Ölüm haberi, ülkenin başkenti Doha'daki Katar Kraliyet Divanı (Amiri Divanı) tarafından resmi bir açıklamayla duyuruldu.
+
+## "Baba Emir"
+
+Halk arasında "Baba Emir" olarak anılan Şeyh Hamad, 1995 yılından 2013 yılına kadar Katar'ı yönetti. Ardından iktidarı, hâlihazırda ülkeyi yöneten oğlu Emir Şeyh Temim bin Hamad Al Sani'ye devretti. 2013 yılındaki bu devirle birlikte Şeyh Temim, ülkenin yönetimini üstlendi. Toplam 18 yıl süren yönetimi, Katar'da önemli ekonomik, sosyal ve kültürel gelişmelere sahne oldu. Bu dönemde, 1996 yılında Al Jazeera televizyon kanalı yayın hayatına başladı.
+
+## Dört günlük ulusal yas
+
+Katar, pazartesi gününden itibaren dört günlük ulusal yas ilan etti. Bu süre boyunca kamu kurumlarındaki çalışmalar askıya alınacak ve bayraklar yarıya indirilecek. İlan edilen yas, ülke genelinde geçerli olacak.
+
+Amiri Divanı yaptığı açıklamada, "Allah'ın takdirine ve kaderine iman eden kalplerle, Amiri Divanı ulusun büyük kaybının yasını tutuyor" ifadelerini kullandı.
+
+## Bölgesel önem
+
+Şeyh Hamad'ın ölümü, İran ile Körfez ülkeleri arasındaki askeri tırmanmanın yaşandığı hafta sonuna denk geldi. Katar, Orta Doğu ve Avrupa genelinde önemli bir enerji ve diplomasi ortağı konumunda bulunuyor. Bu nedenle ülkedeki liderlik gündemi, hem bölgesel hem de küresel açıdan yakından izleniyor. Eski Emir'in yönetimi döneminde ülke, uluslararası alanda giderek daha görünür bir aktör haline gelmişti.`,
+  },
+  'ru-qatar-emir-hamad-dies': {
+    title: 'Скончался бывший эмир Катара шейх Хамад бин Халифа Аль Тани',
+    date: '2026-07-12',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Скончался «Отец-эмир»
+
+Бывший эмир Катара шейх Хамад бин Халифа Аль Тани, известный как «Отец-эмир», скончался в воскресенье, 12 июля 2026 года, в возрасте 74 лет. Об этом сообщил Эмирский диван — Королевский двор Катара.
+
+## Восемнадцать лет у власти
+
+Шейх Хамад правил Катаром с 1995 года. В 2013 году он передал власть своему сыну — нынешнему эмиру шейху Тамиму бин Хамаду Аль Тани. Его восемнадцатилетнее правление сопровождалось масштабным экономическим, социальным и культурным развитием страны. Среди знаковых событий этого периода — запуск в 1996 году телеканала «Аль-Джазира», который изменил медийный ландшафт всего региона. При его правлении Катар превратился в одного из заметных игроков мировой энергетики и региональной дипломатии.
+
+## Национальный траур
+
+Катар объявил четырёхдневный траур, который начинается в понедельник. На это время работа государственных учреждений приостанавливается, а флаги приспущены по всей стране.
+
+## Заявление Королевского двора
+
+«С сердцами, твёрдыми в вере в предопределение и волю Божью, Эмирский диван скорбит о великой утрате для нации», — говорится в заявлении Эмирского дивана от 12 июля 2026 года.
+
+Смерть бывшего эмира пришлась на те же выходные, что и военная эскалация в регионе Персидского залива. Катар остаётся ключевым энергетическим и дипломатическим партнёром на Ближнем Востоке и в Европе, поэтому уход одного из самых влиятельных лидеров новейшей истории страны имеет заметный региональный резонанс. Нынешний эмир шейх Тамим бин Хамад Аль Тани руководит страной с 2013 года.`,
+  },
+
+  // ========== 2026-07-11 ==========
+
+  // --- Topic 3: Russian missile and drone barrage kills six in Ukraine ---
+  'rusiya-ukrayna-raket-hucumu': {
+    title: 'Rusiyanın raket və dron zərbələri Ukraynada altı can aldı',
+    date: '2026-07-11',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Rusiyanın Ukraynaya gecə ərzində endirdiyi geniş miqyaslı raket və dron zərbələri altı nəfərin həyatına son qoydu, 29 nəfər yaralandı. Ukrayna Prezidenti Volodimir Zelenski hadisədən sonra silah tədarükünün sürətləndirilməsi çağırışını təkrarladı.
+
+## Hücumun miqyası
+
+Ukrayna rəsmilərinin məlumatına görə, Rusiya 11 iyul gecəsi ölkəyə qarşı, altısı ballistik olmaqla, 12 raket və 121 dron istifadə etdi. Hava hücumundan müdafiə sistemləri iki raketi və 111 dronu vurub və ya radioelektron vasitələrlə zərərsizləşdirib. Rusiya Müdafiə Nazirliyi qüvvələrinin Kiyevdə dron istehsalı obyektlərini, Odesa vilayətindəki İzmail və Çornomorsk limanlarını hədəf aldığını bildirib.
+
+## Bir neçə bölgədə itkilər
+
+Ölkənin şimal-şərqindəki Sumı vilayətində ictimai nəqliyyat dayanacağı yaxınlığındakı sıx ərazi iki idarəolunan aviabomba ilə vuruldu; uşaq da daxil olmaqla dörd nəfər həlak oldu, 17 nəfər yaralandı. Cənubdakı Odesa liman şəhərində binaya endirilən raket zərbəsində daha iki nəfər həlak oldu, bir nəfər yaralandı. Paytaxt Kiyevdə isə gecə boyu davam edən zərbələrdə uşaq da daxil olmaqla 11 nəfər yaralandı. Ümumilikdə ölkə üzrə altı nəfər həlak oldu, 29 nəfər yaralandı.
+
+## Kiyev sürətli müdafiə istəyir
+
+Zelenski zərbələrdən sonra tərəfdaşları silah və hava müdafiə sistemlərinin çatdırılmasını sürətləndirməyə çağırıb. Ukrayna qüvvələri isə ayrıca Rusiya neft tankerlərini hədəf aldıqlarını bildirib. Yüksək itkilərlə müşayiət olunan bu gecə cəbhə xəttindən uzaq şəhərlərdə də mülki itkilər verən müharibənin davam edən mərhələsinin bir hissəsidir.`,
+  },
+  'en-russia-strikes-ukraine-kills-six': {
+    title: 'Russian Missile and Drone Barrage Kills Six in Ukraine',
+    date: '2026-07-11',
+    category: 'World',
+    locale: 'en',
+    content: `A large overnight Russian barrage of missiles and drones killed six people and wounded 29 across several regions of Ukraine, officials said, as President Volodymyr Zelensky renewed his appeal for faster weapons deliveries.
+
+## Overnight Barrage
+
+Russia launched 12 missiles, including six ballistic missiles, along with 121 drones against Ukraine overnight into July 11, 2026, according to Ukrainian officials. Air defenses shot down or electronically suppressed two missiles and 111 of the drones. Russia's Defense Ministry said its forces had targeted drone production facilities in Kyiv and the ports of Izmail and Chornomorsk in the Odesa region.
+
+## Casualties Across Several Regions
+
+In the northeastern Sumy region, two glide bombs hit a crowded area near a public transport stop, killing four people, including a child, and wounding 17. In the southern port city of Odesa, a missile strike on a building killed two more people and wounded one. In the capital, Kyiv, 11 people, including a child, were wounded in the overnight missile and drone attacks. In total, six people were killed and 29 wounded across the country.
+
+## Kyiv Seeks Faster Air Defenses
+
+Zelensky again urged Ukraine's partners to speed up deliveries of weapons and air-defense systems following the strikes. Ukrainian forces separately said they had targeted Russian oil tankers, part of continued fighting that has extended beyond the land front. The overnight assault marked another high-casualty night in a war that has continued to inflict civilian losses in cities far from the front line.`,
+  },
+  'tr-rusya-ukrayna-fuze-saldirisi': {
+    title: "Rusya'nın Ukrayna'ya füze ve İHA saldırısında 6 kişi öldü",
+    date: '2026-07-11',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Rusya'nın gece boyunca Ukrayna'ya düzenlediği geniş çaplı füze ve insansız hava aracı (İHA) saldırısında altı kişi hayatını kaybetti, 29 kişi yaralandı. Ukrayna Devlet Başkanı Volodimir Zelenski, saldırının ardından silah sevkiyatının hızlandırılması çağrısını yineledi.
+
+## Saldırının kapsamı
+
+Ukraynalı yetkililere göre Rusya, 11 Temmuz gecesi ülkeye altısı balistik olmak üzere 12 füze ve 121 İHA ile saldırdı. Hava savunma sistemleri iki füzeyi ve 111 İHA'yı düşürdü veya elektronik olarak etkisiz hale getirdi. Rusya Savunma Bakanlığı, güçlerinin Kiev'deki İHA üretim tesislerini ve Odesa bölgesindeki İzmail ile Çornomorsk limanlarını hedef aldığını açıkladı.
+
+## Birçok bölgede kayıplar
+
+Ülkenin kuzeydoğusundaki Sumy bölgesinde, bir toplu taşıma durağı yakınındaki kalabalık alana iki güdümlü bomba isabet etti; biri çocuk olmak üzere dört kişi öldü, 17 kişi yaralandı. Güneydeki Odesa liman kentinde bir binaya düzenlenen füze saldırısında iki kişi daha hayatını kaybetti, bir kişi yaralandı. Başkent Kiev'de ise gece boyu süren saldırılarda biri çocuk 11 kişi yaralandı. Ülke genelinde toplam altı kişi öldü, 29 kişi yaralandı.
+
+## Kiev hızlı savunma istiyor
+
+Zelenski, saldırıların ardından ortaklarını silah ve hava savunma sistemlerinin teslimatını hızlandırmaya çağırdı. Ukrayna kuvvetleri ise ayrıca Rus petrol tankerlerini hedef aldıklarını bildirdi. Yüksek can kaybına yol açan bu saldırı, cephe hattından uzak kentlerde de sivil kayıplar veren savaşın süregelen bir aşamasının parçası oldu.`,
+  },
+  'ru-russia-strikes-ukraine': {
+    title: 'Российский обстрел Украины: шесть погибших, десятки раненых',
+    date: '2026-07-11',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Массированный обстрел
+
+В ночь на 11 июля 2026 года российская армия нанесла массированный удар по Украине с применением ракет и беспилотников: погибли шесть человек, 29 получили ранения. Президент Украины Владимир Зеленский после атак вновь призвал ускорить поставки вооружений.
+
+## Масштаб обстрела
+
+По данным украинской стороны, Россия применила 12 ракет, из которых шесть баллистических, а также 121 беспилотник. Силы ПВО сбили или подавили средствами радиоэлектронной борьбы две ракеты и 111 дронов. Министерство обороны России заявило, что его силы наносили удары по объектам производства беспилотников в Киеве, а также по портам Измаил и Черноморск в Одесской области.
+
+## Жертвы в нескольких регионах
+
+В Сумской области на северо-востоке страны две управляемые авиабомбы попали в многолюдный район вблизи остановки общественного транспорта: погибли четыре человека, включая ребёнка, ещё 17 получили ранения. В южном портовом городе Одессе в результате ракетного удара по зданию погибли ещё два человека, один был ранен. В столице, Киеве, за ночь ранения получили 11 человек, включая ребёнка. Всего по стране погибли шесть человек, 29 получили ранения.
+
+## Киев просит ускорить поставки
+
+Зеленский вновь призвал партнёров ускорить передачу вооружений и систем ПВО. Украинские силы, в свою очередь, сообщили, что наносили удары по российским нефтяным танкерам. Ночная атака стала ещё одним эпизодом продолжающейся войны, которая по-прежнему приводит к жертвам среди мирного населения в городах вдали от линии фронта.`,
+  },
+
+  // --- Topic 4: Venezuela earthquake death toll rises to 4,333 ---
+  'venesuela-zelzele-telefat-4333': {
+    title: 'Venesueladakı zəlzələdə həlak olanların sayı 4333-ə çatdı',
+    date: '2026-07-11',
+    category: 'Dünya',
+    locale: 'az',
+    content: `Venesuelada 24 iyunda baş vermiş qoşa zəlzələdə həlak olanların rəsmi sayı 4333 nəfərə çatdı. Yenilənmiş rəqəm 11 iyul şənbə günü Milli Assambleyanın sədri Xorxe Rodriges tərəfindən açıqlandı. Bu, ilkin zəlzələlərdən düz 17 gün sonra verilən yeni rəsmi məlumatdır.
+
+## Rəsmi rəqəmlər
+
+Rodrigesin təqdim etdiyi məlumata görə, fəlakət nəticəsində 16 740 nəfər yaralanıb. Zəlzələdən bəri dağıntılar altından 6400-dən çox insan sağ çıxarılıb. Həlak olanların sayının 4300-ü keçməsi bu təbii fəlakəti son illərin ən ağır hadisələrindən birinə çevirir. Rəqəmlərin bu qədər yüksək olması dağıntıların miqyasını və axtarış işlərinin nə qədər geniş miqyas aldığını əks etdirir.
+
+## Zəlzələnin xüsusiyyətləri
+
+24 iyunda Venesuelanın şimal-mərkəzi hissəsində iki güclü zəlzələ baş vermişdi. Onların maqnitudası müvafiq olaraq 7,5 və 7,2 təşkil etmişdi. İki güclü təkanın qısa müddət ərzində ardıcıl baş verməsi dağıntıların həcmini, eləcə də xilasetmə işlərinin çətinliyini artırıb. Şimal-mərkəzi bölgə ölkənin sıx məskunlaşan ərazilərindən biridir.
+
+## Yenilənən itki rəqəmləri
+
+Ölənlərin sayı əvvəlki günlərdə açıqlanan rəqəmlərdən artıb; iyulun 7-də rəsmi bilanço 3500-dən çox idi. Həlak olanların sayının artması axtarış və xilasetmə işlərinin hələ də davam etdiyini göstərir. Bu rəqəm əvvəlki iyul məlumatlarının təkrarı deyil, tarixlə təsdiqlənmiş yeni itki hesabatıdır. Venesuela hakimiyyəti fəlakətlə bağlı məlumatları müntəzəm yeniləməkdə davam edir, beynəlxalq ictimaiyyət isə hadisənin miqyasını yaxından izləyir.`,
+  },
+  'en-venezuela-earthquake-toll-4333': {
+    title: 'Venezuela Earthquake Death Toll Rises to 4,333, Assembly Says',
+    date: '2026-07-11',
+    category: 'World',
+    locale: 'en',
+    content: `Venezuela's official death toll from the June 24 twin earthquakes has risen to 4,333, the head of the National Assembly announced, 17 days after the disaster.
+
+## A Rising Toll
+
+Venezuela's official death toll from the twin earthquakes of June 24 rose to 4,333, National Assembly President Jorge Rodríguez announced Saturday, July 11, 2026. The revised figure was released 17 days after the two quakes struck, as search, rescue and recovery operations continued across the affected zone. Rodríguez, who heads the country's legislature, presented the updated count of both the dead and the injured.
+
+## The June 24 Earthquakes
+
+The disaster was caused by two powerful earthquakes that hit on June 24, 2026, with magnitudes of 7.5 and 7.2. The tremors struck north-central Venezuela, the country's most densely populated region. Alongside the confirmed dead, authorities have reported 16,740 people injured. The toll has continued to climb in the days and weeks since the earthquakes, as officials account for more of those killed.
+
+## Survivors and Recovery
+
+More than 6,400 people have been pulled alive from the rubble since the earthquakes, according to figures attributed to Rodríguez. The continued recovery of survivors more than two weeks after the disaster reflects both the scale of the collapse and the size of the emergency response.
+
+The updated figures confirm the earthquakes as a major humanitarian disaster, with deaths in the thousands and injuries in the tens of thousands. Humanitarian needs across north-central Venezuela remain substantial as the recovery effort moves into its third week.`,
+  },
+  'tr-venezuela-deprem-can-kaybi': {
+    title: "Venezuela'daki deprem felaketinde can kaybı 4.333'e yükseldi",
+    date: '2026-07-11',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `Venezuela'da 24 Haziran'da meydana gelen ikiz depremlerde hayatını kaybedenlerin sayısının 4.333'e yükseldiği açıklandı. Güncel resmi bilanço, 11 Temmuz Cumartesi günü Ulusal Meclis Başkanı Jorge Rodríguez tarafından kamuoyuyla paylaşıldı.
+
+## Depremlerin bilançosu
+
+Ülkenin kuzey-orta kesiminde 24 Haziran'da 7,5 ve 7,2 büyüklüğünde iki güçlü deprem meydana gelmişti. Resmi verilere göre depremlerde can kaybı 4.333'e ulaşırken, 16.740 kişinin yaralandığı bildirildi. Afetin yaşandığı andan itibaren enkaz altından 6.400'den fazla kişi sağ olarak çıkarıldı. Bu rakamlar, felaketin ne denli büyük bir ölçeğe ulaştığını ortaya koyuyor.
+
+## Kurtarma çalışmaları
+
+Enkaz altından 6.400'ü aşkın kişinin sağ olarak çıkarılması, afetin ardından yürütülen kapsamlı kurtarma çalışmalarını yansıtıyor. Yaralanan 16.740 kişinin tedavi süreçleri devam ederken, ekiplerin sahadaki çalışmaları da sürüyor.
+
+## 17 gün sonra güncelleme
+
+Yeni can kaybı rakamı, ilk depremlerin üzerinden 17 gün geçtikten sonra açıklandı. Kayıpların ve yaralıların sayısına ilişkin bilanço, arama, kurtarma ve enkaz kaldırma çalışmaları sürdükçe güncellenmeye devam ediyor. Ulusal Meclis Başkanı Rodríguez'in paylaştığı güncel veriler, sürecin resmi olarak takip edildiğini gösteriyor.
+
+## Süregelen insani kriz
+
+Ülkenin kuzey-orta bölgesinde yaşanan deprem felaketi, süregelen büyük bir insani kriz olarak uluslararası kamuoyunun gündeminde yer almaya devam ediyor. 16.740 yaralıyla afet, bölgedeki müdahale kapasitesini zorlayan bir tabloya işaret ediyor.`,
+  },
+  'ru-venezuela-earthquake-toll': {
+    title: 'Число жертв землетрясения в Венесуэле достигло 4333 человек',
+    date: '2026-07-11',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Обновлённые данные о числе погибших
+
+Официальное число погибших в результате двух землетрясений, произошедших 24 июня 2026 года в Венесуэле, выросло до 4333 человек. Об этом в субботу, 11 июля 2026 года, объявил председатель Национальной ассамблеи страны Хорхе Родригес.
+
+## Магнитуда и география
+
+Два подземных толчка магнитудой 7,5 и 7,2 пришлись на север центральной части Венесуэлы. Оба толчка произошли в один день — 24 июня 2026 года.
+
+По официальным данным, число раненых достигло 16 740 человек. При этом с момента катастрофы спасателям удалось извлечь из-под завалов живыми более 6400 человек.
+
+## Обновление спустя семнадцать дней
+
+Новые данные были обнародованы спустя семнадцать дней после первых подземных толчков. Рост официальной статистики отражает продолжающиеся поисково-спасательные работы и постепенный разбор завалов в наиболее пострадавших районах.
+
+Власти продолжают уточнять окончательное число жертв по мере поступления информации из зоны бедствия. Прежние сводки называли меньшие цифры, и итоговый показатель может измениться.
+
+## Значение для аудитории
+
+Число погибших — 4333 человека — было официально подтверждено председателем Национальной ассамблеи Хорхе Родригесом. Наряду с 16 740 ранеными эти цифры дают представление о человеческом измерении катастрофы. Для международной аудитории, следящей за развитием ситуации, это остаётся одной из крупнейших гуманитарных катастроф последнего времени. Обновлённая цифра является новым, датированным подсчётом и отражает реальный масштаб трагедии, а не повторяет прежние сводки.`,
+  },
+
+  // --- Topic 5: US housing bill becomes law without Trump's signature ---
+  'abs-menzil-qanunu-tramp-imzasiz': {
+    title: 'ABŞ-də mənzil qanunu Trampın imzası olmadan qüvvəyə mindi',
+    date: '2026-07-11',
+    category: 'İqtisadiyyat',
+    locale: 'az',
+    content: `ABŞ-də iki partiyanın dəstəklədiyi mənzil qanunu Prezident Donald Trampın imzası olmadan qüvvəyə mindi. "21st Century ROAD to Housing Act" adlı qanun 11 iyul tarixində, gecə yarısı avtomatik olaraq qanuna çevrildi.
+
+## İmzasız qüvvəyə minmə
+
+ABŞ Konstitusiyasına əsasən, əgər prezident müəyyən müddət ərzində qanunu nə imzalayır, nə də veto edirsə, sənəd avtomatik olaraq qüvvəyə minir. Tramp qanunu imzalamaqdan imtina etdiyi üçün sənəd məhz bu müddəaya əsasən öz-özünə qanuna çevrildi. Qanunun hər iki partiyanın dəstəyi ilə qəbul edilməsi ona Konqresdə geniş baza qazandırdı.
+
+## Qanunun məzmunu
+
+Sənəd onilliklər ərzində ABŞ-ın ən əhatəli mənzil qanunvericiliyi kimi təsvir olunur. Onun əsas məqsədi mənzil tədarükünü artırmaq və institusional investorların müəyyən fərdi yaşayış evlərini almasını məhdudlaşdırmaqdır. Qanunda hər iki partiyanın töhfə verdiyi 40-dan çox müddəa yer alır və bu tədbirlərin mənzil əlçatanlığı problemini yüngülləşdirməyə yönəldiyi bildirilir.
+
+## Trampın mövqeyi
+
+Tramp qanunu "az əhəmiyyətli" adlandıraraq imzasını verməkdən çəkindi və "Truth Social" platformasında onu tənqid etdi. O, Konqresdən əvvəlcə öz ayrıca "SAVE America Act" adlı seçici eyniləşdirmə (voter ID) qanununu qəbul etməyi tələb etmişdi. Buna baxmayaraq, mənzil qanunu konstitusion mexanizm sayəsində qüvvəyə mindi.
+
+## Əhəmiyyət
+
+Qanun ABŞ mənzil bazarına təsir edən mühüm iqtisadi və siyasi hadisə kimi qiymətləndirilir. Onun imzasız qəbul edilməsi Ağ Ev ilə Konqres arasındakı münasibətlərdə diqqətçəkən epizod oldu və beynəlxalq ictimaiyyət tərəfindən izlənildi.`,
+  },
+  'en-us-housing-bill-becomes-law': {
+    title: "US Housing Bill Becomes Law Without Trump's Signature",
+    date: '2026-07-11',
+    category: 'Politics',
+    locale: 'en',
+    content: `The largest US housing bill in decades became law at midnight without President Donald Trump's signature, after he declined to sign or veto it.
+
+## Law at the Stroke of Midnight
+
+The bipartisan 21st Century ROAD to Housing Act became law at the stroke of midnight on July 11, 2026, without President Donald Trump's signature. Under the US Constitution, a bill becomes law automatically if the president neither signs nor vetoes it within the allotted window.
+
+## The Most Comprehensive Housing Bill in Decades
+
+The legislation is described as the most comprehensive US housing bill in decades. It is intended to increase housing supply and to limit institutional investors from buying certain single-family homes. Because it passed with bipartisan support in Congress, the measure took effect despite the president's decision not to sign it.
+
+## Trump Withholds His Signature
+
+Trump had withheld his signature, dismissing the bill as "of minor importance" in a post on Truth Social. He demanded that Congress first pass his separate SAVE America Act, a voter identification measure, before he would act on the housing legislation. The standoff set the bipartisan housing bill against the president's own legislative priority, but did not stop the measure from taking effect.
+
+With the president neither signing nor vetoing the bill within the constitutional window, it took effect automatically. Supporters say the new law will shape US housing markets by expanding supply and restricting certain large-scale investor purchases of single-family homes.`,
+  },
+  'tr-abd-konut-yasasi-yururlukte': {
+    title: "ABD'de konut yasası Trump'ın imzası olmadan yürürlüğe girdi",
+    date: '2026-07-11',
+    category: 'Ekonomi',
+    locale: 'tr',
+    content: `Amerika Birleşik Devletleri'nde iki partinin de desteğini alan "21. Yüzyıl Konuta Giden Yol Yasası" (21st Century ROAD to Housing Act), 11 Temmuz 2026'da gece yarısı, Başkan Donald Trump'ın imzası olmadan yürürlüğe girdi. Federal düzeyde çıkarılan düzenleme, Washington'daki siyaset gündeminin öne çıkan başlıklarından biri oldu.
+
+## İmzasız yasalaşma
+
+ABD Anayasası'na göre, başkan kendisine tanınan süre içinde bir tasarıyı ne imzalar ne de veto ederse, tasarı otomatik olarak yasalaşıyor. Başkan Trump tasarıyı imzalamayı reddettiği için yasa, 11 Temmuz'da gece yarısı bu anayasal hüküm uyarınca kendiliğinden yürürlüğe girdi. Böylece düzenleme, başkanın imzası olmaksızın resmen yürürlüğe girmiş oldu.
+
+## Yasa ne getiriyor
+
+Söz konusu düzenleme, ABD'de onyıllardır çıkarılan en kapsamlı konut yasası olarak niteleniyor. Yasanın temel amacı, konut arzını artırmak ve kurumsal yatırımcıların belirli tek ailelik konutları satın almasını sınırlandırmak olarak açıklandı. Uygun fiyatlı konuta erişimi kolaylaştırmayı hedefleyen düzenlemenin, ülkedeki konut piyasasını doğrudan etkilemesi bekleniyor.
+
+## Trump'ın itirazı
+
+Başkan Trump, tasarıyı imzalamaktan kaçınarak düzenlemeyi "önemsiz" olarak nitelendirdi. Trump, Kongre'nin öncelikle kendisinin ayrı olarak öne sürdüğü ve seçmen kimlik doğrulamasını öngören "SAVE America Yasası"nı geçirmesini talep etti.
+
+Trump, Truth Social platformundaki paylaşımında yasayı "önemsiz" olarak tanımlamıştı. Buna rağmen tasarı, anayasal süreç işleyerek yasalaştı.`,
+  },
+  'ru-us-housing-bill-law': {
+    title: 'Жилищный закон в США вступил в силу без подписи Трампа',
+    date: '2026-07-11',
+    category: 'Экономика',
+    locale: 'ru',
+    content: `## Закон вступил в силу автоматически
+
+Двухпартийный закон о жилье, известный как «Дорога к жилью двадцать первого века», вступил в силу ровно в полночь 11 июля 2026 года — без подписи президента Дональда Трампа. Согласно конституционной норме, законопроект становится законом автоматически, если президент в отведённый срок не подписывает его и не накладывает вето.
+
+## Крупнейшая жилищная реформа за десятилетия
+
+Документ называют наиболее масштабным жилищным законодательством в США за последние десятилетия. Его цель — увеличить предложение жилья на рынке и ограничить возможность институциональных инвесторов скупать определённые категории частных домов, рассчитанных на одну семью. Инициатива носила двухпартийный характер и была поддержана представителями обеих политических сил.
+
+## Позиция Трампа
+
+Президент Трамп отказался подписывать закон, назвав его «незначительным». В своей социальной сети он потребовал, чтобы Конгресс сначала принял отдельный предложенный им закон об идентификации избирателей. Несмотря на отказ президента ставить подпись, документ всё равно вступил в силу — благодаря конституционному механизму, не требующему подписи главы государства.
+
+## Значение для аудитории
+
+Для международной аудитории это крупная экономическая и политическая новость: реформа затрагивает рынок жилья США и способна повлиять на его доступность для покупателей. Необычный способ её принятия — без подписи главы государства — привлёк к документу дополнительное внимание и стал заметным эпизодом в отношениях между Белым домом и Конгрессом.`,
+  },
+
+  // --- Topic 6: World Cup 2026 semifinal lineup set (England, Argentina advance) ---
+  'dunya-kuboki-2026-yarimfinal-ingiltere-argentina': {
+    title: 'Dünya Kuboku 2026: İngiltərə və Argentina yarımfinala yüksəldi',
+    date: '2026-07-11',
+    category: 'İdman',
+    locale: 'az',
+    content: `2026-cı il Dünya Kubokunun yarımfinal mərhələsinin iştirakçıları müəyyənləşdi. 11 iyul şənbə günü keçirilən hər iki çərəkfinal görüşü əlavə vaxtda həll olundu və İngiltərə ilə Argentina son dördlüyə yüksəldi.
+
+## İngiltərə – Norveç 2:1
+
+İngiltərə Mayami (Florida) şəhərində keçirilən çərəkfinalda Norveçi əlavə vaxtdan sonra 2:1 hesabı ilə məğlub etdi. Oyunun əsas 90 dəqiqəsi bərabərliklə başa çatdı. İngiltərənin hər iki qolunu Cud Bellingem vurdu, Norveç adından isə Şelderup fərqləndi. Görüş əlavə vaxta qaldı və nəticə orada müəyyənləşdi.
+
+## Argentina – İsveçrə 3:1
+
+Eyni gün keçirilən digər çərəkfinalda Argentina İsveçrəni əlavə vaxtdan sonra 3:1 hesabı ilə üstələdi. Hesabı 10-cu dəqiqədə Mak Allister açdı, İsveçrə 67-ci dəqiqədə Ndoye ilə bərabərliyə nail oldu. 72-ci dəqiqədə İsveçrə oyunçusu Breel Embolo ikinci sarı vərəqə səbəbindən oyundan qovuldu və komanda on nəfərlə qaldı. Əlavə vaxtda Argentina üçün Alvarez 112-ci, Lautaro Martines isə 120+1-ci dəqiqədə qol vurdu.
+
+## Yarımfinal cütü
+
+İki nəticə yarımfinal cütünü müəyyənləşdirdi: İngiltərə – Argentina qarşılaşması 15 iyul çərşənbə günü Atlanta (Corciya) şəhərindəki Atlanta Stadionunda keçiriləcək. Hər iki çərəkfinal görüşünün əlavə vaxtda həll olunması mərhələnin nə qədər gərgin keçdiyini göstərdi. Bu matçın qalibi turnirin finalına yüksələcək.
+
+## Görüş məlumatları
+
+İngiltərə – Norveç görüşü Mayami (Florida) şəhərində keçirildi, yarımfinal isə Atlanta (Corciya) şəhərində baş tutacaq. Hər iki çərəkfinal 11 iyul şənbə günü oynanıldı və hər ikisi əlavə vaxta qaldı. İngiltərə həm Norveçi, həm də yarımfinalda Argentinanı geridə qoymaq üçün mübarizə aparacaq. İki komanda arasındakı yarımfinal görüşü 15 iyul çərşənbə gününə planlaşdırılıb.`,
+  },
+  'en-world-cup-2026-england-argentina-semifinal': {
+    title: 'World Cup 2026: England and Argentina Reach the Semifinals',
+    date: '2026-07-11',
+    category: 'Sports',
+    locale: 'en',
+    content: `The World Cup 2026 semifinal lineup was completed on July 11, 2026, after England and Argentina both won their quarterfinals in extra time. The two matches were played on the same day, and each was level after 90 minutes before being settled in the additional 30 minutes of play.
+
+## Quarterfinal: England 2, Norway 1
+
+England defeated Norway 2-1 after extra time in a World Cup 2026 quarterfinal played in Miami, Florida, on July 11, 2026. Jude Bellingham scored both goals for England. Schjelderup scored for Norway. The match went beyond 90 minutes and was decided in the additional 30 minutes of extra time.
+
+## Quarterfinal: Argentina 3, Switzerland 1
+
+Argentina defeated Switzerland 3-1 after extra time on July 11, 2026. Alexis Mac Allister opened the scoring for Argentina in the 10th minute. Dan Ndoye equalized for Switzerland in the 67th minute. Switzerland were reduced to 10 players when Breel Embolo received a second yellow card and was sent off in the 72nd minute. Julián Álvarez restored Argentina's lead in the 112th minute, and Lautaro Martínez added a third in the first minute of added time at the end of extra time (120+1).
+
+## Semifinal Lineup
+
+The two results set the World Cup 2026 semifinal fixture: England will play Argentina on Wednesday, July 15, 2026, at Atlanta Stadium in Atlanta, Georgia. England reached the last four by beating Norway 2-1, while Argentina advanced by beating Switzerland 3-1. The winner of the semifinal will advance to the World Cup final. Both of the July 11 quarterfinals required extra time to separate the teams.`,
+  },
+  'tr-dunya-kupasi-yari-final-eslesmesi': {
+    title: "Dünya Kupası 2026 yarı final eşleşmesi belli oldu: İngiltere-Arjantin",
+    date: '2026-07-11',
+    category: 'Spor',
+    locale: 'tr',
+    content: `2026 FIFA Dünya Kupası'nda çeyrek final karşılaşmalarının tamamlanmasıyla yarı final eşleşmesi netleşti. 11 Temmuz 2026 Cumartesi günü oynanan iki çeyrek final maçı da normal süresinde eşitlik bozulmayınca uzatma dakikalarında sonuçlandı.
+
+## İngiltere 2-1 Norveç
+
+Amerika Birleşik Devletleri'nin Miami (Florida) kentinde oynanan çeyrek final maçında İngiltere, uzatmaların ardından Norveç'i 2-1 mağlup etti. İngiltere'nin iki golünü de Jude Bellingham kaydetti. Norveç'in tek golü Schjelderup'tan geldi. Bu sonuçla İngiltere yarı finale yükseldi.
+
+## Arjantin 3-1 İsviçre
+
+Aynı gün oynanan diğer çeyrek final karşılaşmasında Arjantin, uzatmaların ardından İsviçre'yi 3-1 yendi. Arjantin'in gollerini Mac Allister 10. dakikada, Álvarez 112. dakikada ve Lautaro Martínez 120+1. dakikada kaydetti. İsviçre'nin golünü Ndoye 67. dakikada attı. İsviçreli oyuncu Breel Embolo, 72. dakikada gördüğü ikinci sarı kartın ardından oyundan atıldı. Bu galibiyetle Arjantin de yarı finale adını yazdırdı.
+
+## Yarı final: İngiltere-Arjantin
+
+İki çeyrek finalin sonuçlanmasının ardından yarı final eşleşmesi kesinleşti. İngiltere ile Arjantin, 15 Temmuz 2026 Çarşamba günü Atlanta Stadyumu'nda (Georgia) karşı karşıya gelecek. Böylece turnuvanın son dört takımından ikisi arasındaki eşleşme belli olmuş oldu.
+
+## Karşılaşma bilgileri
+
+Her iki çeyrek final de 11 Temmuz 2026 Cumartesi günü oynandı ve normal süre eşitlikle kapanınca uzatmalara gitti. İngiltere-Norveç maçı Miami'de (Florida) oynandı; yarı final ise Atlanta'da (Georgia) düzenlenecek. İngiltere-Arjantin yarı final karşılaşması 15 Temmuz 2026 Çarşamba gününe programlandı.`,
+  },
+  'ru-world-cup-2026-semifinal': {
+    title: 'Определены полуфиналисты ЧМ-2026: Англия и Аргентина вышли дальше',
+    date: '2026-07-11',
+    category: 'Спорт',
+    locale: 'ru',
+    content: `## Два четвертьфинала
+
+В субботу, 11 июля 2026 года, определились две пары полуфинала чемпионата мира 2026 года. Оба четвертьфинальных матча завершились только в дополнительное время.
+
+## Англия — Норвегия
+
+Сборная Англии обыграла Норвегию со счётом 2:1 в дополнительное время. Матч прошёл в Майами, штат Флорида, 11 июля 2026 года. Оба мяча за сборную Англии забил Беллингем, у сборной Норвегии отличился Шельдеруп.
+
+## Аргентина — Швейцария
+
+Сборная Аргентины победила Швейцарию со счётом 3:1, также в дополнительное время, 11 июля 2026 года. За Аргентину голы забили Мак Аллистер на 10-й минуте, Альварес на 112-й минуте и Лаутаро Мартинес на 120+1-й минуте. У сборной Швейцарии единственный мяч забил Ндойе на 67-й минуте. На 72-й минуте швейцарский нападающий Эмболо получил вторую жёлтую карточку и был удалён с поля.
+
+## Полуфинал 15 июля
+
+Пара полуфинала подтверждена: сборная Англии встретится с Аргентиной в среду, 15 июля 2026 года, на стадионе в Атланте, штат Джорджия. Победитель этого матча выйдет в финал турнира.
+
+## Расписание и площадки
+
+Матч Англия — Норвегия прошёл в Майами, штат Флорида, а полуфинальная встреча состоится в Атланте, штат Джорджия. Обе четвертьфинальные пары были определены в один день — 11 июля 2026 года. Оба четвертьфинала потребовали дополнительного времени: и Англия, и Аргентина решили исход встреч только после основных 90 минут. Итоговые счёта составили 2:1 и 3:1 соответственно. Победители четвертьфиналов — сборные Англии и Аргентины — продолжат борьбу за выход в финал в полуфинальном матче 15 июля 2026 года.`,
+  },
+
   // ========== 2026-07-10 ==========
 
   // --- Topic 7: FIFA World Cup 2026 quarterfinals ---
