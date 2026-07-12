@@ -13,34 +13,66 @@ import { NextRequest } from 'next/server'
  * We make every method return an object with the next method AND also
  * make the whole thing thenable so both patterns work.
  */
-function createChainMock(resolvedValue: Record<string, unknown> = { count: 0, data: [], error: null }) {
-  // Terminal mock -- satisfies both awaiting directly and calling .limit() / .order()
+// Per-test data injection, keyed by `${event_type}:${selectArg}` for list
+// queries and by event_type for counts. Reset in beforeEach.
+let dataForQuery: Record<string, unknown[]> = {}
+let countForType: Record<string, number> = {}
+
+/**
+ * Data-driven Supabase chain mock. Captures the `.select(field)` argument and
+ * the `.eq('event_type', X)` value so the terminal can resolve the right rows
+ * for each of the route's queries, letting a test inject (e.g.) tied tool_use
+ * rows for just the popular_tools aggregation.
+ */
+function createChainMock() {
+  let selectArg = ''
+  let eventType = ''
+  const resolveValue = () => ({
+    count: countForType[eventType] ?? 0,
+    data: dataForQuery[`${eventType}:${selectArg}`] ?? [],
+    error: null,
+  })
   const terminal: Record<string, unknown> = {
-    limit: vi.fn().mockResolvedValue(resolvedValue),
-    order: vi.fn().mockReturnValue({
-      limit: vi.fn().mockResolvedValue(resolvedValue),
-      then: (resolve: (v: unknown) => void) => resolve(resolvedValue),
-    }),
-    // Make the object itself thenable
-    then: (resolve: (v: unknown) => void) => resolve(resolvedValue),
+    limit: vi.fn(() => Promise.resolve(resolveValue())),
+    order: vi.fn(() => ({
+      limit: vi.fn(() => Promise.resolve(resolveValue())),
+      then: (resolve: (v: unknown) => void) => resolve(resolveValue()),
+    })),
+    then: (resolve: (v: unknown) => void) => resolve(resolveValue()),
   }
-
-  const chain = {
-    select: vi.fn().mockReturnValue({
-      eq: vi.fn().mockReturnValue({
-        gte: vi.fn().mockReturnValue(terminal),
-      }),
+  return {
+    select: vi.fn((arg: string) => {
+      selectArg = arg
+      return {
+        eq: vi.fn((_col: string, val: string) => {
+          eventType = val
+          return { gte: vi.fn(() => terminal) }
+        }),
+      }
     }),
   }
-
-  return chain
 }
 
 const mockFrom = vi.fn((_table: string) => createChainMock())
 
+// When set, the mocked client exposes an `.rpc` resolving this value —
+// exercising the Postgres fast path. Left null so the other tests keep hitting
+// the JS fallback (a client without `.rpc`, matching production pre-migration).
+let rpcResult: { data: unknown; error: unknown } | null = null
+
 vi.mock('@/lib/supabase/client', () => ({
   isSupabaseConfigured: true,
-  getSupabaseServer: vi.fn(() => ({ from: mockFrom })),
+  getSupabaseServer: vi.fn(() => {
+    const client: Record<string, unknown> = { from: mockFrom }
+    if (rpcResult) client.rpc = vi.fn().mockResolvedValue(rpcResult)
+    return client
+  }),
+}))
+
+// The route's rate limiter is module-level shared state; mock it to always
+// allow so tests are order-independent (no cross-test bucket accumulation).
+vi.mock('@/lib/rate-limiter', () => ({
+  createRateLimiter: () => vi.fn(async () => ({ allowed: true })),
 }))
 
 import { GET } from '@/app/api/analytics/stats/route'
@@ -64,6 +96,10 @@ describe('GET /api/analytics/stats', () => {
   beforeEach(() => {
     vi.clearAllMocks()
     vi.spyOn(console, 'error').mockImplementation(() => {})
+    vi.spyOn(console, 'warn').mockImplementation(() => {})
+    dataForQuery = {}
+    countForType = {}
+    rpcResult = null
     process.env = { ...ORIGINAL_ENV, ANALYTICS_API_KEY: 'test-secret-key' }
   })
 
@@ -170,6 +206,56 @@ describe('GET /api/analytics/stats', () => {
       for (const call of mockFrom.mock.calls) {
         expect(call[0]).toBe('analytics_events')
       }
+    })
+
+    it('applies the count-desc, key-asc tie-break in the JS fallback', async () => {
+      // banana and apple both occur twice → the alphabetical tie-break must put
+      // apple first even though banana was seen first (Map insertion order).
+      dataForQuery['tool_use:event_data'] = [
+        { event_data: { tool: 'banana' } },
+        { event_data: { tool: 'apple' } },
+        { event_data: { tool: 'banana' } },
+        { event_data: { tool: 'apple' } },
+        { event_data: { tool: 'cherry' } },
+      ]
+
+      const req = createRequest('test-secret-key')
+      const response = await GET(req)
+      const data = await response.json()
+
+      expect(response.status).toBe(200)
+      expect(data.popular_tools).toEqual([
+        { tool: 'apple', count: 2 },
+        { tool: 'banana', count: 2 },
+        { tool: 'cherry', count: 1 },
+      ])
+    })
+
+    it('uses the Postgres fast path when the client exposes .rpc', async () => {
+      const sampleAggregates = {
+        popular_tools: [
+          { tool: 'json-formatter', count: 10 },
+          { tool: 'base64-encode', count: 5 },
+        ],
+        visitors_by_locale: [{ locale: 'az', count: 20 }],
+        top_pages: [{ page_path: '/tools/json', count: 7 }],
+        share_clicks: [{ platform: 'twitter', count: 3 }],
+        tool_completions: [{ tool: 'json-formatter', completions: 8, uses: 10, rate: 80 }],
+      }
+      rpcResult = { data: sampleAggregates, error: null }
+
+      const req = createRequest('test-secret-key')
+      const response = await GET(req)
+      const data = await response.json()
+
+      expect(response.status).toBe(200)
+      // Fast path returns the RPC aggregates verbatim (this branch was never
+      // exercised in CI before — the mock had no `.rpc`).
+      expect(data.popular_tools).toEqual(sampleAggregates.popular_tools)
+      expect(data.visitors_by_locale).toEqual(sampleAggregates.visitors_by_locale)
+      expect(data.top_pages).toEqual(sampleAggregates.top_pages)
+      expect(data.share_clicks).toEqual(sampleAggregates.share_clicks)
+      expect(data.tool_completions).toEqual(sampleAggregates.tool_completions)
     })
   })
 })

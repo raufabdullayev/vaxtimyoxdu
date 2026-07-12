@@ -20,6 +20,35 @@
  */
 
 // ---------------------------------------------------------------------------
+// Safety helpers (prototype-pollution guard + recursion depth cap)
+// ---------------------------------------------------------------------------
+
+/**
+ * Maximum nesting depth before the parser bails out. Bounds recursion on
+ * pathological / hostile input (deeply nested blocks or inline `[[[...]]]`)
+ * so a single tab can't blow the stack.
+ */
+const MAX_YAML_DEPTH = 200
+
+/**
+ * Keys that must never be assigned from parsed input — writing them can corrupt
+ * the prototype chain (`__proto__` re-parents the object; `constructor` /
+ * `prototype` are classic pollution vectors).
+ */
+const UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype'])
+
+/**
+ * Assign a dynamically-named key onto a plain object, skipping unsafe keys. The
+ * parsers build objects from untrusted input; although today's sinks (a
+ * textarea + JSON.stringify) never execute the result, guarding here keeps this
+ * shared module safe for any future server-side reuse.
+ */
+function assignKey(obj: Record<string, unknown>, key: string, value: unknown): void {
+  if (UNSAFE_KEYS.has(key)) return
+  obj[key] = value
+}
+
+// ---------------------------------------------------------------------------
 // JSON -> YAML (used by JsonToYaml only)
 // ---------------------------------------------------------------------------
 
@@ -113,7 +142,8 @@ export function jsonToYaml(obj: unknown, indent: number = 0): string {
  * JsonToYaml's scalar parser. Integer/decimal numbers only; no `\t` unescape;
  * inline-object keys are NOT de-quoted.
  */
-export function parseYamlValue(value: string): unknown {
+export function parseYamlValue(value: string, depth: number = 0): unknown {
+  if (depth > MAX_YAML_DEPTH) throw new Error('YAML nesting too deep')
   const trimmed = value.trim()
   if (trimmed === '' || trimmed === 'null' || trimmed === '~') return null
   if (trimmed === 'true' || trimmed === 'yes') return true
@@ -148,7 +178,7 @@ export function parseYamlValue(value: string): unknown {
   if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
     const inner = trimmed.slice(1, -1).trim()
     if (inner === '') return []
-    return inner.split(',').map((item) => parseYamlValue(item.trim()))
+    return inner.split(',').map((item) => parseYamlValue(item.trim(), depth + 1))
   }
 
   // Inline object
@@ -162,7 +192,7 @@ export function parseYamlValue(value: string): unknown {
       if (colonIdx === -1) continue
       const key = part.slice(0, colonIdx).trim()
       const val = part.slice(colonIdx + 1).trim()
-      obj[key] = parseYamlValue(val)
+      assignKey(obj, key, parseYamlValue(val, depth + 1))
     }
     return obj
   }
@@ -174,7 +204,8 @@ export function parseYamlValue(value: string): unknown {
  * YamlToJson's scalar parser. Adds `\t` unescape, exponent numbers, and
  * de-quotes inline-object keys.
  */
-export function parseYamlValueExtended(value: string): unknown {
+export function parseYamlValueExtended(value: string, depth: number = 0): unknown {
+  if (depth > MAX_YAML_DEPTH) throw new Error('YAML nesting too deep')
   const trimmed = value.trim()
   if (trimmed === '' || trimmed === 'null' || trimmed === '~') return null
   if (trimmed === 'true' || trimmed === 'yes') return true
@@ -210,7 +241,7 @@ export function parseYamlValueExtended(value: string): unknown {
   if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
     const inner = trimmed.slice(1, -1).trim()
     if (inner === '') return []
-    return inner.split(',').map((item) => parseYamlValueExtended(item.trim()))
+    return inner.split(',').map((item) => parseYamlValueExtended(item.trim(), depth + 1))
   }
 
   // Inline object {a: 1, b: 2}
@@ -224,7 +255,7 @@ export function parseYamlValueExtended(value: string): unknown {
       if (colonIdx === -1) continue
       const key = part.slice(0, colonIdx).trim().replace(/^["']|["']$/g, '')
       const val = part.slice(colonIdx + 1).trim()
-      obj[key] = parseYamlValueExtended(val)
+      assignKey(obj, key, parseYamlValueExtended(val, depth + 1))
     }
     return obj
   }
@@ -343,8 +374,10 @@ function parseYamlBlocks(
 ): unknown {
   function parseBlock(
     startIdx: number,
-    parentIndent: number
+    parentIndent: number,
+    depth: number
   ): { value: unknown; nextIdx: number } {
+    if (depth > MAX_YAML_DEPTH) throw new Error('YAML nesting too deep')
     if (startIdx >= lines.length) return { value: null, nextIdx: startIdx }
 
     const line = lines[startIdx]
@@ -367,10 +400,10 @@ function parseYamlBlocks(
             // Array item that starts an object
             const obj: Record<string, unknown> = {}
             if (current.value) {
-              obj[current.key] = scalarParser(current.value)
+              assignKey(obj, current.key, scalarParser(current.value))
             } else {
-              const sub = parseBlock(idx + 1, current.indent + 2)
-              obj[current.key] = sub.value
+              const sub = parseBlock(idx + 1, current.indent + 2, depth + 1)
+              assignKey(obj, current.key, sub.value)
               // Check for more keys at same level
               let nextIdx = sub.nextIdx
               while (
@@ -381,11 +414,11 @@ function parseYamlBlocks(
                 const nextLine = lines[nextIdx]
                 if (nextLine.key !== null) {
                   if (nextLine.value) {
-                    obj[nextLine.key] = scalarParser(nextLine.value)
+                    assignKey(obj, nextLine.key, scalarParser(nextLine.value))
                     nextIdx++
                   } else {
-                    const innerSub = parseBlock(nextIdx + 1, nextLine.indent + 2)
-                    obj[nextLine.key] = innerSub.value
+                    const innerSub = parseBlock(nextIdx + 1, nextLine.indent + 2, depth + 1)
+                    assignKey(obj, nextLine.key, innerSub.value)
                     nextIdx = innerSub.nextIdx
                   }
                 } else {
@@ -421,11 +454,11 @@ function parseYamlBlocks(
 
       if (current.key !== null) {
         if (current.value) {
-          obj[current.key] = scalarParser(current.value)
+          assignKey(obj, current.key, scalarParser(current.value))
           idx++
         } else {
-          const sub = parseBlock(idx + 1, current.indent + 2)
-          obj[current.key] = sub.value
+          const sub = parseBlock(idx + 1, current.indent + 2, depth + 1)
+          assignKey(obj, current.key, sub.value)
           idx = sub.nextIdx
         }
       } else {
@@ -435,7 +468,7 @@ function parseYamlBlocks(
     return { value: obj, nextIdx: idx }
   }
 
-  const { value } = parseBlock(0, lines[0].indent)
+  const { value } = parseBlock(0, lines[0].indent, 0)
   return value
 }
 

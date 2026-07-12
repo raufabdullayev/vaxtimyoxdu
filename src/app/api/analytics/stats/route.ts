@@ -3,6 +3,7 @@ import { timingSafeEqual } from 'crypto'
 import { getSupabaseServer, isSupabaseConfigured } from '@/lib/supabase/client'
 import type { AnalyticsAggregates } from '@/lib/supabase/types'
 import { createRateLimiter } from '@/lib/rate-limiter'
+import { byCountThenKey } from '@/lib/analytics/aggregate-sort'
 
 /**
  * GET /api/analytics/stats
@@ -20,7 +21,11 @@ import { createRateLimiter } from '@/lib/rate-limiter'
  * analytics_aggregates() function (supabase/migrations/002) so we transfer
  * tens of rows instead of up to 10,000 per metric. If that function is not
  * present yet, the route transparently falls back to fetching rows and
- * aggregating in JS (identical output).
+ * aggregating in JS. The fallback mirrors the SQL ordering (count DESC, key
+ * ASC) on a best-effort basis — exact tie order may differ slightly because JS
+ * string comparison and the database collation are not guaranteed identical.
+ * Very large windows are capped at FALLBACK_ROW_CAP rows and the truncation is
+ * logged (the counts undercount until migration 002 is applied).
  *
  * Response shape:
  * {
@@ -40,6 +45,14 @@ const checkRateLimit = createRateLimiter({
   window: '1 m',
   prefix: 'rl:analytics-stats',
 })
+
+/**
+ * Row cap for the pre-migration JS aggregation fallback. Matches the fast
+ * path closely enough for a dashboard, but very high-traffic windows can
+ * exceed it — we warn when a query returns this many rows so the undercount
+ * is observable rather than silent.
+ */
+const FALLBACK_ROW_CAP = 10000
 
 function isAuthorized(req: NextRequest): boolean {
   const apiKey = process.env.ANALYTICS_API_KEY
@@ -100,9 +113,21 @@ async function getAggregates(
       p_since: since,
       p_limit: limit,
     })
-    if (error || !data) return null
+    if (error) {
+      // A real RPC error (e.g. function missing at the DB level, permissions
+      // regression) should be visible — otherwise the route silently degrades
+      // to the expensive JS path forever. The `typeof rpc` guard above already
+      // keeps the expected "SDK/mock without .rpc" case quiet.
+      console.warn('[Analytics Stats] RPC aggregate failed; using JS fallback:', error.message)
+      return null
+    }
+    if (!data) return null
     return data as AnalyticsAggregates
-  } catch {
+  } catch (e) {
+    console.warn(
+      '[Analytics Stats] RPC aggregate threw; using JS fallback:',
+      e instanceof Error ? e.message : e
+    )
     return null
   }
 }
@@ -214,32 +239,51 @@ export async function GET(req: NextRequest) {
           .select('event_data')
           .eq('event_type', 'tool_use')
           .gte('created_at', sinceDate)
-          .limit(10000),
+          .limit(FALLBACK_ROW_CAP),
         supabase
           .from('analytics_events')
           .select('locale')
           .eq('event_type', 'page_view')
           .gte('created_at', sinceDate)
-          .limit(10000),
+          .limit(FALLBACK_ROW_CAP),
         supabase
           .from('analytics_events')
           .select('page_path')
           .eq('event_type', 'page_view')
           .gte('created_at', sinceDate)
-          .limit(10000),
+          .limit(FALLBACK_ROW_CAP),
         supabase
           .from('analytics_events')
           .select('event_data')
           .eq('event_type', 'share_click')
           .gte('created_at', sinceDate)
-          .limit(10000),
+          .limit(FALLBACK_ROW_CAP),
         supabase
           .from('analytics_events')
           .select('event_data')
           .eq('event_type', 'tool_complete')
           .gte('created_at', sinceDate)
-          .limit(10000),
+          .limit(FALLBACK_ROW_CAP),
       ])
+
+      // ── Detect silent truncation: any query at the row cap undercounts ──
+      const cappedMetrics = (
+        [
+          ['tool_use', popularToolsResult],
+          ['page_view/locale', localeResult],
+          ['page_view/path', topPagesResult],
+          ['share_click', shareClicksResult],
+          ['tool_complete', toolCompletesResult],
+        ] as const
+      )
+        .filter(([, r]) => Array.isArray(r.data) && r.data.length >= FALLBACK_ROW_CAP)
+        .map(([metric]) => metric)
+      if (cappedMetrics.length > 0) {
+        console.warn(
+          `[Analytics Stats] JS fallback hit the ${FALLBACK_ROW_CAP}-row cap for [${cappedMetrics.join(', ')}]; ` +
+            'these counts undercount this window. Apply migration 002 for exact Postgres-side aggregation.'
+        )
+      }
 
       // ── Aggregate popular tools ──
       const toolCounts = new Map<string, number>()
@@ -253,7 +297,7 @@ export async function GET(req: NextRequest) {
       }
       popular_tools = Array.from(toolCounts.entries())
         .map(([tool, count]) => ({ tool, count }))
-        .sort((a, b) => b.count - a.count)
+        .sort(byCountThenKey((r) => r.count, (r) => r.tool))
         .slice(0, 20)
 
       // ── Aggregate locale distribution ──
@@ -266,7 +310,7 @@ export async function GET(req: NextRequest) {
       }
       visitors_by_locale = Array.from(localeCounts.entries())
         .map(([locale, count]) => ({ locale, count }))
-        .sort((a, b) => b.count - a.count)
+        .sort(byCountThenKey((r) => r.count, (r) => r.locale))
 
       // ── Aggregate top pages ──
       const pageCounts = new Map<string, number>()
@@ -278,7 +322,7 @@ export async function GET(req: NextRequest) {
       }
       top_pages = Array.from(pageCounts.entries())
         .map(([page_path, count]) => ({ page_path, count }))
-        .sort((a, b) => b.count - a.count)
+        .sort(byCountThenKey((r) => r.count, (r) => r.page_path))
         .slice(0, 20)
 
       // ── Aggregate share clicks by platform ──
@@ -293,7 +337,7 @@ export async function GET(req: NextRequest) {
       }
       share_clicks = Array.from(sharePlatformCounts.entries())
         .map(([platform, count]) => ({ platform, count }))
-        .sort((a, b) => b.count - a.count)
+        .sort(byCountThenKey((r) => r.count, (r) => r.platform))
 
       // ── Aggregate tool completion rates ──
       // Note: tool_complete events use 'toolSlug' key, tool_use events use 'tool' key
@@ -313,7 +357,7 @@ export async function GET(req: NextRequest) {
           const rate = uses > 0 ? Math.round((completions / uses) * 100) : 0
           return { tool, completions, uses, rate }
         })
-        .sort((a, b) => b.completions - a.completions)
+        .sort(byCountThenKey((r) => r.completions, (r) => r.tool))
         .slice(0, 20)
     }
 
