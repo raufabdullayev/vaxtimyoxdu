@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest'
 import {
-  jsonToYaml,
+  valueToYaml,
   parseYamlValue,
   parseYamlValueExtended,
   parseYamlLines,
   parseYamlLinesExtended,
-  yamlToJson,
-  yamlToJsonExtended,
+  parseYaml,
+  parseYamlExtended,
 } from '../yaml-parser'
 
 /**
@@ -20,58 +20,58 @@ import {
  * (JsonToYaml) and "extended" (YamlToJson) variants are asserted explicitly.
  */
 
-describe('jsonToYaml', () => {
+describe('valueToYaml', () => {
   it('serializes scalars', () => {
-    expect(jsonToYaml(null)).toBe('null')
-    expect(jsonToYaml(undefined)).toBe('null')
-    expect(jsonToYaml(true)).toBe('true')
-    expect(jsonToYaml(false)).toBe('false')
-    expect(jsonToYaml(42)).toBe('42')
-    expect(jsonToYaml(-3.14)).toBe('-3.14')
+    expect(valueToYaml(null)).toBe('null')
+    expect(valueToYaml(undefined)).toBe('null')
+    expect(valueToYaml(true)).toBe('true')
+    expect(valueToYaml(false)).toBe('false')
+    expect(valueToYaml(42)).toBe('42')
+    expect(valueToYaml(-3.14)).toBe('-3.14')
   })
 
   it('leaves plain strings unquoted but quotes ambiguous / special ones', () => {
-    expect(jsonToYaml('hello')).toBe('hello')
+    expect(valueToYaml('hello')).toBe('hello')
     // number-like strings get quoted so they round-trip as strings
-    expect(jsonToYaml('123')).toBe('"123"')
+    expect(valueToYaml('123')).toBe('"123"')
     // reserved words get quoted
-    expect(jsonToYaml('true')).toBe('"true"')
-    expect(jsonToYaml('null')).toBe('"null"')
-    expect(jsonToYaml('yes')).toBe('"yes"')
+    expect(valueToYaml('true')).toBe('"true"')
+    expect(valueToYaml('null')).toBe('"null"')
+    expect(valueToYaml('yes')).toBe('"yes"')
     // YAML-significant characters force quoting
-    expect(jsonToYaml('has: colon')).toBe('"has: colon"')
-    expect(jsonToYaml('a#b')).toBe('"a#b"')
+    expect(valueToYaml('has: colon')).toBe('"has: colon"')
+    expect(valueToYaml('a#b')).toBe('"a#b"')
     // leading/trailing whitespace forces quoting
-    expect(jsonToYaml(' padded ')).toBe('" padded "')
+    expect(valueToYaml(' padded ')).toBe('" padded "')
   })
 
   it('escapes backslashes, quotes and newlines inside quoted strings', () => {
-    expect(jsonToYaml('line1\nline2')).toBe('"line1\\nline2"')
-    expect(jsonToYaml('a"b')).toBe('"a\\"b"')
+    expect(valueToYaml('line1\nline2')).toBe('"line1\\nline2"')
+    expect(valueToYaml('a"b')).toBe('"a\\"b"')
   })
 
   it('serializes flat objects', () => {
-    expect(jsonToYaml({ name: 'Alice', age: 30 })).toBe('name: Alice\nage: 30')
+    expect(valueToYaml({ name: 'Alice', age: 30 })).toBe('name: Alice\nage: 30')
   })
 
   it('serializes nested objects with 2-space indentation', () => {
-    expect(jsonToYaml({ server: { host: 'localhost', port: 8080 } })).toBe(
+    expect(valueToYaml({ server: { host: 'localhost', port: 8080 } })).toBe(
       'server:\n  host: localhost\n  port: 8080'
     )
   })
 
   it('serializes arrays of scalars', () => {
-    expect(jsonToYaml(['apple', 'banana', 'cherry'])).toBe('- apple\n- banana\n- cherry')
+    expect(valueToYaml(['apple', 'banana', 'cherry'])).toBe('- apple\n- banana\n- cherry')
   })
 
   it('serializes empty collections', () => {
-    expect(jsonToYaml({})).toBe('{}')
-    expect(jsonToYaml([])).toBe('[]')
+    expect(valueToYaml({})).toBe('{}')
+    expect(valueToYaml([])).toBe('[]')
   })
 
   it('quotes keys containing colon, hash or space', () => {
-    expect(jsonToYaml({ 'a:b': 1 })).toBe('"a:b": 1')
-    expect(jsonToYaml({ 'a b': 1 })).toBe('"a b": 1')
+    expect(valueToYaml({ 'a:b': 1 })).toBe('"a:b": 1')
+    expect(valueToYaml({ 'a b': 1 })).toBe('"a b": 1')
   })
 })
 
@@ -186,48 +186,48 @@ describe('parseYamlLinesExtended (extended line parser)', () => {
   })
 })
 
-describe('yamlToJson (basic entry point)', () => {
+describe('parseYaml (basic entry point)', () => {
   it('returns null for empty / comment-only input (does not throw)', () => {
-    expect(yamlToJson('')).toBeNull()
-    expect(yamlToJson('   ')).toBeNull()
-    expect(yamlToJson('# just a comment')).toBeNull()
+    expect(parseYaml('')).toBeNull()
+    expect(parseYaml('   ')).toBeNull()
+    expect(parseYaml('# just a comment')).toBeNull()
   })
 
   it('parses flat key/value blocks', () => {
-    expect(yamlToJson('name: Alice\nage: 30')).toEqual({ name: 'Alice', age: 30 })
+    expect(parseYaml('name: Alice\nage: 30')).toEqual({ name: 'Alice', age: 30 })
   })
 
   it('parses block arrays under a key', () => {
-    expect(yamlToJson('fruits:\n  - apple\n  - banana\n  - cherry')).toEqual({
+    expect(parseYaml('fruits:\n  - apple\n  - banana\n  - cherry')).toEqual({
       fruits: ['apple', 'banana', 'cherry'],
     })
   })
 
-  it('round-trips representative objects through jsonToYaml', () => {
+  it('round-trips representative objects through valueToYaml', () => {
     const value = { name: 'Alice', age: 30, active: true }
-    expect(yamlToJson(jsonToYaml(value))).toEqual(value)
+    expect(parseYaml(valueToYaml(value))).toEqual(value)
   })
 })
 
-describe('yamlToJsonExtended (extended entry point)', () => {
+describe('parseYamlExtended (extended entry point)', () => {
   it('throws on empty input', () => {
-    expect(() => yamlToJsonExtended('')).toThrow('Empty YAML input')
-    expect(() => yamlToJsonExtended('   ')).toThrow('Empty YAML input')
+    expect(() => parseYamlExtended('')).toThrow('Empty YAML input')
+    expect(() => parseYamlExtended('   ')).toThrow('Empty YAML input')
   })
 
   it('throws on comment-only / no-content input', () => {
-    expect(() => yamlToJsonExtended('# only a comment')).toThrow('No valid YAML content found')
+    expect(() => parseYamlExtended('# only a comment')).toThrow('No valid YAML content found')
   })
 
   it('parses key/value blocks with comment stripping', () => {
-    expect(yamlToJsonExtended('name: Alice # owner\nage: 30')).toEqual({
+    expect(parseYamlExtended('name: Alice # owner\nage: 30')).toEqual({
       name: 'Alice',
       age: 30,
     })
   })
 
   it('parses block arrays', () => {
-    expect(yamlToJsonExtended('items:\n  - one\n  - two\n  - three')).toEqual({
+    expect(parseYamlExtended('items:\n  - one\n  - two\n  - three')).toEqual({
       items: ['one', 'two', 'three'],
     })
   })
@@ -237,9 +237,9 @@ describe('safety guards', () => {
   it('drops __proto__ / constructor / prototype keys in block parsing', () => {
     // Keys that could re-parent the object are silently skipped; the object
     // stays empty (own-property-wise) and nothing leaks to Object.prototype.
-    expect(yamlToJson('__proto__:\n  polluted: 1')).toEqual({})
-    expect(yamlToJson('constructor: bad')).toEqual({})
-    expect(yamlToJsonExtended('prototype: x')).toEqual({})
+    expect(parseYaml('__proto__:\n  polluted: 1')).toEqual({})
+    expect(parseYaml('constructor: bad')).toEqual({})
+    expect(parseYamlExtended('prototype: x')).toEqual({})
     // Global prototype must remain clean.
     expect(({} as Record<string, unknown>).polluted).toBeUndefined()
     expect((Object.prototype as Record<string, unknown>).polluted).toBeUndefined()
@@ -257,6 +257,6 @@ describe('safety guards', () => {
     expect(() => parseYamlValueExtended(deepInline)).toThrow('YAML nesting too deep')
 
     const deepBlock = Array.from({ length: 250 }, (_, i) => '  '.repeat(i) + `k${i}:`).join('\n')
-    expect(() => yamlToJson(deepBlock)).toThrow('YAML nesting too deep')
+    expect(() => parseYaml(deepBlock)).toThrow('YAML nesting too deep')
   })
 })

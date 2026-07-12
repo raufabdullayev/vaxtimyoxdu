@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { yamlToJsonExtended as yamlToJson } from '@/lib/dev/yaml-parser'
+import { parseYamlExtended } from '@/lib/dev/yaml-parser'
 
 function validateYaml(yaml: string): string[] {
   const errors: string[] = []
@@ -51,7 +51,7 @@ export default function YamlToJson() {
     setWarnings(validationWarnings)
 
     try {
-      const parsed = yamlToJson(input)
+      const parsed = parseYamlExtended(input)
       setOutput(JSON.stringify(parsed, null, indent))
       setError('')
     } catch (e) {

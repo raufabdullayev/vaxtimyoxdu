@@ -50,6 +50,15 @@ const checkRateLimit = createRateLimiter({
   prefix: 'rl:analytics-stats',
 })
 
+// Throttle unauthenticated attempts per client IP. The per-key limiter above
+// only ever sees already-valid keys (auth runs first), so without this a wrong
+// key could be brute-forced unthrottled.
+const checkAuthAttempts = createRateLimiter({
+  limit: 20,
+  window: '1 m',
+  prefix: 'rl:analytics-auth',
+})
+
 /**
  * Row cap for the pre-migration JS aggregation fallback. Matches the fast
  * path closely enough for a dashboard, but very high-traffic windows can
@@ -73,6 +82,13 @@ function isAuthorized(req: NextRequest): boolean {
   const headerHash = createHash('sha256').update(headerKey).digest()
   const apiHash = createHash('sha256').update(apiKey).digest()
   return timingSafeEqual(headerHash, apiHash)
+}
+
+/** Best-effort client IP for rate-limiting the unauthenticated path. */
+function getClientIp(req: NextRequest): string {
+  const forwarded = req.headers.get('x-forwarded-for')
+  if (forwarded) return forwarded.split(',')[0].trim()
+  return req.headers.get('x-real-ip') || 'unknown'
 }
 
 /**
@@ -136,8 +152,15 @@ async function getAggregates(
 }
 
 export async function GET(req: NextRequest) {
-  // ── Auth check ──
+  // ── Auth check (throttle failed attempts per IP to deter brute force) ──
   if (!isAuthorized(req)) {
+    const { allowed } = await checkAuthAttempts(getClientIp(req))
+    if (!allowed) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      )
+    }
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
+import { seededOffset } from '@/lib/utils/seeded-offset'
 
 const FONTS = [
   { name: 'Cursive', family: 'cursive' },
@@ -25,14 +26,6 @@ const INK_COLORS = [
   { name: 'Green', color: '#1b5e20' },
   { name: 'Purple', color: '#4a148c' },
 ]
-
-// Deterministic pseudo-random offset in [-0.5, 0.5) derived from an integer seed.
-// Replaces Math.random() so that the per-line "natural" jitter stays stable for a
-// given line index — typing no longer re-randomizes already-rendered lines.
-function seededOffset(seed: number): number {
-  const x = Math.sin(seed * 12.9898) * 43758.5453
-  return (x - Math.floor(x)) - 0.5
-}
 
 export default function TextToHandwriting() {
   const t = useTranslations('toolUI.common')

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { jsonToYaml, yamlToJson } from '@/lib/dev/yaml-parser'
+import { valueToYaml, parseYaml } from '@/lib/dev/yaml-parser'
 
 type Direction = 'json-to-yaml' | 'yaml-to-json'
 
@@ -22,10 +22,10 @@ export default function JsonToYaml() {
     try {
       if (direction === 'json-to-yaml') {
         const parsed = JSON.parse(input)
-        const yaml = jsonToYaml(parsed)
+        const yaml = valueToYaml(parsed)
         setOutput(yaml)
       } else {
-        const parsed = yamlToJson(input)
+        const parsed = parseYaml(input)
         setOutput(JSON.stringify(parsed, null, 2))
       }
       setError('')

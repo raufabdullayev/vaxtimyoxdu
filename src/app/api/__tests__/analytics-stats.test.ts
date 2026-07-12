@@ -60,6 +60,10 @@ const mockFrom = vi.fn((_table: string) => createChainMock())
 // the JS fallback (a client without `.rpc`, matching production pre-migration).
 let rpcResult: { data: unknown; error: unknown } | null = null
 
+// Per-prefix rate-limit control (keys are the route's limiter prefixes).
+// Default (missing key) = allowed; set false to force a 429.
+let rateLimitAllow: Record<string, boolean> = {}
+
 vi.mock('@/lib/supabase/client', () => ({
   isSupabaseConfigured: true,
   getSupabaseServer: vi.fn(() => {
@@ -69,10 +73,11 @@ vi.mock('@/lib/supabase/client', () => ({
   }),
 }))
 
-// The route's rate limiter is module-level shared state; mock it to always
-// allow so tests are order-independent (no cross-test bucket accumulation).
+// The route's rate limiters are module-level shared state; mock them so tests
+// are order-independent, with per-prefix control so a test can force a 429.
 vi.mock('@/lib/rate-limiter', () => ({
-  createRateLimiter: () => vi.fn(async () => ({ allowed: true })),
+  createRateLimiter: (opts: { prefix: string }) =>
+    vi.fn(async () => ({ allowed: rateLimitAllow[opts.prefix] ?? true })),
 }))
 
 import { GET } from '@/app/api/analytics/stats/route'
@@ -100,6 +105,7 @@ describe('GET /api/analytics/stats', () => {
     dataForQuery = {}
     countForType = {}
     rpcResult = null
+    rateLimitAllow = {}
     process.env = { ...ORIGINAL_ENV, ANALYTICS_API_KEY: 'test-secret-key' }
   })
 
@@ -136,6 +142,16 @@ describe('GET /api/analytics/stats', () => {
 
       expect(response.status).toBe(401)
       expect(data.error).toBe('Unauthorized')
+    })
+
+    it('throttles repeated failed auth per IP (429 instead of 401)', async () => {
+      // Force the IP-keyed auth-attempt limiter to deny.
+      rateLimitAllow['rl:analytics-auth'] = false
+
+      const req = createRequest('wrong-key')
+      const response = await GET(req)
+
+      expect(response.status).toBe(429)
     })
   })
 

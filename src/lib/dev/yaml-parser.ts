@@ -5,10 +5,10 @@
  * shipped their own copy of this logic in separate route-split chunks.
  *
  * IMPORTANT: The two tools historically diverged in subtle, observable ways,
- * and both have tests asserting their exact behavior. To preserve EXACT
- * behavior for each tool, this module keeps those tool-specific differences as
- * distinct exports while sharing the large, byte-identical block-parsing
- * recursion (`parseYamlBlocks`) which both tools used verbatim.
+ * and both have tests asserting their exact behavior. The tool-specific
+ * differences are expressed as ScalarOptions / LineOptions flags injected into
+ * shared scalar, line, and block parsers, so each tool keeps its EXACT behavior
+ * (locked by the characterization tests) with no duplicated logic.
  *
  * Differences that are intentionally preserved:
  *  - JsonToYaml ("basic"):    no `\t` unescape, integer/decimal numbers only,
@@ -52,7 +52,7 @@ function assignKey(obj: Record<string, unknown>, key: string, value: unknown): v
 // JSON -> YAML (used by JsonToYaml only)
 // ---------------------------------------------------------------------------
 
-export function jsonToYaml(obj: unknown, indent: number = 0): string {
+export function valueToYaml(obj: unknown, indent: number = 0): string {
   const prefix = '  '.repeat(indent)
 
   if (obj === null) return 'null'
@@ -97,7 +97,7 @@ export function jsonToYaml(obj: unknown, indent: number = 0): string {
     if (obj.length === 0) return '[]'
     const lines: string[] = []
     for (const item of obj) {
-      const value = jsonToYaml(item, indent + 1)
+      const value = valueToYaml(item, indent + 1)
       if (typeof item === 'object' && item !== null && !Array.isArray(item)) {
         const objLines = value.split('\n')
         lines.push(`${prefix}- ${objLines[0]}`)
@@ -121,11 +121,11 @@ export function jsonToYaml(obj: unknown, indent: number = 0): string {
           ? `"${key}"`
           : key
       if (typeof value === 'object' && value !== null) {
-        const nested = jsonToYaml(value, indent + 1)
+        const nested = valueToYaml(value, indent + 1)
         lines.push(`${prefix}${safeKey}:`)
         lines.push(nested)
       } else {
-        lines.push(`${prefix}${safeKey}: ${jsonToYaml(value, indent + 1)}`)
+        lines.push(`${prefix}${safeKey}: ${valueToYaml(value, indent + 1)}`)
       }
     }
     return lines.join('\n')
@@ -138,73 +138,25 @@ export function jsonToYaml(obj: unknown, indent: number = 0): string {
 // Scalar value parsing
 // ---------------------------------------------------------------------------
 
-/**
- * JsonToYaml's scalar parser. Integer/decimal numbers only; no `\t` unescape;
- * inline-object keys are NOT de-quoted.
- */
-export function parseYamlValue(value: string, depth: number = 0): unknown {
-  if (depth > MAX_YAML_DEPTH) throw new Error('YAML nesting too deep')
-  const trimmed = value.trim()
-  if (trimmed === '' || trimmed === 'null' || trimmed === '~') return null
-  if (trimmed === 'true' || trimmed === 'yes') return true
-  if (trimmed === 'false' || trimmed === 'no') return false
-  if (trimmed === '[]') return []
-  if (trimmed === '{}') return {}
-
-  // Quoted string
-  if (
-    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
-    (trimmed.startsWith("'") && trimmed.endsWith("'"))
-  ) {
-    return trimmed
-      .slice(1, -1)
-      .replace(/\\n/g, '\n')
-      .replace(/\\"/g, '"')
-      .replace(/\\\\/g, '\\')
-  }
-
-  // Number
-  if (/^-?\d+(\.\d+)?$/.test(trimmed)) {
-    return Number(trimmed)
-  }
-  if (/^0x[0-9a-fA-F]+$/.test(trimmed)) {
-    return parseInt(trimmed, 16)
-  }
-  if (/^0o[0-7]+$/.test(trimmed)) {
-    return parseInt(trimmed.slice(2), 8)
-  }
-
-  // Inline array
-  if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
-    const inner = trimmed.slice(1, -1).trim()
-    if (inner === '') return []
-    return inner.split(',').map((item) => parseYamlValue(item.trim(), depth + 1))
-  }
-
-  // Inline object
-  if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
-    const inner = trimmed.slice(1, -1).trim()
-    if (inner === '') return {}
-    const obj: Record<string, unknown> = {}
-    const parts = inner.split(',')
-    for (const part of parts) {
-      const colonIdx = part.indexOf(':')
-      if (colonIdx === -1) continue
-      const key = part.slice(0, colonIdx).trim()
-      const val = part.slice(colonIdx + 1).trim()
-      assignKey(obj, key, parseYamlValue(val, depth + 1))
-    }
-    return obj
-  }
-
-  return trimmed
+/** Per-tool scalar-parsing differences, injected as flags. */
+interface ScalarOptions {
+  /** Unescape `\t` inside quoted strings (extended only). */
+  unescapeTabs: boolean
+  /** Accept exponent notation as a number, e.g. `1e3` (extended only). */
+  allowExponent: boolean
+  /** Strip surrounding quotes from inline-object keys (extended only). */
+  dequoteKeys: boolean
 }
 
+const BASIC_SCALAR: ScalarOptions = { unescapeTabs: false, allowExponent: false, dequoteKeys: false }
+const EXTENDED_SCALAR: ScalarOptions = { unescapeTabs: true, allowExponent: true, dequoteKeys: true }
+
 /**
- * YamlToJson's scalar parser. Adds `\t` unescape, exponent numbers, and
- * de-quotes inline-object keys.
+ * Shared scalar parser. The two tools differ only in the ScalarOptions flags;
+ * the branch order and all non-flagged behavior are identical (and locked by
+ * the characterization tests).
  */
-export function parseYamlValueExtended(value: string, depth: number = 0): unknown {
+function parseScalar(value: string, opts: ScalarOptions, depth: number): unknown {
   if (depth > MAX_YAML_DEPTH) throw new Error('YAML nesting too deep')
   const trimmed = value.trim()
   if (trimmed === '' || trimmed === 'null' || trimmed === '~') return null
@@ -218,16 +170,16 @@ export function parseYamlValueExtended(value: string, depth: number = 0): unknow
     (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
     (trimmed.startsWith("'") && trimmed.endsWith("'"))
   ) {
-    return trimmed
-      .slice(1, -1)
-      .replace(/\\n/g, '\n')
-      .replace(/\\t/g, '\t')
-      .replace(/\\"/g, '"')
-      .replace(/\\\\/g, '\\')
+    let unquoted = trimmed.slice(1, -1).replace(/\\n/g, '\n')
+    if (opts.unescapeTabs) unquoted = unquoted.replace(/\\t/g, '\t')
+    return unquoted.replace(/\\"/g, '"').replace(/\\\\/g, '\\')
   }
 
   // Number
-  if (/^-?\d+(\.\d+)?([eE][+-]?\d+)?$/.test(trimmed)) {
+  const numberRe = opts.allowExponent
+    ? /^-?\d+(\.\d+)?([eE][+-]?\d+)?$/
+    : /^-?\d+(\.\d+)?$/
+  if (numberRe.test(trimmed)) {
     return Number(trimmed)
   }
   if (/^0x[0-9a-fA-F]+$/.test(trimmed)) {
@@ -241,7 +193,7 @@ export function parseYamlValueExtended(value: string, depth: number = 0): unknow
   if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
     const inner = trimmed.slice(1, -1).trim()
     if (inner === '') return []
-    return inner.split(',').map((item) => parseYamlValueExtended(item.trim(), depth + 1))
+    return inner.split(',').map((item) => parseScalar(item.trim(), opts, depth + 1))
   }
 
   // Inline object {a: 1, b: 2}
@@ -249,18 +201,34 @@ export function parseYamlValueExtended(value: string, depth: number = 0): unknow
     const inner = trimmed.slice(1, -1).trim()
     if (inner === '') return {}
     const obj: Record<string, unknown> = {}
-    const parts = inner.split(',')
-    for (const part of parts) {
+    for (const part of inner.split(',')) {
       const colonIdx = part.indexOf(':')
       if (colonIdx === -1) continue
-      const key = part.slice(0, colonIdx).trim().replace(/^["']|["']$/g, '')
+      let key = part.slice(0, colonIdx).trim()
+      if (opts.dequoteKeys) key = key.replace(/^["']|["']$/g, '')
       const val = part.slice(colonIdx + 1).trim()
-      assignKey(obj, key, parseYamlValueExtended(val, depth + 1))
+      assignKey(obj, key, parseScalar(val, opts, depth + 1))
     }
     return obj
   }
 
   return trimmed
+}
+
+/**
+ * JsonToYaml's scalar parser. Integer/decimal numbers only; no `\t` unescape;
+ * inline-object keys are NOT de-quoted.
+ */
+export function parseYamlValue(value: string, depth: number = 0): unknown {
+  return parseScalar(value, BASIC_SCALAR, depth)
+}
+
+/**
+ * YamlToJson's scalar parser. Adds `\t` unescape, exponent numbers, and
+ * de-quotes inline-object keys.
+ */
+export function parseYamlValueExtended(value: string, depth: number = 0): unknown {
+  return parseScalar(value, EXTENDED_SCALAR, depth)
 }
 
 // ---------------------------------------------------------------------------
@@ -279,11 +247,25 @@ export interface YamlLine {
   isArrayItem: boolean
 }
 
+/** Per-tool line-parsing differences, injected as flags. */
+interface LineOptions {
+  /** Strip ` #`-delimited inline comments outside quotes (extended only). */
+  stripComments: boolean
+  /** Treat a bare `-` line as an empty array item (extended only). */
+  allowBareDash: boolean
+  /** Strip surrounding quotes from keys (extended only). */
+  dequoteKeys: boolean
+}
+
+const BASIC_LINES: LineOptions = { stripComments: false, allowBareDash: false, dequoteKeys: false }
+const EXTENDED_LINES: LineOptions = { stripComments: true, allowBareDash: true, dequoteKeys: true }
+
 /**
- * JsonToYaml's line parser. No inline-comment stripping, no bare `-` handling,
- * keys are NOT de-quoted.
+ * Shared line tokenizer. The two tools differ only in the LineOptions flags;
+ * tokenization is otherwise identical (and locked by the characterization
+ * tests).
  */
-export function parseYamlLines(yaml: string): YamlLine[] {
+function parseLines(yaml: string, opts: LineOptions): YamlLine[] {
   const lines = yaml.split('\n')
   const result: YamlLine[] = []
 
@@ -294,14 +276,30 @@ export function parseYamlLines(yaml: string): YamlLine[] {
     const indent = indentMatch ? indentMatch[1].length : 0
     let content = raw.trim()
 
+    // Remove inline comments (not inside quotes)
+    if (opts.stripComments) {
+      const commentIdx = content.indexOf(' #')
+      if (commentIdx > 0) {
+        const before = content.slice(0, commentIdx)
+        const quoteCount = (before.match(/"/g) || []).length + (before.match(/'/g) || []).length
+        if (quoteCount % 2 === 0) {
+          content = before.trimEnd()
+        }
+      }
+    }
+
     const isArrayItem = content.startsWith('- ')
     if (isArrayItem) {
       content = content.slice(2)
+    } else if (opts.allowBareDash && content === '-') {
+      result.push({ indent, key: null, value: '', isArrayItem: true })
+      continue
     }
 
     const colonIdx = content.indexOf(':')
     if (colonIdx > 0 && !content.startsWith('"') && !content.startsWith("'")) {
-      const key = content.slice(0, colonIdx).trim()
+      let key = content.slice(0, colonIdx).trim()
+      if (opts.dequoteKeys) key = key.replace(/^["']|["']$/g, '')
       const value = content.slice(colonIdx + 1).trim()
       result.push({ indent, key, value, isArrayItem })
     } else {
@@ -313,50 +311,19 @@ export function parseYamlLines(yaml: string): YamlLine[] {
 }
 
 /**
+ * JsonToYaml's line parser. No inline-comment stripping, no bare `-` handling,
+ * keys are NOT de-quoted.
+ */
+export function parseYamlLines(yaml: string): YamlLine[] {
+  return parseLines(yaml, BASIC_LINES)
+}
+
+/**
  * YamlToJson's line parser. Strips inline comments (outside quotes), supports
  * bare `-` array items, and de-quotes keys.
  */
 export function parseYamlLinesExtended(yaml: string): YamlLine[] {
-  const lines = yaml.split('\n')
-  const result: YamlLine[] = []
-
-  for (let i = 0; i < lines.length; i++) {
-    const raw = lines[i]
-    if (raw.trim() === '' || raw.trim().startsWith('#')) continue
-
-    const indentMatch = raw.match(/^(\s*)/)
-    const indent = indentMatch ? indentMatch[1].length : 0
-    let content = raw.trim()
-
-    // Remove inline comments (not inside quotes)
-    const commentIdx = content.indexOf(' #')
-    if (commentIdx > 0) {
-      const before = content.slice(0, commentIdx)
-      const quoteCount = (before.match(/"/g) || []).length + (before.match(/'/g) || []).length
-      if (quoteCount % 2 === 0) {
-        content = before.trimEnd()
-      }
-    }
-
-    const isArrayItem = content.startsWith('- ')
-    if (isArrayItem) {
-      content = content.slice(2)
-    } else if (content === '-') {
-      result.push({ indent, key: null, value: '', isArrayItem: true })
-      continue
-    }
-
-    const colonIdx = content.indexOf(':')
-    if (colonIdx > 0 && !content.startsWith('"') && !content.startsWith("'")) {
-      const key = content.slice(0, colonIdx).trim().replace(/^["']|["']$/g, '')
-      const value = content.slice(colonIdx + 1).trim()
-      result.push({ indent, key, value, isArrayItem })
-    } else {
-      result.push({ indent, key: null, value: content, isArrayItem })
-    }
-  }
-
-  return result
+  return parseLines(yaml, EXTENDED_LINES)
 }
 
 // ---------------------------------------------------------------------------
@@ -480,7 +447,7 @@ function parseYamlBlocks(
  * JsonToYaml's YAML->value entry point. Returns `null` for empty / no-content
  * input (does not throw).
  */
-export function yamlToJson(yaml: string): unknown {
+export function parseYaml(yaml: string): unknown {
   const lines = parseYamlLines(yaml)
   if (lines.length === 0) return null
   return parseYamlBlocks(lines, parseYamlValue)
@@ -490,7 +457,7 @@ export function yamlToJson(yaml: string): unknown {
  * YamlToJson's YAML->value entry point. Throws on empty / no-content input and
  * uses the extended scalar + line parsers (comment stripping, etc.).
  */
-export function yamlToJsonExtended(yaml: string): unknown {
+export function parseYamlExtended(yaml: string): unknown {
   const trimmed = yaml.trim()
   if (!trimmed) throw new Error('Empty YAML input')
 
