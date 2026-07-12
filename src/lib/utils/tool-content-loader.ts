@@ -85,15 +85,3 @@ export function getToolRichContent(slug: string, locale: string): ToolRichConten
     faqs: typedData.faqs,
   }
 }
-
-/**
- * Get just the FAQs for a tool in a specific locale.
- * Used by the SEO module to generate FAQ JSON-LD.
- */
-export function getToolFaqs(slug: string, locale: string): { question: string; answer: string }[] | null {
-  const content = getToolRichContent(slug, locale)
-  if (!content) {
-    return null
-  }
-  return content.faqs
-}

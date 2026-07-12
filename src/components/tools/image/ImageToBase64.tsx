@@ -13,7 +13,9 @@ export default function ImageToBase64() {
   // Single source of truth: derive the image src and base64 payload from dataUri
   // instead of storing ~3 copies of a multi-megabyte data URI.
   const imageSrc = dataUri
-  const base64Output = dataUri ? dataUri.split(',')[1] || '' : ''
+  // Memoized so the (potentially multi-MB) split runs only when dataUri
+  // changes, not on every render (e.g. output-format toggles, copy state).
+  const base64Output = useMemo(() => (dataUri ? dataUri.split(',')[1] || '' : ''), [dataUri])
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]

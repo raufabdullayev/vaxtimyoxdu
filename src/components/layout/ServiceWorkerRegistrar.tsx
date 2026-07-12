@@ -17,11 +17,16 @@ export default function ServiceWorkerRegistrar() {
     ) {
       // Tracked across the async registration so cleanup can clear it.
       let updateIntervalId: ReturnType<typeof setInterval> | null = null
+      // If the component unmounts before register() resolves, the interval id
+      // is still null when cleanup runs — this flag prevents the late .then()
+      // from creating an interval that would then never be cleared.
+      let cancelled = false
 
       const onLoad = () => {
         navigator.serviceWorker
           .register('/sw.js')
           .then((registration) => {
+            if (cancelled) return
             // Check for SW updates periodically (every hour)
             updateIntervalId = setInterval(() => {
               registration.update()
@@ -37,6 +42,7 @@ export default function ServiceWorkerRegistrar() {
       window.addEventListener('load', onLoad)
 
       return () => {
+        cancelled = true
         window.removeEventListener('load', onLoad)
         if (updateIntervalId !== null) {
           clearInterval(updateIntervalId)

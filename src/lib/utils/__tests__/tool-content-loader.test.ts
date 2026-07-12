@@ -91,17 +91,3 @@ describe('getToolRichContent', () => {
     expect(result).toBeNull()
   })
 })
-
-describe('getToolFaqs', () => {
-  it('returns FAQs for a supported tool', async () => {
-    const { getToolFaqs } = await import('../tool-content-loader')
-    const faqs = getToolFaqs('json-formatter', 'en')
-    expect(faqs).toEqual([{ question: 'Q1', answer: 'A1' }])
-  })
-
-  it('returns null for unsupported tool', async () => {
-    const { getToolFaqs } = await import('../tool-content-loader')
-    const faqs = getToolFaqs('nonexistent', 'en')
-    expect(faqs).toBeNull()
-  })
-})

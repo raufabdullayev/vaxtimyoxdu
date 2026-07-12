@@ -16,6 +16,10 @@ import { byCountThenKey } from '@/lib/analytics/aggregate-sort'
  *
  * Rate limited to 10 requests/minute per API key to prevent resource exhaustion.
  *
+ * NOTE: the `range` query param only scopes the aggregate arrays (popular_tools,
+ * etc.) and errors_404. The page_views / tool_uses count cards always report
+ * fixed 24h / 7d / 30d windows and intentionally ignore `range`.
+ *
  * The 5 group-by aggregations (popular_tools, visitors_by_locale, top_pages,
  * share_clicks, tool_completions) are computed in Postgres via the
  * analytics_aggregates() function (supabase/migrations/002) so we transfer

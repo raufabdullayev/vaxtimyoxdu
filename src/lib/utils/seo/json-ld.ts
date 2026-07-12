@@ -9,7 +9,7 @@ import { getOgImageUrl } from './og'
  *
  * A single tool page calls both generateToolHowToJsonLd and generateToolFaqJsonLd
  * back-to-back, each of which previously resolved getToolRichContent independently
- * (the FAQ path via getToolFaqs). The underlying content is statically-imported,
+ * (the FAQ path read its .faqs). The underlying content is statically-imported,
  * immutable JSON, so caching the resolved object by `${slug}:${locale}` is safe and
  * returns the identical value getToolRichContent would (including null). The result
  * objects are only read, never mutated, so sharing a reference is behavior-preserving.
@@ -184,8 +184,8 @@ export function generateToolFaqJsonLd(
   const locale = options?.locale || 'en'
 
   // Try to use rich FAQs from content files first (top 20 tools).
-  // Reuse the memoized rich-content resolution (getToolFaqs returned content.faqs,
-  // or null when no rich content exists) to avoid re-loading the same object.
+  // Reuse the memoized rich-content resolution (its .faqs, or null when no
+  // rich content exists) to avoid re-loading the same object.
   const richContent = getMemoizedToolRichContent(tool.slug, locale)
   const richFaqs = richContent ? richContent.faqs : null
   const faqs = richFaqs || generateToolFaqs(tool, options)
