@@ -7,6 +7,627 @@ export interface NewsArticle {
 }
 
 export const newsArticles: Record<string, NewsArticle> = {
+
+  // ========== 2026-07-13 (S45 refresh 2026-07-13) ==========
+
+  // --- T1: Iran-US war fourth strike wave + attacks on US bases in Jordan & Qatar (P0) ---
+  'iran-abs-muharibesi-dorduncu-zerbe-dalgasi': {
+    title: 'İran-ABŞ müharibəsi kəskinləşir: dördüncü zərbə dalğası endirildi',
+    date: '2026-07-13',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Dördüncü zərbə dalğası
+
+ABŞ Mərkəzi Komandanlığı (CENTCOM) 12 iyulu 13 iyula bağlayan gecə İranın cənub və qərbindəki daha geniş hədəflər dəstinə dördüncü zərbə dalğası endirib. Hədəflər arasında Bəndər-Abbas, Qeşm, Cask, Sirik, Buşehr, Dezful, Əhvaz, Abadan və Xürrəmşəhr yer alıb.
+
+ABŞ tərəfinin açıqladığı rəsmi məqsəd İranın Hörmüz boğazında gəmiçiliyə hücum etmək imkanlarını zəiflətməkdir. Zərbələr son günlərdə davam edən qarşıdurmanın ən geniş coğrafi əhatəli mərhələsi olub.
+
+## İranın cavab zərbələri
+
+İran İnqilab Keşikçiləri Korpusu (İRQK) ballistik raketlərlə ABŞ hərbi bazalarını hədəfə alıb. Zərbələr İordaniyadakı Şahzadə Həsən hava bazasına və Qətərdəki Əl-Udeyd hava bazasına endirilib.
+
+Bundan əvvəl İran Hörmüz boğazında Kipr bayraqlı GFS Galaxy konteyner gəmisinə hücum etmişdi. Gəminin mühərrik otağında ziyan və yanğın baş verib; hindistanlı bir ekipaj üzvü itkin düşüb, 10 nəfər xilas edilib.
+
+## Boğaz üstündə gərginlik
+
+İran Hörmüz boğazını gəmiçilik hərəkəti üçün bağlı elan edib. ABŞ isə boğazın açıq qaldığını israr edir. Boğaz dünya neft daşımalarının mühüm dəhlizlərindən biridir.
+
+Hadisələr ABŞ-ın 12 iyul tarixli üçüncü zərbə dalğasından və İranın həmin gün beş Körfəz ölkəsinə raket və dron hücumlarından sonra baş verir. İranla həmsərhəd olan Azərbaycanda ictimaiyyət və media Cənubi Qafqaza mümkün təsir riskini diqqətlə izləyir.
+
+Məlumatlar Times of Israel, CNN, Jerusalem Post, PressTV, Euronews və Wikipedia (2026 Hörmüz boğazı böhranı) mənbələrinə istinadən verilir.`,
+  },
+  'en-us-fourth-wave-strikes-iran-hormuz': {
+    title: 'US Launches Fourth Wave of Strikes on Iran as Hormuz Attacks Escalate',
+    date: '2026-07-13',
+    category: 'World',
+    locale: 'en',
+    content: `The conflict between the United States and Iran intensified overnight from July 12 into July 13, 2026, as U.S. Central Command launched a fourth wave of strikes and Iran retaliated against American military bases in the Gulf region.
+
+## Fourth Wave of U.S. Strikes
+
+CENTCOM said its latest wave targeted a wider set of sites across southern and western Iran, including Bandar Abbas, Qeshm, Jask, Sirik, Bushehr, Dezful, Ahvaz, Abadan and Khorramshahr. The stated aim was to degrade Iran's ability to attack commercial shipping in the Strait of Hormuz, one of the world's most important energy chokepoints.
+
+In response, Iran's Islamic Revolutionary Guard Corps struck two U.S. bases with ballistic missiles: Prince Hassan Air Base in Jordan and Al Udeid Air Base in Qatar.
+
+## Shipping Under Threat
+
+Iran had earlier attacked the Cyprus-flagged container ship M/V GFS Galaxy in the Strait of Hormuz. The vessel suffered engine-room damage and a fire. One Indian crew member remained missing and 10 others were rescued.
+
+Tehran declared the Strait of Hormuz closed to shipping traffic, while Washington insisted the waterway remained open. The competing claims added to uncertainty across the region.
+
+## Regional Spillover Concerns
+
+The escalation follows a third U.S. strike wave on July 12 and Iranian missile and drone attacks on five Gulf states the same day. Azerbaijan, which borders Iran, is watching closely for any spillover into the South Caucasus.
+
+Coverage of the crisis has been reported by outlets including Times of Israel, CNN, Jerusalem Post, PressTV and Euronews, as well as summaries compiled on Wikipedia regarding the 2026 Strait of Hormuz crisis.`,
+  },
+  'tr-abd-iran-savasi-dorduncu-dalga-hurmuz': {
+    title: 'ABD-İran savaşı tırmanıyor: Dördüncü dalga saldırılar ve Hürmüz krizi',
+    date: '2026-07-13',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Dördüncü saldırı dalgası
+
+ABD Merkez Kuvvetler Komutanlığı (CENTCOM), 12 Temmuz'u 13 Temmuz 2026'ya bağlayan gece İran'a yönelik dördüncü saldırı dalgasını başlattı. Hedefler İran'ın güney ve batısındaki geniş bir bölgeyi kapsadı: Bender Abbas, Keşm, Cask, Sirik, Buşehr, Dezful, Ahvaz, Abadan ve Hürremşehr.
+
+Washington, bu saldırıların amacını İran'ın Hürmüz Boğazı'ndaki gemilere saldırma kapasitesini zayıflatmak olarak açıkladı. Dördüncü dalga, İran'ın güney ve batısındaki liman kentleri ile sanayi merkezlerini kapsayacak şekilde önceki dalgalara göre daha geniş bir hedef listesini içerdi.
+
+## İran'ın karşı saldırıları
+
+İran İslam Devrim Muhafızları Ordusu (IRGC), balistik füzelerle ABD üslerini hedef aldı. Ürdün'deki Prens Hasan Hava Üssü ve Katar'daki El Udeid Hava Üssü, saldırıya uğrayan üsler arasında yer aldı.
+
+İran ayrıca Hürmüz Boğazı'nda Kıbrıs bayraklı konteyner gemisi M/V GFS Galaxy'ye saldırdı. Geminin makine dairesinde hasar ve yangın meydana geldi. Hintli bir mürettebat üyesi kayıp, 10 kişi ise kurtarıldı.
+
+## Hürmüz Boğazı kapatıldı
+
+İran, Hürmüz Boğazı'nı deniz trafiğine kapattığını duyurdu. ABD ise boğazın açık kaldığında ısrar ediyor.
+
+Bu gelişmeler, 12 Temmuz'daki üçüncü ABD saldırı dalgasının ve İran'ın aynı gün beş Körfez ülkesine düzenlediği füze ile insansız hava aracı saldırılarının ardından yaşanıyor. İran'a sınır olan Azerbaycan ve Güney Kafkasya, çatışmanın bölgeye yayılma riskini yakından izliyor.
+
+Habere ilişkin bilgiler Times of Israel, CNN, Jerusalem Post, PressTV, Euronews ve Wikipedia (2026 Hürmüz Boğazı krizi) kaynaklarına dayanıyor.`,
+  },
+  'ru-ssha-udar-iran-hormuzskiy-proliv': {
+    title: 'США нанесли четвёртый удар по Ирану, эскалация у Хормузского пролива',
+    date: '2026-07-13',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Четвёртая волна ударов США
+
+Ночью с 12 на 13 июля 2026 года конфликт между США и Ираном обострился: Центральное командование ВС США (Центком) нанесло четвёртую волну ударов по территории Ирана, а Иран нанёс ответные удары по американским военным базам в регионе Персидского залива.
+
+Центком сообщило, что новая волна ударов охватила более широкий круг целей на юге и западе Ирана, включая Бендер-Аббас, Кешм, Джаск, Сирик, Бушир, Дезфуль, Ахваз, Абадан и Хорремшехр. Заявленная цель — снизить способность Ирана атаковать торговое судоходство в Хормузском проливе, одном из важнейших энергетических коридоров мира.
+
+## Ответные удары Ирана и атака на судно
+
+В ответ Корпус стражей исламской революции (КСИР) нанёс удары баллистическими ракетами по двум базам США — авиабазе «Принц Хасан» в Иордании и авиабазе «Эль-Удейд» в Катаре.
+
+Ранее Иран атаковал контейнеровоз «Джи-эф-эс Гэлакси», идущий под флагом Кипра, в Хормузском проливе. Судно получило повреждения машинного отделения, на борту вспыхнул пожар. Один член экипажа из Индии числится пропавшим без вести, ещё 10 человек спасены.
+
+## Спор о статусе пролива
+
+Тегеран объявил Хормузский пролив закрытым для судоходства, тогда как Вашингтон настаивает, что пролив остаётся открытым. Противоречивые заявления усиливают неопределённость в регионе.
+
+Эскалация последовала за третьей волной ударов США 12 июля и ракетно-дроновыми атаками Ирана в тот же день по пяти странам Персидского залива. Азербайджан, граничащий с Ираном, внимательно следит за возможными последствиями для Южного Кавказа.
+
+О ситуации сообщали «Таймс оф Изрэйл», Си-эн-эн, «Джерузалем пост», «Пресс ТВ» и «Евроньюс», а также сводки «Википедии» о кризисе в Хормузском проливе 2026 года.`,
+  },
+
+  // --- T2: Coalition of the Willing summit in Paris pledges Ukraine security guarantees ---
+  'paris-istekliler-koalisiyasi-ukrayna-zemanet': {
+    title: 'Parisdə İstəklilər Koalisiyası Ukraynaya təhlükəsizlik zəmanəti verdi',
+    date: '2026-07-13',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `## Parisdə sammit
+
+Fransa prezidenti Emmanuel Makron 13 iyul 2026-cı ildə Parisdəki Əlillər Evində (Hotel des Invalides) İstəklilər Koalisiyasının növbəti sammitinə ev sahibliyi edib. Görüş Fransanın milli bayramı olan Bastiliya gününün (14 iyul) ərəfəsində keçirilib.
+
+Koalisiya bu görüşdə 37 ölkəyə qədər genişlənib. Moldova və Şimali Makedoniya formata ilk dəfə qoşulub. Sammitdə 25-dən çox dövlət və hökumət başçısı iştirak edib. Bu, Ukraynanın Qərb tərəfdaşlarını bir araya gətirən formatın son dövrdə keçirdiyi ən nümayəndəli toplantılardan biri olub.
+
+## Təhlükəsizlik zəmanətləri
+
+Liderlər Ukrayna üçün möhkəm və hüquqi cəhətdən məcburi ikitərəfli təhlükəsizlik zəmanətlərini rəsmiləşdirmək barədə razılığa gəliblər. Bu, koalisiyanın Ukraynaya uzunmüddətli dəstəyinin əsas istiqamətlərindən biri kimi təqdim olunub.
+
+Fransa və Böyük Britaniyanın rəhbərlik etdiyi çoxmillətli təminat qüvvəsi atəşkəs əldə olunarsa, cəbhə xəttindən uzaqda yerləşdirilməyə hazırdır. ABŞ atəşkəsin monitorinqində iştirak edəcək. Parisdəki əməliyyat qərargahında isə ABŞ, Ukrayna və koalisiya üçün birgə koordinasiya hücrəsi yaradılıb.
+
+## Hava müdafiəsi və maliyyə
+
+Sammitdə diqqət həmçinin hava müdafiəsinin gücləndirilməsinə yönəlib. Bu çərçivədə Ukraynada Patriot tipli qırıcı raketlərin lisenziyalı istehsalı nəzərdə tutulur.
+
+Liderlər 2026-cı il üçün nəzərdə tutulan 70 milyard avroluq hərbi yardım öhdəliyini də yenidən təsdiqləyiblər.
+
+Məlumatlar Euronews, Kyiv Post, France Diplomatie və EU Neighbours East mənbələrinə istinadən verilir.`,
+  },
+  'en-paris-summit-ukraine-security-guarantees': {
+    title: 'Paris Summit Pledges Legally Binding Security Guarantees for Ukraine',
+    date: '2026-07-13',
+    category: 'Politics',
+    locale: 'en',
+    content: `French President Emmanuel Macron hosted a "Coalition of the Willing" summit at the Hotel des Invalides in Paris on July 13, 2026, on the eve of Bastille Day, where leaders pledged formal security guarantees for Ukraine.
+
+## An Expanding Coalition
+
+The coalition has grown to 37 nations, with Moldova and North Macedonia joining for the first time. Around 25 or more heads of state and government attended the gathering.
+
+Leaders agreed to formalize robust, legally binding bilateral security guarantees for Ukraine. The commitment marks an effort to put long-term backing for Kyiv on a firmer legal footing.
+
+## A Reassurance Force
+
+A France- and UK-led multinational "reassurance force" is described as "ready" to deploy away from the front lines if a ceasefire is reached. Under the plan, the United States would take part in ceasefire monitoring.
+
+A coordination cell involving the United States, Ukraine and the coalition has been established at the coalition's operational headquarters in Paris, intended to align efforts among the partners.
+
+## Air Defence and Aid
+
+Leaders placed particular focus on air defence, including the licensed production of Patriot interceptors inside Ukraine. Such capacity could help Kyiv counter continued missile threats.
+
+The summit also reaffirmed the coalition's 70 billion euro military aid commitment for 2026, underscoring the scale of support pledged for the year.
+
+The developments were reported by outlets including Euronews and Kyiv Post, along with information from France Diplomatie and EU Neighbours East.`,
+  },
+  'tr-paris-istekliler-koalisyonu-ukrayna-garanti': {
+    title: 'Paris\'te İstekliler Koalisyonu Ukrayna\'ya güvenlik garantisi sözü verdi',
+    date: '2026-07-13',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `## Paris'te koalisyon zirvesi
+
+Fransa Cumhurbaşkanı Emmanuel Macron, 13 Temmuz 2026'da Paris'teki Les Invalides'de "İstekliler Koalisyonu" zirvesine ev sahipliği yaptı. Zirve, 14 Temmuz Bastille Günü'nün arifesinde düzenlendi.
+
+Koalisyon 37 ülkeye genişledi. Moldova ve Kuzey Makedonya ilk kez zirveye katıldı. Toplantıda 25'ten fazla devlet ve hükümet başkanı hazır bulundu.
+
+## Yasal bağlayıcı güvenlik garantileri
+
+Liderler, Ukrayna'ya yönelik güçlü ve yasal olarak bağlayıcı ikili güvenlik garantilerini resmileştirme konusunda anlaştı. Bu adım, daha önce dile getirilen siyasi taahhütlerin somut hukuki çerçevelere dönüştürülmesini hedefliyor.
+
+Fransa ve Birleşik Krallık öncülüğündeki çok uluslu bir "güvence gücü", ateşkes sağlanması durumunda cephe hattından uzakta konuşlanmaya hazır durumda. Söz konusu gücün doğrudan cephe hattında değil, geride konumlanması öngörülüyor. ABD'nin rolü ise muharebe değil, ateşkesin izlenmesiyle sınırlı tutuluyor. Koalisyonun Paris'teki operasyon karargahında ABD, Ukrayna ve koalisyon arasında bir koordinasyon hücresi kuruldu.
+
+## Hava savunması ve askeri yardım
+
+Zirvede hava savunması konusuna da ağırlık verildi. Bu kapsamda Patriot önleyici füzelerinin Ukrayna'da lisanslı üretimi ele alındı.
+
+Liderler ayrıca 2026 yılı için daha önce açıklanan 70 milyar euroluk askeri yardım taahhüdünü yinelediler.
+
+Zirvenin Bastille Günü arifesinde ve genişleyen bir katılımla düzenlenmesi, koalisyonun Ukrayna'ya desteğini sürdürme kararlılığının bir göstergesi olarak öne çıktı.
+
+Habere ilişkin bilgiler Euronews, Kyiv Post, France Diplomatie ve EU Neighbours East kaynaklarına dayanıyor.`,
+  },
+  'ru-parizh-sammit-garantii-ukraine': {
+    title: 'Париж принял саммит «Коалиции желающих» по гарантиям безопасности Украине',
+    date: '2026-07-13',
+    category: 'Политика',
+    locale: 'ru',
+    content: `## Саммит в Париже
+
+Президент Франции Эммануэль Макрон 13 июля 2026 года провёл в парижском Отеле Инвалидов саммит «Коалиции желающих», приуроченный к кануну Дня взятия Бастилии. Лидеры договорились об официальных гарантиях безопасности для Украины.
+
+Коалиция расширилась до 37 стран — Молдова и Северная Македония присоединились впервые. В саммите приняли участие около 25 и более глав государств и правительств.
+
+## Юридически обязывающие гарантии
+
+Лидеры договорились формализовать надёжные, юридически обязывающие двусторонние гарантии безопасности для Украины. Эта договорённость призвана придать долгосрочной поддержке Киева более прочную правовую основу.
+
+Многонациональные «силы поддержки» под руководством Франции и Великобритании названы «готовыми» к развёртыванию вдали от линии фронта в случае достижения перемирия. Согласно плану, США примут участие в мониторинге режима прекращения огня.
+
+В оперативном штабе коалиции в Париже создана координационная группа с участием США, Украины и стран коалиции, призванная согласовывать усилия партнёров.
+
+## Противовоздушная оборона и финансовая помощь
+
+Особое внимание лидеры уделили противовоздушной обороне, включая лицензионное производство перехватчиков «Пэтриот» непосредственно на территории Украины. Такие мощности могут помочь Киеву противостоять продолжающимся ракетным угрозам.
+
+Саммит также подтвердил обязательство коалиции выделить 70 миллиардов евро военной помощи на 2026 год, подчеркнув масштаб заявленной на этот год поддержки.
+
+О событиях сообщали «Евроньюс» и «Киев пост», а также «Франс Дипломати» и «И-Ю Нейборс Ист».`,
+  },
+
+  // --- T3: Russia-Ukraine heavy strikes; Kyiv hit overnight ---
+  'rusiya-ukrayna-qarsiliqli-zerbeler-kiyev': {
+    title: 'Rusiya və Ukrayna qarşılıqlı zərbələr endirdi, Kiyev atəşə tutuldu',
+    date: '2026-07-13',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Qarşılıqlı zərbələr
+
+12 iyul günü Rusiya hücumları Ukraynada 4 nəfərin ölümünə səbəb olub. Bunlardan üçü Dnepropetrovsk vilayətində, o cümlədən ikisi Krivoy Roq şəhərində, biri isə Xersonda həlak olub.
+
+Ukraynanın cavab zərbələri Rusiya nəzarətindəki ərazidə və Rusiyanın öz ərazisində 5 nəfərin ölümünə gətirib. Onlardan dördü işğal altındakı Enerhodarda (Zaporojye vilayəti), biri isə Rusiyanın Samara vilayətindəki Sızran neft emalı zavodunda həlak olub. İki tərəf üzrə ümumilikdə 9 nəfər həyatını itirib. Bu itkilər 12 iyul ərzində baş vermiş qarşılıqlı hücumların nəticəsidir.
+
+## Kiyevə gecə hücumu
+
+13 iyula keçən gecə Rusiyanın ballistik raket və dron hücumu Kiyev şəhərini hədəfə alıb. Bütün Ukrayna üzrə ən azı 10 nəfər ölüb, təxminən 80 nəfər yaralanıb. Yaralılar arasında uşaqlar da var. Yaralıların çoxluğu hücumun mülki əraziyə ciddi ziyan vurduğunu göstərir.
+
+Ukrayna öz növbəsində Rusiyanın Stavropol diyarındakı Mixaylovsk şəhərində yerləşən Lukoil-Yuqnefteprodukt neft anbarını hədəfə alıb. Zərbə nəticəsində obyektdə güclü yanğın baş verib.
+
+## Hava müdafiəsində çatışmazlıq
+
+Ukrayna Rusiyanın davam edən ballistik raket kampaniyasına qarşı Patriot tipli qırıcı raketlərin çatışmazlığı ilə üzləşir. Bu, ölkənin hava müdafiəsi imkanlarına təsir edən əsas problemlərdən biri kimi qeyd olunur. Kiyev və digər iri şəhərlərin qorunması üçün bu sistemlərin tədarükü Ukrayna üçün həlledici əhəmiyyət daşıyır.
+
+Məlumatlar Al Jazeera, The Moscow Times və Kyiv Independent mənbələrinə istinadən verilir.`,
+  },
+  'en-russia-ukraine-strikes-kyiv-hit': {
+    title: 'Russia and Ukraine Trade Heavy Strikes as Kyiv Hit in Overnight Attack',
+    date: '2026-07-13',
+    category: 'World',
+    locale: 'en',
+    content: `Russia and Ukraine exchanged heavy strikes around July 12 and 13, 2026, with a deadly overnight attack on Kyiv and a Ukrainian strike that set a Russian oil depot ablaze.
+
+## Casualties on Both Sides
+
+In the July 12 exchange, Russian attacks killed four people in Ukraine, including three in the Dnipropetrovsk region, two of them in the city of Kryvyi Rih, and one more in the southern Kherson region.
+
+Ukrainian strikes killed five people on Russian-held or Russian territory. Four of them died in occupied Enerhodar in the Zaporizhzhia region, and one was killed at the Syzran oil refinery in Russia's Samara region. Together, the day's toll across both sides reached nine dead.
+
+## Overnight Assault on Kyiv
+
+Overnight into July 13, a Russian ballistic-missile and drone attack struck Kyiv, the Ukrainian capital. Across Ukraine, at least 10 people were killed and roughly 80 others injured, with children among the wounded.
+
+The strikes added to pressure on Ukraine's air defences as Russia continued its ballistic-missile campaign against Ukrainian cities. Ukraine continues to face shortages of Patriot interceptors needed to blunt those attacks, a gap that has left population centers exposed during large-scale strikes.
+
+## Strike on Russian Oil Depot
+
+Ukraine struck the Lukoil-Yugnefteprodukt oil depot, also known as Mikhailovskaya, in Mikhailovsk, Stavropol Krai, Russia, setting it ablaze. The attack formed part of a broader Ukrainian effort to target Russian energy infrastructure well behind the front lines.
+
+The exchanges were reported by outlets including Al Jazeera, The Moscow Times and the Kyiv Independent.`,
+  },
+  'tr-rusya-ukrayna-karsilikli-saldiri-kiev': {
+    title: 'Rusya ve Ukrayna karşılıklı saldırdı: Kiev vuruldu, petrol deposu yandı',
+    date: '2026-07-13',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Karşılıklı saldırılarda ölü sayısı arttı
+
+12 Temmuz'daki karşılıklı saldırılarda Rus saldırıları Ukrayna'da 4 kişinin ölümüne yol açtı. Dnipropetrovsk bölgesinde 3 kişi (2'si Kriviy Rih'te) ve Herson'da 1 kişi hayatını kaybetti.
+
+Ukrayna'nın saldırıları ise Rusya kontrolündeki bölgelerde ve Rusya topraklarında 5 kişinin ölümüne neden oldu. İşgal altındaki Enerhodar'da (Zaporijya) 4 kişi, Rusya'nın Samara bölgesindeki Sizran petrol rafinerisinde ise 1 kişi öldü. Böylece 12 Temmuz'daki karşılıklı saldırılarda iki tarafın toplam ölü sayısı 9'a ulaştı.
+
+## Kiev gece saldırısı altında
+
+13 Temmuz'a bağlanan gece, bir Rus balistik füze ve insansız hava aracı saldırısı Kiev'i vurdu. Başkent, saldırının ana hedeflerinden biri oldu. Ukrayna genelinde en az 10 kişi hayatını kaybetti, yaklaşık 80 kişi yaralandı. Yaralılar arasında çocuklar da bulunuyor; bu durum saldırının sivil alanları etkilediğini ortaya koydu.
+
+## Rusya'da petrol deposu ateşe verildi
+
+Ukrayna, Rusya'nın Stavropol bölgesindeki Mihaylovsk kentinde bulunan Lukoil-Yugnefteprodukt (Mihaylovskaya) petrol deposunu vurarak ateşe verdi. Tesiste çıkan yangın, Ukrayna'nın Rus enerji altyapısına yönelik saldırılarının sürdüğünü gösterdi.
+
+Ukrayna, Rusya'nın balistik füze kampanyasına karşı koymakta kullandığı Patriot önleyici füzelerinde sıkıntı yaşıyor. Bu durum, hava savunması kapasitesinin sürdürülebilirliği açısından öne çıkan başlıklardan biri olmaya devam ediyor.
+
+Habere ilişkin bilgiler Al Jazeera, The Moscow Times ve Kyiv Independent kaynaklarına dayanıyor.`,
+  },
+  'ru-rossiya-ukraina-udary-kiev': {
+    title: 'Россия и Украина обменялись мощными ударами, Киев атакован ночью',
+    date: '2026-07-13',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Жертвы с обеих сторон
+
+Около 12 и 13 июля 2026 года Россия и Украина обменялись мощными ударами: ночная атака унесла жизни людей в Киеве, а украинский удар вызвал пожар на российской нефтебазе.
+
+В результате обмена ударами 12 июля российские атаки убили четырёх человек в Украине, в том числе троих в Днепропетровской области — двоих из них в городе Кривой Рог — и ещё одного в южной Херсонской области.
+
+Украинские удары унесли жизни пяти человек на подконтрольной России или российской территории. Четверо погибли в оккупированном Энергодаре в Запорожской области, ещё один — на Сызранском нефтеперерабатывающем заводе в Самарской области России. Суммарные потери за день с обеих сторон составили девять человек.
+
+## Ночная атака на Киев
+
+Ночью с 12 на 13 июля российская атака баллистическими ракетами и беспилотниками поразила Киев, столицу Украины. По всей Украине погибли не менее 10 человек, около 80 получили ранения, среди пострадавших есть дети.
+
+Удары усилили нагрузку на украинскую противовоздушную оборону на фоне продолжающейся ракетной кампании России против украинских городов. Украина по-прежнему испытывает нехватку перехватчиков «Пэтриот», необходимых для отражения таких атак, — этот пробел оставляет населённые пункты уязвимыми во время массированных ударов.
+
+## Удар по российской нефтебазе
+
+Украина нанесла удар по нефтебазе «Лукойл-Югнефтепродукт», также известной как Михайловская, в городе Михайловск Ставропольского края России, вызвав там сильный пожар. Атака стала частью более широкой кампании Украины по поражению объектов российской энергетической инфраструктуры в глубоком тылу.
+
+Об обменах ударами сообщали «Аль-Джазира», «Москоу таймс» и «Киев Индепендент».`,
+  },
+
+  // ========== 2026-07-12 (S45 refresh 2026-07-13) ==========
+
+  // --- T4: Syria's first post-Assad parliament convenes in Damascus ---
+  'suriya-esed-sonrasi-ilk-parlament-demesq': {
+    title: 'Suriyanın Əsəddən sonrakı ilk parlamenti Dəməşqdə iş başladı',
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Tarixi ilk iclas
+
+2026-cı il iyulun 12-də, bazar günü Suriyanın 210 yerlik keçid dövrü Xalq Məclisi Dəməşqdə ilk iclasını keçirib. Bu, üsyançıların 2024-cü ilin dekabrında Bəşşar Əsədi devirməsindən sonra ölkənin ilk parlamentidir. Həmin üsyançı qüvvələrə hazırda müvəqqəti prezident vəzifəsini icra edən Əhməd əl-Şəra rəhbərlik edirdi. Məclisin toplanması Suriyada keçid dövrü idarəçiliyinin qurulması istiqamətində mühüm addım kimi qiymətləndirilir.
+
+## Deputatların seçilməsi
+
+Məclis üzvlərinin üçdə ikisi ötən il regional seçki kollegiyaları tərəfindən seçilib. Qalan üçdə birini isə əl-Şəra iyulun 1-də təyin edib. Beləliklə, məclisin formalaşmasında həm regional seçkilər, həm də prezident təyinatı rol oynayıb.
+
+İlk iclas 206 üzvün iştirakı ilə açılıb. Druz əhalisinin üstünlük təşkil etdiyi Sveyda vilayətinə ayrılan üç yer davam edən gərginlik səbəbindən hələ də boş qalır. Bir deputatın vəfatından sonra daha bir yer də boşdur. Bu yerlərin boş qalması ölkənin bəzi bölgələrində vəziyyətin hələ tam sabitləşmədiyini göstərir.
+
+## And və spiker seçkisi
+
+İlk iclasda qanunvericilər konstitusiya andı içiblər. Həsəkə vilayətindən olan hakim Əbdül Həmid əl-Əvak məclisin spikeri seçilib.
+
+Yeni parlament 30 aylıq müddətə fəaliyyət göstərəcək. Bu, ölkədə keçid dövrünün mühüm mərhələlərindən biri kimi dəyərləndirilir. Həmin müddət ərzində məclisin qanunvericilik işini təşkil etməsi gözlənilir.
+
+Məlumatlar PBS, Al Jazeera, Al-Monitor, Arab News, The National, SCMP və Enab Baladi mənbələrinə istinadən verilir.`,
+  },
+  'en-syria-post-assad-parliament-damascus': {
+    title: 'Syria\'s First Post-Assad Parliament Convenes in Damascus Session',
+    date: '2026-07-12',
+    category: 'World',
+    locale: 'en',
+    content: `Syria's first parliament since the fall of Bashar al-Assad held its inaugural session in Damascus on Sunday, July 12, 2026, marking a milestone in the country's political transition.
+
+## A New Assembly
+
+The 210-seat transitional People's Assembly convened for the first time since rebels led by interim President Ahmed al-Sharaa toppled Assad in December 2024. The session represented one of the most significant steps yet in reshaping Syria's institutions after more than a decade of conflict.
+
+Two-thirds of the members were chosen by regional electoral colleges last year, while al-Sharaa appointed the remaining third on July 1. The arrangement reflects the interim structure guiding the transition and the balance between elected and appointed representatives.
+
+## Vacant Seats
+
+The session opened with 206 members. Three seats reserved for the Druze-majority Sweida province remain unfilled amid ongoing tensions, and one seat is vacant following the death of a member.
+
+The gaps underscore the challenges facing the new body as it seeks to represent the whole country during a fragile period of transition, with parts of the population still outside the process.
+
+## Oath and Leadership
+
+Lawmakers took the constitutional oath during the opening session. They then elected Abdul Hamid al-Awak, a judge from Hassakeh, as speaker of the assembly, placing a member of the judiciary at the head of the new legislature.
+
+The transitional People's Assembly will serve a 30-month term, giving it a defined window to help steer the country's institutions during the post-Assad period.
+
+The session was reported by outlets including PBS, Al Jazeera, Al-Monitor, Arab News, The National, the South China Morning Post and Enab Baladi.`,
+  },
+  'tr-suriye-esad-sonrasi-ilk-parlamento-sam': {
+    title: 'Suriye\'nin Esad sonrası ilk parlamentosu Şam\'da toplandı',
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Esad sonrası ilk parlamento
+
+Suriye'nin 210 sandalyeli geçici Halk Meclisi, 12 Temmuz 2026 Pazar günü Şam'da ilk oturumunu gerçekleştirdi. Bu meclis, isyancıların geçici Devlet Başkanı Ahmed eş-Şara öncülüğünde Aralık 2024'te Beşar Esad'ı devirmesinden bu yana kurulan ilk parlamento oldu. Böylece Suriye, iktidar değişikliğinin ardından ilk yasama organına kavuştu.
+
+Meclis üyelerinin üçte ikisi geçen yıl bölgesel seçim kurulları tarafından seçildi. Kalan üçte biri ise eş-Şara tarafından 1 Temmuz'da atandı. Meclisin oluşumu, bu şekilde seçilmiş ve atanmış üyelerden meydana gelen karma bir yapıya dayanıyor. Bu yapı, seçim sürecinin tek bir genel oylamaya değil, bölgesel kurullara dayandırıldığını ortaya koyuyor.
+
+## Boş sandalyeler ve gerginlik
+
+Oturum 206 üye ile açıldı. Dürzi çoğunluklu Süveyda vilayeti için ayrılan üç sandalye, bölgede süregelen gerginlikler nedeniyle boş kaldı. Bir milletvekilinin ölümünün ardından bir sandalye daha boş durumda bulunuyor. Süveyda için ayrılan sandalyelerin doldurulması, bölgedeki gerginliklerin seyrine bağlı olacak.
+
+## Yemin ve meclis başkanı
+
+Milletvekilleri anayasal yemini etti. Meclis, Haseke'den bir yargıç olan Abdulhamid el-Avak'ı meclis başkanı olarak seçti.
+
+Geçiş dönemi meclisinin 30 aylık bir görev süresi boyunca çalışması öngörülüyor. Oturumun düzenlenmesi, ülkenin Esad sonrası kurumsal yapısının şekillenmesi yolunda atılan adımlardan biri olarak değerlendiriliyor.
+
+Habere ilişkin bilgiler PBS, Al Jazeera, Al-Monitor, Arab News, The National, SCMP ve Enab Baladi kaynaklarına dayanıyor.`,
+  },
+  'ru-siriya-parlament-damask': {
+    title: 'В Дамаске начал работу первый парламент Сирии после свержения Асада',
+    date: '2026-07-12',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Новое собрание
+
+Первый парламент Сирии после падения Башара Асада провёл своё первое заседание в Дамаске в воскресенье, 12 июля 2026 года, — важная веха в политическом переходе страны.
+
+Переходное Народное собрание, насчитывающее 210 мест, собралось впервые с тех пор, как повстанцы во главе с временным президентом Ахмедом аш-Шараа свергли Асада в декабре 2024 года. Заседание стало одним из самых значимых шагов в перестройке институтов Сирии после более чем десятилетия конфликта.
+
+Две трети депутатов были избраны в прошлом году региональными избирательными коллегиями, оставшуюся треть 1 июля назначил аш-Шараа. Такое устройство отражает переходную структуру, направляющую трансформацию, и баланс между избранными и назначенными представителями.
+
+## Вакантные места
+
+Заседание открылось при участии 206 членов. Три места, зарезервированные за преимущественно друзской провинцией Сувейда, остаются незаполненными на фоне сохраняющейся напряжённости, ещё одно место вакантно после смерти депутата.
+
+Эти пробелы подчёркивают трудности, с которыми сталкивается новый орган, стремящийся представлять всю страну в хрупкий переходный период, когда часть населения по-прежнему остаётся вне процесса.
+
+## Присяга и руководство
+
+На открытии сессии депутаты приняли конституционную присягу. Затем они избрали спикером собрания Абдул Хамида аль-Авака, судью из провинции Хасака, поставив представителя судебной власти во главе нового законодательного органа.
+
+Переходное Народное собрание будет работать в течение 30 месяцев, что даёт ему определённый срок для содействия управлению институтами страны в период после Асада.
+
+О заседании сообщали «Пи-би-эс», «Аль-Джазира», «Аль-Монитор», «Араб ньюс», «Нэшнл», «Саут Чайна Морнинг пост» и «Энаб Баляди».`,
+  },
+
+  // --- T5: US Senator Lindsey Graham dies at 71 ---
+  'abs-senatoru-lindsi-qrem-71-yasinda-vefat': {
+    title: 'ABŞ senatoru Lindsi Qrem 71 yaşında qəflətən vəfat etdi',
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'az',
+    content: `## Senatorun vəfatı
+
+Cənubi Karolina ştatını təmsil edən respublikaçı senator Lindsi Qrem 2026-cı il iyulun 12-də, şənbə gününün gec saatlarında 71 yaşında vəfat edib. Onun ofisi ölümü qısa və qəfil xəstəlik kimi xarakterizə edib.
+
+Qrem uzun illər xarici siyasətdə sərt mövqeyi ilə tanınırdı və prezident Donald Trampın yaxın müttəfiqlərindən biri sayılırdı. O, Senata ilk dəfə 2002-ci ildə seçilmiş və iki onillikdən artıq müddət ərzində Cənubi Karolinanı bu palatada təmsil etmişdi. Bu illər boyu senator ABŞ-ın xarici və müdafiə siyasəti ilə bağlı müzakirələrin fəal iştirakçılarından biri olub. Senatda o, respublikaçıların nüfuzlu simalarından biri kimi tanınırdı.
+
+## Ölümün səbəbi
+
+Vaşinqtonun tibbi ekspert idarəsinin ilkin nəticələrinə görə, ölümün səbəbi arteriosklerotik ürək-damar xəstəliyi fonunda baş verən aorta parçalanmasıdır.
+
+Təcili tibbi yardım xidməti senatorun Kapitoli təpəsindəki evinə ürək dayanması ilə bağlı çağırışa cavab verib. İlkin məlumatlar senatorun sağlamlığında qəfil pozulmanın baş verdiyini göstərir. Ölümlə bağlı yekun tibbi rəy hələ açıqlanmayıb.
+
+## Son günləri
+
+Senatorun ölümü onun Ukraynaya etdiyi səfərdən qayıtdıqdan bir neçə saat sonra baş verib. O, bazar günü nüfuzlu Meet the Press verilişində çıxış etməli idi. Səfər və planlaşdırılan çıxış onun son günlərdə aktiv siyasi qrafikdə olduğunu göstərir.
+
+Bununla da ABŞ Konqresi ən təcrübəli respublikaçı senatorlarından birini itirmiş oldu.
+
+Məlumatlar Washington Post, NBC News, CBS News, NPR, CNN və The Hill mənbələrinə istinadən verilir.`,
+  },
+  'en-lindsey-graham-dies-at-71': {
+    title: 'US Senator Lindsey Graham of South Carolina Dies at Age 71',
+    date: '2026-07-12',
+    category: 'World',
+    locale: 'en',
+    content: `Republican U.S. Senator Lindsey Graham of South Carolina died late Saturday, July 12, 2026, at the age of 71, his office said, describing the cause as a "brief and sudden illness."
+
+## A Veteran Senator
+
+Graham, a prominent foreign-policy hawk and close ally of President Donald Trump, was first elected to the U.S. Senate in 2002. Over more than two decades in office, he became one of the most recognizable voices in Washington on national security and foreign affairs.
+
+His long tenure placed him at the center of numerous debates over U.S. involvement abroad, and he remained an active and vocal presence in the Senate up to the time of his death.
+
+## Circumstances of His Death
+
+The District of Columbia Medical Examiner's preliminary findings cited aortic dissection due to arteriosclerotic cardiovascular disease. Emergency medical services had responded to a cardiac-arrest call at his Capitol Hill home.
+
+His death came only hours after he returned from a trip to Ukraine and just ahead of a scheduled Sunday appearance on "Meet the Press." The timing underscored how suddenly the illness took hold, cutting short a packed public schedule.
+
+## Reaction and Reporting
+
+Graham's sudden death drew wide attention across the political spectrum, reflecting the prominent role he had played in American politics for more than 20 years.
+
+News of his passing was reported by outlets including The Washington Post, NBC News, CBS News, NPR, CNN and The Hill. Details about the timing and cause were drawn from statements by his office and the preliminary findings of the D.C. Medical Examiner.`,
+  },
+  'tr-senator-lindsey-graham-hayatini-kaybetti': {
+    title: 'ABD\'li Senatör Lindsey Graham 71 yaşında hayatını kaybetti',
+    date: '2026-07-12',
+    category: 'Dünya',
+    locale: 'tr',
+    content: `## Uzun süredir görevde olan senatör hayatını kaybetti
+
+Güney Carolina eyaletini temsil eden Cumhuriyetçi Senatör Lindsey Graham, 12 Temmuz 2026 Cumartesi gecesi 71 yaşında hayatını kaybetti. Graham'ın ofisi, ölümün "kısa ve ani bir hastalık" sonucu gerçekleştiğini açıkladı.
+
+Dış politikada şahin bir isim olarak bilinen Graham, Başkan Trump'ın yakın müttefiklerinden biriydi. İlk kez 2002 yılında Senato'ya seçilen Graham, yaklaşık çeyrek asırdır eyaletini temsil ediyordu. Senato'daki uzun görev süresi boyunca ABD'nin dış politika gündeminde etkili bir figür olarak yer aldı.
+
+## Ölüm nedeni
+
+Washington DC Adli Tabipliği'nin ön bulguları, ölüm nedeni olarak arteriyosklerotik kardiyovasküler hastalığa bağlı aort diseksiyonunu gösterdi. Acil sağlık ekipleri, Graham'ın Capitol Hill'deki evine gelen bir kalp durması ihbarı üzerine olay yerine intikal etti.
+
+## Ukrayna dönüşünün ardından
+
+Graham'ın ölümü, Ukrayna'ya yaptığı bir ziyaretten döndükten birkaç saat sonra gerçekleşti. Ölüm haberinin, senatörün yoğun bir dış politika programının hemen ardından gelmesi dikkat çekti. Senatörün ayrıca Pazar günü "Meet the Press" programına katılması planlanıyordu.
+
+2002'den bu yana Senato'da görev yapan Graham, ABD dış politikası tartışmalarında öne çıkan isimlerden biriydi. Trump'a yakınlığı ve dış politikadaki müdahaleci çizgisiyle tanınan senatörün ölümü, hem eyaletinde hem de ulusal siyasette önemli bir boşluk olarak kayıtlara geçti.
+
+Habere ilişkin bilgiler Washington Post, NBC News, CBS News, NPR, CNN ve The Hill kaynaklarına dayanıyor.`,
+  },
+  'ru-lindsi-grem-senator-ssha-umer': {
+    title: 'Сенатор США от Южной Каролины Линдси Грэм скончался в возрасте 71 года',
+    date: '2026-07-12',
+    category: 'Мир',
+    locale: 'ru',
+    content: `## Опытный сенатор
+
+Сенатор-республиканец от Южной Каролины Линдси Грэм скончался поздно вечером в субботу, 12 июля 2026 года, в возрасте 71 года. Его офис охарактеризовал причину как «непродолжительную и внезапную болезнь».
+
+Грэм, видный «ястреб» внешней политики и близкий союзник президента Дональда Трампа, впервые был избран в Сенат США в 2002 году. За более чем два десятилетия пребывания в должности он стал одним из самых узнаваемых голосов Вашингтона по вопросам национальной безопасности и внешней политики.
+
+Его долгая карьера сделала его центральной фигурой во множестве дебатов об участии США в событиях за рубежом; он оставался активным и заметным присутствием в Сенате вплоть до своей смерти.
+
+## Обстоятельства смерти
+
+Согласно предварительным выводам медицинского эксперта округа Колумбия, причиной смерти стало расслоение аорты на фоне атеросклеротического сердечно-сосудистого заболевания. Служба скорой медицинской помощи выезжала на вызов об остановке сердца в его доме на Капитолийском холме.
+
+Его смерть наступила спустя всего несколько часов после возвращения из поездки в Украину и незадолго до запланированного воскресного выступления в передаче «Мит зе пресс». Такая последовательность событий подчёркивает, насколько внезапно проявилась болезнь, оборвав плотный публичный график.
+
+## Реакция и освещение
+
+Внезапная смерть Грэма привлекла широкое внимание по всему политическому спектру, отражая ту заметную роль, которую он играл в американской политике более 20 лет.
+
+Новость о его кончине освещали «Вашингтон пост», Эн-би-си Ньюс, Си-би-эс Ньюс, Эн-пи-ар, Си-эн-эн и «Хилл». Сведения о времени и причине смерти получены из заявлений его офиса и предварительных выводов медицинского эксперта округа Колумбия.`,
+  },
+
+  // ========== 2026-07-11 (S45 refresh 2026-07-13) ==========
+
+  // --- T6: AZ-DOMESTIC: President Aliyev visits Khojavend villages, opens Khankendi Hotel ---
+  'ilham-eliyev-xocavend-xankendi-hotel-acilis': {
+    title: 'İlham Əliyev Xocavənd kəndlərini ziyarət etdi, Xankəndi hotelini açdı',
+    date: '2026-07-11',
+    category: 'Siyasət',
+    locale: 'az',
+    content: `## Xocavənd kəndlərinə səfər
+
+Prezident İlham Əliyev 2026-cı il iyulun 11-də Xocavənd rayonunun azad edilmiş Güzeyxırman və Güneyxırman kəndlərinə işgüzar səfər edib.
+
+Səfər zamanı dövlət başçısına kəndlərdə aparılan bərpa və quruculuq işləri barədə ətraflı məlumat verilib. Kəndlərə qaz, su, elektrik enerjisi və optik-lif xətləri çəkilib. Burada 460 yerlik təmir olunmuş məktəb və 40 yerlik uşaq bağçası da yaradılıb.
+
+Verilən məlumata görə, ilkin mərhələdə 21 ailə, yəni 87 nəfər həmin kəndlərə qayıdıb. Bərpa olunan infrastruktur əhalinin doğma yurdlarına qayıdışını dəstəkləyən əsas amillərdəndir.
+
+## Xankəndi hotelinin açılışı
+
+Prezident həmin səfər çərçivəsində yeni tikilmiş Xankəndi hotelinin açılışında da iştirak edib. Dördmərtəbəli hotel 101 nömrəyə malikdir və eyni vaxtda təxminən 236 qonağa xidmət göstərə bilər.
+
+Obyektdə 20-si yerli sakin olmaqla ümumilikdə 45 nəfər çalışır. Bu, bölgədə yaradılan yeni iş yerlərinin bir hissəsidir. Hotelin istifadəyə verilməsi Xankəndidə xidmət sahəsinin bərpası baxımından əhəmiyyətli sayılır.
+
+## Qarabağın inkişafı
+
+İyulun 12-də prezidentin sosial media hesabında səfərlə bağlı video paylaşılıb. Paylaşımda Qarabağ və Şərqi Zəngəzurda gedən inkişafı görməyin onun qəlbini sevindirdiyi qeyd olunub.
+
+Səfər azad edilmiş ərazilərdə davam edən genişmiqyaslı bərpa prosesinin bir hissəsidir. Paylaşım bu ərazilərdə həyata keçirilən quruculuğun miqyasını bir daha vurğulayıb.
+
+Məlumatlar APA, AzerNews, Today.az və Axar.az mənbələrinə istinadən verilir.`,
+  },
+  'en-aliyev-khojavend-khankendi-hotel': {
+    title: 'Aliyev Visits Khojavend Villages and Opens New Khankendi Hotel',
+    date: '2026-07-11',
+    category: 'Politics',
+    locale: 'en',
+    content: `President Ilham Aliyev made a working visit on July 11, 2026, to the liberated Guzeykhirman and Guneykhirman villages of the Khojavend district in Karabakh, where he reviewed reconstruction efforts and opened a new hotel.
+
+## Restoration Works
+
+During the visit, the president was briefed on restoration works underway in the two villages. The projects include gas, water, electricity and fiber-optic lines, along with a renovated 460-seat school and a 40-seat kindergarten intended to support returning families.
+
+An initial 21 families, totaling 87 people, had returned to the villages. Their return marks an early stage in the broader resettlement of a region that was reconnected to basic services as part of the reconstruction drive.
+
+## New Khankendi Hotel
+
+On the same trip, Aliyev attended the opening of the newly built Khankendi Hotel. The four-story property has 101 rooms and a capacity of up to about 236 guests.
+
+The hotel employs 45 staff, including 20 local residents, reflecting an effort to create jobs alongside physical reconstruction. Facilities such as the hotel are meant to support economic activity and visitors as life gradually resumes in the area.
+
+## A Message on Development
+
+On July 12, the president shared a video on social media with the remark that seeing the development in Karabakh and East Zangezur makes his heart rejoice. The comment came a day after the on-the-ground visit to Khojavend district.
+
+The visit was reported by outlets including APA, AzerNews, Today.az and Axar.az, as part of continued coverage of reconstruction across the liberated territories.`,
+  },
+  'tr-aliyev-hocavend-koyleri-hankendi-oteli': {
+    title: 'Aliyev Hocavend köylerini ziyaret etti, Hankendi Oteli\'ni açtı',
+    date: '2026-07-11',
+    category: 'Siyaset',
+    locale: 'tr',
+    content: `## Hocavend köylerine çalışma ziyareti
+
+Azerbaycan Cumhurbaşkanı İlham Aliyev, 11 Temmuz 2026'da Karabağ'ın Hocavend bölgesindeki işgalden kurtarılan Güzeyhırman ve Güneyhırman köylerine çalışma ziyareti gerçekleştirdi. Köyler, Azerbaycan'ın Karabağ'da yürüttüğü yeniden yerleşim çalışmaları kapsamında yeniden hayata döndürülüyor.
+
+Cumhurbaşkanı, köylerde yürütülen restorasyon çalışmaları hakkında bilgi aldı. Bu çalışmalar arasında doğal gaz, su, elektrik ve fiber-optik hatlar, yenilenen 460 kişilik bir okul ve 40 kişilik bir anaokulu yer alıyor. Altyapı ve eğitim tesislerinin yenilenmesi, geri dönüşlerin sürdürülebilir kılınması açısından öncelikli görülüyor.
+
+Köylere ilk etapta 21 aile, yani 87 kişi geri döndü.
+
+## Hankendi Oteli açıldı
+
+Aliyev, aynı ziyaret kapsamında yeni inşa edilen Hankendi Oteli'nin açılışına katıldı. Dört katlı ve 101 odalı otel, yaklaşık 236 misafir ağırlayabiliyor. Otelde, 20'si yerel halktan olmak üzere toplam 45 personel çalışıyor. Otelin hizmete girmesi, Hankendi'de günlük yaşamın yeniden canlanmasına yönelik adımlar arasında gösteriliyor.
+
+## "Kalbim seviniyor"
+
+Cumhurbaşkanı 12 Temmuz'da sosyal medya hesabından paylaştığı videoda, Karabağ ve Doğu Zengezur'daki gelişmeyi görmenin kalbini sevindirdiğini belirtti.
+
+Köylerde geri dönüşlerin başlaması ve yeni tesislerin hizmete girmesi, bölgede yürütülen yeniden inşa sürecinin somut adımları arasında değerlendiriliyor.
+
+Habere ilişkin bilgiler APA, AzerNews, Today.az ve Axar.az kaynaklarına dayanıyor.`,
+  },
+  'ru-aliev-khodzhavend-khankendi-gostinitsa': {
+    title: 'Алиев посетил сёла Ходжавенда и открыл новую гостиницу в Ханкенди',
+    date: '2026-07-11',
+    category: 'Политика',
+    locale: 'ru',
+    content: `## Восстановительные работы
+
+Президент Ильхам Алиев 11 июля 2026 года совершил рабочую поездку в освобождённые сёла Гюзейхырман и Гюнейхырман Ходжавендского района Карабаха, где ознакомился с ходом восстановительных работ и принял участие в открытии новой гостиницы.
+
+В ходе визита президента проинформировали о работах, ведущихся в этих двух сёлах. Проекты включают прокладку газовых, водопроводных, электрических и оптоволоконных линий, а также восстановленную школу на 460 мест и детский сад на 40 мест, предназначенные для поддержки возвращающихся семей.
+
+В сёла уже вернулись 21 семья — в общей сложности 87 человек. Их возвращение знаменует раннюю стадию более широкого процесса переселения в регион, который в рамках восстановительной программы был вновь подключён к базовым коммуникациям.
+
+## Новая гостиница в Ханкенди
+
+В ходе той же поездки Алиев принял участие в открытии новой гостиницы «Ханкенди». Четырёхэтажное здание располагает 101 номером и способно принять до около 236 гостей одновременно.
+
+В гостинице работает 45 сотрудников, 20 из которых — местные жители, что отражает усилия по созданию рабочих мест наряду с физическим восстановлением региона. Такие объекты, как эта гостиница, призваны поддержать экономическую активность и приём посетителей по мере постепенного возвращения жизни в регион.
+
+## Заявление о развитии региона
+
+12 июля президент опубликовал в социальных сетях видео с комментарием о том, что вид развития, происходящего в Карабахе и Восточном Зангезуре, радует его сердце. Комментарий появился на следующий день после визита в Ходжавендский район.
+
+О визите сообщали АПА, «Азерньюс», «Тудей» и «Ахар» в рамках продолжающегося освещения восстановления освобождённых территорий.`,
+  },
+
   // ========== 2026-07-12 ==========
 
   // --- Topic 1 (P0): Iran attacks five Gulf states after US strikes / Hormuz closed ---
